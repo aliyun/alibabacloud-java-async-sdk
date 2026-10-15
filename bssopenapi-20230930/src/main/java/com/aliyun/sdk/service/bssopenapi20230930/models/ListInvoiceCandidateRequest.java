@@ -199,7 +199,7 @@ public class ListInvoiceCandidateRequest extends Request {
         } 
 
         /**
-         * <p>List of billing cycles.</p>
+         * <p>The list of billing cycles.</p>
          */
         public Builder billingCycles(java.util.List<Integer> billingCycles) {
             String billingCyclesShrink = shrink(billingCycles, "BillingCycles", "json");
@@ -209,7 +209,7 @@ public class ListInvoiceCandidateRequest extends Request {
         }
 
         /**
-         * <p>List of business document numbers.</p>
+         * <p>The list of business document numbers.</p>
          */
         public Builder businessIds(java.util.List<String> businessIds) {
             String businessIdsShrink = shrink(businessIds, "BusinessIds", "json");
@@ -231,7 +231,7 @@ public class ListInvoiceCandidateRequest extends Request {
         }
 
         /**
-         * <p>List of enterprises and accounts. If empty, the current account itself is queried.</p>
+         * <p>The list of enterprises and accounts. If this parameter is left empty, the current account is queried.</p>
          */
         public Builder ecIdAccountIds(java.util.List<EcIdAccountIds> ecIdAccountIds) {
             String ecIdAccountIdsShrink = shrink(ecIdAccountIds, "EcIdAccountIds", "json");
@@ -253,7 +253,7 @@ public class ListInvoiceCandidateRequest extends Request {
         }
 
         /**
-         * <p>List of invoice issuers.</p>
+         * <p>The list of invoice issuers.</p>
          */
         public Builder invoiceIssuers(java.util.List<String> invoiceIssuers) {
             String invoiceIssuersShrink = shrink(invoiceIssuers, "InvoiceIssuers", "json");
@@ -263,7 +263,7 @@ public class ListInvoiceCandidateRequest extends Request {
         }
 
         /**
-         * <p>Primary marketplace ID. If empty, the marketplace ID of the current user is used by default.</p>
+         * <p>The level-1 marketplace ID. If this parameter is left empty, the marketplace ID of the current user is used by default.</p>
          * 
          * <strong>example:</strong>
          * <p>2684201000001</p>
@@ -299,7 +299,7 @@ public class ListInvoiceCandidateRequest extends Request {
         }
 
         /**
-         * <p>List of invoice candidate statuses.</p>
+         * <p>The list of invoice object statuses.</p>
          */
         public Builder status(java.util.List<Integer> status) {
             String statusShrink = shrink(status, "Status", "json");
@@ -309,7 +309,7 @@ public class ListInvoiceCandidateRequest extends Request {
         }
 
         /**
-         * <p>List of invoice candidate types.</p>
+         * <p>The list of invoice object types.</p>
          */
         public Builder types(java.util.List<Integer> types) {
             String typesShrink = shrink(types, "Types", "json");
@@ -378,7 +378,7 @@ public class ListInvoiceCandidateRequest extends Request {
             } 
 
             /**
-             * <p>List of accounts to access. If empty, all accounts under the current entity ID are selected.</p>
+             * <p>The list of accessed accounts. If this parameter is left empty, all accounts under the current entity ID are selected.</p>
              */
             public Builder accountIds(java.util.List<Long> accountIds) {
                 this.accountIds = accountIds;
@@ -386,7 +386,7 @@ public class ListInvoiceCandidateRequest extends Request {
             }
 
             /**
-             * <p>Enterprise entity ID.</p>
+             * <p>The enterprise entity ID.</p>
              * 
              * <strong>example:</strong>
              * <p>12345</p>

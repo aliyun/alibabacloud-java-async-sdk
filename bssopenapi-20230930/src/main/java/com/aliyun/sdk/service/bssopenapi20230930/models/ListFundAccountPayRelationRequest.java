@@ -128,7 +128,7 @@ public class ListFundAccountPayRelationRequest extends Request {
         }
 
         /**
-         * <p>Fund account ID.</p>
+         * <p>The fund account ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,7 +141,7 @@ public class ListFundAccountPayRelationRequest extends Request {
         }
 
         /**
-         * <p>The primary marketplace ID. If this parameter is left empty, the ID of the marketplace to which the current user belongs is used by default.</p>
+         * <p>The level-1 marketplace ID. If this parameter is left empty, the marketplace ID of the current user is used by default.</p>
          * 
          * <strong>example:</strong>
          * <p>2684201000001</p>
@@ -165,9 +165,11 @@ public class ListFundAccountPayRelationRequest extends Request {
         }
 
         /**
-         * <p>The relationship status.
-         * valid: valid.
-         * expired: invalid.</p>
+         * <p>The relationship status. Valid values:</p>
+         * <ul>
+         * <li>valid: Valid.</li>
+         * <li>expired: Invalid.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>valid</p>

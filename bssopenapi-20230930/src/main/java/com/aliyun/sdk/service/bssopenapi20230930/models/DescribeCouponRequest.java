@@ -309,7 +309,7 @@ public class DescribeCouponRequest extends Request {
         }
 
         /**
-         * CouponTemplateIdList.
+         * <p>The list of coupon template IDs.</p>
          */
         public Builder couponTemplateIdList(java.util.List<Long> couponTemplateIdList) {
             String couponTemplateIdListShrink = shrink(couponTemplateIdList, "CouponTemplateIdList", "json");
@@ -344,7 +344,7 @@ public class DescribeCouponRequest extends Request {
         }
 
         /**
-         * <p>The enterprise and account list. If this parameter is left empty, the current account is queried.</p>
+         * <p>The list of enterprises and accounts. If this parameter is left empty, the coupons of the current account are queried.</p>
          */
         public Builder ecIdAccountIds(java.util.List<EcIdAccountIds> ecIdAccountIds) {
             String ecIdAccountIdsShrink = shrink(ecIdAccountIds, "EcIdAccountIds", "json");
@@ -354,7 +354,7 @@ public class DescribeCouponRequest extends Request {
         }
 
         /**
-         * <p>The effective end time.</p>
+         * <p>The effective end time, specified as a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1708423156000</p>
@@ -366,7 +366,7 @@ public class DescribeCouponRequest extends Request {
         }
 
         /**
-         * <p>The effective start time.</p>
+         * <p>The effective start time, specified as a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1684750028000</p>
@@ -378,7 +378,7 @@ public class DescribeCouponRequest extends Request {
         }
 
         /**
-         * <p>The expiration end time.</p>
+         * <p>The expiration end time, specified as a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1708423156000</p>
@@ -390,7 +390,7 @@ public class DescribeCouponRequest extends Request {
         }
 
         /**
-         * <p>The expiration start time.</p>
+         * <p>The expiration start time, specified as a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1684750028000</p>
@@ -402,7 +402,7 @@ public class DescribeCouponRequest extends Request {
         }
 
         /**
-         * IncludeShare.
+         * <p>Specifies whether to include shared coupons.</p>
          */
         public Builder includeShare(Boolean includeShare) {
             this.putQueryParameter("IncludeShare", includeShare);
@@ -411,7 +411,7 @@ public class DescribeCouponRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return for a single request.</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -420,7 +420,7 @@ public class DescribeCouponRequest extends Request {
         }
 
         /**
-         * <p>The primary campaign information.</p>
+         * <p>The first-level site information.</p>
          * 
          * <strong>example:</strong>
          * <p>2684201000001</p>
@@ -432,7 +432,7 @@ public class DescribeCouponRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next query. If this parameter is empty, no more pages are available.</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -441,7 +441,7 @@ public class DescribeCouponRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The page size.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -454,7 +454,7 @@ public class DescribeCouponRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * <p>The product code.</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -534,7 +534,7 @@ public class DescribeCouponRequest extends Request {
             } 
 
             /**
-             * <p>The list of accessed accounts. If this parameter is left empty, all accounts under the current entity ID are selected.</p>
+             * <p>The list of accounts to access. If this parameter is left empty, all accounts under the current entity ID are selected.</p>
              */
             public Builder accountIds(java.util.List<Long> accountIds) {
                 this.accountIds = accountIds;

@@ -87,7 +87,7 @@ public class ListFundAccountRequest extends Request {
         } 
 
         /**
-         * <p>Level-1 marketplace ID. If this parameter is left empty, the ID of the marketplace to which the current user belongs is used by default.</p>
+         * <p>The ID of the primary marketplace. If this parameter is left empty, the ID of the marketplace to which the current user belongs is used by default.</p>
          * 
          * <strong>example:</strong>
          * <p>2084210001</p>
@@ -99,7 +99,7 @@ public class ListFundAccountRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to query only the active account list. Default value: false.</p>
+         * <p>Specifies whether to query only in-use accounts. Default value: false.</p>
          */
         public Builder queryOnlyInUse(Boolean queryOnlyInUse) {
             this.putBodyParameter("QueryOnlyInUse", queryOnlyInUse);
@@ -108,7 +108,7 @@ public class ListFundAccountRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to query only the managed account list. Default value: false.</p>
+         * <p>Specifies whether to query only managed accounts. Default value: false.</p>
          */
         public Builder queryOnlyManage(Boolean queryOnlyManage) {
             this.putBodyParameter("QueryOnlyManage", queryOnlyManage);

@@ -229,7 +229,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * AlreadyAutoPurchase.
+             * <p>Indicates whether the resource has been auto-purchased.</p>
              */
             public Builder alreadyAutoPurchase(Boolean alreadyAutoPurchase) {
                 this.alreadyAutoPurchase = alreadyAutoPurchase;
@@ -237,7 +237,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SettingAutoPurchase.
+             * <p>Indicates whether auto-purchase is configured.</p>
              */
             public Builder settingAutoPurchase(Boolean settingAutoPurchase) {
                 this.settingAutoPurchase = settingAutoPurchase;
@@ -245,7 +245,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SupportAutoPurchase.
+             * <p>Indicates whether auto-purchase is supported.</p>
              */
             public Builder supportAutoPurchase(Boolean supportAutoPurchase) {
                 this.supportAutoPurchase = supportAutoPurchase;
@@ -312,7 +312,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The property code.</p>
+             * <p>The attribute code.</p>
              * 
              * <strong>example:</strong>
              * <p>deadlineAcc</p>
@@ -323,10 +323,10 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The property name.</p>
+             * <p>The attribute name.</p>
              * 
              * <strong>example:</strong>
-             * <p>Total decrement</p>
+             * <p>Decreasing total capacity</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -393,7 +393,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The property code.</p>
+             * <p>The attribute code.</p>
              * 
              * <strong>example:</strong>
              * <p>slb_albcubag_dp_cn</p>
@@ -404,10 +404,10 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The property name.</p>
+             * <p>The attribute name.</p>
              * 
              * <strong>example:</strong>
-             * <p>ALB Resource Plan</p>
+             * <p>ALB resource plan</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -474,7 +474,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The commitment cycle code.</p>
+             * <p>The commitment period code.</p>
              * 
              * <strong>example:</strong>
              * <p>hour</p>
@@ -485,7 +485,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The commitment cycle name.</p>
+             * <p>The commitment period name.</p>
              * 
              * <strong>example:</strong>
              * <p>Hour</p>
@@ -555,7 +555,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The deductible region code.</p>
+             * <p>The code of the region where deductions are applicable.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-beijing</p>
@@ -566,7 +566,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The deductible region.</p>
+             * <p>The region where deductions are applicable.</p>
              * 
              * <strong>example:</strong>
              * <p>Beijing</p>
@@ -636,7 +636,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The property code.</p>
+             * <p>The attribute code.</p>
              * 
              * <strong>example:</strong>
              * <p>slb</p>
@@ -647,7 +647,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The property name.</p>
+             * <p>The attribute name.</p>
              * 
              * <strong>example:</strong>
              * <p>Server Load Balancer</p>
@@ -717,7 +717,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The property code.</p>
+             * <p>The attribute code.</p>
              * 
              * <strong>example:</strong>
              * <p>valid</p>
@@ -728,7 +728,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The property name.</p>
+             * <p>The attribute name.</p>
              * 
              * <strong>example:</strong>
              * <p>Valid</p>
@@ -798,7 +798,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The property code.</p>
+             * <p>The attribute code.</p>
              * 
              * <strong>example:</strong>
              * <p>alb_cubag*******</p>
@@ -809,10 +809,10 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The property name.</p>
+             * <p>The attribute name.</p>
              * 
              * <strong>example:</strong>
-             * <p>Chinese mainland regions</p>
+             * <p>Mainland China</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1486,7 +1486,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * AutoPurchase.
+             * <p>The auto-purchase information.</p>
              */
             public Builder autoPurchase(AutoPurchase autoPurchase) {
                 this.autoPurchase = autoPurchase;
@@ -1497,7 +1497,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
              * <p>The capacity type name.</p>
              * 
              * <strong>example:</strong>
-             * <p>Total decrement</p>
+             * <p>Decreasing total capacity</p>
              */
             public Builder capacitiyTypeName(String capacitiyTypeName) {
                 this.capacitiyTypeName = capacitiyTypeName;
@@ -1598,7 +1598,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The commitment cycle.</p>
+             * <p>The commitment period.</p>
              */
             public Builder cycleType(CycleType cycleType) {
                 this.cycleType = cycleType;
@@ -1606,7 +1606,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The commitment cycle code.</p>
+             * <p>The commitment period code.</p>
              * 
              * <strong>example:</strong>
              * <p>hour</p>
@@ -1617,7 +1617,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The commitment cycle name.</p>
+             * <p>The commitment period name.</p>
              * 
              * <strong>example:</strong>
              * <p>Hour</p>
@@ -1628,7 +1628,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of deductible regions.</p>
+             * <p>The list of regions where deductions are applicable.</p>
              */
             public Builder deductRegions(java.util.List<DeductRegions> deductRegions) {
                 this.deductRegions = deductRegions;
@@ -1636,7 +1636,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * EnableDeductRule.
+             * <p>Indicates whether the deduction rule is enabled.</p>
              */
             public Builder enableDeductRule(Boolean enableDeductRule) {
                 this.enableDeductRule = enableDeductRule;
@@ -1644,7 +1644,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether exchange is supported.</p>
+             * <p>Indicates whether exchanges are supported.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1666,7 +1666,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether upgrade is supported.</p>
+             * <p>Indicates whether upgrades are supported.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1677,7 +1677,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration time.</p>
+             * <p>The expiration time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1710604800000</p>
@@ -1688,7 +1688,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The exchange commodity code.</p>
+             * <p>The commodity code for exchange.</p>
              * 
              * <strong>example:</strong>
              * <p>null</p>
@@ -1776,7 +1776,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The period time.</p>
+             * <p>The period time unit, such as hour for hours.</p>
              * 
              * <strong>example:</strong>
              * <p>hour</p>
@@ -1817,7 +1817,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The purchase time.</p>
+             * <p>The purchase time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1678939036000</p>
@@ -1852,7 +1852,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The specification.</p>
+             * <p>The specifications.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -1865,7 +1865,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The effective period.</p>
+             * <p>The effective period. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1678939035000</p>

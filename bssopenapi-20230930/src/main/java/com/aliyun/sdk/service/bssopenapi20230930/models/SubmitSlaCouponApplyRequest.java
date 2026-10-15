@@ -102,7 +102,7 @@ public class SubmitSlaCouponApplyRequest extends Request {
         } 
 
         /**
-         * <p>The IDs of the damaged records. This parameter is optional.</p>
+         * <p>Optional. The IDs of the damaged records.</p>
          */
         public Builder damagedIds(java.util.List<String> damagedIds) {
             this.putBodyParameter("DamagedIds", damagedIds);
@@ -120,7 +120,7 @@ public class SubmitSlaCouponApplyRequest extends Request {
         }
 
         /**
-         * <p>The claim month. This parameter is required. Format: yyyyMM.</p>
+         * <p>Required. The application month in the yyyyMM format.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,7 +133,7 @@ public class SubmitSlaCouponApplyRequest extends Request {
         }
 
         /**
-         * <p>The primary marketplace ID. If this parameter is left empty, the marketplace ID of the current user is used by default.</p>
+         * <p>The ID of the primary marketplace. If this parameter is left empty, the marketplace ID of the current user is used by default.</p>
          * 
          * <strong>example:</strong>
          * <p>2084210001</p>
@@ -212,7 +212,7 @@ public class SubmitSlaCouponApplyRequest extends Request {
             }
 
             /**
-             * <p>The enterprise entity ID.</p>
+             * <p>The ID of the enterprise entity.</p>
              * 
              * <strong>example:</strong>
              * <p>1501603440974415</p>

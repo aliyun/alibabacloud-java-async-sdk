@@ -130,7 +130,7 @@ public class ListInvoiceCandidateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of data entries.</p>
+         * <p>The data list.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -138,7 +138,7 @@ public class ListInvoiceCandidateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The metadata of the response.</p>
+         * <p>The response structure metadata.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -512,7 +512,7 @@ public class ListInvoiceCandidateResponseBody extends TeaModel {
              * <p>The account name.</p>
              * 
              * <strong>example:</strong>
-             * <p>测试账号</p>
+             * <p>Test account</p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -542,7 +542,7 @@ public class ListInvoiceCandidateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the business event occurred.</p>
+             * <p>The time when the transaction occurred, in the YYYY-MM-DD HH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-06-01 00:00:00</p>
@@ -567,7 +567,7 @@ public class ListInvoiceCandidateResponseBody extends TeaModel {
              * <p>The commodity name.</p>
              * 
              * <strong>example:</strong>
-             * <p>性能测试</p>
+             * <p>Performance testing</p>
              */
             public Builder commodityName(String commodityName) {
                 this.commodityName = commodityName;
@@ -575,7 +575,7 @@ public class ListInvoiceCandidateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time.</p>
+             * <p>The creation time, in the YYYY-MM-DD HH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-06-91 00:00:00</p>
@@ -586,7 +586,7 @@ public class ListInvoiceCandidateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the invoice candidate.</p>
+             * <p>The ID of the invoicing object.</p>
              * 
              * <strong>example:</strong>
              * <p>12345</p>
@@ -655,7 +655,7 @@ public class ListInvoiceCandidateResponseBody extends TeaModel {
              * <p>The product name.</p>
              * 
              * <strong>example:</strong>
-             * <p>性能测试</p>
+             * <p>Performance testing</p>
              */
             public Builder productName(String productName) {
                 this.productName = productName;
@@ -663,7 +663,7 @@ public class ListInvoiceCandidateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource owner account.</p>
+             * <p>The resource ownership account ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1990699401005016</p>
@@ -674,10 +674,10 @@ public class ListInvoiceCandidateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the resource owner account.</p>
+             * <p>The resource ownership account name.</p>
              * 
              * <strong>example:</strong>
-             * <p>测试账号</p>
+             * <p>Test account</p>
              */
             public Builder resourceOwnerAccountName(String resourceOwnerAccountName) {
                 this.resourceOwnerAccountName = resourceOwnerAccountName;
@@ -685,7 +685,7 @@ public class ListInvoiceCandidateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the invoice candidate.</p>
+             * <p>The invoice object status.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -707,7 +707,7 @@ public class ListInvoiceCandidateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the invoice candidate.</p>
+             * <p>The invoice object type.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

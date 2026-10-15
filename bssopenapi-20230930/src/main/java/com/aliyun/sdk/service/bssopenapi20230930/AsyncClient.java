@@ -95,33 +95,33 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <p>When you call this operation, note the following items:</p>
      * <ul>
-     * <li>You can subscribe to one type of bill file at a time.</li>
-     * <li>Except for monthly bill PDFs, after you subscribe, the system pushes a bill file that contains full detailed data from the beginning of the current month to the present day starting from the next day. Before the 4th of each month, the system pushes the full bill file for the entire previous billing cycle.</li>
-     * <li>Monthly bill PDFs are pushed before the 4th of each month for the previous month.</li>
-     * <li>Bill files generated on a daily basis may be delayed. Delayed bills are pushed the day after they are generated and may include bills from before the previous day that were delayed until the previous day. We recommend that you pull the full file for the previous month at the beginning of each month.<blockquote>
-     * <p>Apply for permissions by following the instructions in <a href="https://www.alibabacloud.com/help/en/user-center/user-guide/billing-subscription">Billing subscription</a>.</p>
+     * <li>You can subscribe to only one type of billing file at a time.</li>
+     * <li>Except for monthly billing PDFs, starting from the day after the subscription is created, a billing file containing all detailed data from the beginning of the current month to the current day is pushed daily. A full billing file for the entire previous billing cycle is pushed before the 4th day of each month.</li>
+     * <li>Monthly billing PDFs for the previous month are pushed before the 4th day of each month.</li>
+     * <li>Billing files generated on a daily basis may be delayed. Delayed bills are pushed on the day after they are generated and may include bills that were delayed and generated on the previous day. Pull the full files for the previous month at the beginning of each month.<blockquote>
+     * <p>Apply for the billing subscription permissions as described in the documentation: <a href="https://www.alibabacloud.com/help/en/user-center/user-guide/billing-subscription">Billing subscription</a>.</p>
      * </blockquote>
      * </li>
-     * <li>This subscription shares the same functionality as the Expenses and Costs - Billing Subscription feature. Subscriptions are synchronized between the two.</li>
-     * <li>When you subscribe to a directory under a bucket, make sure the directory name complies with the naming conventions:<ul>
+     * <li>This subscription and the billing subscription in the Expenses and Costs console are the same feature, and subscriptions are interoperable.</li>
+     * <li>When you subscribe to a directory under a bucket, make sure that the directory naming conventions are met:<ul>
      * <li>Emojis are not allowed. Use valid UTF-8 characters.</li>
-     * <li>Use / to separate paths and quickly create subdirectories. Do not start with / or \, and do not use consecutive / characters.</li>
+     * <li>The forward slash (/) is used to separate paths and create subdirectories. Do not start the path with a forward slash (/) or a backslash (\), and do not use consecutive forward slashes.</li>
      * <li>Subdirectories named .. are not allowed.</li>
      * <li>The total length must be 1 to 254 characters.</li>
      * </ul>
      * </li>
      * <li>File names:<ul>
-     * <li><p>Example: <strong>consumeDetailBillV2</strong> (billing item bill details)</p>
+     * <li><p>Example: <strong>consumeDetailBillV2</strong> (billing item details)</p>
      * <ul>
-     * <li><p>Daily push file name format: <code>{Account UID}_{Sales site ID}_{Bill type}_{YYYYMM|YYYYMMDD}</code>, for example: <code>169**_2688801000001_consumeDetailBillV2_20190312</code>.</p>
+     * <li><p>Format of the file name pushed daily: <code>{Account UID}_{Site ID}_{Bill type}_{YYYYMM|YYYYMMDD}</code>. Example: <code>169**_2688801000001_consumeDetailBillV2_20190312</code>.</p>
      * </li>
-     * <li><p>Full file name format at the beginning of the next month: <code>{Account UID}_{Sales site ID}_{Bill type}_{YYYYMM|YYYYMM}</code>, for example: <code>169**_2688801000001_consumeDetailBillV2_201903</code>.</p>
-     * </li>
-     * </ul>
+     * <li><p>Format of the complete file name pushed at the beginning of the next month: <code>{Account UID}_{Site ID}_{Bill type}_{YYYYMM|YYYYMM}</code>. Example: <code>169**_2688801000001_consumeDetailBillV2_201903</code>.</p>
      * </li>
      * </ul>
      * </li>
-     * <li>Monthly bill PDF files are in .pdf format. All other file types are .csv files. When the data volume is large, the system automatically splits the exported bill into multiple files and compresses them into one or more zip files. The zip file name format remains the same.</li>
+     * </ul>
+     * </li>
+     * <li>Monthly billing PDF files are in the .pdf format, and other files are in the .csv format. When the data volume is large, the system automatically splits an exported bill into multiple files and compresses them into one or more ZIP files. The ZIP file names follow the same format.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateReportDefinition  CreateReportDefinitionRequest
@@ -332,7 +332,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries a parent cost center and its child cost centers.</p>
+     * <p>Queries parent cost centers and their child cost centers.</p>
      * 
      * @param request the request parameters of QueryCostCenter  QueryCostCenterRequest
      * @return QueryCostCenterResponse
@@ -411,9 +411,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>Call QueryMonthlySlaList to retrieve the claimable months and records.</li>
+     * <li>Call QueryMonthlySlaList to obtain the claimable months and records.</li>
      * <li>Claim by month or by record.
-     * Note: Only compensation for the last two months can be claimed. Historical compensation has been automatically issued.</li>
+     * Note: You can only claim compensation for the recent two months. Historical compensation has been automatically issued.</li>
      * </ol>
      * 
      * @param request the request parameters of SubmitSlaCouponApply  SubmitSlaCouponApplyRequest

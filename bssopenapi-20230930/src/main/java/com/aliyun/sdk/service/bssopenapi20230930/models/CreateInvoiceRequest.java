@@ -177,10 +177,10 @@ public class CreateInvoiceRequest extends Request {
         } 
 
         /**
-         * <p>Specifies the invoice amount. Supports up to two decimal places.</p>
+         * <p>Specifies the invoice amount. Two decimal places are supported.</p>
          * <ul>
-         * <li>If not specified, the invoice will be issued for the total invoiceable amount of all invoiceCandidateIds.</li>
-         * <li>If specified, the invoice will be issued for the specified amount. The specified amount cannot exceed the total invoiceable amount of all invoiceCandidateIds.</li>
+         * <li>If left empty, the invoice is issued for the total invoiceable amount of all invoice candidate IDs.</li>
+         * <li>If specified, the invoice is issued for the specified amount. The specified amount cannot exceed the total invoiceable amount of all invoice candidate IDs.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -193,7 +193,7 @@ public class CreateInvoiceRequest extends Request {
         }
 
         /**
-         * <p>Enterprise and account list. If empty, the current account is queried.</p>
+         * <p>The list of enterprises and accounts. If this parameter is left empty, the current account is queried.</p>
          */
         public Builder ecIdAccountIds(java.util.List<EcIdAccountIds> ecIdAccountIds) {
             String ecIdAccountIdsShrink = shrink(ecIdAccountIds, "EcIdAccountIds", "json");
@@ -203,7 +203,7 @@ public class CreateInvoiceRequest extends Request {
         }
 
         /**
-         * <p>List of invoice candidate IDs.</p>
+         * <p>The list of invoice candidate IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder invoiceCandidateIds(java.util.List<String> invoiceCandidateIds) {
@@ -214,11 +214,11 @@ public class CreateInvoiceRequest extends Request {
         }
 
         /**
-         * <p>Invoice mode.</p>
+         * <p>The invoicing mode. Valid values:</p>
          * <ul>
-         * <li>0: Independent invoicing. Expenses of multiple accounts under the enterprise are invoiced separately for each account.</li>
-         * <li>1: Consolidated invoicing. Expenses of multiple accounts under the enterprise are consolidated and invoiced under the invoicing entity.
-         * If only one account is passed in the AccountIds parameter, independent invoicing is applied.</li>
+         * <li>0: Independent invoicing. The consumption of multiple accounts under an enterprise is invoiced independently for each account.</li>
+         * <li>1: Consolidated invoicing. The consumption of multiple accounts under an enterprise is consolidated and invoiced based on the invoicing entity.
+         * If only one account is specified in the AccountIds request parameter, independent invoicing is applied.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -232,10 +232,10 @@ public class CreateInvoiceRequest extends Request {
         }
 
         /**
-         * <p>Invoice remark.</p>
+         * <p>The invoice remark.</p>
          * 
          * <strong>example:</strong>
-         * <p>备注信息</p>
+         * <p>Remark information</p>
          */
         public Builder invoiceRemark(String invoiceRemark) {
             this.putQueryParameter("InvoiceRemark", invoiceRemark);
@@ -244,9 +244,9 @@ public class CreateInvoiceRequest extends Request {
         }
 
         /**
-         * <p>Invoice title ID.</p>
+         * <p>The invoice title ID.</p>
          * <ul>
-         * <li>The ID parameter returned by the ListInvoiceTitle API for the current logged-in account.</li>
+         * <li>The ID returned by the ListInvoiceTitle operation for the current logon account.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -260,7 +260,7 @@ public class CreateInvoiceRequest extends Request {
         }
 
         /**
-         * <p>Invoice type.</p>
+         * <p>The invoice type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -273,7 +273,7 @@ public class CreateInvoiceRequest extends Request {
         }
 
         /**
-         * <p>Primary marketplace ID. If empty, the marketplace ID of the current user is used by default.</p>
+         * <p>The level-1 marketplace ID. If this parameter is left empty, the marketplace ID of the current user is used by default.</p>
          * 
          * <strong>example:</strong>
          * <p>2684201000001</p>
@@ -285,7 +285,7 @@ public class CreateInvoiceRequest extends Request {
         }
 
         /**
-         * <p>List of email addresses to receive the invoice. A maximum of 3 can be specified.</p>
+         * <p>The list of email addresses that receive the invoice. You can specify up to three email addresses.</p>
          * <p>This parameter is required.</p>
          */
         public Builder recipientEmails(java.util.List<String> recipientEmails) {
@@ -355,7 +355,7 @@ public class CreateInvoiceRequest extends Request {
             } 
 
             /**
-             * <p>List of accounts to access. If empty, all accounts under the current entity ID are selected.</p>
+             * <p>The list of accounts to access. If this parameter is left empty, all accounts under the current entity ID are selected.</p>
              */
             public Builder accountIds(java.util.List<Long> accountIds) {
                 this.accountIds = accountIds;
@@ -363,7 +363,7 @@ public class CreateInvoiceRequest extends Request {
             }
 
             /**
-             * <p>Enterprise entity ID.</p>
+             * <p>The enterprise entity ID.</p>
              * 
              * <strong>example:</strong>
              * <p>12345</p>

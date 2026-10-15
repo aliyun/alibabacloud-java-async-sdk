@@ -80,7 +80,7 @@ public class ListInvoiceTitleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Invoice title list</p>
+         * <p>The list of invoice titles.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -88,7 +88,7 @@ public class ListInvoiceTitleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Response metadata.</p>
+         * <p>The response metadata.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -99,7 +99,7 @@ public class ListInvoiceTitleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>6000EE23-274B-4E07-A697-FF2E999520A4</p>
@@ -259,10 +259,10 @@ public class ListInvoiceTitleResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Bank name.</p>
+             * <p>The account bank name.</p>
              * 
              * <strong>example:</strong>
-             * <p>招商银行</p>
+             * <p>China Merchants Bank</p>
              */
             public Builder accountBankName(String accountBankName) {
                 this.accountBankName = accountBankName;
@@ -270,7 +270,7 @@ public class ListInvoiceTitleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Account ID.</p>
+             * <p>The account ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1990699401005016</p>
@@ -281,7 +281,7 @@ public class ListInvoiceTitleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Basic bank account number.</p>
+             * <p>The bank account number.</p>
              * 
              * <strong>example:</strong>
              * <p>1234567890</p>
@@ -292,7 +292,7 @@ public class ListInvoiceTitleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the invoice title was created.</p>
+             * <p>The time when the invoice title was created. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-06-01 00:00:00</p>
@@ -303,7 +303,7 @@ public class ListInvoiceTitleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Invoice title ID.</p>
+             * <p>The invoice title ID.</p>
              * 
              * <strong>example:</strong>
              * <p>123456</p>
@@ -314,10 +314,10 @@ public class ListInvoiceTitleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Invoice title.</p>
+             * <p>The invoice title.</p>
              * 
              * <strong>example:</strong>
-             * <p>xx公司</p>
+             * <p>XX Company</p>
              */
             public Builder invoiceTitle(String invoiceTitle) {
                 this.invoiceTitle = invoiceTitle;
@@ -325,10 +325,10 @@ public class ListInvoiceTitleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Registered address.</p>
+             * <p>The registered address.</p>
              * 
              * <strong>example:</strong>
-             * <p>北京市朝阳区</p>
+             * <p>Chaoyang District, Beijing</p>
              */
             public Builder registeredAddress(String registeredAddress) {
                 this.registeredAddress = registeredAddress;
@@ -336,7 +336,7 @@ public class ListInvoiceTitleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Registered landline number.</p>
+             * <p>The registered landline number.</p>
              * 
              * <strong>example:</strong>
              * <p>010-12345678</p>
@@ -347,7 +347,7 @@ public class ListInvoiceTitleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Unified social credit code. 15, 17, 18, or 20 characters.</p>
+             * <p>The unified social credit code. The code is 15, 17, 18, or 20 characters in length.</p>
              * 
              * <strong>example:</strong>
              * <p>111111111111111</p>

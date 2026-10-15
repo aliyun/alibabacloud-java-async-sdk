@@ -119,7 +119,7 @@ public class QueryCostCenterResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of cost center data.</p>
+         * <p>The data list.</p>
          */
         public Builder costCenterDtoList(java.util.List<CostCenterDtoList> costCenterDtoList) {
             this.costCenterDtoList = costCenterDtoList;
@@ -138,7 +138,7 @@ public class QueryCostCenterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The metadata of the response struct.</p>
+         * <p>The response metadata.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -343,7 +343,7 @@ public class QueryCostCenterResponseBody extends TeaModel {
              * <p>The name of the cost center. The name must be unique within the same account.</p>
              * 
              * <strong>example:</strong>
-             * <p>ResourceGroup</p>
+             * <p>Resource group</p>
              */
             public Builder costCenterName(String costCenterName) {
                 this.costCenterName = costCenterName;
@@ -351,7 +351,7 @@ public class QueryCostCenterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The level of the cost center node.</p>
+             * <p>The node level of the cost center.</p>
              * 
              * <strong>example:</strong>
              * <p>loose</p>
@@ -362,7 +362,7 @@ public class QueryCostCenterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the user who owns the cost center.</p>
+             * <p>The ID of the owner account for the cost center.</p>
              * 
              * <strong>example:</strong>
              * <p>1314839403940987</p>
@@ -396,6 +396,9 @@ public class QueryCostCenterResponseBody extends TeaModel {
 
             /**
              * <p>The priority of the cost center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;

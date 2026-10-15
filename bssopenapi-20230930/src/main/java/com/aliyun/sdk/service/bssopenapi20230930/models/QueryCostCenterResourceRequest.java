@@ -174,7 +174,7 @@ public class QueryCostCenterResourceRequest extends Request {
         }
 
         /**
-         * <p>The token for the next query. If this parameter is empty, no more results exist.</p>
+         * <p>The token for the next query. An empty value indicates that no more results are available.</p>
          * 
          * <strong>example:</strong>
          * <p>CAESEgoQCg4KCmd</p>
@@ -186,7 +186,7 @@ public class QueryCostCenterResourceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the owner of the financial unit.</p>
+         * <p>The ID of the owner account for the financial unit.</p>
          * 
          * <strong>example:</strong>
          * <p>1234567812345678</p>
@@ -258,7 +258,7 @@ public class QueryCostCenterResourceRequest extends Request {
             } 
 
             /**
-             * <p>The list of account IDs to access. If this parameter is empty, all accounts under the current entity ID are selected.</p>
+             * <p>The list of accounts to access. If this parameter is empty, all accounts under the current entity ID are selected.</p>
              */
             public Builder accountIds(java.util.List<Long> accountIds) {
                 this.accountIds = accountIds;

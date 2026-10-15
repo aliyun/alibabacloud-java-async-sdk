@@ -178,7 +178,7 @@ public class CreateFundAccountTransferRequest extends Request {
         /**
          * <p>The asset type. Currently, only cash is supported. Valid values:</p>
          * <ul>
-         * <li>cash: cash.</li>
+         * <li>cash: Cash.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -192,7 +192,7 @@ public class CreateFundAccountTransferRequest extends Request {
         }
 
         /**
-         * <p>The ID of the source account (payer account ID).</p>
+         * <p>The ID of the source account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -209,7 +209,7 @@ public class CreateFundAccountTransferRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>转账的备注</p>
+         * <p>Remarks for the transfer</p>
          */
         public Builder remark(String remark) {
             this.putBodyParameter("Remark", remark);
@@ -218,7 +218,7 @@ public class CreateFundAccountTransferRequest extends Request {
         }
 
         /**
-         * <p>The ID of the destination account (payee account ID).</p>
+         * <p>The ID of the destination account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -233,8 +233,8 @@ public class CreateFundAccountTransferRequest extends Request {
         /**
          * <p>The transfer type. Valid values:</p>
          * <ul>
-         * <li>grant: transfer.</li>
-         * <li>recycle: revocation.</li>
+         * <li>grant: Allocation.</li>
+         * <li>recycle: Revocation.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
