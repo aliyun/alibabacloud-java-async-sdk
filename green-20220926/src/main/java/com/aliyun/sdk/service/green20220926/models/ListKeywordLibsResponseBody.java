@@ -125,7 +125,7 @@ public class ListKeywordLibsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The description of the error code.</p>
+         * <p>The detailed description of the error code.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -136,7 +136,7 @@ public class ListKeywordLibsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID assigned by the backend, which uniquely identifies the request. You can use this ID to troubleshoot issues.</p>
+         * <p>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -182,6 +182,9 @@ public class ListKeywordLibsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LibName")
         private String libName;
 
+        @com.aliyun.core.annotation.NameInMap("PreprocessList")
+        private java.util.List<String> preprocessList;
+
         @com.aliyun.core.annotation.NameInMap("ServiceCodes")
         private String serviceCodes;
 
@@ -193,6 +196,7 @@ public class ListKeywordLibsResponseBody extends TeaModel {
             this.keywordCount = builder.keywordCount;
             this.libId = builder.libId;
             this.libName = builder.libName;
+            this.preprocessList = builder.preprocessList;
             this.serviceCodes = builder.serviceCodes;
             this.uid = builder.uid;
         }
@@ -234,6 +238,13 @@ public class ListKeywordLibsResponseBody extends TeaModel {
         }
 
         /**
+         * @return preprocessList
+         */
+        public java.util.List<String> getPreprocessList() {
+            return this.preprocessList;
+        }
+
+        /**
          * @return serviceCodes
          */
         public String getServiceCodes() {
@@ -252,6 +263,7 @@ public class ListKeywordLibsResponseBody extends TeaModel {
             private String keywordCount; 
             private String libId; 
             private String libName; 
+            private java.util.List<String> preprocessList; 
             private String serviceCodes; 
             private String uid; 
 
@@ -263,6 +275,7 @@ public class ListKeywordLibsResponseBody extends TeaModel {
                 this.keywordCount = model.keywordCount;
                 this.libId = model.libId;
                 this.libName = model.libName;
+                this.preprocessList = model.preprocessList;
                 this.serviceCodes = model.serviceCodes;
                 this.uid = model.uid;
             } 
@@ -290,7 +303,7 @@ public class ListKeywordLibsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The library ID.</p>
+             * <p>The ID of the library.</p>
              * 
              * <strong>example:</strong>
              * <p>custom_xxxxx</p>
@@ -301,10 +314,10 @@ public class ListKeywordLibsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The library name.</p>
+             * <p>The name of the library.</p>
              * 
              * <strong>example:</strong>
-             * <p>测试</p>
+             * <p>Test</p>
              */
             public Builder libName(String libName) {
                 this.libName = libName;
@@ -312,7 +325,15 @@ public class ListKeywordLibsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service codes.</p>
+             * <p>The preprocessing list of the library. If ServiceCode is not specified or not configured, an empty array is returned.</p>
+             */
+            public Builder preprocessList(java.util.List<String> preprocessList) {
+                this.preprocessList = preprocessList;
+                return this;
+            }
+
+            /**
+             * <p>The associated services.</p>
              * 
              * <strong>example:</strong>
              * <p>service1,service2</p>
@@ -323,7 +344,7 @@ public class ListKeywordLibsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>UID。</p>
+             * <p>The UID.</p>
              * 
              * <strong>example:</strong>
              * <p>19964*****086772</p>

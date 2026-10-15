@@ -119,7 +119,7 @@ public class UpdateServiceConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code, consistent with the HTTP status code.</p>
+         * <p>The error code, which is consistent with the HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -163,7 +163,7 @@ public class UpdateServiceConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID assigned by the backend to uniquely identify a request. You can use this ID for troubleshooting.</p>
+         * <p>The ID assigned by the backend to uniquely identify a request. It can be used to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -174,7 +174,7 @@ public class UpdateServiceConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>

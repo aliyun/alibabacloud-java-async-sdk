@@ -125,7 +125,7 @@ public class GetKeywordLibResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The description of the error code.</p>
+         * <p>The detailed description of the error code.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -136,7 +136,7 @@ public class GetKeywordLibResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID assigned by the backend, which uniquely identifies the request. You can use this ID to troubleshoot issues.</p>
+         * <p>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -182,6 +182,9 @@ public class GetKeywordLibResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LibName")
         private String libName;
 
+        @com.aliyun.core.annotation.NameInMap("PreprocessList")
+        private java.util.List<String> preprocessList;
+
         @com.aliyun.core.annotation.NameInMap("Uid")
         private String uid;
 
@@ -190,6 +193,7 @@ public class GetKeywordLibResponseBody extends TeaModel {
             this.keywordCount = builder.keywordCount;
             this.libId = builder.libId;
             this.libName = builder.libName;
+            this.preprocessList = builder.preprocessList;
             this.uid = builder.uid;
         }
 
@@ -230,6 +234,13 @@ public class GetKeywordLibResponseBody extends TeaModel {
         }
 
         /**
+         * @return preprocessList
+         */
+        public java.util.List<String> getPreprocessList() {
+            return this.preprocessList;
+        }
+
+        /**
          * @return uid
          */
         public String getUid() {
@@ -241,6 +252,7 @@ public class GetKeywordLibResponseBody extends TeaModel {
             private String keywordCount; 
             private String libId; 
             private String libName; 
+            private java.util.List<String> preprocessList; 
             private String uid; 
 
             private Builder() {
@@ -251,6 +263,7 @@ public class GetKeywordLibResponseBody extends TeaModel {
                 this.keywordCount = model.keywordCount;
                 this.libId = model.libId;
                 this.libName = model.libName;
+                this.preprocessList = model.preprocessList;
                 this.uid = model.uid;
             } 
 
@@ -277,7 +290,7 @@ public class GetKeywordLibResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The keyword library ID.</p>
+             * <p>The ID of the keyword library.</p>
              * 
              * <strong>example:</strong>
              * <p>customxx_xxx</p>
@@ -288,10 +301,10 @@ public class GetKeywordLibResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The library name.</p>
+             * <p>The name of the keyword library.</p>
              * 
              * <strong>example:</strong>
-             * <p>TestLibrary.</p>
+             * <p>Test keyword library</p>
              */
             public Builder libName(String libName) {
                 this.libName = libName;
@@ -299,7 +312,15 @@ public class GetKeywordLibResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Alibaba Cloud account ID.</p>
+             * <p>The preprocessing list of the keyword library. If ServiceCode is not specified or no preprocessing is configured, an empty array is returned.</p>
+             */
+            public Builder preprocessList(java.util.List<String> preprocessList) {
+                this.preprocessList = preprocessList;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the Alibaba Cloud account.</p>
              * 
              * <strong>example:</strong>
              * <p>1825457112123838</p>

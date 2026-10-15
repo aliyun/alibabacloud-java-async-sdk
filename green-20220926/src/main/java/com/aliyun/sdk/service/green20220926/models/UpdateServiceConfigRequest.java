@@ -38,6 +38,10 @@ public class UpdateServiceConfigRequest extends Request {
     private String keywordHitLibs;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("KeywordLibProcessConf")
+    private String keywordLibProcessConf;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ManualMachineConfig")
     private String manualMachineConfig;
 
@@ -76,6 +80,7 @@ public class UpdateServiceConfigRequest extends Request {
         this.fileConfig = builder.fileConfig;
         this.keywordFilterLibs = builder.keywordFilterLibs;
         this.keywordHitLibs = builder.keywordHitLibs;
+        this.keywordLibProcessConf = builder.keywordLibProcessConf;
         this.manualMachineConfig = builder.manualMachineConfig;
         this.regionId = builder.regionId;
         this.resourceType = builder.resourceType;
@@ -132,6 +137,13 @@ public class UpdateServiceConfigRequest extends Request {
      */
     public String getKeywordHitLibs() {
         return this.keywordHitLibs;
+    }
+
+    /**
+     * @return keywordLibProcessConf
+     */
+    public String getKeywordLibProcessConf() {
+        return this.keywordLibProcessConf;
     }
 
     /**
@@ -196,6 +208,7 @@ public class UpdateServiceConfigRequest extends Request {
         private String fileConfig; 
         private String keywordFilterLibs; 
         private String keywordHitLibs; 
+        private String keywordLibProcessConf; 
         private String manualMachineConfig; 
         private String regionId; 
         private String resourceType; 
@@ -216,6 +229,7 @@ public class UpdateServiceConfigRequest extends Request {
             this.fileConfig = request.fileConfig;
             this.keywordFilterLibs = request.keywordFilterLibs;
             this.keywordHitLibs = request.keywordHitLibs;
+            this.keywordLibProcessConf = request.keywordLibProcessConf;
             this.manualMachineConfig = request.manualMachineConfig;
             this.regionId = request.regionId;
             this.resourceType = request.resourceType;
@@ -227,7 +241,7 @@ public class UpdateServiceConfigRequest extends Request {
         } 
 
         /**
-         * <p>The client-generated idempotency token used to prevent duplicate operations caused by network retries. The token must be unique across requests and contain only printable ASCII characters (ASCII 32-126).</p>
+         * <p>The client-generated idempotency token. It prevents duplicate operations caused by network retries and must be unique across different requests. Only printable ASCII characters (ASCII 32-126) are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>550e8400-e29b-41d4-a716-446655440000</p>
@@ -239,7 +253,7 @@ public class UpdateServiceConfigRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform a dry run. When set to true, only parameter validation and business logic checks are performed without actually creating or updating resources.</p>
+         * <p>Specifies whether to enable dry run mode. When set to true, only parameter validation and business logic checks are performed, and resources are not actually created or updated.</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putBodyParameter("DryRun", dryRun);
@@ -272,7 +286,7 @@ public class UpdateServiceConfigRequest extends Request {
         }
 
         /**
-         * <p>The keyword hit libraries.</p>
+         * <p>The matched keyword libraries.</p>
          * 
          * <strong>example:</strong>
          * <p>[]</p>
@@ -280,6 +294,18 @@ public class UpdateServiceConfigRequest extends Request {
         public Builder keywordHitLibs(String keywordHitLibs) {
             this.putBodyParameter("KeywordHitLibs", keywordHitLibs);
             this.keywordHitLibs = keywordHitLibs;
+            return this;
+        }
+
+        /**
+         * <p>The keyword library preprocessing configuration in JSON format. The format maps a libId to a list of preprocessing types, such as {&quot;libId&quot;:[&quot;fps&quot;]}. If this parameter is not passed, the configuration is not updated. An empty object {} clears all configurations. An empty array for a libId clears the configuration for that library.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;libId&quot;:[&quot;fps&quot;]}</p>
+         */
+        public Builder keywordLibProcessConf(String keywordLibProcessConf) {
+            this.putBodyParameter("KeywordLibProcessConf", keywordLibProcessConf);
+            this.keywordLibProcessConf = keywordLibProcessConf;
             return this;
         }
 
@@ -332,7 +358,7 @@ public class UpdateServiceConfigRequest extends Request {
         }
 
         /**
-         * <p>The scenario configuration.</p>
+         * <p>The scenario configuration information.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>

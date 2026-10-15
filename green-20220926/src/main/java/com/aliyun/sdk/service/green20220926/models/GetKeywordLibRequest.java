@@ -25,6 +25,10 @@ public class GetKeywordLibRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceCode")
+    private String serviceCode;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TenantCode")
     private String tenantCode;
@@ -33,6 +37,7 @@ public class GetKeywordLibRequest extends Request {
         super(builder);
         this.libId = builder.libId;
         this.regionId = builder.regionId;
+        this.serviceCode = builder.serviceCode;
         this.tenantCode = builder.tenantCode;
     }
 
@@ -64,6 +69,13 @@ public class GetKeywordLibRequest extends Request {
     }
 
     /**
+     * @return serviceCode
+     */
+    public String getServiceCode() {
+        return this.serviceCode;
+    }
+
+    /**
      * @return tenantCode
      */
     public String getTenantCode() {
@@ -73,6 +85,7 @@ public class GetKeywordLibRequest extends Request {
     public static final class Builder extends Request.Builder<GetKeywordLibRequest, Builder> {
         private String libId; 
         private String regionId; 
+        private String serviceCode; 
         private String tenantCode; 
 
         private Builder() {
@@ -83,11 +96,12 @@ public class GetKeywordLibRequest extends Request {
             super(request);
             this.libId = request.libId;
             this.regionId = request.regionId;
+            this.serviceCode = request.serviceCode;
             this.tenantCode = request.tenantCode;
         } 
 
         /**
-         * <p>The keyword library ID.</p>
+         * <p>The ID of the keyword library.</p>
          * 
          * <strong>example:</strong>
          * <p>customxx_xxx</p>
@@ -111,9 +125,21 @@ public class GetKeywordLibRequest extends Request {
         }
 
         /**
-         * <p>The library code.</p>
+         * <p>The service code. This parameter is required when you query the preprocessing configurations (PreprocessList) of the library.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ugc_moderation_byllm_pro</p>
+         */
+        public Builder serviceCode(String serviceCode) {
+            this.putBodyParameter("ServiceCode", serviceCode);
+            this.serviceCode = serviceCode;
+            return this;
+        }
+
+        /**
+         * <p>The code of the keyword library.</p>
          * <ul>
-         * <li>desensitize: masking library</li>
+         * <li>desensitize: Desensitization keyword library.</li>
          * </ul>
          * 
          * <strong>example:</strong>

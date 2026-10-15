@@ -22,12 +22,17 @@ public class ListKeywordLibsRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceCode")
+    private String serviceCode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TenantCode")
     private String tenantCode;
 
     private ListKeywordLibsRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.serviceCode = builder.serviceCode;
         this.tenantCode = builder.tenantCode;
     }
 
@@ -52,6 +57,13 @@ public class ListKeywordLibsRequest extends Request {
     }
 
     /**
+     * @return serviceCode
+     */
+    public String getServiceCode() {
+        return this.serviceCode;
+    }
+
+    /**
      * @return tenantCode
      */
     public String getTenantCode() {
@@ -60,6 +72,7 @@ public class ListKeywordLibsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListKeywordLibsRequest, Builder> {
         private String regionId; 
+        private String serviceCode; 
         private String tenantCode; 
 
         private Builder() {
@@ -69,6 +82,7 @@ public class ListKeywordLibsRequest extends Request {
         private Builder(ListKeywordLibsRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.serviceCode = request.serviceCode;
             this.tenantCode = request.tenantCode;
         } 
 
@@ -85,9 +99,21 @@ public class ListKeywordLibsRequest extends Request {
         }
 
         /**
+         * <p>The service code. If specified, the PreprocessList for each library under this service dimension is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ugc_moderation_byllm_pro</p>
+         */
+        public Builder serviceCode(String serviceCode) {
+            this.putQueryParameter("ServiceCode", serviceCode);
+            this.serviceCode = serviceCode;
+            return this;
+        }
+
+        /**
          * <p>The library code.</p>
          * <ul>
-         * <li>desensitize: desensitization library.</li>
+         * <li>desensitize: Desensitization library</li>
          * </ul>
          * 
          * <strong>example:</strong>
