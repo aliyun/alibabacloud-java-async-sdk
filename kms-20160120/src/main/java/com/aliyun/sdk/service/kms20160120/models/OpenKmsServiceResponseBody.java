@@ -54,7 +54,7 @@ public class OpenKmsServiceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3455b9b4-95c1-419d-b310-db6a53b09a39</p>

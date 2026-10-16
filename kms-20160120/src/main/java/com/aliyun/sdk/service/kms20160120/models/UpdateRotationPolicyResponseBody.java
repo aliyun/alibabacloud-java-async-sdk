@@ -54,7 +54,7 @@ public class UpdateRotationPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>efb1cbbd-a093-4278-bc03-639dd4fcc207</p>

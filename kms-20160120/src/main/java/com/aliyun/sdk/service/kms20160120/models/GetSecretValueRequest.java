@@ -130,7 +130,20 @@ public class GetSecretValueRequest extends Request {
         } 
 
         /**
-         * DryRun.
+         * <p>Specifies whether to enable DryRun mode. Valid values:</p>
+         * <ul>
+         * <li>true: Enables DryRun mode.</li>
+         * <li>false (default): Disables DryRun mode.</li>
+         * </ul>
+         * <p>DryRun mode is used to test API calls, verify whether you have the required permissions on the specified resources, and check whether the request parameters are configured correctly. When DryRun mode is enabled, KMS always returns a failure with the reason for the failure. Possible failure reasons include:</p>
+         * <ul>
+         * <li>DryRunOperationError: The request would succeed if the DryRun parameter were not configured.</li>
+         * <li>ValidationError: A parameter specified in the request is invalid.</li>
+         * <li>AccessDeniedError: You do not have permission to perform this operation on the KMS resource.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(String dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -139,13 +152,13 @@ public class GetSecretValueRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to obtain the extended configuration of the secret. Valid values:</p>
+         * <p>Specifies whether to retrieve the extended configuration of the secret. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false: This is the default value.</li>
+         * <li>true: Retrieves the extended configuration.</li>
+         * <li>false (default): Does not retrieve the extended configuration.</li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is ignored for a generic secret.</p>
+         * <p>Generic secrets do not support extended configuration. If you set this parameter, it is ignored.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -167,7 +180,10 @@ public class GetSecretValueRequest extends Request {
         }
 
         /**
-         * <p>The name of the secret.</p>
+         * <p>The secret name or secret Alibaba Cloud Resource Name (ARN).</p>
+         * <blockquote>
+         * <p>When accessing a secret in another Alibaba Cloud account, you must enter the secret ARN. The format of the secret ARN is <code>acs:kms:${region}:${account}:secret/${secret-name}</code>.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -180,13 +196,13 @@ public class GetSecretValueRequest extends Request {
         }
 
         /**
-         * <p>The version number of the secret value. If you specify this parameter, Secrets Manager returns the secret value of the specified version.</p>
+         * <p>The version number.</p>
          * <blockquote>
-         * <p> This parameter is ignored for a managed ApsaraDB RDS secret, a managed RAM secret, or a managed ECS secret.</p>
+         * <p>Specifying VersionId is not supported for ApsaraDB RDS secrets, PolarDB secrets, Redis/Tair secrets, dynamic RAM secrets, or dynamic ECS secrets. If you set this parameter, it is ignored.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>00000000000000000000000000000001</p>
+         * <p>v1</p>
          */
         public Builder versionId(String versionId) {
             this.putQueryParameter("VersionId", versionId);
@@ -195,10 +211,10 @@ public class GetSecretValueRequest extends Request {
         }
 
         /**
-         * <p>The stage label that marks the secret version. If you specify this parameter, Secrets Manager returns the secret value of the version that is marked with the specified stage label.</p>
-         * <p>Default value: ACSCurrent.</p>
+         * <p>The version status. Default value: ACSCurrent.</p>
+         * <p>If you specify this parameter, the secret value of the specified version status is returned. If you do not specify this parameter, the secret value of the ACSCurrent version status is returned.</p>
          * <blockquote>
-         * <p> For a managed ApsaraDB RDS secret, a managed RAM secret, or a managed ECS secret, Secrets Manager can return only the secret value of the version marked with ACSPrevious or ACSCurrent.</p>
+         * <p>For ApsaraDB RDS secrets, PolarDB secrets, Redis/Tair secrets, dynamic RAM secrets, and dynamic ECS secrets, only the secret values corresponding to ACSPrevious and ACSCurrent can be retrieved.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

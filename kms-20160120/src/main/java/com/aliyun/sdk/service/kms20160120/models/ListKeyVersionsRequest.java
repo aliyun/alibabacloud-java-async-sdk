@@ -92,7 +92,7 @@ public class ListKeyVersionsRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>0b30658a-ed1a-4922-b8f7-a673ca9c****</p>
+         * <p>key-hzz630494463ejqjx****</p>
          */
         public Builder keyId(String keyId) {
             this.putQueryParameter("KeyId", keyId);

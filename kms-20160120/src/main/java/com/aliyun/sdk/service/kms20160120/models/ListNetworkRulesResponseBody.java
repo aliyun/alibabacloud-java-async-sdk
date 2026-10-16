@@ -106,7 +106,7 @@ public class ListNetworkRulesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A list of access control rules.</p>
+         * NetworkRules.
          */
         public Builder networkRules(NetworkRules networkRules) {
             this.networkRules = networkRules;
@@ -136,7 +136,7 @@ public class ListNetworkRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3bf02f7a-015b-4f34-be0f-cc043fda2d33</p>
@@ -216,10 +216,7 @@ public class ListNetworkRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the access control rule.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>networkrule_test</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -227,10 +224,7 @@ public class ListNetworkRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network type. The value is fixed as Private. Self-managed applications can access KMS instances only over a private virtual private cloud (VPC).</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Private</p>
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;

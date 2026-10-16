@@ -106,7 +106,7 @@ public class ListApplicationAccessPointsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A list of AAPs.</p>
+         * ApplicationAccessPoints.
          */
         public Builder applicationAccessPoints(ApplicationAccessPoints applicationAccessPoints) {
             this.applicationAccessPoints = applicationAccessPoints;
@@ -136,7 +136,7 @@ public class ListApplicationAccessPointsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>bcfefe15-46f0-44a3-bd96-3d422474b71a</p>
@@ -216,10 +216,7 @@ public class ListApplicationAccessPointsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The authentication method.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ClientKey</p>
+             * AuthenticationMethod.
              */
             public Builder authenticationMethod(String authenticationMethod) {
                 this.authenticationMethod = authenticationMethod;
@@ -227,10 +224,7 @@ public class ListApplicationAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the AAP.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>aap_test</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;

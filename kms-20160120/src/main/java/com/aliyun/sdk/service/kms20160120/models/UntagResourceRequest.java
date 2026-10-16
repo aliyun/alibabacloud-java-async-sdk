@@ -102,7 +102,13 @@ public class UntagResourceRequest extends Request {
         } 
 
         /**
-         * CertificateId.
+         * <p>The ID of the certificate.</p>
+         * <blockquote>
+         * <p>You must specify one and only one of the KeyId, SecretName, and CertificateId parameters.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>770dbe42-e146-43d1-a55a-1355db86****</p>
          */
         public Builder certificateId(String certificateId) {
             this.putQueryParameter("CertificateId", certificateId);
@@ -111,7 +117,10 @@ public class UntagResourceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * <p>The ID of the key. This is the globally unique identifier (GUID) of the master key (CMK).</p>
+         * <blockquote>
+         * <p>You must specify one and only one of the KeyId, SecretName, and CertificateId parameters.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>08c33a6f-4e0a-4a1b-a3fa-7ddf****</p>
@@ -123,7 +132,13 @@ public class UntagResourceRequest extends Request {
         }
 
         /**
-         * SecretName.
+         * <p>The name of the credential.</p>
+         * <blockquote>
+         * <p>You must specify one and only one of the KeyId, SecretName, and CertificateId parameters.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>MyDbC****</p>
          */
         public Builder secretName(String secretName) {
             this.putQueryParameter("SecretName", secretName);
@@ -132,6 +147,7 @@ public class UntagResourceRequest extends Request {
         }
 
         /**
+         * <p>One or more tag keys. Separate multiple tag keys with commas (,).<br> You need to specify only tag keys, not tag values.<br> The tag key can be 1 to 128 bytes in length.<br><br></p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

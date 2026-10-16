@@ -17,7 +17,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PutSecretValueRequest</p>
  */
 public class PutSecretValueRequest extends Request {
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SecretData")
     @com.aliyun.core.annotation.Validation(required = true)
     private String secretData;
@@ -118,14 +118,14 @@ public class PutSecretValueRequest extends Request {
         } 
 
         /**
-         * <p>The secret value. The value is encrypted and then stored in the new version.</p>
+         * <p>The secret value. The secret value is encrypted and stored in the specified new version.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>importantdata</p>
          */
         public Builder secretData(String secretData) {
-            this.putQueryParameter("SecretData", secretData);
+            this.putBodyParameter("SecretData", secretData);
             this.secretData = secretData;
             return this;
         }
@@ -133,7 +133,7 @@ public class PutSecretValueRequest extends Request {
         /**
          * <p>The type of the secret value. Valid values:</p>
          * <ul>
-         * <li>text: This is the default value.</li>
+         * <li>text (default)</li>
          * <li>binary</li>
          * </ul>
          * 
@@ -147,7 +147,10 @@ public class PutSecretValueRequest extends Request {
         }
 
         /**
-         * <p>The name of the secret.</p>
+         * <p>The name or Alibaba Cloud Resource Name (ARN) of the secret.</p>
+         * <blockquote>
+         * <p>When you access a secret that belongs to another Alibaba Cloud account, you must specify the ARN of the secret. The ARN of a secret is in the <code>acs:kms:${region}:${account}:secret/${secret-name}</code> format.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -160,11 +163,11 @@ public class PutSecretValueRequest extends Request {
         }
 
         /**
-         * <p>The new version of the secret value. Version numbers must be unique in each secret.</p>
+         * <p>The version ID of the secret. The version ID must be unique within the secret.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>00000000000000000000000000000000203</p>
+         * <p>v3</p>
          */
         public Builder versionId(String versionId) {
             this.putQueryParameter("VersionId", versionId);
@@ -173,7 +176,7 @@ public class PutSecretValueRequest extends Request {
         }
 
         /**
-         * <p>The stage labels that are used to mark the new version. If you do not specify this parameter, Secrets Manager marks the new version with ACSCurrent.</p>
+         * <p>The version stages that are attached to the secret version when it is stored. If you do not specify this parameter, KMS attaches ACSCurrent to the new version by default.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;ACSCurrent&quot;,&quot;ACSNext&quot;]</p>

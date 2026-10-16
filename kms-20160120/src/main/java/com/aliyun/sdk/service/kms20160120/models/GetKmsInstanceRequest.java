@@ -60,7 +60,7 @@ public class GetKmsInstanceRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the KMS instance that you want to query.</p>
+         * <p>The ID of the KMS instance to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

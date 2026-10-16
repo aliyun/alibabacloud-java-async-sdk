@@ -159,11 +159,12 @@ public class ReEncryptRequest extends Request {
         } 
 
         /**
-         * <p>The ciphertext that you want to re-encrypt.</p>
-         * <p>You can set this parameter to the ciphertext that is returned after a symmetric or asymmetric encryption operation.</p>
+         * <p>The ciphertext that you want to re-encrypt.<br> This parameter can be the ciphertext that is returned after symmetric or asymmetric key encryption.<br><br></p>
          * <ul>
-         * <li>Symmetric encryption: the ciphertext returned after you call the <a href="https://help.aliyun.com/document_detail/28949.html">Encrypt</a>, <a href="https://help.aliyun.com/document_detail/28948.html">GenerateDataKey</a>, <a href="https://help.aliyun.com/document_detail/134043.html">GenerateDataKeyWithoutPlaintext</a>, or <a href="https://help.aliyun.com/document_detail/176804.html">GenerateAndExportDataKey</a> operation</li>
-         * <li>Asymmetric encryption: the public key-encrypted ciphertext returned after you call the <a href="https://help.aliyun.com/document_detail/176804.html">GenerateAndExportDataKey</a> operation, or the ciphertext encrypted by using the public key of an asymmetric key pair outside KMS</li>
+         * <li><p>Symmetric encryption: the ciphertext that is returned after you call the <a href="https://help.aliyun.com/document_detail/28949.html">Encrypt</a>, <a href="https://help.aliyun.com/document_detail/28948.html">GenerateDataKey</a>, <a href="https://help.aliyun.com/document_detail/134043.html">GenerateDataKeyWithoutPlaintext</a>, or <a href="https://help.aliyun.com/document_detail/176804.html">GenerateAndExportDataKey</a> operation.</p>
+         * </li>
+         * <li><p>Asymmetric key encryption: the data that is encrypted using a public key after you call the <a href="https://help.aliyun.com/document_detail/176804.html">GenerateAndExportDataKey</a> operation, or the data that is encrypted using an asymmetric public key in an external system.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -177,7 +178,7 @@ public class ReEncryptRequest extends Request {
         }
 
         /**
-         * <p>A JSON string that consists of key-value pairs. This parameter specifies the EncryptionContext that is used to re-encrypt the decrypted data or data key.</p>
+         * <p>A JSON string that consists of key-value pairs. This parameter specifies the encryption context for the destination master key.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;Example&quot;:&quot;Example&quot;}</p>
@@ -190,7 +191,7 @@ public class ReEncryptRequest extends Request {
         }
 
         /**
-         * <p>The ID of the symmetric CMK that is used to re-encrypt the ciphertext after the ciphertext is decrypted.</p>
+         * <p>The ID of the symmetric master key that is used to re-encrypt the data after the ciphertext is decrypted.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -203,7 +204,25 @@ public class ReEncryptRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * <p>Specifies whether to enable the DryRun mode.</p>
+         * <ul>
+         * <li><p>true: enables the DryRun mode.</p>
+         * </li>
+         * <li><p>false (default): disables the DryRun mode.</p>
+         * </li>
+         * </ul>
+         * <p>The DryRun mode is used to test API calls, verify whether you have the permissions to perform operations on the required resources, and check whether the request parameters are valid. If you enable the DryRun mode, KMS always returns a failure and a reason for the failure. The reasons for the failure include the following:</p>
+         * <ul>
+         * <li><p>DryRunOperationError: The request would have succeeded if the DryRun parameter was not configured.</p>
+         * </li>
+         * <li><p>ValidationError: The parameters specified in the request are invalid.</p>
+         * </li>
+         * <li><p>AccessDeniedError: You are not authorized to perform the operation on the KMS resource.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(String dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -212,15 +231,17 @@ public class ReEncryptRequest extends Request {
         }
 
         /**
-         * <p>The encryption algorithm based on which the public key is used to encrypt the ciphertext specified by CiphertextBlob. For more information about encryption algorithms, see <a href="https://help.aliyun.com/document_detail/148130.html">AsymmetricDecrypt</a>.</p>
-         * <p>Valid values:</p>
+         * <p>If CiphertextBlob is the result of public key encryption, specify the public key encryption algorithm. For more information about the algorithms, see <a href="https://help.aliyun.com/document_detail/148130.html">AsymmetricDecrypt</a>.<br> Valid values:<br><br></p>
          * <ul>
-         * <li>RSAES_OAEP_SHA_256</li>
-         * <li>RSAES_OAEP_SHA_1</li>
-         * <li>SM2PKE</li>
+         * <li><p>RSAES_OAEP_SHA_256</p>
+         * </li>
+         * <li><p>RSAES_OAEP_SHA_1</p>
+         * </li>
+         * <li><p>SM2PKE</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> If you set CiphertextBlob to the public key-encrypted ciphertext that is returned after an asymmetric encryption operation, specify this parameter.</p>
+         * <p>You must specify this parameter when CiphertextBlob is the data that is encrypted using a public key after asymmetric key encryption.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -233,9 +254,9 @@ public class ReEncryptRequest extends Request {
         }
 
         /**
-         * <p>A JSON string that consists of key-value pairs. If you specify EncryptionContext when you call the <a href="https://help.aliyun.com/document_detail/28949.html">Encrypt</a>, <a href="https://help.aliyun.com/document_detail/28948.html">GenerateDataKey</a>, <a href="https://help.aliyun.com/document_detail/134043.html">GenerateDataKeyWithoutPlaintext</a>, or <a href="https://help.aliyun.com/document_detail/176804.html">GenerateAndExportDataKey</a> operation to encrypt the data or data key, an equivalent value is required here. For more information, see <a href="https://help.aliyun.com/document_detail/42975.html">EncryptionContext</a>.</p>
+         * <p>A JSON string that consists of key-value pairs. If you specify this parameter when you call the <a href="https://help.aliyun.com/document_detail/28949.html">Encrypt</a>, <a href="https://help.aliyun.com/document_detail/28948.html">GenerateDataKey</a>, <a href="https://help.aliyun.com/document_detail/134043.html">GenerateDataKeyWithoutPlaintext</a>, or <a href="https://help.aliyun.com/document_detail/176804.html">GenerateAndExportDataKey</a> operation, you must specify the same parameter to decrypt the data. For more information, see <a href="https://help.aliyun.com/document_detail/42975.html">EncryptionContext</a>.</p>
          * <blockquote>
-         * <p> If you set CiphertextBlob to the ciphertext that is returned after a symmetric encryption operation, specify this parameter.</p>
+         * <p>You must specify this parameter when CiphertextBlob is the ciphertext that is returned after symmetric encryption.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -249,10 +270,9 @@ public class ReEncryptRequest extends Request {
         }
 
         /**
-         * <p>The ID of the CMK that is used to decrypt the ciphertext.</p>
-         * <p>This parameter is the globally unique ID of the CMK.</p>
+         * <p>The ID of the master key that is used to decrypt the ciphertext.<br> The globally unique identifier of the master key.<br><br></p>
          * <blockquote>
-         * <p> If you set CiphertextBlob to the public key-encrypted ciphertext that is returned after an asymmetric encryption operation, specify this parameter.</p>
+         * <p>You must specify this parameter when CiphertextBlob is the data that is encrypted using a public key after asymmetric key encryption.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -265,9 +285,9 @@ public class ReEncryptRequest extends Request {
         }
 
         /**
-         * <p>The ID of the CMK version that is used to decrypt the ciphertext.</p>
+         * <p>The ID of the key version that is used to decrypt the ciphertext.</p>
          * <blockquote>
-         * <p> If you set CiphertextBlob to the public key-encrypted ciphertext that is returned after an asymmetric encryption operation, specify this parameter.</p>
+         * <p>You must specify this parameter when CiphertextBlob is the data that is encrypted using a public key after asymmetric key encryption.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

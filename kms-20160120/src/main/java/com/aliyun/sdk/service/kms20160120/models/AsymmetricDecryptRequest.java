@@ -146,12 +146,9 @@ public class AsymmetricDecryptRequest extends Request {
         }
 
         /**
-         * <p>The ciphertext that you want to decrypt.</p>
+         * <p>The ciphertext to decrypt, encoded in Base64. </p>
          * <blockquote>
-         * <ul>
-         * <li>The value is encoded in Base64.</li>
-         * <li>You can call the <a href="https://help.aliyun.com/document_detail/148131.html">AsymmetricEncrypt</a> operation to generate the ciphertext.</li>
-         * </ul>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/148131.html">AsymmetricEncrypt</a> operation to generate the ciphertext.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -165,7 +162,20 @@ public class AsymmetricDecryptRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * <p>Specifies whether to enable DryRun mode. Valid values:</p>
+         * <ul>
+         * <li>true: Enabled.</li>
+         * <li>false (default): Disabled.</li>
+         * </ul>
+         * <p>DryRun mode is used to test API calls, verify that you have the required permissions on the relevant resources, and check whether the request parameters are configured correctly. When DryRun mode is enabled, KMS always returns a failure with a reason. The failure reasons include the following:</p>
+         * <ul>
+         * <li>DryRunOperationError: The request would succeed if the DryRun parameter were not specified.</li>
+         * <li>ValidationError: A parameter specified in the request is invalid.</li>
+         * <li>AccessDeniedError: You do not have permission to perform this operation on the KMS resource.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(String dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -174,14 +184,14 @@ public class AsymmetricDecryptRequest extends Request {
         }
 
         /**
-         * <p>The ID of the customer master key (CMK). The ID must be globally unique.</p>
+         * <p>The ID of the key. You can also specify a key alias or a key Amazon Resource Name (ARN). For more information about aliases, see <a href="https://help.aliyun.com/document_detail/480655.html">Manage key aliases</a>.</p>
          * <blockquote>
-         * <p> You can also set this parameter to an alias that is bound to the CMK. For more information, see <a href="https://help.aliyun.com/document_detail/68522.html">Alias overview</a>.</p>
+         * <p>To access a key that belongs to another Alibaba Cloud account, you must specify the key ARN. The key ARN format is <code>acs:kms:${region}:${account}:key/${keyid}</code>.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>5c438b18-05be-40ad-b6c2-3be6752c****</p>
+         * <p>key-hzz630494463ejqjx****</p>
          */
         public Builder keyId(String keyId) {
             this.putQueryParameter("KeyId", keyId);
@@ -190,7 +200,7 @@ public class AsymmetricDecryptRequest extends Request {
         }
 
         /**
-         * <p>The version ID of the CMK. The ID must be globally unique.</p>
+         * <p>The key version ID. The globally unique identifier of the key version.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

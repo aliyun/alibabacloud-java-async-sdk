@@ -106,7 +106,7 @@ public class ListAliasesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The alias of the user.</p>
+         * Aliases.
          */
         public Builder aliases(Aliases aliases) {
             this.aliases = aliases;
@@ -136,7 +136,7 @@ public class ListAliasesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1b57992c-834b-4811-a889-f8bac1ba0353</p>
@@ -229,10 +229,7 @@ public class ListAliasesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The Alibaba Cloud Resource Name (ARN) of the alias.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>acs:kms:cn-hangzhou:123456:alias/ExampleAlias1</p>
+             * AliasArn.
              */
             public Builder aliasArn(String aliasArn) {
                 this.aliasArn = aliasArn;
@@ -240,10 +237,7 @@ public class ListAliasesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the alias.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>alias/ExampleAlias1</p>
+             * AliasName.
              */
             public Builder aliasName(String aliasName) {
                 this.aliasName = aliasName;
@@ -251,10 +245,7 @@ public class ListAliasesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The CMK to which the alias belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>08c33a6f-4e0a-4a1b-a3fa-7ddfa1d****</p>
+             * KeyId.
              */
             public Builder keyId(String keyId) {
                 this.keyId = keyId;

@@ -106,7 +106,7 @@ public class ListKmsInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A list of KMS instances.</p>
+         * KmsInstances.
          */
         public Builder kmsInstances(KmsInstances kmsInstances) {
             this.kmsInstances = kmsInstances;
@@ -114,7 +114,7 @@ public class ListKmsInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the returned page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class ListKmsInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of KMS instances returned per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -136,7 +136,7 @@ public class ListKmsInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>d3eca5c8-a856-4347-8eb6-e1898c3fda2e</p>
@@ -216,10 +216,7 @@ public class ListKmsInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ARN of the KMS instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>acs:kms:pre-hangzhou:120708975881****:keystore/kst-phzz64c9f84eo32dbs****</p>
+             * KmsInstanceArn.
              */
             public Builder kmsInstanceArn(String kmsInstanceArn) {
                 this.kmsInstanceArn = kmsInstanceArn;
@@ -227,10 +224,7 @@ public class ListKmsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the KMS instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>kst-phzz64c9f84eo32dbs****</p>
+             * KmsInstanceId.
              */
             public Builder kmsInstanceId(String kmsInstanceId) {
                 this.kmsInstanceId = kmsInstanceId;

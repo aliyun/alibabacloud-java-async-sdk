@@ -87,7 +87,10 @@ public class ListManagedDataKeyVersionsRequest extends Request {
         } 
 
         /**
-         * DataKeyName.
+         * <p>The name of the managed data key (DK) to query. This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-data-key</p>
          */
         public Builder dataKeyName(String dataKeyName) {
             this.putQueryParameter("DataKeyName", dataKeyName);
@@ -96,7 +99,10 @@ public class ListManagedDataKeyVersionsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. The value must be an integer greater than 0. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -105,7 +111,10 @@ public class ListManagedDataKeyVersionsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

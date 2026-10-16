@@ -119,7 +119,7 @@ public class AsymmetricSignRequest extends Request {
         } 
 
         /**
-         * <p>The version ID of the CMK. The ID must be globally unique.</p>
+         * <p>The signature algorithm.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -132,7 +132,15 @@ public class AsymmetricSignRequest extends Request {
         }
 
         /**
-         * <p>The signature algorithm.</p>
+         * <p>The digest of the original message. The digest is generated using the hash algorithm that corresponds to the value of the Algorithm parameter.</p>
+         * <blockquote>
+         * <ul>
+         * <li>The value is Base64-encoded.</li>
+         * </ul>
+         * </blockquote>
+         * <ul>
+         * <li>For information about how to calculate a message digest, see the &quot;Pre-signing: calculate a message digest&quot; section of the <a href="https://help.aliyun.com/document_detail/148146.html">Asymmetric digital signature</a> topic.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -145,7 +153,25 @@ public class AsymmetricSignRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * <p>Specifies whether to enable the dry-run feature.</p>
+         * <ul>
+         * <li><p>true: enables the feature.</p>
+         * </li>
+         * <li><p>false (default): disables the feature.</p>
+         * </li>
+         * </ul>
+         * <p>The dry-run feature is used to test API calls and verify the permissions on the resources that you have and the validity of the request parameters. If you enable the dry-run feature, KMS always returns a failure response and a failure reason. The failure reasons include the following:</p>
+         * <ul>
+         * <li><p>DryRunOperationError: The request would have succeeded if the DryRun parameter is not configured.</p>
+         * </li>
+         * <li><p>ValidationError: The specified parameters in the request are invalid.</p>
+         * </li>
+         * <li><p>AccessDeniedError: You are not authorized to perform the operation on the KMS resource.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(String dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -154,7 +180,10 @@ public class AsymmetricSignRequest extends Request {
         }
 
         /**
-         * <p>The operation that you want to perform. Set the value to <strong>AsymmetricSign</strong>.</p>
+         * <p>The globally unique identifier (GUID) of the customer master key (CMK).</p>
+         * <blockquote>
+         * <p>You can also specify the alias that is bound to the CMK. For more information, see <a href="https://help.aliyun.com/document_detail/68522.html">Overview of aliases</a>.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,10 +196,7 @@ public class AsymmetricSignRequest extends Request {
         }
 
         /**
-         * <p>The ID of the customer master key (CMK). The ID must be globally unique.</p>
-         * <blockquote>
-         * <p> You can also set this parameter to an alias that is bound to the CMK. For more information, see <a href="https://help.aliyun.com/document_detail/68522.html">Alias overview</a>.</p>
-         * </blockquote>
+         * <p>The ID of the key version. The ID must be the GUID of the key version.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -80,7 +80,10 @@ public class GetKmsInstanceQuotaInfosResponseBody extends TeaModel {
         } 
 
         /**
-         * KmsInstanceId.
+         * <p>The ID of the KMS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kst-hzz6****</p>
          */
         public Builder kmsInstanceId(String kmsInstanceId) {
             this.kmsInstanceId = kmsInstanceId;
@@ -88,7 +91,7 @@ public class GetKmsInstanceQuotaInfosResponseBody extends TeaModel {
         }
 
         /**
-         * KmsInstanceQuotaInfos.
+         * <p>An array of quota details for the instance.</p>
          */
         public Builder kmsInstanceQuotaInfos(java.util.List<KmsInstanceQuotaInfos> kmsInstanceQuotaInfos) {
             this.kmsInstanceQuotaInfos = kmsInstanceQuotaInfos;
@@ -96,7 +99,7 @@ public class GetKmsInstanceQuotaInfosResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>f1fdfa9d-bd49-418b-942f-8f3e3ec00a4f</p>
@@ -178,7 +181,10 @@ public class GetKmsInstanceQuotaInfosResponseBody extends TeaModel {
             } 
 
             /**
-             * ResourceQuota.
+             * <p>The quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder resourceQuota(Long resourceQuota) {
                 this.resourceQuota = resourceQuota;
@@ -186,7 +192,10 @@ public class GetKmsInstanceQuotaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * <p>The resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -194,7 +203,10 @@ public class GetKmsInstanceQuotaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * UsedQuantity.
+             * <p>The quota usage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder usedQuantity(Long usedQuantity) {
                 this.usedQuantity = usedQuantity;

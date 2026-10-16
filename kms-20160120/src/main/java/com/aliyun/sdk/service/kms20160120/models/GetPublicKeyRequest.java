@@ -89,7 +89,25 @@ public class GetPublicKeyRequest extends Request {
         } 
 
         /**
-         * DryRun.
+         * <p>Specifies whether to enable the DryRun mode.</p>
+         * <ul>
+         * <li><p>true: enables the DryRun mode.</p>
+         * </li>
+         * <li><p>false (default): disables the DryRun mode.</p>
+         * </li>
+         * </ul>
+         * <p>The DryRun mode is used to test API calls, verify your permissions on resources, and check whether the parameters are valid. If you enable the DryRun mode, KMS always returns a failed response and a failure reason. The failure reasons include the following:</p>
+         * <ul>
+         * <li><p>DryRunOperationError: The request would have succeeded if the DryRun parameter is not specified.</p>
+         * </li>
+         * <li><p>ValidationError: The specified parameters in the request are invalid.</p>
+         * </li>
+         * <li><p>AccessDeniedError: You are not authorized to perform the operation on the KMS resource.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(String dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -98,7 +116,7 @@ public class GetPublicKeyRequest extends Request {
         }
 
         /**
-         * <p>The globally unique ID of the CMK. You can also set this parameter to an alias that is bound to the CMK. For more information, see <a href="https://help.aliyun.com/document_detail/68522.html">Use aliases</a>.</p>
+         * <p>The globally unique identifier of the customer master key (CMK). This parameter can also be an alias that is bound to the CMK. For more information, see <a href="https://help.aliyun.com/document_detail/68522.html">Use of aliases</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,7 +129,7 @@ public class GetPublicKeyRequest extends Request {
         }
 
         /**
-         * <p>The globally unique ID of the CMK version.</p>
+         * <p>The globally unique identifier of the key version.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -145,7 +145,7 @@ public class GetRandomPasswordRequest extends Request {
         /**
          * <p>The characters that are not included in the password to be generated.</p>
          * <p>Valid values:</p>
-         * <p><code>Valid characters: 0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ! \&quot;#$%&amp;\&quot;()*+,-. /:;&lt;=&gt;? @[\] your_project_id} ~ </code>.</p>
+         * <p><code>Valid characters: 0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ! \\&quot;#$%&amp;\\&quot;()*+,-. /:;&lt;=&gt;? @[\\] your_project_id} ~ </code>.</p>
          * <p>This parameter is empty by default.</p>
          * 
          * <strong>example:</strong>
@@ -161,8 +161,10 @@ public class GetRandomPasswordRequest extends Request {
          * <p>Specifies whether to exclude lowercase letters.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -178,8 +180,10 @@ public class GetRandomPasswordRequest extends Request {
          * <p>Specifies whether to exclude digits.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -195,8 +199,10 @@ public class GetRandomPasswordRequest extends Request {
          * <p>Specifies whether to exclude special characters.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -212,8 +218,10 @@ public class GetRandomPasswordRequest extends Request {
          * <p>Specifies whether to exclude uppercase letters.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -243,8 +251,10 @@ public class GetRandomPasswordRequest extends Request {
          * <p>Specifies whether to include all the preceding character types.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

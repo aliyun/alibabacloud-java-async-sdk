@@ -106,7 +106,7 @@ public class ListAliasesByKeyIdResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>An array that consists of aliases.</p>
+         * Aliases.
          */
         public Builder aliases(Aliases aliases) {
             this.aliases = aliases;
@@ -229,10 +229,7 @@ public class ListAliasesByKeyIdResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The Alibaba Cloud Resource Name (ARN) of the alias.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>acs:kms:cn-hangzhou:123456:alias/ExampleAlias1</p>
+             * AliasArn.
              */
             public Builder aliasArn(String aliasArn) {
                 this.aliasArn = aliasArn;
@@ -240,10 +237,7 @@ public class ListAliasesByKeyIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the alias.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>alias/ExampleAlias1</p>
+             * AliasName.
              */
             public Builder aliasName(String aliasName) {
                 this.aliasName = aliasName;
@@ -251,10 +245,7 @@ public class ListAliasesByKeyIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The CMK to which an alias is bound.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>08c33a6f-4e0a-4a1b-a3fa-7ddfa1d4****</p>
+             * KeyId.
              */
             public Builder keyId(String keyId) {
                 this.keyId = keyId;

@@ -82,8 +82,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
         /**
          * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
          * <ul>
-         * <li>If NextToken is empty (&quot;NextToken&quot;: &quot;&quot;), no next page exists.</li>
-         * <li>If NextToken is not empty, the next query is required, and the value is the token used to start the next query.</li>
+         * <li><p>If NextToken is empty (&quot;NextToken&quot;: &quot;&quot;), no next page exists.</p>
+         * </li>
+         * <li><p>If NextToken is not empty, the next query is required, and the value is the token used to start the next query.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -106,7 +108,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A list of tags.</p>
+         * TagResources.
          */
         public Builder tagResources(TagResources tagResources) {
             this.tagResources = tagResources;
@@ -198,10 +200,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The resource ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>key-hzz62f1cb66fa42qo****</p>
+             * ResourceId.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -209,10 +208,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the resource.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>key</p>
+             * ResourceType.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -220,10 +216,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The key of the tag.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>disk-encryption</p>
+             * TagKey.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -231,10 +224,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the tag.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * TagValue.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

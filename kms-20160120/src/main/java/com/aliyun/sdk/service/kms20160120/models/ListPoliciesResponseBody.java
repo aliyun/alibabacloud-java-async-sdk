@@ -128,7 +128,7 @@ public class ListPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A list of permission policies.</p>
+         * Policies.
          */
         public Builder policies(Policies policies) {
             this.policies = policies;
@@ -136,7 +136,7 @@ public class ListPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>b66ad557-9c00-4064-9c8d-b621c3263308</p>
@@ -203,10 +203,7 @@ public class ListPoliciesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the permission policy.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>policy_test</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;

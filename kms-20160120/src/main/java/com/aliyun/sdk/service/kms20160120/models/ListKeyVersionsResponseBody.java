@@ -106,7 +106,7 @@ public class ListKeyVersionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>An array that consists of key versions.</p>
+         * KeyVersions.
          */
         public Builder keyVersions(KeyVersions keyVersions) {
             this.keyVersions = keyVersions;
@@ -136,7 +136,7 @@ public class ListKeyVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>f71204c4-53cd-4eea-b405-653ba2db7e86</p>
@@ -229,10 +229,7 @@ public class ListKeyVersionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The date and time when the CMK version was created. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2016-03-25T10:42:40Z</p>
+             * CreationDate.
              */
             public Builder creationDate(String creationDate) {
                 this.creationDate = creationDate;
@@ -240,13 +237,7 @@ public class ListKeyVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The globally unique ID of the CMK.</p>
-             * <blockquote>
-             * <p> If you set the KeyId parameter to the alias of the CMK, the ID of the CMK to which the alias is bound is returned.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>0b30658a-ed1a-4922-b8f7-a673ca9c****</p>
+             * KeyId.
              */
             public Builder keyId(String keyId) {
                 this.keyId = keyId;
@@ -254,10 +245,7 @@ public class ListKeyVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The globally unique ID of the CMK version.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1e3304fd-68ac-4d5b-8886-ae5f01a1****</p>
+             * KeyVersionId.
              */
             public Builder keyVersionId(String keyVersionId) {
                 this.keyVersionId = keyVersionId;

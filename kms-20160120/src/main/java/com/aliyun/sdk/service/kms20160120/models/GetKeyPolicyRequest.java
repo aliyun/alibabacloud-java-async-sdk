@@ -74,6 +74,10 @@ public class GetKeyPolicyRequest extends Request {
         } 
 
         /**
+         * <p>The ID or Alibaba Cloud Resource Name (ARN) of the key.</p>
+         * <blockquote>
+         * <p>When you access a key in another Alibaba Cloud account, you must enter the ARN of the key. The ARN of a key is in the <code>acs:kms:${region}:${account}:key/${keyid}</code> format.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +90,10 @@ public class GetKeyPolicyRequest extends Request {
         }
 
         /**
-         * PolicyName.
+         * <p>The name of the key policy. Only the static value default is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder policyName(String policyName) {
             this.putQueryParameter("PolicyName", policyName);

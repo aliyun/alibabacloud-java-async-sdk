@@ -119,7 +119,7 @@ public class ListSecretVersionIdsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -130,7 +130,7 @@ public class ListSecretVersionIdsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The page size of the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -141,7 +141,7 @@ public class ListSecretVersionIdsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * <p>The ID of the request. The ID is a unique identifier that Alibaba Cloud generates for the request and can be used to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>5b75d8b1-5b6a-4ec0-8e0c-c08befdfad47</p>
@@ -152,7 +152,7 @@ public class ListSecretVersionIdsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the secret.</p>
+         * <p>The secret name.</p>
          * 
          * <strong>example:</strong>
          * <p>secret001</p>
@@ -163,10 +163,10 @@ public class ListSecretVersionIdsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned on the current page.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
-         * <p>4</p>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -174,7 +174,7 @@ public class ListSecretVersionIdsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of secret versions.</p>
+         * VersionIds.
          */
         public Builder versionIds(VersionIds versionIds) {
             this.versionIds = versionIds;
@@ -307,10 +307,7 @@ public class ListSecretVersionIdsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the secret version was created.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2020-02-21T15:39:26Z</p>
+             * CreateTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -318,10 +315,7 @@ public class ListSecretVersionIdsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version number.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>00000000000000000000000000000000203</p>
+             * VersionId.
              */
             public Builder versionId(String versionId) {
                 this.versionId = versionId;
@@ -329,7 +323,7 @@ public class ListSecretVersionIdsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The stage labels that mark the secret version.</p>
+             * VersionStages.
              */
             public Builder versionStages(VersionStages versionStages) {
                 this.versionStages = versionStages;
@@ -383,10 +377,7 @@ public class ListSecretVersionIdsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The version number.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>00000000000000000000000000000000203</p>
+             * VersionId.
              */
             public Builder versionId(java.util.List<VersionId> versionId) {
                 this.versionId = versionId;

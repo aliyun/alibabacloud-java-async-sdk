@@ -73,7 +73,10 @@ public class GetKmsInstanceQuotaInfosRequest extends Request {
         } 
 
         /**
-         * KmsInstanceId.
+         * <p>The ID of the KMS instance to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kst-bjj62f5ba3dnpb6v8****</p>
          */
         public Builder kmsInstanceId(String kmsInstanceId) {
             this.putQueryParameter("KmsInstanceId", kmsInstanceId);
@@ -82,7 +85,20 @@ public class GetKmsInstanceQuotaInfosRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>The resource type. Valid values:</p>
+         * <ul>
+         * <li><p><code>key</code>: key quota</p>
+         * </li>
+         * <li><p><code>secret</code>: secret quota</p>
+         * </li>
+         * <li><p><code>qps</code>: queries per second (QPS) quota</p>
+         * </li>
+         * <li><p><code>vpc</code>: Virtual Private Cloud (VPC) quota</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>key</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

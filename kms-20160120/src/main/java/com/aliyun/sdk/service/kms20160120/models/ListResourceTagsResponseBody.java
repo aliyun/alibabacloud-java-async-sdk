@@ -78,7 +78,7 @@ public class ListResourceTagsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The tags of the CMK.</p>
+         * Tags.
          */
         public Builder tags(Tags tags) {
             this.tags = tags;
@@ -157,10 +157,7 @@ public class ListResourceTagsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The globally unique ID of the CMK.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>33caea95-c3e5-4b3e-a9c6-cec76e4e****</p>
+             * KeyId.
              */
             public Builder keyId(String keyId) {
                 this.keyId = keyId;
@@ -168,10 +165,7 @@ public class ListResourceTagsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Project</p>
+             * TagKey.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -179,10 +173,7 @@ public class ListResourceTagsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Test</p>
+             * TagValue.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

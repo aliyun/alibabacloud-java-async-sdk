@@ -175,8 +175,8 @@ public class UpdatePolicyRequest extends Request {
         /**
          * <p>The key and secret that are allowed to access after the update.</p>
          * <ul>
-         * <li>Key: Enter a key in the <code>key/${KeyId}</code> format. To allow access to all keys of a KMS instance, enter key/*.</li>
-         * <li>Secret: Enter a secret in the <code>secret/${SecretName}</code> format. To allow access to all secrets of a KMS instance, enter secret/*.</li>
+         * <li>Key: Enter a key in the <code>key/${KeyId}</code> format. To allow access to all keys of a KMS instance, enter key/\*.</li>
+         * <li>Secret: Enter a secret in the <code>secret/${SecretName}</code> format. To allow access to all secrets of a KMS instance, enter secret/\*.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -75,7 +75,7 @@ public class DescribeKeyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>f1fdfa9d-bd49-418b-942f-8f3e3ec00a4f</p>
@@ -381,7 +381,7 @@ public class DescribeKeyResponseBody extends TeaModel {
              * <p>The Alibaba Cloud Resource Name (ARN) of the CMK.</p>
              * 
              * <strong>example:</strong>
-             * <p>acs:kms:cn-hangzhou:154035569884****:key/05754286-3ba2-4fa6-8d41-4323aca6****</p>
+             * <p>acs:kms:cn-hangzhou:154035569884****:key/key-hzz630494463ejqjx****</p>
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -391,13 +391,16 @@ public class DescribeKeyResponseBody extends TeaModel {
             /**
              * <p>Indicates whether automatic key rotation is enabled. Valid values:</p>
              * <ul>
-             * <li>Enabled</li>
-             * <li>Disabled</li>
-             * <li>Suspended</li>
+             * <li><p>Enabled</p>
+             * </li>
+             * <li><p>Disabled</p>
+             * </li>
+             * <li><p>Suspended</p>
+             * </li>
              * </ul>
              * <p>For more information, see <a href="https://help.aliyun.com/document_detail/134270.html">Automatic key rotation</a>.</p>
              * <blockquote>
-             * <p> Only symmetric CMKs support automatic key rotation.</p>
+             * <p>Only symmetric CMKs support automatic key rotation.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -412,7 +415,7 @@ public class DescribeKeyResponseBody extends TeaModel {
              * <p>The time when the CMK was created. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
-             * <p>2021-05-20T06:34:21Z</p>
+             * <p>2024-05-20T06:34:21Z</p>
              */
             public Builder creationDate(String creationDate) {
                 this.creationDate = creationDate;
@@ -445,11 +448,11 @@ public class DescribeKeyResponseBody extends TeaModel {
              * <p>The time at which the CMK is scheduled for deletion. The time is displayed in UTC.</p>
              * <p>For more information, see <a href="https://help.aliyun.com/document_detail/44196.html">ScheduleKeyDeletion</a>.</p>
              * <blockquote>
-             * <p> This parameter is returned only when the value of the KeyState parameter is PendingDeletion.</p>
+             * <p>This parameter is returned only when the value of the KeyState parameter is PendingDeletion.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
-             * <p>2021-05-26T18:22:03Z</p>
+             * <p>2024-05-26T18:22:03Z</p>
              */
             public Builder deleteDate(String deleteDate) {
                 this.deleteDate = deleteDate;
@@ -459,8 +462,10 @@ public class DescribeKeyResponseBody extends TeaModel {
             /**
              * <p>Indicates whether deletion protection is enabled. Valid values:</p>
              * <ul>
-             * <li>Enabled</li>
-             * <li>Disabled</li>
+             * <li><p>Enabled</p>
+             * </li>
+             * <li><p>Disabled</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -497,7 +502,7 @@ public class DescribeKeyResponseBody extends TeaModel {
              * <p>The ID of the CMK. The ID must be globally unique.</p>
              * 
              * <strong>example:</strong>
-             * <p>05754286-3ba2-4fa6-8d41-4323aca6****</p>
+             * <p>key-hzz630494463ejqjx****</p>
              */
             public Builder keyId(String keyId) {
                 this.keyId = keyId;
@@ -542,7 +547,7 @@ public class DescribeKeyResponseBody extends TeaModel {
              * <p>The time when the last rotation was performed. The time is displayed in UTC. For a new CMK, the value of this parameter is the time when the initial version of the CMK was generated.</p>
              * 
              * <strong>example:</strong>
-             * <p>2021-05-20T06:34:21Z</p>
+             * <p>2024-05-20T06:34:21Z</p>
              */
             public Builder lastRotationDate(String lastRotationDate) {
                 this.lastRotationDate = lastRotationDate;
@@ -553,7 +558,7 @@ public class DescribeKeyResponseBody extends TeaModel {
              * <p>The time when the key material expires. The time is displayed in UTC. If this parameter value is empty, the key material does not expire.</p>
              * 
              * <strong>example:</strong>
-             * <p>2021-07-06T18:22:03Z</p>
+             * <p>2024-07-06T18:22:03Z</p>
              */
             public Builder materialExpireTime(String materialExpireTime) {
                 this.materialExpireTime = materialExpireTime;
@@ -563,7 +568,7 @@ public class DescribeKeyResponseBody extends TeaModel {
             /**
              * <p>The time when the next rotation will be performed.</p>
              * <blockquote>
-             * <p> This parameter is returned only when the value of the AutomaticRotation parameter is Enabled or Suspended.</p>
+             * <p>This parameter is returned only when the value of the AutomaticRotation parameter is Enabled or Suspended.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -612,7 +617,7 @@ public class DescribeKeyResponseBody extends TeaModel {
              * <p>Unit: seconds.</p>
              * <p>For example, if the value is 604800s, automatic key rotation is performed at a 7-day interval.</p>
              * <blockquote>
-             * <p> This parameter is returned only when the value of the AutomaticRotation parameter is Enabled or Suspended.</p>
+             * <p>This parameter is returned only when the value of the AutomaticRotation parameter is Enabled or Suspended.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

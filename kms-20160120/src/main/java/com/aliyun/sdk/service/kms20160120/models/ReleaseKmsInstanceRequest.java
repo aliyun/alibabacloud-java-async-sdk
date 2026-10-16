@@ -74,7 +74,16 @@ public class ReleaseKmsInstanceRequest extends Request {
         } 
 
         /**
-         * ForceDeleteWithoutBackup.
+         * <p>Specifies whether to forcibly release the KMS instance if it has not been backed up.</p>
+         * <ul>
+         * <li><p>true: forcibly releases the instance.</p>
+         * </li>
+         * <li><p>false (default): does not release the instance.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder forceDeleteWithoutBackup(String forceDeleteWithoutBackup) {
             this.putQueryParameter("ForceDeleteWithoutBackup", forceDeleteWithoutBackup);
@@ -83,6 +92,7 @@ public class ReleaseKmsInstanceRequest extends Request {
         }
 
         /**
+         * <p>The ID of the KMS instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -102,13 +102,12 @@ public class ListSecretVersionIdsRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to return deprecated secret versions.</p>
+         * <p>Specifies whether to include secret versions that do not have version stages in the response.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>false: no</li>
-         * <li>true: yes</li>
+         * <li>false (default): does not include</li>
+         * <li>true: includes</li>
          * </ul>
-         * <p>Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -120,7 +119,7 @@ public class ListSecretVersionIdsRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. Default value: 1.</p>
+         * <p>The page number of the current page in a paged query. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -132,7 +131,7 @@ public class ListSecretVersionIdsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Default value: 10.</p>
+         * <p>The number of entries per page in a paged query. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -144,7 +143,10 @@ public class ListSecretVersionIdsRequest extends Request {
         }
 
         /**
-         * <p>The name of the secret.</p>
+         * <p>The secret name or secret Amazon Resource Name (ARN).</p>
+         * <blockquote>
+         * <p>When accessing a secret under another Alibaba Cloud account, you must specify the secret ARN. The format of the secret ARN is <code>acs:kms:${region}:${account}:secret/${secret-name}</code>.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

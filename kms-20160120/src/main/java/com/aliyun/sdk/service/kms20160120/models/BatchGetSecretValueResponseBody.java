@@ -80,7 +80,7 @@ public class BatchGetSecretValueResponseBody extends TeaModel {
         } 
 
         /**
-         * Errors.
+         * <p>The list of errors for secrets that failed to be retrieved.</p>
          */
         public Builder errors(java.util.List<Errors> errors) {
             this.errors = errors;
@@ -88,7 +88,10 @@ public class BatchGetSecretValueResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8252db58-2036-408c-a3d5-56e656dc2551</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,7 @@ public class BatchGetSecretValueResponseBody extends TeaModel {
         }
 
         /**
-         * SecretValues.
+         * <p>The list of secrets that are successfully retrieved.</p>
          */
         public Builder secretValues(java.util.List<SecretValues> secretValues) {
             this.secretValues = secretValues;
@@ -188,7 +191,10 @@ public class BatchGetSecretValueResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>The service error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Forbidden.ResourceNotFound</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -196,7 +202,10 @@ public class BatchGetSecretValueResponseBody extends TeaModel {
             }
 
             /**
-             * HttpStatus.
+             * <p>The HTTP status code returned for the error.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>404</p>
              */
             public Builder httpStatus(Integer httpStatus) {
                 this.httpStatus = httpStatus;
@@ -204,7 +213,10 @@ public class BatchGetSecretValueResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The error message for the failed secret retrieval.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Resource not found.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -212,7 +224,10 @@ public class BatchGetSecretValueResponseBody extends TeaModel {
             }
 
             /**
-             * SecretName.
+             * <p>The secret name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>secret002</p>
              */
             public Builder secretName(String secretName) {
                 this.secretName = secretName;
@@ -266,7 +281,7 @@ public class BatchGetSecretValueResponseBody extends TeaModel {
             } 
 
             /**
-             * VersionStage.
+             * <p>The version stages of the secret.</p>
              */
             public Builder versionStage(java.util.List<String> versionStage) {
                 this.versionStage = versionStage;
@@ -476,7 +491,18 @@ public class BatchGetSecretValueResponseBody extends TeaModel {
             } 
 
             /**
-             * AutomaticRotation.
+             * <p>Indicates whether automatic rotation is enabled. Valid values:</p>
+             * <ul>
+             * <li>Enabled: Automatic rotation is enabled.</li>
+             * <li>Disabled: Automatic rotation is disabled.</li>
+             * <li>Invalid: The rotation status is abnormal. KMS cannot automatically rotate the secret.</li>
+             * </ul>
+             * <blockquote>
+             * <p>This parameter is returned only for ApsaraDB RDS secrets, PolarDB secrets, Redis/Tair secrets, RAM secrets, or ECS secrets.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder automaticRotation(String automaticRotation) {
                 this.automaticRotation = automaticRotation;
@@ -484,7 +510,10 @@ public class BatchGetSecretValueResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the secret was created (UTC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-02-21T15:39:26Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -492,7 +521,13 @@ public class BatchGetSecretValueResponseBody extends TeaModel {
             }
 
             /**
-             * ExtendedConfig.
+             * <p>The extended configuration of the secret.  </p>
+             * <blockquote>
+             * <p>This parameter is returned only for ApsaraDB RDS secrets, PolarDB secrets, Redis/Tair secrets, RAM secrets, or ECS secrets when FetchExtendedConfig is set to true.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;SecretSubType\&quot;:\&quot;SingleUser\&quot;, \&quot;DBInstanceId\&quot;:\&quot;rm-uf667446pc955****\&quot;,  \&quot;CustomData\&quot;:{} }</p>
              */
             public Builder extendedConfig(String extendedConfig) {
                 this.extendedConfig = extendedConfig;
@@ -500,7 +535,13 @@ public class BatchGetSecretValueResponseBody extends TeaModel {
             }
 
             /**
-             * LastRotationDate.
+             * <p>The time of the most recent rotation (UTC).</p>
+             * <blockquote>
+             * <p>This parameter is returned only when the secret has been rotated.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-07-05T08:22:03Z</p>
              */
             public Builder lastRotationDate(String lastRotationDate) {
                 this.lastRotationDate = lastRotationDate;
@@ -508,7 +549,13 @@ public class BatchGetSecretValueResponseBody extends TeaModel {
             }
 
             /**
-             * NextRotationDate.
+             * <p>The time of the next rotation (UTC).</p>
+             * <blockquote>
+             * <p>This parameter is returned only when automatic rotation is enabled.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-07-06T18:22:03Z</p>
              */
             public Builder nextRotationDate(String nextRotationDate) {
                 this.nextRotationDate = nextRotationDate;
@@ -516,7 +563,10 @@ public class BatchGetSecretValueResponseBody extends TeaModel {
             }
 
             /**
-             * RequestId.
+             * <p>The ID of this request, which is a unique identifier generated by Alibaba Cloud for troubleshooting purposes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8252db58-2036-408c-a3d5-56e656dc2551</p>
              */
             public Builder requestId(String requestId) {
                 this.requestId = requestId;
@@ -524,7 +574,14 @@ public class BatchGetSecretValueResponseBody extends TeaModel {
             }
 
             /**
-             * RotationInterval.
+             * <p>The interval for automatic rotation of the secret.
+             * The format is integer[unit], where integer specifies the duration and unit specifies the time unit. The value of unit is s (seconds). For example, a rotation interval of 7 days is 604800s.</p>
+             * <blockquote>
+             * <p>This parameter is returned only when automatic rotation is enabled.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>604800s</p>
              */
             public Builder rotationInterval(String rotationInterval) {
                 this.rotationInterval = rotationInterval;
@@ -532,7 +589,26 @@ public class BatchGetSecretValueResponseBody extends TeaModel {
             }
 
             /**
-             * SecretData.
+             * <p>The secret value. KMS decrypts the stored ciphertext secret value and returns this parameter.  </p>
+             * <ul>
+             * <li><p>A generic secret returns the secret value that you specified.</p>
+             * </li>
+             * <li><p>An ApsaraDB RDS secret or Redis/Tair secret returns the secret value in the following format: <code>{&quot;AccountName&quot;:&quot;&quot;,&quot;AccountPassword&quot;:&quot;&quot;}</code>.</p>
+             * </li>
+             * <li><p>A RAM secret returns the secret value in the following format: <code>{&quot;AccessKeyId&quot;:&quot;Adfdsfd&quot;,&quot;AccessKeySecret&quot;:&quot;fdsfdsf&quot;,&quot;GenerateTimestamp&quot;: &quot;2023-03-25T10:42:40Z&quot;}</code>.  </p>
+             * </li>
+             * <li><p>An ECS secret returns the secret value in the following formats:  </p>
+             * <ul>
+             * <li>Password-type secret: <code>{&quot;UserName&quot;:&quot;ecs-user&quot;,&quot;Password&quot;:&quot;H5asdasdsads****&quot;}</code>.  </li>
+             * <li>Public-private key-type secret (private key in PEM format): <code>{&quot;UserName&quot;:&quot;ecs-user&quot;,&quot;PublicKey&quot;:&quot;ssh-rsa ****mKwnVix9YTFY9Rs= imported-openssh-key&quot;,&quot;PrivateKey&quot;: &quot;d6bee1cb-2e14-4277-ba6b-73786b21****&quot;}</code>.</li>
+             * </ul>
+             * </li>
+             * <li><p>A PolarDB secret returns the secret value in the following format: <code>{&quot;AccountName&quot;:&quot;&quot;,&quot;AccountPassword&quot;:&quot;&quot;}</code>.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>testdata1</p>
              */
             public Builder secretData(String secretData) {
                 this.secretData = secretData;
@@ -540,7 +616,14 @@ public class BatchGetSecretValueResponseBody extends TeaModel {
             }
 
             /**
-             * SecretDataType.
+             * <p>The type of the secret value. Valid values:</p>
+             * <ul>
+             * <li>text</li>
+             * <li>binary</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>binary</p>
              */
             public Builder secretDataType(String secretDataType) {
                 this.secretDataType = secretDataType;
@@ -548,7 +631,10 @@ public class BatchGetSecretValueResponseBody extends TeaModel {
             }
 
             /**
-             * SecretName.
+             * <p>The secret name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>secret001</p>
              */
             public Builder secretName(String secretName) {
                 this.secretName = secretName;
@@ -556,7 +642,18 @@ public class BatchGetSecretValueResponseBody extends TeaModel {
             }
 
             /**
-             * SecretType.
+             * <p>The type of the secret. Valid values:</p>
+             * <ul>
+             * <li>Generic: generic secret.  </li>
+             * <li>Rds: ApsaraDB RDS secret.  </li>
+             * <li>Redis: Redis/Tair secret.</li>
+             * <li>RAMCredentials: RAM secret.  </li>
+             * <li>ECS: ECS secret.</li>
+             * <li>PolarDB: PolarDB secret.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Generic</p>
              */
             public Builder secretType(String secretType) {
                 this.secretType = secretType;
@@ -564,7 +661,10 @@ public class BatchGetSecretValueResponseBody extends TeaModel {
             }
 
             /**
-             * VersionId.
+             * <p>The version number of the secret.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder versionId(String versionId) {
                 this.versionId = versionId;
@@ -572,7 +672,7 @@ public class BatchGetSecretValueResponseBody extends TeaModel {
             }
 
             /**
-             * VersionStages.
+             * <p>The version stages of the secret.</p>
              */
             public Builder versionStages(VersionStages versionStages) {
                 this.versionStages = versionStages;

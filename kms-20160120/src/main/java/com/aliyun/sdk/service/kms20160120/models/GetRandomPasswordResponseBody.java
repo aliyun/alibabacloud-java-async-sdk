@@ -70,7 +70,7 @@ public class GetRandomPasswordResponseBody extends TeaModel {
          * <p>The generated random password.</p>
          * 
          * <strong>example:</strong>
-         * <p>IxGn&gt;NMmNB(y?iZ&lt;Yc,_H/{2GC&quot;U****</p>
+         * <p>IxGn&gt;NMmNB(y?iZ&lt;Yc,_H/{2GC\&quot;U****</p>
          */
         public Builder randomPassword(String randomPassword) {
             this.randomPassword = randomPassword;
@@ -78,7 +78,7 @@ public class GetRandomPasswordResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>6b0cbe25-5e33-467e-972e-7a83c6c97604</p>

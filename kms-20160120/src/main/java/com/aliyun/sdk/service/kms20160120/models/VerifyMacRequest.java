@@ -119,6 +119,19 @@ public class VerifyMacRequest extends Request {
         } 
 
         /**
+         * <p>The algorithm used to generate the message authentication code. Valid values vary based on the key specification:  </p>
+         * <ul>
+         * <li><p>HMAC_SM3</p>
+         * </li>
+         * <li><p>HMAC_SHA_224</p>
+         * </li>
+         * <li><p>HMAC_SHA_256</p>
+         * </li>
+         * <li><p>HMAC_SHA_384</p>
+         * </li>
+         * <li><p>HMAC_SHA_512</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,7 +144,20 @@ public class VerifyMacRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * <p>Specifies whether to enable DryRun mode. Valid values:</p>
+         * <ul>
+         * <li>true: enables DryRun mode.</li>
+         * <li>false (default): disables DryRun mode.</li>
+         * </ul>
+         * <p>DryRun mode is used to test API calls and verify whether you have the required permissions on the corresponding resources and whether the request parameters are correctly configured. When DryRun mode is enabled, KMS always returns a failure and provides the failure reason. Failure reasons include:</p>
+         * <ul>
+         * <li>DryRunOperationError: The request would succeed if the DryRun parameter is not specified.</li>
+         * <li>ValidationError: The parameters specified in the request are invalid.</li>
+         * <li>AccessDeniedError: You are not authorized to perform this operation on the KMS resource.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(String dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -140,6 +166,10 @@ public class VerifyMacRequest extends Request {
         }
 
         /**
+         * <p>The ID of the key. You can also specify a key alias or key Amazon Resource Name (ARN). For more information about aliases, refer to <a href="https://help.aliyun.com/document_detail/480655.html">Manage key aliases</a>.</p>
+         * <blockquote>
+         * <p>To access a key in a different Alibaba Cloud account, you must specify the key ARN. The key ARN is in the format of <code>acs:kms:${region}:${account}:key/${keyid}</code>.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,6 +182,7 @@ public class VerifyMacRequest extends Request {
         }
 
         /**
+         * <p>The Base64-encoding message authentication code to verify.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -164,6 +195,8 @@ public class VerifyMacRequest extends Request {
         }
 
         /**
+         * <p>The original message data.  </p>
+         * <p>Use Base64 encoding. For example, if the hexadecimal content of the message for which you want to generate a message authentication code is <code>[0x31, 0x32, 0x33, 0x34]</code>, the corresponding Base64-encoded value is <code>MTIzNA==</code>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

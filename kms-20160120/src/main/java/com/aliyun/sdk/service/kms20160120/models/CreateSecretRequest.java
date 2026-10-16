@@ -45,7 +45,7 @@ public class CreateSecretRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("RotationInterval")
     private String rotationInterval;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SecretData")
     @com.aliyun.core.annotation.Validation(required = true)
     private String secretData;
@@ -230,7 +230,7 @@ public class CreateSecretRequest extends Request {
         } 
 
         /**
-         * <p>The version number of the secret.</p>
+         * <p>The instance ID of the KMS instance.</p>
          * 
          * <strong>example:</strong>
          * <p>kst-bjj62d8f5e0sgtx8h****</p>
@@ -242,14 +242,7 @@ public class CreateSecretRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable automatic rotation. Valid values:</p>
-         * <ul>
-         * <li>true: specifies to enable automatic rotation.</li>
-         * <li>false: specifies to disable automatic rotation. This is the default value.</li>
-         * </ul>
-         * <blockquote>
-         * <p> This parameter is valid if you set the SecretType parameter to Rds, RAMCredentials, or ECS.</p>
-         * </blockquote>
+         * <p>The description of the secret.</p>
          * 
          * <strong>example:</strong>
          * <p>mydbinfo</p>
@@ -261,14 +254,13 @@ public class CreateSecretRequest extends Request {
         }
 
         /**
-         * <p>Indicates whether automatic rotation is enabled. Valid values:</p>
+         * <p>Specifies whether to enable automatic rotation. Valid values:</p>
          * <ul>
-         * <li>Enabled: indicates that automatic rotation is enabled.</li>
-         * <li>Disabled: indicates that automatic rotation is disabled.</li>
-         * <li>Invalid: indicates that the status of automatic rotation is abnormal. In this case, Secrets Manager cannot automatically rotate the secret.</li>
+         * <li>true: enables automatic rotation.</li>
+         * <li>false: disables automatic rotation. This is the default value.</li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is returned if you set the SecretType parameter to Rds, RAMCredentials, or ECS.</p>
+         * <p>This parameter takes effect only when SecretType is set to Rds (ApsaraDB RDS secret), PolarDB (PolarDB secret), Redis (Redis secret), RAMCredentials (RAM secret), or ECS (ECS secret). When SecretType is set to Generic (generic secret), automatic rotation is not supported. You can call the <a href="https://help.aliyun.com/document_detail/154503.html">PutSecretValue</a> operation to manually rotate the secret.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -281,10 +273,13 @@ public class CreateSecretRequest extends Request {
         }
 
         /**
-         * <p>The description of the secret.</p>
+         * <p>The ID of the key used to encrypt the secret value.</p>
+         * <blockquote>
+         * <p>The key and the secret must belong to the same KMS instance, and the key must be a symmetric key.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>00aa68af-2c02-4f68-95fe-3435d330****</p>
+         * <p>key-gzz63ff0db5hg3qje****</p>
          */
         public Builder encryptionKeyId(String encryptionKeyId) {
             this.putQueryParameter("EncryptionKeyId", encryptionKeyId);
@@ -293,10 +288,92 @@ public class CreateSecretRequest extends Request {
         }
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * <p>The extended configuration of the secret, which is used to specify the property of a specific secret type. The value can be up to 1,024 characters in length.</p>
+         * <ul>
+         * <li><p>When SecretType is set to Generic (generic secret), this parameter is ignored.</p>
+         * </li>
+         * <li><p>When SecretType is set to Rds (ApsaraDB RDS secret), you must specify the following parameters in ExtendedConfig:</p>
+         * <ul>
+         * <li><p>SecretSubType (required): the child class of the secret. Valid values:  </p>
+         * <ul>
+         * <li>SingleUser: specifies that Secrets Manager manages the ApsaraDB RDS secret in single-account pattern. During secret rotation, the password of the specified account is reset to a new random password.</li>
+         * <li>DoubleUsers: specifies that Secrets Manager manages the ApsaraDB RDS secret in dual-account pattern. ACSCurrent and ACSPrevious reference one account each. During secret rotation, the password of the account referenced by ACSPrevious is reset to a new random password, and then Secrets Manager swaps the accounts referenced by ACSCurrent and ACSPrevious.</li>
+         * </ul>
+         * </li>
+         * <li><p>DBInstanceId (required): instance ID of the ApsaraDB RDS instance to which the account belongs.</p>
+         * </li>
+         * <li><p>CustomData (optional): custom data. The value is a JSON-formatted key-value pair. You can specify up to 10 key-value pairs, separated by commas (,). Example: <code>{&quot;Key1&quot;: &quot;v1&quot;, &quot;fds&quot;:&quot;fdsf&quot;}</code>. Default value: <code>{}</code>.</p>
+         * </li>
+         * </ul>
+         * </li>
+         * <li><p>When SecretType is set to Redis (Redis secret), you must specify the following parameters in ExtendedConfig:</p>
+         * <ul>
+         * <li>SecretSubType (required): the child class of the secret. Valid values:  <ul>
+         * <li>DoubleUsers: specifies that Secrets Manager manages the Redis secret in dual-account pattern. ACSCurrent and ACSPrevious reference one account each. During secret rotation, the password of the account referenced by ACSPrevious is reset to a new random password, and then Secrets Manager swaps the accounts referenced by ACSCurrent and ACSPrevious.</li>
+         * </ul>
+         * </li>
+         * <li>AccountName (required): the database username.</li>
+         * <li>CloneAccountName (required): the database username, which is the value of AccountName appended with the <code>_clone</code> suffix.</li>
+         * <li>AccountPrivilege (required): the permissions to access the database.</li>
+         * <li>InstanceId (required): instance ID of the Redis instance.</li>
+         * <li>RegionId (required): the region ID of the Redis instance.</li>
+         * <li>CustomData (optional): custom data. The value is a JSON-formatted key-value pair. You can specify up to 10 key-value pairs, separated by commas (,). Example: <code>{&quot;Key1&quot;: &quot;v1&quot;, &quot;fds&quot;:&quot;fdsf&quot;}</code>. Default value: <code>{}</code>.</li>
+         * </ul>
+         * </li>
+         * <li><p>When SecretType is set to RAMCredentials (RAM secret), you must specify the following parameters in ExtendedConfig:</p>
+         * <ul>
+         * <li>SecretSubType (required): the child class of the secret. Valid value: RamUserAccessKey.</li>
+         * <li>UserName (required): the name of the Resource Access Management (RAM) user.</li>
+         * <li>CustomData (optional): custom data. The value is a JSON-formatted key-value pair. You can specify up to 10 key-value pairs, separated by commas (,). Default value: <code>{}</code>.</li>
+         * </ul>
+         * </li>
+         * <li><p>When SecretType is set to ECS (ECS secret), you must specify the following parameters in ExtendedConfig:</p>
+         * <ul>
+         * <li><p>SecretSubType (required): the child class of the secret. Valid values:  </p>
+         * <ul>
+         * <li>Password: ECS password.</li>
+         * <li>SSHKey: ECS SSH public and private keys.</li>
+         * </ul>
+         * </li>
+         * <li><p>RegionId (required): the region ID of the ECS instance.  </p>
+         * </li>
+         * <li><p>InstanceId (required): instance ID of the ECS instance.</p>
+         * </li>
+         * <li><p>CustomData (optional): custom data. The value is a JSON-formatted key-value pair. You can specify up to 10 key-value pairs, separated by commas (,). Default value: <code>{}</code>.</p>
+         * </li>
+         * </ul>
+         * </li>
+         * <li><p>When SecretType is set to PolarDB, you must specify the following parameters in ExtendedConfig:</p>
+         * <ul>
+         * <li><p>SecretSubType (required): DoubleUsers (fixed value).</p>
+         * </li>
+         * <li><p>RegionId (required): the region ID.</p>
+         * </li>
+         * <li><p>DBClusterId (required): instance ID of the PolarDB cluster.</p>
+         * </li>
+         * <li><p>DBType (required): MySQL or PostgreSQL.</p>
+         * </li>
+         * <li><p>AccountName (required): the account name.</p>
+         * </li>
+         * <li><p>CloneAccountName: the value of AccountName appended with <code>_clone</code>.</p>
+         * </li>
+         * <li><p>AccountType: the account type. Only Normal is supported.</p>
+         * </li>
+         * <li><p>AccountPrivilege: the account permissions. This parameter is available only for MySQL.</p>
+         * </li>
+         * <li><p>DBName: the database name. This parameter is available only for MySQL.</p>
+         * </li>
+         * <li><p>CustomData (optional): custom data. The value is a JSON-formatted key-value pair. You can specify up to 10 key-value pairs, separated by commas (,). Example: <code>{&quot;Key1&quot;: &quot;v1&quot;, &quot;fds&quot;:&quot;fdsf&quot;}</code>. Default value: <code>{}</code>.</p>
+         * </li>
+         * </ul>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>When SecretType is set to Rds, Redis, PolarDB, RAMCredentials, or ECS, you must set this parameter.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;SecretSubType&quot;:&quot;SingleUser&quot;, &quot;DBInstanceId&quot;:&quot;rm-bp1b3dd3a506e****&quot; ,&quot;CustomData&quot;:{}}</p>
+         * <p>{&quot;SecretSubType&quot;:&quot;SingleUser&quot;, &quot;DBInstanceId&quot;:&quot;rm-bp1b3dd3a506e****&quot; ,&quot;CustomData&quot;:{&quot;Key1&quot;: &quot;v1&quot;, &quot;fds&quot;:&quot;fdsf&quot;}}</p>
          */
         public Builder extendedConfig(java.util.Map<String, ?> extendedConfig) {
             String extendedConfigShrink = shrink(extendedConfig, "ExtendedConfig", "json");
@@ -306,7 +383,54 @@ public class CreateSecretRequest extends Request {
         }
 
         /**
-         * Policy.
+         * <p>The content of the access policy in JSON format. The maximum length is 32,768 bytes.</p>
+         * <p>For more information about secret policies, see <a href="https://help.aliyun.com/document_detail/2716465.html">Overview of secret policies</a>. If you do not specify this parameter, the default access policy is used.</p>
+         * <p>The access policy includes the following fields:</p>
+         * <ul>
+         * <li>Version: the version of the access policy. Currently, only version 1 is supported.</li>
+         * <li>Statement: the statements in the access policy. Each access policy contains one or more statements.</li>
+         * </ul>
+         * <p>The access policy uses the following format:</p>
+         * <pre><code>{
+         *     &quot;Version&quot;: &quot;1&quot;,
+         *     &quot;Statement&quot;: [
+         *         {
+         *             &quot;Sid&quot;: &quot;Enable RAM User Permissions&quot;,
+         *             &quot;Effect&quot;: &quot;Allow&quot;,
+         *             &quot;Principal&quot;: {
+         *               &quot;RAM&quot;: [&quot;acs:ram::12345678****:*&quot;]
+         *             },
+         *             &quot;Action&quot;: [
+         *                 &quot;kms:*&quot;
+         *             ],
+         *             &quot;Resource&quot;: [
+         *                 &quot;*&quot;
+         *             ]
+         *         }
+         *     ]
+         * }
+         * </code></pre>
+         * <p>Statement details:</p>
+         * <ul>
+         * <li><p>Sid: optional. The custom statement identifier. The value can be up to 128 characters in length and can contain uppercase letters (A-Z), lowercase letters (a-z), digits (0-9), and special characters (_/+=.@-).</p>
+         * </li>
+         * <li><p>Effect: required. Specifies whether to allow or deny the permissions in the policy statement. Valid values: Allow and Deny.</p>
+         * </li>
+         * <li><p>Principal: required. The principal to which the policy is attached. You can set this field to the current Alibaba Cloud account (the account to which the secret belongs), a RAM user or RAM role under the current Alibaba Cloud account, or a RAM user or RAM role under another Alibaba Cloud account.</p>
+         * </li>
+         * <li><p>Action: required. The API operations to allow or deny. The value must start with &quot;kms:&quot;. For the list of available operations, see <a href="https://help.aliyun.com/document_detail/2716465.html">Overview of secret policies</a>. If you specify an operation that is not in the list, the setting does not take effect.</p>
+         * </li>
+         * <li><p>Resource: required. The value can only be *, which indicates the current KMS secret.</p>
+         * </li>
+         * <li><p>Condition: optional. The conditions that must be met for the authorization to take effect. You can use conditions to evaluate the context of an API request to determine whether the policy statement applies. The format is <code>&quot;Condition&quot;: {&quot;condition operator&quot;: {&quot;condition key&quot;: &quot;condition value&quot;}}</code>. For more information, see <a href="https://help.aliyun.com/document_detail/2716465.html">Overview of secret policies</a>.</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>After you grant Resource Access Management (RAM) user or RAM role under another Alibaba Cloud account, you must also use the Alibaba Cloud account of the RAM user or RAM role to authorize them to use the secret in the RAM console. Only then can the RAM user or RAM role use the secret. For more information, see <a href="https://help.aliyun.com/document_detail/480682.html">Custom policy examples for Key Management Service</a>, <a href="https://help.aliyun.com/document_detail/116146.html">Grant Resource Access Management (RAM) user</a>, and <a href="https://help.aliyun.com/document_detail/116147.html">Grant permissions to a RAM role</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Version&quot;:&quot;1&quot;,&quot;Statement&quot;: [{&quot;Sid&quot;:&quot;kms default secret policy&quot;,&quot;Effect&quot;:&quot;Allow&quot;,&quot;Principal&quot;:{&quot;RAM&quot;: [&quot;acs:ram::119285303511****:<em>&quot;]},&quot;Action&quot;:[&quot;kms:</em>&quot;],&quot;Resource&quot;: [&quot;*&quot;] }] }</p>
          */
         public Builder policy(String policy) {
             this.putQueryParameter("Policy", policy);
@@ -315,7 +439,10 @@ public class CreateSecretRequest extends Request {
         }
 
         /**
-         * <p>The name of the secret.</p>
+         * <p>The interval for automatic rotation. Valid values: 6 hours to 8,760 hours (365 days).<br>The value must be in the <code>integer[unit]</code> format. <code>integer</code> specifies the time length, and <code>unit</code> specifies the time unit.<br>Valid values for <code>unit</code>: d (days), h (hours), m (minutes), and s (seconds). For example, both 7d and 604,800s indicate a 7-day interval.  </p>
+         * <blockquote>
+         * <p>You must set this parameter only when EnableAutomaticRotation is set to true.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>30d</p>
@@ -327,69 +454,46 @@ public class CreateSecretRequest extends Request {
         }
 
         /**
-         * <p>The tags of the secret.</p>
+         * <p>The secret value. The value can be up to 30,720 bytes (30 KB) in length. KMS encrypts the value by using the specified key and stores it in the initial version.</p>
+         * <ul>
+         * <li><p>When SecretType is set to Generic (generic secret), you can customize the secret value.</p>
+         * </li>
+         * <li><p>When SecretType is set to Rds (ApsaraDB RDS secret), the secret value must be in the following format: <code>{&quot;Accounts&quot;:[{&quot;AccountName&quot;:&quot;&quot;,&quot;AccountPassword&quot;:&quot;&quot;}]}</code>. <code>AccountName</code> specifies the username of the ApsaraDB RDS instance, and <code>AccountPassword</code> specifies the password of the account.  </p>
+         * </li>
+         * <li><p>When SecretType is set to Redis (Redis secret), set this parameter to <code>$Auto</code>.</p>
+         * </li>
+         * <li><p>When SecretType is set to RAMCredentials (RAM secret), the secret value must be in the following format: <code>{&quot;AccessKeys&quot;:[{&quot;AccessKeyId&quot;:&quot;&quot;,&quot;AccessKeySecret&quot;:&quot;&quot;}]}</code>. <code>AccessKeyId</code> specifies the AccessKey ID, and <code>AccessKeySecret</code> specifies the AccessKey secret. You must specify all AccessKey pairs of the Resource Access Management (RAM) user.</p>
+         * </li>
+         * <li><p>When SecretType is set to PolarDB, set this parameter to <code>$Auto</code>.</p>
+         * </li>
+         * <li><p>When SecretType is set to ECS (ECS secret), the secret value must be in one of the following formats:  </p>
+         * <ul>
+         * <li><p>When SecretSubType in the ExtendedConfig parameter is set to Password: <code>{&quot;UserName&quot;:&quot;&quot;,&quot;Password&quot;: &quot;&quot;}</code>. <code>UserName</code> specifies the username used to log on to the ECS instance, and <code>Password</code> specifies the logon password.  </p>
+         * </li>
+         * <li><p>When SecretSubType in the ExtendedConfig parameter is set to SSHKey: <code>{&quot;UserName&quot;:&quot;&quot;,&quot;PublicKey&quot;: &quot;&quot;, &quot;PrivateKey&quot;: &quot;&quot;}</code>. <code>PublicKey</code> specifies the SSH public key used to log on to the ECS instance, and <code>PrivateKey</code> specifies the private key.</p>
+         * </li>
+         * </ul>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>The type of the secret. Valid values:</p>
-         * <ul>
-         * <li>Generic: specifies a generic secret.</li>
-         * <li>Rds: specifies a managed ApsaraDB RDS secret.</li>
-         * <li>RAMCredentials: specifies a managed RAM secret.</li>
-         * <li>ECS: specifies a managed ECS secret.</li>
-         * </ul>
+         * <p>{&quot;Accounts&quot;:[{&quot;AccountName&quot;:&quot;user1&quot;,&quot;AccountPassword&quot;:&quot;****&quot;}]}</p>
          */
         public Builder secretData(String secretData) {
-            this.putQueryParameter("SecretData", secretData);
+            this.putBodyParameter("SecretData", secretData);
             this.secretData = secretData;
             return this;
         }
 
         /**
-         * <p>The extended configuration of the secret. This parameter specifies the properties of the secret of the specific type. The description can be up to 1,024 characters in length.</p>
+         * <p>The type of the secret value. Valid values:</p>
          * <ul>
-         * <li><p>If you set the SecretType parameter to Generic, you do not need to configure this parameter.</p>
-         * </li>
-         * <li><p>If you set the SecretType parameter to Rds, configure the following fields for the ExtendedConfig parameter:</p>
-         * <ul>
-         * <li><p>SecretSubType: required. The subtype of the secret. Valid values:</p>
-         * <ul>
-         * <li>SingleUser: Secrets Manager manages the ApsaraDB RDS secret in single-account mode. When the secret is rotated, the password of the specified account is reset to a new random password.</li>
-         * <li>DoubleUsers: Secrets Manager manages the ApsaraDB RDS secret in dual-account mode. One account is referenced by the ACSCurrent version, and the other account is referenced by the ACSPrevious version. When the secret is rotated, the password of the account referenced by the ACSPrevious version is reset to a new random password. Then, Secrets Manager switches the referenced accounts between the ACSCurrent and ACSPrevious versions.</li>
-         * </ul>
-         * </li>
-         * <li><p>DBInstanceId: required. The ApsaraDB RDS instance to which the ApsaraDB RDS account belongs.</p>
-         * </li>
-         * <li><p>CustomData: optional. The custom data. The value is a collection of key-value pairs in the JSON format. Up to 10 key-value pairs can be specified. Separate multiple key-value pairs with commas (,). Example: <code>{&quot;Key1&quot;: &quot;v1&quot;, &quot;fds&quot;:&quot;fdsf&quot;}</code>. The default value is a pair of empty braces (<code>{}</code>).</p>
-         * </li>
-         * </ul>
-         * </li>
-         * <li><p>If you set the SecretType parameter to RAMCredentials, configure the following fields for the ExtendedConfig parameter:</p>
-         * <ul>
-         * <li>SecretSubType: required. The subtype of the secret. Set the value to RamUserAccessKey.</li>
-         * <li>UserName: required. The name of the RAM user.</li>
-         * <li>CustomData: optional. The custom data. The value is a collection of key-value pairs in the JSON format. Up to 10 key-value pairs can be specified. Separate multiple key-value pairs with commas (,). The default value is a pair of empty braces (<code>{}</code>).</li>
-         * </ul>
-         * </li>
-         * <li><p>If you set the SecretType parameter to ECS, configure the following fields for the ExtendedConfig parameter:</p>
-         * <ul>
-         * <li><p>SecretSubType: required. The subtype of the secret. Valid values:</p>
-         * <ul>
-         * <li>Password: the password that is used to log on to the ECS instance.</li>
-         * <li>SSHKey: the SSH public key and private key that are used to log on to the ECS instance.</li>
-         * </ul>
-         * </li>
-         * <li><p>RegionId: required. The ID of the region in which the ECS instance resides.</p>
-         * </li>
-         * <li><p>InstanceId: required. The ID of the ECS instance.</p>
-         * </li>
-         * <li><p>CustomData: optional. The custom data. The value is a collection of key-value pairs in the JSON format. Up to 10 key-value pairs can be specified. Separate multiple key-value pairs with commas (,). The default value is a pair of empty braces (<code>{}</code>).</p>
-         * </li>
-         * </ul>
-         * </li>
+         * <li>text: text. This is the default value.</li>
+         * <li>binary: binary data.</li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is required if you set the SecretType parameter to Rds, RAMCredentials, or ECS.</p>
+         * <p>When SecretType is set to Rds, Redis, PolarDB, RAMCredentials, or ECS, SecretDataType can only be set to text.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -402,19 +506,14 @@ public class CreateSecretRequest extends Request {
         }
 
         /**
-         * <p>The value of the secret that you want to create. Secrets Manager encrypts the secret value and stores the encrypted value in the initial version.</p>
+         * <p>The secret name. The secret name must be unique within the current region.
+         * The name can be up to 192 characters in length and can contain letters, digits, underscores (_), forward slashes (/), plus signs (+), equal signs (=), periods (.), hyphens (-), and at signs (@). The naming requirements vary based on the secret type:  </p>
          * <ul>
-         * <li><p>If you set the SecretType parameter to Generic that indicates a generic secret, you can customize the secret value.</p>
+         * <li><p>When SecretType is set to Generic (generic secret), Rds (ApsaraDB RDS secret), or Redis (Redis or Tair secret), the name cannot start with <code>acs/</code>.  </p>
          * </li>
-         * <li><p>If you set the SecretType parameter to Rds that indicates a managed ApsaraDB RDS secret, the secret value must be in the format of <code>{&quot;Accounts&quot;:[{&quot;AccountName&quot;:&quot;&quot;,&quot;AccountPassword&quot;:&quot;&quot;}]}</code>. In the preceding format, <code>AccountName</code> indicates the username of the account that is used to connect to your ApsaraDB RDS instance, and <code>AccountPassword</code> specifies the password of the account.</p>
+         * <li><p>When SecretType is set to RAMCredentials (RAM secret), use the fixed value <code>$Auto</code>. In this case, KMS automatically generates the secret name, which starts with <code>acs/ram/user/</code> and includes the display name of the Resource Access Management (RAM) user.</p>
          * </li>
-         * <li><p>If you set the SecretType parameter to RAMCredentials that indicates a managed RAM secret, the secret value must be in the format of <code>{&quot;AccessKeys&quot;:[{&quot;AccessKeyId&quot;:&quot;&quot;,&quot;AccessKeySecret&quot;:&quot;&quot;,}]}</code>. In the preceding format, <code>AccessKeyId</code> indicates the AccessKey ID of the RAM user and <code>AccessKeySecret</code> specifies the AccessKey secret of the RAM user. You must specify all the AccessKey pairs of the RAM user.</p>
-         * </li>
-         * <li><p>If you set the SecretType parameter to ECS that indicates a managed ECS secret, the secret value must be in one of the following formats:</p>
-         * <ul>
-         * <li><code>{&quot;UserName&quot;:&quot;&quot;,&quot;Password&quot;: &quot;&quot;}</code>: In the format, <code>UserName</code> specifies the username that is used to log on to the ECS instance, and <code>Password</code> specifies the password that is used to log on to the ECS instance.</li>
-         * <li><code>{&quot;UserName&quot;:&quot;&quot;,&quot;PublicKey&quot;: &quot;&quot;, &quot;PrivateKey&quot;: &quot;&quot;}</code>: In the format, <code>PublicKey</code> indicates the SSH public key that is used to log on to the ECS instance, and <code>PrivateKey</code> specifies the SSH private key that is used to log on to the ECS instance.</li>
-         * </ul>
+         * <li><p>When SecretType is set to ECS (ECS secret), the name must start with <code>acs/ecs/</code>.</p>
          * </li>
          * </ul>
          * <p>This parameter is required.</p>
@@ -429,7 +528,21 @@ public class CreateSecretRequest extends Request {
         }
 
         /**
-         * <p>The ID of the dedicated KMS instance.</p>
+         * <p>The type of the secret. Valid values:</p>
+         * <ul>
+         * <li><p>Generic: generic secret. This is the default value.  </p>
+         * </li>
+         * <li><p>Rds: ApsaraDB RDS secret.  </p>
+         * </li>
+         * <li><p>Redis: Redis secret.</p>
+         * </li>
+         * <li><p>RAMCredentials: RAM secret.  </p>
+         * </li>
+         * <li><p>ECS: ECS secret.</p>
+         * </li>
+         * <li><p>PolarDB: PolarDB secret.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Rds</p>
@@ -441,15 +554,17 @@ public class CreateSecretRequest extends Request {
         }
 
         /**
-         * <p>The interval for automatic rotation. Valid values: 6 hours to 8,760 hours (365 days).</p>
-         * <p>The value is in the <code>integer[unit]</code> format.</p>
-         * <p>The unit can be d (day), h (hour), m (minute), or s (second). For example, both 7d and 604800s indicate a seven-day interval.</p>
-         * <blockquote>
-         * <p> This parameter is required if you set the EnableAutomaticRotation parameter to true. This parameter is ignored if you set the EnableAutomaticRotation parameter to false or if the EnableAutomaticRotation parameter is not configured.</p>
-         * </blockquote>
+         * <p>The tags of the secret. Each tag is a key-value pair that consists of a tag key and a tag value.</p>
+         * <p>The tag key and tag value can be up to 128 characters in length and can contain uppercase and lowercase letters, digits, forward slashes (/), backslashes (\), underscores (_), hyphens (-), periods (.), plus signs (+), equal signs (=), colons (:), and at signs (@).</p>
+         * <ul>
+         * <li><p>A tag key cannot start with aliyun or acs:.</p>
+         * </li>
+         * <li><p>You can add up to 20 tags to each secret.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;TagKey&quot;:&quot;key1&quot;,&quot;TagValue&quot;:&quot;val1&quot;},{&quot;TagKey&quot;:&quot;key2&quot;,&quot;TagValue&quot;:&quot;val2&quot;}]</p>
+         * <p>[{\&quot;TagKey\&quot;:\&quot;key1\&quot;,\&quot;TagValue\&quot;:\&quot;val1\&quot;},{\&quot;TagKey\&quot;:\&quot;key2\&quot;,\&quot;TagValue\&quot;:\&quot;val2\&quot;}]</p>
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);
@@ -458,14 +573,8 @@ public class CreateSecretRequest extends Request {
         }
 
         /**
-         * <p>The type of the secret value. Valid values:</p>
-         * <ul>
-         * <li>text</li>
-         * <li>binary</li>
-         * </ul>
-         * <blockquote>
-         * <p> If you set the SecretType parameter to Rds, RAMCredentials, or ECS, the SecretDataType parameter must be set to text.</p>
-         * </blockquote>
+         * <p>The version ID of the initial version. The version ID must be unique within the secret.
+         * The version ID can be up to 64 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

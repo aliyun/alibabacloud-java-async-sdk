@@ -133,7 +133,7 @@ public class ExportDataKeyRequest extends Request {
         } 
 
         /**
-         * <p>The ciphertext of the data key encrypted by using a CMK.</p>
+         * <p>The ciphertext of the data key that is encrypted using a master key (CMK).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,7 +146,25 @@ public class ExportDataKeyRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * <p>Specifies whether to enable the DryRun mode.</p>
+         * <ul>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false (default)</p>
+         * </li>
+         * </ul>
+         * <p>The DryRun mode is used to test the API call and verify the permissions on the specified resources and the validity of the request parameters. If you enable the DryRun mode, KMS returns a failure response and a failure reason. The failure reasons include the following:</p>
+         * <ul>
+         * <li><p>DryRunOperationError: The request would have succeeded if the DryRun parameter was not specified.</p>
+         * </li>
+         * <li><p>ValidationError: The specified parameters in the request are invalid.</p>
+         * </li>
+         * <li><p>AccessDeniedError: You are not authorized to perform the operation on the KMS resource.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(String dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -155,7 +173,7 @@ public class ExportDataKeyRequest extends Request {
         }
 
         /**
-         * <p>A JSON string that consists of key-value pairs. If you specify this parameter when you use a CMK to encrypt the data key, an equivalent value is required here. For more information, see <a href="https://help.aliyun.com/document_detail/42975.html">EncryptionContext</a>.</p>
+         * <p>A JSON string that consists of key-value pairs. EncryptionContext is the encryption context that is passed in when the data key is encrypted using a CMK. For more information, see <a href="https://help.aliyun.com/document_detail/42975.html">EncryptionContext</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;Example&quot;:&quot;Example&quot;}</p>
@@ -168,7 +186,7 @@ public class ExportDataKeyRequest extends Request {
         }
 
         /**
-         * <p>A Base64-encoded public key.</p>
+         * <p>The public key in Base64 format.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -181,12 +199,14 @@ public class ExportDataKeyRequest extends Request {
         }
 
         /**
-         * <p>The encryption algorithm based on which you want to use the public key specified by PublicKeyBlob to encrypt the data key. For more information about encryption algorithms, see <a href="https://help.aliyun.com/document_detail/148130.html">AsymmetricDecrypt</a>.</p>
-         * <p>Valid values:</p>
+         * <p>The encryption algorithm that is used to encrypt the data key using the public key specified by PublicKeyBlob. For more information about the algorithms, see <a href="https://help.aliyun.com/document_detail/148130.html">AsymmetricDecrypt</a>.<br> Valid values:<br><br></p>
          * <ul>
-         * <li>RSAES_OAEP_SHA_256</li>
-         * <li>RSAES_OAEP_SHA_1</li>
-         * <li>SM2PKE</li>
+         * <li><p>RSAES_OAEP_SHA_256</p>
+         * </li>
+         * <li><p>RSAES_OAEP_SHA_1</p>
+         * </li>
+         * <li><p>SM2PKE</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -200,11 +220,12 @@ public class ExportDataKeyRequest extends Request {
         }
 
         /**
-         * <p>The key type of the public key specified by PublicKeyBlob. For more information about key types, see <a href="https://help.aliyun.com/document_detail/148147.html">Introduction to asymmetric keys</a>.</p>
-         * <p>Valid values:</p>
+         * <p>The type of the public key specified by PublicKeyBlob. For more information about key types, see <a href="https://help.aliyun.com/document_detail/148147.html">Introduction to asymmetric keys</a>.<br> Valid values:<br><br></p>
          * <ul>
-         * <li>RSA_2048</li>
-         * <li>EC_SM2</li>
+         * <li><p>RSA_2048</p>
+         * </li>
+         * <li><p>EC_SM2</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

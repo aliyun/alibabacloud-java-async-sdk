@@ -59,7 +59,7 @@ public class BatchGetSecretValueRequest extends Request {
         } 
 
         /**
-         * SecretsList.
+         * <p>The list of secret information. You can query up to 20 different secrets at a time.</p>
          */
         public Builder secretsList(java.util.List<SecretsList> secretsList) {
             String secretsListShrink = shrink(secretsList, "SecretsList", "json");
@@ -155,7 +155,17 @@ public class BatchGetSecretValueRequest extends Request {
             } 
 
             /**
-             * FetchExtendedConfig.
+             * <p>Specifies whether to retrieve the extended configuration of the secret. Valid values:</p>
+             * <ul>
+             * <li>true: Retrieve the extended configuration.</li>
+             * <li>false (default): Do not retrieve the extended configuration.</li>
+             * </ul>
+             * <blockquote>
+             * <p>Generic secrets do not support extended configurations. This parameter is ignored for generic secrets.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder fetchExtendedConfig(String fetchExtendedConfig) {
                 this.fetchExtendedConfig = fetchExtendedConfig;
@@ -163,6 +173,10 @@ public class BatchGetSecretValueRequest extends Request {
             }
 
             /**
+             * <p>The secret name or secret Alibaba Cloud Resource Name (ARN).</p>
+             * <blockquote>
+             * <p>When accessing a secret in another Alibaba Cloud account, you must specify the secret ARN. The format of a secret ARN is <code>acs:kms:${region}:${account}:secret/${secret-name}</code>.</p>
+             * </blockquote>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -174,7 +188,10 @@ public class BatchGetSecretValueRequest extends Request {
             }
 
             /**
-             * VersionId.
+             * <p>The version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder versionId(String versionId) {
                 this.versionId = versionId;
@@ -182,7 +199,14 @@ public class BatchGetSecretValueRequest extends Request {
             }
 
             /**
-             * VersionStage.
+             * <p>The version stage. Default value: ACSCurrent.</p>
+             * <p>If you specify this parameter, the secret value of the specified version stage is returned. If you do not specify this parameter, the secret value of the ACSCurrent version stage is returned.</p>
+             * <blockquote>
+             * <p>For ApsaraDB RDS secrets, PolarDB secrets, Redis/Tair secrets, RAM secrets, and ECS secrets, you can retrieve only the secret values of the ACSPrevious and ACSCurrent versions.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>ACSCurrent</p>
              */
             public Builder versionStage(String versionStage) {
                 this.versionStage = versionStage;

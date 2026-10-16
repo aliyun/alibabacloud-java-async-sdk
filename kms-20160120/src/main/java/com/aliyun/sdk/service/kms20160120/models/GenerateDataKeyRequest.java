@@ -131,7 +131,20 @@ public class GenerateDataKeyRequest extends Request {
         } 
 
         /**
-         * DryRun.
+         * <p>Specifies whether to enable DryRun mode.</p>
+         * <ul>
+         * <li>true: enabled.</li>
+         * <li>false (default): disabled.</li>
+         * </ul>
+         * <p>DryRun mode is used to test API calls, verify that you have the required permissions on the relevant resources, and check whether request parameters are configured correctly. When DryRun mode is enabled, KMS always returns a failure with a reason. Possible failure reasons include:</p>
+         * <ul>
+         * <li>DryRunOperationError: The request would succeed if the DryRun parameter were not set.</li>
+         * <li>ValidationError: A parameter specified in the request is invalid.</li>
+         * <li>AccessDeniedError: You do not have permission to perform the operation on the KMS resource.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(String dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -140,8 +153,8 @@ public class GenerateDataKeyRequest extends Request {
         }
 
         /**
-         * <p>The JSON string that consists of key-value pairs.</p>
-         * <p>If you specify this parameter, an equivalent value is required when you call the <a href="https://help.aliyun.com/document_detail/28950.html">Decrypt</a> operation. For more information, see <a href="https://help.aliyun.com/document_detail/42975.html">EncryptionContext</a>.</p>
+         * <p>A JSON string of key-value pairs.</p>
+         * <p>If you specify this parameter, you must provide the same parameter when you call the <a href="https://help.aliyun.com/document_detail/28950.html">Decrypt</a> operation. For more information, see <a href="https://help.aliyun.com/document_detail/42975.html">EncryptionContext</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;Example&quot;:&quot;Example&quot;}</p>
@@ -154,12 +167,14 @@ public class GenerateDataKeyRequest extends Request {
         }
 
         /**
-         * <p>The ID of the CMK. The ID must be globally unique.</p>
-         * <p>You can also set this parameter to an alias that is bound to the CMK. For more information, see <a href="https://help.aliyun.com/document_detail/68522.html">Alias overview</a>.</p>
+         * <p>The ID of the key. You can also specify a key alias or a key Amazon Resource Name (ARN). For more information about aliases, see <a href="https://help.aliyun.com/document_detail/480655.html">Manage key aliases</a>.</p>
+         * <blockquote>
+         * <p>To access a key in another Alibaba Cloud account, you must specify the key ARN. The key ARN format is <code>acs:kms:${region}:${account}:key/${keyid}</code>.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>7906979c-8e06-46a2-be2d-68e3ccbc****</p>
+         * <p>key-hzz630494463ejqjx****</p>
          */
         public Builder keyId(String keyId) {
             this.putQueryParameter("KeyId", keyId);
@@ -168,13 +183,15 @@ public class GenerateDataKeyRequest extends Request {
         }
 
         /**
-         * <p>The type of the data key that you want to generate. Valid values:</p>
+         * <p>The length of the data key (DK) to generate. Valid values:</p>
          * <ul>
-         * <li>AES_256: a 256-bit symmetric key</li>
-         * <li>AES_128: a 128-bit symmetric key</li>
+         * <li><p>AES_256: a 256-bit symmetric key.</p>
+         * </li>
+         * <li><p>AES_128: a 128-bit symmetric key.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> We recommend that you use the KeySpec or NumberOfBytes parameter to specify the length of a data key. If none of the parameters are specified, KMS generates a 256-bit data key. If both parameters are specified, KMS ignores the KeySpec parameter.</p>
+         * <p>Use KeySpec or NumberOfBytes to specify the DK length. If neither is specified, KMS generates a 256-bit DK. If both are specified, KMS ignores the KeySpec parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -187,12 +204,12 @@ public class GenerateDataKeyRequest extends Request {
         }
 
         /**
-         * <p>The length of the data key that you want to generate. Unit: bytes.</p>
+         * <p>The length of the data key (DK) to generate, in bytes.</p>
          * <p>Valid values: 1 to 1024.</p>
          * <p>Default value:</p>
          * <ul>
-         * <li>If the KeySpec parameter is set to AES_256, set the value of the NumberOfBytes parameter to 32.</li>
-         * <li>If the KeySpec parameter is set to AES_128, set the value of the NumberOfBytes parameter to 16.</li>
+         * <li>When KeySpec is set to AES_256, the default value of NumberOfBytes is 32.</li>
+         * <li>When KeySpec is set to AES_128, the default value of NumberOfBytes is 16.</li>
          * </ul>
          * 
          * <strong>example:</strong>

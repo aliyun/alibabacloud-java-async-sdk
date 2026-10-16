@@ -106,7 +106,10 @@ public class GetManagedDataKeyResponseBody extends TeaModel {
         } 
 
         /**
-         * DataKeyName.
+         * <p>The name of the managed data key (DK).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-data-key</p>
          */
         public Builder dataKeyName(String dataKeyName) {
             this.dataKeyName = dataKeyName;
@@ -114,7 +117,10 @@ public class GetManagedDataKeyResponseBody extends TeaModel {
         }
 
         /**
-         * DataKeyVersionId.
+         * <p>The version number of the returned managed data key (DK).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xH6OPUmz</p>
          */
         public Builder dataKeyVersionId(String dataKeyVersionId) {
             this.dataKeyVersionId = dataKeyVersionId;
@@ -122,7 +128,10 @@ public class GetManagedDataKeyResponseBody extends TeaModel {
         }
 
         /**
-         * DataKeyVersionName.
+         * <p>The credential name that stores the key material of the returned managed data key (DK) version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kms-datakeyversion!example-data-key!xH6OPUmz</p>
          */
         public Builder dataKeyVersionName(String dataKeyVersionName) {
             this.dataKeyVersionName = dataKeyVersionName;
@@ -130,7 +139,10 @@ public class GetManagedDataKeyResponseBody extends TeaModel {
         }
 
         /**
-         * Plaintext.
+         * <p>The Base64-encoding plaintext value of the data key (DK).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CYueyVmZJ2MfA1VSZV2jCbFT8bO7StAvBnHacplr9aI=</p>
          */
         public Builder plaintext(String plaintext) {
             this.plaintext = plaintext;
@@ -138,7 +150,10 @@ public class GetManagedDataKeyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. Alibaba Cloud generates a unique identifier for each request. You can use the request ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4bd560a1-729e-45f1-a3d9-b2a33d61046b</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

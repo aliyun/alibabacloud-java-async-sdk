@@ -105,7 +105,7 @@ public class ImportKeyMaterialRequest extends Request {
         } 
 
         /**
-         * <p>Use <strong>GetParametersForImport</strong> the Returned public key and the base64-encoded key material.</p>
+         * <p>The key material encrypted with the public key returned by <strong>GetParametersForImport</strong>, and then Base64-encoded.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -118,7 +118,7 @@ public class ImportKeyMaterialRequest extends Request {
         }
 
         /**
-         * <p>By calling <strong>GetParametersForImport</strong> the import token.</p>
+         * <p>The import token obtained by calling <strong>GetParametersForImport</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -147,7 +147,7 @@ public class ImportKeyMaterialRequest extends Request {
          * <p>The time when the key material expires.</p>
          * <p>If this parameter is not specified or set this parameter to 0, the key material does not expire.</p>
          * <blockquote>
-         * <p> The value cannot be earlier than the time when the API is called (based on the server time).</p>
+         * <p>The value cannot be earlier than the time when the operation is called (based on the server time).</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

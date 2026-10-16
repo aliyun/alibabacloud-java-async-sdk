@@ -87,7 +87,10 @@ public class GetManagedDataKeyRequest extends Request {
         } 
 
         /**
-         * DataKeyName.
+         * <p>The name of the managed data key (DK). This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-data-key</p>
          */
         public Builder dataKeyName(String dataKeyName) {
             this.putQueryParameter("DataKeyName", dataKeyName);
@@ -96,7 +99,10 @@ public class GetManagedDataKeyRequest extends Request {
         }
 
         /**
-         * DataKeyVersionId.
+         * <p>The version number of the managed data key (DK). This parameter is optional. If you set this parameter to a specific version number, the plaintext of the specified version of the managed data key (DK) is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xH6OPUmz</p>
          */
         public Builder dataKeyVersionId(String dataKeyVersionId) {
             this.putQueryParameter("DataKeyVersionId", dataKeyVersionId);
@@ -105,7 +111,15 @@ public class GetManagedDataKeyRequest extends Request {
         }
 
         /**
-         * UseLatest.
+         * <p>Specifies whether to use the latest version of the managed data key (DK) when no version number is provided. Valid values:</p>
+         * <ul>
+         * <li>true: Returns the latest version of the managed data key (DK).</li>
+         * <li>false: Returns the first version of the managed data key (DK).</li>
+         * </ul>
+         * <p>Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder useLatest(Boolean useLatest) {
             this.putQueryParameter("UseLatest", useLatest);
