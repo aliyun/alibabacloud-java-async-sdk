@@ -73,7 +73,10 @@ public class ListUserPoolsRequest extends Request {
         } 
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return per page. Valid values: 1 to 1000. Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -82,7 +85,10 @@ public class ListUserPoolsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token used to query the next page of data. You do not need to specify this parameter for the first call. If a NextToken is returned in the response of the previous call, specify it in the current call to obtain the next page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TGlzdFVzZXJQb29sczo6MTA=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);

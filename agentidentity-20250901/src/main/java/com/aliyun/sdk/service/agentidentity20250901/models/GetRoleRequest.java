@@ -73,7 +73,10 @@ public class GetRoleRequest extends Request {
         } 
 
         /**
-         * RoleName.
+         * <p>The name of the role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Analyst</p>
          */
         public Builder roleName(String roleName) {
             this.putBodyParameter("RoleName", roleName);
@@ -82,7 +85,10 @@ public class GetRoleRequest extends Request {
         }
 
         /**
-         * UserPoolName.
+         * <p>The name of the user pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-agent-userpool</p>
          */
         public Builder userPoolName(String userPoolName) {
             this.putBodyParameter("UserPoolName", userPoolName);

@@ -73,7 +73,10 @@ public class GetSpecificIdentityProviderRequest extends Request {
         } 
 
         /**
-         * IdentityProviderType.
+         * <p>The type of the identity provider. Currently, only DingTalk is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DingTalk</p>
          */
         public Builder identityProviderType(String identityProviderType) {
             this.putBodyParameter("IdentityProviderType", identityProviderType);
@@ -82,7 +85,10 @@ public class GetSpecificIdentityProviderRequest extends Request {
         }
 
         /**
-         * UserPoolName.
+         * <p>The name of the user pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-agent-userpool</p>
          */
         public Builder userPoolName(String userPoolName) {
             this.putBodyParameter("UserPoolName", userPoolName);

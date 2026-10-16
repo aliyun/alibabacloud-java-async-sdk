@@ -67,7 +67,10 @@ public class SetSpecificIdentityProviderResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AABD6E03-4B3A-5687-88FF-72232670ED0C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class SetSpecificIdentityProviderResponseBody extends TeaModel {
         }
 
         /**
-         * SpecificIdentityProviderConfiguration.
+         * <p>The configuration information of the identity provider.</p>
          */
         public Builder specificIdentityProviderConfiguration(SpecificIdentityProviderConfiguration specificIdentityProviderConfiguration) {
             this.specificIdentityProviderConfiguration = specificIdentityProviderConfiguration;
@@ -154,7 +157,10 @@ public class SetSpecificIdentityProviderResponseBody extends TeaModel {
             } 
 
             /**
-             * IDPMetadata.
+             * <p>The IdP metadata content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;corpId&quot;:&quot;dingxxxxxxxxxx&quot;,&quot;appKey&quot;:&quot;dingxxxxxxxxxx&quot;,&quot;syncCallbackStatus&quot;:&quot;Enabled&quot;}</p>
              */
             public Builder IDPMetadata(String IDPMetadata) {
                 this.IDPMetadata = IDPMetadata;
@@ -162,7 +168,10 @@ public class SetSpecificIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * IdentityProviderType.
+             * <p>The type of the identity provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DingTalk</p>
              */
             public Builder identityProviderType(String identityProviderType) {
                 this.identityProviderType = identityProviderType;
@@ -170,7 +179,10 @@ public class SetSpecificIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * SSOStatus.
+             * <p>The SSO enabling status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder SSOStatus(String SSOStatus) {
                 this.SSOStatus = SSOStatus;

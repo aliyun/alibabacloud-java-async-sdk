@@ -67,7 +67,7 @@ public class CreatePolicySetResponseBody extends TeaModel {
         } 
 
         /**
-         * PolicySet.
+         * <p>The policy set details.</p>
          */
         public Builder policySet(PolicySet policySet) {
             this.policySet = policySet;
@@ -75,7 +75,10 @@ public class CreatePolicySetResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique identifier of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2A48EB1D-D645-5758-91AF-EDF8E36E257B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -107,11 +110,15 @@ public class CreatePolicySetResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PolicySetName")
         private String policySetName;
 
+        @com.aliyun.core.annotation.NameInMap("SourcePlatform")
+        private String sourcePlatform;
+
         private PolicySet(Builder builder) {
             this.createTime = builder.createTime;
             this.description = builder.description;
             this.policySetArn = builder.policySetArn;
             this.policySetName = builder.policySetName;
+            this.sourcePlatform = builder.sourcePlatform;
         }
 
         public static Builder builder() {
@@ -150,11 +157,19 @@ public class CreatePolicySetResponseBody extends TeaModel {
             return this.policySetName;
         }
 
+        /**
+         * @return sourcePlatform
+         */
+        public String getSourcePlatform() {
+            return this.sourcePlatform;
+        }
+
         public static final class Builder {
             private String createTime; 
             private String description; 
             private String policySetArn; 
             private String policySetName; 
+            private String sourcePlatform; 
 
             private Builder() {
             } 
@@ -164,10 +179,14 @@ public class CreatePolicySetResponseBody extends TeaModel {
                 this.description = model.description;
                 this.policySetArn = model.policySetArn;
                 this.policySetName = model.policySetName;
+                this.sourcePlatform = model.sourcePlatform;
             } 
 
             /**
-             * CreateTime.
+             * <p>The creation time in UTC ISO 8601 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-05-08T06:19:17Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -175,7 +194,10 @@ public class CreatePolicySetResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -183,7 +205,10 @@ public class CreatePolicySetResponseBody extends TeaModel {
             }
 
             /**
-             * PolicySetArn.
+             * <p>The ARN of the policy set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:agentidentity:cn-beijing:123456:policyset/default-policy-set</p>
              */
             public Builder policySetArn(String policySetArn) {
                 this.policySetArn = policySetArn;
@@ -191,10 +216,24 @@ public class CreatePolicySetResponseBody extends TeaModel {
             }
 
             /**
-             * PolicySetName.
+             * <p>The name of the policy set. The name must be unique within the current Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default-policy-set</p>
              */
             public Builder policySetName(String policySetName) {
                 this.policySetName = policySetName;
+                return this;
+            }
+
+            /**
+             * <p>The source platform.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Manuel</p>
+             */
+            public Builder sourcePlatform(String sourcePlatform) {
+                this.sourcePlatform = sourcePlatform;
                 return this;
             }
 

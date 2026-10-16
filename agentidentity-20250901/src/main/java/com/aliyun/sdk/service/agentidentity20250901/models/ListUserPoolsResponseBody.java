@@ -106,7 +106,10 @@ public class ListUserPoolsResponseBody extends TeaModel {
         } 
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries returned for the current request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -114,7 +117,10 @@ public class ListUserPoolsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token used to query the next page of data. An empty value indicates that no more data is available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TGlzdFVzZXJQb29sczo6MjA=</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -122,7 +128,10 @@ public class ListUserPoolsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AABD6E03-4B3A-5687-88FF-72232670ED0C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,10 @@ public class ListUserPoolsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of user pools that meet the conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -138,7 +150,7 @@ public class ListUserPoolsResponseBody extends TeaModel {
         }
 
         /**
-         * UserPools.
+         * <p>The list of user pools.</p>
          */
         public Builder userPools(java.util.List<UserPools> userPools) {
             this.userPools = userPools;
@@ -282,7 +294,10 @@ public class ListUserPoolsResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The creation time in ISO 8601 format (UTC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-05-07T06:19:17Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -290,7 +305,10 @@ public class ListUserPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the user pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>User pool example</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -298,7 +316,10 @@ public class ListUserPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * OIDCDiscoveryURL.
+             * <p>The OpenID Connect (OIDC) discovery URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://signin-cn-beijing.aliyunagentid.com/up_7b6908bcb9ba4c****c8e187/.well-known/openid-configuration">https://signin-cn-beijing.aliyunagentid.com/up_7b6908bcb9ba4c****c8e187/.well-known/openid-configuration</a></p>
              */
             public Builder OIDCDiscoveryURL(String OIDCDiscoveryURL) {
                 this.OIDCDiscoveryURL = OIDCDiscoveryURL;
@@ -306,7 +327,10 @@ public class ListUserPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * SigninBaseURL.
+             * <p>The base sign-in URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://pre-signin-cn-hangzhou.aliyunagentid.com/up_e14d889*****716841">https://pre-signin-cn-hangzhou.aliyunagentid.com/up_e14d889*****716841</a></p>
              */
             public Builder signinBaseURL(String signinBaseURL) {
                 this.signinBaseURL = signinBaseURL;
@@ -314,7 +338,10 @@ public class ListUserPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * SourcePlatform.
+             * <p>The creation source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Manual</p>
              */
             public Builder sourcePlatform(String sourcePlatform) {
                 this.sourcePlatform = sourcePlatform;
@@ -322,7 +349,10 @@ public class ListUserPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The update time in ISO 8601 format (UTC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-05-07T06:19:17Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -330,7 +360,10 @@ public class ListUserPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * UserPoolId.
+             * <p>The ID of the user pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>up-xxxxxxxxxxxxxxxxxxxx</p>
              */
             public Builder userPoolId(String userPoolId) {
                 this.userPoolId = userPoolId;
@@ -338,7 +371,10 @@ public class ListUserPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * UserPoolName.
+             * <p>The name of the user pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-agent-userpool</p>
              */
             public Builder userPoolName(String userPoolName) {
                 this.userPoolName = userPoolName;

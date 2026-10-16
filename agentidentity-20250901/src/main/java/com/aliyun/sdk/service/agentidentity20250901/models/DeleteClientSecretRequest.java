@@ -101,7 +101,10 @@ public class DeleteClientSecretRequest extends Request {
         } 
 
         /**
-         * ClientId.
+         * <p>The client ID. Specify either this parameter or ClientName. If both are specified, ClientId takes precedence.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>client-xxxxxxxxxxxxxxxxxxxx</p>
          */
         public Builder clientId(String clientId) {
             this.putBodyParameter("ClientId", clientId);
@@ -110,7 +113,10 @@ public class DeleteClientSecretRequest extends Request {
         }
 
         /**
-         * ClientName.
+         * <p>The client name. Specify either this parameter or ClientId.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-web-app</p>
          */
         public Builder clientName(String clientName) {
             this.putBodyParameter("ClientName", clientName);
@@ -119,7 +125,10 @@ public class DeleteClientSecretRequest extends Request {
         }
 
         /**
-         * ClientSecretId.
+         * <p>The key ID of the client secret to delete.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>secret-xxxxxxxxxxxxxxxxxxxx</p>
          */
         public Builder clientSecretId(String clientSecretId) {
             this.putBodyParameter("ClientSecretId", clientSecretId);
@@ -128,7 +137,10 @@ public class DeleteClientSecretRequest extends Request {
         }
 
         /**
-         * UserPoolName.
+         * <p>The user pool name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-agent-userpool</p>
          */
         public Builder userPoolName(String userPoolName) {
             this.putBodyParameter("UserPoolName", userPoolName);

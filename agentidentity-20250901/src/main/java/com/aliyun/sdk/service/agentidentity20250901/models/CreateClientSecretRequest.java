@@ -87,7 +87,10 @@ public class CreateClientSecretRequest extends Request {
         } 
 
         /**
-         * ClientId.
+         * <p>The ID of the client. If you specify ClientId, you do not need to specify UserPoolName. Specify either ClientName or ClientId. If both are specified, ClientId takes precedence.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>client_xxxxxxxxxxxxxxxxxxxx</p>
          */
         public Builder clientId(String clientId) {
             this.putBodyParameter("ClientId", clientId);
@@ -96,7 +99,10 @@ public class CreateClientSecretRequest extends Request {
         }
 
         /**
-         * ClientName.
+         * <p>The name of the client. Specify either ClientName or ClientId.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-web-app</p>
          */
         public Builder clientName(String clientName) {
             this.putBodyParameter("ClientName", clientName);
@@ -105,7 +111,10 @@ public class CreateClientSecretRequest extends Request {
         }
 
         /**
-         * UserPoolName.
+         * <p>The name of the user pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-agent-userpool</p>
          */
         public Builder userPoolName(String userPoolName) {
             this.putBodyParameter("UserPoolName", userPoolName);

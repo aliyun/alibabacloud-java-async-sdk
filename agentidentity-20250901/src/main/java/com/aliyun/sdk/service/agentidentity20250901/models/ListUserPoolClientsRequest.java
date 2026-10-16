@@ -87,7 +87,10 @@ public class ListUserPoolClientsRequest extends Request {
         } 
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return per page. Valid values: 1 to 1000. Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -96,7 +99,10 @@ public class ListUserPoolClientsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token used to retrieve the next page of results. You do not need to specify this parameter for the first call. If a NextToken value is returned in the previous response, specify it in the current request to retrieve the next page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TGlzdENsaWVudHM6OjEw</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -105,7 +111,10 @@ public class ListUserPoolClientsRequest extends Request {
         }
 
         /**
-         * UserPoolName.
+         * <p>The name of the user pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-agent-userpool</p>
          */
         public Builder userPoolName(String userPoolName) {
             this.putBodyParameter("UserPoolName", userPoolName);

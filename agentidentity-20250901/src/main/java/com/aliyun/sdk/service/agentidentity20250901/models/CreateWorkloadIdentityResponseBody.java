@@ -67,7 +67,10 @@ public class CreateWorkloadIdentityResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D325DF9D-7CA8-5C47-BA0C-9A74873F2BE3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class CreateWorkloadIdentityResponseBody extends TeaModel {
         }
 
         /**
-         * WorkloadIdentity.
+         * <p>The workload identity.</p>
          */
         public Builder workloadIdentity(WorkloadIdentity workloadIdentity) {
             this.workloadIdentity = workloadIdentity;
@@ -271,7 +274,7 @@ public class CreateWorkloadIdentityResponseBody extends TeaModel {
             } 
 
             /**
-             * AllowedConsentCallbackURLs.
+             * <p>The allowlist of Consent authorization callback URLs for the workload identity, which constrains the allowed redirect addresses during the offline delegation (OfflineAccess) authorization flow.</p>
              */
             public Builder allowedConsentCallbackURLs(java.util.List<String> allowedConsentCallbackURLs) {
                 this.allowedConsentCallbackURLs = allowedConsentCallbackURLs;
@@ -279,7 +282,7 @@ public class CreateWorkloadIdentityResponseBody extends TeaModel {
             }
 
             /**
-             * AllowedResourceOAuth2ReturnURLs.
+             * <p>The list of allowed OAuth2 return URLs.</p>
              */
             public Builder allowedResourceOAuth2ReturnURLs(java.util.List<String> allowedResourceOAuth2ReturnURLs) {
                 this.allowedResourceOAuth2ReturnURLs = allowedResourceOAuth2ReturnURLs;
@@ -287,7 +290,10 @@ public class CreateWorkloadIdentityResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-12-18T06:19:17Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -295,7 +301,10 @@ public class CreateWorkloadIdentityResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example agent</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -303,7 +312,10 @@ public class CreateWorkloadIdentityResponseBody extends TeaModel {
             }
 
             /**
-             * IdentityProviderName.
+             * <p>The configured identity provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>identity-provider-okta</p>
              */
             public Builder identityProviderName(String identityProviderName) {
                 this.identityProviderName = identityProviderName;
@@ -311,7 +323,10 @@ public class CreateWorkloadIdentityResponseBody extends TeaModel {
             }
 
             /**
-             * RoleArn.
+             * <p>The ARN of the RAM role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ram::123456:role/agent-101-role</p>
              */
             public Builder roleArn(String roleArn) {
                 this.roleArn = roleArn;
@@ -319,7 +334,10 @@ public class CreateWorkloadIdentityResponseBody extends TeaModel {
             }
 
             /**
-             * SessionBindingEnabled.
+             * <p>Specifies whether session binding is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder sessionBindingEnabled(Boolean sessionBindingEnabled) {
                 this.sessionBindingEnabled = sessionBindingEnabled;
@@ -327,7 +345,10 @@ public class CreateWorkloadIdentityResponseBody extends TeaModel {
             }
 
             /**
-             * SourceAgentArn.
+             * <p>The ARN of the source agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:agentidentity:cn-beijing:123456:workloadidentity/my-identity</p>
              */
             public Builder sourceAgentArn(String sourceAgentArn) {
                 this.sourceAgentArn = sourceAgentArn;
@@ -335,7 +356,10 @@ public class CreateWorkloadIdentityResponseBody extends TeaModel {
             }
 
             /**
-             * SourcePlatform.
+             * <p>The creation source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Manual</p>
              */
             public Builder sourcePlatform(String sourcePlatform) {
                 this.sourcePlatform = sourcePlatform;
@@ -343,7 +367,10 @@ public class CreateWorkloadIdentityResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-12-18T06:19:17Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -351,7 +378,10 @@ public class CreateWorkloadIdentityResponseBody extends TeaModel {
             }
 
             /**
-             * WorkloadIdentityArn.
+             * <p>The ARN of the workload identity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:agentidentity:cn-beijing:123456:workloadidentitydirectory/default/workloadidentity/agent-101</p>
              */
             public Builder workloadIdentityArn(String workloadIdentityArn) {
                 this.workloadIdentityArn = workloadIdentityArn;
@@ -359,7 +389,10 @@ public class CreateWorkloadIdentityResponseBody extends TeaModel {
             }
 
             /**
-             * WorkloadIdentityName.
+             * <p>The unique name of the workload identity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent-101</p>
              */
             public Builder workloadIdentityName(String workloadIdentityName) {
                 this.workloadIdentityName = workloadIdentityName;

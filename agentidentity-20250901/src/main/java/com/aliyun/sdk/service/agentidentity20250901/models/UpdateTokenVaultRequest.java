@@ -87,7 +87,10 @@ public class UpdateTokenVaultRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example description</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -96,7 +99,10 @@ public class UpdateTokenVaultRequest extends Request {
         }
 
         /**
-         * RoleArn.
+         * <p>The ARN of the RAM role used to grant the AgentIdentity service access to other cloud resources such as KMS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::123456:role/AliyunAgentIdentityVaultRole</p>
          */
         public Builder roleArn(String roleArn) {
             this.putBodyParameter("RoleArn", roleArn);
@@ -105,7 +111,10 @@ public class UpdateTokenVaultRequest extends Request {
         }
 
         /**
-         * TokenVaultName.
+         * <p>The name of the token vault. The name must be unique within the current Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder tokenVaultName(String tokenVaultName) {
             this.putBodyParameter("TokenVaultName", tokenVaultName);

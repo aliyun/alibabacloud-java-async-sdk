@@ -101,7 +101,10 @@ public class CreateAPIKeyCredentialProviderRequest extends Request {
         } 
 
         /**
-         * APIKey.
+         * <p>The API key value to be securely stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example api key</p>
          */
         public Builder APIKey(String APIKey) {
             this.putBodyParameter("APIKey", APIKey);
@@ -110,7 +113,10 @@ public class CreateAPIKeyCredentialProviderRequest extends Request {
         }
 
         /**
-         * APIKeyCredentialProviderName.
+         * <p>The name of the credential provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>api-key-dash-scope</p>
          */
         public Builder APIKeyCredentialProviderName(String APIKeyCredentialProviderName) {
             this.putBodyParameter("APIKeyCredentialProviderName", APIKeyCredentialProviderName);
@@ -119,7 +125,10 @@ public class CreateAPIKeyCredentialProviderRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the credential provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example provider</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -128,7 +137,7 @@ public class CreateAPIKeyCredentialProviderRequest extends Request {
         }
 
         /**
-         * TokenVaultName.
+         * <p>The TokenVault name.</p>
          */
         public Builder tokenVaultName(String tokenVaultName) {
             this.putBodyParameter("TokenVaultName", tokenVaultName);

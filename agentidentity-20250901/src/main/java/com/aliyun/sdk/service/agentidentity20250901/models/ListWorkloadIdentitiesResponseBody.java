@@ -106,7 +106,10 @@ public class ListWorkloadIdentitiesResponseBody extends TeaModel {
         } 
 
         /**
-         * MaxResults.
+         * <p>The maximum number of results to return per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -114,7 +117,10 @@ public class ListWorkloadIdentitiesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token used to retrieve the next page of results. This field is not returned if no more results are available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAcCoknY19uiBwPrAe1W7XMikkA6+rCQddIGHccphiDPypD8zCxQkHV2pg8CkZvyRKg==</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -122,7 +128,10 @@ public class ListWorkloadIdentitiesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>173C69C9-9C07-5B25-9477-603A33E5DA32</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,10 @@ public class ListWorkloadIdentitiesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of workload identities.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -138,7 +150,7 @@ public class ListWorkloadIdentitiesResponseBody extends TeaModel {
         }
 
         /**
-         * WorkloadIdentities.
+         * <p>The list of workload identities.</p>
          */
         public Builder workloadIdentities(java.util.List<WorkloadIdentities> workloadIdentities) {
             this.workloadIdentities = workloadIdentities;
@@ -334,7 +346,7 @@ public class ListWorkloadIdentitiesResponseBody extends TeaModel {
             } 
 
             /**
-             * AllowedConsentCallbackURLs.
+             * <p>The whitelist of consent authorization callback URLs for the workload identity. This whitelist restricts the allowed callback addresses in the offline delegation (OfflineAccess) authorization flow.</p>
              */
             public Builder allowedConsentCallbackURLs(java.util.List<String> allowedConsentCallbackURLs) {
                 this.allowedConsentCallbackURLs = allowedConsentCallbackURLs;
@@ -342,7 +354,7 @@ public class ListWorkloadIdentitiesResponseBody extends TeaModel {
             }
 
             /**
-             * AllowedResourceOAuth2ReturnURLs.
+             * <p>The list of allowed OAuth2 return URLs.</p>
              */
             public Builder allowedResourceOAuth2ReturnURLs(java.util.List<String> allowedResourceOAuth2ReturnURLs) {
                 this.allowedResourceOAuth2ReturnURLs = allowedResourceOAuth2ReturnURLs;
@@ -350,7 +362,10 @@ public class ListWorkloadIdentitiesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-12-18T06:19:17Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -358,7 +373,10 @@ public class ListWorkloadIdentitiesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example agent</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -366,7 +384,10 @@ public class ListWorkloadIdentitiesResponseBody extends TeaModel {
             }
 
             /**
-             * IdentityProviderName.
+             * <p>The configured identity provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Operations Center single sign-on</p>
              */
             public Builder identityProviderName(String identityProviderName) {
                 this.identityProviderName = identityProviderName;
@@ -374,7 +395,10 @@ public class ListWorkloadIdentitiesResponseBody extends TeaModel {
             }
 
             /**
-             * RoleArn.
+             * <p>The ARN of the RAM role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ram::1953507478506681:role/test-rrsa-cb5ca90a20f854671adbac6ed4559a654</p>
              */
             public Builder roleArn(String roleArn) {
                 this.roleArn = roleArn;
@@ -382,7 +406,10 @@ public class ListWorkloadIdentitiesResponseBody extends TeaModel {
             }
 
             /**
-             * SessionBindingEnabled.
+             * <p>Specifies whether session binding is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder sessionBindingEnabled(Boolean sessionBindingEnabled) {
                 this.sessionBindingEnabled = sessionBindingEnabled;
@@ -390,7 +417,10 @@ public class ListWorkloadIdentitiesResponseBody extends TeaModel {
             }
 
             /**
-             * SourceAgentArn.
+             * <p>The ARN of the source agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:agentidentity:cn-beijing:123456:workloadidentity/my-identity</p>
              */
             public Builder sourceAgentArn(String sourceAgentArn) {
                 this.sourceAgentArn = sourceAgentArn;
@@ -398,7 +428,10 @@ public class ListWorkloadIdentitiesResponseBody extends TeaModel {
             }
 
             /**
-             * SourcePlatform.
+             * <p>The creation source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Manual</p>
              */
             public Builder sourcePlatform(String sourcePlatform) {
                 this.sourcePlatform = sourcePlatform;
@@ -406,7 +439,10 @@ public class ListWorkloadIdentitiesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-12-18T06:19:17Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -414,7 +450,10 @@ public class ListWorkloadIdentitiesResponseBody extends TeaModel {
             }
 
             /**
-             * WorkloadIdentityArn.
+             * <p>The ARN of the workload identity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:agentidentity:cn-beijing:123456:workloadidentitydirectory/default/workloadidentity/agent-101</p>
              */
             public Builder workloadIdentityArn(String workloadIdentityArn) {
                 this.workloadIdentityArn = workloadIdentityArn;
@@ -422,7 +461,10 @@ public class ListWorkloadIdentitiesResponseBody extends TeaModel {
             }
 
             /**
-             * WorkloadIdentityName.
+             * <p>The unique name of the workload identity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent-101</p>
              */
             public Builder workloadIdentityName(String workloadIdentityName) {
                 this.workloadIdentityName = workloadIdentityName;

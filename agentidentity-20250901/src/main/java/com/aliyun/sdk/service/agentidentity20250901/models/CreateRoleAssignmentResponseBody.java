@@ -67,7 +67,10 @@ public class CreateRoleAssignmentResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AABD6E03-4B3A-5687-88FF-72232670ED0C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class CreateRoleAssignmentResponseBody extends TeaModel {
         }
 
         /**
-         * RoleAssignment.
+         * <p>The role assignment.</p>
          */
         public Builder roleAssignment(RoleAssignment roleAssignment) {
             this.roleAssignment = roleAssignment;
@@ -206,7 +209,10 @@ public class CreateRoleAssignmentResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The time when the role assignment was created, in ISO 8601 format (UTC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-05-07T06:19:17Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -214,7 +220,10 @@ public class CreateRoleAssignmentResponseBody extends TeaModel {
             }
 
             /**
-             * PrincipalId.
+             * <p>The ID of the principal. When PrincipalType is User, this is the user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user_xxxxxxxxxxxxxxxxxxxx</p>
              */
             public Builder principalId(String principalId) {
                 this.principalId = principalId;
@@ -222,7 +231,10 @@ public class CreateRoleAssignmentResponseBody extends TeaModel {
             }
 
             /**
-             * PrincipalName.
+             * <p>The name of the principal. When PrincipalType is User, this is the username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alice</p>
              */
             public Builder principalName(String principalName) {
                 this.principalName = principalName;
@@ -230,7 +242,10 @@ public class CreateRoleAssignmentResponseBody extends TeaModel {
             }
 
             /**
-             * PrincipalType.
+             * <p>The type of the principal. Only User is currently supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>User</p>
              */
             public Builder principalType(String principalType) {
                 this.principalType = principalType;
@@ -238,7 +253,10 @@ public class CreateRoleAssignmentResponseBody extends TeaModel {
             }
 
             /**
-             * RoleId.
+             * <p>The ID of the role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>role_xxxxxxxxxxxxxxxxxxxx</p>
              */
             public Builder roleId(String roleId) {
                 this.roleId = roleId;
@@ -246,7 +264,10 @@ public class CreateRoleAssignmentResponseBody extends TeaModel {
             }
 
             /**
-             * RoleName.
+             * <p>The name of the role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Analyst</p>
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;
@@ -254,7 +275,10 @@ public class CreateRoleAssignmentResponseBody extends TeaModel {
             }
 
             /**
-             * UserPoolId.
+             * <p>The ID of the user pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>up_xxxxxxxxxxxxxxxxxxxx</p>
              */
             public Builder userPoolId(String userPoolId) {
                 this.userPoolId = userPoolId;

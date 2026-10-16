@@ -129,7 +129,10 @@ public class UpdateUserRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The description of the user. The description must be 0 to 256 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Senior data analyst</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -138,7 +141,10 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * DisplayName.
+         * <p>The display name of the user. The display name must be 0 to 128 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alice Wang</p>
          */
         public Builder displayName(String displayName) {
             this.putBodyParameter("DisplayName", displayName);
@@ -147,7 +153,10 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * Email.
+         * <p>The email address of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:alice.wang@example.com">alice.wang@example.com</a></p>
          */
         public Builder email(String email) {
             this.putBodyParameter("Email", email);
@@ -156,7 +165,14 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status of the user. Valid values:</p>
+         * <ul>
+         * <li>Enabled: The user is enabled.</li>
+         * <li>Disabled: The user is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         public Builder status(String status) {
             this.putBodyParameter("Status", status);
@@ -165,7 +181,10 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * UserName.
+         * <p>The username of the user to be updated. The username can contain letters, digits, underscores (_), periods (.), and hyphens (-), and must be 3 to 128 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
          */
         public Builder userName(String userName) {
             this.putBodyParameter("UserName", userName);
@@ -174,7 +193,10 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * UserPoolName.
+         * <p>The name of the user pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-agent-userpool</p>
          */
         public Builder userPoolName(String userPoolName) {
             this.putBodyParameter("UserPoolName", userPoolName);

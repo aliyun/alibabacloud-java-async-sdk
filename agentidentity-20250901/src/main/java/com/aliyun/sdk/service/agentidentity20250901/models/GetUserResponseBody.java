@@ -67,7 +67,10 @@ public class GetUserResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AABD6E03-4B3A-5687-88FF-72232670ED0C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class GetUserResponseBody extends TeaModel {
         }
 
         /**
-         * User.
+         * <p>The user information.</p>
          */
         public Builder user(User user) {
             this.user = user;
@@ -232,7 +235,10 @@ public class GetUserResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The creation time in ISO 8601 format (UTC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-05-07T06:19:17Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -240,7 +246,10 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Sample user</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -248,7 +257,10 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p>The display name of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alice Wang</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -280,7 +292,10 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The update time in ISO 8601 format (UTC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-05-07T06:19:17Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -288,7 +303,10 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user_xxxxxxxxxxxxxxxxxxxx</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -296,7 +314,10 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alice</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;

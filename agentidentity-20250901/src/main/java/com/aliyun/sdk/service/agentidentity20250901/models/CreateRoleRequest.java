@@ -87,7 +87,10 @@ public class CreateRoleRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The description of the role. The description must be 0 to 128 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Data analyst role</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -96,7 +99,10 @@ public class CreateRoleRequest extends Request {
         }
 
         /**
-         * RoleName.
+         * <p>The name of the role. The name must be unique within the user pool and must be 3 to 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Analyst</p>
          */
         public Builder roleName(String roleName) {
             this.putBodyParameter("RoleName", roleName);
@@ -105,7 +111,10 @@ public class CreateRoleRequest extends Request {
         }
 
         /**
-         * UserPoolName.
+         * <p>The name of the user pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-agent-userpool</p>
          */
         public Builder userPoolName(String userPoolName) {
             this.putBodyParameter("UserPoolName", userPoolName);

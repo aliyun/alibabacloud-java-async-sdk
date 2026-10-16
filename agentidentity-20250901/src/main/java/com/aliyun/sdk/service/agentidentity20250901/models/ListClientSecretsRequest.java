@@ -73,7 +73,10 @@ public class ListClientSecretsRequest extends Request {
         } 
 
         /**
-         * ClientName.
+         * <p>The client name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-web-app</p>
          */
         public Builder clientName(String clientName) {
             this.putBodyParameter("ClientName", clientName);
@@ -82,7 +85,10 @@ public class ListClientSecretsRequest extends Request {
         }
 
         /**
-         * UserPoolName.
+         * <p>The user pool name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-agent-userpool</p>
          */
         public Builder userPoolName(String userPoolName) {
             this.putBodyParameter("UserPoolName", userPoolName);

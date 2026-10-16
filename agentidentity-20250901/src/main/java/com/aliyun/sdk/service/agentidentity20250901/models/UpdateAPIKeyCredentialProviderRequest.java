@@ -101,7 +101,10 @@ public class UpdateAPIKeyCredentialProviderRequest extends Request {
         } 
 
         /**
-         * APIKey.
+         * <p>The new API key value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>new example api key</p>
          */
         public Builder APIKey(String APIKey) {
             this.putBodyParameter("APIKey", APIKey);
@@ -110,7 +113,10 @@ public class UpdateAPIKeyCredentialProviderRequest extends Request {
         }
 
         /**
-         * APIKeyCredentialProviderName.
+         * <p>The name of the credential provider to update.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>api-key-dash-scope</p>
          */
         public Builder APIKeyCredentialProviderName(String APIKeyCredentialProviderName) {
             this.putBodyParameter("APIKeyCredentialProviderName", APIKeyCredentialProviderName);
@@ -119,7 +125,10 @@ public class UpdateAPIKeyCredentialProviderRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The new description of the credential provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>new example provider</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -128,7 +137,10 @@ public class UpdateAPIKeyCredentialProviderRequest extends Request {
         }
 
         /**
-         * TokenVaultName.
+         * <p>The name of the token vault. Default value: default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder tokenVaultName(String tokenVaultName) {
             this.putBodyParameter("TokenVaultName", tokenVaultName);

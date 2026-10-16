@@ -54,7 +54,10 @@ public class DeleteWorkloadIdentityResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0946BB5C-15AA-53E6-A2A6-ED87119A640C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

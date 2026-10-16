@@ -73,7 +73,10 @@ public class DeleteUserPoolClientRequest extends Request {
         } 
 
         /**
-         * ClientName.
+         * <p>The name of the client to delete.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-web-app</p>
          */
         public Builder clientName(String clientName) {
             this.putBodyParameter("ClientName", clientName);
@@ -82,7 +85,10 @@ public class DeleteUserPoolClientRequest extends Request {
         }
 
         /**
-         * UserPoolName.
+         * <p>The name of the user pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-agent-userpool</p>
          */
         public Builder userPoolName(String userPoolName) {
             this.putBodyParameter("UserPoolName", userPoolName);

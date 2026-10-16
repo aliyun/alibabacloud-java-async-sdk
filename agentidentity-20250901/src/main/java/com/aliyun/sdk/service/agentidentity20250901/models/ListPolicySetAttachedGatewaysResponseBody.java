@@ -106,7 +106,7 @@ public class ListPolicySetAttachedGatewaysResponseBody extends TeaModel {
         } 
 
         /**
-         * AttachedGateways.
+         * <p>The list of attached gateways.</p>
          */
         public Builder attachedGateways(java.util.List<AttachedGateways> attachedGateways) {
             this.attachedGateways = attachedGateways;
@@ -114,7 +114,10 @@ public class ListPolicySetAttachedGatewaysResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of results to return per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -122,7 +125,10 @@ public class ListPolicySetAttachedGatewaysResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token used for pagination. You do not need to specify this parameter for the first call. For subsequent calls, pass the NextToken value returned from the previous call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -130,7 +136,10 @@ public class ListPolicySetAttachedGatewaysResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2A48EB1D-D645-5758-91AF-EDF8E36E257B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListPolicySetAttachedGatewaysResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries that match the query conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -243,7 +255,10 @@ public class ListPolicySetAttachedGatewaysResponseBody extends TeaModel {
             } 
 
             /**
-             * AttachedPolicySetName.
+             * <p>The name of the policy set that is currently in effect on the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default-policy-set</p>
              */
             public Builder attachedPolicySetName(String attachedPolicySetName) {
                 this.attachedPolicySetName = attachedPolicySetName;
@@ -251,7 +266,10 @@ public class ListPolicySetAttachedGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * AttachedTime.
+             * <p>The time when the policy set was attached to the gateway, in UTC and ISO 8601 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-05-08T06:19:17Z</p>
              */
             public Builder attachedTime(String attachedTime) {
                 this.attachedTime = attachedTime;
@@ -259,7 +277,14 @@ public class ListPolicySetAttachedGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * EnforcementMode.
+             * <p>The policy enforcement mode. Valid values:</p>
+             * <ul>
+             * <li>ENFORCE: Blocks non-compliant requests and allows compliant requests.</li>
+             * <li>LOG_ONLY: Only logs non-compliant requests without blocking them.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ENFORCE</p>
              */
             public Builder enforcementMode(String enforcementMode) {
                 this.enforcementMode = enforcementMode;
@@ -267,7 +292,10 @@ public class ListPolicySetAttachedGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * GatewayArn.
+             * <p>The ARN of the target gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:agentidentity:cn-beijing:123456:gateway/my-gateway</p>
              */
             public Builder gatewayArn(String gatewayArn) {
                 this.gatewayArn = gatewayArn;
@@ -275,7 +303,14 @@ public class ListPolicySetAttachedGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * GatewayType.
+             * <p>The gateway type. Valid values:</p>
+             * <ul>
+             * <li>AIGateway: Alibaba Cloud AI Gateway</li>
+             * <li>AgentRunMCP: AgentRun MCP tool</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>AIGateway</p>
              */
             public Builder gatewayType(String gatewayType) {
                 this.gatewayType = gatewayType;

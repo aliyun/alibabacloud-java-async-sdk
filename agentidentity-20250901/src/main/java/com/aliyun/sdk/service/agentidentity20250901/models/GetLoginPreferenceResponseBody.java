@@ -80,7 +80,7 @@ public class GetLoginPreferenceResponseBody extends TeaModel {
         } 
 
         /**
-         * LoginPreference.
+         * <p>The logon preference configuration.</p>
          */
         public Builder loginPreference(LoginPreference loginPreference) {
             this.loginPreference = loginPreference;
@@ -88,7 +88,7 @@ public class GetLoginPreferenceResponseBody extends TeaModel {
         }
 
         /**
-         * PasswordPolicy.
+         * <p>The password policy configuration.</p>
          */
         public Builder passwordPolicy(PasswordPolicy passwordPolicy) {
             this.passwordPolicy = passwordPolicy;
@@ -96,7 +96,10 @@ public class GetLoginPreferenceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AABD6E03-4B3A-5687-88FF-72232670ED0C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -149,7 +152,10 @@ public class GetLoginPreferenceResponseBody extends TeaModel {
             } 
 
             /**
-             * EnablePasswordLogin.
+             * <p>Indicates whether password logon is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enablePasswordLogin(Boolean enablePasswordLogin) {
                 this.enablePasswordLogin = enablePasswordLogin;
@@ -320,7 +326,10 @@ public class GetLoginPreferenceResponseBody extends TeaModel {
             } 
 
             /**
-             * HardExpire.
+             * <p>Indicates whether logon is prohibited after a password expires. A value of true indicates that the password must be reset by an administrator before the user can log on.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder hardExpire(Boolean hardExpire) {
                 this.hardExpire = hardExpire;
@@ -328,7 +337,10 @@ public class GetLoginPreferenceResponseBody extends TeaModel {
             }
 
             /**
-             * MaxLoginAttempts.
+             * <p>The maximum number of consecutive logon failures. Default value: 5. This value cannot be modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder maxLoginAttempts(Long maxLoginAttempts) {
                 this.maxLoginAttempts = maxLoginAttempts;
@@ -336,7 +348,10 @@ public class GetLoginPreferenceResponseBody extends TeaModel {
             }
 
             /**
-             * MaxPasswordAge.
+             * <p>The maximum validity period of a password in days. Default value: 7. This value cannot be modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder maxPasswordAge(Long maxPasswordAge) {
                 this.maxPasswordAge = maxPasswordAge;
@@ -344,7 +359,10 @@ public class GetLoginPreferenceResponseBody extends TeaModel {
             }
 
             /**
-             * MaxPasswordLength.
+             * <p>The maximum length of the password. Fixed value: 32.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder maxPasswordLength(Integer maxPasswordLength) {
                 this.maxPasswordLength = maxPasswordLength;
@@ -352,7 +370,10 @@ public class GetLoginPreferenceResponseBody extends TeaModel {
             }
 
             /**
-             * MinPasswordLength.
+             * <p>The minimum length of the password. Fixed value: 8.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder minPasswordLength(Integer minPasswordLength) {
                 this.minPasswordLength = minPasswordLength;
@@ -360,7 +381,10 @@ public class GetLoginPreferenceResponseBody extends TeaModel {
             }
 
             /**
-             * PasswordNotContainUserName.
+             * <p>Indicates whether the password must not contain the username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder passwordNotContainUserName(Boolean passwordNotContainUserName) {
                 this.passwordNotContainUserName = passwordNotContainUserName;
@@ -368,7 +392,10 @@ public class GetLoginPreferenceResponseBody extends TeaModel {
             }
 
             /**
-             * RequireLowerCaseChars.
+             * <p>Indicates whether lowercase letters are required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder requireLowerCaseChars(Boolean requireLowerCaseChars) {
                 this.requireLowerCaseChars = requireLowerCaseChars;
@@ -376,7 +403,10 @@ public class GetLoginPreferenceResponseBody extends TeaModel {
             }
 
             /**
-             * RequireNumbers.
+             * <p>Indicates whether numbers are required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder requireNumbers(Boolean requireNumbers) {
                 this.requireNumbers = requireNumbers;
@@ -384,7 +414,10 @@ public class GetLoginPreferenceResponseBody extends TeaModel {
             }
 
             /**
-             * RequireSymbols.
+             * <p>Indicates whether special characters are required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder requireSymbols(Boolean requireSymbols) {
                 this.requireSymbols = requireSymbols;
@@ -392,7 +425,10 @@ public class GetLoginPreferenceResponseBody extends TeaModel {
             }
 
             /**
-             * RequireUpperCaseChars.
+             * <p>Indicates whether uppercase letters are required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder requireUpperCaseChars(Boolean requireUpperCaseChars) {
                 this.requireUpperCaseChars = requireUpperCaseChars;

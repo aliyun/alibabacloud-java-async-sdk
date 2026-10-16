@@ -67,7 +67,7 @@ public class GetGatewayPolicyConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * GatewayPolicyConfig.
+         * <p>The gateway policy configuration.</p>
          */
         public Builder gatewayPolicyConfig(GatewayPolicyConfig gatewayPolicyConfig) {
             this.gatewayPolicyConfig = gatewayPolicyConfig;
@@ -75,7 +75,10 @@ public class GetGatewayPolicyConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique identifier of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2A48EB1D-D645-5758-91AF-EDF8E36E257B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,14 @@ public class GetGatewayPolicyConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * EnforcementMode.
+             * <p>The policy enforcement mode. Valid values:</p>
+             * <ul>
+             * <li>ENFORCE: Blocks non-compliant requests and allows compliant requests.</li>
+             * <li>LOG_ONLY: Records non-compliant requests without blocking them.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ENFORCE</p>
              */
             public Builder enforcementMode(String enforcementMode) {
                 this.enforcementMode = enforcementMode;
@@ -149,7 +159,10 @@ public class GetGatewayPolicyConfigResponseBody extends TeaModel {
             }
 
             /**
-             * PolicySetArn.
+             * <p>The ARN of the policy set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:agentidentity:cn-beijing:123456:policyset/default-policy-set</p>
              */
             public Builder policySetArn(String policySetArn) {
                 this.policySetArn = policySetArn;

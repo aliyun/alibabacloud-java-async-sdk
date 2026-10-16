@@ -101,7 +101,7 @@ public class UpdatePolicyRequest extends Request {
         } 
 
         /**
-         * Definition.
+         * <p>The definition of the policy.</p>
          */
         public Builder definition(Definition definition) {
             String definitionShrink = shrink(definition, "Definition", "json");
@@ -111,7 +111,10 @@ public class UpdatePolicyRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example description</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -120,7 +123,10 @@ public class UpdatePolicyRequest extends Request {
         }
 
         /**
-         * PolicyName.
+         * <p>The name of the policy. The name must be unique within the policy set to which the policy belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rate-limit-policy</p>
          */
         public Builder policyName(String policyName) {
             this.putBodyParameter("PolicyName", policyName);
@@ -129,7 +135,10 @@ public class UpdatePolicyRequest extends Request {
         }
 
         /**
-         * PolicySetName.
+         * <p>The name of the policy set. The name must be unique within the current Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default-policy-set</p>
          */
         public Builder policySetName(String policySetName) {
             this.putBodyParameter("PolicySetName", policySetName);

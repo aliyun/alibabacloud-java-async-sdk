@@ -67,7 +67,7 @@ public class CreateOAuth2CredentialProviderResponseBody extends TeaModel {
         } 
 
         /**
-         * OAuth2CredentialProvider.
+         * <p>The credential provider.</p>
          */
         public Builder oAuth2CredentialProvider(OAuth2CredentialProvider oAuth2CredentialProvider) {
             this.oAuth2CredentialProvider = oAuth2CredentialProvider;
@@ -75,7 +75,10 @@ public class CreateOAuth2CredentialProviderResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique identifier of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2A48EB1D-D645-5758-91AF-EDF8E36E257B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -258,7 +261,10 @@ public class CreateOAuth2CredentialProviderResponseBody extends TeaModel {
             } 
 
             /**
-             * CallbackURL.
+             * <p>The unique callback URL assigned to the provider. You must configure this URL in the list of allowed callback URLs of the identity provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://agentidentitydata.cn-beijing.aliyuncs.com/oauth2/callback/d51171bc-0dae-3219-8e65-6b4cdafa3beb">https://agentidentitydata.cn-beijing.aliyuncs.com/oauth2/callback/d51171bc-0dae-3219-8e65-6b4cdafa3beb</a></p>
              */
             public Builder callbackURL(String callbackURL) {
                 this.callbackURL = callbackURL;
@@ -266,7 +272,10 @@ public class CreateOAuth2CredentialProviderResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-12-18T06:19:17Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -274,7 +283,10 @@ public class CreateOAuth2CredentialProviderResponseBody extends TeaModel {
             }
 
             /**
-             * CredentialProviderArn.
+             * <p>The ARN of the newly created credential provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:agentidentity:cn-beijing:123456:tokenvault/default/oauth2credentialprovider/oauth-provider-aliyun</p>
              */
             public Builder credentialProviderArn(String credentialProviderArn) {
                 this.credentialProviderArn = credentialProviderArn;
@@ -282,7 +294,10 @@ public class CreateOAuth2CredentialProviderResponseBody extends TeaModel {
             }
 
             /**
-             * CredentialProviderVendor.
+             * <p>The vendor of the provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AliyunOAuth2</p>
              */
             public Builder credentialProviderVendor(String credentialProviderVendor) {
                 this.credentialProviderVendor = credentialProviderVendor;
@@ -290,7 +305,10 @@ public class CreateOAuth2CredentialProviderResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the OAuth 2.0 credential provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example provider</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -298,7 +316,10 @@ public class CreateOAuth2CredentialProviderResponseBody extends TeaModel {
             }
 
             /**
-             * OAuth2CredentialProviderName.
+             * <p>The name of the credential provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oauth-provider-aliyun</p>
              */
             public Builder oAuth2CredentialProviderName(String oAuth2CredentialProviderName) {
                 this.oAuth2CredentialProviderName = oAuth2CredentialProviderName;
@@ -306,7 +327,7 @@ public class CreateOAuth2CredentialProviderResponseBody extends TeaModel {
             }
 
             /**
-             * OAuth2ProviderConfig.
+             * <p>The object that contains provider-specific configurations, such as clientId and clientSecret.</p>
              */
             public Builder oAuth2ProviderConfig(OAuth2ProviderConfig oAuth2ProviderConfig) {
                 this.oAuth2ProviderConfig = oAuth2ProviderConfig;
@@ -330,7 +351,7 @@ public class CreateOAuth2CredentialProviderResponseBody extends TeaModel {
             }
 
             /**
-             * TokenVaultName.
+             * <p>The name of the token vault.</p>
              */
             public Builder tokenVaultName(String tokenVaultName) {
                 this.tokenVaultName = tokenVaultName;
@@ -338,7 +359,10 @@ public class CreateOAuth2CredentialProviderResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-12-18T06:19:17Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

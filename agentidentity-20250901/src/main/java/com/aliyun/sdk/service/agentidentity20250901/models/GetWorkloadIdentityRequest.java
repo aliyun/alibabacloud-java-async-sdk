@@ -59,7 +59,10 @@ public class GetWorkloadIdentityRequest extends Request {
         } 
 
         /**
-         * WorkloadIdentityName.
+         * <p>The unique name of the workload identity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent-101</p>
          */
         public Builder workloadIdentityName(String workloadIdentityName) {
             this.putBodyParameter("WorkloadIdentityName", workloadIdentityName);

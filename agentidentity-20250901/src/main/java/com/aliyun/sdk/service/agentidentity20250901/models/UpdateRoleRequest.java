@@ -87,7 +87,10 @@ public class UpdateRoleRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The new description of the role. The description must be 0 to 128 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Updated role description</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -96,7 +99,10 @@ public class UpdateRoleRequest extends Request {
         }
 
         /**
-         * RoleName.
+         * <p>The name of the role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Analyst</p>
          */
         public Builder roleName(String roleName) {
             this.putBodyParameter("RoleName", roleName);
@@ -105,7 +111,10 @@ public class UpdateRoleRequest extends Request {
         }
 
         /**
-         * UserPoolName.
+         * <p>The name of the user pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-agent-userpool</p>
          */
         public Builder userPoolName(String userPoolName) {
             this.putBodyParameter("UserPoolName", userPoolName);

@@ -67,7 +67,10 @@ public class ListSAMLIdentityProviderCertificatesResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AABD6E03-4B3A-5687-88FF-72232670ED0C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class ListSAMLIdentityProviderCertificatesResponseBody extends TeaModel {
         }
 
         /**
-         * X509Certificates.
+         * <p>The list of X.509 certificates.</p>
          */
         public Builder x509Certificates(java.util.List<X509Certificates> x509Certificates) {
             this.x509Certificates = x509Certificates;
@@ -141,7 +144,10 @@ public class ListSAMLIdentityProviderCertificatesResponseBody extends TeaModel {
             } 
 
             /**
-             * CertificateId.
+             * <p>The certificate ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cert-xxxxxxxxxxxxxxxxxxxx</p>
              */
             public Builder certificateId(String certificateId) {
                 this.certificateId = certificateId;
@@ -149,7 +155,12 @@ public class ListSAMLIdentityProviderCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * X509Certificate.
+             * <p>The content of the X.509 certificate in PEM format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-----BEGIN CERTIFICATE-----
+             * MIIDdz...
+             * -----END CERTIFICATE-----</p>
              */
             public Builder x509Certificate(String x509Certificate) {
                 this.x509Certificate = x509Certificate;

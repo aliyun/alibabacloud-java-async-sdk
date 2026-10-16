@@ -67,7 +67,10 @@ public class CreateUserPoolResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AABD6E03-4B3A-5687-88FF-72232670ED0C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class CreateUserPoolResponseBody extends TeaModel {
         }
 
         /**
-         * UserPool.
+         * <p>The information about the newly created user pool.</p>
          */
         public Builder userPool(UserPool userPool) {
             this.userPool = userPool;
@@ -219,7 +222,10 @@ public class CreateUserPoolResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The creation time in ISO 8601 format (UTC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-05-07T06:19:17Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -227,7 +233,10 @@ public class CreateUserPoolResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the user pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Sample user pool</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -235,7 +244,10 @@ public class CreateUserPoolResponseBody extends TeaModel {
             }
 
             /**
-             * OIDCDiscoveryURL.
+             * <p>The discovery URL for the OpenID Connect (OIDC) protocol.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://signin-cn-beijing.aliyunagentid.com/up_7b6908bcb9ba4c****c8e187/.well-known/openid-configuration">https://signin-cn-beijing.aliyunagentid.com/up_7b6908bcb9ba4c****c8e187/.well-known/openid-configuration</a></p>
              */
             public Builder OIDCDiscoveryURL(String OIDCDiscoveryURL) {
                 this.OIDCDiscoveryURL = OIDCDiscoveryURL;
@@ -243,7 +255,10 @@ public class CreateUserPoolResponseBody extends TeaModel {
             }
 
             /**
-             * SigninBaseURL.
+             * <p>The base URL for logon.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://pre-signin-cn-hangzhou.aliyunagentid.com/up_e14d889*****716841">https://pre-signin-cn-hangzhou.aliyunagentid.com/up_e14d889*****716841</a></p>
              */
             public Builder signinBaseURL(String signinBaseURL) {
                 this.signinBaseURL = signinBaseURL;
@@ -251,7 +266,10 @@ public class CreateUserPoolResponseBody extends TeaModel {
             }
 
             /**
-             * SourcePlatform.
+             * <p>The creation source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Manual</p>
              */
             public Builder sourcePlatform(String sourcePlatform) {
                 this.sourcePlatform = sourcePlatform;
@@ -259,7 +277,10 @@ public class CreateUserPoolResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The update time in ISO 8601 format (UTC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-05-07T06:19:17Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -267,7 +288,10 @@ public class CreateUserPoolResponseBody extends TeaModel {
             }
 
             /**
-             * UserPoolId.
+             * <p>The ID of the user pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>up_xxxxxxxxxxxxxxxxxxxx</p>
              */
             public Builder userPoolId(String userPoolId) {
                 this.userPoolId = userPoolId;
@@ -275,7 +299,10 @@ public class CreateUserPoolResponseBody extends TeaModel {
             }
 
             /**
-             * UserPoolName.
+             * <p>The name of the user pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-agent-userpool</p>
              */
             public Builder userPoolName(String userPoolName) {
                 this.userPoolName = userPoolName;

@@ -54,7 +54,10 @@ public class DeleteOAuth2CredentialProviderResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The unique identifier of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>679B5D1D-F2A2-5D8F-BB56-B62C28CDA9D6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

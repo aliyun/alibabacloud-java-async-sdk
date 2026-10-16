@@ -67,7 +67,10 @@ public class SetUserPasswordResponseBody extends TeaModel {
         } 
 
         /**
-         * RandomPassword.
+         * <p>The system-generated random password returned when GenerateRandomPassword is set to true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Xk9mP2vL5nQ8</p>
          */
         public Builder randomPassword(String randomPassword) {
             this.randomPassword = randomPassword;
@@ -75,7 +78,10 @@ public class SetUserPasswordResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AABD6E03-4B3A-5687-88FF-72232670ED0C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

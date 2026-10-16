@@ -73,7 +73,10 @@ public class GetGatewayPolicyConfigRequest extends Request {
         } 
 
         /**
-         * GatewayArn.
+         * <p>The ARN of the target gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:agentidentity:cn-beijing:123456:gateway/my-gateway</p>
          */
         public Builder gatewayArn(String gatewayArn) {
             this.putBodyParameter("GatewayArn", gatewayArn);
@@ -82,7 +85,15 @@ public class GetGatewayPolicyConfigRequest extends Request {
         }
 
         /**
-         * GatewayType.
+         * <p>The gateway type. Valid values:</p>
+         * <ul>
+         * <li>AIGateway: Alibaba Cloud AI gateway.</li>
+         * <li>AgentRunMCP: AgentRun MCP tool.</li>
+         * </ul>
+         * <p>If this parameter is not specified, the default value is AIGateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AIGateway</p>
          */
         public Builder gatewayType(String gatewayType) {
             this.putBodyParameter("GatewayType", gatewayType);

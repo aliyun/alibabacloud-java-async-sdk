@@ -110,7 +110,10 @@ public class GetUserRequest extends Request {
         }
 
         /**
-         * UserName.
+         * <p>The username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
          */
         public Builder userName(String userName) {
             this.putBodyParameter("UserName", userName);
@@ -128,7 +131,10 @@ public class GetUserRequest extends Request {
         }
 
         /**
-         * UserPoolName.
+         * <p>The name of the user pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-agent-userpool</p>
          */
         public Builder userPoolName(String userPoolName) {
             this.putBodyParameter("UserPoolName", userPoolName);

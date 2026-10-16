@@ -185,7 +185,7 @@ public class CreateWorkloadIdentityRequest extends Request {
         } 
 
         /**
-         * AllowedConsentCallbackURLs.
+         * <p>The allowlist of Consent authorization callback URLs for the workload identity, which constrains the allowed redirect addresses during the offline delegation (OfflineAccess) authorization flow.</p>
          */
         public Builder allowedConsentCallbackURLs(java.util.List<String> allowedConsentCallbackURLs) {
             String allowedConsentCallbackURLsShrink = shrink(allowedConsentCallbackURLs, "AllowedConsentCallbackURLs", "json");
@@ -195,7 +195,7 @@ public class CreateWorkloadIdentityRequest extends Request {
         }
 
         /**
-         * AllowedResourceOAuth2ReturnURLs.
+         * <p>The list of allowed OAuth2 return URLs.</p>
          */
         public Builder allowedResourceOAuth2ReturnURLs(java.util.List<String> allowedResourceOAuth2ReturnURLs) {
             String allowedResourceOAuth2ReturnURLsShrink = shrink(allowedResourceOAuth2ReturnURLs, "AllowedResourceOAuth2ReturnURLs", "json");
@@ -205,7 +205,10 @@ public class CreateWorkloadIdentityRequest extends Request {
         }
 
         /**
-         * CreateRAMRole.
+         * <p>Specifies whether to automatically create an associated RAM role. When set to true, the system automatically creates a RAM role with the same name as the workload identity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder createRAMRole(Boolean createRAMRole) {
             this.putBodyParameter("CreateRAMRole", createRAMRole);
@@ -214,7 +217,10 @@ public class CreateWorkloadIdentityRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example agent</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -223,7 +229,10 @@ public class CreateWorkloadIdentityRequest extends Request {
         }
 
         /**
-         * IdentityProviderName.
+         * <p>The configured identity provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>identity-provider-okta</p>
          */
         public Builder identityProviderName(String identityProviderName) {
             this.putBodyParameter("IdentityProviderName", identityProviderName);
@@ -232,7 +241,10 @@ public class CreateWorkloadIdentityRequest extends Request {
         }
 
         /**
-         * RoleArn.
+         * <p>The ARN of the RAM role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::123456:role/agent-101-role</p>
          */
         public Builder roleArn(String roleArn) {
             this.putBodyParameter("RoleArn", roleArn);
@@ -241,7 +253,10 @@ public class CreateWorkloadIdentityRequest extends Request {
         }
 
         /**
-         * SessionBindingEnabled.
+         * <p>Specifies whether to enable session binding. When enabled, each session is bound to a specific workload identity instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder sessionBindingEnabled(Boolean sessionBindingEnabled) {
             this.putBodyParameter("SessionBindingEnabled", sessionBindingEnabled);
@@ -250,7 +265,10 @@ public class CreateWorkloadIdentityRequest extends Request {
         }
 
         /**
-         * SourceAgentArn.
+         * <p>The ARN of the source agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:agentidentity:cn-beijing:123456:workloadidentity/my-identity</p>
          */
         public Builder sourceAgentArn(String sourceAgentArn) {
             this.putBodyParameter("SourceAgentArn", sourceAgentArn);
@@ -259,7 +277,10 @@ public class CreateWorkloadIdentityRequest extends Request {
         }
 
         /**
-         * SourcePlatform.
+         * <p>The source platform.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>China</p>
          */
         public Builder sourcePlatform(String sourcePlatform) {
             this.putBodyParameter("SourcePlatform", sourcePlatform);
@@ -268,7 +289,10 @@ public class CreateWorkloadIdentityRequest extends Request {
         }
 
         /**
-         * WorkloadIdentityName.
+         * <p>The unique name of the workload identity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent-101</p>
          */
         public Builder workloadIdentityName(String workloadIdentityName) {
             this.putBodyParameter("WorkloadIdentityName", workloadIdentityName);

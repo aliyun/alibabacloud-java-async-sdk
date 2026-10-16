@@ -54,7 +54,10 @@ public class DeletePolicySetResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2A48EB1D-D645-5758-91AF-EDF8E36E257B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

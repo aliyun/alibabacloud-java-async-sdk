@@ -101,7 +101,15 @@ public class ListPolicySetAttachedGatewaysRequest extends Request {
         } 
 
         /**
-         * GatewayType.
+         * <p>The gateway type. Valid values:</p>
+         * <ul>
+         * <li>AIGateway: Alibaba Cloud AI Gateway</li>
+         * <li>AgentRunMCP: AgentRun MCP tool</li>
+         * </ul>
+         * <p>Default value: AIGateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AIGateway</p>
          */
         public Builder gatewayType(String gatewayType) {
             this.putBodyParameter("GatewayType", gatewayType);
@@ -110,7 +118,10 @@ public class ListPolicySetAttachedGatewaysRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of results to return per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -119,7 +130,10 @@ public class ListPolicySetAttachedGatewaysRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token used for pagination. You do not need to specify this parameter for the first call. For subsequent calls, pass the NextToken value returned from the previous call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -128,7 +142,10 @@ public class ListPolicySetAttachedGatewaysRequest extends Request {
         }
 
         /**
-         * PolicySetName.
+         * <p>The name of the policy set. The name must be unique within the current Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default-policy-set</p>
          */
         public Builder policySetName(String policySetName) {
             this.putBodyParameter("PolicySetName", policySetName);

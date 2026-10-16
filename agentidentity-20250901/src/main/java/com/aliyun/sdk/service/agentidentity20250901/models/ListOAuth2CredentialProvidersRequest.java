@@ -87,7 +87,10 @@ public class ListOAuth2CredentialProvidersRequest extends Request {
         } 
 
         /**
-         * MaxResults.
+         * <p>The maximum number of results to return per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -96,7 +99,12 @@ public class ListOAuth2CredentialProvidersRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token used to retrieve the next page of results.</p>
+         * <p>Leave this parameter empty for the first request.
+         * For subsequent requests, specify the NextToken value returned in the previous response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAV3MpHK1AP0pfERHZN5pu6mmxm9MUzOLyiXaWmj3GOT8</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -105,7 +113,7 @@ public class ListOAuth2CredentialProvidersRequest extends Request {
         }
 
         /**
-         * TokenVaultName.
+         * <p>The name of the TokenVault.</p>
          */
         public Builder tokenVaultName(String tokenVaultName) {
             this.putBodyParameter("TokenVaultName", tokenVaultName);

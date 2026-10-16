@@ -106,7 +106,10 @@ public class ListRolesResponseBody extends TeaModel {
         } 
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries returned for the current request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -114,7 +117,10 @@ public class ListRolesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token used to query the next page of data. An empty value indicates that no more data is available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TGlzdFJvbGVzOjoyMA==</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -122,7 +128,10 @@ public class ListRolesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AABD6E03-4B3A-5687-88FF-72232670ED0C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,7 @@ public class ListRolesResponseBody extends TeaModel {
         }
 
         /**
-         * Roles.
+         * <p>The list of roles.</p>
          */
         public Builder roles(java.util.List<Roles> roles) {
             this.roles = roles;
@@ -138,7 +147,10 @@ public class ListRolesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of roles that meet the query conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -256,7 +268,10 @@ public class ListRolesResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The creation time in ISO 8601 format (UTC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-05-07T06:19:17Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -264,7 +279,10 @@ public class ListRolesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The role description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Data analytics role</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -272,7 +290,10 @@ public class ListRolesResponseBody extends TeaModel {
             }
 
             /**
-             * RoleId.
+             * <p>The role ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>role_xxxxxxxxxxxxxxxxxxxx</p>
              */
             public Builder roleId(String roleId) {
                 this.roleId = roleId;
@@ -280,7 +301,10 @@ public class ListRolesResponseBody extends TeaModel {
             }
 
             /**
-             * RoleName.
+             * <p>The role name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Analyst</p>
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;
@@ -288,7 +312,10 @@ public class ListRolesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The role type. Default indicates a default role. Manual indicates a custom role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Manual</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -296,7 +323,10 @@ public class ListRolesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The update time in ISO 8601 format (UTC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-05-07T06:19:17Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

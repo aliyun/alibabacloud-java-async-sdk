@@ -67,7 +67,7 @@ public class ListClientSecretsResponseBody extends TeaModel {
         } 
 
         /**
-         * ClientSecrets.
+         * <p>The list of client secrets.</p>
          */
         public Builder clientSecrets(java.util.List<ClientSecrets> clientSecrets) {
             this.clientSecrets = clientSecrets;
@@ -75,7 +75,10 @@ public class ListClientSecretsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AABD6E03-4B3A-5687-88FF-72232670ED0C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +183,10 @@ public class ListClientSecretsResponseBody extends TeaModel {
             } 
 
             /**
-             * ClientId.
+             * <p>The client ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>client_xxxxxxxxxxxxxxxxxxxx</p>
              */
             public Builder clientId(String clientId) {
                 this.clientId = clientId;
@@ -188,7 +194,10 @@ public class ListClientSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * ClientName.
+             * <p>The client name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-web-app</p>
              */
             public Builder clientName(String clientName) {
                 this.clientName = clientName;
@@ -196,7 +205,10 @@ public class ListClientSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * ClientSecretId.
+             * <p>The client key ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>secret_xxxxxxxxxxxxxxxxxxxx</p>
              */
             public Builder clientSecretId(String clientSecretId) {
                 this.clientSecretId = clientSecretId;
@@ -204,7 +216,10 @@ public class ListClientSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time of the client secret in ISO 8601 format (UTC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-05-07T06:19:17Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -212,7 +227,10 @@ public class ListClientSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * UserPoolName.
+             * <p>The user pool name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-agent-userpool</p>
              */
             public Builder userPoolName(String userPoolName) {
                 this.userPoolName = userPoolName;

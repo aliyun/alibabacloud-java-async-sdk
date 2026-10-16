@@ -101,7 +101,10 @@ public class CreateRoleAssignmentRequest extends Request {
         } 
 
         /**
-         * PrincipalName.
+         * <p>The name of the principal. When PrincipalType is set to User, specify the username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
          */
         public Builder principalName(String principalName) {
             this.putBodyParameter("PrincipalName", principalName);
@@ -110,7 +113,13 @@ public class CreateRoleAssignmentRequest extends Request {
         }
 
         /**
-         * PrincipalType.
+         * <p>The type of the principal. Valid values:</p>
+         * <ul>
+         * <li>User: User. Only this value is currently supported.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>User</p>
          */
         public Builder principalType(String principalType) {
             this.putBodyParameter("PrincipalType", principalType);
@@ -119,7 +128,10 @@ public class CreateRoleAssignmentRequest extends Request {
         }
 
         /**
-         * RoleName.
+         * <p>The name of the role to assign.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Analyst</p>
          */
         public Builder roleName(String roleName) {
             this.putBodyParameter("RoleName", roleName);
@@ -128,7 +140,10 @@ public class CreateRoleAssignmentRequest extends Request {
         }
 
         /**
-         * UserPoolName.
+         * <p>The name of the user pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-agent-userpool</p>
          */
         public Builder userPoolName(String userPoolName) {
             this.putBodyParameter("UserPoolName", userPoolName);

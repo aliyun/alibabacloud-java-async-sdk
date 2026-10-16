@@ -67,7 +67,7 @@ public class CreateClientSecretResponseBody extends TeaModel {
         } 
 
         /**
-         * ClientSecret.
+         * <p>The client secret information.</p>
          */
         public Builder clientSecret(ClientSecret clientSecret) {
             this.clientSecret = clientSecret;
@@ -75,7 +75,10 @@ public class CreateClientSecretResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AABD6E03-4B3A-5687-88FF-72232670ED0C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +196,10 @@ public class CreateClientSecretResponseBody extends TeaModel {
             } 
 
             /**
-             * ClientId.
+             * <p>The ID of the client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>client_xxxxxxxxxxxxxxxxxxxx</p>
              */
             public Builder clientId(String clientId) {
                 this.clientId = clientId;
@@ -201,7 +207,10 @@ public class CreateClientSecretResponseBody extends TeaModel {
             }
 
             /**
-             * ClientName.
+             * <p>The name of the client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-web-app</p>
              */
             public Builder clientName(String clientName) {
                 this.clientName = clientName;
@@ -209,7 +218,10 @@ public class CreateClientSecretResponseBody extends TeaModel {
             }
 
             /**
-             * ClientSecretId.
+             * <p>The client key ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>secret_xxxxxxxxxxxxxxxxxxxx</p>
              */
             public Builder clientSecretId(String clientSecretId) {
                 this.clientSecretId = clientSecretId;
@@ -217,7 +229,10 @@ public class CreateClientSecretResponseBody extends TeaModel {
             }
 
             /**
-             * ClientSecretValue.
+             * <p>The plaintext client secret. This value is returned only once upon creation and cannot be retrieved later. Store it securely.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxxxxxxxxxxxxxx</p>
              */
             public Builder clientSecretValue(String clientSecretValue) {
                 this.clientSecretValue = clientSecretValue;
@@ -225,7 +240,10 @@ public class CreateClientSecretResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the client secret was created, in ISO 8601 format (UTC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-05-07T06:19:17Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -233,7 +251,10 @@ public class CreateClientSecretResponseBody extends TeaModel {
             }
 
             /**
-             * UserPoolName.
+             * <p>The name of the user pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-agent-userpool</p>
              */
             public Builder userPoolName(String userPoolName) {
                 this.userPoolName = userPoolName;

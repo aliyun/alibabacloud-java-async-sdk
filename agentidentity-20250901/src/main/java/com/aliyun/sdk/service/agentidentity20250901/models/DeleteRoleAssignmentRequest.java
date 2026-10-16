@@ -101,7 +101,10 @@ public class DeleteRoleAssignmentRequest extends Request {
         } 
 
         /**
-         * PrincipalName.
+         * <p>The name of the identity. If PrincipalType is set to User, specify the username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
          */
         public Builder principalName(String principalName) {
             this.putBodyParameter("PrincipalName", principalName);
@@ -110,7 +113,10 @@ public class DeleteRoleAssignmentRequest extends Request {
         }
 
         /**
-         * PrincipalType.
+         * <p>The identity type. Currently, only User is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>User</p>
          */
         public Builder principalType(String principalType) {
             this.putBodyParameter("PrincipalType", principalType);
@@ -119,7 +125,10 @@ public class DeleteRoleAssignmentRequest extends Request {
         }
 
         /**
-         * RoleName.
+         * <p>The name of the role to be removed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Analyst</p>
          */
         public Builder roleName(String roleName) {
             this.putBodyParameter("RoleName", roleName);
@@ -128,7 +137,10 @@ public class DeleteRoleAssignmentRequest extends Request {
         }
 
         /**
-         * UserPoolName.
+         * <p>The name of the user pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-agent-userpool</p>
          */
         public Builder userPoolName(String userPoolName) {
             this.putBodyParameter("UserPoolName", userPoolName);

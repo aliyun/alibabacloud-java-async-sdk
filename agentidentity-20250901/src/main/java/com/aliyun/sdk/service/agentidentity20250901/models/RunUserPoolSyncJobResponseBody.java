@@ -67,7 +67,10 @@ public class RunUserPoolSyncJobResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AABD6E03-4B3A-5687-88FF-72232670ED0C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class RunUserPoolSyncJobResponseBody extends TeaModel {
         }
 
         /**
-         * SynchronizationJobId.
+         * <p>The ID of the created synchronization task. You can call GetUserPoolSyncJob to query the execution details of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sync_job_xxxxxxxxxxxxxxxxxxxx</p>
          */
         public Builder synchronizationJobId(String synchronizationJobId) {
             this.synchronizationJobId = synchronizationJobId;

@@ -97,7 +97,7 @@ public class UpdateLoginPreferenceRequest extends Request {
         }
 
         /**
-         * LoginPreference.
+         * <p>The logon preference configuration object. It contains the logon configuration fields to be updated.</p>
          */
         public Builder loginPreference(LoginPreference loginPreference) {
             String loginPreferenceShrink = shrink(loginPreference, "LoginPreference", "json");
@@ -107,7 +107,10 @@ public class UpdateLoginPreferenceRequest extends Request {
         }
 
         /**
-         * UserPoolName.
+         * <p>The name of the user pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-agent-userpool</p>
          */
         public Builder userPoolName(String userPoolName) {
             this.putBodyParameter("UserPoolName", userPoolName);
@@ -162,7 +165,10 @@ public class UpdateLoginPreferenceRequest extends Request {
             } 
 
             /**
-             * EnablePasswordLogin.
+             * <p>Specifies whether to enable password logon for users.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enablePasswordLogin(Boolean enablePasswordLogin) {
                 this.enablePasswordLogin = enablePasswordLogin;

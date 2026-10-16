@@ -73,7 +73,10 @@ public class UpdatePolicySetRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example description</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -82,7 +85,10 @@ public class UpdatePolicySetRequest extends Request {
         }
 
         /**
-         * PolicySetName.
+         * <p>The name of the policy set. The name must be unique within the current Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default-policy-set</p>
          */
         public Builder policySetName(String policySetName) {
             this.putBodyParameter("PolicySetName", policySetName);

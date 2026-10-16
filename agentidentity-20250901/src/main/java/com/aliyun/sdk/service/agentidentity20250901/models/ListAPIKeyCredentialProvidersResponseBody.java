@@ -106,7 +106,7 @@ public class ListAPIKeyCredentialProvidersResponseBody extends TeaModel {
         } 
 
         /**
-         * APIKeyCredentialProviders.
+         * <p>The list of API key credential provider summaries.</p>
          */
         public Builder APIKeyCredentialProviders(java.util.List<APIKeyCredentialProviders> APIKeyCredentialProviders) {
             this.APIKeyCredentialProviders = APIKeyCredentialProviders;
@@ -114,7 +114,10 @@ public class ListAPIKeyCredentialProvidersResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of results to return per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -122,7 +125,10 @@ public class ListAPIKeyCredentialProvidersResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token used to retrieve the next page of results. Leave this parameter empty for the first request. For subsequent requests, specify the NextToken value returned in the previous response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAWbTEdBU0yvszsl8EEXALb8=</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -130,7 +136,10 @@ public class ListAPIKeyCredentialProvidersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique identifier of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4D51596A-8A87-565B-8EDE-45141A02F11C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListAPIKeyCredentialProvidersResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of credential providers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>452</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -269,7 +281,10 @@ public class ListAPIKeyCredentialProvidersResponseBody extends TeaModel {
             } 
 
             /**
-             * APIKeyCredentialProviderName.
+             * <p>The name of the credential provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>api-key-dash-scope</p>
              */
             public Builder APIKeyCredentialProviderName(String APIKeyCredentialProviderName) {
                 this.APIKeyCredentialProviderName = APIKeyCredentialProviderName;
@@ -277,7 +292,10 @@ public class ListAPIKeyCredentialProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-12-18T06:19:17Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -285,7 +303,10 @@ public class ListAPIKeyCredentialProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * CredentialProviderArn.
+             * <p>The ARN of the credential provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:agentidentity:cn-beijing:123456:tokenvault/default/apikeycredentialprovider/api-key-dash-scope</p>
              */
             public Builder credentialProviderArn(String credentialProviderArn) {
                 this.credentialProviderArn = credentialProviderArn;
@@ -293,7 +314,10 @@ public class ListAPIKeyCredentialProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the credential provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example provider</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -309,7 +333,7 @@ public class ListAPIKeyCredentialProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * TokenVaultName.
+             * <p>The name of the TokenVault.</p>
              */
             public Builder tokenVaultName(String tokenVaultName) {
                 this.tokenVaultName = tokenVaultName;
@@ -317,7 +341,10 @@ public class ListAPIKeyCredentialProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-12-18T06:19:17Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

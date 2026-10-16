@@ -106,7 +106,7 @@ public class ListUserPoolClientsResponseBody extends TeaModel {
         } 
 
         /**
-         * Clients.
+         * <p>The list of clients.</p>
          */
         public Builder clients(java.util.List<Clients> clients) {
             this.clients = clients;
@@ -114,7 +114,10 @@ public class ListUserPoolClientsResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries returned for the current request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -122,7 +125,10 @@ public class ListUserPoolClientsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token used to retrieve the next page of results. An empty value indicates that no more data is available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TGlzdENsaWVudHM6OjIw</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -130,7 +136,10 @@ public class ListUserPoolClientsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AABD6E03-4B3A-5687-88FF-72232670ED0C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListUserPoolClientsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of clients that match the query conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -204,7 +216,10 @@ public class ListUserPoolClientsResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The description of the scope.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OpenID Connect identifier scope</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -212,7 +227,10 @@ public class ListUserPoolClientsResponseBody extends TeaModel {
             }
 
             /**
-             * ScopeName.
+             * <p>The name of the scope.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>openid</p>
              */
             public Builder scopeName(String scopeName) {
                 this.scopeName = scopeName;
@@ -409,7 +427,10 @@ public class ListUserPoolClientsResponseBody extends TeaModel {
             } 
 
             /**
-             * AccessTokenValidity.
+             * <p>The validity period of the access token, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3600</p>
              */
             public Builder accessTokenValidity(String accessTokenValidity) {
                 this.accessTokenValidity = accessTokenValidity;
@@ -417,7 +438,10 @@ public class ListUserPoolClientsResponseBody extends TeaModel {
             }
 
             /**
-             * ClientId.
+             * <p>The client ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>client-xxxxxxxxxxxxxxxxxxxx</p>
              */
             public Builder clientId(String clientId) {
                 this.clientId = clientId;
@@ -425,7 +449,10 @@ public class ListUserPoolClientsResponseBody extends TeaModel {
             }
 
             /**
-             * ClientName.
+             * <p>The client name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-web-app</p>
              */
             public Builder clientName(String clientName) {
                 this.clientName = clientName;
@@ -433,7 +460,7 @@ public class ListUserPoolClientsResponseBody extends TeaModel {
             }
 
             /**
-             * ClientScopes.
+             * <p>The list of default scopes for the client.</p>
              */
             public Builder clientScopes(java.util.List<ClientScopes> clientScopes) {
                 this.clientScopes = clientScopes;
@@ -449,7 +476,10 @@ public class ListUserPoolClientsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the client was created, in ISO 8601 format (UTC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-05-07T06:19:17Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -457,7 +487,10 @@ public class ListUserPoolClientsResponseBody extends TeaModel {
             }
 
             /**
-             * EnforcePKCE.
+             * <p>Indicates whether PKCE is enforced.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enforcePKCE(Boolean enforcePKCE) {
                 this.enforcePKCE = enforcePKCE;
@@ -465,7 +498,7 @@ public class ListUserPoolClientsResponseBody extends TeaModel {
             }
 
             /**
-             * RedirectURIs.
+             * <p>The list of OAuth redirect URIs.</p>
              */
             public Builder redirectURIs(java.util.List<String> redirectURIs) {
                 this.redirectURIs = redirectURIs;
@@ -473,7 +506,10 @@ public class ListUserPoolClientsResponseBody extends TeaModel {
             }
 
             /**
-             * RefreshTokenValidity.
+             * <p>The validity period of the refresh token, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>86400</p>
              */
             public Builder refreshTokenValidity(String refreshTokenValidity) {
                 this.refreshTokenValidity = refreshTokenValidity;
@@ -481,7 +517,10 @@ public class ListUserPoolClientsResponseBody extends TeaModel {
             }
 
             /**
-             * SecretRequired.
+             * <p>Indicates whether a client secret is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder secretRequired(Boolean secretRequired) {
                 this.secretRequired = secretRequired;
@@ -489,7 +528,10 @@ public class ListUserPoolClientsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The time when the client was updated, in ISO 8601 format (UTC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-05-07T06:19:17Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -497,7 +539,10 @@ public class ListUserPoolClientsResponseBody extends TeaModel {
             }
 
             /**
-             * UserPoolName.
+             * <p>The name of the user pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-agent-userpool</p>
              */
             public Builder userPoolName(String userPoolName) {
                 this.userPoolName = userPoolName;

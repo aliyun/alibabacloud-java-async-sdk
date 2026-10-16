@@ -38,6 +38,10 @@ public class UpdateUserPoolClientRequest extends Request {
     private String refreshTokenValidity;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Scopes")
+    private java.util.List<String> scopes;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SecretRequired")
     private Boolean secretRequired;
 
@@ -52,6 +56,7 @@ public class UpdateUserPoolClientRequest extends Request {
         this.enforcePKCE = builder.enforcePKCE;
         this.redirectURIs = builder.redirectURIs;
         this.refreshTokenValidity = builder.refreshTokenValidity;
+        this.scopes = builder.scopes;
         this.secretRequired = builder.secretRequired;
         this.userPoolName = builder.userPoolName;
     }
@@ -105,6 +110,13 @@ public class UpdateUserPoolClientRequest extends Request {
     }
 
     /**
+     * @return scopes
+     */
+    public java.util.List<String> getScopes() {
+        return this.scopes;
+    }
+
+    /**
      * @return secretRequired
      */
     public Boolean getSecretRequired() {
@@ -124,6 +136,7 @@ public class UpdateUserPoolClientRequest extends Request {
         private Boolean enforcePKCE; 
         private java.util.List<String> redirectURIs; 
         private String refreshTokenValidity; 
+        private java.util.List<String> scopes; 
         private Boolean secretRequired; 
         private String userPoolName; 
 
@@ -138,12 +151,16 @@ public class UpdateUserPoolClientRequest extends Request {
             this.enforcePKCE = request.enforcePKCE;
             this.redirectURIs = request.redirectURIs;
             this.refreshTokenValidity = request.refreshTokenValidity;
+            this.scopes = request.scopes;
             this.secretRequired = request.secretRequired;
             this.userPoolName = request.userPoolName;
         } 
 
         /**
-         * AccessTokenValidity.
+         * <p>The validity period of the access token, in seconds. Valid values: 900 to 10800. Default value: 3600.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         public Builder accessTokenValidity(String accessTokenValidity) {
             this.putBodyParameter("AccessTokenValidity", accessTokenValidity);
@@ -152,7 +169,10 @@ public class UpdateUserPoolClientRequest extends Request {
         }
 
         /**
-         * ClientName.
+         * <p>The name of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-web-app</p>
          */
         public Builder clientName(String clientName) {
             this.putBodyParameter("ClientName", clientName);
@@ -161,7 +181,10 @@ public class UpdateUserPoolClientRequest extends Request {
         }
 
         /**
-         * EnforcePKCE.
+         * <p>Specifies whether Proof Key for Code Exchange (PKCE) is enforced.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enforcePKCE(Boolean enforcePKCE) {
             this.putBodyParameter("EnforcePKCE", enforcePKCE);
@@ -170,7 +193,7 @@ public class UpdateUserPoolClientRequest extends Request {
         }
 
         /**
-         * RedirectURIs.
+         * <p>The new list of OAuth callback URLs. Specifying this parameter replaces all existing callback URLs.</p>
          */
         public Builder redirectURIs(java.util.List<String> redirectURIs) {
             String redirectURIsShrink = shrink(redirectURIs, "RedirectURIs", "json");
@@ -180,7 +203,10 @@ public class UpdateUserPoolClientRequest extends Request {
         }
 
         /**
-         * RefreshTokenValidity.
+         * <p>The validity period of the refresh token, in seconds. Valid values: 7200 to 31536000 (90 days). Default value: 2592000 (30 days).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86400</p>
          */
         public Builder refreshTokenValidity(String refreshTokenValidity) {
             this.putBodyParameter("RefreshTokenValidity", refreshTokenValidity);
@@ -189,7 +215,20 @@ public class UpdateUserPoolClientRequest extends Request {
         }
 
         /**
-         * SecretRequired.
+         * <p>The scopes granted to the application. You can specify multiple scopes.</p>
+         */
+        public Builder scopes(java.util.List<String> scopes) {
+            String scopesShrink = shrink(scopes, "Scopes", "json");
+            this.putBodyParameter("Scopes", scopesShrink);
+            this.scopes = scopes;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether an application secret is required. A value of true indicates a confidential client, and a value of false indicates a public client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder secretRequired(Boolean secretRequired) {
             this.putBodyParameter("SecretRequired", secretRequired);
@@ -198,7 +237,10 @@ public class UpdateUserPoolClientRequest extends Request {
         }
 
         /**
-         * UserPoolName.
+         * <p>The name of the user pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-agent-userpool</p>
          */
         public Builder userPoolName(String userPoolName) {
             this.putBodyParameter("UserPoolName", userPoolName);

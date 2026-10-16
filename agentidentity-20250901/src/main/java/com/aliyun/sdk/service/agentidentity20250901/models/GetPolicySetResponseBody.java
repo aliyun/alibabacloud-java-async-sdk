@@ -67,7 +67,7 @@ public class GetPolicySetResponseBody extends TeaModel {
         } 
 
         /**
-         * PolicySet.
+         * <p>The details of the policy set.</p>
          */
         public Builder policySet(PolicySet policySet) {
             this.policySet = policySet;
@@ -75,7 +75,10 @@ public class GetPolicySetResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique identifier of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2A48EB1D-D645-5758-91AF-EDF8E36E257B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -107,6 +110,9 @@ public class GetPolicySetResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PolicySetName")
         private String policySetName;
 
+        @com.aliyun.core.annotation.NameInMap("SourcePlatform")
+        private String sourcePlatform;
+
         @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
@@ -115,6 +121,7 @@ public class GetPolicySetResponseBody extends TeaModel {
             this.description = builder.description;
             this.policySetArn = builder.policySetArn;
             this.policySetName = builder.policySetName;
+            this.sourcePlatform = builder.sourcePlatform;
             this.updateTime = builder.updateTime;
         }
 
@@ -155,6 +162,13 @@ public class GetPolicySetResponseBody extends TeaModel {
         }
 
         /**
+         * @return sourcePlatform
+         */
+        public String getSourcePlatform() {
+            return this.sourcePlatform;
+        }
+
+        /**
          * @return updateTime
          */
         public String getUpdateTime() {
@@ -166,6 +180,7 @@ public class GetPolicySetResponseBody extends TeaModel {
             private String description; 
             private String policySetArn; 
             private String policySetName; 
+            private String sourcePlatform; 
             private String updateTime; 
 
             private Builder() {
@@ -176,11 +191,15 @@ public class GetPolicySetResponseBody extends TeaModel {
                 this.description = model.description;
                 this.policySetArn = model.policySetArn;
                 this.policySetName = model.policySetName;
+                this.sourcePlatform = model.sourcePlatform;
                 this.updateTime = model.updateTime;
             } 
 
             /**
-             * CreateTime.
+             * <p>The creation time in UTC ISO 8601 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-05-08T06:19:17Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -188,7 +207,10 @@ public class GetPolicySetResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -196,7 +218,10 @@ public class GetPolicySetResponseBody extends TeaModel {
             }
 
             /**
-             * PolicySetArn.
+             * <p>The ARN of the policy set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:agentidentity:cn-beijing:123456:policyset/default-policy-set</p>
              */
             public Builder policySetArn(String policySetArn) {
                 this.policySetArn = policySetArn;
@@ -204,7 +229,10 @@ public class GetPolicySetResponseBody extends TeaModel {
             }
 
             /**
-             * PolicySetName.
+             * <p>The name of the policy set. The name must be unique within the current Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default-policy-set</p>
              */
             public Builder policySetName(String policySetName) {
                 this.policySetName = policySetName;
@@ -212,7 +240,21 @@ public class GetPolicySetResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The source platform.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Manuel</p>
+             */
+            public Builder sourcePlatform(String sourcePlatform) {
+                this.sourcePlatform = sourcePlatform;
+                return this;
+            }
+
+            /**
+             * <p>The update time in UTC ISO 8601 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-05-08T06:19:17Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

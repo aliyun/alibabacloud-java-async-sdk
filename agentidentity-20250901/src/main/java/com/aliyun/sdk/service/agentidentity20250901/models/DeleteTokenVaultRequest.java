@@ -59,7 +59,10 @@ public class DeleteTokenVaultRequest extends Request {
         } 
 
         /**
-         * TokenVaultName.
+         * <p>The name of the token vault. The name must be unique within the current Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder tokenVaultName(String tokenVaultName) {
             this.putBodyParameter("TokenVaultName", tokenVaultName);

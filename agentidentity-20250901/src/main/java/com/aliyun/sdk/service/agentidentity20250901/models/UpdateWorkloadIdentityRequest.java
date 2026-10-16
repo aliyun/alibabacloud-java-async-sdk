@@ -143,7 +143,7 @@ public class UpdateWorkloadIdentityRequest extends Request {
         } 
 
         /**
-         * AllowedConsentCallbackURLs.
+         * <p>The whitelist of consent authorization callback URLs for the workload identity, which restricts the allowed callback URLs in the offline access delegation authorization flow.</p>
          */
         public Builder allowedConsentCallbackURLs(java.util.List<String> allowedConsentCallbackURLs) {
             String allowedConsentCallbackURLsShrink = shrink(allowedConsentCallbackURLs, "AllowedConsentCallbackURLs", "json");
@@ -153,7 +153,7 @@ public class UpdateWorkloadIdentityRequest extends Request {
         }
 
         /**
-         * AllowedResourceOAuth2ReturnURLs.
+         * <p>The list of allowed OAuth2 return URLs.</p>
          */
         public Builder allowedResourceOAuth2ReturnURLs(java.util.List<String> allowedResourceOAuth2ReturnURLs) {
             String allowedResourceOAuth2ReturnURLsShrink = shrink(allowedResourceOAuth2ReturnURLs, "AllowedResourceOAuth2ReturnURLs", "json");
@@ -163,7 +163,10 @@ public class UpdateWorkloadIdentityRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example agent</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -172,7 +175,10 @@ public class UpdateWorkloadIdentityRequest extends Request {
         }
 
         /**
-         * IdentityProviderName.
+         * <p>The configured identity provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>identity-provider-okta</p>
          */
         public Builder identityProviderName(String identityProviderName) {
             this.putBodyParameter("IdentityProviderName", identityProviderName);
@@ -181,7 +187,10 @@ public class UpdateWorkloadIdentityRequest extends Request {
         }
 
         /**
-         * RoleArn.
+         * <p>The ARN of the RAM role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::123456:role/agent-101-role</p>
          */
         public Builder roleArn(String roleArn) {
             this.putBodyParameter("RoleArn", roleArn);
@@ -190,7 +199,10 @@ public class UpdateWorkloadIdentityRequest extends Request {
         }
 
         /**
-         * SessionBindingEnabled.
+         * <p>Specifies whether session binding is enabled. If enabled, each session is bound to a specific workload identity instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder sessionBindingEnabled(String sessionBindingEnabled) {
             this.putBodyParameter("SessionBindingEnabled", sessionBindingEnabled);
@@ -199,7 +211,10 @@ public class UpdateWorkloadIdentityRequest extends Request {
         }
 
         /**
-         * WorkloadIdentityName.
+         * <p>The unique name of the workload identity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent-101</p>
          */
         public Builder workloadIdentityName(String workloadIdentityName) {
             this.putBodyParameter("WorkloadIdentityName", workloadIdentityName);

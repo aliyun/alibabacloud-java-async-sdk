@@ -67,7 +67,10 @@ public class UpdateUserResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5EEF5C1D-E951-5C0D-B0BC-5FF1B626CFC6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class UpdateUserResponseBody extends TeaModel {
         }
 
         /**
-         * User.
+         * <p>The user information.</p>
          */
         public Builder user(User user) {
             this.user = user;
@@ -232,7 +235,10 @@ public class UpdateUserResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-06-25T12:57:03Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -240,7 +246,10 @@ public class UpdateUserResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Senior data analyst</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -248,7 +257,10 @@ public class UpdateUserResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p>The display name of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alice Wang</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -256,7 +268,10 @@ public class UpdateUserResponseBody extends TeaModel {
             }
 
             /**
-             * Email.
+             * <p>The email address of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:alice.wang@example.com">alice.wang@example.com</a></p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -264,7 +279,14 @@ public class UpdateUserResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the user. Valid values:</p>
+             * <ul>
+             * <li>Enabled: The user is enabled.</li>
+             * <li>Disabled: The user is disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -272,7 +294,15 @@ public class UpdateUserResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the user. Valid values:</p>
+             * <ul>
+             * <li>Manual: The user is manually created by calling an API operation.</li>
+             * <li>JIT: The user is created by using JIT.</li>
+             * <li>SYNC_DINGTALK: The user is synchronized from DingTalk.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Manual</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -280,7 +310,10 @@ public class UpdateUserResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-06-25T12:57:03Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -288,7 +321,10 @@ public class UpdateUserResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user_xxxxxxxxxxxxxxxxxxxx</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -296,7 +332,10 @@ public class UpdateUserResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alice</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;

@@ -73,7 +73,10 @@ public class DeletePolicyRequest extends Request {
         } 
 
         /**
-         * PolicyName.
+         * <p>The name of the policy. The name must be unique within the policy set to which it belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rate-limit-policy</p>
          */
         public Builder policyName(String policyName) {
             this.putBodyParameter("PolicyName", policyName);
@@ -82,7 +85,10 @@ public class DeletePolicyRequest extends Request {
         }
 
         /**
-         * PolicySetName.
+         * <p>The name of the policy set. The name must be unique within the current Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default-policy-set</p>
          */
         public Builder policySetName(String policySetName) {
             this.putBodyParameter("PolicySetName", policySetName);

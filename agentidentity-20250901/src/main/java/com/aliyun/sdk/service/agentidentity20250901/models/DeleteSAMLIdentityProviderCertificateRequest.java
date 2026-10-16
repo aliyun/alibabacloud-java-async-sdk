@@ -73,7 +73,10 @@ public class DeleteSAMLIdentityProviderCertificateRequest extends Request {
         } 
 
         /**
-         * CertificateId.
+         * <p>The ID of the certificate to delete.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxxxxxxxxxxxxxxxx</p>
          */
         public Builder certificateId(String certificateId) {
             this.putBodyParameter("CertificateId", certificateId);
@@ -82,7 +85,10 @@ public class DeleteSAMLIdentityProviderCertificateRequest extends Request {
         }
 
         /**
-         * UserPoolName.
+         * <p>The name of the user pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-agent-userpool</p>
          */
         public Builder userPoolName(String userPoolName) {
             this.putBodyParameter("UserPoolName", userPoolName);

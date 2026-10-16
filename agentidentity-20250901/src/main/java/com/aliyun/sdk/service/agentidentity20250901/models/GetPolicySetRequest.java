@@ -59,7 +59,10 @@ public class GetPolicySetRequest extends Request {
         } 
 
         /**
-         * PolicySetName.
+         * <p>The name of the policy set. The name must be unique within the current Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default-policy-set</p>
          */
         public Builder policySetName(String policySetName) {
             this.putBodyParameter("PolicySetName", policySetName);

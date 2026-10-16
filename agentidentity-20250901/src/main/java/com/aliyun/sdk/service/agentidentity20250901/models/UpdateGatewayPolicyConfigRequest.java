@@ -87,7 +87,14 @@ public class UpdateGatewayPolicyConfigRequest extends Request {
         } 
 
         /**
-         * EnforcementMode.
+         * <p>The policy enforcement mode. Valid values:</p>
+         * <ul>
+         * <li>ENFORCE: Intercepts non-compliant requests and allows compliant requests.</li>
+         * <li>LOG_ONLY: Only logs non-compliant requests without intercepting them.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ENFORCE</p>
          */
         public Builder enforcementMode(String enforcementMode) {
             this.putBodyParameter("EnforcementMode", enforcementMode);
@@ -96,7 +103,10 @@ public class UpdateGatewayPolicyConfigRequest extends Request {
         }
 
         /**
-         * GatewayArn.
+         * <p>The ARN of the target gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:agentidentity:cn-beijing:123456:gateway/my-gateway</p>
          */
         public Builder gatewayArn(String gatewayArn) {
             this.putBodyParameter("GatewayArn", gatewayArn);
@@ -105,7 +115,15 @@ public class UpdateGatewayPolicyConfigRequest extends Request {
         }
 
         /**
-         * GatewayType.
+         * <p>The gateway type. Valid values:</p>
+         * <ul>
+         * <li>AIGateway: Alibaba Cloud AI gateway.</li>
+         * <li>AgentRunMCP: AgentRun MCP tool.
+         * If you do not specify this parameter, the default value is AIGateway.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AIGateway</p>
          */
         public Builder gatewayType(String gatewayType) {
             this.putBodyParameter("GatewayType", gatewayType);

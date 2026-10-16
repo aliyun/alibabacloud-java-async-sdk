@@ -73,7 +73,10 @@ public class GetAPIKeyCredentialProviderRequest extends Request {
         } 
 
         /**
-         * APIKeyCredentialProviderName.
+         * <p>The name of the credential provider to retrieve.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>api-key-dash-scope</p>
          */
         public Builder APIKeyCredentialProviderName(String APIKeyCredentialProviderName) {
             this.putBodyParameter("APIKeyCredentialProviderName", APIKeyCredentialProviderName);
@@ -82,7 +85,7 @@ public class GetAPIKeyCredentialProviderRequest extends Request {
         }
 
         /**
-         * TokenVaultName.
+         * <p>The name of the TokenVault.</p>
          */
         public Builder tokenVaultName(String tokenVaultName) {
             this.putBodyParameter("TokenVaultName", tokenVaultName);

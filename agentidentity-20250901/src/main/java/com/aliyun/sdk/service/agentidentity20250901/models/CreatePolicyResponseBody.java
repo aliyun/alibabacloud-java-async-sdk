@@ -67,7 +67,7 @@ public class CreatePolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * Policy.
+         * <p>The policy details.</p>
          */
         public Builder policy(Policy policy) {
             this.policy = policy;
@@ -75,7 +75,10 @@ public class CreatePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique identifier of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2A48EB1D-D645-5758-91AF-EDF8E36E257B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +196,10 @@ public class CreatePolicyResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The time when the policy was created, in UTC ISO 8601 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-05-08T06:19:17Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -201,7 +207,7 @@ public class CreatePolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Definition.
+             * <p>The policy definition.</p>
              */
             public Builder definition(Definition definition) {
                 this.definition = definition;
@@ -209,7 +215,10 @@ public class CreatePolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -217,7 +226,10 @@ public class CreatePolicyResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyArn.
+             * <p>The ARN of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:agentidentity:cn-beijing:123456:policyset/default-policy-set/policy/rate-limit-policy</p>
              */
             public Builder policyArn(String policyArn) {
                 this.policyArn = policyArn;
@@ -225,7 +237,10 @@ public class CreatePolicyResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyName.
+             * <p>The name of the policy. The name must be unique within the policy set to which the policy belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rate-limit-policy</p>
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -233,7 +248,10 @@ public class CreatePolicyResponseBody extends TeaModel {
             }
 
             /**
-             * PolicySetName.
+             * <p>The name of the policy set. The name must be unique within the current Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default-policy-set</p>
              */
             public Builder policySetName(String policySetName) {
                 this.policySetName = policySetName;

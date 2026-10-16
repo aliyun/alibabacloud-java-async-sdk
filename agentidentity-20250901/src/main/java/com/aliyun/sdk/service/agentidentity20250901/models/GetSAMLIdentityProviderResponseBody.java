@@ -67,7 +67,10 @@ public class GetSAMLIdentityProviderResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AABD6E03-4B3A-5687-88FF-72232670ED0C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class GetSAMLIdentityProviderResponseBody extends TeaModel {
         }
 
         /**
-         * SSOIdentityProviderConfiguration.
+         * <p>The detailed configuration of the identity provider.</p>
          */
         public Builder SSOIdentityProviderConfiguration(SSOIdentityProviderConfiguration SSOIdentityProviderConfiguration) {
             this.SSOIdentityProviderConfiguration = SSOIdentityProviderConfiguration;
@@ -141,7 +144,10 @@ public class GetSAMLIdentityProviderResponseBody extends TeaModel {
             } 
 
             /**
-             * CertificateId.
+             * <p>The certificate ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cert-xxxxxxxxxxxxxxxxxxxx</p>
              */
             public Builder certificateId(String certificateId) {
                 this.certificateId = certificateId;
@@ -149,7 +155,12 @@ public class GetSAMLIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * X509Certificate.
+             * <p>The content of the X509 certificate in PEM format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-----BEGIN CERTIFICATE-----
+             * MIIDdz...
+             * -----END CERTIFICATE-----</p>
              */
             public Builder x509Certificate(String x509Certificate) {
                 this.x509Certificate = x509Certificate;
@@ -281,7 +292,10 @@ public class GetSAMLIdentityProviderResponseBody extends TeaModel {
             } 
 
             /**
-             * EntityId.
+             * <p>The IdP identifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://idp.example.com/entity">https://idp.example.com/entity</a></p>
              */
             public Builder entityId(String entityId) {
                 this.entityId = entityId;
@@ -289,7 +303,14 @@ public class GetSAMLIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * JITProvisionStatus.
+             * <p>The enabling status of just-in-time (JIT) user provisioning. Valid values:</p>
+             * <ul>
+             * <li>Enabled: JIT user provisioning is enabled.</li>
+             * <li>Disabled: JIT user provisioning is disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder JITProvisionStatus(String JITProvisionStatus) {
                 this.JITProvisionStatus = JITProvisionStatus;
@@ -297,7 +318,14 @@ public class GetSAMLIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * JITUpdateStatus.
+             * <p>The enabling status of updating user information through synchronization. Valid values:</p>
+             * <ul>
+             * <li>Enabled: The feature is enabled.</li>
+             * <li>Disabled: The feature is disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder JITUpdateStatus(String JITUpdateStatus) {
                 this.JITUpdateStatus = JITUpdateStatus;
@@ -305,7 +333,10 @@ public class GetSAMLIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * LoginURL.
+             * <p>The logon URL of the IdP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://idp.example.com/sso/saml">https://idp.example.com/sso/saml</a></p>
              */
             public Builder loginURL(String loginURL) {
                 this.loginURL = loginURL;
@@ -313,7 +344,14 @@ public class GetSAMLIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * SAMLBindingType.
+             * <p>The SAML protocol binding type. Valid values:</p>
+             * <ul>
+             * <li>HTTP-Redirect</li>
+             * <li>HTTP-POST</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTP-Redirect</p>
              */
             public Builder SAMLBindingType(String SAMLBindingType) {
                 this.SAMLBindingType = SAMLBindingType;
@@ -321,7 +359,14 @@ public class GetSAMLIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * SSOStatus.
+             * <p>The enabling status of single sign-on (SSO). Valid values:</p>
+             * <ul>
+             * <li>Enabled: SSO is enabled.</li>
+             * <li>Disabled: SSO is disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder SSOStatus(String SSOStatus) {
                 this.SSOStatus = SSOStatus;
@@ -329,7 +374,7 @@ public class GetSAMLIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * X509Certificates.
+             * <p>The list of X509 certificates.</p>
              */
             public Builder x509Certificates(java.util.List<X509Certificates> x509Certificates) {
                 this.x509Certificates = x509Certificates;

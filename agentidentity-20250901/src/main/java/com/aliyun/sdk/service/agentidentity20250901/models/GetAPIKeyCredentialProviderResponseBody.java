@@ -67,7 +67,7 @@ public class GetAPIKeyCredentialProviderResponseBody extends TeaModel {
         } 
 
         /**
-         * APIKeyCredentialProvider.
+         * <p>The API key credential provider.</p>
          */
         public Builder APIKeyCredentialProvider(APIKeyCredentialProvider APIKeyCredentialProvider) {
             this.APIKeyCredentialProvider = APIKeyCredentialProvider;
@@ -75,7 +75,10 @@ public class GetAPIKeyCredentialProviderResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique identifier of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>76BF2570-76F5-5093-87CE-0918DD85752C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -206,7 +209,10 @@ public class GetAPIKeyCredentialProviderResponseBody extends TeaModel {
             } 
 
             /**
-             * APIKeyCredentialProviderName.
+             * <p>The name of the credential provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>api-key-dash-scope</p>
              */
             public Builder APIKeyCredentialProviderName(String APIKeyCredentialProviderName) {
                 this.APIKeyCredentialProviderName = APIKeyCredentialProviderName;
@@ -214,7 +220,10 @@ public class GetAPIKeyCredentialProviderResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-12-18T06:19:17Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -222,7 +231,10 @@ public class GetAPIKeyCredentialProviderResponseBody extends TeaModel {
             }
 
             /**
-             * CredentialProviderArn.
+             * <p>The ARN of the credential provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:agentidentity:cn-beijing:123456:tokenvault/default/apikeycredentialprovider/api-key-dash-scope</p>
              */
             public Builder credentialProviderArn(String credentialProviderArn) {
                 this.credentialProviderArn = credentialProviderArn;
@@ -230,7 +242,10 @@ public class GetAPIKeyCredentialProviderResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the credential provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example provider</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -246,7 +261,7 @@ public class GetAPIKeyCredentialProviderResponseBody extends TeaModel {
             }
 
             /**
-             * TokenVaultName.
+             * <p>The name of the TokenVault.</p>
              */
             public Builder tokenVaultName(String tokenVaultName) {
                 this.tokenVaultName = tokenVaultName;
@@ -254,7 +269,10 @@ public class GetAPIKeyCredentialProviderResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-12-18T06:19:17Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

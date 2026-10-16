@@ -106,7 +106,10 @@ public class ListUsersResponseBody extends TeaModel {
         } 
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries returned for the current request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -114,7 +117,10 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token used to query the next page of data. An empty value indicates that no more data is available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TGlzdFVzZXJzOjoyMA==</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -122,7 +128,10 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AABD6E03-4B3A-5687-88FF-72232670ED0C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,10 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of users that meet the conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -138,7 +150,7 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * Users.
+         * <p>The list of users.</p>
          */
         public Builder users(java.util.List<Users> users) {
             this.users = users;
@@ -295,7 +307,10 @@ public class ListUsersResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The creation time. The time is in the ISO 8601 format in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-05-07T06:19:17Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -303,7 +318,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Sample user</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -311,7 +329,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p>The display name of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alice Wang</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -343,7 +364,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The update time. The time is in the ISO 8601 format in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-05-07T06:19:17Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -351,7 +375,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user_xxxxxxxxxxxxxxxxxxxx</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -359,7 +386,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alice</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;

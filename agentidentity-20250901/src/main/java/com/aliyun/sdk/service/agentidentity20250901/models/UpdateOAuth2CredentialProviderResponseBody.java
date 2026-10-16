@@ -54,7 +54,10 @@ public class UpdateOAuth2CredentialProviderResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The unique identifier of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D9A9DC39-61BB-53FD-9ADC-B14884F21038</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

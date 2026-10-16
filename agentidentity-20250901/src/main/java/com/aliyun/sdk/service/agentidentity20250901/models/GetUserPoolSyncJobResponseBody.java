@@ -67,7 +67,10 @@ public class GetUserPoolSyncJobResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2A48EB1D-D645-5758-91AF-EDF8E36E257B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class GetUserPoolSyncJobResponseBody extends TeaModel {
         }
 
         /**
-         * SynchronizationJob.
+         * <p>The synchronization task information.</p>
          */
         public Builder synchronizationJob(SynchronizationJob synchronizationJob) {
             this.synchronizationJob = synchronizationJob;
@@ -167,7 +170,10 @@ public class GetUserPoolSyncJobResponseBody extends TeaModel {
             } 
 
             /**
-             * Created.
+             * <p>The statistics of created users in JSON format, including the following four fields: total (total count), success (success count), failed (failure count), and skipped (skipped count).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;total&quot;:24,&quot;success&quot;:24,&quot;failed&quot;:0,&quot;skipped&quot;:0}</p>
              */
             public Builder created(String created) {
                 this.created = created;
@@ -175,7 +181,10 @@ public class GetUserPoolSyncJobResponseBody extends TeaModel {
             }
 
             /**
-             * Deleted.
+             * <p>The statistics of deleted users in JSON format, including the following four fields: total (total count), success (success count), failed (failure count), and skipped (skipped count).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;total&quot;:0,&quot;success&quot;:0,&quot;failed&quot;:0,&quot;skipped&quot;:0}</p>
              */
             public Builder deleted(String deleted) {
                 this.deleted = deleted;
@@ -183,7 +192,10 @@ public class GetUserPoolSyncJobResponseBody extends TeaModel {
             }
 
             /**
-             * Same.
+             * <p>The statistics of unchanged users in JSON format, including the following four fields: total (total count), success (success count), failed (failure count), and skipped (skipped count).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;total&quot;:0,&quot;success&quot;:0,&quot;failed&quot;:0,&quot;skipped&quot;:0}</p>
              */
             public Builder same(String same) {
                 this.same = same;
@@ -191,7 +203,10 @@ public class GetUserPoolSyncJobResponseBody extends TeaModel {
             }
 
             /**
-             * Updated.
+             * <p>The statistics of updated users in JSON format, including the following four fields: total (total count), success (success count), failed (failure count), and skipped (skipped count).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;total&quot;:0,&quot;success&quot;:0,&quot;failed&quot;:0,&quot;skipped&quot;:0}</p>
              */
             public Builder updated(String updated) {
                 this.updated = updated;
@@ -336,7 +351,10 @@ public class GetUserPoolSyncJobResponseBody extends TeaModel {
             } 
 
             /**
-             * EndTime.
+             * <p>The end time of the synchronization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-06-25T10:13:35Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -344,7 +362,10 @@ public class GetUserPoolSyncJobResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -352,7 +373,10 @@ public class GetUserPoolSyncJobResponseBody extends TeaModel {
             }
 
             /**
-             * IdentityProviderType.
+             * <p>The type of the identity provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DingTalk</p>
              */
             public Builder identityProviderType(String identityProviderType) {
                 this.identityProviderType = identityProviderType;
@@ -360,7 +384,7 @@ public class GetUserPoolSyncJobResponseBody extends TeaModel {
             }
 
             /**
-             * JobSummary.
+             * <p>The synchronization result statistics information.</p>
              */
             public Builder jobSummary(JobSummary jobSummary) {
                 this.jobSummary = jobSummary;
@@ -368,7 +392,10 @@ public class GetUserPoolSyncJobResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the synchronization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-06-25T10:13:35Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -376,7 +403,22 @@ public class GetUserPoolSyncJobResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the synchronization task. Valid values:</p>
+             * <ul>
+             * <li><p>Pending: The initial state.</p>
+             * </li>
+             * <li><p>Running: The task is running.</p>
+             * </li>
+             * <li><p>Failed: The task failed.</p>
+             * </li>
+             * <li><p>PartialSuccess: The task partially succeeded.</p>
+             * </li>
+             * <li><p>Success: The task succeeded.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -384,7 +426,10 @@ public class GetUserPoolSyncJobResponseBody extends TeaModel {
             }
 
             /**
-             * SynchronizationJobId.
+             * <p>The ID of the synchronization task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>syncjob_8d713b14a63b4a559753492ab51c31f3</p>
              */
             public Builder synchronizationJobId(String synchronizationJobId) {
                 this.synchronizationJobId = synchronizationJobId;
@@ -392,7 +437,10 @@ public class GetUserPoolSyncJobResponseBody extends TeaModel {
             }
 
             /**
-             * TriggerType.
+             * <p>The trigger type of the synchronization task. Valid values: Manual (manually triggered). Only manual triggering is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Manual</p>
              */
             public Builder triggerType(String triggerType) {
                 this.triggerType = triggerType;

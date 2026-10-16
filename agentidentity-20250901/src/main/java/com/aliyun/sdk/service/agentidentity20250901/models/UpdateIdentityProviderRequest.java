@@ -101,7 +101,7 @@ public class UpdateIdentityProviderRequest extends Request {
         } 
 
         /**
-         * AllowedAudience.
+         * <p>The allowed audiences. A token is allowed if its aud claim contains any of the specified audiences.</p>
          */
         public Builder allowedAudience(java.util.List<String> allowedAudience) {
             String allowedAudienceShrink = shrink(allowedAudience, "AllowedAudience", "json");
@@ -111,7 +111,10 @@ public class UpdateIdentityProviderRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example identity provider</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -120,7 +123,10 @@ public class UpdateIdentityProviderRequest extends Request {
         }
 
         /**
-         * DiscoveryURL.
+         * <p>The metadata URL used to retrieve the OpenID configuration or authorization server metadata.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://oauth.aliyun.com/.well-known/openid-configuration">https://oauth.aliyun.com/.well-known/openid-configuration</a></p>
          */
         public Builder discoveryURL(String discoveryURL) {
             this.putBodyParameter("DiscoveryURL", discoveryURL);
@@ -129,7 +135,10 @@ public class UpdateIdentityProviderRequest extends Request {
         }
 
         /**
-         * IdentityProviderName.
+         * <p>The name of the identity provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>identity-provider-okta</p>
          */
         public Builder identityProviderName(String identityProviderName) {
             this.putBodyParameter("IdentityProviderName", identityProviderName);

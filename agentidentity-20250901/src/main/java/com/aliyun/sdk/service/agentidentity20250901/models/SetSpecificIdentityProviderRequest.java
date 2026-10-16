@@ -101,7 +101,10 @@ public class SetSpecificIdentityProviderRequest extends Request {
         } 
 
         /**
-         * IDPMetadata.
+         * <p>The IdP metadata. For the DingTalk type, the metadata is in JSON format and includes fields such as corpId, appKey, appSecret, encryptKey, verificationToken, and syncCallbackStatus.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;corpId&quot;:&quot;dingxxxxxxxxxx&quot;,&quot;appKey&quot;:&quot;dingxxxxxxxxxx&quot;,&quot;appSecret&quot;:&quot;your_app_secret&quot;,&quot;encryptKey&quot;:&quot;your_encrypt_key&quot;,&quot;verificationToken&quot;:&quot;your_verification_token&quot;,&quot;syncCallbackStatus&quot;:&quot;Enabled&quot;}</p>
          */
         public Builder IDPMetadata(String IDPMetadata) {
             this.putBodyParameter("IDPMetadata", IDPMetadata);
@@ -110,7 +113,10 @@ public class SetSpecificIdentityProviderRequest extends Request {
         }
 
         /**
-         * IdentityProviderType.
+         * <p>The type of the identity provider. Currently, only DingTalk is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DingTalk</p>
          */
         public Builder identityProviderType(String identityProviderType) {
             this.putBodyParameter("IdentityProviderType", identityProviderType);
@@ -119,7 +125,14 @@ public class SetSpecificIdentityProviderRequest extends Request {
         }
 
         /**
-         * SSOStatus.
+         * <p>The SSO enabling status. Valid values:</p>
+         * <ul>
+         * <li>Enabled: Enabled.</li>
+         * <li>Disabled: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         public Builder SSOStatus(String SSOStatus) {
             this.putBodyParameter("SSOStatus", SSOStatus);
@@ -128,7 +141,10 @@ public class SetSpecificIdentityProviderRequest extends Request {
         }
 
         /**
-         * UserPoolName.
+         * <p>The name of the user pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-agent-userpool</p>
          */
         public Builder userPoolName(String userPoolName) {
             this.putBodyParameter("UserPoolName", userPoolName);

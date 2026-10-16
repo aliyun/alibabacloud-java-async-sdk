@@ -54,7 +54,10 @@ public class UpdateWorkloadIdentityResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>69469F02-DFA8-5733-960F-AEE7CBC7C436</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -73,7 +73,10 @@ public class CreateUserPoolRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The description of the user pool. The description must be 0 to 128 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sample user pool</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -82,7 +85,10 @@ public class CreateUserPoolRequest extends Request {
         }
 
         /**
-         * UserPoolName.
+         * <p>The name of the user pool. The name must be unique within the same Alibaba Cloud account and must be 3 to 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-agent-userpool</p>
          */
         public Builder userPoolName(String userPoolName) {
             this.putBodyParameter("UserPoolName", userPoolName);

@@ -143,7 +143,13 @@ public class CreateOAuth2CredentialProviderRequest extends Request {
         } 
 
         /**
-         * CallbackURL.
+         * <p>The unique callback URL assigned to the provider. You must configure this URL in the list of allowed callback URLs of the identity provider.
+         * Format: <a href="https://agentidentitydata.%7B%7Bregion%7D%7D.aliyuncs.com/oauth2/callback/%7B%7BUUID%7D%7D">https://agentidentitydata.{{region}}.aliyuncs.com/oauth2/callback/{{UUID}}</a>
+         * If you specify this parameter, the specified value is used.
+         * If you do not specify this parameter, the server automatically generates a value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://agentidentitydata.cn-beijing.aliyuncs.com/oauth2/callback/d51171bc-0dae-3219-8e65-6b4cdafa3beb">https://agentidentitydata.cn-beijing.aliyuncs.com/oauth2/callback/d51171bc-0dae-3219-8e65-6b4cdafa3beb</a></p>
          */
         public Builder callbackURL(String callbackURL) {
             this.putBodyParameter("CallbackURL", callbackURL);
@@ -152,7 +158,10 @@ public class CreateOAuth2CredentialProviderRequest extends Request {
         }
 
         /**
-         * CredentialProviderVendor.
+         * <p>The vendor of the provider, such as AliyunOAuth2, AlibabaCloudOAuth2, DingTalkOAuth2, FeiShuOAuth2, or CustomOAuth2.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AliyunOAuth2</p>
          */
         public Builder credentialProviderVendor(String credentialProviderVendor) {
             this.putBodyParameter("CredentialProviderVendor", credentialProviderVendor);
@@ -161,7 +170,10 @@ public class CreateOAuth2CredentialProviderRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the OAuth 2.0 credential provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example provider</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -170,7 +182,10 @@ public class CreateOAuth2CredentialProviderRequest extends Request {
         }
 
         /**
-         * OAuth2CredentialProviderName.
+         * <p>The name of the credential provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oauth-provider-aliyun</p>
          */
         public Builder oAuth2CredentialProviderName(String oAuth2CredentialProviderName) {
             this.putBodyParameter("OAuth2CredentialProviderName", oAuth2CredentialProviderName);
@@ -179,7 +194,7 @@ public class CreateOAuth2CredentialProviderRequest extends Request {
         }
 
         /**
-         * OAuth2ProviderConfig.
+         * <p>The object that contains provider-specific configurations, such as clientId and clientSecret.</p>
          */
         public Builder oAuth2ProviderConfig(OAuth2ProviderConfig oAuth2ProviderConfig) {
             String oAuth2ProviderConfigShrink = shrink(oAuth2ProviderConfig, "OAuth2ProviderConfig", "json");
@@ -198,7 +213,7 @@ public class CreateOAuth2CredentialProviderRequest extends Request {
         }
 
         /**
-         * TokenVaultName.
+         * <p>The name of the token vault.</p>
          */
         public Builder tokenVaultName(String tokenVaultName) {
             this.putBodyParameter("TokenVaultName", tokenVaultName);

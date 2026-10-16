@@ -106,7 +106,10 @@ public class ListOAuth2CredentialProvidersResponseBody extends TeaModel {
         } 
 
         /**
-         * MaxResults.
+         * <p>The maximum number of results to return per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -114,7 +117,11 @@ public class ListOAuth2CredentialProvidersResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token used to retrieve the next page of results.</p>
+         * <p>Leave this parameter empty for the first request. For subsequent requests, specify the NextToken value returned in the previous response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAV3MpHK1AP0pfERHZN5pu6lURp7zQ6t4/95+g/5jN5r/</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -122,7 +129,7 @@ public class ListOAuth2CredentialProvidersResponseBody extends TeaModel {
         }
 
         /**
-         * OAuth2CredentialProviders.
+         * <p>The credential providers.</p>
          */
         public Builder oAuth2CredentialProviders(java.util.List<OAuth2CredentialProviders> oAuth2CredentialProviders) {
             this.oAuth2CredentialProviders = oAuth2CredentialProviders;
@@ -130,7 +137,10 @@ public class ListOAuth2CredentialProvidersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique identifier of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>690C4C7A-AFB9-54ED-9A06-84426F5C6369</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +148,10 @@ public class ListOAuth2CredentialProvidersResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of credential providers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -373,7 +386,13 @@ public class ListOAuth2CredentialProvidersResponseBody extends TeaModel {
             } 
 
             /**
-             * CallbackURL.
+             * <p>The unique callback URL assigned to the provider. You must configure this URL in the list of allowed callback URLs of the identity provider.
+             * Format: <a href="https://agentidentitydata.%7B%7Bregion%7D%7D.aliyuncs.com/oauth2/callback/%7B%7BUUID%7D%7D">https://agentidentitydata.{{region}}.aliyuncs.com/oauth2/callback/{{UUID}}</a>
+             * If a value is specified, the specified value is used.
+             * If no value is specified, the server automatically generates one.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://agentidentitydata.cn-beijing.aliyuncs.com/oauth2/callback/d51171bc-0dae-3219-8e65-6b4cdafa3beb">https://agentidentitydata.cn-beijing.aliyuncs.com/oauth2/callback/d51171bc-0dae-3219-8e65-6b4cdafa3beb</a></p>
              */
             public Builder callbackURL(String callbackURL) {
                 this.callbackURL = callbackURL;
@@ -381,7 +400,10 @@ public class ListOAuth2CredentialProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-12-18T06:19:17Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -389,7 +411,10 @@ public class ListOAuth2CredentialProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * CredentialProviderArn.
+             * <p>The ARN of the credential provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:agentidentity:cn-beijing:123456:tokenvault/default/oauth2credentialprovider/oauth-provider-aliyun</p>
              */
             public Builder credentialProviderArn(String credentialProviderArn) {
                 this.credentialProviderArn = credentialProviderArn;
@@ -397,7 +422,10 @@ public class ListOAuth2CredentialProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * CredentialProviderVendor.
+             * <p>The vendor of the provider, such as AliyunOAuth2, AlibabaCloudOAuth2, DingTalkOAuth2, FeiShuOAuth2, and CustomOAuth2.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AliyunOAuth2</p>
              */
             public Builder credentialProviderVendor(String credentialProviderVendor) {
                 this.credentialProviderVendor = credentialProviderVendor;
@@ -405,7 +433,10 @@ public class ListOAuth2CredentialProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the OAuth 2.0 credential provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example provider</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -413,7 +444,10 @@ public class ListOAuth2CredentialProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * IDaaSInstanceId.
+             * <p>The IDaaS instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>idaas_xxxx</p>
              */
             public Builder iDaaSInstanceId(String iDaaSInstanceId) {
                 this.iDaaSInstanceId = iDaaSInstanceId;
@@ -421,7 +455,10 @@ public class ListOAuth2CredentialProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * OAuth2CredentialProviderName.
+             * <p>The name of the credential provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oauth2-provider-aliyun</p>
              */
             public Builder oAuth2CredentialProviderName(String oAuth2CredentialProviderName) {
                 this.oAuth2CredentialProviderName = oAuth2CredentialProviderName;
@@ -429,7 +466,7 @@ public class ListOAuth2CredentialProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * OAuth2ProviderConfig.
+             * <p>The object that contains provider-specific configurations, such as clientId and clientSecret.</p>
              */
             public Builder oAuth2ProviderConfig(OAuth2ProviderConfig oAuth2ProviderConfig) {
                 this.oAuth2ProviderConfig = oAuth2ProviderConfig;
@@ -445,7 +482,10 @@ public class ListOAuth2CredentialProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * OutboundApplicationId.
+             * <p>The ID of the outbound application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app_xxxx</p>
              */
             public Builder outboundApplicationId(String outboundApplicationId) {
                 this.outboundApplicationId = outboundApplicationId;
@@ -453,7 +493,10 @@ public class ListOAuth2CredentialProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * OutboundAudience.
+             * <p>The outbound audience.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent-xxxxx</p>
              */
             public Builder outboundAudience(String outboundAudience) {
                 this.outboundAudience = outboundAudience;
@@ -461,7 +504,10 @@ public class ListOAuth2CredentialProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * OutboundClientId.
+             * <p>The outbound client ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>client_xxxx</p>
              */
             public Builder outboundClientId(String outboundClientId) {
                 this.outboundClientId = outboundClientId;
@@ -485,7 +531,10 @@ public class ListOAuth2CredentialProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-12-18T06:19:17Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

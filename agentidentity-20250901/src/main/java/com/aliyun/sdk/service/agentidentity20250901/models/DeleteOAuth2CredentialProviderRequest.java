@@ -73,7 +73,10 @@ public class DeleteOAuth2CredentialProviderRequest extends Request {
         } 
 
         /**
-         * OAuth2CredentialProviderName.
+         * <p>The name of the credential provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oauth2-provider-aliyun</p>
          */
         public Builder oAuth2CredentialProviderName(String oAuth2CredentialProviderName) {
             this.putBodyParameter("OAuth2CredentialProviderName", oAuth2CredentialProviderName);
@@ -82,7 +85,7 @@ public class DeleteOAuth2CredentialProviderRequest extends Request {
         }
 
         /**
-         * TokenVaultName.
+         * <p>The name of the TokenVault.</p>
          */
         public Builder tokenVaultName(String tokenVaultName) {
             this.putBodyParameter("TokenVaultName", tokenVaultName);

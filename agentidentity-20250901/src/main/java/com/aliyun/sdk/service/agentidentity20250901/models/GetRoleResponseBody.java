@@ -67,7 +67,10 @@ public class GetRoleResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AABD6E03-4B3A-5687-88FF-72232670ED0C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class GetRoleResponseBody extends TeaModel {
         }
 
         /**
-         * Role.
+         * <p>The role information.</p>
          */
         public Builder role(Role role) {
             this.role = role;
@@ -193,7 +196,10 @@ public class GetRoleResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The creation time in ISO 8601 format (UTC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-05-07T06:19:17Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -201,7 +207,10 @@ public class GetRoleResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Data analyst role</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -209,7 +218,10 @@ public class GetRoleResponseBody extends TeaModel {
             }
 
             /**
-             * RoleId.
+             * <p>The role ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>role_xxxxxxxxxxxxxxxxxxxx</p>
              */
             public Builder roleId(String roleId) {
                 this.roleId = roleId;
@@ -217,7 +229,10 @@ public class GetRoleResponseBody extends TeaModel {
             }
 
             /**
-             * RoleName.
+             * <p>The name of the role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Analyst</p>
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;
@@ -225,7 +240,10 @@ public class GetRoleResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the role. Default indicates a default role, and Manual indicates a custom role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Manual</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -233,7 +251,10 @@ public class GetRoleResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The update time in ISO 8601 format (UTC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-05-07T06:19:17Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

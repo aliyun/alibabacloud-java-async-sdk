@@ -73,7 +73,10 @@ public class ListWorkloadIdentitiesRequest extends Request {
         } 
 
         /**
-         * MaxResults.
+         * <p>The maximum number of results to return per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -82,7 +85,14 @@ public class ListWorkloadIdentitiesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token. Used to request the next page of results.</p>
+         * <ul>
+         * <li>Leave this parameter empty for the first request.</li>
+         * <li>Pass the NextToken value returned in the previous response for subsequent requests.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAV3MpHK1AP0pfERHZN5pu6lksg167PctRcRw0nyoPjdX</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);

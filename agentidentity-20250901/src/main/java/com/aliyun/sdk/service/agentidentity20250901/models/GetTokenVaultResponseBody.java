@@ -67,7 +67,10 @@ public class GetTokenVaultResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The unique identifier of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2A48EB1D-D645-5758-91AF-EDF8E36E257B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class GetTokenVaultResponseBody extends TeaModel {
         }
 
         /**
-         * TokenVault.
+         * <p>The details of the token vault.</p>
          */
         public Builder tokenVault(TokenVault tokenVault) {
             this.tokenVault = tokenVault;
@@ -141,7 +144,10 @@ public class GetTokenVaultResponseBody extends TeaModel {
             } 
 
             /**
-             * KeyType.
+             * <p>The type of the encryption key. Valid values: SERVICE_MANAGED_KEY (service-managed key) and CUSTOMER_MANAGED_KEY (customer-managed KMS key).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SERVICE_MANAGED_KEY</p>
              */
             public Builder keyType(String keyType) {
                 this.keyType = keyType;
@@ -149,7 +155,10 @@ public class GetTokenVaultResponseBody extends TeaModel {
             }
 
             /**
-             * KmsKeyArn.
+             * <p>The ARN of the KMS key used when KeyType is set to CUSTOMER_MANAGED_KEY.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:kms:cn-beijing:123456:key/key-bjxxxxxxxx</p>
              */
             public Builder kmsKeyArn(String kmsKeyArn) {
                 this.kmsKeyArn = kmsKeyArn;
@@ -281,7 +290,10 @@ public class GetTokenVaultResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The creation time in UTC ISO 8601 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-05-08T06:19:17Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -289,7 +301,10 @@ public class GetTokenVaultResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -297,7 +312,7 @@ public class GetTokenVaultResponseBody extends TeaModel {
             }
 
             /**
-             * EncryptionConfig.
+             * <p>The encryption configuration of the token vault.</p>
              */
             public Builder encryptionConfig(EncryptionConfig encryptionConfig) {
                 this.encryptionConfig = encryptionConfig;
@@ -305,7 +320,10 @@ public class GetTokenVaultResponseBody extends TeaModel {
             }
 
             /**
-             * RoleArn.
+             * <p>The ARN of the RAM role used to authorize the AgentIdentity service to access other cloud resources such as KMS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ram::123456:role/AliyunAgentIdentityVaultRole</p>
              */
             public Builder roleArn(String roleArn) {
                 this.roleArn = roleArn;
@@ -313,7 +331,10 @@ public class GetTokenVaultResponseBody extends TeaModel {
             }
 
             /**
-             * TokenVaultArn.
+             * <p>The ARN of the token vault.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:agentidentity:cn-beijing:123456:tokenvault/default</p>
              */
             public Builder tokenVaultArn(String tokenVaultArn) {
                 this.tokenVaultArn = tokenVaultArn;
@@ -321,7 +342,10 @@ public class GetTokenVaultResponseBody extends TeaModel {
             }
 
             /**
-             * TokenVaultName.
+             * <p>The name of the token vault. The name must be unique within the current Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder tokenVaultName(String tokenVaultName) {
                 this.tokenVaultName = tokenVaultName;
@@ -329,7 +353,10 @@ public class GetTokenVaultResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The update time in UTC ISO 8601 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-05-08T06:19:17Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

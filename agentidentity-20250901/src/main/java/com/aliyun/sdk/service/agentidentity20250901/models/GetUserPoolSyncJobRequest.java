@@ -73,7 +73,10 @@ public class GetUserPoolSyncJobRequest extends Request {
         } 
 
         /**
-         * SynchronizationJobId.
+         * <p>The ID of the synchronization task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>syncjob_8d713b14a63b4a559753492ab51c31f3</p>
          */
         public Builder synchronizationJobId(String synchronizationJobId) {
             this.putBodyParameter("SynchronizationJobId", synchronizationJobId);
@@ -82,7 +85,10 @@ public class GetUserPoolSyncJobRequest extends Request {
         }
 
         /**
-         * UserPoolName.
+         * <p>The name of the user pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UserpoolName</p>
          */
         public Builder userPoolName(String userPoolName) {
             this.putBodyParameter("UserPoolName", userPoolName);

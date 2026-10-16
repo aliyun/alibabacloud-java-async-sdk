@@ -67,7 +67,10 @@ public class CreateUserResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AABD6E03-4B3A-5687-88FF-72232670ED0C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class CreateUserResponseBody extends TeaModel {
         }
 
         /**
-         * User.
+         * <p>The user information.</p>
          */
         public Builder user(User user) {
             this.user = user;
@@ -206,7 +209,10 @@ public class CreateUserResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The description of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Data Analyst</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -214,7 +220,10 @@ public class CreateUserResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p>The display name of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alice</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -222,7 +231,10 @@ public class CreateUserResponseBody extends TeaModel {
             }
 
             /**
-             * Email.
+             * <p>The email address of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:alice@example.com">alice@example.com</a></p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -230,7 +242,14 @@ public class CreateUserResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the user. Valid values:</p>
+             * <ul>
+             * <li>Enabled: Enabled.</li>
+             * <li>Disabled: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -238,7 +257,16 @@ public class CreateUserResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the user. Valid values:</p>
+             * <ul>
+             * <li>Manual: The user is manually created by calling an API operation.</li>
+             * <li>JIT: The user is created through JIT.</li>
+             * <li>SCIM: The user is synchronized through the System for Cross-domain Identity Management protocol.</li>
+             * <li>SYNC_DINGTALK: The user is synchronized from DingTalk.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Manual</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -246,7 +274,10 @@ public class CreateUserResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user_xxxxxxxxxxxxxxxxxxxx</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -254,7 +285,10 @@ public class CreateUserResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alice</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;

@@ -59,7 +59,10 @@ public class DeleteIdentityProviderRequest extends Request {
         } 
 
         /**
-         * IdentityProviderName.
+         * <p>The name of the identity provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>identity-provider-okta</p>
          */
         public Builder identityProviderName(String identityProviderName) {
             this.putBodyParameter("IdentityProviderName", identityProviderName);

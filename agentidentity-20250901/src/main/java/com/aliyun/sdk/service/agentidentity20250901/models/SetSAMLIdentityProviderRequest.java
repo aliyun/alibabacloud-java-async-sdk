@@ -157,7 +157,10 @@ public class SetSAMLIdentityProviderRequest extends Request {
         } 
 
         /**
-         * EntityId.
+         * <p>The IdP identifier. This is the EntityID from the SAML metadata of the external IdP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://idp.example.com/entity">https://idp.example.com/entity</a></p>
          */
         public Builder entityId(String entityId) {
             this.putBodyParameter("EntityId", entityId);
@@ -166,7 +169,14 @@ public class SetSAMLIdentityProviderRequest extends Request {
         }
 
         /**
-         * JITProvisionStatus.
+         * <p>The enabling status of Just-In-Time (JIT) user synchronization and creation. Valid values:</p>
+         * <ul>
+         * <li>Enabled: Enabled. If a user with the same name does not exist in the user pool during SAML logon, automatic creation is performed.</li>
+         * <li>Disabled: Shutdown. If the user is not found, the logon is failed. Default value.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         public Builder JITProvisionStatus(String JITProvisionStatus) {
             this.putBodyParameter("JITProvisionStatus", JITProvisionStatus);
@@ -175,7 +185,14 @@ public class SetSAMLIdentityProviderRequest extends Request {
         }
 
         /**
-         * JITUpdateStatus.
+         * <p>The enabling status of updating user information through synchronization. Valid values:</p>
+         * <ul>
+         * <li>Enabled: The update is enabled. If a user with the same name exists during SAML logon, the user information is updated based on the attributes (DisplayName and Description) passed by the IdP.</li>
+         * <li>Disabled: The update is disabled. Only the logon state is updated, and user attributes are not updated. Default value.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         public Builder JITUpdateStatus(String JITUpdateStatus) {
             this.putBodyParameter("JITUpdateStatus", JITUpdateStatus);
@@ -184,7 +201,10 @@ public class SetSAMLIdentityProviderRequest extends Request {
         }
 
         /**
-         * LoginURL.
+         * <p>The IdP logon URL. When a user logs on, the browser is redirected to this URL to complete SAML authentication.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://idp.example.com/sso/saml">https://idp.example.com/sso/saml</a></p>
          */
         public Builder loginURL(String loginURL) {
             this.putBodyParameter("LoginURL", loginURL);
@@ -193,7 +213,14 @@ public class SetSAMLIdentityProviderRequest extends Request {
         }
 
         /**
-         * SAMLBindingType.
+         * <p>The SAML protocol binding type. Valid values:</p>
+         * <ul>
+         * <li>HTTP-Redirect: AuthnRequest is sent by using HTTP redirect. Default value.</li>
+         * <li>HTTP-POST: AuthnRequest is sent by using HTTP POST.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP-Redirect</p>
          */
         public Builder SAMLBindingType(String SAMLBindingType) {
             this.putBodyParameter("SAMLBindingType", SAMLBindingType);
@@ -202,7 +229,14 @@ public class SetSAMLIdentityProviderRequest extends Request {
         }
 
         /**
-         * SSOStatus.
+         * <p>The enabling status of single sign-on (SSO). Valid values:</p>
+         * <ul>
+         * <li>Enabled: SAML SSO is enabled, and users can log on through an external IdP.</li>
+         * <li>Disabled: SAML SSO is disabled, and users cannot log on through the IdP. Default value.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         public Builder SSOStatus(String SSOStatus) {
             this.putBodyParameter("SSOStatus", SSOStatus);
@@ -211,7 +245,10 @@ public class SetSAMLIdentityProviderRequest extends Request {
         }
 
         /**
-         * UserPoolName.
+         * <p>The name of the user pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-agent-userpool</p>
          */
         public Builder userPoolName(String userPoolName) {
             this.putBodyParameter("UserPoolName", userPoolName);
@@ -220,7 +257,7 @@ public class SetSAMLIdentityProviderRequest extends Request {
         }
 
         /**
-         * X509Certificates.
+         * <p>The list of X.509 certificates in PEM format. If you specify this parameter, all existing certificates are replaced.</p>
          */
         public Builder x509Certificates(java.util.List<String> x509Certificates) {
             String x509CertificatesShrink = shrink(x509Certificates, "X509Certificates", "json");

@@ -170,6 +170,9 @@ public class ListPolicySetsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PolicySetName")
         private String policySetName;
 
+        @com.aliyun.core.annotation.NameInMap("SourcePlatform")
+        private String sourcePlatform;
+
         @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
@@ -178,6 +181,7 @@ public class ListPolicySetsResponseBody extends TeaModel {
             this.description = builder.description;
             this.policySetArn = builder.policySetArn;
             this.policySetName = builder.policySetName;
+            this.sourcePlatform = builder.sourcePlatform;
             this.updateTime = builder.updateTime;
         }
 
@@ -218,6 +222,13 @@ public class ListPolicySetsResponseBody extends TeaModel {
         }
 
         /**
+         * @return sourcePlatform
+         */
+        public String getSourcePlatform() {
+            return this.sourcePlatform;
+        }
+
+        /**
          * @return updateTime
          */
         public String getUpdateTime() {
@@ -229,6 +240,7 @@ public class ListPolicySetsResponseBody extends TeaModel {
             private String description; 
             private String policySetArn; 
             private String policySetName; 
+            private String sourcePlatform; 
             private String updateTime; 
 
             private Builder() {
@@ -239,6 +251,7 @@ public class ListPolicySetsResponseBody extends TeaModel {
                 this.description = model.description;
                 this.policySetArn = model.policySetArn;
                 this.policySetName = model.policySetName;
+                this.sourcePlatform = model.sourcePlatform;
                 this.updateTime = model.updateTime;
             } 
 
@@ -271,6 +284,14 @@ public class ListPolicySetsResponseBody extends TeaModel {
              */
             public Builder policySetName(String policySetName) {
                 this.policySetName = policySetName;
+                return this;
+            }
+
+            /**
+             * SourcePlatform.
+             */
+            public Builder sourcePlatform(String sourcePlatform) {
+                this.sourcePlatform = sourcePlatform;
                 return this;
             }
 

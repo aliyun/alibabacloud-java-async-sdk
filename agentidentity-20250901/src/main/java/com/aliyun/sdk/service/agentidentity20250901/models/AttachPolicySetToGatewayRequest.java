@@ -101,7 +101,10 @@ public class AttachPolicySetToGatewayRequest extends Request {
         } 
 
         /**
-         * EnforcementMode.
+         * <p>The policy enforcement mode. Valid values: ENFORCE (blocks non-compliant requests and allows compliant requests) and LOG_ONLY (records non-compliant requests but does not block them).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENFORCE</p>
          */
         public Builder enforcementMode(String enforcementMode) {
             this.putBodyParameter("EnforcementMode", enforcementMode);
@@ -110,7 +113,10 @@ public class AttachPolicySetToGatewayRequest extends Request {
         }
 
         /**
-         * GatewayArn.
+         * <p>The ARN of the target gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:agentidentity:cn-beijing:123456:gateway/my-gateway</p>
          */
         public Builder gatewayArn(String gatewayArn) {
             this.putBodyParameter("GatewayArn", gatewayArn);
@@ -119,7 +125,15 @@ public class AttachPolicySetToGatewayRequest extends Request {
         }
 
         /**
-         * GatewayType.
+         * <p>The gateway type. Valid values:</p>
+         * <ul>
+         * <li>AIGateway: Alibaba Cloud AI gateway.</li>
+         * <li>AgentRunMCP: AgentRun MCP tool.</li>
+         * </ul>
+         * <p>Default value: AIGateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AIGateway</p>
          */
         public Builder gatewayType(String gatewayType) {
             this.putBodyParameter("GatewayType", gatewayType);
@@ -128,7 +142,10 @@ public class AttachPolicySetToGatewayRequest extends Request {
         }
 
         /**
-         * PolicySetName.
+         * <p>The name of the policy set. The name must be unique within the current Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default-policy-set</p>
          */
         public Builder policySetName(String policySetName) {
             this.putBodyParameter("PolicySetName", policySetName);
