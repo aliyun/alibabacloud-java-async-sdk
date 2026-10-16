@@ -67,7 +67,7 @@ public class ListPolicyVersionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the policy version.</p>
+         * PolicyVersions.
          */
         public Builder policyVersions(PolicyVersions policyVersions) {
             this.policyVersions = policyVersions;
@@ -157,10 +157,7 @@ public class ListPolicyVersionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the policy version was created.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2015-01-23T12:33:18Z</p>
+             * CreateDate.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -168,10 +165,7 @@ public class ListPolicyVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the policy version is the default version.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * IsDefaultVersion.
              */
             public Builder isDefaultVersion(Boolean isDefaultVersion) {
                 this.isDefaultVersion = isDefaultVersion;
@@ -179,10 +173,7 @@ public class ListPolicyVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the policy version.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>v3</p>
+             * VersionId.
              */
             public Builder versionId(String versionId) {
                 this.versionId = versionId;

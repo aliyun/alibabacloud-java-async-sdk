@@ -60,8 +60,8 @@ public class DeleteResourceGroupRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the resource group.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to obtain the ID.</p>
+         * <p>The resource group ID.</p>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> to query the resource group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

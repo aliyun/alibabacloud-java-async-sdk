@@ -67,7 +67,7 @@ public class UpdateResourceGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
@@ -78,7 +78,7 @@ public class UpdateResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information of the resource group.</p>
+         * <p>The resource group information.</p>
          */
         public Builder resourceGroup(ResourceGroup resourceGroup) {
             this.resourceGroup = resourceGroup;
@@ -183,7 +183,7 @@ public class UpdateResourceGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the Alibaba Cloud account to which the resource group belongs.</p>
+             * <p>The Alibaba Cloud account ID to which the resource group belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>123456789****</p>
@@ -194,7 +194,7 @@ public class UpdateResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the resource group was created. The time is displayed in UTC.</p>
+             * <p>The time when the resource group was created (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2015-01-23T12:33:18+08:00</p>
@@ -216,7 +216,7 @@ public class UpdateResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource group.</p>
+             * <p>The resource group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>rg-9gLOoK****</p>

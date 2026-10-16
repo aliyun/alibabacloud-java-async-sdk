@@ -101,11 +101,11 @@ public class ListPoliciesRequest extends Request {
         } 
 
         /**
-         * <p>The language in which you want to return the descriptions of the system permission policies. Valid values:</p>
+         * <p>The language type. The description of the system access policy is returned in the specified language.</p>
          * <ul>
          * <li>en: English.</li>
-         * <li>zh-CN: Chinese</li>
-         * <li>ja: Japanese</li>
+         * <li>zh-CN: Chinese.</li>
+         * <li>ja: Japanese.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -119,7 +119,7 @@ public class ListPoliciesRequest extends Request {
 
         /**
          * <p>The page number.</p>
-         * <p>Pages start from page 1. Default value: 1.</p>
+         * <p>Minimum value: 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -144,10 +144,10 @@ public class ListPoliciesRequest extends Request {
         }
 
         /**
-         * <p>The type of the permission policy. If you do not configure this parameter, all types of permission policies are returned. Valid values:</p>
+         * <p>The type of the access policy. If this parameter is left empty, all types of access policies are listed. </p>
          * <ul>
-         * <li>Custom</li>
-         * <li>System</li>
+         * <li>Custom: custom policy.</li>
+         * <li>System: system policy.</li>
          * </ul>
          * 
          * <strong>example:</strong>

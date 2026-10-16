@@ -67,7 +67,7 @@ public class UpdateFolderResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information of the folder.</p>
+         * <p>The folder information.</p>
          */
         public Builder folder(Folder folder) {
             this.folder = folder;
@@ -75,7 +75,7 @@ public class UpdateFolderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>C2CBCA30-C8DD-423E-B4AD-4FB694C9180C</p>
@@ -170,7 +170,7 @@ public class UpdateFolderResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the folder was created.</p>
+             * <p>The time when the folder was created. The time is displayed in UTC in RFC 3339 format, indicated by Z.</p>
              * 
              * <strong>example:</strong>
              * <p>2019-02-19T09:34:50.757Z</p>
@@ -181,7 +181,7 @@ public class UpdateFolderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the folder.</p>
+             * <p>The folder ID.</p>
              * 
              * <strong>example:</strong>
              * <p>fd-u8B321****</p>
@@ -192,7 +192,7 @@ public class UpdateFolderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the folder.</p>
+             * <p>The folder name.</p>
              * 
              * <strong>example:</strong>
              * <p>rdFolder</p>

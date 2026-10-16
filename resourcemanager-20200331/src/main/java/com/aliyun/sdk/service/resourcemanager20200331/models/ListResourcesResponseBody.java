@@ -128,7 +128,7 @@ public class ListResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
@@ -139,7 +139,7 @@ public class ListResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the resources.</p>
+         * Resources.
          */
         public Builder resources(Resources resources) {
             this.resources = resources;
@@ -147,7 +147,7 @@ public class ListResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -268,10 +268,7 @@ public class ListResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the resource was created. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2015-01-23T12:33:18Z</p>
+             * CreateDate.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -279,10 +276,7 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -290,10 +284,7 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rg-uPJpP****</p>
+             * ResourceGroupId.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -301,10 +292,7 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>i-23v38****</p>
+             * ResourceId.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -312,10 +300,7 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource type.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>instance</p>
+             * ResourceType.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -323,10 +308,7 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud service.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ecs</p>
+             * Service.
              */
             public Builder service(String service) {
                 this.service = service;

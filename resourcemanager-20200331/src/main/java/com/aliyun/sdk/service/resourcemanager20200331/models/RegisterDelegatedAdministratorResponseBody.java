@@ -54,7 +54,7 @@ public class RegisterDelegatedAdministratorResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0A45FC8F-54D2-4A65-8338-25E5DEBDA304</p>

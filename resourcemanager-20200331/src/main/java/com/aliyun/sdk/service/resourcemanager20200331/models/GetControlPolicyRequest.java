@@ -74,14 +74,14 @@ public class GetControlPolicyRequest extends Request {
         } 
 
         /**
-         * <p>The language in which you want to return the description of the access control policy. Valid values:</p>
+         * <p>The language in which the control policy description is returned. Valid values:</p>
          * <ul>
-         * <li>zh-CN (default value): Chinese</li>
-         * <li>en: English</li>
-         * <li>ja: Japanese</li>
+         * <li>zh-CN (default): Chinese.</li>
+         * <li>en: English.</li>
+         * <li>ja: Japanese.</li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is valid only for system access control policies.</p>
+         * <p>This parameter is valid only for system control policies.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -94,7 +94,7 @@ public class GetControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The ID of the access control policy.</p>
+         * <p>The ID of the control policy.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

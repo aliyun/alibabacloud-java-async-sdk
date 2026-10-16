@@ -128,7 +128,7 @@ public class ListPolicyAttachmentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the permission policies.</p>
+         * PolicyAttachments.
          */
         public Builder policyAttachments(PolicyAttachments policyAttachments) {
             this.policyAttachments = policyAttachments;
@@ -281,10 +281,7 @@ public class ListPolicyAttachmentsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the permission policy is attached.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2015-01-23T12:33:18Z</p>
+             * AttachDate.
              */
             public Builder attachDate(String attachDate) {
                 this.attachDate = attachDate;
@@ -292,10 +289,7 @@ public class ListPolicyAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the permission policy.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>The description of the policy.</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -303,10 +297,7 @@ public class ListPolicyAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the permission policy.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>AdministratorAccess</p>
+             * PolicyName.
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -314,14 +305,7 @@ public class ListPolicyAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the permission policy. Valid values:</p>
-             * <ul>
-             * <li>Custom</li>
-             * <li>System</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>System</p>
+             * PolicyType.
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -329,10 +313,7 @@ public class ListPolicyAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the object to which the permission policy is attached.</p>
-             * 
-             * <strong>example:</strong>
-             * <p><a href="mailto:alice@demo.onaliyun.com">alice@demo.onaliyun.com</a></p>
+             * PrincipalName.
              */
             public Builder principalName(String principalName) {
                 this.principalName = principalName;
@@ -340,15 +321,7 @@ public class ListPolicyAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the object to which the permission policy is attached. Valid values:</p>
-             * <ul>
-             * <li>IMSUser: RAM user</li>
-             * <li>IMSGroup: RAM user group</li>
-             * <li>ServiceRole: RAM role</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>IMSUser</p>
+             * PrincipalType.
              */
             public Builder principalType(String principalType) {
                 this.principalType = principalType;
@@ -356,10 +329,7 @@ public class ListPolicyAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource group or the ID of the Alibaba Cloud account to which the resource group belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rg-9gLOoK****</p>
+             * ResourceGroupId.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;

@@ -78,7 +78,7 @@ public class CreateAutoGroupingRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the rule.</p>
+         * <p>The rule ID.</p>
          * 
          * <strong>example:</strong>
          * <p>gr-acfo******hy6a</p>

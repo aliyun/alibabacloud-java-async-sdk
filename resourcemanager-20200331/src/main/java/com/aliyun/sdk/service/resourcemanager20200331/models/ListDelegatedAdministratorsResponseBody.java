@@ -106,7 +106,7 @@ public class ListDelegatedAdministratorsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information of the delegated administrator accounts.</p>
+         * Accounts.
          */
         public Builder accounts(Accounts accounts) {
             this.accounts = accounts;
@@ -114,7 +114,7 @@ public class ListDelegatedAdministratorsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class ListDelegatedAdministratorsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -136,7 +136,7 @@ public class ListDelegatedAdministratorsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>009C3A02-7D4B-416C-9CE7-548C91508F1E</p>
@@ -147,7 +147,7 @@ public class ListDelegatedAdministratorsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -255,10 +255,7 @@ public class ListDelegatedAdministratorsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the member.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>138660628348****</p>
+             * AccountId.
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -266,10 +263,7 @@ public class ListDelegatedAdministratorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the member was specified as a delegated administrator account.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1616652684164</p>
+             * DelegationEnabledTime.
              */
             public Builder delegationEnabledTime(String delegationEnabledTime) {
                 this.delegationEnabledTime = delegationEnabledTime;
@@ -277,10 +271,7 @@ public class ListDelegatedAdministratorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the member.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>abc</p>
+             * DisplayName.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -288,14 +279,7 @@ public class ListDelegatedAdministratorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The way in which the member joins the resource directory. Valid values:</p>
-             * <ul>
-             * <li>invited: The member is invited to join the resource directory.</li>
-             * <li>created: The member is directly created in the resource directory.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>created</p>
+             * JoinMethod.
              */
             public Builder joinMethod(String joinMethod) {
                 this.joinMethod = joinMethod;
@@ -303,10 +287,7 @@ public class ListDelegatedAdministratorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The identifier of the trusted service.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cloudfw.aliyuncs.com</p>
+             * ServicePrincipal.
              */
             public Builder servicePrincipal(String servicePrincipal) {
                 this.servicePrincipal = servicePrincipal;

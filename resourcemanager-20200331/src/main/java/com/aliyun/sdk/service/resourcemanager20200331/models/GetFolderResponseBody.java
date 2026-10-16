@@ -67,7 +67,7 @@ public class GetFolderResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information of the folder.</p>
+         * <p>The folder information.</p>
          */
         public Builder folder(Folder folder) {
             this.folder = folder;
@@ -75,7 +75,7 @@ public class GetFolderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>C2CBCA30-C8DD-423E-B4AD-4FB694C9180C</p>
@@ -183,7 +183,7 @@ public class GetFolderResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the folder was created.</p>
+             * <p>The time when the folder was created. The time is displayed in UTC in RFC 3339 format, indicated by Z.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-06-15T06:39:08.521Z</p>
@@ -194,7 +194,7 @@ public class GetFolderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the folder.</p>
+             * <p>The folder ID.</p>
              * 
              * <strong>example:</strong>
              * <p>fd-Jyl5U7****</p>
@@ -227,7 +227,7 @@ public class GetFolderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The path of the folder in the resource directory.</p>
+             * <p>The path ID (RDPath) of the folder in the resource directory.</p>
              */
             public Builder resourceDirectoryPath(String resourceDirectoryPath) {
                 this.resourceDirectoryPath = resourceDirectoryPath;

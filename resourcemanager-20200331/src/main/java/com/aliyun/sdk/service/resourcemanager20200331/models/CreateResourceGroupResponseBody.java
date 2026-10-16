@@ -78,7 +78,7 @@ public class CreateResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information of the resource group.</p>
+         * <p>The resource group information.</p>
          */
         public Builder resourceGroup(ResourceGroup resourceGroup) {
             this.resourceGroup = resourceGroup;
@@ -338,7 +338,7 @@ public class CreateResourceGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the Alibaba Cloud account to which the resource group belongs.</p>
+             * <p>The Alibaba Cloud account ID to which the resource group belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>151266687691****</p>
@@ -349,7 +349,7 @@ public class CreateResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the resource group was created. The time is displayed in UTC.</p>
+             * <p>The time when the resource group was created (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2021-06-05T14:39:13+08:00</p>
@@ -371,7 +371,7 @@ public class CreateResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource group.</p>
+             * <p>The resource group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>rg-9gLOoK****</p>
@@ -393,7 +393,7 @@ public class CreateResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the resource group in all regions.</p>
+             * RegionStatuses.
              */
             public Builder regionStatuses(RegionStatuses regionStatuses) {
                 this.regionStatuses = regionStatuses;
@@ -403,8 +403,8 @@ public class CreateResourceGroupResponseBody extends TeaModel {
             /**
              * <p>The status of the resource group. Valid values:</p>
              * <ul>
-             * <li>Creating: The resource group is being created.</li>
-             * <li>OK: The resource group is created.</li>
+             * <li>Creating: Being created.</li>
+             * <li>OK: Created.</li>
              * </ul>
              * 
              * <strong>example:</strong>

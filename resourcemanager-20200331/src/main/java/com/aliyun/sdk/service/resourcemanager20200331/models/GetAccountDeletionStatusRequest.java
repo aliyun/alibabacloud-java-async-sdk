@@ -60,7 +60,7 @@ public class GetAccountDeletionStatusRequest extends Request {
         } 
 
         /**
-         * <p>The Alibaba Cloud account ID of the member.</p>
+         * <p>The ID of the member account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

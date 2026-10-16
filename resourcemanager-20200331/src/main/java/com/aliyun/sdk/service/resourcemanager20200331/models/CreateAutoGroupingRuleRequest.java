@@ -225,7 +225,7 @@ public class CreateAutoGroupingRuleRequest extends Request {
         } 
 
         /**
-         * <p>The IDs of regions to be excluded. Separate multiple IDs with commas (,).</p>
+         * <p>The region IDs to exclude. Separate multiple region IDs with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing,cn-guangzhou</p>
@@ -237,7 +237,7 @@ public class CreateAutoGroupingRuleRequest extends Request {
         }
 
         /**
-         * <p>The IDs of resource groups to be excluded. Separate multiple IDs with commas (,).</p>
+         * <p>The resource group IDs to exclude. Separate multiple resource group IDs with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aekz<strong><strong><strong>zj2oi,rg-aekz</strong></strong></strong>r62ua</p>
@@ -249,7 +249,7 @@ public class CreateAutoGroupingRuleRequest extends Request {
         }
 
         /**
-         * <p>The IDs of resources to be excluded. Separate multiple IDs with commas (,).</p>
+         * <p>The resource IDs to exclude. Separate multiple resource IDs with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>pc-uf6p******4h784y,rmq-cn-******ny0y</p>
@@ -261,7 +261,7 @@ public class CreateAutoGroupingRuleRequest extends Request {
         }
 
         /**
-         * <p>The resource types to be excluded. Separate multiple resource types with commas (,).</p>
+         * <p>The resource types to exclude. Separate multiple resource types with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>mse.cluster,slb.loadbalancer</p>
@@ -273,7 +273,7 @@ public class CreateAutoGroupingRuleRequest extends Request {
         }
 
         /**
-         * <p>The IDs of regions. Separate multiple IDs with commas (,).</p>
+         * <p>The scope of region IDs. Separate multiple region IDs with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou,cn-shanghai</p>
@@ -285,7 +285,7 @@ public class CreateAutoGroupingRuleRequest extends Request {
         }
 
         /**
-         * <p>The IDs of resource groups. Separate multiple IDs with commas (,).</p>
+         * <p>The scope of resource group IDs. Separate multiple resource group IDs with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aekz<strong><strong><strong>4b5ea,rg-aek2</strong></strong></strong>fxykq</p>
@@ -297,7 +297,7 @@ public class CreateAutoGroupingRuleRequest extends Request {
         }
 
         /**
-         * <p>The IDs of resources. Separate multiple IDs with commas (,).</p>
+         * <p>The scope of resource IDs. Separate multiple resource IDs with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>i-2zee<strong><strong><strong>ym49kfmwis,vpc-5ts6</strong></strong></strong>fnw493g849a</p>
@@ -309,7 +309,7 @@ public class CreateAutoGroupingRuleRequest extends Request {
         }
 
         /**
-         * <p>The resource types. Separate multiple resource types with commas (,).</p>
+         * <p>The scope of resource types. Separate multiple resource types with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>rds.dbinstance,oss.bucket</p>
@@ -321,7 +321,7 @@ public class CreateAutoGroupingRuleRequest extends Request {
         }
 
         /**
-         * <p>The content records of the rule.</p>
+         * <p>The list of rule content entries.</p>
          * <p>This parameter is required.</p>
          */
         public Builder ruleContents(java.util.List<RuleContents> ruleContents) {
@@ -331,10 +331,10 @@ public class CreateAutoGroupingRuleRequest extends Request {
         }
 
         /**
-         * <p>The description of the rule.</p>
+         * <p>The rule description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Transfer resources to which the {&quot;env&quot;: &quot;online&quot;} and {&quot;project&quot;: &quot;A&quot;} tags are added to the resource group rg-aek2********qcy.</p>
+         * <p>Move resources with tags {&quot;env&quot;: &quot;online&quot;} and {&quot;project&quot;: &quot;A&quot;} to resource group rg-aek2********qcy</p>
          */
         public Builder ruleDesc(String ruleDesc) {
             this.putQueryParameter("RuleDesc", ruleDesc);
@@ -343,11 +343,11 @@ public class CreateAutoGroupingRuleRequest extends Request {
         }
 
         /**
-         * <p>The name of the rule.</p>
+         * <p>The rule name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>Custom Transfer Rule for Online Resources of Project A</p>
+         * <p>Auto allocation rule for Project A online resources</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -356,10 +356,10 @@ public class CreateAutoGroupingRuleRequest extends Request {
         }
 
         /**
-         * <p>The type of the rule. Valid values:</p>
+         * <p>The rule type. Valid values:</p>
          * <ul>
-         * <li>custom_condition: custom transfer rule</li>
-         * <li>associated_transfer: transfer rule for associated resources</li>
+         * <li>custom_condition: custom allocation rule.</li>
+         * <li>associated_transfer: attached-resource allocation rule.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -434,10 +434,10 @@ public class CreateAutoGroupingRuleRequest extends Request {
             } 
 
             /**
-             * <p>The condition for the range of resources to be automatically transferred.</p>
+             * <p>The scope condition for automatic allocation. Specifies the scope of resources to be automatically allocated.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;children&quot;:[{&quot;desired&quot;:&quot;{&quot;env&quot;:&quot;online&quot;, &quot;project&quot;:&quot;A&quot;}&quot;,&quot;featurePath&quot;:&quot;$.tags&quot;,&quot;featureSource&quot;:&quot;RESOURCE&quot;,&quot;operator&quot;:&quot;TagMatchAll&quot;}],&quot;operator&quot;:&quot;and&quot;}</p>
+             * <p>{&quot;children&quot;:[{&quot;desired&quot;:&quot;{\&quot;env\&quot;:\&quot;online\&quot;, \&quot;project\&quot;:\&quot;A\&quot;}&quot;,&quot;featurePath&quot;:&quot;$.tags&quot;,&quot;featureSource&quot;:&quot;RESOURCE&quot;,&quot;operator&quot;:&quot;TagMatchAll&quot;}],&quot;operator&quot;:&quot;and&quot;}</p>
              */
             public Builder autoGroupingScopeCondition(String autoGroupingScopeCondition) {
                 this.autoGroupingScopeCondition = autoGroupingScopeCondition;
@@ -445,7 +445,7 @@ public class CreateAutoGroupingRuleRequest extends Request {
             }
 
             /**
-             * <p>The condition for the destination resource group.</p>
+             * <p>The target resource group condition. Specifies the target resource group for automatic allocation.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

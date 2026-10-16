@@ -67,7 +67,7 @@ public class DeclineHandshakeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information of the invitation.</p>
+         * <p>The handshake information.</p>
          */
         public Builder handshake(Handshake handshake) {
             this.handshake = handshake;
@@ -75,7 +75,7 @@ public class DeclineHandshakeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9B34724D-54B0-4A51-B34D-4512372FE1BE</p>
@@ -261,7 +261,7 @@ public class DeclineHandshakeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the invitation was created.</p>
+             * <p>The creation time of the handshake in RFC 3339 UTC format, indicated by Z for UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2018-08-10T09:55:41Z</p>
@@ -272,7 +272,7 @@ public class DeclineHandshakeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the invitation expires.</p>
+             * <p>The expiration time of the handshake in RFC 3339 UTC format, indicated by Z for UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2018-08-10T09:55:41Z</p>
@@ -283,7 +283,7 @@ public class DeclineHandshakeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the invitation.</p>
+             * <p>The handshake ID.</p>
              * 
              * <strong>example:</strong>
              * <p>h-ycm4rp****</p>
@@ -294,7 +294,7 @@ public class DeclineHandshakeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the enterprise management account of the resource directory.</p>
+             * <p>The ID of the management account of the resource directory.</p>
              * 
              * <strong>example:</strong>
              * <p>172841235500****</p>
@@ -305,7 +305,7 @@ public class DeclineHandshakeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the enterprise management account of the resource directory.</p>
+             * <p>The name of the management account of the resource directory.</p>
              * 
              * <strong>example:</strong>
              * <p>Alice</p>
@@ -316,7 +316,7 @@ public class DeclineHandshakeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the invitation was modified.</p>
+             * <p>The modification time of the handshake in RFC 3339 UTC format, indicated by Z for UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2018-08-10T09:55:41Z</p>
@@ -327,10 +327,10 @@ public class DeclineHandshakeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The invitation note.</p>
+             * <p>The remarks.</p>
              * 
              * <strong>example:</strong>
-             * <p>Welcome</p>
+             * <p>Welcome to join us</p>
              */
             public Builder note(String note) {
                 this.note = note;
@@ -338,7 +338,7 @@ public class DeclineHandshakeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource directory.</p>
+             * <p>The resource directory ID.</p>
              * 
              * <strong>example:</strong>
              * <p>rd-abcdef****</p>
@@ -349,13 +349,13 @@ public class DeclineHandshakeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the invitation. Valid values:</p>
+             * <p>The handshake status. Valid values:</p>
              * <ul>
-             * <li>Pending: The invitation is waiting for confirmation.</li>
-             * <li>Accepted: The invitation is accepted.</li>
-             * <li>Cancelled: The invitation is canceled.</li>
-             * <li>Declined: The invitation is rejected.</li>
-             * <li>Expired: The invitation expired.</li>
+             * <li>Pending: Waiting for confirmation.</li>
+             * <li>Accepted: Accepted.</li>
+             * <li>Cancelled: Cancelled.</li>
+             * <li>Declined: Declined.</li>
+             * <li>Expired: Expired.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -380,8 +380,8 @@ public class DeclineHandshakeResponseBody extends TeaModel {
             /**
              * <p>The type of the invited account. Valid values:</p>
              * <ul>
-             * <li>Account: indicates the ID of the account.</li>
-             * <li>Email: indicates the logon email address of the account.</li>
+             * <li>Account: account ID.</li>
+             * <li>Email: account logon email address.</li>
              * </ul>
              * 
              * <strong>example:</strong>

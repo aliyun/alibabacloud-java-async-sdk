@@ -87,8 +87,8 @@ public class ListDelegatedAdministratorsRequest extends Request {
         } 
 
         /**
-         * <p>The number of the page to return.</p>
-         * <p>Pages start from page 1. Default value: 1.</p>
+         * <p>The page number.</p>
+         * <p>Minimum value: 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -100,7 +100,7 @@ public class ListDelegatedAdministratorsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The number of entries per page.</p>
          * <p>Valid values: 1 to 100. Default value: 10.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +114,7 @@ public class ListDelegatedAdministratorsRequest extends Request {
 
         /**
          * <p>The identifier of the trusted service.</p>
-         * <p>For more information, see the <code>Trusted service identifier</code> column in <a href="https://help.aliyun.com/document_detail/208133.html">Supported trusted services</a>.</p>
+         * <p>For more information, see the <code>Trusted Service Identifier</code> column in <a href="https://help.aliyun.com/document_detail/208133.html">Supported trusted services</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>cloudfw.aliyuncs.com</p>

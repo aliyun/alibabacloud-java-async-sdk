@@ -106,7 +106,7 @@ public class ListTrustedServiceStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The trusted services that are enabled.</p>
+         * EnabledServicePrincipals.
          */
         public Builder enabledServicePrincipals(EnabledServicePrincipals enabledServicePrincipals) {
             this.enabledServicePrincipals = enabledServicePrincipals;
@@ -114,7 +114,7 @@ public class ListTrustedServiceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class ListTrustedServiceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -136,7 +136,7 @@ public class ListTrustedServiceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>CD76D376-2517-4924-92C5-DBC52262F93A</p>
@@ -147,7 +147,7 @@ public class ListTrustedServiceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -216,10 +216,7 @@ public class ListTrustedServiceStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the trusted service was enabled.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2019-02-18T15:32:10.473Z</p>
+             * EnableTime.
              */
             public Builder enableTime(String enableTime) {
                 this.enableTime = enableTime;
@@ -227,10 +224,7 @@ public class ListTrustedServiceStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The identification of the trusted service.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>config.aliyuncs.com</p>
+             * ServicePrincipal.
              */
             public Builder servicePrincipal(String servicePrincipal) {
                 this.servicePrincipal = servicePrincipal;

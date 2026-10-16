@@ -75,7 +75,7 @@ public class UpdateFolderRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the folder.</p>
+         * <p>The folder ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class UpdateFolderRequest extends Request {
         }
 
         /**
-         * <p>The new name of the folder.</p>
+         * <p>The new folder name.</p>
          * <p>The name must be 1 to 24 characters in length and can contain letters, digits, underscores (_), periods (.), and hyphens (-).</p>
          * <p>This parameter is required.</p>
          * 

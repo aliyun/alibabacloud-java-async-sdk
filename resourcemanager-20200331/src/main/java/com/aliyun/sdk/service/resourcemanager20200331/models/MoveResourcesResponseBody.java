@@ -67,7 +67,7 @@ public class MoveResourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>C00B89D3-3247-11DE-95D8-A7C01FB0AB4F</p>
@@ -78,7 +78,7 @@ public class MoveResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned results.</p>
+         * <p>The response results.</p>
          */
         public Builder responses(java.util.List<Responses> responses) {
             this.responses = responses;
@@ -222,9 +222,9 @@ public class MoveResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The error code returned.</p>
+             * <p>The error code.</p>
              * <blockquote>
-             * <p> This parameter is returned if the resource failed to be moved.</p>
+             * <p>This parameter is returned only when the resource transfer fails.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -236,13 +236,13 @@ public class MoveResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error message returned.</p>
+             * <p>The error message.</p>
              * <blockquote>
-             * <p> This parameter is returned if the resource failed to be moved.</p>
+             * <p>This parameter is returned only when the resource transfer fails.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
-             * <p>No permissions</p>
+             * <p>No permission</p>
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -261,7 +261,7 @@ public class MoveResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the request.</p>
+             * <p>The request ID.</p>
              * 
              * <strong>example:</strong>
              * <p>C00B89D3-3247-11DE-95D8-A7C01FB0AB4F</p>
@@ -272,10 +272,10 @@ public class MoveResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource.</p>
+             * <p>The resource ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>vpc-bp1sig0mjktx5ewx1****</p>
+             * <p>i-23v38****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -283,10 +283,10 @@ public class MoveResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the resource.</p>
+             * <p>The resource type.</p>
              * 
              * <strong>example:</strong>
-             * <p>vpc</p>
+             * <p>instance</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -294,10 +294,10 @@ public class MoveResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud service.</p>
+             * <p>The cloud service code.</p>
              * 
              * <strong>example:</strong>
-             * <p>vpc</p>
+             * <p>ecs</p>
              */
             public Builder service(String service) {
                 this.service = service;
@@ -305,10 +305,10 @@ public class MoveResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the move task. Valid values:</p>
+             * <p>The status. Valid values:</p>
              * <ul>
-             * <li>SUCCESS</li>
-             * <li>FAIL</li>
+             * <li>SUCCESS: Succeeded.</li>
+             * <li>FAIL: Failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>

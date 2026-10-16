@@ -67,7 +67,7 @@ public class CreateCloudAccountResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information of the member account.</p>
+         * <p>The member information.</p>
          */
         public Builder account(Account account) {
             this.account = account;
@@ -75,7 +75,7 @@ public class CreateCloudAccountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9B34724D-54B0-4A51-B34D-4512372FE1BE</p>
@@ -248,7 +248,7 @@ public class CreateCloudAccountResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the member account.</p>
+             * <p>The account ID.</p>
              * 
              * <strong>example:</strong>
              * <p>12323344****</p>
@@ -259,7 +259,7 @@ public class CreateCloudAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the member account.</p>
+             * <p>The account name.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="mailto:someone@example.com">someone@example.com</a></p>
@@ -270,7 +270,7 @@ public class CreateCloudAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the member account.</p>
+             * <p>The member name.</p>
              * 
              * <strong>example:</strong>
              * <p>admin-****</p>
@@ -281,7 +281,7 @@ public class CreateCloudAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the folder.</p>
+             * <p>The folder ID.</p>
              * 
              * <strong>example:</strong>
              * <p>fd-bVaRIG****</p>
@@ -292,10 +292,10 @@ public class CreateCloudAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The way in which the member account joined the resource directory. Valid values:</p>
+             * <p>The method used by the member to join the resource directory. Valid values:</p>
              * <ul>
-             * <li>invited: The member account is invited to join the resource directory.</li>
-             * <li>created: The member account is directly created in the resource directory.</li>
+             * <li>invited: The member is invited to join.</li>
+             * <li>created: The member is created in the resource directory.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -307,7 +307,7 @@ public class CreateCloudAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the member account was modified.</p>
+             * <p>The time when the member was last modified. The time is displayed in UTC, as specified by RFC 3339, with Z indicating UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2015-01-23T12:33:18Z</p>
@@ -329,7 +329,7 @@ public class CreateCloudAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource directory.</p>
+             * <p>The resource directory ID.</p>
              * 
              * <strong>example:</strong>
              * <p>rd-k3****</p>
@@ -340,20 +340,20 @@ public class CreateCloudAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the member account. Valid values:</p>
+             * <p>The status of the member. Valid values:</p>
              * <ul>
-             * <li>CreateSuccess: The member account is created.</li>
-             * <li>CreateVerifying: The creation of the member account is under confirmation.</li>
-             * <li>CreateFailed: The member account failed to be created.</li>
-             * <li>CreateExpired: The creation of the member account expired.</li>
-             * <li>CreateCancelled: The creation of the member account is canceled.</li>
-             * <li>PromoteVerifying: The upgrade of the member account is under confirmation.</li>
-             * <li>PromoteFailed: The member account failed to be upgraded.</li>
-             * <li>PromoteExpired: The upgrade of the member account expired.</li>
-             * <li>PromoteCancelled: The upgrade of the member account is canceled.</li>
-             * <li>PromoteSuccess: The member account is upgraded.</li>
-             * <li>InviteSuccess: The owner of the member account accepted the invitation.</li>
-             * <li>Removed: The member account is removed from the resource directory.</li>
+             * <li>CreateSuccess: The member is created.</li>
+             * <li>CreateVerifying: The creation is being confirmed.</li>
+             * <li>CreateFailed: The member failed to be created.</li>
+             * <li>CreateExpired: The creation has expired.</li>
+             * <li>CreateCancelled: The creation is canceled.</li>
+             * <li>PromoteVerifying: The upgrade is being confirmed.</li>
+             * <li>PromoteFailed: The member failed to be upgraded.</li>
+             * <li>PromoteExpired: The upgrade has expired.</li>
+             * <li>PromoteCancelled: The upgrade is canceled.</li>
+             * <li>PromoteSuccess: The member is upgraded.</li>
+             * <li>InviteSuccess: The member is invited.</li>
+             * <li>Removed: The member is removed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -365,7 +365,7 @@ public class CreateCloudAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the member account. The value CloudAccount indicates that the member account is a cloud account.</p>
+             * <p>The member type. The value CloudAccount indicates a cloud account.</p>
              * 
              * <strong>example:</strong>
              * <p>CloudAccount</p>

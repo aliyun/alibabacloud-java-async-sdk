@@ -67,7 +67,7 @@ public class CreateControlPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the access control policy.</p>
+         * <p>The details of the control policy.</p>
          */
         public Builder controlPolicy(ControlPolicy controlPolicy) {
             this.controlPolicy = controlPolicy;
@@ -75,7 +75,7 @@ public class CreateControlPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>776B05B3-A0B0-464B-A191-F4E1119A94B2</p>
@@ -222,7 +222,7 @@ public class CreateControlPolicyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of times that the access control policy is referenced.</p>
+             * <p>The number of times the control policy is referenced.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -233,7 +233,7 @@ public class CreateControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the access control policy was created.</p>
+             * <p>The time when the control policy was created. The time is displayed in UTC in RFC 3339 format, with Z indicating UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-03-18T09:24:19Z</p>
@@ -244,7 +244,7 @@ public class CreateControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the access control policy.</p>
+             * <p>The description of the control policy.</p>
              * 
              * <strong>example:</strong>
              * <p>ExampleControlPolicy</p>
@@ -255,8 +255,8 @@ public class CreateControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The effective scope of the access control policy.</p>
-             * <p>The value RAM indicates that the access control policy takes effect only for RAM users and RAM roles.</p>
+             * <p>The effective scope of the control policy.</p>
+             * <p>Valid values: RAM, which indicates that the control policy takes effect only for Resource Access Management (RAM) users or RAM roles.</p>
              * 
              * <strong>example:</strong>
              * <p>RAM</p>
@@ -267,7 +267,7 @@ public class CreateControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the access control policy.</p>
+             * <p>The ID of the control policy.</p>
              * 
              * <strong>example:</strong>
              * <p>cp-jExXAqIYkwHN****</p>
@@ -278,7 +278,7 @@ public class CreateControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the access control policy.</p>
+             * <p>The Policy Name of the control policy.</p>
              * 
              * <strong>example:</strong>
              * <p>ExampleControlPolicy</p>
@@ -289,10 +289,10 @@ public class CreateControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the access control policy. Valid values:</p>
+             * <p>The type of the control policy. Valid values:</p>
              * <ul>
-             * <li>System: system access control policy</li>
-             * <li>Custom: custom access control policy</li>
+             * <li>System: system control policy.</li>
+             * <li>Custom: custom control policy.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -304,7 +304,7 @@ public class CreateControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the access control policy was updated.</p>
+             * <p>The time when the control policy was last updated. The time is displayed in UTC in RFC 3339 format, with Z indicating UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-03-18T09:24:19Z</p>

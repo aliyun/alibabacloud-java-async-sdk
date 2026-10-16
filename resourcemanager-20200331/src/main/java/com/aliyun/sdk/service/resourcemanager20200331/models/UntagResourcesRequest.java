@@ -102,10 +102,10 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to remove all tags from the specified resource groups or members. Valid values:</p>
+         * <p>Specifies whether to unbind all tags from the specified resource group or resource directory member. Valid values:</p>
          * <ul>
-         * <li>false (default value)</li>
-         * <li>true</li>
+         * <li>false (default): No.</li>
+         * <li>true: Yes.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -118,8 +118,8 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The ID of a resource group or member.</p>
-         * <p>You can specify a maximum of 50 IDs.</p>
+         * <p>The ID of the resource group or resource directory member.</p>
+         * <p>You can specify up to 50 IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
@@ -129,13 +129,13 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The type of the objects from which you want to remove tags. Valid values:</p>
+         * <p>The resource type. Valid values:</p>
          * <ul>
-         * <li>ResourceGroup: resource group. This is the default value.</li>
-         * <li>Account: member.</li>
+         * <li>ResourceGroup (default): Unbinds tags from a resource group.</li>
+         * <li>Account: Unbinds tags from a resource directory member.</li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is required if you remove tags from members in a resource directory.</p>
+         * <p>This parameter is required when you unbind tags from a resource directory member.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -148,10 +148,10 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>A tag key.</p>
-         * <p>You can specify a maximum of 20 tag keys.</p>
+         * <p>The tag key.</p>
+         * <p>You can unbind up to 20 tag keys.</p>
          * <blockquote>
-         * <p> If you set the <code>All</code> parameter to <code>true</code>, you do not need to configure this parameter.</p>
+         * <p>If the <code>All</code> parameter for unbinding all tags is set to <code>true</code>, you do not need to specify tag keys.</p>
          * </blockquote>
          */
         public Builder tagKey(java.util.List<String> tagKey) {

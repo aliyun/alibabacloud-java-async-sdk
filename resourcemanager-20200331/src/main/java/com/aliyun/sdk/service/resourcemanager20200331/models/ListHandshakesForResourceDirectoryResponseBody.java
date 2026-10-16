@@ -106,7 +106,7 @@ public class ListHandshakesForResourceDirectoryResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information of the invitations.</p>
+         * Handshakes.
          */
         public Builder handshakes(Handshakes handshakes) {
             this.handshakes = handshakes;
@@ -114,7 +114,7 @@ public class ListHandshakesForResourceDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class ListHandshakesForResourceDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -136,7 +136,7 @@ public class ListHandshakesForResourceDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9B34724D-54B0-4A51-B34D-4512372FE1BE</p>
@@ -147,7 +147,7 @@ public class ListHandshakesForResourceDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -333,10 +333,7 @@ public class ListHandshakesForResourceDirectoryResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the invitation was created. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2018-08-10T09:55:41Z</p>
+             * CreateTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -344,10 +341,7 @@ public class ListHandshakesForResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the invitation expires. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2018-08-24T09:55:41Z</p>
+             * ExpireTime.
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -355,10 +349,7 @@ public class ListHandshakesForResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the invitation.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>h-ycm4rp****</p>
+             * HandshakeId.
              */
             public Builder handshakeId(String handshakeId) {
                 this.handshakeId = handshakeId;
@@ -366,10 +357,7 @@ public class ListHandshakesForResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the management account of the resource directory.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>172841235500****</p>
+             * MasterAccountId.
              */
             public Builder masterAccountId(String masterAccountId) {
                 this.masterAccountId = masterAccountId;
@@ -377,10 +365,7 @@ public class ListHandshakesForResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the management account of the resource directory.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Alice</p>
+             * MasterAccountName.
              */
             public Builder masterAccountName(String masterAccountName) {
                 this.masterAccountName = masterAccountName;
@@ -388,10 +373,7 @@ public class ListHandshakesForResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the invitation was modified. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2018-08-10T09:55:41Z</p>
+             * ModifyTime.
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -399,10 +381,7 @@ public class ListHandshakesForResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The comment on the invitation.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Welcome</p>
+             * Note.
              */
             public Builder note(String note) {
                 this.note = note;
@@ -410,10 +389,7 @@ public class ListHandshakesForResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource directory.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rd-abcdef****</p>
+             * ResourceDirectoryId.
              */
             public Builder resourceDirectoryId(String resourceDirectoryId) {
                 this.resourceDirectoryId = resourceDirectoryId;
@@ -421,17 +397,7 @@ public class ListHandshakesForResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the invitation. Valid values:</p>
-             * <ul>
-             * <li>Pending: The invitation is waiting for confirmation.</li>
-             * <li>Accepted: The invitation is accepted.</li>
-             * <li>Cancelled: The invitation is canceled.</li>
-             * <li>Declined: The invitation is rejected.</li>
-             * <li>Expired: The invitation expires.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Pending</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -439,10 +405,7 @@ public class ListHandshakesForResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID or logon email address of the invited account.</p>
-             * 
-             * <strong>example:</strong>
-             * <p><a href="mailto:someone@example.com">someone@example.com</a></p>
+             * TargetEntity.
              */
             public Builder targetEntity(String targetEntity) {
                 this.targetEntity = targetEntity;
@@ -450,14 +413,7 @@ public class ListHandshakesForResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the invited account. Valid values:</p>
-             * <ul>
-             * <li>Account: indicates the ID of the account.</li>
-             * <li>Email: indicates the logon email address of the account.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Email</p>
+             * TargetType.
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;

@@ -74,8 +74,8 @@ public class DeleteAccountRequest extends Request {
         } 
 
         /**
-         * <p>The ID of a check item that you can choose to ignore for the member deletion.</p>
-         * <p>You can obtain the ID from the response of the <a href="https://help.aliyun.com/document_detail/448775.html">GetAccountDeletionCheckResult</a> operation.</p>
+         * <p>The ID of the check item that you can choose to abandon and continue with the member deletion.</p>
+         * <p>You can obtain this ID from the AbandonableChecks response parameter of <a href="https://help.aliyun.com/document_detail/448775.html">GetAccountDeletionCheckResult</a>.</p>
          */
         public Builder abandonableCheckId(java.util.List<String> abandonableCheckId) {
             String abandonableCheckIdShrink = shrink(abandonableCheckId, "AbandonableCheckId", "json");
@@ -85,7 +85,7 @@ public class DeleteAccountRequest extends Request {
         }
 
         /**
-         * <p>The Alibaba Cloud account ID of the member that you want to delete.</p>
+         * <p>The ID of the member to delete.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

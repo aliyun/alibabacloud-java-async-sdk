@@ -75,7 +75,7 @@ public class DeregisterDelegatedAdministratorRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the member in the resource directory.</p>
+         * <p>The UID of a member account in the resource directory.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -89,7 +89,7 @@ public class DeregisterDelegatedAdministratorRequest extends Request {
 
         /**
          * <p>The identifier of the trusted service.</p>
-         * <p>For more information, see the <code>Trusted service identifier</code> column in <a href="https://help.aliyun.com/document_detail/208133.html">Supported trusted services</a>.</p>
+         * <p>For more information, see the <code>Trusted Service Identifier</code> column in <a href="https://help.aliyun.com/document_detail/208133.html">Supported trusted services</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

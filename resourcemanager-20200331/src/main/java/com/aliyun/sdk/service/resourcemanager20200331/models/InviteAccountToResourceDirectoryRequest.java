@@ -103,11 +103,11 @@ public class InviteAccountToResourceDirectoryRequest extends Request {
         } 
 
         /**
-         * <p>The comment on the invitation.</p>
-         * <p>The comment can be up to 1,024 characters in length.</p>
+         * <p>The remarks.</p>
+         * <p>Maximum length: 1024 characters.</p>
          * 
          * <strong>example:</strong>
-         * <p>Welcome</p>
+         * <p>Welcome to join</p>
          */
         public Builder note(String note) {
             this.putQueryParameter("Note", note);
@@ -116,7 +116,7 @@ public class InviteAccountToResourceDirectoryRequest extends Request {
         }
 
         /**
-         * <p>The tag key and value.</p>
+         * <p>The tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -125,7 +125,7 @@ public class InviteAccountToResourceDirectoryRequest extends Request {
         }
 
         /**
-         * <p>The ID or logon email address of the account that you want to invite.</p>
+         * <p>The ID or logon email address of the account that is invited.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,10 +138,10 @@ public class InviteAccountToResourceDirectoryRequest extends Request {
         }
 
         /**
-         * <p>The type of the account. Valid values:</p>
+         * <p>The type of the account that is invited. Valid values:</p>
          * <ul>
-         * <li>Account: indicates the ID of the account.</li>
-         * <li>Email: indicates the logon email address of the account.</li>
+         * <li>Account: account ID.</li>
+         * <li>Email: logon email address of the account.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -214,7 +214,7 @@ public class InviteAccountToResourceDirectoryRequest extends Request {
             } 
 
             /**
-             * <p>A tag key.</p>
+             * <p>The tag key.</p>
              * 
              * <strong>example:</strong>
              * <p>k1</p>
@@ -225,7 +225,7 @@ public class InviteAccountToResourceDirectoryRequest extends Request {
             }
 
             /**
-             * <p>A tag value.</p>
+             * <p>The tag value.</p>
              * 
              * <strong>example:</strong>
              * <p>v1</p>

@@ -106,7 +106,7 @@ public class ListFoldersForParentResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information of the folders.</p>
+         * Folders.
          */
         public Builder folders(Folders folders) {
             this.folders = folders;
@@ -114,7 +114,7 @@ public class ListFoldersForParentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class ListFoldersForParentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -136,7 +136,7 @@ public class ListFoldersForParentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>7B8A4E7D-6CFF-471D-84DF-195A7A241ECB</p>
@@ -147,7 +147,7 @@ public class ListFoldersForParentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -229,10 +229,7 @@ public class ListFoldersForParentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the folder was created.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2015-01-23T12:33:18Z</p>
+             * CreateTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -240,10 +237,7 @@ public class ListFoldersForParentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the folder.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rd-evic31****</p>
+             * FolderId.
              */
             public Builder folderId(String folderId) {
                 this.folderId = folderId;
@@ -251,10 +245,7 @@ public class ListFoldersForParentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the folder.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>project-1</p>
+             * FolderName.
              */
             public Builder folderName(String folderName) {
                 this.folderName = folderName;

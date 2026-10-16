@@ -128,7 +128,7 @@ public class ListPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the permission policies.</p>
+         * Policies.
          */
         public Builder policies(Policies policies) {
             this.policies = policies;
@@ -147,7 +147,7 @@ public class ListPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -281,10 +281,7 @@ public class ListPoliciesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of references to the permission policy.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * AttachmentCount.
              */
             public Builder attachmentCount(Integer attachmentCount) {
                 this.attachmentCount = attachmentCount;
@@ -292,10 +289,7 @@ public class ListPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the permission policy was created.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2015-01-23T12:33:18Z</p>
+             * CreateDate.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -303,10 +297,7 @@ public class ListPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The default version of the permission policy.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>v1</p>
+             * DefaultVersion.
              */
             public Builder defaultVersion(String defaultVersion) {
                 this.defaultVersion = defaultVersion;
@@ -314,10 +305,7 @@ public class ListPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the permission policy.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>OSS administrator</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -325,10 +313,7 @@ public class ListPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the permission policy.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>OSS-Administrator</p>
+             * PolicyName.
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -336,14 +321,7 @@ public class ListPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the permission policy. Valid values:</p>
-             * <ul>
-             * <li>Custom</li>
-             * <li>System</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Custom</p>
+             * PolicyType.
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -351,10 +329,7 @@ public class ListPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the permission policy was updated.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2016-02-11T18:39:12Z</p>
+             * UpdateDate.
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;

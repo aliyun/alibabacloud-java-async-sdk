@@ -78,7 +78,7 @@ public class GetResourceGroupResourceCountsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The numbers of the resources.</p>
+         * <p>The resource count.</p>
          */
         public Builder resourceCounts(java.util.List<ResourceCounts> resourceCounts) {
             this.resourceCounts = resourceCounts;
@@ -157,7 +157,7 @@ public class GetResourceGroupResourceCountsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of the resources.</p>
+             * <p>The resource count.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -168,7 +168,7 @@ public class GetResourceGroupResourceCountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The dimension by which resources are queried.</p>
+             * <p>The grouping dimension for resource count statistics.</p>
              * 
              * <strong>example:</strong>
              * <p>ResourceGroupId</p>

@@ -106,7 +106,7 @@ public class ListAccountsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The members returned.</p>
+         * Accounts.
          */
         public Builder accounts(Accounts accounts) {
             this.accounts = accounts;
@@ -114,7 +114,7 @@ public class ListAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class ListAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -136,7 +136,7 @@ public class ListAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>7B8A4E7D-6CFF-471D-84DF-195A7A241ECB</p>
@@ -147,7 +147,7 @@ public class ListAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -216,10 +216,7 @@ public class ListAccountsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>A tag key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>tag_key</p>
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -227,10 +224,7 @@ public class ListAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A tag value.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>tag_value</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -468,10 +462,7 @@ public class ListAccountsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The Alibaba Cloud account ID of the member.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>181761095690****</p>
+             * AccountId.
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -479,10 +470,7 @@ public class ListAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the member.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * DisplayName.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -490,10 +478,7 @@ public class ListAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the folder.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>fd-QRzuim****</p>
+             * FolderId.
              */
             public Builder folderId(String folderId) {
                 this.folderId = folderId;
@@ -501,14 +486,7 @@ public class ListAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The way in which the member joins the resource directory. Valid values:</p>
-             * <ul>
-             * <li>invited: The member is invited to join the resource directory.</li>
-             * <li>created: The member is directly created in the resource directory.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>created</p>
+             * JoinMethod.
              */
             public Builder joinMethod(String joinMethod) {
                 this.joinMethod = joinMethod;
@@ -516,10 +494,7 @@ public class ListAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the member joined the resource directory. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2021-01-18T08:01:50.522Z</p>
+             * JoinTime.
              */
             public Builder joinTime(String joinTime) {
                 this.joinTime = joinTime;
@@ -527,10 +502,7 @@ public class ListAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the member was modified. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2021-01-18T08:04:37.668Z</p>
+             * ModifyTime.
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -538,10 +510,7 @@ public class ListAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource directory.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rd-3G****</p>
+             * ResourceDirectoryId.
              */
             public Builder resourceDirectoryId(String resourceDirectoryId) {
                 this.resourceDirectoryId = resourceDirectoryId;
@@ -549,7 +518,7 @@ public class ListAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The path of the member in the resource directory.</p>
+             * ResourceDirectoryPath.
              */
             public Builder resourceDirectoryPath(String resourceDirectoryPath) {
                 this.resourceDirectoryPath = resourceDirectoryPath;
@@ -557,19 +526,7 @@ public class ListAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the member. Valid values:</p>
-             * <ul>
-             * <li>CreateSuccess: The member is created.</li>
-             * <li>PromoteVerifying: The upgrade of the member is being confirmed.</li>
-             * <li>PromoteFailed: The upgrade of the member fails.</li>
-             * <li>PromoteExpired: The upgrade of the member expires.</li>
-             * <li>PromoteCancelled: The upgrade of the member is canceled.</li>
-             * <li>PromoteSuccess: The member is upgraded.</li>
-             * <li>InviteSuccess: The member accepts the invitation.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>CreateSuccess</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -577,7 +534,7 @@ public class ListAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags that are added to the member.</p>
+             * Tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -585,14 +542,7 @@ public class ListAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the member. Valid values:</p>
-             * <ul>
-             * <li>CloudAccount: cloud account</li>
-             * <li>ResourceAccount: resource account</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>ResourceAccount</p>
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;

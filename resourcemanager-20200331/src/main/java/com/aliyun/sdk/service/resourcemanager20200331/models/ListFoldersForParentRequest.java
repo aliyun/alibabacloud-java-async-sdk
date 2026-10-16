@@ -101,8 +101,8 @@ public class ListFoldersForParentRequest extends Request {
         } 
 
         /**
-         * <p>The number of the page to return.</p>
-         * <p>Pages start from page 1. Default value: 1.</p>
+         * <p>The page number.</p>
+         * <p>Minimum value: 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -114,7 +114,7 @@ public class ListFoldersForParentRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The number of entries per page.</p>
          * <p>Valid values: 1 to 100. Default value: 10.</p>
          * 
          * <strong>example:</strong>
@@ -128,7 +128,7 @@ public class ListFoldersForParentRequest extends Request {
 
         /**
          * <p>The ID of the parent folder.</p>
-         * <p>If you leave this parameter empty, the information of the first-level subfolders of the Root folder is queried.</p>
+         * <p>If you leave this parameter empty, the subfolders at the next level of the Root folder are queried.</p>
          * 
          * <strong>example:</strong>
          * <p>r-b1****</p>
@@ -140,7 +140,7 @@ public class ListFoldersForParentRequest extends Request {
         }
 
         /**
-         * <p>The keyword used for the query, such as a folder name.</p>
+         * <p>The query keyword, such as a folder name.</p>
          * <p>Fuzzy match is supported.</p>
          * 
          * <strong>example:</strong>

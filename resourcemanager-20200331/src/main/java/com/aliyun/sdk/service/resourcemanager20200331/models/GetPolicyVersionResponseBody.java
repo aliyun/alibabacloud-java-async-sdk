@@ -67,7 +67,7 @@ public class GetPolicyVersionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the policy version.</p>
+         * <p>The version information of the access policy.</p>
          */
         public Builder policyVersion(PolicyVersion policyVersion) {
             this.policyVersion = policyVersion;
@@ -170,7 +170,7 @@ public class GetPolicyVersionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the policy version was created.</p>
+             * <p>The time when the access policy version was created. The time is in RFC 3339 UTC format, indicated by Z.</p>
              * 
              * <strong>example:</strong>
              * <p>2015-01-23T12:33:18Z</p>
@@ -181,7 +181,7 @@ public class GetPolicyVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the policy version is the default version.</p>
+             * <p>Indicates whether the version is the default version of the access policy.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -192,10 +192,10 @@ public class GetPolicyVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The document of the permission policy.</p>
+             * <p>The content of the access policy.</p>
              * 
              * <strong>example:</strong>
-             * <p>{ &quot;Statement&quot;: [{ &quot;Action&quot;: [&quot;oss:<em>&quot;], &quot;Effect&quot;: &quot;Allow&quot;, &quot;Resource&quot;: [&quot;acs:oss:</em>:<em>:</em>&quot;]}], &quot;Version&quot;: &quot;1&quot;}</p>
+             * <p>{ \&quot;Statement\&quot;: [{ \&quot;Action\&quot;: [\&quot;oss:<em>\&quot;], \&quot;Effect\&quot;: \&quot;Allow\&quot;, \&quot;Resource\&quot;: [\&quot;acs:oss:</em>:<em>:</em>\&quot;]}], \&quot;Version\&quot;: \&quot;1\&quot;}</p>
              */
             public Builder policyDocument(String policyDocument) {
                 this.policyDocument = policyDocument;
@@ -203,7 +203,7 @@ public class GetPolicyVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the policy version.</p>
+             * <p>The ID of the access policy version.</p>
              * 
              * <strong>example:</strong>
              * <p>v3</p>

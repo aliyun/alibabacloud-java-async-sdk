@@ -67,7 +67,7 @@ public class GetAccountResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information of the member.</p>
+         * <p>The member account information.</p>
          */
         public Builder account(Account account) {
             this.account = account;
@@ -75,7 +75,7 @@ public class GetAccountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9B34724D-54B0-4A51-B34D-4512372FE1BE</p>
@@ -144,7 +144,7 @@ public class GetAccountResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>A tag key.</p>
+             * <p>The tag key.</p>
              * 
              * <strong>example:</strong>
              * <p>tag_key</p>
@@ -155,7 +155,7 @@ public class GetAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A tag value.</p>
+             * <p>The tag value.</p>
              * 
              * <strong>example:</strong>
              * <p>tag_value</p>
@@ -394,7 +394,7 @@ public class GetAccountResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The Alibaba Cloud account ID of the member.</p>
+             * <p>The member account ID.</p>
              * 
              * <strong>example:</strong>
              * <p>181761095690****</p>
@@ -405,7 +405,7 @@ public class GetAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Alibaba Cloud account name of the member.</p>
+             * <p>The name of the account.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="mailto:someone@example.com">someone@example.com</a></p>
@@ -416,7 +416,7 @@ public class GetAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the member.</p>
+             * <p>The display name of the member account.</p>
              * 
              * <strong>example:</strong>
              * <p>admin</p>
@@ -427,13 +427,13 @@ public class GetAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the modification for the email address bound to the member. Valid values:</p>
+             * <p>The email status. Valid values:</p>
              * <ul>
-             * <li>WAIT_MODIFY: in progress</li>
-             * <li>CANCELLED: canceled</li>
-             * <li>EXPIRED: expired</li>
+             * <li>Empty: No email modification record exists.</li>
+             * <li>WAIT_MODIFY: The modification is in progress.</li>
+             * <li>CANCELLED: The modification is canceled.</li>
+             * <li>EXPIRED: The modification has expired.</li>
              * </ul>
-             * <p>If the value of this parameter is empty, no modification is performed for the email address.</p>
              * 
              * <strong>example:</strong>
              * <p>WAIT_MODIFY</p>
@@ -466,10 +466,10 @@ public class GetAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The way in which the member joins the resource directory. Valid values:</p>
+             * <p>The method used by the member account to join the resource directory. Valid values:</p>
              * <ul>
-             * <li>invited: The member is invited to join the resource directory.</li>
-             * <li>created: The member is directly created in the resource directory.</li>
+             * <li>invited: Invited.</li>
+             * <li>created: Created.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -481,7 +481,7 @@ public class GetAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the member joined the resource directory.</p>
+             * <p>The time when the member account joined the resource directory. The time is displayed in UTC, as specified by RFC 3339, with Z indicating UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2015-01-23T12:33:18Z</p>
@@ -492,7 +492,7 @@ public class GetAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The location of the member in the resource directory.</p>
+             * <p>The location of the member account in the resource directory.</p>
              */
             public Builder location(String location) {
                 this.location = location;
@@ -500,7 +500,7 @@ public class GetAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the member was modified.</p>
+             * <p>The time when the member account was last modified. The time is displayed in UTC, as specified by RFC 3339, with Z indicating UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2015-01-23T12:33:18Z</p>
@@ -522,7 +522,7 @@ public class GetAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The path of the member in the resource directory.</p>
+             * <p>The path ID (RDPath) of the member account in the resource directory.</p>
              */
             public Builder resourceDirectoryPath(String resourceDirectoryPath) {
                 this.resourceDirectoryPath = resourceDirectoryPath;
@@ -530,15 +530,15 @@ public class GetAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the member. Valid values:</p>
+             * <p>The join status of the member account. Valid values:</p>
              * <ul>
-             * <li>CreateSuccess: The member is created.</li>
-             * <li>PromoteVerifying: The upgrade of the member is being confirmed.</li>
-             * <li>PromoteFailed: The upgrade of the member fails.</li>
-             * <li>PromoteExpired: The upgrade of the member expires.</li>
-             * <li>PromoteCancelled: The upgrade of the member is canceled.</li>
-             * <li>PromoteSuccess: The member is upgraded.</li>
-             * <li>InviteSuccess: The member accepts the invitation.</li>
+             * <li>CreateSuccess: Created.</li>
+             * <li>PromoteVerifying: Upgrade is being confirmed.</li>
+             * <li>PromoteFailed: Upgrade failed.</li>
+             * <li>PromoteExpired: Upgrade expired.</li>
+             * <li>PromoteCancelled: Upgrade canceled.</li>
+             * <li>PromoteSuccess: Upgrade succeeded.</li>
+             * <li>InviteSuccess: Invitation succeeded.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -550,7 +550,7 @@ public class GetAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags that are added to the member.</p>
+             * <p>The tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -558,10 +558,10 @@ public class GetAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the member. Valid values:</p>
+             * <p>The type of the member account. Valid values:</p>
              * <ul>
-             * <li>CloudAccount: cloud account</li>
-             * <li>ResourceAccount: resource account</li>
+             * <li>CloudAccount: Cloud account.</li>
+             * <li>ResourceAccount: Resource account.</li>
              * </ul>
              * 
              * <strong>example:</strong>

@@ -67,7 +67,7 @@ public class ResendCreateCloudAccountEmailResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information of the member account.</p>
+         * <p>The member account information.</p>
          */
         public Builder account(Account account) {
             this.account = account;
@@ -75,7 +75,7 @@ public class ResendCreateCloudAccountEmailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9B34724D-54B0-4A51-B34D-4512372FE1BE</p>
@@ -261,7 +261,7 @@ public class ResendCreateCloudAccountEmailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the account.</p>
+             * <p>The account ID.</p>
              * 
              * <strong>example:</strong>
              * <p>12323344****</p>
@@ -272,7 +272,7 @@ public class ResendCreateCloudAccountEmailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the account.</p>
+             * <p>The account name.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="mailto:someone@example.com">someone@example.com</a></p>
@@ -294,7 +294,7 @@ public class ResendCreateCloudAccountEmailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the folder.</p>
+             * <p>The ID of the resource folder.</p>
              * 
              * <strong>example:</strong>
              * <p>fd-bVaRIG****</p>
@@ -305,10 +305,10 @@ public class ResendCreateCloudAccountEmailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The way in which the member account joined the resource directory. Valid values:</p>
+             * <p>The method used by the member account to join the resource directory. Valid values:</p>
              * <ul>
-             * <li>invited: The member account is invited to join the resource directory.</li>
-             * <li>created: The member account is directly created in the resource directory.</li>
+             * <li>invited: Invited.</li>
+             * <li>created: Created.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -320,7 +320,7 @@ public class ResendCreateCloudAccountEmailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the member account joined the resource directory.</p>
+             * <p>The time when the member account joined the resource directory. The time is displayed in UTC, as specified by RFC 3339, with Z indicating UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2015-01-23T12:33:18Z</p>
@@ -331,7 +331,7 @@ public class ResendCreateCloudAccountEmailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the member account was modified.</p>
+             * <p>The time when the member account was last modified. The time is displayed in UTC, as specified by RFC 3339, with Z indicating UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2015-01-23T12:33:18Z</p>
@@ -345,7 +345,7 @@ public class ResendCreateCloudAccountEmailResponseBody extends TeaModel {
              * <p>The account record ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>16950264-3f0d-4ca9-82dd-6ee7a3d33d6b</p>
+             * <p>16950264-3f0d-4ca9-82dd-6ee7a3d3****</p>
              */
             public Builder recordId(String recordId) {
                 this.recordId = recordId;
@@ -364,20 +364,20 @@ public class ResendCreateCloudAccountEmailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the member account. Valid values:</p>
+             * <p>The join status of the member account. Valid values:</p>
              * <ul>
-             * <li>CreateSuccess: The member account is created.</li>
-             * <li>CreateVerifying: The creation of the member account is under confirmation.</li>
-             * <li>CreateFailed: The member account failed to be created.</li>
-             * <li>CreateExpired: The creation of the member account expired.</li>
-             * <li>CreateCancelled: The creation of the member account is canceled.</li>
-             * <li>PromoteVerifying: The upgrade of the member account is under confirmation.</li>
-             * <li>PromoteFailed: The member account failed to be upgraded.</li>
-             * <li>PromoteExpired: The upgrade of the member account expired.</li>
-             * <li>PromoteCancelled: The upgrade of the member account is canceled.</li>
-             * <li>PromoteSuccess: The member account is upgraded.</li>
-             * <li>InviteSuccess: The owner of the member account accepted the invitation.</li>
-             * <li>Removed: The member account is removed from the resource directory.</li>
+             * <li>CreateSuccess: Created.</li>
+             * <li>CreateVerifying: Pending creation confirmation.</li>
+             * <li>CreateFailed: Creation failed.</li>
+             * <li>CreateExpired: Creation expired.</li>
+             * <li>CreateCancelled: Creation canceled.</li>
+             * <li>PromoteVerifying: Pending upgrade confirmation.</li>
+             * <li>PromoteFailed: Upgrade failed.</li>
+             * <li>PromoteExpired: Upgrade expired.</li>
+             * <li>PromoteCancelled: Upgrade canceled.</li>
+             * <li>PromoteSuccess: Upgraded.</li>
+             * <li>InviteSuccess: Invited.</li>
+             * <li>Removed: Removed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -389,7 +389,7 @@ public class ResendCreateCloudAccountEmailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the member account. The value CloudAccount indicates that the member account is a cloud account.</p>
+             * <p>The type of the member account. The value CloudAccount indicates a cloud account.</p>
              * 
              * <strong>example:</strong>
              * <p>CloudAccount</p>

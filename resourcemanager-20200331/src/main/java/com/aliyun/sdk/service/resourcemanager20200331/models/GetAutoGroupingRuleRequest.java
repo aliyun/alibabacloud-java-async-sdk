@@ -60,7 +60,7 @@ public class GetAutoGroupingRuleRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the rule.</p>
+         * <p>The rule ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

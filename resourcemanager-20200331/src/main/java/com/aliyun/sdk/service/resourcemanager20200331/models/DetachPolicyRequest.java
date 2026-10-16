@@ -120,8 +120,8 @@ public class DetachPolicyRequest extends Request {
         } 
 
         /**
-         * <p>The name of the permission policy.</p>
-         * <p>The name must be 1 to 128 characters in length and can contain letters, digits, and hyphen (-).</p>
+         * <p>Policy Name of the access policy.</p>
+         * <p>Policy Name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -134,10 +134,10 @@ public class DetachPolicyRequest extends Request {
         }
 
         /**
-         * <p>The type of the permission policy. Valid values:</p>
+         * <p>The type of the access policy. Valid values:</p>
          * <ul>
-         * <li>Custom</li>
-         * <li>System</li>
+         * <li>Custom: custom policy.</li>
+         * <li>System: system policy.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -151,7 +151,7 @@ public class DetachPolicyRequest extends Request {
         }
 
         /**
-         * <p>The name of the object to which you want to attach the permission policy.</p>
+         * <p>The name of the object from which you want to detach the policy.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -164,11 +164,11 @@ public class DetachPolicyRequest extends Request {
         }
 
         /**
-         * <p>The type of the object to which you want to attach the permission policy. Valid values:</p>
+         * <p>The authorization object type. Valid values:</p>
          * <ul>
-         * <li>IMSUser: RAM user</li>
-         * <li>IMSGroup: RAM user group</li>
-         * <li>ServiceRole: RAM role</li>
+         * <li>IMSUser: Resource Access Management (RAM) user.</li>
+         * <li>IMSGroup: RAM user group.</li>
+         * <li>ServiceRole: RAM role.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -182,8 +182,8 @@ public class DetachPolicyRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group or the ID of the Alibaba Cloud account to which the resource group belongs.</p>
-         * <p>This parameter specifies the resource group or Alibaba Cloud account for which you want to revoke permissions.</p>
+         * <p>The ID of the resource group or the ID of the Alibaba Cloud account that owns the resource group.</p>
+         * <p>Specifies the resource group or Alibaba Cloud account from which to detach the policy.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

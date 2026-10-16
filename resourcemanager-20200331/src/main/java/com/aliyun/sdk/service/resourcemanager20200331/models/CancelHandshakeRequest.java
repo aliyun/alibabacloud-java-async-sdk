@@ -60,7 +60,7 @@ public class CancelHandshakeRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the invitation.</p>
+         * <p>The handshake ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

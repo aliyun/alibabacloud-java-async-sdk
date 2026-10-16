@@ -60,7 +60,7 @@ public class GetFolderRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the folder.</p>
+         * <p>The folder ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

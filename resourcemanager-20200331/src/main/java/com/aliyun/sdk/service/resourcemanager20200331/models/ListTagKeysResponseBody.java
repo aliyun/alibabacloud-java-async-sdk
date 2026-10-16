@@ -80,10 +80,10 @@ public class ListTagKeysResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether the next query is required.</p>
+         * <p>Indicates whether a next query token is available. Valid values:</p>
          * <ul>
-         * <li>If the value of this parameter is empty (<code>&quot;NextToken&quot;: &quot;&quot;</code>), all results are returned, and the next query is not required.</li>
-         * <li>If the value of this parameter is not empty, the next query is required, and the value is the token used to start the next query.</li>
+         * <li>If NextToken is empty, that is, <code>&quot;NextToken&quot;: &quot;&quot;</code>, no additional results exist.</li>
+         * <li>If NextToken has a value, the value is the token for the next query.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -95,7 +95,7 @@ public class ListTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>DC09A6AA-2713-4E10-A2E9-E6C5C43A8842</p>
@@ -106,7 +106,7 @@ public class ListTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information of the tag keys.</p>
+         * <p>The tag key information.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.tags = tags;

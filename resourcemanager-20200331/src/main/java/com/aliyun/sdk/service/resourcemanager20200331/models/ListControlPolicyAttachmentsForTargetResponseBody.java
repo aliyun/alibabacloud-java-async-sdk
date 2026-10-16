@@ -67,7 +67,7 @@ public class ListControlPolicyAttachmentsForTargetResponseBody extends TeaModel 
         } 
 
         /**
-         * <p>The attached access control policies.</p>
+         * ControlPolicyAttachments.
          */
         public Builder controlPolicyAttachments(ControlPolicyAttachments controlPolicyAttachments) {
             this.controlPolicyAttachments = controlPolicyAttachments;
@@ -75,7 +75,7 @@ public class ListControlPolicyAttachmentsForTargetResponseBody extends TeaModel 
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>C276B600-7B7A-49E8-938C-E16CFA955A82</p>
@@ -196,10 +196,7 @@ public class ListControlPolicyAttachmentsForTargetResponseBody extends TeaModel 
             } 
 
             /**
-             * <p>The time when the access control policy was attached.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2021-03-19T02:56:24Z</p>
+             * AttachDate.
              */
             public Builder attachDate(String attachDate) {
                 this.attachDate = attachDate;
@@ -207,10 +204,7 @@ public class ListControlPolicyAttachmentsForTargetResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The description of the access control policy.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ExampleControlPolicy</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -218,14 +212,7 @@ public class ListControlPolicyAttachmentsForTargetResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The effective scope of the access control policy. Valid values:</p>
-             * <ul>
-             * <li>All: The access control policy is in effect for Alibaba Cloud accounts, RAM users, and RAM roles.</li>
-             * <li>RAM: The access control policy is in effect only for RAM users and RAM roles.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>RAM</p>
+             * EffectScope.
              */
             public Builder effectScope(String effectScope) {
                 this.effectScope = effectScope;
@@ -233,10 +220,7 @@ public class ListControlPolicyAttachmentsForTargetResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The ID of the access control policy.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cp-jExXAqIYkwHN****</p>
+             * PolicyId.
              */
             public Builder policyId(String policyId) {
                 this.policyId = policyId;
@@ -244,10 +228,7 @@ public class ListControlPolicyAttachmentsForTargetResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The name of the access control policy.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ExampleControlPolicy</p>
+             * PolicyName.
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -255,14 +236,7 @@ public class ListControlPolicyAttachmentsForTargetResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The type of the access control policy. Valid values:</p>
-             * <ul>
-             * <li>System: system access control policy</li>
-             * <li>Custom: custom access control policy</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Custom</p>
+             * PolicyType.
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;

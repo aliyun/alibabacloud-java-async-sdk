@@ -88,7 +88,7 @@ public class ListResourceGroupCapabilityRequest extends Request {
 
         /**
          * <p>The resource type.</p>
-         * <p>You can obtain the resource type from the <strong>Resource type</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</p>
+         * <p>You can obtain the resource type from the <strong>Resource Type</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>instance</p>
@@ -100,8 +100,8 @@ public class ListResourceGroupCapabilityRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Alibaba Cloud service.</p>
-         * <p>You can obtain the service code from the <strong>Service code</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</p>
+         * <p>The cloud service ID.</p>
+         * <p>You can obtain the cloud service ID from the <strong>Cloud Service Code</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs</p>
@@ -113,7 +113,7 @@ public class ListResourceGroupCapabilityRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether a specific resource type or cloud service supports resource group events.</p>
+         * <p>Specifies whether resource group events are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

@@ -67,7 +67,7 @@ public class ListResourceGroupCapabilityResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether a specific resource type or cloud service supports resource group events.</p>
+         * <p>The list of capability items.</p>
          */
         public Builder capabilities(java.util.List<Capabilities> capabilities) {
             this.capabilities = capabilities;
@@ -170,7 +170,10 @@ public class ListResourceGroupCapabilityResponseBody extends TeaModel {
             } 
 
             /**
-             * ResourceCenterResourceType.
+             * <p>The resource center resource type code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACS::ECS::Instance</p>
              */
             public Builder resourceCenterResourceType(String resourceCenterResourceType) {
                 this.resourceCenterResourceType = resourceCenterResourceType;
@@ -179,7 +182,7 @@ public class ListResourceGroupCapabilityResponseBody extends TeaModel {
 
             /**
              * <p>The resource type.</p>
-             * <p>You can obtain the resource type from the <strong>Resource type</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</p>
+             * <p>You can obtain the resource type from the <strong>Resource Type</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>instance</p>
@@ -190,8 +193,8 @@ public class ListResourceGroupCapabilityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service code.</p>
-             * <p>You can obtain the code from the <strong>Service code</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</p>
+             * <p>The cloud service code.</p>
+             * <p>You can obtain the cloud service code from the <strong>Cloud Service Code</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>ecs</p>
@@ -202,7 +205,7 @@ public class ListResourceGroupCapabilityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether a specific resource type or cloud service supports resource group events.</p>
+             * <p>Specifies whether resource group events are supported.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>

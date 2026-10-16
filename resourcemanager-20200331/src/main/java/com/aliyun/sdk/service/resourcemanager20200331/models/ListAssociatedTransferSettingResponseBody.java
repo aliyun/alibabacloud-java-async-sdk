@@ -67,7 +67,7 @@ public class ListAssociatedTransferSettingResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The settings of the Transfer Associated Resources feature.</p>
+         * <p>The settings of the associated resource group transfer feature.</p>
          */
         public Builder associatedTransferSetting(AssociatedTransferSetting associatedTransferSetting) {
             this.associatedTransferSetting = associatedTransferSetting;
@@ -183,7 +183,7 @@ public class ListAssociatedTransferSettingResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The type of the associated resource.</p>
+             * <p>The resource type of the associated resource.</p>
              * 
              * <strong>example:</strong>
              * <p>disk</p>
@@ -194,7 +194,7 @@ public class ListAssociatedTransferSettingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service code of the associated resource.</p>
+             * <p>The cloud service code of the associated resource.</p>
              * 
              * <strong>example:</strong>
              * <p>ecs</p>
@@ -205,7 +205,7 @@ public class ListAssociatedTransferSettingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the primary resource.</p>
+             * <p>The resource type of the master resource.</p>
              * 
              * <strong>example:</strong>
              * <p>instance</p>
@@ -216,7 +216,7 @@ public class ListAssociatedTransferSettingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service code of the primary resource.</p>
+             * <p>The cloud service code of the master resource.</p>
              * 
              * <strong>example:</strong>
              * <p>ecs</p>
@@ -227,10 +227,10 @@ public class ListAssociatedTransferSettingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the Transfer Associated Resources feature. Valid values:</p>
+             * <p>The status of the associated resource group transfer feature. Valid values:</p>
              * <ul>
-             * <li>Enable: enabled</li>
-             * <li>Disable: disabled</li>
+             * <li>Enable: enabled.</li>
+             * <li>Disable: disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -327,7 +327,7 @@ public class ListAssociatedTransferSettingResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the Alibaba Cloud account.</p>
+             * <p>The Alibaba Cloud account ID.</p>
              * 
              * <strong>example:</strong>
              * <p>121998723923****</p>
@@ -338,10 +338,10 @@ public class ListAssociatedTransferSettingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the Transfer Existing Associated Resources feature is enabled. Valid values:</p>
+             * <p>Indicates whether the task for transferring existing associated resources to the same resource group is started. Valid values:</p>
              * <ul>
-             * <li>false</li>
-             * <li>true</li>
+             * <li>false: The task is not started.</li>
+             * <li>true: The task is started.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -353,7 +353,7 @@ public class ListAssociatedTransferSettingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The settings of transfer rules.</p>
+             * <p>The rule settings of the associated resource group transfer feature.</p>
              */
             public Builder ruleSettings(java.util.List<RuleSettings> ruleSettings) {
                 this.ruleSettings = ruleSettings;
@@ -361,10 +361,10 @@ public class ListAssociatedTransferSettingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the Transfer Associated Resources feature. Valid values:</p>
+             * <p>The status of the associated resource group transfer feature. Valid values:</p>
              * <ul>
-             * <li>Enable: enabled</li>
-             * <li>Disable: disabled</li>
+             * <li>Enable: enabled.</li>
+             * <li>Disable: disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>

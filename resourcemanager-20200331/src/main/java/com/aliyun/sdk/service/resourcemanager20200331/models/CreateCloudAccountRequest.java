@@ -103,9 +103,9 @@ public class CreateCloudAccountRequest extends Request {
         } 
 
         /**
-         * <p>The display name of the member account.</p>
+         * <p>The member name.</p>
          * <p>The name must be 2 to 50 characters in length and can contain letters, digits, underscores (_), periods (.), and hyphens (-).</p>
-         * <p>The name must be unique in the current resource directory.</p>
+         * <p>The member name must be unique within the resource directory.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,7 +143,7 @@ public class CreateCloudAccountRequest extends Request {
         }
 
         /**
-         * <p>The ID of the settlement account. If you do not specify this parameter, the current account is used for settlement.</p>
+         * <p>The ID of the settlement account. If this parameter is left empty, the current account is used for settlement.</p>
          * 
          * <strong>example:</strong>
          * <p>12323344****</p>

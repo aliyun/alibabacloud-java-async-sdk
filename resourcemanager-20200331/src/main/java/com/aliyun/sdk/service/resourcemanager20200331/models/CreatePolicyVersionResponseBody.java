@@ -67,7 +67,7 @@ public class CreatePolicyVersionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the policy version.</p>
+         * <p>The access policy version information.</p>
          */
         public Builder policyVersion(PolicyVersion policyVersion) {
             this.policyVersion = policyVersion;
@@ -157,10 +157,10 @@ public class CreatePolicyVersionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the policy version was created.</p>
+             * <p>The time when the access policy version was created. The time is in RFC 3339 UTC format, indicated by Z.</p>
              * 
              * <strong>example:</strong>
-             * <p>2015-01-23T12:33:18</p>
+             * <p>2015-01-23T12:33:18Z</p>
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -168,7 +168,7 @@ public class CreatePolicyVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the policy version is the default version.</p>
+             * <p>Indicates whether the version is the default version of the access policy.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -179,7 +179,7 @@ public class CreatePolicyVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the policy version.</p>
+             * <p>The ID of the access policy version.</p>
              * 
              * <strong>example:</strong>
              * <p>v3</p>

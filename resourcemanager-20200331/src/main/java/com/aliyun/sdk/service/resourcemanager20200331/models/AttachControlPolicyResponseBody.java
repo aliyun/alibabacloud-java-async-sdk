@@ -54,7 +54,7 @@ public class AttachControlPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>95060F1D-6990-4645-8920-A81D1BBFE992</p>

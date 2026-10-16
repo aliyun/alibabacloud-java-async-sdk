@@ -60,10 +60,10 @@ public class SetMemberDeletionPermissionRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to enable the member deletion feature. Valid values:</p>
+         * <p>Specifies whether to enable or disable the member deletion permission. Valid values:</p>
          * <ul>
-         * <li>Enabled: enables the member deletion feature</li>
-         * <li>Disabled: disables the member deletion feature</li>
+         * <li>Enabled: enables the member deletion permission.</li>
+         * <li>Disabled: disables the member deletion permission.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

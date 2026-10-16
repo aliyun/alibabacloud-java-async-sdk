@@ -139,7 +139,7 @@ public class ListRolesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the roles.</p>
+         * Roles.
          */
         public Builder roles(Roles roles) {
             this.roles = roles;
@@ -216,10 +216,7 @@ public class ListRolesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the deletion task was created.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2018-10-23T12:33:18Z</p>
+             * CreateDate.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -227,10 +224,7 @@ public class ListRolesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the deletion task.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ECSAdmin/cc61514b-26eb-4453-ab53-b142eb70****</p>
+             * DeletionTaskId.
              */
             public Builder deletionTaskId(String deletionTaskId) {
                 this.deletionTaskId = deletionTaskId;
@@ -401,10 +395,7 @@ public class ListRolesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The Alibaba Cloud Resource Name (ARN) of the role.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>acs:ram::123456789012****:role/ECSAdmin</p>
+             * Arn.
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -412,10 +403,7 @@ public class ListRolesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the role was created.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2015-01-23T12:33:18Z</p>
+             * CreateDate.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -423,10 +411,7 @@ public class ListRolesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the role.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ECS administrator</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -434,10 +419,7 @@ public class ListRolesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the role is a service-linked role.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * IsServiceLinkedRole.
              */
             public Builder isServiceLinkedRole(Boolean isServiceLinkedRole) {
                 this.isServiceLinkedRole = isServiceLinkedRole;
@@ -445,7 +427,7 @@ public class ListRolesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information of the most recent deletion task.</p>
+             * LatestDeletionTask.
              */
             public Builder latestDeletionTask(LatestDeletionTask latestDeletionTask) {
                 this.latestDeletionTask = latestDeletionTask;
@@ -453,10 +435,7 @@ public class ListRolesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum session duration of the role.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3600</p>
+             * MaxSessionDuration.
              */
             public Builder maxSessionDuration(Long maxSessionDuration) {
                 this.maxSessionDuration = maxSessionDuration;
@@ -464,10 +443,7 @@ public class ListRolesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the role.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>90123456789****</p>
+             * RoleId.
              */
             public Builder roleId(String roleId) {
                 this.roleId = roleId;
@@ -475,10 +451,7 @@ public class ListRolesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the role.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ECSAdmin</p>
+             * RoleName.
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;
@@ -486,10 +459,7 @@ public class ListRolesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the role after authorization.</p>
-             * 
-             * <strong>example:</strong>
-             * <p><a href="mailto:ECSAdmin@role.123456.onaliyunservice.com">ECSAdmin@role.123456.onaliyunservice.com</a></p>
+             * RolePrincipalName.
              */
             public Builder rolePrincipalName(String rolePrincipalName) {
                 this.rolePrincipalName = rolePrincipalName;
@@ -497,10 +467,7 @@ public class ListRolesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the role was updated.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2016-01-23T12:33:18Z</p>
+             * UpdateDate.
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;

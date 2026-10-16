@@ -101,15 +101,10 @@ public class GetResourceGroupResourceCountsRequest extends Request {
         } 
 
         /**
-         * <p>The dimension by which resources are queried.</p>
+         * <p>The grouping dimension for resource count statistics.</p>
          * <blockquote>
-         * <p>If you do not specify a dimension, no results are returned.</p>
+         * <p>Specify a grouping dimension. If you do not specify a grouping dimension, the response is empty.</p>
          * </blockquote>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>ResourceGroupId</li>
-         * <li>ResourceType</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>ResourceGroupId</p>
@@ -122,7 +117,7 @@ public class GetResourceGroupResourceCountsRequest extends Request {
 
         /**
          * <p>The resource group ID.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2716558.html">ListResourceGroups</a> operation to obtain the ID.</p>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/2716558.html">ListResourceGroups</a> to obtain the resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-9gLOoK****</p>
@@ -134,7 +129,7 @@ public class GetResourceGroupResourceCountsRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the resources.</p>
+         * <p>The region to which the resource belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -146,7 +141,7 @@ public class GetResourceGroupResourceCountsRequest extends Request {
         }
 
         /**
-         * <p>The resource types.</p>
+         * <p>The list of resource types.</p>
          */
         public Builder resourceTypes(java.util.List<ResourceTypes> resourceTypes) {
             this.putQueryParameter("ResourceTypes", resourceTypes);
@@ -215,7 +210,7 @@ public class GetResourceGroupResourceCountsRequest extends Request {
 
             /**
              * <p>The resource type.</p>
-             * <p>You can obtain the resource type from the <strong>Resource type</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</p>
+             * <p>You can obtain the resource type from the <strong>Resource Type</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>instance</p>
@@ -226,8 +221,8 @@ public class GetResourceGroupResourceCountsRequest extends Request {
             }
 
             /**
-             * <p>The service code.</p>
-             * <p>You can obtain the code from the <strong>Service code</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</p>
+             * <p>The cloud service code.</p>
+             * <p>You can obtain the cloud service code from the <strong>Cloud Service Code</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>ecs</p>

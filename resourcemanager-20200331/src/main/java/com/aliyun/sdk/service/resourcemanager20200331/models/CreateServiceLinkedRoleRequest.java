@@ -89,8 +89,8 @@ public class CreateServiceLinkedRoleRequest extends Request {
 
         /**
          * <p>The suffix of the role name.</p>
-         * <p>The role name (including its suffix) must be 1 to 64 characters in length and can contain letters, digits, periods (.), and hyphens (-).</p>
-         * <p>For example, if the suffix is <code>Example</code>, the role name is <code>ServiceLinkedRoleName_Example</code>.</p>
+         * <p>The total length of the role name (including the suffix) must be 1 to 64 characters and can contain letters, digits, periods (.), and hyphens (-).</p>
+         * <p>For example, if the suffix is <code>Example</code>, the role name is <code>ServiceLinkedRoleName_Example</code>, and the maximum length cannot exceed 64 characters.</p>
          * 
          * <strong>example:</strong>
          * <p>Example</p>
@@ -103,7 +103,7 @@ public class CreateServiceLinkedRoleRequest extends Request {
 
         /**
          * <p>The description of the service-linked role.</p>
-         * <p>You must configure this parameter for service-linked roles that support custom suffixes. Otherwise, the preset value is used and cannot be modified.</p>
+         * <p>Only service-linked roles that allow custom suffixes can have a custom role description. Otherwise, the role description uses a preset value and cannot be modified.</p>
          * <p>The description must be 1 to 1,024 characters in length.</p>
          * 
          * <strong>example:</strong>
@@ -117,7 +117,7 @@ public class CreateServiceLinkedRoleRequest extends Request {
 
         /**
          * <p>The service name.</p>
-         * <p>For more information about the service name, see <a href="https://help.aliyun.com/document_detail/461722.html">Alibaba Cloud services that support service-linked roles</a>.</p>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/461722.html">Cloud services that support service-linked roles</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

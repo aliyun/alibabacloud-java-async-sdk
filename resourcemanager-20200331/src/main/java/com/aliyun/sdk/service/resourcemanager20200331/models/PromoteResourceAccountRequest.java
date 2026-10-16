@@ -75,7 +75,7 @@ public class PromoteResourceAccountRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the resource account you want to upgrade.</p>
+         * <p>The ID of the resource account to upgrade.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class PromoteResourceAccountRequest extends Request {
         }
 
         /**
-         * <p>The email address used to log on to the cloud account after the upgrade.</p>
+         * <p>The logon email address of the Alibaba Cloud account after the upgrade.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

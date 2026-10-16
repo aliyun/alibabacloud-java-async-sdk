@@ -90,8 +90,8 @@ public class GetPolicyVersionRequest extends Request {
         } 
 
         /**
-         * <p>The name of the permission policy.</p>
-         * <p>The name must be 1 to 128 characters in length and can contain letters, digits, and hyphen (-).</p>
+         * <p>Policy Name of the access policy.</p>
+         * <p>Policy Name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -104,10 +104,10 @@ public class GetPolicyVersionRequest extends Request {
         }
 
         /**
-         * <p>The type of the permission policy. Valid values:</p>
+         * <p>The type of the access policy. Valid values:</p>
          * <ul>
-         * <li>Custom</li>
-         * <li>System</li>
+         * <li>Custom: custom policy.</li>
+         * <li>System: system policy.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -121,7 +121,7 @@ public class GetPolicyVersionRequest extends Request {
         }
 
         /**
-         * <p>The ID of the policy version.</p>
+         * <p>The ID of the access policy version.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

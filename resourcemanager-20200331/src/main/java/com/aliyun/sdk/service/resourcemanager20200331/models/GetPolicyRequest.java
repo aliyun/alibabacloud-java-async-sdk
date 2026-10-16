@@ -89,11 +89,11 @@ public class GetPolicyRequest extends Request {
         } 
 
         /**
-         * <p>The language in which you want to return the description of the system permission policy. Valid values:</p>
+         * <p>The language type. The description of the system access policy is returned in this language. Valid values:</p>
          * <ul>
-         * <li>en: English</li>
-         * <li>zh-CN: Chinese</li>
-         * <li>ja: Japanese</li>
+         * <li>en: English.</li>
+         * <li>zh-CN: Chinese.</li>
+         * <li>ja: Japanese.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -106,8 +106,8 @@ public class GetPolicyRequest extends Request {
         }
 
         /**
-         * <p>The name of the permission policy.</p>
-         * <p>The name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).</p>
+         * <p>Policy Name of the access policy.</p>
+         * <p>Policy Name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -120,10 +120,10 @@ public class GetPolicyRequest extends Request {
         }
 
         /**
-         * <p>The type of the permission policy. Valid values:</p>
+         * <p>The type of the access policy. Valid values:</p>
          * <ul>
-         * <li>Custom</li>
-         * <li>System</li>
+         * <li>Custom: custom policy.</li>
+         * <li>System: system policy.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

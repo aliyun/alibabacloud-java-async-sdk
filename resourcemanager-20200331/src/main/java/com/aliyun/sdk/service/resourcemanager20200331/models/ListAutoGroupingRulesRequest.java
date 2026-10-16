@@ -116,7 +116,7 @@ public class ListAutoGroupingRulesRequest extends Request {
         } 
 
         /**
-         * <p>The maximum number of entries to return for a single request. Valid values: 1 to 50.</p>
+         * <p>The maximum number of entries to return in a single request. Valid values: 1 to 50.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -128,7 +128,7 @@ public class ListAutoGroupingRulesRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * <p>If the response is truncated, you can use NextToken to send another request to retrieve the content after the current truncation point.</p>
          * 
          * <strong>example:</strong>
          * <p>TGlzdFJlc291cm****</p>
@@ -140,7 +140,7 @@ public class ListAutoGroupingRulesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the rule.</p>
+         * <p>The rule ID.</p>
          * 
          * <strong>example:</strong>
          * <p>gr-acfo******hy6a</p>
@@ -152,10 +152,10 @@ public class ListAutoGroupingRulesRequest extends Request {
         }
 
         /**
-         * <p>The name of the rule.</p>
+         * <p>The rule name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Custom Transfer Rule for Online Resources of Project A</p>
+         * <p>Auto group transfer rule for Project A online resources</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -164,10 +164,10 @@ public class ListAutoGroupingRulesRequest extends Request {
         }
 
         /**
-         * <p>The type of the rule. Valid values:</p>
+         * <p>The rule type. Valid values:</p>
          * <ul>
-         * <li>custom_condition: custom transfer rule</li>
-         * <li>associated_transfer: transfer rule for associated resources</li>
+         * <li>custom_condition: custom rule-based group transfer.</li>
+         * <li>associated_transfer: attached-resource allocation group transfer.</li>
          * </ul>
          * 
          * <strong>example:</strong>

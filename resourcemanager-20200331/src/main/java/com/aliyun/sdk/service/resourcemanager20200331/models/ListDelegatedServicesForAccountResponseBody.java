@@ -67,10 +67,7 @@ public class ListDelegatedServicesForAccountResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The trusted services.</p>
-         * <blockquote>
-         * <p> If the value of this parameter is empty, the member is not specified as a delegated administrator account.</p>
-         * </blockquote>
+         * DelegatedServices.
          */
         public Builder delegatedServices(DelegatedServices delegatedServices) {
             this.delegatedServices = delegatedServices;
@@ -78,7 +75,7 @@ public class ListDelegatedServicesForAccountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>D9C03B94-9396-4794-A74B-13DC437556A6</p>
@@ -160,10 +157,7 @@ public class ListDelegatedServicesForAccountResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the member was specified as a delegated administrator account of the trusted service.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1616652684164</p>
+             * DelegationEnabledTime.
              */
             public Builder delegationEnabledTime(String delegationEnabledTime) {
                 this.delegationEnabledTime = delegationEnabledTime;
@@ -171,10 +165,7 @@ public class ListDelegatedServicesForAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The identification of the trusted service.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cloudfw.aliyuncs.com</p>
+             * ServicePrincipal.
              */
             public Builder servicePrincipal(String servicePrincipal) {
                 this.servicePrincipal = servicePrincipal;
@@ -182,14 +173,7 @@ public class ListDelegatedServicesForAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the trusted service. Valid values:</p>
-             * <ul>
-             * <li>ENABLED: enabled</li>
-             * <li>DISABLED: disabled</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>ENABLED</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;

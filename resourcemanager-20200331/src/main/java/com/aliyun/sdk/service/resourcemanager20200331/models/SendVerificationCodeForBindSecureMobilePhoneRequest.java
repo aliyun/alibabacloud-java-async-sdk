@@ -75,7 +75,7 @@ public class SendVerificationCodeForBindSecureMobilePhoneRequest extends Request
         } 
 
         /**
-         * <p>The ID of the resource account.</p>
+         * <p>The account ID of the member.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,10 +88,15 @@ public class SendVerificationCodeForBindSecureMobilePhoneRequest extends Request
         }
 
         /**
-         * <p>The mobile phone number that you want to bind to the resource account.</p>
-         * <p>Specify the mobile phone number in the &lt;Country code&gt;-&lt;Mobile phone number&gt; format.</p>
+         * <p>The secure phone number.</p>
+         * <p>Format: <Country code>-<Phone number>.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;</p>
          * <blockquote>
-         * <p> Mobile phone numbers in the <code>86-&lt;Mobile phone number&gt;</code> format in the Chinese mainland are not supported.</p>
+         * <p>Only phone numbers in the Chinese mainland in the format of <code>86-&lt;Phone number&gt;</code> are supported.</p>
+         * </blockquote>
+         * <p>&lt;props=&quot;intl&quot;&gt;</p>
+         * <blockquote>
+         * <p>Phone numbers in the Chinese mainland in the format of <code>86-&lt;Phone number&gt;</code> are not supported.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

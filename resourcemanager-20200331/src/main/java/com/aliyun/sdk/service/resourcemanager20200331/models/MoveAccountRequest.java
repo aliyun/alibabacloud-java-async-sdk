@@ -75,7 +75,7 @@ public class MoveAccountRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the account you want to move.</p>
+         * <p>The ID of the account to be moved.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

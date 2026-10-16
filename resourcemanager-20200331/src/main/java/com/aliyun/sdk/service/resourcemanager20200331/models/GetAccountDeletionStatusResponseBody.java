@@ -67,7 +67,7 @@ public class GetAccountDeletionStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The deletion status of the member.</p>
+         * <p>The deletion status of the member account.</p>
          */
         public Builder rdAccountDeletionStatus(RdAccountDeletionStatus rdAccountDeletionStatus) {
             this.rdAccountDeletionStatus = rdAccountDeletionStatus;
@@ -75,7 +75,7 @@ public class GetAccountDeletionStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>8AA43293-7C8F-5730-8F2D-7F864EC092C5</p>
@@ -155,7 +155,7 @@ public class GetAccountDeletionStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the cloud service to which the check item belongs.</p>
+             * <p>The service name of the cloud service to which the check item belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>Others</p>
@@ -278,7 +278,7 @@ public class GetAccountDeletionStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The Alibaba Cloud account ID of the member.</p>
+             * <p>The ID of the member account.</p>
              * 
              * <strong>example:</strong>
              * <p>169946124551****</p>
@@ -289,7 +289,7 @@ public class GetAccountDeletionStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the deletion.</p>
+             * <p>The time when the deletion started, in RFC 3339 format with a UTC offset of +08:00.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-08-23T17:05:30+08:00</p>
@@ -300,7 +300,7 @@ public class GetAccountDeletionStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the deletion.</p>
+             * <p>The time when the deletion ended, in RFC 3339 format with a UTC offset of +08:00.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -312,10 +312,10 @@ public class GetAccountDeletionStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the deletion. Valid values:</p>
+             * <p>The deletion type. Valid values:</p>
              * <ul>
-             * <li>0: direct deletion. If the member does not have pay-as-you-go resources that are purchased within the previous 30 days, the system directly deletes the member.</li>
-             * <li>1: deletion with a silence period. If the member has pay-as-you-go resources that are purchased within the previous 30 days, the member enters a silence period. The system starts to delete the member until the silence period ends. For more information about the silence period, see <a href="https://help.aliyun.com/document_detail/446079.html">What is the silence period for member deletion?</a></li>
+             * <li>0: direct deletion. If the member account has no pay-as-you-go resources in the last 30 days, the system directly deletes the member account.</li>
+             * <li>1: cool-down period deletion. If the member account has pay-as-you-go resources in the last 30 days, the member account enters a cool-down period. The system starts to delete the member account after the cool-down period ends. For more information about the cool-down period, see <a href="https://help.aliyun.com/document_detail/446079.html">What is the cool-down period for member account deletion</a>.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -327,7 +327,7 @@ public class GetAccountDeletionStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reasons why the member fails to be deleted.</p>
+             * <p>The reasons for the deletion failure.</p>
              */
             public Builder failReasonList(java.util.List<FailReasonList> failReasonList) {
                 this.failReasonList = failReasonList;
@@ -337,11 +337,11 @@ public class GetAccountDeletionStatusResponseBody extends TeaModel {
             /**
              * <p>The status. Valid values:</p>
              * <ul>
-             * <li>Success: The member is deleted.</li>
-             * <li>Checking: A deletion check is being performed for the member.</li>
-             * <li>Deleting: The member is being deleted.</li>
-             * <li>CheckFailed: The deletion check for the member fails.</li>
-             * <li>DeleteFailed: The member fails to be deleted.</li>
+             * <li>Success: The member account is deleted.</li>
+             * <li>Checking: The check is in progress.</li>
+             * <li>Deleting: The deletion is in progress.</li>
+             * <li>CheckFailed: The check failed.</li>
+             * <li>DeleteFailed: The deletion failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>

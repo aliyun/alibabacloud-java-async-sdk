@@ -60,7 +60,7 @@ public class DeleteRoleRequest extends Request {
         } 
 
         /**
-         * <p>The name of the role.</p>
+         * <p>The role name.</p>
          * <p>The name must be 1 to 64 characters in length and can contain letters, digits, periods (.), and hyphens (-).</p>
          * <p>This parameter is required.</p>
          * 

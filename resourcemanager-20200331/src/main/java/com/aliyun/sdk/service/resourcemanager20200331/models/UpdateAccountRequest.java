@@ -88,7 +88,7 @@ public class UpdateAccountRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the Alibaba Cloud account that corresponds to the member.</p>
+         * <p>The ID of the member.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -103,11 +103,11 @@ public class UpdateAccountRequest extends Request {
         /**
          * <p>The new type of the member. Valid values:</p>
          * <ul>
-         * <li>ResourceAccount: resource account</li>
-         * <li>CloudAccount: cloud account</li>
+         * <li>ResourceAccount: switches the specified cloud account to a resource account.</li>
+         * <li>CloudAccount: switches the specified resource account to a cloud account.</li>
          * </ul>
          * <blockquote>
-         * <p> You can configure either the <code>NewDisplayName</code> or <code>NewAccountType</code> parameter.</p>
+         * <p>Set either NewDisplayName or NewAccountType. You cannot set both of them at the same time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -120,9 +120,9 @@ public class UpdateAccountRequest extends Request {
         }
 
         /**
-         * <p>The new display name of the member.</p>
+         * <p>The new name of the member.</p>
          * <blockquote>
-         * <p> You can configure either the <code>NewDisplayName</code> or <code>NewAccountType</code> parameter.</p>
+         * <p>Set either NewDisplayName or NewAccountType. You cannot set both of them at the same time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

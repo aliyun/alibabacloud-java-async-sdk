@@ -89,11 +89,11 @@ public class CreatePolicyRequest extends Request {
         } 
 
         /**
-         * <p>The description of the permission policy.</p>
+         * <p>The description of the access policy.</p>
          * <p>The description must be 1 to 1,024 characters in length.</p>
          * 
          * <strong>example:</strong>
-         * <p>OSS administrator</p>
+         * <p>OSS administrator permissions</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -102,8 +102,8 @@ public class CreatePolicyRequest extends Request {
         }
 
         /**
-         * <p>The document of the policy.</p>
-         * <p>The document must be 1 to 6,144 characters in length.</p>
+         * <p>The content of the access policy.</p>
+         * <p>The content must be 1 to 6,144 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,8 +116,8 @@ public class CreatePolicyRequest extends Request {
         }
 
         /**
-         * <p>The name of the permission policy.</p>
-         * <p>The name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).</p>
+         * <p>Policy Name of the access policy.</p>
+         * <p>Policy Name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
