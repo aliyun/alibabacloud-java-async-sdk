@@ -119,7 +119,7 @@ public class UpdateAgentIMChannelResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The business status code. The value SUCCESS indicates success.</p>
+         * <p>The business status code. The value is SUCCESS if the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -138,7 +138,7 @@ public class UpdateAgentIMChannelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code. The value 200 indicates success.</p>
+         * <p>The HTTP status code. The value is 200 if the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -171,7 +171,7 @@ public class UpdateAgentIMChannelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -549,12 +549,7 @@ public class UpdateAgentIMChannelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IM channel type. Valid values:</p>
-             * <ul>
-             * <li>DINGTALK: DingTalk.</li>
-             * <li>FEISHU: Lark.</li>
-             * <li>WECOM: WeCom.</li>
-             * </ul>
+             * <p>The IM channel type. Valid values: DINGTALK (DingTalk), FEISHU (Lark), and WECOM (WeCom).</p>
              * 
              * <strong>example:</strong>
              * <p>DINGTALK</p>
@@ -576,7 +571,7 @@ public class UpdateAgentIMChannelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The channel credential summary. Only non-sensitive fields and the names of configured secret fields are returned. Secret values are not returned.</p>
+             * <p>The channel credential summary. Only non-sensitive fields and configured secret field names are returned. Secret values are not returned.</p>
              */
             public Builder credentialSummary(CredentialSummary credentialSummary) {
                 this.credentialSummary = credentialSummary;
@@ -584,7 +579,7 @@ public class UpdateAgentIMChannelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to enable the IM channel. Default value upon creation: true.</p>
+             * <p>Specifies whether to enable the IM channel. Default value: true.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -614,7 +609,7 @@ public class UpdateAgentIMChannelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the bound ServiceEndpoint. The endpoint must belong to the specified agent and its current version, be in the ready state, and have a public endpoint.</p>
+             * <p>The ID of the bound ServiceEndpoint. The endpoint must belong to the specified agent and its current version, and must be ready and have a public endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p>se-1</p>
@@ -625,15 +620,7 @@ public class UpdateAgentIMChannelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IM channel status. Valid values:</p>
-             * <ul>
-             * <li>CREATING: Being created.</li>
-             * <li>READY: Ready.</li>
-             * <li>UPDATING: Being updated.</li>
-             * <li>FAILED: Failed.</li>
-             * <li>DELETING: Being deleted.</li>
-             * <li>DELETE_FAILED: Deletion failed.</li>
-             * </ul>
+             * <p>The IM channel status. Valid values: CREATING (Creating), READY (Ready), UPDATING (Updating), FAILED (Failed), DELETING (Deleting), and DELETE_FAILED (Deletion failed).</p>
              * 
              * <strong>example:</strong>
              * <p>READY</p>
@@ -644,7 +631,7 @@ public class UpdateAgentIMChannelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reason for the current IM channel status.</p>
+             * <p>The reason for the current status of the IM channel.</p>
              * 
              * <strong>example:</strong>
              * <p>AppFlow creation failed</p>

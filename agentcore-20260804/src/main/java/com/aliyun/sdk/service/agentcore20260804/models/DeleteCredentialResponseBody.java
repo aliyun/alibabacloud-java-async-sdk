@@ -171,7 +171,7 @@ public class DeleteCredentialResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -261,7 +261,7 @@ public class DeleteCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The credential name. The name must be unique within the workspace and can contain only letters, digits, periods (.), underscores (_), and hyphens (-). The name must be 3 to 128 characters in length and cannot use runtime reserved names.</p>
+             * <p>The credential name. It must be unique within the workspace, contain only letters, digits, periods, underscores, and hyphens, and be 3 to 128 characters in length. Runtime reserved names cannot be used.</p>
              * 
              * <strong>example:</strong>
              * <p>model-api-key</p>

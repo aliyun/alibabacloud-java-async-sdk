@@ -169,7 +169,7 @@ public class ResetUserPasswordRequest extends Request {
             } 
 
             /**
-             * <p>The user ID. At least one of agentCoreUserId and username must be specified. If both are specified, agentCoreUserId takes precedence.</p>
+             * <p>The user ID. You must specify at least one of agentCoreUserId and username. If both are specified, agentCoreUserId takes precedence.</p>
              * 
              * <strong>example:</strong>
              * <p>usr-123456</p>
@@ -180,7 +180,7 @@ public class ResetUserPasswordRequest extends Request {
             }
 
             /**
-             * <p>The new password after the reset. The password must be 8 to 32 characters in length and must contain uppercase letters, lowercase letters, digits, and special characters. The password cannot contain the username. If this parameter is not specified, the server generates a random password.</p>
+             * <p>The new password. The password must be 8 to 32 characters in length and must contain uppercase letters, lowercase letters, digits, and special characters. It cannot contain the username. If you do not specify this parameter, the server generates a random password.</p>
              * 
              * <strong>example:</strong>
              * <p>Example@2026</p>
@@ -191,7 +191,7 @@ public class ResetUserPasswordRequest extends Request {
             }
 
             /**
-             * <p>The username. At least one of username and agentCoreUserId must be specified.</p>
+             * <p>The username. You must specify at least one of agentCoreUserId and username.</p>
              * 
              * <strong>example:</strong>
              * <p>user-01</p>

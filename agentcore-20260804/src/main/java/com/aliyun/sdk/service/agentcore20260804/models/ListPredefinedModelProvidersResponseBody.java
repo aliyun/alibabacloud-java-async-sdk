@@ -119,7 +119,10 @@ public class ListPredefinedModelProvidersResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The business status code. The value is SUCCESS if the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ListPredefinedModelProvidersResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The list of predefined model providers.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ListPredefinedModelProvidersResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code. The value is 200 if the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class ListPredefinedModelProvidersResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The message about the request processing result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class ListPredefinedModelProvidersResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>request-1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,7 @@ public class ListPredefinedModelProvidersResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -251,7 +263,10 @@ public class ListPredefinedModelProvidersResponseBody extends TeaModel {
             } 
 
             /**
-             * defaultEndpoint.
+             * <p>The default model service endpoint of the provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://dashscope.aliyuncs.com/compatible-mode/v1">https://dashscope.aliyuncs.com/compatible-mode/v1</a></p>
              */
             public Builder defaultEndpoint(String defaultEndpoint) {
                 this.defaultEndpoint = defaultEndpoint;
@@ -259,7 +274,10 @@ public class ListPredefinedModelProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * defaultProtocol.
+             * <p>The default model invocation protocol of the provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OpenAI/v1</p>
              */
             public Builder defaultProtocol(String defaultProtocol) {
                 this.defaultProtocol = defaultProtocol;
@@ -267,7 +285,10 @@ public class ListPredefinedModelProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * displayName.
+             * <p>The display name of the model provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alibaba Cloud Model Studio</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -275,7 +296,10 @@ public class ListPredefinedModelProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * providerType.
+             * <p>The model provider type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen</p>
              */
             public Builder providerType(String providerType) {
                 this.providerType = providerType;

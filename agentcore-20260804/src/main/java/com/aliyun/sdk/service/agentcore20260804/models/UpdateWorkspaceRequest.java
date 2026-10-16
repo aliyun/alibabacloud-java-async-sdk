@@ -88,7 +88,7 @@ public class UpdateWorkspaceRequest extends Request {
         } 
 
         /**
-         * <p>The workspace ID.</p>
+         * <p>The ID of the workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,7 +111,7 @@ public class UpdateWorkspaceRequest extends Request {
         }
 
         /**
-         * <p>The client idempotency token.</p>
+         * <p>The client token used to ensure idempotence.</p>
          * 
          * <strong>example:</strong>
          * <p>workspace-update-20260805-001</p>
@@ -195,7 +195,7 @@ public class UpdateWorkspaceRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to enable VPC networking.</p>
+             * <p>Specifies whether to enable the VPC network.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -206,7 +206,7 @@ public class UpdateWorkspaceRequest extends Request {
             }
 
             /**
-             * <p>The list of vSwitch IDs. When VPC networking is enabled, at least one vSwitch must be specified, and all vSwitches must belong to the VPC specified by VpcId.</p>
+             * <p>The list of vSwitch IDs. When the VPC network is enabled, the list must contain at least one vSwitch, and all vSwitches must belong to the VPC specified by VpcId.</p>
              */
             public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
@@ -214,7 +214,7 @@ public class UpdateWorkspaceRequest extends Request {
             }
 
             /**
-             * <p>The VPC ID of the user.</p>
+             * <p>The ID of the user VPC.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-bp1234567890</p>
@@ -238,11 +238,18 @@ public class UpdateWorkspaceRequest extends Request {
      * <p>UpdateWorkspaceRequest</p>
      */
     public static class NetworkConfiguration extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("publicEgressEnabled")
+        private Boolean publicEgressEnabled;
+
+        @com.aliyun.core.annotation.NameInMap("publicIngressEnabled")
+        private Boolean publicIngressEnabled;
+
         @com.aliyun.core.annotation.NameInMap("vpc")
-        @com.aliyun.core.annotation.Validation(required = true)
         private Vpc vpc;
 
         private NetworkConfiguration(Builder builder) {
+            this.publicEgressEnabled = builder.publicEgressEnabled;
+            this.publicIngressEnabled = builder.publicIngressEnabled;
             this.vpc = builder.vpc;
         }
 
@@ -255,6 +262,20 @@ public class UpdateWorkspaceRequest extends Request {
         }
 
         /**
+         * @return publicEgressEnabled
+         */
+        public Boolean getPublicEgressEnabled() {
+            return this.publicEgressEnabled;
+        }
+
+        /**
+         * @return publicIngressEnabled
+         */
+        public Boolean getPublicIngressEnabled() {
+            return this.publicIngressEnabled;
+        }
+
+        /**
          * @return vpc
          */
         public Vpc getVpc() {
@@ -262,18 +283,43 @@ public class UpdateWorkspaceRequest extends Request {
         }
 
         public static final class Builder {
+            private Boolean publicEgressEnabled; 
+            private Boolean publicIngressEnabled; 
             private Vpc vpc; 
 
             private Builder() {
             } 
 
             private Builder(NetworkConfiguration model) {
+                this.publicEgressEnabled = model.publicEgressEnabled;
+                this.publicIngressEnabled = model.publicIngressEnabled;
                 this.vpc = model.vpc;
             } 
 
             /**
+             * <p>Specifies whether to allow public egress access from the platform. If this parameter is not specified, the original value is retained. Disabling this feature asynchronously cascades to disable the public network switch for agents. Re-enabling this feature does not automatically restore the agent switch. This parameter only controls whether the latest versions of managed and custom agents use the public egress of the platform. It does not control fixed historical versions, model or MCP proxy egress, or the public egress of the user VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder publicEgressEnabled(Boolean publicEgressEnabled) {
+                this.publicEgressEnabled = publicEgressEnabled;
+                return this;
+            }
+
+            /**
+             * <p>Specifies whether to allow public ingress access. If this parameter is not specified, the original value is retained. This parameter can be modified together with PublicEgressEnabled and takes effect asynchronously through a unified task. After this feature is disabled, the public ingress for all agent endpoints in the workspace is closed. After this feature is re-enabled, the original public ingress is restored. INNER_DIRECT and user VPC ingress are not affected. Collaboration and Element Web ingress are not controlled by this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder publicIngressEnabled(Boolean publicIngressEnabled) {
+                this.publicIngressEnabled = publicIngressEnabled;
+                return this;
+            }
+
+            /**
              * <p>The VPC network configuration of the user.</p>
-             * <p>This parameter is required.</p>
              */
             public Builder vpc(Vpc vpc) {
                 this.vpc = vpc;
@@ -340,7 +386,7 @@ public class UpdateWorkspaceRequest extends Request {
             } 
 
             /**
-             * <p>The updated workspace name.</p>
+             * <p>The updated name of the workspace.</p>
              * 
              * <strong>example:</strong>
              * <p>production-agents-v2</p>

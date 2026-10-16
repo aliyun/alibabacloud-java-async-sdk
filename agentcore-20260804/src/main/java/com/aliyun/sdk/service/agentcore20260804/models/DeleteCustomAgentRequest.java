@@ -88,7 +88,7 @@ public class DeleteCustomAgentRequest extends Request {
         }
 
         /**
-         * <p>The unique identifier of the custom agent. You can retrieve it from the response of CreateCustomAgent or ListCustomAgents.</p>
+         * <p>The unique identifier of the custom agent. You can obtain it from the response of CreateCustomAgent or ListCustomAgents.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

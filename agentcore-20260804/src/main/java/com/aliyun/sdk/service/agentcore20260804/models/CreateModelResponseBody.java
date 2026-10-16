@@ -119,7 +119,7 @@ public class CreateModelResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The business status code. The value SUCCESS indicates success.</p>
+         * <p>The business status code. A value of SUCCESS indicates a successful request.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -138,7 +138,7 @@ public class CreateModelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code. The value 200 indicates success.</p>
+         * <p>The HTTP status code. A value of 200 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -149,7 +149,7 @@ public class CreateModelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request processing result message.</p>
+         * <p>The message about the request processing result.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -171,7 +171,7 @@ public class CreateModelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -331,7 +331,7 @@ public class CreateModelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether the model is able to invoke multiple tools in a single response.</p>
+             * <p>Specifies whether the model is able to invoke multiple tool calling operations in a single response.</p>
              */
             public Builder multiToolCall(Boolean multiToolCall) {
                 this.multiToolCall = multiToolCall;
@@ -347,7 +347,7 @@ public class CreateModelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether the model supports streaming tool calling.</p>
+             * <p>Specifies whether the model is able to invoke tool calling in a streaming manner.</p>
              */
             public Builder streamToolCall(Boolean streamToolCall) {
                 this.streamToolCall = streamToolCall;
@@ -542,7 +542,7 @@ public class CreateModelResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The model capability configuration.</p>
+             * <p>The model capability configurations.</p>
              */
             public Builder capabilities(Capabilities capabilities) {
                 this.capabilities = capabilities;
@@ -561,7 +561,7 @@ public class CreateModelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The model context window size, in tokens. The value must be a positive integer.</p>
+             * <p>The context window size of the model, in tokens. It must be a positive integer.</p>
              * 
              * <strong>example:</strong>
              * <p>128000</p>
@@ -572,7 +572,7 @@ public class CreateModelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource creation time in RFC 3339 UTC format.</p>
+             * <p>The time when the resource was created, in RFC 3339 UTC format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-09T00:00:00Z</p>
@@ -594,7 +594,7 @@ public class CreateModelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of output tokens supported per model generation.</p>
+             * <p>The maximum number of output tokens supported per generation.</p>
              * 
              * <strong>example:</strong>
              * <p>131072</p>
@@ -627,7 +627,7 @@ public class CreateModelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource last update time in RFC 3339 UTC format.</p>
+             * <p>The time when the resource was last updated, in RFC 3339 UTC format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-09T00:00:00Z</p>

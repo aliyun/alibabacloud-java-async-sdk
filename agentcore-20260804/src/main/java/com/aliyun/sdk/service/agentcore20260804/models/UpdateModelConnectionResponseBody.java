@@ -119,7 +119,7 @@ public class UpdateModelConnectionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The business status code. The value SUCCESS indicates success.</p>
+         * <p>The business status code. The value is SUCCESS if the request succeeds.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -138,7 +138,7 @@ public class UpdateModelConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code. The value 200 indicates success.</p>
+         * <p>The HTTP status code. The value is 200 if the request succeeds.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -149,7 +149,7 @@ public class UpdateModelConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request processing result message.</p>
+         * <p>The message about the request processing result.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -171,7 +171,7 @@ public class UpdateModelConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -380,7 +380,7 @@ public class UpdateModelConnectionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of API keys configured in the model connection.</p>
+             * <p>The number of API keys configured for the model connection.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -402,7 +402,7 @@ public class UpdateModelConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the resource was created, in RFC 3339 UTC format.</p>
+             * <p>The time when the resource was created. The time is in RFC 3339 UTC format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-09T00:00:00Z</p>
@@ -413,7 +413,7 @@ public class UpdateModelConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether access credentials have been configured for the model connection.</p>
+             * <p>Indicates whether access credentials are configured for the model connection.</p>
              */
             public Builder credentialConfigured(Boolean credentialConfigured) {
                 this.credentialConfigured = credentialConfigured;
@@ -432,7 +432,7 @@ public class UpdateModelConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The absolute HTTP or HTTPS address of the upstream model service. The address can be up to 1024 characters in length.</p>
+             * <p>The absolute HTTP or HTTPS URL of the upstream model service. The URL can be up to 1,024 characters in length.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://dashscope.aliyuncs.com/compatible-mode/v1">https://dashscope.aliyuncs.com/compatible-mode/v1</a></p>
@@ -443,7 +443,7 @@ public class UpdateModelConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The model connection name. The name must be 1 to 128 non-whitespace characters in length.</p>
+             * <p>The name of the model connection. The name must be 1 to 128 non-whitespace characters in length.</p>
              * 
              * <strong>example:</strong>
              * <p>name</p>
@@ -454,7 +454,7 @@ public class UpdateModelConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The model invocation protocol. Currently, only OpenAI/v1 is supported. If not specified in Settings when the model connection is created, this default value is used.</p>
+             * <p>The model invoke protocol. Currently, only OpenAI/v1 is supported. If the Settings are not specified during model creation, this default value is used.</p>
              * 
              * <strong>example:</strong>
              * <p>OpenAI/v1</p>
@@ -487,7 +487,7 @@ public class UpdateModelConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The failure summary returned when the model connection fails to be published or fails to be deleted but remains in the Deleting state. This value is empty for other states.</p>
+             * <p>The failure summary returned when the model connection fails to be published, or when deletion fails but the connection remains in the Deleting state. This field is empty in other states.</p>
              * 
              * <strong>example:</strong>
              * <p>GatewayOperationException</p>
@@ -498,7 +498,7 @@ public class UpdateModelConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the resource was last updated, in RFC 3339 UTC format.</p>
+             * <p>The time when the resource was last updated. The time is in RFC 3339 UTC format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-09T00:00:00Z</p>

@@ -131,7 +131,7 @@ public class DeleteMcpResponseBody extends TeaModel {
          * <p>The response message.</p>
          * 
          * <strong>example:</strong>
-         * <p>Request processed successfully</p>
+         * <p>The request is processed successfully</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -139,7 +139,7 @@ public class DeleteMcpResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>A1B2C3D4-E5F6-47A8-90AB-CDEF12345678</p>
@@ -150,7 +150,7 @@ public class DeleteMcpResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -119,7 +119,7 @@ public class CreateAgentIMChannelResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The business status code. The value is SUCCESS when the request succeeds.</p>
+         * <p>The business status code. The value is SUCCESS when the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -138,7 +138,7 @@ public class CreateAgentIMChannelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code. The value is 200 when the request succeeds.</p>
+         * <p>The HTTP status code. The value is 200 when the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -171,7 +171,7 @@ public class CreateAgentIMChannelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -549,12 +549,7 @@ public class CreateAgentIMChannelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IM channel type. Valid values:</p>
-             * <ul>
-             * <li>DINGTALK: DingTalk.</li>
-             * <li>FEISHU: Lark.</li>
-             * <li>WECOM: WeCom.</li>
-             * </ul>
+             * <p>The IM channel type. Valid values: DINGTALK (DingTalk), FEISHU (Lark), and WECOM (WeCom).</p>
              * 
              * <strong>example:</strong>
              * <p>DINGTALK</p>
@@ -584,7 +579,7 @@ public class CreateAgentIMChannelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to enable the IM channel. Default value during creation: true.</p>
+             * <p>Specifies whether to enable the IM channel. Default value: true.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -592,7 +587,7 @@ public class CreateAgentIMChannelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public network access URL of the attached ServiceEndpoint.</p>
+             * <p>The public network access address of the bound ServiceEndpoint.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://agent.example.com">https://agent.example.com</a></p>
@@ -614,7 +609,7 @@ public class CreateAgentIMChannelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the bound ServiceEndpoint. The endpoint must belong to the specified agent and its current version, be in the ready state, and have a public network address.</p>
+             * <p>The ID of the bound ServiceEndpoint. The endpoint must belong to the specified agent and its current version, and must be ready and have a public network address.</p>
              * 
              * <strong>example:</strong>
              * <p>se-1</p>
@@ -627,11 +622,11 @@ public class CreateAgentIMChannelResponseBody extends TeaModel {
             /**
              * <p>The IM channel status. Valid values:</p>
              * <ul>
-             * <li>CREATING: Being created.</li>
+             * <li>CREATING: Creating.</li>
              * <li>READY: Ready.</li>
-             * <li>UPDATING: Being updated.</li>
+             * <li>UPDATING: Updating.</li>
              * <li>FAILED: Failed.</li>
-             * <li>DELETING: Being deleted.</li>
+             * <li>DELETING: Deleting.</li>
              * <li>DELETE_FAILED: Deletion failed.</li>
              * </ul>
              * 

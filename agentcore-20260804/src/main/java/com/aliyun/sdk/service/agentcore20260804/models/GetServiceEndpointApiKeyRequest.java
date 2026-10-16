@@ -88,7 +88,7 @@ public class GetServiceEndpointApiKeyRequest extends Request {
         }
 
         /**
-         * <p>The ID of the service endpoint for which to query the API Key.</p>
+         * <p>The ID of the service endpoint for which to query the API key.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

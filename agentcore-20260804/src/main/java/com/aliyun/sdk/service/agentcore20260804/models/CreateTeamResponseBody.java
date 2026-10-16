@@ -171,7 +171,7 @@ public class CreateTeamResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -248,7 +248,7 @@ public class CreateTeamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The role of the agent in the team. Valid values: LEADER, WORKER. Each team must include exactly one LEADER.</p>
+             * <p>The role of the agent in the team. Valid values: LEADER and WORKER. Each team must have exactly one LEADER.</p>
              * 
              * <strong>example:</strong>
              * <p>WORKER</p>
@@ -318,7 +318,7 @@ public class CreateTeamResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The role of the user in the team. Valid values: ADMIN, MEMBER. Each team must include exactly one ADMIN.</p>
+             * <p>The role of the user in the team. Valid values: ADMIN and MEMBER. Each team must have exactly one ADMIN.</p>
              * 
              * <strong>example:</strong>
              * <p>ADMIN</p>
@@ -498,7 +498,7 @@ public class CreateTeamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time in UTC, formatted in RFC 3339.</p>
+             * <p>The creation time in RFC 3339 UTC format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-12T03:04:05Z</p>
@@ -520,7 +520,7 @@ public class CreateTeamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The team name. The name can contain only lowercase letters, digits, and hyphens (-). It must start and end with a lowercase letter or digit. The name must be 1 to 128 characters in length.</p>
+             * <p>The team name. The name can only contain lowercase letters, digits, and hyphens. It must start and end with a lowercase letter or a digit, and must be 1 to 128 characters in length.</p>
              * 
              * <strong>example:</strong>
              * <p>team-01</p>
@@ -531,7 +531,7 @@ public class CreateTeamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The team status. Valid values: Creating, Active, Updating, Deleting, Failed, Deleted.</p>
+             * <p>The team status. Valid values: Creating, Active, Updating, Deleting, Failed, and Deleted.</p>
              * 
              * <strong>example:</strong>
              * <p>Active</p>
@@ -553,7 +553,7 @@ public class CreateTeamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time of the last modification in UTC, formatted in RFC 3339.</p>
+             * <p>The time of the last update in RFC 3339 UTC format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-12T03:04:05Z</p>

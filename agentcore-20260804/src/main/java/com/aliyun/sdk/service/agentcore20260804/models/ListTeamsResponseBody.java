@@ -188,7 +188,7 @@ public class ListTeamsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of records per page that took effect for this query.</p>
+         * <p>The maximum number of records per page applied to this query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -199,7 +199,7 @@ public class ListTeamsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message. An error description is returned if the request failed.</p>
+         * <p>The response message. An error description is returned if the request fails.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -210,7 +210,7 @@ public class ListTeamsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token for the next page. This value is empty if no more pages are available.</p>
+         * <p>The pagination token for the next page. This parameter is empty if no next page exists.</p>
          * 
          * <strong>example:</strong>
          * <p>dGVhbS1vZmZzZXQ6MTA</p>
@@ -232,7 +232,7 @@ public class ListTeamsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -240,7 +240,7 @@ public class ListTeamsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of teams that match the query conditions.</p>
+         * <p>The total number of teams that meet the query conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>42</p>
@@ -344,11 +344,7 @@ public class ListTeamsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The role of the agent in the team. Valid values:</p>
-             * <ul>
-             * <li>LEADER</li>
-             * <li>WORKER</li>
-             * </ul>
+             * <p>The role of the agent in the team. Valid values: LEADER, WORKER.</p>
              * 
              * <strong>example:</strong>
              * <p>WORKER</p>
@@ -431,12 +427,7 @@ public class ListTeamsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The role of the user in the team. Valid values:</p>
-             * <ul>
-             * <li>ADMIN</li>
-             * <li>MEMBER</li>
-             * </ul>
-             * <p>Each team must have exactly one ADMIN.</p>
+             * <p>The role of the user in the team. Valid values: ADMIN, MEMBER. Each team must have exactly one ADMIN.</p>
              * 
              * <strong>example:</strong>
              * <p>ADMIN</p>
@@ -627,7 +618,7 @@ public class ListTeamsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time in UTC, formatted according to RFC 3339.</p>
+             * <p>The creation time in RFC 3339 UTC format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-12T03:04:05Z</p>
@@ -641,7 +632,7 @@ public class ListTeamsResponseBody extends TeaModel {
              * <p>The team description.</p>
              * 
              * <strong>example:</strong>
-             * <p>A team responsible for intelligent customer service</p>
+             * <p>The team responsible for intelligent customer service</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -649,7 +640,7 @@ public class ListTeamsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The team name. The name can contain only lowercase letters, digits, and hyphens (-). It must start and end with a lowercase letter or digit. The name must be 1 to 128 characters in length.</p>
+             * <p>The team name. It can contain only lowercase letters, digits, and hyphens. It must start and end with a lowercase letter or a digit, and must be 1 to 128 characters in length.</p>
              * 
              * <strong>example:</strong>
              * <p>team-01</p>
@@ -660,15 +651,7 @@ public class ListTeamsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The team status. Valid values:</p>
-             * <ul>
-             * <li>Creating</li>
-             * <li>Active</li>
-             * <li>Updating</li>
-             * <li>Deleting</li>
-             * <li>Failed</li>
-             * <li>Deleted</li>
-             * </ul>
+             * <p>The team status. Valid values: Creating, Active, Updating, Deleting, Failed, and Deleted.</p>
              * 
              * <strong>example:</strong>
              * <p>Active</p>
@@ -690,7 +673,7 @@ public class ListTeamsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time of the last modification in UTC, formatted according to RFC 3339.</p>
+             * <p>The time of the last modification in RFC 3339 UTC format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-12T03:04:05Z</p>

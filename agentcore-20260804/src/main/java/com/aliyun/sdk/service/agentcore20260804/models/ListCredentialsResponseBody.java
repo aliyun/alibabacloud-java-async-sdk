@@ -180,7 +180,7 @@ public class ListCredentialsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of credentials.</p>
+         * <p>The credential list.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -188,7 +188,7 @@ public class ListCredentialsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of records per page that takes effect for this query.</p>
+         * <p>The maximum number of records per page that takes effect in this query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -210,7 +210,7 @@ public class ListCredentialsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token for the next page. This value is empty if there is no next page.</p>
+         * <p>The cursor for the next page. It is empty if there is no next page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -232,7 +232,7 @@ public class ListCredentialsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -240,7 +240,7 @@ public class ListCredentialsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of credentials that match the query conditions.</p>
+         * <p>The total number of credentials that meet the query conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>42</p>
@@ -333,7 +333,7 @@ public class ListCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource name. This value is empty if the resource has been deleted.</p>
+             * <p>The resource name. It is empty if the resource has been deleted.</p>
              * 
              * <strong>example:</strong>
              * <p>my-agent</p>
@@ -544,7 +544,7 @@ public class ListCredentialsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of agents bound to this credential.</p>
+             * <p>The number of agents bound to the credential.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -555,7 +555,7 @@ public class ListCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time in UTC, formatted according to RFC 3339.</p>
+             * <p>The creation time in UTC format compliant with RFC 3339.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-12T03:04:05Z</p>
@@ -577,7 +577,7 @@ public class ListCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The masked content of the credential. When credentialType is apiKey, the apiKey value is returned as asterisks (*) of equal length.</p>
+             * <p>The masked credential content. When credentialType is apiKey, the apiKey value is returned as asterisks (*) of the same length.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;apiKey&quot;:&quot;****************&quot;}</p>
@@ -599,10 +599,10 @@ public class ListCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The credential description. The description can be up to 256 characters in length.</p>
+             * <p>The credential description, which cannot exceed 256 characters in length.</p>
              * 
              * <strong>example:</strong>
-             * <p>API Key used for calling model services in the production environment</p>
+             * <p>API key used to call model services in the production environment</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -610,7 +610,7 @@ public class ListCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The credential name. The name must be unique within the workspace and can contain only letters, digits, periods (.), underscores (_), and hyphens (-). The name must be 3 to 128 characters in length and cannot use runtime reserved names.</p>
+             * <p>The credential name. It must be unique within the workspace, contain only letters, digits, periods, underscores, and hyphens, and be 3 to 128 characters in length. Runtime reserved names cannot be used.</p>
              * 
              * <strong>example:</strong>
              * <p>model-api-key</p>
@@ -621,7 +621,7 @@ public class ListCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID where the resource resides.</p>
+             * <p>The region ID of the resource.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -640,7 +640,7 @@ public class ListCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource scope of the credential.</p>
+             * <p>The application scope of the credential resource.</p>
              * 
              * <strong>example:</strong>
              * <p>ALL</p>
@@ -651,7 +651,7 @@ public class ListCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time of the last modification in UTC, formatted according to RFC 3339.</p>
+             * <p>The time of the last modification in UTC format compliant with RFC 3339.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-12T03:04:05Z</p>

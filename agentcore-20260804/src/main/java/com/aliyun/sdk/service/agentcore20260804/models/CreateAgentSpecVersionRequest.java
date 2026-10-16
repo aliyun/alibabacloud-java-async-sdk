@@ -195,7 +195,7 @@ public class CreateAgentSpecVersionRequest extends Request {
             }
 
             /**
-             * <p>The version number of the draft. If this parameter is not specified, the version number is automatically incremented.</p>
+             * <p>Specifies the draft version number. If you do not specify this parameter, the version number is automatically incremented.</p>
              * 
              * <strong>example:</strong>
              * <p>2.0.0</p>

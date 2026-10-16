@@ -119,7 +119,7 @@ public class UpdateAgentIMChannelCredentialResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The business status code. The value is SUCCESS if the request succeeds.</p>
+         * <p>The business status code. The value is SUCCESS when the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -130,7 +130,7 @@ public class UpdateAgentIMChannelCredentialResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The summary of the updated IM channel credential.</p>
+         * <p>The summary of the updated IM channel credentials.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -138,7 +138,7 @@ public class UpdateAgentIMChannelCredentialResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code. The value is 200 if the request succeeds.</p>
+         * <p>The HTTP status code. The value is 200 when the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -149,7 +149,7 @@ public class UpdateAgentIMChannelCredentialResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result message of the request.</p>
+         * <p>The message indicating the request processing result.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -171,7 +171,7 @@ public class UpdateAgentIMChannelCredentialResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -237,7 +237,7 @@ public class UpdateAgentIMChannelCredentialResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of configured secret field names. Secret values are not included.</p>
+             * <p>The list of configured secret field names, excluding the secret values.</p>
              */
             public Builder configuredSecretFields(java.util.List<String> configuredSecretFields) {
                 this.configuredSecretFields = configuredSecretFields;

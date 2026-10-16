@@ -119,7 +119,7 @@ public class GetExternalAgentBootstrapOptionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The business status code. The value SUCCESS is returned if the request succeeds.</p>
+         * <p>The business status code. The value is SUCCESS when the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -130,7 +130,7 @@ public class GetExternalAgentBootstrapOptionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The network access information available for the external agent.</p>
+         * <p>The access network information available for the external agent.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -138,7 +138,7 @@ public class GetExternalAgentBootstrapOptionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code. The value 200 is returned if the request succeeds.</p>
+         * <p>The HTTP status code. The value is 200 when the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -149,7 +149,7 @@ public class GetExternalAgentBootstrapOptionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result message of the request.</p>
+         * <p>The request processing result message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -171,7 +171,7 @@ public class GetExternalAgentBootstrapOptionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -237,7 +237,7 @@ public class GetExternalAgentBootstrapOptionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the network access type is available.</p>
+             * <p>Indicates whether the access network is available.</p>
              */
             public Builder available(Boolean available) {
                 this.available = available;
@@ -245,11 +245,7 @@ public class GetExternalAgentBootstrapOptionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network type. Valid values:</p>
-             * <ul>
-             * <li>INTRANET: internal network.</li>
-             * <li>INTERNET: public network.</li>
-             * </ul>
+             * <p>The access network type. Valid values: INTRANET (internal network) and INTERNET (public network).</p>
              * 
              * <strong>example:</strong>
              * <p>INTERNET</p>
@@ -343,7 +339,7 @@ public class GetExternalAgentBootstrapOptionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of available network access options.</p>
+             * <p>The list of available access networks.</p>
              */
             public Builder networkOptions(java.util.List<NetworkOptions> networkOptions) {
                 this.networkOptions = networkOptions;

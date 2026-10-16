@@ -149,7 +149,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The description of the request processing result. The value is success when the request is successful.</p>
+         * <p>The result message of the request. The value is success when the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -171,7 +171,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was processed successfully. A value of true indicates that the request was processed successfully. A successful creation, update, or deletion does not mean that the background operation is complete.</p>
+         * <p>Indicates whether the request was processed successfully. A value of true indicates success. Note that a successful creation, update, or deletion response does not mean that the background operation is complete.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -263,7 +263,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The AgenticFS mount directory in the container, which is located under /mnt/agenticfs/.</p>
+             * <p>The AgenticFS mount directory in the container, located under /mnt/agenticfs/.</p>
              * 
              * <strong>example:</strong>
              * <p>/mnt/agenticfs/data</p>
@@ -274,7 +274,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The relative directory in the mounted AccessPoint.</p>
+             * <p>The relative directory within the mounted access point.</p>
              * 
              * <strong>example:</strong>
              * <p>workspace/data</p>
@@ -285,7 +285,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether the mount is read-only. A value of true indicates a read-only mount. A value of false indicates a read-write mount.</p>
+             * <p>Specifies whether the mount is read-only. A value of true indicates a read-only mount, and a value of false indicates a read-write mount.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -296,7 +296,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The AgenticFS AccessPoint domain name used for the mount.</p>
+             * <p>The AgenticFS access point domain name used for the mount.</p>
              * 
              * <strong>example:</strong>
              * <p>ap-0123456789abcdef0.0123456789-vlm36.cn-hangzhou.nas.aliyuncs.com</p>
@@ -694,7 +694,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The TCP port listened to by the agent service.</p>
+             * <p>The TCP port listened on by the agent service.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -978,7 +978,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The HTTP Health Check Path.</p>
+             * <p>The HTTP health check path.</p>
              * 
              * <strong>example:</strong>
              * <p>/healthz</p>
@@ -1094,7 +1094,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The reason code for the waiting or execution failure of the latest configuration. This code is used to determine the subsequent processing method.</p>
+             * <p>The cause code for the waiting or execution failure of the latest configuration. This code is used to determine the subsequent handling method.</p>
              * 
              * <strong>example:</strong>
              * <p>AgentExecutionFailed</p>
@@ -1105,7 +1105,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the reason why the latest configuration failed to execute or is waiting. Check the code and retryable fields to determine what to do next.</p>
+             * <p>The reason why the latest configuration is pending or failed to execute. Determine what to do next based on the code and retryable fields.</p>
              * 
              * <strong>example:</strong>
              * <p>Agent execution failed. Check the configuration and resubmit</p>
@@ -1116,7 +1116,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether the system automatically retries. A value of true indicates that you can query again later. A value of false indicates that you must check and fix the configuration based on the reason, and then resubmit the agent.</p>
+             * <p>Specifies whether automatic retries are performed. If the value is true, you can query again later. If the value is false, check and fix the configuration based on the cause, and then resubmit.</p>
              */
             public Builder retryable(Boolean retryable) {
                 this.retryable = retryable;
@@ -1305,7 +1305,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Specifies whether Internet access is allowed on the agent side. The actual access is still limited by the workspace configuration.</p>
+             * <p>Specifies whether Internet access is allowed on the agent side. The actual access is still restricted by the workspace.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -1359,7 +1359,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Specifies whether access to the user VPC configured for the workspace is allowed on the agent side. The actual access is still limited by the workspace configuration.</p>
+             * <p>Specifies whether access to the user VPC configured for the workspace is allowed on the agent side. The actual access is still restricted by the workspace.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -1426,7 +1426,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The Internet access configuration of the agent. If this field is not configured, Internet access is allowed on the agent side, but is still limited by the workspace configuration.</p>
+             * <p>The Internet access configuration of the agent. If this field is not configured, Internet access is allowed on the agent side but is still restricted by the workspace.</p>
              */
             public Builder accessInternet(AccessInternet accessInternet) {
                 this.accessInternet = accessInternet;
@@ -1434,7 +1434,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user VPC access configuration of the agent. If this field is not configured, user VPC access is allowed on the agent side, but is still limited by the workspace configuration.</p>
+             * <p>The user VPC access configuration of the agent. If this field is not configured, user VPC access is allowed on the agent side but is still restricted by the workspace.</p>
              */
             public Builder accessVpc(AccessVpc accessVpc) {
                 this.accessVpc = accessVpc;
@@ -1538,7 +1538,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The OSS mount directory in the container, which is located under /mnt/oss/.</p>
+             * <p>The OSS mount directory in the container, located under /mnt/oss/.</p>
              * 
              * <strong>example:</strong>
              * <p>/mnt/oss/train</p>
@@ -1560,7 +1560,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether the mount is read-only. A value of true indicates a read-only mount. A value of false indicates a read-write mount.</p>
+             * <p>Specifies whether the mount is read-only. A value of true indicates a read-only mount, and a value of false indicates a read-write mount.</p>
              */
             public Builder readOnly(Boolean readOnly) {
                 this.readOnly = readOnly;
@@ -1628,7 +1628,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The purpose description of the current API path.</p>
+             * <p>The usage description of the current API path.</p>
              * 
              * <strong>example:</strong>
              * <p>AG-UI conversation API</p>
@@ -1966,7 +1966,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configured session idle timeout limit in seconds.</p>
+             * <p>The configured session idle timeout limit, in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>600</p>
@@ -2051,9 +2051,9 @@ public class GetCustomAgentResponseBody extends TeaModel {
              * <p>The session policy type. Valid values:</p>
              * <ul>
              * <li>AFFINITY: Session affinity.</li>
-             * <li>ISOLATED_HEADER_FIELD: Associates sessions by using the request header specified in headerName.</li>
-             * <li>ISOLATED_COOKIE: Not recommended.
-             * The compatible value DISABLED in requests is returned as AFFINITY.</li>
+             * <li>ISOLATED_HEADER_FIELD: Uses the request header specified by headerName to associate sessions.</li>
+             * <li>ISOLATED_COOKIE: Cookie-based session isolation. Not recommended.
+             * Note: The compatible value DISABLED in a request is returned as AFFINITY.</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -2549,7 +2549,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the agent was created. The time is in ISO 8601 format. The trailing Z indicates the UTC time zone. Fractional seconds may be included.</p>
+             * <p>The creation time of the agent. The time is in ISO 8601 format. The trailing Z indicates the UTC time zone. Fractional seconds may be included.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-10-10T06:00:00Z</p>
@@ -2560,7 +2560,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The deployment method of the agent. Custom agents are deployed and managed by the platform. The value is MANAGED for custom agents.</p>
+             * <p>The deployment method of the agent. Custom agents are deployed and managed by the platform, and the value is MANAGED.</p>
              * 
              * <strong>example:</strong>
              * <p>MANAGED</p>
@@ -2590,7 +2590,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The HTTP health check configuration of the agent. This field is empty if no health check is configured.</p>
+             * <p>The HTTP health check configuration of the agent. This field is empty if not configured.</p>
              */
             public Builder healthCheck(HealthCheck healthCheck) {
                 this.healthCheck = healthCheck;
@@ -2606,7 +2606,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The latest configuration version number. Updates with the same configuration may retain the original version number. This field does not indicate that the configuration has taken effect.</p>
+             * <p>The current latest configuration version number. Updates with the same configuration may retain the original version number. This field does not indicate that the configuration has taken effect.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -2617,14 +2617,14 @@ public class GetCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution status corresponding to the latestSpecVersion field. Valid values:</p>
+             * <p>The execution status corresponding to latestSpecVersion. Valid values:</p>
              * <ul>
-             * <li>pending: waiting for execution</li>
-             * <li>processing: executing</li>
-             * <li>waiting_retry: waiting for a retry</li>
-             * <li>succeeded: executed successfully</li>
-             * <li>failed: execution failed</li>
-             * <li>superseded: superseded by a subsequent version</li>
+             * <li>pending: Waiting for execution.</li>
+             * <li>processing: Executing.</li>
+             * <li>waiting_retry: Waiting for a retry.</li>
+             * <li>succeeded: Executed successfully.</li>
+             * <li>failed: Execution failed.</li>
+             * <li>superseded: Superseded by a subsequent version.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2655,7 +2655,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network access configuration of the agent. The actual access scope is also limited by the workspace network configuration.</p>
+             * <p>The network access configuration of the agent. The actual access scope is also restricted by the workspace network configuration.</p>
              */
             public Builder network(Network network) {
                 this.network = network;
@@ -2709,7 +2709,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The count of instances by runtime phase. Keys include PENDING (creating or initializing), RUNNING (running), HIBERNATING (hibernating), HIBERNATED (hibernated), RESUMING (resuming), TERMINATING (terminating), and FAILED (failed). Only phases that actually occur are returned. Missing keys are treated as 0.</p>
+             * <p>The counts by runtime instance phase. Keys include PENDING (creating or initializing), RUNNING (running), HIBERNATING (hibernating), HIBERNATED (hibernated), RESUMING (resuming), TERMINATING (terminating), and FAILED (failed). Only phases that actually occur are returned. Missing keys are treated as 0.</p>
              */
             public Builder sandboxPhaseCounts(java.util.Map<String, Long> sandboxPhaseCounts) {
                 this.sandboxPhaseCounts = sandboxPhaseCounts;
@@ -2719,12 +2719,12 @@ public class GetCustomAgentResponseBody extends TeaModel {
             /**
              * <p>The overall status of the agent. Valid values:</p>
              * <ul>
-             * <li>Creating: Creating.</li>
-             * <li>Running: Running.</li>
-             * <li>Failed: Failed.</li>
-             * <li>Updating: Updating.</li>
-             * <li>Deleting: Deleting.</li>
-             * <li>Deleted: Deleted.
+             * <li>Creating: The agent is being created.</li>
+             * <li>Running: The agent is running.</li>
+             * <li>Failed: The agent failed.</li>
+             * <li>Updating: The agent is being updated.</li>
+             * <li>Deleting: The agent is being deleted.</li>
+             * <li>Deleted: The agent is deleted.
              * To check the execution progress of the latest configuration, query latestVersionStatus.</li>
              * </ul>
              * 
@@ -2737,7 +2737,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last update time of the agent in ISO 8601 format. The trailing Z indicates the UTC time zone. Fractional seconds may be included.</p>
+             * <p>The time when the agent was last updated. The time is in ISO 8601 format. A trailing Z indicates the UTC time zone. Fractional seconds may be included.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-10-10T06:05:00Z</p>

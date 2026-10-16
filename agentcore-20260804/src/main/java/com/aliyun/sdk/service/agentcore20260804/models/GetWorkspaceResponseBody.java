@@ -171,7 +171,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -272,7 +272,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user VPC ID.</p>
+             * <p>The VPC ID of the user.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-bp1234567890</p>
@@ -296,14 +296,22 @@ public class GetWorkspaceResponseBody extends TeaModel {
      * <p>GetWorkspaceResponseBody</p>
      */
     public static class NetworkConfiguration extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("publicEgressEnabled")
+        private Boolean publicEgressEnabled;
+
         @com.aliyun.core.annotation.NameInMap("publicEgressIp")
         private String publicEgressIp;
+
+        @com.aliyun.core.annotation.NameInMap("publicIngressEnabled")
+        private Boolean publicIngressEnabled;
 
         @com.aliyun.core.annotation.NameInMap("vpc")
         private Vpc vpc;
 
         private NetworkConfiguration(Builder builder) {
+            this.publicEgressEnabled = builder.publicEgressEnabled;
             this.publicEgressIp = builder.publicEgressIp;
+            this.publicIngressEnabled = builder.publicIngressEnabled;
             this.vpc = builder.vpc;
         }
 
@@ -316,10 +324,24 @@ public class GetWorkspaceResponseBody extends TeaModel {
         }
 
         /**
+         * @return publicEgressEnabled
+         */
+        public Boolean getPublicEgressEnabled() {
+            return this.publicEgressEnabled;
+        }
+
+        /**
          * @return publicEgressIp
          */
         public String getPublicEgressIp() {
             return this.publicEgressIp;
+        }
+
+        /**
+         * @return publicIngressEnabled
+         */
+        public Boolean getPublicIngressEnabled() {
+            return this.publicIngressEnabled;
         }
 
         /**
@@ -330,16 +352,31 @@ public class GetWorkspaceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean publicEgressEnabled; 
             private String publicEgressIp; 
+            private Boolean publicIngressEnabled; 
             private Vpc vpc; 
 
             private Builder() {
             } 
 
             private Builder(NetworkConfiguration model) {
+                this.publicEgressEnabled = model.publicEgressEnabled;
                 this.publicEgressIp = model.publicEgressIp;
+                this.publicIngressEnabled = model.publicIngressEnabled;
                 this.vpc = model.vpc;
             } 
+
+            /**
+             * <p>Returns the target configuration value. Updating indicates that the change is still being executed, and UpdateFailed indicates that the current change failed. This setting only controls the use of the platform public egress for the latest versions of managed and custom agents. It does not control fixed historical versions, model or MCP proxy egress, or the public egress of the user VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder publicEgressEnabled(Boolean publicEgressEnabled) {
+                this.publicEgressEnabled = publicEgressEnabled;
+                return this;
+            }
 
             /**
              * <p>The public egress IP address of the workspace.</p>
@@ -353,7 +390,18 @@ public class GetWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user VPC network configuration.</p>
+             * <p>Returns the target configuration value. Updating indicates that the change is in progress, and UpdateFailed indicates that the change failed. When disabled, the public ingress for all agent endpoints in the workspace is closed. When re-enabled, the original public ingress is restored. INNER_DIRECT and user VPC ingress are not affected. Collaboration and Element Web ingress are not controlled by this setting.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder publicIngressEnabled(Boolean publicIngressEnabled) {
+                this.publicIngressEnabled = publicIngressEnabled;
+                return this;
+            }
+
+            /**
+             * <p>The VPC network configuration of the user.</p>
              */
             public Builder vpc(Vpc vpc) {
                 this.vpc = vpc;
@@ -559,7 +607,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the workspace was created.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-06T03:56:56Z</p>
@@ -581,7 +629,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The workspace network configuration.</p>
+             * <p>The network configuration of the workspace.</p>
              */
             public Builder networkConfiguration(NetworkConfiguration networkConfiguration) {
                 this.networkConfiguration = networkConfiguration;
@@ -622,7 +670,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The workspace storage type.</p>
+             * <p>The storage type of the workspace.</p>
              * 
              * <strong>example:</strong>
              * <p>PRIVATE</p>

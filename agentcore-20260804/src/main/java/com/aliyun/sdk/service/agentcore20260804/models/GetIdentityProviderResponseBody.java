@@ -149,7 +149,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message. An error description is returned if the request failed.</p>
+         * <p>The response message. An error description is returned if the request fails.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -171,7 +171,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -250,7 +250,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The App ID of the Lark application. Required when the binding type is Feishu.</p>
+             * <p>The App ID of the Lark application. This parameter is required when the binding type is Feishu.</p>
              * 
              * <strong>example:</strong>
              * <p>cli_exampleappid01</p>
@@ -261,7 +261,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The AppKey of the DingTalk application. Required when the binding type is DingTalk.</p>
+             * <p>The AppKey of the DingTalk application. This parameter is required when the binding type is DingTalk.</p>
              * 
              * <strong>example:</strong>
              * <p>dingexampleappkey01</p>
@@ -272,7 +272,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The CorpId of the DingTalk enterprise. Required when the binding type is DingTalk.</p>
+             * <p>The CorpId of the DingTalk enterprise. This parameter is required when the binding type is DingTalk.</p>
              * 
              * <strong>example:</strong>
              * <p>dingexamplecorpid01</p>
@@ -446,7 +446,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation time in UTC, formatted according to RFC 3339.</p>
+             * <p>The creation time in RFC 3339 UTC format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-12T03:04:05Z</p>
@@ -457,7 +457,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The event subscription callback URL. Configure this URL in the external identity provider application to receive organization change events. An empty string is returned if the user pool has not been activated.</p>
+             * <p>The event subscription callback URL. You must configure this URL in the application of the external identity provider to receive organization change events. An empty string is returned if the user pool is not activated.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://auth.cn-hangzhou.agentteams.aliyuncs.com/roa/dingtalk/event/up-123456">http://auth.cn-hangzhou.agentteams.aliyuncs.com/roa/dingtalk/event/up-123456</a></p>
@@ -468,7 +468,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the external identity provider. Valid values: DingTalk, Feishu.</p>
+             * <p>The type of the external identity provider. Valid values: DingTalk and Feishu.</p>
              * 
              * <strong>example:</strong>
              * <p>DingTalk</p>
@@ -479,7 +479,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The logon callback URL. Configure this URL in the external identity provider application. An empty string is returned if the user pool has not been activated.</p>
+             * <p>The logon callback URL. You must configure this URL in the application of the external identity provider. An empty string is returned if the user pool is not activated.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://signin-cn-hangzhou.aliyunagentid.com/up-123456/dingtalk/callback">https://signin-cn-hangzhou.aliyunagentid.com/up-123456/dingtalk/callback</a></p>
@@ -490,7 +490,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether workspace users are allowed to log on through this external identity provider.</p>
+             * <p>Specifies whether workspace users are allowed to log on through this external identity provider.</p>
              */
             public Builder loginEnabled(Boolean loginEnabled) {
                 this.loginEnabled = loginEnabled;
@@ -498,7 +498,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The application configuration of the external identity provider. Application secret configurations are not returned.</p>
+             * <p>The application configurations of the external identity provider. Application secret configurations are not returned.</p>
              */
             public Builder metadata(Metadata metadata) {
                 this.metadata = metadata;
@@ -508,15 +508,15 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             /**
              * <p>The status. Valid values:</p>
              * <ul>
-             * <li>CONFIGURED: The configuration has been accepted and is waiting for user pool activation.</li>
+             * <li>CONFIGURED: The configuration is accepted and waiting for the user pool to be activated.</li>
              * <li>SYNCING: Organization members are being synchronized.</li>
-             * <li>SYNCED: Organization member synchronization is complete.</li>
-             * <li>READY: The binding is active.</li>
-             * <li>SYNC_FAILED: Organization member synchronization failed.</li>
+             * <li>SYNCED: Organization members are synchronized.</li>
+             * <li>READY: The binding is in effect.</li>
+             * <li>SYNC_FAILED: Failed to synchronize organization members.</li>
              * <li>UPDATING: The configuration is being updated.</li>
-             * <li>UPDATE_FAILED: The configuration update failed.</li>
-             * <li>DISCONNECTING: The binding is being removed.</li>
-             * <li>DISCONNECT_FAILED: The unbinding failed.</li>
+             * <li>UPDATE_FAILED: Failed to update the configuration.</li>
+             * <li>DISCONNECTING: The binding is being disconnected.</li>
+             * <li>DISCONNECT_FAILED: Failed to disconnect the binding.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -528,7 +528,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether organization member synchronization is enabled. When enabled, the external identity provider synchronizes organization members as workspace users.</p>
+             * <p>Specifies whether organization member synchronization is enabled. After this feature is enabled, organization members are synchronized as workspace users by this external identity provider.</p>
              */
             public Builder syncEnabled(Boolean syncEnabled) {
                 this.syncEnabled = syncEnabled;
@@ -536,7 +536,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time of the last modification in UTC, formatted according to RFC 3339.</p>
+             * <p>The time of the last update in RFC 3339 UTC format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-12T03:04:05Z</p>

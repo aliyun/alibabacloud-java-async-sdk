@@ -169,7 +169,7 @@ public class CreateAgentSpecRequest extends Request {
             }
 
             /**
-             * <p>The draft version number. If not specified, the default value is 0.0.1.</p>
+             * <p>Specifies the draft version number. If not specified, the default value is 0.0.1.</p>
              * 
              * <strong>example:</strong>
              * <p>0.0.1</p>

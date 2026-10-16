@@ -116,11 +116,7 @@ public class CreateExternalAgentBootstrapTokenRequest extends Request {
         }
 
         /**
-         * <p>The network type for connection. Valid values:</p>
-         * <ul>
-         * <li>INTERNET: public network</li>
-         * <li>INTRANET: internal network</li>
-         * </ul>
+         * <p>The network type for onboarding. Valid values: INTRANET (internal network) and INTERNET (Internet).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

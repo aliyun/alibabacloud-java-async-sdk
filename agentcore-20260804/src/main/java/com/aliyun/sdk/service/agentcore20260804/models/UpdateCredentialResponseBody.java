@@ -171,7 +171,7 @@ public class UpdateCredentialResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -261,7 +261,7 @@ public class UpdateCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource name. This value is empty if the resource has been deleted.</p>
+             * <p>The resource name. This parameter is empty if the resource is deleted.</p>
              * 
              * <strong>example:</strong>
              * <p>my-agent</p>
@@ -459,7 +459,7 @@ public class UpdateCredentialResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation time in UTC, formatted in RFC 3339.</p>
+             * <p>The creation time in UTC format compliant with RFC 3339.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-12T03:04:05Z</p>
@@ -481,7 +481,7 @@ public class UpdateCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The masked credential content. If credentialType is set to apiKey, the apiKey value is returned as asterisks (*) of equal length.</p>
+             * <p>The desensitized result of the credential content. If credentialType is apiKey, the value of apiKey is returned as asterisks (*) of the same length.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;apiKey&quot;:&quot;****************&quot;}</p>
@@ -503,10 +503,10 @@ public class UpdateCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The credential description. The description can be up to 256 characters in length.</p>
+             * <p>The credential description, which can be up to 256 characters in length.</p>
              * 
              * <strong>example:</strong>
-             * <p>API Key used for calling model services in the production environment</p>
+             * <p>API key used to call model services in the production environment</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -514,7 +514,7 @@ public class UpdateCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The credential name. The name must be unique within the workspace and can contain only letters, digits, periods (.), underscores (_), and hyphens (-). The name must be 3 to 128 characters in length and cannot use runtime reserved names.</p>
+             * <p>The credential name. The name must be unique within the workspace, can only contain letters, digits, periods (.), underscores (_), and hyphens (-), must be 3 to 128 characters in length, and cannot be a runtime reserved name.</p>
              * 
              * <strong>example:</strong>
              * <p>model-api-key</p>
@@ -536,7 +536,7 @@ public class UpdateCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Each item contains resourceType, resourceId, and resourceName. resourceName is empty if the resource has been deleted.</p>
+             * <p>Each item includes resourceType, resourceId, and resourceName. resourceName is empty if the resource is deleted.</p>
              */
             public Builder resourceRefs(java.util.List<ResourceRefs> resourceRefs) {
                 this.resourceRefs = resourceRefs;
@@ -544,7 +544,7 @@ public class UpdateCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The credential resource scope.</p>
+             * <p>The application scope of the credential resources.</p>
              * 
              * <strong>example:</strong>
              * <p>ALL</p>
@@ -555,7 +555,7 @@ public class UpdateCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time of the last modification in UTC, formatted in RFC 3339.</p>
+             * <p>The time of the last modification in UTC format compliant with RFC 3339.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-12T03:04:05Z</p>

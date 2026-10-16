@@ -185,7 +185,7 @@ public class ListServiceEndpointsRequest extends Request {
         }
 
         /**
-         * <p>Filters by target agent ID.</p>
+         * <p>Filters the results by target agent ID.</p>
          * 
          * <strong>example:</strong>
          * <p>agent-123456</p>
@@ -197,7 +197,7 @@ public class ListServiceEndpointsRequest extends Request {
         }
 
         /**
-         * <p>Filters by target agent version number.</p>
+         * <p>Filters the results by target agent version.</p>
          * 
          * <strong>example:</strong>
          * <p>v1</p>
@@ -209,7 +209,7 @@ public class ListServiceEndpointsRequest extends Request {
         }
 
         /**
-         * <p>Filters by collaboration component type. Valid values: MATRIX_CLIENT, MATRIX_FEDERATION, ELEMENT_WEB.</p>
+         * <p>Filters the results by collaboration component type. Valid values: MATRIX_CLIENT, MATRIX_FEDERATION, and ELEMENT_WEB.</p>
          * 
          * <strong>example:</strong>
          * <p>ELEMENT_WEB</p>
@@ -221,7 +221,7 @@ public class ListServiceEndpointsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of records per page. Valid values: 1 to 100. If this parameter is not specified, 20 records are returned by default.</p>
+         * <p>The maximum number of records to return per page. Valid values: 1 to 100. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -233,7 +233,7 @@ public class ListServiceEndpointsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token for the next page. Do not specify this parameter for the first request. For subsequent requests, set this parameter to the nextToken value returned in the previous response.</p>
+         * <p>The cursor for querying the next page. Do not specify this parameter for the first call. For subsequent calls, specify the nextToken value returned in the previous response.</p>
          * 
          * <strong>example:</strong>
          * <p>djE6YWdlbnRjb3JlLnNlcnZpY2UtZW5kcG9pbnQubGlzdDoyMA</p>
@@ -245,7 +245,7 @@ public class ListServiceEndpointsRequest extends Request {
         }
 
         /**
-         * <p>Filters by the workspace resource binding ID of the target collaboration component.</p>
+         * <p>Filters the results by the workspace resource binding ID of the target collaboration component.</p>
          * 
          * <strong>example:</strong>
          * <p>wrb-123456</p>
@@ -257,7 +257,7 @@ public class ListServiceEndpointsRequest extends Request {
         }
 
         /**
-         * <p>Filters by service endpoint status. Valid values: CREATING, READY, UPDATING, DEGRADED, DISABLED, DELETING.</p>
+         * <p>Filters the results by service endpoint status. Valid values: CREATING, READY, UPDATING, DEGRADED, DISABLED, and DELETING.</p>
          * 
          * <strong>example:</strong>
          * <p>READY</p>
@@ -269,7 +269,7 @@ public class ListServiceEndpointsRequest extends Request {
         }
 
         /**
-         * <p>Filters by target type. Valid values: AGENT_VERSION, TEAM_COLLABORATION.</p>
+         * <p>Filters the results by target type. Valid values: AGENT_VERSION and TEAM_COLLABORATION.</p>
          * 
          * <strong>example:</strong>
          * <p>AGENT_VERSION</p>

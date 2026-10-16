@@ -111,7 +111,7 @@ public class CreateModelConnectionRequest extends Request {
         }
 
         /**
-         * <p>The client token used for idempotence. Not supported.</p>
+         * <p>The client token used for idempotence. This parameter is not supported.</p>
          * 
          * <strong>example:</strong>
          * <p>client-token-1</p>
@@ -258,7 +258,7 @@ public class CreateModelConnectionRequest extends Request {
             }
 
             /**
-             * <p>The absolute HTTP or HTTPS address of the upstream model service. The address can be up to 1024 characters in length.</p>
+             * <p>The absolute HTTP or HTTPS URL of the upstream model service. The URL can be up to 1,024 characters in length.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -270,7 +270,7 @@ public class CreateModelConnectionRequest extends Request {
             }
 
             /**
-             * <p>The model connection name. The name must be 1 to 128 non-whitespace characters in length.</p>
+             * <p>The name of the model connection. The name must be 1 to 128 non-whitespace characters in length.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -282,7 +282,7 @@ public class CreateModelConnectionRequest extends Request {
             }
 
             /**
-             * <p>The model invoke protocol. Currently, only OpenAI/v1 is supported. If this parameter is not configured in Settings during model creation, this default value is used.</p>
+             * <p>The model invoke protocol. Currently, only OpenAI/v1 is supported. If the Settings are not specified during model creation, this default value is used.</p>
              * 
              * <strong>example:</strong>
              * <p>OpenAI/v1</p>

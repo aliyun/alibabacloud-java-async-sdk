@@ -160,7 +160,7 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>request-123456</p>
@@ -171,7 +171,7 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -253,7 +253,7 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Specifies whether to enable VPC networking.</p>
+             * <p>Specifies whether to enable the VPC network.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -272,7 +272,7 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The VPC ID of the user.</p>
+             * <p>The ID of the user VPC.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-bp1234567890</p>
@@ -296,10 +296,18 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
      * <p>UpdateWorkspaceResponseBody</p>
      */
     public static class NetworkConfiguration extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("publicEgressEnabled")
+        private Boolean publicEgressEnabled;
+
+        @com.aliyun.core.annotation.NameInMap("publicIngressEnabled")
+        private Boolean publicIngressEnabled;
+
         @com.aliyun.core.annotation.NameInMap("vpc")
         private Vpc vpc;
 
         private NetworkConfiguration(Builder builder) {
+            this.publicEgressEnabled = builder.publicEgressEnabled;
+            this.publicIngressEnabled = builder.publicIngressEnabled;
             this.vpc = builder.vpc;
         }
 
@@ -312,6 +320,20 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
         }
 
         /**
+         * @return publicEgressEnabled
+         */
+        public Boolean getPublicEgressEnabled() {
+            return this.publicEgressEnabled;
+        }
+
+        /**
+         * @return publicIngressEnabled
+         */
+        public Boolean getPublicIngressEnabled() {
+            return this.publicIngressEnabled;
+        }
+
+        /**
          * @return vpc
          */
         public Vpc getVpc() {
@@ -319,14 +341,40 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean publicEgressEnabled; 
+            private Boolean publicIngressEnabled; 
             private Vpc vpc; 
 
             private Builder() {
             } 
 
             private Builder(NetworkConfiguration model) {
+                this.publicEgressEnabled = model.publicEgressEnabled;
+                this.publicIngressEnabled = model.publicIngressEnabled;
                 this.vpc = model.vpc;
             } 
+
+            /**
+             * <p>Returns the target configuration value. Updating indicates that the change is still in progress, and UpdateFailed indicates that the current change failed. This parameter only controls whether the latest versions of managed and custom agents use the public egress of the platform. It does not control fixed historical versions, model or MCP proxy egress, or the public egress of the user VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder publicEgressEnabled(Boolean publicEgressEnabled) {
+                this.publicEgressEnabled = publicEgressEnabled;
+                return this;
+            }
+
+            /**
+             * <p>Returns the target configuration value. Updating indicates that the change is in progress, and UpdateFailed indicates that the change failed. After this feature is disabled, the public ingress for all agent endpoints in the workspace is closed. After this feature is re-enabled, the original public ingress is restored. INNER_DIRECT and user VPC ingress are not affected. Collaboration and Element Web ingress are not controlled by this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder publicIngressEnabled(Boolean publicIngressEnabled) {
+                this.publicIngressEnabled = publicIngressEnabled;
+                return this;
+            }
 
             /**
              * <p>The VPC network configuration of the user.</p>
@@ -487,7 +535,7 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The OSS storage authorization status.</p>
+             * <p>The authorization status of OSS storage.</p>
              * 
              * <strong>example:</strong>
              * <p>AUTHORIZED</p>
@@ -509,7 +557,7 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The workspace name.</p>
+             * <p>The name of the workspace.</p>
              * 
              * <strong>example:</strong>
              * <p>production-agents-v2</p>
@@ -528,7 +576,7 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the workspace.</p>
+             * <p>The ID of the region where the workspace resides.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -539,7 +587,7 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The workspace status. Valid values: Initializing, Initialized, Deleting, and Deleted.</p>
+             * <p>The status of the workspace. Valid values: Initializing, Initialized, Deleting, and Deleted.</p>
              * 
              * <strong>example:</strong>
              * <p>Initialized</p>
@@ -561,7 +609,7 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tenant ID to which the workspace belongs.</p>
+             * <p>The ID of the tenant to which the workspace belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>tenant-123456</p>
@@ -572,7 +620,7 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The workspace ID.</p>
+             * <p>The ID of the workspace.</p>
              * 
              * <strong>example:</strong>
              * <p>ws-123456</p>

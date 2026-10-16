@@ -222,7 +222,7 @@ public class GetAgentSpecResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The version author.</p>
+             * <p>The author of the version.</p>
              * 
              * <strong>example:</strong>
              * <p>alice</p>
@@ -233,7 +233,7 @@ public class GetAgentSpecResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time. This value is a UNIX timestamp in milliseconds.</p>
+             * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1787671022000</p>
@@ -247,7 +247,7 @@ public class GetAgentSpecResponseBody extends TeaModel {
              * <p>The description.</p>
              * 
              * <strong>example:</strong>
-             * <p>A sample description that explains the purpose of the resource</p>
+             * <p>A sample description used to explain the purpose of the resource</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -288,7 +288,7 @@ public class GetAgentSpecResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time. This value is a UNIX timestamp in milliseconds.</p>
+             * <p>The update time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1787671022000</p>
@@ -526,7 +526,7 @@ public class GetAgentSpecResponseBody extends TeaModel {
              * <p>The description.</p>
              * 
              * <strong>example:</strong>
-             * <p>A sample description that explains the purpose of the resource</p>
+             * <p>A sample description used to explain the purpose of the resource</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -545,7 +545,7 @@ public class GetAgentSpecResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version that is currently being edited.</p>
+             * <p>The version currently being edited.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0.0</p>
@@ -556,7 +556,7 @@ public class GetAgentSpecResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the AgentSpec is enabled.</p>
+             * <p>Indicates whether it is enabled.</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -605,7 +605,7 @@ public class GetAgentSpecResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version that is currently under review.</p>
+             * <p>The version currently under review.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0.0</p>
@@ -627,7 +627,7 @@ public class GetAgentSpecResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time. This value is a UNIX timestamp in milliseconds.</p>
+             * <p>The update time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1787671022000</p>

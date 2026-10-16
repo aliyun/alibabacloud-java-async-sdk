@@ -180,7 +180,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of workspaces.</p>
+         * <p>The workspace list.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -188,7 +188,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of records per page used in this request.</p>
+         * <p>The maximum number of records per page used for this request.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -210,7 +210,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token for the next page. This parameter is empty if no more pages are available.</p>
+         * <p>The cursor for the next page. This parameter is empty if there is no next page.</p>
          * 
          * <strong>example:</strong>
          * <p>d29ya3NwYWNlLW9mZnNldDo0MA</p>
@@ -232,7 +232,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -243,7 +243,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of workspaces that match the query conditions.</p>
+         * <p>The total number of workspaces that meet the query conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>42</p>
@@ -368,10 +368,18 @@ public class ListWorkspacesResponseBody extends TeaModel {
      * <p>ListWorkspacesResponseBody</p>
      */
     public static class NetworkConfiguration extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("publicEgressEnabled")
+        private Boolean publicEgressEnabled;
+
+        @com.aliyun.core.annotation.NameInMap("publicIngressEnabled")
+        private Boolean publicIngressEnabled;
+
         @com.aliyun.core.annotation.NameInMap("vpc")
         private Vpc vpc;
 
         private NetworkConfiguration(Builder builder) {
+            this.publicEgressEnabled = builder.publicEgressEnabled;
+            this.publicIngressEnabled = builder.publicIngressEnabled;
             this.vpc = builder.vpc;
         }
 
@@ -384,6 +392,20 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
+         * @return publicEgressEnabled
+         */
+        public Boolean getPublicEgressEnabled() {
+            return this.publicEgressEnabled;
+        }
+
+        /**
+         * @return publicIngressEnabled
+         */
+        public Boolean getPublicIngressEnabled() {
+            return this.publicIngressEnabled;
+        }
+
+        /**
          * @return vpc
          */
         public Vpc getVpc() {
@@ -391,17 +413,43 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean publicEgressEnabled; 
+            private Boolean publicIngressEnabled; 
             private Vpc vpc; 
 
             private Builder() {
             } 
 
             private Builder(NetworkConfiguration model) {
+                this.publicEgressEnabled = model.publicEgressEnabled;
+                this.publicIngressEnabled = model.publicIngressEnabled;
                 this.vpc = model.vpc;
             } 
 
             /**
-             * <p>The VPC network configuration of the user.</p>
+             * <p>Returns the target configuration value. Updating indicates that the change is still in progress, and UpdateFailed indicates that the current change failed. This setting only controls whether the latest versions of managed and custom agents use the public network egress of the platform. It does not control fixed historical versions, model or MCP proxy egresses, or the public network egress of the user VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder publicEgressEnabled(Boolean publicEgressEnabled) {
+                this.publicEgressEnabled = publicEgressEnabled;
+                return this;
+            }
+
+            /**
+             * <p>Returns the target configuration value. Updating indicates that the change is in progress, and UpdateFailed indicates that the change failed. After this setting is disabled, the public network ingress for all agent endpoints in the workspace is closed. After it is re-enabled, the original public network ingress is restored. INNER_DIRECT and user VPC ingress are not affected. Collaboration and Element Web ingress are not controlled by this setting.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder publicIngressEnabled(Boolean publicIngressEnabled) {
+                this.publicIngressEnabled = publicIngressEnabled;
+                return this;
+            }
+
+            /**
+             * <p>The network configuration of the user VPC.</p>
              */
             public Builder vpc(Vpc vpc) {
                 this.vpc = vpc;
@@ -533,7 +581,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the workspace was created.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-06T03:56:56Z</p>
@@ -544,7 +592,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the workspace.</p>
+             * <p>The workspace name.</p>
              * 
              * <strong>example:</strong>
              * <p>production-agents</p>
@@ -563,7 +611,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the workspace.</p>
+             * <p>The ID of the region where the workspace resides.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -574,13 +622,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The workspace status. Valid values:</p>
-             * <ul>
-             * <li>Initializing</li>
-             * <li>Initialized</li>
-             * <li>Deleting</li>
-             * <li>Deleted.</li>
-             * </ul>
+             * <p>The workspace status. Valid values: Initializing, Initialized, Deleting, and Deleted.</p>
              * 
              * <strong>example:</strong>
              * <p>Initialized</p>

@@ -87,7 +87,7 @@ public class GetSkillImportFileUrlRequest extends Request {
         }
 
         /**
-         * <p>The Content-Type of the upload file. Default value: application/zip.</p>
+         * <p>The Content-Type of the uploaded file. Default value: application/zip.</p>
          * 
          * <strong>example:</strong>
          * <p>application/zip</p>

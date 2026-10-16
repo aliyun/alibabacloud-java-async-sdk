@@ -149,7 +149,7 @@ public class CreateIdentityProviderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message. An error description is returned if the request failed.</p>
+         * <p>The response message. If the request fails, an error description is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -171,7 +171,7 @@ public class CreateIdentityProviderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -276,11 +276,7 @@ public class CreateIdentityProviderResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The type of the external identity provider. Valid values:</p>
-             * <ul>
-             * <li>DingTalk</li>
-             * <li>Feishu</li>
-             * </ul>
+             * <p>The type of the external identity provider. Valid values: DingTalk and Feishu.</p>
              * 
              * <strong>example:</strong>
              * <p>DingTalk</p>
@@ -291,7 +287,7 @@ public class CreateIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether workspace users are allowed to log on through this external identity provider.</p>
+             * <p>Specifies whether workspace users can log on through the external identity provider.</p>
              */
             public Builder loginEnabled(Boolean loginEnabled) {
                 this.loginEnabled = loginEnabled;
@@ -301,14 +297,14 @@ public class CreateIdentityProviderResponseBody extends TeaModel {
             /**
              * <p>The binding status. Valid values:</p>
              * <ul>
-             * <li>CONFIGURED: The configuration has been accepted and is waiting for user pool provisioning.</li>
+             * <li>CONFIGURED: The configuration is accepted, and the system is waiting to activate the user pool.</li>
              * <li>SYNCING: Organization members are being synchronized.</li>
-             * <li>SYNCED: Organization member synchronization is complete.</li>
-             * <li>READY: The binding is active.</li>
+             * <li>SYNCED: Organization member synchronization is completed.</li>
+             * <li>READY: The binding is in effect.</li>
              * <li>SYNC_FAILED: Organization member synchronization failed.</li>
              * <li>UPDATING: The configuration is being updated.</li>
              * <li>UPDATE_FAILED: The configuration update failed.</li>
-             * <li>DISCONNECTING: The binding is being removed.</li>
+             * <li>DISCONNECTING: The unbinding is in progress.</li>
              * <li>DISCONNECT_FAILED: The unbinding failed.</li>
              * </ul>
              * 
@@ -321,7 +317,7 @@ public class CreateIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to enable organization member synchronization. After this feature is enabled, the external identity provider synchronizes organization members as workspace users.</p>
+             * <p>Specifies whether to enable organization member synchronization. If enabled, organization members are synchronized to workspace users from the external identity provider.</p>
              */
             public Builder syncEnabled(Boolean syncEnabled) {
                 this.syncEnabled = syncEnabled;

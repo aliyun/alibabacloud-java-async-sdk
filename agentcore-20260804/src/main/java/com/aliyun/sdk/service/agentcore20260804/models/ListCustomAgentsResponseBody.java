@@ -210,7 +210,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The opaque token used to query the next page. An empty value indicates that there are no more pages. Pass the token as is in subsequent requests.</p>
+         * <p>The opaque token used to query the next page. If this value is empty, no more pages are available. Pass this value as is in subsequent requests.</p>
          * 
          * <strong>example:</strong>
          * <p>djE6YWdlbnRjb3JlLmFnZW50Lmxpc3QuY3VzdG9tOjIw</p>
@@ -221,7 +221,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique identifier of the request. You can use the ID to locate and troubleshoot issues.</p>
+         * <p>The unique identifier of the request. You can use this ID to locate and troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>550E8400-E29B-41D4-A716-446655440000</p>
@@ -232,7 +232,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was processed successfully. true indicates that the request was processed successfully. A successful creation, update, or deletion does not mean that the background operation is complete.</p>
+         * <p>Indicates whether the request was processed successfully. A value of true indicates that the request was processed successfully. A successful creation, update, or deletion does not indicate that the background operation is complete.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -310,7 +310,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the purpose of the current API path.</p>
+             * <p>The description of the current API path.</p>
              * 
              * <strong>example:</strong>
              * <p>AG-UI conversation API</p>
@@ -422,7 +422,12 @@ public class ListCustomAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The invoke Protocol Type. Valid values: agui: AG-UI protocol. openai-chat-completion: OpenAI Chat Completions compatible protocol. custom: custom protocol.</p>
+             * <p>The invocation protocol type. Valid values:</p>
+             * <ul>
+             * <li>agui: AG-UI protocol.</li>
+             * <li>openai-chat-completion: OpenAI Chat Completions compatible protocol.</li>
+             * <li>custom: Custom protocol.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -623,7 +628,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The unique identifier of the custom agent. You can obtain the value from the response of CreateCustomAgent or ListCustomAgents.</p>
+             * <p>The unique identifier of the custom agent. You can obtain this value from the response of CreateCustomAgent or ListCustomAgents.</p>
              * 
              * <strong>example:</strong>
              * <p>agent-550e8400e29b41d4a716446655440000</p>
@@ -645,7 +650,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the agent was created. The time is displayed in ISO 8601 format. The trailing Z indicates the UTC time zone. Fractional seconds may be included.</p>
+             * <p>The time when the agent was created. The time is in ISO 8601 format. The trailing Z indicates the UTC time zone. Fractional seconds may be included.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-10-10T06:00:00Z</p>
@@ -656,7 +661,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The deployment method of the agent. Custom agents are deployed and managed by the platform. The value is MANAGED.</p>
+             * <p>The deployment method of the agent. Custom agents are deployed and managed by the platform. The value is MANAGED for custom agents.</p>
              * 
              * <strong>example:</strong>
              * <p>MANAGED</p>
@@ -667,10 +672,10 @@ public class ListCustomAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the agent\&quot;s purpose.</p>
+             * <p>The description of the agent.</p>
              * 
              * <strong>example:</strong>
-             * <p>Custom agent that provides conversation services</p>
+             * <p>Custom agent that provides conversational services</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -719,7 +724,16 @@ public class ListCustomAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The overall status of the agent. Valid values: Creating: The agent is being created. Running: The agent is running. Failed: The agent failed to run. Updating: The agent is being updated. Deleting: The agent is being deleted. Deleted: The agent is deleted. To query the execution progress of the latest configuration, call GetCustomAgent.</p>
+             * <p>The overall status of the agent. Valid values:</p>
+             * <ul>
+             * <li>Creating: The agent is being created.</li>
+             * <li>Running: The agent is running.</li>
+             * <li>Failed: The agent failed.</li>
+             * <li>Updating: The agent is being updated.</li>
+             * <li>Deleting: The agent is being deleted.</li>
+             * <li>Deleted: The agent is deleted.
+             * To check the execution progress of the latest configuration, call GetCustomAgent.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Running</p>
@@ -730,7 +744,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the agent was last updated. The time is displayed in ISO 8601 format. The trailing Z indicates the UTC time zone. Fractional seconds may be included.</p>
+             * <p>The time when the agent was last updated. The time is in ISO 8601 format. The trailing Z indicates the UTC time zone. Fractional seconds may be included.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-10-10T06:05:00Z</p>

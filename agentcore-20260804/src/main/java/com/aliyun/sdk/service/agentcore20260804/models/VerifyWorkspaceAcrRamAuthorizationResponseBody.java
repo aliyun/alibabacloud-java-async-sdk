@@ -171,7 +171,7 @@ public class VerifyWorkspaceAcrRamAuthorizationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -318,7 +318,7 @@ public class VerifyWorkspaceAcrRamAuthorizationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ACR Enterprise instance ID.</p>
+             * <p>The ID of the ACR Enterprise instance.</p>
              * 
              * <strong>example:</strong>
              * <p>cri-1234567890abcdef</p>
@@ -329,7 +329,7 @@ public class VerifyWorkspaceAcrRamAuthorizationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The policy attachment status for the target repository.</p>
+             * <p>The current attachment status of the policy for the target repository.</p>
              * 
              * <strong>example:</strong>
              * <p>UNAUTHORIZED</p>
@@ -340,7 +340,7 @@ public class VerifyWorkspaceAcrRamAuthorizationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The prerequisite status for access. This is not the Secret Ready status.</p>
+             * <p>The access prerequisite status. This does not indicate that the secret is ready.</p>
              * 
              * <strong>example:</strong>
              * <p>ELIGIBLE</p>
@@ -362,7 +362,7 @@ public class VerifyWorkspaceAcrRamAuthorizationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The human-readable reason. This field is omitted when no reason exists.</p>
+             * <p>The user-readable reason message. This field is omitted when no reason exists.</p>
              * 
              * <strong>example:</strong>
              * <p>Authorize the Workspace role for this ACR instance.</p>
@@ -373,7 +373,7 @@ public class VerifyWorkspaceAcrRamAuthorizationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The shared role name selected by the backend. This value is not editable on the frontend.</p>
+             * <p>The name of the shared role selected by the backend. This field is not editable on the frontend.</p>
              * 
              * <strong>example:</strong>
              * <p>AliyunAgentCoreWorkspace-ws-1234567890abcdef12345</p>

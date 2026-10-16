@@ -171,7 +171,7 @@ public class UpdateUserResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -365,7 +365,7 @@ public class UpdateUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The authentication method of the user. password indicates local password authentication within the workspace. dingtalk and feishu indicate that the user is synchronized and authenticated by the corresponding external identity provider.</p>
+             * <p>The authentication method of the user. A value of password indicates that local password authentication in the workspace is used. A value of dingtalk or feishu indicates that the user is synchronized and authenticated by the corresponding external identity provider.</p>
              * 
              * <strong>example:</strong>
              * <p>password</p>
@@ -376,7 +376,7 @@ public class UpdateUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time in UTC, formatted in RFC 3339.</p>
+             * <p>The creation time, in UTC and RFC 3339 format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-12T03:04:05Z</p>
@@ -387,10 +387,10 @@ public class UpdateUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the user. The name is 1 to 32 characters in length.</p>
+             * <p>The display name of the user. The name must be 1 to 32 characters in length.</p>
              * 
              * <strong>example:</strong>
-             * <p>John</p>
+             * <p>Zhang San</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -398,7 +398,7 @@ public class UpdateUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The email address of the user. The address can be up to 256 characters in length.</p>
+             * <p>The email address of the user. The email address can be up to 256 characters in length.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="mailto:user-01@example.com">user-01@example.com</a></p>
@@ -409,7 +409,7 @@ public class UpdateUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The username. The name must be unique within the workspace and can contain only lowercase letters, digits, and hyphens (-). It must start and end with a lowercase letter or digit and be 1 to 32 characters in length.</p>
+             * <p>The username. The username must be unique within the workspace, can contain only lowercase letters, digits, and hyphens, must start and end with a lowercase letter or a digit, and must be 1 to 32 characters in length.</p>
              * 
              * <strong>example:</strong>
              * <p>user-01</p>
@@ -453,7 +453,7 @@ public class UpdateUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time of the last modification in UTC, formatted in RFC 3339.</p>
+             * <p>The time of the last update, in UTC and RFC 3339 format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-12T03:04:05Z</p>

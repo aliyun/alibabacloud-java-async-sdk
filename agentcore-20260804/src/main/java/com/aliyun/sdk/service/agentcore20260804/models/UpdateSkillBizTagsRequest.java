@@ -102,7 +102,7 @@ public class UpdateSkillBizTagsRequest extends Request {
         }
 
         /**
-         * <p>The Skill name.</p>
+         * <p>The skill name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -172,7 +172,7 @@ public class UpdateSkillBizTagsRequest extends Request {
             } 
 
             /**
-             * <p>The business tags as a JSON array string.</p>
+             * <p>The JSON array string of business tags.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

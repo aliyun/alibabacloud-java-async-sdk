@@ -67,7 +67,7 @@ public class ListSkillReferencesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The skill reference relationship data returned by the paged query. The data is returned with paging.</p>
+         * <p>The skill reference relationship data returned by the paging query.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,7 @@ public class ListSkillReferencesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID, which is used for troubleshooting.</p>
+         * <p>The request ID used for troubleshooting.</p>
          * 
          * <strong>example:</strong>
          * <p>5C6D9E10-1234-5678-9ABC-DEF012345678</p>
@@ -209,7 +209,7 @@ public class ListSkillReferencesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the referencing entity (the identifier of the Agent or AgentSpec).</p>
+             * <p>The ID of the referencing entity, which is the identifier of the agent or agent spec.</p>
              * 
              * <strong>example:</strong>
              * <p>agent-1234567890abcdef</p>
@@ -253,7 +253,7 @@ public class ListSkillReferencesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reference selector value, such as latest, a named label, HEAD, or a specific version.</p>
+             * <p>The reference selector value. Valid values: latest, a named label, HEAD, or a specific version.</p>
              * 
              * <strong>example:</strong>
              * <p>HEAD</p>
@@ -275,7 +275,7 @@ public class ListSkillReferencesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The workspace ID to which the reference belongs.</p>
+             * <p>The ID of the workspace to which the reference belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>ws-1234567890abcdef</p>
@@ -401,7 +401,7 @@ public class ListSkillReferencesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of reference relationships that match the filter conditions.</p>
+             * <p>The total number of reference relationships that meet the conditions.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>

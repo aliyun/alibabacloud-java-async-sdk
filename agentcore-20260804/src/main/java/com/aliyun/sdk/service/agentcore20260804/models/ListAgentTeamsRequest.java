@@ -87,7 +87,7 @@ public class ListAgentTeamsRequest extends Request {
         }
 
         /**
-         * <p>The request parameters for querying the agent team list.</p>
+         * <p>The request parameters for querying the list of agent teams.</p>
          */
         public Builder body(ListAgentTeamsRequestBody body) {
             String bodyShrink = shrink(body, "body", "json");

@@ -67,7 +67,7 @@ public class GetSkillImportFileUrlResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response data.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -170,7 +170,7 @@ public class GetSkillImportFileUrlResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The Content-Type of the upload file.</p>
+             * <p>The Content-Type of the uploaded file.</p>
              * 
              * <strong>example:</strong>
              * <p>application/zip</p>
@@ -181,7 +181,7 @@ public class GetSkillImportFileUrlResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum file size allowed for upload, in bytes.</p>
+             * <p>The maximum allowed file size for upload, in bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>10485760</p>
@@ -203,7 +203,7 @@ public class GetSkillImportFileUrlResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The OSS pre-signed upload URL.</p>
+             * <p>The OSS presigned upload URL.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://example.com/artifacts/example.zip">https://example.com/artifacts/example.zip</a></p>

@@ -130,7 +130,7 @@ public class DeleteWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result of the delete request.</p>
+         * <p>The deletion request result.</p>
          */
         public Builder data(Data data) {
             this.data = data;

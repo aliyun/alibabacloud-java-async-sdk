@@ -169,7 +169,7 @@ public class BatchUploadSkillsViaOssRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to overwrite an existing Skill. Default value: false.</p>
+             * <p>Specifies whether to overwrite existing skills. Default value: false.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>

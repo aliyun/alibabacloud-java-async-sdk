@@ -119,7 +119,7 @@ public class DeleteExternalAgentResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The business status code. The value SUCCESS is returned if the request is successful.</p>
+         * <p>The business status code. The value is SUCCESS if the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -138,7 +138,7 @@ public class DeleteExternalAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code. The value 200 is returned if the request is successful.</p>
+         * <p>The HTTP status code. The value is 200 if the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -149,7 +149,7 @@ public class DeleteExternalAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned for the request processing result.</p>
+         * <p>The message about the request processing result.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -171,7 +171,7 @@ public class DeleteExternalAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -401,7 +401,7 @@ public class DeleteExternalAgentResponseBody extends TeaModel {
              * <p>The description of the external agent.</p>
              * 
              * <strong>example:</strong>
-             * <p>A code review agent running in the user environment</p>
+             * <p>Code review agent running in the user environment</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -442,15 +442,7 @@ public class DeleteExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the external agent. Valid values:</p>
-             * <ul>
-             * <li>Creating: The agent is being created.</li>
-             * <li>Running: The agent is running.</li>
-             * <li>Failed: The agent has failed.</li>
-             * <li>Updating: The agent is being updated.</li>
-             * <li>Deleting: The agent is being deleted.</li>
-             * <li>Deleted: The agent has been deleted.</li>
-             * </ul>
+             * <p>The status of the external agent. Valid values: Creating, Running, Failed, Updating, Deleting, and Deleted.</p>
              * 
              * <strong>example:</strong>
              * <p>Running</p>

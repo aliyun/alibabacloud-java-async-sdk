@@ -130,7 +130,7 @@ public class CreateCredentialResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The created credential information.</p>
+         * <p>The information about the created credential.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -171,7 +171,7 @@ public class CreateCredentialResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -261,7 +261,7 @@ public class CreateCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource name. This value is empty if the resource has been deleted.</p>
+             * <p>The name of the resource. This parameter is empty if the resource is deleted.</p>
              * 
              * <strong>example:</strong>
              * <p>my-agent</p>
@@ -272,7 +272,7 @@ public class CreateCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource type, such as agent.</p>
+             * <p>The type of the resource, such as agent.</p>
              * 
              * <strong>example:</strong>
              * <p>agent</p>
@@ -459,7 +459,7 @@ public class CreateCredentialResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation time in UTC, formatted in RFC 3339.</p>
+             * <p>The time when the credential was created. The time is displayed in UTC and follows the RFC 3339 format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-12T03:04:05Z</p>
@@ -481,7 +481,7 @@ public class CreateCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The masked credential content. When credentialType is apiKey, the apiKey value is returned as asterisks (*) of equal length.</p>
+             * <p>The desensitized result of the credential content. If credentialType is apiKey, the value of apiKey is returned as asterisks (*) of the same length.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;apiKey&quot;:&quot;****************&quot;}</p>
@@ -503,10 +503,10 @@ public class CreateCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The credential description. The description can be up to 256 characters in length.</p>
+             * <p>The description of the credential. The description can be up to 256 characters in length.</p>
              * 
              * <strong>example:</strong>
-             * <p>API Key used for calling model services in the production environment</p>
+             * <p>API key used to call the model service in the production environment</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -514,7 +514,7 @@ public class CreateCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The credential name. The name must be unique within the workspace and can contain only letters, digits, periods (.), underscores (_), and hyphens (-). The name must be 3 to 128 characters in length and cannot use runtime reserved names.</p>
+             * <p>The name of the credential. The name must be unique within the workspace, can only contain letters, digits, periods, underscores, and hyphens, and must be 3 to 128 characters in length. Runtime reserved names cannot be used.</p>
              * 
              * <strong>example:</strong>
              * <p>model-api-key</p>
@@ -525,7 +525,7 @@ public class CreateCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID where the resource resides.</p>
+             * <p>The region ID of the resource.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -536,7 +536,7 @@ public class CreateCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Each item contains resourceType, resourceId, and resourceName. resourceName is empty if the resource has been deleted.</p>
+             * <p>Each item contains resourceType, resourceId, and resourceName. If the resource is deleted, resourceName is empty.</p>
              */
             public Builder resourceRefs(java.util.List<ResourceRefs> resourceRefs) {
                 this.resourceRefs = resourceRefs;
@@ -544,7 +544,7 @@ public class CreateCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The credential resource scope.</p>
+             * <p>The application scope of the credential resource.</p>
              * 
              * <strong>example:</strong>
              * <p>ALL</p>
@@ -555,7 +555,7 @@ public class CreateCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time of the last modification in UTC, formatted in RFC 3339.</p>
+             * <p>The time when the credential was last modified. The time is displayed in UTC and follows the RFC 3339 format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-12T03:04:05Z</p>
