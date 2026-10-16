@@ -35,6 +35,10 @@ public class DescribeScansRequest extends Request {
     private String nextToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("query")
+    private String query;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("status")
     private String status;
 
@@ -48,6 +52,7 @@ public class DescribeScansRequest extends Request {
         this.regionId = builder.regionId;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
+        this.query = builder.query;
         this.status = builder.status;
         this.taskName = builder.taskName;
     }
@@ -94,6 +99,13 @@ public class DescribeScansRequest extends Request {
     }
 
     /**
+     * @return query
+     */
+    public String getQuery() {
+        return this.query;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -112,6 +124,7 @@ public class DescribeScansRequest extends Request {
         private String regionId; 
         private Long maxResults; 
         private String nextToken; 
+        private String query; 
         private String status; 
         private String taskName; 
 
@@ -125,6 +138,7 @@ public class DescribeScansRequest extends Request {
             this.regionId = request.regionId;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
+            this.query = request.query;
             this.status = request.status;
             this.taskName = request.taskName;
         } 
@@ -152,7 +166,7 @@ public class DescribeScansRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 20. Maximum value: 100.</p>
+         * <p>The maximum number of entries per page. Default value: 20. Maximum value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -164,7 +178,7 @@ public class DescribeScansRequest extends Request {
         }
 
         /**
-         * <p>The pagination token. Do not specify this parameter or set it to an empty string for the first page. For subsequent pages, pass the nextToken value from the previous response without any modification. If the nextToken value in the response is empty, the last page has been reached.</p>
+         * <p>The pagination token. To query the first page, leave this parameter empty or do not specify it. To query subsequent pages, pass the nextToken value returned in the previous response. If the nextToken value in the response is empty, the last page is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>eyJ0IjoiMjAyNi0wNy0xNlQwNzo1MzozOC4wMjFaIiwiaSI6MTAwMDQ0OH0</p>
@@ -176,11 +190,23 @@ public class DescribeScansRequest extends Request {
         }
 
         /**
-         * <p>The task status. Valid values:</p>
+         * <p>The query string. You can perform a fuzzy match by project name or prompt.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
+         */
+        public Builder query(String query) {
+            this.putQueryParameter("query", query);
+            this.query = query;
+            return this;
+        }
+
+        /**
+         * <p>The status of the task. Valid values:</p>
          * <ul>
-         * <li>running: Running.</li>
-         * <li>completed: Completed.</li>
-         * <li>failed: Failed.</li>
+         * <li>running: The task is running.</li>
+         * <li>completed: The task is completed.</li>
+         * <li>failed: The task failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -193,7 +219,7 @@ public class DescribeScansRequest extends Request {
         }
 
         /**
-         * <p>The task name.</p>
+         * <p>The name of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>name</p>

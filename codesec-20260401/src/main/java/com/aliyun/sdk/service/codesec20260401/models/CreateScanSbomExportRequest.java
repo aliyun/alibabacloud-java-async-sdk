@@ -119,7 +119,7 @@ public class CreateScanSbomExportRequest extends Request {
         } 
 
         /**
-         * <p>Numeric primary key (<code>projects.id</code>).</p>
+         * <p>The project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -132,7 +132,7 @@ public class CreateScanSbomExportRequest extends Request {
         }
 
         /**
-         * <p>Numeric primary key (<code>scans.id</code>).</p>
+         * <p>The task ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,9 +154,7 @@ public class CreateScanSbomExportRequest extends Request {
         }
 
         /**
-         * <p>选填。指定下载落盘的文件名（含扩展名），会签进下载地址的 Content-Disposition。
-         * 留空时后端按 <code>项目名-sbom-&lt;format&gt;.&lt;扩展名&gt;</code> 生成默认值。
-         * 不得含控制字符或路径分隔符（<code>/</code>、<code>\</code>）、长度不超过 255，否则 → 400 <strong><code>InvalidFileName</code></strong>。</p>
+         * <p>The file name (including the extension) for the downloaded file. The file name is signed into the Content-Disposition header of the URL. If you leave this parameter empty, the backend generates a file name in the format of project name-sbom-<format>.<extension>. If the file name contains control characters or path separators (/ or \), or if the length exceeds 255 characters, a 400 InvalidFileName error is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>test-sbom-cyclonedx.cdx.json</p>
@@ -168,8 +166,11 @@ public class CreateScanSbomExportRequest extends Request {
         }
 
         /**
-         * <p>闭合枚举，须是该次扫描 <strong><code>artifacts</code></strong> 里 <strong><code>status=success</code></strong> 的 <strong><code>artifact_kind</code></strong>。
-         * 未知值 → 400 <strong><code>InvalidArtifactFormat</code></strong>，且绝不参与 OSS key 构造。</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>cyclonedx-json</li>
+         * <li>spdx-json</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
