@@ -215,7 +215,7 @@ public class GetPermissionRequest extends Request {
         } 
 
         /**
-         * <p>The workspace ID. For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
+         * <p>The workspace ID. For more information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -228,7 +228,7 @@ public class GetPermissionRequest extends Request {
         }
 
         /**
-         * <p>The name of the permission, which is unique within a region. For more information about permissions, see <a href="https://help.aliyun.com/document_detail/2840449.html">Appendix: Roles and permissions</a>. For information about how to obtain the permission name, see <a href="https://help.aliyun.com/document_detail/449132.html">ListPermissions</a>.</p>
+         * <p>The name of the permission. The name must be unique within a region. For more information about permissions, see <a href="https://help.aliyun.com/document_detail/2840449.html">Appendix: Roles and permissions</a>. For more information about how to obtain the permission name, see <a href="https://help.aliyun.com/document_detail/449132.html">ListPermissions</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -243,7 +243,7 @@ public class GetPermissionRequest extends Request {
         /**
          * <p>The access type. Valid values:</p>
          * <ul>
-         * <li>PUBLIC: All members in the current workspace can access the instance.</li>
+         * <li>PUBLIC: All members of the current workspace can access the instance.</li>
          * <li>PRIVATE: Only the creator can access the instance.</li>
          * </ul>
          * 
@@ -293,7 +293,7 @@ public class GetPermissionRequest extends Request {
         }
 
         /**
-         * <p>The Alibaba Cloud account UID of the workspace permission creator.</p>
+         * <p>The Alibaba Cloud account UID of the creator of the workspace permission.</p>
          * 
          * <strong>example:</strong>
          * <p>17915******4216</p>
@@ -305,7 +305,7 @@ public class GetPermissionRequest extends Request {
         }
 
         /**
-         * Labels.
+         * <p>The labels.</p>
          */
         public Builder labels(java.util.Map<String, ?> labels) {
             String labelsShrink = shrink(labels, "Labels", "json");
@@ -317,8 +317,8 @@ public class GetPermissionRequest extends Request {
         /**
          * <p>The optional configurations. Separate multiple configurations with commas (,). Valid values:</p>
          * <ul>
-         * <li>ResourceEmpty: The resource is empty. The resource is empty if Resource is not specified.</li>
-         * <li>DisableRam: RAM authentication is not performed.</li>
+         * <li>ResourceEmpty: The resource is empty. If Resource is not specified, this value is empty.</li>
+         * <li>DisableRam: Disables RAM checks.</li>
          * </ul>
          * 
          * <strong>example:</strong>

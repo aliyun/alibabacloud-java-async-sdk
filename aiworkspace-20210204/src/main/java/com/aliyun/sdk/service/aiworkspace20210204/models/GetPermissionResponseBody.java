@@ -80,7 +80,7 @@ public class GetPermissionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The name of the permission, which is unique within the same region. For more information about permissions, see <a href="https://help.aliyun.com/document_detail/2840449.html">Appendix: Roles and permissions</a>.</p>
+         * <p>The name of the permission. The name is unique within a region. For more information about permissions, see <a href="https://help.aliyun.com/document_detail/2840449.html">Appendix: Roles and permissions</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>PaiDLC:ListJobs</p>
@@ -170,7 +170,7 @@ public class GetPermissionResponseBody extends TeaModel {
             /**
              * <p>The access type. Valid values:</p>
              * <ul>
-             * <li>PUBLIC: All members in the current workspace can perform operations.</li>
+             * <li>PUBLIC: All members of the current workspace can perform operations.</li>
              * <li>PRIVATE: Only the creator can perform operations.</li>
              * <li>ANY: Both the creator and non-creators can perform operations.</li>
              * </ul>
@@ -184,9 +184,9 @@ public class GetPermissionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The access type.
-             * When Accessibility is set to PUBLIC, all users can perform operations and this value does not take effect.
-             * When Accessibility is set to PRIVATE, EntityAccessType supports the following values:</p>
+             * <p>The entity access type.
+             * If Accessibility is set to PUBLIC, all users can perform operations and this parameter does not take effect.
+             * If Accessibility is set to PRIVATE, EntityAccessType supports the following values:</p>
              * <ul>
              * <li>CREATOR: Only the creator can perform operations.</li>
              * <li>ANY: Both the creator and non-creators can perform operations.</li>

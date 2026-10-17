@@ -259,7 +259,7 @@ public class Experiment extends TeaModel {
         }
 
         /**
-         * <p>The list of labels for the experiment.</p>
+         * <p>The list of experiment labels.</p>
          */
         public Builder labels(java.util.List<ExperimentLabel> labels) {
             this.labels = labels;
@@ -267,7 +267,7 @@ public class Experiment extends TeaModel {
         }
 
         /**
-         * <p>LatestRun</p>
+         * <p>The information about the latest run associated with the experiment.</p>
          */
         public Builder latestRun(Run latestRun) {
             this.latestRun = latestRun;
@@ -275,7 +275,7 @@ public class Experiment extends TeaModel {
         }
 
         /**
-         * <p>The name of the experiment.</p>
+         * <p>The experiment name.</p>
          * 
          * <strong>example:</strong>
          * <p>exp-test</p>
@@ -287,6 +287,9 @@ public class Experiment extends TeaModel {
 
         /**
          * <p>The Alibaba Cloud account ID of the experiment owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1631044****3440</p>
          */
         public Builder ownerId(String ownerId) {
             this.ownerId = ownerId;
@@ -295,6 +298,9 @@ public class Experiment extends TeaModel {
 
         /**
          * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0C6835C5-A424-5AFB-ACC2-F1E3CA1ABF7C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -303,6 +309,9 @@ public class Experiment extends TeaModel {
 
         /**
          * <p>The default OSS storage path for TensorBoard logs of each trial in the experiment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://test-bucket.oss-cn-hangzhou.aliyuncs.com/tensorboard/</p>
          */
         public Builder tensorboardLogUri(String tensorboardLogUri) {
             this.tensorboardLogUri = tensorboardLogUri;
@@ -311,6 +320,9 @@ public class Experiment extends TeaModel {
 
         /**
          * <p>The user ID of the experiment creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1557702098******</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;

@@ -67,7 +67,7 @@ public class UserMetricsEndpoint extends TeaModel {
         } 
 
         /**
-         * Path.
+         * <p>The HTTP path of the metric collection API.</p>
          */
         public Builder path(String path) {
             this.path = path;
@@ -75,7 +75,7 @@ public class UserMetricsEndpoint extends TeaModel {
         }
 
         /**
-         * Port.
+         * <p>The port number on which the metric collection service listens.</p>
          */
         public Builder port(Integer port) {
             this.port = port;

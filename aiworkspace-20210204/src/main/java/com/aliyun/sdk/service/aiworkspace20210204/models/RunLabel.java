@@ -108,7 +108,10 @@ public class RunLabel extends TeaModel {
         } 
 
         /**
-         * <p>Time when the label was created</p>
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-12-27T03:30:04Z</p>
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -116,7 +119,10 @@ public class RunLabel extends TeaModel {
         }
 
         /**
-         * <p>Time when the label was last modified</p>
+         * <p>The modification time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-12-27T03:30:04Z</p>
          */
         public Builder gmtModifiedTime(String gmtModifiedTime) {
             this.gmtModifiedTime = gmtModifiedTime;
@@ -124,7 +130,7 @@ public class RunLabel extends TeaModel {
         }
 
         /**
-         * <p>Key of the label</p>
+         * <p>The tag key.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -136,7 +142,7 @@ public class RunLabel extends TeaModel {
         }
 
         /**
-         * <p>ID of the Run that owns this label</p>
+         * <p>The associated Run ID.</p>
          * 
          * <strong>example:</strong>
          * <p>run-1qJhzJ2YXgX****</p>
@@ -147,7 +153,7 @@ public class RunLabel extends TeaModel {
         }
 
         /**
-         * <p>Value of the label</p>
+         * <p>The tag value.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

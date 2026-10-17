@@ -236,7 +236,7 @@ public class Run extends TeaModel {
         } 
 
         /**
-         * <p>The visibility of the run.</p>
+         * <p>The accessibility.</p>
          * 
          * <strong>example:</strong>
          * <p>PRIVATE</p>
@@ -258,7 +258,7 @@ public class Run extends TeaModel {
         }
 
         /**
-         * <p>The time when the run was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-30T12:51:33.028Z</p>
@@ -269,7 +269,7 @@ public class Run extends TeaModel {
         }
 
         /**
-         * <p>The time when the run was last modified.</p>
+         * <p>The modification time.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-30T12:51:33.028Z</p>
@@ -296,7 +296,7 @@ public class Run extends TeaModel {
         }
 
         /**
-         * <p>Name</p>
+         * <p>The name.</p>
          * 
          * <strong>example:</strong>
          * <p>testrun</p>
@@ -307,7 +307,7 @@ public class Run extends TeaModel {
         }
 
         /**
-         * <p>The ID of the owner\&quot;s root account.</p>
+         * <p>The Alibaba Cloud account ID of the owner.</p>
          * 
          * <strong>example:</strong>
          * <p>163104*****3440</p>
@@ -371,6 +371,9 @@ public class Run extends TeaModel {
 
         /**
          * <p>The ID of the owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1557702098******</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;

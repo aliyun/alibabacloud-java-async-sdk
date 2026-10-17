@@ -198,6 +198,9 @@ public class Trial extends TeaModel {
 
         /**
          * <p>Accessibility</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PRIVATE</p>
          */
         public Builder accessibility(String accessibility) {
             this.accessibility = accessibility;
@@ -217,6 +220,9 @@ public class Trial extends TeaModel {
 
         /**
          * <p>GmtCreateTime</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-30T12:51:33.028Z</p>
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -225,6 +231,9 @@ public class Trial extends TeaModel {
 
         /**
          * <p>GmtModifiedTime</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-30T12:51:33.028Z</p>
          */
         public Builder gmtModifiedTime(String gmtModifiedTime) {
             this.gmtModifiedTime = gmtModifiedTime;
@@ -241,6 +250,9 @@ public class Trial extends TeaModel {
 
         /**
          * <p>Name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testrun</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -249,6 +261,9 @@ public class Trial extends TeaModel {
 
         /**
          * <p>OwnerId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1631044****3440</p>
          */
         public Builder ownerId(String ownerId) {
             this.ownerId = ownerId;
@@ -257,6 +272,9 @@ public class Trial extends TeaModel {
 
         /**
          * <p>SourceId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>train9s0afvjkf</p>
          */
         public Builder sourceId(String sourceId) {
             this.sourceId = sourceId;
@@ -265,6 +283,9 @@ public class Trial extends TeaModel {
 
         /**
          * <p>SourceType</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TrainingService</p>
          */
         public Builder sourceType(String sourceType) {
             this.sourceType = sourceType;
@@ -292,6 +313,9 @@ public class Trial extends TeaModel {
 
         /**
          * <p>WorkspaceId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>145883</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = workspaceId;

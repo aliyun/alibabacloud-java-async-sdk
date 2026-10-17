@@ -35,6 +35,10 @@ public class ListConfigsRequest extends Request {
     private String labels;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Options")
+    private String options;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Verbose")
     private String verbose;
 
@@ -44,6 +48,7 @@ public class ListConfigsRequest extends Request {
         this.categoryName = builder.categoryName;
         this.configKeys = builder.configKeys;
         this.labels = builder.labels;
+        this.options = builder.options;
         this.verbose = builder.verbose;
     }
 
@@ -89,6 +94,13 @@ public class ListConfigsRequest extends Request {
     }
 
     /**
+     * @return options
+     */
+    public String getOptions() {
+        return this.options;
+    }
+
+    /**
      * @return verbose
      */
     public String getVerbose() {
@@ -100,6 +112,7 @@ public class ListConfigsRequest extends Request {
         private String categoryName; 
         private String configKeys; 
         private String labels; 
+        private String options; 
         private String verbose; 
 
         private Builder() {
@@ -112,6 +125,7 @@ public class ListConfigsRequest extends Request {
             this.categoryName = request.categoryName;
             this.configKeys = request.configKeys;
             this.labels = request.labels;
+            this.options = request.options;
             this.verbose = request.verbose;
         } 
 
@@ -129,14 +143,14 @@ public class ListConfigsRequest extends Request {
         }
 
         /**
-         * <p>The category of the configuration item. The following categories are supported:</p>
+         * <p>The categorization of the configuration item. Valid values:</p>
          * <ul>
-         * <li>CommonResourceConfig: common resource configuration.</li>
-         * <li>DLCAutoRecycle: DLC automatic recycling.</li>
-         * <li>DLCPriorityConfig: DLC priority settings.</li>
-         * <li>DSWPriorityConfig: DSW priority settings.</li>
-         * <li>QuotaMaximumDuration: maximum runtime duration configuration for DLC jobs in a quota.</li>
-         * <li>CommonTagConfig: tag settings.</li>
+         * <li>CommonResourceConfig: general resource configuration</li>
+         * <li>DLCAutoRecycle: automatic DLC revoke</li>
+         * <li>DLCPriorityConfig: DLC priority settings</li>
+         * <li>DSWPriorityConfig: DSW priority settings</li>
+         * <li>QuotaMaximumDuration: maximum runtime configuration of DLC nodes for a quota</li>
+         * <li>CommonTagConfig: label settings</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -149,13 +163,13 @@ public class ListConfigsRequest extends Request {
         }
 
         /**
-         * <p>The keys of the configuration items. The following keys are supported:</p>
+         * <p>The keys of the configuration items. Valid values:</p>
          * <ul>
-         * <li>tempStoragePath: the temporary storage path. This ConfigKey can be used only when CategoryName is set to CommonResourceConfig.</li>
-         * <li>isAutoRecycle: the automatic recycling configuration. This ConfigKey can be used only when CategoryName is set to DLCAutoRecycle.</li>
-         * <li>priorityConfig: the priority configuration. This ConfigKey can be used only when CategoryName is set to DLCPriorityConfig or DSWPriorityConfig.</li>
-         * <li>quotaMaximumDuration: the maximum runtime duration configuration for DLC jobs in a quota. This ConfigKey can be used only when CategoryName is set to QuotaMaximumDuration.</li>
-         * <li>predefinedTags: the preset tags for the workspace. Resources that are created must include these tags.</li>
+         * <li>tempStoragePath: Temporary storage path. This key is allowed only when CategoryName is set to CommonResourceConfig.</li>
+         * <li>isAutoRecycle: Automatic revoke configuration. This key is allowed only when CategoryName is set to DLCAutoRecycle.</li>
+         * <li>priorityConfig: Priority configuration. This key is allowed only when CategoryName is set to DLCPriorityConfig or DSWPriorityConfig.</li>
+         * <li>quotaMaximumDuration: Maximum runtime configuration of DLC nodes for a quota. This key is allowed only when CategoryName is set to QuotaMaximumDuration.</li>
+         * <li>predefinedTags: Preset labels for the workspace. Resources created must have these labels.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -168,7 +182,7 @@ public class ListConfigsRequest extends Request {
         }
 
         /**
-         * <p>The labels used as filter conditions. Separate multiple conditions with commas. These conditions are evaluated using a logical AND.</p>
+         * <p>The labels used as filter conditions. Separate multiple conditions with commas. These conditions are combined by using the AND operator.</p>
          * 
          * <strong>example:</strong>
          * <p>key1=value1,key2=value2</p>
@@ -180,10 +194,22 @@ public class ListConfigsRequest extends Request {
         }
 
         /**
+         * <p>The additional options. Currently, only ThrowExceptionOnError is supported, which indicates that an error is thrown when an exception occurs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ThrowExceptionOnError</p>
+         */
+        public Builder options(String options) {
+            this.putQueryParameter("Options", options);
+            this.options = options;
+            return this;
+        }
+
+        /**
          * <p>Specifies whether to display label information. Valid values:</p>
          * <ul>
-         * <li>true: Display label information.</li>
-         * <li>false: Do not display label information.</li>
+         * <li>true: Displays label information.</li>
+         * <li>false: Does not display label information.</li>
          * </ul>
          * 
          * <strong>example:</strong>
