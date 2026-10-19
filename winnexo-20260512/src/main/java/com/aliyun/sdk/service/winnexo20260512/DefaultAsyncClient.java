@@ -69,6 +69,48 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <p>按待办ID集合批量作废；已完结/不存在不报错（幂等）</p>
+     * 
+     * @param request the request parameters of BatchCancelTodos  BatchCancelTodosRequest
+     * @return BatchCancelTodosResponse
+     */
+    @Override
+    public CompletableFuture<BatchCancelTodosResponse> batchCancelTodos(BatchCancelTodosRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("BatchCancelTodos").setMethod(HttpMethod.POST).setPathRegex("/openapi/batchCancelTodos").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BatchCancelTodosResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<BatchCancelTodosResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>有效成员批量排产、暂停、恢复或删除工作项；单项失败不回滚其他项</p>
+     * 
+     * @param request the request parameters of BatchOperateWorkItems  BatchOperateWorkItemsRequest
+     * @return BatchOperateWorkItemsResponse
+     */
+    @Override
+    public CompletableFuture<BatchOperateWorkItemsResponse> batchOperateWorkItems(BatchOperateWorkItemsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("BatchOperateWorkItems").setMethod(HttpMethod.POST).setPathRegex("/openapi/batchOperateWorkItems").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BatchOperateWorkItemsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<BatchOperateWorkItemsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <p>Idempotently cancels subscriptions along three independent dimensions: graphName, operatingObjectName, and objectType. The input array accepts 1 to 200 items per request. Each item must be a non-empty string with a maximum length of 128 characters. After server-side validation, items are deduplicated while preserving order. Non-string values, values that exceed the length limit, or arrays that exceed the size limit are rejected. The delete operation, per-item status tracking, and remaining valid count are completed within a single transaction. To safely cancel all subscriptions, you must also invoke ClearOperatingObjectFavorites to clean up historical, MISSING, or permission-hidden records that are invisible in the list, and then read back to confirm that total is 0.</p>
      * 
      * @param request the request parameters of BatchRemoveOperatingObjectFavorites  BatchRemoveOperatingObjectFavoritesRequest
@@ -83,6 +125,69 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<BatchRemoveOperatingObjectFavoritesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>作废待办；todoId 定位不存在返回 404，按 workItemId 批量尽力而为</p>
+     * 
+     * @param request the request parameters of CancelTodo  CancelTodoRequest
+     * @return CancelTodoResponse
+     */
+    @Override
+    public CompletableFuture<CancelTodoResponse> cancelTodo(CancelTodoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CancelTodo").setMethod(HttpMethod.POST).setPathRegex("/openapi/cancelTodo").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CancelTodoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CancelTodoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>本人需 APP/VIEW，代查他人需 APP/MANAGE。</p>
+     * 
+     * @param request the request parameters of CheckAppResourcePermission  CheckAppResourcePermissionRequest
+     * @return CheckAppResourcePermissionResponse
+     */
+    @Override
+    public CompletableFuture<CheckAppResourcePermissionResponse> checkAppResourcePermission(CheckAppResourcePermissionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CheckAppResourcePermission").setMethod(HttpMethod.POST).setPathRegex("/openapi/checkAppResourcePermission").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CheckAppResourcePermissionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CheckAppResourcePermissionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>整批逐应用鉴权后，复用 service 的常数级查询。</p>
+     * 
+     * @param request the request parameters of CheckAppResourcePermissionsBatch  CheckAppResourcePermissionsBatchRequest
+     * @return CheckAppResourcePermissionsBatchResponse
+     */
+    @Override
+    public CompletableFuture<CheckAppResourcePermissionsBatchResponse> checkAppResourcePermissionsBatch(CheckAppResourcePermissionsBatchRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CheckAppResourcePermissionsBatch").setMethod(HttpMethod.POST).setPathRegex("/openapi/checkAppResourcePermissionsBatch").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CheckAppResourcePermissionsBatchResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CheckAppResourcePermissionsBatchResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -108,6 +213,27 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <p>基于鉴权用户管理个人或指定写作协作空间记忆；空间模式沿用活跃成员权限。</p>
+     * 
+     * @param request the request parameters of ClearAutoMemory  ClearAutoMemoryRequest
+     * @return ClearAutoMemoryResponse
+     */
+    @Override
+    public CompletableFuture<ClearAutoMemoryResponse> clearAutoMemory(ClearAutoMemoryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ClearAutoMemory").setMethod(HttpMethod.POST).setPathRegex("/openapi/clearAutoMemory").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ClearAutoMemoryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ClearAutoMemoryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <p>Clears all persisted follows for the current calling user across three independent dimensions: graphName, operatingObjectName, and objectType. This includes historical records, MISSING records, and permission-hidden records that are not visible in the list. The operation does not return invisible object IDs and verifies that the remaining physical record count is zero within the same transaction.</p>
      * 
      * @param request the request parameters of ClearOperatingObjectFavorites  ClearOperatingObjectFavoritesRequest
@@ -122,6 +248,48 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ClearOperatingObjectFavoritesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>按工作流批量关闭待办；命中该空间该工作流 run 的全部 PENDING 待办（幂等）</p>
+     * 
+     * @param request the request parameters of CloseWorkflowTodos  CloseWorkflowTodosRequest
+     * @return CloseWorkflowTodosResponse
+     */
+    @Override
+    public CompletableFuture<CloseWorkflowTodosResponse> closeWorkflowTodos(CloseWorkflowTodosRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CloseWorkflowTodos").setMethod(HttpMethod.POST).setPathRegex("/openapi/closeWorkflowTodos").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CloseWorkflowTodosResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CloseWorkflowTodosResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>统计当前用户的待办角标（待处理数与未读数）</p>
+     * 
+     * @param request the request parameters of CountTodos  CountTodosRequest
+     * @return CountTodosResponse
+     */
+    @Override
+    public CompletableFuture<CountTodosResponse> countTodos(CountTodosRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CountTodos").setMethod(HttpMethod.POST).setPathRegex("/openapi/countTodos").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CountTodosResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CountTodosResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1074,6 +1242,27 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <p>创建待办（sourceType 仅接受 OPEN_API）；处理人不校验存在性，由调用方保证映射正确</p>
+     * 
+     * @param request the request parameters of CreateTodo  CreateTodoRequest
+     * @return CreateTodoResponse
+     */
+    @Override
+    public CompletableFuture<CreateTodoResponse> createTodo(CreateTodoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateTodo").setMethod(HttpMethod.POST).setPathRegex("/openapi/createTodo").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateTodoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateTodoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <p>Creates a user by using OpenAPI.
      *     Business orchestration:
      *     1. Parses roleCodes into role_ids (validates against system role enumerations).
@@ -1149,6 +1338,90 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateUserWithGroupsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>有效成员创建 Workflow 工作项并复制模板执行快照；仅接受 WORKFLOW 类型</p>
+     * 
+     * @param request the request parameters of CreateWorkItem  CreateWorkItemRequest
+     * @return CreateWorkItemResponse
+     */
+    @Override
+    public CompletableFuture<CreateWorkItemResponse> createWorkItem(CreateWorkItemRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateWorkItem").setMethod(HttpMethod.POST).setPathRegex("/openapi/createWorkItem").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateWorkItemResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateWorkItemResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>组合既有创建与排产，不旁路工作项权限或运行准入。</p>
+     * 
+     * @param request the request parameters of CreateWorkflowInstance  CreateWorkflowInstanceRequest
+     * @return CreateWorkflowInstanceResponse
+     */
+    @Override
+    public CompletableFuture<CreateWorkflowInstanceResponse> createWorkflowInstance(CreateWorkflowInstanceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateWorkflowInstance").setMethod(HttpMethod.POST).setPathRegex("/openapi/createWorkflowInstance").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateWorkflowInstanceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateWorkflowInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>有效成员保存全新工作流模板；同名模板不会覆盖</p>
+     * 
+     * @param request the request parameters of CreateWorkflowTemplate  CreateWorkflowTemplateRequest
+     * @return CreateWorkflowTemplateResponse
+     */
+    @Override
+    public CompletableFuture<CreateWorkflowTemplateResponse> createWorkflowTemplate(CreateWorkflowTemplateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateWorkflowTemplate").setMethod(HttpMethod.POST).setPathRegex("/openapi/createWorkflowTemplate").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateWorkflowTemplateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateWorkflowTemplateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>逐应用通过 MANAGE 校验后，调用原有原子删除能力。</p>
+     * 
+     * @param request the request parameters of DeleteAppResourcePermissions  DeleteAppResourcePermissionsRequest
+     * @return DeleteAppResourcePermissionsResponse
+     */
+    @Override
+    public CompletableFuture<DeleteAppResourcePermissionsResponse> deleteAppResourcePermissions(DeleteAppResourcePermissionsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteAppResourcePermissions").setMethod(HttpMethod.POST).setPathRegex("/openapi/deleteAppResourcePermissions").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteAppResourcePermissionsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteAppResourcePermissionsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1238,6 +1511,48 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <p>有效成员删除非处理中工作项；级联清理待办、节点话题与运行时</p>
+     * 
+     * @param request the request parameters of DeleteWorkItem  DeleteWorkItemRequest
+     * @return DeleteWorkItemResponse
+     */
+    @Override
+    public CompletableFuture<DeleteWorkItemResponse> deleteWorkItem(DeleteWorkItemRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteWorkItem").setMethod(HttpMethod.POST).setPathRegex("/openapi/deleteWorkItem").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteWorkItemResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteWorkItemResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>有效成员物理删除工作流模板及其步骤；不执行工作项依赖校验</p>
+     * 
+     * @param request the request parameters of DeleteWorkflowTemplate  DeleteWorkflowTemplateRequest
+     * @return DeleteWorkflowTemplateResponse
+     */
+    @Override
+    public CompletableFuture<DeleteWorkflowTemplateResponse> deleteWorkflowTemplate(DeleteWorkflowTemplateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteWorkflowTemplate").setMethod(HttpMethod.POST).setPathRegex("/openapi/deleteWorkflowTemplate").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteWorkflowTemplateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteWorkflowTemplateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <p>Disables the INSTANCE token of a user.
      *     Business logic:
      *     1. Retrieves user_id from identity (caller_type=user is enforced).
@@ -1287,6 +1602,69 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<EnableTokenResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>有效成员导出可回流导入的精简模板定义</p>
+     * 
+     * @param request the request parameters of ExportWorkflowTemplate  ExportWorkflowTemplateRequest
+     * @return ExportWorkflowTemplateResponse
+     */
+    @Override
+    public CompletableFuture<ExportWorkflowTemplateResponse> exportWorkflowTemplate(ExportWorkflowTemplateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ExportWorkflowTemplate").setMethod(HttpMethod.POST).setPathRegex("/openapi/exportWorkflowTemplate").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ExportWorkflowTemplateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ExportWorkflowTemplateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>有效成员调用 LLM 生成非持久化模板草稿；消耗租户 LLM 配额</p>
+     * 
+     * @param request the request parameters of GenerateWorkflowTemplateDraft  GenerateWorkflowTemplateDraftRequest
+     * @return GenerateWorkflowTemplateDraftResponse
+     */
+    @Override
+    public CompletableFuture<GenerateWorkflowTemplateDraftResponse> generateWorkflowTemplateDraft(GenerateWorkflowTemplateDraftRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GenerateWorkflowTemplateDraft").setMethod(HttpMethod.POST).setPathRegex("/openapi/generateWorkflowTemplateDraft").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GenerateWorkflowTemplateDraftResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GenerateWorkflowTemplateDraftResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>查询工作流 Agent 工作日志</p>
+     * 
+     * @param request the request parameters of GetAgentWorkLog  GetAgentWorkLogRequest
+     * @return GetAgentWorkLogResponse
+     */
+    @Override
+    public CompletableFuture<GetAgentWorkLogResponse> getAgentWorkLog(GetAgentWorkLogRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetAgentWorkLog").setMethod(HttpMethod.POST).setPathRegex("/openapi/getAgentWorkLog").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAgentWorkLogResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetAgentWorkLogResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1497,6 +1875,69 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetKnowledgeBaseSourceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>基于鉴权用户管理个人或指定写作协作空间记忆；空间模式沿用活跃成员权限。</p>
+     * 
+     * @param request the request parameters of GetMemoryAutoExtractionSwitch  GetMemoryAutoExtractionSwitchRequest
+     * @return GetMemoryAutoExtractionSwitchResponse
+     */
+    @Override
+    public CompletableFuture<GetMemoryAutoExtractionSwitchResponse> getMemoryAutoExtractionSwitch(GetMemoryAutoExtractionSwitchRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetMemoryAutoExtractionSwitch").setMethod(HttpMethod.POST).setPathRegex("/openapi/getMemoryAutoExtractionSwitch").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetMemoryAutoExtractionSwitchResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetMemoryAutoExtractionSwitchResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>基于鉴权用户管理个人或指定写作协作空间记忆；空间模式沿用活跃成员权限。</p>
+     * 
+     * @param request the request parameters of GetMemoryDetail  GetMemoryDetailRequest
+     * @return GetMemoryDetailResponse
+     */
+    @Override
+    public CompletableFuture<GetMemoryDetailResponse> getMemoryDetail(GetMemoryDetailRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetMemoryDetail").setMethod(HttpMethod.POST).setPathRegex("/openapi/getMemoryDetail").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetMemoryDetailResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetMemoryDetailResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>查询实例节点完整详情</p>
+     * 
+     * @param request the request parameters of GetNodeDetail  GetNodeDetailRequest
+     * @return GetNodeDetailResponse
+     */
+    @Override
+    public CompletableFuture<GetNodeDetailResponse> getNodeDetail(GetNodeDetailRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetNodeDetail").setMethod(HttpMethod.POST).setPathRegex("/openapi/getNodeDetail").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetNodeDetailResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetNodeDetailResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1724,6 +2165,48 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <p>查询待办（无已读副作用）；todoId/workItemId/messageId 三选一，优先级 todoId &gt; workItemId &gt; messageId</p>
+     * 
+     * @param request the request parameters of GetTodo  GetTodoRequest
+     * @return GetTodoResponse
+     */
+    @Override
+    public CompletableFuture<GetTodoResponse> getTodo(GetTodoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetTodo").setMethod(HttpMethod.POST).setPathRegex("/openapi/getTodo").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetTodoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetTodoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>查询待办详情；当前调用者为 PENDING 处理人时自动填充 readAt（已读副作用）</p>
+     * 
+     * @param request the request parameters of GetTodoDetail  GetTodoDetailRequest
+     * @return GetTodoDetailResponse
+     */
+    @Override
+    public CompletableFuture<GetTodoDetailResponse> getTodoDetail(GetTodoDetailRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetTodoDetail").setMethod(HttpMethod.POST).setPathRegex("/openapi/getTodoDetail").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetTodoDetailResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetTodoDetailResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <p>Retrieves the INSTANCE token for a user and ensures that it is in an active state (idempotent).
      *     Business logic:
      *     1. Obtains user_id from identity (caller_type=user is enforced).
@@ -1895,6 +2378,111 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <p>有效成员读取当前空间可见工作项详情</p>
+     * 
+     * @param request the request parameters of GetWorkItem  GetWorkItemRequest
+     * @return GetWorkItemResponse
+     */
+    @Override
+    public CompletableFuture<GetWorkItemResponse> getWorkItem(GetWorkItemRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetWorkItem").setMethod(HttpMethod.POST).setPathRegex("/openapi/getWorkItem").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetWorkItemResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetWorkItemResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>校验调用者工作项权限后 302 跳转到产物短期签名下载地址</p>
+     * 
+     * @param request the request parameters of GetWorkItemArtifactAccess  GetWorkItemArtifactAccessRequest
+     * @return GetWorkItemArtifactAccessResponse
+     */
+    @Override
+    public CompletableFuture<GetWorkItemArtifactAccessResponse> getWorkItemArtifactAccess(GetWorkItemArtifactAccessRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetWorkItemArtifactAccess").setMethod(HttpMethod.GET).setPathRegex("/openapi/getWorkItemArtifactAccess").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetWorkItemArtifactAccessResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetWorkItemArtifactAccessResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>校验调用者工作项权限后 302 跳转到输入附件短期预览地址</p>
+     * 
+     * @param request the request parameters of GetWorkItemAttachmentAccess  GetWorkItemAttachmentAccessRequest
+     * @return GetWorkItemAttachmentAccessResponse
+     */
+    @Override
+    public CompletableFuture<GetWorkItemAttachmentAccessResponse> getWorkItemAttachmentAccess(GetWorkItemAttachmentAccessRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetWorkItemAttachmentAccess").setMethod(HttpMethod.GET).setPathRegex("/openapi/getWorkItemAttachmentAccess").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetWorkItemAttachmentAccessResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetWorkItemAttachmentAccessResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>以当前成员和工作项可见性读取实例。</p>
+     * 
+     * @param request the request parameters of GetWorkflowInstance  GetWorkflowInstanceRequest
+     * @return GetWorkflowInstanceResponse
+     */
+    @Override
+    public CompletableFuture<GetWorkflowInstanceResponse> getWorkflowInstance(GetWorkflowInstanceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetWorkflowInstance").setMethod(HttpMethod.POST).setPathRegex("/openapi/getWorkflowInstance").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetWorkflowInstanceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetWorkflowInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>有效成员读取协作空间工作流模板当前配置</p>
+     * 
+     * @param request the request parameters of GetWorkflowTemplate  GetWorkflowTemplateRequest
+     * @return GetWorkflowTemplateResponse
+     */
+    @Override
+    public CompletableFuture<GetWorkflowTemplateResponse> getWorkflowTemplate(GetWorkflowTemplateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetWorkflowTemplate").setMethod(HttpMethod.POST).setPathRegex("/openapi/getWorkflowTemplate").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetWorkflowTemplateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetWorkflowTemplateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <p>Grants authorization to authorized users or user groups to use a specified digital human.
      *     Business logic:
      *     1. Constructs an AuthContext from identity.
@@ -1915,6 +2503,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GrantAgentUsersResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>有效成员导入可移植模板 JSON 并创建新模板；无论名称是否相同都新建</p>
+     * 
+     * @param request the request parameters of ImportWorkflowTemplate  ImportWorkflowTemplateRequest
+     * @return ImportWorkflowTemplateResponse
+     */
+    @Override
+    public CompletableFuture<ImportWorkflowTemplateResponse> importWorkflowTemplate(ImportWorkflowTemplateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ImportWorkflowTemplate").setMethod(HttpMethod.POST).setPathRegex("/openapi/importWorkflowTemplate").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ImportWorkflowTemplateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ImportWorkflowTemplateResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2045,6 +2654,48 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListAliDingMinutesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>APP/MANAGE 授权后按安全应用前缀分页。</p>
+     * 
+     * @param request the request parameters of ListAppResourcePermissionRecords  ListAppResourcePermissionRecordsRequest
+     * @return ListAppResourcePermissionRecordsResponse
+     */
+    @Override
+    public CompletableFuture<ListAppResourcePermissionRecordsResponse> listAppResourcePermissionRecords(ListAppResourcePermissionRecordsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListAppResourcePermissionRecords").setMethod(HttpMethod.POST).setPathRegex("/openapi/listAppResourcePermissionRecords").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListAppResourcePermissionRecordsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListAppResourcePermissionRecordsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>强制应用前缀，本人需 VIEW，代查他人需 MANAGE。</p>
+     * 
+     * @param request the request parameters of ListAppResourceUserPermissions  ListAppResourceUserPermissionsRequest
+     * @return ListAppResourceUserPermissionsResponse
+     */
+    @Override
+    public CompletableFuture<ListAppResourceUserPermissionsResponse> listAppResourceUserPermissions(ListAppResourceUserPermissionsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListAppResourceUserPermissions").setMethod(HttpMethod.POST).setPathRegex("/openapi/listAppResourceUserPermissions").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListAppResourceUserPermissionsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListAppResourceUserPermissionsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2306,6 +2957,27 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <p>查询实例节点列表</p>
+     * 
+     * @param request the request parameters of ListInstanceNodes  ListInstanceNodesRequest
+     * @return ListInstanceNodesResponse
+     */
+    @Override
+    public CompletableFuture<ListInstanceNodesResponse> listInstanceNodes(ListInstanceNodesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListInstanceNodes").setMethod(HttpMethod.POST).setPathRegex("/openapi/listInstanceNodes").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListInstanceNodesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListInstanceNodesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <h2>Operation description</h2>
      * <ul>
      * <li>This API operation retrieves the category list (subdirectory tree) of an enterprise knowledge base. You must have the knowledge base view permission.</li>
@@ -2533,6 +3205,27 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <p>分页查询当前用户的待办列表；筛选组内并集、组间交集，全不传 = 全部</p>
+     * 
+     * @param request the request parameters of ListTodos  ListTodosRequest
+     * @return ListTodosResponse
+     */
+    @Override
+    public CompletableFuture<ListTodosResponse> listTodos(ListTodosRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListTodos").setMethod(HttpMethod.POST).setPathRegex("/openapi/listTodos").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListTodosResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListTodosResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <h2>Request description</h2>
      * <p>This API is used to query the complete user group hierarchy under a specified tenant, including the basic information of each user group and its direct child user group list. Use the <code>tenantId</code> parameter to specify the tenant ID to query. If this parameter is not provided, the caller\&quot;s tenant ID is used by default.</p>
      * <h3>Precautions</h3>
@@ -2692,6 +3385,111 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <p>有效成员列出有权访问工作项的全部历史产物</p>
+     * 
+     * @param request the request parameters of ListWorkItemArtifacts  ListWorkItemArtifactsRequest
+     * @return ListWorkItemArtifactsResponse
+     */
+    @Override
+    public CompletableFuture<ListWorkItemArtifactsResponse> listWorkItemArtifacts(ListWorkItemArtifactsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListWorkItemArtifacts").setMethod(HttpMethod.POST).setPathRegex("/openapi/listWorkItemArtifacts").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListWorkItemArtifactsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListWorkItemArtifactsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>有效成员分页筛选当前空间可见工作项；page/pageSize 与 nextToken/maxResults 并存，令牌优先</p>
+     * 
+     * @param request the request parameters of ListWorkItems  ListWorkItemsRequest
+     * @return ListWorkItemsResponse
+     */
+    @Override
+    public CompletableFuture<ListWorkItemsResponse> listWorkItems(ListWorkItemsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListWorkItems").setMethod(HttpMethod.POST).setPathRegex("/openapi/listWorkItems").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListWorkItemsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListWorkItemsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>复用详情投影，避免工作项列表与实例状态混用。</p>
+     * 
+     * @param request the request parameters of ListWorkflowInstances  ListWorkflowInstancesRequest
+     * @return ListWorkflowInstancesResponse
+     */
+    @Override
+    public CompletableFuture<ListWorkflowInstancesResponse> listWorkflowInstances(ListWorkflowInstancesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListWorkflowInstances").setMethod(HttpMethod.POST).setPathRegex("/openapi/listWorkflowInstances").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListWorkflowInstancesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListWorkflowInstancesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>有效成员分页搜索当前协作空间的有效模板；page/pageSize 与 nextToken/maxResults 并存，令牌优先</p>
+     * 
+     * @param request the request parameters of ListWorkflowTemplates  ListWorkflowTemplatesRequest
+     * @return ListWorkflowTemplatesResponse
+     */
+    @Override
+    public CompletableFuture<ListWorkflowTemplatesResponse> listWorkflowTemplates(ListWorkflowTemplatesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListWorkflowTemplates").setMethod(HttpMethod.POST).setPathRegex("/openapi/listWorkflowTemplates").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListWorkflowTemplatesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListWorkflowTemplatesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>标记当前用户的待办已读；markAllRead 优先于 todoIds，两者皆空不报错</p>
+     * 
+     * @param request the request parameters of MarkTodosRead  MarkTodosReadRequest
+     * @return MarkTodosReadResponse
+     */
+    @Override
+    public CompletableFuture<MarkTodosReadResponse> markTodosRead(MarkTodosReadRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("MarkTodosRead").setMethod(HttpMethod.POST).setPathRegex("/openapi/markTodosRead").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(MarkTodosReadResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<MarkTodosReadResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <p>Only valid members who are the resource creator or a space administrator can move a resource within the same physical folder tree of a space. The source and target must be real and different folder IDs, and the resource must be in the source folder. Referenced resources are read-only. The sourceId is preserved and not re-parsed. A successful local attach does not guarantee that the downstream path has been synchronized. Duplicate requests may report that the resource is not in the source folder. Query the location first.</p>
      * 
      * @param request the request parameters of MoveGroupResource  MoveGroupResourceRequest
@@ -2799,6 +3597,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<OfflineAnnouncementResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>有效成员暂停工作项绑定的整个 Workflow</p>
+     * 
+     * @param request the request parameters of PauseWorkItem  PauseWorkItemRequest
+     * @return PauseWorkItemResponse
+     */
+    @Override
+    public CompletableFuture<PauseWorkItemResponse> pauseWorkItem(PauseWorkItemRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("PauseWorkItem").setMethod(HttpMethod.POST).setPathRegex("/openapi/pauseWorkItem").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PauseWorkItemResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<PauseWorkItemResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2959,6 +3778,27 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <p>有效成员查询工作项 feed 分组视图；服务端游标分页（cursor/pageSize）</p>
+     * 
+     * @param request the request parameters of QueryWorkItemFeed  QueryWorkItemFeedRequest
+     * @return QueryWorkItemFeedResponse
+     */
+    @Override
+    public CompletableFuture<QueryWorkItemFeedResponse> queryWorkItemFeed(QueryWorkItemFeedRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("QueryWorkItemFeed").setMethod(HttpMethod.POST).setPathRegex("/openapi/queryWorkItemFeed").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryWorkItemFeedResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryWorkItemFeedResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <h2>Request description</h2>
      * <p>Based on the most recent N messages in a session and the skills attached to the agent, invokes an LLM to generate 0 to 3 next-step recommendations (follow-up questions or recommended skills to execute).</p>
      * <ul>
@@ -2981,6 +3821,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<RecommendNextActionsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>先检查全部应用的 MANAGE 权限，再执行一次原子批量注册。</p>
+     * 
+     * @param request the request parameters of RegisterAppResourcePermissions  RegisterAppResourcePermissionsRequest
+     * @return RegisterAppResourcePermissionsResponse
+     */
+    @Override
+    public CompletableFuture<RegisterAppResourcePermissionsResponse> registerAppResourcePermissions(RegisterAppResourcePermissionsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RegisterAppResourcePermissions").setMethod(HttpMethod.POST).setPathRegex("/openapi/registerAppResourcePermissions").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RegisterAppResourcePermissionsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RegisterAppResourcePermissionsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -3199,6 +4060,27 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <p>基于鉴权用户管理个人或指定写作协作空间记忆；空间模式沿用活跃成员权限。</p>
+     * 
+     * @param request the request parameters of ReplaceManualMemory  ReplaceManualMemoryRequest
+     * @return ReplaceManualMemoryResponse
+     */
+    @Override
+    public CompletableFuture<ReplaceManualMemoryResponse> replaceManualMemory(ReplaceManualMemoryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ReplaceManualMemory").setMethod(HttpMethod.POST).setPathRegex("/openapi/replaceManualMemory").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ReplaceManualMemoryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ReplaceManualMemoryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <h2>Operation description</h2>
      * <p>This API performs a full replacement of object bindings for a specified data source (deletes existing bindings first, then inserts new bindings). If an empty list is passed, all bindings are cleared.</p>
      * <ul>
@@ -3246,6 +4128,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ReplaceSourceFileResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>重跑失败的工作流节点</p>
+     * 
+     * @param request the request parameters of RerunNodeAI  RerunNodeAIRequest
+     * @return RerunNodeAIResponse
+     */
+    @Override
+    public CompletableFuture<RerunNodeAIResponse> rerunNodeAI(RerunNodeAIRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RerunNodeAI").setMethod(HttpMethod.POST).setPathRegex("/openapi/rerunNodeAI").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RerunNodeAIResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RerunNodeAIResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -3304,6 +4207,69 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ResetTokenResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>有效成员解析工作项产物短期签名下载地址</p>
+     * 
+     * @param request the request parameters of ResolveWorkItemArtifactAccess  ResolveWorkItemArtifactAccessRequest
+     * @return ResolveWorkItemArtifactAccessResponse
+     */
+    @Override
+    public CompletableFuture<ResolveWorkItemArtifactAccessResponse> resolveWorkItemArtifactAccess(ResolveWorkItemArtifactAccessRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ResolveWorkItemArtifactAccess").setMethod(HttpMethod.POST).setPathRegex("/openapi/resolveWorkItemArtifactAccess").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ResolveWorkItemArtifactAccessResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ResolveWorkItemArtifactAccessResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>有效成员解析工作项输入附件短期预览地址</p>
+     * 
+     * @param request the request parameters of ResolveWorkItemAttachmentAccess  ResolveWorkItemAttachmentAccessRequest
+     * @return ResolveWorkItemAttachmentAccessResponse
+     */
+    @Override
+    public CompletableFuture<ResolveWorkItemAttachmentAccessResponse> resolveWorkItemAttachmentAccess(ResolveWorkItemAttachmentAccessRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ResolveWorkItemAttachmentAccess").setMethod(HttpMethod.POST).setPathRegex("/openapi/resolveWorkItemAttachmentAccess").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ResolveWorkItemAttachmentAccessResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ResolveWorkItemAttachmentAccessResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>有效成员从当前 Plan 暂停点恢复工作项</p>
+     * 
+     * @param request the request parameters of ResumeWorkItem  ResumeWorkItemRequest
+     * @return ResumeWorkItemResponse
+     */
+    @Override
+    public CompletableFuture<ResumeWorkItemResponse> resumeWorkItem(ResumeWorkItemRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ResumeWorkItem").setMethod(HttpMethod.POST).setPathRegex("/openapi/resumeWorkItem").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ResumeWorkItemResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ResumeWorkItemResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -3615,6 +4581,27 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <p>有效成员幂等排产工作项并物化固定 Plan</p>
+     * 
+     * @param request the request parameters of ScheduleWorkItem  ScheduleWorkItemRequest
+     * @return ScheduleWorkItemResponse
+     */
+    @Override
+    public CompletableFuture<ScheduleWorkItemResponse> scheduleWorkItem(ScheduleWorkItemRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ScheduleWorkItem").setMethod(HttpMethod.POST).setPathRegex("/openapi/scheduleWorkItem").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ScheduleWorkItemResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ScheduleWorkItemResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <h2>请求说明</h2>
      * <ul>
      * <li>仅供 Winnexo 轻量工作台使用。</li>
@@ -3641,7 +4628,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Sends a session message asynchronously.</p>
+     * <p>Asynchronously sends a session message.</p>
      * 
      * @param request the request parameters of SendAsyncChatMessage  SendAsyncChatMessageRequest
      * @return SendAsyncChatMessageResponse
@@ -3715,6 +4702,27 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>有效成员设置工作项个人置顶</p>
+     * 
+     * @param request the request parameters of SetWorkItemPinned  SetWorkItemPinnedRequest
+     * @return SetWorkItemPinnedResponse
+     */
+    @Override
+    public CompletableFuture<SetWorkItemPinnedResponse> setWorkItemPinned(SetWorkItemPinnedRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("SetWorkItemPinned").setMethod(HttpMethod.POST).setPathRegex("/openapi/setWorkItemPinned").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SetWorkItemPinnedResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SetWorkItemPinnedResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of StopChatMessage  StopChatMessageRequest
      * @return StopChatMessageResponse
      */
@@ -3780,6 +4788,27 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <p>提交待办作答结果；本人重复提交幂等返回首次结果，他人抢先返回 409 AlreadyCompleted</p>
+     * 
+     * @param request the request parameters of SubmitTodo  SubmitTodoRequest
+     * @return SubmitTodoResponse
+     */
+    @Override
+    public CompletableFuture<SubmitTodoResponse> submitTodo(SubmitTodoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("SubmitTodo").setMethod(HttpMethod.POST).setPathRegex("/openapi/submitTodo").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SubmitTodoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SubmitTodoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <p>Accepts a department tree and member relationships pushed from the client and creates an asynchronous synchronization task.
      *     Processing flow:
      *     1. Validates platformType (only saml, oauth2, or custom are allowed).
@@ -3802,6 +4831,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<SyncOrgStructureResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>终止当前工作流实例</p>
+     * 
+     * @param request the request parameters of TerminateInstance  TerminateInstanceRequest
+     * @return TerminateInstanceResponse
+     */
+    @Override
+    public CompletableFuture<TerminateInstanceResponse> terminateInstance(TerminateInstanceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("TerminateInstance").setMethod(HttpMethod.POST).setPathRegex("/openapi/terminateInstance").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TerminateInstanceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<TerminateInstanceResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -3836,6 +4886,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<TogglePrimaryObjectFavoriteResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>转办待办给指定用户；目标剔除操作人本人，整单原子校验</p>
+     * 
+     * @param request the request parameters of TransferTodo  TransferTodoRequest
+     * @return TransferTodoResponse
+     */
+    @Override
+    public CompletableFuture<TransferTodoResponse> transferTodo(TransferTodoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("TransferTodo").setMethod(HttpMethod.POST).setPathRegex("/openapi/transferTodo").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TransferTodoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<TransferTodoResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -4079,6 +5150,27 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <p>基于鉴权用户管理个人或指定写作协作空间记忆；空间模式沿用活跃成员权限。</p>
+     * 
+     * @param request the request parameters of UpdateMemoryAutoExtractionSwitch  UpdateMemoryAutoExtractionSwitchRequest
+     * @return UpdateMemoryAutoExtractionSwitchResponse
+     */
+    @Override
+    public CompletableFuture<UpdateMemoryAutoExtractionSwitchResponse> updateMemoryAutoExtractionSwitch(UpdateMemoryAutoExtractionSwitchRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateMemoryAutoExtractionSwitch").setMethod(HttpMethod.POST).setPathRegex("/openapi/updateMemoryAutoExtractionSwitch").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateMemoryAutoExtractionSwitchResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateMemoryAutoExtractionSwitchResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <p>Updates a scheduled task.</p>
      * 
      * @param request the request parameters of UpdateScheduledTask  UpdateScheduledTaskRequest
@@ -4222,6 +5314,48 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateUserInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>有效成员按乐观版本编辑工作项；workflowTemplateIds 未传保持绑定</p>
+     * 
+     * @param request the request parameters of UpdateWorkItem  UpdateWorkItemRequest
+     * @return UpdateWorkItemResponse
+     */
+    @Override
+    public CompletableFuture<UpdateWorkItemResponse> updateWorkItem(UpdateWorkItemRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateWorkItem").setMethod(HttpMethod.POST).setPathRegex("/openapi/updateWorkItem").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateWorkItemResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateWorkItemResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>有效成员整体覆盖更新工作流模板；最后一次保存生效</p>
+     * 
+     * @param request the request parameters of UpdateWorkflowTemplate  UpdateWorkflowTemplateRequest
+     * @return UpdateWorkflowTemplateResponse
+     */
+    @Override
+    public CompletableFuture<UpdateWorkflowTemplateResponse> updateWorkflowTemplate(UpdateWorkflowTemplateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateWorkflowTemplate").setMethod(HttpMethod.POST).setPathRegex("/openapi/updateWorkflowTemplate").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateWorkflowTemplateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateWorkflowTemplateResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

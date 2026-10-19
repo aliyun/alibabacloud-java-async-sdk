@@ -178,7 +178,7 @@ public class CheckHealthResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the currently effective digital employee. This value is empty if not configured.</p>
+         * <p>The name of the currently effective digital employee. This field is empty if not configured.</p>
          * 
          * <strong>example:</strong>
          * <p>pcitc-magent</p>
@@ -189,7 +189,7 @@ public class CheckHealthResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The description of the status code.</p>
+         * <p>The status code description.</p>
          * 
          * <strong>example:</strong>
          * <p>ok</p>

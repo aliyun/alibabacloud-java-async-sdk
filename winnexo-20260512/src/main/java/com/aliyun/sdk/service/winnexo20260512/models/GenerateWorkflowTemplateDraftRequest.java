@@ -1,0 +1,163 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.winnexo20260512.models;
+
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * 
+ * {@link GenerateWorkflowTemplateDraftRequest} extends {@link RequestModel}
+ *
+ * <p>GenerateWorkflowTemplateDraftRequest</p>
+ */
+public class GenerateWorkflowTemplateDraftRequest extends Request {
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("collaborationGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String collaborationGroupId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("previousDraft")
+    private java.util.Map<String, ?> previousDraft;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("requirement")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String requirement;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("tenantId")
+    private String tenantId;
+
+    private GenerateWorkflowTemplateDraftRequest(Builder builder) {
+        super(builder);
+        this.collaborationGroupId = builder.collaborationGroupId;
+        this.previousDraft = builder.previousDraft;
+        this.requirement = builder.requirement;
+        this.tenantId = builder.tenantId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static GenerateWorkflowTemplateDraftRequest create() {
+        return builder().build();
+    }
+
+@Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return collaborationGroupId
+     */
+    public String getCollaborationGroupId() {
+        return this.collaborationGroupId;
+    }
+
+    /**
+     * @return previousDraft
+     */
+    public java.util.Map<String, ?> getPreviousDraft() {
+        return this.previousDraft;
+    }
+
+    /**
+     * @return requirement
+     */
+    public String getRequirement() {
+        return this.requirement;
+    }
+
+    /**
+     * @return tenantId
+     */
+    public String getTenantId() {
+        return this.tenantId;
+    }
+
+    public static final class Builder extends Request.Builder<GenerateWorkflowTemplateDraftRequest, Builder> {
+        private String collaborationGroupId; 
+        private java.util.Map<String, ?> previousDraft; 
+        private String requirement; 
+        private String tenantId; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(GenerateWorkflowTemplateDraftRequest request) {
+            super(request);
+            this.collaborationGroupId = request.collaborationGroupId;
+            this.previousDraft = request.previousDraft;
+            this.requirement = request.requirement;
+            this.tenantId = request.tenantId;
+        } 
+
+        /**
+         * <p>协作空间 ID</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>group_example</p>
+         */
+        public Builder collaborationGroupId(String collaborationGroupId) {
+            this.putBodyParameter("collaborationGroupId", collaborationGroupId);
+            this.collaborationGroupId = collaborationGroupId;
+            return this;
+        }
+
+        /**
+         * <p>上一轮草稿；提供时基于它迭代修改</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
+         */
+        public Builder previousDraft(java.util.Map<String, ?> previousDraft) {
+            String previousDraftShrink = shrink(previousDraft, "previousDraft", "json");
+            this.putBodyParameter("previousDraft", previousDraftShrink);
+            this.previousDraft = previousDraft;
+            return this;
+        }
+
+        /**
+         * <p>模板需求描述</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
+         */
+        public Builder requirement(String requirement) {
+            this.putBodyParameter("requirement", requirement);
+            this.requirement = requirement;
+            return this;
+        }
+
+        /**
+         * <p>租户ID，公共参数；缺省时使用调用方默认租户</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
+         */
+        public Builder tenantId(String tenantId) {
+            this.putQueryParameter("tenantId", tenantId);
+            this.tenantId = tenantId;
+            return this;
+        }
+
+        @Override
+        public GenerateWorkflowTemplateDraftRequest build() {
+            return new GenerateWorkflowTemplateDraftRequest(this);
+        } 
+
+    } 
+
+}

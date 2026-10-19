@@ -36,12 +36,57 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>按待办ID集合批量作废；已完结/不存在不报错（幂等）</p>
+     * 
+     * @param request the request parameters of BatchCancelTodos  BatchCancelTodosRequest
+     * @return BatchCancelTodosResponse
+     */
+    CompletableFuture<BatchCancelTodosResponse> batchCancelTodos(BatchCancelTodosRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>有效成员批量排产、暂停、恢复或删除工作项；单项失败不回滚其他项</p>
+     * 
+     * @param request the request parameters of BatchOperateWorkItems  BatchOperateWorkItemsRequest
+     * @return BatchOperateWorkItemsResponse
+     */
+    CompletableFuture<BatchOperateWorkItemsResponse> batchOperateWorkItems(BatchOperateWorkItemsRequest request);
+
+    /**
+     * <b>description</b> :
      * <p>Idempotently cancels subscriptions along three independent dimensions: graphName, operatingObjectName, and objectType. The input array accepts 1 to 200 items per request. Each item must be a non-empty string with a maximum length of 128 characters. After server-side validation, items are deduplicated while preserving order. Non-string values, values that exceed the length limit, or arrays that exceed the size limit are rejected. The delete operation, per-item status tracking, and remaining valid count are completed within a single transaction. To safely cancel all subscriptions, you must also invoke ClearOperatingObjectFavorites to clean up historical, MISSING, or permission-hidden records that are invisible in the list, and then read back to confirm that total is 0.</p>
      * 
      * @param request the request parameters of BatchRemoveOperatingObjectFavorites  BatchRemoveOperatingObjectFavoritesRequest
      * @return BatchRemoveOperatingObjectFavoritesResponse
      */
     CompletableFuture<BatchRemoveOperatingObjectFavoritesResponse> batchRemoveOperatingObjectFavorites(BatchRemoveOperatingObjectFavoritesRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>作废待办；todoId 定位不存在返回 404，按 workItemId 批量尽力而为</p>
+     * 
+     * @param request the request parameters of CancelTodo  CancelTodoRequest
+     * @return CancelTodoResponse
+     */
+    CompletableFuture<CancelTodoResponse> cancelTodo(CancelTodoRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>本人需 APP/VIEW，代查他人需 APP/MANAGE。</p>
+     * 
+     * @param request the request parameters of CheckAppResourcePermission  CheckAppResourcePermissionRequest
+     * @return CheckAppResourcePermissionResponse
+     */
+    CompletableFuture<CheckAppResourcePermissionResponse> checkAppResourcePermission(CheckAppResourcePermissionRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>整批逐应用鉴权后，复用 service 的常数级查询。</p>
+     * 
+     * @param request the request parameters of CheckAppResourcePermissionsBatch  CheckAppResourcePermissionsBatchRequest
+     * @return CheckAppResourcePermissionsBatchResponse
+     */
+    CompletableFuture<CheckAppResourcePermissionsBatchResponse> checkAppResourcePermissionsBatch(CheckAppResourcePermissionsBatchRequest request);
 
     /**
      * @param request the request parameters of CheckHealth  CheckHealthRequest
@@ -51,12 +96,39 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>基于鉴权用户管理个人或指定写作协作空间记忆；空间模式沿用活跃成员权限。</p>
+     * 
+     * @param request the request parameters of ClearAutoMemory  ClearAutoMemoryRequest
+     * @return ClearAutoMemoryResponse
+     */
+    CompletableFuture<ClearAutoMemoryResponse> clearAutoMemory(ClearAutoMemoryRequest request);
+
+    /**
+     * <b>description</b> :
      * <p>Clears all persisted follows for the current calling user across three independent dimensions: graphName, operatingObjectName, and objectType. This includes historical records, MISSING records, and permission-hidden records that are not visible in the list. The operation does not return invisible object IDs and verifies that the remaining physical record count is zero within the same transaction.</p>
      * 
      * @param request the request parameters of ClearOperatingObjectFavorites  ClearOperatingObjectFavoritesRequest
      * @return ClearOperatingObjectFavoritesResponse
      */
     CompletableFuture<ClearOperatingObjectFavoritesResponse> clearOperatingObjectFavorites(ClearOperatingObjectFavoritesRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>按工作流批量关闭待办；命中该空间该工作流 run 的全部 PENDING 待办（幂等）</p>
+     * 
+     * @param request the request parameters of CloseWorkflowTodos  CloseWorkflowTodosRequest
+     * @return CloseWorkflowTodosResponse
+     */
+    CompletableFuture<CloseWorkflowTodosResponse> closeWorkflowTodos(CloseWorkflowTodosRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>统计当前用户的待办角标（待处理数与未读数）</p>
+     * 
+     * @param request the request parameters of CountTodos  CountTodosRequest
+     * @return CountTodosResponse
+     */
+    CompletableFuture<CountTodosResponse> countTodos(CountTodosRequest request);
 
     /**
      * <b>description</b> :
@@ -573,6 +645,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>创建待办（sourceType 仅接受 OPEN_API）；处理人不校验存在性，由调用方保证映射正确</p>
+     * 
+     * @param request the request parameters of CreateTodo  CreateTodoRequest
+     * @return CreateTodoResponse
+     */
+    CompletableFuture<CreateTodoResponse> createTodo(CreateTodoRequest request);
+
+    /**
+     * <b>description</b> :
      * <p>Creates a user by using OpenAPI.
      *     Business orchestration:
      *     1. Parses roleCodes into role_ids (validates against system role enumerations).
@@ -616,6 +697,42 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateUserWithGroupsResponse
      */
     CompletableFuture<CreateUserWithGroupsResponse> createUserWithGroups(CreateUserWithGroupsRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>有效成员创建 Workflow 工作项并复制模板执行快照；仅接受 WORKFLOW 类型</p>
+     * 
+     * @param request the request parameters of CreateWorkItem  CreateWorkItemRequest
+     * @return CreateWorkItemResponse
+     */
+    CompletableFuture<CreateWorkItemResponse> createWorkItem(CreateWorkItemRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>组合既有创建与排产，不旁路工作项权限或运行准入。</p>
+     * 
+     * @param request the request parameters of CreateWorkflowInstance  CreateWorkflowInstanceRequest
+     * @return CreateWorkflowInstanceResponse
+     */
+    CompletableFuture<CreateWorkflowInstanceResponse> createWorkflowInstance(CreateWorkflowInstanceRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>有效成员保存全新工作流模板；同名模板不会覆盖</p>
+     * 
+     * @param request the request parameters of CreateWorkflowTemplate  CreateWorkflowTemplateRequest
+     * @return CreateWorkflowTemplateResponse
+     */
+    CompletableFuture<CreateWorkflowTemplateResponse> createWorkflowTemplate(CreateWorkflowTemplateRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>逐应用通过 MANAGE 校验后，调用原有原子删除能力。</p>
+     * 
+     * @param request the request parameters of DeleteAppResourcePermissions  DeleteAppResourcePermissionsRequest
+     * @return DeleteAppResourcePermissionsResponse
+     */
+    CompletableFuture<DeleteAppResourcePermissionsResponse> deleteAppResourcePermissions(DeleteAppResourcePermissionsRequest request);
 
     /**
      * <b>description</b> :
@@ -665,6 +782,24 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>有效成员删除非处理中工作项；级联清理待办、节点话题与运行时</p>
+     * 
+     * @param request the request parameters of DeleteWorkItem  DeleteWorkItemRequest
+     * @return DeleteWorkItemResponse
+     */
+    CompletableFuture<DeleteWorkItemResponse> deleteWorkItem(DeleteWorkItemRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>有效成员物理删除工作流模板及其步骤；不执行工作项依赖校验</p>
+     * 
+     * @param request the request parameters of DeleteWorkflowTemplate  DeleteWorkflowTemplateRequest
+     * @return DeleteWorkflowTemplateResponse
+     */
+    CompletableFuture<DeleteWorkflowTemplateResponse> deleteWorkflowTemplate(DeleteWorkflowTemplateRequest request);
+
+    /**
+     * <b>description</b> :
      * <p>Disables the INSTANCE token of a user.
      *     Business logic:
      *     1. Retrieves user_id from identity (caller_type=user is enforced).
@@ -694,6 +829,33 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return EnableTokenResponse
      */
     CompletableFuture<EnableTokenResponse> enableToken(EnableTokenRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>有效成员导出可回流导入的精简模板定义</p>
+     * 
+     * @param request the request parameters of ExportWorkflowTemplate  ExportWorkflowTemplateRequest
+     * @return ExportWorkflowTemplateResponse
+     */
+    CompletableFuture<ExportWorkflowTemplateResponse> exportWorkflowTemplate(ExportWorkflowTemplateRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>有效成员调用 LLM 生成非持久化模板草稿；消耗租户 LLM 配额</p>
+     * 
+     * @param request the request parameters of GenerateWorkflowTemplateDraft  GenerateWorkflowTemplateDraftRequest
+     * @return GenerateWorkflowTemplateDraftResponse
+     */
+    CompletableFuture<GenerateWorkflowTemplateDraftResponse> generateWorkflowTemplateDraft(GenerateWorkflowTemplateDraftRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>查询工作流 Agent 工作日志</p>
+     * 
+     * @param request the request parameters of GetAgentWorkLog  GetAgentWorkLogRequest
+     * @return GetAgentWorkLogResponse
+     */
+    CompletableFuture<GetAgentWorkLogResponse> getAgentWorkLog(GetAgentWorkLogRequest request);
 
     /**
      * <b>description</b> :
@@ -808,6 +970,33 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetKnowledgeBaseSourceResponse
      */
     CompletableFuture<GetKnowledgeBaseSourceResponse> getKnowledgeBaseSource(GetKnowledgeBaseSourceRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>基于鉴权用户管理个人或指定写作协作空间记忆；空间模式沿用活跃成员权限。</p>
+     * 
+     * @param request the request parameters of GetMemoryAutoExtractionSwitch  GetMemoryAutoExtractionSwitchRequest
+     * @return GetMemoryAutoExtractionSwitchResponse
+     */
+    CompletableFuture<GetMemoryAutoExtractionSwitchResponse> getMemoryAutoExtractionSwitch(GetMemoryAutoExtractionSwitchRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>基于鉴权用户管理个人或指定写作协作空间记忆；空间模式沿用活跃成员权限。</p>
+     * 
+     * @param request the request parameters of GetMemoryDetail  GetMemoryDetailRequest
+     * @return GetMemoryDetailResponse
+     */
+    CompletableFuture<GetMemoryDetailResponse> getMemoryDetail(GetMemoryDetailRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>查询实例节点完整详情</p>
+     * 
+     * @param request the request parameters of GetNodeDetail  GetNodeDetailRequest
+     * @return GetNodeDetailResponse
+     */
+    CompletableFuture<GetNodeDetailResponse> getNodeDetail(GetNodeDetailRequest request);
 
     /**
      * <b>description</b> :
@@ -935,6 +1124,24 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>查询待办（无已读副作用）；todoId/workItemId/messageId 三选一，优先级 todoId &gt; workItemId &gt; messageId</p>
+     * 
+     * @param request the request parameters of GetTodo  GetTodoRequest
+     * @return GetTodoResponse
+     */
+    CompletableFuture<GetTodoResponse> getTodo(GetTodoRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>查询待办详情；当前调用者为 PENDING 处理人时自动填充 readAt（已读副作用）</p>
+     * 
+     * @param request the request parameters of GetTodoDetail  GetTodoDetailRequest
+     * @return GetTodoDetailResponse
+     */
+    CompletableFuture<GetTodoDetailResponse> getTodoDetail(GetTodoDetailRequest request);
+
+    /**
+     * <b>description</b> :
      * <p>Retrieves the INSTANCE token for a user and ensures that it is in an active state (idempotent).
      *     Business logic:
      *     1. Obtains user_id from identity (caller_type=user is enforced).
@@ -1034,6 +1241,51 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>有效成员读取当前空间可见工作项详情</p>
+     * 
+     * @param request the request parameters of GetWorkItem  GetWorkItemRequest
+     * @return GetWorkItemResponse
+     */
+    CompletableFuture<GetWorkItemResponse> getWorkItem(GetWorkItemRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>校验调用者工作项权限后 302 跳转到产物短期签名下载地址</p>
+     * 
+     * @param request the request parameters of GetWorkItemArtifactAccess  GetWorkItemArtifactAccessRequest
+     * @return GetWorkItemArtifactAccessResponse
+     */
+    CompletableFuture<GetWorkItemArtifactAccessResponse> getWorkItemArtifactAccess(GetWorkItemArtifactAccessRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>校验调用者工作项权限后 302 跳转到输入附件短期预览地址</p>
+     * 
+     * @param request the request parameters of GetWorkItemAttachmentAccess  GetWorkItemAttachmentAccessRequest
+     * @return GetWorkItemAttachmentAccessResponse
+     */
+    CompletableFuture<GetWorkItemAttachmentAccessResponse> getWorkItemAttachmentAccess(GetWorkItemAttachmentAccessRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>以当前成员和工作项可见性读取实例。</p>
+     * 
+     * @param request the request parameters of GetWorkflowInstance  GetWorkflowInstanceRequest
+     * @return GetWorkflowInstanceResponse
+     */
+    CompletableFuture<GetWorkflowInstanceResponse> getWorkflowInstance(GetWorkflowInstanceRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>有效成员读取协作空间工作流模板当前配置</p>
+     * 
+     * @param request the request parameters of GetWorkflowTemplate  GetWorkflowTemplateRequest
+     * @return GetWorkflowTemplateResponse
+     */
+    CompletableFuture<GetWorkflowTemplateResponse> getWorkflowTemplate(GetWorkflowTemplateRequest request);
+
+    /**
+     * <b>description</b> :
      * <p>Grants authorization to authorized users or user groups to use a specified digital human.
      *     Business logic:
      *     1. Constructs an AuthContext from identity.
@@ -1046,6 +1298,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GrantAgentUsersResponse
      */
     CompletableFuture<GrantAgentUsersResponse> grantAgentUsers(GrantAgentUsersRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>有效成员导入可移植模板 JSON 并创建新模板；无论名称是否相同都新建</p>
+     * 
+     * @param request the request parameters of ImportWorkflowTemplate  ImportWorkflowTemplateRequest
+     * @return ImportWorkflowTemplateResponse
+     */
+    CompletableFuture<ImportWorkflowTemplateResponse> importWorkflowTemplate(ImportWorkflowTemplateRequest request);
 
     /**
      * <b>description</b> :
@@ -1116,6 +1377,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListAliDingMinutesResponse
      */
     CompletableFuture<ListAliDingMinutesResponse> listAliDingMinutes(ListAliDingMinutesRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>APP/MANAGE 授权后按安全应用前缀分页。</p>
+     * 
+     * @param request the request parameters of ListAppResourcePermissionRecords  ListAppResourcePermissionRecordsRequest
+     * @return ListAppResourcePermissionRecordsResponse
+     */
+    CompletableFuture<ListAppResourcePermissionRecordsResponse> listAppResourcePermissionRecords(ListAppResourcePermissionRecordsRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>强制应用前缀，本人需 VIEW，代查他人需 MANAGE。</p>
+     * 
+     * @param request the request parameters of ListAppResourceUserPermissions  ListAppResourceUserPermissionsRequest
+     * @return ListAppResourceUserPermissionsResponse
+     */
+    CompletableFuture<ListAppResourceUserPermissionsResponse> listAppResourceUserPermissions(ListAppResourceUserPermissionsRequest request);
 
     /**
      * <b>description</b> :
@@ -1253,6 +1532,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>查询实例节点列表</p>
+     * 
+     * @param request the request parameters of ListInstanceNodes  ListInstanceNodesRequest
+     * @return ListInstanceNodesResponse
+     */
+    CompletableFuture<ListInstanceNodesResponse> listInstanceNodes(ListInstanceNodesRequest request);
+
+    /**
+     * <b>description</b> :
      * <h2>Operation description</h2>
      * <ul>
      * <li>This API operation retrieves the category list (subdirectory tree) of an enterprise knowledge base. You must have the knowledge base view permission.</li>
@@ -1384,6 +1672,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>分页查询当前用户的待办列表；筛选组内并集、组间交集，全不传 = 全部</p>
+     * 
+     * @param request the request parameters of ListTodos  ListTodosRequest
+     * @return ListTodosResponse
+     */
+    CompletableFuture<ListTodosResponse> listTodos(ListTodosRequest request);
+
+    /**
+     * <b>description</b> :
      * <h2>Request description</h2>
      * <p>This API is used to query the complete user group hierarchy under a specified tenant, including the basic information of each user group and its direct child user group list. Use the <code>tenantId</code> parameter to specify the tenant ID to query. If this parameter is not provided, the caller\&quot;s tenant ID is used by default.</p>
      * <h3>Precautions</h3>
@@ -1471,6 +1768,51 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>有效成员列出有权访问工作项的全部历史产物</p>
+     * 
+     * @param request the request parameters of ListWorkItemArtifacts  ListWorkItemArtifactsRequest
+     * @return ListWorkItemArtifactsResponse
+     */
+    CompletableFuture<ListWorkItemArtifactsResponse> listWorkItemArtifacts(ListWorkItemArtifactsRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>有效成员分页筛选当前空间可见工作项；page/pageSize 与 nextToken/maxResults 并存，令牌优先</p>
+     * 
+     * @param request the request parameters of ListWorkItems  ListWorkItemsRequest
+     * @return ListWorkItemsResponse
+     */
+    CompletableFuture<ListWorkItemsResponse> listWorkItems(ListWorkItemsRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>复用详情投影，避免工作项列表与实例状态混用。</p>
+     * 
+     * @param request the request parameters of ListWorkflowInstances  ListWorkflowInstancesRequest
+     * @return ListWorkflowInstancesResponse
+     */
+    CompletableFuture<ListWorkflowInstancesResponse> listWorkflowInstances(ListWorkflowInstancesRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>有效成员分页搜索当前协作空间的有效模板；page/pageSize 与 nextToken/maxResults 并存，令牌优先</p>
+     * 
+     * @param request the request parameters of ListWorkflowTemplates  ListWorkflowTemplatesRequest
+     * @return ListWorkflowTemplatesResponse
+     */
+    CompletableFuture<ListWorkflowTemplatesResponse> listWorkflowTemplates(ListWorkflowTemplatesRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>标记当前用户的待办已读；markAllRead 优先于 todoIds，两者皆空不报错</p>
+     * 
+     * @param request the request parameters of MarkTodosRead  MarkTodosReadRequest
+     * @return MarkTodosReadResponse
+     */
+    CompletableFuture<MarkTodosReadResponse> markTodosRead(MarkTodosReadRequest request);
+
+    /**
+     * <b>description</b> :
      * <p>Only valid members who are the resource creator or a space administrator can move a resource within the same physical folder tree of a space. The source and target must be real and different folder IDs, and the resource must be in the source folder. Referenced resources are read-only. The sourceId is preserved and not re-parsed. A successful local attach does not guarantee that the downstream path has been synchronized. Duplicate requests may report that the resource is not in the source folder. Query the location first.</p>
      * 
      * @param request the request parameters of MoveGroupResource  MoveGroupResourceRequest
@@ -1534,6 +1876,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return OfflineAnnouncementResponse
      */
     CompletableFuture<OfflineAnnouncementResponse> offlineAnnouncement(OfflineAnnouncementRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>有效成员暂停工作项绑定的整个 Workflow</p>
+     * 
+     * @param request the request parameters of PauseWorkItem  PauseWorkItemRequest
+     * @return PauseWorkItemResponse
+     */
+    CompletableFuture<PauseWorkItemResponse> pauseWorkItem(PauseWorkItemRequest request);
 
     /**
      * <b>description</b> :
@@ -1618,6 +1969,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>有效成员查询工作项 feed 分组视图；服务端游标分页（cursor/pageSize）</p>
+     * 
+     * @param request the request parameters of QueryWorkItemFeed  QueryWorkItemFeedRequest
+     * @return QueryWorkItemFeedResponse
+     */
+    CompletableFuture<QueryWorkItemFeedResponse> queryWorkItemFeed(QueryWorkItemFeedRequest request);
+
+    /**
+     * <b>description</b> :
      * <h2>Request description</h2>
      * <p>Based on the most recent N messages in a session and the skills attached to the agent, invokes an LLM to generate 0 to 3 next-step recommendations (follow-up questions or recommended skills to execute).</p>
      * <ul>
@@ -1632,6 +1992,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RecommendNextActionsResponse
      */
     CompletableFuture<RecommendNextActionsResponse> recommendNextActions(RecommendNextActionsRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>先检查全部应用的 MANAGE 权限，再执行一次原子批量注册。</p>
+     * 
+     * @param request the request parameters of RegisterAppResourcePermissions  RegisterAppResourcePermissionsRequest
+     * @return RegisterAppResourcePermissionsResponse
+     */
+    CompletableFuture<RegisterAppResourcePermissionsResponse> registerAppResourcePermissions(RegisterAppResourcePermissionsRequest request);
 
     /**
      * <b>description</b> :
@@ -1750,6 +2119,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>基于鉴权用户管理个人或指定写作协作空间记忆；空间模式沿用活跃成员权限。</p>
+     * 
+     * @param request the request parameters of ReplaceManualMemory  ReplaceManualMemoryRequest
+     * @return ReplaceManualMemoryResponse
+     */
+    CompletableFuture<ReplaceManualMemoryResponse> replaceManualMemory(ReplaceManualMemoryRequest request);
+
+    /**
+     * <b>description</b> :
      * <h2>Operation description</h2>
      * <p>This API performs a full replacement of object bindings for a specified data source (deletes existing bindings first, then inserts new bindings). If an empty list is passed, all bindings are cleared.</p>
      * <ul>
@@ -1777,6 +2155,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ReplaceSourceFileResponse
      */
     CompletableFuture<ReplaceSourceFileResponse> replaceSourceFile(ReplaceSourceFileRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>重跑失败的工作流节点</p>
+     * 
+     * @param request the request parameters of RerunNodeAI  RerunNodeAIRequest
+     * @return RerunNodeAIResponse
+     */
+    CompletableFuture<RerunNodeAIResponse> rerunNodeAI(RerunNodeAIRequest request);
 
     /**
      * <b>description</b> :
@@ -1811,6 +2198,33 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ResetTokenResponse
      */
     CompletableFuture<ResetTokenResponse> resetToken(ResetTokenRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>有效成员解析工作项产物短期签名下载地址</p>
+     * 
+     * @param request the request parameters of ResolveWorkItemArtifactAccess  ResolveWorkItemArtifactAccessRequest
+     * @return ResolveWorkItemArtifactAccessResponse
+     */
+    CompletableFuture<ResolveWorkItemArtifactAccessResponse> resolveWorkItemArtifactAccess(ResolveWorkItemArtifactAccessRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>有效成员解析工作项输入附件短期预览地址</p>
+     * 
+     * @param request the request parameters of ResolveWorkItemAttachmentAccess  ResolveWorkItemAttachmentAccessRequest
+     * @return ResolveWorkItemAttachmentAccessResponse
+     */
+    CompletableFuture<ResolveWorkItemAttachmentAccessResponse> resolveWorkItemAttachmentAccess(ResolveWorkItemAttachmentAccessRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>有效成员从当前 Plan 暂停点恢复工作项</p>
+     * 
+     * @param request the request parameters of ResumeWorkItem  ResumeWorkItemRequest
+     * @return ResumeWorkItemResponse
+     */
+    CompletableFuture<ResumeWorkItemResponse> resumeWorkItem(ResumeWorkItemRequest request);
 
     /**
      * <b>description</b> :
@@ -1998,6 +2412,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>有效成员幂等排产工作项并物化固定 Plan</p>
+     * 
+     * @param request the request parameters of ScheduleWorkItem  ScheduleWorkItemRequest
+     * @return ScheduleWorkItemResponse
+     */
+    CompletableFuture<ScheduleWorkItemResponse> scheduleWorkItem(ScheduleWorkItemRequest request);
+
+    /**
+     * <b>description</b> :
      * <h2>请求说明</h2>
      * <ul>
      * <li>仅供 Winnexo 轻量工作台使用。</li>
@@ -2012,7 +2435,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Sends a session message asynchronously.</p>
+     * <p>Asynchronously sends a session message.</p>
      * 
      * @param request the request parameters of SendAsyncChatMessage  SendAsyncChatMessageRequest
      * @return SendAsyncChatMessageResponse
@@ -2041,6 +2464,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     ResponseIterable<SendChatMessageResponseBody> sendChatMessageWithResponseIterable(SendChatMessageRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>有效成员设置工作项个人置顶</p>
+     * 
+     * @param request the request parameters of SetWorkItemPinned  SetWorkItemPinnedRequest
+     * @return SetWorkItemPinnedResponse
+     */
+    CompletableFuture<SetWorkItemPinnedResponse> setWorkItemPinned(SetWorkItemPinnedRequest request);
+
+    /**
      * @param request the request parameters of StopChatMessage  StopChatMessageRequest
      * @return StopChatMessageResponse
      */
@@ -2061,6 +2493,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>提交待办作答结果；本人重复提交幂等返回首次结果，他人抢先返回 409 AlreadyCompleted</p>
+     * 
+     * @param request the request parameters of SubmitTodo  SubmitTodoRequest
+     * @return SubmitTodoResponse
+     */
+    CompletableFuture<SubmitTodoResponse> submitTodo(SubmitTodoRequest request);
+
+    /**
+     * <b>description</b> :
      * <p>Accepts a department tree and member relationships pushed from the client and creates an asynchronous synchronization task.
      *     Processing flow:
      *     1. Validates platformType (only saml, oauth2, or custom are allowed).
@@ -2075,6 +2516,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SyncOrgStructureResponse
      */
     CompletableFuture<SyncOrgStructureResponse> syncOrgStructure(SyncOrgStructureRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>终止当前工作流实例</p>
+     * 
+     * @param request the request parameters of TerminateInstance  TerminateInstanceRequest
+     * @return TerminateInstanceResponse
+     */
+    CompletableFuture<TerminateInstanceResponse> terminateInstance(TerminateInstanceRequest request);
 
     /**
      * <b>description</b> :
@@ -2097,6 +2547,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return TogglePrimaryObjectFavoriteResponse
      */
     CompletableFuture<TogglePrimaryObjectFavoriteResponse> togglePrimaryObjectFavorite(TogglePrimaryObjectFavoriteRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>转办待办给指定用户；目标剔除操作人本人，整单原子校验</p>
+     * 
+     * @param request the request parameters of TransferTodo  TransferTodoRequest
+     * @return TransferTodoResponse
+     */
+    CompletableFuture<TransferTodoResponse> transferTodo(TransferTodoRequest request);
 
     /**
      * <b>description</b> :
@@ -2228,6 +2687,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>基于鉴权用户管理个人或指定写作协作空间记忆；空间模式沿用活跃成员权限。</p>
+     * 
+     * @param request the request parameters of UpdateMemoryAutoExtractionSwitch  UpdateMemoryAutoExtractionSwitchRequest
+     * @return UpdateMemoryAutoExtractionSwitchResponse
+     */
+    CompletableFuture<UpdateMemoryAutoExtractionSwitchResponse> updateMemoryAutoExtractionSwitch(UpdateMemoryAutoExtractionSwitchRequest request);
+
+    /**
+     * <b>description</b> :
      * <p>Updates a scheduled task.</p>
      * 
      * @param request the request parameters of UpdateScheduledTask  UpdateScheduledTaskRequest
@@ -2303,5 +2771,23 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateUserInfoResponse
      */
     CompletableFuture<UpdateUserInfoResponse> updateUserInfo(UpdateUserInfoRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>有效成员按乐观版本编辑工作项；workflowTemplateIds 未传保持绑定</p>
+     * 
+     * @param request the request parameters of UpdateWorkItem  UpdateWorkItemRequest
+     * @return UpdateWorkItemResponse
+     */
+    CompletableFuture<UpdateWorkItemResponse> updateWorkItem(UpdateWorkItemRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>有效成员整体覆盖更新工作流模板；最后一次保存生效</p>
+     * 
+     * @param request the request parameters of UpdateWorkflowTemplate  UpdateWorkflowTemplateRequest
+     * @return UpdateWorkflowTemplateResponse
+     */
+    CompletableFuture<UpdateWorkflowTemplateResponse> updateWorkflowTemplate(UpdateWorkflowTemplateRequest request);
 
 }

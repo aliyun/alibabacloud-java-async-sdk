@@ -18,6 +18,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListOutputFilesRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("bizId")
+    private String bizId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("collaborationGroupId")
+    private String collaborationGroupId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("itemType")
     private String itemType;
 
@@ -38,8 +46,16 @@ public class ListOutputFilesRequest extends Request {
     private Long pageSize;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("sessionId")
+    private String sessionId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("sharedOnly")
     private Boolean sharedOnly;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("tags")
+    private java.util.List<String> tags;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("tenantId")
@@ -47,12 +63,16 @@ public class ListOutputFilesRequest extends Request {
 
     private ListOutputFilesRequest(Builder builder) {
         super(builder);
+        this.bizId = builder.bizId;
+        this.collaborationGroupId = builder.collaborationGroupId;
         this.itemType = builder.itemType;
         this.keyword = builder.keyword;
         this.operatingObjectName = builder.operatingObjectName;
         this.page = builder.page;
         this.pageSize = builder.pageSize;
+        this.sessionId = builder.sessionId;
         this.sharedOnly = builder.sharedOnly;
+        this.tags = builder.tags;
         this.tenantId = builder.tenantId;
     }
 
@@ -67,6 +87,20 @@ public class ListOutputFilesRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return bizId
+     */
+    public String getBizId() {
+        return this.bizId;
+    }
+
+    /**
+     * @return collaborationGroupId
+     */
+    public String getCollaborationGroupId() {
+        return this.collaborationGroupId;
     }
 
     /**
@@ -105,10 +139,24 @@ public class ListOutputFilesRequest extends Request {
     }
 
     /**
+     * @return sessionId
+     */
+    public String getSessionId() {
+        return this.sessionId;
+    }
+
+    /**
      * @return sharedOnly
      */
     public Boolean getSharedOnly() {
         return this.sharedOnly;
+    }
+
+    /**
+     * @return tags
+     */
+    public java.util.List<String> getTags() {
+        return this.tags;
     }
 
     /**
@@ -119,12 +167,16 @@ public class ListOutputFilesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListOutputFilesRequest, Builder> {
+        private String bizId; 
+        private String collaborationGroupId; 
         private String itemType; 
         private String keyword; 
         private String operatingObjectName; 
         private Long page; 
         private Long pageSize; 
+        private String sessionId; 
         private Boolean sharedOnly; 
+        private java.util.List<String> tags; 
         private String tenantId; 
 
         private Builder() {
@@ -133,14 +185,42 @@ public class ListOutputFilesRequest extends Request {
 
         private Builder(ListOutputFilesRequest request) {
             super(request);
+            this.bizId = request.bizId;
+            this.collaborationGroupId = request.collaborationGroupId;
             this.itemType = request.itemType;
             this.keyword = request.keyword;
             this.operatingObjectName = request.operatingObjectName;
             this.page = request.page;
             this.pageSize = request.pageSize;
+            this.sessionId = request.sessionId;
             this.sharedOnly = request.sharedOnly;
+            this.tags = request.tags;
             this.tenantId = request.tenantId;
         } 
+
+        /**
+         * <p>精确业务编号，来自文件登记或工作流实例关联</p>
+         * 
+         * <strong>example:</strong>
+         * <p>REQ-20261012-001</p>
+         */
+        public Builder bizId(String bizId) {
+            this.putBodyParameter("bizId", bizId);
+            this.bizId = bizId;
+            return this;
+        }
+
+        /**
+         * <p>可选协作空间 ID；未传保持当前用户个人产出范围</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cg_123e4567-e89b-42d3-a456-426614174001</p>
+         */
+        public Builder collaborationGroupId(String collaborationGroupId) {
+            this.putBodyParameter("collaborationGroupId", collaborationGroupId);
+            this.collaborationGroupId = collaborationGroupId;
+            return this;
+        }
 
         /**
          * <p>The type of the output item. Valid values: ppt, html, document, picture, slides, video, audio, email, and others.</p>
@@ -203,6 +283,18 @@ public class ListOutputFilesRequest extends Request {
         }
 
         /**
+         * <p>精确会话 ID，覆盖普通会话、技能会话与任务 executionId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>session_123e4567-e89b-42d3-a456-426614174008</p>
+         */
+        public Builder sessionId(String sessionId) {
+            this.putBodyParameter("sessionId", sessionId);
+            this.sessionId = sessionId;
+            return this;
+        }
+
+        /**
          * <p>Specifies whether to display only outputs and output items with sharing enabled.</p>
          * 
          * <strong>example:</strong>
@@ -211,6 +303,16 @@ public class ListOutputFilesRequest extends Request {
         public Builder sharedOnly(Boolean sharedOnly) {
             this.putBodyParameter("sharedOnly", sharedOnly);
             this.sharedOnly = sharedOnly;
+            return this;
+        }
+
+        /**
+         * <p>全部匹配的标签列表，来自文件登记或实例 variables.tags</p>
+         */
+        public Builder tags(java.util.List<String> tags) {
+            String tagsShrink = shrink(tags, "tags", "json");
+            this.putBodyParameter("tags", tagsShrink);
+            this.tags = tags;
             return this;
         }
 
