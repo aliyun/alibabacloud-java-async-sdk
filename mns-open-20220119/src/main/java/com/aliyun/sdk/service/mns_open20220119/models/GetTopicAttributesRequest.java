@@ -97,7 +97,7 @@ public class GetTopicAttributesRequest extends Request {
         }
 
         /**
-         * <p>The tag.</p>
+         * <p>The list of resource tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);

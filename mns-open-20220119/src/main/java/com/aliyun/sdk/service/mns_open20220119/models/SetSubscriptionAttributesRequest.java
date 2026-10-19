@@ -164,10 +164,12 @@ public class SetSubscriptionAttributesRequest extends Request {
         }
 
         /**
-         * <p>The retry policy that is applied if an error occurs when Message Service (MNS) pushes messages to the endpoint. Valid values:</p>
+         * <p>The retry policy for message delivery failures to the endpoint. Valid values:</p>
          * <ul>
-         * <li>BACKOFF_RETRY</li>
-         * <li>EXPONENTIAL_DECAY_RETRY</li>
+         * <li><p>BACKOFF_RETRY: backoff retry.</p>
+         * </li>
+         * <li><p>EXPONENTIAL_DECAY_RETRY: exponential decay retry.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -284,7 +286,7 @@ public class SetSubscriptionAttributesRequest extends Request {
             } 
 
             /**
-             * <p>The queue to which dead-letter messages are delivered.</p>
+             * <p>The destination queue for dead-letter messages.</p>
              * 
              * <strong>example:</strong>
              * <p>deadLetterTargetQueue</p>
@@ -295,7 +297,7 @@ public class SetSubscriptionAttributesRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable the dead-letter message delivery.</p>
+             * <p>Whether to enable dead-letter message delivery.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -365,7 +367,7 @@ public class SetSubscriptionAttributesRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to enable the dead-letter message delivery.</p>
+             * <p>Whether to enable dead-letter message delivery.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>

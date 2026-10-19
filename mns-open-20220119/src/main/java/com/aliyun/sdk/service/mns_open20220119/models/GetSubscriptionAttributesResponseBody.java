@@ -130,7 +130,7 @@ public class GetSubscriptionAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -138,7 +138,7 @@ public class GetSubscriptionAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>operation success</p>
@@ -149,7 +149,7 @@ public class GetSubscriptionAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>06273500-249F-5863-121D-74D51123****</p>
@@ -160,7 +160,7 @@ public class GetSubscriptionAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response status.</p>
+         * <p>The status of the response.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -171,7 +171,7 @@ public class GetSubscriptionAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -240,7 +240,7 @@ public class GetSubscriptionAttributesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The queue to which dead-letter messages are delivered.</p>
+             * <p>The destination queue for dead-letter message delivery.</p>
              * 
              * <strong>example:</strong>
              * <p>deadLetterTargetQueue</p>
@@ -251,7 +251,7 @@ public class GetSubscriptionAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to enable the dead-letter message delivery.</p>
+             * <p>Indicates whether dead-letter message delivery is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -321,10 +321,10 @@ public class GetSubscriptionAttributesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Specifies whether to enable the dead-letter message delivery.</p>
+             * <p>Indicates whether throttling is enabled. Valid values: true or false.</p>
              * 
              * <strong>example:</strong>
-             * <p>true</p>
+             * <p>false</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -332,7 +332,10 @@ public class GetSubscriptionAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * MaxReceivesPerSecond.
+             * <p>The maximum number of messages received per second.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder maxReceivesPerSecond(Integer maxReceivesPerSecond) {
                 this.maxReceivesPerSecond = maxReceivesPerSecond;
@@ -516,7 +519,7 @@ public class GetSubscriptionAttributesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the subscription was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * <p>The time when the subscription was created. The value is a UNIX timestamp in seconds in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>1449554806</p>
@@ -535,7 +538,7 @@ public class GetSubscriptionAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The endpoint to which the messages are pushed.</p>
+             * <p>The endpoint address of the subscription.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://example.com">http://example.com</a></p>
@@ -546,7 +549,7 @@ public class GetSubscriptionAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag that is used to filter messages. Only the messages that are attached with the specified tag can be pushed.</p>
+             * <p>The tag used for message filtering in the subscription. Only messages with matching tags are pushed.</p>
              * 
              * <strong>example:</strong>
              * <p>important</p>
@@ -557,7 +560,7 @@ public class GetSubscriptionAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the subscription was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * <p>The time when the subscription attributes were last modified. The value is a UNIX timestamp in seconds in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>1449554962</p>
@@ -568,11 +571,14 @@ public class GetSubscriptionAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The content format of the messages that are pushed to the endpoint. Valid values:</p>
+             * <p>The format of the message content pushed to the endpoint. Valid values:</p>
              * <ul>
-             * <li>XML</li>
-             * <li>JSON</li>
-             * <li>SIMPLIFIED</li>
+             * <li><p>XML</p>
+             * </li>
+             * <li><p>JSON</p>
+             * </li>
+             * <li><p>SIMPLIFIED</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -584,10 +590,12 @@ public class GetSubscriptionAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The retry policy that is applied if an error occurs when Message Service (MNS) pushes messages to the endpoint. Valid values:</p>
+             * <p>The retry strategy used when an error occurs while pushing messages to the endpoint. Valid values:</p>
              * <ul>
-             * <li>BACKOFF_RETRY</li>
-             * <li>EXPONENTIAL_DECAY_RETRY</li>
+             * <li><p>BACKOFF_RETRY: backoff retry.</p>
+             * </li>
+             * <li><p>EXPONENTIAL_DECAY_RETRY: exponential decay retry.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -610,7 +618,7 @@ public class GetSubscriptionAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * TenantRateLimitPolicy.
+             * <p>The throttling policy.</p>
              */
             public Builder tenantRateLimitPolicy(TenantRateLimitPolicy tenantRateLimitPolicy) {
                 this.tenantRateLimitPolicy = tenantRateLimitPolicy;
@@ -618,7 +626,7 @@ public class GetSubscriptionAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the topic.</p>
+             * <p>The name of the subscribed topic.</p>
              * 
              * <strong>example:</strong>
              * <p>MyTopic</p>
@@ -629,7 +637,7 @@ public class GetSubscriptionAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Alibaba Cloud account ID of the topic owner.</p>
+             * <p>The account ID of the owner of the subscribed topic.</p>
              * 
              * <strong>example:</strong>
              * <p>123456789098****</p>

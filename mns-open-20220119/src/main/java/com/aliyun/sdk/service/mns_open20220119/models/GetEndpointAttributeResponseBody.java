@@ -119,7 +119,7 @@ public class GetEndpointAttributeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The response code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -138,7 +138,7 @@ public class GetEndpointAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>operation success</p>
@@ -149,7 +149,7 @@ public class GetEndpointAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>06273500-249F-5863-121D-74D51123****</p>
@@ -171,7 +171,7 @@ public class GetEndpointAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -255,7 +255,7 @@ public class GetEndpointAttributeResponseBody extends TeaModel {
             /**
              * <p>The ACL policy. Valid values:</p>
              * <ul>
-             * <li><strong>allow</strong>: indicates that the current endpoint allows access from the corresponding CIDR block. (Only allow is supported.)</li>
+             * <li><strong>allow</strong>: The endpoint allows access from the corresponding CIDR block. Currently, only allow is supported.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -278,7 +278,7 @@ public class GetEndpointAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time.</p>
+             * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1701951224000</p>
@@ -348,7 +348,7 @@ public class GetEndpointAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of CIDR block.</p>
+             * <p>The list of CIDR blocks.</p>
              */
             public Builder cidrList(java.util.List<CidrList> cidrList) {
                 this.cidrList = cidrList;
@@ -356,7 +356,7 @@ public class GetEndpointAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether the endpoint is enabled.</p>
+             * <p>Indicates whether the endpoint is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>

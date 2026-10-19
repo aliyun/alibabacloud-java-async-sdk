@@ -93,7 +93,10 @@ public class EventMatchRule extends TeaModel {
         } 
 
         /**
-         * MatchState.
+         * <p>Indicates whether the rule is matched.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder matchState(Boolean matchState) {
             this.matchState = matchState;
@@ -101,7 +104,10 @@ public class EventMatchRule extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The full name matching rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testBucket/folder1/file1</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -109,7 +115,10 @@ public class EventMatchRule extends TeaModel {
         }
 
         /**
-         * Prefix.
+         * <p>The prefix matching rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testBucket/prefix1xxx</p>
          */
         public Builder prefix(String prefix) {
             this.prefix = prefix;
@@ -117,7 +126,10 @@ public class EventMatchRule extends TeaModel {
         }
 
         /**
-         * Suffix.
+         * <p>The suffix matching rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>suffix/xxxx.test</p>
          */
         public Builder suffix(String suffix) {
             this.suffix = suffix;

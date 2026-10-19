@@ -130,10 +130,10 @@ public class SubscribeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>The response data.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;Code&quot;: 200, &quot;Success&quot;: True}</p>
+         * <p>{\&quot;Code\&quot;: 200, \&quot;Success\&quot;: True}</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -141,7 +141,7 @@ public class SubscribeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>operation success</p>

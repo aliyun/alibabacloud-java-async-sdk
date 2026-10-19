@@ -280,7 +280,9 @@ public class CreateQueueRequest extends Request {
         }
 
         /**
-         * <p>The period after which all messages sent to the queue are consumed. Valid values: 0 to 604800. Unit: seconds. Default value: 0</p>
+         * <p>The delay period for all messages sent to the queue. A message sent to the queue can be consumed only after the delay period specified by this parameter elapses.
+         * Valid values: 0 to 604800. Unit: seconds.
+         * Default value: 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -292,7 +294,7 @@ public class CreateQueueRequest extends Request {
         }
 
         /**
-         * <p>The dead-letter queue policy.</p>
+         * <p>The dead-letter policy.</p>
          */
         public Builder dlqPolicy(DlqPolicy dlqPolicy) {
             String dlqPolicyShrink = shrink(dlqPolicy, "DlqPolicy", "json");
@@ -302,10 +304,12 @@ public class CreateQueueRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the log management feature. Valid values:</p>
+         * <p>Specifies whether to enable the Log Management feature. Valid values:</p>
          * <ul>
-         * <li>true: enabled.</li>
-         * <li>false: disabled.</li>
+         * <li><p>true: Enabled.</p>
+         * </li>
+         * <li><p>false: Disabled.</p>
+         * </li>
          * </ul>
          * <p>Default value: false.</p>
          * 
@@ -337,7 +341,9 @@ public class CreateQueueRequest extends Request {
         }
 
         /**
-         * <p>The maximum length of the message that is sent to the queue. Valid values: 1024 to 65536. Unit: bytes. Default value: 65536.</p>
+         * <p>The maximum size of a message body that can be sent to the queue.
+         * Valid values: 1024 to 65536. Unit: bytes.
+         * Default value: 65536.</p>
          * 
          * <strong>example:</strong>
          * <p>65536</p>
@@ -349,7 +355,9 @@ public class CreateQueueRequest extends Request {
         }
 
         /**
-         * <p>The maximum duration for which a message is retained in the queue. After the specified retention period ends, the message is deleted regardless of whether the message is consumed. Valid values: 60 to 604800. Unit: seconds. Default value: 345600.</p>
+         * <p>The maximum duration for which a message is retained in the queue. After the specified duration elapses since a message is sent to the queue, the message is deleted regardless of whether it has been consumed.
+         * Valid values: 60 to 604800. Unit: seconds.
+         * Default value: 345600.</p>
          * 
          * <strong>example:</strong>
          * <p>345600</p>
@@ -361,7 +369,9 @@ public class CreateQueueRequest extends Request {
         }
 
         /**
-         * <p>The maximum duration for which long polling requests are held after the ReceiveMessage operation is called. Valid values: 0 to 30. Unit: seconds. Default value: 0</p>
+         * <p>The maximum duration for which a ReceiveMessage request waits when the queue has no messages.
+         * Valid values: 0 to 30. Unit: seconds.
+         * Default value: 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -386,7 +396,14 @@ public class CreateQueueRequest extends Request {
         }
 
         /**
-         * QueueType.
+         * <p>The type of the queue. Valid values:</p>
+         * <ul>
+         * <li>normal: standard queue.</li>
+         * <li>fifo: FIFO queue.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         public Builder queueType(String queueType) {
             this.putQueryParameter("QueueType", queueType);
@@ -413,7 +430,7 @@ public class CreateQueueRequest extends Request {
         }
 
         /**
-         * <p>The tags.</p>
+         * <p>The list of resource tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -422,7 +439,7 @@ public class CreateQueueRequest extends Request {
         }
 
         /**
-         * TenantRateLimitPolicy.
+         * <p>The throttling policy.</p>
          */
         public Builder tenantRateLimitPolicy(TenantRateLimitPolicy tenantRateLimitPolicy) {
             String tenantRateLimitPolicyShrink = shrink(tenantRateLimitPolicy, "TenantRateLimitPolicy", "json");
@@ -432,7 +449,9 @@ public class CreateQueueRequest extends Request {
         }
 
         /**
-         * <p>The duration for which a message stays in the Inactive state after the message is received from the queue. Valid values: 1 to 43200. Unit: seconds. Default value: 30.</p>
+         * <p>The duration for which a message stays in the Inactive state after it is consumed from the queue and changes from the Active state to the Inactive state.
+         * Valid values: 1 to 43200. Unit: seconds.
+         * Default value: 30.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -464,6 +483,7 @@ public class CreateQueueRequest extends Request {
         private Boolean enabled;
 
         @com.aliyun.core.annotation.NameInMap("MaxReceiveCount")
+        @com.aliyun.core.annotation.Validation(maximum = 1000)
         private Integer maxReceiveCount;
 
         private DlqPolicy(Builder builder) {
@@ -516,7 +536,7 @@ public class CreateQueueRequest extends Request {
             } 
 
             /**
-             * <p>The queue to which dead-letter messages are delivered.</p>
+             * <p>The target queue to which dead-letter messages are delivered.</p>
              * 
              * <strong>example:</strong>
              * <p>deadLetterQueue</p>
@@ -527,7 +547,7 @@ public class CreateQueueRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable the dead-letter message delivery.</p>
+             * <p>Specifies whether to enable dead-letter message delivery.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -538,7 +558,7 @@ public class CreateQueueRequest extends Request {
             }
 
             /**
-             * <p>The maximum number of retries.</p>
+             * <p>The maximum number of times a message can be delivered.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -619,7 +639,7 @@ public class CreateQueueRequest extends Request {
             }
 
             /**
-             * <p>The tag value.</p>
+             * <p>The value of the tag.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -689,10 +709,14 @@ public class CreateQueueRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to enable the dead-letter message delivery.</p>
+             * <p>Specifies whether to enable throttling. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
              * <strong>example:</strong>
-             * <p>true</p>
+             * <p>false</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -700,7 +724,10 @@ public class CreateQueueRequest extends Request {
             }
 
             /**
-             * MaxReceivesPerSecond.
+             * <p>The maximum number of receives per second.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder maxReceivesPerSecond(Integer maxReceivesPerSecond) {
                 this.maxReceivesPerSecond = maxReceivesPerSecond;

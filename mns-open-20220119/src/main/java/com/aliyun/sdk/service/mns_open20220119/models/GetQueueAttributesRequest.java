@@ -110,7 +110,7 @@ public class GetQueueAttributesRequest extends Request {
         }
 
         /**
-         * <p>The tags.</p>
+         * <p>The list of resource tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);

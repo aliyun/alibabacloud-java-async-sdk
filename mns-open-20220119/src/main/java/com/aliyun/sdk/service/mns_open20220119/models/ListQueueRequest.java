@@ -138,7 +138,7 @@ public class ListQueueRequest extends Request {
         }
 
         /**
-         * <p>The page number. Valid values: 1 to 100000000. If you set this parameter to a value smaller than 1, the value of this parameter is 1 by default. If you set this parameter to a value greater than 100000000, the value of this parameter is 100000000 by default.</p>
+         * <p>The page number of the returned results. Valid values: 1 to 100000000. If the specified value is less than 1, the system defaults to 1. If the specified value is greater than 100000000, the system defaults to 100000000.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -150,7 +150,7 @@ public class ListQueueRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Value values: 10 to 50. If you set this parameter to a value smaller than 10, the value of this parameter is 10 by default. If you set this parameter to a value greater than 50, the value of this parameter is 50 by default.</p>
+         * <p>The number of entries to return on each page. Valid values: 10 to 50. If the specified value is less than 10, the system defaults to 10. If the specified value is greater than 50, the system defaults to 50.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -174,7 +174,14 @@ public class ListQueueRequest extends Request {
         }
 
         /**
-         * QueueType.
+         * <p>The type of the queue. Valid values:</p>
+         * <ul>
+         * <li>normal: standard queue</li>
+         * <li>fifo: FIFO queue</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         public Builder queueType(String queueType) {
             this.putQueryParameter("QueueType", queueType);
@@ -183,7 +190,7 @@ public class ListQueueRequest extends Request {
         }
 
         /**
-         * <p>The tags.</p>
+         * <p>The list of resource tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);

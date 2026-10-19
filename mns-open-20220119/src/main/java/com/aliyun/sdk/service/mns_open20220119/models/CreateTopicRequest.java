@@ -197,8 +197,11 @@ public class CreateTopicRequest extends Request {
         /**
          * <p>Specifies whether to enable the log management feature. Valid values:</p>
          * <ul>
-         * <li>true: enabled.</li>
-         * <li>false: disabled. Default value: false.</li>
+         * <li><p>true: Enabled.</p>
+         * </li>
+         * <li><p>false: Disabled.
+         * Default value: false.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -229,7 +232,7 @@ public class CreateTopicRequest extends Request {
         }
 
         /**
-         * <p>The maximum length of the message that is sent to the topic. Valid values: 1024 to 65536. Unit: bytes. Default value: 65536.</p>
+         * <p>The maximum length of the message body sent to the topic. Valid values: 1024 to 65536. Unit: bytes. Default value: 65536.</p>
          * 
          * <strong>example:</strong>
          * <p>10240</p>
@@ -259,7 +262,7 @@ public class CreateTopicRequest extends Request {
         }
 
         /**
-         * <p>The tags.</p>
+         * <p>The list of resource tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -268,7 +271,7 @@ public class CreateTopicRequest extends Request {
         }
 
         /**
-         * <p>The name of the topic that you want to create.</p>
+         * <p>The name of the topic to create.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -281,7 +284,14 @@ public class CreateTopicRequest extends Request {
         }
 
         /**
-         * TopicType.
+         * <p>The type of the topic. Valid values:</p>
+         * <ul>
+         * <li>normal: normal topic</li>
+         * <li>fifo: FIFO topic</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         public Builder topicType(String topicType) {
             this.putQueryParameter("TopicType", topicType);
@@ -349,7 +359,7 @@ public class CreateTopicRequest extends Request {
             } 
 
             /**
-             * <p>The tag key.</p>
+             * <p>The key of the tag.</p>
              * 
              * <strong>example:</strong>
              * <p>tag1</p>
@@ -360,10 +370,10 @@ public class CreateTopicRequest extends Request {
             }
 
             /**
-             * <p>The tag value.</p>
+             * <p>The value of the tag.</p>
              * 
              * <strong>example:</strong>
-             * <p>joyce.wang</p>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;

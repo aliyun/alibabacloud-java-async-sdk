@@ -83,7 +83,7 @@ public class DeleteTopicRequest extends Request {
         }
 
         /**
-         * <p>The name of the topic that you want to delete.</p>
+         * <p>The name of the topic to delete.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

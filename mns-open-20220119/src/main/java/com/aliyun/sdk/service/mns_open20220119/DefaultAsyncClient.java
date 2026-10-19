@@ -30,37 +30,7 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.product = "Mns-open";
         this.version = "2022-01-19";
         this.endpointRule = "regional";
-        this.endpointMap = CommonUtil.buildMap(
-            new TeaPair("us-west-1", "mns-open.us-west-1.aliyuncs.com"),
-            new TeaPair("us-east-1", "mns-open.us-east-1.aliyuncs.com"),
-            new TeaPair("me-east-1", "mns-open.me-east-1.aliyuncs.com"),
-            new TeaPair("me-central-1", "mns-open.me-central-1.aliyuncs.com"),
-            new TeaPair("eu-west-1", "mns-open.eu-west-1.aliyuncs.com"),
-            new TeaPair("eu-central-1", "mns-open.eu-central-1.aliyuncs.com"),
-            new TeaPair("cn-zhengzhou-jva", "mns-open.cn-zhengzhou-jva.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "mns-open.cn-zhangjiakou.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu", "mns-open.cn-wulanchabu.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-finance-1", "mns-open.cn-shenzhen-finance-1.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "mns-open.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "mns-open.cn-shanghai-finance-1.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "mns-open.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-qingdao", "mns-open.cn-qingdao.aliyuncs.com"),
-            new TeaPair("cn-huhehaote", "mns-open.cn-huhehaote.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "mns-open.cn-hongkong.aliyuncs.com"),
-            new TeaPair("cn-heyuan-acdr-1", "mns-open.cn-heyuan-acdr-1.aliyuncs.com"),
-            new TeaPair("cn-heyuan", "mns-open.cn-heyuan.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-finance", "mns-open.cn-hangzhou-finance.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "mns-open.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("cn-guangzhou", "mns-open.cn-guangzhou.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "mns-open.cn-chengdu.aliyuncs.com"),
-            new TeaPair("cn-beijing", "mns-open.cn-beijing.aliyuncs.com"),
-            new TeaPair("ap-southeast-7", "mns-open.ap-southeast-7.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "mns-open.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "mns-open.ap-southeast-3.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "mns-open.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-northeast-2", "mns-open.ap-northeast-2.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "mns-open.ap-northeast-1.aliyuncs.com")
-        );
+        this.endpointMap = new java.util.HashMap<>();
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 
@@ -286,6 +256,28 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Warning: </p>
+     * </blockquote>
+     * <p>To optimize service performance, Simple Message Queue will soon deprecate the return values of the following fields, which will default to 0:
+     *     - ActiveMessages
+     *     - InactiveMessages
+     *     - DelayMessages 
+     *   </p>
+     *   <p>Use the following methods to obtain alternatives:</p>
+     *   <ul>
+     *     <li>Use the CloudMonitor OpenAPI to retrieve queue metrics. For more information, see <a href="https://api.aliyun.com/api/Cms/2019-01-01/DescribeMetricLast?RegionId=cn-hangzhou&params={%22Namespace%22:%22acs_smq%22,%22MetricName%22:%22NumberOfMessagesVisible%22}&tab=DEBUG">CloudMonitor OpenAPI documentation</a>.</li>
+     *     <li><a href="https://cloudmonitornext.console.aliyun.com/metric-meta/acs_smq/smq/all?spm=5176.2020520111.0.0.5d0c66102s05T4">CloudMonitor metrics documentation</a>. The mapping of deprecated fields to alternative metrics is as follows:
+     *       <ul>
+     *         <li>ActiveMessages → CloudMonitor metric NumberOfMessagesVisible</li>
+     *         <li>InactiveMessages → CloudMonitor metric NumberOfMessagesInvisible</li>
+     *         <li>DelayMessages → CloudMonitor metric NumberOfMessagesDelayed</li>
+     *       </ul>
+     *     </li>
+     *   </ul>
+     * </warning>
+     * 
      * @param request the request parameters of GetQueueAttributes  GetQueueAttributesRequest
      * @return GetQueueAttributesResponse
      */

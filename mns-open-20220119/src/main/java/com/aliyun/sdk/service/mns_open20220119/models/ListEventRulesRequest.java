@@ -194,7 +194,10 @@ public class ListEventRulesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>This parameter is deprecated. Use PageSize for paged queries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -203,7 +206,10 @@ public class ListEventRulesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>This parameter is deprecated. Use PageNum for paged queries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cd7NlPlX4kgKCdsCWMiMR/+HnVzPLQ4/XLvjR64jZ7F9AQ+Mr3T59J6IVkuXeV3w</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -212,7 +218,12 @@ public class ListEventRulesRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>The page number of the results to return.
+         * Valid values: 1 to 100000.
+         * If you set this parameter to a value less than 1, the system uses 1. If you set this parameter to a value greater than 100000, the system uses 100000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Long pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -221,7 +232,12 @@ public class ListEventRulesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page.
+         * Valid values: 10 to 50.
+         * If you set this parameter to a value less than 10, the system uses 10. If you set this parameter to a value greater than 50, the system uses 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -230,7 +246,10 @@ public class ListEventRulesRequest extends Request {
         }
 
         /**
-         * ProductName.
+         * <p>The name of the Alibaba Cloud service for which event notifications are configured.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss</p>
          */
         public Builder productName(String productName) {
             this.putQueryParameter("ProductName", productName);
@@ -239,7 +258,10 @@ public class ListEventRulesRequest extends Request {
         }
 
         /**
-         * ResourceName.
+         * <p>The resource name in the matching rule. This parameter is used to filter rules. For example, for Object Storage Service (OSS), this is the bucket name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-bucket</p>
          */
         public Builder resourceName(String resourceName) {
             this.putQueryParameter("ResourceName", resourceName);
@@ -248,7 +270,10 @@ public class ListEventRulesRequest extends Request {
         }
 
         /**
-         * RuleName.
+         * <p>The name of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rule-xsXDW</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -257,7 +282,7 @@ public class ListEventRulesRequest extends Request {
         }
 
         /**
-         * Subscription.
+         * <p>The subscriber.</p>
          */
         public Builder subscription(Subscription subscription) {
             String subscriptionShrink = shrink(subscription, "Subscription", "json");
@@ -267,7 +292,10 @@ public class ListEventRulesRequest extends Request {
         }
 
         /**
-         * TopicName.
+         * <p>The name of the topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-topic</p>
          */
         public Builder topicName(String topicName) {
             this.putQueryParameter("TopicName", topicName);
@@ -335,7 +363,16 @@ public class ListEventRulesRequest extends Request {
             } 
 
             /**
-             * EndpointType.
+             * <p>The endpoint type. Valid values:</p>
+             * <ul>
+             * <li><p><strong>topic</strong>: A topic can deliver messages to multiple subscribers. You can add or remove subscribers later.</p>
+             * </li>
+             * <li><p><strong>queue</strong>: Messages are delivered directly to a queue. This simplifies the delivery path, but you cannot add new subscribers later.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>topic</p>
              */
             public Builder endpointType(String endpointType) {
                 this.endpointType = endpointType;
@@ -343,7 +380,10 @@ public class ListEventRulesRequest extends Request {
             }
 
             /**
-             * EndpointValue.
+             * <p>The actual value of the endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-topic</p>
              */
             public Builder endpointValue(String endpointValue) {
                 this.endpointValue = endpointValue;

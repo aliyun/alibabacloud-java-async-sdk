@@ -130,7 +130,7 @@ public class DeleteTopicResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>The response data.</p>
          */
         public Builder data(java.util.Map<String, ?> data) {
             this.data = data;
@@ -138,7 +138,7 @@ public class DeleteTopicResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>operation success</p>

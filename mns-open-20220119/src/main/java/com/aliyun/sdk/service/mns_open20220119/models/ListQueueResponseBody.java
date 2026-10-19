@@ -130,7 +130,7 @@ public class ListQueueResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -138,7 +138,7 @@ public class ListQueueResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>operation success</p>
@@ -149,7 +149,7 @@ public class ListQueueResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>06273500-249F-5863-121D-74D51123****</p>
@@ -171,7 +171,7 @@ public class ListQueueResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -253,7 +253,7 @@ public class ListQueueResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The queue to which dead-letter messages are delivered.</p>
+             * <p>The destination queue for dead-letter message delivery.</p>
              * 
              * <strong>example:</strong>
              * <p>deadLetterTargetQueue</p>
@@ -264,7 +264,7 @@ public class ListQueueResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to enable the dead-letter message delivery.</p>
+             * <p>Indicates whether dead-letter message delivery is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -275,7 +275,7 @@ public class ListQueueResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of retries.</p>
+             * <p>The maximum number of delivery attempts for a message.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -660,10 +660,10 @@ public class ListQueueResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The total number of messages that are in the Active state in the queue. The value is an approximate number. Default value: 0. We recommend that you do not use the return value and that you call CloudMonitor API operations to query the metric value.</p>
+             * <p>The approximate total number of messages in the Active state in the queue. This parameter is deprecated and will default to 0 in the future. Use CloudMonitor API operations to obtain this metric.</p>
              * 
              * <strong>example:</strong>
-             * <p>20</p>
+             * <p>0</p>
              */
             public Builder activeMessages(Long activeMessages) {
                 this.activeMessages = activeMessages;
@@ -671,7 +671,7 @@ public class ListQueueResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the queue was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * <p>The time when the queue was created. The value is a UNIX timestamp in seconds in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>1250700999</p>
@@ -682,7 +682,7 @@ public class ListQueueResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of the messages that are in the Delayed state in the queue. The value is an approximate number. Default value: 0. We recommend that you do not use the return value and that you call CloudMonitor API operations to query the metric value.</p>
+             * <p>The approximate total number of messages in the Delayed state in the queue. This parameter is deprecated and will default to 0 in the future. Use CloudMonitor API operations to obtain this metric.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -693,7 +693,7 @@ public class ListQueueResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The period after which all messages sent to the queue are consumed. Unit: seconds.</p>
+             * <p>The delay time for all messages sent to the queue. Messages sent to the queue can be consumed only after the delay time specified by this parameter elapses. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -712,7 +712,10 @@ public class ListQueueResponseBody extends TeaModel {
             }
 
             /**
-             * EnableSSE.
+             * <p>Indicates whether server-side encryption is enabled. Valid values: true or false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableSSE(Boolean enableSSE) {
                 this.enableSSE = enableSSE;
@@ -720,7 +723,10 @@ public class ListQueueResponseBody extends TeaModel {
             }
 
             /**
-             * EncryptionEnabled.
+             * <p>Indicates whether server-side encryption is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder encryptionEnabled(Boolean encryptionEnabled) {
                 this.encryptionEnabled = encryptionEnabled;
@@ -728,7 +734,7 @@ public class ListQueueResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of the messages that are in the Inactive state in the queue. The value is an approximate number. Default value: 0. We recommend that you do not use the return value and that you call CloudMonitor API operations to query the metric value.</p>
+             * <p>The approximate total number of messages in the Inactive state in the queue. This parameter is deprecated and will default to 0 in the future. Use CloudMonitor API operations to obtain this metric.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -739,7 +745,10 @@ public class ListQueueResponseBody extends TeaModel {
             }
 
             /**
-             * KmsKeyId.
+             * <p>The KMS key ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key-xxx</p>
              */
             public Builder kmsKeyId(String kmsKeyId) {
                 this.kmsKeyId = kmsKeyId;
@@ -747,7 +756,7 @@ public class ListQueueResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the queue was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * <p>The time when the queue attributes were last modified. The value is a UNIX timestamp in seconds in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>1250700999</p>
@@ -758,10 +767,12 @@ public class ListQueueResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the logging feature is enabled. Valid values:</p>
+             * <p>Indicates whether the log management feature is enabled. Valid values:</p>
              * <ul>
-             * <li>True</li>
-             * <li>False</li>
+             * <li><p>True: enabled</p>
+             * </li>
+             * <li><p>False: disabled</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -773,7 +784,7 @@ public class ListQueueResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum length of the message that is sent to the queue. Unit: bytes.</p>
+             * <p>The maximum size of the message body sent to the queue. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>65536</p>
@@ -784,7 +795,7 @@ public class ListQueueResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum duration for which a message is retained in the queue. After the specified retention period ends, the message is deleted regardless of whether the message is received. Unit: seconds.</p>
+             * <p>The maximum retention period of messages in the queue. Messages are deleted after the specified retention period elapses, regardless of whether they have been consumed. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>65536</p>
@@ -795,7 +806,7 @@ public class ListQueueResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum duration for which long polling requests are held after the ReceiveMessage operation is called. Unit: seconds.</p>
+             * <p>The maximum waiting time for a ReceiveMessage request when the queue is empty. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -817,7 +828,14 @@ public class ListQueueResponseBody extends TeaModel {
             }
 
             /**
-             * QueueType.
+             * <p>The type of the queue. Valid values:</p>
+             * <ul>
+             * <li>normal: standard queue</li>
+             * <li>fifo: FIFO queue</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder queueType(String queueType) {
                 this.queueType = queueType;
@@ -825,7 +843,10 @@ public class ListQueueResponseBody extends TeaModel {
             }
 
             /**
-             * SseAlgorithm.
+             * <p>The server-side encryption algorithm. Currently, only AES-256-GCM is supported. If this parameter is not specified, the default algorithm is used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AES-256-GCM</p>
              */
             public Builder sseAlgorithm(String sseAlgorithm) {
                 this.sseAlgorithm = sseAlgorithm;
@@ -833,7 +854,10 @@ public class ListQueueResponseBody extends TeaModel {
             }
 
             /**
-             * SseType.
+             * <p>The server-side encryption method. Valid values: SMQ or KMS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>KMS</p>
              */
             public Builder sseType(String sseType) {
                 this.sseType = sseType;
@@ -841,7 +865,7 @@ public class ListQueueResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags added to the resources.</p>
+             * <p>The list of resource tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -849,7 +873,7 @@ public class ListQueueResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The duration for which a message stays in the Inactive state after the message is received from the queue. Valid values: 1 to 43200. Unit: seconds. Default value: 30.</p>
+             * <p>The duration during which a message remains in the Inactive state after it is consumed from the queue. Valid values: 1 to 43200. Unit: seconds. Default value: 30.</p>
              * 
              * <strong>example:</strong>
              * <p>60</p>
@@ -971,7 +995,7 @@ public class ListQueueResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The data returned on the current page.</p>
+             * <p>The results returned on the current page.</p>
              */
             public Builder pageData(java.util.List<PageData> pageData) {
                 this.pageData = pageData;
@@ -979,7 +1003,7 @@ public class ListQueueResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page number.</p>
+             * <p>The page number of the returned results.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -990,7 +1014,7 @@ public class ListQueueResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries per page.</p>
+             * <p>The number of entries returned on each page.</p>
              * 
              * <strong>example:</strong>
              * <p>50</p>
@@ -1001,7 +1025,7 @@ public class ListQueueResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of pages returned.</p>
+             * <p>The total number of pages.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -1012,7 +1036,7 @@ public class ListQueueResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries on the current page.</p>
+             * <p>The number of entries returned on the current page.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>

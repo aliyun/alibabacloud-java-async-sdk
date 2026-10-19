@@ -85,7 +85,7 @@ public class EnableEndpointRequest extends Request {
         /**
          * <p>The type of the endpoint. Valid value:</p>
          * <ul>
-         * <li><strong>public</strong>: indicates public endpoint. (Only the public is supported.)</li>
+         * <li><strong>public</strong>: The Internet endpoint. Only public is supported.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

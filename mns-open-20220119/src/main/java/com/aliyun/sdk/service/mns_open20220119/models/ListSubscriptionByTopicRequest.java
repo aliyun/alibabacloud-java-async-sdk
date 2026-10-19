@@ -170,7 +170,9 @@ public class ListSubscriptionByTopicRequest extends Request {
         }
 
         /**
-         * <p>The page number. Valid values: 1 to 100000000. If you set this parameter to a value smaller than 1, the value of this parameter is 1 by default. If you set this parameter to a value greater than 100000000, the value of this parameter is 100000000 by default.</p>
+         * <p>The page number of the results to return.
+         * Valid values: 1 to 100000000.
+         * If the value is less than 1, the system uses 1. If the value is greater than 100000000, the system uses 100000000.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -182,7 +184,9 @@ public class ListSubscriptionByTopicRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Value values: 10 to 50. If you set this parameter to a value smaller than 10, the value of this parameter is 10 by default. If you set this parameter to a value greater than 50, the value of this parameter is 50 by default.</p>
+         * <p>The number of entries to return on each page.
+         * Valid values: 10 to 50.
+         * If the value is less than 10, the system uses 10. If the value is greater than 50, the system uses 50.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -194,7 +198,7 @@ public class ListSubscriptionByTopicRequest extends Request {
         }
 
         /**
-         * <p>The name of the subscription.</p>
+         * <p>The subscription name.</p>
          * 
          * <strong>example:</strong>
          * <p>demo-subscription</p>

@@ -98,6 +98,7 @@ public class DeleteEventRuleRequest extends Request {
         }
 
         /**
+         * <p>The name of the cloud service for the event notification.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +111,7 @@ public class DeleteEventRuleRequest extends Request {
         }
 
         /**
+         * <p>The name of the event rule.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -130,7 +130,7 @@ public class GetTopicAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -138,7 +138,7 @@ public class GetTopicAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>operation success</p>
@@ -149,7 +149,7 @@ public class GetTopicAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>06273500-249F-5863-121D-74D51123****</p>
@@ -160,7 +160,7 @@ public class GetTopicAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response status.</p>
+         * <p>The status of the response.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -503,7 +503,7 @@ public class GetTopicAttributesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the topic was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * <p>The time when the topic was created. The value is a UNIX timestamp in seconds in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>1449554277</p>
@@ -514,7 +514,10 @@ public class GetTopicAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * EnableSSE.
+             * <p>Indicates whether storage encryption is enabled. Valid values: true and false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableSSE(Boolean enableSSE) {
                 this.enableSSE = enableSSE;
@@ -522,7 +525,10 @@ public class GetTopicAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * EncryptionEnabled.
+             * <p>Indicates whether storage encryption is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder encryptionEnabled(Boolean encryptionEnabled) {
                 this.encryptionEnabled = encryptionEnabled;
@@ -530,7 +536,10 @@ public class GetTopicAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * KmsKeyId.
+             * <p>The KMS key ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key-xxx</p>
              */
             public Builder kmsKeyId(String kmsKeyId) {
                 this.kmsKeyId = kmsKeyId;
@@ -538,7 +547,7 @@ public class GetTopicAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the topic was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * <p>The time when the topic attributes were last modified. The value is a UNIX timestamp in seconds in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>1449554460</p>
@@ -549,10 +558,10 @@ public class GetTopicAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the logging feature is enabled. Valid values:</p>
+             * <p>Indicates whether the log management feature is enabled. Valid values:</p>
              * <ul>
-             * <li>True</li>
-             * <li>False</li>
+             * <li>True: Enabled.</li>
+             * <li>False: Disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -564,7 +573,7 @@ public class GetTopicAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum length of the message that is sent to the topic. Unit: bytes.</p>
+             * <p>The maximum size of a message body sent to the topic. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>65536</p>
@@ -586,7 +595,7 @@ public class GetTopicAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum duration for which a message is retained in the topic. After the specified retention period ends, the message is deleted regardless of whether the message is received. Unit: seconds.</p>
+             * <p>The maximum retention period of a message in the topic. After the specified period elapses from the time the message is sent to the topic, the message is deleted regardless of whether it was successfully pushed to users. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>86400</p>
@@ -597,7 +606,10 @@ public class GetTopicAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * SseAlgorithm.
+             * <p>The storage encryption algorithm. Currently, only AES-256-GCM is supported. If this parameter is not specified, the default algorithm is used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AES-256-GCM</p>
              */
             public Builder sseAlgorithm(String sseAlgorithm) {
                 this.sseAlgorithm = sseAlgorithm;
@@ -605,7 +617,10 @@ public class GetTopicAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * SseType.
+             * <p>The storage encryption type. Valid values: SMQ and KMS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>KMS</p>
              */
             public Builder sseType(String sseType) {
                 this.sseType = sseType;
@@ -613,7 +628,7 @@ public class GetTopicAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags added to the resources.</p>
+             * <p>The list of resource tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -621,7 +636,10 @@ public class GetTopicAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * TopicInnerUrl.
+             * <p>The internal access URL of the topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://111111111****.mns.us-west-1-internal.aliyuncs.com/topics/testTopic">http://111111111****.mns.us-west-1-internal.aliyuncs.com/topics/testTopic</a></p>
              */
             public Builder topicInnerUrl(String topicInnerUrl) {
                 this.topicInnerUrl = topicInnerUrl;
@@ -640,7 +658,14 @@ public class GetTopicAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * TopicType.
+             * <p>The topic type. Valid values:</p>
+             * <ul>
+             * <li>normal: Normal topic.</li>
+             * <li>fifo: FIFO topic.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder topicType(String topicType) {
                 this.topicType = topicType;
@@ -648,7 +673,10 @@ public class GetTopicAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * TopicUrl.
+             * <p>The public network access URL of the topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://111111111****.mns.us-west-1.aliyuncs.com/topics/testTopic">http://111111111****.mns.us-west-1.aliyuncs.com/topics/testTopic</a></p>
              */
             public Builder topicUrl(String topicUrl) {
                 this.topicUrl = topicUrl;

@@ -92,6 +92,28 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetEventRuleResponse> getEventRule(GetEventRuleRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Warning: </p>
+     * </blockquote>
+     * <p>To optimize service performance, Simple Message Queue will soon deprecate the return values of the following fields, which will default to 0:
+     *     - ActiveMessages
+     *     - InactiveMessages
+     *     - DelayMessages 
+     *   </p>
+     *   <p>Use the following methods to obtain alternatives:</p>
+     *   <ul>
+     *     <li>Use the CloudMonitor OpenAPI to retrieve queue metrics. For more information, see <a href="https://api.aliyun.com/api/Cms/2019-01-01/DescribeMetricLast?RegionId=cn-hangzhou&params={%22Namespace%22:%22acs_smq%22,%22MetricName%22:%22NumberOfMessagesVisible%22}&tab=DEBUG">CloudMonitor OpenAPI documentation</a>.</li>
+     *     <li><a href="https://cloudmonitornext.console.aliyun.com/metric-meta/acs_smq/smq/all?spm=5176.2020520111.0.0.5d0c66102s05T4">CloudMonitor metrics documentation</a>. The mapping of deprecated fields to alternative metrics is as follows:
+     *       <ul>
+     *         <li>ActiveMessages → CloudMonitor metric NumberOfMessagesVisible</li>
+     *         <li>InactiveMessages → CloudMonitor metric NumberOfMessagesInvisible</li>
+     *         <li>DelayMessages → CloudMonitor metric NumberOfMessagesDelayed</li>
+     *       </ul>
+     *     </li>
+     *   </ul>
+     * </warning>
+     * 
      * @param request the request parameters of GetQueueAttributes  GetQueueAttributesRequest
      * @return GetQueueAttributesResponse
      */

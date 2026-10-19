@@ -113,9 +113,9 @@ public class RevokeEndpointAclRequest extends Request {
         }
 
         /**
-         * <p>The ACL policy. Value:</p>
+         * <p>The ACL policy. Valid values:</p>
          * <ul>
-         * <li><strong>allow</strong>: indicates that this operation is included in the Cidr whitelist. (Only the allow is supported.)</li>
+         * <li><strong>allow</strong>: The operation is for a Classless Inter-Domain Routing (CIDR) whitelist. Currently, only \<code>allow\\</code> is supported.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -129,7 +129,7 @@ public class RevokeEndpointAclRequest extends Request {
         }
 
         /**
-         * <p>The list of CIDR block.</p>
+         * <p>The list of network segments.</p>
          * <p>This parameter is required.</p>
          */
         public Builder cidrList(java.util.List<String> cidrList) {
@@ -140,9 +140,9 @@ public class RevokeEndpointAclRequest extends Request {
         }
 
         /**
-         * <p>The type of the endpoint. Valid values:</p>
+         * <p>The endpoint type. Valid values:</p>
          * <ul>
-         * <li><strong>public</strong>: indicates public endpoint. (Only the public is supported.)</li>
+         * <li><strong>public</strong>: The Internet endpoint. Currently, only \<code>public\\</code> is supported.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

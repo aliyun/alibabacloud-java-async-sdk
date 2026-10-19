@@ -138,7 +138,10 @@ public class SetAccountAttributesRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>Ensures the idempotence of the request. Generate a parameter value from your client to ensure that the value is unique across different requests. ClientToken supports only ASCII characters and cannot exceed 64 characters in length. For more information, see How to ensure idempotence.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>06273500-249</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -147,7 +150,10 @@ public class SetAccountAttributesRequest extends Request {
         }
 
         /**
-         * LogEnabled.
+         * <p>Specifies whether to enable the log management feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder logEnabled(Boolean logEnabled) {
             this.putQueryParameter("LogEnabled", logEnabled);
@@ -156,7 +162,10 @@ public class SetAccountAttributesRequest extends Request {
         }
 
         /**
-         * LogStoreName.
+         * <p>The name of the Simple Log Service Logstore.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-logstore</p>
          */
         public Builder logStoreName(String logStoreName) {
             this.putQueryParameter("LogStoreName", logStoreName);
@@ -165,7 +174,10 @@ public class SetAccountAttributesRequest extends Request {
         }
 
         /**
-         * MessageTraceEnabled.
+         * <p>Specifies whether to enable the message trace feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder messageTraceEnabled(Boolean messageTraceEnabled) {
             this.putQueryParameter("MessageTraceEnabled", messageTraceEnabled);
@@ -174,7 +186,10 @@ public class SetAccountAttributesRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the Simple Log Service project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-project</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);

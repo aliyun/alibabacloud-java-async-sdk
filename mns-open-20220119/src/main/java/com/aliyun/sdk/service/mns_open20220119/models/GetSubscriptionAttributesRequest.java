@@ -111,7 +111,7 @@ public class GetSubscriptionAttributesRequest extends Request {
         }
 
         /**
-         * <p>The name of the topic.</p>
+         * <p>The name of the subscribed topic.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

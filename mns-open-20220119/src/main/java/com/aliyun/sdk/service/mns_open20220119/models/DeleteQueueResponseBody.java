@@ -130,7 +130,7 @@ public class DeleteQueueResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -138,7 +138,7 @@ public class DeleteQueueResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>operation success</p>
@@ -149,7 +149,7 @@ public class DeleteQueueResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>06273500-249F-5863-121D-74D51123****</p>
@@ -160,7 +160,7 @@ public class DeleteQueueResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response status.</p>
+         * <p>The status of the response.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -264,7 +264,10 @@ public class DeleteQueueResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The returned message.</p>
+             * <p>The response message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>无</p>
              */
             public Builder message(String message) {
                 this.message = message;

@@ -169,12 +169,15 @@ public class SetTopicAttributesRequest extends Request {
         /**
          * <p>Specifies whether to enable the log management feature. Valid values:</p>
          * <ul>
-         * <li>true: enabled.</li>
-         * <li>false: disabled. Default value: false.</li>
+         * <li><p>true: Enabled.</p>
+         * </li>
+         * <li><p>false: Disabled.
+         * Default value: false.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>True</p>
+         * <p>true</p>
          */
         public Builder enableLogging(Boolean enableLogging) {
             this.putQueryParameter("EnableLogging", enableLogging);
@@ -201,7 +204,7 @@ public class SetTopicAttributesRequest extends Request {
         }
 
         /**
-         * <p>The maximum length of the message that is sent to the topic. Valid values: 1024 to 65536. Unit: bytes. Default value: 65536.</p>
+         * <p>The maximum length of the message body sent to the topic. Valid values: 1024 to 65536. Unit: bytes. Default value: 65536.</p>
          * 
          * <strong>example:</strong>
          * <p>65536</p>

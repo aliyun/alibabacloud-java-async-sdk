@@ -130,7 +130,7 @@ public class ListTopicResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -138,7 +138,7 @@ public class ListTopicResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>operation success</p>
@@ -149,7 +149,7 @@ public class ListTopicResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>06273500-249F-5863-121D-74D51123****</p>
@@ -160,7 +160,7 @@ public class ListTopicResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response status.</p>
+         * <p>The status of the response.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -171,7 +171,7 @@ public class ListTopicResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -240,7 +240,7 @@ public class ListTopicResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The tag key.</p>
+             * <p>The key of the tag.</p>
              * 
              * <strong>example:</strong>
              * <p>tag1</p>
@@ -251,7 +251,7 @@ public class ListTopicResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value.</p>
+             * <p>The value of the tag.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -503,7 +503,7 @@ public class ListTopicResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the subscription was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * <p>The time when the topic was created. The value is a UTC UNIX timestamp in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1449554962</p>
@@ -514,7 +514,10 @@ public class ListTopicResponseBody extends TeaModel {
             }
 
             /**
-             * EnableSSE.
+             * <p>Specifies whether server-side encryption is enabled. Valid values: true and false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableSSE(Boolean enableSSE) {
                 this.enableSSE = enableSSE;
@@ -522,7 +525,10 @@ public class ListTopicResponseBody extends TeaModel {
             }
 
             /**
-             * EncryptionEnabled.
+             * <p>Indicates whether server-side encryption is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder encryptionEnabled(Boolean encryptionEnabled) {
                 this.encryptionEnabled = encryptionEnabled;
@@ -530,7 +536,10 @@ public class ListTopicResponseBody extends TeaModel {
             }
 
             /**
-             * KmsKeyId.
+             * <p>The KMS key ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key-xxx</p>
              */
             public Builder kmsKeyId(String kmsKeyId) {
                 this.kmsKeyId = kmsKeyId;
@@ -538,7 +547,7 @@ public class ListTopicResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the subscription was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * <p>The time when the topic attributes were last modified. The value is a UTC UNIX timestamp in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1449554962</p>
@@ -549,10 +558,10 @@ public class ListTopicResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the logging feature is enabled.</p>
+             * <p>Indicates whether the log management feature is enabled. Valid values:</p>
              * <ul>
-             * <li>True</li>
-             * <li>False</li>
+             * <li>True: enabled</li>
+             * <li>False: disabled</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -564,7 +573,7 @@ public class ListTopicResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum length of the message that is sent to the topic. Unit: bytes.</p>
+             * <p>The maximum length of the message body that can be sent to the topic. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>65536</p>
@@ -586,7 +595,7 @@ public class ListTopicResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum duration for which a message is retained in the topic. After the specified retention period ends, the message is deleted regardless of whether the message is received. Unit: seconds.</p>
+             * <p>The maximum retention period of messages in the topic. After the specified period elapses from the time a message is sent to the topic, the message is deleted regardless of whether it is successfully pushed to users. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>86400</p>
@@ -597,7 +606,10 @@ public class ListTopicResponseBody extends TeaModel {
             }
 
             /**
-             * SseAlgorithm.
+             * <p>The server-side encryption algorithm. Currently, AES-256-GCM is supported. If this parameter is not specified, the default algorithm is used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AES-256-GCM</p>
              */
             public Builder sseAlgorithm(String sseAlgorithm) {
                 this.sseAlgorithm = sseAlgorithm;
@@ -605,7 +617,10 @@ public class ListTopicResponseBody extends TeaModel {
             }
 
             /**
-             * SseType.
+             * <p>The server-side encryption method. Valid values: SMQ and KMS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>KMS</p>
              */
             public Builder sseType(String sseType) {
                 this.sseType = sseType;
@@ -613,7 +628,7 @@ public class ListTopicResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags added to the resources.</p>
+             * <p>The list of resource tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -621,7 +636,7 @@ public class ListTopicResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The internal URL of the message topic. The internal URL can be accessed over an internal network.</p>
+             * <p>The internal URL of the topic.</p>
              * 
              * <strong>example:</strong>
              * <p>http:// 111111111****.mns.us-west-1-internal.aliyuncs.com/topics/testTopic</p>
@@ -643,7 +658,14 @@ public class ListTopicResponseBody extends TeaModel {
             }
 
             /**
-             * TopicType.
+             * <p>The type of the topic. Valid values:</p>
+             * <ul>
+             * <li>normal: normal topic</li>
+             * <li>fifo: FIFO topic</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder topicType(String topicType) {
                 this.topicType = topicType;
@@ -651,7 +673,7 @@ public class ListTopicResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the message topic.</p>
+             * <p>The URL of the topic.</p>
              * 
              * <strong>example:</strong>
              * <p>http:// 111111111****.mns.us-west-1.aliyuncs.com/topics/testTopic</p>
@@ -747,7 +769,7 @@ public class ListTopicResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The data returned on the current page.</p>
+             * <p>The results returned on the current page.</p>
              */
             public Builder pageData(java.util.List<PageData> pageData) {
                 this.pageData = pageData;
@@ -755,7 +777,7 @@ public class ListTopicResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page number.</p>
+             * <p>The page number of the returned results.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -766,7 +788,7 @@ public class ListTopicResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries per page.</p>
+             * <p>The number of entries returned on each page.</p>
              * 
              * <strong>example:</strong>
              * <p>50</p>
@@ -777,7 +799,7 @@ public class ListTopicResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of results.</p>
              * 
              * <strong>example:</strong>
              * <p>130</p>

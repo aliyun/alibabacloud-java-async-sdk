@@ -119,7 +119,10 @@ public class ListEventRulesResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ListEventRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ListEventRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>operation success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +149,10 @@ public class ListEventRulesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>06273500-249F-5863-121D-74D51123E62C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +160,10 @@ public class ListEventRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -159,7 +171,10 @@ public class ListEventRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -225,7 +240,16 @@ public class ListEventRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * EndpointType.
+             * <p>The endpoint type. Valid values:</p>
+             * <ul>
+             * <li><p><strong>topic</strong>: A topic can deliver messages to multiple subscribers. You can add or remove subscribers later.</p>
+             * </li>
+             * <li><p><strong>queue</strong>: Messages are delivered directly to a queue. This simplifies the delivery path, but you cannot add new subscribers later.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>topic</p>
              */
             public Builder endpointType(String endpointType) {
                 this.endpointType = endpointType;
@@ -233,7 +257,10 @@ public class ListEventRulesResponseBody extends TeaModel {
             }
 
             /**
-             * EndpointValue.
+             * <p>The actual value of the endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-topic</p>
              */
             public Builder endpointValue(String endpointValue) {
                 this.endpointValue = endpointValue;
@@ -300,7 +327,10 @@ public class ListEventRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * EndpointType.
+             * <p>The endpoint type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>queue</p>
              */
             public Builder endpointType(String endpointType) {
                 this.endpointType = endpointType;
@@ -308,7 +338,10 @@ public class ListEventRulesResponseBody extends TeaModel {
             }
 
             /**
-             * EndpointValue.
+             * <p>The actual value of the endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>wyx-vp-complete-queue</p>
              */
             public Builder endpointValue(String endpointValue) {
                 this.endpointValue = endpointValue;
@@ -440,7 +473,10 @@ public class ListEventRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * DeliveryMode.
+             * <p>This parameter is deprecated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>--</p>
              */
             public Builder deliveryMode(String deliveryMode) {
                 this.deliveryMode = deliveryMode;
@@ -448,7 +484,7 @@ public class ListEventRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Endpoint.
+             * <p>The endpoint of the subscription.</p>
              */
             public Builder endpoint(Endpoint endpoint) {
                 this.endpoint = endpoint;
@@ -456,7 +492,7 @@ public class ListEventRulesResponseBody extends TeaModel {
             }
 
             /**
-             * EventTypes.
+             * <p>The list of event types.</p>
              */
             public Builder eventTypes(java.util.List<String> eventTypes) {
                 this.eventTypes = eventTypes;
@@ -464,7 +500,7 @@ public class ListEventRulesResponseBody extends TeaModel {
             }
 
             /**
-             * MatchRules.
+             * <p>The event matching rules. The rules have an OR relationship.</p>
              */
             public Builder matchRules(java.util.List<java.util.List<EventMatchRule>> matchRules) {
                 this.matchRules = matchRules;
@@ -472,7 +508,10 @@ public class ListEventRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * <p>The name of the event notification rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rule-xsXDW</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -480,7 +519,7 @@ public class ListEventRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Subscriptions.
+             * <p>The subscribers. A maximum of 20 entries are returned. If there are more subscribers, see <a href="https://help.aliyun.com/document_detail/2804757.html">List Subscriptions</a>.</p>
              */
             public Builder subscriptions(java.util.List<Subscriptions> subscriptions) {
                 this.subscriptions = subscriptions;
@@ -488,7 +527,10 @@ public class ListEventRulesResponseBody extends TeaModel {
             }
 
             /**
-             * TopicName.
+             * <p>The name of the topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo-topic</p>
              */
             public Builder topicName(String topicName) {
                 this.topicName = topicName;
@@ -633,7 +675,10 @@ public class ListEventRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * MaxResults.
+             * <p>This parameter is deprecated. The maximum number of entries is based on Total.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder maxResults(Integer maxResults) {
                 this.maxResults = maxResults;
@@ -641,7 +686,10 @@ public class ListEventRulesResponseBody extends TeaModel {
             }
 
             /**
-             * NextToken.
+             * <p>This parameter is deprecated. Paged queries are based on PageNum.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a88f58d504b8b4c4e0b5e8707e68181f</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -649,7 +697,7 @@ public class ListEventRulesResponseBody extends TeaModel {
             }
 
             /**
-             * PageData.
+             * <p>The data entries.</p>
              */
             public Builder pageData(java.util.List<PageData> pageData) {
                 this.pageData = pageData;
@@ -657,7 +705,10 @@ public class ListEventRulesResponseBody extends TeaModel {
             }
 
             /**
-             * PageNum.
+             * <p>The page number of the returned results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNum(Long pageNum) {
                 this.pageNum = pageNum;
@@ -665,7 +716,10 @@ public class ListEventRulesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -673,7 +727,10 @@ public class ListEventRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Pages.
+             * <p>The total number of pages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder pages(Long pages) {
                 this.pages = pages;
@@ -681,7 +738,10 @@ public class ListEventRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * <p>The number of entries on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -689,7 +749,10 @@ public class ListEventRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>130</p>
              */
             public Builder total(Long total) {
                 this.total = total;

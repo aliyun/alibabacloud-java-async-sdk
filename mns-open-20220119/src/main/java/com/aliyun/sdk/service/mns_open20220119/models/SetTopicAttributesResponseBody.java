@@ -130,7 +130,7 @@ public class SetTopicAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -138,7 +138,7 @@ public class SetTopicAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>operation success</p>
@@ -264,7 +264,10 @@ public class SetTopicAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The returned message.</p>
+             * <p>The response message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>无</p>
              */
             public Builder message(String message) {
                 this.message = message;

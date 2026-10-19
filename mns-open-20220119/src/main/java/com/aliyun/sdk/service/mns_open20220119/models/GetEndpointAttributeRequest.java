@@ -83,9 +83,9 @@ public class GetEndpointAttributeRequest extends Request {
         }
 
         /**
-         * <p>The type of the endpoint. Value:</p>
+         * <p>The endpoint type. Valid values:</p>
          * <ul>
-         * <li><strong>public</strong>: indicates public endpoint. (Only the public is supported.)</li>
+         * <li><strong>public</strong>: Internet endpoint. Currently, only public is supported.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

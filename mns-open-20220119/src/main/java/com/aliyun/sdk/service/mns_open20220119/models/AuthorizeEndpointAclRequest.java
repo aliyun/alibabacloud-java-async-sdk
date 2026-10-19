@@ -113,9 +113,9 @@ public class AuthorizeEndpointAclRequest extends Request {
         }
 
         /**
-         * <p>The ACL policy. Valid values:</p>
+         * <p>The access control list (ACL) policy. Valid value:</p>
          * <ul>
-         * <li><strong>allow</strong>: indicates that this operation is included in the Cidr whitelist. (Only the allow is supported.)</li>
+         * <li><strong>allow</strong>: A CIDR whitelist. Only allow is supported.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -129,7 +129,7 @@ public class AuthorizeEndpointAclRequest extends Request {
         }
 
         /**
-         * <p>The list of CIDR block.</p>
+         * <p>A list of CIDR blocks.</p>
          * <p>This parameter is required.</p>
          */
         public Builder cidrList(java.util.List<String> cidrList) {
@@ -140,9 +140,9 @@ public class AuthorizeEndpointAclRequest extends Request {
         }
 
         /**
-         * <p>The type of the endpoint. Valid values:</p>
+         * <p>The type of the endpoint. Valid value:</p>
          * <ul>
-         * <li><strong>public</strong>: indicates public endpoint. (Only the public endpoint is supported.)</li>
+         * <li><strong>public</strong>: An internet endpoint. Only public is supported.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

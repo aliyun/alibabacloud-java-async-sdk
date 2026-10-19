@@ -251,7 +251,9 @@ public class SetQueueAttributesRequest extends Request {
         }
 
         /**
-         * <p>The period after which all messages sent to the queue are consumed. Valid values: 0 to 604800. Unit: seconds. Default value: 0</p>
+         * <p>The delay time for all messages sent to the queue. Messages sent to the queue become consumable only after the delay time specified by this parameter elapses.
+         * Valid values: 0 to 604800. Unit: seconds.
+         * Default value: 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -273,14 +275,17 @@ public class SetQueueAttributesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the log management feature. Valid values:</p>
+         * <p>Specifies whether to enable the Log Management feature. Valid values:</p>
          * <ul>
-         * <li>true: enabled.</li>
-         * <li>false: disabled. Default value: false.</li>
+         * <li><p>true: Enabled.</p>
+         * </li>
+         * <li><p>false: Disabled.
+         * Default value: false.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>True</p>
+         * <p>true</p>
          */
         public Builder enableLogging(Boolean enableLogging) {
             this.putQueryParameter("EnableLogging", enableLogging);
@@ -307,7 +312,9 @@ public class SetQueueAttributesRequest extends Request {
         }
 
         /**
-         * <p>The maximum length of the message that is sent to the queue. Valid values: 1024 to 65536. Unit: bytes. Default value: 65536.</p>
+         * <p>The maximum length of the message body sent to the queue.
+         * Valid values: 1024 to 65536. Unit: bytes.
+         * Default value: 65536.</p>
          * 
          * <strong>example:</strong>
          * <p>1024</p>
@@ -319,7 +326,9 @@ public class SetQueueAttributesRequest extends Request {
         }
 
         /**
-         * <p>The maximum duration for which a message is retained in the queue. After the specified retention period ends, the message is deleted regardless of whether the message is received. Valid values: 60 to 604800. Unit: seconds. Default value: 345600.</p>
+         * <p>The maximum lifetime of a message in the queue. After the time specified by this parameter elapses since the message is sent to the queue, the message is deleted regardless of whether it has been consumed.
+         * Valid values: 60 to 604800. Unit: seconds.
+         * Default value: 345600.</p>
          * 
          * <strong>example:</strong>
          * <p>120</p>
@@ -331,7 +340,9 @@ public class SetQueueAttributesRequest extends Request {
         }
 
         /**
-         * <p>The maximum duration for which long polling requests are held after the ReceiveMessage operation is called. Valid values: 0 to 30. Unit: seconds. Default value: 0</p>
+         * <p>The maximum wait time for a ReceiveMessage request on the queue when no messages are available in the queue.
+         * Valid values: 0 to 30. Unit: seconds.
+         * Default value: 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -384,7 +395,9 @@ public class SetQueueAttributesRequest extends Request {
         }
 
         /**
-         * <p>The duration for which a message stays in the Inactive state after the message is received from the queue. Valid values: 1 to 43200. Unit: seconds. Default value: 30.</p>
+         * <p>The duration for which a message stays in the Inactive state after it is consumed from the queue and changes from the Active state to the Inactive state.
+         * Valid values: 1 to 43200. Unit: seconds.
+         * Default value: 30.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -416,6 +429,7 @@ public class SetQueueAttributesRequest extends Request {
         private Boolean enabled;
 
         @com.aliyun.core.annotation.NameInMap("MaxReceiveCount")
+        @com.aliyun.core.annotation.Validation(maximum = 1000)
         private Integer maxReceiveCount;
 
         private DlqPolicy(Builder builder) {
@@ -468,7 +482,7 @@ public class SetQueueAttributesRequest extends Request {
             } 
 
             /**
-             * <p>The queue to which dead-letter messages are delivered.</p>
+             * <p>The target queue to which dead-letter messages are delivered.</p>
              * 
              * <strong>example:</strong>
              * <p>deadLetterTargetQueue</p>
@@ -479,7 +493,7 @@ public class SetQueueAttributesRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable the dead-letter message delivery.</p>
+             * <p>Specifies whether to enable dead-letter message delivery.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -490,7 +504,7 @@ public class SetQueueAttributesRequest extends Request {
             }
 
             /**
-             * <p>The maximum number of retries.</p>
+             * <p>The maximum number of times a message can be delivered.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -560,7 +574,7 @@ public class SetQueueAttributesRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to enable the dead-letter message delivery.</p>
+             * <p>Specifies whether to enable dead-letter message delivery.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>

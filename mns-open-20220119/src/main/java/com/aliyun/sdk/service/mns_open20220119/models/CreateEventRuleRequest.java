@@ -184,7 +184,11 @@ public class CreateEventRuleRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>A client token to ensure the idempotence of the request.</p>
+         * <p>Generate a unique value for this parameter from your client for each request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>06273500-249F-5863-121D-74D51123****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -193,7 +197,10 @@ public class CreateEventRuleRequest extends Request {
         }
 
         /**
-         * DeliveryMode.
+         * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>--</p>
          */
         public Builder deliveryMode(String deliveryMode) {
             this.putQueryParameter("DeliveryMode", deliveryMode);
@@ -202,7 +209,7 @@ public class CreateEventRuleRequest extends Request {
         }
 
         /**
-         * Endpoint.
+         * <p>The endpoint that receives messages for this subscription.</p>
          */
         public Builder endpoint(Endpoint endpoint) {
             String endpointShrink = shrink(endpoint, "Endpoint", "json");
@@ -212,7 +219,7 @@ public class CreateEventRuleRequest extends Request {
         }
 
         /**
-         * Endpoints.
+         * <p>This parameter is deprecated. Use Endpoint instead.</p>
          */
         public Builder endpoints(java.util.List<Endpoints> endpoints) {
             String endpointsShrink = shrink(endpoints, "Endpoints", "json");
@@ -222,6 +229,7 @@ public class CreateEventRuleRequest extends Request {
         }
 
         /**
+         * <p>A list of event types.</p>
          * <p>This parameter is required.</p>
          */
         public Builder eventTypes(java.util.List<String> eventTypes) {
@@ -232,6 +240,7 @@ public class CreateEventRuleRequest extends Request {
         }
 
         /**
+         * <p>A list of matching rules. The logical relationship between the rules is OR.</p>
          * <p>This parameter is required.</p>
          */
         public Builder matchRules(java.util.List<java.util.List<EventMatchRule>> matchRules) {
@@ -242,6 +251,7 @@ public class CreateEventRuleRequest extends Request {
         }
 
         /**
+         * <p>The name of the Alibaba Cloud product for which you want to receive event notifications.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -254,6 +264,7 @@ public class CreateEventRuleRequest extends Request {
         }
 
         /**
+         * <p>The name of the event rule.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -325,7 +336,16 @@ public class CreateEventRuleRequest extends Request {
             } 
 
             /**
-             * EndpointType.
+             * <p>The endpoint type. Valid values:</p>
+             * <ul>
+             * <li><p><strong>topic</strong>: The endpoint is a topic. A topic can deliver messages to multiple subscribers. You can add or remove subscribers later.</p>
+             * </li>
+             * <li><p><strong>queue</strong>: The endpoint is a queue. Messages are delivered directly to the queue. This simplifies the delivery path, but you cannot add new subscribers later.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>topic</p>
              */
             public Builder endpointType(String endpointType) {
                 this.endpointType = endpointType;
@@ -333,7 +353,10 @@ public class CreateEventRuleRequest extends Request {
             }
 
             /**
-             * EndpointValue.
+             * <p>The value of the endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-topic</p>
              */
             public Builder endpointValue(String endpointValue) {
                 this.endpointValue = endpointValue;
@@ -400,7 +423,10 @@ public class CreateEventRuleRequest extends Request {
             } 
 
             /**
-             * EndpointType.
+             * <p>Deprecated. Use Endpoint.EndpointType instead.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>http</p>
              */
             public Builder endpointType(String endpointType) {
                 this.endpointType = endpointType;
@@ -408,7 +434,10 @@ public class CreateEventRuleRequest extends Request {
             }
 
             /**
-             * EndpointValue.
+             * <p>Deprecated. Use Endpoint.EndpointValue instead.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-xxx-queue</p>
              */
             public Builder endpointValue(String endpointValue) {
                 this.endpointValue = endpointValue;

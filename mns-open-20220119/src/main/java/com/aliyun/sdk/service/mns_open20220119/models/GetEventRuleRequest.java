@@ -98,6 +98,7 @@ public class GetEventRuleRequest extends Request {
         }
 
         /**
+         * <p>The name of the Alibaba Cloud product that triggers the event notification.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +111,7 @@ public class GetEventRuleRequest extends Request {
         }
 
         /**
+         * <p>The name of the event notification rule.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
