@@ -117,7 +117,11 @@ public class DescribeChatMessageRequest extends Request {
         } 
 
         /**
+         * <p>The question asked by the user.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>How to set reasonable annual planning goals?</p>
          */
         public Builder query(String query) {
             this.putQueryParameter("Query", query);
@@ -126,6 +130,7 @@ public class DescribeChatMessageRequest extends Request {
         }
 
         /**
+         * <p>The Alibaba Cloud region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,7 +143,10 @@ public class DescribeChatMessageRequest extends Request {
         }
 
         /**
-         * SessionId.
+         * <p>The session ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>df94eec5-3d95-435c-87d4-43e8bb3f9519</p>
          */
         public Builder sessionId(String sessionId) {
             this.putQueryParameter("SessionId", sessionId);
@@ -156,7 +164,10 @@ public class DescribeChatMessageRequest extends Request {
         }
 
         /**
-         * Timezone.
+         * <p>The time zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Asia/Shanghai</p>
          */
         public Builder timezone(String timezone) {
             this.putQueryParameter("Timezone", timezone);

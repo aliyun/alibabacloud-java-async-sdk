@@ -117,6 +117,7 @@ public class GetEmbodiedAIPlatformResourceUsageInfoRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,6 +130,7 @@ public class GetEmbodiedAIPlatformResourceUsageInfoRequest extends Request {
         }
 
         /**
+         * <p>The end time of the time range to query network resource usage. Format: yyyy-MM-ddTHH:mmZ.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -141,7 +143,10 @@ public class GetEmbodiedAIPlatformResourceUsageInfoRequest extends Request {
         }
 
         /**
-         * PlatformName.
+         * <p>The name of the Embodied platform.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>platform1</p>
          */
         public Builder platformName(String platformName) {
             this.putQueryParameter("PlatformName", platformName);
@@ -150,6 +155,10 @@ public class GetEmbodiedAIPlatformResourceUsageInfoRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the instance.</p>
+         * <blockquote>
+         * <p>You can call the DescribeRegions operation to query the region ID of a specified Data Lakehouse Edition cluster.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -162,6 +171,7 @@ public class GetEmbodiedAIPlatformResourceUsageInfoRequest extends Request {
         }
 
         /**
+         * <p>The start time of the time range to query network resource usage. Format: yyyy-MM-ddTHH:mmZ.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>

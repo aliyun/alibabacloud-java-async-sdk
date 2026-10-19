@@ -132,7 +132,7 @@ public class GetEmbodiedAIPlatformResourceUsageInfoResponseBody extends TeaModel
         } 
 
         /**
-         * AcuDetails.
+         * <p>The number of ACUs for each component of the Embodied platform.</p>
          */
         public Builder acuDetails(AcuDetails acuDetails) {
             this.acuDetails = acuDetails;
@@ -140,7 +140,7 @@ public class GetEmbodiedAIPlatformResourceUsageInfoResponseBody extends TeaModel
         }
 
         /**
-         * GpuDetails.
+         * <p>The GPU usage.</p>
          */
         public Builder gpuDetails(java.util.List<GpuDetails> gpuDetails) {
             this.gpuDetails = gpuDetails;
@@ -148,7 +148,10 @@ public class GetEmbodiedAIPlatformResourceUsageInfoResponseBody extends TeaModel
         }
 
         /**
-         * MaxRegisteredDevices.
+         * <p>The maximum number of registered devices.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder maxRegisteredDevices(Long maxRegisteredDevices) {
             this.maxRegisteredDevices = maxRegisteredDevices;
@@ -156,7 +159,10 @@ public class GetEmbodiedAIPlatformResourceUsageInfoResponseBody extends TeaModel
         }
 
         /**
-         * RegisteredDeviceCount.
+         * <p>The number of registered devices.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder registeredDeviceCount(Long registeredDeviceCount) {
             this.registeredDeviceCount = registeredDeviceCount;
@@ -175,7 +181,7 @@ public class GetEmbodiedAIPlatformResourceUsageInfoResponseBody extends TeaModel
         }
 
         /**
-         * SlbTraffic.
+         * <p>The network resource usage information.</p>
          */
         public Builder slbTraffic(SlbTraffic slbTraffic) {
             this.slbTraffic = slbTraffic;
@@ -183,7 +189,7 @@ public class GetEmbodiedAIPlatformResourceUsageInfoResponseBody extends TeaModel
         }
 
         /**
-         * StorageUsage.
+         * <p>The storage resource usage information.</p>
          */
         public Builder storageUsage(StorageUsage storageUsage) {
             this.storageUsage = storageUsage;
@@ -275,7 +281,10 @@ public class GetEmbodiedAIPlatformResourceUsageInfoResponseBody extends TeaModel
             } 
 
             /**
-             * EapWebserverACUCount.
+             * <p>The number of ACUs for the EAP web server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder eapWebserverACUCount(Double eapWebserverACUCount) {
                 this.eapWebserverACUCount = eapWebserverACUCount;
@@ -283,7 +292,10 @@ public class GetEmbodiedAIPlatformResourceUsageInfoResponseBody extends TeaModel
             }
 
             /**
-             * RayHeadACUCount.
+             * <p>The number of ACUs for the Ray head node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder rayHeadACUCount(Double rayHeadACUCount) {
                 this.rayHeadACUCount = rayHeadACUCount;
@@ -291,7 +303,10 @@ public class GetEmbodiedAIPlatformResourceUsageInfoResponseBody extends TeaModel
             }
 
             /**
-             * RayWorkerACUCount.
+             * <p>The number of ACUs for the Ray worker node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder rayWorkerACUCount(Double rayWorkerACUCount) {
                 this.rayWorkerACUCount = rayWorkerACUCount;
@@ -299,7 +314,10 @@ public class GetEmbodiedAIPlatformResourceUsageInfoResponseBody extends TeaModel
             }
 
             /**
-             * TotalACUCount.
+             * <p>The total number of ACUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalACUCount(Double totalACUCount) {
                 this.totalACUCount = totalACUCount;
@@ -379,7 +397,10 @@ public class GetEmbodiedAIPlatformResourceUsageInfoResponseBody extends TeaModel
             } 
 
             /**
-             * AllocatedUnit.
+             * <p>The GPU allocation unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder allocatedUnit(Integer allocatedUnit) {
                 this.allocatedUnit = allocatedUnit;
@@ -387,7 +408,10 @@ public class GetEmbodiedAIPlatformResourceUsageInfoResponseBody extends TeaModel
             }
 
             /**
-             * GpuModel.
+             * <p>The GPU model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ADB.MLLarge.2</p>
              */
             public Builder gpuModel(String gpuModel) {
                 this.gpuModel = gpuModel;
@@ -395,7 +419,10 @@ public class GetEmbodiedAIPlatformResourceUsageInfoResponseBody extends TeaModel
             }
 
             /**
-             * TotalCount.
+             * <p>The current number of GPUs in use for this model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -462,7 +489,10 @@ public class GetEmbodiedAIPlatformResourceUsageInfoResponseBody extends TeaModel
             } 
 
             /**
-             * TotalBytesIn.
+             * <p>The inbound Internet traffic, in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalBytesIn(Long totalBytesIn) {
                 this.totalBytesIn = totalBytesIn;
@@ -470,7 +500,10 @@ public class GetEmbodiedAIPlatformResourceUsageInfoResponseBody extends TeaModel
             }
 
             /**
-             * TotalBytesOut.
+             * <p>The outbound Internet traffic, in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalBytesOut(Long totalBytesOut) {
                 this.totalBytesOut = totalBytesOut;
@@ -524,7 +557,10 @@ public class GetEmbodiedAIPlatformResourceUsageInfoResponseBody extends TeaModel
             } 
 
             /**
-             * MeteredSize.
+             * <p>The NAS standard storage usage, in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder meteredSize(Long meteredSize) {
                 this.meteredSize = meteredSize;
@@ -578,7 +614,10 @@ public class GetEmbodiedAIPlatformResourceUsageInfoResponseBody extends TeaModel
             } 
 
             /**
-             * StandardStorageSize.
+             * <p>The OSS standard storage usage, in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder standardStorageSize(Long standardStorageSize) {
                 this.standardStorageSize = standardStorageSize;
@@ -645,7 +684,7 @@ public class GetEmbodiedAIPlatformResourceUsageInfoResponseBody extends TeaModel
             } 
 
             /**
-             * Nas.
+             * <p>The NAS storage usage.</p>
              */
             public Builder nas(Nas nas) {
                 this.nas = nas;
@@ -653,7 +692,7 @@ public class GetEmbodiedAIPlatformResourceUsageInfoResponseBody extends TeaModel
             }
 
             /**
-             * Oss.
+             * <p>The OSS storage usage.</p>
              */
             public Builder oss(Oss oss) {
                 this.oss = oss;

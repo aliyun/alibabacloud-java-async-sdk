@@ -80,7 +80,10 @@ public class CreateMultiModelKnowledgeBaseResponseBody extends TeaModel {
         } 
 
         /**
-         * DbClusterId.
+         * <p>The ID of the created AnalyticDB for MySQL cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amv-***</p>
          */
         public Builder dbClusterId(String dbClusterId) {
             this.dbClusterId = dbClusterId;
@@ -88,7 +91,10 @@ public class CreateMultiModelKnowledgeBaseResponseBody extends TeaModel {
         }
 
         /**
-         * MmkbName.
+         * <p>The name of the created multimodal knowledge engine service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mmkb-***</p>
          */
         public Builder mmkbName(String mmkbName) {
             this.mmkbName = mmkbName;

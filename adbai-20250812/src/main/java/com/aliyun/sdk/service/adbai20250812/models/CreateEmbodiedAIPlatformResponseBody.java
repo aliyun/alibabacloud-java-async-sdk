@@ -54,7 +54,10 @@ public class CreateEmbodiedAIPlatformResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19E994DC-A816-56DB-9F90-5F8E403DD19D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

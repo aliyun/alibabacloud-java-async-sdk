@@ -26,12 +26,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateAgentPlatformResponse> createAgentPlatform(CreateAgentPlatformRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Queries the actual resource amount corresponding to the backend of the instance ontology count.</p>
+     * 
      * @param request the request parameters of CreateEmbodiedAIPlatform  CreateEmbodiedAIPlatformRequest
      * @return CreateEmbodiedAIPlatformResponse
      */
     CompletableFuture<CreateEmbodiedAIPlatformResponse> createEmbodiedAIPlatform(CreateEmbodiedAIPlatformRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Creates an AnalyticDB for MySQL multimodal knowledge base.</p>
+     * 
      * @param request the request parameters of CreateMultiModelKnowledgeBase  CreateMultiModelKnowledgeBaseRequest
      * @return CreateMultiModelKnowledgeBaseResponse
      */
@@ -50,12 +56,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteEmbodiedAIPlatformResponse> deleteEmbodiedAIPlatform(DeleteEmbodiedAIPlatformRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Deletes an ADB multimodal knowledge base.</p>
+     * 
      * @param request the request parameters of DeleteMultiModalKnowledgeBase  DeleteMultiModalKnowledgeBaseRequest
      * @return DeleteMultiModalKnowledgeBaseResponse
      */
     CompletableFuture<DeleteMultiModalKnowledgeBaseResponse> deleteMultiModalKnowledgeBase(DeleteMultiModalKnowledgeBaseRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves multi-turn conversations for instance kernel diagnostics.</p>
+     * 
      * @param request the request parameters of DescribeChatMessage  DescribeChatMessageRequest
      * @return DescribeChatMessageResponse
      */
@@ -64,6 +76,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     ResponseIterable<DescribeChatMessageResponseBody> describeChatMessageWithResponseIterable(DescribeChatMessageRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Queries the actual resource capacity corresponding to the backend of the instance device count.</p>
+     * 
      * @param request the request parameters of DescribeEapDeviceResourceAllocation  DescribeEapDeviceResourceAllocationRequest
      * @return DescribeEapDeviceResourceAllocationResponse
      */

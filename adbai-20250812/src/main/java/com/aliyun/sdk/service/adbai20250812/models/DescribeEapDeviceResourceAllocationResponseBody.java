@@ -67,7 +67,7 @@ public class DescribeEapDeviceResourceAllocationResponseBody extends TeaModel {
         } 
 
         /**
-         * Items.
+         * <p>The list of specification recommendations.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -300,7 +300,10 @@ public class DescribeEapDeviceResourceAllocationResponseBody extends TeaModel {
             } 
 
             /**
-             * DeviceCount.
+             * <p>The total number of devices.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder deviceCount(Integer deviceCount) {
                 this.deviceCount = deviceCount;
@@ -308,7 +311,10 @@ public class DescribeEapDeviceResourceAllocationResponseBody extends TeaModel {
             }
 
             /**
-             * HeadAcu.
+             * <p>The total number of ACUs for the Ray Cluster Head of the embodied intelligence platform.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.0</p>
              */
             public Builder headAcu(Double headAcu) {
                 this.headAcu = headAcu;
@@ -316,7 +322,10 @@ public class DescribeEapDeviceResourceAllocationResponseBody extends TeaModel {
             }
 
             /**
-             * HeadCpu.
+             * <p>The number of vCPU cores for the Ray Cluster Head of the embodied intelligence platform.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder headCpu(Integer headCpu) {
                 this.headCpu = headCpu;
@@ -324,7 +333,10 @@ public class DescribeEapDeviceResourceAllocationResponseBody extends TeaModel {
             }
 
             /**
-             * HeadSpecName.
+             * <p>The Ray Cluster Head specification of the embodied intelligence platform.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;medium&quot;</p>
              */
             public Builder headSpecName(String headSpecName) {
                 this.headSpecName = headSpecName;
@@ -332,7 +344,10 @@ public class DescribeEapDeviceResourceAllocationResponseBody extends TeaModel {
             }
 
             /**
-             * TotalAcu.
+             * <p>The total number of actually deployed ACUs on the embodied intelligence platform.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>26</p>
              */
             public Builder totalAcu(Double totalAcu) {
                 this.totalAcu = totalAcu;
@@ -340,7 +355,10 @@ public class DescribeEapDeviceResourceAllocationResponseBody extends TeaModel {
             }
 
             /**
-             * TotalDeployedCpu.
+             * <p>The total number of actually deployed vCPU cores on the embodied intelligence platform.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>26</p>
              */
             public Builder totalDeployedCpu(Integer totalDeployedCpu) {
                 this.totalDeployedCpu = totalDeployedCpu;
@@ -348,7 +366,10 @@ public class DescribeEapDeviceResourceAllocationResponseBody extends TeaModel {
             }
 
             /**
-             * TotalTargetCpu.
+             * <p>The total number of target vCPU cores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>24</p>
              */
             public Builder totalTargetCpu(Integer totalTargetCpu) {
                 this.totalTargetCpu = totalTargetCpu;
@@ -356,7 +377,10 @@ public class DescribeEapDeviceResourceAllocationResponseBody extends TeaModel {
             }
 
             /**
-             * WebserverAcu.
+             * <p>The total number of ACUs for the embodied intelligence platform.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8.0</p>
              */
             public Builder webserverAcu(Double webserverAcu) {
                 this.webserverAcu = webserverAcu;
@@ -364,7 +388,10 @@ public class DescribeEapDeviceResourceAllocationResponseBody extends TeaModel {
             }
 
             /**
-             * WebserverCpu.
+             * <p>The total number of vCPU cores for the embodied intelligence platform.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder webserverCpu(Integer webserverCpu) {
                 this.webserverCpu = webserverCpu;
@@ -372,7 +399,10 @@ public class DescribeEapDeviceResourceAllocationResponseBody extends TeaModel {
             }
 
             /**
-             * WebserverSpecName.
+             * <p>The Webserver specification of the embodied intelligence platform.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;xlarge&quot;</p>
              */
             public Builder webserverSpecName(String webserverSpecName) {
                 this.webserverSpecName = webserverSpecName;
@@ -380,7 +410,10 @@ public class DescribeEapDeviceResourceAllocationResponseBody extends TeaModel {
             }
 
             /**
-             * WorkerAcu.
+             * <p>The total number of ACUs for a single Ray Cluster Worker of the embodied intelligence platform.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16.0</p>
              */
             public Builder workerAcu(Double workerAcu) {
                 this.workerAcu = workerAcu;
@@ -388,7 +421,10 @@ public class DescribeEapDeviceResourceAllocationResponseBody extends TeaModel {
             }
 
             /**
-             * WorkerCount.
+             * <p>The total number of Ray Cluster Workers of the embodied intelligence platform.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder workerCount(Integer workerCount) {
                 this.workerCount = workerCount;
@@ -396,7 +432,10 @@ public class DescribeEapDeviceResourceAllocationResponseBody extends TeaModel {
             }
 
             /**
-             * WorkerCpu.
+             * <p>The number of vCPU cores for a single Ray Cluster Worker of the embodied intelligence platform.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder workerCpu(Integer workerCpu) {
                 this.workerCpu = workerCpu;
@@ -404,7 +443,10 @@ public class DescribeEapDeviceResourceAllocationResponseBody extends TeaModel {
             }
 
             /**
-             * WorkerSpecName.
+             * <p>The Ray Cluster Worker specification of the embodied intelligence platform.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;xlarge&quot;</p>
              */
             public Builder workerSpecName(String workerSpecName) {
                 this.workerSpecName = workerSpecName;

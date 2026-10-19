@@ -132,7 +132,10 @@ public class DescribeEmbodiedAIPlatformsResponseBody extends TeaModel {
         } 
 
         /**
-         * MaxResults.
+         * <p>Use the paged query parameters PageSize, PageNumber, and TotalCount for paging.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -140,7 +143,10 @@ public class DescribeEmbodiedAIPlatformsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>Use the paged query parameters PageSize, PageNumber, and TotalCount for paging.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9c3158c2e8acf616501bd5ee05******</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -148,7 +154,10 @@ public class DescribeEmbodiedAIPlatformsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -156,7 +165,10 @@ public class DescribeEmbodiedAIPlatformsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -164,7 +176,7 @@ public class DescribeEmbodiedAIPlatformsResponseBody extends TeaModel {
         }
 
         /**
-         * Platforms.
+         * <p>The list of embodied intelligence multimodal data platforms.</p>
          */
         public Builder platforms(java.util.List<Platforms> platforms) {
             this.platforms = platforms;
@@ -172,7 +184,10 @@ public class DescribeEmbodiedAIPlatformsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B47EED99-BFA5-529D-8D85-A6642421D390</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +195,10 @@ public class DescribeEmbodiedAIPlatformsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of platforms.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -246,7 +264,10 @@ public class DescribeEmbodiedAIPlatformsResponseBody extends TeaModel {
             } 
 
             /**
-             * WebserverAddress.
+             * <p>The public network access address of the platform webserver.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://amv-2z******-***-roboto.ads.example.com:80">http://amv-2z******-***-roboto.ads.example.com:80</a></p>
              */
             public Builder webserverAddress(String webserverAddress) {
                 this.webserverAddress = webserverAddress;
@@ -254,7 +275,10 @@ public class DescribeEmbodiedAIPlatformsResponseBody extends TeaModel {
             }
 
             /**
-             * WebserverSpecName.
+             * <p>The webserver specification of the platform.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>large</p>
              */
             public Builder webserverSpecName(String webserverSpecName) {
                 this.webserverSpecName = webserverSpecName;
@@ -386,7 +410,10 @@ public class DescribeEmbodiedAIPlatformsResponseBody extends TeaModel {
             } 
 
             /**
-             * AllocateUnit.
+             * <p>The allocation unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder allocateUnit(String allocateUnit) {
                 this.allocateUnit = allocateUnit;
@@ -394,7 +421,10 @@ public class DescribeEmbodiedAIPlatformsResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * <p>The name of the worker group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>worker1</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -402,7 +432,10 @@ public class DescribeEmbodiedAIPlatformsResponseBody extends TeaModel {
             }
 
             /**
-             * MaxWorkerQuantity.
+             * <p>The maximum number of workers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder maxWorkerQuantity(Integer maxWorkerQuantity) {
                 this.maxWorkerQuantity = maxWorkerQuantity;
@@ -410,7 +443,10 @@ public class DescribeEmbodiedAIPlatformsResponseBody extends TeaModel {
             }
 
             /**
-             * MinWorkerQuantity.
+             * <p>The minimum number of workers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder minWorkerQuantity(Integer minWorkerQuantity) {
                 this.minWorkerQuantity = minWorkerQuantity;
@@ -418,7 +454,10 @@ public class DescribeEmbodiedAIPlatformsResponseBody extends TeaModel {
             }
 
             /**
-             * WorkerDiskCapacity.
+             * <p>The disk size of each worker.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100G</p>
              */
             public Builder workerDiskCapacity(String workerDiskCapacity) {
                 this.workerDiskCapacity = workerDiskCapacity;
@@ -426,7 +465,10 @@ public class DescribeEmbodiedAIPlatformsResponseBody extends TeaModel {
             }
 
             /**
-             * WorkerSpecName.
+             * <p>The worker resource model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>large</p>
              */
             public Builder workerSpecName(String workerSpecName) {
                 this.workerSpecName = workerSpecName;
@@ -434,7 +476,10 @@ public class DescribeEmbodiedAIPlatformsResponseBody extends TeaModel {
             }
 
             /**
-             * WorkerSpecType.
+             * <p>The Ray worker resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CPU</p>
              */
             public Builder workerSpecType(String workerSpecType) {
                 this.workerSpecType = workerSpecType;
@@ -579,7 +624,14 @@ public class DescribeEmbodiedAIPlatformsResponseBody extends TeaModel {
             } 
 
             /**
-             * Category.
+             * <p>The Ray cluster type. Valid values:</p>
+             * <ul>
+             * <li>BASIC: basic type without high availability.</li>
+             * <li>HIGH_AVAILABILITY: high-availability type.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>BASIC</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -587,7 +639,10 @@ public class DescribeEmbodiedAIPlatformsResponseBody extends TeaModel {
             }
 
             /**
-             * HeadDiskCapacity.
+             * <p>The disk size of the head node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100G</p>
              */
             public Builder headDiskCapacity(String headDiskCapacity) {
                 this.headDiskCapacity = headDiskCapacity;
@@ -595,7 +650,10 @@ public class DescribeEmbodiedAIPlatformsResponseBody extends TeaModel {
             }
 
             /**
-             * HeadSpec.
+             * <p>The node specifications of the head node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>large</p>
              */
             public Builder headSpec(String headSpec) {
                 this.headSpec = headSpec;
@@ -603,7 +661,10 @@ public class DescribeEmbodiedAIPlatformsResponseBody extends TeaModel {
             }
 
             /**
-             * HeadSpecType.
+             * <p>The resource type of the head node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CPU</p>
              */
             public Builder headSpecType(String headSpecType) {
                 this.headSpecType = headSpecType;
@@ -611,7 +672,10 @@ public class DescribeEmbodiedAIPlatformsResponseBody extends TeaModel {
             }
 
             /**
-             * RayClusterAddress.
+             * <p>The Ray cluster address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://ray-cluster-address.example.com">http://ray-cluster-address.example.com</a></p>
              */
             public Builder rayClusterAddress(String rayClusterAddress) {
                 this.rayClusterAddress = rayClusterAddress;
@@ -619,7 +683,10 @@ public class DescribeEmbodiedAIPlatformsResponseBody extends TeaModel {
             }
 
             /**
-             * RayDashboardAddress.
+             * <p>The Ray Dashboard address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://ray-dashboard-address.example.com">http://ray-dashboard-address.example.com</a></p>
              */
             public Builder rayDashboardAddress(String rayDashboardAddress) {
                 this.rayDashboardAddress = rayDashboardAddress;
@@ -627,7 +694,10 @@ public class DescribeEmbodiedAIPlatformsResponseBody extends TeaModel {
             }
 
             /**
-             * RayGrafanaAddress.
+             * <p>The Ray Grafana address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://ray-grafana-address.example.com">http://ray-grafana-address.example.com</a></p>
              */
             public Builder rayGrafanaAddress(String rayGrafanaAddress) {
                 this.rayGrafanaAddress = rayGrafanaAddress;
@@ -635,7 +705,7 @@ public class DescribeEmbodiedAIPlatformsResponseBody extends TeaModel {
             }
 
             /**
-             * WorkerGroups.
+             * <p>The list of Ray worker group configurations.</p>
              */
             public Builder workerGroups(java.util.List<WorkerGroups> workerGroups) {
                 this.workerGroups = workerGroups;
@@ -715,7 +785,10 @@ public class DescribeEmbodiedAIPlatformsResponseBody extends TeaModel {
             } 
 
             /**
-             * AllocateUnit.
+             * <p>The allocation unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder allocateUnit(String allocateUnit) {
                 this.allocateUnit = allocateUnit;
@@ -1109,7 +1182,10 @@ public class DescribeEmbodiedAIPlatformsResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-12-01 14:55:36</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -1117,7 +1193,7 @@ public class DescribeEmbodiedAIPlatformsResponseBody extends TeaModel {
             }
 
             /**
-             * EapConfig.
+             * <p>The webserver configuration of the platform.</p>
              */
             public Builder eapConfig(EapConfig eapConfig) {
                 this.eapConfig = eapConfig;
@@ -1125,7 +1201,10 @@ public class DescribeEmbodiedAIPlatformsResponseBody extends TeaModel {
             }
 
             /**
-             * OssBucketName.
+             * <p>The lake storage name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>adb-lake-cn-beijing-5q1w******</p>
              */
             public Builder ossBucketName(String ossBucketName) {
                 this.ossBucketName = ossBucketName;
@@ -1133,7 +1212,10 @@ public class DescribeEmbodiedAIPlatformsResponseBody extends TeaModel {
             }
 
             /**
-             * PlatformName.
+             * <p>The platform name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>platform1</p>
              */
             public Builder platformName(String platformName) {
                 this.platformName = platformName;
@@ -1141,7 +1223,7 @@ public class DescribeEmbodiedAIPlatformsResponseBody extends TeaModel {
             }
 
             /**
-             * RayConfig.
+             * <p>The Ray specification information of the platform.</p>
              */
             public Builder rayConfig(RayConfig rayConfig) {
                 this.rayConfig = rayConfig;
@@ -1157,7 +1239,10 @@ public class DescribeEmbodiedAIPlatformsResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * <p>The running status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>running</p>
              */
             public Builder state(String state) {
                 this.state = state;

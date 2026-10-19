@@ -30,6 +30,10 @@ public class CreateMultiModelKnowledgeBaseRequest extends Request {
     private Integer dbClusterAcu;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
+    private String description;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LakeStorageBucketName")
     private String lakeStorageBucketName;
 
@@ -62,6 +66,7 @@ public class CreateMultiModelKnowledgeBaseRequest extends Request {
         this.adbInstanceName = builder.adbInstanceName;
         this.DBClusterId = builder.DBClusterId;
         this.dbClusterAcu = builder.dbClusterAcu;
+        this.description = builder.description;
         this.lakeStorageBucketName = builder.lakeStorageBucketName;
         this.regionId = builder.regionId;
         this.resourceAcuMax = builder.resourceAcuMax;
@@ -103,6 +108,13 @@ public class CreateMultiModelKnowledgeBaseRequest extends Request {
      */
     public Integer getDbClusterAcu() {
         return this.dbClusterAcu;
+    }
+
+    /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
     }
 
     /**
@@ -158,6 +170,7 @@ public class CreateMultiModelKnowledgeBaseRequest extends Request {
         private String adbInstanceName; 
         private String DBClusterId; 
         private Integer dbClusterAcu; 
+        private String description; 
         private String lakeStorageBucketName; 
         private String regionId; 
         private Integer resourceAcuMax; 
@@ -175,6 +188,7 @@ public class CreateMultiModelKnowledgeBaseRequest extends Request {
             this.adbInstanceName = request.adbInstanceName;
             this.DBClusterId = request.DBClusterId;
             this.dbClusterAcu = request.dbClusterAcu;
+            this.description = request.description;
             this.lakeStorageBucketName = request.lakeStorageBucketName;
             this.regionId = request.regionId;
             this.resourceAcuMax = request.resourceAcuMax;
@@ -185,7 +199,10 @@ public class CreateMultiModelKnowledgeBaseRequest extends Request {
         } 
 
         /**
-         * AdbInstanceName.
+         * <p><strong>[Deprecated]</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder adbInstanceName(String adbInstanceName) {
             this.putQueryParameter("AdbInstanceName", adbInstanceName);
@@ -194,7 +211,10 @@ public class CreateMultiModelKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * <p>The ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amv-bp11q28kvl688****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -203,7 +223,10 @@ public class CreateMultiModelKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * DbClusterAcu.
+         * <p>The number of ACUs for the AnalyticDB for MySQL instance resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24</p>
          */
         public Builder dbClusterAcu(Integer dbClusterAcu) {
             this.putQueryParameter("DbClusterAcu", dbClusterAcu);
@@ -212,7 +235,22 @@ public class CreateMultiModelKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * LakeStorageBucketName.
+         * <p>The description of the multimodal knowledge base instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
+         */
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
+            return this;
+        }
+
+        /**
+         * <p><strong>[Deprecated]</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder lakeStorageBucketName(String lakeStorageBucketName) {
             this.putQueryParameter("LakeStorageBucketName", lakeStorageBucketName);
@@ -221,7 +259,13 @@ public class CreateMultiModelKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * <blockquote>
+         * <p>You can call the DescribeRegions operation to query the region ID of a specified Data Lakehouse Edition cluster.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -230,7 +274,10 @@ public class CreateMultiModelKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * ResourceAcuMax.
+         * <p>The maximum number of ACUs for the multimodal knowledge base resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>128</p>
          */
         public Builder resourceAcuMax(Integer resourceAcuMax) {
             this.putQueryParameter("ResourceAcuMax", resourceAcuMax);
@@ -239,7 +286,10 @@ public class CreateMultiModelKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * ResourceAcuMin.
+         * <p>The minimum number of ACUs for the multimodal knowledge base resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32</p>
          */
         public Builder resourceAcuMin(Integer resourceAcuMin) {
             this.putQueryParameter("ResourceAcuMin", resourceAcuMin);
@@ -248,7 +298,10 @@ public class CreateMultiModelKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * <p>The ID of the vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1ak7shaq72ywiah****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -257,7 +310,10 @@ public class CreateMultiModelKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * <p>The ID of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-uf66oesmrqge1t2gs****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -266,7 +322,10 @@ public class CreateMultiModelKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * <p>The ID of the zone to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai-b</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

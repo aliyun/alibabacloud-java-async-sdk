@@ -104,7 +104,7 @@ public class ModifyAgentPlatformRequest extends Request {
         } 
 
         /**
-         * AiPlatformConfig.
+         * <p>The parameters required for upgrading or downgrading the metric platform.</p>
          */
         public Builder aiPlatformConfig(AiPlatformConfig aiPlatformConfig) {
             String aiPlatformConfigShrink = shrink(aiPlatformConfig, "AiPlatformConfig", "json");
@@ -114,6 +114,7 @@ public class ModifyAgentPlatformRequest extends Request {
         }
 
         /**
+         * <p>The instance cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -126,6 +127,7 @@ public class ModifyAgentPlatformRequest extends Request {
         }
 
         /**
+         * <p>The name of the metric platform.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,6 +140,10 @@ public class ModifyAgentPlatformRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
+         * <blockquote>
+         * <p>You can call the DescribeRegions operation to query the region ID of a specified Data Lakehouse Edition cluster.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -261,7 +267,10 @@ public class ModifyAgentPlatformRequest extends Request {
             } 
 
             /**
-             * ServeApiKey.
+             * <p>The API key of the model for the inference service that the metric analysis platform depends on.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3760d3**************************</p>
              */
             public Builder serveApiKey(String serveApiKey) {
                 this.serveApiKey = serveApiKey;
@@ -269,7 +278,10 @@ public class ModifyAgentPlatformRequest extends Request {
             }
 
             /**
-             * ServeEmbeddingEndpoint.
+             * <p>The endpoint of the embedding model for the inference service that the metric analysis platform depends on.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://111.xx.xx.xx:8100/inferenceservice/emb">http://111.xx.xx.xx:8100/inferenceservice/emb</a></p>
              */
             public Builder serveEmbeddingEndpoint(String serveEmbeddingEndpoint) {
                 this.serveEmbeddingEndpoint = serveEmbeddingEndpoint;
@@ -277,7 +289,10 @@ public class ModifyAgentPlatformRequest extends Request {
             }
 
             /**
-             * ServeEmbeddingModelName.
+             * <p>The name of the embedding model for the inference service that the metric analysis platform depends on.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Qwen3-Embedding-8B</p>
              */
             public Builder serveEmbeddingModelName(String serveEmbeddingModelName) {
                 this.serveEmbeddingModelName = serveEmbeddingModelName;
@@ -285,7 +300,10 @@ public class ModifyAgentPlatformRequest extends Request {
             }
 
             /**
-             * ServeEndpoint.
+             * <p>The endpoint of the base model for the inference service that the metric analysis platform depends on.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://111.xx.xx.xx:8100/inferenceservice/base">http://111.xx.xx.xx:8100/inferenceservice/base</a></p>
              */
             public Builder serveEndpoint(String serveEndpoint) {
                 this.serveEndpoint = serveEndpoint;
@@ -293,7 +311,10 @@ public class ModifyAgentPlatformRequest extends Request {
             }
 
             /**
-             * ServeModelName.
+             * <p>The name of the base model for the inference service that the metric analysis platform depends on.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Qwen3-235B-A22B-Instruct-2507</p>
              */
             public Builder serveModelName(String serveModelName) {
                 this.serveModelName = serveModelName;
@@ -301,7 +322,10 @@ public class ModifyAgentPlatformRequest extends Request {
             }
 
             /**
-             * SpecName.
+             * <p>The specification of the metric analysis platform.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>large</p>
              */
             public Builder specName(String specName) {
                 this.specName = specName;

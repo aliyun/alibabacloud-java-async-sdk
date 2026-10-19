@@ -301,7 +301,10 @@ public class DescribeChatMessageResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -309,7 +312,10 @@ public class DescribeChatMessageResponseBody extends TeaModel {
         }
 
         /**
-         * CompletedAt.
+         * <p>The completion time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-03-18T02:01:56Z</p>
          */
         public Builder completedAt(String completedAt) {
             this.completedAt = completedAt;
@@ -317,7 +323,7 @@ public class DescribeChatMessageResponseBody extends TeaModel {
         }
 
         /**
-         * Content.
+         * <p>The task content.</p>
          */
         public Builder content(java.util.List<Content> content) {
             this.content = content;
@@ -325,7 +331,10 @@ public class DescribeChatMessageResponseBody extends TeaModel {
         }
 
         /**
-         * CreatedAt.
+         * <p>The creation time, in ISO 8601 format and UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-03-18T02:01:56Z</p>
          */
         public Builder createdAt(String createdAt) {
             this.createdAt = createdAt;
@@ -333,7 +342,7 @@ public class DescribeChatMessageResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The result set.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -341,7 +350,10 @@ public class DescribeChatMessageResponseBody extends TeaModel {
         }
 
         /**
-         * Delta.
+         * <p>Indicates whether the content is incremental.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder delta(Boolean delta) {
             this.delta = delta;
@@ -349,7 +361,10 @@ public class DescribeChatMessageResponseBody extends TeaModel {
         }
 
         /**
-         * Error.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Failed to get sse streaming, please try again later.</p>
          */
         public Builder error(String error) {
             this.error = error;
@@ -357,7 +372,10 @@ public class DescribeChatMessageResponseBody extends TeaModel {
         }
 
         /**
-         * Id.
+         * <p>The message ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>97616</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -365,7 +383,10 @@ public class DescribeChatMessageResponseBody extends TeaModel {
         }
 
         /**
-         * Index.
+         * <p>The index.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder index(Long index) {
             this.index = index;
@@ -373,7 +394,10 @@ public class DescribeChatMessageResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -381,7 +405,10 @@ public class DescribeChatMessageResponseBody extends TeaModel {
         }
 
         /**
-         * MsgId.
+         * <p>The message ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>msg_294c8b98-dc64-4c82-9417-e03522a631f6</p>
          */
         public Builder msgId(String msgId) {
             this.msgId = msgId;
@@ -389,7 +416,10 @@ public class DescribeChatMessageResponseBody extends TeaModel {
         }
 
         /**
-         * Object.
+         * <p>The message object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>content</p>
          */
         public Builder object(String object) {
             this.object = object;
@@ -397,7 +427,10 @@ public class DescribeChatMessageResponseBody extends TeaModel {
         }
 
         /**
-         * Output.
+         * <p>The content output.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;type&quot;: &quot;text&quot;, &quot;text&quot;: &quot;Skill not found: instance_health_inspection&quot;}]</p>
          */
         public Builder output(String output) {
             this.output = output;
@@ -405,7 +438,10 @@ public class DescribeChatMessageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B47EED99-BFA5-529D-8D85-A6642421D390</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -413,7 +449,10 @@ public class DescribeChatMessageResponseBody extends TeaModel {
         }
 
         /**
-         * Role.
+         * <p>The message role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>assistant</p>
          */
         public Builder role(String role) {
             this.role = role;
@@ -421,7 +460,10 @@ public class DescribeChatMessageResponseBody extends TeaModel {
         }
 
         /**
-         * SequenceNumber.
+         * <p>The sequence number of the message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder sequenceNumber(Long sequenceNumber) {
             this.sequenceNumber = sequenceNumber;
@@ -429,7 +471,10 @@ public class DescribeChatMessageResponseBody extends TeaModel {
         }
 
         /**
-         * SessionId.
+         * <p>The session ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>593b51eef93b443fb2ba2a6dc68b737b</p>
          */
         public Builder sessionId(String sessionId) {
             this.sessionId = sessionId;
@@ -437,7 +482,10 @@ public class DescribeChatMessageResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The message status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>created</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -445,7 +493,10 @@ public class DescribeChatMessageResponseBody extends TeaModel {
         }
 
         /**
-         * Text.
+         * <p>The text content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>：-636 KB</p>
          */
         public Builder text(String text) {
             this.text = text;
@@ -453,7 +504,10 @@ public class DescribeChatMessageResponseBody extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>The message type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -532,7 +586,10 @@ public class DescribeChatMessageResponseBody extends TeaModel {
             } 
 
             /**
-             * CallId.
+             * <p>The ID of the invoked data API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>call_e0e9ee423c7e4ba88d058fd6</p>
              */
             public Builder callId(String callId) {
                 this.callId = callId;
@@ -540,7 +597,10 @@ public class DescribeChatMessageResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the invoked data API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>describeScalingRecommendation</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -548,7 +608,10 @@ public class DescribeChatMessageResponseBody extends TeaModel {
             }
 
             /**
-             * Output.
+             * <p>The output of the invoked data API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;type&quot;: &quot;text&quot;, &quot;text&quot;: &quot;Skill not found: instance_health_inspection&quot;}]</p>
              */
             public Builder output(String output) {
                 this.output = output;
@@ -719,7 +782,7 @@ public class DescribeChatMessageResponseBody extends TeaModel {
             } 
 
             /**
-             * Data.
+             * <p>The result set.</p>
              */
             public Builder data(ContentData data) {
                 this.data = data;
@@ -727,7 +790,10 @@ public class DescribeChatMessageResponseBody extends TeaModel {
             }
 
             /**
-             * Delta.
+             * <p>Indicates whether the content is incremental.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder delta(Boolean delta) {
                 this.delta = delta;
@@ -735,7 +801,10 @@ public class DescribeChatMessageResponseBody extends TeaModel {
             }
 
             /**
-             * Error.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Failed to get sse streaming, please try again later.</p>
              */
             public Builder error(String error) {
                 this.error = error;
@@ -743,7 +812,10 @@ public class DescribeChatMessageResponseBody extends TeaModel {
             }
 
             /**
-             * Index.
+             * <p>The index.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder index(Long index) {
                 this.index = index;
@@ -751,7 +823,10 @@ public class DescribeChatMessageResponseBody extends TeaModel {
             }
 
             /**
-             * MsgId.
+             * <p>The message ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>msg_294c8b98-dc64-4c82-9417-e03522a631f6</p>
              */
             public Builder msgId(String msgId) {
                 this.msgId = msgId;
@@ -759,7 +834,10 @@ public class DescribeChatMessageResponseBody extends TeaModel {
             }
 
             /**
-             * Object.
+             * <p>The message object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>content</p>
              */
             public Builder object(String object) {
                 this.object = object;
@@ -767,7 +845,10 @@ public class DescribeChatMessageResponseBody extends TeaModel {
             }
 
             /**
-             * SequenceNumber.
+             * <p>The sequence number of the message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sequenceNumber(Long sequenceNumber) {
                 this.sequenceNumber = sequenceNumber;
@@ -775,7 +856,10 @@ public class DescribeChatMessageResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The message status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>completed</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -783,7 +867,10 @@ public class DescribeChatMessageResponseBody extends TeaModel {
             }
 
             /**
-             * Text.
+             * <p>The text content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3 MB\n-</p>
              */
             public Builder text(String text) {
                 this.text = text;
@@ -791,7 +878,10 @@ public class DescribeChatMessageResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The message type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>text</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -884,7 +974,10 @@ public class DescribeChatMessageResponseBody extends TeaModel {
             } 
 
             /**
-             * Arguments.
+             * <p>The parameters of the invoked data API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;instanceName&quot;: &quot;amv-bp1b9y9xhvpzm9p0&quot;, &quot;pageNumber&quot;: 1, &quot;pageSize&quot;: 10}</p>
              */
             public Builder arguments(String arguments) {
                 this.arguments = arguments;
@@ -892,7 +985,10 @@ public class DescribeChatMessageResponseBody extends TeaModel {
             }
 
             /**
-             * CallId.
+             * <p>The ID of the invoked data API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>call_1891f1689bc44ab292aadff3</p>
              */
             public Builder callId(String callId) {
                 this.callId = callId;
@@ -900,7 +996,10 @@ public class DescribeChatMessageResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the invoked data API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>describeScalingRecommendation</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -908,7 +1007,10 @@ public class DescribeChatMessageResponseBody extends TeaModel {
             }
 
             /**
-             * Output.
+             * <p>The output of the invoked data API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;type&quot;: &quot;text&quot;, &quot;text&quot;: &quot;Skill not found: instance_health_inspection&quot;}]</p>
              */
             public Builder output(String output) {
                 this.output = output;

@@ -146,6 +146,7 @@ public class CreateEmbodiedAIPlatformRequest extends Request {
         } 
 
         /**
+         * <p>The instance cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,7 +159,10 @@ public class CreateEmbodiedAIPlatformRequest extends Request {
         }
 
         /**
-         * DeviceCount.
+         * <p>The device count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder deviceCount(Integer deviceCount) {
             this.putQueryParameter("DeviceCount", deviceCount);
@@ -167,6 +171,10 @@ public class CreateEmbodiedAIPlatformRequest extends Request {
         }
 
         /**
+         * <p>The name of the embodied intelligence multimodal data platform.</p>
+         * <blockquote>
+         * <p>The name can contain lowercase letters, digits, and underscores. It must start with a letter and end with a letter or digit. The name can be up to 16 characters in length.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -179,7 +187,7 @@ public class CreateEmbodiedAIPlatformRequest extends Request {
         }
 
         /**
-         * RayConfig.
+         * <p>The Ray specification information of the platform.</p>
          */
         public Builder rayConfig(RayConfig rayConfig) {
             String rayConfigShrink = shrink(rayConfig, "RayConfig", "json");
@@ -189,7 +197,7 @@ public class CreateEmbodiedAIPlatformRequest extends Request {
         }
 
         /**
-         * RayTrainConfig.
+         * <p>The development and training resource configuration.</p>
          */
         public Builder rayTrainConfig(RayTrainConfig rayTrainConfig) {
             String rayTrainConfigShrink = shrink(rayTrainConfig, "RayTrainConfig", "json");
@@ -199,6 +207,10 @@ public class CreateEmbodiedAIPlatformRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
+         * <blockquote>
+         * <p>You can call the DescribeRegions operation to query the region ID of a specified Data Lakehouse Edition cluster.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -211,7 +223,10 @@ public class CreateEmbodiedAIPlatformRequest extends Request {
         }
 
         /**
-         * WebserverSpecName.
+         * <p>The Webserver specification of the platform.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>large</p>
          */
         public Builder webserverSpecName(String webserverSpecName) {
             this.putQueryParameter("WebserverSpecName", webserverSpecName);
@@ -344,7 +359,10 @@ public class CreateEmbodiedAIPlatformRequest extends Request {
             } 
 
             /**
-             * AllocateUnit.
+             * <p>The allocation unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder allocateUnit(String allocateUnit) {
                 this.allocateUnit = allocateUnit;
@@ -352,7 +370,10 @@ public class CreateEmbodiedAIPlatformRequest extends Request {
             }
 
             /**
-             * GroupName.
+             * <p>The worker group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -360,7 +381,10 @@ public class CreateEmbodiedAIPlatformRequest extends Request {
             }
 
             /**
-             * MaxWorkerQuantity.
+             * <p>The maximum number of workers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder maxWorkerQuantity(Integer maxWorkerQuantity) {
                 this.maxWorkerQuantity = maxWorkerQuantity;
@@ -368,7 +392,10 @@ public class CreateEmbodiedAIPlatformRequest extends Request {
             }
 
             /**
-             * MinWorkerQuantity.
+             * <p>The minimum number of workers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder minWorkerQuantity(Integer minWorkerQuantity) {
                 this.minWorkerQuantity = minWorkerQuantity;
@@ -376,7 +403,10 @@ public class CreateEmbodiedAIPlatformRequest extends Request {
             }
 
             /**
-             * WorkerDiskCapacity.
+             * <p>The disk size of the worker node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100G</p>
              */
             public Builder workerDiskCapacity(String workerDiskCapacity) {
                 this.workerDiskCapacity = workerDiskCapacity;
@@ -384,7 +414,10 @@ public class CreateEmbodiedAIPlatformRequest extends Request {
             }
 
             /**
-             * WorkerSpecName.
+             * <p>The worker node specifications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xlarge</p>
              */
             public Builder workerSpecName(String workerSpecName) {
                 this.workerSpecName = workerSpecName;
@@ -392,7 +425,10 @@ public class CreateEmbodiedAIPlatformRequest extends Request {
             }
 
             /**
-             * WorkerSpecType.
+             * <p>The worker node resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CPU</p>
              */
             public Builder workerSpecType(String workerSpecType) {
                 this.workerSpecType = workerSpecType;
@@ -472,7 +508,16 @@ public class CreateEmbodiedAIPlatformRequest extends Request {
             } 
 
             /**
-             * Category.
+             * <p>The Ray cluster type. Valid values:</p>
+             * <ul>
+             * <li><p>BASIC: basic type, non-high-availability.</p>
+             * </li>
+             * <li><p>HIGH_AVAILABILITY: high-availability type.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>BASIC</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -480,7 +525,10 @@ public class CreateEmbodiedAIPlatformRequest extends Request {
             }
 
             /**
-             * HeadSpec.
+             * <p>The head node specifications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xlarge</p>
              */
             public Builder headSpec(String headSpec) {
                 this.headSpec = headSpec;
@@ -488,7 +536,7 @@ public class CreateEmbodiedAIPlatformRequest extends Request {
             }
 
             /**
-             * WorkerGroups.
+             * <p>The list of Ray worker group configurations.</p>
              */
             public Builder workerGroups(java.util.List<WorkerGroups> workerGroups) {
                 this.workerGroups = workerGroups;
@@ -568,7 +616,10 @@ public class CreateEmbodiedAIPlatformRequest extends Request {
             } 
 
             /**
-             * AllocateUnit.
+             * <p>The allocation unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;1&quot;</p>
              */
             public Builder allocateUnit(String allocateUnit) {
                 this.allocateUnit = allocateUnit;
@@ -576,7 +627,10 @@ public class CreateEmbodiedAIPlatformRequest extends Request {
             }
 
             /**
-             * Count.
+             * <p>The number of GPU cards.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -584,7 +638,10 @@ public class CreateEmbodiedAIPlatformRequest extends Request {
             }
 
             /**
-             * SpecName.
+             * <p>The GPU model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ADB.MLGrand.4</p>
              */
             public Builder specName(String specName) {
                 this.specName = specName;
@@ -664,7 +721,10 @@ public class CreateEmbodiedAIPlatformRequest extends Request {
             } 
 
             /**
-             * InstanceId.
+             * <p>The image repository instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cri-***</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -672,7 +732,7 @@ public class CreateEmbodiedAIPlatformRequest extends Request {
             }
 
             /**
-             * Namespaces.
+             * <p>The namespace list.</p>
              */
             public Builder namespaces(java.util.List<String> namespaces) {
                 this.namespaces = namespaces;
@@ -680,7 +740,10 @@ public class CreateEmbodiedAIPlatformRequest extends Request {
             }
 
             /**
-             * Registry.
+             * <p>The image repository instance address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-vpc.example-region.cr.aliyuncs.com</p>
              */
             public Builder registry(String registry) {
                 this.registry = registry;
@@ -734,7 +797,7 @@ public class CreateEmbodiedAIPlatformRequest extends Request {
             } 
 
             /**
-             * AcrConfig.
+             * <p>The image repository configuration.</p>
              */
             public Builder acrConfig(AcrConfig acrConfig) {
                 this.acrConfig = acrConfig;
@@ -814,7 +877,7 @@ public class CreateEmbodiedAIPlatformRequest extends Request {
             } 
 
             /**
-             * CpuAcu.
+             * <p>The number of CPU ACUs to purchase.</p>
              */
             public Builder cpuAcu(Long cpuAcu) {
                 this.cpuAcu = cpuAcu;
@@ -822,7 +885,7 @@ public class CreateEmbodiedAIPlatformRequest extends Request {
             }
 
             /**
-             * GpuSpecs.
+             * <p>The list of GPU model types to purchase.</p>
              */
             public Builder gpuSpecs(java.util.List<GpuSpecs> gpuSpecs) {
                 this.gpuSpecs = gpuSpecs;
@@ -830,7 +893,7 @@ public class CreateEmbodiedAIPlatformRequest extends Request {
             }
 
             /**
-             * TerminalConfig.
+             * <p>The development machine configuration.</p>
              */
             public Builder terminalConfig(TerminalConfig terminalConfig) {
                 this.terminalConfig = terminalConfig;

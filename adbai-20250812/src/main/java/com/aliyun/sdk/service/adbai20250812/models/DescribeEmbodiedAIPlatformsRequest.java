@@ -187,6 +187,7 @@ public class DescribeEmbodiedAIPlatformsRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -199,6 +200,7 @@ public class DescribeEmbodiedAIPlatformsRequest extends Request {
         }
 
         /**
+         * <p>The end time of platform creation, used to filter query results. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -211,7 +213,10 @@ public class DescribeEmbodiedAIPlatformsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>Use PageSize and PageNumber for pagination.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -220,7 +225,10 @@ public class DescribeEmbodiedAIPlatformsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>Use PageSize and PageNumber for pagination.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>298a7d5473b128dfe0b5e8707e******</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -229,7 +237,10 @@ public class DescribeEmbodiedAIPlatformsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -238,7 +249,10 @@ public class DescribeEmbodiedAIPlatformsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page in a paged query. Default value: 30.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -247,7 +261,10 @@ public class DescribeEmbodiedAIPlatformsRequest extends Request {
         }
 
         /**
-         * PlatformName.
+         * <p>The name of the embodied intelligence multimodal data platform.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>platform1</p>
          */
         public Builder platformName(String platformName) {
             this.putQueryParameter("PlatformName", platformName);
@@ -256,6 +273,10 @@ public class DescribeEmbodiedAIPlatformsRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the instance.</p>
+         * <blockquote>
+         * <p>You can call the DescribeRegions operation to query the region ID of a specified Data Lakehouse Edition cluster.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -268,6 +289,7 @@ public class DescribeEmbodiedAIPlatformsRequest extends Request {
         }
 
         /**
+         * <p>The start time of platform creation, used to filter query results. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -280,7 +302,10 @@ public class DescribeEmbodiedAIPlatformsRequest extends Request {
         }
 
         /**
-         * State.
+         * <p>The running status of the platform.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>running</p>
          */
         public Builder state(String state) {
             this.putQueryParameter("State", state);

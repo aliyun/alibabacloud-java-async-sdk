@@ -104,6 +104,7 @@ public class CreateAgentPlatformRequest extends Request {
         } 
 
         /**
+         * <p>The parameters required to create the metric analysis platform.</p>
          * <p>This parameter is required.</p>
          */
         public Builder aiPlatformConfig(AiPlatformConfig aiPlatformConfig) {
@@ -114,6 +115,7 @@ public class CreateAgentPlatformRequest extends Request {
         }
 
         /**
+         * <p>The instance cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -126,6 +128,7 @@ public class CreateAgentPlatformRequest extends Request {
         }
 
         /**
+         * <p>The name of the metric analysis platform.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,7 +141,13 @@ public class CreateAgentPlatformRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * <blockquote>
+         * <p>You can call the DescribeRegions operation to query the region ID of a specified Data Lakehouse Edition cluster.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -264,6 +273,7 @@ public class CreateAgentPlatformRequest extends Request {
             } 
 
             /**
+             * <p>The API key of the model for the inference service that the metric analysis platform depends on.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -275,6 +285,7 @@ public class CreateAgentPlatformRequest extends Request {
             }
 
             /**
+             * <p>The endpoint of the embedding model for the inference service that the metric analysis platform depends on.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -286,6 +297,7 @@ public class CreateAgentPlatformRequest extends Request {
             }
 
             /**
+             * <p>The name of the embedding model for the inference service that the metric analysis platform depends on.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -297,6 +309,7 @@ public class CreateAgentPlatformRequest extends Request {
             }
 
             /**
+             * <p>The endpoint of the base model for the inference service that the metric analysis platform depends on.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -308,6 +321,7 @@ public class CreateAgentPlatformRequest extends Request {
             }
 
             /**
+             * <p>The name of the base model for the inference service that the metric analysis platform depends on.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -319,6 +333,7 @@ public class CreateAgentPlatformRequest extends Request {
             }
 
             /**
+             * <p>The specifications of the metric analysis platform.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
