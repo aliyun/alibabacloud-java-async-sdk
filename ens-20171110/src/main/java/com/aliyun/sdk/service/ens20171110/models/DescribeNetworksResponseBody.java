@@ -114,7 +114,7 @@ public class DescribeNetworksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Current page number.</p>
+         * <p>The page number of the current query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class DescribeNetworksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Number of entries per page in the current query.</p>
+         * <p>The number of entries per page in the current query.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -136,7 +136,7 @@ public class DescribeNetworksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -147,7 +147,7 @@ public class DescribeNetworksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Total number of entries.</p>
+         * <p>The total number of entries in the list.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>

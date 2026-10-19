@@ -143,7 +143,7 @@ public class DescribeNetworksRequest extends Request {
         } 
 
         /**
-         * <p>ENS node ID.</p>
+         * <p>The ENS edge zone ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing-telecom</p>
@@ -155,7 +155,7 @@ public class DescribeNetworksRequest extends Request {
         }
 
         /**
-         * <p>Array of ENS edge zone IDs. Array length: 1–100.</p>
+         * <p>The array of ENS edge zone IDs. Array length: 1 to 100.</p>
          */
         public Builder ensRegionIds(java.util.List<String> ensRegionIds) {
             this.putQueryParameter("EnsRegionIds", ensRegionIds);
@@ -164,7 +164,7 @@ public class DescribeNetworksRequest extends Request {
         }
 
         /**
-         * <p>Network ID.</p>
+         * <p>The network ID.</p>
          * 
          * <strong>example:</strong>
          * <p>n-5***</p>
@@ -176,7 +176,7 @@ public class DescribeNetworksRequest extends Request {
         }
 
         /**
-         * <p>Array of network IDs. Array length: 1–100.</p>
+         * <p>The array of network IDs. Array length: 1 to 100.</p>
          */
         public Builder networkIds(java.util.List<String> networkIds) {
             this.putQueryParameter("NetworkIds", networkIds);
@@ -185,7 +185,7 @@ public class DescribeNetworksRequest extends Request {
         }
 
         /**
-         * <p>Network name.</p>
+         * <p>The network name.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -197,7 +197,7 @@ public class DescribeNetworksRequest extends Request {
         }
 
         /**
-         * <p>Page number. Default value: <strong>1</strong>.</p>
+         * <p>The page number of the list. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -209,7 +209,7 @@ public class DescribeNetworksRequest extends Request {
         }
 
         /**
-         * <p>Number of entries per page in a paged query. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * <p>The number of entries per page in a paging query. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

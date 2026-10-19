@@ -89,6 +89,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AssociateHaVipResponse> associateHaVip(AssociateHaVipRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>The maximum number of secondary CIDR blocks that you can add to a network is as follows:</p>
+     * <ul>
+     * <li>A network supports up to five secondary IPv4 CIDR blocks.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of AssociateNetworkCidrBlock  AssociateNetworkCidrBlockRequest
+     * @return AssociateNetworkCidrBlockResponse
+     */
+    CompletableFuture<AssociateNetworkCidrBlockResponse> associateNetworkCidrBlock(AssociateNetworkCidrBlockRequest request);
+
+    /**
      * @param request the request parameters of AttachDisk  AttachDiskRequest
      * @return AttachDiskResponse
      */
@@ -239,8 +251,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Single-user call frequency: 10 calls per second.</li>
-     * <li>Creating a cluster is an asynchronous operation. After the API call returns, wait 10 to 20 minutes for the cluster to finish initialization. During this process, call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</li>
+     * <li>Rate limit per user: 10 calls per second.</li>
+     * <li>Cluster creation is an asynchronous operation. After you call this operation, you must wait 10 to 20 minutes for the cluster to be initialized. During this process, you can call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, you can call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateCluster  CreateClusterRequest
@@ -433,8 +445,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>API call frequency: 100 calls per second.</li>
-     * <li>Per-user call frequency: 5 calls per second.</li>
+     * <li>API rate limit: 100 calls per second.</li>
+     * <li>Rate limit per user: 5 calls per second.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateNetwork  CreateNetworkRequest
@@ -561,8 +573,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Each user is limited to 10 calls per second.</li>
-     * <li>Cluster creation is an asynchronous operation. After the API call is successful, wait 10 to 20 minutes for the cluster to initialize. During this time, you can call the DescribeClustersV1 operation to check the cluster status. After the cluster is created, you can call the DescribeClusterUserKubeconfig operation to obtain the cluster\&quot;s kubeconfig file.</li>
+     * <li>Call frequency per user: 10 calls per second.</li>
+     * <li>Creating a cluster is an asynchronous operation. After the API call returns, wait 10 to 20 minutes for the cluster initialization to complete. During this process, you can call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, you can call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteClusterNodePool  DeleteClusterNodePoolRequest
@@ -886,7 +898,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Per-user call frequency: 100 calls per second.</li>
+     * <li>Rate limit per user: 100 calls per second.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeClusterDetail  DescribeClusterDetailRequest
@@ -930,7 +942,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>A single user is limited to 100 calls per second.</li>
+     * <li>Rate limit per user: 100 calls per second.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeClusterUserKubeconfig  DescribeClusterUserKubeconfigRequest
@@ -1401,8 +1413,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>API rate limit: 100 calls/sec.</li>
-     * <li>Per-user rate limit: 10 calls/sec.</li>
+     * <li>API call rate: 100 calls per second.</li>
+     * <li>Call rate per user: 10 calls per second.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeNetworkAttribute  DescribeNetworkAttributeRequest
@@ -1425,8 +1437,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>API call frequency: 100 calls per second.</li>
-     * <li>Per-user call frequency: 10 calls per second.</li>
+     * <li>API call rate: 100 calls per second.</li>
+     * <li>Call rate per user: 10 calls per second.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeNetworks  DescribeNetworksRequest
@@ -1765,8 +1777,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>The call frequency for a single user is limited to 10 calls per second.</li>
-     * <li>Cluster creation is an asynchronous operation. After the API call returns, the cluster requires 10 to 20 minutes to complete initialization. During this process, you can call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, you can call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</li>
+     * <li>The rate limit is 10 calls per second per user.</li>
+     * <li>Cluster creation is an asynchronous operation. After the API call returns, wait 10 to 20 minutes for the cluster initialization to complete. During this process, you can call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, you can call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</li>
      * </ul>
      * 
      * @param request the request parameters of InstallClusterAddons  InstallClusterAddonsRequest
@@ -1885,8 +1897,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Single-user call frequency: 10 calls per second.</li>
-     * <li>Creating a cluster is an asynchronous operation. After the API call returns, wait 10 to 20 minutes for the cluster to finish initialization. During this process, call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</li>
+     * <li>Rate limit per user: 10 calls per second.</li>
+     * <li>Cluster creation is an asynchronous operation. After you call the API operation, you must wait 10 to 20 minutes for the cluster initialization to complete. During this process, you can call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, you can call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</li>
      * </ul>
      * 
      * @param request the request parameters of ModifyClusterNodePool  ModifyClusterNodePoolRequest
@@ -2069,8 +2081,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>API call frequency: 100 calls per second.</li>
-     * <li>Per-user call frequency: 5 calls per second.</li>
+     * <li>API rate limit: 100 calls per second.</li>
+     * <li>Rate limit per user: 5 calls per second.</li>
      * </ul>
      * 
      * @param request the request parameters of ModifyVSwitchAttribute  ModifyVSwitchAttributeRequest
@@ -2570,6 +2582,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UnassociateNetworkAclResponse> unassociateNetworkAcl(UnassociateNetworkAclRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before deleting a secondary CIDR block from a network, delete the vSwitches created in the secondary CIDR block.</p>
+     * 
+     * @param request the request parameters of UnassociateNetworkCidrBlock  UnassociateNetworkCidrBlockRequest
+     * @return UnassociateNetworkCidrBlockResponse
+     */
+    CompletableFuture<UnassociateNetworkCidrBlockResponse> unassociateNetworkCidrBlock(UnassociateNetworkCidrBlockRequest request);
+
+    /**
      * @param request the request parameters of UnloadRegionSDG  UnloadRegionSDGRequest
      * @return UnloadRegionSDGResponse
      */
@@ -2620,8 +2641,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Each user can call this operation up to 10 times per second.</li>
-     * <li>Creating a cluster is an asynchronous operation. After calling the operation, wait 10 to 20 minutes for the cluster to initialize. During this time, you can call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</li>
+     * <li>The maximum call frequency per user is 10 calls per second.</li>
+     * <li>Creating a cluster is an asynchronous operation. After the API call returns, you must wait 10 to 20 minutes for the cluster initialization to complete. During this process, you can call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, you can call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</li>
      * </ul>
      * 
      * @param request the request parameters of UpgradeClusterAddons  UpgradeClusterAddonsRequest

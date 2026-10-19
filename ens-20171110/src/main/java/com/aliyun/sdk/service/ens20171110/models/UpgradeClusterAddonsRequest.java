@@ -74,7 +74,7 @@ public class UpgradeClusterAddonsRequest extends Request {
         } 
 
         /**
-         * <p>The component information.</p>
+         * <p>The add-on information.</p>
          */
         public Builder addons(java.util.List<Addons> addons) {
             String addonsShrink = shrink(addons, "Addons", "json");
@@ -204,7 +204,7 @@ public class UpgradeClusterAddonsRequest extends Request {
             }
 
             /**
-             * <p>The component name.</p>
+             * <p>The add-on name.</p>
              * 
              * <strong>example:</strong>
              * <p>edge-csi-lite</p>
@@ -215,7 +215,7 @@ public class UpgradeClusterAddonsRequest extends Request {
             }
 
             /**
-             * <p>The custom parameters for the component.</p>
+             * <p>The custom parameters of the add-on.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;k1&quot;:&quot;v1&quot;}</p>
@@ -298,7 +298,7 @@ public class UpgradeClusterAddonsRequest extends Request {
             } 
 
             /**
-             * <p>The schema of the custom parameters for the component.</p>
+             * <p>The schema of the custom parameters for the add-on.</p>
              */
             public Builder configSchema(java.util.List<ConfigSchema> configSchema) {
                 this.configSchema = configSchema;
@@ -306,7 +306,7 @@ public class UpgradeClusterAddonsRequest extends Request {
             }
 
             /**
-             * <p>The component name.</p>
+             * <p>The add-on name.</p>
              * 
              * <strong>example:</strong>
              * <p>edge-csi-lite</p>

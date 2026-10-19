@@ -67,7 +67,7 @@ public class ListAddonsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A list of component information.</p>
+         * <p>The list of component information.</p>
          */
         public Builder addons(java.util.List<Addons> addons) {
             this.addons = addons;
@@ -192,7 +192,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the component.</p>
+             * <p>The component name.</p>
              * 
              * <strong>example:</strong>
              * <p>edge-csi-lite</p>
@@ -299,7 +299,7 @@ public class ListAddonsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether to automatically clean up associated cloud resources.</p>
+             * <p>Indicates whether associated cloud resources are automatically cleaned up.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -310,7 +310,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The schemas for the custom parameters of the component.</p>
+             * <p>The list of schemas for custom parameters of the component.</p>
              */
             public Builder configSchema(java.util.List<ConfigSchema> configSchema) {
                 this.configSchema = configSchema;
@@ -318,7 +318,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the component.</p>
+             * <p>The component name.</p>
              * 
              * <strong>example:</strong>
              * <p>edge-csi-lite</p>
@@ -329,7 +329,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the component.</p>
+             * <p>The component version.</p>
              * 
              * <strong>example:</strong>
              * <p>v2</p>

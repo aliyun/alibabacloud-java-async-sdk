@@ -75,7 +75,7 @@ public class InstallClusterAddonsRequest extends Request {
         } 
 
         /**
-         * <p>The component information.</p>
+         * <p>The add-on information.</p>
          * <p>This parameter is required.</p>
          */
         public Builder addons(java.util.List<Addons> addons) {
@@ -308,7 +308,7 @@ public class InstallClusterAddonsRequest extends Request {
             }
 
             /**
-             * <p>The plug-in name.</p>
+             * <p>The add-on name.</p>
              * 
              * <strong>example:</strong>
              * <p>edge-csi-lite</p>

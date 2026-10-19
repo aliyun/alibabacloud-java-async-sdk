@@ -393,7 +393,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The CIDR block for pods.</p>
+         * <p>The pod CIDR block.</p>
          * 
          * <strong>example:</strong>
          * <p>172.20.0.0/16</p>
@@ -412,7 +412,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * ControlPlaneMeta.
+         * <p>The control plane metadata.</p>
          */
         public Builder controlPlaneMeta(ControlPlaneMeta controlPlaneMeta) {
             this.controlPlaneMeta = controlPlaneMeta;
@@ -420,7 +420,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Created.
+         * <p>The time when the cluster was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-04-07T09:57:26+08:00</p>
          */
         public Builder created(String created) {
             this.created = created;
@@ -439,7 +442,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Isp.
+         * <p>The ISP information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>unicom</p>
          */
         public Builder isp(String isp) {
             this.isp = isp;
@@ -447,7 +453,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The authentication token for cluster access.</p>
+         * <p>The authentication token for joining the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxx.yyy</p>
@@ -458,7 +464,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The cluster version, which is consistent with the Kubernetes community baseline version. We recommend that you select the latest version. If you do not specify this parameter, the latest version is used by default.</p>
+         * <p>The cluster version, which aligns with the Kubernetes community baseline version. Select the latest version. If not specified, the latest version is used by default.</p>
          * 
          * <strong>example:</strong>
          * <p>1.32.1.aliyunedge.1</p>
@@ -469,7 +475,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The CLB instance ID of the API server.</p>
+         * <p>The ID of the Classic Load Balancer (CLB) instance for the API server.</p>
          * 
          * <strong>example:</strong>
          * <p>lb-5snthcyu1x10g7tywj7iu****</p>
@@ -491,7 +497,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * NatGatewayId.
+         * <p>The ID of the NAT gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nat-5tawjw5j7sgd2deujxuk0****</p>
          */
         public Builder natGatewayId(String natGatewayId) {
             this.natGatewayId = natGatewayId;
@@ -499,7 +508,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * NodeCount.
+         * <p>The number of nodes in the cluster.</p>
          */
         public Builder nodeCount(NodeCount nodeCount) {
             this.nodeCount = nodeCount;
@@ -507,7 +516,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * PodStatus.
+         * <p>The pod status information of the cluster.</p>
          */
         public Builder podStatus(PodStatus podStatus) {
             this.podStatus = podStatus;
@@ -515,7 +524,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The vSwitch IDs for pods.</p>
+         * <p>The pod vSwitch IDs.</p>
          */
         public Builder podVswitchIds(java.util.List<String> podVswitchIds) {
             this.podVswitchIds = podVswitchIds;
@@ -534,7 +543,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request。</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</p>
@@ -545,7 +554,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The CIDR block for services.</p>
+         * <p>The service CIDR block.</p>
          * 
          * <strong>example:</strong>
          * <p>172.19.0.0/20</p>
@@ -556,12 +565,12 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The cluster status. Valid values:</p>
+         * <p>The cluster state. Valid values:</p>
          * <ul>
-         * <li><strong>initial</strong>: Being created.</li>
+         * <li><strong>initial</strong>: Creating.</li>
          * <li><strong>failed</strong>: Creation failed.</li>
          * <li><strong>running</strong>: Running.</li>
-         * <li><strong>deleting</strong>: Being released.</li>
+         * <li><strong>deleting</strong>: Releasing.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -584,7 +593,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The vSwitch IDs of the cluster nodes.</p>
+         * <p>The vSwitch IDs where the cluster nodes reside.</p>
          */
         public Builder vswitchIds(java.util.List<String> vswitchIds) {
             this.vswitchIds = vswitchIds;
@@ -715,7 +724,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The container runtime type.</p>
+             * <p>The runtime type.</p>
              * 
              * <strong>example:</strong>
              * <p>containerd</p>
@@ -726,7 +735,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The image ID of the control plane virtual machine.</p>
+             * <p>The ID of the control plane virtual machine image.</p>
              * 
              * <strong>example:</strong>
              * <p>m-5ul335umat4e2y9ynwi84p3f9</p>
@@ -737,7 +746,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node instance type.</p>
+             * <p>The instance type of the node.</p>
              * 
              * <strong>example:</strong>
              * <p>ens.esk.sn1.medium</p>
@@ -770,7 +779,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The system cloud disk type of the node.</p>
+             * <p>The system cloud disk category of the node.</p>
              * 
              * <strong>example:</strong>
              * <p>cloud_efficiency</p>
@@ -864,7 +873,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-573utia8wbecrbgsm6o8fx132</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -872,7 +884,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Ip.
+             * <p>The instance IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.10.0.2</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -880,10 +895,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cluster name.</p>
+             * <p>The node name.</p>
              * 
              * <strong>example:</strong>
-             * <p>your-cluster-name</p>
+             * <p>i-573utia8wbecrbgsm6o8fx132</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -950,7 +965,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * PrivateUrl.
+             * <p>The private endpoint of the API server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://10.0.0.1:6443">https://10.0.0.1:6443</a></p>
              */
             public Builder privateUrl(String privateUrl) {
                 this.privateUrl = privateUrl;
@@ -958,7 +976,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PublicUrl.
+             * <p>The public address of the API server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://0.0.0.0:6443">https://0.0.0.0:6443</a></p>
              */
             public Builder publicUrl(String publicUrl) {
                 this.publicUrl = publicUrl;
@@ -1025,7 +1046,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * MasterInstances.
+             * <p>The master node information.</p>
              */
             public Builder masterInstances(java.util.List<MasterInstances> masterInstances) {
                 this.masterInstances = masterInstances;
@@ -1033,7 +1054,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * MasterUrl.
+             * <p>The API server address.</p>
              */
             public Builder masterUrl(MasterUrl masterUrl) {
                 this.masterUrl = masterUrl;
@@ -1100,7 +1121,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * Ready.
+             * <p>The number of ready nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder ready(Integer ready) {
                 this.ready = ready;
@@ -1108,7 +1132,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The total number of nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder total(Integer total) {
                 this.total = total;
@@ -1175,7 +1202,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * Running.
+             * <p>The number of pods in the Running state.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder running(Integer running) {
                 this.running = running;
@@ -1183,7 +1213,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The total number of pods.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder total(Integer total) {
                 this.total = total;

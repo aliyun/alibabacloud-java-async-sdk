@@ -147,14 +147,11 @@ public class CreateVSwitchRequest extends Request {
         } 
 
         /**
-         * <p>The CIDR block of the VSwitch. The following requirements apply:</p>
+         * <p>The CIDR block of the vSwitch. The CIDR block must meet the following requirements:</p>
          * <ul>
-         * <li><p>The prefix length must be an integer from 16 to 29.</p>
-         * </li>
-         * <li><p>The CIDR block of the VSwitch must be a subset of the CIDR block of the VPC to which the VSwitch belongs.</p>
-         * </li>
-         * <li><p>The CIDR block of the VSwitch cannot be the same as the destination CIDR block of an existing route in the VPC, but it can be a subset of the destination CIDR block.</p>
-         * </li>
+         * <li>The subnet mask length of the vSwitch CIDR block must be 16 to 29 bits.</li>
+         * <li>The vSwitch CIDR block must fall within the CIDR block of the VPC to which the vSwitch belongs.</li>
+         * <li>The vSwitch CIDR block cannot be the same as the destination CIDR block of a route entry in the VPC, but it can be a subset of the destination CIDR block.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -168,8 +165,8 @@ public class CreateVSwitchRequest extends Request {
         }
 
         /**
-         * <p>The description of the VSwitch.</p>
-         * <p>The description must be 2 to 256 characters in length. It must start with a letter or a Chinese character, and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>The description of the vSwitch.</p>
+         * <p>The description must be 2 to 256 characters in length. It must start with a letter or a Chinese character and cannot start with http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>This is my vswitch.</p>
@@ -181,7 +178,7 @@ public class CreateVSwitchRequest extends Request {
         }
 
         /**
-         * <p>The ID of the ENS node.</p>
+         * <p>The ID of the ENS edge zone.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -194,7 +191,13 @@ public class CreateVSwitchRequest extends Request {
         }
 
         /**
-         * Ipv6CidrBlock.
+         * <p>The IPv6 CIDR block of the vSwitch.</p>
+         * <blockquote>
+         * <p>You can specify this parameter to assign an IPv6 CIDR block to the vSwitch only when IPv6 is enabled for the network to which the vSwitch belongs. After the IPv6 CIDR block is assigned, it cannot be changed. Make sure that the IPv6 CIDR block does not overlap with the CIDR blocks of other vSwitches in the same network.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2408:XXXX:0:a600::/110</p>
          */
         public Builder ipv6CidrBlock(String ipv6CidrBlock) {
             this.putQueryParameter("Ipv6CidrBlock", ipv6CidrBlock);
@@ -203,7 +206,7 @@ public class CreateVSwitchRequest extends Request {
         }
 
         /**
-         * <p>The ID of the network to which the VSwitch belongs.</p>
+         * <p>The ID of the network to which the new vSwitch belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>n-257gqcdfvx6n****</p>
@@ -215,7 +218,7 @@ public class CreateVSwitchRequest extends Request {
         }
 
         /**
-         * <p>The tags of the resource. You can specify up to 20 tags.</p>
+         * <p>The resource tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -224,14 +227,12 @@ public class CreateVSwitchRequest extends Request {
         }
 
         /**
-         * <p>The name of the VSwitch. The following requirements apply:</p>
+         * <p>The name of the vSwitch. The name must meet the following requirements:</p>
          * <ul>
-         * <li><p>The name must be 2 to 128 characters in length.</p>
-         * </li>
-         * <li><p>The name must start with a letter or a Chinese character, and cannot start with <code>http://</code> or <code>https://</code>. The name can contain digits, colons (:), underscores (_), and hyphens (-).</p>
-         * </li>
+         * <li>The name must be 2 to 128 characters in length.</li>
+         * <li>The name must start with a letter or a Chinese character, and cannot start with http:// or https://. It can contain digits, half-width colons (:), underscores (_), and hyphens (-).</li>
          * </ul>
-         * <p>Default value: an empty string.</p>
+         * <p>Default value: empty.</p>
          * 
          * <strong>example:</strong>
          * <p>Test vSwitch</p>
@@ -302,14 +303,11 @@ public class CreateVSwitchRequest extends Request {
             } 
 
             /**
-             * <p>The key of the tag.</p>
+             * <p>The tag key of the instance. Valid values of N: <strong>1</strong> to <strong>20</strong>.</p>
              * <ul>
-             * <li><p>The tag key cannot start with <code>aliyun</code>, <code>acs:</code>, <code>http://</code>, or <code>https://</code>.</p>
-             * </li>
-             * <li><p>The tag key can be up to 64 characters long.</p>
-             * </li>
-             * <li><p>The tag key cannot be an empty string.</p>
-             * </li>
+             * <li>The tag key cannot start with <code>aliyun</code>, <code>acs:</code>, <code>http://</code>, or <code>https://</code>.</li>
+             * <li>The tag key can be up to 64 characters in length.</li>
+             * <li>The tag key cannot be an empty string.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -321,7 +319,7 @@ public class CreateVSwitchRequest extends Request {
             }
 
             /**
-             * <p>The value of the tag. It can be up to 128 characters long, can be an empty string, and cannot start with <code>acs:</code> or contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag value of the resource. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length, and cannot start with acs: or contain http:// or https://.</p>
              * 
              * <strong>example:</strong>
              * <p>Deep</p>

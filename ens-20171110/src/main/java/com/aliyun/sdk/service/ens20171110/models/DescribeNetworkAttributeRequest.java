@@ -60,7 +60,7 @@ public class DescribeNetworkAttributeRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the network.</p>
+         * <p>The network ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
