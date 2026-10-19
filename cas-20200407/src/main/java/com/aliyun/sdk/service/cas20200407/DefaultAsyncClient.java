@@ -878,9 +878,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the number of CA certificates (including root CA certificates and subordinate CA certificates) that you have created.</p>
-     * <h2>QPS limit</h2>
-     * <p>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API call is throttled, which may affect your business. Call this operation as needed.</p>
+     * <p>This operation queries the number of CA certificates that you have created, including root CA certificates and subordinate CA certificates.</p>
+     * <h2>Rate limit</h2>
+     * <p>The rate limit for this operation is 10 queries per second (QPS) per user. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation as needed.</p>
      * 
      * @param request the request parameters of GetCertificatePackageCount  GetCertificatePackageCountRequest
      * @return GetCertificatePackageCountResponse
@@ -1261,6 +1261,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>After a task is created, it is in the editing state. You must call the UpdateDeploymentJobStatus operation to change the state to pending. Otherwise, the task will not be executed.</p>
+     * 
      * @param request the request parameters of ListDeploymentJob  ListDeploymentJobRequest
      * @return ListDeploymentJobResponse
      */
