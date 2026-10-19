@@ -67,7 +67,7 @@ public class DescribeParameterModificationHistoryResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Details about the parameter modification records.</p>
+         * HistoricalParameters.
          */
         public Builder historicalParameters(HistoricalParameters historicalParameters) {
             this.historicalParameters = historicalParameters;
@@ -170,10 +170,7 @@ public class DescribeParameterModificationHistoryResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the parameter was modified. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2019-03-12T07:58:24Z</p>
+             * ModifyTime.
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -181,10 +178,7 @@ public class DescribeParameterModificationHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parameter value after modification.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>200</p>
+             * NewParameterValue.
              */
             public Builder newParameterValue(String newParameterValue) {
                 this.newParameterValue = newParameterValue;
@@ -192,10 +186,7 @@ public class DescribeParameterModificationHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parameter value before modification.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>100</p>
+             * OldParameterValue.
              */
             public Builder oldParameterValue(String oldParameterValue) {
                 this.oldParameterValue = oldParameterValue;
@@ -203,10 +194,7 @@ public class DescribeParameterModificationHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the modified parameter.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>operationProfiling.slowOpThresholdMs</p>
+             * ParameterName.
              */
             public Builder parameterName(String parameterName) {
                 this.parameterName = parameterName;

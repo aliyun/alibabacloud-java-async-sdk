@@ -91,7 +91,7 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>An array that consists of the information of IP whitelists.</p>
+         * SecurityIpGroups.
          */
         public Builder securityIpGroups(SecurityIpGroups securityIpGroups) {
             this.securityIpGroups = securityIpGroups;
@@ -181,10 +181,7 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The attribute of the IP address whitelist.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>hidden</p>
+             * SecurityIpGroupAttribute.
              */
             public Builder securityIpGroupAttribute(String securityIpGroupAttribute) {
                 this.securityIpGroupAttribute = securityIpGroupAttribute;
@@ -192,10 +189,7 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the IP whitelist.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>default</p>
+             * SecurityIpGroupName.
              */
             public Builder securityIpGroupName(String securityIpGroupName) {
                 this.securityIpGroupName = securityIpGroupName;
@@ -203,10 +197,7 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the IP whitelist.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>47.xxx.xxx.xx,100.xxx.xxx.0/24</p>
+             * SecurityIpList.
              */
             public Builder securityIpList(String securityIpList) {
                 this.securityIpList = securityIpList;

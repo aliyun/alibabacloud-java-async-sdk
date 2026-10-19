@@ -258,7 +258,10 @@ public class DescribeBinlogFilesRequest extends Request {
         } 
 
         /**
-         * BinlogId.
+         * <p>The binlog ID. This parameter is not currently supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder binlogId(String binlogId) {
             this.putQueryParameter("BinlogId", binlogId);
@@ -267,6 +270,7 @@ public class DescribeBinlogFilesRequest extends Request {
         }
 
         /**
+         * <p>The ID of the instance. If the instance is a sharded cluster, you must also specify the <strong>NodeId</strong> parameter.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -279,7 +283,13 @@ public class DescribeBinlogFilesRequest extends Request {
         }
 
         /**
-         * DestRegion.
+         * <p>The region where the cross-region backup is stored.</p>
+         * <blockquote>
+         * <p>This parameter is required when you query cross-region backups.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder destRegion(String destRegion) {
             this.putQueryParameter("DestRegion", destRegion);
@@ -288,6 +298,7 @@ public class DescribeBinlogFilesRequest extends Request {
         }
 
         /**
+         * <p>The end time of the query. The time must be later than the start time. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss.xxx</em>Z format. The time is displayed in UTC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -300,7 +311,13 @@ public class DescribeBinlogFilesRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * <p>The ID of the mongos node or shard node in the sharded cluster instance.</p>
+         * <blockquote>
+         * <p>This parameter is applicable only to sharded cluster instances.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>d-uf696817a1b5d9f4</p>
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -327,7 +344,10 @@ public class DescribeBinlogFilesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -336,7 +356,10 @@ public class DescribeBinlogFilesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -345,7 +368,10 @@ public class DescribeBinlogFilesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-zhangjiakou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -354,7 +380,10 @@ public class DescribeBinlogFilesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-xxxx</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -381,7 +410,15 @@ public class DescribeBinlogFilesRequest extends Request {
         }
 
         /**
-         * SrcRegion.
+         * <p>The region of the source instance for a cross-region backup.</p>
+         * <blockquote>
+         * <ul>
+         * <li>This parameter is required when you query cross-region backups.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>ap-southeast-1</p>
          */
         public Builder srcRegion(String srcRegion) {
             this.putQueryParameter("SrcRegion", srcRegion);
@@ -390,6 +427,7 @@ public class DescribeBinlogFilesRequest extends Request {
         }
 
         /**
+         * <p>The start time of the query. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss.xxx</em>Z format. The time is displayed in UTC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

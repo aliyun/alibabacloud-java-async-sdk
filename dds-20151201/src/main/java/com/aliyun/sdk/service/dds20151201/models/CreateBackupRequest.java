@@ -169,11 +169,15 @@ public class CreateBackupRequest extends Request {
         /**
          * <p>The backup method of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>Logical</strong></li>
-         * <li><strong>Physical</strong> (default)</li>
+         * <li><strong>Snapshot</strong>: snapshot backup</li>
+         * <li><strong>Logical</strong>: logical backup</li>
+         * <li><strong>Physical</strong>: physical backup (default)</li>
          * </ul>
          * <blockquote>
-         * <p>Only replica set instances and sharded cluster instances support this parameter. You do not need to specify this parameter for standalone instances. All standalone instances use snapshot backup.</p>
+         * <ul>
+         * <li>Cloud disk instances support only snapshot backup.</li>
+         * <li>Only replica set and sharded cluster instances support selecting the backup method. You do not need to specify this parameter for standalone instances. The backup method is fixed to snapshot backup.</li>
+         * </ul>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -186,7 +190,17 @@ public class CreateBackupRequest extends Request {
         }
 
         /**
-         * BackupRetentionPeriod.
+         * <p>The retention period of the backup. This parameter is applicable only to replica set and sharded cluster instances with cloud disks.</p>
+         * <blockquote>
+         * <p>If you do not specify this parameter, the default backup policy applies. Valid values: </p>
+         * <ul>
+         * <li>7 to 730: 7 to 730 days</li>
+         * <li>-1: long-term retention</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder backupRetentionPeriod(Long backupRetentionPeriod) {
             this.putQueryParameter("BackupRetentionPeriod", backupRetentionPeriod);

@@ -93,7 +93,10 @@ public class DescribeReplicaSetRoleResponseBody extends TeaModel {
         } 
 
         /**
-         * ConnectionStringSuffix.
+         * <p>The domain name suffix for the connection string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>.mongodb.rds.aliyuncs.com</p>
          */
         public Builder connectionStringSuffix(String connectionStringSuffix) {
             this.connectionStringSuffix = connectionStringSuffix;
@@ -112,7 +115,7 @@ public class DescribeReplicaSetRoleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the roles of the replica set instance.</p>
+         * <p>Details of the replica set.</p>
          */
         public Builder replicaSets(ReplicaSets replicaSets) {
             this.replicaSets = replicaSets;
@@ -254,10 +257,7 @@ public class DescribeReplicaSetRoleResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The endpoint of the node.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>dds-bpxxxxxxxx.mongodb.rds.aliyuncs.com</p>
+             * ConnectionDomain.
              */
             public Builder connectionDomain(String connectionDomain) {
                 this.connectionDomain = connectionDomain;
@@ -265,10 +265,7 @@ public class DescribeReplicaSetRoleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The port number that is used to connect to the node.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3717</p>
+             * ConnectionPort.
              */
             public Builder connectionPort(String connectionPort) {
                 this.connectionPort = connectionPort;
@@ -276,10 +273,7 @@ public class DescribeReplicaSetRoleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The connection type of the node.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>SRV</p>
+             * ConnectionType.
              */
             public Builder connectionType(String connectionType) {
                 this.connectionType = connectionType;
@@ -287,10 +281,7 @@ public class DescribeReplicaSetRoleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The remaining duration of the classic network endpoint. Unit: seconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1209582</p>
+             * ExpiredTime.
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -298,15 +289,7 @@ public class DescribeReplicaSetRoleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network type of the instance. Valid values:</p>
-             * <ul>
-             * <li><strong>VPC</strong>: the virtual private cloud (VPC)</li>
-             * <li><strong>Classic</strong>: the classic network</li>
-             * <li><strong>Public</strong>: the Internet</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>VPC</p>
+             * NetworkType.
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -314,14 +297,7 @@ public class DescribeReplicaSetRoleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The role of the node in the replica set instance. Valid values:</p>
-             * <ul>
-             * <li><strong>Primary</strong></li>
-             * <li><strong>Secondary</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Primary</p>
+             * ReplicaSetRole.
              */
             public Builder replicaSetRole(String replicaSetRole) {
                 this.replicaSetRole = replicaSetRole;
@@ -329,10 +305,7 @@ public class DescribeReplicaSetRoleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The role ID of the node.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>651xxxxx</p>
+             * RoleId.
              */
             public Builder roleId(String roleId) {
                 this.roleId = roleId;

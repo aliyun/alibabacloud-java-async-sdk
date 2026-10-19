@@ -54,7 +54,7 @@ public class ModifyAuditPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>DC04D812-F18D-4568-9B88-F260D9590116</p>

@@ -93,7 +93,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The endpoints of DynamoDB-compatible instances.</p>
+         * CompatibleConnections.
          */
         public Builder compatibleConnections(CompatibleConnections compatibleConnections) {
             this.compatibleConnections = compatibleConnections;
@@ -101,7 +101,10 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
         }
 
         /**
-         * ConnectionStringSuffix.
+         * <p>The suffix of the connection string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>.mongodb.rds.aliyuncs.com</p>
          */
         public Builder connectionStringSuffix(String connectionStringSuffix) {
             this.connectionStringSuffix = connectionStringSuffix;
@@ -109,7 +112,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The endpoints of the ApsaraDB for MongoDB sharded cluster instance.</p>
+         * NetworkAddresses.
          */
         public Builder networkAddresses(NetworkAddresses networkAddresses) {
             this.networkAddresses = networkAddresses;
@@ -251,10 +254,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The remaining duration of the classic network endpoint. Unit: seconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2591963</p>
+             * ExpiredTime.
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -262,10 +262,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>10.140.xxx.xx</p>
+             * IPAddress.
              */
             public Builder IPAddress(String IPAddress) {
                 this.IPAddress = IPAddress;
@@ -273,10 +270,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The endpoint of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>dds-bpxxxxxxxxxxxxxx.mongodb.rds.aliyuncs.com</p>
+             * NetworkAddress.
              */
             public Builder networkAddress(String networkAddress) {
                 this.networkAddress = networkAddress;
@@ -284,15 +278,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network type of the instance.</p>
-             * <ul>
-             * <li><strong>VPC</strong>: virtual private cloud</li>
-             * <li><strong>Classic</strong>: classic network</li>
-             * <li><strong>Public</strong>: the Internet</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>VPC</p>
+             * NetworkType.
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -300,10 +286,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The port that is used to connect to the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3717</p>
+             * Port.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -311,13 +294,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The VPC ID of the instance.</p>
-             * <blockquote>
-             * <p> This parameter is returned when the network type is <strong>VPC</strong>.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>vpc-bpxxxxxxxx</p>
+             * VPCId.
              */
             public Builder VPCId(String VPCId) {
                 this.VPCId = VPCId;
@@ -325,13 +302,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the vSwitch in the Virtual Private Cloud (VPC).</p>
-             * <blockquote>
-             * <p> This parameter is returned when the network type is <strong>VPC</strong>.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>vsw-bpxxxxxxxx</p>
+             * VswitchId.
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
@@ -582,14 +553,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The public endpoint type. Valid values:</p>
-             * <ul>
-             * <li><strong>SRV</strong></li>
-             * <li><strong>Normal</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>SRV</p>
+             * ConnectionType.
              */
             public Builder connectionType(String connectionType) {
                 this.connectionType = connectionType;
@@ -597,10 +561,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The remaining duration of the classic network endpoint. Unit: seconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2591963</p>
+             * ExpiredTime.
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -608,10 +569,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>10.140.xxx.xx</p>
+             * IPAddress.
              */
             public Builder IPAddress(String IPAddress) {
                 this.IPAddress = IPAddress;
@@ -619,10 +577,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The connection string of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>s-bpxxxxxxxx.mongodb.rds.aliyuncs.com</p>
+             * NetworkAddress.
              */
             public Builder networkAddress(String networkAddress) {
                 this.networkAddress = networkAddress;
@@ -630,15 +585,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network type of the instance.</p>
-             * <ul>
-             * <li><strong>VPC</strong>: virtual private cloud</li>
-             * <li><strong>Classic</strong>: classic network</li>
-             * <li><strong>Public</strong>: the Internet</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>VPC</p>
+             * NetworkType.
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -646,10 +593,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the mongos node.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>s-bpxxxxxxxx</p>
+             * NodeId.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -657,15 +601,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the node. Valid values:</p>
-             * <ul>
-             * <li><strong>mongos</strong>: mongos node</li>
-             * <li><strong>shard</strong>: shard node</li>
-             * <li><strong>configserver</strong>: Configserver node</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>mongos</p>
+             * NodeType.
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -673,10 +609,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The port that is used to connect to the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3717</p>
+             * Port.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -684,14 +617,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The role of the node. Valid values:</p>
-             * <ul>
-             * <li>Primary</li>
-             * <li>Secondary</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Primary</p>
+             * Role.
              */
             public Builder role(String role) {
                 this.role = role;
@@ -699,10 +625,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Txt record which can be used to store MongoDB-related meta data, such as version, configuration parameters and etc. With the combination of txt record and other technology, for example SRV record, the MongoDB client can complete the complex service discovery and configuration passing.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>mongo.example.com. IN TXT &quot;config=replicaSet=myReplicaSet&quot;</p>
+             * TxtRecord.
              */
             public Builder txtRecord(String txtRecord) {
                 this.txtRecord = txtRecord;
@@ -710,13 +633,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The VPC ID of the instance.</p>
-             * <blockquote>
-             * <p> This parameter is returned when the network type is <strong>VPC</strong>.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>vpc-bpxxxxxxxx</p>
+             * VPCId.
              */
             public Builder VPCId(String VPCId) {
                 this.VPCId = VPCId;
@@ -724,13 +641,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the vSwitch in the VPC.</p>
-             * <blockquote>
-             * <p> This parameter is returned when the network type is <strong>VPC</strong>.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>vsw-bpxxxxxxxx</p>
+             * VswitchId.
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
@@ -784,10 +695,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The connection string of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>s-bpxxxxxxxx.mongodb.rds.aliyuncs.com</p>
+             * NetworkAddress.
              */
             public Builder networkAddress(java.util.List<NetworkAddress> networkAddress) {
                 this.networkAddress = networkAddress;

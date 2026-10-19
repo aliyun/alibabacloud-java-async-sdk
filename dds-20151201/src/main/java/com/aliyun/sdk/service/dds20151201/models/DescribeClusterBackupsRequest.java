@@ -279,7 +279,7 @@ public class DescribeClusterBackupsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the cluster backup set.</p>
+         * <p>The ID of the cluster backup.</p>
          * 
          * <strong>example:</strong>
          * <p>5664****</p>
@@ -291,7 +291,10 @@ public class DescribeClusterBackupsRequest extends Request {
         }
 
         /**
-         * BackupJobId.
+         * <p>The ID of the backup job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>775051</p>
          */
         public Builder backupJobId(String backupJobId) {
             this.putQueryParameter("BackupJobId", backupJobId);
@@ -313,9 +316,9 @@ public class DescribeClusterBackupsRequest extends Request {
         }
 
         /**
-         * <p>The region where cross-region backups reside.</p>
+         * <p>The region where the geo-redundant backup resides.</p>
          * <blockquote>
-         * <p> This parameter is required if you want to query cross-region backups.</p>
+         * <p>This parameter is required when you query geo-redundant backups.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -328,7 +331,10 @@ public class DescribeClusterBackupsRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. Specify the time in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC. The end time must be later than the start time.</p>
+         * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+         * <blockquote>
+         * <p>This parameter is invalid if you specify the BackupId parameter.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>2019-03-14T13:10Z</p>
@@ -340,10 +346,12 @@ public class DescribeClusterBackupsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to query information about child nodes in the cluster backup. Valid values:</p>
+         * <p>Specifies whether to query the information about the child nodes in the cluster backup. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The system returns only the basic information of the cluster backup.</li>
-         * <li><strong>false</strong> (default): The system returns the backup information of all child nodes.</li>
+         * <li><p><strong>true</strong>: Returns only the basic information about the cluster backup, not the backup information about all child nodes.</p>
+         * </li>
+         * <li><p><strong>false</strong> (Default): Returns the backup information about all child nodes.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -374,7 +382,7 @@ public class DescribeClusterBackupsRequest extends Request {
         }
 
         /**
-         * <p>The page number. Default value: <strong>1</strong>. The page number must be a positive integer.</p>
+         * <p>The number of the page to return. The value must be a positive integer. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -388,9 +396,12 @@ public class DescribeClusterBackupsRequest extends Request {
         /**
          * <p>The number of entries to return on each page. Valid values:</p>
          * <ul>
-         * <li><strong>30</strong> (default)</li>
-         * <li><strong>50</strong></li>
-         * <li><strong>100</strong></li>
+         * <li><p><strong>30</strong> (Default)</p>
+         * </li>
+         * <li><p><strong>50</strong></p>
+         * </li>
+         * <li><p><strong>100</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -403,7 +414,10 @@ public class DescribeClusterBackupsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-xxxx</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -430,15 +444,15 @@ public class DescribeClusterBackupsRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the instance.</p>
+         * <p>The region where the instance resides.</p>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>This parameter is required if you want to query the backup sets of a released instance.</p>
+         * <li><p>This parameter is required when you query the backup sets of a released instance.</p>
          * </li>
-         * <li><p>This parameter is required if you want to query cross-region backups.</p>
+         * <li><p>This parameter is required when you query geo-redundant backups.</p>
          * </li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -450,10 +464,13 @@ public class DescribeClusterBackupsRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+         * <p>The beginning of the time range to query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in Coordinated Universal Time (UTC).</p>
+         * <blockquote>
+         * <p>This parameter is invalid if you specify the BackupId parameter.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>2019-03-13T12:11:14Z</p>
+         * <p>2019-03-13T12:11Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

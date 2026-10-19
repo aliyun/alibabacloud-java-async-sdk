@@ -41,6 +41,10 @@ public class ResetAccountPasswordRequest extends Request {
     private String DBInstanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBName")
+    private String DBName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -63,6 +67,7 @@ public class ResetAccountPasswordRequest extends Request {
         this.accountPassword = builder.accountPassword;
         this.characterType = builder.characterType;
         this.DBInstanceId = builder.DBInstanceId;
+        this.DBName = builder.DBName;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -118,6 +123,13 @@ public class ResetAccountPasswordRequest extends Request {
     }
 
     /**
+     * @return DBName
+     */
+    public String getDBName() {
+        return this.DBName;
+    }
+
+    /**
      * @return ownerAccount
      */
     public String getOwnerAccount() {
@@ -151,6 +163,7 @@ public class ResetAccountPasswordRequest extends Request {
         private String accountPassword; 
         private String characterType; 
         private String DBInstanceId; 
+        private String DBName; 
         private String ownerAccount; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
@@ -167,6 +180,7 @@ public class ResetAccountPasswordRequest extends Request {
             this.accountPassword = request.accountPassword;
             this.characterType = request.characterType;
             this.DBInstanceId = request.DBInstanceId;
+            this.DBName = request.DBName;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -198,8 +212,10 @@ public class ResetAccountPasswordRequest extends Request {
         /**
          * <p>The new password.</p>
          * <ul>
-         * <li>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include <code>! # $ % ^ &amp; * ( ) _ + - =</code></li>
-         * <li>The password must be 8 to 32 characters in length.</li>
+         * <li><p>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include <code>! # $ % ^ &amp; * ( ) _ + - =</code></p>
+         * </li>
+         * <li><p>The password must be 8 to 32 characters in length.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -215,8 +231,10 @@ public class ResetAccountPasswordRequest extends Request {
         /**
          * <p>The role of the instance.</p>
          * <ul>
-         * <li>If the instance is a sharded cluster instance, this parameter is required. Valid values: db and cs.</li>
-         * <li>If the instance is a replica set instance, you can leave this parameter empty or set the parameter to normal.</li>
+         * <li><p>If the instance is a sharded cluster instance, this parameter is required. Valid values: db and cs.</p>
+         * </li>
+         * <li><p>If the instance is a replica set instance, you can leave this parameter empty or set the parameter to normal.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -238,6 +256,18 @@ public class ResetAccountPasswordRequest extends Request {
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
             this.DBInstanceId = DBInstanceId;
+            return this;
+        }
+
+        /**
+         * <p>账号所在库（账号建在/操作于哪个库），缺省 admin；规则：长度1~63，禁 /、\、.、空格、&quot;、$，禁 local</p>
+         * 
+         * <strong>example:</strong>
+         * <p>admin</p>
+         */
+        public Builder DBName(String DBName) {
+            this.putQueryParameter("DBName", DBName);
+            this.DBName = DBName;
             return this;
         }
 

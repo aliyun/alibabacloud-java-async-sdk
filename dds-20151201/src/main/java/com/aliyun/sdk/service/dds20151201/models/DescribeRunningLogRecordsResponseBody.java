@@ -119,7 +119,7 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The database engine.</p>
+         * <p>The engine type of the current database.</p>
          * 
          * <strong>example:</strong>
          * <p>MongoDB</p>
@@ -130,7 +130,7 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Details about the operational log entries.</p>
+         * Items.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -138,7 +138,7 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -149,7 +149,7 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of records per page.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -160,7 +160,7 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>45D2B592-DEBA-4347-BBF3-47FF6C97DBBC</p>
@@ -171,7 +171,7 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -266,10 +266,7 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The category of the log entry.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>NETWORK</p>
+             * Category.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -277,10 +274,7 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The connection information of the log entry.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>conn18xxxxxx</p>
+             * ConnInfo.
              */
             public Builder connInfo(String connInfo) {
                 this.connInfo = connInfo;
@@ -288,10 +282,7 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The content of the log entry.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>end connection 11.xxx.xxx.xx:3xxxx (0 connections now open)\n</p>
+             * Content.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -299,10 +290,7 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the log entry was generated. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2019-02-26T12:09:34Z</p>
+             * CreateTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;

@@ -41,6 +41,10 @@ public class ModifyAccountDescriptionRequest extends Request {
     private String DBInstanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBName")
+    private String DBName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -63,6 +67,7 @@ public class ModifyAccountDescriptionRequest extends Request {
         this.accountName = builder.accountName;
         this.characterType = builder.characterType;
         this.DBInstanceId = builder.DBInstanceId;
+        this.DBName = builder.DBName;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -118,6 +123,13 @@ public class ModifyAccountDescriptionRequest extends Request {
     }
 
     /**
+     * @return DBName
+     */
+    public String getDBName() {
+        return this.DBName;
+    }
+
+    /**
      * @return ownerAccount
      */
     public String getOwnerAccount() {
@@ -151,6 +163,7 @@ public class ModifyAccountDescriptionRequest extends Request {
         private String accountName; 
         private String characterType; 
         private String DBInstanceId; 
+        private String DBName; 
         private String ownerAccount; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
@@ -167,6 +180,7 @@ public class ModifyAccountDescriptionRequest extends Request {
             this.accountName = request.accountName;
             this.characterType = request.characterType;
             this.DBInstanceId = request.DBInstanceId;
+            this.DBName = request.DBName;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -185,8 +199,10 @@ public class ModifyAccountDescriptionRequest extends Request {
         /**
          * <p>The description of the account.</p>
          * <ul>
-         * <li>The description must start with a letter and cannot start with http:// or https://.</li>
-         * <li>The description must be 2 to 256 characters in length, and can contain letters, digits, underscores (_), and hyphens (-).</li>
+         * <li><p>The description must start with a letter and cannot start with http\:// or https\://.</p>
+         * </li>
+         * <li><p>The description must be 2 to 256 characters in length, and can contain letters, digits, underscores (_), and hyphens (-).</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -215,12 +231,15 @@ public class ModifyAccountDescriptionRequest extends Request {
         /**
          * <p>The type of the account whose description you can modify. Valid values:</p>
          * <ul>
-         * <li><strong>db</strong>: shard account</li>
-         * <li><strong>cs</strong>: ConfigServer account</li>
-         * <li><strong>normal</strong> (default): replica set account (available)</li>
+         * <li><p><strong>db</strong>: shard account</p>
+         * </li>
+         * <li><p><strong>cs</strong>: ConfigServer account</p>
+         * </li>
+         * <li><p><strong>normal</strong> (default): replica set account (available)</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> You can set this parameter only to <strong>normal</strong>.</p>
+         * <p>You can set this parameter only to <strong>normal</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -242,6 +261,15 @@ public class ModifyAccountDescriptionRequest extends Request {
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
             this.DBInstanceId = DBInstanceId;
+            return this;
+        }
+
+        /**
+         * DBName.
+         */
+        public Builder DBName(String DBName) {
+            this.putQueryParameter("DBName", DBName);
+            this.DBName = DBName;
             return this;
         }
 

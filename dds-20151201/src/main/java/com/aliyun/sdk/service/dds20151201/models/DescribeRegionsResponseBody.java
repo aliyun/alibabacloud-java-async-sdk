@@ -67,7 +67,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The regions.</p>
+         * Regions.
          */
         public Builder regions(Regions regions) {
             this.regions = regions;
@@ -157,14 +157,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether a virtual private cloud (VPC) is supported. Valid values:</p>
-             * <ul>
-             * <li><strong>true</strong>: VPC is supported.</li>
-             * <li><strong>false</strong>: VPC is not supported.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * VpcEnabled.
              */
             public Builder vpcEnabled(Boolean vpcEnabled) {
                 this.vpcEnabled = vpcEnabled;
@@ -172,10 +165,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The zone ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou-h</p>
+             * ZoneId.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -183,15 +173,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the zone.</p>
-             * <p>The value of the ZoneName parameter is in the language that is specified by the <strong>AcceptLanguage</strong> parameter. For example, if the value of the ZoneId parameter in the response is <strong>cn-hangzhou-h</strong>, the following values are returned for the ZoneName parameter:</p>
-             * <ul>
-             * <li>If the value of the <strong>AcceptLanguage</strong> parameter is <strong>zh</strong>, the value <strong>H</strong> is returned for the ZoneName parameter.</li>
-             * <li>If the value of the <strong>AcceptLanguage</strong> parameter is <strong>en</strong>, the value <strong>Hangzhou Zone H</strong> is returned for the ZoneName parameter.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Hangzhou Zone H</p>
+             * ZoneName.
              */
             public Builder zoneName(String zoneName) {
                 this.zoneName = zoneName;
@@ -338,14 +320,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The public endpoint of the region.</p>
-             * <p>For example, if the value of the RegionId parameter in the response is cn-hangzhou, the following value is returned for the EndPoint parameter:</p>
-             * <ul>
-             * <li>mongodb.aliyuncs.com</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>mongodb.aliyuncs.com</p>
+             * EndPoint.
              */
             public Builder endPoint(String endPoint) {
                 this.endPoint = endPoint;
@@ -353,10 +328,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -364,15 +336,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the region.</p>
-             * <p>The value of the LocalName parameter is in the language that is specified by the <strong>AcceptLanguage</strong> parameter. For example, if the value of the RegionId parameter in the response is <strong>cn-hangzhou</strong>, the following values are returned for the LocalName parameter:</p>
-             * <ul>
-             * <li>If the value of the <strong>AcceptLanguage</strong> parameter is <strong>zh</strong>, the value <strong>华东1（杭州）</strong> is returned for the LocalName parameter.</li>
-             * <li>If the value of the <strong>AcceptLanguage</strong> parameter is <strong>en</strong>, the value <strong>China (Hangzhou)</strong> is returned for the LocalName parameter.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>China (Hangzhou)</p>
+             * RegionName.
              */
             public Builder regionName(String regionName) {
                 this.regionName = regionName;
@@ -380,7 +344,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The zones.</p>
+             * Zones.
              */
             public Builder zones(Zones zones) {
                 this.zones = zones;

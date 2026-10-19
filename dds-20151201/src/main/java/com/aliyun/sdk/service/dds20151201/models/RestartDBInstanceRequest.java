@@ -43,6 +43,10 @@ public class RestartDBInstanceRequest extends Request {
     private Long ownerId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParallelRestartMongos")
+    private Boolean parallelRestartMongos;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -62,6 +66,7 @@ public class RestartDBInstanceRequest extends Request {
         this.nodeType = builder.nodeType;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.parallelRestartMongos = builder.parallelRestartMongos;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.switchMode = builder.switchMode;
@@ -123,6 +128,13 @@ public class RestartDBInstanceRequest extends Request {
     }
 
     /**
+     * @return parallelRestartMongos
+     */
+    public Boolean getParallelRestartMongos() {
+        return this.parallelRestartMongos;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -150,6 +162,7 @@ public class RestartDBInstanceRequest extends Request {
         private String nodeType; 
         private String ownerAccount; 
         private Long ownerId; 
+        private Boolean parallelRestartMongos; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String switchMode; 
@@ -166,6 +179,7 @@ public class RestartDBInstanceRequest extends Request {
             this.nodeType = request.nodeType;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.parallelRestartMongos = request.parallelRestartMongos;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.switchMode = request.switchMode;
@@ -196,7 +210,7 @@ public class RestartDBInstanceRequest extends Request {
         /**
          * <p>The ID of the shard or mongos node in the sharded cluster instance.</p>
          * <blockquote>
-         * <p>The sharded cluster instance is restarted if you do not specify this parameter.</p>
+         * <p>If you do not specify this parameter for a sharded cluster instance, the entire sharded cluster instance is restarted.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -236,6 +250,15 @@ public class RestartDBInstanceRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether to restart mongos nodes in parallel. This parameter takes effect only when you restart multiple mongos nodes at a time.</p>
+         */
+        public Builder parallelRestartMongos(Boolean parallelRestartMongos) {
+            this.putQueryParameter("ParallelRestartMongos", parallelRestartMongos);
+            this.parallelRestartMongos = parallelRestartMongos;
+            return this;
+        }
+
+        /**
          * ResourceOwnerAccount.
          */
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
@@ -254,7 +277,14 @@ public class RestartDBInstanceRequest extends Request {
         }
 
         /**
-         * SwitchMode.
+         * <p>The time when the instance is restarted. Valid values:</p>
+         * <ul>
+         * <li>0: Immediately.</li>
+         * <li>1: Within the O&amp;M window.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder switchMode(String switchMode) {
             this.putQueryParameter("SwitchMode", switchMode);

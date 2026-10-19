@@ -54,7 +54,7 @@ public class AllocatePublicNetworkAddressResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>8AA45036-497F-52E7-B951-F9C7B239****</p>

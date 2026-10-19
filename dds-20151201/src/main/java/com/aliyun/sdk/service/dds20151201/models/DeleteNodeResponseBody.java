@@ -102,7 +102,7 @@ public class DeleteNodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the task.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>111111111</p>

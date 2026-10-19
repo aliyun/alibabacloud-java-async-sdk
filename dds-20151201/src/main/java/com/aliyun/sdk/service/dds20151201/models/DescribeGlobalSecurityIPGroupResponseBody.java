@@ -67,7 +67,7 @@ public class DescribeGlobalSecurityIPGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The global IP whitelist templates.</p>
+         * <p>The list of global IP whitelist templates.</p>
          */
         public Builder globalSecurityIPGroup(java.util.List<GlobalSecurityIPGroup> globalSecurityIPGroup) {
             this.globalSecurityIPGroup = globalSecurityIPGroup;
@@ -75,7 +75,7 @@ public class DescribeGlobalSecurityIPGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique ID of the request. If the request fails, provide this ID for technical support to troubleshoot the failure.</p>
+         * <p>The unique ID of the request. If you encounter any issues, provide this request ID to the support team for troubleshooting.</p>
          * 
          * <strong>example:</strong>
          * <p>72651AF9-7897-41A7-8B67-6C15C7F26A0A</p>
@@ -183,7 +183,7 @@ public class DescribeGlobalSecurityIPGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The instances associated with the global whitelist template.</p>
+             * <p>The list of instances bound to the global IP whitelist template.</p>
              */
             public Builder DBInstances(java.util.List<String> DBInstances) {
                 this.DBInstances = DBInstances;
@@ -193,7 +193,7 @@ public class DescribeGlobalSecurityIPGroupResponseBody extends TeaModel {
             /**
              * <p>The IP addresses in the whitelist template.</p>
              * <blockquote>
-             * <p>Separate multiple IP addresses with commas (,). You can create up to 1,000 IP addresses or CIDR blocks for all IP address whitelists.</p>
+             * <p>Separate multiple IP addresses with commas (,). A maximum of 1,000 IP addresses or CIDR blocks can be added to all IP whitelists in total.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -227,7 +227,7 @@ public class DescribeGlobalSecurityIPGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the instance.</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>

@@ -271,14 +271,18 @@ public class DescribeActiveOperationTasksRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to allow the cancellation operation. Valid values:</p>
+         * <p>Specifies whether the task can be canceled. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: The cancellation operation is not allowed.</li>
-         * <li><strong>1</strong>: The cancellation operation is allowed.</li>
+         * <li><p><strong>-1</strong> (default): returns all tasks.</p>
+         * </li>
+         * <li><p><strong>0</strong>: returns only tasks that cannot be canceled.</p>
+         * </li>
+         * <li><p><strong>1</strong>: returns only tasks that can be canceled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>-1</p>
          */
         public Builder allowCancel(Integer allowCancel) {
             this.putQueryParameter("AllowCancel", allowCancel);
@@ -287,10 +291,14 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to allow the modification operation. Valid values:</p>
+         * <p>Specifies whether the time can be changed. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: The modification operation is not allowed.</li>
-         * <li><strong>1</strong>: The modification operation is allowed.</li>
+         * <li><p><strong>-1</strong> (default): returns all tasks.</p>
+         * </li>
+         * <li><p><strong>0</strong>: returns only tasks whose time cannot be changed.</p>
+         * </li>
+         * <li><p><strong>1</strong>: returns only tasks whose time can be changed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -303,11 +311,14 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * <p>The type of task configuration change. Valid values:</p>
+         * <p>The level of the task. Valid values:</p>
          * <ul>
-         * <li><strong>all</strong> (default): The configurations of all O&amp;M tasks are changed.</li>
-         * <li><strong>S0</strong>: The configurations of tasks initiated to fix exceptions are changed.</li>
-         * <li><strong>S1</strong>: The configurations of system O&amp;M tasks are changed.</li>
+         * <li><p><strong>all</strong> (default): returns all tasks.</p>
+         * </li>
+         * <li><p><strong>S0</strong>: returns tasks for exception fixing.</p>
+         * </li>
+         * <li><p><strong>S1</strong>: returns tasks for system O\&amp;M.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -320,10 +331,10 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * <p>The type of the database engine.</p>
+         * <p>The database type. Default value: <strong>all</strong>.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>mongoDb</p>
          */
         public Builder dbType(String dbType) {
             this.putQueryParameter("DbType", dbType);
@@ -332,10 +343,10 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * <p>The name of the instance.</p>
+         * <p>The name of the instance. This parameter is optional. You can specify only one instance name.</p>
          * 
          * <strong>example:</strong>
-         * <p>dds-bp16aaccfe10e3e4</p>
+         * <p>dds-bp16aaccfe10****</p>
          */
         public Builder insName(String insName) {
             this.putQueryParameter("InsName", insName);
@@ -362,7 +373,7 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. Specify the parameter to a positive integer that is greater than <strong>0</strong>. Default value: <strong>1</strong>.</p>
+         * <p>The page number. The value must be greater than <strong>0</strong>. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -374,7 +385,7 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>. Default value: <strong>30</strong>.</p>
+         * <p>The number of entries per page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>. Default value: <strong>30</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -386,10 +397,10 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * <p>The ID of the service.</p>
+         * <p>The product name. For MongoDB instances, set this parameter to <strong>MongoDB</strong>.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>MongoDB</p>
          */
         public Builder productId(String productId) {
             this.putQueryParameter("ProductId", productId);
@@ -398,9 +409,9 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the instance.</p>
+         * <p>The ID of the region where the pending event is located. Call the DescribeRegions operation to obtain the region ID.</p>
          * <blockquote>
-         * <p> If you set the Region parameter to <strong>all</strong>, all tasks created within your Alibaba Cloud account are queried. In this case, you must set the <strong>taskType</strong> parameter to <strong>all</strong>.</p>
+         * <p>A value of <strong>all</strong> indicates all region IDs.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -413,7 +424,7 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmyiu4ekp****</p>
@@ -443,16 +454,24 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * <p>The status of the task. Valid values:</p>
+         * <p>The task status. This parameter filters the returned tasks.</p>
          * <ul>
-         * <li><strong>0</strong>: waiting for execution</li>
-         * <li><strong>1</strong>: being executed</li>
-         * <li><strong>2</strong>: successful</li>
-         * <li><strong>3</strong>: failed</li>
+         * <li><p><strong>-1</strong>: all tasks.</p>
+         * </li>
+         * <li><p><strong>3</strong>: pending tasks.</p>
+         * </li>
+         * <li><p><strong>4</strong>: running tasks.</p>
+         * </li>
+         * <li><p><strong>5</strong>: successfully completed tasks.</p>
+         * </li>
+         * <li><p><strong>6</strong>: failed tasks.</p>
+         * </li>
+         * <li><p><strong>7</strong>: canceled tasks.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>0</p>
+         * <p>-1</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);
@@ -461,10 +480,22 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * <p>The task type.</p>
+         * <p>The task type. Valid values:</p>
+         * <ul>
+         * <li><p><strong>rds_apsaradb_ha</strong>: primary-secondary node switchover.</p>
+         * </li>
+         * <li><p><strong>rds_apsaradb_transfer</strong>: instance migration.</p>
+         * </li>
+         * <li><p><strong>rds_apsaradb_upgrade</strong>: minor version upgrade.</p>
+         * </li>
+         * <li><p><strong>rds_apsaradb_maxscale</strong>: proxy minor version upgrade.</p>
+         * </li>
+         * <li><p><strong>all</strong>: all task types.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>all</p>
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

@@ -67,7 +67,7 @@ public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of custom keys.</p>
+         * KeyIds.
          */
         public Builder keyIds(KeyIds keyIds) {
             this.keyIds = keyIds;
@@ -75,7 +75,7 @@ public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>7CD51DA4-A499-43CE-B9B5-20CD4FDC648E</p>

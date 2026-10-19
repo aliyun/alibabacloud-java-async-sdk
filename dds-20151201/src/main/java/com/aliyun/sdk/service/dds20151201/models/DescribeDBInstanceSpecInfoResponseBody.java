@@ -93,7 +93,10 @@ public class DescribeDBInstanceSpecInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * CPU.
+         * <p>The number of CPU cores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder CPU(String CPU) {
             this.CPU = CPU;
@@ -101,7 +104,10 @@ public class DescribeDBInstanceSpecInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The description of the instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2核8GB（独享型）</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -109,7 +115,10 @@ public class DescribeDBInstanceSpecInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Memory.
+         * <p>The memory size, in GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder memory(String memory) {
             this.memory = memory;
@@ -117,7 +126,10 @@ public class DescribeDBInstanceSpecInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6B82A9EF-9961-5A31-A19F-009B709xxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

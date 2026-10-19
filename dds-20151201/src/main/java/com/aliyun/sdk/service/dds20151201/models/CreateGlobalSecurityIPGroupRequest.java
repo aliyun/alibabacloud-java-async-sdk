@@ -162,7 +162,7 @@ public class CreateGlobalSecurityIPGroupRequest extends Request {
         /**
          * <p>The IP addresses in the whitelist template.</p>
          * <blockquote>
-         * <p>Separate multiple IP addresses with commas (,). You can create up to 1,000 IP addresses or CIDR blocks for all IP address whitelists.</p>
+         * <p>Separate multiple IP addresses with commas (,). A maximum of 1,000 IP addresses or CIDR blocks can be added to all IP whitelists in total.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -178,9 +178,12 @@ public class CreateGlobalSecurityIPGroupRequest extends Request {
         /**
          * <p>The name of the IP whitelist template. The name must meet the following requirements:</p>
          * <ul>
-         * <li>It can contain lowercase letters, digits, and underscores (_).</li>
-         * <li>It must start with a letter and end with a letter or digit.</li>
-         * <li>It must be 2 to 120 characters in length.</li>
+         * <li><p>It can contain only lowercase letters, digits, and underscores (_).</p>
+         * </li>
+         * <li><p>It must start with a letter and end with a letter or a digit.</p>
+         * </li>
+         * <li><p>It must be 2 to 120 characters in length.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -212,7 +215,7 @@ public class CreateGlobalSecurityIPGroupRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> to query regions.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

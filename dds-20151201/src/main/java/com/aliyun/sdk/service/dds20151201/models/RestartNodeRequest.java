@@ -182,9 +182,9 @@ public class RestartNodeRequest extends Request {
         }
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The instance ID. </p>
          * <blockquote>
-         * <p> If you set this parameter to the ID of a sharded cluster instance, you must also specify the <strong>NodeId</strong> parameter.</p>
+         * <p>If the instance is a sharded cluster instance, you must also specify <code>NodeId</code>.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -198,9 +198,9 @@ public class RestartNodeRequest extends Request {
         }
 
         /**
-         * <p>The ID of the shard, mongos, or ConfigServer node in a child instance of the sharded cluster instance.</p>
+         * <p>Instance ID of the Mongos node, Shard node, or ConfigServer node in the sharded cluster instance. You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to query instance IDs of Mongos nodes, Shard nodes, or ConfigServer nodes.</p>
          * <blockquote>
-         * <p> If you set the <strong>DBInstanceId</strong> parameter to the ID of a sharded cluster instance, you must specify this parameter.</p>
+         * <p>This parameter is required when <strong>DBInstanceId</strong> is set to instance ID of a sharded cluster instance.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -251,8 +251,8 @@ public class RestartNodeRequest extends Request {
         /**
          * <p>The role ID of the node.</p>
          * <ol>
-         * <li>You can call the <a href="https://help.aliyun.com/document_detail/468469.html">DescribeReplicaSetRole</a> operation to query the role ID of a node in a replica set instance.</li>
-         * <li>You can call the <a href="https://help.aliyun.com/document_detail/468472.html">DescribeRoleZoneInfo</a> operation to query the role ID of a node in a sharded cluster instance.</li>
+         * <li>You can call the <a href="https://help.aliyun.com/document_detail/468469.html">DescribeReplicaSetRole</a> operation to query the node IDs of a replica set instance.</li>
+         * <li>You can call the <a href="https://help.aliyun.com/document_detail/468472.html">DescribeRoleZoneInfo</a> operation to query the node IDs of a sharded cluster instance.</li>
          * </ol>
          * <p>This parameter is required.</p>
          * 
@@ -266,7 +266,17 @@ public class RestartNodeRequest extends Request {
         }
 
         /**
-         * SwitchMode.
+         * <p>The execution time. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: immediately. This is the default value.</li>
+         * <li><strong>1</strong>: during the maintenance window.</li>
+         * </ul>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/473775.html">ModifyInstanceMaintainTime</a> operation to modify the maintenance window of the instance.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder switchMode(String switchMode) {
             this.putQueryParameter("SwitchMode", switchMode);

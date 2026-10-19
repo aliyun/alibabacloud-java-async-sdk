@@ -411,8 +411,8 @@ public class DescribeDBInstancesRequest extends Request {
         /**
          * <p>The billing method of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>PrePaid</strong>: subscription</li>
-         * <li><strong>PostPaid</strong>: pay-as-you-go</li>
+         * <li><strong>PrePaid</strong>: subscription.</li>
+         * <li><strong>PostPaid</strong>: pay-as-you-go.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -425,7 +425,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * <p>The endpoint of the node. You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to query the endpoint of the node.</p>
+         * <p>The endpoint of the node. You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to query the endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>dds-bp1ea17b41abecf43****.mongodb.rds.aliyuncs.com</p>
@@ -437,7 +437,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * <p>The instance type. For more information about valid values, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.</p>
+         * <p>The instance specification. For more information about valid values, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance specifications</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>dds.mongo.mid</p>
@@ -449,15 +449,15 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * <p>The name of the instance. The name must meet the following requirements:</p>
+         * <p>The instance name. The name must meet the following requirements:</p>
          * <ul>
-         * <li>The name must start with a letter.</li>
-         * <li>It can contain digits, letters, underscores (_), and hyphens (-).</li>
+         * <li>It must start with a Chinese character or a letter.</li>
+         * <li>It can contain digits, Chinese characters, letters, underscores (_), and hyphens (-).</li>
          * <li>It must be 2 to 256 characters in length.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>Test database</p>
+         * <p>TestDatabase</p>
          */
         public Builder DBInstanceDescription(String DBInstanceDescription) {
             this.putQueryParameter("DBInstanceDescription", DBInstanceDescription);
@@ -478,7 +478,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * <p>The state of the instance. For more information about valid values, see <a href="https://help.aliyun.com/document_detail/63870.html">Instance states</a>.</p>
+         * <p>The instance status. For more details about valid values, see <a href="https://help.aliyun.com/document_detail/63870.html">Instance status table</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -490,10 +490,12 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * <p>The architecture of the instance. Valid values:</p>
+         * <p>The instance type. Valid values: </p>
          * <ul>
-         * <li><strong>sharding</strong>: sharded cluster instance</li>
-         * <li><strong>replicate</strong>: replica set or standalone instance</li>
+         * <li><strong>sharding</strong>: sharded cluster instance.</li>
+         * <li><strong>replicate</strong>: default value. Replica set instance or single-node instance.
+         *  &lt;props=&quot;china&quot;&gt;</li>
+         * <li><strong>serverless</strong>: Serverless instance.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -506,11 +508,11 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * <p>The type of the node in the instance. This parameter is used to filter standard or test instance.</p>
+         * <p>Specifies whether to filter standard or test instances.</p>
          * <ol>
-         * <li>Valid value for a standalone or DBFS instance.</li>
-         * <li>Valid value for a standard instance that comes in the replica set or sharded cluster architecture: standard</li>
-         * <li>Valid value when all instances are displayed: default</li>
+         * <li>Single-node instances and DBFS instances: customized</li>
+         * <li>Standard instances (replica set and sharded cluster): standard</li>
+         * <li>Default (displays all instances): default</li>
          * </ol>
          * 
          * <strong>example:</strong>
@@ -523,7 +525,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * <p>The database engine of the instance. Set the value to <strong>MongoDB</strong>.</p>
+         * <p>The database engine. Set the value to <strong>MongoDB</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>MongoDB</p>
@@ -535,8 +537,9 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * <p>The database engine version of the instance.</p>
+         * <p>The database engine version. Valid values:</p>
          * <ul>
+         * <li><strong>7.0</strong></li>
          * <li><strong>6.0</strong></li>
          * <li><strong>5.0</strong></li>
          * <li><strong>4.4</strong></li>
@@ -555,10 +558,10 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * <p>The time when the instance expires.</p>
+         * <p>The expiration time of the instance in the yyyy-MM-ddTHH:mm:ssZ format (UTC). This parameter is used to filter instances whose expiration time is earlier than or equal to the specified time.</p>
          * 
          * <strong>example:</strong>
-         * <p>2019-12-26T16:00Z</p>
+         * <p>2019-12-26T16:00:00Z</p>
          */
         public Builder expireTime(String expireTime) {
             this.putQueryParameter("ExpireTime", expireTime);
@@ -567,10 +570,10 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the instance has expired. Valid values:</p>
+         * <p>The expiration status of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: expired.</li>
+         * <li><strong>false</strong>: not expired.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -585,8 +588,8 @@ public class DescribeDBInstancesRequest extends Request {
         /**
          * <p>The network type of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>Classic</strong></li>
-         * <li><strong>VPC</strong></li>
+         * <li><strong>Classic</strong>: classic network.</li>
+         * <li><strong>VPC</strong>: VPC.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -617,7 +620,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. The value of this parameter must be an integer that is greater than 0. Default value: <strong>1</strong>.</p>
+         * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -629,7 +632,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Valid values:</p>
+         * <p>The number of entries per page. Valid values:</p>
          * <ul>
          * <li><strong>30</strong> (default)</li>
          * <li><strong>50</strong></li>
@@ -646,7 +649,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -675,7 +678,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmyiu4ekp****</p>
@@ -705,7 +708,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * <p>The tags of the instance.</p>
+         * <p>The tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -714,7 +717,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * <p>The vSwitch ID of the instance.</p>
+         * <p>The vSwitch ID of the VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-bp1vj604nj5a9zz74****</p>
@@ -726,7 +729,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * <p>The VPC ID of the instance.</p>
+         * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp1n3i15v90el48nx****</p>
@@ -738,7 +741,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * <p>The zone ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the most recent zone list.</p>
+         * <p>The zone ID. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the zone ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-b</p>
@@ -811,9 +814,9 @@ public class DescribeDBInstancesRequest extends Request {
             /**
              * <p>The tag key of the instance. Valid values of N: <strong>1</strong> to <strong>20</strong>.</p>
              * <ul>
-             * <li>The key cannot start with <code>aliyun</code>, <code>acs:</code>, <code>http://</code>, or <code>https://</code>.</li>
-             * <li>It can be up to 64 characters in length.</li>
-             * <li>It cannot be an empty string.</li>
+             * <li>The tag key cannot start with <code>aliyun</code>, <code>acs:</code>, <code>http://</code>, or <code>https://</code>.</li>
+             * <li>The tag key can be up to 64 characters in length.</li>
+             * <li>The tag key cannot be an empty string.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -827,9 +830,9 @@ public class DescribeDBInstancesRequest extends Request {
             /**
              * <p>The tag value of the instance. Valid values of N: <strong>1</strong> to <strong>20</strong>.</p>
              * <ul>
-             * <li>The value cannot start with <code>aliyun</code>, <code>acs:</code>, <code>http://</code>, or <code>https://</code>.</li>
-             * <li>The value can be up to 128 characters in length.</li>
-             * <li>It can be an empty string.</li>
+             * <li>The tag value cannot start with <code>aliyun</code>, <code>acs:</code>, <code>http://</code>, or <code>https://</code>.</li>
+             * <li>The tag value can be up to 128 characters in length.</li>
+             * <li>The tag value can be an empty string.</li>
              * </ul>
              * 
              * <strong>example:</strong>

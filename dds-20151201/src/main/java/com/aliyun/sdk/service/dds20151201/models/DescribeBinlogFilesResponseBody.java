@@ -114,7 +114,10 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
         }
 
         /**
-         * MaxRecordsPerPage.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder maxRecordsPerPage(Integer maxRecordsPerPage) {
             this.maxRecordsPerPage = maxRecordsPerPage;
@@ -122,7 +125,10 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the returned results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -130,7 +136,10 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F8CA8312-530A-413A-9129-F2BB32A8D404</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * <p>The total number of binlog files found.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>240</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;

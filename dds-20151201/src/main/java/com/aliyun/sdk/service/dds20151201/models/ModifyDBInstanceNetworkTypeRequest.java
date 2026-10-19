@@ -225,9 +225,9 @@ public class ModifyDBInstanceNetworkTypeRequest extends Request {
         }
 
         /**
-         * <p>The retention period of the original classic network address when you change the network type to VPC. Valid values: <strong>14</strong>, <strong>30</strong>, <strong>60</strong>, and <strong>120</strong>. Unit: days.</p>
+         * <p>The retention period of the original classic network address when you switch the network type to VPC. Settings. Valid values: <strong>14</strong>, <strong>30</strong>, <strong>60</strong>, and <strong>120</strong>. Unit: days.</p>
          * <blockquote>
-         * <p>This parameter is required when the <strong>NetworkType</strong> parameter is set to <strong>VPC</strong> and the <strong>RetainClassic</strong> parameter is set to <strong>True</strong>.</p>
+         * <p>This parameter is required when the <strong>NetworkType</strong> parameter settings is set to <strong>VPC</strong> and the <strong>RetainClassic</strong> parameter settings is set to <strong>True</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -253,9 +253,9 @@ public class ModifyDBInstanceNetworkTypeRequest extends Request {
         }
 
         /**
-         * <p>The network type to switch to. Valid value:</p>
+         * <p>The target network type to which you want to switch the instance. Valid values:</p>
          * <ul>
-         * <li><strong>VPC</strong></li>
+         * <li><strong>VPC</strong>: switches the network type to VPC.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -305,19 +305,17 @@ public class ModifyDBInstanceNetworkTypeRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to retain the original classic network address when you change the network type to VPC. Valid values:</p>
+         * <p>Specifies whether to retain the original classic network address when you switch the network type to VPC. Settings. Valid values:</p>
          * <ul>
          * <li><strong>True</strong>: retains the original classic network address.</li>
          * <li><strong>False</strong>: does not retain the original classic network address.</li>
          * </ul>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>This parameter is required when the <strong>NetworkType</strong> parameter is set to <strong>VPC</strong>.</p>
-         * </li>
-         * <li><p>If you set this parameter to <strong>True</strong>, you must also specify the <strong>ClassicExpiredDays</strong> parameter.</p>
-         * </li>
+         * <li>This parameter is required when the <strong>NetworkType</strong> parameter settings is set to <strong>VPC</strong>.</li>
+         * <li>If this parameter settings is set to <strong>True</strong>, you must also specify the <strong>ClassicExpiredDays</strong> parameter.</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -329,9 +327,9 @@ public class ModifyDBInstanceNetworkTypeRequest extends Request {
         }
 
         /**
-         * <p>The ID of the vSwitch in the VPC.</p>
+         * <p>The vSwitch ID in the VPC.</p>
          * <blockquote>
-         * <p>This parameter is required when the <strong>NetworkType</strong> parameter is set to <strong>VPC</strong>.</p>
+         * <p>This parameter is required when the <strong>NetworkType</strong> parameter settings is set to <strong>VPC</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -344,9 +342,9 @@ public class ModifyDBInstanceNetworkTypeRequest extends Request {
         }
 
         /**
-         * <p>The ID of the VPC.</p>
+         * <p>The VPC ID.</p>
          * <blockquote>
-         * <p>This parameter is required when the <strong>NetworkType</strong> parameter is set to <strong>VPC</strong>.</p>
+         * <p>This parameter is required when the <strong>NetworkType</strong> parameter settings is set to <strong>VPC</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -359,7 +357,7 @@ public class ModifyDBInstanceNetworkTypeRequest extends Request {
         }
 
         /**
-         * <p>可用区ID，您可以通过调用<a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a>接口查询可用区ID。</p>
+         * <p>The zone ID. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the zone ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -22,6 +22,10 @@ public class CreateAccountRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountDescription")
+    private String accountDescription;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AccountName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String accountName;
@@ -41,6 +45,10 @@ public class CreateAccountRequest extends Request {
     private String DBInstanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBName")
+    private String DBName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -56,17 +64,24 @@ public class CreateAccountRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Roles")
+    private java.util.List<Roles> roles;
+
     private CreateAccountRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.accountDescription = builder.accountDescription;
         this.accountName = builder.accountName;
         this.accountPassword = builder.accountPassword;
         this.characterType = builder.characterType;
         this.DBInstanceId = builder.DBInstanceId;
+        this.DBName = builder.DBName;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.roles = builder.roles;
     }
 
     public static Builder builder() {
@@ -87,6 +102,13 @@ public class CreateAccountRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return accountDescription
+     */
+    public String getAccountDescription() {
+        return this.accountDescription;
     }
 
     /**
@@ -118,6 +140,13 @@ public class CreateAccountRequest extends Request {
     }
 
     /**
+     * @return DBName
+     */
+    public String getDBName() {
+        return this.DBName;
+    }
+
+    /**
      * @return ownerAccount
      */
     public String getOwnerAccount() {
@@ -145,16 +174,26 @@ public class CreateAccountRequest extends Request {
         return this.resourceOwnerId;
     }
 
+    /**
+     * @return roles
+     */
+    public java.util.List<Roles> getRoles() {
+        return this.roles;
+    }
+
     public static final class Builder extends Request.Builder<CreateAccountRequest, Builder> {
         private String regionId; 
+        private String accountDescription; 
         private String accountName; 
         private String accountPassword; 
         private String characterType; 
         private String DBInstanceId; 
+        private String DBName; 
         private String ownerAccount; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private java.util.List<Roles> roles; 
 
         private Builder() {
             super();
@@ -163,14 +202,17 @@ public class CreateAccountRequest extends Request {
         private Builder(CreateAccountRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.accountDescription = request.accountDescription;
             this.accountName = request.accountName;
             this.accountPassword = request.accountPassword;
             this.characterType = request.characterType;
             this.DBInstanceId = request.DBInstanceId;
+            this.DBName = request.DBName;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.roles = request.roles;
         } 
 
         /**
@@ -183,7 +225,19 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * <p>The name of the database account. The name must be 4 to 16 characters in length. It can contain lowercase letters, digits, and underscores (_). It must start with a lowercase letter. The account is granted read-only permissions.</p>
+         * <p>The description of the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
+        public Builder accountDescription(String accountDescription) {
+            this.putQueryParameter("AccountDescription", accountDescription);
+            this.accountDescription = accountDescription;
+            return this;
+        }
+
+        /**
+         * <p>The account name. The name must be 4 to 16 characters in length and can contain lowercase letters, digits, and underscores (_). It must start with a lowercase letter. The account has read-only permissions.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -196,7 +250,10 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * <p>The password of the database account. The password must be 8 to 32 characters in length. It can contain at least three types of the following characters: uppercase letters, lowercase letters, digits, and special characters. Special characters include ! # $ % ^ &amp; * ( ) _ + - =</p>
+         * <p>The account password. The password must be 8 to 32 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include ! @ # $ % ^ &amp; * ( ) _ + - =</p>
+         * <blockquote>
+         * <p>For information about how to handle special characters, see <a href="https://help.aliyun.com/document_detail/471568.html">What do I do if a connection fails because the username or password in the connection string contains special characters?</a></p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -209,14 +266,14 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * <p>The type of the account that you want to create. Valid values:</p>
+         * <p>The type of the account to be created. Valid values:</p>
          * <ul>
-         * <li><strong>db</strong> (default): shard account (available)</li>
-         * <li><strong>cs</strong>: ConfigServer account</li>
-         * <li><strong>normal</strong>: replica set account</li>
+         * <li><strong>db</strong>: shard account. This is the default value.</li>
+         * <li><strong>cs</strong>: Configserver account.</li>
+         * <li><strong>normal</strong>: replica set account.</li>
          * </ul>
          * <blockquote>
-         * <p> You can set this parameter only to <strong>db</strong>.</p>
+         * <p>Currently, only <strong>db</strong> accounts are supported.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -229,7 +286,7 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -238,6 +295,18 @@ public class CreateAccountRequest extends Request {
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
             this.DBInstanceId = DBInstanceId;
+            return this;
+        }
+
+        /**
+         * <p>The database to which the account belongs. This is the database where the account is created or on which the account operates. Default value: admin. The name must be 1 to 63 characters in length and cannot contain /, \, ., spaces, double quotation marks (&quot;), or $. The name cannot be local.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>admin</p>
+         */
+        public Builder DBName(String DBName) {
+            this.putQueryParameter("DBName", DBName);
+            this.DBName = DBName;
             return this;
         }
 
@@ -277,6 +346,15 @@ public class CreateAccountRequest extends Request {
             return this;
         }
 
+        /**
+         * <p>The list of authorized roles for the account.</p>
+         */
+        public Builder roles(java.util.List<Roles> roles) {
+            this.putQueryParameter("Roles", roles);
+            this.roles = roles;
+            return this;
+        }
+
         @Override
         public CreateAccountRequest build() {
             return new CreateAccountRequest(this);
@@ -284,4 +362,85 @@ public class CreateAccountRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateAccountRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAccountRequest</p>
+     */
+    public static class Roles extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DBName")
+        private String DBName;
+
+        @com.aliyun.core.annotation.NameInMap("Role")
+        private String role;
+
+        private Roles(Builder builder) {
+            this.DBName = builder.DBName;
+            this.role = builder.role;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Roles create() {
+            return builder().build();
+        }
+
+        /**
+         * @return DBName
+         */
+        public String getDBName() {
+            return this.DBName;
+        }
+
+        /**
+         * @return role
+         */
+        public String getRole() {
+            return this.role;
+        }
+
+        public static final class Builder {
+            private String DBName; 
+            private String role; 
+
+            private Builder() {
+            } 
+
+            private Builder(Roles model) {
+                this.DBName = model.DBName;
+                this.role = model.role;
+            } 
+
+            /**
+             * <p>The authorized database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>admin</p>
+             */
+            public Builder DBName(String DBName) {
+                this.DBName = DBName;
+                return this;
+            }
+
+            /**
+             * <p>The granted permissions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>read</p>
+             */
+            public Builder role(String role) {
+                this.role = role;
+                return this;
+            }
+
+            public Roles build() {
+                return new Roles(this);
+            } 
+
+        } 
+
+    }
 }

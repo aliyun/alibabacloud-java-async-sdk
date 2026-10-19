@@ -106,7 +106,7 @@ public class DescribeParametersResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The parameter settings in the configuration template.</p>
+         * ConfigParameters.
          */
         public Builder configParameters(ConfigParameters configParameters) {
             this.configParameters = configParameters;
@@ -114,7 +114,7 @@ public class DescribeParametersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The database engine of the instance. Default value: <strong>mongodb</strong>.</p>
+         * <p>The database engine. Default value: <strong>mongodb</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>mongodb</p>
@@ -125,7 +125,7 @@ public class DescribeParametersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The database engine version of the instance.</p>
+         * <p>The database engine version.</p>
          * 
          * <strong>example:</strong>
          * <p>4.0</p>
@@ -147,7 +147,7 @@ public class DescribeParametersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The settings of the parameters that have taken effect.</p>
+         * RunningParameters.
          */
         public Builder runningParameters(RunningParameters runningParameters) {
             this.runningParameters = runningParameters;
@@ -265,10 +265,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The valid values of the parameter.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>[0-65536]</p>
+             * CheckingCode.
              */
             public Builder checkingCode(String checkingCode) {
                 this.checkingCode = checkingCode;
@@ -276,14 +273,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether a restart is required for parameter modifications to take effect. Valid values:</p>
-             * <ul>
-             * <li><strong>false</strong>: A restart is not required. Modifications take effect immediately.</li>
-             * <li><strong>true</strong>: A restart is required for parameter modifications to take effect.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * ForceRestart.
              */
             public Builder forceRestart(Boolean forceRestart) {
                 this.forceRestart = forceRestart;
@@ -291,14 +281,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the parameter value can be modified. Valid values:</p>
-             * <ul>
-             * <li><strong>false</strong>: The parameter value cannot be modified.</li>
-             * <li><strong>true</strong>: The parameter value can be modified.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * ModifiableStatus.
              */
             public Builder modifiableStatus(Boolean modifiableStatus) {
                 this.modifiableStatus = modifiableStatus;
@@ -306,10 +289,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the parameter.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>The threshold in milliseconds at which the database profiler considers a query slow, default is 100.</p>
+             * ParameterDescription.
              */
             public Builder parameterDescription(String parameterDescription) {
                 this.parameterDescription = parameterDescription;
@@ -317,10 +297,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the parameter.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>operationProfiling.slowOpThresholdMs</p>
+             * ParameterName.
              */
             public Builder parameterName(String parameterName) {
                 this.parameterName = parameterName;
@@ -328,10 +305,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the parameter.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>200</p>
+             * ParameterValue.
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;
@@ -517,15 +491,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>实例的角色类型，取值说明：</p>
-             * <ul>
-             * <li><strong>db</strong>：shard角色。</li>
-             * <li><strong>cs</strong>：config server角色。</li>
-             * <li><strong>mongos</strong>：mongos角色。</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>db</p>
+             * CharacterType.
              */
             public Builder characterType(String characterType) {
                 this.characterType = characterType;
@@ -533,10 +499,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The valid values of the parameter.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>[33554432-268435456]</p>
+             * CheckingCode.
              */
             public Builder checkingCode(String checkingCode) {
                 this.checkingCode = checkingCode;
@@ -544,14 +507,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether a restart is required for parameter modifications to take effect. Valid values:</p>
-             * <ul>
-             * <li><strong>false</strong>: A restart is not required. Modifications take effect immediately.</li>
-             * <li><strong>true</strong>: A restart is required for parameter modifications to take effect.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * ForceRestart.
              */
             public Builder forceRestart(String forceRestart) {
                 this.forceRestart = forceRestart;
@@ -559,14 +515,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the parameter value can be modified. Valid values:</p>
-             * <ul>
-             * <li><strong>false</strong>: The parameter value cannot be modified.</li>
-             * <li><strong>true</strong>: The parameter value can be modified.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * ModifiableStatus.
              */
             public Builder modifiableStatus(String modifiableStatus) {
                 this.modifiableStatus = modifiableStatus;
@@ -574,10 +523,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the parameter.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>The maximum memory bytes that sort stage may use, default is 33554432(i.e. 32MB)</p>
+             * ParameterDescription.
              */
             public Builder parameterDescription(String parameterDescription) {
                 this.parameterDescription = parameterDescription;
@@ -585,10 +531,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the parameter.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>setParameter.internalQueryExecMaxBlockingSortBytes</p>
+             * ParameterName.
              */
             public Builder parameterName(String parameterName) {
                 this.parameterName = parameterName;
@@ -596,10 +539,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the parameter.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>33554432</p>
+             * ParameterValue.
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;

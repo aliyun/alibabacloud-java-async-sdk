@@ -106,7 +106,7 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The cluster backup sets. A cluster backup file contains the backup sets of each node.</p>
+         * <p>The details of the cluster backup sets. A cluster backup contains the backup sets of all nodes.</p>
          */
         public Builder clusterBackups(java.util.List<ClusterBackups> clusterBackups) {
             this.clusterBackups = clusterBackups;
@@ -114,7 +114,7 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of entries returned.</p>
+         * <p>The maximum number of entries returned in this request.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -125,7 +125,7 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the page returned.</p>
+         * <p>The page number of the returned page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -136,7 +136,7 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The number of entries returned per page.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -147,7 +147,7 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2F42BB4E-461F-5B55-A37C-53B1141C****</p>
@@ -242,7 +242,7 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The instance type of the node.</p>
+             * <p>The specifications of the node.</p>
              * 
              * <strong>example:</strong>
              * <p>mdb.shard.4x.large.d</p>
@@ -253,7 +253,7 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node ID.</p>
+             * <p>The ID of the node.</p>
              * 
              * <strong>example:</strong>
              * <p>d-2ze75ab1fa5d****</p>
@@ -264,7 +264,7 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node type.</p>
+             * <p>The type of the node.</p>
              * 
              * <strong>example:</strong>
              * <p>db</p>
@@ -275,7 +275,7 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage capacity of the node. Unit: MB.</p>
+             * <p>The storage space of the node, in MB.</p>
              * 
              * <strong>example:</strong>
              * <p>20480</p>
@@ -462,7 +462,7 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The URL that is used to download the backup set over the Internet. If the backup set cannot be downloaded, an empty string is returned.</p>
+             * <p>The public URL from which you can download the backup file. If the backup file is unavailable for download, an empty string is returned.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://oss.com/xxx">http://oss.com/xxx</a></p>
@@ -473,7 +473,7 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the backup. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * <p>The time when the backup finished. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format and is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-10-16T19:33:20Z</p>
@@ -484,7 +484,7 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the backup set.</p>
+             * <p>The ID of the backup.</p>
              * 
              * <strong>example:</strong>
              * <p>738025367</p>
@@ -495,7 +495,7 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL that is used to download the backup set over an internal network. If the backup set cannot be downloaded, null is returned.</p>
+             * <p>The internal URL from which you can download the backup file. If the backup file is unavailable for download, an empty string is returned.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://oss.com/xxx">http://oss.com/xxx</a></p>
@@ -506,7 +506,7 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The backup name.</p>
+             * <p>The name of the backup.</p>
              * 
              * <strong>example:</strong>
              * <p>12345678.tar.gz</p>
@@ -517,7 +517,7 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the backup file. Unit: bytes.</p>
+             * <p>The size of the backup file, in bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>77544597650</p>
@@ -528,7 +528,7 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the backup. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * <p>The time when the backup started. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format and is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-10-16T19:33:20Z</p>
@@ -539,10 +539,12 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the backup task. Valid values:</p>
+             * <p>The backup status. Valid values:</p>
              * <ul>
-             * <li><strong>Success</strong>: The backup task is successful.</li>
-             * <li><strong>Failed</strong>: The backup task failed.</li>
+             * <li><p><strong>Success</strong>: The backup is successful.</p>
+             * </li>
+             * <li><p><strong>Failed</strong>: The backup failed.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -554,7 +556,7 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information of the node associated with the backup.</p>
+             * <p>The information about the instance node that is associated with the backup.</p>
              */
             public Builder extraInfo(ExtraInfo extraInfo) {
                 this.extraInfo = extraInfo;
@@ -562,7 +564,7 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The shard name.</p>
+             * <p>The name of the shard in the MongoDB cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>d-bp16cb162771****</p>
@@ -575,8 +577,10 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             /**
              * <p>Indicates whether the backup set is available. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: unavailable</li>
-             * <li><strong>1</strong>: available</li>
+             * <li><p><strong>0</strong>: unavailable.</p>
+             * </li>
+             * <li><p><strong>1</strong>: available.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -634,7 +638,7 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the cluster backups are migrated from the historical backup sets. If the value of this parameter is <strong>1</strong>, the cluster backups are migrated from the historical backup sets.</p>
+             * <p>Indicates whether the backup set was migrated from a historical backup. A value of <strong>1</strong> indicates that the backup was migrated.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -847,16 +851,21 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The backup status. Valid values:</p>
+             * <p>The status of the attached log backup. Valid values:</p>
              * <ul>
-             * <li><strong>init</strong>: The backup is being initialized.</li>
-             * <li><strong>No_Need</strong>: Log backup is not performed.</li>
-             * <li><strong>Running</strong>: Log backup is being performed.</li>
-             * <li><strong>Ready</strong>: Log backup is complete.</li>
-             * <li><strong>Failed</strong>: Log backup failed.</li>
+             * <li><p><strong>Init</strong>: initialization.</p>
+             * </li>
+             * <li><p><strong>No_Need</strong>: No attached log backup is available.</p>
+             * </li>
+             * <li><p><strong>Running</strong>: The attached log backup is in progress.</p>
+             * </li>
+             * <li><p><strong>Ready</strong>: The attached log backup is complete.</p>
+             * </li>
+             * <li><p><strong>Failed</strong>: The attached log backup failed.</p>
+             * </li>
              * </ul>
              * <blockquote>
-             * <p> If the <strong>ClusterBackupStatus</strong> parameter is set to OK, full backup is successful. If you want to perform point-in-time-restoration on an instance for which log backup is enabled or to implement consistency restoration, make sure that log backup is complete.</p>
+             * <p>If the value of the <strong>ClusterBackupStatus</strong> parameter is OK, it only indicates that the full backup was successful. For a cluster instance for which log backup is enabled, the attached log backup must be complete before you can perform a point-in-time restore or ensure data consistency.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -868,7 +877,14 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupExpireTime.
+             * <p>The time when the backup expires. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format and is displayed in UTC.</p>
+             * <blockquote>
+             * <p>Notice: </p>
+             * </blockquote>
+             * <p>A value of &quot;9999-01-01T00:00:00Z&quot; indicates that the backup is permanently retained.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-03-29T03:47:12Z</p>
              */
             public Builder backupExpireTime(String backupExpireTime) {
                 this.backupExpireTime = backupExpireTime;
@@ -876,7 +892,7 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The collection of the backup sets of each child node in a cluster backup set.</p>
+             * <p>The backup sets of each child node in the cluster backup.</p>
              */
             public Builder backups(java.util.List<Backups> backups) {
                 this.backups = backups;
@@ -884,7 +900,7 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end of the time range within which the cluster backup is performed.</p>
+             * <p>The time when the cluster backup finished.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-10-16T19:33:20Z</p>
@@ -895,7 +911,7 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The backup set ID.</p>
+             * <p>The ID of the cluster backup.</p>
              * 
              * <strong>example:</strong>
              * <p>cb-o8c2ugnxo26kx***</p>
@@ -906,7 +922,7 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cluster backup mode.</p>
+             * <p>The mode of the cluster backup.</p>
              * 
              * <strong>example:</strong>
              * <p>Automated</p>
@@ -917,7 +933,7 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the cluster backup set. Unit: bytes.</p>
+             * <p>The size of the cluster backup set, in bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>107374182400</p>
@@ -928,7 +944,7 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The beginning of the time range within which the cluster backup is performed.</p>
+             * <p>The time when the cluster backup started.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-10-16T19:33:20Z</p>
@@ -939,7 +955,7 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the cluster backup set.</p>
+             * <p>The status of the cluster backup.</p>
              * 
              * <strong>example:</strong>
              * <p>OK</p>
@@ -950,14 +966,22 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Version of the backuped instance.</p>
+             * <p>The database engine version of the instance when the backup was created. Valid values:</p>
              * <ul>
-             * <li><strong>6.0</strong></li>
-             * <li><strong>5.0</strong></li>
-             * <li><strong>4.4</strong></li>
-             * <li><strong>4.2</strong></li>
-             * <li><strong>4.0</strong></li>
-             * <li><strong>3.4</strong></li>
+             * <li><p><strong>7.0</strong></p>
+             * </li>
+             * <li><p><strong>6.0</strong></p>
+             * </li>
+             * <li><p><strong>5.0</strong></p>
+             * </li>
+             * <li><p><strong>4.4</strong></p>
+             * </li>
+             * <li><p><strong>4.2</strong></p>
+             * </li>
+             * <li><p><strong>4.0</strong></p>
+             * </li>
+             * <li><p><strong>3.4</strong></p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -969,7 +993,7 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The additional information in the JSON format.</p>
+             * <p>The supplementary information. The value is a JSON-formatted string.</p>
              */
             public Builder extraInfo(ClusterBackupsExtraInfo extraInfo) {
                 this.extraInfo = extraInfo;
@@ -977,10 +1001,12 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the cluster backup sets take effect. Valid values:</p>
+             * <p>Indicates whether the cluster backup set is valid. Valid values:</p>
              * <ul>
-             * <li><strong>1</strong>: The cluster backup sets take effect.</li>
-             * <li><strong>0</strong>: The backup sets of child nodes are incomplete or fail.</li>
+             * <li><p><strong>1</strong>: The cluster backup set is valid.</p>
+             * </li>
+             * <li><p><strong>0</strong>: The backup sets of child nodes are not complete or have failed.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -992,7 +1018,8 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The progress of the backup task. Unit: %. The progress is returned only for running backup tasks.</p>
+             * <p>The backup progress in percentage.
+             * This parameter is returned only for backups that are in progress.</p>
              * 
              * <strong>example:</strong>
              * <p>50</p>

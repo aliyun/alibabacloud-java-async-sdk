@@ -130,6 +130,7 @@ public class CancelActiveOperationTasksRequest extends Request {
         } 
 
         /**
+         * <p>The IDs of the O&amp;M events to be canceled in batches. Separate multiple IDs with commas (,).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -160,7 +161,10 @@ public class CancelActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-xxxx</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

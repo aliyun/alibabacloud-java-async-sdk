@@ -54,7 +54,7 @@ public class DeleteGlobalSecurityIPGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The unique ID of the request. If the request fails, provide this ID for technical support to troubleshoot the failure.</p>
+         * <p>The request ID. If you encounter any issues, provide this request ID to the support team for troubleshooting.</p>
          * 
          * <strong>example:</strong>
          * <p>2F42BB4E-461F-5B55-A37C-53B1141C****</p>

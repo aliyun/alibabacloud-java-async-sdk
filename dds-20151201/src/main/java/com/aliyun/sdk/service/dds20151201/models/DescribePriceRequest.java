@@ -229,7 +229,7 @@ public class DescribePriceRequest extends Request {
         } 
 
         /**
-         * <p>The business information. This is an additional parameter.</p>
+         * <p>The additional parameter for business information.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;AccountPassword&quot;:&quot;Pw123456&quot;,&quot;DBInstanceDescription&quot;:&quot;test&quot;}</p>
@@ -241,17 +241,17 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * <p>The code of the instance. Valid values:</p>
+         * <p>The commodity code. Valid values:</p>
          * <ul>
-         * <li><strong>dds</strong>: a replica set instance that uses the pay-as-you-go billing method</li>
-         * <li><strong>badds</strong>: a replica set instance that uses the subscription billing method</li>
-         * <li><strong>dds_sharding</strong>: a sharded cluster instance that uses the pay-as-you-go billing method</li>
-         * <li><strong>badds_sharding</strong>: a sharded cluster instance that uses the subscription billing method</li>
-         * <li><strong>badds_sharding_intl</strong>: a sharded cluster instance that uses the subscription billing method and is available on the International site (alibabacloud.com)</li>
-         * <li><strong>dds_sharding_intl</strong>: a sharded cluster instance that uses the pay-as-you-go billing method and is available on the International site (alibabacloud.com)</li>
-         * <li><strong>badds_sharding_jp</strong>: a sharded cluster instance that uses the subscription billing method and is available on the Japan site (jp.alibabacloud.com)</li>
-         * <li><strong>badds_intl</strong>: a replica set instance that uses the subscription billing method and is available on the International site (alibabacloud.com)</li>
-         * <li><strong>dds_intl</strong>: a replica set instance that uses the pay-as-you-go billing method and is available on the International site (alibabacloud.com)</li>
+         * <li><strong>dds</strong>: pay-as-you-go replica set instance</li>
+         * <li><strong>badds</strong>: subscription replica set instance</li>
+         * <li><strong>dds_sharding</strong>: pay-as-you-go sharded cluster instance</li>
+         * <li><strong>badds_sharding</strong>: subscription sharded cluster instance</li>
+         * <li><strong>badds_sharding_intl</strong>: subscription sharded cluster instance on the international site</li>
+         * <li><strong>dds_sharding_intl</strong>: pay-as-you-go sharded cluster instance on the international site</li>
+         * <li><strong>badds_sharding_jp</strong>: subscription sharded cluster instance on the Japan site</li>
+         * <li><strong>badds_intl</strong>: subscription replica set instance on the international site</li>
+         * <li><strong>dds_intl</strong>: pay-as-you-go replica set instance on the international site</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -264,14 +264,14 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to use coupons. Default value: null. Valid values:</p>
+         * <p>Specifies whether to use a coupon. Valid values:</p>
          * <ul>
-         * <li><strong>default</strong> or <strong>null</strong>: uses coupons.</li>
-         * <li><strong>youhuiquan_promotion_option_id_for_blank</strong>: does not use coupons.</li>
+         * <li><strong>default</strong> or <strong>null</strong> (default): Use a coupon.</li>
+         * <li><strong>youhuiquan_promotion_option_id_for_blank</strong>: Do not use a coupon.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>youhuiquan_promotion_option_id_for_blank</p>
+         * <p>default</p>
          */
         public Builder couponNo(String couponNo) {
             this.putQueryParameter("CouponNo", couponNo);
@@ -280,7 +280,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * <p>A JSON string that contains the details of the instance. For more information about the parameter and sample JSON formats, see <a href="https://help.aliyun.com/document_detail/197291.html">DescribePrice</a>.</p>
+         * <p>The JSON-formatted string that contains multiple pieces of information about instances. For metric descriptions and more JSON format examples, see <a href="https://help.aliyun.com/document_detail/197291.html">DBInstances metric description for the DescribePrice operation</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -293,10 +293,10 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return the OrderParams parameter. Valid values:</p>
+         * <p>Specifies whether to return order parameters. Valid values:</p>
          * <ul>
-         * <li><strong>false</strong> (default)</li>
-         * <li><strong>true</strong></li>
+         * <li><strong>false</strong> (default): Do not return order parameters.</li>
+         * <li><strong>true</strong>: Return order parameters.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -311,9 +311,9 @@ public class DescribePriceRequest extends Request {
         /**
          * <p>The order type. Valid values:</p>
          * <ul>
-         * <li><strong>BUY</strong></li>
-         * <li><strong>UPGRADE</strong></li>
-         * <li><strong>RENEW</strong></li>
+         * <li><strong>BUY</strong>: Create an instance.</li>
+         * <li><strong>UPGRADE</strong>: Upgrade instance configurations.</li>
+         * <li><strong>RENEW</strong>: Renew an instance.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -345,7 +345,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * <p>The code of the service. Default value: <strong>dds</strong>.</p>
+         * <p>The product code. Default value: <strong>dds</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>dds</p>
@@ -357,7 +357,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -369,7 +369,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</p>
+         * <p>The resource group ID. For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/151181.html">View the basic information of a resource group</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmyiu4ekp****</p>

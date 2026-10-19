@@ -585,12 +585,12 @@ public class CreateShardingDBInstanceRequest extends Request {
         /**
          * <p>The password of the root account. The password must meet the following requirements:</p>
          * <ul>
-         * <li>The password contains at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</li>
-         * <li>The following special characters are supported: ! @ # $ % ^ &amp; * ( ) _ + - =.</li>
-         * <li>The password must be 8 to 32 characters in length.</li>
+         * <li>It must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</li>
+         * <li>Special characters include !@#$%^&amp;*()_+-=.</li>
+         * <li>It must be 8 to 32 characters in length.</li>
          * </ul>
          * <blockquote>
-         * <p> For more information about how to resolve failed database connections due to special characters, see <a href="https://help.aliyun.com/document_detail/471568.html">What do I do if my instance is not connected due to special characters in the password in the connection string of the instance?</a></p>
+         * <p>For more information about how to troubleshoot connection failures caused by special characters in database connection string, see <a href="https://help.aliyun.com/document_detail/471568.html">What do I do if database connection to an ApsaraDB for MongoDB instance fails because the username or password in database connection string contains special characters?</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -605,11 +605,11 @@ public class CreateShardingDBInstanceRequest extends Request {
         /**
          * <p>Specifies whether to enable auto-renewal for the instance. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong> (default)</li>
+         * <li><strong>true</strong>: Enables auto-renewal.</li>
+         * <li><strong>false</strong>: Disables auto-renewal. You must manually renew the instance. This is the default value.</li>
          * </ul>
          * <blockquote>
-         * <p>This parameter is available and optional if you set the value of <strong>ChargeType</strong> to <strong>PrePaid</strong>.</p>
+         * <p>This parameter is available and optional only when the <strong>ChargeType</strong> parameter is set to <strong>PrePaid</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -622,9 +622,11 @@ public class CreateShardingDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the backup set. </p>
+         * <p>The ID of the cluster backup.</p>
          * <blockquote>
-         * <p>When you call this operation to clone an instance based on the backup set, this parameter is required. The <strong>SrcDBInstanceId</strong> parameter is also required.</p>
+         * <ul>
+         * <li>This parameter is required only when RestoreType is set to 2 or 3.</li>
+         * </ul>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -639,11 +641,11 @@ public class CreateShardingDBInstanceRequest extends Request {
         /**
          * <p>The billing method of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>PostPaid</strong> (default): pay-as-you-go</li>
-         * <li><strong>PrePaid</strong>: subscription</li>
+         * <li><strong>PostPaid</strong>: Pay-as-you-go. This is the default value.</li>
+         * <li><strong>PrePaid</strong>: Subscription.</li>
          * </ul>
          * <blockquote>
-         * <p> If you set this parameter to <strong>PrePaid</strong>, you must also configure the <strong>Period</strong> parameter.</p>
+         * <p>If you set this parameter to <strong>PrePaid</strong>, you must also specify the <strong>Period</strong> parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -656,7 +658,7 @@ public class CreateShardingDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <p>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can use the client to generate the token, but you must ensure that the token is unique among different requests. The token can contain a maximum of 64 ASCII characters and cannot contain non-ASCII characters.</p>
          * 
          * <strong>example:</strong>
          * <p>ETnLKlblzczshOTUbOCz****</p>
@@ -668,7 +670,7 @@ public class CreateShardingDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ConfigServer nodes of the instance.</p>
+         * <p>The information about the ConfigServer nodes.</p>
          * <p>This parameter is required.</p>
          */
         public Builder configServer(java.util.List<ConfigServer> configServer) {
@@ -678,10 +680,10 @@ public class CreateShardingDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The name of the instance. The name of the instance must meet the following requirements:</p>
+         * <p>The name of the instance. The name must meet the following requirements:</p>
          * <ul>
-         * <li>The name must start with a letter.</li>
-         * <li>It can contain digits, letters, underscores (_), and hyphens (-).</li>
+         * <li>It must start with a letter or a Chinese character.</li>
+         * <li>It can contain digits, letters, Chinese characters, underscores (_), periods (.), and hyphens (-).</li>
          * <li>It must be 2 to 256 characters in length.</li>
          * </ul>
          * 
@@ -695,10 +697,7 @@ public class CreateShardingDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The region of the backup set used for the cross-region backup and restoration.</p>
-         * <blockquote>
-         * <p> This parameter is required when you set the RestoreType parameter to 3.</p>
-         * </blockquote>
+         * <p>The region where the cross-region backup is stored.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -710,7 +709,7 @@ public class CreateShardingDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable disk encryption.</p>
+         * <p>Specifies whether to enable cloud disk encryption.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -734,7 +733,7 @@ public class CreateShardingDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The database engine of the instance. Set the value to <strong>MongoDB</strong>.</p>
+         * <p>The database engine. Set the value to <strong>MongoDB</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -747,8 +746,9 @@ public class CreateShardingDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The database engine version of the instance. Valid values:</p>
+         * <p>The database version number. Valid values:</p>
          * <ul>
+         * <li><strong>8.0</strong></li>
          * <li><strong>7.0</strong></li>
          * <li><strong>6.0</strong></li>
          * <li><strong>5.0</strong></li>
@@ -757,13 +757,11 @@ public class CreateShardingDBInstanceRequest extends Request {
          * <li><strong>4.0</strong></li>
          * </ul>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>For more information about the limits on database versions and storage engines, see <a href="https://help.aliyun.com/document_detail/61906.html">MongoDB versions and storage engines</a>.</p>
-         * </li>
-         * <li><p>If you call this operation to clone an instance, set the value of this parameter to the database engine version of the source instance.</p>
-         * </li>
+         * <li>For more information about the constraints on storage engines and versions, see <a href="https://help.aliyun.com/document_detail/61906.html">Versions and storage engines</a>.</li>
+         * <li>When you call this operation to clone an instance, the value of this parameter must be the same as that of the source instance.</li>
          * </ul>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -776,10 +774,10 @@ public class CreateShardingDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The global IP address whitelist template of the instance. Separate multiple templates with commas (,). The template name must be globally unique.</p>
+         * <p>The global IP address whitelist templates of the instance. Separate multiple templates with commas (,). Duplicate templates are not supported.</p>
          * 
          * <strong>example:</strong>
-         * <p>g-qxieqf40xjst1ngp****</p>
+         * <p>g-qxieqf40xjst1ngpr3jz</p>
          */
         public Builder globalSecurityGroupIds(String globalSecurityGroupIds) {
             this.putQueryParameter("GlobalSecurityGroupIds", globalSecurityGroupIds);
@@ -788,32 +786,32 @@ public class CreateShardingDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of secondary zone 2 for multi-zone deployment. Valid values:</p>
+         * <p>The secondary zone 2 for multi-zone deployment. Valid values:</p>
          * <ul>
-         * <li><strong>cn-hangzhou-g</strong>: Hangzhou Zone G</li>
-         * <li><strong>cn-hangzhou-h</strong>: Hangzhou Zone H</li>
-         * <li><strong>cn-hangzhou-i</strong>: Hangzhou Zone I</li>
-         * <li><strong>cn-hongkong-b</strong>: Hong Kong Zone B</li>
-         * <li><strong>cn-hongkong-c</strong>: Hong Kong Zone C</li>
-         * <li><strong>cn-hongkong-d</strong>: Hong Kong Zone D</li>
-         * <li><strong>cn-wulanchabu-a</strong>: Ulanqab Zone A</li>
-         * <li><strong>cn-wulanchabu-b</strong>: Ulanqab Zone B</li>
-         * <li><strong>cn-wulanchabu-c</strong>: Ulanqab Zone C</li>
-         * <li><strong>ap-southeast-1a</strong>: Singapore Zone A</li>
-         * <li><strong>ap-southeast-1b</strong>: Singapore Zone B</li>
-         * <li><strong>ap-southeast-1c</strong>: Singapore Zone C</li>
-         * <li><strong>ap-southeast-5a</strong>: Jakarta Zone A</li>
-         * <li><strong>ap-southeast-5b</strong>: Jakarta Zone B</li>
-         * <li><strong>ap-southeast-5c</strong>: Jakarta Zone C</li>
-         * <li><strong>eu-central-1a</strong>: Frankfurt Zone A</li>
-         * <li><strong>eu-central-1b</strong>: Frankfurt Zone B</li>
-         * <li><strong>eu-central-1c</strong>: Frankfurt Zone C</li>
+         * <li><strong>cn-hangzhou-g</strong>: Hangzhou Zone G.</li>
+         * <li><strong>cn-hangzhou-h</strong>: Hangzhou Zone H.</li>
+         * <li><strong>cn-hangzhou-i</strong>: Hangzhou Zone I.</li>
+         * <li><strong>cn-hongkong-b</strong>: Hong Kong (China) Zone B.</li>
+         * <li><strong>cn-hongkong-c</strong>: Hong Kong (China) Zone C.</li>
+         * <li><strong>cn-hongkong-d</strong>: Hong Kong (China) Zone D.</li>
+         * <li><strong>cn-wulanchabu-a</strong>: Ulanqab Zone A.</li>
+         * <li><strong>cn-wulanchabu-b</strong>: Ulanqab Zone B.</li>
+         * <li><strong>cn-wulanchabu-c</strong>: Ulanqab Zone C.</li>
+         * <li><strong>ap-southeast-1a</strong>: Singapore Zone A.</li>
+         * <li><strong>ap-southeast-1b</strong>: Singapore Zone B.</li>
+         * <li><strong>ap-southeast-1c</strong>: Singapore Zone C.</li>
+         * <li><strong>ap-southeast-5a</strong>: Jakarta Zone A.</li>
+         * <li><strong>ap-southeast-5b</strong>: Jakarta Zone B.</li>
+         * <li><strong>ap-southeast-5c</strong>: Jakarta Zone C.</li>
+         * <li><strong>eu-central-1a</strong>: Frankfurt Zone A.</li>
+         * <li><strong>eu-central-1b</strong>: Frankfurt Zone B.</li>
+         * <li><strong>eu-central-1c</strong>: Frankfurt Zone C.</li>
          * </ul>
          * <blockquote>
          * <ul>
-         * <li>This parameter is available and required if you set the value of <strong>EngineVersion</strong> to <strong>4.4</strong> or <strong>5.0</strong>.</li>
+         * <li>This parameter is available only when the instance uses cloud disks.</li>
          * <li>The value of this parameter cannot be the same as the value of <strong>ZoneId</strong> or <strong>SecondaryZoneId</strong>.</li>
-         * <li>For more information about the multi-zone deployment policy of a sharded cluster instance, see <a href="https://help.aliyun.com/document_detail/117865.html">Create a multi-zone sharded cluster instance</a>.</li>
+         * <li>For more information about the multi-zone deployment policy for sharded cluster instances, see <a href="https://help.aliyun.com/document_detail/117865.html">Create a multi-zone sharded cluster instance</a>.</li>
          * </ul>
          * </blockquote>
          * 
@@ -827,7 +825,7 @@ public class CreateShardingDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The mongos nodes of the instance.</p>
+         * <p>The information about the mongos nodes.</p>
          * <p>This parameter is required.</p>
          */
         public Builder mongos(java.util.List<Mongos> mongos) {
@@ -837,8 +835,10 @@ public class CreateShardingDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The network type of the instance. Set the value to VPC.</p>
-         * <hr>
+         * <p>The network type of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>VPC</strong>: VPC.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>VPC</p>
@@ -868,10 +868,10 @@ public class CreateShardingDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The subscription period of the instance. Unit: months.</p>
+         * <p>The subscription duration of the instance. Unit: months.</p>
          * <p>Valid values: <strong>1</strong> to <strong>9</strong>, <strong>12</strong>, <strong>24</strong>, <strong>36</strong>, and <strong>60</strong>.</p>
          * <blockquote>
-         * <p>When you set the <strong>ChargeType</strong> parameter to <strong>PrePaid</strong>, this parameter is valid and required.</p>
+         * <p>This parameter is required and takes effect only when the <strong>ChargeType</strong> parameter is set to <strong>PrePaid</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -884,10 +884,10 @@ public class CreateShardingDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The access protocol type of the instance. Valid values:</p>
+         * <p>The type of the access protocol. Valid values:</p>
          * <ul>
-         * <li><strong>mongodb</strong></li>
-         * <li><strong>dynamodb</strong></li>
+         * <li><strong>mongodb</strong>: MongoDB protocol.</li>
+         * <li><strong>dynamodb</strong>: DynamoDB protocol.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -900,7 +900,7 @@ public class CreateShardingDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The provisioned IOPS of the instance:</p>
+         * <p>The provisioned IOPS.</p>
          * 
          * <strong>example:</strong>
          * <p>1960</p>
@@ -912,7 +912,7 @@ public class CreateShardingDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -925,7 +925,7 @@ public class CreateShardingDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The information of the shard component.</p>
+         * <p>The information about the shard nodes.</p>
          * <p>This parameter is required.</p>
          */
         public Builder replicaSet(java.util.List<ReplicaSet> replicaSet) {
@@ -935,10 +935,7 @@ public class CreateShardingDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View the basic information of a resource group</a>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rg-acfmyiu4ekp****</p>
+         * ResourceGroupId.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -965,9 +962,9 @@ public class CreateShardingDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The point in time to restore the instance, which must be within seven days. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in Coordinated Universal Time (UTC).</p>
+         * <p>The point in time to which you want to restore the instance. You can specify any point in time within the last seven days. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</p>
          * <blockquote>
-         * <p>This parameter is required only if you call this operation to clone an instance. If you specify this parameter, you must also specify <strong>SrcDBInstanceId</strong>.</p>
+         * <p>This parameter is required only when you call this operation to clone an instance. You must also specify the <strong>SrcDBInstanceId</strong> parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -980,11 +977,11 @@ public class CreateShardingDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The restoration type of the instance. Valid values:</p>
+         * <p>The backup restoration type. Valid values:</p>
          * <ul>
-         * <li>1: restores the instance data to the specified point in time.</li>
-         * <li>2: restores the data of the released instance to the specified backup set.</li>
-         * <li>3: restores the instance data to the specified cross-region backup set.</li>
+         * <li>1: Restore the instance to a specified point in time.</li>
+         * <li>2: Restore a released instance to a specified backup set.</li>
+         * <li>3: Restore the instance to a specified cross-region backup set.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -997,34 +994,34 @@ public class CreateShardingDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of secondary zone 1 for multi-zone deployment. Valid values:</p>
+         * <p>The secondary zone 1 for multi-zone deployment. Valid values:</p>
          * <ul>
-         * <li><strong>cn-hangzhou-g</strong>: Hangzhou Zone G</li>
-         * <li><strong>cn-hangzhou-h</strong>: Hangzhou Zone H</li>
-         * <li><strong>cn-hangzhou-i</strong>: Hangzhou Zone I</li>
-         * <li><strong>cn-hongkong-b</strong>: Hong Kong Zone B</li>
-         * <li><strong>cn-hongkong-c</strong>: Hong Kong Zone C</li>
-         * <li><strong>cn-hongkong-d</strong>: Hong Kong Zone D</li>
-         * <li><strong>cn-wulanchabu-a</strong>: Ulanqab Zone A</li>
-         * <li><strong>cn-wulanchabu-b</strong>: Ulanqab Zone B</li>
-         * <li><strong>cn-wulanchabu-c</strong>: Ulanqab Zone C</li>
-         * <li><strong>ap-southeast-1a</strong>: Singapore Zone A</li>
-         * <li><strong>ap-southeast-1b</strong>: Singapore Zone B</li>
-         * <li><strong>ap-southeast-1c</strong>: Singapore Zone C</li>
-         * <li><strong>ap-southeast-5a</strong>: Jakarta Zone A</li>
-         * <li><strong>ap-southeast-5b</strong>: Jakarta Zone B</li>
-         * <li><strong>ap-southeast-5c</strong>: Jakarta Zone C</li>
-         * <li><strong>eu-central-1a</strong>: Frankfurt Zone A</li>
-         * <li><strong>eu-central-1b</strong>: Frankfurt Zone B</li>
-         * <li><strong>eu-central-1c</strong>: Frankfurt Zone C</li>
-         * </ul>
-         * <blockquote>
+         * <li><strong>cn-hangzhou-g</strong>: Hangzhou Zone G.</li>
+         * <li><strong>cn-hangzhou-h</strong>: Hangzhou Zone H.</li>
+         * <li><strong>cn-hangzhou-i</strong>: Hangzhou Zone I.</li>
+         * <li><strong>cn-hongkong-b</strong>: Hong Kong (China) Zone B.</li>
+         * <li><strong>cn-hongkong-c</strong>: Hong Kong (China) Zone C.</li>
+         * <li><strong>cn-hongkong-d</strong>: Hong Kong (China) Zone D.</li>
+         * <li><strong>cn-wulanchabu-a</strong>: Ulanqab Zone A.</li>
+         * <li><strong>cn-wulanchabu-b</strong>: Ulanqab Zone B.</li>
+         * <li><strong>cn-wulanchabu-c</strong>: Ulanqab Zone C.</li>
+         * <li><strong>ap-southeast-1a</strong>: Singapore Zone A.</li>
+         * <li><strong>ap-southeast-1b</strong>: Singapore Zone B.</li>
+         * <li><strong>ap-southeast-1c</strong>: Singapore Zone C.</li>
+         * <li><strong>ap-southeast-5a</strong>: Jakarta Zone A.</li>
+         * <li><strong>ap-southeast-5b</strong>: Jakarta Zone B.</li>
+         * <li><strong>ap-southeast-5c</strong>: Jakarta Zone C.</li>
+         * <li><strong>eu-central-1a</strong>: Frankfurt Zone A.</li>
+         * <li><strong>eu-central-1b</strong>: Frankfurt Zone B.</li>
+         * <li><strong>eu-central-1c</strong>: Frankfurt Zone C.<blockquote>
          * <ul>
-         * <li>This parameter is available and required if you set the value of <strong>EngineVersion</strong> to <strong>4.4</strong> or <strong>5.0</strong>.</li>
+         * <li>This parameter is available only when the instance uses cloud disks.</li>
          * <li>The value of this parameter cannot be the same as the value of <strong>ZoneId</strong> or <strong>HiddenZoneId</strong>.</li>
-         * <li>For more information about the multi-zone deployment policy of a sharded cluster instance, see <a href="https://help.aliyun.com/document_detail/117865.html">Create a multi-zone sharded cluster instance</a>.</li>
+         * <li>For more information about the multi-zone deployment policy for sharded cluster instances, see <a href="https://help.aliyun.com/document_detail/117865.html">Create a multi-zone sharded cluster instance</a>.</li>
          * </ul>
          * </blockquote>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-h</p>
@@ -1036,16 +1033,16 @@ public class CreateShardingDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The IP addresses in an IP address whitelist of the instance. Multiple IP addresses are separated by commas (,), and each IP address in the IP address whitelist must be unique. The following types of values are supported:</p>
+         * <p>The IP address whitelist of the instance. Separate multiple IP addresses with commas (,). Duplicate IP addresses are not supported. The following formats are supported:</p>
          * <ul>
          * <li>0.0.0.0/0</li>
          * <li>IP addresses, such as 10.23.12.24.</li>
-         * <li>CIDR blocks, such as 10.23.12.0/24. In this case, 24 indicates that the prefix of each IP address is 24-bit long. You can replace 24 with a value within the range of 1 to 32.</li>
+         * <li>CIDR blocks, such as 10.23.12.0/24. 24 indicates the length of the prefix in the CIDR block, and the prefix length ranges from 1 to 32.</li>
          * </ul>
          * <blockquote>
          * <ul>
-         * <li>A maximum of 1,000 IP addresses and CIDR blocks can be configured for each instance.</li>
-         * <li>If you enter 0.0.0.0/0, all IP addresses can access the instance. This may introduce security risks to the instance. Proceed with caution.</li>
+         * <li>You can add up to 1,000 IP addresses or CIDR blocks to the whitelist of an instance. The total number of IP addresses or CIDR blocks in all whitelist groups cannot exceed 1,000.</li>
+         * <li>0.0.0.0/0 indicates that all IP addresses can access the instance. This is a high-risk setting. Configure this parameter with caution.</li>
          * </ul>
          * </blockquote>
          * 
@@ -1061,7 +1058,7 @@ public class CreateShardingDBInstanceRequest extends Request {
         /**
          * <p>The source instance ID.</p>
          * <blockquote>
-         * <p>This parameter is required only if you call this operation to clone an instance. If you specify this parameter, you must also specify <strong>RestoreTime</strong>.</p>
+         * <p>This parameter is required only when you call this operation to clone an instance. You must also specify the <strong>RestoreTime</strong> parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1074,9 +1071,12 @@ public class CreateShardingDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the instance.</p>
+         * <p>The region where the source instance is located.</p>
          * <blockquote>
-         * <p>This parameter is required when restore type is set to 2 or 3.</p>
+         * <ul>
+         * <li>This parameter is required when the backup restoration type is rebuilding a deleted instance.</li>
+         * <li>This parameter is required when the backup restoration type is cross-region backup cloning.</li>
+         * </ul>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1091,13 +1091,11 @@ public class CreateShardingDBInstanceRequest extends Request {
         /**
          * <p>The storage engine of the instance. Set the value to <strong>WiredTiger</strong>.</p>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>If you call this operation to clone an instance, set the value of this parameter to the storage engine of the source instance.</p>
-         * </li>
-         * <li><p>For more information about the limits on database versions and storage engines, see <a href="https://help.aliyun.com/document_detail/61906.html">MongoDB versions and storage engines</a>.</p>
-         * </li>
+         * <li>When you call this operation to clone an instance, the value of this parameter must be the same as that of the source instance.</li>
+         * <li>For more information about the constraints on storage engines and versions, see <a href="https://help.aliyun.com/document_detail/61906.html">Versions and storage engines</a>.</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>WiredTiger</p>
@@ -1109,17 +1107,17 @@ public class CreateShardingDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The storage type of the instance. Valid values:</p>
+         * <p>The storage type. Valid values: </p>
          * <ul>
-         * <li><strong>cloud_essd1</strong>: ESSD PL1</li>
-         * <li><strong>cloud_essd2</strong>: ESSD PL2</li>
-         * <li><strong>cloud_essd3</strong>: ESSD PL3</li>
-         * <li><strong>local_ssd</strong>: local SSD</li>
+         * <li><strong>cloud_essd1</strong>: PL1 ESSD.</li>
+         * <li><strong>cloud_essd2</strong>: PL2 ESSD.</li>
+         * <li><strong>cloud_essd3</strong>: PL3 ESSD.</li>
+         * <li><strong>local_ssd</strong>: local SSD.</li>
          * </ul>
          * <blockquote>
          * <ul>
-         * <li>Instances of MongoDB 4.4 and later support only cloud disks. <strong>cloud_essd1</strong> is selected if you leave this parameter empty.</li>
-         * <li>Instances of MongoDB 4.2 and earlier support only local disks. <strong>local_ssd</strong> is selected if you leave this parameter empty.</li>
+         * <li>Instances of version 4.4 and later support only cloud disks. If you do not specify this parameter, <strong>cloud_essd1</strong> is selected by default.</li>
+         * <li>Instances of version 4.2 and earlier support only local disks. If you do not specify this parameter, <strong>local_ssd</strong> is selected by default.</li>
          * </ul>
          * </blockquote>
          * 
@@ -1133,7 +1131,7 @@ public class CreateShardingDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The custom tags that you want to add to the instance.</p>
+         * <p>The custom tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -1142,7 +1140,7 @@ public class CreateShardingDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The vSwitch ID of the instance.</p>
+         * <p>The vSwitch ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-bp1vj604nj5a9zz74****</p>
@@ -1154,7 +1152,7 @@ public class CreateShardingDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the VPC.</p>
+         * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp1n3i15v90el48nx****</p>
@@ -1166,7 +1164,7 @@ public class CreateShardingDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The zone ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the most recent zone list.</p>
+         * <p>The zone ID. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the zone ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-g</p>
@@ -1239,10 +1237,10 @@ public class CreateShardingDBInstanceRequest extends Request {
             } 
 
             /**
-             * <p>The instance type of the ConfigServer node. Valid values:</p>
+             * <p>The specifications of the ConfigServer node. Valid values:</p>
              * <ul>
-             * <li><strong>mdb.shard.2x.xlarge.d</strong>: 4 cores, 8 GB (dedicated). Only instances that run MongoDB 4.4 and later support this instance type.</li>
-             * <li><strong>dds.cs.mid</strong> :1 core, 2 GB (general-purpose). Only instances that run MongoDB 4.2 and earlier support this instance type.</li>
+             * <li><strong>mdb.shard.2x.xlarge.d</strong>: 4 cores, 8 GB (dedicated). This specification is supported only for instances of version 4.4 and later.</li>
+             * <li><strong>dds.cs.mid</strong>: 1 core, 2 GB (general-purpose). This specification is supported only for instances of version 4.2 and earlier.</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -1255,9 +1253,9 @@ public class CreateShardingDBInstanceRequest extends Request {
             }
 
             /**
-             * <p>The storage space of the ConfigServer node. Unit: GB.</p>
+             * <p>The storage capacity of the ConfigServer node. Unit: GB.</p>
              * <blockquote>
-             * <p>The values that can be specified for this parameter vary based on the instance types. For more information, see <a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a>.</p>
+             * <p>The valid values are subject to the instance specifications. For more information, see <a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a>.</p>
              * </blockquote>
              * <p>This parameter is required.</p>
              * 
@@ -1317,11 +1315,11 @@ public class CreateShardingDBInstanceRequest extends Request {
             } 
 
             /**
-             * <p>The instance type of the mongos node. For more information, see <a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a>.</p>
+             * <p>The specifications of the mongos node. For more information, see <a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a>.</p>
              * <blockquote>
              * <ul>
-             * <li><strong>N</strong> specifies the serial number of the mongos node for which the instance type is specified. For example, <strong>Mongos.2.Class</strong> specifies the instance type of the second mongos node.</li>
-             * <li>Valid values for <strong>N</strong>: <strong>2</strong> to <strong>32</strong>.</li>
+             * <li><strong>N</strong> in the parameter name specifies the sequence number of the mongos node. For example, <strong>Mongos.2.Class</strong> specifies the specifications of the second mongos node.</li>
+             * <li>Valid values of <strong>N</strong>: <strong>2</strong> to <strong>32</strong>.</li>
              * </ul>
              * </blockquote>
              * <p>This parameter is required.</p>
@@ -1410,15 +1408,13 @@ public class CreateShardingDBInstanceRequest extends Request {
             } 
 
             /**
-             * <p>The instance type of the shard component. For more information, see <a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a>.</p>
+             * <p>The specifications of the shard node. For more information, see <a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a>.</p>
              * <blockquote>
-             * </blockquote>
              * <ul>
-             * <li><p><strong>N</strong> specifies the serial number of the shard component for which the instance type is specified. For example, <strong>ReplicaSet.2.Class</strong> specifies the instance type of the second shard component.</p>
-             * </li>
-             * <li><p>Valid values of <strong>N</strong>: <strong>2</strong> to <strong>32</strong>.</p>
-             * </li>
+             * <li><strong>N</strong> in the parameter name specifies the sequence number of the shard node. For example, <strong>ReplicaSet.2.Class</strong> specifies the specifications of the second shard node.</li>
+             * <li>Valid values of <strong>N</strong>: <strong>2</strong> to <strong>32</strong>.</li>
              * </ul>
+             * </blockquote>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1430,10 +1426,10 @@ public class CreateShardingDBInstanceRequest extends Request {
             }
 
             /**
-             * <p>The number of read-only nodes in the shard component.</p>
-             * <p>Valid values: <strong>0</strong>, <strong>1, 2, 3, 4, and 5</strong>. Default value: <strong>0</strong>.</p>
+             * <p>The number of read-only nodes in the shard node.</p>
+             * <p>Valid values: <strong>0</strong> to <strong>5</strong>. Default value: <strong>0</strong>.</p>
              * <blockquote>
-             * <p> <strong>N</strong> specifies the serial number of the shard component for which you want to set the number of read-only nodes. <strong>ReplicaSet.2.ReadonlyReplicas</strong> specifies the number of read-only nodes in the second shard component.</p>
+             * <p><strong>N</strong> in the parameter name specifies the sequence number of the shard node. For example, <strong>ReplicaSet.2.ReadonlyReplicas</strong> specifies the number of read-only nodes in the second shard node.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1445,15 +1441,13 @@ public class CreateShardingDBInstanceRequest extends Request {
             }
 
             /**
-             * <p>The storage capacity of the shard component. Unit: GB.</p>
+             * <p>The storage capacity of the shard node. Unit: GB.</p>
              * <blockquote>
-             * </blockquote>
              * <ul>
-             * <li><p>The values that can be specified for this parameter vary based on the instance types. For more information, see <a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a>.</p>
-             * </li>
-             * <li><p><strong>N</strong> specifies the serial number of the shard component for which the storage capacity is specified. For example, <strong>ReplicaSet.2.Storage</strong> specifies the storage capacity of the second shard component.</p>
-             * </li>
+             * <li>The valid values are subject to the instance specifications. For more information, see <a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a>.</li>
+             * <li><strong>N</strong> in the parameter name specifies the sequence number of the shard node. For example, <strong>ReplicaSet.2.Storage</strong> specifies the storage capacity of the second shard node.</li>
              * </ul>
+             * </blockquote>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1524,9 +1518,11 @@ public class CreateShardingDBInstanceRequest extends Request {
             } 
 
             /**
-             * <p>The tag key.</p>
+             * <p>The key of the tag.</p>
              * <blockquote>
-             * <p> <strong>N</strong> specifies the serial number of the tag. For example, <strong>Tag.1.Key</strong> specifies the key of the first tag and <strong>Tag.2.Key</strong> specifies the key of the second tag.</p>
+             * <ul>
+             * <li><strong>N</strong> in the parameter name specifies the sequence number of the tag. For example, <strong>Tag.1.Key</strong> specifies the key of the first tag, and <strong>Tag.2.Key</strong> specifies the key of the second tag.</li>
+             * </ul>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1538,9 +1534,9 @@ public class CreateShardingDBInstanceRequest extends Request {
             }
 
             /**
-             * <p>The tag value.</p>
+             * <p>The value of the tag.</p>
              * <blockquote>
-             * <p> <strong>N</strong> specifies the serial number of the tag. For example, <strong>Tag.1.Value</strong> specifies the value of the first tag and Tag.2.Value specifies the value of the second tag.</p>
+             * <p><strong>N</strong> in the parameter name specifies the sequence number of the tag. For example, <strong>Tag.1.Value</strong> specifies the value of the first tag, and <strong>Tag.2.Value</strong> specifies the value of the second tag.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

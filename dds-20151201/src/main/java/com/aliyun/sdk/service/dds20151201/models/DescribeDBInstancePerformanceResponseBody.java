@@ -93,7 +93,7 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The end of the queried time range. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time is displayed in UTC.</p>
+         * <p>The end of the time range to query. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-06-13T11:58Z</p>
@@ -104,7 +104,7 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of performance metrics.</p>
+         * PerformanceKeys.
          */
         public Builder performanceKeys(PerformanceKeys performanceKeys) {
             this.performanceKeys = performanceKeys;
@@ -123,7 +123,7 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The beginning of the queried time range. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time is displayed in UTC.</p>
+         * <p>The beginning of the time range to query. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-06-13T10:58Z</p>
@@ -192,10 +192,7 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The date and time when the metric value was generated.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2022-06-13T10:58:00Z</p>
+             * Date.
              */
             public Builder date(String date) {
                 this.date = date;
@@ -203,10 +200,7 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the performance metric.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0.23</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -353,10 +347,7 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The performance metrics that are returned.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>CpuUsage</p>
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -364,7 +355,7 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the performance metric values.</p>
+             * PerformanceValues.
              */
             public Builder performanceValues(PerformanceValues performanceValues) {
                 this.performanceValues = performanceValues;
@@ -372,10 +363,7 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unit of the performance metric.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>%</p>
+             * Unit.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -383,11 +371,7 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The format of the performance metric value. If the performance metric contains multiple fields, the fields are separated with ampersands ( &amp;).</p>
-             * <p>For example, if you query disk space usage, the returned value of the <strong>ValueFormat</strong> parameter is <strong>ins_size&amp;data_size&amp;log_size</strong>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cpu_usage</p>
+             * ValueFormat.
              */
             public Builder valueFormat(String valueFormat) {
                 this.valueFormat = valueFormat;

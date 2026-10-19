@@ -78,7 +78,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The supported database types.</p>
+         * SupportedDBTypes.
          */
         public Builder supportedDBTypes(SupportedDBTypes supportedDBTypes) {
             this.supportedDBTypes = supportedDBTypes;
@@ -157,10 +157,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The maximum storage capacity. Unit: GB.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>16000</p>
+             * Max.
              */
             public Builder max(Integer max) {
                 this.max = max;
@@ -168,10 +165,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The minimum storage capacity. Unit: GB.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>20</p>
+             * Min.
              */
             public Builder min(Integer min) {
                 this.min = min;
@@ -179,10 +173,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The step size for adjusting the storage capacity. Unit: GB.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>10</p>
+             * Step.
              */
             public Builder step(Integer step) {
                 this.step = step;
@@ -262,7 +253,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The storage capacity range of the instance.</p>
+             * DBInstanceStorageRange.
              */
             public Builder DBInstanceStorageRange(DBInstanceStorageRange DBInstanceStorageRange) {
                 this.DBInstanceStorageRange = DBInstanceStorageRange;
@@ -270,10 +261,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance family.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>mdb.shard.2x.xlarge.d</p>
+             * InstanceClass.
              */
             public Builder instanceClass(String instanceClass) {
                 this.instanceClass = instanceClass;
@@ -281,10 +269,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>4 cores, 8 GB (Dedicated) (Current instance type: mdb.shard.2x.xlarge.d (4 cores, 8 GB (Dedicated cloud-disk), maximum connections: 3000, maximum IOPS: min{1800 + 50 × Storage capacity, 21000}))</p>
+             * InstanceClassRemark.
              */
             public Builder instanceClassRemark(String instanceClassRemark) {
                 this.instanceClassRemark = instanceClassRemark;
@@ -418,7 +403,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The details of the available resources.</p>
+             * AvailableResources.
              */
             public Builder availableResources(AvailableResources availableResources) {
                 this.availableResources = availableResources;
@@ -426,10 +411,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network type of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>VPC</p>
+             * NetworkTypes.
              */
             public Builder networkTypes(String networkTypes) {
                 this.networkTypes = networkTypes;
@@ -437,10 +419,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of nodes in the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3</p>
+             * NodeType.
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -561,10 +540,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The storage engine of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>WiredTiger</p>
+             * Engine.
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -572,7 +548,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The supported instance types.</p>
+             * SupportedNodeTypes.
              */
             public Builder supportedNodeTypes(SupportedNodeTypes supportedNodeTypes) {
                 this.supportedNodeTypes = supportedNodeTypes;
@@ -693,7 +669,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The supported storage engines.</p>
+             * SupportedEngines.
              */
             public Builder supportedEngines(SupportedEngines supportedEngines) {
                 this.supportedEngines = supportedEngines;
@@ -701,10 +677,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The database engine version of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>4.0</p>
+             * Version.
              */
             public Builder version(String version) {
                 this.version = version;
@@ -838,10 +811,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the region.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -849,7 +819,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The supported storage engine versions.</p>
+             * SupportedEngineVersions.
              */
             public Builder supportedEngineVersions(SupportedEngineVersions supportedEngineVersions) {
                 this.supportedEngineVersions = supportedEngineVersions;
@@ -857,10 +827,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the zone.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou-h</p>
+             * ZoneId.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -981,7 +948,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The available zones.</p>
+             * AvailableZones.
              */
             public Builder availableZones(AvailableZones availableZones) {
                 this.availableZones = availableZones;
@@ -989,14 +956,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The architecture of the instance. Valid values:</p>
-             * <ul>
-             * <li><strong>normal</strong>: replica set instance</li>
-             * <li><strong>sharding</strong>: sharded cluster instance</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>sharding</p>
+             * DbType.
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;

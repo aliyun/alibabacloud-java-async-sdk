@@ -22,6 +22,10 @@ public class ModifyNodeSpecRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AlignPrimaryZone")
+    private Boolean alignPrimaryZone;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AutoPay")
     private Boolean autoPay;
 
@@ -111,6 +115,7 @@ public class ModifyNodeSpecRequest extends Request {
     private ModifyNodeSpecRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.alignPrimaryZone = builder.alignPrimaryZone;
         this.autoPay = builder.autoPay;
         this.businessInfo = builder.businessInfo;
         this.clientToken = builder.clientToken;
@@ -152,6 +157,13 @@ public class ModifyNodeSpecRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return alignPrimaryZone
+     */
+    public Boolean getAlignPrimaryZone() {
+        return this.alignPrimaryZone;
     }
 
     /**
@@ -303,6 +315,7 @@ public class ModifyNodeSpecRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyNodeSpecRequest, Builder> {
         private String regionId; 
+        private Boolean alignPrimaryZone; 
         private Boolean autoPay; 
         private String businessInfo; 
         private String clientToken; 
@@ -332,6 +345,7 @@ public class ModifyNodeSpecRequest extends Request {
         private Builder(ModifyNodeSpecRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.alignPrimaryZone = request.alignPrimaryZone;
             this.autoPay = request.autoPay;
             this.businessInfo = request.businessInfo;
             this.clientToken = request.clientToken;
@@ -365,10 +379,19 @@ public class ModifyNodeSpecRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether to automatically align the primary node to the primary zone after operations such as specification changes for multi-zone instances. If you choose not to align the node, one primary/secondary switchover (transient disconnection) is avoided. Default value: true.</p>
+         */
+        public Builder alignPrimaryZone(Boolean alignPrimaryZone) {
+            this.putQueryParameter("AlignPrimaryZone", alignPrimaryZone);
+            this.alignPrimaryZone = alignPrimaryZone;
+            return this;
+        }
+
+        /**
          * <p>Specifies whether to enable automatic payment. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong> (default): enables automatic payment. Make sure that you have sufficient balance within your account.</li>
-         * <li><strong>false</strong>: disables automatic payment. In this case, you must manually pay for the instance.</li>
+         * <li><strong>true</strong> (default): Automatic payment is enabled. Make sure that your account has sufficient balance.</li>
+         * <li><strong>false</strong>: Manual payment is enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -381,7 +404,7 @@ public class ModifyNodeSpecRequest extends Request {
         }
 
         /**
-         * <p>The business information. This is an additional parameter.</p>
+         * <p>The additional parameter that contains business information.</p>
          * 
          * <strong>example:</strong>
          * <p>{“ActivityId&quot;:&quot;000000000&quot;}</p>
@@ -393,7 +416,7 @@ public class ModifyNodeSpecRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <p>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can generate the value of this parameter on the client side. Make sure that the value is unique across different requests and contains a maximum of 64 ASCII characters. The value cannot contain non-ASCII characters.</p>
          * 
          * <strong>example:</strong>
          * <p>ETnLKlblzczshOTUbOCz****</p>
@@ -405,10 +428,14 @@ public class ModifyNodeSpecRequest extends Request {
         }
 
         /**
-         * <p>The coupon code. Default value: <code>youhuiquan_promotion_option_id_for_blank</code>.</p>
+         * <p>Specifies whether to use a coupon. Valid values:</p>
+         * <ul>
+         * <li><strong>default</strong> or <strong>null</strong> (default): Use a coupon.</li>
+         * <li><strong>youhuiquan_promotion_option_id_for_blank</strong>: Do not use a coupon.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
-         * <p>youhuiquan_promotion_option_id_for_blank</p>
+         * <p>default</p>
          */
         public Builder couponNo(String couponNo) {
             this.putQueryParameter("CouponNo", couponNo);
@@ -417,7 +444,7 @@ public class ModifyNodeSpecRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -430,10 +457,10 @@ public class ModifyNodeSpecRequest extends Request {
         }
 
         /**
-         * <p>The time when the changed configurations take effect. Valid values:</p>
+         * <p>The effective period of the configuration change. Valid values: </p>
          * <ul>
-         * <li><strong>Immediately</strong> (default): The new configurations immediately take effect</li>
-         * <li><strong>MaintainTime</strong>: The new configurations take effect during the maintenance window of the instance.</li>
+         * <li><strong>Immediately</strong> (default): The configuration change takes effect immediately.</li>
+         * <li><strong>MaintainTime</strong>: The configuration change takes effect within the maintenance window of the instance.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -448,8 +475,8 @@ public class ModifyNodeSpecRequest extends Request {
         /**
          * <p>The source of the request. Valid values:</p>
          * <ul>
-         * <li><strong>OpenApi</strong>: the ApsaraDB for MongoDB API</li>
-         * <li><strong>mongo_buy</strong>: the ApsaraDB for MongoDB console</li>
+         * <li><strong>OpenApi</strong>: The request is sent from OpenAPI.</li>
+         * <li><strong>mongo_buy</strong>: The request is sent from the console.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -462,7 +489,7 @@ public class ModifyNodeSpecRequest extends Request {
         }
 
         /**
-         * <p>The specifications of the shard or mongos node. For more information, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.</p>
+         * <p>The specifications of the shard or mongos node. For more information, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance specifications</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>dds.mongos.standard</p>
@@ -476,7 +503,7 @@ public class ModifyNodeSpecRequest extends Request {
         /**
          * <p>The ID of the shard or mongos node in the sharded cluster instance. You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to query the node ID.</p>
          * <blockquote>
-         * <p>If you set this parameter to the ID of the shard node, you must also specify the <strong>NodeStorage</strong> parameter.</p>
+         * <p>If the value is a shard node ID, you must also specify the <strong>NodeStorage</strong> parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -490,14 +517,11 @@ public class ModifyNodeSpecRequest extends Request {
         }
 
         /**
-         * <p>The storage capacity of the shard node. Unit: GB.</p>
+         * <p>The storage space of the shard node. The step size is 10 GB.</p>
          * <ul>
-         * <li>Valid values are <strong>10</strong> to <strong>2000</strong> if the instance uses local SSDs.</li>
-         * <li>Valid values are <strong>20</strong> to <strong>16000</strong> if the instance uses enhanced SSDs (ESSDs) at PL1.</li>
+         * <li>For local SSDs, valid values: <strong>10</strong> to <strong>2000</strong>.</li>
+         * <li>For PL1 ESSDs, valid values: <strong>20</strong> to <strong>16000</strong>.</li>
          * </ul>
-         * <blockquote>
-         * <p>The value must be a multiple of 10.</p>
-         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -511,8 +535,8 @@ public class ModifyNodeSpecRequest extends Request {
         /**
          * <p>The order type. Valid values:</p>
          * <ul>
-         * <li><strong>UPGRADE</strong></li>
-         * <li><strong>DOWNGRADE</strong></li>
+         * <li><strong>UPGRADE</strong>: Upgrade.</li>
+         * <li><strong>DOWNGRADE</strong>: Downgrade.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -544,7 +568,7 @@ public class ModifyNodeSpecRequest extends Request {
 
         /**
          * <p>The number of read-only nodes in the shard node.</p>
-         * <p>Valid values: <strong>0</strong> to <strong>5</strong>. The value must be an integer. Default value: <strong>0</strong>.</p>
+         * <p>Valid values: <strong>0</strong> to <strong>5</strong>. The value must be an integer.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -574,7 +598,10 @@ public class ModifyNodeSpecRequest extends Request {
         }
 
         /**
-         * <p>The execution time. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * <p>The time when the configuration change is executed. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</p>
+         * <blockquote>
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated. Use the EffectiveTime parameter instead.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>2022-01-05T03:18:53Z</p>
@@ -586,7 +613,13 @@ public class ModifyNodeSpecRequest extends Request {
         }
 
         /**
-         * TargetHiddenZoneId.
+         * <p>The destination hidden zone for zone migration.</p>
+         * <blockquote>
+         * <p>Notice: This parameter is supported only for cloud disk instances.</notice></p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-j</p>
          */
         public Builder targetHiddenZoneId(String targetHiddenZoneId) {
             this.putQueryParameter("TargetHiddenZoneId", targetHiddenZoneId);
@@ -595,7 +628,13 @@ public class ModifyNodeSpecRequest extends Request {
         }
 
         /**
-         * TargetSecondaryZoneId.
+         * <p>The destination secondary zone for zone migration.</p>
+         * <blockquote>
+         * <p>Notice: This parameter is supported only for cloud disk instances.</notice></p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-e</p>
          */
         public Builder targetSecondaryZoneId(String targetSecondaryZoneId) {
             this.putQueryParameter("TargetSecondaryZoneId", targetSecondaryZoneId);
@@ -604,7 +643,13 @@ public class ModifyNodeSpecRequest extends Request {
         }
 
         /**
-         * TargetVswitchId.
+         * <p>The ID of the destination vSwitch for zone migration.</p>
+         * <blockquote>
+         * <p>Notice: This parameter is supported only for cloud disk instances.</notice></p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-xxxxxxxx</p>
          */
         public Builder targetVswitchId(String targetVswitchId) {
             this.putQueryParameter("TargetVswitchId", targetVswitchId);
@@ -613,7 +658,13 @@ public class ModifyNodeSpecRequest extends Request {
         }
 
         /**
-         * TargetZoneId.
+         * <p>The destination primary zone for zone migration.</p>
+         * <blockquote>
+         * <p>Notice: This parameter is supported only for cloud disk instances.</notice></p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
          */
         public Builder targetZoneId(String targetZoneId) {
             this.putQueryParameter("TargetZoneId", targetZoneId);

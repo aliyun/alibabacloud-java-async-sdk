@@ -167,6 +167,7 @@ public class AllocateDBInstanceSrvNetworkAddressRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -179,7 +180,13 @@ public class AllocateDBInstanceSrvNetworkAddressRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * <p>The ID of the Mongos or shard node in a sharded cluster instance.</p>
+         * <blockquote>
+         * <p>You do not need to specify this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>d-bp1b7bb3bbe****</p>
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -224,7 +231,17 @@ public class AllocateDBInstanceSrvNetworkAddressRequest extends Request {
         }
 
         /**
-         * SrvConnectionType.
+         * <p>The type of the SRV address to apply for. Valid values:</p>
+         * <ul>
+         * <li><strong>vpc</strong>: VPC SRV address.</li>
+         * <li><strong>public</strong>: Public SRV address.<blockquote>
+         * <p>The default is the private SRV address.</p>
+         * </blockquote>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc</p>
          */
         public Builder srvConnectionType(String srvConnectionType) {
             this.putQueryParameter("SrvConnectionType", srvConnectionType);

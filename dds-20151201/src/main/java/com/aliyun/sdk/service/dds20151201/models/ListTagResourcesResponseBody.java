@@ -82,7 +82,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         /**
          * <p>The token used to start the next query.</p>
          * <blockquote>
-         * <p> If not all results are returned in the first query, this parameter is returned. You can pass in the returned value of this parameter in the next query.</p>
+         * <p>If not all results are returned in the first query, this parameter is returned. You can pass in the returned value of this parameter in the next query.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -105,7 +105,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Details about the tags of the instance.</p>
+         * TagResources.
          */
         public Builder tagResources(TagResources tagResources) {
             this.tagResources = tagResources;
@@ -197,10 +197,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the resource. It is the ID of the ApsaraDB for MongoDB instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>dds-bp17e7a04960****</p>
+             * ResourceId.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -208,10 +205,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource type. The return value is fixed to <strong>ALIYUN: KVSTORE: INSTANCE</strong>, indicating an ApsaraDB for MongoDB instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ALIYUN::DDS::INSTANCE</p>
+             * ResourceType.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -219,10 +213,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The key of the tag.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Environment</p>
+             * TagKey.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -230,10 +221,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the tag.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>dev</p>
+             * TagValue.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

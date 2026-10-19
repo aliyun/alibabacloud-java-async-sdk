@@ -150,7 +150,7 @@ public class ModifyTaskInfoRequest extends Request {
          * <p>A action-related parameter. This parameter can be extended based on your business requirements. This parameter value varies with the value of the TaskAction parameter.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;recoverMode&quot;:&quot;immediate&quot;}</p>
+         * <p>{\&quot;recoverMode\&quot;:\&quot;immediate\&quot;}</p>
          */
         public Builder actionParams(String actionParams) {
             this.putQueryParameter("ActionParams", actionParams);

@@ -106,7 +106,7 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Details about returned entries.</p>
+         * Items.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -255,14 +255,7 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether auto-renewal is enabled for the instance. Valid values:</p>
-             * <ul>
-             * <li><strong>true</strong>: Auto-renewal is enabled for the instance.</li>
-             * <li><strong>false</strong>: Auto-renewal is disabled for the instance.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * AutoRenew.
              */
             public Builder autoRenew(String autoRenew) {
                 this.autoRenew = autoRenew;
@@ -270,14 +263,7 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The category of the instance. Valid values:</p>
-             * <ul>
-             * <li><strong>replicate</strong>: the standalone or replica set instance</li>
-             * <li><strong>sharding</strong>: the sharded cluster instance</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>replicate</p>
+             * DBInstanceType.
              */
             public Builder DBInstanceType(String DBInstanceType) {
                 this.DBInstanceType = DBInstanceType;
@@ -285,10 +271,7 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>dds-bp2568*****</p>
+             * DbInstanceId.
              */
             public Builder dbInstanceId(String dbInstanceId) {
                 this.dbInstanceId = dbInstanceId;
@@ -296,16 +279,7 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The auto-renewal period. Unit: months.</p>
-             * <blockquote>
-             * <ul>
-             * <li>This parameter is ruturned only when the returned value of the <strong>AutoRenew</strong> parameter is <strong>true</strong>.</li>
-             * <li>You can call the <a href="https://help.aliyun.com/document_detail/145979.html">ModifyInstanceAutoRenewalAttribute</a> operation to modify the auto-renewal period.</li>
-             * </ul>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * Duration.
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -313,10 +287,7 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

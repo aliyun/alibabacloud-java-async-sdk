@@ -78,7 +78,7 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information of nodes in the zone.</p>
+         * ZoneInfos.
          */
         public Builder zoneInfos(ZoneInfos zoneInfos) {
             this.zoneInfos = zoneInfos;
@@ -183,10 +183,7 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the node.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>dds-bpxxxxxxxx</p>
+             * InsName.
              */
             public Builder insName(String insName) {
                 this.insName = insName;
@@ -194,19 +191,7 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the node. Valid values:</p>
-             * <ul>
-             * <li><strong>normal</strong></li>
-             * <li><strong>configServer</strong></li>
-             * <li><strong>shard</strong></li>
-             * <li><strong>mongos</strong></li>
-             * </ul>
-             * <blockquote>
-             * <p>Valid value for replica set instances: <strong>normal</strong>. Valid values for sharded cluster instances: <strong>configServer</strong>, <strong>shard</strong>, and <strong>mongos</strong>.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>normal</p>
+             * NodeType.
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -214,10 +199,7 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The role ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>83xxxxx</p>
+             * RoleId.
              */
             public Builder roleId(String roleId) {
                 this.roleId = roleId;
@@ -225,15 +207,7 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The role of the node. Valid values:</p>
-             * <ul>
-             * <li><strong>Primary</strong></li>
-             * <li><strong>Secondary</strong></li>
-             * <li><strong>Hidden</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Primary</p>
+             * RoleType.
              */
             public Builder roleType(String roleType) {
                 this.roleType = roleType;
@@ -241,10 +215,7 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The zone ID of the node.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou-e</p>
+             * ZoneId.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

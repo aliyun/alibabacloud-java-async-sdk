@@ -80,7 +80,10 @@ public class CreateBackupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the backup set.</p>
+         * <p>The ID of the backup.</p>
+         * <blockquote>
+         * <p><strong>[Deprecated]</strong> This parameter will be deprecated soon. To obtain the backup ID, call the <a href="https://help.aliyun.com/document_detail/468441.html">DescribeBackups</a> operation.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>5664****</p>
@@ -91,7 +94,10 @@ public class CreateBackupResponseBody extends TeaModel {
         }
 
         /**
-         * BackupJobId.
+         * <p>The ID of the backup job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>775051</p>
          */
         public Builder backupJobId(String backupJobId) {
             this.backupJobId = backupJobId;
@@ -99,7 +105,7 @@ public class CreateBackupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>7016B12F-7F64-40A4-BAFF-013F02AC82FC</p>

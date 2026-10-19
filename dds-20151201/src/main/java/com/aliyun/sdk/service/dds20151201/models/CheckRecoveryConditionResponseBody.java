@@ -80,7 +80,7 @@ public class CheckRecoveryConditionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The instance ID</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>dds-bp1378****</p>
@@ -91,10 +91,10 @@ public class CheckRecoveryConditionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the data of the instance can be restored. Valid values:</p>
+         * <p>Indicates whether the restoration conditions are met. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The data of the instance can be restored.</li>
-         * <li><strong>false</strong>: The data of the instance cannot be restored.</li>
+         * <li><strong>true</strong>: The conditions are met.</li>
+         * <li><strong>false</strong>: The conditions are not met.</li>
          * </ul>
          * 
          * <strong>example:</strong>

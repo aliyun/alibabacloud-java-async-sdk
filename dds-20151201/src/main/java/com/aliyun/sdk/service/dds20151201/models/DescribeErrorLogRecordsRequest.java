@@ -283,9 +283,9 @@ public class DescribeErrorLogRecordsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <blockquote>
-         * <p> If you set this parameter to the ID of a sharded cluster instance, you must also specify the <strong>NodeId</strong> parameter.</p>
+         * <p>If you specify a sharded cluster instance ID for this parameter, you must also specify the <strong>NodeId</strong> parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -311,7 +311,7 @@ public class DescribeErrorLogRecordsRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. The end time must be later than the start time and within 24 hours from the start time. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+         * <p>The end time of the query. The end time must be later than the start time, and the interval between the end time and the start time cannot exceed one day. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format. The time must be in UTC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -324,11 +324,7 @@ public class DescribeErrorLogRecordsRequest extends Request {
         }
 
         /**
-         * <p>The logical relationship between multiple keywords. Valid values:</p>
-         * <ul>
-         * <li><strong>or</strong></li>
-         * <li><strong>and</strong> (default value)</li>
-         * </ul>
+         * <p>The logical operator for keyword search. Default value: and.</p>
          * 
          * <strong>example:</strong>
          * <p>and</p>
@@ -340,9 +336,9 @@ public class DescribeErrorLogRecordsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the mongos node or shard node whose error logs you want to query in the instance. If the instance is a sharded cluster instance, you must specify this parameter.</p>
+         * <p>The ID of a mongos node or shard node in the sharded cluster instance.</p>
          * <blockquote>
-         * <p> This parameter is valid only when <strong>DBInstanceId</strong> is set to the ID of a sharded cluster instance.</p>
+         * <p>This parameter is available only when the <strong>DBInstanceId</strong> parameter is set to a sharded cluster instance ID.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -373,7 +369,7 @@ public class DescribeErrorLogRecordsRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. The value must be an integer that is greater than 0. Default value: <strong>1</strong>.</p>
+         * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -385,7 +381,7 @@ public class DescribeErrorLogRecordsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Valid values: <strong>30</strong> to <strong>100</strong>.</p>
+         * <p>The number of entries per page. Valid values: <strong>30</strong> to <strong>100</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -397,7 +393,7 @@ public class DescribeErrorLogRecordsRequest extends Request {
         }
 
         /**
-         * <p>The keywords used for query. You can enter up to 10 keywords at a time. If you enter multiple keywords, separate the keywords with spaces.</p>
+         * <p>The keywords to search for. Separate multiple keywords with spaces. You can specify a maximum of 10 keywords.</p>
          * 
          * <strong>example:</strong>
          * <p>test test1</p>
@@ -409,7 +405,7 @@ public class DescribeErrorLogRecordsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</p>
+         * <p>The resource group ID. For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmyiu4ekp****</p>
@@ -439,13 +435,14 @@ public class DescribeErrorLogRecordsRequest extends Request {
         }
 
         /**
-         * <p>The role of the node whose error logs you want to query in the instance. Valid values:</p>
+         * <p>The role of the node in the instance. Valid values:</p>
          * <ul>
-         * <li><strong>primary</strong></li>
-         * <li><strong>secondary</strong></li>
+         * <li><strong>primary</strong>: primary node.</li>
+         * <li><strong>secondary</strong>: secondary node.</li>
+         * <li><strong>search</strong>: search node.</li>
          * </ul>
          * <blockquote>
-         * <p> If you set the <strong>NodeId</strong> parameter to the ID of a mongos node, the RoleType parameter must be set to <strong>primary</strong>.</p>
+         * <p>If the <strong>NodeId</strong> parameter is set to a mongos node ID, this parameter can only be set to <strong>primary</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -458,7 +455,7 @@ public class DescribeErrorLogRecordsRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+         * <p>The start time of the query. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format. The time must be in UTC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

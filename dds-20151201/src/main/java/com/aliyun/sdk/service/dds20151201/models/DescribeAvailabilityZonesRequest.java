@@ -314,12 +314,14 @@ public class DescribeAvailabilityZonesRequest extends Request {
         /**
          * <p>The language of the returned <strong>RegionName</strong> and <strong>ZoneName</strong> parameter values. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong> (default): Chinese</li>
-         * <li><strong>en</strong>: English</li>
+         * <li><p><strong>zh</strong> (default): Chinese</p>
+         * </li>
+         * <li><p><strong>en</strong>: English</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>en</p>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -342,8 +344,10 @@ public class DescribeAvailabilityZonesRequest extends Request {
         /**
          * <p>The architecture of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>normal</strong>: replica set instance</li>
-         * <li><strong>sharding</strong>: sharded cluster instance</li>
+         * <li><p><strong>normal</strong>: replica set instance</p>
+         * </li>
+         * <li><p><strong>sharding</strong>: sharded cluster instance</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -394,8 +398,10 @@ public class DescribeAvailabilityZonesRequest extends Request {
         /**
          * <p>The billing method of the product. Valid values:</p>
          * <ul>
-         * <li><strong>PrePaid</strong>: subscription</li>
-         * <li><strong>PostPaid:</strong> pay-as-you-go</li>
+         * <li><p><strong>PrePaid</strong>: subscription</p>
+         * </li>
+         * <li><p><strong>PostPaid:</strong> pay-as-you-go</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -410,8 +416,10 @@ public class DescribeAvailabilityZonesRequest extends Request {
         /**
          * <p>The architecture of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>sharding</strong>: sharded cluster instance</li>
-         * <li><strong>replicate</strong>: replica set or standalone instance</li>
+         * <li><p><strong>sharding</strong>: sharded cluster instance</p>
+         * </li>
+         * <li><p><strong>replicate</strong>: replica set or standalone instance</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -469,14 +477,18 @@ public class DescribeAvailabilityZonesRequest extends Request {
         /**
          * <p>The number of nodes in the instance.</p>
          * <blockquote>
-         * <p> This parameter is available only for replica set instances.</p>
+         * <p>This parameter is available only for replica set instances.</p>
          * </blockquote>
          * <p>Valid values:</p>
          * <ul>
-         * <li>1</li>
-         * <li>3</li>
-         * <li>5</li>
-         * <li>7</li>
+         * <li><p>1</p>
+         * </li>
+         * <li><p>3</p>
+         * </li>
+         * <li><p>5</p>
+         * </li>
+         * <li><p>7</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -521,9 +533,12 @@ public class DescribeAvailabilityZonesRequest extends Request {
         /**
          * <p>The storage type. Valid values:</p>
          * <ul>
-         * <li><strong>cloud</strong>: displays only zones available for instances that use cloud disks.</li>
-         * <li><strong>local</strong>: only displays zones available for instances that use local disks instances.</li>
-         * <li><strong>default</strong> or unspecified: displays zones available for instances that use cloud disks and those that use local disks.</li>
+         * <li><p><strong>cloud</strong>: displays only zones available for instances that use cloud disks.</p>
+         * </li>
+         * <li><p><strong>local</strong>: only displays zones available for instances that use local disks instances.</p>
+         * </li>
+         * <li><p><strong>default</strong> or unspecified: displays zones available for instances that use cloud disks and those that use local disks.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -538,15 +553,21 @@ public class DescribeAvailabilityZonesRequest extends Request {
         /**
          * <p>The storage type. Valid values:</p>
          * <ul>
-         * <li><strong>cloud_essd1</strong>: PL1 Enterprise SSDs (ESSDs)</li>
-         * <li><strong>cloud_essd2</strong>: PL2 ESSDs</li>
-         * <li><strong>cloud_essd3</strong>: PL3 ESSDs</li>
-         * <li><strong>local_ssd</strong>: local SSDs</li>
+         * <li><p><strong>cloud_essd1</strong>: PL1 Enterprise SSDs (ESSDs)</p>
+         * </li>
+         * <li><p><strong>cloud_essd2</strong>: PL2 ESSDs</p>
+         * </li>
+         * <li><p><strong>cloud_essd3</strong>: PL3 ESSDs</p>
+         * </li>
+         * <li><p><strong>local_ssd</strong>: local SSDs</p>
+         * </li>
          * </ul>
          * <blockquote>
          * <ul>
-         * <li>Instances that run MongoDB 4.4 or later only use cloud disks to store data. If you do not specify this parameter, the value <strong>cloud_essd1</strong> is used by default.</li>
-         * <li>Instances that run MongoDB 4.2 and earlier only use local disks to store data. If you do not specify this parameter, the value <strong>local_ssd</strong> is used by default.</li>
+         * <li><p>Instances that run MongoDB 4.4 or later only use cloud disks to store data. If you do not specify this parameter, the value <strong>cloud_essd1</strong> is used by default.</p>
+         * </li>
+         * <li><p>Instances that run MongoDB 4.2 and earlier only use local disks to store data. If you do not specify this parameter, the value <strong>local_ssd</strong> is used by default.</p>
+         * </li>
          * </ul>
          * </blockquote>
          * 

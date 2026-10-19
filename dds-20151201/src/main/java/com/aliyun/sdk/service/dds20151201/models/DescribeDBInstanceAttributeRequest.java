@@ -220,10 +220,10 @@ public class DescribeDBInstanceAttributeRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to query instances that are deleted. Valid values:</p>
+         * <p>Specifies whether the instance is deleted. Valid values: </p>
          * <ul>
-         * <li><strong>false</strong>: queries instances that are running.</li>
-         * <li><strong>true</strong>: queries instance that are deleted.</li>
+         * <li><strong>false</strong>: The instance is running. Queries the information of a running instance.</li>
+         * <li><strong>true</strong>: The instance is deleted. Queries the information of a deleted instance.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -254,9 +254,9 @@ public class DescribeDBInstanceAttributeRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View the basic information of a resource group</a>.</p>
+         * <p>The resource group ID. For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</p>
          * <blockquote>
-         * <p>This parameter is available only if you use the China site (aliyun.com).</p>
+         * <p>This parameter is supported only on the China site.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

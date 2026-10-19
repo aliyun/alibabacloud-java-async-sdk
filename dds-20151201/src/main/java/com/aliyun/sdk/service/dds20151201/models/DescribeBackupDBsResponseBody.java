@@ -106,7 +106,7 @@ public class DescribeBackupDBsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the databases.</p>
+         * Databases.
          */
         public Builder databases(Databases databases) {
             this.databases = databases;
@@ -203,10 +203,7 @@ public class DescribeBackupDBsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the database.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>mongodbtest</p>
+             * DBName.
              */
             public Builder DBName(String DBName) {
                 this.DBName = DBName;

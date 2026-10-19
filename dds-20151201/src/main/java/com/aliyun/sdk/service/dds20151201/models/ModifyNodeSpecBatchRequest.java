@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyNodeSpecBatchRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AlignPrimaryZone")
+    private Boolean alignPrimaryZone;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AutoPay")
     private Boolean autoPay;
 
@@ -89,6 +93,7 @@ public class ModifyNodeSpecBatchRequest extends Request {
 
     private ModifyNodeSpecBatchRequest(Builder builder) {
         super(builder);
+        this.alignPrimaryZone = builder.alignPrimaryZone;
         this.autoPay = builder.autoPay;
         this.businessInfo = builder.businessInfo;
         this.clientToken = builder.clientToken;
@@ -119,6 +124,13 @@ public class ModifyNodeSpecBatchRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return alignPrimaryZone
+     */
+    public Boolean getAlignPrimaryZone() {
+        return this.alignPrimaryZone;
     }
 
     /**
@@ -241,6 +253,7 @@ public class ModifyNodeSpecBatchRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyNodeSpecBatchRequest, Builder> {
+        private Boolean alignPrimaryZone; 
         private Boolean autoPay; 
         private String businessInfo; 
         private String clientToken; 
@@ -265,6 +278,7 @@ public class ModifyNodeSpecBatchRequest extends Request {
 
         private Builder(ModifyNodeSpecBatchRequest request) {
             super(request);
+            this.alignPrimaryZone = request.alignPrimaryZone;
             this.autoPay = request.autoPay;
             this.businessInfo = request.businessInfo;
             this.clientToken = request.clientToken;
@@ -285,10 +299,20 @@ public class ModifyNodeSpecBatchRequest extends Request {
         } 
 
         /**
+         * <p>Specifies whether to automatically align the primary node to the primary zone after operations such as configuration changes for a multi-zone instance. If you choose not to align the node, one primary/secondary switchover (transient connection) is prevented. Default value: true.</p>
+         */
+        public Builder alignPrimaryZone(Boolean alignPrimaryZone) {
+            this.putQueryParameter("AlignPrimaryZone", alignPrimaryZone);
+            this.alignPrimaryZone = alignPrimaryZone;
+            return this;
+        }
+
+        /**
          * <p>Specifies whether to enable automatic payment. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: enables automatic payment. Make sure that you have sufficient balance within your account.</li>
-         * <li><strong>false</strong>: disables automatic payment. You can perform the following operations to pay for the instance: Log on to the ApsaraDB for MongoDB console. In the upper-right corner of the page, click <strong>Expenses</strong> to go to the <strong>Billing Management</strong> console. In the left-side navigation pane, click <strong>Orders</strong>. On the <strong>Orders</strong> page, find the order and complete the payment.</li>
+         * <li><strong>true</strong>: enables automatic payment. Make sure that your account has sufficient balance.
+         * &lt;props=&quot;china&quot;&gt;- <strong>false</strong>: disables automatic payment. You can log on to the ApsaraDB for MongoDB console, choose <strong>Expenses</strong> &gt; <strong>Expenses and Costs</strong> in the upper-right corner, choose <strong>Orders</strong> &gt; <strong>My Orders</strong> in the left-side navigation pane, and then find the target order on the <strong>Orders</strong> tab to complete the payment.
+         * &lt;props=&quot;intl&quot;&gt;- <strong>false</strong>: disables automatic payment. You can log on to the ApsaraDB for MongoDB console, choose <strong>Expenses</strong> &gt; <strong>Expenses and Costs</strong> in the upper-right corner, click <strong>Order Management</strong> in the left-side navigation pane, and then find the target order on the <strong>Orders</strong> page to complete the payment.</li>
          * </ul>
          * <p>Default value: <strong>true</strong>.</p>
          * 
@@ -314,7 +338,7 @@ public class ModifyNodeSpecBatchRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <p>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can use the client to generate the token, but you must ensure that it is unique among different requests. The token can contain a maximum of 64 ASCII characters and cannot contain non-ASCII characters.</p>
          * 
          * <strong>example:</strong>
          * <p>ETnLKlblzczshOTUbOCz****</p>
@@ -326,10 +350,14 @@ public class ModifyNodeSpecBatchRequest extends Request {
         }
 
         /**
-         * <p>The coupon code. Default value: <code>youhuiquan_promotion_option_id_for_blank</code>.</p>
+         * <p>Specifies whether to use a coupon. Valid values:</p>
+         * <ul>
+         * <li><strong>default</strong> or <strong>null</strong>: uses a coupon. This is the default value.</li>
+         * <li><strong>youhuiquan_promotion_option_id_for_blank</strong>: does not use a coupon.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
-         * <p>youhuiquan_promotion_option_id_for_blank</p>
+         * <p>default</p>
          */
         public Builder couponNo(String couponNo) {
             this.putQueryParameter("CouponNo", couponNo);
@@ -338,7 +366,7 @@ public class ModifyNodeSpecBatchRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance whose configurations you want to change.</p>
+         * <p>The instance ID of the instance whose configurations you want to modify.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -351,19 +379,17 @@ public class ModifyNodeSpecBatchRequest extends Request {
         }
 
         /**
-         * <p>The time when the changed configurations take effect. Valid values:</p>
+         * <p>The effective period of the configuration change. Valid values:</p>
          * <ul>
-         * <li><strong>Immediately</strong>: The configurations immediately take effect.</li>
-         * <li><strong>MaintainTime</strong>: The configurations take effect during the maintenance window of the instance.</li>
+         * <li><strong>Immediately</strong>: The configuration change takes effect immediately.</li>
+         * <li><strong>MaintainTime</strong>: The configuration change takes effect during the maintenance window of the instance.</li>
          * </ul>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/62008.html">ModifyDBInstanceMaintainTime</a> operation to modify the maintenance window of an instance.</p>
-         * </li>
-         * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to view the maintenance window of an instance.</p>
-         * </li>
+         * <li>You can invoke the <a href="https://help.aliyun.com/document_detail/62008.html">ModifyDBInstanceMaintainTime</a> operation to modify the maintenance window of the instance.</li>
+         * <li>You can invoke the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to view the maintenance window of the instance.</li>
          * </ul>
+         * </blockquote>
          * <p>Default value: <strong>Immediately</strong>.</p>
          * 
          * <strong>example:</strong>
@@ -376,7 +402,7 @@ public class ModifyNodeSpecBatchRequest extends Request {
         }
 
         /**
-         * <p>The configuration information of the mongos nodes or shard nodes whose configurations you want to change. For more information, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.</p>
+         * <p>The specifications of the Mongos or shard nodes to be modified. For more information, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -389,13 +415,13 @@ public class ModifyNodeSpecBatchRequest extends Request {
         }
 
         /**
-         * <p>The type of configuration changes. Valid values:</p>
+         * <p>The type of the configuration change. Valid values:</p>
          * <ul>
-         * <li><strong>UPGRADE</strong></li>
-         * <li><strong>DOWNGRADE</strong></li>
+         * <li><strong>UPGRADE</strong>: upgrades the configurations.</li>
+         * <li><strong>DOWNGRADE</strong>: downgrades the configurations.</li>
          * </ul>
          * <blockquote>
-         * <p>This parameter is only applicable to instances whose billing method is subscription.</p>
+         * <p>This parameter is available only when the billing method of the instance is subscription.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -426,7 +452,7 @@ public class ModifyNodeSpecBatchRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query available regions.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -456,7 +482,19 @@ public class ModifyNodeSpecBatchRequest extends Request {
         }
 
         /**
-         * TargetHiddenZoneId.
+         * <p>The destination zone of the hidden node when you migrate the instance across zones and change its configurations at the same time.</p>
+         * <blockquote>
+         * <p>Notice: This parameter is supported only for cloud disk instances.</notice>
+         * Notice: The value of this parameter cannot be the same as the value of the TargetZoneId or TargetSecondaryZoneId parameter.</notice></p>
+         * </blockquote>
+         * <blockquote>
+         * <ul>
+         * <li>You must specify this parameter only when you migrate the instance across zones and change its configurations at the same time.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-e</p>
          */
         public Builder targetHiddenZoneId(String targetHiddenZoneId) {
             this.putQueryParameter("TargetHiddenZoneId", targetHiddenZoneId);
@@ -465,7 +503,17 @@ public class ModifyNodeSpecBatchRequest extends Request {
         }
 
         /**
-         * TargetSecondaryZoneId.
+         * <p>The destination zone of the secondary node when you migrate the instance across zones and change its configurations at the same time.</p>
+         * <blockquote>
+         * <p>Notice: This parameter is supported only for cloud disk instances.</notice>
+         * Notice: The value of this parameter cannot be the same as the value of the TargetZoneId or TargetHiddenZoneId parameter.</notice></p>
+         * <ul>
+         * <li>You must specify this parameter only when you migrate the instance across zones and change its configurations at the same time.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-j</p>
          */
         public Builder targetSecondaryZoneId(String targetSecondaryZoneId) {
             this.putQueryParameter("TargetSecondaryZoneId", targetSecondaryZoneId);
@@ -474,7 +522,16 @@ public class ModifyNodeSpecBatchRequest extends Request {
         }
 
         /**
-         * TargetVswitchId.
+         * <p>The ID of the destination vSwitch when you migrate the instance across zones and change its configurations at the same time.</p>
+         * <blockquote>
+         * <p>Notice: This parameter is supported only for cloud disk instances.</notice></p>
+         * <ul>
+         * <li>You must specify this parameter only when you migrate the instance across zones and change its configurations at the same time.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-xxxxxxxx</p>
          */
         public Builder targetVswitchId(String targetVswitchId) {
             this.putQueryParameter("TargetVswitchId", targetVswitchId);
@@ -483,7 +540,17 @@ public class ModifyNodeSpecBatchRequest extends Request {
         }
 
         /**
-         * TargetZoneId.
+         * <p>The destination zone of the primary node when you migrate the instance across zones and change its configurations at the same time.</p>
+         * <blockquote>
+         * <p>Notice: This parameter is supported only for cloud disk instances.</notice>
+         * Notice: The value of this parameter cannot be the same as the value of the TargetSecondaryZoneId or TargetHiddenZoneId parameter.</notice></p>
+         * <ul>
+         * <li>You must specify this parameter only when you migrate the instance across zones and change its configurations at the same time.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
          */
         public Builder targetZoneId(String targetZoneId) {
             this.putQueryParameter("TargetZoneId", targetZoneId);

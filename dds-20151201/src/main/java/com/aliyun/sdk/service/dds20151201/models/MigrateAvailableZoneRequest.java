@@ -187,9 +187,9 @@ public class MigrateAvailableZoneRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <blockquote>
-         * <p>If the instance is deployed in a VPC, you must specify the <strong>Vswitch</strong> parameter.</p>
+         * <p>If the network type of the instance is VPC, you must also specify the <strong>Vswitch</strong> parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -203,10 +203,10 @@ public class MigrateAvailableZoneRequest extends Request {
         }
 
         /**
-         * <p>The time when the instance is migrated to the destination zone. Valid values:</p>
+         * <p>The effective time for migrating the zone. The instance must be active. Valid values:</p>
          * <ul>
-         * <li><strong>Immediately</strong>: The instance is immediately migrated to the destination zone.</li>
-         * <li><strong>MaintainTime</strong>: The instance is migrated to the destination zone during the maintenance window of the instance.</li>
+         * <li><strong>Immediately</strong>: Takes effect immediately.</li>
+         * <li><strong>MaintainTime</strong>: Takes effect during the maintenance window of the instance.</li>
          * </ul>
          * <p>Default value: <strong>Immediately</strong>.</p>
          * 
@@ -220,7 +220,7 @@ public class MigrateAvailableZoneRequest extends Request {
         }
 
         /**
-         * <p>The ID of the destination hidden zone.</p>
+         * <p>The ID of destination secondary zone 2.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai-n</p>
@@ -268,7 +268,7 @@ public class MigrateAvailableZoneRequest extends Request {
         }
 
         /**
-         * <p>The ID of the destination secondary zone.</p>
+         * <p>The ID of destination secondary zone 1.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-h</p>
@@ -282,7 +282,7 @@ public class MigrateAvailableZoneRequest extends Request {
         /**
          * <p>The ID of the vSwitch in the destination zone.</p>
          * <blockquote>
-         * <p>If the instance is deployed in a VPC, you must specify this parameter.</p>
+         * <p>This parameter is required when the network type of the instance is VPC.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -297,13 +297,11 @@ public class MigrateAvailableZoneRequest extends Request {
         /**
          * <p>The ID of the destination zone.</p>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>The source zone and the destination zone belong to the same region.</p>
-         * </li>
-         * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the zone ID.</p>
-         * </li>
+         * <li>The destination zone and the current zone of the instance are in the same region.</li>
+         * <li>You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query zone IDs.</li>
          * </ul>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

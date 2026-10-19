@@ -175,7 +175,7 @@ public class ListTagResourcesRequest extends Request {
         /**
          * <p>The token used to start the next query to retrieve more results.</p>
          * <blockquote>
-         * <p> This parameter is not required in the first query. If not all results are returned in one query, you can pass in the <strong>NextToken</strong> value returned in the previous query to perform the query again.</p>
+         * <p>This parameter is not required in the first query. If not all results are returned in one query, you can pass in the <strong>NextToken</strong> value returned in the previous query to perform the query again.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -222,7 +222,7 @@ public class ListTagResourcesRequest extends Request {
          * <p>The resource IDs. You must specify this parameter or the Tag parameter.</p>
          * 
          * <strong>example:</strong>
-         * <p>dds-bpxxxxxxxx</p>
+         * <p>Development group</p>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -333,7 +333,7 @@ public class ListTagResourcesRequest extends Request {
              * <p>The key of tag.</p>
              * 
              * <strong>example:</strong>
-             * <p>env</p>
+             * <p>Development group</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -344,7 +344,7 @@ public class ListTagResourcesRequest extends Request {
              * <p>The value of tag.</p>
              * 
              * <strong>example:</strong>
-             * <p>dev</p>
+             * <p>4.0 environment</p>
              */
             public Builder value(String value) {
                 this.value = value;

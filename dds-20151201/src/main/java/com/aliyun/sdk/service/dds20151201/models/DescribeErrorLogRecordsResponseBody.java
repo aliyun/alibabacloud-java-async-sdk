@@ -119,7 +119,7 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The database engine.</p>
+         * <p>The engine type of the current database.</p>
          * 
          * <strong>example:</strong>
          * <p>MongoDB</p>
@@ -130,7 +130,7 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Details about the log entries returned.</p>
+         * Items.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -138,7 +138,7 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -149,7 +149,7 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of records per page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -160,7 +160,7 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>68BCBEC2-1E66-471F-A1A8-E3C60C0A80B0</p>
@@ -171,7 +171,7 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -279,21 +279,7 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The category of the log entry. Valid values:</p>
-             * <ul>
-             * <li>NETWORK: network connection log</li>
-             * <li>ACCESS: access control log</li>
-             * <li>-: general log</li>
-             * <li>COMMAND: slow query log</li>
-             * <li>SHARDING: sharded cluster log</li>
-             * <li>STORAGE: storage engine log</li>
-             * <li>CONNPOOL: connection pool log</li>
-             * <li>ASIO: asynchronous I/O operation log</li>
-             * <li>WRITE: slow update log</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>NETWORK</p>
+             * Category.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -301,10 +287,7 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The connection information of the log entry.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>conn18xxxxxx</p>
+             * ConnInfo.
              */
             public Builder connInfo(String connInfo) {
                 this.connInfo = connInfo;
@@ -312,10 +295,7 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The content of the log entry.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>xxxxxxxx</p>
+             * Content.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -323,10 +303,7 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the log entry was generated. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2019-02-26T12:09:34Z</p>
+             * CreateTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -334,10 +311,7 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the log entry.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1111111111</p>
+             * Id.
              */
             public Builder id(Integer id) {
                 this.id = id;

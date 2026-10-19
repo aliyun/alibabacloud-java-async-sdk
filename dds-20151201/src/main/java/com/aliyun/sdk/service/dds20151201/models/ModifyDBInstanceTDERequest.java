@@ -210,7 +210,7 @@ public class ModifyDBInstanceTDERequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -223,7 +223,17 @@ public class ModifyDBInstanceTDERequest extends Request {
         }
 
         /**
-         * <p>The ID of the custom key.</p>
+         * <p>The ID of the custom key.
+         * Custom keys are supported only in the following regions. In other regions, the default key is used for encryption.</p>
+         * <ul>
+         * <li>Singapore (ap-southeast-1)</li>
+         * <li>Hangzhou (cn-hangzhou)</li>
+         * <li>Shanghai (cn-shanghai)</li>
+         * <li>Beijing (cn-beijing)</li>
+         * <li>Shenzhen (cn-shenzhen)</li>
+         * <li>Hong Kong (China) (cn-hongkong)</li>
+         * <li>Malaysia (ap-southeast-3)</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>749c1df7-xxxx-xxxx-xxxx-xxxxxxxxxxxx</p>
@@ -235,9 +245,9 @@ public class ModifyDBInstanceTDERequest extends Request {
         }
 
         /**
-         * <p>The encryption method. Set the value to <strong>aes-256-cbc</strong>.</p>
+         * <p>The encryption method. Valid values: <strong>aes-256-cbc</strong>.</p>
          * <blockquote>
-         * <p>This parameter is valid only when the <strong>TEDStatus</strong> parameter is set to <strong>enabled</strong>.</p>
+         * <p>This parameter is available only when the <strong>TDEStatus</strong> parameter is set to <strong>enabled</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -286,15 +296,11 @@ public class ModifyDBInstanceTDERequest extends Request {
         }
 
         /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the specified Resource Access Management (RAM) role. The ARN is displayed in the <code>acs:ram::$accountID:role/$roleName</code> format.</p>
+         * <p>The ARN of the specified role. Format: <code>acs:ram::$accountID:role/$roleName</code>.</p>
          * <blockquote>
          * <ul>
-         * <li><code>$accountID</code>: specifies the ID of the Alibaba Cloud account. To view the account ID, log on to the Alibaba Cloud Management Console, move your pointer over your profile picture in the upper-right corner, and then click Security Settings.</li>
-         * </ul>
-         * </blockquote>
-         * <blockquote>
-         * <ul>
-         * <li><code>$roleName</code>: specifies the name of the RAM role. To view the RAM role name, log on to the RAM console. In the left-side navigation pane, choose Identities &gt; Roles. On the Roles page, view the name of the RAM role.</li>
+         * <li><code>$accountID</code>: the ID of the Alibaba Cloud account. You can view the ID by logging on to the Alibaba Cloud Management Console, moving the pointer over the profile picture in the upper-right corner, and clicking Security Settings.</li>
+         * <li><code>$roleName</code>: the name of the RAM role. You can view the name by logging on to the Resource Access Management (RAM) console, clicking RAM Roles in the left-side navigation pane, and viewing the RAM role name list.</li>
          * </ul>
          * </blockquote>
          * 
@@ -308,7 +314,16 @@ public class ModifyDBInstanceTDERequest extends Request {
         }
 
         /**
-         * SwitchMode.
+         * <p>The time to modify the Transparent Data Encryption (TDE) status of the MongoDB instance. Valid values:</p>
+         * <ul>
+         * <li><p>0: immediately.</p>
+         * </li>
+         * <li><p>1: within the O&amp;M window.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder switchMode(String switchMode) {
             this.putQueryParameter("SwitchMode", switchMode);
@@ -317,7 +332,7 @@ public class ModifyDBInstanceTDERequest extends Request {
         }
 
         /**
-         * <p>The TDE status. When the value of this parameter is set to <strong>Enabled</strong>, TDE is enabled.</p>
+         * <p>The TDE status. Valid values: <strong>enabled</strong>, which indicates that TDE is enabled.</p>
          * <blockquote>
          * <p>You cannot disable TDE after it is enabled. Proceed with caution.</p>
          * </blockquote>

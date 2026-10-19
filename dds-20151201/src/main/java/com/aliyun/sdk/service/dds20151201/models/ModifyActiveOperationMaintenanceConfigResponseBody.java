@@ -54,7 +54,10 @@ public class ModifyActiveOperationMaintenanceConfigResponseBody extends TeaModel
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D8F1D721-6439-4257-A89C-F1E8E9C9****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

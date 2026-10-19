@@ -78,7 +78,7 @@ public class DescribeInstanceRecoverTimeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time ranges to which data can be restored. The time ranges include those used for point-in-time data restoration.</p>
+         * <p>The list of restorable time ranges. This list contains all time ranges available for point-in-time restoration.</p>
          */
         public Builder restoreRanges(java.util.List<RestoreRanges> restoreRanges) {
             this.restoreRanges = restoreRanges;
@@ -157,7 +157,7 @@ public class DescribeInstanceRecoverTimeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The beginning of the time range to which data can be restored.</p>
+             * <p>The beginning of the restorable time range.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-10-16T19:33:20Z</p>
@@ -168,7 +168,7 @@ public class DescribeInstanceRecoverTimeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end of the time range to which data can be restored.</p>
+             * <p>The end of the restorable time range.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-10-16T19:43:20Z</p>
@@ -179,9 +179,9 @@ public class DescribeInstanceRecoverTimeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The method used to restore data. Valid value:</p>
+             * <p>The restoration method. Valid values:</p>
              * <ul>
-             * <li>PointInTime (default): Data is restored to a point in time.</li>
+             * <li>PointInTime (default): point-in-time restoration.</li>
              * </ul>
              * 
              * <strong>example:</strong>

@@ -67,7 +67,10 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60EEBD77-227C-5B39-86EA-D89163C5****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
         }
 
         /**
-         * VSwitches.
+         * <p>The list of vSwitches.</p>
          */
         public Builder vSwitches(VSwitches vSwitches) {
             this.vSwitches = vSwitches;
@@ -258,7 +261,10 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
             } 
 
             /**
-             * AliUid.
+             * <p>This parameter is deprecated. No value is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder aliUid(String aliUid) {
                 this.aliUid = aliUid;
@@ -266,7 +272,10 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
             }
 
             /**
-             * Bid.
+             * <p>This parameter is deprecated. No value is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder bid(String bid) {
                 this.bid = bid;
@@ -274,7 +283,10 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
             }
 
             /**
-             * CidrBlock.
+             * <p>The CIDR block of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.<strong>.</strong>.0/24</p>
              */
             public Builder cidrBlock(String cidrBlock) {
                 this.cidrBlock = cidrBlock;
@@ -282,7 +294,10 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>This parameter is deprecated. No value is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -290,7 +305,10 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>This parameter is deprecated. No value is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -298,7 +316,16 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
             }
 
             /**
-             * IsDefault.
+             * <p>Indicates whether the vSwitch is the default vSwitch. Valid values:</p>
+             * <ul>
+             * <li><p><strong>true</strong>: The vSwitch is the default vSwitch.</p>
+             * </li>
+             * <li><p><strong>false</strong>: The vSwitch is not the default vSwitch.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -306,7 +333,10 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
             }
 
             /**
-             * IzNo.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-h</p>
              */
             public Builder izNo(String izNo) {
                 this.izNo = izNo;
@@ -314,7 +344,10 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionNo.
+             * <p>This parameter is deprecated. No value is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder regionNo(String regionNo) {
                 this.regionNo = regionNo;
@@ -322,7 +355,10 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the vSwitch. A value of <strong>Available</strong> indicates that the vSwitch is active.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -330,7 +366,7 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>VSwitch ID。</p>
+             * <p>The vSwitch ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-bp*******************</p>
@@ -341,7 +377,10 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchName.
+             * <p>The name of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-name</p>
              */
             public Builder vSwitchName(String vSwitchName) {
                 this.vSwitchName = vSwitchName;
@@ -395,7 +434,7 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
             } 
 
             /**
-             * VSwitch.
+             * <p>The vSwitch information.</p>
              */
             public Builder vSwitch(java.util.List<VSwitch> vSwitch) {
                 this.vSwitch = vSwitch;

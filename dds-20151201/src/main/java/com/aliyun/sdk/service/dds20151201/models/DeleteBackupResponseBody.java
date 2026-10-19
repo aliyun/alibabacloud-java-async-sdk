@@ -54,7 +54,10 @@ public class DeleteBackupResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7A9807F0-1301-4154-9849-6497E94A****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

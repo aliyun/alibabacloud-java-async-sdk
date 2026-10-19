@@ -54,7 +54,10 @@ public class AllocateDBInstanceSrvNetworkAddressResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6B82A9EF-9961-5A31-A19F-009B7098ACCA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

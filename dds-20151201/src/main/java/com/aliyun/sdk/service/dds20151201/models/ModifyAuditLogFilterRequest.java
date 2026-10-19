@@ -181,15 +181,15 @@ public class ModifyAuditLogFilterRequest extends Request {
         }
 
         /**
-         * <p>The type of logs collected by the audit log feature of the instance. Separate multiple types with commas (,). Valid values:</p>
+         * <p>The collection types of audit logs. Separate multiple collection types with commas (,).</p>
          * <ul>
-         * <li><strong>admin</strong>: O&amp;M and management operations</li>
-         * <li><strong>slow</strong>: slow query logs</li>
-         * <li><strong>query</strong>: query operations</li>
-         * <li><strong>insert</strong>: insert operations</li>
-         * <li><strong>update</strong>: update operations</li>
-         * <li><strong>delete</strong>: delete operations</li>
-         * <li><strong>command</strong>: protocol commands such as the aggregate method</li>
+         * <li><strong>admin</strong>: O&amp;M and management operations.</li>
+         * <li><strong>slow</strong>: Slow queries.</li>
+         * <li><strong>query</strong>: Query operations.</li>
+         * <li><strong>insert</strong>: Insert operations.  </li>
+         * <li><strong>update</strong>: Update operations.  </li>
+         * <li><strong>delete</strong>: Delete operations. </li>
+         * <li><strong>command</strong>: Protocol commands, such as the aggregate method.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -241,12 +241,18 @@ public class ModifyAuditLogFilterRequest extends Request {
         /**
          * <p>The role of the node in the instance. Valid values:</p>
          * <ul>
-         * <li><strong>primary</strong></li>
-         * <li><strong>secondary</strong></li>
+         * <li><strong>db</strong>: shard node</li>
+         * <li><strong>mongos</strong>: mongos node</li>
          * </ul>
+         * <blockquote>
+         * <p>Metric description</p>
+         * <ul>
+         * <li>This parameter applies only to sharded cluster instances. If this parameter is left empty, the default value db is used. You do not need to specify this parameter for replica set instances.</li>
+         * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>primary</p>
+         * <p>db</p>
          */
         public Builder roleType(String roleType) {
             this.putQueryParameter("RoleType", roleType);

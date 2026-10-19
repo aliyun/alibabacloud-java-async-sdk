@@ -336,13 +336,15 @@ public class TagResourcesRequest extends Request {
              * <p>The key of tag.</p>
              * <p>N specifies the serial number of the tag. The following example shows how to calculate consumption intervals:</p>
              * <ul>
-             * <li><strong>Tag.1.Key</strong> specifies the key of the first tag.</li>
-             * <li><strong>Tag.2.Key</strong> specifies the key of the second tag.</li>
+             * <li><p><strong>Tag.1.Key</strong> specifies the key of the first tag.</p>
+             * </li>
+             * <li><p><strong>Tag.2.Key</strong> specifies the key of the second tag.</p>
+             * </li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>Development team</p>
+             * <p>Development group</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -353,13 +355,15 @@ public class TagResourcesRequest extends Request {
              * <p>The value of tag.</p>
              * <p>N specifies the serial number of the tag. The following example shows how to calculate consumption intervals:</p>
              * <ul>
-             * <li><strong>Tag.1.Value</strong> specifies the value of the first tag.</li>
-             * <li><strong>Tag.2.Value</strong> specifies the value of the second tag.</li>
+             * <li><p><strong>Tag.1.Value</strong> specifies the value of the first tag.</p>
+             * </li>
+             * <li><p><strong>Tag.2.Value</strong> specifies the value of the second tag.</p>
+             * </li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>MongoDB 4.0 environment</p>
+             * <p>4.0 environment</p>
              */
             public Builder value(String value) {
                 this.value = value;

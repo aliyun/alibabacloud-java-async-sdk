@@ -238,10 +238,10 @@ public class TransformInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable automatic payment. Valid values:</p>
+         * <p>Specifies whether automatic payment is enabled for the order. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: enables automatic payment for the order.</li>
+         * <li><strong>false</strong>: requires manual payment for the order.</li>
          * </ul>
          * <blockquote>
          * <p>Default value: <strong>true</strong>.</p>
@@ -257,10 +257,10 @@ public class TransformInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable auto-renewal. Valid values:</p>
+         * <p>Specifies whether to enable auto-renewal upon expiration. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: enables auto-renewal.</li>
+         * <li><strong>false</strong>: disables auto-renewal.</li>
          * </ul>
          * <blockquote>
          * <p>Default value: <strong>false</strong>.</p>
@@ -276,7 +276,7 @@ public class TransformInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * <p>The business information. This is an additional parameter.</p>
+         * <p>The additional parameter for business information.</p>
          * 
          * <strong>example:</strong>
          * <p>{“ActivityId&quot;:&quot;000000000&quot;}</p>
@@ -290,8 +290,8 @@ public class TransformInstanceChargeTypeRequest extends Request {
         /**
          * <p>The billing method of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>PrePaid:</strong> subscription.</li>
-         * <li><strong>PostPaid:</strong> pay-as-you-go.</li>
+         * <li><strong>PrePaid</strong>: subscription.</li>
+         * <li><strong>PostPaid</strong>: pay-as-you-go.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -305,10 +305,14 @@ public class TransformInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * <p>The coupon code. Default value: <code>youhuiquan_promotion_option_id_for_blank</code>.</p>
+         * <p>Specifies whether to use a coupon. Valid values:</p>
+         * <ul>
+         * <li><strong>default</strong> or <strong>null</strong> (default): uses a coupon.</li>
+         * <li><strong>youhuiquan_promotion_option_id_for_blank</strong>: does not use a coupon.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
-         * <p>youhuiquan_promotion_option_id_for_blank</p>
+         * <p>default</p>
          */
         public Builder couponNo(String couponNo) {
             this.putQueryParameter("CouponNo", couponNo);
@@ -317,7 +321,7 @@ public class TransformInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -348,7 +352,13 @@ public class TransformInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * <p>The subscription duration of the instance. Unit: months. Valid values: <strong>1, 2, 3, 4, 5, 6, 7, 8, 9</strong>****, <strong>12</strong>, <strong>24</strong>, and <strong>36</strong>.</p>
+         * <p>The subscription duration. Valid values:</p>
+         * <ul>
+         * <li><p>If PricingCycle is set to Month: <strong>1</strong> to <strong>9</strong>.</p>
+         * </li>
+         * <li><p>If PricingCycle is set to Year: <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, and <strong>5</strong>.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -360,13 +370,12 @@ public class TransformInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * <p>实例付费时长单位
-         * 取值说明：</p>
+         * <p>The unit of the subscription duration. Valid values:</p>
          * <ul>
-         * <li><strong>Month：</strong> 月</li>
-         * <li><strong>Year：</strong> 年</li>
+         * <li><strong>Month</strong>: months.</li>
+         * <li><strong>Year</strong>: years.</li>
          * </ul>
-         * <p>默认值：Month</p>
+         * <p>Default value: Month.</p>
          * 
          * <strong>example:</strong>
          * <p>Month</p>

@@ -159,7 +159,7 @@ public class DescribeBackupStorageRequest extends Request {
         /**
          * <p>The ID of the shard node in the sharded cluster instance.</p>
          * <blockquote>
-         * <p> This parameter is required only when the <strong>DBInstanceId</strong> parameter is set to the ID of a sharded cluster instance.</p>
+         * <p>This parameter is required if the <strong>DBInstanceId</strong> parameter specifies the ID of a sharded cluster instance.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -190,7 +190,7 @@ public class DescribeBackupStorageRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to query the most recent region list.</p>
+         * <p>The ID of the region where the instance is located. Call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to query the region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-bejing</p>

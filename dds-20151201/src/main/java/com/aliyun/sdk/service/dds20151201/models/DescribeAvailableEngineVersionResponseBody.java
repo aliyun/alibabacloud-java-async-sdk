@@ -67,10 +67,7 @@ public class DescribeAvailableEngineVersionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of one or more engine versions to which an ApsaraDB for MongoDB instance can be upgraded.</p>
-         * <blockquote>
-         * <p> An empty string is returned if the latest version is being used.</p>
-         * </blockquote>
+         * EngineVersions.
          */
         public Builder engineVersions(EngineVersions engineVersions) {
             this.engineVersions = engineVersions;

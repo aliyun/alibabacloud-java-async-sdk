@@ -159,10 +159,10 @@ public class MigrateToOtherZoneRequest extends Request {
         } 
 
         /**
-         * <p>The time when the instance is migrated to the destination zone. Valid values:</p>
+         * <p>The effective period for the zone migration. Valid values:</p>
          * <ul>
-         * <li><strong>Immediately</strong> (default): The instance is migrated immediately.</li>
-         * <li><strong>MaintainTime</strong>: The instance is migrated during its maintenance window.</li>
+         * <li><strong>Immediately</strong> (default): The migration becomes active immediately.</li>
+         * <li><strong>MaintainTime</strong>: The migration becomes active within the O&amp;M window of the instance.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -175,9 +175,9 @@ public class MigrateToOtherZoneRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <blockquote>
-         * <p> If the network type of the instance is VPC, you must specify the <strong>Vswitch</strong> parameter .</p>
+         * <p>If the network type of the instance is VPC, you must also specify the <strong>VSwitchId</strong> parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -229,7 +229,7 @@ public class MigrateToOtherZoneRequest extends Request {
         /**
          * <p>The ID of the vSwitch in the destination zone.</p>
          * <blockquote>
-         * <p> This parameter is valid and required only when the network type of the instance is VPC.</p>
+         * <p>This parameter is available and required only when the network type of the instance is VPC.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -242,11 +242,11 @@ public class MigrateToOtherZoneRequest extends Request {
         }
 
         /**
-         * <p>The ID of the destination zone to which you want to migrate the ApsaraDB for MongoDB instance.</p>
+         * <p>The ID of the destination zone.</p>
          * <blockquote>
          * <ul>
-         * <li>The destination and source zones must be in one region.</li>
-         * <li>You can call <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> to query the zone IDs.</li>
+         * <li>The destination zone must be in the same region as the current zone of the instance.</li>
+         * <li>You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query zone IDs.</li>
          * </ul>
          * </blockquote>
          * <p>This parameter is required.</p>

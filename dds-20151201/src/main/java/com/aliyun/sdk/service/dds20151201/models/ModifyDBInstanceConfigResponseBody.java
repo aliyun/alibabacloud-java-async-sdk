@@ -54,7 +54,10 @@ public class ModifyDBInstanceConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E466EFD6-2AD2-xxxx-A1A6-C7AFA1B323E1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

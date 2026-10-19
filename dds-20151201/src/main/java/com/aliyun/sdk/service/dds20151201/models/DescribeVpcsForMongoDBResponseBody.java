@@ -106,7 +106,10 @@ public class DescribeVpcsForMongoDBResponseBody extends TeaModel {
         } 
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +117,10 @@ public class DescribeVpcsForMongoDBResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +128,10 @@ public class DescribeVpcsForMongoDBResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>53924AF0-1628-5AA2-9C95-D4**********</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,10 @@ public class DescribeVpcsForMongoDBResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -138,7 +150,7 @@ public class DescribeVpcsForMongoDBResponseBody extends TeaModel {
         }
 
         /**
-         * Vpcs.
+         * <p>The list of VPCs.</p>
          */
         public Builder vpcs(java.util.List<Vpcs> vpcs) {
             this.vpcs = vpcs;
@@ -282,7 +294,7 @@ public class DescribeVpcsForMongoDBResponseBody extends TeaModel {
             } 
 
             /**
-             * CidrBlock.
+             * <p>The CIDR block of the vSwitch.</p>
              */
             public Builder cidrBlock(String cidrBlock) {
                 this.cidrBlock = cidrBlock;
@@ -290,7 +302,10 @@ public class DescribeVpcsForMongoDBResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p><strong>[Deprecated]</strong> This parameter is deprecated and no value is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -298,7 +313,10 @@ public class DescribeVpcsForMongoDBResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p><strong>[Deprecated]</strong> This parameter is deprecated and no value is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -306,7 +324,14 @@ public class DescribeVpcsForMongoDBResponseBody extends TeaModel {
             }
 
             /**
-             * IsDefault.
+             * <p>Indicates whether the vSwitch is the default vSwitch. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The vSwitch is the default vSwitch.</li>
+             * <li><strong>false</strong>: The vSwitch is not the default vSwitch.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -314,7 +339,10 @@ public class DescribeVpcsForMongoDBResponseBody extends TeaModel {
             }
 
             /**
-             * IzNo.
+             * <p>The active zone to which the vSwitch belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-i</p>
              */
             public Builder izNo(String izNo) {
                 this.izNo = izNo;
@@ -322,7 +350,10 @@ public class DescribeVpcsForMongoDBResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the vSwitch. <strong>Available</strong> indicates that the vSwitch is active.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -330,7 +361,7 @@ public class DescribeVpcsForMongoDBResponseBody extends TeaModel {
             }
 
             /**
-             * <p>VSwitch ID。</p>
+             * <p>The vSwitch ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-bp*******************</p>
@@ -341,7 +372,10 @@ public class DescribeVpcsForMongoDBResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchName.
+             * <p>The name of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-name</p>
              */
             public Builder vSwitchName(String vSwitchName) {
                 this.vSwitchName = vSwitchName;
@@ -525,7 +559,10 @@ public class DescribeVpcsForMongoDBResponseBody extends TeaModel {
             } 
 
             /**
-             * AliUid.
+             * <p><strong>[Deprecated]</strong> This parameter is deprecated and no value is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder aliUid(String aliUid) {
                 this.aliUid = aliUid;
@@ -533,7 +570,10 @@ public class DescribeVpcsForMongoDBResponseBody extends TeaModel {
             }
 
             /**
-             * Bid.
+             * <p><strong>[Deprecated]</strong> This parameter is deprecated and no value is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder bid(String bid) {
                 this.bid = bid;
@@ -541,7 +581,7 @@ public class DescribeVpcsForMongoDBResponseBody extends TeaModel {
             }
 
             /**
-             * CidrBlock.
+             * <p>The CIDR block of the VPC.</p>
              */
             public Builder cidrBlock(String cidrBlock) {
                 this.cidrBlock = cidrBlock;
@@ -549,7 +589,10 @@ public class DescribeVpcsForMongoDBResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p><strong>[Deprecated]</strong> This parameter is deprecated and no value is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -557,7 +600,10 @@ public class DescribeVpcsForMongoDBResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p><strong>[Deprecated]</strong> This parameter is deprecated and no value is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -565,7 +611,16 @@ public class DescribeVpcsForMongoDBResponseBody extends TeaModel {
             }
 
             /**
-             * IsDefault.
+             * <p>Indicates whether the VPC is the default VPC. Valid values:</p>
+             * <ul>
+             * <li><p><strong>true</strong>: Yes.</p>
+             * </li>
+             * <li><p><strong>false</strong>: No.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -573,7 +628,10 @@ public class DescribeVpcsForMongoDBResponseBody extends TeaModel {
             }
 
             /**
-             * RegionNo.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionNo(String regionNo) {
                 this.regionNo = regionNo;
@@ -581,7 +639,10 @@ public class DescribeVpcsForMongoDBResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the VPC. <strong>Available</strong> indicates that the VPC is available.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -589,7 +650,7 @@ public class DescribeVpcsForMongoDBResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchs.
+             * <p>The list of vSwitches.</p>
              */
             public Builder vSwitchs(java.util.List<VSwitchs> vSwitchs) {
                 this.vSwitchs = vSwitchs;
@@ -597,7 +658,7 @@ public class DescribeVpcsForMongoDBResponseBody extends TeaModel {
             }
 
             /**
-             * <p>VPC ID。</p>
+             * <p>The VPC ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-2zep2pepkthg5ueal****</p>
@@ -608,7 +669,10 @@ public class DescribeVpcsForMongoDBResponseBody extends TeaModel {
             }
 
             /**
-             * VpcName.
+             * <p>The name of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-name</p>
              */
             public Builder vpcName(String vpcName) {
                 this.vpcName = vpcName;

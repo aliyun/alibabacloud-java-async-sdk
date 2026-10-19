@@ -180,7 +180,18 @@ public class DescribeShardingNetworkAddressRequest extends Request {
         }
 
         /**
-         * NetworkType.
+         * <p>The network type. Valid values:</p>
+         * <ul>
+         * <li><p><strong>VPC</strong>: virtual private cloud.</p>
+         * </li>
+         * <li><p><strong>Classic</strong>: classic network.</p>
+         * </li>
+         * <li><p><strong>Public</strong>: public network.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder networkType(String networkType) {
             this.putQueryParameter("NetworkType", networkType);
@@ -189,9 +200,9 @@ public class DescribeShardingNetworkAddressRequest extends Request {
         }
 
         /**
-         * <p>The ID of the mongos, shard, or Configserver node in the sharded cluster instance.</p>
+         * <p>The ID of a mongos, shard, or ConfigServer node in the sharded cluster instance.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to view the ID of the mongos, shard, or Configserver node.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to query the IDs of mongos, shard, and ConfigServer nodes.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

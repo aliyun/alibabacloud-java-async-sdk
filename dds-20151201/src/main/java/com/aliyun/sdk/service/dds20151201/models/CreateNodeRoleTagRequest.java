@@ -153,6 +153,7 @@ public class CreateNodeRoleTagRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -201,7 +202,15 @@ public class CreateNodeRoleTagRequest extends Request {
         }
 
         /**
-         * ShardList.
+         * <p>The shard node ID.</p>
+         * <blockquote>
+         * <ul>
+         * <li>This parameter is available only when you create a role tag for a shard node of a sharded cluster instance.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>d-l5xf98b78b9fxxxx,d-l5xf98b7sf9fxxxx</p>
          */
         public Builder shardList(String shardList) {
             this.putQueryParameter("ShardList", shardList);

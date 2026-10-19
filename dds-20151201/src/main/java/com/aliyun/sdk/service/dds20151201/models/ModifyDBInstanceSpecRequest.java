@@ -22,6 +22,10 @@ public class ModifyDBInstanceSpecRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AlignPrimaryZone")
+    private Boolean alignPrimaryZone;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AutoPay")
     private Boolean autoPay;
 
@@ -114,6 +118,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
     private ModifyDBInstanceSpecRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.alignPrimaryZone = builder.alignPrimaryZone;
         this.autoPay = builder.autoPay;
         this.businessInfo = builder.businessInfo;
         this.couponNo = builder.couponNo;
@@ -156,6 +161,13 @@ public class ModifyDBInstanceSpecRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return alignPrimaryZone
+     */
+    public Boolean getAlignPrimaryZone() {
+        return this.alignPrimaryZone;
     }
 
     /**
@@ -314,6 +326,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyDBInstanceSpecRequest, Builder> {
         private String regionId; 
+        private Boolean alignPrimaryZone; 
         private Boolean autoPay; 
         private String businessInfo; 
         private String couponNo; 
@@ -344,6 +357,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
         private Builder(ModifyDBInstanceSpecRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.alignPrimaryZone = request.alignPrimaryZone;
             this.autoPay = request.autoPay;
             this.businessInfo = request.businessInfo;
             this.couponNo = request.couponNo;
@@ -378,10 +392,20 @@ public class ModifyDBInstanceSpecRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable automatic payment. Valid values:</p>
+         * <p>Specifies whether to automatically align the primary node to the primary zone for a multi-zone instance after operations such as configuration changes. If you choose not to align the node, one primary/secondary switchover (transient disconnection) is avoided. Default value: true (aligned).</p>
+         */
+        public Builder alignPrimaryZone(Boolean alignPrimaryZone) {
+            this.putQueryParameter("AlignPrimaryZone", alignPrimaryZone);
+            this.alignPrimaryZone = alignPrimaryZone;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to enable automatic payment for the instance. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong> (default): enables automatic payment. Make sure that your Alibaba Cloud account has a sufficient balance.</li>
-         * <li><strong>false</strong>: disables automatic payment. You can perform the following operations to pay for the instance: Log on to the ApsaraDB for MongoDB console. In the upper-right corner of the page, choose <strong>Expenses</strong> &gt; <strong>User Center</strong>. In the left-side navigation pane, choose <strong>Order Management</strong> &gt; <strong>Order</strong>. On the <strong>Orders for Services</strong> tab, find the order and pay for the order.</li>
+         * <li><strong>true</strong>: enables automatic payment. This is the default value. Make sure that your account has sufficient balance.
+         * &lt;props=&quot;china&quot;&gt;- <strong>false</strong>: disables automatic payment. You must manually pay for the order in the console. Log on to the ApsaraDB for MongoDB console. In the upper-right corner of the page, choose <strong>Expenses</strong> &gt; <strong>Expenses and Costs</strong>. In the left-side navigation pane, choose <strong>Orders</strong> &gt; <strong>My Orders</strong>. On the <strong>Orders</strong> tab, find the order and complete the payment.
+         * &lt;props=&quot;intl&quot;&gt;- <strong>false</strong>: disables automatic payment. You must manually pay for the order in the console. Log on to the ApsaraDB for MongoDB console. In the upper-right corner of the page, choose <strong>Expenses</strong> &gt; <strong>Expenses and Costs</strong>. In the left-side navigation pane, click <strong>Order Management</strong>. On the <strong>Orders</strong> page, find the order and complete the payment.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -406,10 +430,14 @@ public class ModifyDBInstanceSpecRequest extends Request {
         }
 
         /**
-         * <p>The coupon code. Default value: <code>youhuiquan_promotion_option_id_for_blank</code>.</p>
+         * <p>Specifies whether to use a coupon. Valid values:</p>
+         * <ul>
+         * <li><strong>default</strong> or <strong>null</strong>: uses a coupon. This is the default value.</li>
+         * <li><strong>youhuiquan_promotion_option_id_for_blank</strong>: does not use a coupon.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
-         * <p>youhuiquan_promotion_option_id_for_blank</p>
+         * <p>default</p>
          */
         public Builder couponNo(String couponNo) {
             this.putQueryParameter("CouponNo", couponNo);
@@ -418,9 +446,14 @@ public class ModifyDBInstanceSpecRequest extends Request {
         }
 
         /**
-         * <p>The instance type. For more information, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>. You can also call the <a href="https://help.aliyun.com/document_detail/149719.html">DescribeAvailableResource</a> operation to view instance types.</p>
+         * <p>The instance type. &lt;props=&quot;intl&quot;&gt;<ph>For more information, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>. You can also call the <a href="https://help.aliyun.com/document_detail/149719.html">DescribeAvailableResource</a> operation to query instance types.</ph>
+         * &lt;props=&quot;china&quot;&gt;</p>
+         * <ul>
+         * <li>For standalone instances and replica set instances, this parameter specifies the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>. You can also call the <a href="https://help.aliyun.com/document_detail/149719.html">DescribeAvailableResource</a> operation to query the instance types of standalone instances and replica set instances.</li>
+         * <li>For serverless instances, this parameter specifies the compute specifications of the instance. Valid values: 100 to 8000.</li>
+         * </ul>
          * <blockquote>
-         * <p>You must specify at least one of the DBInstanceClass and <strong>DBInstanceStorage</strong> parameters.</p>
+         * <p>You must specify at least one of the <strong>DBInstanceClass</strong> and <strong>DBInstanceStorage</strong> parameters.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -433,7 +466,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -446,15 +479,18 @@ public class ModifyDBInstanceSpecRequest extends Request {
         }
 
         /**
-         * <p>The storage capacity of the instance. Valid values: 10 to 3000. The value must be a multiple of 10. Unit: GB. The values that can be specified for this parameter are subject to the instance types. For more information, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.</p>
-         * <blockquote>
-         * </blockquote>
+         * <p>Instance storage space of the instance. &lt;props=&quot;intl&quot;&gt;<ph>Valid values: 10 to 3000. Unit: GB. The step size is 10 GB. The valid values are subject to the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.</ph></p>
+         * <p>&lt;props=&quot;china&quot;&gt;</p>
          * <ul>
-         * <li><p>You must specify at least one of the DBInstanceStorage and <strong>DBInstanceClass</strong> parameters.</p>
-         * </li>
-         * <li><p>Storage capacity can be scaled down only for pay-as-you-go replica set instances. The new storage capacity you specify must be greater than the used storage capacity.</p>
-         * </li>
+         * <li>For standalone instances and replica set instances, valid values are 10 to 3000. Unit: GB. The step size is 10 GB. The valid values are subject to the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.</li>
+         * <li>For serverless instances, valid values are 1 to 100. Unit: GB. The step size is 1 GB.</li>
          * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>You must specify at least one of the <strong>DBInstanceStorage</strong> and <strong>DBInstanceClass</strong> parameters.</li>
+         * <li>You cannot downgrade instance storage space.</li>
+         * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -466,10 +502,10 @@ public class ModifyDBInstanceSpecRequest extends Request {
         }
 
         /**
-         * <p>The time when the changed configurations take effect. Valid values:</p>
+         * <p>The time when the configuration change takes effect. Valid values:</p>
          * <ul>
-         * <li><strong>Immediately</strong> (default): The configurations immediately take effect.</li>
-         * <li><strong>MaintainTime</strong>: The configurations take effect during the maintenance window of the instance.</li>
+         * <li><strong>Immediately</strong>: takes effect immediately. This is the default value.</li>
+         * <li><strong>MaintainTime</strong>: takes effect during the maintenance window of the instance.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -482,22 +518,10 @@ public class ModifyDBInstanceSpecRequest extends Request {
         }
 
         /**
-         * <p>The additional parameter.</p>
-         * <p>Valid values:</p>
+         * <p>The additional parameter. Valid values:</p>
          * <ul>
-         * <li><p>async</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>sync</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
+         * <li><strong>async</strong>: returns the result after the configuration change order is created.</li>
+         * <li><strong>sync</strong>: returns the result when the configuration change is delivered after the order is created.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -510,13 +534,13 @@ public class ModifyDBInstanceSpecRequest extends Request {
         }
 
         /**
-         * <p>The type of the configuration change. Valid values:</p>
+         * <p>The type of configuration change. Valid values:</p>
          * <ul>
-         * <li><strong>UPGRADE</strong></li>
-         * <li><strong>DOWNGRADE</strong> (default)</li>
+         * <li><strong>UPGRADE</strong>: upgrades the configurations. This is the default value.</li>
+         * <li><strong>DOWNGRADE</strong>: downgrades the configurations.</li>
          * </ul>
          * <blockquote>
-         * <p> This parameter can be configured only when the billing method of the instance is subscription.</p>
+         * <p>You can specify this parameter only when the instance uses the subscription billing method.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -548,9 +572,9 @@ public class ModifyDBInstanceSpecRequest extends Request {
 
         /**
          * <p>The number of read-only nodes. Valid values: <strong>0</strong> to <strong>5</strong>.</p>
-         * <p>If your instance has only <strong>Classic Network</strong> and <strong>VPC</strong> endpoints, you must apply for a public endpoint or release the classic network endpoint for the instance before you can change the <strong>Read-only Nodes</strong> value.</p>
+         * <p>If the instance is connected only over the <strong>classic network</strong> and a <strong>VPC</strong>, you must enable Internet access or release the classic network before you can change the <strong>number of read-only nodes</strong>.</p>
          * <blockquote>
-         * <p>You can go to the <strong>Database Connections</strong> page to view the types of networks that are enabled.</p>
+         * <p>You can log on to the ApsaraDB for MongoDB console and view the enabled network types on the <strong>Database Connections</strong> page.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -563,13 +587,14 @@ public class ModifyDBInstanceSpecRequest extends Request {
         }
 
         /**
-         * <p>The number of nodes in the instance.</p>
+         * <p>The number of nodes in the instance. Default value: 3.</p>
          * <ul>
-         * <li>Valid values for replica set instances: <strong>3</strong>, <strong>5</strong>, and <strong>7</strong></li>
-         * <li>Valid values for standalone instances: <strong>1</strong></li>
+         * <li>For a replica set instance, valid values are <strong>3</strong>, <strong>5</strong>, and <strong>7</strong>.</li>
+         * <li>For a standalone instance, the value is fixed to <strong>1</strong>.</li>
+         * <li>For a replica set instance that uses shared storage (supported only on the Alibaba Cloud China site), the value is fixed to <strong>2</strong>.</li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is not required for a serverless instance which is only available on the China site (aliyun.com).</p>
+         * <p>You do not need to specify this parameter for a serverless instance (supported only on the Alibaba Cloud China site).</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -600,7 +625,10 @@ public class ModifyDBInstanceSpecRequest extends Request {
         }
 
         /**
-         * SearchNodeClass.
+         * <p>The specifications of the search node for the configuration change.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mdb.shard.2x.xlarge.d</p>
          */
         public Builder searchNodeClass(String searchNodeClass) {
             this.putQueryParameter("SearchNodeClass", searchNodeClass);
@@ -609,7 +637,10 @@ public class ModifyDBInstanceSpecRequest extends Request {
         }
 
         /**
-         * SearchNodeCount.
+         * <p>The number of search nodes for the configuration change.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder searchNodeCount(Long searchNodeCount) {
             this.putQueryParameter("SearchNodeCount", searchNodeCount);
@@ -618,7 +649,10 @@ public class ModifyDBInstanceSpecRequest extends Request {
         }
 
         /**
-         * SearchNodeStorage.
+         * <p>The storage capacity of the search node for the configuration change.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder searchNodeStorage(Long searchNodeStorage) {
             this.putQueryParameter("SearchNodeStorage", searchNodeStorage);
@@ -627,7 +661,22 @@ public class ModifyDBInstanceSpecRequest extends Request {
         }
 
         /**
-         * TargetHiddenZoneId.
+         * <p>The destination zone for the hidden node when you cloud disk instance across zones and change its configurations at the same time.</p>
+         * <blockquote>
+         * <p>Notice: This parameter is supported only for instances that use cloud disks.</notice>
+         * Notice: The value of this parameter cannot be the same as the value of the TargetZoneId or TargetSecondaryZoneId parameter.</notice></p>
+         * </blockquote>
+         * <blockquote>
+         * <ul>
+         * <li>You must specify this parameter only when you cloud disk instance across zones and change its configurations at the same time.</li>
+         * <li>This parameter is available only for multi-zone migration.</li>
+         * <li>The destination zone and the current zone of the instance must be in the same region.</li>
+         * <li>You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query zone IDs.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-i</p>
          */
         public Builder targetHiddenZoneId(String targetHiddenZoneId) {
             this.putQueryParameter("TargetHiddenZoneId", targetHiddenZoneId);
@@ -636,7 +685,20 @@ public class ModifyDBInstanceSpecRequest extends Request {
         }
 
         /**
-         * TargetSecondaryZoneId.
+         * <p>The destination zone for the secondary node when you cloud disk instance across zones and change its configurations at the same time.</p>
+         * <blockquote>
+         * <p>Notice: This parameter is supported only for instances that use cloud disks.</notice>
+         * Notice: The value of this parameter cannot be the same as the value of the TargetZoneId or TargetHiddenZoneId parameter.</notice></p>
+         * <ul>
+         * <li>You must specify this parameter only when you cloud disk instance across zones and change its configurations at the same time.</li>
+         * <li>This parameter is available only for multi-zone migration.</li>
+         * <li>The destination zone and the current zone of the instance must be in the same region.</li>
+         * <li>You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query zone IDs.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
          */
         public Builder targetSecondaryZoneId(String targetSecondaryZoneId) {
             this.putQueryParameter("TargetSecondaryZoneId", targetSecondaryZoneId);
@@ -645,7 +707,16 @@ public class ModifyDBInstanceSpecRequest extends Request {
         }
 
         /**
-         * TargetVswitchId.
+         * <p>The ID of the destination vSwitch when you cloud disk instance across zones and change its configurations at the same time.</p>
+         * <blockquote>
+         * <p>Notice: This parameter is supported only for instances that use cloud disks.</notice></p>
+         * <ul>
+         * <li>You must specify this parameter only when you cloud disk instance across zones and change its configurations at the same time.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1buy0h9myt5i9e7****</p>
          */
         public Builder targetVswitchId(String targetVswitchId) {
             this.putQueryParameter("TargetVswitchId", targetVswitchId);
@@ -654,7 +725,19 @@ public class ModifyDBInstanceSpecRequest extends Request {
         }
 
         /**
-         * TargetZoneId.
+         * <p>The destination zone for instance migration when you migrate the instance across zones and change its configurations at the same time.</p>
+         * <blockquote>
+         * <p>Notice: This parameter is supported only for cloud disk instances.</notice>
+         * Notice: The value of this parameter cannot be the same as the value of the TargetSecondaryZoneId or TargetHiddenZoneId parameter.</notice></p>
+         * <ul>
+         * <li>You must specify this parameter only when you migrate the instance across zones and change its configurations at the same time.</li>
+         * <li>The destination zone and the current zone of the instance must be in the same region.</li>
+         * <li>You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query zone IDs.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-j</p>
          */
         public Builder targetZoneId(String targetZoneId) {
             this.putQueryParameter("TargetZoneId", targetZoneId);

@@ -301,18 +301,18 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The frequency at which high-frequency backup is created. Valid values:</p>
+         * <p>The high-frequency backup frequency. Valid values:</p>
          * <ul>
-         * <li><strong>-1</strong>: High-frequency backup is disabled.</li>
-         * <li><strong>15</strong>: every 15 minutes.</li>
-         * <li><strong>30</strong>: every 30 minutes.</li>
-         * <li><strong>60</strong>: every hour.</li>
-         * <li><strong>120</strong>: every 2 hours.</li>
-         * <li><strong>180</strong>: every 3 hours.</li>
-         * <li><strong>240</strong>: every 4 hours.</li>
-         * <li><strong>360</strong>: every 6 hours.</li>
-         * <li><strong>480</strong>: every 8 hours.</li>
-         * <li><strong>720</strong>: every 12 hours.</li>
+         * <li><strong>-1</strong>: high-frequency backup is disabled</li>
+         * <li><strong>15</strong>: every 15 minutes</li>
+         * <li><strong>30</strong>: every 30 minutes</li>
+         * <li><strong>60</strong>: every 1 hour</li>
+         * <li><strong>120</strong>: every 2 hours</li>
+         * <li><strong>180</strong>: every 3 hours</li>
+         * <li><strong>240</strong>: every 4 hours</li>
+         * <li><strong>360</strong>: every 6 hours</li>
+         * <li><strong>480</strong>: every 8 hours</li>
+         * <li><strong>720</strong>: every 12 hours</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -324,7 +324,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The retention period of the backup data. Unit: day.</p>
+         * <p>The backup retention period in days.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -335,13 +335,13 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The backup retention policy configured for the instance. Valid values:</p>
-         * <ol>
-         * <li>0: All backup sets are immediately deleted when the instance is released.</li>
-         * <li>1: Automatic backup is performed and the backup set is retained for a long period of time when the instance is released.</li>
-         * <li>2: Automatic backup is performed and all backup sets are retained for a long period of time when the instance is released.</li>
-         * </ol>
-         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/2779111.html">Retain the backup files of an ApsaraDB for MongoDB instance for a long period of time</a>.</p>
+         * <p>The backup data retention policy. Valid values:</p>
+         * <ul>
+         * <li>0: All backup sets of the instance are immediately deleted when the instance is released.</li>
+         * <li>1: An automatic backup is created when the instance is released, and the backup set is retained for long-term retention (LTR).</li>
+         * <li>2: An automatic backup is created when the instance is released, and all backup sets of the cluster are retained for long-term retention (LTR).</li>
+         * </ul>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/2779111.html">Long-term retention backup</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -352,17 +352,19 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The retention period of Cross-regional backup.
-         * Valid values:</p>
+         * <p>The days of the week when geo-redundancy backups are performed. Valid values:</p>
          * <ul>
-         * <li><strong>Monday</strong></li>
-         * <li><strong>Tuesday</strong></li>
-         * <li><strong>Wednesday</strong></li>
-         * <li><strong>Thursday</strong></li>
-         * <li><strong>Friday</strong></li>
-         * <li><strong>Saturday</strong></li>
-         * <li><strong>Sunday</strong></li>
+         * <li>Monday: Monday</li>
+         * <li>Tuesday: Tuesday</li>
+         * <li>Wednesday: Wednesday</li>
+         * <li>Thursday: Thursday</li>
+         * <li>Friday: Friday</li>
+         * <li>Saturday: Saturday</li>
+         * <li>Sunday: Sunday</li>
          * </ul>
+         * <blockquote>
+         * <p>Required for geo-redundancy backups.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>Monday</p>
@@ -373,10 +375,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The retention type of Cross-regional  log backup.</p>
+         * <p>The retention type for cross-region log backups. Valid values:</p>
          * <ul>
-         * <li>delay : retain the backup for a period of time.</li>
-         * <li>never : retain the backup permanently.</li>
+         * <li>delay: retained for a specified period</li>
+         * <li>never: never expires</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -388,7 +390,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The retention time of Cross-regional log backup.</p>
+         * <p>The retention period for cross-region log backups.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>
@@ -399,10 +401,12 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The retention type of Cross-regional backup.</p>
+         * <p>The retention type for geo-redundancy backups. Valid values:</p>
          * <ul>
-         * <li>delay : retain the backup for a period of time.</li>
-         * <li>never : retain the backup permanently.</li>
+         * <li><p>delay: retained for a specified period</p>
+         * </li>
+         * <li><p>never: never expires</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -414,7 +418,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The retention time of Cross-regional backup.</p>
+         * <p>The retention period for geo-redundancy backups.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>
@@ -425,7 +429,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The region ID of the cross-regional backup..</p>
+         * <p>The region where geo-redundancy backups are stored.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shenzhen</p>
@@ -436,10 +440,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the log backup feature is enabled. Valid values:</p>
+         * <p>Specifies whether to enable log backup. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong> (default): The log backup feature is disabled.</li>
-         * <li><strong>1</strong>: The log backup feature is enabled.</li>
+         * <li><strong>0</strong>: disabled (default)</li>
+         * <li><strong>1</strong>: enabled</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -451,11 +455,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether to turn on cross-regional log backup.</p>
+         * <p>Specifies whether cross-region log backup is enabled.</p>
+         * <blockquote>
+         * <p>Required for geo-redundancy backups.</p>
          * <ul>
-         * <li>1: turn on . Used for sharded cluster.</li>
-         * <li>0: turn off. Used for replicate set.</li>
+         * <li>1: enabled (must be set to 1 for sharded cluster instances)</li>
+         * <li>0: disabled (must be set to 0 for replica set instances)</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -466,7 +473,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The retention period of high-frequency backups. Unit: day.</p>
+         * <p>The retention period for high-frequency backups, in days.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -477,7 +484,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of days for which log backups are retained. Valid values: 7 to 730.</p>
+         * <p>The retention period for log backups, in days. Valid values: 7 to 730.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>
@@ -488,15 +495,15 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The day of a week on which to back up data. Valid values:</p>
+         * <p>The backup cycle. Valid values:</p>
          * <ul>
-         * <li><strong>Monday</strong></li>
-         * <li><strong>Tuesday</strong></li>
-         * <li><strong>Wednesday</strong></li>
-         * <li><strong>Thursday</strong></li>
-         * <li><strong>Friday</strong></li>
-         * <li><strong>Saturday</strong></li>
-         * <li><strong>Sunday</strong></li>
+         * <li><strong>Monday</strong>: Monday</li>
+         * <li><strong>Tuesday</strong>: Tuesday</li>
+         * <li><strong>Wednesday</strong>: Wednesday</li>
+         * <li><strong>Thursday</strong>: Thursday</li>
+         * <li><strong>Friday</strong>: Friday</li>
+         * <li><strong>Saturday</strong>: Saturday</li>
+         * <li><strong>Sunday</strong>: Sunday</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -508,7 +515,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time range during which the backup was created. The time follows the ISO 8601 standard in the <em>HH:mm</em>Z-<em>HH:mm</em>Z format. The time is displayed in UTC.</p>
+         * <p>The backup time. The format is <i>HH:mm</i>Z-<i>HH:mm</i>Z (UTC time).</p>
          * 
          * <strong>example:</strong>
          * <p>09:00Z-10:00Z</p>
@@ -519,7 +526,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time of next standard backup.</p>
+         * <p>The time of the next regular backup. The format is <i>yyyy-mm-dd</i>t<i>hh:mm</i>z (UTC time).</p>
          * 
          * <strong>example:</strong>
          * <p>2024-06-19T19:11Z</p>
@@ -530,7 +537,16 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * PreserveOneEachHour.
+         * <p>Specifies whether to enable sparse backup within an hour. Valid values:</p>
+         * <ul>
+         * <li><p>true: When the backup frequency is set to minutes, all snapshots taken within 1 hour from the current time are retained. For snapshots taken more than 1 hour but within 24 hours from the current time, only the first snapshot after the hour is retained.</p>
+         * </li>
+         * <li><p>false: Sparse backup within an hour is disabled. All snapshots within the high-frequency backup retention period are retained.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder preserveOneEachHour(Boolean preserveOneEachHour) {
             this.preserveOneEachHour = preserveOneEachHour;
@@ -538,7 +554,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>5A9464CA-F7DC-5434-90B1-DF7F197C****</p>
@@ -551,8 +567,8 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         /**
          * <p>The snapshot backup type. Valid values:</p>
          * <ul>
-         * <li><strong>Flash</strong>: single-digit second backup</li>
-         * <li><strong>Standard</strong> (default): standard backup</li>
+         * <li><strong>Flash</strong>: backup within seconds</li>
+         * <li><strong>Standard</strong>: standard backup (default)</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -564,7 +580,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The region ID of the instance.</p>
+         * <p>The region where the source instance is deployed.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

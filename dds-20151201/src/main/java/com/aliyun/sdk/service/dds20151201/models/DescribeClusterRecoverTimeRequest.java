@@ -195,7 +195,7 @@ public class DescribeClusterRecoverTimeRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -208,7 +208,15 @@ public class DescribeClusterRecoverTimeRequest extends Request {
         }
 
         /**
-         * DestRegion.
+         * <p>The region where the geo-redundancy backup set resides.</p>
+         * <blockquote>
+         * <ul>
+         * <li>This parameter is required when you query a geo-redundancy backup.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder destRegion(String destRegion) {
             this.putQueryParameter("DestRegion", destRegion);
@@ -244,7 +252,10 @@ public class DescribeClusterRecoverTimeRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-xxxx</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -271,7 +282,15 @@ public class DescribeClusterRecoverTimeRequest extends Request {
         }
 
         /**
-         * SrcRegion.
+         * <p>The region where the source instance of the geo-redundancy backup resides.</p>
+         * <blockquote>
+         * <ul>
+         * <li>This parameter is required when you query a geo-redundancy backup.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder srcRegion(String srcRegion) {
             this.putQueryParameter("SrcRegion", srcRegion);

@@ -419,26 +419,24 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>The frequency at which high-frequency backups are generated. Valid values:</p>
+         * <p>The high-frequency backup frequency. Valid values:</p>
          * <ul>
-         * <li><strong>-1</strong>: High-frequency backup is disabled.</li>
-         * <li><strong>30</strong>: High-frequency backups are generated every 30 minutes.</li>
-         * <li><strong>60</strong>: High-frequency backups are generated every 1 hour.</li>
-         * <li><strong>120</strong>: High-frequency backups are generated every 2 hours.</li>
-         * <li><strong>180</strong>: High-frequency backups are generated every 3 hours.</li>
-         * <li><strong>240</strong>: High-frequency backups are generated every 4 hours.</li>
-         * <li><strong>360</strong>: High-frequency backups are generated every 6 hours.</li>
-         * <li><strong>480</strong>: High-frequency backups are generated every 8 hours.</li>
-         * <li><strong>720</strong>: High-frequency backups are generated every 12 hours.</li>
+         * <li><strong>-1</strong>: Disables high-frequency backups.</li>
+         * <li><strong>30</strong>: Every 30 minutes.</li>
+         * <li><strong>60</strong>: Every 1 hour.</li>
+         * <li><strong>120</strong>: Every 2 hours.</li>
+         * <li><strong>180</strong>: Every 3 hours.</li>
+         * <li><strong>240</strong>: Every 4 hours.</li>
+         * <li><strong>360</strong>: Every 6 hours.</li>
+         * <li><strong>480</strong>: Every 8 hours.</li>
+         * <li><strong>720</strong>: Every 12 hours.</li>
          * </ul>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>If you set the <strong>SnapshotBackupType</strong> parameter to <strong>Standard</strong>, you must fix the value of this parameter to -1.</p>
-         * </li>
-         * <li><p>High-frequency backup takes effect only when you set the <strong>SnapshotBackupType</strong> parameter to <strong>Flash</strong> and this parameter to a value greater than 0.</p>
-         * </li>
+         * <li>If <strong>SnapshotBackupType</strong> is set to <strong>Standard</strong>, this parameter must be set to <strong>-1</strong>.</li>
+         * <li>If <strong>SnapshotBackupType</strong> is set to <strong>Flash</strong> and this parameter is set to a value greater than 0, high-frequency backups take effect.</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>-1</p>
@@ -450,15 +448,13 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>The retention period of full backups.</p>
+         * <p>The number of days for which full backups are retained.</p>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>If your instance is created before September 10, 2021, backups are retained for seven days by default.</p>
-         * </li>
-         * <li><p>If your instance is created after September 10, 2021, backups are retained for 30 days by default.</p>
-         * </li>
+         * <li>For users who created instances before September 10, 2021, the default retention period is 7 days.</li>
+         * <li>For new users who created instances on or after September 10, 2021, the default retention period is 30 days.</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -470,13 +466,16 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>The backup retention policy configured for the instance. Valid values:</p>
+         * <p>The backup data retention policy. Valid values:</p>
          * <ul>
-         * <li>0: All backup sets are immediately deleted when the instance is released.</li>
-         * <li>1: Automatic backup is performed when the instance is released and the backup set is retained for a long period of time.</li>
-         * <li>2: Automatic backup is performed when the instance is released and all backup sets are retained for a long period of time.</li>
+         * <li><p>0: Deletes all backup sets of the instance immediately when the instance is released.</p>
+         * </li>
+         * <li><p>1: An automatic backup is performed when the instance is released, and the backup set is retained for long-term retention (LTR).</p>
+         * </li>
+         * <li><p>2: An automatic backup is performed when the instance is released, and all backup sets of the cluster are retained for long-term retention (LTR).</p>
+         * </li>
          * </ul>
-         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/2779111.html">Retain the backup files of an ApsaraDB for MongoDB instance for a long period of time</a>.</p>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/2779111.html">Long-term retention backups</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -488,25 +487,23 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>The day of the week on which the cross-region backup files are retained. Valid values:</p>
+         * <p>The days of the week when cross-region backup is performed. Valid values:</p>
          * <ol>
-         * <li>Monday</li>
-         * <li>Tuesday</li>
-         * <li>Wednesday</li>
-         * <li>Thursday</li>
-         * <li>Friday</li>
-         * <li>Saturday</li>
-         * <li>Sunday</li>
+         * <li>Monday: Monday.</li>
+         * <li>Tuesday: Tuesday.</li>
+         * <li>Wednesday: Wednesday.</li>
+         * <li>Thursday: Thursday.</li>
+         * <li>Friday: Friday.</li>
+         * <li>Saturday: Saturday.</li>
+         * <li>Sunday: Sunday.</li>
          * </ol>
          * <blockquote>
-         * <p> This parameter is required for a cross-region backup operation.</p>
-         * </blockquote>
+         * <p>This parameter is required for cross-region backup.</p>
          * <ul>
-         * <li><p>Separate multiple values with commas (,).</p>
-         * </li>
-         * <li><p>If you set the SnapshotBackupType parameter to Standard, the parameter value must fall within the value of the PreferredBackupPeriod parameter that specifies the standard backup period.</p>
-         * </li>
+         * <li>If you specify multiple values, separate them with commas (,).</li>
+         * <li>When the backup settings are set to standard backup, the value must be a subset of the PreferredBackupPeriod backup epoch.</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday</p>
@@ -518,13 +515,13 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>The action performed for the cross-region backup policy. Valid values:</p>
+         * <p>The operation policy for cross-region backup. Valid values:</p>
          * <ul>
-         * <li>update: modifies the cross-region backup policy.</li>
-         * <li>delete: deletes the cross-region backup policy.</li>
+         * <li>update: Modifies the cross-region backup policy.</li>
+         * <li>delete: Deletes the cross-region backup policy.</li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is required for a cross-region backup operation.</p>
+         * <p>This parameter is required for cross-region backup.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -537,13 +534,13 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>The retention type of the cross-region log backup files. Valid values:</p>
+         * <p>The retention type for cross-region log backup. Valid values:</p>
          * <ul>
-         * <li>delay: retains the cross-region backup files for a period of time.</li>
-         * <li>never: permanently retains the cross-region backup files.</li>
+         * <li>delay: Retains backups for a specified period.</li>
+         * <li>never: Never expires.</li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is required for a cross-region backup operation.</p>
+         * <p>This parameter is required for cross-region backup.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -556,9 +553,9 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>The retention period of the cross-region log backup files. Valid values: 3 to 1825. Unit: day. The parameter value must be less than or equal to the value of the CrossRetentionValue parameter.</p>
+         * <p>The retention period for cross-region log backup. Valid values: 3 to 1825 days. The value must be less than or equal to the value of CrossRetentionValue.</p>
          * <blockquote>
-         * <p> This parameter is required for a cross-region backup operation.</p>
+         * <p>This parameter is required for cross-region backup.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -571,13 +568,15 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>The retention type of the cross-region backup files. Valid values:</p>
+         * <p>The retention type for cross-region backup. Valid values:</p>
          * <ul>
-         * <li>delay: retains the cross-region backup files for a period of time.</li>
-         * <li>never: permanently retains the cross-region backup files.</li>
+         * <li><p>delay: Retains backups for a specified period.</p>
+         * </li>
+         * <li><p>never: Never expires.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is required for a cross-region backup operation.</p>
+         * <p>This parameter is required for cross-region backup.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -590,15 +589,13 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>The retention period of the cross-region backup files. Valid values: 3 to 1825. Unit: day.</p>
+         * <p>The retention period for cross-region backup. Valid values: 3 to 1825 days.</p>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>This parameter is required for a cross-region backup operation.</p>
-         * </li>
-         * <li><p>This parameter is required when you set the CrossRetentionType parameter to delay.</p>
-         * </li>
+         * <li>This parameter is required for cross-region backup.</li>
+         * <li>This parameter is required and must be specified when CrossRetentionType is set to delay.</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>7</p>
@@ -623,9 +620,9 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>The region in which the backup files are retained.</p>
+         * <p>The region where backups are stored.</p>
          * <blockquote>
-         * <p> This parameter is required for a cross-region backup operation.</p>
+         * <p>This parameter is required for cross-region backup.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -638,10 +635,15 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the log backup feature. Valid values:</p>
+         * <p>Specifies whether to enable log backup. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong> (default): The log backup feature is disabled.</li>
-         * <li><strong>1</strong>: The log backup feature is enabled.</li>
+         * <li><p><strong>0</strong>: Disables log backup. This is the default value.</p>
+         * </li>
+         * <li><p><strong>1</strong>: Enables log backup.</p>
+         * <blockquote>
+         * <p>Notice: Sharded cluster instances do not support disabling log backup.</notice></p>
+         * </blockquote>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -654,16 +656,14 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the cross-region log backup feature.</p>
+         * <p>Specifies whether to enable cross-region log backup.</p>
          * <blockquote>
-         * <p> This parameter is required for a cross-region backup operation.</p>
-         * </blockquote>
+         * <p>This parameter is required for cross-region backup.</p>
          * <ul>
-         * <li><p>Valid values:1: enables the feature. The parameter value must be 1 for sharded cluster instances.</p>
-         * </li>
-         * <li><p>0: disables the feature. The parameter value must be 0 for replica set instances.</p>
-         * </li>
+         * <li>1: Enables cross-region log backup. This value is required for sharded cluster instances. For replica set instances, this value is required if you want to support cross-region point-in-time recovery.</li>
+         * <li>0: Disables cross-region log backup.</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -675,7 +675,7 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>The number of days for which high-frequency backup files are retained. Before you use this parameter, make sure that you specify the BackupInterval parameter. By default, high-frequency backup files are retained for one day.</p>
+         * <p>The number of days for which high-frequency backups are retained. Before you use this parameter, make sure that the BackupInterval parameter is specified. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -687,19 +687,17 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>The instance architecture. Valid values:</p>
+         * <p>The instance type. Valid values:</p>
          * <ul>
-         * <li>replicate</li>
+         * <li>replicate </li>
          * <li>sharding</li>
          * </ul>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>This parameter is required when you set the RestoreType parameter to 2.</p>
-         * </li>
-         * <li><p>This parameter is required when you set the RestoreType parameter to 3.</p>
-         * </li>
+         * <li>This parameter is required when the backup recovery type is set to rebuilding a deleted instance.</li>
+         * <li>This parameter is required when the backup recovery type is set to cloning an instance from cross-region backup.</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>replicate</p>
@@ -742,20 +740,21 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>The day of a week when the system regularly backs up data. Valid values:</p>
+         * <p>The backup cycle. Valid values:</p>
          * <ul>
-         * <li><strong>Monday</strong></li>
-         * <li><strong>Tuesday</strong></li>
-         * <li><strong>Wednesday</strong></li>
-         * <li><strong>Thursday</strong></li>
-         * <li><strong>Friday</strong></li>
-         * <li><strong>Saturday</strong></li>
-         * <li><strong>Sunday</strong></li>
+         * <li><strong>Monday</strong>: Monday.</li>
+         * <li><strong>Tuesday</strong>: Tuesday.</li>
+         * <li><strong>Wednesday</strong>: Wednesday.</li>
+         * <li><strong>Thursday</strong>: Thursday.</li>
+         * <li><strong>Friday</strong>: Friday.</li>
+         * <li><strong>Saturday</strong>: Saturday.</li>
+         * <li><strong>Sunday</strong>: Sunday.</li>
          * </ul>
-         * <p>**</p>
-         * <p><strong>Notice</strong>: To ensure data security, make sure that the system backs up data at least twice a week.</p>
          * <blockquote>
-         * <p> Separate multiple values with commas (,).</p>
+         * <p>Notice: To ensure data security, back up your MongoDB data at least twice a week.</notice></p>
+         * </blockquote>
+         * <blockquote>
+         * <p>If you specify multiple values, separate them with commas (,).</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -768,9 +767,9 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>The start time of the backup. Specify the time in the ISO 8601 standard in the <em>HH:mm</em>Z-<em>HH:mm</em>Z format. The time must be in UTC.</p>
+         * <p>The time period during which backups are performed. The format is <i>HH:mm</i>Z-<i>HH:mm</i>Z (UTC).</p>
          * <blockquote>
-         * <p> The time range is 1 hour.</p>
+         * <p>The time period is limited to 1 hour.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -783,7 +782,16 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * PreserveOneEachHour.
+         * <p>Specifies whether to enable hourly sparse backup. Valid values:</p>
+         * <ul>
+         * <li><p>true: If the backup frequency is set to minutes, all snapshots taken within 1 hour from the current time are retained. For snapshots taken more than 1 hour but within 24 hours from the current time, only the first snapshot taken after the hour is retained.</p>
+         * </li>
+         * <li><p>false: All snapshots taken within the high-frequency backup retention period are retained.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder preserveOneEachHour(Boolean preserveOneEachHour) {
             this.putQueryParameter("PreserveOneEachHour", preserveOneEachHour);
@@ -812,8 +820,8 @@ public class ModifyBackupPolicyRequest extends Request {
         /**
          * <p>The snapshot backup type. Valid values:</p>
          * <ul>
-         * <li><strong>Flash</strong>: single-digit second backup</li>
-         * <li><strong>Standard</strong> (default): standard backup</li>
+         * <li><strong>Flash</strong>: Backup within seconds.</li>
+         * <li><strong>Standard</strong>: Standard backup. This is the default value.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -826,15 +834,13 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the instance.</p>
+         * <p>The region where the instance is deployed.</p>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>This parameter is required for the data restoration of a deleted instance.</p>
-         * </li>
-         * <li><p>This parameter is required for a cross-region backup operation.</p>
-         * </li>
+         * <li>This parameter is required to recover deleted instances.</li>
+         * <li>This parameter is required for cross-region backup.</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>

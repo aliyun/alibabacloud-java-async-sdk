@@ -212,7 +212,7 @@ public class ModifyAuditPolicyRequest extends Request {
         }
 
         /**
-         * <p>The request source for the audit log feature. Set the value to <strong>Console</strong>.</p>
+         * <p>The source of the audit log request. Valid value: <strong>Console</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>Console</p>
@@ -224,10 +224,10 @@ public class ModifyAuditPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the audit log feature. Valid values:</p>
+         * <p>The status of audit logging. Valid values:</p>
          * <ul>
-         * <li><strong>enable</strong></li>
-         * <li><strong>disabled</strong></li>
+         * <li><strong>enable</strong>: Enables audit logging.</li>
+         * <li><strong>disabled</strong>: Disables audit logging.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -254,7 +254,10 @@ public class ModifyAuditPolicyRequest extends Request {
         }
 
         /**
-         * HotStoragePeriod.
+         * <p>This parameter takes effect only in the V2_Standard edition (DAS Enterprise Edition NoSQL-compatible audit logs) and specifies the hot storage duration of audit logs. Valid values: 0 to 7. Unit: days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder hotStoragePeriod(Integer hotStoragePeriod) {
             this.putQueryParameter("HotStoragePeriod", hotStoragePeriod);
@@ -299,14 +302,18 @@ public class ModifyAuditPolicyRequest extends Request {
         }
 
         /**
-         * <p>The type of the audit log feature. Valid values:</p>
+         * <p>The edition of audit logging. Valid values:</p>
          * <ul>
-         * <li><strong>Trail</strong>: free trial edition.</li>
-         * <li><strong>Standard</strong>: official edition.</li>
+         * <li><strong>Trial</strong>: Free Trial edition.</li>
+         * <li><strong>Standard</strong>: Standard edition.</li>
+         * <li><strong>V2_Standard</strong>: DAS Enterprise Edition (NoSQL-compatible) audit logs.<blockquote>
+         * <ul>
+         * <li>The default value is <strong>Trial</strong>. Starting from January 6, 2022, the Standard edition of audit logs is gradually rolled out across regions, and applications for the Free Trial edition are no longer accepted.</li>
+         * <li>Starting from February 2026, DAS Enterprise Edition (NoSQL-compatible) audit logs are gradually rolled out across regions, and applications for the Standard edition are no longer accepted.</li>
          * </ul>
-         * <blockquote>
-         * <p>The default value is <strong>Trail</strong>. Starting from January 6, 2022, the official edition of the audit log feature has been launched in all regions, and the free trial edition of the feature can no longer be applied for. We recommend that you set this parameter to <strong>Standard</strong>.</p>
          * </blockquote>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Standard</p>
@@ -318,7 +325,12 @@ public class ModifyAuditPolicyRequest extends Request {
         }
 
         /**
-         * <p>The log retention period. Valid values: 1 to 365 days. Default value: 30 days.</p>
+         * <ul>
+         * <li><p>In the Standard edition, this parameter specifies the retention period of audit logs. Valid values: 1 to 365. Default value: 30. Unit: days.</p>
+         * </li>
+         * <li><p>In the V2_Standard edition (DAS Enterprise Edition NoSQL-compatible audit logs), this parameter specifies the cold storage duration of audit logs. Valid values: 30, 180, 365, 1095, and 1825. Unit: days.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>30</p>

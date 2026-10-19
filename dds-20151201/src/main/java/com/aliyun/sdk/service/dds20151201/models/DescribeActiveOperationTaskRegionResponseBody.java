@@ -67,7 +67,7 @@ public class DescribeActiveOperationTaskRegionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The region ID.</p>
+         * <p>The list of regions.</p>
          */
         public Builder regionList(java.util.List<RegionList> regionList) {
             this.regionList = regionList;
@@ -144,7 +144,7 @@ public class DescribeActiveOperationTaskRegionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The total number of tasks.</p>
+             * <p>The number of tasks.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -155,7 +155,7 @@ public class DescribeActiveOperationTaskRegionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the instance.</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-beijing</p>

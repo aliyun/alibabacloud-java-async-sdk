@@ -67,7 +67,7 @@ public class DescribeKernelReleaseNotesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of the version release notes.</p>
+         * ReleaseNotes.
          */
         public Builder releaseNotes(ReleaseNotes releaseNotes) {
             this.releaseNotes = releaseNotes;
@@ -75,7 +75,7 @@ public class DescribeKernelReleaseNotesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>F01D4DDA-CB72-4083-B399-AF4642294FE6</p>
@@ -144,10 +144,7 @@ public class DescribeKernelReleaseNotesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The version number.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>mongodb_20180619_0.4.9</p>
+             * KernelVersion.
              */
             public Builder kernelVersion(String kernelVersion) {
                 this.kernelVersion = kernelVersion;
@@ -155,10 +152,7 @@ public class DescribeKernelReleaseNotesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The release notes.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test release note.</p>
+             * ReleaseNote.
              */
             public Builder releaseNote(String releaseNote) {
                 this.releaseNote = releaseNote;
@@ -212,10 +206,7 @@ public class DescribeKernelReleaseNotesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The release notes.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test release note.</p>
+             * ReleaseNote.
              */
             public Builder releaseNote(java.util.List<ReleaseNote> releaseNote) {
                 this.releaseNote = releaseNote;

@@ -194,10 +194,10 @@ public class DescribeBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>The architecture of the instance. Valid values:</p>
+         * <p>The instance type. Valid values:</p>
          * <ul>
-         * <li><strong>sharding</strong>: sharded cluster instance</li>
-         * <li><strong>replicate</strong>: replica set or standalone instance</li>
+         * <li>replicate: replica set instance</li>
+         * <li>sharding: sharded cluster instance</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -255,7 +255,7 @@ public class DescribeBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the instance.</p>
+         * <p>The region where the instance is deployed.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>

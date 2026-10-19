@@ -106,7 +106,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>An array that consists of the information of audit log entries.</p>
+         * Items.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -114,7 +114,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of entries on the current page.</p>
+         * <p>The maximum number of records on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -147,7 +147,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of returned entries.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>40</p>
@@ -307,10 +307,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The account of the database.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * AccountName.
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -318,10 +315,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the database.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test123</p>
+             * DBName.
              */
             public Builder DBName(String DBName) {
                 this.DBName = DBName;
@@ -329,10 +323,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the statement was executed. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2019-03-11T03:30:27Z</p>
+             * ExecuteTime.
              */
             public Builder executeTime(String executeTime) {
                 this.executeTime = executeTime;
@@ -340,10 +331,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP addresses of the client.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>11.xxx.xxx.xxx</p>
+             * HostAddress.
              */
             public Builder hostAddress(String hostAddress) {
                 this.hostAddress = hostAddress;
@@ -351,10 +339,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of SQL audit log entries that are returned.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * ReturnRowCounts.
              */
             public Builder returnRowCounts(Long returnRowCounts) {
                 this.returnRowCounts = returnRowCounts;
@@ -362,10 +347,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The statement that was executed.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>{ &quot;atype&quot; : &quot;createCollection&quot;, &quot;param&quot; : { &quot;ns&quot; : &quot;123.test1&quot; }, &quot;result&quot;: &quot;OK&quot; }</p>
+             * Syntax.
              */
             public Builder syntax(String syntax) {
                 this.syntax = syntax;
@@ -373,10 +355,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the collection.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>C1</p>
+             * TableName.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -384,10 +363,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the thread.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>140682188297984</p>
+             * ThreadID.
              */
             public Builder threadID(String threadID) {
                 this.threadID = threadID;
@@ -395,10 +371,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The duration of the statement execution. Unit: microseconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>700</p>
+             * TotalExecutionTimes.
              */
             public Builder totalExecutionTimes(Long totalExecutionTimes) {
                 this.totalExecutionTimes = totalExecutionTimes;

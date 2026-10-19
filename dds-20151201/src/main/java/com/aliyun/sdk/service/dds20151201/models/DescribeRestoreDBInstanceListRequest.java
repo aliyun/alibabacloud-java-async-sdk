@@ -159,10 +159,10 @@ public class DescribeRestoreDBInstanceListRequest extends Request {
         } 
 
         /**
-         * <p>Find instances created after the specified time, formatted as <i>yyyy-MM-dd</i>T<i>HH:00:00</i>Z (UTC time).</p>
+         * <p>The start time used to query instances. Only instances created after this time are returned. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:00:00</i>Z format. The time must be in UTC.</p>
          * <blockquote>
          * <ul>
-         * <li>The time must be on the hour.</li>
+         * <li>The time must be a time frame.</li>
          * <li>The time cannot be earlier than 7 days before the current time.</li>
          * </ul>
          * </blockquote>
@@ -221,7 +221,7 @@ public class DescribeRestoreDBInstanceListRequest extends Request {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>

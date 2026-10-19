@@ -223,10 +223,12 @@ public class DescribeMongoDBLogConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether to enable the audit log feature.</p>
+         * <p>Indicates whether the audit log feature is enabled for the ApsaraDB for MongoDB instance.</p>
          * <ul>
-         * <li><strong>true</strong>: The audit log feature is enabled.</li>
-         * <li><strong>false</strong>: The audit log feature is disabled.</li>
+         * <li><p><strong>true</strong>: Enabled.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -238,7 +240,10 @@ public class DescribeMongoDBLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * HotTtlForV2Standard.
+         * <p>The retention period of hot storage for the V2_Standard (DAS Enterprise Edition (NoSQL-compatible)) version of audit logs. Unit: days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder hotTtlForV2Standard(Long hotTtlForV2Standard) {
             this.hotTtlForV2Standard = hotTtlForV2Standard;
@@ -246,10 +251,12 @@ public class DescribeMongoDBLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether a rule to distribute logs to Logtail is created. For more information, see <a href="https://help.aliyun.com/document_detail/28979.html">Logtail overview</a>. Valid values:</p>
+         * <p>Indicates whether a rule is created to ship audit logs to Logtail. For more information about Logtail, see <a href="https://help.aliyun.com/document_detail/28979.html">What is Logtail?</a>. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: A rule to distribute logs to Logtail is created.</li>
-         * <li><strong>0</strong> or <strong>null</strong>: A rule to distribute logs to Logtail is not created.</li>
+         * <li><p><strong>1</strong>: A rule is created.</p>
+         * </li>
+         * <li><p><strong>0</strong> or <strong>null</strong>: No rule is created.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -261,10 +268,12 @@ public class DescribeMongoDBLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether a project exists in the current region. Valid values:</p>
+         * <p>Indicates whether a Simple Log Service project for audit logs exists in the current region. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: A logging project exists in the current region.</li>
-         * <li><strong>0</strong> or <strong>null</strong>: A logging project does not exist in the current region.</li>
+         * <li><p><strong>1</strong>: The project exists.</p>
+         * </li>
+         * <li><p><strong>0</strong> or <strong>null</strong>: The project does not exist.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -276,7 +285,7 @@ public class DescribeMongoDBLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum storage capacity for the formal edition of the audit log feature. If the value is -1, no maximum storage capacity is set.</p>
+         * <p>The maximum storage capacity for the official version of audit logs. A value of -1 indicates that no upper limit is set.</p>
          * 
          * <strong>example:</strong>
          * <p>-1</p>
@@ -287,7 +296,7 @@ public class DescribeMongoDBLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum storage capacity for the free trial edition of the audit log feature. Unit: bytes. You can set the maximum storage capacity to 107,374,182,400 bytes.</p>
+         * <p>The maximum storage capacity for the free trial version of audit logs. Unit: bytes. The maximum value is 107374182400 bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>107374182400</p>
@@ -309,10 +318,14 @@ public class DescribeMongoDBLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The type of the audit log feature. Valid values:</p>
+         * <p>The version of the audit log feature.</p>
          * <ul>
-         * <li><strong>Trail</strong>: the free trial edition</li>
-         * <li><strong>Standard</strong>: the official edition</li>
+         * <li><p><strong>Trial</strong>: Free trial version.</p>
+         * </li>
+         * <li><p><strong>Standard</strong>: Official version.</p>
+         * </li>
+         * <li><p><strong>V2_Standard</strong>: DAS Enterprise Edition (NoSQL-compatible) version.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -324,7 +337,7 @@ public class DescribeMongoDBLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The retention period for the official edition of the audit log feature. Valid values: 1 to 365. Unit: day.</p>
+         * <p>The retention period of audit logs for the official version. The value ranges from 1 to 365. Unit: days.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -335,7 +348,7 @@ public class DescribeMongoDBLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The retention period for the free trial edition of the audit log feature.</p>
+         * <p>The retention period of audit logs for the free trial version. Unit: days.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -346,7 +359,10 @@ public class DescribeMongoDBLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * TtlForV2Standard.
+         * <p>The retention period of cold storage for the V2_Standard (DAS Enterprise Edition (NoSQL-compatible)) version of audit logs. Unit: days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder ttlForV2Standard(Long ttlForV2Standard) {
             this.ttlForV2Standard = ttlForV2Standard;
@@ -354,7 +370,7 @@ public class DescribeMongoDBLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The used storage capacity for the formal edition of the audit log feature. Unit: bytes.</p>
+         * <p>The storage capacity that is used by audit logs for the official version. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>20163</p>
@@ -365,7 +381,7 @@ public class DescribeMongoDBLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The used storage capacity for the free trial edition of the audit log feature. Unit: bytes.</p>
+         * <p>The storage capacity that is used by audit logs for the free trial version. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>12548178759</p>
@@ -376,7 +392,7 @@ public class DescribeMongoDBLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the project.</p>
+         * <p>The name of the Simple Log Service project for the audit logs.</p>
          * 
          * <strong>example:</strong>
          * <p>nosql-176498472570****-cn-hangzhou</p>

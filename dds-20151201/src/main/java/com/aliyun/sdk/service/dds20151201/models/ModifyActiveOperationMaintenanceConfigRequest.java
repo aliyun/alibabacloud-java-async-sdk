@@ -171,7 +171,14 @@ public class ModifyActiveOperationMaintenanceConfigRequest extends Request {
         } 
 
         /**
-         * CycleTime.
+         * <p>The list of days in the O&amp;M cycle, separated by commas (,).</p>
+         * <ul>
+         * <li>If CycleType is set to Month, each item is an integer from 1 to 28, which represents a day of the month.</li>
+         * <li>If CycleType is set to Week, each item is an integer from 1 to 7, which represents a day of the week.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1,2,3</p>
          */
         public Builder cycleTime(String cycleTime) {
             this.putQueryParameter("CycleTime", cycleTime);
@@ -180,7 +187,14 @@ public class ModifyActiveOperationMaintenanceConfigRequest extends Request {
         }
 
         /**
-         * CycleType.
+         * <p>The cycle type. Valid values:</p>
+         * <ul>
+         * <li>Month: Monthly.</li>
+         * <li>Week: Weekly.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Week</p>
          */
         public Builder cycleType(String cycleType) {
             this.putQueryParameter("CycleType", cycleType);
@@ -189,7 +203,10 @@ public class ModifyActiveOperationMaintenanceConfigRequest extends Request {
         }
 
         /**
-         * MaintainEndTime.
+         * <p>The end time of the instance O&amp;M window. The time is in the HH:mmZ format and in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22:00Z</p>
          */
         public Builder maintainEndTime(String maintainEndTime) {
             this.putQueryParameter("MaintainEndTime", maintainEndTime);
@@ -198,7 +215,10 @@ public class ModifyActiveOperationMaintenanceConfigRequest extends Request {
         }
 
         /**
-         * MaintainStartTime.
+         * <p>The start time of the instance O&amp;M window. The time is in the HH:mmZ format and in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21:00Z</p>
          */
         public Builder maintainStartTime(String maintainStartTime) {
             this.putQueryParameter("MaintainStartTime", maintainStartTime);
@@ -243,7 +263,14 @@ public class ModifyActiveOperationMaintenanceConfigRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>Specifies whether the configuration takes effect. Valid values: </p>
+         * <ul>
+         * <li>1: Effective. </li>
+         * <li>2: Invalid.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);

@@ -26,9 +26,17 @@ public class DescribeAccountsRequest extends Request {
     private String accountName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CharacterType")
+    private String characterType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBName")
+    private String DBName;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
@@ -50,7 +58,9 @@ public class DescribeAccountsRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.accountName = builder.accountName;
+        this.characterType = builder.characterType;
         this.DBInstanceId = builder.DBInstanceId;
+        this.DBName = builder.DBName;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -85,10 +95,24 @@ public class DescribeAccountsRequest extends Request {
     }
 
     /**
+     * @return characterType
+     */
+    public String getCharacterType() {
+        return this.characterType;
+    }
+
+    /**
      * @return DBInstanceId
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    /**
+     * @return DBName
+     */
+    public String getDBName() {
+        return this.DBName;
     }
 
     /**
@@ -122,7 +146,9 @@ public class DescribeAccountsRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeAccountsRequest, Builder> {
         private String regionId; 
         private String accountName; 
+        private String characterType; 
         private String DBInstanceId; 
+        private String DBName; 
         private String ownerAccount; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
@@ -136,7 +162,9 @@ public class DescribeAccountsRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.accountName = request.accountName;
+            this.characterType = request.characterType;
             this.DBInstanceId = request.DBInstanceId;
+            this.DBName = request.DBName;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -153,7 +181,7 @@ public class DescribeAccountsRequest extends Request {
         }
 
         /**
-         * <p>The name of the account. Set the value to <strong>root</strong>.</p>
+         * <p>The account name.</p>
          * 
          * <strong>example:</strong>
          * <p>root</p>
@@ -161,6 +189,18 @@ public class DescribeAccountsRequest extends Request {
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
             this.accountName = accountName;
+            return this;
+        }
+
+        /**
+         * <p>The account type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
+         */
+        public Builder characterType(String characterType) {
+            this.putQueryParameter("CharacterType", characterType);
+            this.characterType = characterType;
             return this;
         }
 
@@ -174,6 +214,18 @@ public class DescribeAccountsRequest extends Request {
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
             this.DBInstanceId = DBInstanceId;
+            return this;
+        }
+
+        /**
+         * <p>The database to which the account belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>admin</p>
+         */
+        public Builder DBName(String DBName) {
+            this.putQueryParameter("DBName", DBName);
+            this.DBName = DBName;
             return this;
         }
 

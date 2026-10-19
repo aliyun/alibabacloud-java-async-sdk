@@ -168,7 +168,7 @@ public class ModifyDBInstanceNetExpireTimeRequest extends Request {
         }
 
         /**
-         * <p>The retention period of the classic network endpoint of the instance. Valid values: <strong>14</strong>, <strong>30</strong>, <strong>60</strong>, and <strong>120</strong>. Unit: day.</p>
+         * <p>Sets the retention period of the original classic network endpoint. Valid values: <strong>14</strong>, <strong>30</strong>, <strong>60</strong>, and <strong>120</strong>. Unit: days.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

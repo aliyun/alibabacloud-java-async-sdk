@@ -130,7 +130,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>An array that consists of the information about each slow query.</p>
+         * Items.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -344,10 +344,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The username of the database account that performs the operation.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * AccountName.
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -355,10 +352,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the database.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>mongodbtest</p>
+             * DBName.
              */
             public Builder DBName(String DBName) {
                 this.DBName = DBName;
@@ -366,10 +360,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of documents that are scanned during the operation.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1000000</p>
+             * DocsExamined.
              */
             public Builder docsExamined(Long docsExamined) {
                 this.docsExamined = docsExamined;
@@ -377,10 +368,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the operation. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2019-02-25T 01:41:28Z</p>
+             * ExecutionStartTime.
              */
             public Builder executionStartTime(String executionStartTime) {
                 this.executionStartTime = executionStartTime;
@@ -388,10 +376,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The host IP address that is used to connect to the database.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>192.168.XX.XX</p>
+             * HostAddress.
              */
             public Builder hostAddress(String hostAddress) {
                 this.hostAddress = hostAddress;
@@ -399,10 +384,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of rows involved in index scans.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * KeysExamined.
              */
             public Builder keysExamined(Long keysExamined) {
                 this.keysExamined = keysExamined;
@@ -410,10 +392,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution time of the statement. Unit: milliseconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>600</p>
+             * QueryTimes.
              */
             public Builder queryTimes(String queryTimes) {
                 this.queryTimes = queryTimes;
@@ -421,10 +400,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of rows returned by the SQL statement.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * ReturnRowCounts.
              */
             public Builder returnRowCounts(Long returnRowCounts) {
                 this.returnRowCounts = returnRowCounts;
@@ -432,10 +408,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The SQL statement that is executed during the slow operation.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>{&quot;op&quot;:&quot;query&quot;,&quot;ns&quot;:&quot;mongodbtest.customer&quot;,&quot;query&quot;:{&quot;find&quot;:&quot;customer&quot;,&quot;filter&quot;:{&quot;name&quot;:&quot;jack&quot;}}}</p>
+             * SQLText.
              */
             public Builder SQLText(String SQLText) {
                 this.SQLText = SQLText;
@@ -443,10 +416,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the collection.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>C1</p>
+             * TableName.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;

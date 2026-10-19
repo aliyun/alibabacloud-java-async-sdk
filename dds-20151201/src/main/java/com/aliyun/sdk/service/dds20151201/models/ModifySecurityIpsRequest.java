@@ -22,9 +22,17 @@ public class ModifySecurityIpsRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ModifyMode")
@@ -62,7 +70,9 @@ public class ModifySecurityIpsRequest extends Request {
     private ModifySecurityIpsRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.clientToken = builder.clientToken;
         this.DBInstanceId = builder.DBInstanceId;
+        this.dryRun = builder.dryRun;
         this.modifyMode = builder.modifyMode;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -94,10 +104,24 @@ public class ModifySecurityIpsRequest extends Request {
     }
 
     /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
      * @return DBInstanceId
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -158,7 +182,9 @@ public class ModifySecurityIpsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifySecurityIpsRequest, Builder> {
         private String regionId; 
+        private String clientToken; 
         private String DBInstanceId; 
+        private Boolean dryRun; 
         private String modifyMode; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -175,7 +201,9 @@ public class ModifySecurityIpsRequest extends Request {
         private Builder(ModifySecurityIpsRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.clientToken = request.clientToken;
             this.DBInstanceId = request.DBInstanceId;
+            this.dryRun = request.dryRun;
             this.modifyMode = request.modifyMode;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -196,6 +224,18 @@ public class ModifySecurityIpsRequest extends Request {
         }
 
         /**
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. Example: qwertyui1234567</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwertyui1234567</p>
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
          * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
@@ -209,11 +249,23 @@ public class ModifySecurityIpsRequest extends Request {
         }
 
         /**
-         * <p>The method that is used to modify the IP address whitelist. Valid values:</p>
+         * <p>Specifies whether to perform a dry run. Valid values:
+         * true: performs a dry run without calling the operation. The system checks the request parameters, request format, service limits, and available resources. If the check fails, the corresponding error is returned. If the check succeeds, the DryRunOperation error code is returned.
+         * false (default): sends the request. If the check succeeds, the operation is performed.</p>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * <p>The modification method. Valid values:</p>
          * <ul>
-         * <li><strong>Cover</strong>: overwrites the original IP address whitelist.</li>
-         * <li><strong>Append</strong>: appends data to the IP address whitelist.</li>
-         * <li><strong>Delete</strong>: deletes the IP address whitelist.</li>
+         * <li><strong>Cover</strong>: Overwrites the original whitelist.</li>
+         * <li><strong>Append</strong>: Appends to the whitelist. An error is returned if duplicate IP addresses exist.</li>
+         * <li><strong>Extend</strong>: Appends to the whitelist. Duplicate IP addresses are merged.</li>
+         * <li><strong>Delete</strong>: Deletes the whitelist.</li>
          * </ul>
          * <p>Default value: <strong>Cover</strong>.</p>
          * 
@@ -263,8 +315,8 @@ public class ModifySecurityIpsRequest extends Request {
         }
 
         /**
-         * <p>The attribute of the IP address whitelist. It can contain a maximum of 120 characters in length and can contain uppercase letters, lowercase letters, and digits.</p>
-         * <p>This parameter is empty by default.</p>
+         * <p>The attribute of the whitelist group. The value can contain uppercase letters, lowercase letters, and digits. The maximum length is 120 characters.</p>
+         * <p>Default value: empty string.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -276,7 +328,7 @@ public class ModifySecurityIpsRequest extends Request {
         }
 
         /**
-         * <p>The name of the IP address whitelist that you want to modify. Default value: <strong>default</strong>.</p>
+         * <p>The name of the IP whitelist group to modify. Default value: <strong>default</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>allowserver</p>
@@ -288,10 +340,10 @@ public class ModifySecurityIpsRequest extends Request {
         }
 
         /**
-         * <p>The IP addresses in the IP address whitelist. Separate multiple IP addresses with commas (,). You can add a maximum of 1,000 different IP addresses to the IP address whitelist. The entries in the IP address whitelist must be in one of the following formats:</p>
+         * <p>The list of IP addresses in the IP whitelist group. Separate multiple IP addresses with commas (,). IP addresses cannot be duplicated. A maximum of 1000 IP addresses are supported. The following two formats are supported:</p>
          * <ul>
-         * <li>IP addresses, such as 127.0.0.1.</li>
-         * <li>CIDR blocks, such as 127.0.0.1/24. In this example, 24 indicates that the prefix of each IP address in the IP address whitelist is 24 bits in length. You can replace 24 with a value within the range of 1 to 32.</li>
+         * <li>IP address format, such as 127.0.0.1.</li>
+         * <li>CIDR format, such as 127.0.0.1/24 (Classless Inter-Domain Routing, where 24 indicates the length of the prefix in the address. The value ranges from 1 to 32).</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

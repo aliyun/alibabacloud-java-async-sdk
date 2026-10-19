@@ -54,7 +54,10 @@ public class ModifySrvNetworkAddressResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>45D2B592-DEBA-4347-BBF3-xxxxxC97DBBC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

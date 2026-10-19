@@ -212,11 +212,10 @@ public class DescribeActiveOperationTaskRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return the historical tasks. </p>
-         * <p>Default value: 0. Valid values:</p>
+         * <p>Specifies whether to return historical tasks. Valid values:</p>
          * <ul>
-         * <li>0: returns the current task.</li>
-         * <li>1: returns the historical tasks.</li>
+         * <li>0: returns current tasks. This is the default value.</li>
+         * <li>1: returns historical tasks.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -247,7 +246,7 @@ public class DescribeActiveOperationTaskRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. The value must be an integer that is greater than 0. Default value: 1.</p>
+         * <p>The page number. The value must be greater than 0 and not exceed the maximum value of the Integer data type. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -259,7 +258,7 @@ public class DescribeActiveOperationTaskRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Specify a value greater than 10. Default value: 30.</p>
+         * <p>The maximum number of entries to return on each page. The value must be greater than 10. Default value: 30.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -271,7 +270,7 @@ public class DescribeActiveOperationTaskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the product.</p>
+         * <p>The product ID.</p>
          * 
          * <strong>example:</strong>
          * <p>MongoDB</p>
@@ -283,10 +282,7 @@ public class DescribeActiveOperationTaskRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the instance.</p>
-         * <blockquote>
-         * <p> If you set the Region parameter to <strong>all</strong>, all tasks created within your Alibaba Cloud account are queried. In this case, you must set the <strong>taskType</strong> parameter to <strong>all</strong>.</p>
-         * </blockquote>
+         * <p>The ID of the region to which the pending events belong. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query region IDs. If you set this parameter to all, all tasks under the current account are queried, and the TaskType parameter must also be set to all.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -317,12 +313,14 @@ public class DescribeActiveOperationTaskRequest extends Request {
         }
 
         /**
-         * <p>The type of the task. Valid values:</p>
+         * <p>The task type. Valid values:</p>
          * <ul>
-         * <li>rds_apsaradb_ha: master-replica switchover</li>
-         * <li>rds_apsaradb_transfer: instance migration</li>
-         * <li>rds_apsaradb_upgrade: minor version update</li>
+         * <li>rds_apsaradb_ha: primary/secondary node switch.</li>
+         * <li>rds_apsaradb_transfer: instance migration.</li>
+         * <li>rds_apsaradb_upgrade: minor version update.</li>
          * </ul>
+         * <p>You can obtain the valid values from the <a href="https://help.aliyun.com/document_detail/2639186.html">DescribeHistoryTasks</a> operation.</p>
+         * <p>If you set this parameter to all, all tasks under the current account are queried, and the Region parameter must also be set to all.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

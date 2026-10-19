@@ -181,11 +181,11 @@ public class DescribeParametersRequest extends Request {
         }
 
         /**
-         * <p>The role of the instance. Valid values:</p>
+         * <p>The role type of the instance. Valid values:</p>
          * <ul>
-         * <li>db: a shard node.</li>
-         * <li>cs: a Configserver node.</li>
-         * <li>mongos: a mongos node.</li>
+         * <li>db: shard role</li>
+         * <li>cs: config server role</li>
+         * <li>mongos: mongos role</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -200,7 +200,7 @@ public class DescribeParametersRequest extends Request {
         /**
          * <p>The instance ID.</p>
          * <blockquote>
-         * <p> If you set this parameter to the ID of a sharded cluster instance, you must also specify the <strong>NodeId</strong> parameter.</p>
+         * <p>If you specify the ID of a sharded cluster instance for this parameter, you must also specify the <strong>NodeId</strong> parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -214,7 +214,7 @@ public class DescribeParametersRequest extends Request {
         }
 
         /**
-         * <p>The parameter that is available in the future.</p>
+         * <p>The extended parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>terrform</p>
@@ -226,9 +226,9 @@ public class DescribeParametersRequest extends Request {
         }
 
         /**
-         * <p>The ID of the mongos or shard node in the specified sharded cluster instance.</p>
+         * <p>Instance ID of the mongos or shard node in the sharded cluster instance.</p>
          * <blockquote>
-         * <p> This parameter is valid when the <strong>DBInstanceId</strong> parameter is set to the ID of a sharded cluster instance.</p>
+         * <p>This parameter is available only when the <strong>DBInstanceId</strong> parameter is set to instance ID of a sharded cluster instance.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

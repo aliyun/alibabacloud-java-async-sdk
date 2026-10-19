@@ -228,7 +228,7 @@ public class DescribeHistoryTasksStatRequest extends Request {
         }
 
         /**
-         * <p>The start time of the O&amp;M task to perform. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. You can query data within the last 30 days.</p>
+         * <p>The start time of the O\&amp;M task to perform. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. You can query data within the last 30 days.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -379,7 +379,7 @@ public class DescribeHistoryTasksStatRequest extends Request {
         }
 
         /**
-         * <p>The end time of the O&amp;M task to perform. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. You can query data within the last 30 days.</p>
+         * <p>The end time of the O\&amp;M task to perform. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. You can query data within the last 30 days.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

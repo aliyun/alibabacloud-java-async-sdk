@@ -184,7 +184,10 @@ public class DescribeRdsVSwitchsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm4ojaksxxxxx</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -211,7 +214,10 @@ public class DescribeRdsVSwitchsRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * <p>The ID of VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp*******************</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -220,7 +226,10 @@ public class DescribeRdsVSwitchsRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-j</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

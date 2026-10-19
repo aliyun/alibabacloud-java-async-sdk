@@ -169,6 +169,7 @@ public class ModifyDBInstanceConfigRequest extends Request {
         }
 
         /**
+         * <p>The configuration item name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -181,6 +182,7 @@ public class ModifyDBInstanceConfigRequest extends Request {
         }
 
         /**
+         * <p>The configuration item value</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -193,6 +195,7 @@ public class ModifyDBInstanceConfigRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
