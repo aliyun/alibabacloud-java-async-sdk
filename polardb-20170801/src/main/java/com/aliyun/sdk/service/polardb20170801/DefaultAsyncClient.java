@@ -1005,8 +1005,8 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>Each cluster can have a maximum of three manually created backups at the same time.</li>
-     * <li>If the error message <code>Exceeding the daily backup times of this DB cluster</code> is returned, three manually created backups already exist in your cluster. <a href="https://help.aliyun.com/document_detail/98101.html">Delete backups</a> before calling this operation.</li>
+     * <li>Each cluster can have a maximum of three manually created backups at a time.</li>
+     * <li>If the error message <code>Exceeding the daily backup times of this DB cluster</code> is returned, three manually created backups already exist in your cluster. <a href="https://help.aliyun.com/document_detail/98101.html">Delete backups</a> before you call this operation.</li>
      * <li>After you call this operation, a backup task is created in the background. If the data volume is large, the backup may take a long time. Wait until the backup is complete.</li>
      * </ul>
      * </blockquote>
@@ -1156,7 +1156,14 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>DBLink can connect two PolarDB for PostgreSQL (Compatible with Oracle) clusters, or connect a PolarDB for PostgreSQL (Compatible with Oracle) cluster to a self-managed PostgreSQL database on an ECS instance. You can use DBLink to query data across clusters.</p>
+     * <p>A DBLink can connect two PolarDB for PostgreSQL (Compatible with Oracle) clusters, or connect a PolarDB for PostgreSQL (Compatible with Oracle) cluster to a self-managed PostgreSQL database on an ECS instance. You can use DBLink to query data across clusters.</p>
+     * <blockquote>
+     * <ul>
+     * <li>You can create up to 10 DBLinks for a cluster.</li>
+     * <li>A DBLink occupies one DBLink quota on both the source cluster and the destination cluster.</li>
+     * <li>The source cluster and the destination cluster or destination ECS instance must be in the same region.</li>
+     * </ul>
+     * </blockquote>
      * 
      * @param request the request parameters of CreateDBCluster  CreateDBClusterRequest
      * @return CreateDBClusterResponse
@@ -3036,8 +3043,8 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>This operation supports filtering and returning the list of template operators based on the <code>RelativeDBClusterId</code> and <code>KubeType</code> parameters.</li>
-     * <li>Note: Ensure that the <code>RelativeDBClusterId</code> provided in the request matches an existing PolarDB database instance ID. Otherwise, data cannot be retrieved correctly.</li>
+     * <li>This operation filters and returns a list of model operators based on the RelativeDBClusterId and KubeType parameters.</li>
+     * <li>Note: Make sure that the RelativeDBClusterId provided in the request matches the instance ID of an existing PolarDB database instance. Otherwise, the data cannot be retrieved.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeAIDBClusterTasks  DescribeAIDBClusterTasksRequest
@@ -3278,7 +3285,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <h2>Operation description</h2>
      * <ul>
      * <li>This operation supports filtering and returning the list of related model operators based on the <code>RelativeDBClusterId</code> and <code>KubeType</code> parameters.</li>
-     * <li>Note: Ensure that the <code>RelativeDBClusterId</code> provided in the request matches an existing PolarDB database instance ID. Otherwise, data cannot be retrieved correctly.</li>
+     * <li>Note: Ensure that the <code>RelativeDBClusterId</code> provided in the request matches an existing PolarDB instance ID. Otherwise, data cannot be retrieved correctly.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeAgenticDBClusters  DescribeAgenticDBClustersRequest
@@ -3390,7 +3397,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This API operation queries all information about a specific PolarDB application, including but not limited to component details and endpoints.</p>
+     * <p>This API queries all relevant information about a specific PolarDB application, including but not limited to component details and connection endpoints.</p>
      * 
      * @param request the request parameters of DescribeApplicationAttribute  DescribeApplicationAttributeRequest
      * @return DescribeApplicationAttributeResponse
@@ -4972,6 +4979,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeKBSyncLinkAttribute  DescribeKBSyncLinkAttributeRequest
+     * @return DescribeKBSyncLinkAttributeResponse
+     */
+    @Override
+    public CompletableFuture<DescribeKBSyncLinkAttributeResponse> describeKBSyncLinkAttribute(DescribeKBSyncLinkAttributeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeKBSyncLinkAttribute").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeKBSyncLinkAttributeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeKBSyncLinkAttributeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeKBSyncLinks  DescribeKBSyncLinksRequest
      * @return DescribeKBSyncLinksResponse
      */
@@ -5710,13 +5735,13 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This operation queries all quota rules for a specific PolarFS instance. It supports wildcard matching with the <code>QuotaNameMatch</code> and <code>PatternMatch</code> parameters.</li>
-     * <li>Paging is not yet available and will be released in a future kernel update.</li>
-     * <li>The <code>PolarFsInstanceId</code> parameter is required to specify the PolarFS instance to query.</li>
-     * <li>You can use optional parameters, such as <code>QuotaNameMatch</code> and <code>PatternMatch</code>, to filter quota rules.</li>
-     * <li>The returned data includes the total number of quota rules, the number of rules on the current page, and details for each rule, such as the rule ID, name, description, and capacity limit.</li>
+     * <li>This API operation queries all quota rules for a specific Polarlakebase instance. You can use the <code>QuotaNameMatch</code> and <code>PatternMatch</code> parameters for fuzzy matching.</li>
+     * <li>The pagination feature is not yet publicly available and will be released after the kernel is ready. Currently, results are returned without pagination limits.</li>
+     * <li><code>PolarFsInstanceId</code> is required and specifies the Polarlakebase instance to query.</li>
+     * <li>Optional parameters such as <code>QuotaNameMatch</code> and <code>PatternMatch</code> can be used to further filter quota rules that meet the specified conditions.</li>
+     * <li>The returned data includes but is not limited to the total number of quota rules, the number of rules on the current page, and specific rule details such as rule ID, name, description, and capacity limits.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribePolarFsQuota  DescribePolarFsQuotaRequest
@@ -5954,10 +5979,8 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li><p>This API is available only for PolarDB for MySQL.</p>
-     * </li>
-     * <li><p>Effective September 1, 2024, the SQLHash field value will change when you call this API due to an optimization to the SQL templating algorithm. For more information, see <a href="https://help.aliyun.com/document_detail/2845725.html">Optimization of the templating algorithm for slow SQL queries</a>.</p>
-     * </li>
+     * <li>Only PolarDB for MySQL supports this operation.</li>
+     * <li>Starting from September 1, 2024, due to the optimization of the SQL template algorithm, the value of the SQLHash field will change when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/2845725.html">Notice: Optimization of the slow SQL template algorithm</a>.</li>
      * </ul>
      * </blockquote>
      * 
@@ -5980,9 +6003,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <p>You can view tasks generated by directly calling an API operation such as <a href="https://help.aliyun.com/document_detail/98169.html">CreateDBCluster</a>, or tasks generated when the system calls the corresponding API operation while you use a feature in the PolarDB console, such as <a href="https://help.aliyun.com/document_detail/58769.html">creating a cluster</a>.</p>
      * <ul>
-     * <li>You can view the progress details of tasks generated by either direct API calls, such as <a href="https://help.aliyun.com/document_detail/98169.html">CreateDBCluster</a>, or operations in the PolarDB console, such as <a href="https://help.aliyun.com/document_detail/58769.html">creating a cluster</a>.</li>
-     * <li>Currently, this operation supports viewing the progress details only for tasks generated when you create a cluster by calling the <a href="https://help.aliyun.com/document_detail/98169.html">CreateDBCluster</a> operation, provided that the <code>CreationOption</code> parameter is not set to <code>CreateGdnStandby</code>.</li>
+     * <li>Currently, you can view only the progress details of tasks generated when creating a cluster, that is, when the <a href="https://help.aliyun.com/document_detail/98169.html">CreateDBCluster</a> operation is called and the <code>CreationOption</code> parameter is not set to <code>CreateGdnStandby</code>.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeTasks  DescribeTasksRequest
@@ -8504,6 +8527,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ResizeAIDBClusterModel  ResizeAIDBClusterModelRequest
+     * @return ResizeAIDBClusterModelResponse
+     */
+    @Override
+    public CompletableFuture<ResizeAIDBClusterModelResponse> resizeAIDBClusterModel(ResizeAIDBClusterModelRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ResizeAIDBClusterModel").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ResizeAIDBClusterModelResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ResizeAIDBClusterModelResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of RestartAIDBCluster  RestartAIDBClusterRequest
      * @return RestartAIDBClusterResponse
      */
@@ -8702,6 +8743,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves memory data from a specified application.</p>
+     * 
      * @param request the request parameters of SearchMemories  SearchMemoriesRequest
      * @return SearchMemoriesResponse
      */
@@ -8822,9 +8866,9 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>PolarDB clusters support subscription and pay-as-you-go billing methods. You can change the billing method from subscription to pay-as-you-go or from pay-as-you-go to subscription based on your business requirements. For more information, see <a href="https://help.aliyun.com/document_detail/172886.html">Change from subscription to pay-as-you-go</a> and <a href="https://help.aliyun.com/document_detail/84076.html">Change from pay-as-you-go to subscription</a>.</li>
-     * <li>If your Alibaba Cloud account balance is insufficient, you cannot change the pay-as-you-go billing method to subscription.</li>
-     * <li>When you change the billing method from subscription to pay-as-you-go, the system automatically refunds the remaining balance of the fees that you have paid.</li>
+     * <li>PolarDB clusters support the subscription and pay-as-you-go billing methods. You can switch from subscription to pay-as-you-go or from pay-as-you-go to subscription based on your business requirements. For more information, see <a href="https://help.aliyun.com/document_detail/172886.html">Switch from subscription to pay-as-you-go</a> and <a href="https://help.aliyun.com/document_detail/84076.html">Switch from pay-as-you-go to subscription</a>.</li>
+     * <li>If your Alibaba Cloud account balance is insufficient, the pay-as-you-go billing method cannot be switched to subscription.</li>
+     * <li>When you switch from subscription to pay-as-you-go, the system automatically refunds the remaining balance of the fees that you have paid.</li>
      * </ul>
      * </blockquote>
      * 
@@ -9225,6 +9269,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Upgrades a plug-in that is installed in a PolarClaw application.</p>
+     * 
      * @param request the request parameters of UpgradePolarClawPlugin  UpgradePolarClawPluginRequest
      * @return UpgradePolarClawPluginResponse
      */

@@ -80,7 +80,7 @@ public class GenerateUpgradeReportForSyncCloneResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>CDB3258F-B5DE-43C4-8935-CBA0CA******</p>
@@ -91,7 +91,7 @@ public class GenerateUpgradeReportForSyncCloneResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the source instance.</p>
+         * <p>The source instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-k2j96w169uhu868l8</p>

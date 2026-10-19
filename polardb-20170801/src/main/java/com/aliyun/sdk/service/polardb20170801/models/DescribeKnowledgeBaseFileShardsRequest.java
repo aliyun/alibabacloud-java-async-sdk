@@ -131,7 +131,7 @@ public class DescribeKnowledgeBaseFileShardsRequest extends Request {
         }
 
         /**
-         * <p>The unique ID of the knowledge base.</p>
+         * <p>The unique identifier of the knowledge base.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,7 +156,7 @@ public class DescribeKnowledgeBaseFileShardsRequest extends Request {
         }
 
         /**
-         * <p>The number of records per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>

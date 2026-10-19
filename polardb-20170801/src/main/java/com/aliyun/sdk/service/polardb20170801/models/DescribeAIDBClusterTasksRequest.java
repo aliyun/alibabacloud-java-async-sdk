@@ -171,7 +171,7 @@ public class DescribeAIDBClusterTasksRequest extends Request {
         } 
 
         /**
-         * <p>The template operator type.</p>
+         * <p>The type of the model operator.</p>
          * 
          * <strong>example:</strong>
          * <p>aitrain</p>
@@ -231,7 +231,7 @@ public class DescribeAIDBClusterTasksRequest extends Request {
         }
 
         /**
-         * <p>The instance ID of the PolarDB instance.</p>
+         * <p>The PolarDB instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-2ze88***</p>

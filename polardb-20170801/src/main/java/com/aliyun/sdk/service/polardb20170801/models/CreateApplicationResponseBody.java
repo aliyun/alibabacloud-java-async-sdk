@@ -143,7 +143,7 @@ public class CreateApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of child components.</p>
+         * <p>The list of subcomponents.</p>
          */
         public Builder components(java.util.List<Components> components) {
             this.components = components;
@@ -151,7 +151,7 @@ public class CreateApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The description of the application.</p>
+         * <p>The application remarks.</p>
          * 
          * <strong>example:</strong>
          * <p>myapp</p>
@@ -162,7 +162,7 @@ public class CreateApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The generated order ID.</p>
+         * <p>The ID of the generated order.</p>
          * 
          * <strong>example:</strong>
          * <p>2148126708*****</p>
@@ -184,7 +184,7 @@ public class CreateApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether resources are sufficient. This parameter is returned only when DryRun is set to true.</p>
+         * <p>Indicates whether the required resources are available. This parameter is returned only when DryRun is set to true.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -195,7 +195,7 @@ public class CreateApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-********************</p>
@@ -251,7 +251,7 @@ public class CreateApplicationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The child component ID.</p>
+             * <p>The subcomponent ID.</p>
              * 
              * <strong>example:</strong>
              * <p>pac-********************</p>

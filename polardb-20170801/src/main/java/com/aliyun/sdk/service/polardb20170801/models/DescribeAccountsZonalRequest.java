@@ -213,6 +213,9 @@ public class DescribeAccountsZonalRequest extends Request {
 
         /**
          * <p>The cluster ID.</p>
+         * <blockquote>
+         * <p>Note: Only the IDs of edge clusters (clusters created by setting the CloudProvider parameter to ENS when calling CreateDBCluster) are supported. If you specify the ID of common clusters, the CrossCloudOpenAPI.CallError error is returned.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -225,7 +228,7 @@ public class DescribeAccountsZonalRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return in a single request.</p>
+         * <p>The maximum number of entries to return for this request.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -237,7 +240,7 @@ public class DescribeAccountsZonalRequest extends Request {
         }
 
         /**
-         * <p>The token to retrieve the next page of results. You do not need to specify this parameter for the first request. In a subsequent request, set this parameter to the NextToken value returned in the previous response.</p>
+         * <p>The query token. Set the value to the NextToken value returned in the last API call. If no subsequent query is required, do not specify this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>212db86sca4384811e0b5e8707e******</p>
@@ -249,7 +252,7 @@ public class DescribeAccountsZonalRequest extends Request {
         }
 
         /**
-         * <p>The node type. This parameter is required when you query the accounts of a PolarDB Search node.</p>
+         * <p>The node type. This parameter is required when you query the accounts of PolarDB Search nodes. Valid values:</p>
          * <ul>
          * <li>Search</li>
          * </ul>
@@ -282,7 +285,7 @@ public class DescribeAccountsZonalRequest extends Request {
         }
 
         /**
-         * <p>The page number. The value must be an integer that is greater than 0. The default value is 1.</p>
+         * <p>The page number. Valid values: integers greater than 0 and less than or equal to the maximum value of the Integer type. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -294,7 +297,7 @@ public class DescribeAccountsZonalRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Valid values:</p>
+         * <p>The number of entries per page. Valid values:</p>
          * <ul>
          * <li><p>30</p>
          * </li>
@@ -303,7 +306,7 @@ public class DescribeAccountsZonalRequest extends Request {
          * <li><p>100</p>
          * </li>
          * </ul>
-         * <p>The default value is 30.</p>
+         * <p>Default value: 30.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>

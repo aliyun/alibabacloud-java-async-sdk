@@ -161,7 +161,7 @@ public class ModifyApplicationEndpointAddressRequest extends Request {
         }
 
         /**
-         * <p>The new endpoint prefix.</p>
+         * <p>The new endpoint address prefix.</p>
          * 
          * <strong>example:</strong>
          * <p>xg06iror0l</p>

@@ -159,7 +159,10 @@ public class DescribeAgenticDBBranchesRequest extends Request {
         } 
 
         /**
-         * BranchName.
+         * <p>The branch name for fuzzy match.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>feature</p>
          */
         public Builder branchName(String branchName) {
             this.putQueryParameter("BranchName", branchName);
@@ -168,6 +171,7 @@ public class DescribeAgenticDBBranchesRequest extends Request {
         }
 
         /**
+         * <p>The AgenticDB cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -180,7 +184,10 @@ public class DescribeAgenticDBBranchesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -189,7 +196,10 @@ public class DescribeAgenticDBBranchesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 30. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -198,7 +208,10 @@ public class DescribeAgenticDBBranchesRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The ID of the project to which the branch belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>proj-a1b2c3d4e5f6</p>
          */
         public Builder projectId(String projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -207,6 +220,7 @@ public class DescribeAgenticDBBranchesRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -219,7 +233,15 @@ public class DescribeAgenticDBBranchesRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status filter. Valid values:</p>
+         * <ul>
+         * <li>Running</li>
+         * <li>Pending</li>
+         * <li>Paused</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -228,7 +250,10 @@ public class DescribeAgenticDBBranchesRequest extends Request {
         }
 
         /**
-         * TenantId.
+         * <p>The ID of the tenant to which the branch belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-4b83e0da66674951</p>
          */
         public Builder tenantId(String tenantId) {
             this.putQueryParameter("TenantId", tenantId);

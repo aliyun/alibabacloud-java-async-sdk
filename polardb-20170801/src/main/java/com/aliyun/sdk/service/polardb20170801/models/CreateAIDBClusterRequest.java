@@ -30,6 +30,10 @@ public class CreateAIDBClusterRequest extends Request {
     private Boolean autoUseCoupon;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Capacity")
+    private Long capacity;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
@@ -166,6 +170,7 @@ public class CreateAIDBClusterRequest extends Request {
         this.ackAdmin = builder.ackAdmin;
         this.autoRenew = builder.autoRenew;
         this.autoUseCoupon = builder.autoUseCoupon;
+        this.capacity = builder.capacity;
         this.clientToken = builder.clientToken;
         this.createPublicEndpoint = builder.createPublicEndpoint;
         this.DBClusterDescription = builder.DBClusterDescription;
@@ -232,6 +237,13 @@ public class CreateAIDBClusterRequest extends Request {
      */
     public Boolean getAutoUseCoupon() {
         return this.autoUseCoupon;
+    }
+
+    /**
+     * @return capacity
+     */
+    public Long getCapacity() {
+        return this.capacity;
     }
 
     /**
@@ -462,6 +474,7 @@ public class CreateAIDBClusterRequest extends Request {
         private String ackAdmin; 
         private String autoRenew; 
         private Boolean autoUseCoupon; 
+        private Long capacity; 
         private String clientToken; 
         private String createPublicEndpoint; 
         private String DBClusterDescription; 
@@ -504,6 +517,7 @@ public class CreateAIDBClusterRequest extends Request {
             this.ackAdmin = request.ackAdmin;
             this.autoRenew = request.autoRenew;
             this.autoUseCoupon = request.autoUseCoupon;
+            this.capacity = request.capacity;
             this.clientToken = request.clientToken;
             this.createPublicEndpoint = request.createPublicEndpoint;
             this.DBClusterDescription = request.DBClusterDescription;
@@ -553,12 +567,12 @@ public class CreateAIDBClusterRequest extends Request {
         /**
          * <p>Specifies whether to enable auto-renewal. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Auto-renewal is enabled.</li>
-         * <li><strong>false</strong>: Auto-renewal is not enabled.</li>
+         * <li><strong>true</strong>: enables auto-renewal.</li>
+         * <li><strong>false</strong>: disables auto-renewal.</li>
          * </ul>
          * <p>Default value: <strong>false</strong>.</p>
          * <blockquote>
-         * <p>This parameter takes effect only when <strong>PayType</strong> is set to <strong>Prepaid</strong>.</p>
+         * <p>This parameter takes effect only when the <strong>PayType</strong> parameter is set to <strong>Prepaid</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -573,8 +587,8 @@ public class CreateAIDBClusterRequest extends Request {
         /**
          * <p>Specifies whether to automatically use coupons. Valid values:</p>
          * <ul>
-         * <li>true (default): Use coupons.</li>
-         * <li>false: Do not use coupons.</li>
+         * <li>true (default): uses coupons.</li>
+         * <li>false: does not use coupons.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -583,6 +597,18 @@ public class CreateAIDBClusterRequest extends Request {
         public Builder autoUseCoupon(Boolean autoUseCoupon) {
             this.putQueryParameter("AutoUseCoupon", autoUseCoupon);
             this.autoUseCoupon = autoUseCoupon;
+            return this;
+        }
+
+        /**
+         * <p>The initial model capacity of the instance. The value must be a positive integer. A capacity unit of 1000 is equivalent to one L20N equivalent card.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4000</p>
+         */
+        public Builder capacity(Long capacity) {
+            this.putQueryParameter("Capacity", capacity);
+            this.capacity = capacity;
             return this;
         }
 
@@ -608,7 +634,7 @@ public class CreateAIDBClusterRequest extends Request {
         }
 
         /**
-         * <p>The cluster description. Fuzzy match is supported.</p>
+         * <p>The description of the cluster. Fuzzy match is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -620,7 +646,7 @@ public class CreateAIDBClusterRequest extends Request {
         }
 
         /**
-         * <p>The instance ID of the PolarDB instance on which the application depends.</p>
+         * <p>The PolarDB instance ID on which the application depends.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-******************</p>
@@ -668,7 +694,7 @@ public class CreateAIDBClusterRequest extends Request {
         }
 
         /**
-         * <p>The ACK cluster ID.</p>
+         * <p>The ID of the ACK cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxxxxxxxxxxxxxxxxxxxxx</p>
@@ -692,7 +718,7 @@ public class CreateAIDBClusterRequest extends Request {
         }
 
         /**
-         * <p>The Kubernetes cluster management mode.</p>
+         * <p>The management mode of the Kubernetes cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>self_k8s</p>
@@ -740,7 +766,7 @@ public class CreateAIDBClusterRequest extends Request {
         }
 
         /**
-         * <p>The model name.</p>
+         * <p>The name of the model.</p>
          * 
          * <strong>example:</strong>
          * <p>Qwen3-30B-A3B</p>
@@ -811,10 +837,10 @@ public class CreateAIDBClusterRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required to pass parameter when <strong>PayType</strong> is set to <strong>Prepaid</strong>. Specifies the unit of the upfront payment duration for the subscription cluster. </p>
+         * <p>If the billing method is <strong>Prepaid</strong>, you must pass parameter. Specifies the upfront cluster as yearly or monthly. Valid values: </p>
          * <ul>
-         * <li><strong>Year</strong>: The subscription duration is measured in years.</li>
-         * <li><strong>Month</strong>: The subscription duration is measured in months.</li>
+         * <li><strong>Year</strong>: yearly. The unit is year.</li>
+         * <li><strong>Month</strong>: monthly. The unit is month.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -827,7 +853,7 @@ public class CreateAIDBClusterRequest extends Request {
         }
 
         /**
-         * <p>The coupon code. If this parameter is not specified, the default coupon is used.</p>
+         * <p>The coupon code. If you do not specify this parameter, the default coupon is used.</p>
          * 
          * <strong>example:</strong>
          * <p>727xxxxxx934</p>
@@ -870,7 +896,7 @@ public class CreateAIDBClusterRequest extends Request {
         }
 
         /**
-         * <p>The security group ID.</p>
+         * <p>The ID of the security group.</p>
          * 
          * <strong>example:</strong>
          * <p>sg-bp**************</p>
@@ -906,7 +932,7 @@ public class CreateAIDBClusterRequest extends Request {
         }
 
         /**
-         * <p>The pay-as-you-go time intervals.</p>
+         * <p>The pay-as-you-go time ranges.</p>
          */
         public Builder timeSlices(java.util.List<TimeSlices> timeSlices) {
             this.putQueryParameter("TimeSlices", timeSlices);
@@ -915,10 +941,10 @@ public class CreateAIDBClusterRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required when <strong>PayType</strong> is set to <strong>Prepaid</strong>.</p>
+         * <p>The subscription duration. This parameter is required when the billing method is set to <strong>Prepaid</strong>.</p>
          * <ul>
-         * <li>If <strong>Period</strong> is set to <strong>Month</strong>, the valid values of <strong>UsedTime</strong> are integers in the range of <code>[1-9]</code>.</li>
-         * <li>If <strong>Period</strong> is set to <strong>Year</strong>, the valid values of <strong>UsedTime</strong> are integers in the range of <code>[1-3]</code>.</li>
+         * <li>If <strong>Period</strong> is set to <strong>Month</strong>, the value of <strong>UsedTime</strong> is an integer ranging from <code>1</code> to <code>9</code>.</li>
+         * <li>If <strong>Period</strong> is set to <strong>Year</strong>, the value of <strong>UsedTime</strong> is an integer ranging from <code>1</code> to <code>3</code>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -931,7 +957,7 @@ public class CreateAIDBClusterRequest extends Request {
         }
 
         /**
-         * <p>The VPC ID.</p>
+         * <p>The ID of the virtual private cloud (VPC).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -944,7 +970,7 @@ public class CreateAIDBClusterRequest extends Request {
         }
 
         /**
-         * <p>The vSwitch ID.</p>
+         * <p>The ID of the vSwitch.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1028,7 +1054,7 @@ public class CreateAIDBClusterRequest extends Request {
             } 
 
             /**
-             * <p>The start time of the task. The time is in the <code>YYYY-MM-DDThh:mm:ssZ</code> format (UTC).</p>
+             * <p>The start time of the task. Specify the time in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time must be in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>1758729600</p>
@@ -1039,7 +1065,7 @@ public class CreateAIDBClusterRequest extends Request {
             }
 
             /**
-             * <p>The end time of the query. The end time must be later than the start time. The time is in the <code>YYYY-MM-DDThh:mmZ</code> format (UTC).</p>
+             * <p>The end time of the query. The end time must be later than the start time. Specify the time in the <code>YYYY-MM-DDThh:mmZ</code> format. The time must be in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>1758733200</p>

@@ -67,7 +67,7 @@ public class DescribeDBClusterEndpointsZonalResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the cluster endpoints.</p>
+         * <p>The cluster endpoint details.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -246,9 +246,9 @@ public class DescribeDBClusterEndpointsZonalResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether the endpoint is the dashboard endpoint of a PolarDB search node. Valid values:</p>
+             * <p>Specifies whether the address is the dashboard address of a PolarDB Search node. Valid values:</p>
              * <ul>
-             * <li><p>True: Yes.</p>
+             * <li><p>Ture: Yes.</p>
              * </li>
              * <li><p>False: No.</p>
              * </li>
@@ -278,7 +278,7 @@ public class DescribeDBClusterEndpointsZonalResponseBody extends TeaModel {
              * <ul>
              * <li><p>Public: Internet.</p>
              * </li>
-             * <li><p>Private: internal network.</p>
+             * <li><p>Private: Private network.</p>
              * </li>
              * </ul>
              * 
@@ -291,7 +291,7 @@ public class DescribeDBClusterEndpointsZonalResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The port number.</p>
+             * <p>The port.</p>
              * 
              * <strong>example:</strong>
              * <p>1521</p>
@@ -302,7 +302,7 @@ public class DescribeDBClusterEndpointsZonalResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The private domain name that is bound to the endpoint.</p>
+             * <p>The bound private domain name.</p>
              * 
              * <strong>example:</strong>
              * <p><em><strong>.</strong></em>.**.com</p>
@@ -313,7 +313,7 @@ public class DescribeDBClusterEndpointsZonalResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the virtual private cloud (VPC).</p>
+             * <p>The VPC ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-***************</p>
@@ -324,7 +324,7 @@ public class DescribeDBClusterEndpointsZonalResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The virtual switch ID.</p>
+             * <p>The vSwitch ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-************</p>
@@ -335,7 +335,7 @@ public class DescribeDBClusterEndpointsZonalResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The VPC instance ID.</p>
+             * <p>The VPC-connected instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>pe-*************</p>
@@ -584,7 +584,7 @@ public class DescribeDBClusterEndpointsZonalResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the endpoint.</p>
+             * <p>The endpoint name.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -608,32 +608,25 @@ public class DescribeDBClusterEndpointsZonalResponseBody extends TeaModel {
             /**
              * <p>The advanced configurations of the cluster endpoint.</p>
              * <ul>
-             * <li><p><strong>DistributedTransaction</strong>: The status of transaction splitting. Valid values:</p>
+             * <li><p><strong>DistributedTransaction</strong>: The transaction splitting status. Valid values:</p>
              * <ul>
-             * <li><p><strong>on</strong>: Transaction splitting is enabled.</p>
-             * </li>
-             * <li><p><strong>off</strong>: Transaction splitting is disabled.</p>
-             * </li>
+             * <li><strong>on</strong>: Transaction splitting is enabled.</li>
+             * <li><strong>off</strong>: Transaction splitting is disabled.</li>
              * </ul>
              * </li>
-             * <li><p><strong>ConsistLevel</strong>: The consistency level. Valid values:</p>
+             * <li><p><strong>ConsistLevel</strong>: The session consistency level. Valid values:</p>
              * <ul>
-             * <li><p><strong>0</strong>: Eventual consistency.</p>
-             * </li>
-             * <li><p><strong>1</strong>: Session consistency.</p>
-             * </li>
-             * <li><p><strong>2</strong>: Global consistency.</p>
-             * </li>
+             * <li><strong>0</strong>: Eventual consistency.</li>
+             * <li><strong>1</strong>: Session consistency.</li>
+             * <li><strong>2</strong>: Global consistency.</li>
              * </ul>
              * </li>
-             * <li><p><strong>LoadBalanceStrategy</strong>: The load balancing policy for automatic scheduling based on loads. The value is fixed as <strong>load</strong>.</p>
+             * <li><p><strong>LoadBalanceStrategy</strong>: The load balancing policy. Automatic scheduling based on load. The value is fixed as <strong>load</strong>.</p>
              * </li>
-             * <li><p><strong>MasterAcceptReads</strong>: Specifies whether the primary node accepts read requests. Valid values:</p>
+             * <li><p><strong>MasterAcceptReads</strong>: Specifies whether the primary database accepts reads. Valid values:</p>
              * <ul>
-             * <li><p><strong>on</strong>: The primary node accepts read requests.</p>
-             * </li>
-             * <li><p><strong>off</strong>: The primary node does not accept read requests.</p>
-             * </li>
+             * <li><strong>on</strong>: The primary database accepts reads.</li>
+             * <li><strong>off</strong>: Offload reads from primary node.</li>
              * </ul>
              * </li>
              * </ul>
@@ -647,13 +640,13 @@ public class DescribeDBClusterEndpointsZonalResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the cluster endpoint. Valid values:</p>
+             * <p>The cluster endpoint type. Valid values:</p>
              * <ul>
-             * <li><p>Cluster: the default cluster endpoint.</p>
+             * <li><p>Cluster: Default cluster endpoint.</p>
              * </li>
-             * <li><p>Primary: the primary endpoint.</p>
+             * <li><p>Primary: Primary endpoint.</p>
              * </li>
-             * <li><p>Custom: a custom cluster endpoint.</p>
+             * <li><p>Custom: Custom cluster endpoint.</p>
              * </li>
              * </ul>
              * 
@@ -666,7 +659,7 @@ public class DescribeDBClusterEndpointsZonalResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The role of each node in the endpoint. The primary node has the Writer role. Because multiple read-only nodes can be added to an endpoint, each read-only node is assigned a role name suffixed with a number, such as Reader1 and Reader2.</p>
+             * <p>The role names of the nodes under the target endpoint. The primary node is named Writer. Because multiple read-only nodes can be added to an endpoint, a number is appended to the role name of each read-only node for distinction, such as Reader1 and Reader2.</p>
              * 
              * <strong>example:</strong>
              * <p>Reader1</p>
@@ -677,7 +670,7 @@ public class DescribeDBClusterEndpointsZonalResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of nodes that are configured for the endpoint.</p>
+             * <p>The list of nodes configured for the endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p>pi-<em><strong><strong><strong><strong><strong><strong><strong>,pi-</strong></strong></strong></strong></strong></strong></strong></em></p>
@@ -688,11 +681,11 @@ public class DescribeDBClusterEndpointsZonalResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The policy for global consistency timeout. Valid values:</p>
+             * <p>The global consistency timeout policy. Valid values:</p>
              * <ul>
              * <li><p>0: Sends the request to the primary node.</p>
              * </li>
-             * <li><p>2: Degrades the request. If a global consistency read times out, the query is automatically degraded to a regular request. The client does not receive an error message.</p>
+             * <li><p>2: Downgrades upon timeout. If a global consistency read times out, the query is automatically downgraded to regular requests, and the client does not receive an error message.</p>
              * </li>
              * </ul>
              * 
@@ -705,7 +698,7 @@ public class DescribeDBClusterEndpointsZonalResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timeout period for global consistency.</p>
+             * <p>The global consistency timeout period.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -718,9 +711,9 @@ public class DescribeDBClusterEndpointsZonalResponseBody extends TeaModel {
             /**
              * <p>The read/write mode. Valid values:</p>
              * <ul>
-             * <li><p>ReadWrite: read and write (automatic read/write splitting).</p>
+             * <li><p>ReadWrite: Read and write (automatic read/write splitting).</p>
              * </li>
-             * <li><p>ReadOnly: read-only.</p>
+             * <li><p>ReadOnly: Read-only.</p>
              * </li>
              * </ul>
              * 
@@ -733,11 +726,11 @@ public class DescribeDBClusterEndpointsZonalResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether global consistency (high-performance mode) is enabled for the node. Valid values:</p>
+             * <p>Specifies whether the global consistency (high-performance mode) feature is enabled for the node. Valid values:</p>
              * <ul>
-             * <li><p>on: enabled.</p>
+             * <li><p>on: Enabled.</p>
              * </li>
-             * <li><p>off: disabled.</p>
+             * <li><p>off: Disabled.</p>
              * </li>
              * </ul>
              * 

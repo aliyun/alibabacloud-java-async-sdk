@@ -173,10 +173,8 @@ public class ModifyEncryptionDBSecretRequest extends Request {
         /**
          * <p>The status of the key. Valid values:</p>
          * <ul>
-         * <li><p><strong>Enabled</strong></p>
-         * </li>
-         * <li><p><strong>Disabled</strong></p>
-         * </li>
+         * <li><strong>Enabled</strong>: Enabled.</li>
+         * <li><strong>Disabled</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -237,7 +235,7 @@ public class ModifyEncryptionDBSecretRequest extends Request {
         }
 
         /**
-         * <p>The Global Resource Descriptor (GRD) of the role. For more information, see <a href="https://help.aliyun.com/document_detail/93689.html">Overview of RAM roles</a>.</p>
+         * <p>The global resource descriptor of the RAM role. The descriptor is used to specify a RAM role. For details, see <a href="https://help.aliyun.com/document_detail/93689.html">RAM role overview</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:ram::1406926*****:role/aliyunrdsinstanceencryptiondefaultrole</p>

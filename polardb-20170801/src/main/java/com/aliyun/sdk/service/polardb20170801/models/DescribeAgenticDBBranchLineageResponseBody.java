@@ -145,7 +145,7 @@ public class DescribeAgenticDBBranchLineageResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The anchor branch ID.</p>
+         * <p>The ID of the anchor branch.</p>
          * 
          * <strong>example:</strong>
          * <p>br-7g8h9i0j1k2l</p>
@@ -164,7 +164,7 @@ public class DescribeAgenticDBBranchLineageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of returned nodes.</p>
+         * <p>The total number of nodes returned.</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>
@@ -208,7 +208,7 @@ public class DescribeAgenticDBBranchLineageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The primary branch ID.</p>
+         * <p>The ID of the primary branch.</p>
          * 
          * <strong>example:</strong>
          * <p>br-root</p>
@@ -457,7 +457,7 @@ public class DescribeAgenticDBBranchLineageResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The compute cluster ID of the branch.</p>
+             * <p>The ID of the compute cluster associated with the branch.</p>
              * 
              * <strong>example:</strong>
              * <p>pc-g0lsayq8c5qe</p>
@@ -502,6 +502,7 @@ public class DescribeAgenticDBBranchLineageResponseBody extends TeaModel {
 
             /**
              * <p>The time when the branch was created.</p>
+             * <p>The time is in the ISO 8601 standard in the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</p>
              * 
              * <strong>example:</strong>
              * <p>2026-06-10T11:00:00Z</p>
@@ -512,7 +513,7 @@ public class DescribeAgenticDBBranchLineageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The depth relative to the anchor branch. The anchor branch has a depth of 0. Ancestor branches have negative values. Descendant branches have positive values.</p>
+             * <p>The depth relative to the anchor branch. The anchor branch has a depth of 0. Ancestor branches have negative values, and descendant branches have positive values.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -567,7 +568,10 @@ public class DescribeAgenticDBBranchLineageResponseBody extends TeaModel {
             }
 
             /**
-             * IsDefaultBranch.
+             * <p>Indicates whether the branch is the default branch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isDefaultBranch(Boolean isDefaultBranch) {
                 this.isDefaultBranch = isDefaultBranch;
@@ -586,7 +590,7 @@ public class DescribeAgenticDBBranchLineageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parent branch ID.</p>
+             * <p>The ID of the parent branch.</p>
              * 
              * <strong>example:</strong>
              * <p>br-1a2b3c4d5e6f</p>
@@ -597,7 +601,7 @@ public class DescribeAgenticDBBranchLineageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parent branch name.</p>
+             * <p>The name of the parent branch.</p>
              * 
              * <strong>example:</strong>
              * <p>main</p>

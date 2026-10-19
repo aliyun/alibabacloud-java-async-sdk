@@ -182,8 +182,7 @@ public class CreateKBSyncLinkResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the synchronization link was created.</p>
-         * <p>The time is in the ISO 8601 standard in the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+         * <p>The creation time. The time is in ISO 8601 format and the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-14T05:58:42Z</p>
@@ -194,7 +193,7 @@ public class CreateKBSyncLinkResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The description of the synchronization link.</p>
+         * <p>The description of the link.</p>
          * 
          * <strong>example:</strong>
          * <p>testDesc</p>
@@ -231,7 +230,7 @@ public class CreateKBSyncLinkResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the synchronization link.</p>
+         * <p>The name of the link.</p>
          * 
          * <strong>example:</strong>
          * <p>testName</p>
@@ -253,7 +252,7 @@ public class CreateKBSyncLinkResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The directory address of the synchronization source.</p>
+         * <p>The source directory address for synchronization.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.feishu.cn/wiki/space/xxxxxx">https://example.feishu.cn/wiki/space/xxxxxx</a></p>
@@ -264,7 +263,7 @@ public class CreateKBSyncLinkResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The synchronization interval. Unit: minutes.</p>
+         * <p>The synchronization interval, in minutes.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>

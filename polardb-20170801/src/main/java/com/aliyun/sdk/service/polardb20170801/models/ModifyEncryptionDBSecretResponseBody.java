@@ -104,9 +104,9 @@ public class ModifyEncryptionDBSecretResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The message returned for the request.</p>
          * <blockquote>
-         * <p>If the request is successful, \<code>Successful\\</code> is returned. If the request fails, an error message is returned, such as an error code.</p>
+         * <p>If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message such as an error code is returned.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -118,7 +118,7 @@ public class ModifyEncryptionDBSecretResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>4CE6DF97-AEA4-484F-906F-C407EE******</p>
@@ -129,11 +129,11 @@ public class ModifyEncryptionDBSecretResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>The result of the request. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong></p>
+         * <li><p><strong>true</strong>: The request is successful.</p>
          * </li>
-         * <li><p><strong>false</strong></p>
+         * <li><p><strong>false</strong>: The request fails.</p>
          * </li>
          * </ul>
          * 

@@ -174,7 +174,7 @@ public class CreateDBClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-***************</p>

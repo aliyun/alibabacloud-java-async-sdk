@@ -321,7 +321,7 @@ public class DescribeKnowledgeBasesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of AI applications bound to the knowledge base.</p>
+             * <p>The number of AI applications that are associated with the knowledge base.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -333,6 +333,7 @@ public class DescribeKnowledgeBasesResponseBody extends TeaModel {
 
             /**
              * <p>The creation time.</p>
+             * <p>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
              * 
              * <strong>example:</strong>
              * <p>2025-03-25T09:37:10Z</p>

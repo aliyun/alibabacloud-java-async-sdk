@@ -138,7 +138,7 @@ public class DescribeModelApisResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of records on the current page.</p>
+         * <p>The number of entries on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -149,7 +149,7 @@ public class DescribeModelApisResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page. Valid values: <strong>30</strong>, <strong>50</strong>, or <strong>100</strong>.</p>
+         * <p>The number of entries per page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>.</p>
          * <p>Default value: <strong>30</strong>.</p>
          * 
          * <strong>example:</strong>
@@ -172,7 +172,7 @@ public class DescribeModelApisResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of records.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -358,7 +358,7 @@ public class DescribeModelApisResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The model category. Valid values:</p>
+             * <p>The category. Valid values:</p>
              * <ul>
              * <li><strong>text</strong></li>
              * <li><strong>embedding</strong></li>
@@ -374,7 +374,10 @@ public class DescribeModelApisResponseBody extends TeaModel {
             }
 
             /**
-             * Config.
+             * <p>The gateway retry configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;failover&quot;:{&quot;enabled&quot;:true,&quot;max_provider_retries&quot;:2,&quot;max_failover_providers&quot;:1,&quot;retryable_status_codes&quot;:[429,500,502,503,504],&quot;retry_delay&quot;:0.5}}</p>
              */
             public Builder config(String config) {
                 this.config = config;
@@ -393,7 +396,7 @@ public class DescribeModelApisResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The model API IDs.</p>
+             * <p>The IDs of the model APIs.</p>
              * 
              * <strong>example:</strong>
              * <p>mi-xxxx</p>
@@ -404,7 +407,7 @@ public class DescribeModelApisResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The model API name.</p>
+             * <p>The name of the model API.</p>
              * 
              * <strong>example:</strong>
              * <p>testName</p>
@@ -443,7 +446,7 @@ public class DescribeModelApisResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of input tokens.</p>
+             * <p>The number of input points.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -454,7 +457,7 @@ public class DescribeModelApisResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of output tokens.</p>
+             * <p>The number of output points.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -465,7 +468,7 @@ public class DescribeModelApisResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The routing rules list (JSON array string).</p>
+             * <p>The list of routing rules, formatted as a JSON array string.</p>
              * 
              * <strong>example:</strong>
              * <p>[
@@ -499,7 +502,7 @@ public class DescribeModelApisResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The model API status.</p>
+             * <p>The status of the model API.</p>
              * 
              * <strong>example:</strong>
              * <p>Enable</p>

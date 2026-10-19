@@ -169,7 +169,7 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned on the current page.</p>
+         * <p>The number of records on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -180,7 +180,7 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page. Valid values: 5 to 50. Default value: 10.</p>
+         * <p>The number of records per page. Valid values: 5 to 50. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -191,7 +191,7 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The path of the directory.</p>
+         * <p>The directory path.</p>
          * 
          * <strong>example:</strong>
          * <p>/data</p>
@@ -202,7 +202,7 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The PolarFS instance ID.</p>
+         * <p>The Polarlakebase instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pfs-2ze0i74ka607*****</p>
@@ -213,7 +213,7 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the rules.</p>
+         * <p>The rule details.</p>
          */
         public Builder policyItems(java.util.List<PolicyItems> policyItems) {
             this.policyItems = policyItems;
@@ -229,7 +229,7 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>2FED790E-FB61-4721-8C1C-07C627******</p>
@@ -240,7 +240,7 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -426,7 +426,7 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The TTL of the access time. Unit: seconds.</p>
+             * <p>The TTL for access time. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>7200</p>
@@ -437,7 +437,7 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The TTL of the change time. Unit: seconds.</p>
+             * <p>The TTL for change time. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>7200</p>
@@ -459,12 +459,10 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the rule is enabled. Valid values:</p>
+             * <p>Specifies whether the rule is enabled. Valid values:</p>
              * <ul>
-             * <li><p><strong>true</strong>: The rule takes effect immediately for new events. This is the default value.</p>
-             * </li>
-             * <li><p><strong>false</strong>: The rule does not take effect for new events.</p>
-             * </li>
+             * <li><strong>true</strong>: The new event takes effect immediately for new transactions. This is the default value.</li>
+             * <li><strong>false</strong>: The new event does not take effect for new transactions.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -476,9 +474,9 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The glob pattern of paths to exclude.</p>
+             * <p>The matching rule for excluding specific paths.</p>
              * <ul>
-             * <li>The pattern must start with <code>/</code> and supports glob syntax, including <code>*</code>, <code>?</code>, and <code>**</code>.</li>
+             * <li>A path pattern that starts with <code>/</code> (supports <code>*</code>, <code>?</code>, and <code>**</code> glob syntax).</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -490,7 +488,7 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of files in the directory.</p>
+             * <p>The file count limit for users in the directory.</p>
              * 
              * <strong>example:</strong>
              * <p>77</p>
@@ -512,9 +510,9 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The glob pattern for paths to include.</p>
+             * <p>The glob pattern for matching paths.</p>
              * <ul>
-             * <li>The pattern must start with <code>/</code> and supports glob syntax, including <code>*</code>, <code>?</code>, and <code>**</code>.</li>
+             * <li>A path pattern that starts with <code>/</code> (supports <code>*</code>, <code>?</code>, and <code>**</code> glob syntax).</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -548,9 +546,9 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum total size of files in the directory. Unit: GB.</p>
+             * <p>The total file capacity limit for the directory. Unit: GB.</p>
              * <ul>
-             * <li>The value must be greater than or equal to 1.</li>
+             * <li>Note: The value must be at least 1 GB.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -671,7 +669,7 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of inodes.</p>
+             * <p>Inodes</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>

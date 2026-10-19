@@ -23,6 +23,9 @@ public class RegisterAIDBClusterCustomModelResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DisplayModelName")
     private String displayModelName;
 
+    @com.aliyun.core.annotation.NameInMap("ImageImportStatus")
+    private String imageImportStatus;
+
     @com.aliyun.core.annotation.NameInMap("ModelId")
     private Long modelId;
 
@@ -41,6 +44,7 @@ public class RegisterAIDBClusterCustomModelResponseBody extends TeaModel {
     private RegisterAIDBClusterCustomModelResponseBody(Builder builder) {
         this.created = builder.created;
         this.displayModelName = builder.displayModelName;
+        this.imageImportStatus = builder.imageImportStatus;
         this.modelId = builder.modelId;
         this.modelName = builder.modelName;
         this.modelType = builder.modelType;
@@ -72,6 +76,13 @@ public class RegisterAIDBClusterCustomModelResponseBody extends TeaModel {
      */
     public String getDisplayModelName() {
         return this.displayModelName;
+    }
+
+    /**
+     * @return imageImportStatus
+     */
+    public String getImageImportStatus() {
+        return this.imageImportStatus;
     }
 
     /**
@@ -112,6 +123,7 @@ public class RegisterAIDBClusterCustomModelResponseBody extends TeaModel {
     public static final class Builder {
         private Boolean created; 
         private String displayModelName; 
+        private String imageImportStatus; 
         private Long modelId; 
         private String modelName; 
         private String modelType; 
@@ -124,6 +136,7 @@ public class RegisterAIDBClusterCustomModelResponseBody extends TeaModel {
         private Builder(RegisterAIDBClusterCustomModelResponseBody model) {
             this.created = model.created;
             this.displayModelName = model.displayModelName;
+            this.imageImportStatus = model.imageImportStatus;
             this.modelId = model.modelId;
             this.modelName = model.modelName;
             this.modelType = model.modelType;
@@ -132,7 +145,7 @@ public class RegisterAIDBClusterCustomModelResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether the registration is newly created. A value of false indicates that an existing registration was updated.</p>
+         * <p>Indicates whether a new registration is created. A value of false indicates that an existing registration is updated.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -143,13 +156,24 @@ public class RegisterAIDBClusterCustomModelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The display name and initial client-facing invocation name.</p>
+         * <p>The display name and the initial invocation name for clients.</p>
          * 
          * <strong>example:</strong>
          * <p>my-qwen3</p>
          */
         public Builder displayModelName(String displayModelName) {
             this.displayModelName = displayModelName;
+            return this;
+        }
+
+        /**
+         * <p>The image import status. The initial value is Importing after an image is registered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Importing</p>
+         */
+        public Builder imageImportStatus(String imageImportStatus) {
+            this.imageImportStatus = imageImportStatus;
             return this;
         }
 

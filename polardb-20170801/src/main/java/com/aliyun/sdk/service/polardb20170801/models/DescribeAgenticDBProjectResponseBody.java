@@ -158,7 +158,11 @@ public class DescribeAgenticDBProjectResponseBody extends TeaModel {
         } 
 
         /**
-         * CreateTime.
+         * <p>The time when the project was created.</p>
+         * <p>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-06-10T11:00:00Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -166,7 +170,10 @@ public class DescribeAgenticDBProjectResponseBody extends TeaModel {
         }
 
         /**
-         * DefaultBranchId.
+         * <p>The ID of the default branch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>br-1a2b3c4d5e6f</p>
          */
         public Builder defaultBranchId(String defaultBranchId) {
             this.defaultBranchId = defaultBranchId;
@@ -174,7 +181,10 @@ public class DescribeAgenticDBProjectResponseBody extends TeaModel {
         }
 
         /**
-         * DefaultBranchName.
+         * <p>The name of the default branch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>main</p>
          */
         public Builder defaultBranchName(String defaultBranchName) {
             this.defaultBranchName = defaultBranchName;
@@ -182,7 +192,10 @@ public class DescribeAgenticDBProjectResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The description of the project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Production analytics database</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -190,7 +203,10 @@ public class DescribeAgenticDBProjectResponseBody extends TeaModel {
         }
 
         /**
-         * ProjectId.
+         * <p>Project ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>proj-a1b2c3d4e5f6</p>
          */
         public Builder projectId(String projectId) {
             this.projectId = projectId;
@@ -198,7 +214,10 @@ public class DescribeAgenticDBProjectResponseBody extends TeaModel {
         }
 
         /**
-         * ProjectName.
+         * <p>The project name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>analytics-prod</p>
          */
         public Builder projectName(String projectName) {
             this.projectName = projectName;
@@ -206,7 +225,10 @@ public class DescribeAgenticDBProjectResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>I9J0K1L2-M3N4-5678-IJKL-789012345678</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -214,7 +236,15 @@ public class DescribeAgenticDBProjectResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The project status. Valid values:</p>
+         * <ul>
+         * <li>Active: Normal.</li>
+         * <li>Destroying: Being destroyed.</li>
+         * <li>Destroyed: Destroyed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -222,7 +252,10 @@ public class DescribeAgenticDBProjectResponseBody extends TeaModel {
         }
 
         /**
-         * TenantId.
+         * <p>The ID of the tenant to which the project belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-4b83e0da66674951</p>
          */
         public Builder tenantId(String tenantId) {
             this.tenantId = tenantId;

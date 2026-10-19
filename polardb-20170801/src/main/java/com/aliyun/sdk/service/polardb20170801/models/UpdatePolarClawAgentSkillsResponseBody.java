@@ -154,7 +154,7 @@ public class UpdatePolarClawAgentSkillsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The return code.</p>
+         * <p>The response status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>

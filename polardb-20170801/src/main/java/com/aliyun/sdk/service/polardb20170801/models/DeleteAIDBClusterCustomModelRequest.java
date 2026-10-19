@@ -18,11 +18,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DeleteAIDBClusterCustomModelRequest extends Request {
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("DBClusterId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String DBClusterId;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ModelName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String modelName;
@@ -34,7 +29,6 @@ public class DeleteAIDBClusterCustomModelRequest extends Request {
 
     private DeleteAIDBClusterCustomModelRequest(Builder builder) {
         super(builder);
-        this.DBClusterId = builder.DBClusterId;
         this.modelName = builder.modelName;
         this.regionId = builder.regionId;
     }
@@ -53,13 +47,6 @@ public class DeleteAIDBClusterCustomModelRequest extends Request {
     }
 
     /**
-     * @return DBClusterId
-     */
-    public String getDBClusterId() {
-        return this.DBClusterId;
-    }
-
-    /**
      * @return modelName
      */
     public String getModelName() {
@@ -74,7 +61,6 @@ public class DeleteAIDBClusterCustomModelRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteAIDBClusterCustomModelRequest, Builder> {
-        private String DBClusterId; 
         private String modelName; 
         private String regionId; 
 
@@ -84,26 +70,12 @@ public class DeleteAIDBClusterCustomModelRequest extends Request {
 
         private Builder(DeleteAIDBClusterCustomModelRequest request) {
             super(request);
-            this.DBClusterId = request.DBClusterId;
             this.modelName = request.modelName;
             this.regionId = request.regionId;
         } 
 
         /**
-         * <p>The ID of the PolarDB AI 3.0 logical instance.</p>
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>pm-2ze4x2mwo81knj08a</p>
-         */
-        public Builder DBClusterId(String DBClusterId) {
-            this.putQueryParameter("DBClusterId", DBClusterId);
-            this.DBClusterId = DBClusterId;
-            return this;
-        }
-
-        /**
-         * <p>The key of the custom model registration to delete.</p>
+         * <p>The custom model registration key to delete.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

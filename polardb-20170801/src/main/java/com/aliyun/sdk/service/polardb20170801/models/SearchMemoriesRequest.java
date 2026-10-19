@@ -173,7 +173,7 @@ public class SearchMemoriesRequest extends Request {
         } 
 
         /**
-         * <p>The application ID.</p>
+         * <p>The application ID. Example: pa-**************.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

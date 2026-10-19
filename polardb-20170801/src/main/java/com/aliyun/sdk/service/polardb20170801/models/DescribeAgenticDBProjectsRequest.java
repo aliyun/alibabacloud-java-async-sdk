@@ -219,7 +219,7 @@ public class DescribeAgenticDBProjectsRequest extends Request {
         }
 
         /**
-         * <p>The tenant ID to which the project belongs.</p>
+         * <p>The ID of the tenant to which the project belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>t-4b83e0da66674951</p>

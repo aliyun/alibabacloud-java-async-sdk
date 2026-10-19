@@ -89,7 +89,7 @@ public class UpdatePolarClawAgentSkillsRequest extends Request {
         } 
 
         /**
-         * <p>Agent ID</p>
+         * <p>PolarClaw Agent ID。</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class UpdatePolarClawAgentSkillsRequest extends Request {
         }
 
         /**
-         * <p>The application ID.</p>
+         * <p>The PolarClaw application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

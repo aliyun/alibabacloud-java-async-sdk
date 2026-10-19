@@ -74,7 +74,7 @@ public class RestartPolarClawGatewayRequest extends Request {
         } 
 
         /**
-         * <p>The application ID.</p>
+         * <p>The PolarClaw application ID. Example: pa-xxx.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -89,8 +89,8 @@ public class RestartPolarClawGatewayRequest extends Request {
         /**
          * <p>The restart mode. Valid values:</p>
          * <ul>
-         * <li>in-process: lightweight restart without applying environment variable changes. This is the default value.</li>
-         * <li>pkill: cold start that applies environment variable changes.</li>
+         * <li>in-process: lightweight restart. Environment variables do not take effect. This is the default value.</li>
+         * <li>pkill: cold start. Environment variables take effect.</li>
          * </ul>
          * 
          * <strong>example:</strong>

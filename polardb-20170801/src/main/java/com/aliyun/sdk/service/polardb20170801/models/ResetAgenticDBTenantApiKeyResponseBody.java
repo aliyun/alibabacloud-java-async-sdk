@@ -132,7 +132,10 @@ public class ResetAgenticDBTenantApiKeyResponseBody extends TeaModel {
         } 
 
         /**
-         * ApiKey.
+         * <p>The new API key in plaintext. This value is returned only in this response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pagc_key_cGFnYy1icDFh...newSignature22ch</p>
          */
         public Builder apiKey(String apiKey) {
             this.apiKey = apiKey;
@@ -140,7 +143,10 @@ public class ResetAgenticDBTenantApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * ApiKeyId.
+         * <p>The resource ID of the API key. This value remains unchanged after the reset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ak-71304e39c7e841a1</p>
          */
         public Builder apiKeyId(String apiKeyId) {
             this.apiKeyId = apiKeyId;
@@ -148,7 +154,11 @@ public class ResetAgenticDBTenantApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The reset time, which is the effective period of the new key.</p>
+         * <p>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-06-10T14:00:00Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -156,7 +166,11 @@ public class ResetAgenticDBTenantApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * ExpireTime.
+         * <p>The expiration time.</p>
+         * <p>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2027-01-01T00:00:00Z</p>
          */
         public Builder expireTime(String expireTime) {
             this.expireTime = expireTime;
@@ -164,7 +178,10 @@ public class ResetAgenticDBTenantApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B2C3D4E5-F6A7-8901-BCDE-F12345678901</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -172,7 +189,10 @@ public class ResetAgenticDBTenantApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * TenantId.
+         * <p>The tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-4b83e0da66674951</p>
          */
         public Builder tenantId(String tenantId) {
             this.tenantId = tenantId;
@@ -180,7 +200,10 @@ public class ResetAgenticDBTenantApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * TenantName.
+         * <p>The tenant name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-saas-app</p>
          */
         public Builder tenantName(String tenantName) {
             this.tenantName = tenantName;

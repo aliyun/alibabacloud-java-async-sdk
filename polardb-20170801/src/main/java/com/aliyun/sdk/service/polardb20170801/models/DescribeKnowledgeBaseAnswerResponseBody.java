@@ -195,10 +195,10 @@ public class DescribeKnowledgeBaseAnswerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The answer content.</p>
+         * <p>The content of the answer.</p>
          * 
          * <strong>example:</strong>
-         * <p>The financial report summary is as follows: ******</p>
+         * <p>The content of the financial report is summarized as follows: ******</p>
          */
         public Builder answer(String answer) {
             this.answer = answer;
@@ -206,7 +206,7 @@ public class DescribeKnowledgeBaseAnswerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The cumulative number of tokens generated for completion.</p>
+         * <p>The cumulative number of completion tokens generated.</p>
          * 
          * <strong>example:</strong>
          * <p>3935</p>
@@ -239,7 +239,7 @@ public class DescribeKnowledgeBaseAnswerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The large language model ID.</p>
+         * <p>The ID of the large language model.</p>
          * 
          * <strong>example:</strong>
          * <p>OO1A6p8B******_xPUC</p>
@@ -250,7 +250,7 @@ public class DescribeKnowledgeBaseAnswerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The cumulative number of tokens consumed by the prompt.</p>
+         * <p>The cumulative number of prompt tokens consumed.</p>
          * 
          * <strong>example:</strong>
          * <p>2459</p>
@@ -261,7 +261,7 @@ public class DescribeKnowledgeBaseAnswerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique ID of the Q&amp;A task.</p>
+         * <p>The unique identifier of the Q&amp;A task.</p>
          * 
          * <strong>example:</strong>
          * <p>R3BGbnBqcXN******.2a5a23c9-******-179970533d30</p>
@@ -293,8 +293,8 @@ public class DescribeKnowledgeBaseAnswerResponseBody extends TeaModel {
         /**
          * <p>The status of the Q&amp;A task. Valid values:</p>
          * <ul>
-         * <li>RUNNING: In progress.</li>
-         * <li>COMPLETED: Completed.</li>
+         * <li>RUNNING: The task is in progress.</li>
+         * <li>COMPLETED: The task is completed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -414,7 +414,7 @@ public class DescribeKnowledgeBaseAnswerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique ID of the image resource.</p>
+             * <p>The unique identifier of the image resource.</p>
              * 
              * <strong>example:</strong>
              * <p>document-0/pictures/1</p>
@@ -436,7 +436,7 @@ public class DescribeKnowledgeBaseAnswerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The media type of the image resource.</p>
+             * <p>The MIME type of the image resource.</p>
              * 
              * <strong>example:</strong>
              * <p>image/png</p>
@@ -634,7 +634,7 @@ public class DescribeKnowledgeBaseAnswerResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The chunk metadata.</p>
+             * <p>The shard metadata.</p>
              * 
              * <strong>example:</strong>
              * <p>{}</p>
@@ -659,7 +659,7 @@ public class DescribeKnowledgeBaseAnswerResponseBody extends TeaModel {
              * <p>The file name.</p>
              * 
              * <strong>example:</strong>
-             * <p>FinancialReport.pdf</p>
+             * <p>Financial_Report.pdf</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -667,7 +667,7 @@ public class DescribeKnowledgeBaseAnswerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of image resources associated with the referenced chunk in the Q&amp;A.</p>
+             * <p>The list of image resources associated with the shard referenced in the Q&amp;A.</p>
              */
             public Builder imageResources(java.util.List<ImageResources> imageResources) {
                 this.imageResources = imageResources;
@@ -675,7 +675,7 @@ public class DescribeKnowledgeBaseAnswerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique ID of the knowledge base.</p>
+             * <p>The unique identifier of the knowledge base.</p>
              * 
              * <strong>example:</strong>
              * <p>pkb-xxxxx</p>
@@ -697,7 +697,7 @@ public class DescribeKnowledgeBaseAnswerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of page numbers to which the chunk belongs.</p>
+             * <p>The list of page numbers to which the shard belongs.</p>
              */
             public Builder pageNumbers(java.util.List<Integer> pageNumbers) {
                 this.pageNumbers = pageNumbers;
@@ -705,10 +705,10 @@ public class DescribeKnowledgeBaseAnswerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The chunk content.</p>
+             * <p>The shard content.</p>
              * 
              * <strong>example:</strong>
-             * <p>FinancialReport</p>
+             * <p>Financial report</p>
              */
             public Builder shardContent(String shardContent) {
                 this.shardContent = shardContent;
@@ -716,7 +716,7 @@ public class DescribeKnowledgeBaseAnswerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The chunk ID.</p>
+             * <p>The shard ID.</p>
              * 
              * <strong>example:</strong>
              * <p>8</p>

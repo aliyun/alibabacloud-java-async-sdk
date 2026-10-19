@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeCostRulesRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CostRuleId")
+    private String costRuleId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EffectiveTargetType")
     private String effectiveTargetType;
 
@@ -29,6 +33,10 @@ public class DescribeCostRulesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("GwClusterId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String gwClusterId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InputTokenTier")
+    private String inputTokenTier;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ModelName")
@@ -52,9 +60,11 @@ public class DescribeCostRulesRequest extends Request {
 
     private DescribeCostRulesRequest(Builder builder) {
         super(builder);
+        this.costRuleId = builder.costRuleId;
         this.effectiveTargetType = builder.effectiveTargetType;
         this.effectiveTargetValue = builder.effectiveTargetValue;
         this.gwClusterId = builder.gwClusterId;
+        this.inputTokenTier = builder.inputTokenTier;
         this.modelName = builder.modelName;
         this.modelServiceId = builder.modelServiceId;
         this.pageNumber = builder.pageNumber;
@@ -76,6 +86,13 @@ public class DescribeCostRulesRequest extends Request {
     }
 
     /**
+     * @return costRuleId
+     */
+    public String getCostRuleId() {
+        return this.costRuleId;
+    }
+
+    /**
      * @return effectiveTargetType
      */
     public String getEffectiveTargetType() {
@@ -94,6 +111,13 @@ public class DescribeCostRulesRequest extends Request {
      */
     public String getGwClusterId() {
         return this.gwClusterId;
+    }
+
+    /**
+     * @return inputTokenTier
+     */
+    public String getInputTokenTier() {
+        return this.inputTokenTier;
     }
 
     /**
@@ -132,9 +156,11 @@ public class DescribeCostRulesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeCostRulesRequest, Builder> {
+        private String costRuleId; 
         private String effectiveTargetType; 
         private String effectiveTargetValue; 
         private String gwClusterId; 
+        private String inputTokenTier; 
         private String modelName; 
         private String modelServiceId; 
         private Integer pageNumber; 
@@ -147,9 +173,11 @@ public class DescribeCostRulesRequest extends Request {
 
         private Builder(DescribeCostRulesRequest request) {
             super(request);
+            this.costRuleId = request.costRuleId;
             this.effectiveTargetType = request.effectiveTargetType;
             this.effectiveTargetValue = request.effectiveTargetValue;
             this.gwClusterId = request.gwClusterId;
+            this.inputTokenTier = request.inputTokenTier;
             this.modelName = request.modelName;
             this.modelServiceId = request.modelServiceId;
             this.pageNumber = request.pageNumber;
@@ -158,7 +186,19 @@ public class DescribeCostRulesRequest extends Request {
         } 
 
         /**
-         * <p>Filters by effective target type. Valid values: global, consumerGroup, and consumer.</p>
+         * <p>The ID of the cost rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cr-xxx</p>
+         */
+        public Builder costRuleId(String costRuleId) {
+            this.putQueryParameter("CostRuleId", costRuleId);
+            this.costRuleId = costRuleId;
+            return this;
+        }
+
+        /**
+         * <p>The type of the effective target. Valid values: global, consumerGroup, and consumer.</p>
          * 
          * <strong>example:</strong>
          * <p>global</p>
@@ -170,7 +210,7 @@ public class DescribeCostRulesRequest extends Request {
         }
 
         /**
-         * <p>Filters by effective target value.</p>
+         * <p>The value of the effective target used to filter results.</p>
          * 
          * <strong>example:</strong>
          * <p>user</p>
@@ -195,7 +235,19 @@ public class DescribeCostRulesRequest extends Request {
         }
 
         /**
-         * <p>The model name, such as gpt-4 or qwen-turbo.</p>
+         * <p>The input token tier used to filter results. Rules that include this tier are returned. Valid values: 0-32K, 32K-64K, 64K-128K, 128K-256K, 256K-512K, 512K-1M, and 1M+.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0-32K</p>
+         */
+        public Builder inputTokenTier(String inputTokenTier) {
+            this.putQueryParameter("InputTokenTier", inputTokenTier);
+            this.inputTokenTier = inputTokenTier;
+            return this;
+        }
+
+        /**
+         * <p>The name of the model, such as gpt-4 or qwen-turbo.</p>
          * 
          * <strong>example:</strong>
          * <p>qwen3-max</p>
@@ -207,7 +259,7 @@ public class DescribeCostRulesRequest extends Request {
         }
 
         /**
-         * <p>The model service ID.</p>
+         * <p>The ID of the model service.</p>
          * 
          * <strong>example:</strong>
          * <p>ms-xxxxxx</p>

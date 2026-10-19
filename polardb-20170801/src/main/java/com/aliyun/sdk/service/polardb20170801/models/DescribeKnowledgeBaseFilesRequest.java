@@ -159,7 +159,7 @@ public class DescribeKnowledgeBaseFilesRequest extends Request {
         } 
 
         /**
-         * <p>The list of file IDs, separated by commas (,).</p>
+         * <p>The list of file IDs, separated by commas.</p>
          * 
          * <strong>example:</strong>
          * <p>doc_a,doc_b</p>
@@ -171,10 +171,10 @@ public class DescribeKnowledgeBaseFilesRequest extends Request {
         }
 
         /**
-         * <p>The keyword used to filter file names.</p>
+         * <p>The keyword for the file name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Financial report</p>
+         * <p>FinancialReport</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -183,7 +183,7 @@ public class DescribeKnowledgeBaseFilesRequest extends Request {
         }
 
         /**
-         * <p>The unique ID of the knowledge base.</p>
+         * <p>The unique identifier of the knowledge base.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -196,7 +196,7 @@ public class DescribeKnowledgeBaseFilesRequest extends Request {
         }
 
         /**
-         * <p>The unique ID of the synchronization link.</p>
+         * <p>The unique identifier of the synchronization link.</p>
          * 
          * <strong>example:</strong>
          * <p>pkbl-2ze123456789abc</p>

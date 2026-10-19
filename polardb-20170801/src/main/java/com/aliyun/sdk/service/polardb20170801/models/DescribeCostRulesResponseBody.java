@@ -138,7 +138,7 @@ public class DescribeCostRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of records on the current page.</p>
+         * <p>The number of entries on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -171,7 +171,7 @@ public class DescribeCostRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of records.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -193,18 +193,111 @@ public class DescribeCostRulesResponseBody extends TeaModel {
      *
      * <p>DescribeCostRulesResponseBody</p>
      */
+    public static class InputTokenTiers extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("InputCostPointsPerMillion")
+        private String inputCostPointsPerMillion;
+
+        @com.aliyun.core.annotation.NameInMap("Tier")
+        private String tier;
+
+        private InputTokenTiers(Builder builder) {
+            this.inputCostPointsPerMillion = builder.inputCostPointsPerMillion;
+            this.tier = builder.tier;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static InputTokenTiers create() {
+            return builder().build();
+        }
+
+        /**
+         * @return inputCostPointsPerMillion
+         */
+        public String getInputCostPointsPerMillion() {
+            return this.inputCostPointsPerMillion;
+        }
+
+        /**
+         * @return tier
+         */
+        public String getTier() {
+            return this.tier;
+        }
+
+        public static final class Builder {
+            private String inputCostPointsPerMillion; 
+            private String tier; 
+
+            private Builder() {
+            } 
+
+            private Builder(InputTokenTiers model) {
+                this.inputCostPointsPerMillion = model.inputCostPointsPerMillion;
+                this.tier = model.tier;
+            } 
+
+            /**
+             * <p>The input cost points per million tokens for the tier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
+             */
+            public Builder inputCostPointsPerMillion(String inputCostPointsPerMillion) {
+                this.inputCostPointsPerMillion = inputCostPointsPerMillion;
+                return this;
+            }
+
+            /**
+             * <p>The token tier. Valid values: &quot;&quot; (default tier), 0-32K, 32K-64K, 64K-128K, 128K-256K, 256K-512K, 512K-1M, and 1M+.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0-32K</p>
+             */
+            public Builder tier(String tier) {
+                this.tier = tier;
+                return this;
+            }
+
+            public InputTokenTiers build() {
+                return new InputTokenTiers(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeCostRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCostRulesResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CacheCostPointsPerMillion")
         private String cacheCostPointsPerMillion;
 
+        @com.aliyun.core.annotation.NameInMap("CacheCreationCostPointsPerMillion")
+        private String cacheCreationCostPointsPerMillion;
+
         @com.aliyun.core.annotation.NameInMap("CostRuleId")
         private String costRuleId;
+
+        @com.aliyun.core.annotation.NameInMap("EffectiveEndTime")
+        private String effectiveEndTime;
+
+        @com.aliyun.core.annotation.NameInMap("EffectiveStartTime")
+        private String effectiveStartTime;
 
         @com.aliyun.core.annotation.NameInMap("EffectiveTargetType")
         private String effectiveTargetType;
 
         @com.aliyun.core.annotation.NameInMap("EffectiveTargetValue")
         private String effectiveTargetValue;
+
+        @com.aliyun.core.annotation.NameInMap("ExplicitCacheCostPointsPerMillion")
+        private String explicitCacheCostPointsPerMillion;
 
         @com.aliyun.core.annotation.NameInMap("GmtCreated")
         private String gmtCreated;
@@ -215,8 +308,17 @@ public class DescribeCostRulesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GwClusterId")
         private String gwClusterId;
 
+        @com.aliyun.core.annotation.NameInMap("ImageCostPointsPerCount")
+        private String imageCostPointsPerCount;
+
         @com.aliyun.core.annotation.NameInMap("InputCostPointsPerMillion")
         private String inputCostPointsPerMillion;
+
+        @com.aliyun.core.annotation.NameInMap("InputTokenTier")
+        private String inputTokenTier;
+
+        @com.aliyun.core.annotation.NameInMap("InputTokenTiers")
+        private java.util.List<InputTokenTiers> inputTokenTiers;
 
         @com.aliyun.core.annotation.NameInMap("Model")
         private String model;
@@ -224,21 +326,36 @@ public class DescribeCostRulesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ModelServiceId")
         private String modelServiceId;
 
+        @com.aliyun.core.annotation.NameInMap("ModelServiceName")
+        private String modelServiceName;
+
         @com.aliyun.core.annotation.NameInMap("OutputCostPointsPerMillion")
         private String outputCostPointsPerMillion;
 
+        @com.aliyun.core.annotation.NameInMap("VideoCostPointsPerSecond")
+        private String videoCostPointsPerSecond;
+
         private Items(Builder builder) {
             this.cacheCostPointsPerMillion = builder.cacheCostPointsPerMillion;
+            this.cacheCreationCostPointsPerMillion = builder.cacheCreationCostPointsPerMillion;
             this.costRuleId = builder.costRuleId;
+            this.effectiveEndTime = builder.effectiveEndTime;
+            this.effectiveStartTime = builder.effectiveStartTime;
             this.effectiveTargetType = builder.effectiveTargetType;
             this.effectiveTargetValue = builder.effectiveTargetValue;
+            this.explicitCacheCostPointsPerMillion = builder.explicitCacheCostPointsPerMillion;
             this.gmtCreated = builder.gmtCreated;
             this.gmtModified = builder.gmtModified;
             this.gwClusterId = builder.gwClusterId;
+            this.imageCostPointsPerCount = builder.imageCostPointsPerCount;
             this.inputCostPointsPerMillion = builder.inputCostPointsPerMillion;
+            this.inputTokenTier = builder.inputTokenTier;
+            this.inputTokenTiers = builder.inputTokenTiers;
             this.model = builder.model;
             this.modelServiceId = builder.modelServiceId;
+            this.modelServiceName = builder.modelServiceName;
             this.outputCostPointsPerMillion = builder.outputCostPointsPerMillion;
+            this.videoCostPointsPerSecond = builder.videoCostPointsPerSecond;
         }
 
         public static Builder builder() {
@@ -257,10 +374,31 @@ public class DescribeCostRulesResponseBody extends TeaModel {
         }
 
         /**
+         * @return cacheCreationCostPointsPerMillion
+         */
+        public String getCacheCreationCostPointsPerMillion() {
+            return this.cacheCreationCostPointsPerMillion;
+        }
+
+        /**
          * @return costRuleId
          */
         public String getCostRuleId() {
             return this.costRuleId;
+        }
+
+        /**
+         * @return effectiveEndTime
+         */
+        public String getEffectiveEndTime() {
+            return this.effectiveEndTime;
+        }
+
+        /**
+         * @return effectiveStartTime
+         */
+        public String getEffectiveStartTime() {
+            return this.effectiveStartTime;
         }
 
         /**
@@ -275,6 +413,13 @@ public class DescribeCostRulesResponseBody extends TeaModel {
          */
         public String getEffectiveTargetValue() {
             return this.effectiveTargetValue;
+        }
+
+        /**
+         * @return explicitCacheCostPointsPerMillion
+         */
+        public String getExplicitCacheCostPointsPerMillion() {
+            return this.explicitCacheCostPointsPerMillion;
         }
 
         /**
@@ -299,10 +444,31 @@ public class DescribeCostRulesResponseBody extends TeaModel {
         }
 
         /**
+         * @return imageCostPointsPerCount
+         */
+        public String getImageCostPointsPerCount() {
+            return this.imageCostPointsPerCount;
+        }
+
+        /**
          * @return inputCostPointsPerMillion
          */
         public String getInputCostPointsPerMillion() {
             return this.inputCostPointsPerMillion;
+        }
+
+        /**
+         * @return inputTokenTier
+         */
+        public String getInputTokenTier() {
+            return this.inputTokenTier;
+        }
+
+        /**
+         * @return inputTokenTiers
+         */
+        public java.util.List<InputTokenTiers> getInputTokenTiers() {
+            return this.inputTokenTiers;
         }
 
         /**
@@ -320,44 +486,76 @@ public class DescribeCostRulesResponseBody extends TeaModel {
         }
 
         /**
+         * @return modelServiceName
+         */
+        public String getModelServiceName() {
+            return this.modelServiceName;
+        }
+
+        /**
          * @return outputCostPointsPerMillion
          */
         public String getOutputCostPointsPerMillion() {
             return this.outputCostPointsPerMillion;
         }
 
+        /**
+         * @return videoCostPointsPerSecond
+         */
+        public String getVideoCostPointsPerSecond() {
+            return this.videoCostPointsPerSecond;
+        }
+
         public static final class Builder {
             private String cacheCostPointsPerMillion; 
+            private String cacheCreationCostPointsPerMillion; 
             private String costRuleId; 
+            private String effectiveEndTime; 
+            private String effectiveStartTime; 
             private String effectiveTargetType; 
             private String effectiveTargetValue; 
+            private String explicitCacheCostPointsPerMillion; 
             private String gmtCreated; 
             private String gmtModified; 
             private String gwClusterId; 
+            private String imageCostPointsPerCount; 
             private String inputCostPointsPerMillion; 
+            private String inputTokenTier; 
+            private java.util.List<InputTokenTiers> inputTokenTiers; 
             private String model; 
             private String modelServiceId; 
+            private String modelServiceName; 
             private String outputCostPointsPerMillion; 
+            private String videoCostPointsPerSecond; 
 
             private Builder() {
             } 
 
             private Builder(Items model) {
                 this.cacheCostPointsPerMillion = model.cacheCostPointsPerMillion;
+                this.cacheCreationCostPointsPerMillion = model.cacheCreationCostPointsPerMillion;
                 this.costRuleId = model.costRuleId;
+                this.effectiveEndTime = model.effectiveEndTime;
+                this.effectiveStartTime = model.effectiveStartTime;
                 this.effectiveTargetType = model.effectiveTargetType;
                 this.effectiveTargetValue = model.effectiveTargetValue;
+                this.explicitCacheCostPointsPerMillion = model.explicitCacheCostPointsPerMillion;
                 this.gmtCreated = model.gmtCreated;
                 this.gmtModified = model.gmtModified;
                 this.gwClusterId = model.gwClusterId;
+                this.imageCostPointsPerCount = model.imageCostPointsPerCount;
                 this.inputCostPointsPerMillion = model.inputCostPointsPerMillion;
+                this.inputTokenTier = model.inputTokenTier;
+                this.inputTokenTiers = model.inputTokenTiers;
                 this.model = model.model;
                 this.modelServiceId = model.modelServiceId;
+                this.modelServiceName = model.modelServiceName;
                 this.outputCostPointsPerMillion = model.outputCostPointsPerMillion;
+                this.videoCostPointsPerSecond = model.videoCostPointsPerSecond;
             } 
 
             /**
-             * <p>The cost points per million cache tokens. Default value: 0.</p>
+             * <p>The cache read cost points per million tokens. Default value: 0.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -368,7 +566,18 @@ public class DescribeCostRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cost rule ID.</p>
+             * <p>The cache creation or write cost points per million tokens.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>400</p>
+             */
+            public Builder cacheCreationCostPointsPerMillion(String cacheCreationCostPointsPerMillion) {
+                this.cacheCreationCostPointsPerMillion = cacheCreationCostPointsPerMillion;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the cost rule.</p>
              * 
              * <strong>example:</strong>
              * <p>924d450014e64e88ac6e8486f8e990**</p>
@@ -379,7 +588,29 @@ public class DescribeCostRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The effective target type.</p>
+             * <p>The end time of the effective period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-10-01T00:00:00Z</p>
+             */
+            public Builder effectiveEndTime(String effectiveEndTime) {
+                this.effectiveEndTime = effectiveEndTime;
+                return this;
+            }
+
+            /**
+             * <p>The start time of the effective period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-09-01T00:00:00Z</p>
+             */
+            public Builder effectiveStartTime(String effectiveStartTime) {
+                this.effectiveStartTime = effectiveStartTime;
+                return this;
+            }
+
+            /**
+             * <p>The type of the effective target.</p>
              * 
              * <strong>example:</strong>
              * <p>global</p>
@@ -390,7 +621,7 @@ public class DescribeCostRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The effective target value.</p>
+             * <p>The value of the effective target.</p>
              * 
              * <strong>example:</strong>
              * <p>user</p>
@@ -401,7 +632,18 @@ public class DescribeCostRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time.</p>
+             * <p>The explicit cache read cost points per million tokens.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
+             */
+            public Builder explicitCacheCostPointsPerMillion(String explicitCacheCostPointsPerMillion) {
+                this.explicitCacheCostPointsPerMillion = explicitCacheCostPointsPerMillion;
+                return this;
+            }
+
+            /**
+             * <p>The time when the cost rule was created.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-01-04T16:09:29+08:00</p>
@@ -412,7 +654,7 @@ public class DescribeCostRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last modification time.</p>
+             * <p>The time when the cost rule was last updated.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-10-16 16:46:20</p>
@@ -434,7 +676,18 @@ public class DescribeCostRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cost points per million input tokens. Default value: 0.</p>
+             * <p>The image input cost points per image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
+             */
+            public Builder imageCostPointsPerCount(String imageCostPointsPerCount) {
+                this.imageCostPointsPerCount = imageCostPointsPerCount;
+                return this;
+            }
+
+            /**
+             * <p>The input cost points per million tokens. Default value: 0.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -445,7 +698,26 @@ public class DescribeCostRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The model name.</p>
+             * <p>The input token tier. An empty value indicates a legacy or default rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0-32K</p>
+             */
+            public Builder inputTokenTier(String inputTokenTier) {
+                this.inputTokenTier = inputTokenTier;
+                return this;
+            }
+
+            /**
+             * <p>The non-cumulative tiered pricing for input tokens. Each element includes the tier and the input cost points per million tokens.</p>
+             */
+            public Builder inputTokenTiers(java.util.List<InputTokenTiers> inputTokenTiers) {
+                this.inputTokenTiers = inputTokenTiers;
+                return this;
+            }
+
+            /**
+             * <p>The name of the model.</p>
              * 
              * <strong>example:</strong>
              * <p>gpt-4</p>
@@ -456,7 +728,7 @@ public class DescribeCostRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The model service ID.</p>
+             * <p>The ID of the model service.</p>
              * 
              * <strong>example:</strong>
              * <p>ms-xxxxxxxxx</p>
@@ -467,13 +739,35 @@ public class DescribeCostRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cost points per million output tokens. Default value: 0.</p>
+             * <p>The model service name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen-service</p>
+             */
+            public Builder modelServiceName(String modelServiceName) {
+                this.modelServiceName = modelServiceName;
+                return this;
+            }
+
+            /**
+             * <p>The output cost points per million tokens. Default value: 0.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
              */
             public Builder outputCostPointsPerMillion(String outputCostPointsPerMillion) {
                 this.outputCostPointsPerMillion = outputCostPointsPerMillion;
+                return this;
+            }
+
+            /**
+             * <p>The video input cost points per second.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
+             */
+            public Builder videoCostPointsPerSecond(String videoCostPointsPerSecond) {
+                this.videoCostPointsPerSecond = videoCostPointsPerSecond;
                 return this;
             }
 

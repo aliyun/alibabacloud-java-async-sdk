@@ -228,7 +228,7 @@ public class DescribeAIDBClustersRequest extends Request {
         } 
 
         /**
-         * <p>The node type. Multiple types are supported. Separate two values with a comma (,).</p>
+         * <p>The node type. You can specify multiple types separated by commas (,). Valid values:</p>
          * <ul>
          * <li>vnode: managed by Kubernetes.</li>
          * <li>container: logon-enabled container.</li>
@@ -245,7 +245,7 @@ public class DescribeAIDBClustersRequest extends Request {
         }
 
         /**
-         * <p>The cluster description. Fuzzy match is supported.</p>
+         * <p>The description of the cluster. Fuzzy match is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-****************</p>
@@ -257,7 +257,7 @@ public class DescribeAIDBClustersRequest extends Request {
         }
 
         /**
-         * <p>The cluster ID. Separate multiple cluster IDs with commas (,).</p>
+         * <p>The cluster IDs. Separate multiple cluster IDs with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>pc-***************</p>
@@ -269,22 +269,20 @@ public class DescribeAIDBClustersRequest extends Request {
         }
 
         /**
-         * <p>The cluster status. Valid values:</p>
+         * <p>The status of the cluster. Valid values:</p>
          * <ul>
-         * <li><strong>Creating</strong>: being created.</li>
-         * <li><strong>Running</strong>: running.</li>
-         * <li><strong>Deleting</strong>: being released.</li>
-         * <li><strong>Rebooting</strong>: being restarted.</li>
-         * <li><strong>DBNodeCreating</strong>: a node is being added (increase).</li>
-         * <li><strong>DBNodeDeleting</strong>: a node is being deleted.</li>
-         * <li><strong>ClassChanging</strong>: node specifications are being changed.</li>
-         * <li><strong>NetAddressCreating</strong>: a network connectivity is being created.</li>
-         * <li><strong>NetAddressDeleting</strong>: a network connectivity is being deleted.</li>
-         * <li><strong>NetAddressModifying</strong>: a network connectivity is being modified. </li>
-         * <li><strong>Deleted</strong>: released.</li>
-         * </ul>
-         * <ul>
-         * <li><strong>ClassChanged</strong>: resources are being revoked after a decrease the quota operation.</li>
+         * <li><strong>Creating</strong>: The cluster is being created.</li>
+         * <li><strong>Running</strong>: The cluster is running.</li>
+         * <li><strong>Deleting</strong>: The cluster is being released.</li>
+         * <li><strong>Rebooting</strong>: The cluster is being restarted.</li>
+         * <li><strong>DBNodeCreating</strong>: Nodes are being increased.</li>
+         * <li><strong>DBNodeDeleting</strong>: Nodes are being deleted.</li>
+         * <li><strong>ClassChanging</strong>: The node specifications are being changed.</li>
+         * <li><strong>NetAddressCreating</strong>: The network connectivity is being created.</li>
+         * <li><strong>NetAddressDeleting</strong>: The network connectivity is being deleted.</li>
+         * <li><strong>NetAddressModifying</strong>: The network connectivity is being modified. </li>
+         * <li><strong>Deleted</strong>: The cluster is released.</li>
+         * <li><strong>ClassChanged</strong>: Resources are being revoked after you upgrade or decrease the quota.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -327,7 +325,7 @@ public class DescribeAIDBClustersRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>.</p>
+         * <p>The number of entries to return on each page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>.</p>
          * <p>Default value: <strong>30</strong>.</p>
          * 
          * <strong>example:</strong>
@@ -387,7 +385,7 @@ public class DescribeAIDBClustersRequest extends Request {
         }
 
         /**
-         * <p>The list of tags.</p>
+         * <p>The tag list.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -455,7 +453,7 @@ public class DescribeAIDBClustersRequest extends Request {
             } 
 
             /**
-             * <p>The tag key. You can filter the cluster list by tag. You can specify up to 20 tag pairs. The number n for each tag pair must be unique and must be a consecutive integer starting from 1. The value of Tag.n.Key corresponds to Tag.n.Value.</p>
+             * <p>The tag key. You can filter clusters by tag. You can specify up to 20 tag key-value pairs. The number n in each tag pair must be unique and must be a consecutive integer starting from 1. The value of Tag.n.Key is Tag.n.Value.</p>
              * 
              * <strong>example:</strong>
              * <p>testKey</p>

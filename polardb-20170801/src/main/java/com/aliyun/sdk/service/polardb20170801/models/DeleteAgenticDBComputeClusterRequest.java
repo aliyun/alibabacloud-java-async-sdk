@@ -168,7 +168,7 @@ public class DeleteAgenticDBComputeClusterRequest extends Request {
         }
 
         /**
-         * <p>The project ID to which the resource belongs.</p>
+         * <p>The project ID.</p>
          * 
          * <strong>example:</strong>
          * <p>proj-7140b4c74b3a44978c825bac77</p>

@@ -130,7 +130,7 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The database engine version.</p>
+         * <p>The DPI engine version.</p>
          * 
          * <strong>example:</strong>
          * <p>3.0</p>
@@ -275,8 +275,20 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
      * <p>DescribeAvailableModelsResponseBody</p>
      */
     public static class Items extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ContainerEnv")
+        private java.util.Map<String, String> containerEnv;
+
+        @com.aliyun.core.annotation.NameInMap("CustomImageSource")
+        private String customImageSource;
+
         @com.aliyun.core.annotation.NameInMap("CustomModelName")
         private String customModelName;
+
+        @com.aliyun.core.annotation.NameInMap("DBInstanceClass")
+        private String DBInstanceClass;
+
+        @com.aliyun.core.annotation.NameInMap("DirectCommand")
+        private String directCommand;
 
         @com.aliyun.core.annotation.NameInMap("DisplayModelName")
         private String displayModelName;
@@ -287,6 +299,15 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GpuRequired")
         private java.util.List<GpuRequired> gpuRequired;
 
+        @com.aliyun.core.annotation.NameInMap("ImageImportStatus")
+        private String imageImportStatus;
+
+        @com.aliyun.core.annotation.NameInMap("ImageName")
+        private String imageName;
+
+        @com.aliyun.core.annotation.NameInMap("InferenceEngine")
+        private String inferenceEngine;
+
         @com.aliyun.core.annotation.NameInMap("MinimumCpu")
         private Long minimumCpu;
 
@@ -295,6 +316,9 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("ModelName")
         private String modelName;
+
+        @com.aliyun.core.annotation.NameInMap("ModelParams")
+        private java.util.Map<String, String> modelParams;
 
         @com.aliyun.core.annotation.NameInMap("ModelSeries")
         private String modelSeries;
@@ -312,13 +336,21 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
         private String tuneArch;
 
         private Items(Builder builder) {
+            this.containerEnv = builder.containerEnv;
+            this.customImageSource = builder.customImageSource;
             this.customModelName = builder.customModelName;
+            this.DBInstanceClass = builder.DBInstanceClass;
+            this.directCommand = builder.directCommand;
             this.displayModelName = builder.displayModelName;
             this.gmtModified = builder.gmtModified;
             this.gpuRequired = builder.gpuRequired;
+            this.imageImportStatus = builder.imageImportStatus;
+            this.imageName = builder.imageName;
+            this.inferenceEngine = builder.inferenceEngine;
             this.minimumCpu = builder.minimumCpu;
             this.minimumMemory = builder.minimumMemory;
             this.modelName = builder.modelName;
+            this.modelParams = builder.modelParams;
             this.modelSeries = builder.modelSeries;
             this.modelType = builder.modelType;
             this.ossPath = builder.ossPath;
@@ -335,10 +367,38 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
         }
 
         /**
+         * @return containerEnv
+         */
+        public java.util.Map<String, String> getContainerEnv() {
+            return this.containerEnv;
+        }
+
+        /**
+         * @return customImageSource
+         */
+        public String getCustomImageSource() {
+            return this.customImageSource;
+        }
+
+        /**
          * @return customModelName
          */
         public String getCustomModelName() {
             return this.customModelName;
+        }
+
+        /**
+         * @return DBInstanceClass
+         */
+        public String getDBInstanceClass() {
+            return this.DBInstanceClass;
+        }
+
+        /**
+         * @return directCommand
+         */
+        public String getDirectCommand() {
+            return this.directCommand;
         }
 
         /**
@@ -363,6 +423,27 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
         }
 
         /**
+         * @return imageImportStatus
+         */
+        public String getImageImportStatus() {
+            return this.imageImportStatus;
+        }
+
+        /**
+         * @return imageName
+         */
+        public String getImageName() {
+            return this.imageName;
+        }
+
+        /**
+         * @return inferenceEngine
+         */
+        public String getInferenceEngine() {
+            return this.inferenceEngine;
+        }
+
+        /**
          * @return minimumCpu
          */
         public Long getMinimumCpu() {
@@ -381,6 +462,13 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
          */
         public String getModelName() {
             return this.modelName;
+        }
+
+        /**
+         * @return modelParams
+         */
+        public java.util.Map<String, String> getModelParams() {
+            return this.modelParams;
         }
 
         /**
@@ -419,13 +507,21 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.Map<String, String> containerEnv; 
+            private String customImageSource; 
             private String customModelName; 
+            private String DBInstanceClass; 
+            private String directCommand; 
             private String displayModelName; 
             private String gmtModified; 
             private java.util.List<GpuRequired> gpuRequired; 
+            private String imageImportStatus; 
+            private String imageName; 
+            private String inferenceEngine; 
             private Long minimumCpu; 
             private Long minimumMemory; 
             private String modelName; 
+            private java.util.Map<String, String> modelParams; 
             private String modelSeries; 
             private String modelType; 
             private String ossPath; 
@@ -436,13 +532,21 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
             } 
 
             private Builder(Items model) {
+                this.containerEnv = model.containerEnv;
+                this.customImageSource = model.customImageSource;
                 this.customModelName = model.customModelName;
+                this.DBInstanceClass = model.DBInstanceClass;
+                this.directCommand = model.directCommand;
                 this.displayModelName = model.displayModelName;
                 this.gmtModified = model.gmtModified;
                 this.gpuRequired = model.gpuRequired;
+                this.imageImportStatus = model.imageImportStatus;
+                this.imageName = model.imageName;
+                this.inferenceEngine = model.inferenceEngine;
                 this.minimumCpu = model.minimumCpu;
                 this.minimumMemory = model.minimumMemory;
                 this.modelName = model.modelName;
+                this.modelParams = model.modelParams;
                 this.modelSeries = model.modelSeries;
                 this.modelType = model.modelType;
                 this.ossPath = model.ossPath;
@@ -451,13 +555,57 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The custom model registration key.</p>
+             * <p>The container startup environment variables registered for the custom model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;HF_HOME&quot;:&quot;/cache/hf&quot;}</p>
+             */
+            public Builder containerEnv(java.util.Map<String, String> containerEnv) {
+                this.containerEnv = containerEnv;
+                return this;
+            }
+
+            /**
+             * <p>The source image address registered by the customer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>registry.example.com/customer/model:v1</p>
+             */
+            public Builder customImageSource(String customImageSource) {
+                this.customImageSource = customImageSource;
+                return this;
+            }
+
+            /**
+             * <p>The registration key of the custom model.</p>
              * 
              * <strong>example:</strong>
              * <p>Qwen3-32B</p>
              */
             public Builder customModelName(String customModelName) {
                 this.customModelName = customModelName;
+                return this;
+            }
+
+            /**
+             * <p>The deployment specifications registered for the custom model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>polardb.gpu.gn8is.4xlarge</p>
+             */
+            public Builder DBInstanceClass(String DBInstanceClass) {
+                this.DBInstanceClass = DBInstanceClass;
+                return this;
+            }
+
+            /**
+             * <p>The direct startup command registered for the custom model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>python -m vllm.entrypoints.openai.api_server</p>
+             */
+            public Builder directCommand(String directCommand) {
+                this.directCommand = directCommand;
                 return this;
             }
 
@@ -473,7 +621,7 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last modified time of the registration.</p>
+             * <p>The time when the registration was last modified.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-09-07 20:57:20</p>
@@ -484,7 +632,7 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The supported GPU types.</p>
+             * <p>The supported GPU models.</p>
              */
             public Builder gpuRequired(java.util.List<GpuRequired> gpuRequired) {
                 this.gpuRequired = gpuRequired;
@@ -492,7 +640,40 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The minimum number of CPUs.</p>
+             * <p>The image import status. Valid values: Importing, Available, and Failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Available</p>
+             */
+            public Builder imageImportStatus(String imageImportStatus) {
+                this.imageImportStatus = imageImportStatus;
+                return this;
+            }
+
+            /**
+             * <p>The model service image address registered by the customer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>registry.example.com/customer/model:v1</p>
+             */
+            public Builder imageName(String imageName) {
+                this.imageName = imageName;
+                return this;
+            }
+
+            /**
+             * <p>The inference engine registered for the custom model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vllm</p>
+             */
+            public Builder inferenceEngine(String inferenceEngine) {
+                this.inferenceEngine = inferenceEngine;
+                return this;
+            }
+
+            /**
+             * <p>The minimum CPU requirement.</p>
              * 
              * <strong>example:</strong>
              * <p>8</p>
@@ -503,7 +684,7 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The minimum memory size.</p>
+             * <p>The minimum memory requirement.</p>
              * 
              * <strong>example:</strong>
              * <p>16384</p>
@@ -521,6 +702,17 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
              */
             public Builder modelName(String modelName) {
                 this.modelName = modelName;
+                return this;
+            }
+
+            /**
+             * <p>The startup parameters registered for the custom model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;--max-model-len&quot;:&quot;32768&quot;}</p>
+             */
+            public Builder modelParams(java.util.Map<String, String> modelParams) {
+                this.modelParams = modelParams;
                 return this;
             }
 

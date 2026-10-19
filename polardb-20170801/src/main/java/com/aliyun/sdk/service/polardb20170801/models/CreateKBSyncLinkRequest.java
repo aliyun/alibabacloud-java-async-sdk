@@ -32,6 +32,11 @@ public class CreateKBSyncLinkRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FeishuChatMemberStaleTtlSeconds")
+    @com.aliyun.core.annotation.Validation(maximum = 2147483647)
+    private Integer feishuChatMemberStaleTtlSeconds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("KnowledgeBaseId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String knowledgeBaseId;
@@ -84,11 +89,16 @@ public class CreateKBSyncLinkRequest extends Request {
     @com.aliyun.core.annotation.Validation(maxLength = 255)
     private String userId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserRefreshToken")
+    private String userRefreshToken;
+
     private CreateKBSyncLinkRequest(Builder builder) {
         super(builder);
         this.clientId = builder.clientId;
         this.clientSecret = builder.clientSecret;
         this.description = builder.description;
+        this.feishuChatMemberStaleTtlSeconds = builder.feishuChatMemberStaleTtlSeconds;
         this.knowledgeBaseId = builder.knowledgeBaseId;
         this.linkName = builder.linkName;
         this.mcpEndpoint = builder.mcpEndpoint;
@@ -100,6 +110,7 @@ public class CreateKBSyncLinkRequest extends Request {
         this.tenantId = builder.tenantId;
         this.userAccessToken = builder.userAccessToken;
         this.userId = builder.userId;
+        this.userRefreshToken = builder.userRefreshToken;
     }
 
     public static Builder builder() {
@@ -134,6 +145,13 @@ public class CreateKBSyncLinkRequest extends Request {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return feishuChatMemberStaleTtlSeconds
+     */
+    public Integer getFeishuChatMemberStaleTtlSeconds() {
+        return this.feishuChatMemberStaleTtlSeconds;
     }
 
     /**
@@ -213,10 +231,18 @@ public class CreateKBSyncLinkRequest extends Request {
         return this.userId;
     }
 
+    /**
+     * @return userRefreshToken
+     */
+    public String getUserRefreshToken() {
+        return this.userRefreshToken;
+    }
+
     public static final class Builder extends Request.Builder<CreateKBSyncLinkRequest, Builder> {
         private String clientId; 
         private String clientSecret; 
         private String description; 
+        private Integer feishuChatMemberStaleTtlSeconds; 
         private String knowledgeBaseId; 
         private String linkName; 
         private String mcpEndpoint; 
@@ -228,6 +254,7 @@ public class CreateKBSyncLinkRequest extends Request {
         private String tenantId; 
         private String userAccessToken; 
         private String userId; 
+        private String userRefreshToken; 
 
         private Builder() {
             super();
@@ -238,6 +265,7 @@ public class CreateKBSyncLinkRequest extends Request {
             this.clientId = request.clientId;
             this.clientSecret = request.clientSecret;
             this.description = request.description;
+            this.feishuChatMemberStaleTtlSeconds = request.feishuChatMemberStaleTtlSeconds;
             this.knowledgeBaseId = request.knowledgeBaseId;
             this.linkName = request.linkName;
             this.mcpEndpoint = request.mcpEndpoint;
@@ -249,6 +277,7 @@ public class CreateKBSyncLinkRequest extends Request {
             this.tenantId = request.tenantId;
             this.userAccessToken = request.userAccessToken;
             this.userId = request.userId;
+            this.userRefreshToken = request.userRefreshToken;
         } 
 
         /**
@@ -290,7 +319,19 @@ public class CreateKBSyncLinkRequest extends Request {
         }
 
         /**
-         * <p>The unique ID of the knowledge base.</p>
+         * <p>The validity period of the Lark group member snapshot for fallback reuse, in seconds. This parameter can be explicitly set only for FEISHU synchronization links. A value of -1 indicates that the snapshot never expires. A value of 0 disables snapshot fallback reuse. A positive integer indicates the maximum age of the snapshot allowed for reuse. Default value: -1. If this parameter is omitted, -1 takes effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
+         */
+        public Builder feishuChatMemberStaleTtlSeconds(Integer feishuChatMemberStaleTtlSeconds) {
+            this.putQueryParameter("FeishuChatMemberStaleTtlSeconds", feishuChatMemberStaleTtlSeconds);
+            this.feishuChatMemberStaleTtlSeconds = feishuChatMemberStaleTtlSeconds;
+            return this;
+        }
+
+        /**
+         * <p>The unique identifier of the knowledge base.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -303,7 +344,7 @@ public class CreateKBSyncLinkRequest extends Request {
         }
 
         /**
-         * <p>The name of the synchronization link.</p>
+         * <p>The name of the link.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -316,7 +357,7 @@ public class CreateKBSyncLinkRequest extends Request {
         }
 
         /**
-         * <p>The MCP Server endpoint for DingTalk documents.</p>
+         * <p>The endpoint of the DingTalk document MCP server.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://mcp-gw.dingtalk.com/server/1a2b3cxxxxxx789?key=d5e6fxxxxxx876">https://mcp-gw.dingtalk.com/server/1a2b3cxxxxxx789?key=d5e6fxxxxxx876</a></p>
@@ -341,7 +382,7 @@ public class CreateKBSyncLinkRequest extends Request {
         }
 
         /**
-         * <p>The MCP Server endpoint for DingTalk spreadsheets.</p>
+         * <p>The endpoint of the DingTalk sheet MCP server.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://mcp-gw.dingtalk.com/server/1a2b3cxxxxxx567?key=d5e6fxxxxxx543">https://mcp-gw.dingtalk.com/server/1a2b3cxxxxxx567?key=d5e6fxxxxxx543</a></p>
@@ -353,7 +394,7 @@ public class CreateKBSyncLinkRequest extends Request {
         }
 
         /**
-         * <p>The directory address of the synchronization source.</p>
+         * <p>The source directory address for synchronization.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -379,7 +420,7 @@ public class CreateKBSyncLinkRequest extends Request {
         }
 
         /**
-         * <p>The synchronization interval. Unit: minutes.</p>
+         * <p>The synchronization interval, in minutes.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -403,7 +444,7 @@ public class CreateKBSyncLinkRequest extends Request {
         }
 
         /**
-         * <p>The Lark user access token. This token is used only when the application identity cannot expand group members because the bot is not in the group chat.</p>
+         * <p>The Lark user access token. This token is used only when the application identity cannot retrieve group members because the bot is not in the group chat.</p>
          * 
          * <strong>example:</strong>
          * <hr>
@@ -415,7 +456,7 @@ public class CreateKBSyncLinkRequest extends Request {
         }
 
         /**
-         * <p>The DingTalk user ID of the operator.</p>
+         * <p>The ID of the DingTalk operator.</p>
          * 
          * <strong>example:</strong>
          * <p>123***56</p>
@@ -423,6 +464,18 @@ public class CreateKBSyncLinkRequest extends Request {
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);
             this.userId = userId;
+            return this;
+        }
+
+        /**
+         * <p>The Lark user refresh token. This token must be provided together with UserAccessToken to automatically rotate the fallback identity for retrieving group members.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
+        public Builder userRefreshToken(String userRefreshToken) {
+            this.putQueryParameter("UserRefreshToken", userRefreshToken);
+            this.userRefreshToken = userRefreshToken;
             return this;
         }
 

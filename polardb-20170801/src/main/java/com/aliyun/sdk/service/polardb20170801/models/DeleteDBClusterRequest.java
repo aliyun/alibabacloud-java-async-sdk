@@ -144,14 +144,11 @@ public class DeleteDBClusterRequest extends Request {
         } 
 
         /**
-         * <p>The retention policy for backup sets when the cluster is deleted. Valid values:</p>
+         * <p>The backup data retention policy when the cluster is deleted. Valid values:</p>
          * <ul>
-         * <li><p><strong>ALL</strong>: permanently retains all backup sets.</p>
-         * </li>
-         * <li><p><strong>LATEST</strong>: permanently retains the last backup set. The system automatically creates a new backup before the cluster is deleted.</p>
-         * </li>
-         * <li><p><strong>NONE</strong>: does not retain any backup sets after the cluster is deleted.</p>
-         * </li>
+         * <li><strong>ALL</strong>: Long-term retention (LTR) of all backups.</li>
+         * <li><strong>LATEST</strong>: Long-term retention (LTR) of the last backup (automatic backup before deletion).</li>
+         * <li><strong>NONE</strong>: Does not retain any backups when the cluster is deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -164,7 +161,7 @@ public class DeleteDBClusterRequest extends Request {
         }
 
         /**
-         * <p>The cloud service provider of the instance.</p>
+         * <p>The cloud service provider to which the instance belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>ENS</p>

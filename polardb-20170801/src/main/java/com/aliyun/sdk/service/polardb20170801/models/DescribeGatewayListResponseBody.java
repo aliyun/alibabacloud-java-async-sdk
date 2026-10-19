@@ -119,7 +119,7 @@ public class DescribeGatewayListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A list of gateway instances.</p>
+         * <p>The list of gateway instances.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -127,7 +127,7 @@ public class DescribeGatewayListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -138,7 +138,7 @@ public class DescribeGatewayListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned on the current page.</p>
+         * <p>The number of entries on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -149,14 +149,11 @@ public class DescribeGatewayListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries per page. Valid values:</p>
          * <ul>
-         * <li><p><strong>30</strong></p>
-         * </li>
-         * <li><p><strong>50</strong></p>
-         * </li>
-         * <li><p><strong>100</strong></p>
-         * </li>
+         * <li><strong>30</strong></li>
+         * <li><strong>50</strong></li>
+         * <li><strong>100</strong></li>
          * </ul>
          * <p>Default value: 30.</p>
          * 
@@ -169,7 +166,7 @@ public class DescribeGatewayListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>CED079B7-A408-41A1-BFF1-EC608E******</p>
@@ -379,7 +376,8 @@ public class DescribeGatewayListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the gateway instance was created.</p>
+             * <p>The creation time.</p>
+             * <p>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
              * 
              * <strong>example:</strong>
              * <p>2020-08-14T05:58:42Z</p>
@@ -401,13 +399,12 @@ public class DescribeGatewayListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration time of the gateway instance.</p>
+             * <p>The expiration time of the cluster.</p>
              * <ul>
-             * <li><p>For subscription instances, this parameter indicates the expiration time.</p>
-             * </li>
-             * <li><p>This parameter is empty for pay-as-you-go instances.</p>
-             * </li>
+             * <li>If the billing method of the cluster is subscription, the actual expiration time is returned.</li>
+             * <li>If the billing method of the cluster is pay-as-you-go, an empty value is returned.</li>
              * </ul>
+             * <p>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
              * 
              * <strong>example:</strong>
              * <p>2028-09-01T16:00:00Z</p>
@@ -418,7 +415,7 @@ public class DescribeGatewayListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the gateway instance has expired. Valid values:</p>
+             * <p>Indicates whether the cluster has expired. Valid values:</p>
              * <ul>
              * <li><p><strong>true</strong></p>
              * </li>
@@ -446,7 +443,7 @@ public class DescribeGatewayListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the gateway instance.</p>
+             * <p>The gateway description.</p>
              * 
              * <strong>example:</strong>
              * <p>pg-xxxxxx</p>
@@ -457,7 +454,8 @@ public class DescribeGatewayListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the gateway instance was last modified.</p>
+             * <p>The last modification time.</p>
+             * <p>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
              * 
              * <strong>example:</strong>
              * <p>2024-10-29T09:31:37Z</p>
@@ -468,12 +466,10 @@ public class DescribeGatewayListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing method. Valid values:</p>
+             * <p>The billing method. Valid values: </p>
              * <ul>
-             * <li><p><strong>Postpaid</strong>: pay-as-you-go</p>
-             * </li>
-             * <li><p><strong>Prepaid</strong>: subscription</p>
-             * </li>
+             * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
+             * <li><strong>Prepaid</strong>: subscription.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -496,12 +492,10 @@ public class DescribeGatewayListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the gateway instance. Valid values:</p>
+             * <p>The application status. Valid values:</p>
              * <ul>
-             * <li><p><strong>CREATE</strong>: creating</p>
-             * </li>
-             * <li><p><strong>ACTIVATION</strong>: running</p>
-             * </li>
+             * <li>CREATE: being created.</li>
+             * <li>ACTIVATION: running.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -524,7 +518,7 @@ public class DescribeGatewayListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the virtual private cloud (VPC).</p>
+             * <p>The VPC ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-****************</p>

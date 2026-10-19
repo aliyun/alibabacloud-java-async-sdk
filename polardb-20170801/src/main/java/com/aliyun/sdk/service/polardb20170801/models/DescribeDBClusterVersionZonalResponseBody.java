@@ -234,7 +234,7 @@ public class DescribeDBClusterVersionZonalResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The latest version of the database kernel.</p>
+         * <p>The latest version of the database kernel engine.</p>
          * 
          * <strong>example:</strong>
          * <p>8.0.1.1.16</p>
@@ -245,14 +245,12 @@ public class DescribeDBClusterVersionZonalResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The minor version of the database engine.</p>
+         * <p>The minor version number of the database engine.</p>
          * <ul>
-         * <li><p>If <code>DBVersion</code> is <strong>8.0</strong>, the valid values are:</p>
+         * <li><p>If <code>DBVersion</code> is <strong>8.0</strong>, valid values are:</p>
          * <ul>
-         * <li><p><strong>8.0.2</strong></p>
-         * </li>
-         * <li><p><strong>8.0.1</strong></p>
-         * </li>
+         * <li><strong>8.0.2</strong></li>
+         * <li><strong>8.0.1</strong></li>
          * </ul>
          * </li>
          * <li><p>If <code>DBVersion</code> is <strong>5.7</strong>, the value is <strong>5.7.28</strong>.</p>
@@ -270,7 +268,7 @@ public class DescribeDBClusterVersionZonalResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The patch version of the database engine.</p>
+         * <p>The revision version number of the database engine.</p>
          * 
          * <strong>example:</strong>
          * <p>8.0.1.1.7</p>
@@ -289,7 +287,7 @@ public class DescribeDBClusterVersionZonalResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The major version of the database engine. Valid values:</p>
+         * <p>The major version number of the database engine. Valid values:</p>
          * <ul>
          * <li><p>8.0</p>
          * </li>
@@ -308,15 +306,15 @@ public class DescribeDBClusterVersionZonalResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the current minor version of the database. Valid values:</p>
+         * <p>The status of the current database minor version. Valid values:</p>
          * <ul>
          * <li><p>Stable: The current version is stable.</p>
          * </li>
          * <li><p>Old: The current version is outdated. Upgrade to the latest version.</p>
          * </li>
-         * <li><p>HighRisk: The current version has critical bugs. Upgrade to the latest version immediately.</p>
+         * <li><p>HighRisk: The current version has critical defects. Upgrade to the latest version immediately.</p>
          * </li>
-         * <li><p>Beta: The current version is a beta version.</p>
+         * <li><p>Beta: The current version is a beta release.</p>
          * </li>
          * </ul>
          * 
@@ -329,7 +327,7 @@ public class DescribeDBClusterVersionZonalResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the current database kernel version is the latest version. Valid values:</p>
+         * <p>Indicates whether the current database kernel engine version is the latest version. Valid values:</p>
          * <ul>
          * <li><p>true</p>
          * </li>
@@ -346,7 +344,7 @@ public class DescribeDBClusterVersionZonalResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the current database proxy version is the latest version. Valid values:</p>
+         * <p>Indicates whether the current database kernel engine version is the latest version. Valid values:</p>
          * <ul>
          * <li><p>true</p>
          * </li>
@@ -363,7 +361,7 @@ public class DescribeDBClusterVersionZonalResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The latest version of the database proxy.</p>
+         * <p>The latest version of PolarProxy.</p>
          * 
          * <strong>example:</strong>
          * <p>2.4.17</p>
@@ -374,7 +372,7 @@ public class DescribeDBClusterVersionZonalResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The version of the database proxy.</p>
+         * <p>The version of PolarProxy.</p>
          * 
          * <strong>example:</strong>
          * <p>2.4.15</p>
@@ -385,16 +383,12 @@ public class DescribeDBClusterVersionZonalResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of upgradable database proxy versions.</p>
+         * <p>The release status of the PolarProxy version. Valid values:</p>
          * <ul>
-         * <li><p><strong>Stable</strong>: The current version is stable.</p>
-         * </li>
-         * <li><p><strong>Old</strong>: The current version is outdated. Do not upgrade to this version.</p>
-         * </li>
-         * <li><p><strong>HighRisk</strong>: The current version has critical bugs. Do not upgrade to this version.</p>
-         * </li>
-         * <li><p><strong>Beta</strong>: The current version is a beta version.</p>
-         * </li>
+         * <li><strong>Stable</strong>: The current version is stable.</li>
+         * <li><strong>Old</strong>: The current version is outdated. Do not upgrade to this version.</li>
+         * <li><strong>HighRisk</strong>: The current version has critical defects. Do not upgrade to this version.</li>
+         * <li><strong>Beta</strong>: The current version is a beta release.</li>
          * </ul>
          */
         public Builder proxyRevisionVersionList(java.util.List<ProxyRevisionVersionList> proxyRevisionVersionList) {
@@ -403,15 +397,15 @@ public class DescribeDBClusterVersionZonalResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the database proxy version. Valid values:</p>
+         * <p>The version status of PolarProxy. Valid values:</p>
          * <ul>
          * <li><p>Stable: The current version is stable.</p>
          * </li>
          * <li><p>Old: The current version is outdated. Upgrade to the latest version.</p>
          * </li>
-         * <li><p>HighRisk: The current version has critical bugs. Upgrade to the latest version immediately.</p>
+         * <li><p>HighRisk: The current version has critical defects. Upgrade to the latest version immediately.</p>
          * </li>
-         * <li><p>Beta: The current version is a beta version.</p>
+         * <li><p>Beta: The current version is a beta release.</p>
          * </li>
          * </ul>
          * 
@@ -532,14 +526,10 @@ public class DescribeDBClusterVersionZonalResponseBody extends TeaModel {
             /**
              * <p>The release status of the database version. Valid values:</p>
              * <ul>
-             * <li><p><strong>Stable</strong>: The current version is stable.</p>
-             * </li>
-             * <li><p><strong>Old</strong>: The current version is outdated. Do not upgrade to this version.</p>
-             * </li>
-             * <li><p><strong>HighRisk</strong>: The current version has critical bugs. Do not upgrade to this version.</p>
-             * </li>
-             * <li><p><strong>Beta</strong>: The current version is a beta version.</p>
-             * </li>
+             * <li><strong>Stable</strong>: The current version is stable.</li>
+             * <li><strong>Old</strong>: The current version is outdated. Do not upgrade to this version.</li>
+             * <li><strong>HighRisk</strong>: The current version has critical defects. Do not upgrade to this version.</li>
+             * <li><strong>Beta</strong>: The current version is a beta release.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -551,7 +541,7 @@ public class DescribeDBClusterVersionZonalResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The code of the patch version for the database engine. Use this code to specify the target version for an upgrade.</p>
+             * <p>The revision version code of the database engine, which is used to specify the target version for the upgrade.</p>
              * 
              * <strong>example:</strong>
              * <p>20230707</p>
@@ -562,7 +552,7 @@ public class DescribeDBClusterVersionZonalResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The patch version of the database engine.</p>
+             * <p>The revision version number of the database engine.</p>
              * 
              * <strong>example:</strong>
              * <p>8.0.1.1.35.1</p>
@@ -671,10 +661,8 @@ public class DescribeDBClusterVersionZonalResponseBody extends TeaModel {
             /**
              * <p>The release type. Valid values:</p>
              * <ul>
-             * <li><p><strong>LTS</strong>: Long-Term Support (LTS) version.</p>
-             * </li>
-             * <li><p><strong>BETA</strong>: Preview version.</p>
-             * </li>
+             * <li><strong>LTS</strong>: Long-term support version.</li>
+             * <li><strong>BETA</strong>: Preview version.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -686,7 +674,7 @@ public class DescribeDBClusterVersionZonalResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The code of the patch version for the database proxy. Use this code to specify the target version for an upgrade.</p>
+             * <p>The revision version code of the PolarProxy engine, which is used to specify the target version for the upgrade.</p>
              * 
              * <strong>example:</strong>
              * <p>20230707</p>
@@ -697,7 +685,7 @@ public class DescribeDBClusterVersionZonalResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The patch version of the database proxy.</p>
+             * <p>The revision version number of the PolarProxy engine.</p>
              * 
              * <strong>example:</strong>
              * <p>2.8.24</p>

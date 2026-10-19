@@ -67,7 +67,7 @@ public class ModifyCostRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The cost rule ID.</p>
+         * <p>The ID of the cost rule.</p>
          * 
          * <strong>example:</strong>
          * <p>924d450014e64e88ac6e8486f8e990**</p>
@@ -78,7 +78,7 @@ public class ModifyCostRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>6BD9CDE4-5E7B-4BF3-9BB8-83C73E******</p>

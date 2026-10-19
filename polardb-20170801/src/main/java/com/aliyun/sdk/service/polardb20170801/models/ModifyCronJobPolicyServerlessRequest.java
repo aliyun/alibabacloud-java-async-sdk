@@ -345,9 +345,9 @@ public class ModifyCronJobPolicyServerlessRequest extends Request {
         /**
          * <p>Specifies whether to enable No-activity Suspension. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: Enables the feature.</p>
+         * <li><p><strong>true</strong>: Enabled.</p>
          * </li>
-         * <li><p><strong>false</strong> (default): Disables the feature.</p>
+         * <li><p><strong>false</strong> (default): Disabled.</p>
          * </li>
          * </ul>
          * 
@@ -361,7 +361,7 @@ public class ModifyCronJobPolicyServerlessRequest extends Request {
         }
 
         /**
-         * <p>The Cron expression.</p>
+         * <p>The cron expression.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -388,6 +388,7 @@ public class ModifyCronJobPolicyServerlessRequest extends Request {
 
         /**
          * <p>The end time.</p>
+         * <p>Specify the time in the ISO 8601 standard in the YYYY-MM-DDTHH:mmZ format. The time must be in UTC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -400,7 +401,7 @@ public class ModifyCronJobPolicyServerlessRequest extends Request {
         }
 
         /**
-         * <p>The ID of the scheduled task.</p>
+         * <p>The scheduled task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>8006e51c-dab3-4602-bc69-4f728002c6ce</p>
@@ -485,7 +486,7 @@ public class ModifyCronJobPolicyServerlessRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of PCUs. Valid values: 1 to 32.</p>
+         * <p>The maximum value. Valid values: 1 to 32. Unit: PCU.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -497,7 +498,7 @@ public class ModifyCronJobPolicyServerlessRequest extends Request {
         }
 
         /**
-         * <p>The minimum number of PolarDB Capacity Units (PCUs). Valid values: 0.25 to 32. This value must be less than or equal to the value of ScaleMax.</p>
+         * <p>The minimum value. Valid values: 0.25 to 32. The minimum value must be less than or equal to the maximum value. Unit: PCU.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -509,7 +510,7 @@ public class ModifyCronJobPolicyServerlessRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of read-only nodes for scaling. Valid values: 0 to 15.</p>
+         * <p>The maximum number of read-only nodes for scaling. The value cannot be less than the minimum value. Valid values: 0 to 15.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -533,7 +534,7 @@ public class ModifyCronJobPolicyServerlessRequest extends Request {
         }
 
         /**
-         * <p>The detection period for No-activity Suspension. Unit: minutes. Valid values: 5 to 1440. The value must be a multiple of 5.</p>
+         * <p>The detection duration for No-activity Suspension. Valid values: 5 to 1440. Unit: minutes. The detection duration must be a multiple of 5 minutes.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -545,7 +546,7 @@ public class ModifyCronJobPolicyServerlessRequest extends Request {
         }
 
         /**
-         * <p>The CPU utilization threshold for a scale-up. Unit: percent. Valid values: 40 to 100.</p>
+         * <p>The CPU scale-up threshold. Valid values: 40 to 100. Unit: %.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -557,7 +558,7 @@ public class ModifyCronJobPolicyServerlessRequest extends Request {
         }
 
         /**
-         * <p>The CPU utilization threshold for a scale-down. Unit: percent. Valid values: 10 to 100. The value of ServerlessRuleCpuEnlargeThreshold minus the value of this parameter must be greater than or equal to 30.</p>
+         * <p>The CPU scale-down threshold. Valid values: 10 to 100. Unit: %. The difference between the scale-up threshold and the scale-down threshold must be at least 30.</p>
          * 
          * <strong>example:</strong>
          * <p>25</p>
@@ -571,10 +572,8 @@ public class ModifyCronJobPolicyServerlessRequest extends Request {
         /**
          * <p>The scaling sensitivity. Valid values:</p>
          * <ul>
-         * <li><p>normal</p>
-         * </li>
-         * <li><p>flexible</p>
-         * </li>
+         * <li>normal: standard.</li>
+         * <li>flexible: sensitive.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -587,7 +586,7 @@ public class ModifyCronJobPolicyServerlessRequest extends Request {
         }
 
         /**
-         * <p>The start time. Specify the time in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC.</p>
+         * <p>The start time. Specify the time in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2020-09-23T01:00:00Z</p>

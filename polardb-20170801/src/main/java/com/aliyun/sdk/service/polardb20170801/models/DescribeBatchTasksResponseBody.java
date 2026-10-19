@@ -106,7 +106,7 @@ public class DescribeBatchTasksResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The page number of the returned results.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -117,7 +117,7 @@ public class DescribeBatchTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of records per page.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -128,7 +128,7 @@ public class DescribeBatchTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>925B84D9-CA72-432C-95CF-738C22******</p>
@@ -139,7 +139,7 @@ public class DescribeBatchTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The task list.</p>
+         * <p>The task information.</p>
          */
         public Builder taskList(java.util.List<TaskList> taskList) {
             this.taskList = taskList;
@@ -147,7 +147,7 @@ public class DescribeBatchTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of tasks that match the query, ignoring pagination.</p>
+         * <p>The total number of tasks that meet the filter conditions, regardless of pagination.</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>
@@ -294,7 +294,7 @@ public class DescribeBatchTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The batch ID.</p>
+             * <p>The batch task ID.</p>
              * 
              * <strong>example:</strong>
              * <p>pcb-xxx</p>
@@ -316,7 +316,7 @@ public class DescribeBatchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of successfully completed subtasks in the batch.</p>
+             * <p>The number of successful batch tasks.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
@@ -349,7 +349,7 @@ public class DescribeBatchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task name.</p>
+             * <p>The description of the model service.</p>
              * 
              * <strong>example:</strong>
              * <p>batch_task_test</p>
@@ -371,7 +371,7 @@ public class DescribeBatchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of subtasks in the batch.</p>
+             * <p>The total number of tasks that meet the filter conditions, regardless of pagination.</p>
              * 
              * <strong>example:</strong>
              * <p>8</p>

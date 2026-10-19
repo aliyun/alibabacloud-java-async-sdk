@@ -118,7 +118,7 @@ public class DeleteAgenticDBTenantApiKeyRequest extends Request {
         }
 
         /**
-         * <p>The AgenticDB cluster ID.</p>
+         * <p>The ID of the AgenticDB cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,7 +144,7 @@ public class DeleteAgenticDBTenantApiKeyRequest extends Request {
         }
 
         /**
-         * <p>The tenant ID, which is used for secondary authentication on the backend.</p>
+         * <p>The tenant ID, which is used for secondary verification on the backend.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

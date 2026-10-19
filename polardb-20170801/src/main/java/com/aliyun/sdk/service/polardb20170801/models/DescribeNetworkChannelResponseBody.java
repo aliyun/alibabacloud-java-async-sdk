@@ -67,7 +67,7 @@ public class DescribeNetworkChannelResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A list of network channels.</p>
+         * <p>The list of network channels.</p>
          */
         public Builder channelInfos(java.util.List<ChannelInfos> channelInfos) {
             this.channelInfos = channelInfos;
@@ -75,7 +75,7 @@ public class DescribeNetworkChannelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>925B84D9-CA72-432C-95CF-738C22******</p>
@@ -259,7 +259,7 @@ public class DescribeNetworkChannelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the source cluster.</p>
+             * <p>The source instance name.</p>
              * 
              * <strong>example:</strong>
              * <p>pc-*************</p>
@@ -270,7 +270,10 @@ public class DescribeNetworkChannelResponseBody extends TeaModel {
             }
 
             /**
-             * EniId.
+             * <p>The ID of the elastic network interfaces (ENIs) used by the reverse access link of the network channel. The network interface controller (NIC) is used for the connection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eni-2z******</p>
              */
             public Builder eniId(String eniId) {
                 this.eniId = eniId;
@@ -278,7 +281,7 @@ public class DescribeNetworkChannelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The notes about the channel.</p>
+             * <p>The remarks.</p>
              * 
              * <strong>example:</strong>
              * <p>test update</p>
@@ -300,7 +303,7 @@ public class DescribeNetworkChannelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the target cluster.</p>
+             * <p>The target instance name.</p>
              * 
              * <strong>example:</strong>
              * <p>pc-*************</p>
@@ -311,7 +314,7 @@ public class DescribeNetworkChannelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address of the target cluster.</p>
+             * <p>The IP address of the target instance.</p>
              * 
              * <strong>example:</strong>
              * <p>33.<em>.</em>.240</p>
@@ -322,7 +325,7 @@ public class DescribeNetworkChannelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The port of the target cluster.</p>
+             * <p>The port of the target instance.</p>
              * 
              * <strong>example:</strong>
              * <p>3389</p>
@@ -333,7 +336,7 @@ public class DescribeNetworkChannelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the target cluster.</p>
+             * <p>The target instance type.</p>
              * 
              * <strong>example:</strong>
              * <p>polardb_for_postgresql</p>
@@ -344,7 +347,7 @@ public class DescribeNetworkChannelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the VPC that contains the endpoint.</p>
+             * <p>The ID of the VPC where the access endpoint resides.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-2ze13g2c6j7j2jl*******</p>

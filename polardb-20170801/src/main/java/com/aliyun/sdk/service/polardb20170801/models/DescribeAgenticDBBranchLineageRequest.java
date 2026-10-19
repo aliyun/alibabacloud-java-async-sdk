@@ -147,7 +147,7 @@ public class DescribeAgenticDBBranchLineageRequest extends Request {
         } 
 
         /**
-         * <p>The anchor branch ID. If this parameter is not specified, the primary branch of the project is used by default.</p>
+         * <p>The ID of the anchor branch. If this parameter is not specified, the primary branch of the project is used by default.</p>
          * 
          * <strong>example:</strong>
          * <p>br-7g8h9i0j1k2l</p>
@@ -159,7 +159,7 @@ public class DescribeAgenticDBBranchLineageRequest extends Request {
         }
 
         /**
-         * <p>The AgenticDB cluster ID.</p>
+         * <p>The ID of the AgenticDB cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -184,7 +184,10 @@ public class DescribeAgenticDBBranchLineageRequest extends Request {
         }
 
         /**
-         * MaxViewDepth.
+         * <p>The maximum number of levels to return in the view, including the anchor branch itself. Valid values: 1 to 20. Default value: 3. The server automatically allocates the budget for ancestor and descendant levels with a downward bias.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder maxViewDepth(Integer maxViewDepth) {
             this.putQueryParameter("MaxViewDepth", maxViewDepth);

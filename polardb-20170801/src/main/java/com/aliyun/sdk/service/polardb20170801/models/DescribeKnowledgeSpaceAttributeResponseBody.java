@@ -316,8 +316,8 @@ public class DescribeKnowledgeSpaceAttributeResponseBody extends TeaModel {
         /**
          * <p>The access control list (ACL) mode of the knowledge space. Valid values:</p>
          * <ul>
-         * <li>DISABLED</li>
-         * <li>ENFORCED</li>
+         * <li>DISABLED: ACL is disabled.</li>
+         * <li>ENFORCED: ACL is enforced.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -329,7 +329,8 @@ public class DescribeKnowledgeSpaceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the knowledge space was created.</p>
+         * <p>The creation time.</p>
+         * <p>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
          * 
          * <strong>example:</strong>
          * <p>2026-06-25T09:53:44Z</p>
@@ -362,7 +363,7 @@ public class DescribeKnowledgeSpaceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The type of the database engine. Valid values:</p>
+         * <p>The database engine type. Valid values:</p>
          * <ul>
          * <li>MySQL</li>
          * <li>PostgreSQL</li>
@@ -498,7 +499,7 @@ public class DescribeKnowledgeSpaceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The default chunking strategy configuration of the knowledge space. This parameter may be empty if existing instances do not have the complete configuration saved.</p>
+         * <p>The default chunking strategy configuration of the knowledge space. This value may be empty if existing instances do not have a complete configuration saved.</p>
          */
         public Builder shardingStrategyConfig(ShardingStrategyConfig shardingStrategyConfig) {
             this.shardingStrategyConfig = shardingStrategyConfig;
@@ -913,7 +914,7 @@ public class DescribeKnowledgeSpaceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The chunking strategy type used when a rule is matched.</p>
+             * <p>The chunking strategy type used when the rule is matched.</p>
              * 
              * <strong>example:</strong>
              * <p>hierarchical</p>

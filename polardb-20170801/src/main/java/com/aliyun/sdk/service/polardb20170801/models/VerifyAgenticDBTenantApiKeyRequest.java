@@ -75,7 +75,7 @@ public class VerifyAgenticDBTenantApiKeyRequest extends Request {
         } 
 
         /**
-         * <p>The plaintext API key to validate.</p>
+         * <p>The plaintext of the API key to be validated.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

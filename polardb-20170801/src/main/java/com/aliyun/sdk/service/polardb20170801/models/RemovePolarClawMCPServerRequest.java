@@ -75,7 +75,7 @@ public class RemovePolarClawMCPServerRequest extends Request {
         } 
 
         /**
-         * <p>The application ID.</p>
+         * <p>The PolarClaw application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

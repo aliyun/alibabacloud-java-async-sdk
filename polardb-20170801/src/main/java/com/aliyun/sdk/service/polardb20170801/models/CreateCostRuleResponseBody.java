@@ -67,7 +67,7 @@ public class CreateCostRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The cost rule ID.</p>
+         * <p>The ID of the cost rule.</p>
          * 
          * <strong>example:</strong>
          * <p>924d450014e64e88ac6e8486f8e990**</p>

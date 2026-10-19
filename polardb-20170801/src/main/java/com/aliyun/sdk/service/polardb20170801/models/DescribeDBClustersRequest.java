@@ -364,7 +364,7 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * <p>The cluster ID. Separate multiple cluster IDs with commas (,).</p>
+         * <p>The cluster IDs. Separate multiple cluster IDs with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>pc-****************</p>
@@ -388,7 +388,7 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * <p>The node ID. You can specify multiple node IDs, separated by commas (,).</p>
+         * <p>The node IDs. You can specify multiple node IDs and separate them with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>pi-***************</p>
@@ -417,7 +417,7 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * <p>The database engine version.</p>
+         * <p>The database version.</p>
          * 
          * <strong>example:</strong>
          * <p>5.6</p>
@@ -429,9 +429,9 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * <p>The query mode for the list. Set the value to Simple to use the simple mode, which returns only basic metadata of clusters.</p>
+         * <p>The query mode for the list. A value of Simple indicates the brief mode, in which only the basic metadata of the clusters is returned.</p>
          * <blockquote>
-         * <p>If you do not specify this parameter, the detailed mode is used by default, which returns detailed information about clusters.</p>
+         * <p>If this parameter is not specified, the detailed mode is used by default, and the detailed information of the clusters is returned.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -507,8 +507,8 @@ public class DescribeDBClustersRequest extends Request {
         /**
          * <p>The billing method. Valid values: </p>
          * <ul>
-         * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
-         * <li><strong>Prepaid</strong>: subscription.</li>
+         * <li><strong>Postpaid</strong>: pay-as-you-go</li>
+         * <li><strong>Prepaid</strong>: subscription</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -521,7 +521,7 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * <p>Filters clusters created within the last N days. Valid values: 0 to 15.</p>
+         * <p>Filters the clusters created in the last N days. Valid values: 0 to 15.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>
@@ -533,7 +533,7 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * <p>Filters clusters that expire within the next N days. Valid values: 0 to 15.</p>
+         * <p>Filters the clusters that expire in N days. Valid values: 0 to 15.</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>
@@ -591,7 +591,7 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * <p>The tags.</p>
+         * <p>The list of tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -659,7 +659,7 @@ public class DescribeDBClustersRequest extends Request {
             } 
 
             /**
-             * <p>The tag key. You can use tags to filter the cluster list. You can specify up to 20 tag pairs. The number n for each tag pair must be unique and must be a consecutive integer that starts from 1. The Tag.n.Key parameter is paired with the Tag.n.Value parameter.</p>
+             * <p>The tag key. You can filter the cluster list based on tags. You can specify up to 20 tag key-value pairs. The number n in each tag key-value pair must be unique and must be a consecutive integer starting from 1. The value of Tag.n.Key is Tag.n.Value.</p>
              * <blockquote>
              * <p>The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code>, <code>acs:</code>, <code>http://</code>, or <code>https://</code>.</p>
              * </blockquote>

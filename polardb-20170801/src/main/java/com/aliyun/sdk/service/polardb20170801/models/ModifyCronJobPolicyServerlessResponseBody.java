@@ -54,7 +54,7 @@ public class ModifyCronJobPolicyServerlessResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>D1401250-910B-57A6-8A6A-D9988A62B1CD</p>

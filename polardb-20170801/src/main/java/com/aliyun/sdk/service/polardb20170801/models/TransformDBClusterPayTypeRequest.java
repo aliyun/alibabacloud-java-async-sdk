@@ -305,7 +305,7 @@ public class TransformDBClusterPayTypeRequest extends Request {
         }
 
         /**
-         * <p>The subscription type of the subscription instance. Valid values:</p>
+         * <p>The unit of the subscription duration for the instance. Valid values:</p>
          * <ul>
          * <li><p><strong>Year</strong>: yearly subscription</p>
          * </li>
@@ -383,9 +383,9 @@ public class TransformDBClusterPayTypeRequest extends Request {
         /**
          * <p>The subscription duration. Valid values:</p>
          * <ul>
-         * <li><p>If <strong>Period</strong> is set to <strong>Year</strong>, set <strong>UsedTime</strong> to a value from 1 to 3.</p>
+         * <li><p>If <strong>Period</strong> is set to <strong>Year</strong>, set UsedTime to a value from 1 to 3.</p>
          * </li>
-         * <li><p>If <strong>Period</strong> is set to <strong>Month</strong>, set <strong>UsedTime</strong> to a value from 1 to 9.</p>
+         * <li><p>If <strong>Period</strong> is set to <strong>Month</strong>, set UsedTime to a value from 1 to 9.</p>
          * </li>
          * </ul>
          * <blockquote>

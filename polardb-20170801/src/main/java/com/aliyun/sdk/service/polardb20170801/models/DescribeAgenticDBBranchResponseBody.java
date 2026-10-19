@@ -262,7 +262,10 @@ public class DescribeAgenticDBBranchResponseBody extends TeaModel {
         } 
 
         /**
-         * BranchComputeClusterId.
+         * <p>The ID of the compute cluster associated with the branch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-g0lsayq8c5qe</p>
          */
         public Builder branchComputeClusterId(String branchComputeClusterId) {
             this.branchComputeClusterId = branchComputeClusterId;
@@ -270,7 +273,10 @@ public class DescribeAgenticDBBranchResponseBody extends TeaModel {
         }
 
         /**
-         * BranchComputeNodeCount.
+         * <p>The number of compute nodes. The value is fixed to 1 in the initial phase.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder branchComputeNodeCount(Integer branchComputeNodeCount) {
             this.branchComputeNodeCount = branchComputeNodeCount;
@@ -278,7 +284,10 @@ public class DescribeAgenticDBBranchResponseBody extends TeaModel {
         }
 
         /**
-         * BranchId.
+         * <p>The branch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>br-7g8h9i0j1k2l</p>
          */
         public Builder branchId(String branchId) {
             this.branchId = branchId;
@@ -286,7 +295,10 @@ public class DescribeAgenticDBBranchResponseBody extends TeaModel {
         }
 
         /**
-         * BranchName.
+         * <p>The branch name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>feature-analytics</p>
          */
         public Builder branchName(String branchName) {
             this.branchName = branchName;
@@ -294,7 +306,11 @@ public class DescribeAgenticDBBranchResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The time when the branch was created.</p>
+         * <p>The time is in the ISO 8601 standard in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-06-10T11:00:00Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -302,7 +318,10 @@ public class DescribeAgenticDBBranchResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The description of the branch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Feature branch for analytics</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -310,7 +329,10 @@ public class DescribeAgenticDBBranchResponseBody extends TeaModel {
         }
 
         /**
-         * IsDefaultBranch.
+         * <p>Indicates whether the branch is the default branch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isDefaultBranch(Boolean isDefaultBranch) {
             this.isDefaultBranch = isDefaultBranch;
@@ -318,7 +340,10 @@ public class DescribeAgenticDBBranchResponseBody extends TeaModel {
         }
 
         /**
-         * LastActivatedAt.
+         * <p>The time when the branch was last activated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-06-10T12:30:00Z</p>
          */
         public Builder lastActivatedAt(String lastActivatedAt) {
             this.lastActivatedAt = lastActivatedAt;
@@ -326,7 +351,10 @@ public class DescribeAgenticDBBranchResponseBody extends TeaModel {
         }
 
         /**
-         * MaxCU.
+         * <p>The maximum compute unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder maxCU(String maxCU) {
             this.maxCU = maxCU;
@@ -334,7 +362,10 @@ public class DescribeAgenticDBBranchResponseBody extends TeaModel {
         }
 
         /**
-         * MinCU.
+         * <p>The minimum compute unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.25</p>
          */
         public Builder minCU(String minCU) {
             this.minCU = minCU;
@@ -342,7 +373,10 @@ public class DescribeAgenticDBBranchResponseBody extends TeaModel {
         }
 
         /**
-         * ParentBranchId.
+         * <p>The ID of the parent branch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>br-1a2b3c4d5e6f</p>
          */
         public Builder parentBranchId(String parentBranchId) {
             this.parentBranchId = parentBranchId;
@@ -350,7 +384,10 @@ public class DescribeAgenticDBBranchResponseBody extends TeaModel {
         }
 
         /**
-         * ParentBranchName.
+         * <p>The name of the parent branch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>main</p>
          */
         public Builder parentBranchName(String parentBranchName) {
             this.parentBranchName = parentBranchName;
@@ -358,7 +395,10 @@ public class DescribeAgenticDBBranchResponseBody extends TeaModel {
         }
 
         /**
-         * ProjectId.
+         * <p>The ID of the project to which the branch belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>proj-a1b2c3d4e5f6</p>
          */
         public Builder projectId(String projectId) {
             this.projectId = projectId;
@@ -366,7 +406,10 @@ public class DescribeAgenticDBBranchResponseBody extends TeaModel {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the project to which the branch belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>analytics-prod</p>
          */
         public Builder projectName(String projectName) {
             this.projectName = projectName;
@@ -374,7 +417,10 @@ public class DescribeAgenticDBBranchResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C3D4E5F6-A7B8-9012-CDEF-345678901CDE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -382,7 +428,15 @@ public class DescribeAgenticDBBranchResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the branch. Valid values:</p>
+         * <ul>
+         * <li>Running</li>
+         * <li>Pending</li>
+         * <li>Paused</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -390,7 +444,10 @@ public class DescribeAgenticDBBranchResponseBody extends TeaModel {
         }
 
         /**
-         * TenantId.
+         * <p>The ID of the tenant to which the branch belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-4b83e0da66674951</p>
          */
         public Builder tenantId(String tenantId) {
             this.tenantId = tenantId;

@@ -167,7 +167,7 @@ public class DescribeGlobalDatabaseNetworkRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Global Database Network (GDN).</p>
+         * <p>GDN ID。</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

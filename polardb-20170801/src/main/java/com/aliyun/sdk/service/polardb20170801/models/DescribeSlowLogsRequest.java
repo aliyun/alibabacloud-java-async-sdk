@@ -218,7 +218,7 @@ public class DescribeSlowLogsRequest extends Request {
         }
 
         /**
-         * <p>The database name.</p>
+         * <p>The name of the database.</p>
          * 
          * <strong>example:</strong>
          * <p>PolarDB_MySQL</p>
@@ -230,7 +230,7 @@ public class DescribeSlowLogsRequest extends Request {
         }
 
         /**
-         * <p>The end date of the query range. The end date cannot be earlier than the start date, and the interval between the start and end dates cannot exceed 31 days. Specify the date in <code>yyyy-MM-ddZ</code> format. The time is in UTC.</p>
+         * <p>The end date of the query. The end date must be later than or equal to the start date. The interval between the start date and the end date cannot exceed 31 days. Format: yyyy-MM-ddZ (UTC).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -261,8 +261,8 @@ public class DescribeSlowLogsRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
-         * <p>The default value is 1.</p>
+         * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type.</p>
+         * <p>Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -274,7 +274,7 @@ public class DescribeSlowLogsRequest extends Request {
         }
 
         /**
-         * <p>The number of logs to return on each page. Valid values: 30 to 100. The default value is 30.</p>
+         * <p>The number of entries per page. Valid values: 30 to 100. Default value: 30.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -317,7 +317,7 @@ public class DescribeSlowLogsRequest extends Request {
         }
 
         /**
-         * <p>The start date of the query range. The date can be up to 31 days in the past. Specify the date in <code>yyyy-MM-ddZ</code> format. The time is in UTC.</p>
+         * <p>The start date of the query. The interval between the start date and the current date cannot exceed 31 days. Format: yyyy-MM-ddZ (UTC).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

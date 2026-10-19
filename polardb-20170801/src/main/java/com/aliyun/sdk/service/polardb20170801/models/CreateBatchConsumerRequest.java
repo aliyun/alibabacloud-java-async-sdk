@@ -181,7 +181,7 @@ public class CreateBatchConsumerRequest extends Request {
         }
 
         /**
-         * <p>The redemption code. If specified, the recharge-type activation branch is used, and the count and quota are populated from the database.</p>
+         * <p>The redemption code. If specified, the recharge activation branch is used, and the count and quota are populated from the database.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;9&quot;</p>

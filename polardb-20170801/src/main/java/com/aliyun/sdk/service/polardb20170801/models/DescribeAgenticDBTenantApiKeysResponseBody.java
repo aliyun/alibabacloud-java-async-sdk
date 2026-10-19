@@ -106,7 +106,7 @@ public class DescribeAgenticDBTenantApiKeysResponseBody extends TeaModel {
         } 
 
         /**
-         * Items.
+         * <p>The list of API keys.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -114,7 +114,10 @@ public class DescribeAgenticDBTenantApiKeysResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class DescribeAgenticDBTenantApiKeysResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class DescribeAgenticDBTenantApiKeysResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C3D4E5F6-A7B8-9012-CDEF-123456789012</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class DescribeAgenticDBTenantApiKeysResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -282,7 +294,10 @@ public class DescribeAgenticDBTenantApiKeysResponseBody extends TeaModel {
             } 
 
             /**
-             * ApiKeyId.
+             * <p>The resource ID of the API key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ak-71304e39c7e841a1</p>
              */
             public Builder apiKeyId(String apiKeyId) {
                 this.apiKeyId = apiKeyId;
@@ -290,7 +305,10 @@ public class DescribeAgenticDBTenantApiKeysResponseBody extends TeaModel {
             }
 
             /**
-             * ApiKeyMasked.
+             * <p>The masked API key value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pagc_key_cGFnYy1icDFhMmIz****</p>
              */
             public Builder apiKeyMasked(String apiKeyMasked) {
                 this.apiKeyMasked = apiKeyMasked;
@@ -298,7 +316,11 @@ public class DescribeAgenticDBTenantApiKeysResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the API key was created.</p>
+             * <p>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-06-10T10:30:00Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -306,7 +328,10 @@ public class DescribeAgenticDBTenantApiKeysResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the API key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MCP server token</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -314,7 +339,11 @@ public class DescribeAgenticDBTenantApiKeysResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * <p>The time when the API key expires.</p>
+             * <p>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2027-01-01T00:00:00Z</p>
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -322,7 +351,10 @@ public class DescribeAgenticDBTenantApiKeysResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the API key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -330,7 +362,10 @@ public class DescribeAgenticDBTenantApiKeysResponseBody extends TeaModel {
             }
 
             /**
-             * TenantId.
+             * <p>The ID of the tenant to which the API key belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t-4b83e0da66674951</p>
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -338,7 +373,10 @@ public class DescribeAgenticDBTenantApiKeysResponseBody extends TeaModel {
             }
 
             /**
-             * TenantName.
+             * <p>The name of the tenant to which the API key belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-saas-app</p>
              */
             public Builder tenantName(String tenantName) {
                 this.tenantName = tenantName;
