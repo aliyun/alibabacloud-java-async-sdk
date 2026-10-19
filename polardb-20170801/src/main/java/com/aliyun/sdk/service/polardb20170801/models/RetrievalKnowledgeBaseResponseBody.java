@@ -332,6 +332,9 @@ public class RetrievalKnowledgeBaseResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SimilarityScore")
         private Double similarityScore;
 
+        @com.aliyun.core.annotation.NameInMap("SourceUri")
+        private String sourceUri;
+
         private Results(Builder builder) {
             this.captions = builder.captions;
             this.docItems = builder.docItems;
@@ -344,6 +347,7 @@ public class RetrievalKnowledgeBaseResponseBody extends TeaModel {
             this.shardContent = builder.shardContent;
             this.shardIndex = builder.shardIndex;
             this.similarityScore = builder.similarityScore;
+            this.sourceUri = builder.sourceUri;
         }
 
         public static Builder builder() {
@@ -431,6 +435,13 @@ public class RetrievalKnowledgeBaseResponseBody extends TeaModel {
             return this.similarityScore;
         }
 
+        /**
+         * @return sourceUri
+         */
+        public String getSourceUri() {
+            return this.sourceUri;
+        }
+
         public static final class Builder {
             private java.util.List<String> captions; 
             private java.util.List<String> docItems; 
@@ -443,6 +454,7 @@ public class RetrievalKnowledgeBaseResponseBody extends TeaModel {
             private String shardContent; 
             private Integer shardIndex; 
             private Double similarityScore; 
+            private String sourceUri; 
 
             private Builder() {
             } 
@@ -459,6 +471,7 @@ public class RetrievalKnowledgeBaseResponseBody extends TeaModel {
                 this.shardContent = model.shardContent;
                 this.shardIndex = model.shardIndex;
                 this.similarityScore = model.similarityScore;
+                this.sourceUri = model.sourceUri;
             } 
 
             /**
@@ -564,6 +577,17 @@ public class RetrievalKnowledgeBaseResponseBody extends TeaModel {
              */
             public Builder similarityScore(Double similarityScore) {
                 this.similarityScore = similarityScore;
+                return this;
+            }
+
+            /**
+             * <p>The URI of the source document.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example.com/source.pdf">https://example.com/source.pdf</a></p>
+             */
+            public Builder sourceUri(String sourceUri) {
+                this.sourceUri = sourceUri;
                 return this;
             }
 

@@ -198,6 +198,9 @@ public class VerifyAgenticDBTenantApiKeyResponseBody extends TeaModel {
          * <li>Expired: The API key has expired.</li>
          * <li>Revoked: The API key has been revoked.</li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NotFound</p>
          */
         public Builder reason(String reason) {
             this.reason = reason;

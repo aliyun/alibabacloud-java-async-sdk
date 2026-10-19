@@ -368,6 +368,9 @@ public class DescribeKnowledgeBaseFileShardsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ShardIndex")
         private Integer shardIndex;
 
+        @com.aliyun.core.annotation.NameInMap("SourceUri")
+        private String sourceUri;
+
         private Shards(Builder builder) {
             this.captions = builder.captions;
             this.docItems = builder.docItems;
@@ -376,6 +379,7 @@ public class DescribeKnowledgeBaseFileShardsResponseBody extends TeaModel {
             this.pageNumbers = builder.pageNumbers;
             this.shardContent = builder.shardContent;
             this.shardIndex = builder.shardIndex;
+            this.sourceUri = builder.sourceUri;
         }
 
         public static Builder builder() {
@@ -435,6 +439,13 @@ public class DescribeKnowledgeBaseFileShardsResponseBody extends TeaModel {
             return this.shardIndex;
         }
 
+        /**
+         * @return sourceUri
+         */
+        public String getSourceUri() {
+            return this.sourceUri;
+        }
+
         public static final class Builder {
             private java.util.List<String> captions; 
             private java.util.List<String> docItems; 
@@ -443,6 +454,7 @@ public class DescribeKnowledgeBaseFileShardsResponseBody extends TeaModel {
             private java.util.List<String> pageNumbers; 
             private String shardContent; 
             private Integer shardIndex; 
+            private String sourceUri; 
 
             private Builder() {
             } 
@@ -455,6 +467,7 @@ public class DescribeKnowledgeBaseFileShardsResponseBody extends TeaModel {
                 this.pageNumbers = model.pageNumbers;
                 this.shardContent = model.shardContent;
                 this.shardIndex = model.shardIndex;
+                this.sourceUri = model.sourceUri;
             } 
 
             /**
@@ -516,6 +529,17 @@ public class DescribeKnowledgeBaseFileShardsResponseBody extends TeaModel {
              */
             public Builder shardIndex(Integer shardIndex) {
                 this.shardIndex = shardIndex;
+                return this;
+            }
+
+            /**
+             * <p>The URI of the source document.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example.com/source.pdf">https://example.com/source.pdf</a></p>
+             */
+            public Builder sourceUri(String sourceUri) {
+                this.sourceUri = sourceUri;
                 return this;
             }
 

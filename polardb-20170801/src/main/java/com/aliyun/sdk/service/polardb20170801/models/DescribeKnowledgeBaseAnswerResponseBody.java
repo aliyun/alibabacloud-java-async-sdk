@@ -504,6 +504,9 @@ public class DescribeKnowledgeBaseAnswerResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SourceId")
         private Integer sourceId;
 
+        @com.aliyun.core.annotation.NameInMap("SourceUri")
+        private String sourceUri;
+
         private Sources(Builder builder) {
             this.chunkMetadata = builder.chunkMetadata;
             this.fileId = builder.fileId;
@@ -516,6 +519,7 @@ public class DescribeKnowledgeBaseAnswerResponseBody extends TeaModel {
             this.shardIndex = builder.shardIndex;
             this.similarityScore = builder.similarityScore;
             this.sourceId = builder.sourceId;
+            this.sourceUri = builder.sourceUri;
         }
 
         public static Builder builder() {
@@ -603,6 +607,13 @@ public class DescribeKnowledgeBaseAnswerResponseBody extends TeaModel {
             return this.sourceId;
         }
 
+        /**
+         * @return sourceUri
+         */
+        public String getSourceUri() {
+            return this.sourceUri;
+        }
+
         public static final class Builder {
             private java.util.Map<String, ?> chunkMetadata; 
             private String fileId; 
@@ -615,6 +626,7 @@ public class DescribeKnowledgeBaseAnswerResponseBody extends TeaModel {
             private Integer shardIndex; 
             private Double similarityScore; 
             private Integer sourceId; 
+            private String sourceUri; 
 
             private Builder() {
             } 
@@ -631,6 +643,7 @@ public class DescribeKnowledgeBaseAnswerResponseBody extends TeaModel {
                 this.shardIndex = model.shardIndex;
                 this.similarityScore = model.similarityScore;
                 this.sourceId = model.sourceId;
+                this.sourceUri = model.sourceUri;
             } 
 
             /**
@@ -745,6 +758,17 @@ public class DescribeKnowledgeBaseAnswerResponseBody extends TeaModel {
              */
             public Builder sourceId(Integer sourceId) {
                 this.sourceId = sourceId;
+                return this;
+            }
+
+            /**
+             * <p>The URI of the original document.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example.com/source.pdf">https://example.com/source.pdf</a></p>
+             */
+            public Builder sourceUri(String sourceUri) {
+                this.sourceUri = sourceUri;
                 return this;
             }
 
