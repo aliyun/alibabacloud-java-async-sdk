@@ -33,12 +33,17 @@ public class ListRegionsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoadAll")
+    private Boolean loadAll;
+
     private ListRegionsRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.audited = builder.audited;
         this.identified = builder.identified;
         this.lang = builder.lang;
+        this.loadAll = builder.loadAll;
     }
 
     public static Builder builder() {
@@ -82,11 +87,19 @@ public class ListRegionsRequest extends Request {
         return this.lang;
     }
 
+    /**
+     * @return loadAll
+     */
+    public Boolean getLoadAll() {
+        return this.loadAll;
+    }
+
     public static final class Builder extends Request.Builder<ListRegionsRequest, Builder> {
         private String regionId; 
         private Boolean audited; 
         private Boolean identified; 
         private String lang; 
+        private Boolean loadAll; 
 
         private Builder() {
             super();
@@ -98,6 +111,7 @@ public class ListRegionsRequest extends Request {
             this.audited = request.audited;
             this.identified = request.identified;
             this.lang = request.lang;
+            this.loadAll = request.loadAll;
         } 
 
         /**
@@ -110,7 +124,7 @@ public class ListRegionsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to filter regions by assets that have audit enabled. A value of true indicates that audit is enabled. A value of false indicates that audit is not enabled. If you do not specify this parameter, this filter condition is not applied.</p>
+         * <p>Specifies whether to filter regions by assets with auditing enabled. Valid values: true: Enabled. false: Disabled. If you do not specify this parameter, this filter condition is not applied.</p>
          */
         public Builder audited(Boolean audited) {
             this.putQueryParameter("Audited", audited);
@@ -119,7 +133,7 @@ public class ListRegionsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to filter regions by assets that have detection enabled. A value of true indicates that detection is enabled. A value of false indicates that detection is not enabled. If you do not specify this parameter, this filter condition is not applied.</p>
+         * <p>Specifies whether to filter regions by assets with detection enabled. Valid values: true: Enabled. false: Disabled. If you do not specify this parameter, this filter condition is not applied.</p>
          */
         public Builder identified(Boolean identified) {
             this.putQueryParameter("Identified", identified);
@@ -128,11 +142,7 @@ public class ListRegionsRequest extends Request {
         }
 
         /**
-         * <p>The language of the response description. Valid values:</p>
-         * <ul>
-         * <li>zh: Chinese.</li>
-         * <li>en: English.</li>
-         * </ul>
+         * <p>The language of the response. Valid values: zh: Chinese. en: English.</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -140,6 +150,15 @@ public class ListRegionsRequest extends Request {
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
             this.lang = lang;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to retrieve all regions.</p>
+         */
+        public Builder loadAll(Boolean loadAll) {
+            this.putQueryParameter("LoadAll", loadAll);
+            this.loadAll = loadAll;
             return this;
         }
 
