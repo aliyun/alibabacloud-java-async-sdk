@@ -115,7 +115,10 @@ public class ListModelLimitsRequest extends Request {
         } 
 
         /**
-         * maxResults.
+         * <p>The maximum number of results. Valid values: 0 to 200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -124,7 +127,10 @@ public class ListModelLimitsRequest extends Request {
         }
 
         /**
-         * model.
+         * <p>The single model for exact match.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen-plus</p>
          */
         public Builder model(String model) {
             this.putQueryParameter("model", model);
@@ -133,7 +139,10 @@ public class ListModelLimitsRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The model name for fuzzy match.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen-plus</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -142,7 +151,10 @@ public class ListModelLimitsRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The page token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lwytFRtLdNk=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -151,7 +163,10 @@ public class ListModelLimitsRequest extends Request {
         }
 
         /**
-         * workspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ws-8af73c50f5596193</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("workspaceId", workspaceId);

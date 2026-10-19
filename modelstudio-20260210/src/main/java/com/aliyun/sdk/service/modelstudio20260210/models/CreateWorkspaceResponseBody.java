@@ -119,7 +119,10 @@ public class CreateWorkspaceResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class CreateWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class CreateWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -154,7 +163,14 @@ public class CreateWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -162,7 +178,7 @@ public class CreateWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * workspace.
+         * <p>The workspace information.</p>
          */
         public Builder workspace(Workspace workspace) {
             this.workspace = workspace;
@@ -291,7 +307,10 @@ public class CreateWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * gmtCreate.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1742785623772</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -299,7 +318,10 @@ public class CreateWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * region.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -307,7 +329,10 @@ public class CreateWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * serviceSite.
+             * <p>The service deployment scope. For more information, see <a href="https://www.alibabacloud.com/help/zh/model-studio/regions/">documentation</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>global</p>
              */
             public Builder serviceSite(String serviceSite) {
                 this.serviceSite = serviceSite;
@@ -315,7 +340,10 @@ public class CreateWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * workspaceId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ws-ac3ef438bec22dc5</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;
@@ -323,7 +351,10 @@ public class CreateWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * workspaceName.
+             * <p>The workspace name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder workspaceName(String workspaceName) {
                 this.workspaceName = workspaceName;

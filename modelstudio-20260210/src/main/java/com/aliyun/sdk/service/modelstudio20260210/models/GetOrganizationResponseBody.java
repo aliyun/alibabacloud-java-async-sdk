@@ -119,7 +119,10 @@ public class GetOrganizationResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetOrganizationResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The business data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetOrganizationResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetOrganizationResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class GetOrganizationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0CB5868D-C6E5-59A6-A20A-C39EB2E75BDE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,14 @@ public class GetOrganizationResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API call is successful. Valid values:</p>
+         * <ul>
+         * <li>true: Successful.</li>
+         * <li>false: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -316,7 +335,10 @@ public class GetOrganizationResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The organization description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>组织描述</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -324,7 +346,10 @@ public class GetOrganizationResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-11-20T02:26:35Z</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -332,7 +357,10 @@ public class GetOrganizationResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-11-13T02:11:56Z</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -340,7 +368,10 @@ public class GetOrganizationResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The organization name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>组织名称</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -348,7 +379,10 @@ public class GetOrganizationResponseBody extends TeaModel {
             }
 
             /**
-             * NamespaceId.
+             * <p>The product namespace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>namespace-1</p>
              */
             public Builder namespaceId(String namespaceId) {
                 this.namespaceId = namespaceId;
@@ -356,7 +390,10 @@ public class GetOrganizationResponseBody extends TeaModel {
             }
 
             /**
-             * OrgId.
+             * <p>The organization ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>org_123456789</p>
              */
             public Builder orgId(String orgId) {
                 this.orgId = orgId;
@@ -364,7 +401,10 @@ public class GetOrganizationResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerBizAccountId.
+             * <p>The business account identifier of the organization owner. The value is aliyunUid for the ALIYUN type and userIdentifier for the SSO type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1543686331379464</p>
              */
             public Builder ownerBizAccountId(String ownerBizAccountId) {
                 this.ownerBizAccountId = ownerBizAccountId;
@@ -372,7 +412,10 @@ public class GetOrganizationResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerId.
+             * <p>The UAC account ID of the organization owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acc_123456789</p>
              */
             public Builder ownerId(String ownerId) {
                 this.ownerId = ownerId;
@@ -380,7 +423,10 @@ public class GetOrganizationResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status. Valid values: ACTIVE and FROZEN.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACTIVE</p>
              */
             public Builder status(String status) {
                 this.status = status;

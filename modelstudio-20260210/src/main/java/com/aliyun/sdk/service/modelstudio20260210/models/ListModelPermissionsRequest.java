@@ -130,7 +130,14 @@ public class ListModelPermissionsRequest extends Request {
         } 
 
         /**
-         * authorizationScope.
+         * <p>The authorization query dimension. Valid values:</p>
+         * <ul>
+         * <li><strong>AUTHORIZED</strong>: models that have been authorized for the specified modelAction. Use this value together with modelAction.</li>
+         * <li><strong>AUTHORIZABLE</strong>: full authorizable catalog.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AUTHORIZABLE</p>
          */
         public Builder authorizationScope(String authorizationScope) {
             this.putQueryParameter("authorizationScope", authorizationScope);
@@ -139,7 +146,7 @@ public class ListModelPermissionsRequest extends Request {
         }
 
         /**
-         * filter.
+         * <p>The filter conditions.</p>
          */
         public Builder filter(Filter filter) {
             this.putQueryParameter("filter", filter);
@@ -148,7 +155,10 @@ public class ListModelPermissionsRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of entries to return per page. Default value: 20. If the upper limit is exceeded, the error code InvalidParameter.maxResults is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -157,7 +167,13 @@ public class ListModelPermissionsRequest extends Request {
         }
 
         /**
-         * modelAction.
+         * <p>The authorization action dimension. Valid values:</p>
+         * <ul>
+         * <li><strong>INFERENCE</strong>: model inference authorization.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>INFERENCE</p>
          */
         public Builder modelAction(String modelAction) {
             this.putQueryParameter("modelAction", modelAction);
@@ -166,7 +182,10 @@ public class ListModelPermissionsRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token (offset) for the next page. Do not pass this parameter for the first page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lwytFRtLdNk=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -175,6 +194,7 @@ public class ListModelPermissionsRequest extends Request {
         }
 
         /**
+         * <p>The workspace ID. This parameter is required and cannot be empty.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -246,7 +266,10 @@ public class ListModelPermissionsRequest extends Request {
             } 
 
             /**
-             * model.
+             * <p>The exact match for a single model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen-plus</p>
              */
             public Builder model(String model) {
                 this.model = model;
@@ -254,7 +277,10 @@ public class ListModelPermissionsRequest extends Request {
             }
 
             /**
-             * name.
+             * <p>The fuzzy match for the model name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OVERLAY</p>
              */
             public Builder name(String name) {
                 this.name = name;

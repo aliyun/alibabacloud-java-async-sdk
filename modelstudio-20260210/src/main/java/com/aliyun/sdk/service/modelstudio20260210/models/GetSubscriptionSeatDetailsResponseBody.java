@@ -93,7 +93,10 @@ public class GetSubscriptionSeatDetailsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class GetSubscriptionSeatDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The business data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class GetSubscriptionSeatDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +123,14 @@ public class GetSubscriptionSeatDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call is successful. Valid values:</p>
+         * <ul>
+         * <li>true: Successful.</li>
+         * <li>false: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -248,7 +261,10 @@ public class GetSubscriptionSeatDetailsResponseBody extends TeaModel {
             } 
 
             /**
-             * CycleEndTime.
+             * <p>The end time of the current cycle, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1755273600</p>
              */
             public Builder cycleEndTime(Long cycleEndTime) {
                 this.cycleEndTime = cycleEndTime;
@@ -256,7 +272,10 @@ public class GetSubscriptionSeatDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * CycleInstanceId.
+             * <p>The equity code (subscription code). This does not need to be consumed in CREDITS scenarios.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder cycleInstanceId(String cycleInstanceId) {
                 this.cycleInstanceId = cycleInstanceId;
@@ -264,7 +283,10 @@ public class GetSubscriptionSeatDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * CycleStartTime.
+             * <p>The start time of the current cycle, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1775232000</p>
              */
             public Builder cycleStartTime(Long cycleStartTime) {
                 this.cycleStartTime = cycleStartTime;
@@ -272,7 +294,10 @@ public class GetSubscriptionSeatDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * CycleSurplusValue.
+             * <p>The remaining quota of the current cycle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40.00000000</p>
              */
             public Builder cycleSurplusValue(Double cycleSurplusValue) {
                 this.cycleSurplusValue = cycleSurplusValue;
@@ -280,7 +305,10 @@ public class GetSubscriptionSeatDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * CycleTotalValue.
+             * <p>The total quota of the current cycle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.00000000</p>
              */
             public Builder cycleTotalValue(Double cycleTotalValue) {
                 this.cycleTotalValue = cycleTotalValue;
@@ -288,7 +316,10 @@ public class GetSubscriptionSeatDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * CycleVersion.
+             * <p>The time-series version of the current cycle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder cycleVersion(Long cycleVersion) {
                 this.cycleVersion = cycleVersion;
@@ -296,7 +327,10 @@ public class GetSubscriptionSeatDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * EquityType.
+             * <p>The equity type, such as CREDITS, SPN, or resource plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CREDITS</p>
              */
             public Builder equityType(String equityType) {
                 this.equityType = equityType;
@@ -480,7 +514,10 @@ public class GetSubscriptionSeatDetailsResponseBody extends TeaModel {
             } 
 
             /**
-             * AccountEmail.
+             * <p>The mailbox of the member accounts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:test@email.com">test@email.com</a></p>
              */
             public Builder accountEmail(String accountEmail) {
                 this.accountEmail = accountEmail;
@@ -488,7 +525,10 @@ public class GetSubscriptionSeatDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * AccountId.
+             * <p>The ID of the attached member accounts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acc_123456789</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -496,7 +536,10 @@ public class GetSubscriptionSeatDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * AccountName.
+             * <p>The name of the member accounts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ExampleName</p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -504,7 +547,14 @@ public class GetSubscriptionSeatDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * AssignedStatus.
+             * <p>The assignment status. Valid values:</p>
+             * <ul>
+             * <li>ASSIGNED</li>
+             * <li>UNASSIGNED</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ASSIGNED</p>
              */
             public Builder assignedStatus(String assignedStatus) {
                 this.assignedStatus = assignedStatus;
@@ -512,7 +562,10 @@ public class GetSubscriptionSeatDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The expiration time of the seat.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1781422733</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -520,7 +573,7 @@ public class GetSubscriptionSeatDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * EquityList.
+             * <p>The currently active equity instances. For TokenPlan products, this list contains only one active equity instance.</p>
              */
             public Builder equityList(java.util.List<EquityList> equityList) {
                 this.equityList = equityList;
@@ -528,7 +581,10 @@ public class GetSubscriptionSeatDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceCode.
+             * <p>The instance code of the seat.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>subs-1234567</p>
              */
             public Builder instanceCode(String instanceCode) {
                 this.instanceCode = instanceCode;
@@ -536,7 +592,10 @@ public class GetSubscriptionSeatDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * SeatId.
+             * <p>The seat ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>seat_123456</p>
              */
             public Builder seatId(String seatId) {
                 this.seatId = seatId;
@@ -544,7 +603,15 @@ public class GetSubscriptionSeatDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * SpecType.
+             * <p>The seat type. Valid values: </p>
+             * <ul>
+             * <li>standard: standard seat.</li>
+             * <li>pro: pro seat.</li>
+             * <li>max: premium seat.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>standard</p>
              */
             public Builder specType(String specType) {
                 this.specType = specType;
@@ -552,7 +619,10 @@ public class GetSubscriptionSeatDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the seat.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1781422733</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -560,7 +630,18 @@ public class GetSubscriptionSeatDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The seat status. Valid values:</p>
+             * <ul>
+             * <li>CREATING: being created.</li>
+             * <li>NORMAL: active.</li>
+             * <li>LIMIT: restricted due to overdue payment.</li>
+             * <li>RELEASE: released upon expiration.</li>
+             * <li>STOP: stopped upon expiration.</li>
+             * <li>REFUNDED: refunded.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -653,7 +734,7 @@ public class GetSubscriptionSeatDetailsResponseBody extends TeaModel {
             } 
 
             /**
-             * Items.
+             * <p>The data items.</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;
@@ -661,7 +742,10 @@ public class GetSubscriptionSeatDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNo.
+             * <p>The page number. The value is greater than 0 and does not exceed the maximum value of the Integer data type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNo(Integer pageNo) {
                 this.pageNo = pageNo;
@@ -669,7 +753,10 @@ public class GetSubscriptionSeatDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -677,7 +764,10 @@ public class GetSubscriptionSeatDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The total number of seats.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder total(Integer total) {
                 this.total = total;

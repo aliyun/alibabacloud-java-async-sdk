@@ -158,7 +158,10 @@ public class ListModelPermissionsResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The error code. This value is empty when the call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -166,7 +169,10 @@ public class ListModelPermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * errorMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified parameter is invalid</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -174,7 +180,10 @@ public class ListModelPermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -182,7 +191,7 @@ public class ListModelPermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * list.
+         * <p>The list of workspace permissions.</p>
          */
         public Builder list(java.util.List<List> list) {
             this.list = list;
@@ -190,7 +199,10 @@ public class ListModelPermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of entries returned per request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -198,7 +210,10 @@ public class ListModelPermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The token for the next request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lwytFRtLdNk=</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -206,7 +221,10 @@ public class ListModelPermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The unique request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>36045E0A-551D-592D-B1BC-4C56596CE59E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -214,7 +232,10 @@ public class ListModelPermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the API call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -222,7 +243,10 @@ public class ListModelPermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -301,7 +325,10 @@ public class ListModelPermissionsResponseBody extends TeaModel {
             } 
 
             /**
-             * deploy.
+             * <p>The model deployment authorization. A value of true indicates that the model has been granted authorization. A value of false indicates that the model has not been granted authorization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder deploy(Boolean deploy) {
                 this.deploy = deploy;
@@ -309,7 +336,10 @@ public class ListModelPermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * fineTune.
+             * <p>The model training authorization. A value of true indicates that the model has been granted training authorization. A value of false indicates that the model has not been granted authorization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder fineTune(Boolean fineTune) {
                 this.fineTune = fineTune;
@@ -317,7 +347,10 @@ public class ListModelPermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * inference.
+             * <p>Indicates whether the model has inference permission. A value of true indicates that the model is authorized. A value of false indicates that the model is not authorized.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder inference(Boolean inference) {
                 this.inference = inference;
@@ -397,7 +430,10 @@ public class ListModelPermissionsResponseBody extends TeaModel {
             } 
 
             /**
-             * model.
+             * <p>The model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen-plus</p>
              */
             public Builder model(String model) {
                 this.model = model;
@@ -405,7 +441,10 @@ public class ListModelPermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The model name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen-plus</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -413,7 +452,7 @@ public class ListModelPermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * permissions.
+             * <p>The authorization status.</p>
              */
             public Builder permissions(Permissions permissions) {
                 this.permissions = permissions;

@@ -74,7 +74,7 @@ public class UpdateOrganizationMemberRequest extends Request {
         } 
 
         /**
-         * AccountIds.
+         * <p>The list of account IDs for batch operations.</p>
          */
         public Builder accountIds(java.util.List<String> accountIds) {
             this.putQueryParameter("AccountIds", accountIds);
@@ -83,6 +83,7 @@ public class UpdateOrganizationMemberRequest extends Request {
         }
 
         /**
+         * <p>The code of the new role. When you perform a batch operation, all specified accounts are changed to this role.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

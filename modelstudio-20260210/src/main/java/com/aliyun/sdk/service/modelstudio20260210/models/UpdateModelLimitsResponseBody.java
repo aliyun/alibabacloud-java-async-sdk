@@ -106,7 +106,10 @@ public class UpdateModelLimitsResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The error code. This parameter is empty when the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class UpdateModelLimitsResponseBody extends TeaModel {
         }
 
         /**
-         * errorMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A workspace with ID beb173d2361941 does not exist.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +128,10 @@ public class UpdateModelLimitsResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +139,10 @@ public class UpdateModelLimitsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The unique request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E4C14AE6-E987-5C2F-9230-9960AB48F4F2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,10 @@ public class UpdateModelLimitsResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the API call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

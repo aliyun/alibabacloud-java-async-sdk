@@ -93,7 +93,10 @@ public class CreateTokenPlanInviteLinkResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>404</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class CreateTokenPlanInviteLinkResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The business parameters.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class CreateTokenPlanInviteLinkResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +123,14 @@ public class CreateTokenPlanInviteLinkResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The call was successful.</li>
+         * <li>false: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -170,7 +183,10 @@ public class CreateTokenPlanInviteLinkResponseBody extends TeaModel {
             } 
 
             /**
-             * Token.
+             * <p>The generated token.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sk-ws-D.<strong><strong>.</strong></strong>***</p>
              */
             public Builder token(String token) {
                 this.token = token;

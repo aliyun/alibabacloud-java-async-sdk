@@ -132,7 +132,10 @@ public class DeleteWorkspaceResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -140,7 +143,7 @@ public class DeleteWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * failReasons.
+         * <p>The list of failure reasons.</p>
          */
         public Builder failReasons(java.util.List<FailReasons> failReasons) {
             this.failReasons = failReasons;
@@ -148,7 +151,10 @@ public class DeleteWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -156,7 +162,16 @@ public class DeleteWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * isDeleted.
+         * <p>Indicates whether the workspace is successfully deleted. Valid values:</p>
+         * <ul>
+         * <li><p>true: Succeeded.</p>
+         * </li>
+         * <li><p>false: Failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isDeleted(Boolean isDeleted) {
             this.isDeleted = isDeleted;
@@ -164,7 +179,10 @@ public class DeleteWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -183,7 +201,14 @@ public class DeleteWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the API call is successful. Valid values:</p>
+         * <ul>
+         * <li>true: Succeeded.</li>
+         * <li>false: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -249,7 +274,10 @@ public class DeleteWorkspaceResponseBody extends TeaModel {
             } 
 
             /**
-             * reason.
+             * <p>The specific reason.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>API Key exists. Please clear them first.</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -257,7 +285,10 @@ public class DeleteWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * resourceType.
+             * <p>The resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>API Key</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;

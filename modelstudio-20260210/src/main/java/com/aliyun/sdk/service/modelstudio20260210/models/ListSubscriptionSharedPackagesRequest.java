@@ -87,7 +87,10 @@ public class ListSubscriptionSharedPackagesRequest extends Request {
         } 
 
         /**
-         * PageNo.
+         * <p>The page number. Default value: 1. The value must be a positive integer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -96,7 +99,10 @@ public class ListSubscriptionSharedPackagesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -105,7 +111,7 @@ public class ListSubscriptionSharedPackagesRequest extends Request {
         }
 
         /**
-         * StatusList.
+         * <p>The list of statuses used for filtering.</p>
          */
         public Builder statusList(java.util.List<String> statusList) {
             this.putQueryParameter("StatusList", statusList);

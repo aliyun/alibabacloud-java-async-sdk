@@ -119,7 +119,7 @@ public class CreateApiKeyResponseBody extends TeaModel {
         } 
 
         /**
-         * apiKey.
+         * <p>The API key information.</p>
          */
         public Builder apiKey(ApiKey apiKey) {
             this.apiKey = apiKey;
@@ -127,7 +127,10 @@ public class CreateApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -135,7 +138,10 @@ public class CreateApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class CreateApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -162,7 +171,14 @@ public class CreateApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true: Succeeded.</li>
+         * <li>false: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -291,7 +307,13 @@ public class CreateApiKeyResponseBody extends TeaModel {
             }
 
             /**
-             * apiKeyValue.
+             * <p>The value of the API key.</p>
+             * <blockquote>
+             * <p>Notice: Copy your API key immediately. Store it securely. Anyone who obtains this key can initiate service requests on your behalf and incur charges. If you lose the key, you can reset it or create a new one.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>sk-ws-djI.8O7dkfkW2aICctnid4u4</p>
              */
             public Builder apiKeyValue(String apiKeyValue) {
                 this.apiKeyValue = apiKeyValue;
@@ -299,7 +321,10 @@ public class CreateApiKeyResponseBody extends TeaModel {
             }
 
             /**
-             * createdBy.
+             * <p>The creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1378030599924858</p>
              */
             public Builder createdBy(String createdBy) {
                 this.createdBy = createdBy;
@@ -307,7 +332,10 @@ public class CreateApiKeyResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>desc</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -315,7 +343,10 @@ public class CreateApiKeyResponseBody extends TeaModel {
             }
 
             /**
-             * gmtCreate.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1774338222000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -323,7 +354,10 @@ public class CreateApiKeyResponseBody extends TeaModel {
             }
 
             /**
-             * workspaceId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ws-3fa048e86117d91f</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;

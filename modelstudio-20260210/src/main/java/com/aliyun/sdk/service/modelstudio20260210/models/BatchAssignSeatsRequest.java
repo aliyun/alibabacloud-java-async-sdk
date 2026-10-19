@@ -88,7 +88,7 @@ public class BatchAssignSeatsRequest extends Request {
         } 
 
         /**
-         * AccountIds.
+         * <p>The list of target member IDs.</p>
          */
         public Builder accountIds(java.util.List<String> accountIds) {
             this.putQueryParameter("AccountIds", accountIds);
@@ -97,7 +97,10 @@ public class BatchAssignSeatsRequest extends Request {
         }
 
         /**
-         * Locale.
+         * <p>The language. Valid values: zh-CN and en-US.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder locale(String locale) {
             this.putQueryParameter("Locale", locale);
@@ -106,6 +109,12 @@ public class BatchAssignSeatsRequest extends Request {
         }
 
         /**
+         * <p>The seat type. Valid values:</p>
+         * <ul>
+         * <li>standard: standard seat</li>
+         * <li>pro: pro seat</li>
+         * <li>max: premium seat</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

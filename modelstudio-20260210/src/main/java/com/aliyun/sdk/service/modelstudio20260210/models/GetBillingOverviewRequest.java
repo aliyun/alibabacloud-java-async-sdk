@@ -143,7 +143,10 @@ public class GetBillingOverviewRequest extends Request {
         } 
 
         /**
-         * billMonth.
+         * <p>The billing month. This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-08</p>
          */
         public Builder billMonth(String billMonth) {
             this.putQueryParameter("billMonth", billMonth);
@@ -152,7 +155,7 @@ public class GetBillingOverviewRequest extends Request {
         }
 
         /**
-         * filter.
+         * <p>The filter condition.</p>
          */
         public Builder filter(Filter filter) {
             String filterShrink = shrink(filter, "filter", "json");
@@ -162,7 +165,7 @@ public class GetBillingOverviewRequest extends Request {
         }
 
         /**
-         * groupBy.
+         * <p>The list of grouping conditions. Currently, you must specify exactly one grouping dimension.</p>
          */
         public Builder groupBy(java.util.List<GroupBy> groupBy) {
             String groupByShrink = shrink(groupBy, "groupBy", "json");
@@ -172,7 +175,10 @@ public class GetBillingOverviewRequest extends Request {
         }
 
         /**
-         * locale.
+         * <p>The response language. Default value: en-US.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder locale(String locale) {
             this.putQueryParameter("locale", locale);
@@ -181,7 +187,10 @@ public class GetBillingOverviewRequest extends Request {
         }
 
         /**
-         * regionId.
+         * <p>The region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("regionId", regionId);
@@ -190,7 +199,10 @@ public class GetBillingOverviewRequest extends Request {
         }
 
         /**
-         * topNum.
+         * <p>The number of groups to return. Valid values: 1 to 20. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder topNum(Integer topNum) {
             this.putQueryParameter("topNum", topNum);
@@ -199,7 +211,10 @@ public class GetBillingOverviewRequest extends Request {
         }
 
         /**
-         * zeroFilter.
+         * <p>Specifies whether to filter out groups with a zero amount. Default value: true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder zeroFilter(Boolean zeroFilter) {
             this.putQueryParameter("zeroFilter", zeroFilter);
@@ -280,7 +295,10 @@ public class GetBillingOverviewRequest extends Request {
             } 
 
             /**
-             * code.
+             * <p>The filter field. For more information, see the &quot;Additional information&quot; section below.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CHARGE_TYPE</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -288,7 +306,10 @@ public class GetBillingOverviewRequest extends Request {
             }
 
             /**
-             * selectType.
+             * <p>The filter type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IN</p>
              */
             public Builder selectType(String selectType) {
                 this.selectType = selectType;
@@ -296,7 +317,7 @@ public class GetBillingOverviewRequest extends Request {
             }
 
             /**
-             * values.
+             * <p>The list of filter values.</p>
              */
             public Builder values(java.util.List<String> values) {
                 this.values = values;
@@ -350,7 +371,7 @@ public class GetBillingOverviewRequest extends Request {
             } 
 
             /**
-             * dimensions.
+             * <p>The list of dimension filters.</p>
              */
             public Builder dimensions(java.util.List<Dimensions> dimensions) {
                 this.dimensions = dimensions;
@@ -404,7 +425,10 @@ public class GetBillingOverviewRequest extends Request {
             } 
 
             /**
-             * code.
+             * <p>The grouping dimension code. For more information, see the &quot;Additional information&quot; section below.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BASE_MODEL</p>
              */
             public Builder code(String code) {
                 this.code = code;

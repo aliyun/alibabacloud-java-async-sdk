@@ -119,7 +119,10 @@ public class AddOrganizationMemberResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class AddOrganizationMemberResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The business data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class AddOrganizationMemberResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class AddOrganizationMemberResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class AddOrganizationMemberResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>385C2BC3-52FC-564F-9312-97E5DFE1DFC0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class AddOrganizationMemberResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -225,7 +240,10 @@ public class AddOrganizationMemberResponseBody extends TeaModel {
             } 
 
             /**
-             * AccountId.
+             * <p>The account ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acc_123456789</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -233,7 +251,10 @@ public class AddOrganizationMemberResponseBody extends TeaModel {
             }
 
             /**
-             * SeatAssigned.
+             * <p>Indicates whether the seat was assigned successfully.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder seatAssigned(Boolean seatAssigned) {
                 this.seatAssigned = seatAssigned;

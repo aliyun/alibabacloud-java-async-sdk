@@ -74,7 +74,16 @@ public class CreateTokenPlanInviteLinkRequest extends Request {
         } 
 
         /**
-         * ExpireType.
+         * <p>The expiration period. Default value: DAYS_7. Valid values:</p>
+         * <ul>
+         * <li>DAYS_7</li>
+         * <li>DAYS_30</li>
+         * <li>MONTHS_6</li>
+         * <li>YEAR_1</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DAYS_7</p>
          */
         public Builder expireType(String expireType) {
             this.putQueryParameter("ExpireType", expireType);
@@ -83,6 +92,11 @@ public class CreateTokenPlanInviteLinkRequest extends Request {
         }
 
         /**
+         * <p>The SSO logon method bound to the invitation link. Valid values:</p>
+         * <ul>
+         * <li>SAML</li>
+         * <li>DINGTALK</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

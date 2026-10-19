@@ -146,7 +146,10 @@ public class ListApiKeysRequest extends Request {
         } 
 
         /**
-         * apiKeyId.
+         * <p>The API Key ID for exact match.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3076140</p>
          */
         public Builder apiKeyId(Long apiKeyId) {
             this.putQueryParameter("apiKeyId", apiKeyId);
@@ -155,7 +158,10 @@ public class ListApiKeysRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>The keyword for fuzzy match by description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("description", description);
@@ -164,7 +170,10 @@ public class ListApiKeysRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -173,7 +182,10 @@ public class ListApiKeysRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The token used to retrieve more results. This parameter is not required for the first query. For subsequent queries, use the token obtained from the previous response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>w9Z+S5+TZyw=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -182,7 +194,16 @@ public class ListApiKeysRequest extends Request {
         }
 
         /**
-         * order.
+         * <p>The sort order. Valid values:</p>
+         * <ul>
+         * <li><p>DESC (default)</p>
+         * </li>
+         * <li><p>ASC</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ASC</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("order", order);
@@ -191,7 +212,16 @@ public class ListApiKeysRequest extends Request {
         }
 
         /**
-         * orderBy.
+         * <p>The field by which to sort the results. Valid values:</p>
+         * <ul>
+         * <li><p>apiKeyId (default)</p>
+         * </li>
+         * <li><p>gmtCreate</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>gmtCreate</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("orderBy", orderBy);
@@ -200,7 +230,10 @@ public class ListApiKeysRequest extends Request {
         }
 
         /**
-         * workspaceId.
+         * <p>The workspace ID for exact match.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ws-ac3ef438bec22dc5</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("workspaceId", workspaceId);

@@ -106,7 +106,10 @@ public class GetBillingTrendResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The request result code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class GetBillingTrendResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class GetBillingTrendResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The request result description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -141,7 +147,10 @@ public class GetBillingTrendResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -233,7 +242,10 @@ public class GetBillingTrendResponseBody extends TeaModel {
             } 
 
             /**
-             * amount.
+             * <p>The total amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder amount(String amount) {
                 this.amount = amount;
@@ -241,7 +253,10 @@ public class GetBillingTrendResponseBody extends TeaModel {
             }
 
             /**
-             * currency.
+             * <p>The currency of the amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CNY</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -249,7 +264,10 @@ public class GetBillingTrendResponseBody extends TeaModel {
             }
 
             /**
-             * pretaxAmount.
+             * <p>The pretax amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>94.34</p>
              */
             public Builder pretaxAmount(String pretaxAmount) {
                 this.pretaxAmount = pretaxAmount;
@@ -257,7 +275,10 @@ public class GetBillingTrendResponseBody extends TeaModel {
             }
 
             /**
-             * taxAmount.
+             * <p>The tax amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5.66</p>
              */
             public Builder taxAmount(String taxAmount) {
                 this.taxAmount = taxAmount;
@@ -363,7 +384,10 @@ public class GetBillingTrendResponseBody extends TeaModel {
             } 
 
             /**
-             * amount.
+             * <p>The total amount of the current group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder amount(String amount) {
                 this.amount = amount;
@@ -371,7 +395,10 @@ public class GetBillingTrendResponseBody extends TeaModel {
             }
 
             /**
-             * key.
+             * <p>The grouping dimension value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen-plus</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -379,7 +406,10 @@ public class GetBillingTrendResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The display name of the group. This value is affected by the locale parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen-plus</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -387,7 +417,10 @@ public class GetBillingTrendResponseBody extends TeaModel {
             }
 
             /**
-             * pretaxAmount.
+             * <p>The pretax amount of the current group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>56.60</p>
              */
             public Builder pretaxAmount(String pretaxAmount) {
                 this.pretaxAmount = pretaxAmount;
@@ -395,7 +428,10 @@ public class GetBillingTrendResponseBody extends TeaModel {
             }
 
             /**
-             * taxAmount.
+             * <p>The tax amount of the current group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3.40</p>
              */
             public Builder taxAmount(String taxAmount) {
                 this.taxAmount = taxAmount;
@@ -514,7 +550,10 @@ public class GetBillingTrendResponseBody extends TeaModel {
             } 
 
             /**
-             * amount.
+             * <p>The amount of the group within the current period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder amount(String amount) {
                 this.amount = amount;
@@ -522,7 +561,10 @@ public class GetBillingTrendResponseBody extends TeaModel {
             }
 
             /**
-             * key.
+             * <p>The grouping dimension value. Data beyond the top N uses DIMENSION_GROUP_OTHERS_VALUE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen-plus</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -530,7 +572,10 @@ public class GetBillingTrendResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The display name of the group. This value is affected by the locale parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen-plus</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -538,7 +583,10 @@ public class GetBillingTrendResponseBody extends TeaModel {
             }
 
             /**
-             * percentage.
+             * <p>The ratio of the current group amount to the total amount of the current period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.6667</p>
              */
             public Builder percentage(String percentage) {
                 this.percentage = percentage;
@@ -546,7 +594,10 @@ public class GetBillingTrendResponseBody extends TeaModel {
             }
 
             /**
-             * pretaxAmount.
+             * <p>The pretax amount of the group within the current period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18.87</p>
              */
             public Builder pretaxAmount(String pretaxAmount) {
                 this.pretaxAmount = pretaxAmount;
@@ -554,7 +605,10 @@ public class GetBillingTrendResponseBody extends TeaModel {
             }
 
             /**
-             * taxAmount.
+             * <p>The tax amount of the group within the current period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.13</p>
              */
             public Builder taxAmount(String taxAmount) {
                 this.taxAmount = taxAmount;
@@ -647,7 +701,10 @@ public class GetBillingTrendResponseBody extends TeaModel {
             } 
 
             /**
-             * amount.
+             * <p>The total amount for the current period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder amount(String amount) {
                 this.amount = amount;
@@ -655,7 +712,10 @@ public class GetBillingTrendResponseBody extends TeaModel {
             }
 
             /**
-             * currency.
+             * <p>The currency of the amount for the current period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CNY</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -663,7 +723,10 @@ public class GetBillingTrendResponseBody extends TeaModel {
             }
 
             /**
-             * pretaxAmount.
+             * <p>The pretax amount for the current period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>28.30</p>
              */
             public Builder pretaxAmount(String pretaxAmount) {
                 this.pretaxAmount = pretaxAmount;
@@ -671,7 +734,10 @@ public class GetBillingTrendResponseBody extends TeaModel {
             }
 
             /**
-             * taxAmount.
+             * <p>The tax amount for the current period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.70</p>
              */
             public Builder taxAmount(String taxAmount) {
                 this.taxAmount = taxAmount;
@@ -751,7 +817,10 @@ public class GetBillingTrendResponseBody extends TeaModel {
             } 
 
             /**
-             * period.
+             * <p>The statistical period. DAY returns yyyyMMdd. MONTH returns yyyyMM.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20260801</p>
              */
             public Builder period(String period) {
                 this.period = period;
@@ -759,7 +828,7 @@ public class GetBillingTrendResponseBody extends TeaModel {
             }
 
             /**
-             * periodDetails.
+             * <p>The cost groups that actually exist in the current period.</p>
              */
             public Builder periodDetails(java.util.List<PeriodDetails> periodDetails) {
                 this.periodDetails = periodDetails;
@@ -767,7 +836,7 @@ public class GetBillingTrendResponseBody extends TeaModel {
             }
 
             /**
-             * total.
+             * <p>The total cost for the current period.</p>
              */
             public Builder total(Total total) {
                 this.total = total;
@@ -847,7 +916,7 @@ public class GetBillingTrendResponseBody extends TeaModel {
             } 
 
             /**
-             * costTotals.
+             * <p>The total cost for the entire query time range, including the top N groups and &quot;Others&quot;.</p>
              */
             public Builder costTotals(CostTotals costTotals) {
                 this.costTotals = costTotals;
@@ -855,7 +924,7 @@ public class GetBillingTrendResponseBody extends TeaModel {
             }
 
             /**
-             * groupByTotal.
+             * <p>The total cost of the top N groups and the optional &quot;Others&quot; group within the period.</p>
              */
             public Builder groupByTotal(java.util.List<GroupByTotal> groupByTotal) {
                 this.groupByTotal = groupByTotal;
@@ -863,7 +932,7 @@ public class GetBillingTrendResponseBody extends TeaModel {
             }
 
             /**
-             * resultByTime.
+             * <p>The cost trend list sorted by time in ascending order.</p>
              */
             public Builder resultByTime(java.util.List<ResultByTime> resultByTime) {
                 this.resultByTime = resultByTime;

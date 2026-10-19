@@ -73,7 +73,7 @@ public class BatchRevokeSeatsRequest extends Request {
         } 
 
         /**
-         * Items.
+         * <p>The list of revocation items. This parameter is required.</p>
          */
         public Builder items(java.util.List<Items> items) {
             String itemsShrink = shrink(items, "Items", "json");
@@ -83,7 +83,10 @@ public class BatchRevokeSeatsRequest extends Request {
         }
 
         /**
-         * Locale.
+         * <p>The language. Valid values: zh-CN and en-US.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder locale(String locale) {
             this.putQueryParameter("Locale", locale);
@@ -138,7 +141,10 @@ public class BatchRevokeSeatsRequest extends Request {
             } 
 
             /**
-             * AccountId.
+             * <p>The ID of the currently associated member.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acc_123456789</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;

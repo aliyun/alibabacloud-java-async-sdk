@@ -93,7 +93,10 @@ public class ListSubscriptionSharedPackagesResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class ListSubscriptionSharedPackagesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The business data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class ListSubscriptionSharedPackagesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +123,14 @@ public class ListSubscriptionSharedPackagesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API call is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The call is successful.</li>
+         * <li>false: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -248,7 +261,10 @@ public class ListSubscriptionSharedPackagesResponseBody extends TeaModel {
             } 
 
             /**
-             * CycleEndTime.
+             * <p>The end time of the current cycle, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1756310400</p>
              */
             public Builder cycleEndTime(Long cycleEndTime) {
                 this.cycleEndTime = cycleEndTime;
@@ -256,7 +272,10 @@ public class ListSubscriptionSharedPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * CycleInstanceId.
+             * <p>The equity code (subscription code). This is not required for consumption in the credits scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder cycleInstanceId(String cycleInstanceId) {
                 this.cycleInstanceId = cycleInstanceId;
@@ -264,7 +283,10 @@ public class ListSubscriptionSharedPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * CycleStartTime.
+             * <p>The start time of the current cycle, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1775232000</p>
              */
             public Builder cycleStartTime(Long cycleStartTime) {
                 this.cycleStartTime = cycleStartTime;
@@ -272,7 +294,10 @@ public class ListSubscriptionSharedPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * CycleSurplusValue.
+             * <p>The remaining quota of the current cycle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40.00000000</p>
              */
             public Builder cycleSurplusValue(Double cycleSurplusValue) {
                 this.cycleSurplusValue = cycleSurplusValue;
@@ -280,7 +305,10 @@ public class ListSubscriptionSharedPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * CycleTotalValue.
+             * <p>The total quota of the current cycle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.00000000</p>
              */
             public Builder cycleTotalValue(Double cycleTotalValue) {
                 this.cycleTotalValue = cycleTotalValue;
@@ -288,7 +316,10 @@ public class ListSubscriptionSharedPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * CycleVersion.
+             * <p>The sequential version of the current cycle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder cycleVersion(Long cycleVersion) {
                 this.cycleVersion = cycleVersion;
@@ -296,7 +327,10 @@ public class ListSubscriptionSharedPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * EquityType.
+             * <p>The equity type, such as CREDITS, SPN, or resource plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CREDITS</p>
              */
             public Builder equityType(String equityType) {
                 this.equityType = equityType;
@@ -376,7 +410,7 @@ public class ListSubscriptionSharedPackagesResponseBody extends TeaModel {
             } 
 
             /**
-             * EquityList.
+             * <p>The currently active equity instances.</p>
              */
             public Builder equityList(java.util.List<EquityList> equityList) {
                 this.equityList = equityList;
@@ -384,7 +418,10 @@ public class ListSubscriptionSharedPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceCode.
+             * <p>The instance code of the seat.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>subs-1234567</p>
              */
             public Builder instanceCode(String instanceCode) {
                 this.instanceCode = instanceCode;
@@ -392,7 +429,18 @@ public class ListSubscriptionSharedPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The seat status. Valid values:</p>
+             * <ul>
+             * <li>CREATING: being created.</li>
+             * <li>NORMAL: active.</li>
+             * <li>LIMIT: restricted due to overdue payment.</li>
+             * <li>RELEASE: released upon expiration.</li>
+             * <li>STOP: stopped upon expiration.</li>
+             * <li>REFUNDED: refunded.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -485,7 +533,7 @@ public class ListSubscriptionSharedPackagesResponseBody extends TeaModel {
             } 
 
             /**
-             * Items.
+             * <p>The data entries.</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;
@@ -493,7 +541,10 @@ public class ListSubscriptionSharedPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * PageNo.
+             * <p>The page number. The value must be greater than 0 and cannot exceed the maximum value of the Integer data type. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNo(Integer pageNo) {
                 this.pageNo = pageNo;
@@ -501,7 +552,10 @@ public class ListSubscriptionSharedPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -509,7 +563,10 @@ public class ListSubscriptionSharedPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The total number of seats.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder total(Integer total) {
                 this.total = total;

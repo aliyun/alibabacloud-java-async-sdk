@@ -73,7 +73,7 @@ public class RemoveOrganizationMemberRequest extends Request {
         } 
 
         /**
-         * AccountIds.
+         * <p>The list of member account IDs to be removed.</p>
          */
         public Builder accountIds(java.util.List<String> accountIds) {
             this.putQueryParameter("AccountIds", accountIds);
@@ -82,7 +82,10 @@ public class RemoveOrganizationMemberRequest extends Request {
         }
 
         /**
-         * Locale.
+         * <p>The language. Valid values: zh-CN and en-US.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder locale(String locale) {
             this.putQueryParameter("Locale", locale);

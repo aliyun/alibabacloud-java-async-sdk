@@ -129,7 +129,10 @@ public class GetSubscriptionSeatDetailsRequest extends Request {
         } 
 
         /**
-         * PageNo.
+         * <p>The page number. Default value: 1. Valid values: positive integers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -138,7 +141,10 @@ public class GetSubscriptionSeatDetailsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -147,7 +153,10 @@ public class GetSubscriptionSeatDetailsRequest extends Request {
         }
 
         /**
-         * QueryAssigned.
+         * <p>The seat assignment status filter. Set to true for assigned seats, false for unassigned seats, or null for all seats.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder queryAssigned(Boolean queryAssigned) {
             this.putQueryParameter("QueryAssigned", queryAssigned);
@@ -156,7 +165,10 @@ public class GetSubscriptionSeatDetailsRequest extends Request {
         }
 
         /**
-         * SeatId.
+         * <p>The seat ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>seat-123456</p>
          */
         public Builder seatId(String seatId) {
             this.putQueryParameter("SeatId", seatId);
@@ -165,7 +177,15 @@ public class GetSubscriptionSeatDetailsRequest extends Request {
         }
 
         /**
-         * SeatType.
+         * <p>The seat type (specType). Valid values:</p>
+         * <ul>
+         * <li>standard: standard seat.</li>
+         * <li>pro: pro seat.</li>
+         * <li>max: premium seat.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>standard</p>
          */
         public Builder seatType(String seatType) {
             this.putQueryParameter("SeatType", seatType);
@@ -174,7 +194,7 @@ public class GetSubscriptionSeatDetailsRequest extends Request {
         }
 
         /**
-         * StatusList.
+         * <p>The list of seat statuses used for filtering.</p>
          */
         public Builder statusList(java.util.List<String> statusList) {
             this.putQueryParameter("StatusList", statusList);

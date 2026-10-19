@@ -158,7 +158,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -166,7 +169,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -174,7 +180,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * maxResults.
+         * <p>The page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -182,7 +191,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -190,7 +202,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The token used to retrieve additional results. You do not need to provide this parameter for the first request. Obtain the token for subsequent requests from the response of the previous request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TbB1IsZUSR4iE</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -209,7 +224,14 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the API call was successful. Valid values:</p>
+         * <ul>
+         * <li>true: Successful.</li>
+         * <li>false: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -217,7 +239,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>149</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -225,7 +250,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * workspaces.
+         * <p>The list of workspaces.</p>
          */
         public Builder workspaces(java.util.List<Workspaces> workspaces) {
             this.workspaces = workspaces;
@@ -354,7 +379,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * gmtCreate.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1742785623772</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -362,7 +390,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * region.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -370,7 +401,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * serviceSite.
+             * <p>The service deployment scope. For details, <a href="https://www.alibabacloud.com/help/zh/model-studio/regions/">view the documentation</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>global</p>
              */
             public Builder serviceSite(String serviceSite) {
                 this.serviceSite = serviceSite;
@@ -378,7 +412,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * workspaceId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ws-0759e7b7ea7f585b</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;
@@ -386,7 +423,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * workspaceName.
+             * <p>The workspace name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder workspaceName(String workspaceName) {
                 this.workspaceName = workspaceName;

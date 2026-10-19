@@ -106,7 +106,10 @@ public class UpdateModelPermissionsResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The error code. This parameter is empty when the call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class UpdateModelPermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * errorMessage.
+         * <p>The error message. This parameter is empty when the call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified parameter is invalid</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +128,10 @@ public class UpdateModelPermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Long httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +139,10 @@ public class UpdateModelPermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The unique request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>36045E0A-551D-592D-B1BC-4C56596CE59E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,10 @@ public class UpdateModelPermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the API call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

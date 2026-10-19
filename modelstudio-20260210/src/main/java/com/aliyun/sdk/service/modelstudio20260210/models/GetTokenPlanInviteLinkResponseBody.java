@@ -93,7 +93,10 @@ public class GetTokenPlanInviteLinkResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class GetTokenPlanInviteLinkResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class GetTokenPlanInviteLinkResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +123,14 @@ public class GetTokenPlanInviteLinkResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li>true: Successful.</li>
+         * <li>false: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -183,7 +196,10 @@ public class GetTokenPlanInviteLinkResponseBody extends TeaModel {
             } 
 
             /**
-             * ExpireTime.
+             * <p>The expiration time. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1778379206</p>
              */
             public Builder expireTime(Long expireTime) {
                 this.expireTime = expireTime;
@@ -191,7 +207,10 @@ public class GetTokenPlanInviteLinkResponseBody extends TeaModel {
             }
 
             /**
-             * Token.
+             * <p>The generated token.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sk-ws-D.<strong><strong>.</strong></strong>***</p>
              */
             public Builder token(String token) {
                 this.token = token;

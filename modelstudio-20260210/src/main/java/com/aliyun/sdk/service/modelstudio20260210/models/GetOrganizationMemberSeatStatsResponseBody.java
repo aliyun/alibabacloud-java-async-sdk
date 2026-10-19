@@ -132,7 +132,10 @@ public class GetOrganizationMemberSeatStatsResponseBody extends TeaModel {
         } 
 
         /**
-         * AdminRoleUserCount.
+         * <p>The number of administrators (ORG_ADMIN role).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder adminRoleUserCount(Integer adminRoleUserCount) {
             this.adminRoleUserCount = adminRoleUserCount;
@@ -140,7 +143,10 @@ public class GetOrganizationMemberSeatStatsResponseBody extends TeaModel {
         }
 
         /**
-         * MemberRoleUserCount.
+         * <p>The number of regular members (ORG_MEMBER role).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder memberRoleUserCount(Integer memberRoleUserCount) {
             this.memberRoleUserCount = memberRoleUserCount;
@@ -148,7 +154,10 @@ public class GetOrganizationMemberSeatStatsResponseBody extends TeaModel {
         }
 
         /**
-         * OrgId.
+         * <p>The organization ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5ffd468b1e45db3c1cc26ad6</p>
          */
         public Builder orgId(String orgId) {
             this.orgId = orgId;
@@ -156,7 +165,10 @@ public class GetOrganizationMemberSeatStatsResponseBody extends TeaModel {
         }
 
         /**
-         * OwnerRoleUserCount.
+         * <p>The number of owner accounts (ORG_OWNER role).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder ownerRoleUserCount(Integer ownerRoleUserCount) {
             this.ownerRoleUserCount = ownerRoleUserCount;
@@ -164,7 +176,10 @@ public class GetOrganizationMemberSeatStatsResponseBody extends TeaModel {
         }
 
         /**
-         * SeatedMemberCount.
+         * <p>The number of members with assigned seats.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder seatedMemberCount(Integer seatedMemberCount) {
             this.seatedMemberCount = seatedMemberCount;
@@ -172,7 +187,10 @@ public class GetOrganizationMemberSeatStatsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalMemberCount.
+         * <p>The total number of members.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder totalMemberCount(Integer totalMemberCount) {
             this.totalMemberCount = totalMemberCount;
@@ -180,7 +198,10 @@ public class GetOrganizationMemberSeatStatsResponseBody extends TeaModel {
         }
 
         /**
-         * UnseatedMemberCount.
+         * <p>The number of members without assigned seats.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder unseatedMemberCount(Integer unseatedMemberCount) {
             this.unseatedMemberCount = unseatedMemberCount;

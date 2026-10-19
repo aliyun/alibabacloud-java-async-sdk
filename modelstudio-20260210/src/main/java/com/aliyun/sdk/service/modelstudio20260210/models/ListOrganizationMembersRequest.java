@@ -115,7 +115,10 @@ public class ListOrganizationMembersRequest extends Request {
         } 
 
         /**
-         * HasSeat.
+         * <p>Specifies whether to filter by seat assignment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder hasSeat(Boolean hasSeat) {
             this.putQueryParameter("HasSeat", hasSeat);
@@ -124,7 +127,10 @@ public class ListOrganizationMembersRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>Fuzzy filter by member name. Matches accountName or email, case-insensitive.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MemberName</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -133,7 +139,10 @@ public class ListOrganizationMembersRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>The page number, starting from 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -142,7 +151,10 @@ public class ListOrganizationMembersRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 20. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -151,7 +163,10 @@ public class ListOrganizationMembersRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>Filters by member status, such as ACTIVE or FROZEN. A value of null indicates no filtering.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACTIVE</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

@@ -158,7 +158,10 @@ public class ListModelLimitsResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -166,7 +169,10 @@ public class ListModelLimitsResponseBody extends TeaModel {
         }
 
         /**
-         * errorMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified parameter is invalid.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -174,7 +180,10 @@ public class ListModelLimitsResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Long httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -182,7 +191,7 @@ public class ListModelLimitsResponseBody extends TeaModel {
         }
 
         /**
-         * limits.
+         * <p>The model throttling information.</p>
          */
         public Builder limits(java.util.List<Limits> limits) {
             this.limits = limits;
@@ -190,7 +199,10 @@ public class ListModelLimitsResponseBody extends TeaModel {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of records to return in a single call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Long maxResults) {
             this.maxResults = maxResults;
@@ -198,7 +210,10 @@ public class ListModelLimitsResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The token for the next request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lwytFRtLdNk=</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -217,7 +232,10 @@ public class ListModelLimitsResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the API call succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -225,7 +243,10 @@ public class ListModelLimitsResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -356,7 +377,10 @@ public class ListModelLimitsResponseBody extends TeaModel {
             } 
 
             /**
-             * asyncUserConcurrencyLimit.
+             * <p>The maximum number of concurrent requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder asyncUserConcurrencyLimit(Long asyncUserConcurrencyLimit) {
                 this.asyncUserConcurrencyLimit = asyncUserConcurrencyLimit;
@@ -364,7 +388,10 @@ public class ListModelLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * asyncUserQueueLimit.
+             * <p>The number of queued requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder asyncUserQueueLimit(Long asyncUserQueueLimit) {
                 this.asyncUserQueueLimit = asyncUserQueueLimit;
@@ -372,7 +399,10 @@ public class ListModelLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * requestLimit.
+             * <p>The request throttling value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder requestLimit(Long requestLimit) {
                 this.requestLimit = requestLimit;
@@ -380,7 +410,10 @@ public class ListModelLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * requestLimitPeriod.
+             * <p>The time period for request throttling. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder requestLimitPeriod(Integer requestLimitPeriod) {
                 this.requestLimitPeriod = requestLimitPeriod;
@@ -388,7 +421,10 @@ public class ListModelLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * usageLimit.
+             * <p>The usage throttling value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder usageLimit(Long usageLimit) {
                 this.usageLimit = usageLimit;
@@ -396,7 +432,10 @@ public class ListModelLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * usageLimitField.
+             * <p>The usage throttling unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder usageLimitField(String usageLimitField) {
                 this.usageLimitField = usageLimitField;
@@ -404,7 +443,10 @@ public class ListModelLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * usageLimitPeriod.
+             * <p>The time period for usage throttling. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder usageLimitPeriod(Integer usageLimitPeriod) {
                 this.usageLimitPeriod = usageLimitPeriod;
@@ -536,7 +578,10 @@ public class ListModelLimitsResponseBody extends TeaModel {
             } 
 
             /**
-             * asyncUserConcurrencyLimit.
+             * <p>The maximum number of concurrent requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder asyncUserConcurrencyLimit(Long asyncUserConcurrencyLimit) {
                 this.asyncUserConcurrencyLimit = asyncUserConcurrencyLimit;
@@ -544,7 +589,10 @@ public class ListModelLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * asyncUserQueueLimit.
+             * <p>The number of queued requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder asyncUserQueueLimit(Long asyncUserQueueLimit) {
                 this.asyncUserQueueLimit = asyncUserQueueLimit;
@@ -552,7 +600,10 @@ public class ListModelLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * requestLimit.
+             * <p>The request throttling value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder requestLimit(Long requestLimit) {
                 this.requestLimit = requestLimit;
@@ -560,7 +611,10 @@ public class ListModelLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * requestLimitPeriod.
+             * <p>The time period for request throttling. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder requestLimitPeriod(Integer requestLimitPeriod) {
                 this.requestLimitPeriod = requestLimitPeriod;
@@ -568,7 +622,10 @@ public class ListModelLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * usageLimit.
+             * <p>The usage throttling value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder usageLimit(Long usageLimit) {
                 this.usageLimit = usageLimit;
@@ -576,7 +633,10 @@ public class ListModelLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * usageLimitField.
+             * <p>The usage throttling unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>token</p>
              */
             public Builder usageLimitField(String usageLimitField) {
                 this.usageLimitField = usageLimitField;
@@ -584,7 +644,10 @@ public class ListModelLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * usageLimitPeriod.
+             * <p>The time period for usage throttling. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder usageLimitPeriod(Integer usageLimitPeriod) {
                 this.usageLimitPeriod = usageLimitPeriod;
@@ -614,6 +677,9 @@ public class ListModelLimitsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("workspaceId")
+        private String workspaceId;
+
         @com.aliyun.core.annotation.NameInMap("workspaceLimit")
         private WorkspaceLimit workspaceLimit;
 
@@ -621,6 +687,7 @@ public class ListModelLimitsResponseBody extends TeaModel {
             this.model = builder.model;
             this.modelLimit = builder.modelLimit;
             this.name = builder.name;
+            this.workspaceId = builder.workspaceId;
             this.workspaceLimit = builder.workspaceLimit;
         }
 
@@ -654,6 +721,13 @@ public class ListModelLimitsResponseBody extends TeaModel {
         }
 
         /**
+         * @return workspaceId
+         */
+        public String getWorkspaceId() {
+            return this.workspaceId;
+        }
+
+        /**
          * @return workspaceLimit
          */
         public WorkspaceLimit getWorkspaceLimit() {
@@ -664,6 +738,7 @@ public class ListModelLimitsResponseBody extends TeaModel {
             private String model; 
             private ModelLimit modelLimit; 
             private String name; 
+            private String workspaceId; 
             private WorkspaceLimit workspaceLimit; 
 
             private Builder() {
@@ -673,11 +748,15 @@ public class ListModelLimitsResponseBody extends TeaModel {
                 this.model = model.model;
                 this.modelLimit = model.modelLimit;
                 this.name = model.name;
+                this.workspaceId = model.workspaceId;
                 this.workspaceLimit = model.workspaceLimit;
             } 
 
             /**
-             * model.
+             * <p>The model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen-plus</p>
              */
             public Builder model(String model) {
                 this.model = model;
@@ -685,7 +764,7 @@ public class ListModelLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * modelLimit.
+             * <p>The model throttling for the current user account.</p>
              */
             public Builder modelLimit(ModelLimit modelLimit) {
                 this.modelLimit = modelLimit;
@@ -693,7 +772,10 @@ public class ListModelLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The model name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen-plus</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -701,7 +783,18 @@ public class ListModelLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * workspaceLimit.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ws_123xxx</p>
+             */
+            public Builder workspaceId(String workspaceId) {
+                this.workspaceId = workspaceId;
+                return this;
+            }
+
+            /**
+             * <p>The custom model throttling for the current workspace.</p>
              */
             public Builder workspaceLimit(WorkspaceLimit workspaceLimit) {
                 this.workspaceLimit = workspaceLimit;

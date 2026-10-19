@@ -119,7 +119,10 @@ public class GetTokenPlanAccountDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetTokenPlanAccountDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The business data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetTokenPlanAccountDetailResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetTokenPlanAccountDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class GetTokenPlanAccountDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C0DC05D9-C506-519B-AFF3-2B00165176E4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,14 @@ public class GetTokenPlanAccountDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API call is successful. Valid values:</p>
+         * <ul>
+         * <li>true: Successful.</li>
+         * <li>false: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -251,7 +270,14 @@ public class GetTokenPlanAccountDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * MemberStatus.
+             * <p>The member status. Valid values:</p>
+             * <ul>
+             * <li>ACTIVE </li>
+             * <li>FROZEN</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ACTIVE</p>
              */
             public Builder memberStatus(String memberStatus) {
                 this.memberStatus = memberStatus;
@@ -259,7 +285,14 @@ public class GetTokenPlanAccountDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RoleCode.
+             * <p>The workspace role code. Valid values:</p>
+             * <ul>
+             * <li>WS_ADMIN</li>
+             * <li>WS_MEMBER</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>WS_ADMIN</p>
              */
             public Builder roleCode(String roleCode) {
                 this.roleCode = roleCode;
@@ -267,7 +300,10 @@ public class GetTokenPlanAccountDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RoleId.
+             * <p>The workspace role ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SYSTEM_ROLE_WS_ADMIN</p>
              */
             public Builder roleId(String roleId) {
                 this.roleId = roleId;
@@ -275,7 +311,10 @@ public class GetTokenPlanAccountDetailResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ws_123456789</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;
@@ -381,7 +420,15 @@ public class GetTokenPlanAccountDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * MemberStatus.
+             * <p>The organization member status. Valid values:</p>
+             * <ul>
+             * <li>ACTIVE </li>
+             * <li>INITIAL </li>
+             * <li>FROZEN</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ENABLE</p>
              */
             public Builder memberStatus(String memberStatus) {
                 this.memberStatus = memberStatus;
@@ -389,7 +436,10 @@ public class GetTokenPlanAccountDetailResponseBody extends TeaModel {
             }
 
             /**
-             * OrgId.
+             * <p>The organization ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>org_123456789</p>
              */
             public Builder orgId(String orgId) {
                 this.orgId = orgId;
@@ -397,7 +447,15 @@ public class GetTokenPlanAccountDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RoleCode.
+             * <p>The organization role code. Valid values:</p>
+             * <ul>
+             * <li>ORG_OWNER</li>
+             * <li>ORG_ADMIN</li>
+             * <li>ORG_MEMBER</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ORG_MEMBER</p>
              */
             public Builder roleCode(String roleCode) {
                 this.roleCode = roleCode;
@@ -405,7 +463,10 @@ public class GetTokenPlanAccountDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RoleId.
+             * <p>The organization role ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SYSTEM_ROLE_ORG_OWNER</p>
              */
             public Builder roleId(String roleId) {
                 this.roleId = roleId;
@@ -413,7 +474,7 @@ public class GetTokenPlanAccountDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Workspaces.
+             * <p>The list of workspaces that the account has joined under the organization.</p>
              */
             public Builder workspaces(java.util.List<Workspaces> workspaces) {
                 this.workspaces = workspaces;
@@ -558,7 +619,10 @@ public class GetTokenPlanAccountDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * AccountId.
+             * <p>The account ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acc_123456789</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -566,7 +630,15 @@ public class GetTokenPlanAccountDetailResponseBody extends TeaModel {
             }
 
             /**
-             * AccountType.
+             * <p>The account type. Valid values:</p>
+             * <ul>
+             * <li>ALIYUN </li>
+             * <li>SSO </li>
+             * <li>SA</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ALIYUN</p>
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;
@@ -574,7 +646,10 @@ public class GetTokenPlanAccountDetailResponseBody extends TeaModel {
             }
 
             /**
-             * AliyunUid.
+             * <p>The Alibaba Cloud UID. This parameter applies only to accounts of the ALIYUN type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1122334455</p>
              */
             public Builder aliyunUid(String aliyunUid) {
                 this.aliyunUid = aliyunUid;
@@ -582,7 +657,10 @@ public class GetTokenPlanAccountDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedAt.
+             * <p>The time when the account was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Thu May 28 14:33:52 CST 2026</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -590,7 +668,10 @@ public class GetTokenPlanAccountDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Email.
+             * <p>The email address. This parameter applies only to accounts of the SSO type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:test@email.com">test@email.com</a></p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -598,7 +679,10 @@ public class GetTokenPlanAccountDetailResponseBody extends TeaModel {
             }
 
             /**
-             * IsDeleted.
+             * <p>The global status of the account. A value of 0 indicates Normal. A value of 1 indicates Frozen.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder isDeleted(Boolean isDeleted) {
                 this.isDeleted = isDeleted;
@@ -606,7 +690,10 @@ public class GetTokenPlanAccountDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The display name of the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -614,7 +701,7 @@ public class GetTokenPlanAccountDetailResponseBody extends TeaModel {
             }
 
             /**
-             * OrgMemberships.
+             * <p>The list of organization memberships in a tree structure (organization → workspace).</p>
              */
             public Builder orgMemberships(java.util.List<OrgMemberships> orgMemberships) {
                 this.orgMemberships = orgMemberships;

@@ -93,7 +93,10 @@ public class GetTokenPlanOrgInviteConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class GetTokenPlanOrgInviteConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data result of the current category statistics.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class GetTokenPlanOrgInviteConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +123,14 @@ public class GetTokenPlanOrgInviteConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API call is successful. Valid values:</p>
+         * <ul>
+         * <li>true: Successful.</li>
+         * <li>false: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -196,7 +209,14 @@ public class GetTokenPlanOrgInviteConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * DefaultRoleId.
+             * <p>The default organization role ID to assign. Valid values:</p>
+             * <ul>
+             * <li>SYSTEM_ROLE_ORG_ADMIN</li>
+             * <li>SYSTEM_ROLE_ORG_MEMBER</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ORG_MEMBER</p>
              */
             public Builder defaultRoleId(String defaultRoleId) {
                 this.defaultRoleId = defaultRoleId;
@@ -204,7 +224,10 @@ public class GetTokenPlanOrgInviteConfigResponseBody extends TeaModel {
             }
 
             /**
-             * OrgId.
+             * <p>The organization ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>org_123456789</p>
              */
             public Builder orgId(String orgId) {
                 this.orgId = orgId;
@@ -212,7 +235,15 @@ public class GetTokenPlanOrgInviteConfigResponseBody extends TeaModel {
             }
 
             /**
-             * SeatAssignStrategy.
+             * <p>The default seat allocation strategy. Valid values:</p>
+             * <ul>
+             * <li>HIGH_TO_LOW</li>
+             * <li>LOW_TO_HIGH </li>
+             * <li>NONE</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>NONE</p>
              */
             public Builder seatAssignStrategy(String seatAssignStrategy) {
                 this.seatAssignStrategy = seatAssignStrategy;

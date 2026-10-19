@@ -106,7 +106,10 @@ public class GetBillingOverviewResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The request result code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class GetBillingOverviewResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The bill overview data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class GetBillingOverviewResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The request result message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -141,7 +147,10 @@ public class GetBillingOverviewResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -246,7 +255,10 @@ public class GetBillingOverviewResponseBody extends TeaModel {
             } 
 
             /**
-             * amount.
+             * <p>The amount of the current group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3000</p>
              */
             public Builder amount(String amount) {
                 this.amount = amount;
@@ -254,7 +266,7 @@ public class GetBillingOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * articleCodes.
+             * <p>The list of commodity codes associated with the current group.</p>
              */
             public Builder articleCodes(java.util.List<String> articleCodes) {
                 this.articleCodes = articleCodes;
@@ -262,7 +274,10 @@ public class GetBillingOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * key.
+             * <p>The grouping dimension value. A null value is returned as DIMENSION_FILTER_NULL_VALUE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>inference</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -270,7 +285,10 @@ public class GetBillingOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The display name of the group, which is affected by the locale parameter. A null value is displayed as -.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Model invocation</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -278,7 +296,10 @@ public class GetBillingOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * percentage.
+             * <p>The ratio of the group amount to the total amount of the top N groups.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.10</p>
              */
             public Builder percentage(String percentage) {
                 this.percentage = percentage;
@@ -384,7 +405,10 @@ public class GetBillingOverviewResponseBody extends TeaModel {
             } 
 
             /**
-             * currency.
+             * <p>The currency of the amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>USD</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -392,7 +416,7 @@ public class GetBillingOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * groups.
+             * <p>The top N groups sorted by amount in descending order.</p>
              */
             public Builder groups(java.util.List<Groups> groups) {
                 this.groups = groups;
@@ -400,7 +424,10 @@ public class GetBillingOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * pretaxAmount.
+             * <p>The total pretax amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>28729.32</p>
              */
             public Builder pretaxAmount(String pretaxAmount) {
                 this.pretaxAmount = pretaxAmount;
@@ -408,7 +435,10 @@ public class GetBillingOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * taxAmount.
+             * <p>The total tax amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2499.28</p>
              */
             public Builder taxAmount(String taxAmount) {
                 this.taxAmount = taxAmount;
@@ -416,7 +446,10 @@ public class GetBillingOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * totalAmount.
+             * <p>The total amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>31228.60</p>
              */
             public Builder totalAmount(String totalAmount) {
                 this.totalAmount = totalAmount;

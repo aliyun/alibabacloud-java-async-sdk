@@ -104,7 +104,10 @@ public class ListWorkspacesRequest extends Request {
         } 
 
         /**
-         * maxResults.
+         * <p>The page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -113,7 +116,10 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The token used to retrieve additional results. You do not need to provide this parameter for the first request. Obtain the token for subsequent requests from the response of the previous request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>uwCwQ5FFCDo=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -122,7 +128,10 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * workspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ws-32klhjk2312334jkh</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("workspaceId", workspaceId);
@@ -131,7 +140,10 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * workspaceName.
+         * <p>Filters workspaces by name using a fuzzy keyword match.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ws_test</p>
          */
         public Builder workspaceName(String workspaceName) {
             this.putQueryParameter("workspaceName", workspaceName);

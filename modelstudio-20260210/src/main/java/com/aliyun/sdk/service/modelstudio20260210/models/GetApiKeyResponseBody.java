@@ -119,7 +119,7 @@ public class GetApiKeyResponseBody extends TeaModel {
         } 
 
         /**
-         * apiKey.
+         * <p>The API key information.</p>
          */
         public Builder apiKey(ApiKey apiKey) {
             this.apiKey = apiKey;
@@ -127,7 +127,10 @@ public class GetApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * code.
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -135,7 +138,10 @@ public class GetApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -162,7 +171,14 @@ public class GetApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true: Succeeded.</li>
+         * <li>false: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -228,7 +244,7 @@ public class GetApiKeyResponseBody extends TeaModel {
             } 
 
             /**
-             * accessibleModels.
+             * <p>The list of accessible models.</p>
              */
             public Builder accessibleModels(java.util.List<String> accessibleModels) {
                 this.accessibleModels = accessibleModels;
@@ -236,7 +252,14 @@ public class GetApiKeyResponseBody extends TeaModel {
             }
 
             /**
-             * allowAllModels.
+             * <p>Indicates whether all models with inference permissions granted in the specified workspace are accessible. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder allowAllModels(Boolean allowAllModels) {
                 this.allowAllModels = allowAllModels;
@@ -316,7 +339,7 @@ public class GetApiKeyResponseBody extends TeaModel {
             } 
 
             /**
-             * accessIps.
+             * <p>The IP access whitelist.</p>
              */
             public Builder accessIps(java.util.List<String> accessIps) {
                 this.accessIps = accessIps;
@@ -324,7 +347,7 @@ public class GetApiKeyResponseBody extends TeaModel {
             }
 
             /**
-             * modelAccessScope.
+             * <p>The model access scope. If configured, only the selected models can be called.</p>
              */
             public Builder modelAccessScope(ModelAccessScope modelAccessScope) {
                 this.modelAccessScope = modelAccessScope;
@@ -332,7 +355,14 @@ public class GetApiKeyResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The permission type. Valid values:</p>
+             * <ul>
+             * <li>All: all permissions.</li>
+             * <li>Custom: custom permissions.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Custom</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -501,7 +531,10 @@ public class GetApiKeyResponseBody extends TeaModel {
             }
 
             /**
-             * apiKeyValue.
+             * <p>The value of the API key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sk-ws-djI.mhU0D****testtestest</p>
              */
             public Builder apiKeyValue(String apiKeyValue) {
                 this.apiKeyValue = apiKeyValue;
@@ -509,7 +542,7 @@ public class GetApiKeyResponseBody extends TeaModel {
             }
 
             /**
-             * auth.
+             * <p>The permission settings.</p>
              */
             public Builder auth(Auth auth) {
                 this.auth = auth;
@@ -517,7 +550,10 @@ public class GetApiKeyResponseBody extends TeaModel {
             }
 
             /**
-             * createdBy.
+             * <p>The creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1378030599924858</p>
              */
             public Builder createdBy(String createdBy) {
                 this.createdBy = createdBy;
@@ -525,7 +561,10 @@ public class GetApiKeyResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v7</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -533,7 +572,14 @@ public class GetApiKeyResponseBody extends TeaModel {
             }
 
             /**
-             * disabled.
+             * <p>Indicates whether the API key is disabled.</p>
+             * <ul>
+             * <li><strong>0</strong>: Active.</li>
+             * <li><strong>1</strong>: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder disabled(Integer disabled) {
                 this.disabled = disabled;
@@ -541,7 +587,10 @@ public class GetApiKeyResponseBody extends TeaModel {
             }
 
             /**
-             * gmtCreate.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1774338222000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -549,7 +598,10 @@ public class GetApiKeyResponseBody extends TeaModel {
             }
 
             /**
-             * workspaceId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ws-b2d30f148c236908</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;
@@ -557,7 +609,10 @@ public class GetApiKeyResponseBody extends TeaModel {
             }
 
             /**
-             * workspaceName.
+             * <p>The workspace name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>workspace_test</p>
              */
             public Builder workspaceName(String workspaceName) {
                 this.workspaceName = workspaceName;

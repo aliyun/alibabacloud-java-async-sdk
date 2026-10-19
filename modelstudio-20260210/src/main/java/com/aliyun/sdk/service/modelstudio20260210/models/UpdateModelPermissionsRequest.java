@@ -88,7 +88,15 @@ public class UpdateModelPermissionsRequest extends Request {
         } 
 
         /**
-         * accessAllEntities.
+         * <p>The tri-state value for one-click authorization. Valid values:</p>
+         * <ul>
+         * <li>OPEN: grants authorization to all models with one click.</li>
+         * <li>CLOSE: cancels one-click authorization.</li>
+         * <li>KEEP: keeps per-model authorization.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OPEN</p>
          */
         public Builder accessAllEntities(String accessAllEntities) {
             this.putBodyParameter("accessAllEntities", accessAllEntities);
@@ -97,7 +105,7 @@ public class UpdateModelPermissionsRequest extends Request {
         }
 
         /**
-         * models.
+         * <p>The list of per-model authorization items.</p>
          */
         public Builder models(java.util.List<Models> models) {
             this.putBodyParameter("models", models);
@@ -106,6 +114,7 @@ public class UpdateModelPermissionsRequest extends Request {
         }
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -204,7 +213,7 @@ public class UpdateModelPermissionsRequest extends Request {
             } 
 
             /**
-             * deploy.
+             * <p>Specifies whether to grant model deployment permission.</p>
              */
             public Builder deploy(Boolean deploy) {
                 this.deploy = deploy;
@@ -212,7 +221,7 @@ public class UpdateModelPermissionsRequest extends Request {
             }
 
             /**
-             * fineTune.
+             * <p>Specifies whether to grant model training permission.</p>
              */
             public Builder fineTune(Boolean fineTune) {
                 this.fineTune = fineTune;
@@ -220,7 +229,7 @@ public class UpdateModelPermissionsRequest extends Request {
             }
 
             /**
-             * inference.
+             * <p>Specifies whether to grant model invocation permission.</p>
              */
             public Builder inference(Boolean inference) {
                 this.inference = inference;
@@ -228,6 +237,7 @@ public class UpdateModelPermissionsRequest extends Request {
             }
 
             /**
+             * <p>The model.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

@@ -74,6 +74,7 @@ public class CreateTokenPlanKeyRequest extends Request {
         } 
 
         /**
+         * <p>The account ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,10 @@ public class CreateTokenPlanKeyRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>APIKEY描述</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);

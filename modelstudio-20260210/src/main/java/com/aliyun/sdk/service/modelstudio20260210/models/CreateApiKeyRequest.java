@@ -89,7 +89,7 @@ public class CreateApiKeyRequest extends Request {
         } 
 
         /**
-         * auth.
+         * <p>The API key permission settings.</p>
          */
         public Builder auth(Auth auth) {
             this.putBodyParameter("auth", auth);
@@ -98,7 +98,10 @@ public class CreateApiKeyRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("description", description);
@@ -107,7 +110,15 @@ public class CreateApiKeyRequest extends Request {
         }
 
         /**
-         * workspaceId.
+         * <p>The workspace ID.</p>
+         * <blockquote>
+         * <ul>
+         * <li>If you leave this parameter empty, the API key is automatically assigned to the default workspace.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>ws-8af73c50f5596193</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("workspaceId", workspaceId);
@@ -175,7 +186,10 @@ public class CreateApiKeyRequest extends Request {
             } 
 
             /**
-             * accessibleModels.
+             * <p>The list of accessible models.</p>
+             * <blockquote>
+             * <p>Notice: This parameter takes effect only when allowAllModels is set to false.</p>
+             * </blockquote>
              */
             public Builder accessibleModels(java.util.List<String> accessibleModels) {
                 this.accessibleModels = accessibleModels;
@@ -183,7 +197,14 @@ public class CreateApiKeyRequest extends Request {
             }
 
             /**
-             * allowAllModels.
+             * <p>Specifies whether all models with granted inference permissions in the workspace are accessible. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder allowAllModels(Boolean allowAllModels) {
                 this.allowAllModels = allowAllModels;
@@ -263,7 +284,12 @@ public class CreateApiKeyRequest extends Request {
             } 
 
             /**
-             * accessIps.
+             * <p>The IP access whitelist.</p>
+             * <blockquote>
+             * <ul>
+             * <li>When you set custom permissions and leave the IP access whitelist empty, the server sets the default values to IPv4 (0.0.0.0/0) and IPv6 (::/0), which allows all traffic.</li>
+             * </ul>
+             * </blockquote>
              */
             public Builder accessIps(java.util.List<String> accessIps) {
                 this.accessIps = accessIps;
@@ -271,7 +297,7 @@ public class CreateApiKeyRequest extends Request {
             }
 
             /**
-             * modelAccessScope.
+             * <p>The model access scope.</p>
              */
             public Builder modelAccessScope(ModelAccessScope modelAccessScope) {
                 this.modelAccessScope = modelAccessScope;
@@ -279,7 +305,14 @@ public class CreateApiKeyRequest extends Request {
             }
 
             /**
-             * type.
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>All: all permissions.</li>
+             * <li>Custom: custom permissions.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Custom</p>
              */
             public Builder type(String type) {
                 this.type = type;

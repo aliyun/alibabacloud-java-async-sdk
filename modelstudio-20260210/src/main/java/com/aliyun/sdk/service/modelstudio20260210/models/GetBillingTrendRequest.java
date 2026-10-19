@@ -157,7 +157,7 @@ public class GetBillingTrendRequest extends Request {
         } 
 
         /**
-         * filter.
+         * <p>The dimension filter conditions.</p>
          */
         public Builder filter(Filter filter) {
             String filterShrink = shrink(filter, "filter", "json");
@@ -167,7 +167,10 @@ public class GetBillingTrendRequest extends Request {
         }
 
         /**
-         * granularity.
+         * <p>The query granularity. This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DAY</p>
          */
         public Builder granularity(String granularity) {
             this.putQueryParameter("granularity", granularity);
@@ -176,7 +179,7 @@ public class GetBillingTrendRequest extends Request {
         }
 
         /**
-         * groupBy.
+         * <p>The grouping conditions. This parameter must contain one and only one element.</p>
          */
         public Builder groupBy(java.util.List<GroupBy> groupBy) {
             String groupByShrink = shrink(groupBy, "groupBy", "json");
@@ -186,7 +189,10 @@ public class GetBillingTrendRequest extends Request {
         }
 
         /**
-         * locale.
+         * <p>The response language. Default value: en-US.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder locale(String locale) {
             this.putQueryParameter("locale", locale);
@@ -195,7 +201,10 @@ public class GetBillingTrendRequest extends Request {
         }
 
         /**
-         * regionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("regionId", regionId);
@@ -204,7 +213,7 @@ public class GetBillingTrendRequest extends Request {
         }
 
         /**
-         * timePeriod.
+         * <p>The query time range, including the start time and end time. This parameter is required.</p>
          */
         public Builder timePeriod(TimePeriod timePeriod) {
             String timePeriodShrink = shrink(timePeriod, "timePeriod", "json");
@@ -214,7 +223,10 @@ public class GetBillingTrendRequest extends Request {
         }
 
         /**
-         * topNum.
+         * <p>The number of groups to return. Valid values: 1 to 20. Default value: 20. The remaining groups are merged into &quot;Others&quot;.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder topNum(Integer topNum) {
             this.putQueryParameter("topNum", topNum);
@@ -223,7 +235,10 @@ public class GetBillingTrendRequest extends Request {
         }
 
         /**
-         * zeroFilter.
+         * <p>Specifies whether to filter out groups with a zero amount. Default value: true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder zeroFilter(Boolean zeroFilter) {
             this.putQueryParameter("zeroFilter", zeroFilter);
@@ -304,7 +319,10 @@ public class GetBillingTrendRequest extends Request {
             } 
 
             /**
-             * code.
+             * <p>The filter dimension code. For more information, see the &quot;Additional information&quot; section below.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CHARGE_TYPE</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -312,7 +330,10 @@ public class GetBillingTrendRequest extends Request {
             }
 
             /**
-             * selectType.
+             * <p>The filter method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IN</p>
              */
             public Builder selectType(String selectType) {
                 this.selectType = selectType;
@@ -320,7 +341,7 @@ public class GetBillingTrendRequest extends Request {
             }
 
             /**
-             * values.
+             * <p>The filter value list.</p>
              */
             public Builder values(java.util.List<String> values) {
                 this.values = values;
@@ -374,7 +395,7 @@ public class GetBillingTrendRequest extends Request {
             } 
 
             /**
-             * dimensions.
+             * <p>The dimension filter list.</p>
              */
             public Builder dimensions(java.util.List<Dimensions> dimensions) {
                 this.dimensions = dimensions;
@@ -428,7 +449,10 @@ public class GetBillingTrendRequest extends Request {
             } 
 
             /**
-             * code.
+             * <p>The grouping dimension code. For more information, see the &quot;Additional information&quot; section below.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BASE_MODEL</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -495,7 +519,10 @@ public class GetBillingTrendRequest extends Request {
             } 
 
             /**
-             * end.
+             * <p>The end time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-08-25</p>
              */
             public Builder end(String end) {
                 this.end = end;
@@ -503,7 +530,10 @@ public class GetBillingTrendRequest extends Request {
             }
 
             /**
-             * start.
+             * <p>The start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-08-01</p>
              */
             public Builder start(String start) {
                 this.start = start;

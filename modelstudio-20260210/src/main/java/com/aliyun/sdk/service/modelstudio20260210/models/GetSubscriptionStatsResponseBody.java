@@ -93,7 +93,10 @@ public class GetSubscriptionStatsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class GetSubscriptionStatsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The business data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class GetSubscriptionStatsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +123,14 @@ public class GetSubscriptionStatsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API call is successful. Valid values:</p>
+         * <ul>
+         * <li>true: Successful.</li>
+         * <li>false: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -235,7 +248,10 @@ public class GetSubscriptionStatsResponseBody extends TeaModel {
             } 
 
             /**
-             * AssignedSeats.
+             * <p>The number of assigned seats.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder assignedSeats(Long assignedSeats) {
                 this.assignedSeats = assignedSeats;
@@ -243,7 +259,10 @@ public class GetSubscriptionStatsResponseBody extends TeaModel {
             }
 
             /**
-             * SeatCredits.
+             * <p>The total credits quota for the seat.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder seatCredits(Double seatCredits) {
                 this.seatCredits = seatCredits;
@@ -251,7 +270,10 @@ public class GetSubscriptionStatsResponseBody extends TeaModel {
             }
 
             /**
-             * SeatRefreshTime.
+             * <p>The refresh time of the current cycle, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1781422734</p>
              */
             public Builder seatRefreshTime(Long seatRefreshTime) {
                 this.seatRefreshTime = seatRefreshTime;
@@ -259,7 +281,10 @@ public class GetSubscriptionStatsResponseBody extends TeaModel {
             }
 
             /**
-             * SeatRemainingCredits.
+             * <p>The remaining credits for the current cycle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40</p>
              */
             public Builder seatRemainingCredits(Double seatRemainingCredits) {
                 this.seatRemainingCredits = seatRemainingCredits;
@@ -267,7 +292,15 @@ public class GetSubscriptionStatsResponseBody extends TeaModel {
             }
 
             /**
-             * SeatType.
+             * <p>The seat type (specType). Valid values:</p>
+             * <ul>
+             * <li>standard: Standard seat.</li>
+             * <li>pro: Pro seat.</li>
+             * <li>max: Premium seat.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>standard</p>
              */
             public Builder seatType(String seatType) {
                 this.seatType = seatType;
@@ -275,7 +308,10 @@ public class GetSubscriptionStatsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalSeats.
+             * <p>The total number of seats.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder totalSeats(Long totalSeats) {
                 this.totalSeats = totalSeats;
@@ -355,7 +391,7 @@ public class GetSubscriptionStatsResponseBody extends TeaModel {
             } 
 
             /**
-             * Items.
+             * <p>The list of seat information, grouped by specType.</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;
@@ -363,7 +399,10 @@ public class GetSubscriptionStatsResponseBody extends TeaModel {
             }
 
             /**
-             * SubscriptionEndTime.
+             * <p>The subscription end time, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1781422734</p>
              */
             public Builder subscriptionEndTime(Long subscriptionEndTime) {
                 this.subscriptionEndTime = subscriptionEndTime;
@@ -371,7 +410,10 @@ public class GetSubscriptionStatsResponseBody extends TeaModel {
             }
 
             /**
-             * SubscriptionStartTime.
+             * <p>The subscription start time, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1781422733</p>
              */
             public Builder subscriptionStartTime(Long subscriptionStartTime) {
                 this.subscriptionStartTime = subscriptionStartTime;

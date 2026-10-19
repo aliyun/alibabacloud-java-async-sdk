@@ -93,7 +93,10 @@ public class RotateTokenPlanKeyResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class RotateTokenPlanKeyResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The business data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class RotateTokenPlanKeyResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +123,14 @@ public class RotateTokenPlanKeyResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API call is successful. Valid values:</p>
+         * <ul>
+         * <li>true: Successful.</li>
+         * <li>false: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -222,7 +235,10 @@ public class RotateTokenPlanKeyResponseBody extends TeaModel {
             } 
 
             /**
-             * ApiKeyId.
+             * <p>The API Key ID, which is system-generated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ak_123456</p>
              */
             public Builder apiKeyId(String apiKeyId) {
                 this.apiKeyId = apiKeyId;
@@ -230,7 +246,10 @@ public class RotateTokenPlanKeyResponseBody extends TeaModel {
             }
 
             /**
-             * MaskedApiKey.
+             * <p>The new masked_api_key returned by BaiLian, such as sk_***cdef.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sk_***6</p>
              */
             public Builder maskedApiKey(String maskedApiKey) {
                 this.maskedApiKey = maskedApiKey;
@@ -238,7 +257,10 @@ public class RotateTokenPlanKeyResponseBody extends TeaModel {
             }
 
             /**
-             * PlainApiKey.
+             * <p>The new plaintext API Key returned by BaiLian. This value is returned only once during the reset operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sk-ws.abc123456</p>
              */
             public Builder plainApiKey(String plainApiKey) {
                 this.plainApiKey = plainApiKey;
@@ -246,7 +268,10 @@ public class RotateTokenPlanKeyResponseBody extends TeaModel {
             }
 
             /**
-             * ResetAt.
+             * <p>The time when the API key was reset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-07-18T03:19:17Z</p>
              */
             public Builder resetAt(String resetAt) {
                 this.resetAt = resetAt;
@@ -254,7 +279,10 @@ public class RotateTokenPlanKeyResponseBody extends TeaModel {
             }
 
             /**
-             * SourceId.
+             * <p>The source_id returned by BaiLian.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder sourceId(String sourceId) {
                 this.sourceId = sourceId;

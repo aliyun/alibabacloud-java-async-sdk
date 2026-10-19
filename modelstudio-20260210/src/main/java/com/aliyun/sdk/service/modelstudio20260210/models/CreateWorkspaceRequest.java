@@ -75,7 +75,10 @@ public class CreateWorkspaceRequest extends Request {
         } 
 
         /**
-         * serviceSite.
+         * <p>The service deployment scope (the deployment scope for services that depend on GPU resources, such as inference, training, and deployment). The Beijing and Singapore regions are not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>global</p>
          */
         public Builder serviceSite(String serviceSite) {
             this.putQueryParameter("serviceSite", serviceSite);
@@ -84,6 +87,7 @@ public class CreateWorkspaceRequest extends Request {
         }
 
         /**
+         * <p>The workspace name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -119,7 +119,7 @@ public class ResetApiKeyResponseBody extends TeaModel {
         } 
 
         /**
-         * apiKey.
+         * <p>The API key information.</p>
          */
         public Builder apiKey(ApiKey apiKey) {
             this.apiKey = apiKey;
@@ -127,7 +127,10 @@ public class ResetApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * code.
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -135,7 +138,10 @@ public class ResetApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class ResetApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -162,7 +171,14 @@ public class ResetApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -252,7 +268,10 @@ public class ResetApiKeyResponseBody extends TeaModel {
             }
 
             /**
-             * apiKeyValue.
+             * <p>The value of the API key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sk-ws-djI.8O7dkfkW2aICctnid4u4</p>
              */
             public Builder apiKeyValue(String apiKeyValue) {
                 this.apiKeyValue = apiKeyValue;
@@ -260,7 +279,10 @@ public class ResetApiKeyResponseBody extends TeaModel {
             }
 
             /**
-             * workspaceId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ws-b2d30f148c236908</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;

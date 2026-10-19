@@ -74,6 +74,7 @@ public class UpdateModelLimitsRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,7 @@ public class UpdateModelLimitsRequest extends Request {
         }
 
         /**
-         * workspaceLimits.
+         * <p>The throttling values for the workspace.</p>
          */
         public Builder workspaceLimits(java.util.List<WorkspaceLimits> workspaceLimits) {
             String workspaceLimitsShrink = shrink(workspaceLimits, "workspaceLimits", "json");
@@ -207,7 +208,10 @@ public class UpdateModelLimitsRequest extends Request {
             } 
 
             /**
-             * model.
+             * <p>The model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen-plus</p>
              */
             public Builder model(String model) {
                 this.model = model;
@@ -215,7 +219,14 @@ public class UpdateModelLimitsRequest extends Request {
             }
 
             /**
-             * operationType.
+             * <p>The throttling operation type. Valid values:</p>
+             * <ul>
+             * <li><strong>OVERLAY</strong>: Sets or overwrites the throttling configuration.</li>
+             * <li><strong>DELETE</strong>: Deletes the throttling configuration (restores to no throttling).</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>OVERLAY</p>
              */
             public Builder operationType(String operationType) {
                 this.operationType = operationType;
@@ -223,7 +234,10 @@ public class UpdateModelLimitsRequest extends Request {
             }
 
             /**
-             * requestLimit.
+             * <p>The request throttling value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder requestLimit(Long requestLimit) {
                 this.requestLimit = requestLimit;
@@ -231,7 +245,10 @@ public class UpdateModelLimitsRequest extends Request {
             }
 
             /**
-             * requestLimitPeriod.
+             * <p>The time period for request throttling. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder requestLimitPeriod(Long requestLimitPeriod) {
                 this.requestLimitPeriod = requestLimitPeriod;
@@ -239,7 +256,10 @@ public class UpdateModelLimitsRequest extends Request {
             }
 
             /**
-             * usageLimit.
+             * <p>The usage throttling value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder usageLimit(Long usageLimit) {
                 this.usageLimit = usageLimit;
@@ -247,7 +267,10 @@ public class UpdateModelLimitsRequest extends Request {
             }
 
             /**
-             * usageLimitPeriod.
+             * <p>The time period for usage throttling. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder usageLimitPeriod(Long usageLimitPeriod) {
                 this.usageLimitPeriod = usageLimitPeriod;

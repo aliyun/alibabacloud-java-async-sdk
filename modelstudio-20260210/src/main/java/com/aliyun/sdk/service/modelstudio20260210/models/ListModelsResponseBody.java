@@ -485,10 +485,14 @@ public class ListModelsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("priceUnit")
         private String priceUnit;
 
+        @com.aliyun.core.annotation.NameInMap("timeBand")
+        private String timeBand;
+
         private Prices(Builder builder) {
             this.price = builder.price;
             this.priceName = builder.priceName;
             this.priceUnit = builder.priceUnit;
+            this.timeBand = builder.timeBand;
         }
 
         public static Builder builder() {
@@ -520,10 +524,18 @@ public class ListModelsResponseBody extends TeaModel {
             return this.priceUnit;
         }
 
+        /**
+         * @return timeBand
+         */
+        public String getTimeBand() {
+            return this.timeBand;
+        }
+
         public static final class Builder {
             private String price; 
             private String priceName; 
             private String priceUnit; 
+            private String timeBand; 
 
             private Builder() {
             } 
@@ -532,6 +544,7 @@ public class ListModelsResponseBody extends TeaModel {
                 this.price = model.price;
                 this.priceName = model.priceName;
                 this.priceUnit = model.priceUnit;
+                this.timeBand = model.timeBand;
             } 
 
             /**
@@ -555,6 +568,14 @@ public class ListModelsResponseBody extends TeaModel {
              */
             public Builder priceUnit(String priceUnit) {
                 this.priceUnit = priceUnit;
+                return this;
+            }
+
+            /**
+             * timeBand.
+             */
+            public Builder timeBand(String timeBand) {
+                this.timeBand = timeBand;
                 return this;
             }
 

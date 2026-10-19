@@ -132,7 +132,10 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -140,7 +143,7 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The business data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -148,7 +151,10 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -156,7 +162,10 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
         }
 
         /**
-         * PageNo.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.pageNo = pageNo;
@@ -164,7 +173,10 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -172,7 +184,10 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -180,7 +195,10 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -984,7 +1002,10 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
             } 
 
             /**
-             * AccountBizId.
+             * <p>The member business ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>112233</p>
              */
             public Builder accountBizId(String accountBizId) {
                 this.accountBizId = accountBizId;
@@ -992,7 +1013,10 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
             }
 
             /**
-             * AccountId.
+             * <p>The ID of the member accounts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acc_123456789</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -1000,7 +1024,10 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
             }
 
             /**
-             * AccountName.
+             * <p>The name of the member accounts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_001</p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -1019,7 +1046,10 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
             }
 
             /**
-             * Email.
+             * <p>The member email address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:test@email.com">test@email.com</a></p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -1027,7 +1057,10 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The time when the member joined.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-06-10T11:57:42.000+00:00</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -1035,7 +1068,10 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
             }
 
             /**
-             * MaskedApiKey.
+             * <p>The masked API key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>prefix.abc****456</p>
              */
             public Builder maskedApiKey(String maskedApiKey) {
                 this.maskedApiKey = maskedApiKey;
@@ -1043,7 +1079,10 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
             }
 
             /**
-             * OrgId.
+             * <p>The organization ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>org_123456789</p>
              */
             public Builder orgId(String orgId) {
                 this.orgId = orgId;
@@ -1059,7 +1098,7 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
             }
 
             /**
-             * Roles.
+             * <p>The list of member roles.</p>
              */
             public Builder roles(java.util.List<String> roles) {
                 this.roles = roles;
@@ -1067,7 +1106,10 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
             }
 
             /**
-             * SeatId.
+             * <p>The seat resource allocate ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>seat_123456</p>
              */
             public Builder seatId(String seatId) {
                 this.seatId = seatId;
@@ -1075,7 +1117,15 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
             }
 
             /**
-             * SpecType.
+             * <p>The seat specification type. Valid values:</p>
+             * <ul>
+             * <li>standard: Standard seat.</li>
+             * <li>pro: Pro seat.</li>
+             * <li>max: Max seat.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>standard</p>
              */
             public Builder specType(String specType) {
                 this.specType = specType;
@@ -1083,7 +1133,10 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The member status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACTIVE</p>
              */
             public Builder status(String status) {
                 this.status = status;

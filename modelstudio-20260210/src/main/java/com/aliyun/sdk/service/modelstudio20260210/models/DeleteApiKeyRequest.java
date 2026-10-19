@@ -60,7 +60,7 @@ public class DeleteApiKeyRequest extends Request {
         } 
 
         /**
-         * <p>API Key ID。</p>
+         * <p>The API key ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

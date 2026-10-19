@@ -75,6 +75,11 @@ public class SetTokenPlanOrgInviteConfigRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the organization role assigned by default. Valid values:</p>
+         * <ul>
+         * <li>SYSTEM_ROLE_ORG_ADMIN</li>
+         * <li>SYSTEM_ROLE_ORG_MEMBER</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +92,12 @@ public class SetTokenPlanOrgInviteConfigRequest extends Request {
         }
 
         /**
+         * <p>The default seat allocation policy. Valid values:</p>
+         * <ul>
+         * <li>HIGH_TO_LOW</li>
+         * <li>LOW_TO_HIGH</li>
+         * <li>NONE</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

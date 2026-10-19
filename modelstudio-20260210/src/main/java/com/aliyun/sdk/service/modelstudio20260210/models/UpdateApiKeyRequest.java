@@ -102,7 +102,10 @@ public class UpdateApiKeyRequest extends Request {
         }
 
         /**
-         * auth.
+         * <p>The API Key permission settings.</p>
+         * <blockquote>
+         * <p>Do not specify this parameter or specify it completely for each UpdateApiKey operation. Otherwise, the configuration may not match your expectations.</p>
+         * </blockquote>
          */
         public Builder auth(Auth auth) {
             this.putBodyParameter("auth", auth);
@@ -111,7 +114,10 @@ public class UpdateApiKeyRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>update description.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("description", description);
@@ -179,7 +185,10 @@ public class UpdateApiKeyRequest extends Request {
             } 
 
             /**
-             * accessibleModels.
+             * <p>The list of accessible models.</p>
+             * <blockquote>
+             * <p>Notice: The specified content takes effect only when allowAllModels is set to false.</p>
+             * </blockquote>
              */
             public Builder accessibleModels(java.util.List<String> accessibleModels) {
                 this.accessibleModels = accessibleModels;
@@ -187,7 +196,11 @@ public class UpdateApiKeyRequest extends Request {
             }
 
             /**
-             * allowAllModels.
+             * <p>Specifies whether all models with inference permissions in the workspace are accessible. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              */
             public Builder allowAllModels(Boolean allowAllModels) {
                 this.allowAllModels = allowAllModels;
@@ -267,7 +280,12 @@ public class UpdateApiKeyRequest extends Request {
             } 
 
             /**
-             * accessIps.
+             * <p>The IP access whitelist.</p>
+             * <blockquote>
+             * <ul>
+             * <li>When you customize the permission scope, if the IP access whitelist is not specified, the server sets it to IPv4 (0.0.0.0/0) and IPv6 (::/0) by default, which allows all traffic.</li>
+             * </ul>
+             * </blockquote>
              */
             public Builder accessIps(java.util.List<String> accessIps) {
                 this.accessIps = accessIps;
@@ -275,7 +293,7 @@ public class UpdateApiKeyRequest extends Request {
             }
 
             /**
-             * modelAccessScope.
+             * <p>The model access scope.</p>
              */
             public Builder modelAccessScope(ModelAccessScope modelAccessScope) {
                 this.modelAccessScope = modelAccessScope;
@@ -283,7 +301,14 @@ public class UpdateApiKeyRequest extends Request {
             }
 
             /**
-             * type.
+             * <p>The permission type. Valid values:</p>
+             * <ul>
+             * <li>All: full permissions.</li>
+             * <li>Custom: custom permissions.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Custom</p>
              */
             public Builder type(String type) {
                 this.type = type;
