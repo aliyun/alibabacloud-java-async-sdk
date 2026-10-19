@@ -67,7 +67,7 @@ public class DescribeZonesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1D42F072-72FE-4DC4-BB8E-64B1D298****</p>
@@ -78,7 +78,7 @@ public class DescribeZonesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The queried zones.</p>
+         * Zones.
          */
         public Builder zones(Zones zones) {
             this.zones = zones;
@@ -196,14 +196,7 @@ public class DescribeZonesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether Tair (Redis OSS-compatible) instances can be created in the current zone. Valid values:</p>
-             * <ul>
-             * <li><strong>true</strong>: Tair (Redis OSS-compatible) instances cannot be created in the current zone.</li>
-             * <li><strong>false</strong>: Tair (Redis OSS-compatible) instances can be created in the current zone.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * Disabled.
              */
             public Builder disabled(Boolean disabled) {
                 this.disabled = disabled;
@@ -211,10 +204,7 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the zone is managed by ApsaraDB RDS. The return value of this parameter is <strong>true</strong> in Tair (Redis OSS-compatible).</p>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * IsRds.
              */
             public Builder isRds(Boolean isRds) {
                 this.isRds = isRds;
@@ -222,10 +212,7 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-huhehaote</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -233,14 +220,7 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the network type of the instance can be changed from the classic network to Virtual Private Cloud (VPC). Valid values:</p>
-             * <ul>
-             * <li><strong>true</strong>: The network type of the instance can be changed from the classic network to VPC.</li>
-             * <li><strong>false</strong>: The network type of the instance cannot be changed from the classic network to VPC.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * SwitchNetwork.
              */
             public Builder switchNetwork(Boolean switchNetwork) {
                 this.switchNetwork = switchNetwork;
@@ -248,10 +228,7 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the zone within the specified region.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-huhehaote-b</p>
+             * ZoneId.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -259,10 +236,7 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the zone within the specified region.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Hohhot Zone B</p>
+             * ZoneName.
              */
             public Builder zoneName(String zoneName) {
                 this.zoneName = zoneName;

@@ -194,7 +194,7 @@ public class DescribeGlobalDistributeCacheRequest extends Request {
         }
 
         /**
-         * <p>The ID of the distributed instance.</p>
+         * <p>The distributed instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>gr-bp14rkqrhac****</p>
@@ -224,7 +224,7 @@ public class DescribeGlobalDistributeCacheRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. The value must be an integer that is greater than <strong>0</strong>. Default value: <strong>1</strong>.</p>
+         * <p>The page number. Set the value to a number that is greater than <strong>0</strong> and does not exceed the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -236,7 +236,7 @@ public class DescribeGlobalDistributeCacheRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return each page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -275,7 +275,7 @@ public class DescribeGlobalDistributeCacheRequest extends Request {
         }
 
         /**
-         * <p>The ID of the child instance that is attached to the distributed instance.</p>
+         * <p>The child instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>gr-bp1zcjlobkyrq****</p>

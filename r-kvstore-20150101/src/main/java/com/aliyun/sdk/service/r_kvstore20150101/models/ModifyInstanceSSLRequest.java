@@ -217,11 +217,11 @@ public class ModifyInstanceSSLRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable TLS (SSL) encryption. Valid values:</p>
+         * <p>Modifies the TLS (SSL) settings. Valid values:</p>
          * <ul>
-         * <li><strong>Disable</strong>: disables SSL encryption.</li>
-         * <li><strong>Enable</strong>: enables SSL encryption.</li>
-         * <li><strong>Update</strong>: updates the SSL certificate.</li>
+         * <li><strong>Disable</strong>: Disables TLS (SSL).</li>
+         * <li><strong>Enable</strong>: Enables TLS (SSL).</li>
+         * <li><strong>Update</strong>: Updates the certificate.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

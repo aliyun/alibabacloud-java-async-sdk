@@ -172,7 +172,10 @@ public class CreateInspectionScheduleRequest extends Request {
         } 
 
         /**
-         * CronExpression.
+         * <p>The cron expression for the periodic scheduling.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0 0 2 * * ?</p>
          */
         public Builder cronExpression(String cronExpression) {
             this.putQueryParameter("CronExpression", cronExpression);
@@ -181,7 +184,17 @@ public class CreateInspectionScheduleRequest extends Request {
         }
 
         /**
-         * InspectionItems.
+         * <p>The specified inspection items. The following inspection items are supported:</p>
+         * <ul>
+         * <li>RESOURCE_USAGE</li>
+         * <li>BIGKEY</li>
+         * <li>HOTKEY</li>
+         * <li>PERFORMANCE_METRICS</li>
+         * <li>SLOWLOG</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RESOURCE_USAGE</p>
          */
         public Builder inspectionItems(String inspectionItems) {
             this.putQueryParameter("InspectionItems", inspectionItems);
@@ -190,7 +203,10 @@ public class CreateInspectionScheduleRequest extends Request {
         }
 
         /**
-         * InspectionWindow.
+         * <p>The time window.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1h</p>
          */
         public Builder inspectionWindow(String inspectionWindow) {
             this.putQueryParameter("InspectionWindow", inspectionWindow);
@@ -199,6 +215,7 @@ public class CreateInspectionScheduleRequest extends Request {
         }
 
         /**
+         * <p>The O&amp;M Assistant instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -211,7 +228,15 @@ public class CreateInspectionScheduleRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * <p>The list of associated instance IDs.</p>
+         * <blockquote>
+         * <ul>
+         * <li>Separate multiple instances with commas (,).</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -220,7 +245,10 @@ public class CreateInspectionScheduleRequest extends Request {
         }
 
         /**
-         * ReportLanguage.
+         * <p>The report language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder reportLanguage(String reportLanguage) {
             this.putQueryParameter("ReportLanguage", reportLanguage);
@@ -229,7 +257,10 @@ public class CreateInspectionScheduleRequest extends Request {
         }
 
         /**
-         * ScheduleName.
+         * <p>The name of the timed scheduling.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-sche</p>
          */
         public Builder scheduleName(String scheduleName) {
             this.putQueryParameter("ScheduleName", scheduleName);
@@ -247,7 +278,10 @@ public class CreateInspectionScheduleRequest extends Request {
         }
 
         /**
-         * Timezone.
+         * <p>The time zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Asia/Shanghai</p>
          */
         public Builder timezone(String timezone) {
             this.putQueryParameter("Timezone", timezone);

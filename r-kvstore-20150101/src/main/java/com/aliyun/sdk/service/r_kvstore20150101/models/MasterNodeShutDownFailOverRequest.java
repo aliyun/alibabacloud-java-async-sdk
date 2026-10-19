@@ -143,7 +143,7 @@ public class MasterNodeShutDownFailOverRequest extends Request {
         } 
 
         /**
-         * <p>The resource category. Set the value to instance.</p>
+         * <p>The resource type. Set the value to <code>instance</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>instance</p>
@@ -156,8 +156,8 @@ public class MasterNodeShutDownFailOverRequest extends Request {
 
         /**
          * <ul>
-         * <li>Specify: This mode allows you to specify a database node to use.</li>
-         * <li>Random: In this mode, a random database node is selected when no database node is specified.</li>
+         * <li><strong>Specify</strong>: Specifies the data nodes.</li>
+         * <li><strong>Random</strong>: The system randomly simulates a failure for one-fourth of the data nodes (rounded up to the nearest integer, with a minimum of 1). This parameter takes effect only when no data nodes are specified.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -170,7 +170,7 @@ public class MasterNodeShutDownFailOverRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the database nodes.</p>
+         * <p>The specified data nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>r-rdsdavinx01003-db-0,r-rdsdavinx01003-db-1</p>
@@ -183,19 +183,12 @@ public class MasterNodeShutDownFailOverRequest extends Request {
 
         /**
          * <ul>
-         * <li><strong>Hard</strong>: stimulates a hardware failure that cannot be recovered. In this case, a high-availability switchover is triggered.</li>
-         * <li><strong>Soft</strong> (default): stimulates a hardware failure that can be recovered. In this case, the system first attempts to recover the faulty node. If the attempt fails, a high-availability switchover is triggered.</li>
-         * </ul>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>Safe</li>
-         * <li>UnSafe</li>
-         * <li>Hard</li>
-         * <li>Soft</li>
+         * <li><strong>Hard</strong>: Simulates an unrecoverable hardware failure. A switchover (HA) is directly triggered.</li>
+         * <li><strong>Soft</strong> (default): Simulates a recoverable hardware failure. The system preferentially attempts to recover the failed node. If the recovery fails, a switchover (HA) is triggered.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>Safe</p>
+         * <p>Hard</p>
          */
         public Builder failMode(String failMode) {
             this.putQueryParameter("FailMode", failMode);
@@ -217,8 +210,8 @@ public class MasterNodeShutDownFailOverRequest extends Request {
 
         /**
          * <ul>
-         * <li>Specify: This mode allows you to specify a proxy node to use.</li>
-         * <li>Random: In this mode, a random proxy node is selected when no proxy node is specified.</li>
+         * <li><strong>Specify</strong>: Specifies the proxy nodes.</li>
+         * <li><strong>Random</strong>: The system randomly simulates a failure for one-fourth of the proxy nodes (rounded up to the nearest integer, with a minimum of 1). This parameter takes effect only when no proxy nodes are specified.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -231,7 +224,7 @@ public class MasterNodeShutDownFailOverRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the proxy nodes.</p>
+         * <p>The specified proxy nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>6981,6982</p>

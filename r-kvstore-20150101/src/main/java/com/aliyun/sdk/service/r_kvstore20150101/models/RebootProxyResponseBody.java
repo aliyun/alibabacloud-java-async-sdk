@@ -54,7 +54,7 @@ public class RebootProxyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>561AFBF1-BE20-44DB-9BD1-6988B53E****</p>

@@ -80,7 +80,7 @@ public class DescribeInstancesOverviewResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The queried instances.</p>
+         * <p>The array of instances.</p>
          */
         public Builder instances(java.util.List<Instances> instances) {
             this.instances = instances;
@@ -88,7 +88,7 @@ public class DescribeInstancesOverviewResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1E83311F-0EE4-4922-A3BF-730B312B****</p>
@@ -428,11 +428,11 @@ public class DescribeInstancesOverviewResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The architecture of the instance. Valid values:</p>
+             * <p>The architecture type. Valid values:</p>
              * <ul>
-             * <li><strong>cluster</strong>: cluster architecture</li>
-             * <li><strong>standard</strong>: standard architecture</li>
-             * <li><strong>rwsplit</strong>: read/write splitting architecture</li>
+             * <li><strong>cluster</strong>: Cluster Edition.</li>
+             * <li><strong>standard</strong>: Standard Edition.</li>
+             * <li><strong>rwsplit</strong>: read/write splitting Edition.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -455,14 +455,14 @@ public class DescribeInstancesOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing method of the instance. Valid values:</p>
+             * <p>The billing method. Valid values:</p>
              * <ul>
-             * <li><strong>PrePaid</strong>: subscription</li>
-             * <li><strong>PostPaid</strong>: pay-as-you-go</li>
+             * <li><strong>PrePaid</strong>: subscription.</li>
+             * <li><strong>PostPaid</strong>: pay-as-you-go.</li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>PostPaid</p>
+             * <p>PrePaid</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -503,10 +503,10 @@ public class DescribeInstancesOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The engine version of the instance. Valid values: <strong>2.8</strong>, <strong>4.0</strong>, <strong>5.0</strong>, <strong>6.0</strong>, and <strong>7.0</strong>.</p>
+             * <p>The Redis-compatible engine version of the instance. Valid values: <strong>2.8</strong>, <strong>4.0</strong>, <strong>5.0</strong>, <strong>6.0</strong>, and <strong>7.0</strong>.</p>
              * 
              * <strong>example:</strong>
-             * <p>4.0</p>
+             * <p>6.0</p>
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;
@@ -514,7 +514,7 @@ public class DescribeInstancesOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the distributed instance.</p>
+             * <p>The distributed instance ID.</p>
              * <blockquote>
              * <p>This parameter is returned only when the instance is a child instance of a distributed instance.</p>
              * </blockquote>
@@ -528,7 +528,7 @@ public class DescribeInstancesOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance type of the instance.</p>
+             * <p>The instance type.</p>
              * 
              * <strong>example:</strong>
              * <p>redis.logic.sharding.2g.2db.0rodb.4proxy.default</p>
@@ -539,7 +539,7 @@ public class DescribeInstancesOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance.</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>r-bp1zxszhcgatnx****</p>
@@ -561,23 +561,23 @@ public class DescribeInstancesOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the instance. Valid values:</p>
+             * <p>The instance status. Valid values:</p>
              * <ul>
-             * <li><strong>Normal</strong>: The instance is normal.</li>
+             * <li><strong>Normal</strong>: The instance is running.</li>
              * <li><strong>Creating</strong>: The instance is being created.</li>
-             * <li><strong>Changing</strong>: The configurations of the instance are being changed.</li>
+             * <li><strong>Changing</strong>: The instance is being modified.</li>
              * <li><strong>Inactive</strong>: The instance is disabled.</li>
-             * <li><strong>Flushing</strong>: The instance is being released.</li>
+             * <li><strong>Flushing</strong>: The instance is being purged.</li>
              * <li><strong>Released</strong>: The instance is released.</li>
-             * <li><strong>Transforming</strong>: The billing method of the instance is being changed.</li>
+             * <li><strong>Transforming</strong>: The instance is being transformed.</li>
              * <li><strong>Unavailable</strong>: The instance is unavailable.</li>
              * <li><strong>Error</strong>: The instance failed to be created.</li>
              * <li><strong>Migrating</strong>: The instance is being migrated.</li>
              * <li><strong>BackupRecovering</strong>: The instance is being restored from a backup.</li>
-             * <li><strong>MinorVersionUpgrading</strong>: The minor version of the instance is being updated.</li>
-             * <li><strong>NetworkModifying</strong>: The network type of the instance is being changed.</li>
-             * <li><strong>SSLModifying</strong>: The SSL certificate of the instance is being changed.</li>
-             * <li><strong>MajorVersionUpgrading</strong>: The major version of the instance is being upgraded. The instance remains accessible during the upgrade.</li>
+             * <li><strong>MinorVersionUpgrading</strong>: A minor version upgrade is in progress.</li>
+             * <li><strong>NetworkModifying</strong>: The network configuration is being modified.</li>
+             * <li><strong>SSLModifying</strong>: The SSL configuration is being modified.</li>
+             * <li><strong>MajorVersionUpgrading</strong>: A major engine version upgrade is in progress. The instance can be accessed normally.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -589,10 +589,10 @@ public class DescribeInstancesOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The edition of the instance. Valid values:</p>
+             * <p>The instance type. Valid values:</p>
              * <ul>
-             * <li><strong>Tair</strong>: Tair (Enterprise Edition)</li>
-             * <li><strong>Redis</strong>: Redis Open-Source Edition</li>
+             * <li><strong>Tair</strong>: Tair (Enterprise Edition).</li>
+             * <li><strong>Redis</strong>: Redis Community Edition.</li>
              * <li><strong>Memcache</strong></li>
              * </ul>
              * 
@@ -605,10 +605,10 @@ public class DescribeInstancesOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network type of the instance. Valid values:</p>
+             * <p>The network type. Valid values:</p>
              * <ul>
-             * <li><strong>CLASSIC</strong>: classic network</li>
-             * <li><strong>VPC</strong>: VPC</li>
+             * <li><strong>CLASSIC</strong>: classic network.</li>
+             * <li><strong>VPC</strong>: virtual private cloud (VPC).</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -628,9 +628,12 @@ public class DescribeInstancesOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The private IP address of the instance.</p>
+             * <p>The private IP address of the instance in a VPC. The IP address may change. Use ConnectionDomain (the internal endpoint) to connect to the instance.</p>
              * <blockquote>
-             * <p>This parameter is not returned when the instance is deployed in the classic network.</p>
+             * <ul>
+             * <li>This parameter is not returned if the network type of the instance is classic network.</li>
+             * <li>This parameter is not returned for cloud-native instances.</li>
+             * </ul>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -642,7 +645,7 @@ public class DescribeInstancesOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the instance.</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -653,7 +656,7 @@ public class DescribeInstancesOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource group to which the instance belongs.</p>
+             * <p>The resource group ID to which the instance belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>rg-acfmyiu4ekp****</p>
@@ -664,9 +667,9 @@ public class DescribeInstancesOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Instance&quot;s secondary zone id.</p>
+             * <p>The secondary zone ID.</p>
              * <blockquote>
-             * <p>This parameter is only returned when the instance has a secondary zone ID.</p>
+             * <p>This parameter is returned only when the instance has a secondary zone.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -678,7 +681,7 @@ public class DescribeInstancesOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the vSwitch to which the instance is connected.</p>
+             * <p>The vSwitch ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-bp1e7clcw529l773d****</p>
@@ -689,7 +692,7 @@ public class DescribeInstancesOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the VPC.</p>
+             * <p>The VPC ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-bp1nme44gek34slfc****</p>
@@ -700,7 +703,7 @@ public class DescribeInstancesOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The zone ID of the instance.</p>
+             * <p>The zone ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou-b</p>

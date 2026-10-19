@@ -67,7 +67,10 @@ public class DescribeTairSkvDdbTableResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID, which is used to locate logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2363CEDF-C697-14B6-AB9E-C57A4AA0EAD4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -94,12 +97,144 @@ public class DescribeTairSkvDdbTableResponseBody extends TeaModel {
      *
      * <p>DescribeTairSkvDdbTableResponseBody</p>
      */
+    public static class GlobalSecondaryIndex extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("GsiId")
+        private String gsiId;
+
+        @com.aliyun.core.annotation.NameInMap("IndexName")
+        private String indexName;
+
+        private GlobalSecondaryIndex(Builder builder) {
+            this.gsiId = builder.gsiId;
+            this.indexName = builder.indexName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static GlobalSecondaryIndex create() {
+            return builder().build();
+        }
+
+        /**
+         * @return gsiId
+         */
+        public String getGsiId() {
+            return this.gsiId;
+        }
+
+        /**
+         * @return indexName
+         */
+        public String getIndexName() {
+            return this.indexName;
+        }
+
+        public static final class Builder {
+            private String gsiId; 
+            private String indexName; 
+
+            private Builder() {
+            } 
+
+            private Builder(GlobalSecondaryIndex model) {
+                this.gsiId = model.gsiId;
+                this.indexName = model.indexName;
+            } 
+
+            /**
+             * GsiId.
+             */
+            public Builder gsiId(String gsiId) {
+                this.gsiId = gsiId;
+                return this;
+            }
+
+            /**
+             * IndexName.
+             */
+            public Builder indexName(String indexName) {
+                this.indexName = indexName;
+                return this;
+            }
+
+            public GlobalSecondaryIndex build() {
+                return new GlobalSecondaryIndex(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeTairSkvDdbTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTairSkvDdbTableResponseBody</p>
+     */
+    public static class GlobalSecondaryIndexList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("GlobalSecondaryIndex")
+        private java.util.List<GlobalSecondaryIndex> globalSecondaryIndex;
+
+        private GlobalSecondaryIndexList(Builder builder) {
+            this.globalSecondaryIndex = builder.globalSecondaryIndex;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static GlobalSecondaryIndexList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return globalSecondaryIndex
+         */
+        public java.util.List<GlobalSecondaryIndex> getGlobalSecondaryIndex() {
+            return this.globalSecondaryIndex;
+        }
+
+        public static final class Builder {
+            private java.util.List<GlobalSecondaryIndex> globalSecondaryIndex; 
+
+            private Builder() {
+            } 
+
+            private Builder(GlobalSecondaryIndexList model) {
+                this.globalSecondaryIndex = model.globalSecondaryIndex;
+            } 
+
+            /**
+             * GlobalSecondaryIndex.
+             */
+            public Builder globalSecondaryIndex(java.util.List<GlobalSecondaryIndex> globalSecondaryIndex) {
+                this.globalSecondaryIndex = globalSecondaryIndex;
+                return this;
+            }
+
+            public GlobalSecondaryIndexList build() {
+                return new GlobalSecondaryIndexList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeTairSkvDdbTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTairSkvDdbTableResponseBody</p>
+     */
     public static class Table extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private Long bandwidth;
 
         @com.aliyun.core.annotation.NameInMap("Connections")
         private Long connections;
+
+        @com.aliyun.core.annotation.NameInMap("GlobalSecondaryIndexList")
+        private GlobalSecondaryIndexList globalSecondaryIndexList;
 
         @com.aliyun.core.annotation.NameInMap("TableId")
         private String tableId;
@@ -110,6 +245,7 @@ public class DescribeTairSkvDdbTableResponseBody extends TeaModel {
         private Table(Builder builder) {
             this.bandwidth = builder.bandwidth;
             this.connections = builder.connections;
+            this.globalSecondaryIndexList = builder.globalSecondaryIndexList;
             this.tableId = builder.tableId;
             this.tableName = builder.tableName;
         }
@@ -137,6 +273,13 @@ public class DescribeTairSkvDdbTableResponseBody extends TeaModel {
         }
 
         /**
+         * @return globalSecondaryIndexList
+         */
+        public GlobalSecondaryIndexList getGlobalSecondaryIndexList() {
+            return this.globalSecondaryIndexList;
+        }
+
+        /**
          * @return tableId
          */
         public String getTableId() {
@@ -153,6 +296,7 @@ public class DescribeTairSkvDdbTableResponseBody extends TeaModel {
         public static final class Builder {
             private Long bandwidth; 
             private Long connections; 
+            private GlobalSecondaryIndexList globalSecondaryIndexList; 
             private String tableId; 
             private String tableName; 
 
@@ -162,6 +306,7 @@ public class DescribeTairSkvDdbTableResponseBody extends TeaModel {
             private Builder(Table model) {
                 this.bandwidth = model.bandwidth;
                 this.connections = model.connections;
+                this.globalSecondaryIndexList = model.globalSecondaryIndexList;
                 this.tableId = model.tableId;
                 this.tableName = model.tableName;
             } 
@@ -179,6 +324,14 @@ public class DescribeTairSkvDdbTableResponseBody extends TeaModel {
              */
             public Builder connections(Long connections) {
                 this.connections = connections;
+                return this;
+            }
+
+            /**
+             * GlobalSecondaryIndexList.
+             */
+            public Builder globalSecondaryIndexList(GlobalSecondaryIndexList globalSecondaryIndexList) {
+                this.globalSecondaryIndexList = globalSecondaryIndexList;
                 return this;
             }
 

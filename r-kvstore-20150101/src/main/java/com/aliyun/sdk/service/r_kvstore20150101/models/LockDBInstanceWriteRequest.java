@@ -181,11 +181,11 @@ public class LockDBInstanceWriteRequest extends Request {
         }
 
         /**
-         * <p>The reason why write operations on the instance are locked.</p>
+         * <p>The reason for locking the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>lock reason</p>
+         * <p>Lock write operation verification</p>
          */
         public Builder lockReason(String lockReason) {
             this.putQueryParameter("LockReason", lockReason);

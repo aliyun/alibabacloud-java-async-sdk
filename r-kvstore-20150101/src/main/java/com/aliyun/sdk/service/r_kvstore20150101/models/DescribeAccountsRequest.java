@@ -210,7 +210,7 @@ public class DescribeAccountsRequest extends Request {
         }
 
         /**
-         * <p>The name of the account that you want to query.</p>
+         * <p>The name of the account to query.</p>
          * 
          * <strong>example:</strong>
          * <p>demoaccount</p>
@@ -222,7 +222,7 @@ public class DescribeAccountsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -253,7 +253,10 @@ public class DescribeAccountsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -262,7 +265,10 @@ public class DescribeAccountsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -289,7 +295,10 @@ public class DescribeAccountsRequest extends Request {
         }
 
         /**
-         * SearchAccountName.
+         * <p>The fuzzy match string for the account name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder searchAccountName(String searchAccountName) {
             this.putQueryParameter("SearchAccountName", searchAccountName);

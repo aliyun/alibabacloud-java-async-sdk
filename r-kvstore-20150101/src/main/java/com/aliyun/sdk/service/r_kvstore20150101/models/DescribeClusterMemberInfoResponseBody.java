@@ -67,7 +67,7 @@ public class DescribeClusterMemberInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Details about data nodes in the cluster instance.</p>
+         * <p>The list of data node information for the cluster instance.</p>
          */
         public Builder clusterChildren(java.util.List<ClusterChildren> clusterChildren) {
             this.clusterChildren = clusterChildren;
@@ -75,7 +75,7 @@ public class DescribeClusterMemberInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2D9F3768-EDA9-4811-943E-42C8006E****</p>
@@ -313,9 +313,9 @@ public class DescribeClusterMemberInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The maximum bandwidth of the node. Unit: MB/s.</p>
+             * <p>The bandwidth of the node. Unit: MB/s.</p>
              * <blockquote>
-             * <p>This parameter is returned only if the return value of <strong>Service</strong> is <strong>redis</strong>, which indicates a data node.</p>
+             * <p>This parameter is returned only when the <strong>Service</strong> parameter is set to <strong>redis</strong>, which indicates that the node is a data node.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -327,7 +327,7 @@ public class DescribeClusterMemberInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The retention period of binlogs.</p>
+             * <p>The number of days for which binary logs are retained.</p>
              * 
              * <strong>example:</strong>
              * <p>7</p>
@@ -338,7 +338,7 @@ public class DescribeClusterMemberInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of workload. The return value is <strong>ALIYUN</strong>.</p>
+             * <p>The business type. The value is fixed as <strong>ALIYUN</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>ALIYUN</p>
@@ -349,9 +349,9 @@ public class DescribeClusterMemberInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum memory capacity per data node. Unit: MB.</p>
+             * <p>The maximum memory capacity of a single data node. Unit: MB.</p>
              * <blockquote>
-             * <p>This parameter is returned only if the return value of <strong>Service</strong> is <strong>redis</strong>, which indicates a data node.</p>
+             * <p>This parameter is returned only when the <strong>Service</strong> parameter is set to <strong>redis</strong>, which indicates that the node is a data node.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -363,7 +363,7 @@ public class DescribeClusterMemberInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The specifications of the data node. For more information, see <a href="https://help.aliyun.com/document_detail/164477.html">Community Edition instances that use cloud disks</a>.</p>
+             * <p>The specifications of the data node. For more information, see <a href="https://help.aliyun.com/document_detail/164477.html">Cloud-native instance specifications</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>redis.shard.small.ce</p>
@@ -374,7 +374,7 @@ public class DescribeClusterMemberInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of connections supported by the data node.</p>
+             * <p>The maximum number of connections for the data node.</p>
              * 
              * <strong>example:</strong>
              * <p>20000</p>
@@ -385,7 +385,8 @@ public class DescribeClusterMemberInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The current bandwidth of the data node, which is the sum of the default bandwidth and any extra bandwidth that is purchased. Unit: Mbit/s.</p>
+             * <p>The current bandwidth of the node. Unit: MB/s. The value is the sum of the default bandwidth and the increased bandwidth of the node.</p>
+             * <p>&lt;props=&quot;china&quot;&gt;This parameter is returned only when the instance is created in a dedicated cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -396,9 +397,9 @@ public class DescribeClusterMemberInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage capacity of the <a href="https://help.aliyun.com/document_detail/122389.html">enhanced SSD (ESSD)</a> that is used by the data node. Unit: MB.</p>
+             * <p>The storage space of the <a href="https://help.aliyun.com/document_detail/122389.html">ESSD cloud disk</a> for the data node. Unit: MB.</p>
              * <blockquote>
-             * <p>The ESSD is used only to store system operating data, such as Persistent Memory (PMEM). It is not used as a medium to write and read data.</p>
+             * <p>The ESSD cloud disk is used only for system operations, such as data persistence, and is not used as a medium for data access.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -410,7 +411,7 @@ public class DescribeClusterMemberInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the replica set in the node.</p>
+             * <p>The replica set ID of the node.</p>
              * 
              * <strong>example:</strong>
              * <p>501791111</p>
@@ -421,7 +422,7 @@ public class DescribeClusterMemberInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the data node.</p>
+             * <p>The name of the node.</p>
              * 
              * <strong>example:</strong>
              * <p>r-bp1zxszhcgatnx****-db-0</p>
@@ -432,7 +433,7 @@ public class DescribeClusterMemberInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of replica nodes.</p>
+             * <p>The number of child nodes.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -456,8 +457,8 @@ public class DescribeClusterMemberInfoResponseBody extends TeaModel {
             /**
              * <p>The node type. Valid values:</p>
              * <ul>
-             * <li><strong>redis</strong>: data node</li>
-             * <li><strong>redis_cs</strong>: config server</li>
+             * <li><strong>redis</strong>: data node.</li>
+             * <li><strong>redis_cs</strong>: configuration server node.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -480,7 +481,7 @@ public class DescribeClusterMemberInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the user.</p>
+             * <p>The user ID.</p>
              * 
              * <strong>example:</strong>
              * <p>2****_176498472570****</p>

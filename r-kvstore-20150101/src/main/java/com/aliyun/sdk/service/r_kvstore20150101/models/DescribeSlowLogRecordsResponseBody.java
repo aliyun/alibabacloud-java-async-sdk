@@ -158,7 +158,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The database engine that the instance runs.</p>
+         * <p>The database engine.</p>
          * 
          * <strong>example:</strong>
          * <p>Redis</p>
@@ -169,7 +169,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>r-bp10n********</p>
@@ -180,7 +180,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The slow query log entries.</p>
+         * Items.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -188,7 +188,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -221,7 +221,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>686BB8A6-BBA5-47E5-8A75-D2ADE433****</p>
@@ -233,9 +233,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
 
         /**
          * <p>The start time of the query.</p>
+         * <p>The time is in the YYYY-MM-DDTHH:mmZ format and displayed in UTC.</p>
          * 
          * <strong>example:</strong>
-         * <p>2019-03-10T13:11Z</p>
+         * <p>2019-03-10T14:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -243,7 +244,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of returned log entries.</p>
+         * <p>The total number of log entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -403,10 +404,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the account.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * Account.
              */
             public Builder account(String account) {
                 this.account = account;
@@ -414,10 +412,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The username of the account.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>demo</p>
+             * AccountName.
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -425,10 +420,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The slow query statement.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>KEYS *</p>
+             * Command.
              */
             public Builder command(String command) {
                 this.command = command;
@@ -436,10 +428,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The database name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>-1</p>
+             * DBName.
              */
             public Builder DBName(String DBName) {
                 this.DBName = DBName;
@@ -447,10 +436,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The database name. This parameter serves the same purpose as the <strong>DBName</strong> parameter. We recommend that you use the <strong>DBName</strong> parameter.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>-1</p>
+             * DataBaseName.
              */
             public Builder dataBaseName(String dataBaseName) {
                 this.dataBaseName = dataBaseName;
@@ -458,10 +444,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The amount of time consumed to execute the slow query statement. Unit: microseconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>248</p>
+             * ElapsedTime.
              */
             public Builder elapsedTime(Long elapsedTime) {
                 this.elapsedTime = elapsedTime;
@@ -469,10 +452,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time when the slow query statement was executed. The time is displayed in the YYYY-MM-DDTHH:mm:ssZ format.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2019-03-20T09:18:41Z</p>
+             * ExecuteTime.
              */
             public Builder executeTime(String executeTime) {
                 this.executeTime = executeTime;
@@ -480,10 +460,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address of the client.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>172.16.88.***</p>
+             * IPAddress.
              */
             public Builder IPAddress(String IPAddress) {
                 this.IPAddress = IPAddress;
@@ -491,10 +468,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>r-bp1zxszhcgatnx****-db-0</p>
+             * NodeId.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;

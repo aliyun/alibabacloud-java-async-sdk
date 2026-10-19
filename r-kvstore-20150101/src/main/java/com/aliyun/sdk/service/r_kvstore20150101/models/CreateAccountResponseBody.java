@@ -93,7 +93,10 @@ public class CreateAccountResponseBody extends TeaModel {
         } 
 
         /**
-         * AccountName.
+         * <p>The account name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demoaccount</p>
          */
         public Builder accountName(String accountName) {
             this.accountName = accountName;
@@ -101,7 +104,7 @@ public class CreateAccountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the account.</p>
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated.</p>
          * 
          * <strong>example:</strong>
          * <p>demoaccount</p>
@@ -112,7 +115,7 @@ public class CreateAccountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>r-bp1zxszhcgatnx****</p>
@@ -123,7 +126,7 @@ public class CreateAccountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ABAF95F6-35C1-4177-AF3A-70969EBD****</p>

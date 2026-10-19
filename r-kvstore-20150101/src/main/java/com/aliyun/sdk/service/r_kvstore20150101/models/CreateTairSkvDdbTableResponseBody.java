@@ -236,7 +236,10 @@ public class CreateTairSkvDdbTableResponseBody extends TeaModel {
         } 
 
         /**
-         * Bandwidth.
+         * <p>The bandwidth limit of the instance. Unit: MB/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>96</p>
          */
         public Builder bandwidth(Long bandwidth) {
             this.bandwidth = bandwidth;
@@ -244,7 +247,14 @@ public class CreateTairSkvDdbTableResponseBody extends TeaModel {
         }
 
         /**
-         * ChargeType.
+         * <p>The billing method. Valid values:</p>
+         * <ul>
+         * <li>PrePaid: subscription.</li>
+         * <li>PostPaid: pay-as-you-go.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         public Builder chargeType(String chargeType) {
             this.chargeType = chargeType;
@@ -252,7 +262,10 @@ public class CreateTairSkvDdbTableResponseBody extends TeaModel {
         }
 
         /**
-         * Config.
+         * <p>The detailed configuration of the instance in JSON format. For more information about the parameters, see <a href="https://help.aliyun.com/document_detail/43885.html">Parameter settings</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;EvictionPolicy\&quot;:\&quot;volatile-lru\&quot;,\&quot;hash-max-ziplist-entries\&quot;:512,\&quot;zset-max-ziplist-entries\&quot;:128,\&quot;zset-max-ziplist-value\&quot;:64,\&quot;set-max-intset-entries\&quot;:512,\&quot;hash-max-ziplist-value\&quot;:64}</p>
          */
         public Builder config(String config) {
             this.config = config;
@@ -260,7 +273,10 @@ public class CreateTairSkvDdbTableResponseBody extends TeaModel {
         }
 
         /**
-         * ConnectionDomain.
+         * <p>The internal endpoint of the Redis instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx**.redis.rds.aliyuncs.com</p>
          */
         public Builder connectionDomain(String connectionDomain) {
             this.connectionDomain = connectionDomain;
@@ -268,7 +284,10 @@ public class CreateTairSkvDdbTableResponseBody extends TeaModel {
         }
 
         /**
-         * Connections.
+         * <p>The maximum number of connections supported by the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder connections(Long connections) {
             this.connections = connections;
@@ -276,7 +295,10 @@ public class CreateTairSkvDdbTableResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * <p>The globally unique instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx*</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -284,7 +306,10 @@ public class CreateTairSkvDdbTableResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceStatus.
+         * <p>The current status of the instance. The value is fixed as Creating.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Creating</p>
          */
         public Builder instanceStatus(String instanceStatus) {
             this.instanceStatus = instanceStatus;
@@ -292,7 +317,10 @@ public class CreateTairSkvDdbTableResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20741011111111</p>
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;
@@ -300,7 +328,10 @@ public class CreateTairSkvDdbTableResponseBody extends TeaModel {
         }
 
         /**
-         * Port.
+         * <p>The Redis service port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6379</p>
          */
         public Builder port(Integer port) {
             this.port = port;
@@ -308,7 +339,10 @@ public class CreateTairSkvDdbTableResponseBody extends TeaModel {
         }
 
         /**
-         * QPS.
+         * <p>The queries per second (QPS). This value is the theoretical value for the current instance specification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100000</p>
          */
         public Builder QPS(Long QPS) {
             this.QPS = QPS;
@@ -316,7 +350,10 @@ public class CreateTairSkvDdbTableResponseBody extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -324,7 +361,10 @@ public class CreateTairSkvDdbTableResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2D9F3768-EDA9-4811-943E-42C8006E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -332,7 +372,10 @@ public class CreateTairSkvDdbTableResponseBody extends TeaModel {
         }
 
         /**
-         * TableName.
+         * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apitest</p>
          */
         public Builder tableName(String tableName) {
             this.tableName = tableName;
@@ -340,7 +383,10 @@ public class CreateTairSkvDdbTableResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The ID of the task flow that is executed for the creation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11111****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -348,7 +394,10 @@ public class CreateTairSkvDdbTableResponseBody extends TeaModel {
         }
 
         /**
-         * ZoneId.
+         * <p>The zone ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-b</p>
          */
         public Builder zoneId(String zoneId) {
             this.zoneId = zoneId;

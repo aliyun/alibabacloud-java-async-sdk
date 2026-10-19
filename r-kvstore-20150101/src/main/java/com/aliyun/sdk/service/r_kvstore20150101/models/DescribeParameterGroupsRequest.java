@@ -160,9 +160,9 @@ public class DescribeParameterGroupsRequest extends Request {
         /**
          * <p>The engine type. Valid values:</p>
          * <ul>
-         * <li><strong>redis</strong>: Redis Open-Source Edition or Tair (In-Memory)</li>
-         * <li><strong>tair_pena</strong>: Tair (On NVM)</li>
-         * <li><strong>tair_pdb</strong>: Tair (On Disk)</li>
+         * <li><strong>redis</strong>: open-source Redis or Tair (Memory-optimized).</li>
+         * <li><strong>tair_pena</strong>: Tair (Persistent Memory-optimized).</li>
+         * <li><strong>tair_pdb</strong>: Tair (Disk-optimized, ESSD/SSD).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -175,7 +175,7 @@ public class DescribeParameterGroupsRequest extends Request {
         }
 
         /**
-         * EngineVersion.
+         * <p>The compatible engine version.</p>
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -202,7 +202,7 @@ public class DescribeParameterGroupsRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the instance.</p>
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

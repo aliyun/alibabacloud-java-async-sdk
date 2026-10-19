@@ -80,7 +80,7 @@ public class UnlockDBInstanceWriteResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The name of the instance.</p>
+         * <p>The instance name.</p>
          * 
          * <strong>example:</strong>
          * <p>r-2ev03avw0r0552***</p>

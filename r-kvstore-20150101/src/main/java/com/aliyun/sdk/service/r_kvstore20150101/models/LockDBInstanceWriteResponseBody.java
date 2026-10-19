@@ -104,10 +104,10 @@ public class LockDBInstanceWriteResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The reason why write operations on the instance are locked.</p>
+         * <p>The reason for locking the instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>lock reason</p>
+         * <p>Lock write operation test</p>
          */
         public Builder lockReason(String lockReason) {
             this.lockReason = lockReason;

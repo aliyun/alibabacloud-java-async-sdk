@@ -172,7 +172,10 @@ public class DescribeGlobalSecurityIPGroupRequest extends Request {
         } 
 
         /**
-         * Engine.
+         * <p>The database engine type. Valid values: redis (Redis engine) and memcache (Memcache engine).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>redis</p>
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -224,7 +227,7 @@ public class DescribeGlobalSecurityIPGroupRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmyiu4ekp****</p>

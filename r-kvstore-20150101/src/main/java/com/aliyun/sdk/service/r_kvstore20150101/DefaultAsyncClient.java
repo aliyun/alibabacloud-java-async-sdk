@@ -31,12 +31,7 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.version = "2015-01-01";
         this.endpointRule = "regional";
         this.endpointMap = CommonUtil.buildMap(
-            new TeaPair("cn-qingdao", "r-kvstore.aliyuncs.com"),
-            new TeaPair("cn-beijing", "r-kvstore.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu", "r-kvstore.aliyuncs.com"),
             new TeaPair("cn-hangzhou", "r-kvstore.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "r-kvstore.aliyuncs.com"),
-            new TeaPair("cn-heyuan", "r-kvstore.aliyuncs.com"),
             new TeaPair("cn-hangzhou-finance", "r-kvstore.aliyuncs.com"),
             new TeaPair("ap-northeast-2-pop", "r-kvstore.aliyuncs.com"),
             new TeaPair("cn-beijing-finance-pop", "r-kvstore.aliyuncs.com"),
@@ -67,39 +62,7 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("cn-zhangjiakou-na62-a01", "r-kvstore.aliyuncs.com"),
             new TeaPair("cn-zhengzhou-nebula-1", "r-kvstore.aliyuncs.com"),
             new TeaPair("eu-west-1-oxs", "r-kvstore.aliyuncs.com"),
-            new TeaPair("rus-west-1-pop", "r-kvstore.aliyuncs.com"),
-            new TeaPair("cn-zhengzhou-jva", "r-kvstore.cn-zhengzhou-jva.aliyuncs.com"),
-            new TeaPair("cn-wuhan-lr", "r-kvstore.cn-wuhan-lr.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "r-kvstore.cn-hongkong.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "r-kvstore.cn-zhangjiakou.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "r-kvstore.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-nanjing", "r-kvstore.cn-nanjing.aliyuncs.com"),
-            new TeaPair("ap-northeast-2", "r-kvstore.ap-northeast-2.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "r-kvstore.ap-northeast-1.aliyuncs.com"),
-            new TeaPair("cn-fuzhou", "r-kvstore.cn-fuzhou.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "r-kvstore.cn-chengdu.aliyuncs.com"),
-            new TeaPair("cn-guangzhou", "r-kvstore.cn-guangzhou.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "r-kvstore.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-southeast-2", "r-kvstore.ap-southeast-2.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "r-kvstore.ap-southeast-3.aliyuncs.com"),
-            new TeaPair("cn-huhehaote", "r-kvstore.cn-huhehaote.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "r-kvstore.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("ap-southeast-6", "r-kvstore.ap-southeast-6.aliyuncs.com"),
-            new TeaPair("ap-southeast-7", "r-kvstore.ap-southeast-7.aliyuncs.com"),
-            new TeaPair("us-east-1", "r-kvstore.us-east-1.aliyuncs.com"),
-            new TeaPair("us-southeast-1", "r-kvstore.us-southeast-1.aliyuncs.com"),
-            new TeaPair("eu-west-1", "r-kvstore.eu-west-1.aliyuncs.com"),
-            new TeaPair("us-west-1", "r-kvstore.us-west-1.aliyuncs.com"),
-            new TeaPair("eu-central-1", "r-kvstore.eu-central-1.aliyuncs.com"),
-            new TeaPair("na-south-1", "r-kvstore.na-south-1.aliyuncs.com"),
-            new TeaPair("me-east-1", "r-kvstore.me-east-1.aliyuncs.com"),
-            new TeaPair("me-central-1", "r-kvstore.me-central-1.aliyuncs.com"),
-            new TeaPair("ap-south-1", "r-kvstore.ap-south-1.aliyuncs.com"),
-            new TeaPair("cn-heyuan-acdr-1", "r-kvstore.cn-heyuan-acdr-1.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-finance-1", "r-kvstore.cn-shenzhen-finance-1.aliyuncs.com"),
-            new TeaPair("cn-beijing-finance-1", "r-kvstore.cn-beijing-finance-1.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "r-kvstore.cn-shanghai-finance-1.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu-gic-1", "r-kvstore.cn-wulanchabu-gic-1.aliyuncs.com")
+            new TeaPair("rus-west-1-pop", "r-kvstore.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
@@ -110,9 +73,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <p>This operation is available only for cluster instances that use cloud disks.</p>
-     * 
      * @param request the request parameters of AddShardingNode  AddShardingNodeRequest
      * @return AddShardingNodeResponse
      */
@@ -132,13 +92,13 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Clients can bypass proxy nodes and use private endpoints to connect to cluster instances. This is similar to the connection to native Redis clusters. The direct connection mode can reduce communication overheads and the response time of Tair (Redis OSS-compatible).
-     * To call this operation, make sure that the instance meets the following requirements:</p>
+     * <p>Clients can use the direct connection endpoint to bypass the proxy and connect to the cluster instance in the same way as they connect to a native Redis cluster. This reduces link overhead and further improves the response speed of the ApsaraDB Tair (Redis® OSS-Compatible) database service.
+     * The instance for which you invoke this operation must meet the following conditions:</p>
      * <ul>
-     * <li>The instance is a cluster instance.</li>
-     * <li>The instance is deployed in classic mode.</li>
-     * <li>The instance is deployed in a virtual private cloud (VPC). If the instance is deployed in the classic network, you can call the <a href="https://help.aliyun.com/document_detail/473797.html">SwitchNetwork</a> operation to change the network type to VPC.</li>
-     * <li>SSL encryption is disabled for the instance. If SSL encryption is enabled, you can call the <a href="https://help.aliyun.com/document_detail/473838.html">ModifyInstanceSSL</a> operation to disable SSL encryption.</li>
+     * <li>The instance uses the cluster architecture.</li>
+     * <li>The deployment pattern is classic.</li>
+     * <li>The network type of the instance is VPC. If the instance is connected to the classic network, you can invoke the <a href="https://help.aliyun.com/document_detail/473797.html">SwitchNetwork</a> operation to switch the network type to VPC.</li>
+     * <li>The Secure Sockets Layer (SSL) encryption feature is disabled for the instance. If the Secure Sockets Layer (SSL) encryption feature is enabled, you can invoke the <a href="https://help.aliyun.com/document_detail/473838.html">ModifyInstanceSSL</a> operation for shutdown.</li>
      * </ul>
      * 
      * @param request the request parameters of AllocateDirectConnection  AllocateDirectConnectionRequest
@@ -160,7 +120,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can also apply for public endpoints in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/43850.html">Use a public endpoint to connect to an ApsaraDB for Redis instance</a>.</p>
+     * <p>For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/124920.html">Apply for a public endpoint</a>.</p>
      * 
      * @param request the request parameters of AllocateInstancePublicConnection  AllocateInstancePublicConnectionRequest
      * @return AllocateInstancePublicConnectionResponse
@@ -181,11 +141,11 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>O\&amp;M events cannot be canceled in the following scenarios:</p>
+     * <p>Scenarios in which O&amp;M events cannot be canceled</p>
      * <ul>
-     * <li>The allowCancel parameter is set to 0.</li>
-     * <li>The current time is later than the start time of the O\&amp;M event.</li>
-     * <li>The state value of the O\&amp;M event is not 3.</li>
+     * <li>allowCancel is 0.</li>
+     * <li>The current time is later than the start time of the O&amp;M event.</li>
+     * <li>The status of the O&amp;M event is not 3 (waiting for execution).</li>
      * </ul>
      * 
      * @param request the request parameters of CancelActiveOperationTasks  CancelActiveOperationTasksRequest
@@ -225,9 +185,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  For information about Transparent Data Encryption (TDE) and the usage notes of TDE, see <a href="https://help.aliyun.com/document_detail/265913.html">Enable TDE</a>.</p>
+     * <p>For more information about Transparent Data Encryption (TDE) and related precautions, see <a href="https://help.aliyun.com/document_detail/265913.html">Enable TDE</a>.</p>
      * <ul>
-     * <li>If the Tair (Redis OSS-compatible) instance is authorized to use KMS, you can call the <a href="https://help.aliyun.com/document_detail/473859.html">ModifyInstanceTDE</a> operation to enable TDE.</li>
+     * <li>After you call this operation to confirm that the authorization is complete, you can call the <a href="https://help.aliyun.com/document_detail/473859.html">ModifyInstanceTDE</a> operation to enable TDE.</li>
      * </ul>
      * 
      * @param request the request parameters of CheckCloudResourceAuthorized  CheckCloudResourceAuthorizedRequest
@@ -249,11 +209,11 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is supported only for instances that are compatible with Redis 4.0 or later.</p>
+     * <p>This operation supports only instances that are compatible with Redis 4.0 or later.</p>
      * <ul>
-     * <li>The instance must be in the running state.</li>
-     * <li>You can create up to 18 accounts for an instance.<blockquote>
-     * <p> For more information about how to create an account in the console, see <a href="https://help.aliyun.com/document_detail/92665.html">Manage database accounts</a>.</p>
+     * <li>The instance status must be Running when you call this operation. </li>
+     * <li>You can create up to 18 accounts for each instance.<blockquote>
+     * <p>For the console operation that corresponds to this API operation, see <a href="https://help.aliyun.com/document_detail/92665.html">Account management</a>.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -277,7 +237,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can also back up an instance in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/43886.html">Backup and recovery</a>.</p>
+     * <p>For the console operation that corresponds to this API operation, see <a href="https://help.aliyun.com/document_detail/43886.html">Backup and recovery</a>.</p>
      * 
      * @param request the request parameters of CreateBackup  CreateBackupRequest
      * @return CreateBackupResponse
@@ -298,7 +258,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation is no longer available. Use the new operation. For more information, see <a href="https://help.aliyun.com/document_detail/184226.html">Real-time key statistics and offline key analysis</a>.</p>
+     * <p>This operation is no longer recommended. Use the new operation <a href="https://help.aliyun.com/document_detail/184226.html">Real-time Top Key Statistics and Offline Full Key Analysis</a> instead.</p>
      * 
      * @param request the request parameters of CreateCacheAnalysisTask  CreateCacheAnalysisTaskRequest
      * @return CreateCacheAnalysisTaskResponse
@@ -319,11 +279,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to convert an existing instance to the first child instance of a distributed instance. After the instance is converted, the distributed instance is created. Before you call this operation, make sure that the following requirements are met:</p>
+     * <p>You can call this operation to convert an existing instance into the first child instance of a distributed instance. After the conversion, the distributed instance to which the instance belongs is created.
+     * The instance to be converted must meet the following requirements:</p>
      * <ul>
-     * <li>The instance that you want to convert must be a Tair <a href="https://help.aliyun.com/document_detail/126164.html">DRAM-based</a> instance that uses the classic deployment mode.</li>
-     * <li>If the existing instance is a cluster instance, the direct connection mode must be disabled for the instance. For more information, see <a href="https://help.aliyun.com/document_detail/150047.html">Release a private endpoint</a>.<blockquote>
-     * <p> You can also call the <a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a> operation to create an instance that is specified as the first child instance of a distributed instance. After the child instance is created, the distributed instance to which the child instance belongs is created.</p>
+     * <li>The instance is a Tair <a href="https://help.aliyun.com/document_detail/126164.html">memory-optimized</a> (Classic Edition) instance.</li>
+     * <li>If the instance uses a cluster architecture, you must disable the direct connection mode. For more information, see <a href="https://help.aliyun.com/document_detail/150047.html">Release a direct connection endpoint</a>.<blockquote>
+     * <p>You can also call the <a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a> operation to create an instance as the first child instance of a distributed instance. After the child instance is created, the distributed instance to which it belongs is created.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -401,10 +362,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of Tair (Redis OSS-compatible).
-     * You can call this operation to create a Tair (Redis OSS-compatible) instance or a classic Tair DRAM-based instance. To create a cloud-native Tair instance, call the <a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a> operation.</p>
+     * <p>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of Tair (Redis OSS-compatible).
+     * This operation can be used to create an ApsaraDB for Redis Community Edition instance or a Tair in-memory instance with the classic architecture. To create a Tair instance with the cloud-native architecture, call the <a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a> operation.</p>
      * <blockquote>
-     * <p>For more information about how to create an instance that meets your requirements in the Tair (Redis OSS-compatible) console, see <a href="https://help.aliyun.com/document_detail/26351.html">Step 1: Create an instance</a>.</p>
+     * <p>For information about how to create an ApsaraDB for Redis instance in the console and how to select an instance type, see <a href="https://help.aliyun.com/document_detail/26351.html">Create an ApsaraDB for Redis instance</a>.</p>
      * </blockquote>
      * 
      * @param request the request parameters of CreateInstance  CreateInstanceRequest
@@ -444,14 +405,15 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of Tair (Redis OSS-compatible).</p>
+     * <p>Make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of the ApsaraDB for Tair (Redis OSS-compatible) database before you call this API operation.</p>
      * <blockquote>
-     * <p> You can call this operation to create classic Redis Open-Source Edition instances or classic Tair DRAM-based instances. We recommend that you use an API operation for creating a single instance:</p>
-     * </blockquote>
+     * <p>This API operation only supports creating Classic Edition instances.
+     * Use the following operations to create a single instance:</p>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a>: creates a Redis Open-Source instance or a classic Tair DRAM-based instance.</li>
-     * <li><a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a>: creates a Tair (Enterprise Edition) instance. The instance can be a DRAM-based, persistent memory-optimized, or ESSD/SSD-based instance.</li>
+     * <li><a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a>: creates an open-source Redis instance or a Tair memory-optimized Classic Edition instance.</li>
+     * <li><a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a>: creates a Tair cloud-native instance (including memory-optimized, persistent memory-optimized, and disk-optimized instances).</li>
      * </ul>
+     * </blockquote>
      * 
      * @param request the request parameters of CreateInstances  CreateInstancesRequest
      * @return CreateInstancesResponse
@@ -471,6 +433,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Parameter templates are applicable only to instances deployed in cloud-native deployment mode (formerly cloud disk instances).</p>
+     * 
      * @param request the request parameters of CreateParameterGroup  CreateParameterGroupRequest
      * @return CreateParameterGroupResponse
      */
@@ -508,14 +473,14 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>For information about instance selection, see <a href="https://help.aliyun.com/document_detail/223808.html">Instructions for selecting an appropriate Tair (Redis OSS-compatible) instance</a>.
-     * Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of Tair (Redis OSS-compatible).</p>
+     * <p>For selection reference, see <a href="https://help.aliyun.com/document_detail/223808.html">Must-read for selecting Tair database (Redis OSS-Compatible)</a>.
+     * Make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of Tair database (Redis OSS-Compatible) before you invoke this operation.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li>For information about how to create an instance in the console, see <a href="https://help.aliyun.com/document_detail/26351.html">Step 1: Create an instance</a>.</li>
-     * <li>To create other types of instances, such as Redis Open-Source Edition instances or <a href="https://help.aliyun.com/document_detail/126164.html">Tair DRAM-based</a> instances, you can call the <a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a> operation.</li>
+     * <li>For instructions on how to perform this operation in the console, see <a href="https://help.aliyun.com/document_detail/26351.html">Create a Tair instance</a>.</li>
+     * <li>To create other types of instances, such as open-source instances or <a href="https://help.aliyun.com/document_detail/126164.html">Tair memory-optimized</a> classic instances, you can invoke the <a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a> operation.</li>
      * </ul>
+     * </blockquote>
      * 
      * @param request the request parameters of CreateTairInstance  CreateTairInstanceRequest
      * @return CreateTairInstanceResponse
@@ -553,6 +518,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.htm">pricing</a> of ApsaraDB for Redis.</li>
+     * </ul>
+     * 
      * @param request the request parameters of CreateTairSkvDdbTable  CreateTairSkvDdbTableRequest
      * @return CreateTairSkvDdbTableResponse
      */
@@ -571,6 +542,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <ul>
+     * <li>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.htm">pricing details</a> of ApsaraDB for Redis.</li>
+     * <li>To create a Tair Serverless KV table instance, call the <code>CreateTairSkvDdbTable</code> operation.</li>
+     * </ul>
+     * 
      * @param request the request parameters of CreateTairSkvDdbWorkspace  CreateTairSkvDdbWorkspaceRequest
      * @return CreateTairSkvDdbWorkspaceResponse
      */
@@ -590,9 +568,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is supported only for instances that are compatible with Redis 4.0 or later.</p>
+     * <p>This API operation supports only instances that are compatible with Redis 4.0 or later.</p>
      * <ul>
-     * <li>The instance must be in the Running state.</li>
+     * <li>You can call this API operation only when the instance is in the Running state.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteAccount  DeleteAccountRequest
@@ -613,6 +591,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation supports only cloud-native edition instances.</p>
+     * 
      * @param request the request parameters of DeleteBackup  DeleteBackupRequest
      * @return DeleteBackupResponse
      */
@@ -632,7 +613,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Before you delete an IP whitelist template, you must unbind (disassociate) the instances that are currently associated with the template.</p>
+     * <p>Before you delete an IP whitelist template, dissociate all instances that are associated with the template.</p>
      * 
      * @param request the request parameters of DeleteGlobalSecurityIPGroup  DeleteGlobalSecurityIPGroupRequest
      * @return DeleteGlobalSecurityIPGroupResponse
@@ -652,6 +633,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>For the console operation that corresponds to this API, see <a href="https://help.aliyun.com/document_detail/43882.html">Release an instance</a>.
+     * When you invoke this operation, the instance must meet the following conditions:</p>
+     * <ul>
+     * <li>The instance status is Running.</li>
+     * <li>The payer of the instance is pay-as-you-go.<blockquote>
+     * <p>Upfront (subscription) instances cannot be deleted by invoking this operation. They will undergo automatic release when they expire. To release a subscription instance in advance, perform the operation in the console.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
      * @param request the request parameters of DeleteInspectionSchedule  DeleteInspectionScheduleRequest
      * @return DeleteInspectionScheduleResponse
      */
@@ -671,12 +663,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>For more information about how to perform the corresponding operation in the console, see <a href="https://help.aliyun.com/document_detail/43882.html">Release an instance</a>.
-     * Before you call this operation, make sure that the following requirements are met:</p>
+     * <p>For the console operation that corresponds to this API operation, see <a href="https://help.aliyun.com/document_detail/43882.html">Release an instance</a>.
+     * When you invoke this operation, the instance must meet the following conditions:</p>
      * <ul>
-     * <li>The instance is in the running state.</li>
-     * <li>The instance is charged on a pay-as-you-go basis.<blockquote>
-     * <p> You cannot call this operation to release a subscription instance, which is automatically released when it expires. To release a subscription instance before it expires, submit a ticket.</p>
+     * <li>The instance status is Running.</li>
+     * <li>The payer uses the pay-as-you-go billing method.<blockquote>
+     * <p>Upfront (subscription) instances cannot be deleted by invoking this operation. They will undergo automatic release after they expire. To release a subscription instance in advance, perform the operation in the console.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -717,14 +709,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <p>You can also remove data shards from an instance in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/198082.html">Adjust the number of shards for an instance with cloud disks</a>.\
-     * Before you call this operation, make sure that the instance meets the following requirements:</p>
-     * <ul>
-     * <li>The instance is a persistent memory-optimized instance in the cluster architecture. For more information about persistent memory-optimized instances, see <a href="https://help.aliyun.com/document_detail/183956.html">Persistent memory-optimized instances</a>.</li>
-     * <li>The instance has more than one data shard.</li>
-     * </ul>
-     * 
      * @param request the request parameters of DeleteShardingNode  DeleteShardingNodeRequest
      * @return DeleteShardingNodeResponse
      */
@@ -743,11 +727,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <blockquote>
-     * <p> Only Tair (Redis OSS-compatible) instances of Redis 4.0 or later are supported.</p>
-     * </blockquote>
-     * 
      * @param request the request parameters of DescribeAccounts  DescribeAccountsRequest
      * @return DescribeAccountsResponse
      */
@@ -785,7 +764,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>After you have called this API operation and queried the information about a specific O&amp;M task, you can also call the <a href="https://help.aliyun.com/document_detail/473864.html">ModifyActiveOperationTask</a> operation to modify the scheduled switchover time of the O&amp;M task.</p>
+     * <p>After you call this operation to check whether O&amp;M tasks exist, you can call <a href="https://help.aliyun.com/document_detail/473864.html">ModifyActiveOperationTask</a> to modify the scheduled switchover time of an O&amp;M task.</p>
      * 
      * @param request the request parameters of DescribeActiveOperationTask  DescribeActiveOperationTaskRequest
      * @return DescribeActiveOperationTaskResponse
@@ -842,7 +821,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, you must enable the audit log feature for the instance. For more information, see <a href="https://help.aliyun.com/document_detail/473829.html">ModifyAuditLogConfig</a> or <a href="https://help.aliyun.com/document_detail/102015.html">Enable the audit log feature</a>.</p>
+     * <p>Before calling this operation, audit logging must be enabled for the instance. For more information, see <a href="https://help.aliyun.com/document_detail/473829.html">ModifyAuditLogConfig</a> or <a href="https://help.aliyun.com/document_detail/102015.html">Audit logs</a>.</p>
      * 
      * @param request the request parameters of DescribeAuditLogConfig  DescribeAuditLogConfigRequest
      * @return DescribeAuditLogConfigResponse
@@ -863,7 +842,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, you must enable the audit log feature for the instance. For more information, see <a href="https://help.aliyun.com/document_detail/473829.html">ModifyAuditLogConfig</a>.</p>
+     * <p>When you call this operation, the audit log feature must be enabled for the instance. For more information, see <a href="https://help.aliyun.com/document_detail/473829.html">ModifyAuditLogConfig</a>.</p>
      * 
      * @param request the request parameters of DescribeAuditRecords  DescribeAuditRecordsRequest
      * @return DescribeAuditRecordsResponse
@@ -937,6 +916,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation is not applicable to cloud-native cluster architecture instances. If needed, use the <a href="https://help.aliyun.com/document_detail/2679168.html">DescribeClusterBackupList</a> operation.</p>
+     * 
      * @param request the request parameters of DescribeBackups  DescribeBackupsRequest
      * @return DescribeBackupsResponse
      */
@@ -956,14 +938,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <blockquote>
-     * <p>Tair (Redis OSS-compatible) has optimized the cache analytics feature to improve user experience. This API operation is phased out. You can use the new API operation for cache analytics. For more information, see <a href="https://help.aliyun.com/document_detail/186019.html">API operations for cache analytics are upgraded</a>.
-     * Before you call this operation, make sure that the instance meets the following requirements:</p>
-     * </blockquote>
-     * <ul>
-     * <li>The engine version of the instance is Redis 4.0 or later.</li>
-     * <li>The instance uses the latest minor version. For more information about how to check whether to update the minor version of an instance, see <a href="https://help.aliyun.com/document_detail/129203.html">How do I check whether the minor version of a Tair (Redis OSS-compatible) instance is the latest?</a></li>
-     * </ul>
+     * <p>This API operation is deprecated. Use the new operation <a href="https://help.aliyun.com/document_detail/184226.html">Real-time top key statistics and offline full key analysis</a> instead.</p>
      * 
      * @param request the request parameters of DescribeCacheAnalysisReport  DescribeCacheAnalysisReportRequest
      * @return DescribeCacheAnalysisReportResponse
@@ -984,14 +959,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <blockquote>
-     * <p>Tair (Redis OSS-compatible) has optimized the cache analytics feature to improve user experience. This API operation is phased out. You can use the new API operation for cache analytics. For more information, see <a href="https://help.aliyun.com/document_detail/186019.html">API operations for cache analytics are upgraded</a>.
-     * Before you call this operation, make sure that the instance meets the following requirements:</p>
-     * </blockquote>
-     * <ul>
-     * <li>The engine version of the instance is Redis 4.0 or later.</li>
-     * <li>The instance uses the latest minor version. For more information about how to check whether to update the minor version of an instance, see <a href="https://help.aliyun.com/document_detail/129203.html">How do I check whether the minor version of a Tair (Redis OSS-compatible) instance is the latest?</a></li>
-     * </ul>
+     * <p>This operation is no longer recommended. Use the new operation <a href="https://help.aliyun.com/document_detail/184226.html">Real-time top key statistics and offline full key analysis</a>.</p>
      * 
      * @param request the request parameters of DescribeCacheAnalysisReportList  DescribeCacheAnalysisReportListRequest
      * @return DescribeCacheAnalysisReportListResponse
@@ -1034,7 +1002,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>This API operation is applicable only to Tair (Redis OSS-compatible) instances that use <a href="https://help.aliyun.com/document_detail/188068.html">cloud disks</a> and the <a href="https://help.aliyun.com/document_detail/52228.html">cluster architecture</a>.</p>
+     * <p>This operation is applicable only to <a href="https://help.aliyun.com/document_detail/188068.html">cloud-native instances</a> in the <a href="https://help.aliyun.com/document_detail/52228.html">cluster architecture</a>.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DescribeClusterMemberInfo  DescribeClusterMemberInfoRequest
@@ -1092,9 +1060,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <blockquote>
-     * <p>Only instances that use cloud disks support this operation.</p>
-     * </blockquote>
+     * <p><notice>Only cloud-native instances support this operation.</notice></p>
      * 
      * @param request the request parameters of DescribeDBNodeDirectVipInfo  DescribeDBNodeDirectVipInfoRequest
      * @return DescribeDBNodeDirectVipInfoResponse
@@ -1134,7 +1100,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>If you want to query the information about Tair (Redis OSS-compatible) instances that are not deployed in a dedicated cluster, call the <a href="https://help.aliyun.com/document_detail/473779.html">DescribeInstanceAttribute</a> operation.</p>
+     * <p>To query the information about instances that are not in a dedicated cluster, call <a href="https://help.aliyun.com/document_detail/473779.html">DescribeInstanceAttribute</a>.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DescribeDedicatedClusterInstanceList  DescribeDedicatedClusterInstanceListRequest
@@ -1156,9 +1122,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, TDE must be enabled for the Tair (Redis OSS-compatible) instance by using a custom key. For more information, see <a href="https://help.aliyun.com/document_detail/473859.html">ModifyInstanceTDE</a>.</p>
+     * <p>Before you call this operation, make sure that TDE (Transparent Data Encryption) has been enabled for the instance by using a custom key. For more information about the related operation, see <a href="https://help.aliyun.com/document_detail/473859.html">ModifyInstanceTDE</a>.</p>
      * <blockquote>
-     * <p>For more information about TDE, see <a href="https://help.aliyun.com/document_detail/265913.html">Enable TDE</a>.</p>
+     * <p>For more information about TDE and precautions, see <a href="https://help.aliyun.com/document_detail/265913.html">Enable TDE</a>.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DescribeEncryptionKey  DescribeEncryptionKeyRequest
@@ -1180,9 +1146,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  You can specify a custom key when you call the <a href="https://help.aliyun.com/document_detail/473859.html">ModifyInstanceTDE</a> operation to enable Transparent Data Encryption (TDE). You can call the DescribeEncryptionKeyList operation to query the custom keys that are in use. To create a custom key, you can call the <a href="https://help.aliyun.com/document_detail/28947.html">CreateKey</a> operation of Key Management Service (KMS).</p>
+     * <p>When you invoke <a href="https://help.aliyun.com/document_detail/473859.html">ModifyInstanceTDE</a> to enable transparent data encryption (TDE), you can use a custom key. This operation helps you query the custom keys used by an instance. To create a custom key, invoke the <a href="https://help.aliyun.com/document_detail/28947.html">CreateKey</a> operation of Key Management Service.</p>
      * <ul>
-     * <li>For more information about TDE and the usage notes of TDE, see <a href="https://help.aliyun.com/document_detail/265913.html">Enable TDE</a>.</li>
+     * <li>For more information about transparent data encryption (TDE) and precautions, see <a href="https://help.aliyun.com/document_detail/265913.html">Enable TDE</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeEncryptionKeyList  DescribeEncryptionKeyListRequest
@@ -1203,10 +1169,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Debugging</h2>
-     * <p><a href="https://api.aliyun.com/#product=R-kvstore%5C&api=DescribeEngineVersion%5C&type=RPC%5C&version=2015-01-01">OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.</a></p>
-     * 
      * @param request the request parameters of DescribeEngineVersion  DescribeEngineVersionRequest
      * @return DescribeEngineVersionResponse
      */
@@ -1225,10 +1187,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Debugging</h2>
-     * <p><a href="https://api.aliyun.com/#product=R-kvstore%5C&api=DescribeGlobalDistributeCache%5C&type=RPC%5C&version=2015-01-01">OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.</a></p>
-     * 
      * @param request the request parameters of DescribeGlobalDistributeCache  DescribeGlobalDistributeCacheRequest
      * @return DescribeGlobalDistributeCacheResponse
      */
@@ -1320,7 +1278,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can also query the performance monitoring data of an instance in the Tair console. For more information, see <a href="https://help.aliyun.com/document_detail/43887.html">Metrics</a>.</p>
+     * <p>For the console operation that corresponds to this API, see <a href="https://help.aliyun.com/document_detail/43887.html">Performance monitoring</a>.</p>
      * 
      * @param request the request parameters of DescribeHistoryMonitorValues  DescribeHistoryMonitorValuesRequest
      * @return DescribeHistoryMonitorValuesResponse
@@ -1484,12 +1442,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <p>This operation is available only for instances that use cloud disks.</p>
-     * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/473847.html">DescribeParameters</a> operation to query the parameter settings of instances that use local disks.</p>
-     * </blockquote>
-     * 
      * @param request the request parameters of DescribeInstanceConfig  DescribeInstanceConfigRequest
      * @return DescribeInstanceConfigResponse
      */
@@ -1508,6 +1460,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>For more information about multiple LBs, see.</p>
+     * 
      * @param request the request parameters of DescribeInstanceMultiVIP  DescribeInstanceMultiVIPRequest
      * @return DescribeInstanceMultiVIPResponse
      */
@@ -1526,17 +1481,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <p>SSL encryption is supported for Tair (Redis OSS-compatible) 2.8 standard master-replica instances, Tair (Redis OSS-compatible) 2.8 master-replica cluster instances, and Tair (Redis OSS-compatible) 4.0 master-replica cluster instances. You can enable SSL encryption to enhance data transmission security.
-     * You can use one of the following methods to enable or disable SSL encryption or update the SSL certificate for a Tair (Redis OSS-compatible) instance:</p>
-     * <ul>
-     * <li>Call the <a href="https://help.aliyun.com/document_detail/473838.html">ModifyInstanceSSL</a> operation.</li>
-     * <li>Enable or disable SSL encryption or update the SSL certificate in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/84898.html">Configure SSL encryption</a>.<blockquote>
-     * <p>After SSL encryption is enabled, the instance may respond slower.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
      * @param request the request parameters of DescribeInstanceSSL  DescribeInstanceSSLRequest
      * @return DescribeInstanceSSLResponse
      */
@@ -1556,9 +1500,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>For more information about TDE and the usage notes of TDE, see <a href="https://help.aliyun.com/document_detail/265913.html">Enable TDE</a>.</p>
+     * <p>For more information about the transparent data encryption (TDE) feature and precautions, see <a href="https://help.aliyun.com/document_detail/265913.html">Enable transparent data encryption TDE</a>.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/473859.html">ModifyInstanceTDE</a> to enable or disable TDE.</p>
+     * <p>You can invoke <a href="https://help.aliyun.com/document_detail/473859.html">ModifyInstanceTDE</a> to enable or shutdown the TDE encrypt feature.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DescribeInstanceTDEStatus  DescribeInstanceTDEStatusRequest
@@ -1598,9 +1542,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>If you do not specify the InstanceIds parameter when you call this operation, the overview information of all instances is returned.</p>
+     * <p>If you do not specify any request parameters, the overview information of all instances is returned.</p>
      * <blockquote>
-     * <p>This operation returns non-paged results.</p>
+     * <p>This operation does not support pagination for the returned results.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DescribeInstancesOverview  DescribeInstancesOverviewRequest
@@ -1622,7 +1566,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/473771.html">EnableAdditionalBandwidth</a> operation to increase the internal bandwidth of an instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/473771.html">EnableAdditionalBandwidth</a> operation to purchase bandwidth for an instance.</p>
      * 
      * @param request the request parameters of DescribeIntranetAttribute  DescribeIntranetAttributeRequest
      * @return DescribeIntranetAttributeResponse
@@ -1643,7 +1587,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This parameter is supported only for cluster and read/write splitting instances.</p>
+     * <p>This operation is supported only for cluster and read/write splitting instances.</p>
      * 
      * @param request the request parameters of DescribeLogicInstanceTopology  DescribeLogicInstanceTopologyRequest
      * @return DescribeLogicInstanceTopologyResponse
@@ -1665,8 +1609,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> To improve user experience, Tair has upgraded the monitoring metrics. The DescribeMonitorItems operation is phased out. For more information, see <a href="https://help.aliyun.com/document_detail/189893.html">The DescribeMonitorItems operation of Tair (Redis OSS-compatible) is phased out</a>.
-     * After you call this operation to retrieve a list of metrics for a specified instance, you can call the <a href="https://help.aliyun.com/document_detail/473827.html">DescribeHistoryMonitorValues</a> operation to query the monitoring history of the instance.</p>
+     * <p>To improve user experience, Tair (Redis® OSS-Compatible) has upgraded its performance monitoring. This operation will be taken offline. For more information, see <a href="https://help.aliyun.com/document_detail/189893.html">Notice: Tair (Redis® OSS-Compatible) DescribeMonitorItems operation offline</a>.
+     * After you call this operation to obtain the list of monitoring items, you can call the <a href="https://help.aliyun.com/document_detail/473827.html">DescribeHistoryMonitorValues</a> operation to query the historical monitoring information of an instance.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DescribeMonitorItems  DescribeMonitorItemsRequest
@@ -1778,7 +1722,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>After you call this operation to query the parameters and default values of an instance, you can call the <a href="https://help.aliyun.com/document_detail/473844.html">ModifyInstanceConfig</a> operation to reconfigure the parameters of the instance.</p>
+     * <p>After you call this operation to retrieve the parameter list and default values, you can call the <a href="https://help.aliyun.com/document_detail/473844.html">ModifyInstanceConfig</a> operation to modify the parameters of a Redis instance as needed.</p>
      * 
      * @param request the request parameters of DescribeParameterTemplates  DescribeParameterTemplatesRequest
      * @return DescribeParameterTemplatesResponse
@@ -1798,12 +1742,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <p>This operation is applicable only to classic instances.</p>
-     * <blockquote>
-     * <p> If the instance is deployed in cloud-native mode, you can use the <a href="https://help.aliyun.com/document_detail/473846.html">DescribeInstanceConfig</a> operation to query the configuration and operational parameters of the instance.</p>
-     * </blockquote>
-     * 
      * @param request the request parameters of DescribeParameters  DescribeParametersRequest
      * @return DescribeParametersResponse
      */
@@ -1877,8 +1815,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>For more information about how to view the operational logs of an instance in the Tair (Redis OSS-compatible) console, see <a href="https://help.aliyun.com/document_detail/101713.html">View active logs</a>.
-     * This operation can be called up to 100 times per minute.</p>
+     * <p>For the corresponding console operation of this API, see <a href="https://help.aliyun.com/document_detail/101713.html">Query running logs</a>. The maximum call frequency of DescribeRunningLogRecords is 100 calls per minute.</p>
      * 
      * @param request the request parameters of DescribeRunningLogRecords  DescribeRunningLogRecordsRequest
      * @return DescribeRunningLogRecordsResponse
@@ -1935,7 +1872,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query whether the service-lined role AliyunServiceRoleForKvstore is created for Tair (Redis OSS-compatible). For more information, see <a href="https://help.aliyun.com/document_detail/184337.html">Service-linked role of Tair (Redis OSS-compatible)</a>.</p>
+     * <p>Call this operation to query whether the associated role named AliyunServiceRoleForKvstore has been authorized for use by Tair (Redis® OSS-Compatible) database under the current account. For more information, see <a href="https://help.aliyun.com/document_detail/184337.html">Service-linked role for Tair (Redis® OSS-Compatible) database</a>.</p>
      * 
      * @param request the request parameters of DescribeServiceLinkedRoleExists  DescribeServiceLinkedRoleExistsRequest
      * @return DescribeServiceLinkedRoleExistsResponse
@@ -1956,7 +1893,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can also query slow logs in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/95874.html">Query slow logs of an instance</a>. This operation can be called up to 100 times per minute.</p>
+     * <p>For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/95874.html">Query slow query logs</a>.
+     * The maximum number of calls to DescribeSlowLogRecords is 100 per minute.</p>
      * 
      * @param request the request parameters of DescribeSlowLogRecords  DescribeSlowLogRecordsRequest
      * @return DescribeSlowLogRecordsResponse
@@ -2067,7 +2005,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query the following Tair (Redis OSS-compatible) KVCache instances: inference operator instances, virtual cluster instances, and cache service instances.</p>
+     * <p>This operation queries inference operator instances, virtual cluster instances, and cache service instances of Tair KVCache.</p>
      * 
      * @param request the request parameters of DescribeTairKVCacheInferInstances  DescribeTairKVCacheInferInstancesRequest
      * @return DescribeTairKVCacheInferInstancesResponse
@@ -2087,6 +2025,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>You must specify the <code>InstanceId</code> parameter when you call this operation.</li>
+     * <li>The response includes basic information about each table, such as the table ID, name, bandwidth, and maximum number of connections.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeTairSkvDdbTable  DescribeTairSkvDdbTableRequest
      * @return DescribeTairSkvDdbTableResponse
      */
@@ -2105,6 +2050,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>This operation queries the table schema configuration of a Tair Serverless KV table instance.</li>
+     * <li>When you invoke this operation, you must specify the InstanceId parameter. The value of this parameter is the instance ID of the instance that you want to query.</li>
+     * <li>The BackupId parameter specifies the backup set of the table to query.</li>
+     * <li>The response packet includes the time-to-live (TTL) specifications and detailed table structure definition.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeTairSkvDdbTableSchema  DescribeTairSkvDdbTableSchemaRequest
      * @return DescribeTairSkvDdbTableSchemaResponse
      */
@@ -2160,11 +2114,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, instances must be available in the recycle bin. For more information, see <a href="https://help.aliyun.com/document_detail/86114.html">Instance recycle bin</a>.</p>
+     * <p>When you call this operation, the instance must exist in the recycle bin. For more information, see <a href="https://help.aliyun.com/document_detail/86114.html">Cluster recycle bin</a>.</p>
      * <blockquote>
-     * <p>Calling this operation permanently deletes the instances and their data backups in the recycle bin.
-     * **
-     * <strong>Warning</strong> After you destroy the instance, data in the instance is permanently deleted and can no longer be restored. Proceed with caution.</p>
+     * <p>After you call this operation, the instance and its data backups in the recycle bin are permanently deleted.
+     * <danger>After this operation is performed, the data of the instance is permanently deleted and cannot be recovered. Proceed with caution.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DestroyInstance  DestroyInstanceRequest
@@ -2186,9 +2139,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>If you enable the bandwidth auto scaling feature and call this operation at the same time, bandwidth auto scaling takes precedence. During bandwidth scale-back, the instance is scaled back to the default bandwidth of the instance type. For more information about the limits, costs, and FAQ about this feature, see <a href="https://help.aliyun.com/document_detail/102588.html">Adjust the bandwidth of an instance</a>.</p>
+     * <p>If you enable the elastic elastic scaling feature for the instance while calling this operation, the instance preferentially uses the elastic elastic scaling feature. When the bandwidth is elastically scaled down, it is scaled down to the default bandwidth of the instance specifications. For more information about the limits, billing, and FAQ of this feature, see <a href="https://help.aliyun.com/document_detail/102588.html">Adjust the bandwidth of an instance</a>.</p>
      * <blockquote>
-     * <p> Before you call this operation, you can call the <a href="https://help.aliyun.com/document_detail/473782.html">DescribeRoleZoneInfo</a> operation to query the current bandwidth of each data node in an instance.</p>
+     * <p>Before you call this operation, you can call <a href="https://help.aliyun.com/document_detail/473782.html">DescribeRoleZoneInfo</a> to query the current bandwidth of each data node in the instance.</p>
      * </blockquote>
      * 
      * @param request the request parameters of EnableAdditionalBandwidth  EnableAdditionalBandwidthRequest
@@ -2210,9 +2163,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>For more information about how to clear the expired keys in the Tair (Redis OSS-compatible) console, see <a href="https://help.aliyun.com/document_detail/43881.html">Clear data</a>.</p>
+     * <p>For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/43881.html">Clear data</a>.</p>
      * <blockquote>
-     * <p> Expired keys cannot be recovered after they are deleted. Exercise caution when you call this operation.</p>
+     * <p>Expired keys cannot be recovered after they are cleared. Use this API operation with caution.</p>
      * </blockquote>
      * 
      * @param request the request parameters of FlushExpireKeys  FlushExpireKeysRequest
@@ -2233,6 +2186,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>For the corresponding console operation, refer to <a href="https://help.aliyun.com/document_detail/43881.html">Purge data</a>.</p>
+     * <blockquote>
+     * <p>Before calling this API to delete data, back up your data or confirm that a backup is not required.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of FlushInstance  FlushInstanceRequest
      * @return FlushInstanceResponse
      */
@@ -2252,9 +2211,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Each Tair (Redis OSS-compatible) instance can contain up to 256 databases named from DB0 to DB255. Each database does not have a separate memory usage limit. The memory capacity that a database can use is subject to the total memory limit of the instance. You can execute the <code>SELECT</code> statement to switch between databases. For more information, see <a href="https://help.aliyun.com/document_detail/38688.html">What is the size of each database on a Tair (Redis OSS-compatible) instance, and how can I choose databases?</a></p>
+     * <p>ApsaraDB for Tair (Redis® OSS-Compatible) instances support 256 databases, from DB0 to DB255. Each database does not have a separate memory usage limit. The memory capacity available to a database is subject to the total memory limit of the instance. You can run the <code>SELECT</code> command to switch between databases. For more information, see <a href="https://help.aliyun.com/document_detail/38688.html">Tair DB</a>.</p>
      * <blockquote>
-     * <p> This operation is available only for cloud-native instances that use cloud disks.</p>
+     * <p>This operation supports only cloud-native instances (formerly cloud disk-based instances) in cluster architecture.</p>
      * </blockquote>
      * 
      * @param request the request parameters of FlushInstanceForDB  FlushInstanceForDBRequest
@@ -2275,14 +2234,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <blockquote>
-     * </blockquote>
-     * <ul>
-     * <li>Only Tair (Redis OSS-compatible) instances of Redis 4.0 or later are supported.</li>
-     * <li>The Tair (Redis OSS-compatible) instance must be in the running state.</li>
-     * </ul>
-     * 
      * @param request the request parameters of GrantAccountPrivilege  GrantAccountPrivilegeRequest
      * @return GrantAccountPrivilegeResponse
      */
@@ -2302,7 +2253,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The log management feature of Tair (Redis OSS-compatible) requires the resources of <a href="https://help.aliyun.com/document_detail/48869.html">Simple Log Service</a>. To use the log management feature, you can call this operation to assign the AliyunServiceRoleForKvstore service-linked role to Tair (Redis OSS-compatible). For more information, see <a href="https://help.aliyun.com/document_detail/184337.html">Service-linked role of Tair (Redis OSS-compatible)</a>.</p>
+     * <p>The Log Management feature of Tair (Redis® OSS-Compatible) database requires resources from <a href="https://help.aliyun.com/document_detail/48869.html">Simple Log Service</a>. Before using the Log Management feature, call this operation to associate the service-linked role named AliyunServiceRoleForKvstore with Tair (Redis® OSS-Compatible) database. For more information, see <a href="https://help.aliyun.com/document_detail/184337.html">Service-linked role for Tair (Redis® OSS-Compatible) database</a>.</p>
      * 
      * @param request the request parameters of InitializeKvstorePermission  InitializeKvstorePermissionRequest
      * @return InitializeKvstorePermissionResponse
@@ -2323,7 +2274,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can also query the relationships between instances and tags in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/119160.html">Filter Tair (Redis OSS-compatible) instances by tag</a> and <a href="https://help.aliyun.com/document_detail/134038.html">View tags bound to an instance</a>.</p>
+     * <p>For the corresponding console operations of this API, refer to <a href="https://help.aliyun.com/document_detail/119160.html">Filter instances by tag</a> and <a href="https://help.aliyun.com/document_detail/134038.html">View tags bound to an instance</a>.</p>
      * 
      * @param request the request parameters of ListTagResources  ListTagResourcesRequest
      * @return ListTagResourcesResponse
@@ -2361,6 +2312,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>When you call this operation, the specified node is shut down. The instance automatically triggers a primary/secondary switchover to promote the secondary node to the primary node.</li>
+     * <li>The node with the simulated failure automatically recovers later.</li>
+     * <li>This operation is not supported for single-node (single-replica) instances.</li>
+     * </ul>
+     * 
      * @param request the request parameters of MasterNodeShutDownFailOver  MasterNodeShutDownFailOverRequest
      * @return MasterNodeShutDownFailOverResponse
      */
@@ -2380,13 +2338,13 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, you must release the public endpoint (if any) of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/106272.html">Migrate an instance across zones</a>.</p>
+     * <p>Before you call this operation, you must release the public endpoint. For more information, see <a href="https://help.aliyun.com/document_detail/106272.html">Migrate an instance across zones</a>.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li>If the network type of an Tair (Redis OSS-compatible) instance is switched from classic network to Virtual Private Cloud (VPC), and the classic network endpoint is retained, you can migrate the instance across zones only after the classic network endpoint is released upon expiration.</li>
-     * <li>After the instance is migrated, the endpoint of the instance remains unchanged. However, the virtual IP address (VIP) is changed. We recommend that you use the endpoint instead of the VIP to connect to the instance.</li>
+     * <li>If the instance was switched from the classic network to a VPC and retains the classic network endpoint, you must wait until the classic network endpoint expires and is released before you can migrate the instance across zones.</li>
+     * <li>After the migration, the endpoint of the instance remains unchanged, but the virtual IP address (VIP) changes. Use the endpoint instead of the VIP to connect to the instance in your business applications.</li>
      * </ul>
+     * </blockquote>
      * 
      * @param request the request parameters of MigrateToOtherZone  MigrateToOtherZoneRequest
      * @return MigrateToOtherZoneResponse
@@ -2407,7 +2365,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation is supported only for instances that run Redis 4.0 or later.</p>
+     * <p>This API operation supports only instances that are compatible with Redis 4.0 or later.</p>
      * 
      * @param request the request parameters of ModifyAccountDescription  ModifyAccountDescriptionRequest
      * @return ModifyAccountDescriptionResponse
@@ -2427,6 +2385,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Currently, only Tair Serverless KV instances are supported.</p>
+     * 
      * @param request the request parameters of ModifyAccountParameter  ModifyAccountParameterRequest
      * @return ModifyAccountParameterResponse
      */
@@ -2482,7 +2443,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can receive notifications for Tair (Redis OSS-compatible) events such as instance migration and version upgrade by text message, phone call, email, internal message, or by using the console. You can also change the scheduled switchover time of a task by using the console. For more information, see <a href="https://help.aliyun.com/document_detail/187022.html">Query or manage pending events</a>.</p>
+     * <p>O&amp;M events of Tair (Redis® OSS-Compatible) instances, such as instance migration and version upgrades, are notified through text messages, phone calls, emails, or internal messages, and are also displayed in the console. In addition to invoking this operation to modify the scheduled switchover time, you can also modify it in the console. For more information, see <a href="https://help.aliyun.com/document_detail/187022.html">Query or manage pending events</a>.</p>
      * 
      * @param request the request parameters of ModifyActiveOperationTask  ModifyActiveOperationTaskRequest
      * @return ModifyActiveOperationTaskResponse
@@ -2521,12 +2482,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of the audit log feature.
-     * Before you call this operation, make sure that the Tair (Redis OSS-compatible) instance meets the following requirements:</p>
-     * <ul>
-     * <li>The instance is a Tair (Redis OSS-compatible) Community Edition instance or Tair <a href="https://help.aliyun.com/document_detail/126164.html">DRAM-based instance</a>.</li>
-     * <li>The engine version of the instance is Redis 4.0 or later, and the latest minor version is used. You can call the <a href="https://help.aliyun.com/document_detail/473781.html">DescribeEngineVersion</a> operation to check whether the instance uses the latest major version and minor version.</li>
-     * </ul>
+     * <p>Before you call this operation, make sure that you fully understand the billing and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of audit logs.</p>
      * 
      * @param request the request parameters of ModifyAuditLogConfig  ModifyAuditLogConfigRequest
      * @return ModifyAuditLogConfigResponse
@@ -2601,7 +2557,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can also modify the endpoint or port number of an instance in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/85683.html">Change the endpoint or port number of an instance</a>.</p>
+     * <p>For the console operation that corresponds to this API operation, see <a href="https://help.aliyun.com/document_detail/85683.html">Modify an endpoint</a>.</p>
      * 
      * @param request the request parameters of ModifyDBInstanceConnectionString  ModifyDBInstanceConnectionStringRequest
      * @return ModifyDBInstanceConnectionStringResponse
@@ -2729,9 +2685,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <p>You can also modify the information of an instance in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/43874.html">Change or reset the password</a>.</p>
-     * 
      * @param request the request parameters of ModifyInstanceAttribute  ModifyInstanceAttributeRequest
      * @return ModifyInstanceAttributeResponse
      */
@@ -2752,7 +2705,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Auto-renewal is triggered seven days before the expiration date of the instance.</p>
+     * <p>Auto-renewal is triggered 7 days before the instance expires.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ModifyInstanceAutoRenewalAttribute  ModifyInstanceAutoRenewalAttributeRequest
@@ -2774,9 +2727,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  Before you call this operation, make sure that you understand the billing methods and pricing of instance bandwidth. Tair (Redis OSS-compatible) charges fees per hour based on the amount and usage duration of the extra bandwidth that you purchase. The fees vary based on the region that you select. For more information, see <a href="https://help.aliyun.com/document_detail/54532.html">Billable items</a>.</p>
      * <ul>
-     * <li>The bandwidth of an instance or a shard can be increased by up to six times the default bandwidth of the instance, but the increase in bandwidth cannot exceed 192 Mbit/s. For example, if the default bandwidth of a Tair DRAM-based master-replica instance equipped with 2 GB of memory is 96 Mbit/s, you can increase the bandwidth of the instance by up to 192 Mbit/s. As a result, the maximum bandwidth of the instance is 288 Mbit/s. If the default bandwidth of a Redis Open-Source Edition master-replica instance equipped with 256 MB of memory is 10 Mbit/s, you can increase the bandwidth of the instance by up to 60 Mbit/s. As a result, the maximum bandwidth of the instance is 70 Mbit/s.</li>
+     * <li>Before calling this operation, make sure that you fully understand the bandwidth billing method and pricing of the instance. Tair (Redis® OSS-Compatible) charges fees on an hourly basis based on the increased bandwidth and usage duration. The pricing varies by region. For more information, see <a href="https://help.aliyun.com/document_detail/54532.html">Billable items</a>.</li>
+     * <li>The bandwidth of an instance (or a single shard) can be increased by up to 6 times the default bandwidth of the instance, with a maximum increase of 192 MB/s. For example, the default bandwidth of a Tair memory-optimized 2 GB standard architecture instance is 96 MB/s. The bandwidth of this instance type can be increased by up to 192 MB/s, resulting in a maximum bandwidth of 288 MB/s. The default bandwidth of a Redis Community Edition 256 MB standard architecture instance is 10 MB/s. The bandwidth of this instance type can be increased by up to 60 MB/s, resulting in a maximum bandwidth of 70 MB/s.</li>
      * </ul>
      * 
      * @param request the request parameters of ModifyInstanceBandwidth  ModifyInstanceBandwidthRequest
@@ -2816,7 +2769,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can also modify the maintenance window of an instance in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/55252.html">Set a maintenance window</a>.</p>
+     * <p>For the console operation that corresponds to this API operation, see <a href="https://help.aliyun.com/document_detail/55252.html">Set a maintenance window</a>.</p>
      * 
      * @param request the request parameters of ModifyInstanceMaintainTime  ModifyInstanceMaintainTimeRequest
      * @return ModifyInstanceMaintainTimeResponse
@@ -2837,7 +2790,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>For more information about the precautions and impacts of the upgrade, see <a href="https://help.aliyun.com/document_detail/101764.html">Upgrade the major version</a>.</p>
+     * <p>For the precautions and impacts of this API operation, see <a href="https://help.aliyun.com/document_detail/101764.html">Upgrade the major version</a>.</p>
      * 
      * @param request the request parameters of ModifyInstanceMajorVersion  ModifyInstanceMajorVersionRequest
      * @return ModifyInstanceMajorVersionResponse
@@ -2858,13 +2811,13 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The procedure to update the minor version of an instance varies based on types of Tair (Redis OSS-compatible) instances. For more information, see <a href="https://help.aliyun.com/document_detail/56450.html">Upgrade the minor version</a>.</p>
+     * <p>The upgrade process varies by architecture. For more information, see <a href="https://help.aliyun.com/document_detail/56450.html">How minor version upgrades work</a>.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li>Before you call this operation, you can call the <a href="https://help.aliyun.com/document_detail/473781.html">DescribeEngineVersion</a> operation to query the minor version of the current instance.</li>
-     * <li>When you switch your workloads over from the original instance to a new instance or from the master node to the replica node in the original instance, you may experience disconnections that last a few seconds. The original instance stays in the read-only state within 60 seconds until all data is synchronized. We recommend that you upgrade the original instance during off-peak hours and make sure that your application is configured to automatically reconnect to the original instance.</li>
+     * <li>Before you call this operation, you can call <a href="https://help.aliyun.com/document_detail/473781.html">DescribeEngineVersion</a> to query the current minor version of the instance.</li>
+     * <li>During an instance switchover or primary/secondary switchover, the instance enters a read-only state for up to 60 seconds to wait for full data synchronization. Transient disconnections that last for a few seconds may also occur. Perform the upgrade during off-peak hours and ensure that your application has a reconnection mechanism.</li>
      * </ul>
+     * </blockquote>
      * 
      * @param request the request parameters of ModifyInstanceMinorVersion  ModifyInstanceMinorVersionRequest
      * @return ModifyInstanceMinorVersionResponse
@@ -2885,9 +2838,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can also perform this operation in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/60062.html">Change the expiration time for the endpoint of the classic network</a>.</p>
+     * <p>For the corresponding console operation of this API, refer to <a href="https://help.aliyun.com/document_detail/60062.html">Modify the retention period of the original classic network endpoint</a>.</p>
      * <blockquote>
-     * <p>For more information about how to switch the network type of a Tair (Redis OSS-compatible) instance from classic network to VPC, see <a href="https://help.aliyun.com/document_detail/473797.html">SwitchNetwork</a>.</p>
+     * <p>For information about how to switch an instance from the classic network to a VPC, refer to <a href="https://help.aliyun.com/document_detail/473797.html">SwitchNetwork</a>.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ModifyInstanceNetExpireTime  ModifyInstanceNetExpireTimeRequest
@@ -2927,9 +2880,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can also configure SSL encryption in the console. For more information, see <a href="https://help.aliyun.com/document_detail/84898.html">Configure SSL encryption</a>.</p>
+     * <p>For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/84898.html">Secure Sockets Layer (SSL) encryption settings</a>.</p>
      * <blockquote>
-     * <p> To specify the earliest supported SSL version, you can call the <a href="https://help.aliyun.com/document_detail/473844.html">ModifyInstanceConfig</a> operation to modify the required parameter.</p>
+     * <p>To specify the minimum SSL version, you can invoke the <a href="https://help.aliyun.com/document_detail/473844.html">ModifyInstanceConfig</a> operation to modify the relevant parameter.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ModifyInstanceSSL  ModifyInstanceSSLRequest
@@ -2952,7 +2905,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> For more information about the procedure, impacts, limits, and fees of this operation, see <a href="https://help.aliyun.com/document_detail/26353.html">Change the configurations of an instance</a>.</p>
+     * <p>For information about the execution process, impacts, feature limits, and billing of modifying instance specifications, refer to <a href="https://help.aliyun.com/document_detail/26353.html">Change instance configurations</a>.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ModifyInstanceSpec  ModifyInstanceSpecRequest
@@ -2975,7 +2928,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>For more information about TDE and the impact of TDE, see <a href="https://help.aliyun.com/document_detail/265913.html">Enable TDE</a>.</p>
+     * <p>For more information about Transparent Data Encryption (TDE) and the impacts of enabling TDE, see <a href="https://help.aliyun.com/document_detail/265913.html">Enable TDE</a>.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ModifyInstanceTDE  ModifyInstanceTDERequest
@@ -2997,10 +2950,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>When the password-free access feature is enabled, Elastic Compute Service (ECS) instances in the same virtual private cloud (VPC) can connect to the Tair instance without a password. You can also use the username and password to connect to the Tair instance.</p>
-     * <blockquote>
-     * <p>The Tair instance is deployed in a VPC. For more information, see <a href="https://help.aliyun.com/document_detail/85168.html">Enable password-free access</a>.</p>
-     * </blockquote>
+     * <p>For information about how to perform this operation in the console, see <a href="https://help.aliyun.com/document_detail/85168.html">Enable password-free access</a>.</p>
      * 
      * @param request the request parameters of ModifyInstanceVpcAuthMode  ModifyInstanceVpcAuthModeRequest
      * @return ModifyInstanceVpcAuthModeResponse
@@ -3022,10 +2972,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li>This operation is applicable only to an instance that is deployed in a dedicated cluster. To adjust the bandwidth of a standard instance, call the <a href="https://help.aliyun.com/document_detail/473771.html">EnableAdditionalBandwidth</a> operation.</li>
+     * <li>This operation applies only to instances created in dedicated clusters&lt;props=&quot;china&quot;&gt;. For information about the related console operations and limits, see <a href="https://help.aliyun.com/document_detail/206257.html">Modify bandwidth policy</a>. To adjust the bandwidth of a regular instance, call the <a href="https://help.aliyun.com/document_detail/473771.html">EnableAdditionalBandwidth</a> operation.</li>
      * </ul>
+     * </blockquote>
      * 
      * @param request the request parameters of ModifyIntranetAttribute  ModifyIntranetAttributeRequest
      * @return ModifyIntranetAttributeResponse
@@ -3064,9 +3014,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can also perform this operation in the <a href="https://resourcemanager.console.aliyun.com/resource-center">Resource Management</a> console. For more information, see <a href="https://help.aliyun.com/document_detail/94487.html">Transfer resources across resource groups</a>.</p>
+     * <p>You can also perform this operation in the <a href="https://resourcemanager.console.aliyun.com/resource-center">Resource Management</a> console. For more information, see <a href="https://help.aliyun.com/document_detail/94487.html">Move resources across resource groups</a>.</p>
      * <blockquote>
-     * <p> Resource Group allows you to sort resources owned by your Alibaba Cloud account into groups. This simplifies the resource and permission management within your Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/94475.html">What is Resource Management?</a></p>
+     * <p>A resource group is a mechanism for managing resources in groups within an Alibaba Cloud account. Resource groups help you address the complexity of resource grouping and authorization management within a single Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/94475.html">What is Resource Management?</a></p>
      * </blockquote>
      * 
      * @param request the request parameters of ModifyResourceGroup  ModifyResourceGroupRequest
@@ -3088,9 +3038,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <blockquote>
-     * <p>After you call this operation, the security groups that are added to the whitelists of the Tair instance are deleted, and the security group specified by the <strong>SecurityGroupId</strong> parameter is added to the whitelists. For more information about how to reset security groups in the Tair console, see <a href="https://help.aliyun.com/document_detail/148267.html">Add security groups</a>.</p>
-     * </blockquote>
+     * <p>This operation overwrites the existing security groups in the instance whitelist and adds the security groups specified by the <strong>SecurityGroupId</strong> parameter to the whitelist. For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/148267.html">Add a security group</a>.</p>
      * 
      * @param request the request parameters of ModifySecurityGroupConfiguration  ModifySecurityGroupConfigurationRequest
      * @return ModifySecurityGroupConfigurationResponse
@@ -3111,7 +3059,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can also modify the whitelists of an instance in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/56464.html">Configure a whitelist for an instance</a>.</p>
+     * <p>For the console operation that corresponds to this API operation, see <a href="https://help.aliyun.com/document_detail/56464.html">Configure an IP whitelist</a>.</p>
      * 
      * @param request the request parameters of ModifySecurityIps  ModifySecurityIpsRequest
      * @return ModifySecurityIpsResponse
@@ -3168,7 +3116,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation supports only instances that use the read/write splitting architecture or the cluster architecture in proxy mode. For more information, see <a href="https://help.aliyun.com/document_detail/164224.html">Restart or rebuild proxy nodes</a>.</p>
+     * <p>This operation is supported only for instances that use the cluster architecture in proxy mode or the read/write splitting architecture. For more information, see <a href="https://help.aliyun.com/document_detail/164224.html">Restart or rebuild proxy nodes</a>.</p>
      * 
      * @param request the request parameters of RebootProxy  RebootProxyRequest
      * @return RebootProxyResponse
@@ -3189,7 +3137,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>In direct connection mode, clients can bypass proxy nodes and use private endpoints to connect to ApsaraDB for Redis instances. This is similar to the connection to a native Redis cluster. The direct connection mode can reduce communication overheads and the response time of ApsaraDB for Redis. For more information, see <a href="https://help.aliyun.com/document_detail/146901.html">Enable the direct connection mode</a>.</p>
+     * <p>A client can use the direct connection address to bypass the proxy and connect to a Tair (Redis® OSS-Compatible) database cluster in the same way as connecting to a native Redis cluster. This reduces link overhead and further improves the response speed of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/146901.html">Enable direct connection access</a>.</p>
      * 
      * @param request the request parameters of ReleaseDirectConnection  ReleaseDirectConnectionRequest
      * @return ReleaseDirectConnectionResponse
@@ -3210,7 +3158,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can also release the public endpoint for an instance in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/125424.html">Release public endpoints</a>.</p>
+     * <p>For the corresponding console operation, refer to <a href="https://help.aliyun.com/document_detail/125424.html">Release a public endpoint</a>.</p>
      * 
      * @param request the request parameters of ReleaseInstancePublicConnection  ReleaseInstancePublicConnectionRequest
      * @return ReleaseInstancePublicConnectionResponse
@@ -3231,7 +3179,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The operation that you want to perform. Set the value to <strong>RemoveSubInstance</strong>.</p>
+     * <blockquote>
+     * <p>After the conversion is complete, the child instance becomes a standard instance. You can find and manage the instance in the instance list of the corresponding region.</p>
+     * </blockquote>
      * 
      * @param request the request parameters of RemoveSubInstance  RemoveSubInstanceRequest
      * @return RemoveSubInstanceResponse
@@ -3252,7 +3202,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can adjust the bandwidth of an instance in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/102588.html">Adjust the bandwidth of an instance</a>. You can also call the <a href="https://help.aliyun.com/document_detail/473771.html">EnableAdditionalBandwidth</a> operation to purchase bandwidth for an instance.</p>
+     * <p>This operation is no longer recommended. You can adjust instance bandwidth through the console (<a href="https://help.aliyun.com/document_detail/102588.html">Modify instance bandwidth</a>) or by calling <a href="https://help.aliyun.com/document_detail/473771.html">EnableAdditionalBandwidth</a>.</p>
      * 
      * @param request the request parameters of RenewAdditionalBandwidth  RenewAdditionalBandwidthRequest
      * @return RenewAdditionalBandwidthResponse
@@ -3272,9 +3222,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <p>This operation is applicable only to subscription instances.</p>
-     * 
      * @param request the request parameters of RenewInstance  RenewInstanceRequest
      * @return RenewInstanceResponse
      */
@@ -3295,7 +3242,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> Only Tair (Redis OSS-compatible) instances of Redis 4.0 or later are supported.</p>
+     * <p>This operation is supported only for Redis instances that run version 4.0 or later.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ResetAccountPassword  ResetAccountPasswordRequest
@@ -3389,9 +3336,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  If your instance is a <a href="https://help.aliyun.com/document_detail/126164.html">DRAM-based instance</a> or a <a href="https://help.aliyun.com/document_detail/183956.html">persistent memory-optimized instance</a> and has the <a href="https://help.aliyun.com/document_detail/148479.html">data flashback</a> feature enabled, you can call this operation to restore the entire instance or specific keys to a specific point in time accurate to the second. This way, you can achieve more fine-grained data restoration.</p>
+     * <p>If your instance is a Tair (Enterprise Edition) memory-optimized instance of the classic architecture, you can call this operation to restore specified keys in the current instance to a specific point in time accurate to seconds. This enables more fine-grained data restoration.</p>
      * <ul>
-     * <li>For other types of instances, we recommend that you call the <a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a> or <a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a> operation to restore the backup data to a new instance.</li>
+     * <li>For instances other than the preceding type, call the <a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a> or <a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a> operation to restore backup data to a new instance.</li>
      * </ul>
      * 
      * @param request the request parameters of RestoreInstance  RestoreInstanceRequest
@@ -3468,13 +3415,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>For more information about nearby access to applications that are deployed across zones, see <a href="https://help.aliyun.com/document_detail/164222.html">Switch node roles</a>.
-     * The instance must be a Redis Open-Source Edition instance or Tair (Enterprise Edition) <a href="https://help.aliyun.com/document_detail/126164.html">DRAM-based</a> instance that uses local disks.
-     * A call to this operation has the following impacts on your instance:</p>
+     * <p>For more information about nearest access for applications in multi-zone deployment scenarios, see <a href="https://help.aliyun.com/document_detail/164222.html">Scenario examples</a>.
+     * When you call this operation, the instance must be of the high-availability or dual-replica type.
+     * Calling this operation has the following impacts:</p>
      * </blockquote>
      * <ul>
-     * <li>The data shards in the instance may change to the read-only state and experience transient connections within seconds. Make sure that your application is configured to automatically reconnect to the instance.</li>
-     * <li>If the instance enters the switching state, you cannot manage this instance. For example, you cannot modify the instance configurations or migrate the instance to another zone.</li>
+     * <li>After the node role switchover is triggered, the data node on which the switchover is performed will enter a read-only state for a few seconds and experience transient disconnections. Make sure that your application has a reconnection mechanism.</li>
+     * <li>While the instance is in the switching state, you cannot perform instance-level operations, such as changing configurations or migrating zones.</li>
      * </ul>
      * 
      * @param request the request parameters of SwitchInstanceHA  SwitchInstanceHARequest
@@ -3496,11 +3443,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>For more information about the proxy mode, see <a href="https://help.aliyun.com/document_detail/142959.html">Features of proxy servers</a>. Before you call this operation, make sure that the following requirements are met:</p>
+     * <p>For more information about the proxy mode, see <a href="https://help.aliyun.com/document_detail/142959.html">Proxy features</a>.
+     * Before calling this operation, ensure that the following conditions are met:</p>
      * <ul>
-     * <li>The instance is created by using a dedicated cluster. For more information, see <a href="https://help.aliyun.com/document_detail/141455.html">What is ApsaraDB for MyBase?</a></li>
+     * <li>The instance is created in a dedicated cluster. For more information, see <a href="https://help.aliyun.com/document_detail/141455.html">ApsaraDB MyBase dedicated cluster</a>.</li>
      * <li>The instance uses the <a href="https://help.aliyun.com/document_detail/52228.html">cluster architecture</a>.<blockquote>
-     * <p> Before you call the SwitchInstanceProxy operation, you must call the <a href="https://help.aliyun.com/document_detail/473867.html">DescribeDedicatedClusterInstanceList</a> operation and view the value of the <strong>ProxyCount</strong> response parameter to check whether the proxy mode is enabled. A value of 0 indicates that the proxy mode is disabled. A value that is greater than 0 indicates that the proxy mode is enabled.</p>
+     * <p>Before calling this operation, call the <a href="https://help.aliyun.com/document_detail/473867.html">DescribeDedicatedClusterInstanceList</a> operation and check the value of the <strong>ProxyCount</strong> response parameter to determine whether the proxy mode is enabled for the instance. For example, a value of 0 indicates that the proxy mode is disabled. A value greater than 0 indicates that the proxy mode is enabled.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -3523,6 +3471,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation is supported only for cloud-native architecture instances.</p>
+     * 
      * @param request the request parameters of SwitchInstanceToTargetZone  SwitchInstanceToTargetZoneRequest
      * @return SwitchInstanceToTargetZoneResponse
      */
@@ -3541,6 +3492,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>This operation applies only to active multi-zone (dual-zone) cluster architecture instances.</li>
+     * <li>The node subjected to failure impersonation automatically recovers later. However, the primary node is located in the secondary zone and the secondary node is located in the primary zone. This may cause cross-data-center access between the instance and other services. To resolve this issue, you can perform a manual switchover of zones on the Service Availability page in the console.</li>
+     * </ul>
+     * 
      * @param request the request parameters of SwitchInstanceZoneFailOver  SwitchInstanceZoneFailOverRequest
      * @return SwitchInstanceZoneFailOverResponse
      */
@@ -3577,6 +3534,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>This operation applies only to Classic Edition instances.</li>
+     * <li>After the data migration or synchronization task is completed, you can call this operation again to remove the specification change restrictions.</li>
+     * </ul>
+     * 
      * @param request the request parameters of SyncDtsStatus  SyncDtsStatusRequest
      * @return SyncDtsStatusResponse
      */
@@ -3596,14 +3559,14 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>If you have a large number of instances, you can create multiple tags and add these tags to the instances. Then, you can filter instances by tag.</p>
+     * <p>If you have a large number of instances, you can create multiple labels and attach different labels to the instances for categorization. You can then filter instances by label.</p>
      * <ul>
-     * <li>A tag consists of a key and a value. Each key must be unique in a region for an Alibaba Cloud account. Different keys can be mapped to the same value.</li>
-     * <li>If the tag that you specify does not exist, this tag is automatically created and added to the specified instance.</li>
-     * <li>If the key of the specified tag is the same as that of an existing tag, the specified tag overwrites the existing tag.</li>
-     * <li>You can add up to 20 tags to each instance.</li>
-     * <li>You can add tags to up to 50 instances in each request.
-     * You can also add tags to instances in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/118779.html">Create a tag</a>.</li>
+     * <li>A label consists of a key-value pair. The key must be unique within the same account and region, while the value has no such restriction.</li>
+     * <li>If the label in Settings does not exist, automatic creation of the label is performed and it is attached to the target instance.</li>
+     * <li>If the instance is already attached to a label with the same key, the new label overwrites the existing one.</li>
+     * <li>You can attach up to 20 labels to each instance.</li>
+     * <li>You can attach labels to up to 50 instances each time you invoke the API.
+     * For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/118779.html">Create a label</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of TagResources  TagResourcesRequest
@@ -3625,10 +3588,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you understand relevant precautions and billing rules. For more information, see the following topics:</p>
+     * <p>Before you call this operation, make sure that you understand the precautions and billing instructions. For more information, see:</p>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/54542.html">Change the billing method to subscription</a>.</li>
-     * <li><a href="https://help.aliyun.com/document_detail/211549.html">Change the billing method to pay-as-you-go</a>.</li>
+     * <li><a href="https://help.aliyun.com/document_detail/54542.html">Switch from pay-as-you-go to subscription</a>.</li>
+     * <li><a href="https://help.aliyun.com/document_detail/211549.html">Switch from subscription to pay-as-you-go</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of TransformInstanceChargeType  TransformInstanceChargeTypeRequest
@@ -3668,10 +3631,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>For more information about how to change the billing method in the Tair (Redis OSS-compatible) console, see <a href="https://help.aliyun.com/document_detail/54542.html">Switch to subscription</a>.</p>
-     * <blockquote>
-     * <p> You cannot change the billing method of a Tair (Redis OSS-compatible) instance from subscription to pay-as-you-go.</p>
-     * </blockquote>
+     * <p>For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/54542.html">Change the billing method to subscription</a>.</p>
      * 
      * @param request the request parameters of TransformToPrePaid  TransformToPrePaidRequest
      * @return TransformToPrePaidResponse
@@ -3710,10 +3670,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  You can remove up to 20 tags at a time.</p>
+     * <p>You can remove up to 20 tags at a time.</p>
      * <ul>
-     * <li>If a tag is removed from an instance and is not added to other instances, the tag is deleted.
-     * You can also remove tags from instances in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/119157.html">Remove a tag</a>.</li>
+     * <li>If a tag is removed from an instance and is not attached to any other instances, the tag is automatically deleted.
+     * For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/119157.html">Remove tags</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of UntagResources  UntagResourcesRequest
@@ -3735,13 +3695,13 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The procedure and impacts for updating the minor version of an instance varies based on the instance architecture. For more information, see <a href="https://help.aliyun.com/document_detail/56450.html">Update the minor version of an instance</a>.</p>
+     * <p>The upgrade process and impact vary depending on the architecture. For more information, see <a href="https://help.aliyun.com/document_detail/56450.html">Minor engine version update</a>.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li>Before you call this operation, you can call the <a href="https://help.aliyun.com/document_detail/473781.html">DescribeEngineVersion</a> operation to query the current minor version of the proxy node.</li>
-     * <li>The connection to the instance is interrupted during the update. We recommend that perform an update during off-peak hours. Make sure your application can reconnect to the instance after the update. For more information, see <a href="https://help.aliyun.com/document_detail/56450.html">Minor version update</a>.</li>
+     * <li>Before you call this operation, you can call <a href="https://help.aliyun.com/document_detail/473781.html">DescribeEngineVersion</a> to query the current minor version of the proxy nodes.</li>
+     * <li>The upgrade causes connection interruptions. Perform the upgrade during off-peak hours and make sure that your application has a reconnection mechanism. For more information about the impact, see <a href="https://help.aliyun.com/document_detail/56450.html">Minor engine version update</a>.</li>
      * </ul>
+     * </blockquote>
      * 
      * @param request the request parameters of UpgradeProxy  UpgradeProxyRequest
      * @return UpgradeProxyResponse

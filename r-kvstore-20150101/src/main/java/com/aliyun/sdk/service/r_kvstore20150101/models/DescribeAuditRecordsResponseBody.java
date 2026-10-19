@@ -146,6 +146,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
 
         /**
          * <p>The end time of the query.</p>
+         * <p>The time is in the YYYY-MM-DDTHH:mm:ssZ format and displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-03-25T12:10:00Z</p>
@@ -167,7 +168,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The collection of returned audit log entries.</p>
+         * Items.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -175,7 +176,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number of the page to return.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -186,7 +187,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of entries returned per page.</p>
+         * <p>The maximum number of entries to return on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -209,6 +210,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
 
         /**
          * <p>The start time of the query.</p>
+         * <p>The time is in the YYYY-MM-DDTHH:mm:ssZ format and displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-03-24T12:10:00Z</p>
@@ -219,7 +221,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of returned entries.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>22222</p>
@@ -379,10 +381,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The username of the account.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>demo</p>
+             * AccountName.
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -390,10 +389,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The database name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>demo</p>
+             * DatabaseName.
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -401,10 +397,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the command was run.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2019-03-25T03:22:08Z</p>
+             * ExecuteTime.
              */
             public Builder executeTime(String executeTime) {
                 this.executeTime = executeTime;
@@ -412,10 +405,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address of the client.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>127.0.0.1</p>
+             * HostAddress.
              */
             public Builder hostAddress(String hostAddress) {
                 this.hostAddress = hostAddress;
@@ -423,10 +413,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>192.16.100.***</p>
+             * IPAddress.
              */
             public Builder IPAddress(String IPAddress) {
                 this.IPAddress = IPAddress;
@@ -434,13 +421,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the node.</p>
-             * <blockquote>
-             * <p>A specific node ID is returned only if the instance uses the cluster or read/write splitting architecture.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>r-bp1zxszhcgatnx****-db-0</p>
+             * NodeId.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -448,10 +429,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The command that was run.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>CONFIG GET maxmemory</p>
+             * SQLText.
              */
             public Builder SQLText(String SQLText) {
                 this.SQLText = SQLText;
@@ -459,10 +437,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the command.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>non_read_write</p>
+             * SQLType.
              */
             public Builder SQLType(String SQLType) {
                 this.SQLType = SQLType;
@@ -470,10 +445,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The amount of time consumed to run the command.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * TotalExecutionTimes.
              */
             public Builder totalExecutionTimes(String totalExecutionTimes) {
                 this.totalExecutionTimes = totalExecutionTimes;

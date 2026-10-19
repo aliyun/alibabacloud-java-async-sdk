@@ -174,14 +174,14 @@ public class CreateGlobalSecurityIPGroupRequest extends Request {
         } 
 
         /**
-         * <p>The IP addresses in the IP whitelist template.</p>
+         * <p>The IP addresses in the whitelist template.</p>
          * <blockquote>
-         * <p> Separate multiple IP addresses with commas (,). The maximum number of IP addresses is 1,000.</p>
+         * <p>Separate multiple IP addresses with commas (,). IP addresses cannot be duplicated. You can add up to 1,000 IP addresses.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>111.175.56.206,47.253.88.168,111.181.0.162</p>
+         * <p>192.168.0.1,10.10.10.10,172.16.0.1</p>
          */
         public Builder gIpList(String gIpList) {
             this.putQueryParameter("GIpList", gIpList);
@@ -190,7 +190,7 @@ public class CreateGlobalSecurityIPGroupRequest extends Request {
         }
 
         /**
-         * <p>The name of the IP whitelist template. The name must meet the following requirements:</p>
+         * <p>The name of the IP address whitelist template. The name must meet the following requirements:</p>
          * <ul>
          * <li>The name can contain lowercase letters, digits, and underscores (_).</li>
          * <li>The name must start with a letter and end with a letter or digit.</li>

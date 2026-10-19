@@ -158,7 +158,7 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The type of the database engine.</p>
+         * <p>The database engine.</p>
          * 
          * <strong>example:</strong>
          * <p>Redis</p>
@@ -169,7 +169,7 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>r-bp1zxszhcgatnx****</p>
@@ -180,7 +180,7 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Details about the log entries.</p>
+         * Items.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -188,7 +188,7 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -199,7 +199,7 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of log entries returned on the current page.</p>
+         * <p>The number of entries returned on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -210,7 +210,7 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of entries returned on each page.</p>
+         * <p>The maximum number of entries returned per page.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -232,7 +232,7 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The beginning of the time range to query.</p>
+         * <p>The start time of the query. The time is in the YYYY-MM-DDTHH:mmZ format and is in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2018-12-03T07:01Z</p>
@@ -243,7 +243,7 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -338,10 +338,7 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The content of the log.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>CONFIG REWRITE executed with success.</p>
+             * Content.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -349,10 +346,7 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the log was generated. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2018-12-03T07:07:30Z</p>
+             * CreateTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -360,7 +354,7 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance.</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>r-bp1zxszhcgatnx****</p>
@@ -371,13 +365,7 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the node.</p>
-             * <blockquote>
-             * <p> If a standard instance is queried, <code>(null)</code> is returned.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>r-bp1zxszhcgatnx****-db-0</p>
+             * NodeId.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;

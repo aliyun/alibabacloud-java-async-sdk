@@ -181,13 +181,13 @@ public class CreateGlobalDistributeCacheRequest extends Request {
         }
 
         /**
-         * <p>The time when you want to perform the conversion. Valid values:</p>
+         * <p>The time when the operation is executed. Valid values:</p>
          * <ul>
-         * <li><strong>Immediately</strong>: immediately performs the conversion.</li>
-         * <li><strong>MaintainTime</strong> (default): performs the conversion during the maintenance window.</li>
+         * <li><strong>Immediately</strong>: Executes the operation immediately.</li>
+         * <li><strong>MaintainTime</strong>: Executes the operation during the maintenance window. This is the default value.</li>
          * </ul>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/473775.html">ModifyInstanceMaintainTime</a> operation to modify the maintenance window of an instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/473775.html">ModifyInstanceMaintainTime</a> operation to modify the maintenance window of the instance.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -220,11 +220,13 @@ public class CreateGlobalDistributeCacheRequest extends Request {
         /**
          * <p>The ID of the resource group.</p>
          * <blockquote>
-         * <p> You do not need to specify system parameters.</p>
+         * <p>You do not need to specify this system parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>rg-acfmyiu4ekp****</p>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -260,7 +262,7 @@ public class CreateGlobalDistributeCacheRequest extends Request {
         }
 
         /**
-         * <p>The ID of the existing instance.</p>
+         * <p>The instance ID to be transformed.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

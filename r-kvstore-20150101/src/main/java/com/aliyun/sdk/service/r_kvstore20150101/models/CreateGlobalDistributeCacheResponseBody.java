@@ -80,7 +80,10 @@ public class CreateGlobalDistributeCacheResponseBody extends TeaModel {
         } 
 
         /**
-         * GlobalInstanceId.
+         * <p>The distributed instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gr-8vbzg1y6m****t38p</p>
          */
         public Builder globalInstanceId(String globalInstanceId) {
             this.globalInstanceId = globalInstanceId;
@@ -88,7 +91,10 @@ public class CreateGlobalDistributeCacheResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-8vb6ffc5****4ec4</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -96,7 +102,7 @@ public class CreateGlobalDistributeCacheResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>E681E498-5A0D-44F2-B1A7-912DC3******</p>

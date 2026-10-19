@@ -54,7 +54,7 @@ public class ModifyInstanceMaintainTimeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>8D0C0AFC-E9CD-47A4-8395-5C31BF9B3E76</p>

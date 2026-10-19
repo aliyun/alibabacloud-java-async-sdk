@@ -67,7 +67,7 @@ public class DescribeDBInstanceMonitorResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The collection frequency of the monitoring data. Unit: second.</p>
+         * <p>The collection granularity of monitoring data, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>

@@ -106,7 +106,7 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Details about each node in the instance.</p>
+         * Node.
          */
         public Builder node(Node node) {
             this.node = node;
@@ -114,7 +114,7 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -147,7 +147,7 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -346,16 +346,7 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The current bandwidth of the node, which consists of the default bandwidth and the increased bandwidth. Unit: MB/s.</p>
-             * <blockquote>
-             * <ul>
-             * <li>You can call the <a href="https://help.aliyun.com/document_detail/473771.html">EnableAdditionalBandwidth</a> operation to specify the increased bandwidth.</li>
-             * <li>You can also use this parameter to calculate the increased bandwidth. For example, if the default bandwidth of the node is 96 MB/s and the returned value of this parameter is 100, the increased bandwidth is 4 MB/s.</li>
-             * </ul>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>100</p>
+             * CurrentBandWidth.
              */
             public Builder currentBandWidth(Long currentBandWidth) {
                 this.currentBandWidth = currentBandWidth;
@@ -363,10 +354,7 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The minor version of the node.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>redis-5.0_0.3.10</p>
+             * CurrentMinorVersion.
              */
             public Builder currentMinorVersion(String currentMinorVersion) {
                 this.currentMinorVersion = currentMinorVersion;
@@ -374,10 +362,7 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the data shard.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>30381****</p>
+             * CustinsId.
              */
             public Builder custinsId(String custinsId) {
                 this.custinsId = custinsId;
@@ -385,10 +370,7 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The default bandwidth of the node. Unit: MB/s.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>96</p>
+             * DefaultBandWidth.
              */
             public Builder defaultBandWidth(Long defaultBandWidth) {
                 this.defaultBandWidth = defaultBandWidth;
@@ -396,10 +378,7 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the node.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>r-t4nlenc2p04uvb****</p>
+             * InsName.
              */
             public Builder insName(String insName) {
                 this.insName = insName;
@@ -407,13 +386,7 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the node is a read replica. If the node is a read replica, <strong>3</strong> is returned.</p>
-             * <blockquote>
-             * <p> If the node is not a read replica, no value is returned.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>3</p>
+             * InsType.
              */
             public Builder insType(Integer insType) {
                 this.insType = insType;
@@ -421,17 +394,7 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the minor version is the latest version. Valid values:</p>
-             * <ul>
-             * <li><strong>0</strong>: The minor version is not the latest version.</li>
-             * <li><strong>1</strong>: The minor version is the latest version.</li>
-             * </ul>
-             * <blockquote>
-             * <p> To update the minor version, call the <a href="https://help.aliyun.com/document_detail/473777.html">ModifyInstanceMinorVersion</a> operation.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * IsLatestVersion.
              */
             public Builder isLatestVersion(Integer isLatestVersion) {
                 this.isLatestVersion = isLatestVersion;
@@ -439,14 +402,7 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the bandwidth of the node is increased. Valid values:</p>
-             * <ul>
-             * <li><strong>true</strong>: The bandwidth of the node is not increased.</li>
-             * <li><strong>false</strong>: The bandwidth of the node is increased.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * IsOpenBandWidthService.
              */
             public Builder isOpenBandWidthService(Boolean isOpenBandWidthService) {
                 this.isOpenBandWidthService = isOpenBandWidthService;
@@ -454,10 +410,7 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This parameter is used only for internal maintenance of instances.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>10065****</p>
+             * NodeId.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -465,15 +418,7 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node type. Valid values:</p>
-             * <ul>
-             * <li><strong>db</strong>: data node.</li>
-             * <li><strong>proxy</strong>: proxy node.</li>
-             * <li><strong>normal</strong>: regular node. This value is returned when the instance runs in the standard architecture.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>normal</p>
+             * NodeType.
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -481,14 +426,7 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The role of the node. Valid values:</p>
-             * <ul>
-             * <li><strong>master</strong>: master node</li>
-             * <li><strong>slave</strong>: replica node</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>master</p>
+             * Role.
              */
             public Builder role(String role) {
                 this.role = role;
@@ -496,10 +434,7 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the zone.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou-b</p>
+             * ZoneId.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

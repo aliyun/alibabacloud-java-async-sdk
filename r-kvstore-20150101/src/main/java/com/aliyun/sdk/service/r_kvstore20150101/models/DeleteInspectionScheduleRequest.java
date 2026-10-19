@@ -88,10 +88,11 @@ public class DeleteInspectionScheduleRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID of the AI assistant.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>r-bp1zxszhcgatnx****</p>
+         * <p>ta-bp1zxszhcgatnx****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -100,7 +101,10 @@ public class DeleteInspectionScheduleRequest extends Request {
         }
 
         /**
-         * ScheduleId.
+         * <p>The scheduling ID of the timed scheduling.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>scheduleId-202604141xxxx</p>
          */
         public Builder scheduleId(String scheduleId) {
             this.putQueryParameter("ScheduleId", scheduleId);

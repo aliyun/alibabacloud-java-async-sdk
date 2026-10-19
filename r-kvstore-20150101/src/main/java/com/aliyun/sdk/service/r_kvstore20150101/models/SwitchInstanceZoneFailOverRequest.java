@@ -101,11 +101,12 @@ public class SwitchInstanceZoneFailOverRequest extends Request {
         }
 
         /**
-         * <p>The duration for which the fault lasts. Unit: minutes.</p>
-         * <p>Valid values:</p>
+         * <p>The duration of the simulated failure. Unit: minutes.
+         * Valid values:</p>
          * <ul>
          * <li>5</li>
          * <li>10</li>
+         * <li>30</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -118,7 +119,7 @@ public class SwitchInstanceZoneFailOverRequest extends Request {
         }
 
         /**
-         * <p>The ID of the destination zone.</p>
+         * <p>The target zone ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-j</p>

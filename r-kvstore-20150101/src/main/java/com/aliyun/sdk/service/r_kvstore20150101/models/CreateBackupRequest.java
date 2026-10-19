@@ -167,7 +167,10 @@ public class CreateBackupRequest extends Request {
         }
 
         /**
-         * BackupRetentionPeriod.
+         * <p>The retention period of this manual backup. Valid values: 7 to 730. Unit: days. If you set this parameter to -1, the manual backup does not expire within the instance lifetime. If you do not specify this parameter, the retention period is the same as that of the current automatic backup policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder backupRetentionPeriod(Long backupRetentionPeriod) {
             this.putQueryParameter("BackupRetentionPeriod", backupRetentionPeriod);
@@ -176,7 +179,7 @@ public class CreateBackupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

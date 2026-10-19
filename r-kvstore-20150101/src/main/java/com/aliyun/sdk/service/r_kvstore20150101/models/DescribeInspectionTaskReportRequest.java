@@ -103,7 +103,10 @@ public class DescribeInspectionTaskReportRequest extends Request {
         } 
 
         /**
-         * InspectionInsId.
+         * <p>The ID of the inspection instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp19f4f6994813xxx</p>
          */
         public Builder inspectionInsId(String inspectionInsId) {
             this.putQueryParameter("InspectionInsId", inspectionInsId);
@@ -112,6 +115,7 @@ public class DescribeInspectionTaskReportRequest extends Request {
         }
 
         /**
+         * <p>The assistant instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +137,7 @@ public class DescribeInspectionTaskReportRequest extends Request {
         }
 
         /**
+         * <p>The task ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

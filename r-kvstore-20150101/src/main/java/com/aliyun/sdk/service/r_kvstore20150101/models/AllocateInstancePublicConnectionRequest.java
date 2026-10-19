@@ -183,9 +183,9 @@ public class AllocateInstancePublicConnectionRequest extends Request {
         }
 
         /**
-         * <p>The prefix of the public endpoint. The prefix must start with a lowercase letter and can contain lowercase letters and digits. The prefix can be 8 to 40 characters in length.</p>
+         * <p>The prefix of the public endpoint. The prefix must start with a lowercase letter and can contain lowercase letters and digits. The prefix must be 8 to 40 characters in length.</p>
          * <blockquote>
-         * <p> The endpoint is in the <code>&lt;prefix&gt;.redis.rds.aliyuncs.com</code> format.</p>
+         * <p>The public endpoint is in the format of <code>&lt;prefix&gt;.redis.rds.aliyuncs.com</code>.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -199,7 +199,7 @@ public class AllocateInstancePublicConnectionRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

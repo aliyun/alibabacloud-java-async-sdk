@@ -67,7 +67,7 @@ public class SwitchInstanceHAResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5D622714-AEDD-4609-9167-F5DDD3D1****</p>
@@ -78,7 +78,10 @@ public class SwitchInstanceHAResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>674546459</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

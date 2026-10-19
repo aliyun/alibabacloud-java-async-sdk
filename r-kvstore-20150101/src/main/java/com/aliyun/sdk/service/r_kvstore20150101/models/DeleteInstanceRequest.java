@@ -144,7 +144,7 @@ public class DeleteInstanceRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the distributed instance to which the instance belongs. This parameter is applicable to only China site (aliyun.com).</p>
+         * <p>The instance ID of the distributed instance to which the instance that you want to release belongs. This parameter is applicable only to Chinese site (aliyun.com).</p>
          * 
          * <strong>example:</strong>
          * <p>gr-bp14rkqrhac****</p>
@@ -156,7 +156,7 @@ public class DeleteInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance that you want to release.</p>
+         * <p>The instance ID of the instance that you want to release.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

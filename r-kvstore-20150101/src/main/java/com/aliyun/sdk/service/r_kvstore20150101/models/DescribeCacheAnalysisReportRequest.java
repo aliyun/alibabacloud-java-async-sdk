@@ -226,7 +226,7 @@ public class DescribeCacheAnalysisReportRequest extends Request {
         }
 
         /**
-         * <p>The type of analytics. Set the value to <strong>BigKey</strong>.</p>
+         * <p>The analysis type. Set the value to <strong>BigKey</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -239,7 +239,7 @@ public class DescribeCacheAnalysisReportRequest extends Request {
         }
 
         /**
-         * <p>The date to query. You can query the report for one day each time. Specify the date in the <em>yyyy-MM-dd</em>Z format. The time must be in UTC.</p>
+         * <p>The date to query. You can query the offline full key analysis results for one day at a time. The format is <i>yyyy-MM-dd</i>Z (UTC time).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -252,11 +252,11 @@ public class DescribeCacheAnalysisReportRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>-bp1zxszhcgatnx****</p>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -265,13 +265,13 @@ public class DescribeCacheAnalysisReportRequest extends Request {
         }
 
         /**
-         * <p>The ID of the child node in the cluster instance.</p>
+         * <p>The ID of the child node in a cluster instance.</p>
          * <blockquote>
-         * <p> If you do not specify this parameter, the analysis results of all child nodes in the instance are returned.</p>
+         * <p>This parameter is required for cluster instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>-bp1zxszhcgatnx****-db-0</p>
+         * <p>r-bp1zxszhcgatnx****-db-0</p>
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -300,7 +300,7 @@ public class DescribeCacheAnalysisReportRequest extends Request {
         /**
          * <p>The number of the page to return.</p>
          * <blockquote>
-         * <p>If the parameter value exceeds the maximum number of the returned pages, an empty large key list is returned.</p>
+         * <p>If the value is greater than the maximum number of pages in the returned result, the returned big key results are empty.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -315,7 +315,7 @@ public class DescribeCacheAnalysisReportRequest extends Request {
         /**
          * <p>The number of entries to return on each page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>.</p>
          * <blockquote>
-         * <p>The default value is <strong>30</strong>.</p>
+         * <p>Default value: <strong>30</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

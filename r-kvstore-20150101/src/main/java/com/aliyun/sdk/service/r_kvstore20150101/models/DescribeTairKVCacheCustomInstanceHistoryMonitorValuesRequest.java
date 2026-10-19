@@ -240,9 +240,6 @@ public class DescribeTairKVCacheCustomInstanceHistoryMonitorValuesRequest extend
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2024-09-20T00:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -261,9 +258,6 @@ public class DescribeTairKVCacheCustomInstanceHistoryMonitorValuesRequest extend
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>tc-bp1zxszhcgatnx****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -345,9 +339,6 @@ public class DescribeTairKVCacheCustomInstanceHistoryMonitorValuesRequest extend
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2024-09-05T08:49:27Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

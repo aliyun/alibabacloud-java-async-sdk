@@ -183,9 +183,6 @@ public class ResetTairKVCacheCustomInstancePasswordRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -213,9 +210,6 @@ public class ResetTairKVCacheCustomInstancePasswordRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Pass!123456</p>
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);

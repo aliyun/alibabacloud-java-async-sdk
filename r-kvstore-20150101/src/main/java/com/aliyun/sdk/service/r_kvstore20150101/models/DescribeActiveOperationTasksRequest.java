@@ -271,9 +271,9 @@ public class DescribeActiveOperationTasksRequest extends Request {
         } 
 
         /**
-         * <p>The filter condition that is used to return events based on the settings of event cancellation. Default value: -1. Valid values:</p>
+         * <p>Specifies whether the event can be canceled. Default value: -1. Valid values:</p>
          * <ul>
-         * <li><strong>-1</strong>: returns all events.</li>
+         * <li><strong>-1</strong>: all events.</li>
          * <li><strong>0</strong>: returns only O&amp;M events that cannot be canceled.</li>
          * <li><strong>1</strong>: returns only O&amp;M events that can be canceled.</li>
          * </ul>
@@ -288,11 +288,11 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * <p>The filter condition that is used to return events based on the settings of the switching time. Default value: -1. Valid values:</p>
+         * <p>Specifies whether the event time can be modified. Default value: -1. Valid values:</p>
          * <ul>
-         * <li><strong>-1</strong>: returns all events.</li>
-         * <li><strong>0</strong>: returns only O&amp;M events for which the switching time cannot be changed.</li>
-         * <li><strong>-1</strong>: returns only O&amp;M events for which the switching time can be changed.</li>
+         * <li><strong>-1</strong>: all events.</li>
+         * <li><strong>0</strong>: returns only O&amp;M events whose time cannot be modified.</li>
+         * <li><strong>1</strong>: returns only O&amp;M events whose time can be modified.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -305,11 +305,11 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * <p>The type of task configuration change. Valid values:</p>
+         * <p>The change level. Default value: all. Valid values:</p>
          * <ul>
-         * <li><strong>all</strong> (default): The configurations of all O&amp;M tasks are changed.</li>
-         * <li><strong>S0</strong>: The configurations of tasks initiated to fix exceptions are changed.</li>
-         * <li><strong>S1</strong>: The configurations of system O&amp;M tasks are changed.</li>
+         * <li><strong>all</strong>: all levels including exception recovery and system O&amp;M.</li>
+         * <li><strong>S0</strong>: exception recovery.</li>
+         * <li><strong>S1</strong>: system O&amp;M.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -322,7 +322,7 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * <p>The database type. Valid values: <strong>redis</strong></p>
+         * <p>The database type. Set this parameter to <strong>redis</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>redis</p>
@@ -334,7 +334,7 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * <p>The name of the instance. You can leave this parameter empty. If you configure this parameter, you can specify the name only of one instance.</p>
+         * <p>The instance name. This parameter is optional. If specified, only one instance name is allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>r-wz96fzmpvpr2qnqnlb</p>
@@ -364,7 +364,7 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * <p>The page number. The value must be greater than 0. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -388,7 +388,7 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * <p>The name of the service. Valid values: RDS, POLARDB, MongoDB, and Redis. For Redis instances, set the value to Redis.</p>
+         * <p>The product name. Valid values: RDS, POLARDB, MongoDB, and Redis. For Redis instances, set this parameter to Redis.</p>
          * 
          * <strong>example:</strong>
          * <p>Redis</p>
@@ -400,9 +400,9 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the O&amp;M task. You can call the <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the pending event. You can call the <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> operation to query available region IDs.</p>
          * <blockquote>
-         * <p>A value of <strong>all</strong> indicates all region IDs.</p>
+         * <p>Set this parameter to <strong>all</strong> to query events in all regions.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -442,14 +442,14 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * <p>The status of an O&amp;M event. This parameter is used to filter returned tasks. Valid values:</p>
+         * <p>The status of the O&amp;M event. This parameter is used to filter the returned events. Valid values:</p>
          * <ul>
-         * <li><strong>-1</strong>: filters all events.</li>
-         * <li><strong>3</strong>: filters pending events.</li>
-         * <li><strong>4</strong>: filters in-progress events.</li>
-         * <li><strong>5</strong>: filters successful events.</li>
-         * <li><strong>6</strong>: filters failed events.</li>
-         * <li><strong>7</strong>: filters canceled events.</li>
+         * <li><strong>-1</strong>: all events.</li>
+         * <li><strong>3</strong>: pending events.</li>
+         * <li><strong>4</strong>: events being processed.</li>
+         * <li><strong>5</strong>: events that ended successfully.</li>
+         * <li><strong>6</strong>: events that ended with failures.</li>
+         * <li><strong>7</strong>: canceled events.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -462,21 +462,10 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * <p>The type of the O&amp;M event. If this parameter is not specified, all types of O&amp;M events are queried.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>rds_apsradb_upgrade: minor version update</li>
-         * <li>rds_apsaradb_ha: primary/secondary switchover</li>
-         * <li>rds_apsaradb_ssl_update: SSL certificate update</li>
-         * <li>rds_apsaradb_major_upgrade: major version upgrade</li>
-         * <li>rds_apsradb_transfer: instance migration</li>
-         * <li>rds_apsaradb_modify_config: network upgrade</li>
-         * <li>rds_apsaradb_modify_config: instance parameter adjustment</li>
-         * <li>rds_apsaradb_maxscale: proxy minor version update</li>
-         * </ul>
+         * <p>The event type of the O&amp;M event. If this parameter is left empty, all types are queried.</p>
          * 
          * <strong>example:</strong>
-         * <p>all</p>
+         * <p>rds_apsradb_transfer</p>
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

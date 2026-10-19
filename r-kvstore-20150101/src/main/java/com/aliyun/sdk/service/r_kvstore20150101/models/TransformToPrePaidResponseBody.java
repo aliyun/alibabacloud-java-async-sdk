@@ -80,7 +80,8 @@ public class TransformToPrePaidResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The time when the instance expires after the billing method of the instance is changed from pay-as-you-go to subscription.</p>
+         * <p>The time when the instance expires after the billing method of the instance is changed to subscription.</p>
+         * <p>The time is in the YYYY-MM-DDTHH:mm:ssZ format in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-01-18T16:00:00Z</p>

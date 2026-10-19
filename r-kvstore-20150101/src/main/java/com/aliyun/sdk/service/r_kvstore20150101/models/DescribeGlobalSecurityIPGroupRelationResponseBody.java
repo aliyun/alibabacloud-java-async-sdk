@@ -91,7 +91,7 @@ public class DescribeGlobalSecurityIPGroupRelationResponseBody extends TeaModel 
         }
 
         /**
-         * <p>The information about the associated global IP whitelist template.</p>
+         * <p>The information about the associated global IP whitelist templates.</p>
          */
         public Builder globalSecurityIPGroupRel(java.util.List<GlobalSecurityIPGroupRel> globalSecurityIPGroupRel) {
             this.globalSecurityIPGroupRel = globalSecurityIPGroupRel;
@@ -194,9 +194,9 @@ public class DescribeGlobalSecurityIPGroupRelationResponseBody extends TeaModel 
             } 
 
             /**
-             * <p>The IP address in the IP whitelist template.</p>
+             * <p>The IP addresses in the whitelist template.</p>
              * <blockquote>
-             * <p> Multiple IP addresses are separated by commas (,).</p>
+             * <p>Separate multiple IP addresses with commas (,).</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

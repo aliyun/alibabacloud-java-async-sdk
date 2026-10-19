@@ -90,9 +90,6 @@ public class CreateTCInstanceResponseBody extends TeaModel {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>22179******0904</p>
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;

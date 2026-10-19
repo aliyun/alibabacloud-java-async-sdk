@@ -54,7 +54,7 @@ public class ModifyInstanceVpcAuthModeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ABAF95F6-35C1-4177-AF3A-70969EBD****</p>

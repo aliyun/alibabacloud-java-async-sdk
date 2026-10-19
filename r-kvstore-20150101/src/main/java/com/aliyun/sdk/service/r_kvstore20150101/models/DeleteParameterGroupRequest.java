@@ -171,11 +171,11 @@ public class DeleteParameterGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the parameter template.</p>
+         * <p>The parameter template ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>rpg-sys-00*****</p>
+         * <p>g-sysa00*****</p>
          */
         public Builder parameterGroupId(String parameterGroupId) {
             this.putQueryParameter("ParameterGroupId", parameterGroupId);

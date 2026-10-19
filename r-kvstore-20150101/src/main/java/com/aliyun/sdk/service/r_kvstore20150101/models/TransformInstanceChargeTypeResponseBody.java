@@ -80,10 +80,11 @@ public class TransformInstanceChargeTypeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The time when the instance expires.</p>
+         * <p>The expiration time of the instance.</p>
          * <blockquote>
-         * <p> A value is returned for this parameter only if the instance was changed from pay-as-you-go to subscription.</p>
+         * <p>This parameter is returned only when the billing method of the instance is changed from pay-as-you-go to subscription.</p>
          * </blockquote>
+         * <p>The time is displayed in the YYYY-MM-DDTHH:mm:ssZ format in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-05-13T00:00:00Z</p>

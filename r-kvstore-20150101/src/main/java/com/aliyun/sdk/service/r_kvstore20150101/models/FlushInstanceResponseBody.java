@@ -54,7 +54,7 @@ public class FlushInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The operation that you want to perform. Set the value to <strong>FlushInstance</strong>.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>8D0C0AFC-E9CD-47A4-8395-5C31BF9B3E7</p>

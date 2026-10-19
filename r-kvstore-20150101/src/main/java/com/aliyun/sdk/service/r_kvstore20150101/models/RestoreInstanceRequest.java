@@ -223,7 +223,7 @@ public class RestoreInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the backup file. You can call the <a href="https://help.aliyun.com/document_detail/473823.html">DescribeBackups</a>operation to query the IDs of backup files.</p>
+         * <p>The ID of the backup file for the instance. You can call the <a href="https://help.aliyun.com/document_detail/473823.html">DescribeBackups</a> operation to query the ID.</p>
          * 
          * <strong>example:</strong>
          * <p>78241****</p>
@@ -235,14 +235,14 @@ public class RestoreInstanceRequest extends Request {
         }
 
         /**
-         * <p>The key that you want to restore. You can specify multiple keys. Separate multiple keys with commas (,). Regular expressions are supported.</p>
+         * <p>The keys to restore. Regular expressions are supported. Separate multiple values with commas (,).</p>
          * <ul>
          * <li>If you do not specify this parameter, the entire instance is restored.</li>
-         * <li>If you specify this parameter, only the involved keys are restored. Only classic instances support this feature.</li>
-         * </ul>
-         * <blockquote>
-         * <p> In a regular expression, an asterisk (<code>*</code>) matches zero or more occurrences of a subexpression that occurs before. For example, if you set this parameter to <code>h.*llo</code>, strings such as <code>hllo</code> and <code>heeeello</code> are matched.</p>
+         * <li>If you specify this parameter, only the specified keys are restored. This feature is supported only by classic architecture instances.<blockquote>
+         * <p>For example, in a regular expression, an asterisk (<code>*</code>) matches the preceding subexpression zero or more times. If you set this parameter to <code>h.*llo</code>, the system matches strings such as <code>hllo</code> and <code>heeeello</code>.</p>
          * </blockquote>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>key:00000007198*</p>
@@ -254,7 +254,7 @@ public class RestoreInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -303,9 +303,9 @@ public class RestoreInstanceRequest extends Request {
         }
 
         /**
-         * <p>The point in time to which you want to restore data. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+         * <p>The point in time to which you want to restore data. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format. The time must be in UTC.</p>
          * <blockquote>
-         * <p> The point in time cannot be earlier than the point in time when the data flashback feature is enabled.</p>
+         * <p>The point in time cannot be earlier than the time when the data flashback feature is enabled.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -318,10 +318,10 @@ public class RestoreInstanceRequest extends Request {
         }
 
         /**
-         * <p>The restoration mode. Valid values:</p>
+         * <p>The restoration type. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong> (default): The parameter is invalid.</li>
-         * <li><strong>1</strong>: restores data to a specified point in time. You can specify this value only if the <a href="https://help.aliyun.com/document_detail/148479.html">data flashback</a> feature is enabled for the instance. If you specify this value, you also need to set the <strong>RestoreTime</strong> parameter.</li>
+         * <li><strong>0</strong> (default): This value is deprecated.</li>
+         * <li><strong>1</strong>: Restores data to a specified point in time. You can specify this value only when the <a href="https://help.aliyun.com/document_detail/148479.html">data flashback</a> feature is enabled for the instance. If you specify this value, you must also specify the <strong>RestoreTime</strong> parameter.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -343,15 +343,13 @@ public class RestoreInstanceRequest extends Request {
         }
 
         /**
-         * <p>When you restore a classic instance, regardless of whether you choose to restore all data or specific keys, you can apply an offset to the expiration time of the keys. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC. A key expires after the remaining validity period of the key elapses based on the expiration offset time point.</p>
+         * <p>When you restore a classic architecture instance, you can apply an offset to the expiration time of keys regardless of whether you choose to restore full data or specified keys. Specify the time in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC. The instance calculates the remaining expiration duration of the keys at the specified flashback point in time, starting from the specified expiration offset point in time.</p>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>This feature applies only to keys and does not work on elements in the self-developed data structures of Tair, such as fields in exHash and skeys in TairTS.</p>
-         * </li>
-         * <li><p>This time point must be between the specified flashback time point and the submission time of the data restoration task.</p>
-         * </li>
+         * <li>This feature supports offsetting the expiration time only at the key level. It does not support offsetting the internal expiration time of keys in Tair-developed data structures, such as the fields in exHash and the skeys in TS.</li>
+         * <li>The point in time cannot be earlier than the specified flashback point in time or later than the time when the restoration task is submitted.</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>2021-07-06T08:25:57Z</p>

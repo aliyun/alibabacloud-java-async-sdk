@@ -54,7 +54,7 @@ public class ModifyIntranetAttributeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>97AC8948-D7E4-457E-BE03-850CF04E****</p>

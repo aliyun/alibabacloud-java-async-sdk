@@ -167,13 +167,13 @@ public class FlushExpireKeysRequest extends Request {
         }
 
         /**
-         * <p>The time when you want to delete the expired keys. Default value: Immediately. Valid values:</p>
+         * <p>The execution time. Valid values:</p>
          * <ul>
-         * <li><strong>Immediately</strong>: deletes the keys immediately.</li>
-         * <li><strong>MaintainTime</strong>: deletes the keys during the maintenance window.</li>
+         * <li><strong>Immediately</strong>: Executes the operation immediately. This is the default value.</li>
+         * <li><strong>MaintainTime</strong>: Executes the operation during the maintenance window.</li>
          * </ul>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/473775.html">ModifyInstanceMaintainTime</a> operation to modify the maintenance window of an instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/473775.html">ModifyInstanceMaintainTime</a> operation to modify the maintenance window of the instance.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -186,7 +186,7 @@ public class FlushExpireKeysRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

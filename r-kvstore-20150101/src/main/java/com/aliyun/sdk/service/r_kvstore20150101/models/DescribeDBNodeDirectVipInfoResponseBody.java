@@ -80,7 +80,7 @@ public class DescribeDBNodeDirectVipInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The VIP information of shards in the cluster instance.</p>
+         * DirectVipInfo.
          */
         public Builder directVipInfo(DirectVipInfo directVipInfo) {
             this.directVipInfo = directVipInfo;
@@ -194,13 +194,7 @@ public class DescribeDBNodeDirectVipInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The network type of the security group. Valid values:</p>
-             * <ul>
-             * <li><strong>vpc</strong>: Virtual Private Cloud (VPC)</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>vpc</p>
+             * NetType.
              */
             public Builder netType(String netType) {
                 this.netType = netType;
@@ -208,10 +202,7 @@ public class DescribeDBNodeDirectVipInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The shard ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>r-8vb3679b04551444-db-2</p>
+             * NodeId.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -219,10 +210,7 @@ public class DescribeDBNodeDirectVipInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The port number. Valid values: <strong>1024</strong> to <strong>65535</strong>. Default value: <strong>6379</strong>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>6379</p>
+             * Port.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -230,10 +218,7 @@ public class DescribeDBNodeDirectVipInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The VIP of the shard.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>100.115.61.8</p>
+             * Vip.
              */
             public Builder vip(String vip) {
                 this.vip = vip;

@@ -54,7 +54,7 @@ public class ReleaseInstancePublicConnectionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>88F850B5-CC68-48B4-83CA-5497C3C191DE</p>

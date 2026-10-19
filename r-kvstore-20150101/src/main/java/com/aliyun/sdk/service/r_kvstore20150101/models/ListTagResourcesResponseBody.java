@@ -80,7 +80,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The token required to obtain more results. If a query does not return all results, in the next query, you can provide the token returned by the previous query to obtain more results.</p>
+         * <p>The token used to start the next query. If a query does not return all results, you can pass the token returned from the previous query in subsequent queries to continue the query.</p>
          * 
          * <strong>example:</strong>
          * <p>212db86sca4384811e0b5e8707ec2****</p>
@@ -91,7 +91,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>47A514A1-4B77-4E30-B4C5-2A880650****</p>
@@ -102,7 +102,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Details about the instances and tags.</p>
+         * TagResources.
          */
         public Builder tagResources(TagResources tagResources) {
             this.tagResources = tagResources;
@@ -194,10 +194,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The resource ID, which is also the ID of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>r-bp1zxszhcgatnx****</p>
+             * ResourceId.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -205,10 +202,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource type. The return value is <strong>ALIYUN::KVSTORE::INSTANCE</strong>. This value indicates a Tair (Redis OSS-compatible) instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ALIYUN::KVSTORE::INSTANCE</p>
+             * ResourceType.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -216,10 +210,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The keys of the tags.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>demokey</p>
+             * TagKey.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -227,10 +218,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The values of the tags.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>demovalue</p>
+             * TagValue.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

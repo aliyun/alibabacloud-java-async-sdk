@@ -353,11 +353,11 @@ public class DescribeInstancesOverviewRequest extends Request {
         } 
 
         /**
-         * <p>The architecture of the instance. Valid values:</p>
+         * <p>The architecture type. Valid values:</p>
          * <ul>
-         * <li><strong>cluster</strong>: cluster architecture</li>
-         * <li><strong>standard</strong>: standard architecture</li>
-         * <li><strong>rwsplit</strong>: read/write splitting architecture</li>
+         * <li><strong>cluster</strong>: Cluster Edition.</li>
+         * <li><strong>standard</strong>: Standard Edition.</li>
+         * <li><strong>rwsplit</strong>: read/write splitting Edition.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -370,10 +370,10 @@ public class DescribeInstancesOverviewRequest extends Request {
         }
 
         /**
-         * <p>The billing method of the instance. Valid values:</p>
+         * <p>The billing method. Valid values:</p>
          * <ul>
-         * <li><strong>PrePaid</strong>: subscription</li>
-         * <li><strong>PostPaid</strong>: pay-as-you-go</li>
+         * <li><strong>PrePaid</strong>: subscription.</li>
+         * <li><strong>PostPaid</strong>: pay-as-you-go.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -386,10 +386,10 @@ public class DescribeInstancesOverviewRequest extends Request {
         }
 
         /**
-         * <p>The edition of the instance. Valid values:</p>
+         * <p>The edition type. Valid values:</p>
          * <ul>
-         * <li><strong>Community</strong>: Redis Open-Source Edition</li>
-         * <li><strong>Enterprise</strong>: Tair (Enterprise Edition)</li>
+         * <li><strong>Community</strong>: Community Edition.</li>
+         * <li><strong>Enterprise</strong>: Enterprise Edition.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -402,19 +402,10 @@ public class DescribeInstancesOverviewRequest extends Request {
         }
 
         /**
-         * <p>The engine version of the instance. Valid values: <strong>2.8</strong>, <strong>4.0</strong>, <strong>5.0</strong>, <strong>6.0</strong>, and <strong>7.0</strong>.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>1.0</li>
-         * <li>2.8</li>
-         * <li>4.0</li>
-         * <li>5.0</li>
-         * <li>6.0</li>
-         * <li>7.0</li>
-         * </ul>
+         * <p>The Redis-compatible engine version of the instance. Valid values: <strong>2.8</strong>, <strong>4.0</strong>, <strong>5.0</strong>, <strong>6.0</strong>, and <strong>7.0</strong>.</p>
          * 
          * <strong>example:</strong>
-         * <p>4.0</p>
+         * <p>6.0</p>
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -423,7 +414,7 @@ public class DescribeInstancesOverviewRequest extends Request {
         }
 
         /**
-         * <p>The instance type of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/107984.html">Instance types</a>.</p>
+         * <p>The instance type. For more information, see <a href="https://help.aliyun.com/document_detail/107984.html">Instance types</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>redis.master.small.default</p>
@@ -435,9 +426,9 @@ public class DescribeInstancesOverviewRequest extends Request {
         }
 
         /**
-         * <p>The IDs of instances.</p>
+         * <p>The IDs of the instances that you want to query.</p>
          * <blockquote>
-         * <p>By default, all instances that belong to this account are queried. If you specify multiple instance IDs, separate the instance IDs with commas (,).</p>
+         * <p>By default, all instances under the current account are queried. To specify multiple instance IDs, separate them with commas (,).</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -450,26 +441,24 @@ public class DescribeInstancesOverviewRequest extends Request {
         }
 
         /**
-         * <p>The state of the instance. Valid values:</p>
+         * <p>The instance status. Valid values:</p>
          * <ul>
-         * <li><strong>Normal</strong>: The instance is normal.</li>
+         * <li><strong>Normal</strong>: The instance is running.</li>
          * <li><strong>Creating</strong>: The instance is being created.</li>
-         * <li><strong>Changing</strong>: The configurations of the instance are being changed.</li>
+         * <li><strong>Changing</strong>: The instance is being modified.</li>
          * <li><strong>Inactive</strong>: The instance is disabled.</li>
-         * <li><strong>Flushing</strong>: The instance is being released.</li>
+         * <li><strong>Flushing</strong>: The instance is being purged.</li>
          * <li><strong>Released</strong>: The instance is released.</li>
-         * <li><strong>Transforming</strong>: The billing method of the instance is being changed.</li>
-         * <li><strong>Unavailable</strong>: The instance is unavailable.</li>
-         * <li><strong>Error</strong>: The instance failed to be created.</li>
+         * <li><strong>Transforming</strong>: The instance is being transformed.</li>
          * <li><strong>Migrating</strong>: The instance is being migrated.</li>
          * <li><strong>BackupRecovering</strong>: The instance is being restored from a backup.</li>
-         * <li><strong>MinorVersionUpgrading</strong>: The minor version of the instance is being updated.</li>
-         * <li><strong>NetworkModifying</strong>: The network type of the instance is being changed.</li>
-         * <li><strong>SSLModifying</strong>: The SSL certificate of the instance is being changed.</li>
-         * <li><strong>MajorVersionUpgrading</strong>: The major version of the instance is being upgraded. The instance remains accessible during the upgrade.</li>
+         * <li><strong>MinorVersionUpgrading</strong>: A minor version upgrade is in progress.</li>
+         * <li><strong>NetworkModifying</strong>: The network configuration is being modified.</li>
+         * <li><strong>SSLModifying</strong>: The SSL configuration is being modified.</li>
+         * <li><strong>MajorVersionUpgrading</strong>: A major engine version upgrade is in progress. The instance can be accessed normally.</li>
          * </ul>
          * <blockquote>
-         * <p>For more information about instance states, see <a href="https://help.aliyun.com/document_detail/200740.html">Instance states and impacts</a>.</p>
+         * <p>For more information about instance statuses, see <a href="https://help.aliyun.com/document_detail/200740.html">Instance states and impacts</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -482,7 +471,7 @@ public class DescribeInstancesOverviewRequest extends Request {
         }
 
         /**
-         * <p>The category of the instance. Valid values:</p>
+         * <p>The instance type. Valid values:</p>
          * <ul>
          * <li><strong>Tair</strong></li>
          * <li><strong>Redis</strong></li>
@@ -499,10 +488,10 @@ public class DescribeInstancesOverviewRequest extends Request {
         }
 
         /**
-         * <p>The network type of the instance. Valid values:</p>
+         * <p>The network type. Valid values:</p>
          * <ul>
-         * <li><strong>CLASSIC</strong>: classic network</li>
-         * <li><strong>VPC</strong>: Virtual Private Cloud (VPC)</li>
+         * <li><strong>CLASSIC</strong>: classic network.</li>
+         * <li><strong>VPC</strong>: virtual private cloud (VPC).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -542,7 +531,7 @@ public class DescribeInstancesOverviewRequest extends Request {
         }
 
         /**
-         * <p>The private IP address of the instance.</p>
+         * <p>The private IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>172.16.49.***</p>
@@ -554,7 +543,7 @@ public class DescribeInstancesOverviewRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region in which the instances you want to query reside. You can call the <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> operation to query the region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -566,9 +555,9 @@ public class DescribeInstancesOverviewRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the instances you want to query belong.</p>
+         * <p>The resource group ID.</p>
          * <blockquote>
-         * <p>You can query resource group IDs by using the Tair (Redis OSS-compatible) console or by calling the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</p>
+         * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation or use the console to obtain the resource group ID. Related operations: see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -599,7 +588,7 @@ public class DescribeInstancesOverviewRequest extends Request {
         }
 
         /**
-         * <p>The keyword used for fuzzy search. The keyword can be based on an instance ID or an instance description.</p>
+         * <p>The keyword used for fuzzy search by instance ID or instance description.</p>
          * 
          * <strong>example:</strong>
          * <p>apitest</p>
@@ -620,7 +609,7 @@ public class DescribeInstancesOverviewRequest extends Request {
         }
 
         /**
-         * <p>The ID of the vSwitch.</p>
+         * <p>The vSwitch ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-bp1e7clcw529l773d****</p>
@@ -632,7 +621,7 @@ public class DescribeInstancesOverviewRequest extends Request {
         }
 
         /**
-         * <p>The ID of the VPC.</p>
+         * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp1nme44gek34slfc****</p>
@@ -644,7 +633,7 @@ public class DescribeInstancesOverviewRequest extends Request {
         }
 
         /**
-         * <p>The zone ID of the instance.</p>
+         * <p>The zone ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-b</p>

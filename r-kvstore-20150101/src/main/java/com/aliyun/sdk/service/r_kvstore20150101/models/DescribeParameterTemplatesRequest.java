@@ -225,11 +225,12 @@ public class DescribeParameterTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The architecture of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/86132.html">Overview</a>. Valid values:</p>
+         * <p>The architecture of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/86132.html">Architecture overview</a>. Valid values:</p>
          * <ul>
-         * <li><strong>logic</strong>: The instance is a cluster master-replica instance or a read/write splitting instance.</li>
-         * <li><strong>normal</strong>: The instance is a standard master-replica instance.</li>
+         * <li><strong>logic</strong>: cluster or read/write splitting architecture</li>
+         * <li><strong>normal</strong>: standard architecture (primary/secondary)</li>
          * </ul>
+         * <p>&lt;props=&quot;china&quot;&gt;When <strong>EngineVersion</strong> is set to <strong>6.0</strong>, this parameter does not support the <strong>logic</strong> value.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -242,7 +243,7 @@ public class DescribeParameterTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The database engine that is run on the instance. Set the value to <strong>Redis</strong>.</p>
+         * <p>The database engine. Set the value to <strong>Redis</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -255,7 +256,7 @@ public class DescribeParameterTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The major version of the instance. Valid values: <strong>4.0</strong>, <strong>5.0</strong>, <strong>6.0</strong>, and <strong>7.0</strong>.</p>
+         * <p>The major engine version of the instance. Valid values: <strong>4.0</strong>, <strong>5.0</strong>, <strong>6.0</strong>, and <strong>7.0</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -268,7 +269,7 @@ public class DescribeParameterTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to query the IDs of instances.</p>
+         * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to query the instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>r-bp1zxszhcgatnx****</p>
@@ -298,7 +299,10 @@ public class DescribeParameterTemplatesRequest extends Request {
         }
 
         /**
-         * ParameterCategory.
+         * <p>Specifies whether to query the account parameter template. Set the value to <strong>account</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>account</p>
          */
         public Builder parameterCategory(String parameterCategory) {
             this.putQueryParameter("ParameterCategory", parameterCategory);
@@ -307,9 +311,9 @@ public class DescribeParameterTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the instance belongs. You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query the IDs of resource groups.</p>
+         * <p>The ID of the resource group. You can invoke the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query the ID of the resource group.</p>
          * <blockquote>
-         * <p> You can also query the ID of a resource group in the Resource Management console. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View the basic information of a resource group</a>.</p>
+         * <p>You can also obtain the resource group ID in the console. For related operations, see <a href="https://help.aliyun.com/document_detail/151181.html">View the basic information of a resource group</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

@@ -67,7 +67,7 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of parameter templates.</p>
+         * <p>The parameter templates.</p>
          */
         public Builder parameterGroups(java.util.List<ParameterGroups> parameterGroups) {
             this.parameterGroups = parameterGroups;
@@ -222,10 +222,10 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The service category. Valid values:</p>
+             * <p>The product category. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: Redis Open-Source Edition</li>
-             * <li><strong>1</strong>: Tair (Enterprise Edition)</li>
+             * <li><strong>0</strong>: open-source Redis.</li>
+             * <li><strong>1</strong>: Tair (Enterprise Edition).</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -250,13 +250,13 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
             /**
              * <p>The engine type. Valid values:</p>
              * <ul>
-             * <li><strong>redis</strong>: Redis Open-Source Edition or Tair (In-Memory)</li>
-             * <li><strong>tair_pena</strong>: Tair (On NVM)</li>
-             * <li><strong>tair_pdb</strong>: Tair (On Disk)</li>
+             * <li><strong>redis</strong>: open-source Redis or Tair (Memory-optimized).</li>
+             * <li><strong>tair_pena</strong>: Tair (Persistent Memory-optimized).</li>
+             * <li><strong>tair_pdb</strong>: Tair (Disk-optimized).</li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>redis</p>
+             * <p>tair_pena</p>
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -286,7 +286,7 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parameter template ID.</p>
+             * <p>The ID of the parameter template.</p>
              * 
              * <strong>example:</strong>
              * <p>test01</p>

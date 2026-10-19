@@ -67,7 +67,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the parameter template.</p>
+         * <p>The parameter template object.</p>
          */
         public Builder parameterGroup(ParameterGroup parameterGroup) {
             this.parameterGroup = parameterGroup;
@@ -144,7 +144,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the parameter.</p>
+             * <p>The parameter name.</p>
              * 
              * <strong>example:</strong>
              * <p>timeout</p>
@@ -155,7 +155,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the parameter.</p>
+             * <p>The parameter value.</p>
              * 
              * <strong>example:</strong>
              * <p>1000</p>
@@ -316,10 +316,10 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The service category. Valid values:</p>
+             * <p>The product category. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: Redis Open-Source Edition</li>
-             * <li><strong>1</strong>: Tair (Enterprise Edition)</li>
+             * <li><strong>0</strong>: Redis Community Edition.</li>
+             * <li><strong>1</strong>: Tair (Enterprise Edition).</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -342,12 +342,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The engine type. Valid values:</p>
-             * <ul>
-             * <li><em>redis</em>: Redis or Tair DRAM-based instance</li>
-             * <li><em>tair_pena</em>: Tair persistent memory-optimized instance</li>
-             * <li><em>tair_pdb</em>: Tair ESSD-based instance</li>
-             * </ul>
+             * <p>The engine of the parameter template.</p>
              * 
              * <strong>example:</strong>
              * <p>redis</p>
@@ -358,7 +353,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The compatible engine version.</p>
+             * <p>The engine-compatible version.</p>
              * 
              * <strong>example:</strong>
              * <p>5.0</p>
@@ -380,7 +375,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parameter template ID, which is globally unique.</p>
+             * <p>The globally unique ID of the parameter template.</p>
              * 
              * <strong>example:</strong>
              * <p>sys-001*****</p>

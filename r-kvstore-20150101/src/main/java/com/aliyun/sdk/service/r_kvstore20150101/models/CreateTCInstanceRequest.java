@@ -499,9 +499,6 @@ public class CreateTCInstanceRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ubuntu_20_04_64_20G_alibase_20210412</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -583,9 +580,6 @@ public class CreateTCInstanceRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -751,9 +745,6 @@ public class CreateTCInstanceRequest extends Request {
 
             /**
              * <p>This parameter is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cloud_essd</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -762,9 +753,6 @@ public class CreateTCInstanceRequest extends Request {
 
             /**
              * <p>This parameter is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>PL0</p>
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;
@@ -773,9 +761,6 @@ public class CreateTCInstanceRequest extends Request {
 
             /**
              * <p>This parameter is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>100</p>
              */
             public Builder size(Integer size) {
                 this.size = size;

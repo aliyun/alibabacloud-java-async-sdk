@@ -67,7 +67,7 @@ public class ModifyActiveOperationTasksResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The IDs of the O&amp;M events. Separate multiple event IDs with commas (,).</p>
+         * <p>The O&amp;M event IDs. Separate multiple IDs with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>11111,22222</p>
@@ -78,7 +78,7 @@ public class ModifyActiveOperationTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>E278D833-BB4B-50BF-8646-7BC1BAB2373B</p>

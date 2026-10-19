@@ -168,7 +168,7 @@ public class ModifyDBInstanceMonitorRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The ID of the Tair instance. This operation is used only to modify the monitoring collection granularity of a Tair instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -181,11 +181,12 @@ public class ModifyDBInstanceMonitorRequest extends Request {
         }
 
         /**
-         * <p>The interval at which monitoring data is collected. Valid values: 5 and 60. Unit: seconds.</p>
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated and uses a fixed value of 60.</p>
+         * <p>The collection granularity of monitoring data. Unit: seconds. Default value: 60.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>5</p>
+         * <p>60</p>
          */
         public Builder interval(String interval) {
             this.putQueryParameter("Interval", interval);

@@ -80,7 +80,7 @@ public class DescribeCacheAnalysisReportListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of the offline key analysis reports.</p>
+         * DailyTasks.
          */
         public Builder dailyTasks(DailyTasks dailyTasks) {
             this.dailyTasks = dailyTasks;
@@ -88,7 +88,7 @@ public class DescribeCacheAnalysisReportListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1041xxxx</p>
@@ -99,7 +99,7 @@ public class DescribeCacheAnalysisReportListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>743D0A03-52DE-4E6F-8D09-EC1414CF****</p>
@@ -194,10 +194,7 @@ public class DescribeCacheAnalysisReportListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the child node in the cluster instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>r-bp1zxszhcgatnx****-db-0</p>
+             * NodeId.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -205,10 +202,7 @@ public class DescribeCacheAnalysisReportListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the offline key analytics task.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2019-08-01T19:08:49Z</p>
+             * StartTime.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -216,14 +210,7 @@ public class DescribeCacheAnalysisReportListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the offline key analytics task. Valid values:</p>
-             * <ul>
-             * <li><strong>success</strong></li>
-             * <li><strong>running</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>success</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -231,10 +218,7 @@ public class DescribeCacheAnalysisReportListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the task.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>156465****</p>
+             * TaskId.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -355,10 +339,7 @@ public class DescribeCacheAnalysisReportListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The date when the offline key analytics task was performed.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2019-08-01Z</p>
+             * Date.
              */
             public Builder date(String date) {
                 this.date = date;
@@ -366,7 +347,7 @@ public class DescribeCacheAnalysisReportListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Details about the offline key analysis reports.</p>
+             * Tasks.
              */
             public Builder tasks(Tasks tasks) {
                 this.tasks = tasks;

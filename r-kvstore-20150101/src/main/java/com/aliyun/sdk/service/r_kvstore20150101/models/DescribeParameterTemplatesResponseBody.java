@@ -106,7 +106,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The database engine that is run on the instance. The value <strong>Redis</strong> is returned for this parameter.</p>
+         * <p>The database engine. The value is always <strong>Redis</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>redis</p>
@@ -117,7 +117,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The major version of the instance.</p>
+         * <p>The major engine version of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>5.0</p>
@@ -128,7 +128,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of parameters that are supported by the instance.</p>
+         * <p>The number of parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>24</p>
@@ -139,7 +139,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>An array that consists of the details about the parameters returned.</p>
+         * Parameters.
          */
         public Builder parameters(Parameters parameters) {
             this.parameters = parameters;
@@ -268,10 +268,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The valid values of the parameter.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>[yes|no]</p>
+             * CheckingCode.
              */
             public Builder checkingCode(String checkingCode) {
                 this.checkingCode = checkingCode;
@@ -279,14 +276,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the parameter can be reconfigured. Valid values:</p>
-             * <ul>
-             * <li><strong>true</strong>: The parameter can be reconfigured.</li>
-             * <li><strong>false</strong>: The parameter cannot be reconfigured.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * ForceModify.
              */
             public Builder forceModify(Boolean forceModify) {
                 this.forceModify = forceModify;
@@ -294,14 +284,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether a restart of the instance is required after the parameter is reconfigured. Valid values:</p>
-             * <ul>
-             * <li><strong>true</strong>: After the parameter is reconfigured, you must restart the instance to make the new value of the parameter take effect.</li>
-             * <li><strong>false</strong>: After the parameter is reconfigured, the new value of the parameter immediately takes effect. You do not need to restart the instance.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * ForceRestart.
              */
             public Builder forceRestart(Boolean forceRestart) {
                 this.forceRestart = forceRestart;
@@ -309,10 +292,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the parameter.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test description</p>
+             * ParameterDescription.
              */
             public Builder parameterDescription(String parameterDescription) {
                 this.parameterDescription = parameterDescription;
@@ -320,10 +300,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the parameter. For more information about the parameters and the parameter settings, see <a href="https://help.aliyun.com/document_detail/259681.html">Parameters</a>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>appendonly</p>
+             * ParameterName.
              */
             public Builder parameterName(String parameterName) {
                 this.parameterName = parameterName;
@@ -331,10 +308,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The default value of the parameter.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>yes</p>
+             * ParameterValue.
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;

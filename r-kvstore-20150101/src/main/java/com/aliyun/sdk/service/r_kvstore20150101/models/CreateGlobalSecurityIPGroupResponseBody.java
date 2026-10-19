@@ -67,7 +67,7 @@ public class CreateGlobalSecurityIPGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the global IP whitelist template.</p>
+         * <p>The information about the global IP address whitelist template.</p>
          */
         public Builder globalSecurityIPGroup(java.util.List<GlobalSecurityIPGroup> globalSecurityIPGroup) {
             this.globalSecurityIPGroup = globalSecurityIPGroup;
@@ -170,10 +170,10 @@ public class CreateGlobalSecurityIPGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The IP addresses in the IP whitelist template.</p>
+             * <p>The IP addresses in the whitelist template.</p>
              * 
              * <strong>example:</strong>
-             * <p>192.168.0.1</p>
+             * <p>192.168.0.1,10.10.10.10,172.16.0.1</p>
              */
             public Builder gIpList(String gIpList) {
                 this.gIpList = gIpList;
@@ -181,10 +181,10 @@ public class CreateGlobalSecurityIPGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the IP whitelist template.</p>
+             * <p>The name of the IP address whitelist template.</p>
              * 
              * <strong>example:</strong>
-             * <p>white_list_test_sg</p>
+             * <p>test_123</p>
              */
             public Builder globalIgName(String globalIgName) {
                 this.globalIgName = globalIgName;
@@ -192,10 +192,10 @@ public class CreateGlobalSecurityIPGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the IP whitelist template.</p>
+             * <p>The ID of the IP address whitelist template.</p>
              * 
              * <strong>example:</strong>
-             * <p>g-sdgwqyp4f5j1x3qk7yvm</p>
+             * <p>g-sdgwqyp4f5j1x3qk****</p>
              */
             public Builder globalSecurityGroupId(String globalSecurityGroupId) {
                 this.globalSecurityGroupId = globalSecurityGroupId;

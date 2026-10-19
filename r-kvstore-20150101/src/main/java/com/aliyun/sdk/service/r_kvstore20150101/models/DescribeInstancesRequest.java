@@ -424,11 +424,11 @@ public class DescribeInstancesRequest extends Request {
         } 
 
         /**
-         * <p>The architecture of the instance. Valid values:</p>
+         * <p>The architecture type. Valid values:</p>
          * <ul>
-         * <li><strong>cluster</strong>: cluster architecture</li>
-         * <li><strong>standard</strong>: standard architecture</li>
-         * <li><strong>rwsplit</strong>: read/write splitting architecture</li>
+         * <li><strong>cluster</strong>: cluster edition</li>
+         * <li><strong>standard</strong>: standard edition</li>
+         * <li><strong>rwsplit</strong>: read/write splitting edition</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -441,7 +441,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * <p>The billing method of the instance. Valid values:</p>
+         * <p>The billing method. Valid values:</p>
          * <ul>
          * <li><strong>PrePaid</strong>: subscription</li>
          * <li><strong>PostPaid</strong>: pay-as-you-go</li>
@@ -457,10 +457,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * <p>The edition of the instance. Valid values:</p>
+         * <p>The edition type of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>Community</strong>: Redis Open-Source Edition</li>
-         * <li><strong>Enterprise</strong>: Tair (Enterprise Edition)</li>
+         * <li><strong>Community</strong>: open-source Redis</li>
+         * <li><strong>Enterprise</strong>: Tair Enterprise Edition</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -473,16 +473,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * <p>The database engine version of the instance. Valid values: <strong>2.8</strong>, <strong>4.0</strong>, <strong>5.0</strong>, <strong>6.0</strong>, and <strong>7.0</strong>.</p>
-         * <p>Enumerated values:</p>
-         * <ul>
-         * <li>1.0</li>
-         * <li>2.8</li>
-         * <li>4.0</li>
-         * <li>5.0</li>
-         * <li>6.0</li>
-         * <li>7.0</li>
-         * </ul>
+         * <p>The Redis-compatible engine version of the instance. Valid values: <strong>2.8</strong>, <strong>4.0</strong>, <strong>5.0</strong>, <strong>6.0</strong>, and <strong>7.0</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>4.0</p>
@@ -494,7 +485,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the instance has expired. Valid values:</p>
+         * <p>The expiration status of the instance. Valid values:</p>
          * <ul>
          * <li><strong>true</strong>: The instance has expired.</li>
          * <li><strong>false</strong>: The instance has not expired.</li>
@@ -510,10 +501,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return the child instances of distributed instances. Valid values:</p>
+         * <p>Specifies whether to filter child instances of distributed instances in the returned instance list. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Only child instances are returned.</li>
-         * <li><strong>false</strong>: Child instances are not returned.</li>
+         * <li><strong>true</strong>: Only child instance information is returned.</li>
+         * <li><strong>false</strong>: Child instance information is not returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -526,7 +517,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * <p>The instance type of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/107984.html">Instance types</a>.</p>
+         * <p>The instance specifications. For more information, see <a href="https://help.aliyun.com/document_detail/107984.html">Instance specifications</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>redis.master.small.default</p>
@@ -538,9 +529,9 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the instances that you want to query.</p>
+         * <p>The IDs of the instances to be queried.</p>
          * <blockquote>
-         * <p> If you want to specify multiple instance IDs, separate the instance IDs with commas (,). You can specify a maximum of 30 instance IDs in a single request.</p>
+         * <p>To specify multiple instance IDs, separate the IDs with commas (,). You can specify up to 30 instance IDs in a single request.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -553,26 +544,24 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * <p>The state of the instance. Valid values:</p>
+         * <p>The status of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>Normal</strong>: The instance is normal.</li>
-         * <li><strong>Creating</strong>: The instance is being created.</li>
-         * <li><strong>Changing</strong>: The configurations of the instance are being changed.</li>
-         * <li><strong>Inactive</strong>: The instance is disabled.</li>
-         * <li><strong>Flushing</strong>: The instance is being released.</li>
-         * <li><strong>Released</strong>: The instance is released.</li>
-         * <li><strong>Transforming</strong>: The billing method of the instance is being changed.</li>
-         * <li><strong>Unavailable</strong>: The instance is suspended.</li>
-         * <li><strong>Error</strong>: The instance failed to be created.</li>
-         * <li><strong>Migrating</strong>: The instance is being migrated.</li>
-         * <li><strong>BackupRecovering</strong>: The instance is being restored from a backup.</li>
-         * <li><strong>MinorVersionUpgrading</strong>: The minor version of the instance is being updated.</li>
-         * <li><strong>NetworkModifying</strong>: The network type of the instance is being changed.</li>
-         * <li><strong>SSLModifying</strong>: The SSL certificate of the instance is being changed.</li>
-         * <li><strong>MajorVersionUpgrading</strong>: The major version of the instance is being upgraded. The instance remains accessible during the upgrade.</li>
+         * <li><strong>Normal</strong>: normal</li>
+         * <li><strong>Creating</strong>: creating</li>
+         * <li><strong>Changing</strong>: changing</li>
+         * <li><strong>Inactive</strong>: disabled</li>
+         * <li><strong>Flushing</strong>: purge in progress</li>
+         * <li><strong>Released</strong>: released</li>
+         * <li><strong>Transforming</strong>: transforming</li>
+         * <li><strong>Migrating</strong>: migrating</li>
+         * <li><strong>BackupRecovering</strong>: recovering from backup</li>
+         * <li><strong>MinorVersionUpgrading</strong>: minor version upgrade in progress</li>
+         * <li><strong>NetworkModifying</strong>: changing the network type</li>
+         * <li><strong>SSLModifying</strong>: changing SSL configurations</li>
+         * <li><strong>MajorVersionUpgrading</strong>: major engine version upgrade in progress, during which the instance remains accessible</li>
          * </ul>
          * <blockquote>
-         * <p>For more information about instance states, see <a href="https://help.aliyun.com/document_detail/200740.html">Instance states and impacts</a>.</p>
+         * <p>For more information about instance statuses, see <a href="https://help.aliyun.com/document_detail/200740.html">Instance statuses and impacts</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -585,11 +574,11 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * <p>The database engine. Valid values:</p>
+         * <p>The instance type. Valid values:</p>
          * <ul>
          * <li><strong>Tair</strong>: Tair (Enterprise Edition)</li>
-         * <li><strong>Redis</strong>: Redis Open-Source Edition</li>
-         * <li><strong>Memcache</strong></li>
+         * <li><strong>Redis</strong>: open-source Redis</li>
+         * <li><strong>Memcache</strong>: Memcache</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -604,8 +593,8 @@ public class DescribeInstancesRequest extends Request {
         /**
          * <p>The network type. Valid values:</p>
          * <ul>
-         * <li><strong>CLASSIC</strong></li>
-         * <li><strong>VPC</strong></li>
+         * <li><strong>CLASSIC</strong>: classic network</li>
+         * <li><strong>VPC</strong>: VPC</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -618,7 +607,19 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * NodeType.
+         * <p>The node type. Valid values:</p>
+         * <ul>
+         * <li><strong>MASTER_SLAVE</strong>: high-availability (dual-replica)</li>
+         * <li><strong>STAND_ALONE</strong>: single-replica</li>
+         * <li><strong>double</strong>: dual-replica</li>
+         * <li><strong>single</strong>: single-replica<blockquote>
+         * <p>For cloud-native instances, select <strong>MASTER_SLAVE</strong> or <strong>STAND_ALONE</strong>. For classic instances, select <strong>double</strong> or <strong>single</strong>.</p>
+         * </blockquote>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MASTER_SLAVE</p>
          */
         public Builder nodeType(String nodeType) {
             this.putQueryParameter("NodeType", nodeType);
@@ -645,7 +646,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+         * <p>The page number of the instance list. Pages start from <strong>1</strong>. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -660,7 +661,7 @@ public class DescribeInstancesRequest extends Request {
          * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>30</strong>.</p>
          * 
          * <strong>example:</strong>
-         * <p>10</p>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -669,7 +670,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * <p>The private IP address of the instance.</p>
+         * <p>The private IP address in the VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>172.16.49.***</p>
@@ -683,7 +684,7 @@ public class DescribeInstancesRequest extends Request {
         /**
          * <p>The region ID of the instance.</p>
          * <blockquote>
-         * <p>When you call this operation and specify the <strong>Tag</strong> parameter, you must also specify this parameter.</p>
+         * <p>When you call this operation, if the <strong>Tag</strong> parameter is specified, this parameter is required.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -696,9 +697,9 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the instance belongs.</p>
+         * <p>The resource group ID.</p>
          * <blockquote>
-         * <p>You can query resource group IDs by using the Tair (Redis OSS-compatible) console or by calling the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</p>
+         * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation or use the console to obtain the list of resource group IDs. For related operations, see <a href="https://help.aliyun.com/document_detail/151181.html">View the basic information of a resource group</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -729,7 +730,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * <p>The keyword used for fuzzy search. The keyword can be based on an instance name or an instance ID.</p>
+         * <p>The search keyword. Fuzzy match is supported for instance names and instance IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>apitest</p>
@@ -750,7 +751,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * <p>The tags of the instance.</p>
+         * <p>The tag information of the instance.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -759,7 +760,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the vSwitch.</p>
+         * <p>The vSwitch ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-bp1e7clcw529l773d****</p>
@@ -771,7 +772,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the VPC.</p>
+         * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp1nme44gek34slfc****</p>
@@ -783,7 +784,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * <p>The zone ID of the instance.</p>
+         * <p>The zone ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hongkong-b</p>
@@ -854,9 +855,9 @@ public class DescribeInstancesRequest extends Request {
             } 
 
             /**
-             * <p>The tag key. A tag is a key-value pair.</p>
+             * <p>The tag key. It forms a key-value pair with the tag value.</p>
              * <blockquote>
-             * <p> A maximum of five key-value pairs can be specified at a time.</p>
+             * <p>You can specify up to 5 tag key-value pairs in a single request.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -868,10 +869,10 @@ public class DescribeInstancesRequest extends Request {
             }
 
             /**
-             * <p>The tag value.</p>
+             * <p>The tag value. It forms a key-value pair with the tag key.</p>
              * 
              * <strong>example:</strong>
-             * <p>Local disk</p>
+             * <p>Development</p>
              */
             public Builder value(String value) {
                 this.value = value;

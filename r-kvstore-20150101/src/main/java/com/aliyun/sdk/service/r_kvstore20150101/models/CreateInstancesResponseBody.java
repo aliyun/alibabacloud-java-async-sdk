@@ -80,7 +80,7 @@ public class CreateInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The IDs of instances that were created.</p>
+         * InstanceIds.
          */
         public Builder instanceIds(InstanceIds instanceIds) {
             this.instanceIds = instanceIds;

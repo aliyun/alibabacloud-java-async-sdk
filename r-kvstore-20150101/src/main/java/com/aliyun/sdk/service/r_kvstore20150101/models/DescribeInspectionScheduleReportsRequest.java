@@ -116,6 +116,7 @@ public class DescribeInspectionScheduleReportsRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to query the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,7 +129,10 @@ public class DescribeInspectionScheduleReportsRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageNum(Long pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -137,7 +141,10 @@ public class DescribeInspectionScheduleReportsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -146,7 +153,10 @@ public class DescribeInspectionScheduleReportsRequest extends Request {
         }
 
         /**
-         * ScheduleId.
+         * <p>The ID of the timed scheduling.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>scheduleId-202604141xxxx</p>
          */
         public Builder scheduleId(String scheduleId) {
             this.putQueryParameter("ScheduleId", scheduleId);

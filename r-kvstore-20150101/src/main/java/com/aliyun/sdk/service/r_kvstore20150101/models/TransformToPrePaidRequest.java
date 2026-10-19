@@ -224,10 +224,10 @@ public class TransformToPrePaidRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable auto-renewal. Default value: false. Valid values:</p>
+         * <p>Specifies whether to enable automatic payment. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: enables auto-renewal.</li>
-         * <li><strong>false</strong>: disables auto-renewal. In this case, you can renew your instance in the console. For more information, see <a href="https://help.aliyun.com/document_detail/26352.html">Manually renew an instance</a>.</li>
+         * <li><strong>true</strong>: enables automatic payment.</li>
+         * <li><strong>false</strong>: disables automatic payment (default). You must manually renew the instance in the console. For more information, see <a href="https://help.aliyun.com/document_detail/26352.html">Manual renewal</a>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -240,10 +240,10 @@ public class TransformToPrePaidRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable auto-renewal for the instance. Valid values:</p>
+         * <p>Specifies whether to enable auto-renewal. Valid values:</p>
          * <ul>
-         * <li><em>true</em>: enables auto-renewal.</li>
-         * <li><em>false</em> (default): disables auto-renewal.</li>
+         * <li><strong>true</strong>: enables auto-renewal.</li>
+         * <li><strong>false</strong>: disables auto-renewal.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -256,9 +256,9 @@ public class TransformToPrePaidRequest extends Request {
         }
 
         /**
-         * <p>The subscription duration that is supported by auto-renewal. Unit: month. Valid values: <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>6</strong>, and <strong>12</strong>.</p>
+         * <p>The auto-renewal epoch. Unit: months. Valid values: <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>6</strong>, and <strong>12</strong>.</p>
          * <blockquote>
-         * <p> This parameter is required if the <strong>AutoRenew</strong> parameter is set to <strong>true</strong>.</p>
+         * <p>This parameter is required when <strong>AutoRenew</strong> is set to <strong>true</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -280,7 +280,7 @@ public class TransformToPrePaidRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance. You can call the <a href="~~DescribeInstances~~">DescribeInstances</a> operation to query the ID of the instance.</p>
+         * <p>Instance ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to query instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -311,7 +311,7 @@ public class TransformToPrePaidRequest extends Request {
         }
 
         /**
-         * <p>The subscription duration of the instance. Unit: months. Valid values: <strong>1</strong> to <strong>9</strong>, <strong>12</strong>, <strong>24</strong>, and <strong>36</strong>.</p>
+         * <p>The subscription duration. Unit: months. Valid values: <strong>1</strong> to <strong>9</strong>, <strong>12</strong>, <strong>24</strong>, and <strong>36</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

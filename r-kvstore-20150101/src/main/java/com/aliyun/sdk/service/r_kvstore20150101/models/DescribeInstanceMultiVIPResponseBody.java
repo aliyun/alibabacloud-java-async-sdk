@@ -106,7 +106,10 @@ public class DescribeInstanceMultiVIPResponseBody extends TeaModel {
         } 
 
         /**
-         * MasterDns.
+         * <p>The IP address of the primary DNS server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-8vb30e8n0m4nvu7tff.redis.zhangbei.rds.aliyuncs.com</p>
          */
         public Builder masterDns(String masterDns) {
             this.masterDns = masterDns;
@@ -114,7 +117,7 @@ public class DescribeInstanceMultiVIPResponseBody extends TeaModel {
         }
 
         /**
-         * MasterDnsRecord.
+         * <p>The list of IP addresses corresponding to all LBs of the current instance.</p>
          */
         public Builder masterDnsRecord(java.util.List<String> masterDnsRecord) {
             this.masterDnsRecord = masterDnsRecord;
@@ -122,7 +125,10 @@ public class DescribeInstanceMultiVIPResponseBody extends TeaModel {
         }
 
         /**
-         * MaxQuota.
+         * <p>The maximum number of VIPs that can be created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder maxQuota(Long maxQuota) {
             this.maxQuota = maxQuota;
@@ -130,7 +136,7 @@ public class DescribeInstanceMultiVIPResponseBody extends TeaModel {
         }
 
         /**
-         * MultiVIPList.
+         * <p>The list of multiple LB VIPs.</p>
          */
         public Builder multiVIPList(java.util.List<MultiVIPList> multiVIPList) {
             this.multiVIPList = multiVIPList;
@@ -138,7 +144,10 @@ public class DescribeInstanceMultiVIPResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABAF95F6-35C1-4177-AF3A-70969EBD****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -191,7 +200,10 @@ public class DescribeInstanceMultiVIPResponseBody extends TeaModel {
             } 
 
             /**
-             * ConnectionString.
+             * <p>The endpoint of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>r-bp1p4pzsr2rtubcvns-conn1.redis.rds.aliyuncs.com</p>
              */
             public Builder connectionString(String connectionString) {
                 this.connectionString = connectionString;

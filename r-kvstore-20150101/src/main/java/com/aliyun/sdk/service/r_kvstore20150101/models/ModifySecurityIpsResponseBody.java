@@ -54,7 +54,7 @@ public class ModifySecurityIpsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAF99B1-69ED-4E80-8CD5-272C09E4****</p>

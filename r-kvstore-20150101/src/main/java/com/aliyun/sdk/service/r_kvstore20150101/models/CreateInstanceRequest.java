@@ -763,13 +763,14 @@ public class CreateInstanceRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to enable append-only file (AOF) persistence for the instance. Valid values:</p>
+         * <p>The AOF parameter settings of the new instance. Valid values:</p>
          * <ul>
          * <li><strong>yes</strong> (default): enables AOF persistence.</li>
-         * <li><strong>no</strong>: disables AOF persistence.</li>
+         * <li><strong>no</strong>: shutdown AOF persistence.<blockquote>
+         * <p>This parameter applies to classic instances. Cloud-native instances do not support specifying the AOF parameter.</p>
+         * </blockquote>
+         * </li>
          * </ul>
-         * <p>**</p>
-         * <p><strong>Description</strong> This parameter is applicable to classic instances, and is unavailable for cloud-native instances.</p>
          * 
          * <strong>example:</strong>
          * <p>yes</p>
@@ -781,7 +782,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable auto-renewal for the instance. Valid values:</p>
+         * <p>Specifies whether to enable auto-renewal. Valid values:</p>
          * <ul>
          * <li><strong>true</strong>: enables auto-renewal.</li>
          * <li><strong>false</strong> (default): disables auto-renewal.</li>
@@ -797,9 +798,9 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The subscription duration that is supported by auto-renewal. Unit: month. Valid values: <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>6</strong>, and <strong>12</strong>.</p>
+         * <p>The auto-renewal epoch. Unit: months. Valid values: <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>6</strong>, and <strong>12</strong>.</p>
          * <blockquote>
-         * <p> This parameter is required if the <strong>AutoRenew</strong> parameter is set to <strong>true</strong>.</p>
+         * <p>This parameter is required when the AutoRenew parameter is set to <strong>true</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -812,10 +813,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to use a coupon. Valid values:</p>
+         * <p>Specifies whether to use a voucher. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: uses a coupon.</li>
-         * <li><strong>false</strong> (default): does not use a coupon.</li>
+         * <li><strong>true</strong>: uses a voucher.</li>
+         * <li><strong>false</strong> (default): does not use a voucher.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -828,8 +829,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>If your instance is a cloud-native cluster instance, we recommend that you use <a href="https://help.aliyun.com/document_detail/2679168.html">DescribeClusterBackupList</a> to query the backup set ID of the cluster instance, such as cb-xx. Then, set the ClusterBackupId request parameter to the backup set ID to clone the cluster instance. This eliminates the need to specify the backup set ID of each shard.</p>
-         * <p>You can set the BackupId parameter to the backup set ID of the source instance. The system uses the data stored in the backup set to create an instance. You can call the <a href="https://help.aliyun.com/document_detail/473823.html">DescribeBackups</a> operation to query backup set IDs. If the source instance is a cluster instance, set the BackupId parameter to the backup set IDs of all shards of the source instance, separated by commas (,). Example: &quot;10**,11**,15**&quot;.</p>
+         * <p>You can specify the backup set ID of the source instance in this parameter. The system uses the data saved in the backup set to create the new instance. You can call the <a href="https://help.aliyun.com/document_detail/473823.html">DescribeBackups</a> operation to query the BackupId. If the source instance is a cluster instance, you must enter the backup set IDs of all shards in the source instance and separate them with commas, such as &quot;10**,11**,15**&quot;.</p>
+         * <blockquote>
+         * <p>If your instance is a cloud-native architecture instance and a cluster instance, we recommend that you call the <a href="https://help.aliyun.com/document_detail/2679168.html">DescribeClusterBackupList</a> operation to query the cluster backup set ID, such as &quot;cb-xx&quot;, and then enter it in the ClusterBackupId request parameter to clone the cluster instance. This saves you the trouble of entering the backup set ID of each shard.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>111111111</p>
@@ -855,7 +858,7 @@ public class CreateInstanceRequest extends Request {
         /**
          * <p>The storage capacity of the instance. Unit: MB.</p>
          * <blockquote>
-         * <p>You must specify at least one of the <strong>Capacity</strong> and <strong>InstanceClass</strong> parameters when you call this operation.</p>
+         * <p>When you call this operation, you must specify at least one of the Capacity and InstanceClass parameters.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -868,10 +871,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The billing method of the instance. Valid values:</p>
+         * <p>The billing method. Valid values:</p>
          * <ul>
-         * <li><strong>PrePaid</strong>: subscription</li>
-         * <li><strong>PostPaid</strong> (default): pay-as-you-go</li>
+         * <li><strong>PrePaid</strong>: subscription.</li>
+         * <li><strong>PostPaid</strong> (default): pay-as-you-go.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -884,14 +887,14 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>This parameter is supported for specific new cluster instances. You can query the backup set ID by using the <a href="https://help.aliyun.com/document_detail/2679168.html">DescribeClusterBackupList</a> operation.</p>
+         * <p>The ID of the cluster backup set. Some new cluster architectures support cluster backup set IDs. You can call the <a href="https://help.aliyun.com/document_detail/2679168.html">DescribeClusterBackupList</a> operation to obtain the ID.</p>
          * <ul>
-         * <li>If this parameter is supported, you can specify the backup set ID. In this case, you do not need to specify the <strong>BackupId</strong> parameter.</li>
-         * <li>If this parameter is not supported, set the BackupId parameter to the IDs of backup sets for all shards of the source instance, separated by commas (,). Example: &quot;2158****20,2158****22&quot;.</li>
+         * <li>If the architecture supports cluster backup sets, you can enter the specified cluster backup set ID without specifying the BackupId parameter.</li>
+         * <li>If the architecture does not support cluster backup sets, specify the backup set IDs of all shards in the source instance in the BackupId parameter and separate them with commas, such as &quot;2158\<em>\</em>\<em>\<em>20,2158\</em>\</em>\*\*22&quot;.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>cb-hyxdof5x9kqbtust</p>
+         * <p>cb-hyxdof5x9kqb****</p>
          */
         public Builder clusterBackupId(String clusterBackupId) {
             this.putQueryParameter("ClusterBackupId", clusterBackupId);
@@ -900,7 +903,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The operation that you want to perform. Set the value to <strong>AllocateInstancePublicConnection</strong>.</p>
+         * <p>The prefix of the endpoint. The prefix must be 8 to 40 characters in length and can contain lowercase letters and digits. It must start with a lowercase letter.</p>
+         * <blockquote>
+         * <p>The endpoint format is: <Prefix>.redis.rds.aliyuncs.com.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>r-bp1zxszhcgatnx****</p>
@@ -924,7 +930,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the dedicated cluster. This parameter is required if you create an instance in a dedicated cluster.</p>
+         * <p>The ID of the dedicated cluster. This parameter is required when you create an ApsaraDB for Redis instance in a dedicated cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>dhg-uv4fnk6r7zff****</p>
@@ -936,10 +942,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <p>Specifies whether to perform a dry run on the instance creation request. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: performs a dry run and does not create the instance. The system prechecks the request parameters, request format, service limits, and available resources. If the request fails to pass the precheck, an error message is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
-         * <li><strong>false</strong>: performs a dry run and sends the request. If the request passes the dry run, the instance is created.</li>
+         * <li><strong>true</strong>: performs a dry run without creating the instance. The system checks the request parameters, request format, service limits, and available resources. If the request fails the dry run, the system returns an error. If the request passes the dry run, the system returns the DryRunOperation error code.</li>
+         * <li><strong>false</strong> (default): sends the normal request and creates the instance after the request passes the check.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -952,24 +958,24 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The engine version. Valid values for <strong>classic instances</strong>:</p>
+         * <p>The engine version of the Redis <strong>classic instance</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>2.8</strong> (not recommended due to <a href="https://help.aliyun.com/document_detail/2674657.html">scheduled EOFS</a>)</li>
-         * <li><strong>4.0</strong> (not recommended)</li>
+         * <li><strong>2.8</strong> (Not recommended. <a href="https://help.aliyun.com/document_detail/2674657.html">End-of-life is planned</a>.)</li>
+         * <li><strong>4.0</strong> (Not recommended)</li>
          * <li><strong>5.0</strong></li>
          * </ul>
-         * <p>Valid values for <strong>cloud-native instances</strong>:</p>
+         * <p>The engine version of the Redis <strong>cloud-native instance</strong>. Valid values:</p>
          * <ul>
          * <li><strong>5.0</strong></li>
-         * <li><strong>6.0</strong> (recommended)</li>
+         * <li><strong>6.0</strong> (Recommended)</li>
          * <li><strong>7.0</strong></li>
          * </ul>
          * <blockquote>
-         * <p> The default value is <strong>5.0</strong>.</p>
+         * <p>Default value: <strong>5.0</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>4.0</p>
+         * <p>5.0</p>
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -978,19 +984,17 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to use the new instance as the first child instance of a distributed instance. Valid values:</p>
+         * <p>Specifies whether to use the new instance as the first child instance of a distributed instance. You can create a distributed instance in this way. Valid values:</p>
          * <ul>
          * <li><strong>true</strong>: uses the new instance as the first child instance.</li>
          * <li><strong>false</strong> (default): does not use the new instance as the first child instance.</li>
          * </ul>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>If you want to create a Tair DRAM-based instance that runs Redis 5.0, you must set this parameter to <strong>true</strong>.</p>
-         * </li>
-         * <li><p>This parameter is available only on the China site (aliyun.com).</p>
-         * </li>
+         * <li>If you set this parameter to <strong>true</strong>, the new instance must be a Tair memory-optimized instance and the DPI engine version must be 5.0.</li>
+         * <li>This parameter applies only to the China site.</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1002,7 +1006,8 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the distributed instance. This parameter is available only on the China site (aliyun.com).</p>
+         * <p>The distributed instance ID. This parameter applies only to the China site.</p>
+         * <p>&lt;props=&quot;china&quot;&gt; If you want to append the new ApsaraDB for Redis instance as a new child instance to a distributed instance, this parameter is active and required. For more information and console operations, see <a href="https://help.aliyun.com/document_detail/106885.html">Add a child instance to a distributed instance</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>gr-bp14rkqrhac****</p>
@@ -1014,7 +1019,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The global IP whitelist template for the instance. Multiple IP whitelist templates should be separated by English commas (,) and cannot be duplicated.</p>
+         * <p>The global IP address whitelist templates of the instance. Separate multiple templates with commas (,). Duplicate templates are not allowed.</p>
+         * <blockquote>
+         * <p>Notice: This parameter applies only to cloud-native instances. Classic instances do not support the whitelist template feature.</notice></p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>g-zsldxfiwjmti0kcm****</p>
@@ -1026,9 +1034,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The instance type. For example, redis.master.small.default indicates a Community Edition standard master-replica instance that has 1 GB of memory. For more information, see <a href="https://help.aliyun.com/document_detail/26350.html">Overview</a>.</p>
-         * <p>**</p>
-         * <p><strong>Description</strong> You must specify at least one of the <strong>Capacity</strong> and <strong>InstanceClass</strong> parameters when you call the CreateInstance operation.</p>
+         * <p>The instance type. For example, redis.master.small.default indicates a 1 GB Community Edition (classic architecture) instance with the standard architecture and two replicas. For more information, see <a href="https://help.aliyun.com/document_detail/26350.html">Overview of instance types</a>. </p>
+         * <blockquote>
+         * <p>When you call this operation, you must specify at least one of the Capacity and InstanceClass parameters.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>redis.master.small.default</p>
@@ -1040,7 +1049,20 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * InstanceEndpointType.
+         * <p>The type of the endpoint used when you create a cloud-native dual-zone deployment read/write splitting instance. If you do not explicitly specify this parameter, the default value is AzIndependentEndpoint.</p>
+         * <ul>
+         * <li><strong>AzIndependentEndpoint</strong>: <strong>Default value</strong>. Active zone-independent endpoints. The primary and secondary active zones provide independent endpoints. You can use different endpoints to implement nearest access for active zones.</li>
+         * <li><strong>UnifiedEndpoint</strong>: Unified endpoint. A unified endpoint is provided to access nodes in both the primary and secondary active zones, but cross-zone access may occur.</li>
+         * </ul>
+         * <blockquote>
+         * <p>Notice: This parameter applies only to cloud-native dual-zone deployment read/write splitting instances. For other types of instances, only active zone-independent endpoints are supported. Even if you specify UnifiedEndpoint, it does not take effect.</notice></p>
+         * </blockquote>
+         * <blockquote>
+         * <p>Notice: The UnifiedEndpoint parameter is currently available only to whitelisted users. If a non-whitelisted user specifies this parameter, an invocation error is returned. To apply for the permissions, submit a ticket.</notice></p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>AzIndependentEndpoint</p>
          */
         public Builder instanceEndpointType(String instanceEndpointType) {
             this.putQueryParameter("InstanceEndpointType", instanceEndpointType);
@@ -1049,7 +1071,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The name of the instance. The name must be 2 to 80 characters in length and must start with a letter. It cannot contain spaces or specific special characters. These special characters include <code>@ / : = &quot; &lt; &gt; { [ ] }</code></p>
+         * <p>The name of the instance. The name must be 2 to 80 characters in length, and must start with a letter or a Chinese character. It cannot contain the following special characters: <code>@/:=”&lt;&gt;{[]}</code> and spaces.</p>
          * 
          * <strong>example:</strong>
          * <p>apitest</p>
@@ -1061,7 +1083,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The database engine of the instance. Valid values:</p>
+         * <p>The instance type. Valid values:</p>
          * <ul>
          * <li><strong>Redis</strong> (default)</li>
          * <li><strong>Memcache</strong></li>
@@ -1077,7 +1099,16 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * MaintainEndTime.
+         * <p>The end time of the maintenance window for the instance. Specify the time in the <i>HH:mm</i>Z format. The time must be in UTC. For example, if you want the maintenance window to end at 02:00 (UTC+8), set the value to <code>18:00Z</code>.</p>
+         * <blockquote>
+         * <p>The interval between the start time and the end time must be at least 1 hour.</p>
+         * </blockquote>
+         * <blockquote>
+         * <p>If you do not specify this parameter, the default value is 22:00 (UTC), which is 06:00 (UTC+8).</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>07:00Z</p>
          */
         public Builder maintainEndTime(String maintainEndTime) {
             this.putQueryParameter("MaintainEndTime", maintainEndTime);
@@ -1086,7 +1117,13 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * MaintainStartTime.
+         * <p>The start time of the maintenance window for the instance. Specify the time in the <i>HH:mm</i>Z format. The time must be in UTC. For example, if you want the maintenance window to start at 01:00 (UTC+8), set the value to <code>17:00Z</code>.</p>
+         * <blockquote>
+         * <p>If you do not specify this parameter, the default value is 18:00 (UTC), which is 02:00 (UTC+8).</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>03:00Z</p>
          */
         public Builder maintainStartTime(String maintainStartTime) {
             this.putQueryParameter("MaintainStartTime", maintainStartTime);
@@ -1095,9 +1132,9 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The network type. Valid value:</p>
+         * <p>The network type. Valid values:</p>
          * <ul>
-         * <li><strong>VPC</strong> (default)</li>
+         * <li><strong>VPC</strong>: Virtual Private Cloud (VPC). This is the default value.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1112,14 +1149,14 @@ public class CreateInstanceRequest extends Request {
         /**
          * <p>The node type. Valid values:</p>
          * <ul>
-         * <li><strong>MASTER_SLAVE</strong>: high availability (master-replica)</li>
-         * <li><strong>STAND_ALONE</strong>: standalone</li>
-         * <li><strong>double</strong>: master-replica</li>
-         * <li><strong>single</strong>: standalone</li>
-         * </ul>
-         * <blockquote>
-         * <p> To create a cloud-native instance, set this parameter to <strong>MASTER_SLAVE</strong> or <strong>STAND_ALONE</strong>. To create a classic instance, set this parameter to <strong>double</strong> or <strong>single</strong>.</p>
+         * <li><strong>MASTER_SLAVE</strong>: high-availability (two replicas)</li>
+         * <li><strong>STAND_ALONE</strong>: single replica</li>
+         * <li><strong>double</strong>: two replicas</li>
+         * <li><strong>single</strong>: single replica<blockquote>
+         * <p>For cloud-native instances, select <strong>MASTER_SLAVE</strong> or <strong>STAND_ALONE</strong>. For classic instances, select <strong>double</strong> or <strong>single</strong>.</p>
          * </blockquote>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>STAND_ALONE</p>
@@ -1149,7 +1186,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The parameter template ID, which must be globally unique.</p>
+         * <p>The globally unique ID of the parameter template.&gt;Notice: This parameter applies only to cloud-native instances.</notice></p>
          * 
          * <strong>example:</strong>
          * <p>rpg-test**</p>
@@ -1161,7 +1198,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The password that is used to connect to the instance. The password must be 8 to 32 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and specific special characters. These special characters include <code>! @ # $ % ^ &amp; * ( ) _ + - =</code></p>
+         * <p>The password of the instance. The password must be 8 to 32 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, special characters, and digits. The allowed special characters include <code>!@#$%^&amp;*()_+-=</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>Pass!123456</p>
@@ -1173,9 +1210,9 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The subscription duration. Valid values: <strong>1</strong>, 2, 3, 4, 5, 6, 7, 8, <strong>9</strong>, <strong>12</strong>, <strong>24</strong>,<strong>36</strong>, and <strong>60</strong>. Unit: months.</p>
+         * <p>The subscription duration. Unit: months. Valid values: <strong>1</strong> to <strong>9</strong>, <strong>12</strong>, <strong>24</strong>, <strong>36</strong>, and <strong>60</strong>.</p>
          * <blockquote>
-         * <p>This parameter is available and required only if the <strong>ChargeType</strong> parameter is set to <strong>PrePaid</strong>.</p>
+         * <p>This parameter is required and takes effect only when the ChargeType parameter is set to <strong>PrePaid</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1188,7 +1225,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The port number that is used to connect to the instance. Valid values: <strong>1024</strong> to <strong>65535</strong>. Default value: <strong>6379</strong>.</p>
+         * <p>The service port of the instance. Valid values: <strong>1</strong> to <strong>65535</strong>. Default value: <strong>6379</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>6379</p>
@@ -1200,9 +1237,9 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The private IP address of the instance.</p>
+         * <p>The internal network IP address of the new instance.</p>
          * <blockquote>
-         * <p>The private IP address must be available within the CIDR block of the vSwitch to which to connect the instance.</p>
+         * <p>The internal network IP address must be within the vSwitch CIDR block to which the instance belongs.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1215,13 +1252,21 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The number of read replicas in the primary zone. This parameter applies only to read/write splitting instances that use cloud disks. You can use this parameter to customize the number of read replicas. Valid values: 1 to 9.</p>
-         * <blockquote>
-         * <p> The sum of the values of this parameter and SlaveReadOnlyCount cannot be greater than 9.</p>
+         * <p>The number of read-only nodes in the primary zone. This parameter applies only to cloud-native read/write splitting instances.</p>
+         * <ul>
+         * <li>If the instance uses the standard architecture, valid values are 1 to 9.</li>
+         * <li>If the instance uses the cluster architecture, valid values are 1 to 4, which indicates the number of read-only nodes per shard.<blockquote>
+         * <p>If you create a multi-zone instance, you can use this parameter and the SlaveReadOnlyCount parameter to specify the number of read-only nodes in the primary and secondary zones.</p>
+         * <ul>
+         * <li>If the instance uses the standard architecture, the sum of this parameter and the SlaveReadOnlyCount parameter cannot exceed 9.</li>
+         * <li>If the instance uses the cluster architecture, the sum of this parameter and the SlaveReadOnlyCount parameter cannot exceed 4.</li>
+         * </ul>
          * </blockquote>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
-         * <p>5</p>
+         * <p>2</p>
          */
         public Builder readOnlyCount(Integer readOnlyCount) {
             this.putQueryParameter("ReadOnlyCount", readOnlyCount);
@@ -1230,14 +1275,14 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>When creating an instance using a specified backup set, whether to restore account, kernel parameter (whitelist), and whitelist (config) information from the original backup set. For example, if you need to restore account information, the value should be <code>{&quot;account&quot;:true}</code>.
-         * By default, it is empty, indicating that no account, kernel parameter, or whitelist information will be restored from the original backup set. </p>
+         * <p>Specifies whether to restore the account, kernel parameters, and whitelist information from the original backup set when you create an instance by using a specified backup set. For example, to restore the account information, set the value to <code>account</code>.</p>
+         * <p>Default value: empty, which indicates that the account, kernel parameters, and whitelist information are not restored from the original backup set.</p>
          * <blockquote>
-         * <p>This parameter applies only to cloud-native instances and requires that the original backup set has saved the account, kernel parameter, and whitelist information. You can use the <a href="https://help.aliyun.com/document_detail/473823.html">DescribeBackups</a> API to check if the RecoverConfigMode parameter in the specified backup set contains the above information.</p>
+         * <p>This parameter applies only to cloud-native instances, and the original backup set must contain the account, kernel parameters, and whitelist information. You can call the <a href="https://help.aliyun.com/document_detail/473823.html">DescribeBackups</a> operation to query whether the RecoverConfigMode parameter of the specified backup set contains the preceding information.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;whitelist&quot;:true,&quot;config&quot;:true,&quot;account&quot;:true}</p>
+         * <p>whitelist,config,account</p>
          */
         public Builder recoverConfigMode(String recoverConfigMode) {
             this.putQueryParameter("RecoverConfigMode", recoverConfigMode);
@@ -1246,7 +1291,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where you want to create the instance. You can call the <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1259,15 +1304,9 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The number of slave replicas in the primary availability zone. This parameter is applicable only for creating cloud-native cluster edition multi-replica instances, allowing you to customize the number of slave replicas. The value range is 1 to 4.</p>
+         * <p>The number of secondary nodes in the primary zone. This parameter applies only to cloud-native cluster instances with multiple replicas. You can use this parameter to specify a custom number of secondary nodes. Valid values: 1 to 4.</p>
          * <blockquote>
-         * <blockquote>
-         * <ul>
-         * <li>The sum of this parameter and SlaveReplicaCount cannot exceed 4. </li>
-         * <li>Only one of this parameter and ReadOnlyCount can be passed; there are no instances that simultaneously include both replicas and read-only nodes. </li>
-         * <li>Primary-secondary instances do not support multiple replicas.</li>
-         * </ul>
-         * </blockquote>
+         * <p>If you create a multi-zone instance, you can use this parameter and the SlaveReplicaCount parameter to specify the number of secondary nodes in the primary and secondary zones. The sum of this parameter and the SlaveReplicaCount parameter cannot exceed 4.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1310,7 +1349,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>If data flashback is enabled for the source instance, you can use this parameter to specify a point in time within the backup retention period of the source instance. The system uses the backup data of the source instance at the point in time to create an instance. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * <p>The point in time to which you want to restore the source instance. If the data flashback feature is enabled for the source instance, you can specify any point in time within the backup retention period of the source instance. The system uses the backup data of the source instance at the specified point in time to create the new instance. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-06-19T16:00:00Z</p>
@@ -1322,13 +1361,13 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The secondary zone ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473764.html">DescribeZones</a> operation to query the most recent zone list.</p>
+         * <p>The secondary zone ID. You can call the <a href="https://help.aliyun.com/document_detail/473764.html">DescribeZones</a> operation to query the most recent zone list.</p>
          * <blockquote>
-         * <p>If you specify this parameter, the master node and replica node of the instance can be deployed in different zones and disaster recovery is implemented across zones. The instance can withstand failures in data centers.</p>
+         * <p>The value of this parameter cannot be the same as the value of the ZoneId parameter, and cannot be the ID of a multi-zone deployment.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>cn-hangzhou-h</p>
+         * <p>cn-hangzhou-g</p>
          */
         public Builder secondaryZoneId(String secondaryZoneId) {
             this.putQueryParameter("SecondaryZoneId", secondaryZoneId);
@@ -1337,7 +1376,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>系统自动生成的安全 Token，无需传入</p>
+         * SecurityToken.
          */
         public Builder securityToken(String securityToken) {
             this.putQueryParameter("SecurityToken", securityToken);
@@ -1346,7 +1385,11 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The number of shards. This parameter applies only to cloud-native cluster instances.</p>
+         * <p>The number of shards. This parameter applies only to cloud-native instances. You can use this parameter to specify a custom number of shards.</p>
+         * <ul>
+         * <li>1: creates a non-cluster architecture.</li>
+         * <li>A value greater than 1: creates a cluster architecture.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -1358,10 +1401,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The number of read replicas in the secondary zone. This parameter is used to create a read/write splitting instance that is deployed across multiple zones. The sum of the values of this parameter and ReadOnlyCount cannot be greater than 9.</p>
-         * <blockquote>
-         * <p>When you create a multi-zone read/write splitting instance, you must specify both SlaveReadOnlyCount and SecondaryZoneId.</p>
-         * </blockquote>
+         * <p>The number of read-only nodes in the secondary zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -1373,7 +1413,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>Used for specifying the number of slave replicas in the secondary availability zone when creating a multi-AZ cloud-native cluster edition with multiple replicas. The sum of this parameter and ReplicaCount cannot exceed 4. <notice>When creating a multi-AZ cloud-native cluster edition with multiple replicas, both SlaveReplicaCount and SecondaryZoneId parameters must be specified.</notice></p>
+         * <p>The number of secondary nodes in the secondary zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -1385,9 +1425,9 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>If you want to create an instance based on the backup set of an existing instance, set this parameter to the ID of the source instance.</p>
+         * <p>If you want to create a new instance based on the backup set of an instance, specify the source instance ID in this parameter first.</p>
          * <blockquote>
-         * <p> After you specify the SrcDBInstanceId parameter, use the <strong>BackupId</strong>, <strong>ClusterBackupId</strong> (recommended for cloud-native cluster instances), or <strong>RestoreTime</strong> parameter to specify the backup set or the specific point in time that you want to use to create an instance. The SrcDBInstanceId parameter must be used in combination with one of the preceding three parameters.</p>
+         * <p>Then, specify the backup set or point in time by using the BackupId, ClusterBackupId (recommended for cloud-native cluster architecture), or RestoreTime parameter. This parameter must be used in combination with one of the preceding three parameters.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1400,7 +1440,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The tags of the instance.</p>
+         * <p>The tag information of the instance.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -1409,7 +1449,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the token is unique among different requests. The token is case-sensitive. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token is case-sensitive and can be up to 64 ASCII characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>ETnLKlblzczshOTUbOCz****</p>
@@ -1421,7 +1461,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the vSwitch to which you want the instance to connect.</p>
+         * <p>The ID of the vSwitch.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-bp1e7clcw529l773d****</p>
@@ -1433,7 +1473,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the virtual private cloud (VPC).</p>
+         * <p>The ID of the VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp1nme44gek34slfc****</p>
@@ -1445,10 +1485,13 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The primary zone ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> operation to query the most recent zone list.</p>
+         * <p>The primary active zone ID. You can call the <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> operation to query the most recent active zone list, and use this parameter to specify the active zone where you want to create the instance.</p>
+         * <blockquote>
+         * <p>You can also specify the SecondaryZoneId parameter to set the secondary active zone. The deployment of the primary and secondary nodes is in the specified primary and secondary active zones to implement a primary/secondary architecture. For example, you can set the ZoneId parameter to &quot;cn-hangzhou-h&quot; and the SecondaryZoneId parameter to &quot;cn-hangzhou-g&quot;.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>cn-hangzhou-e</p>
+         * <p>cn-hangzhou-h</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -1516,11 +1559,11 @@ public class CreateInstanceRequest extends Request {
             } 
 
             /**
-             * <p>The keys of the tags that are added to the instance.</p>
+             * <p>The key of the tag.</p>
              * <blockquote>
              * <ul>
-             * <li><strong>N</strong> specifies the serial number of the tag. Up to 20 tags can be added to a single instance. For example, Tag.1.Key specifies the key of the first tag and Tag.2.Key specifies the key of the second tag.</li>
-             * <li>If the key of the tag does not exist, the tag is automatically created.</li>
+             * <li><strong>N</strong> indicates the sequence number of the tag key. You can attach up to 20 tags to a single instance. For example, Tag.1.Key indicates the key of the first tag, and Tag.2.Key indicates the key of the second tag.</li>
+             * <li>If the key of the tag does not exist, the system performs automatic creation.</li>
              * </ul>
              * </blockquote>
              * 
@@ -1533,9 +1576,9 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * <p>The values of the tags that are added to the instance.</p>
+             * <p>The value of the tag.</p>
              * <blockquote>
-             * <p><strong>N</strong> specifies the serial number of the tag. For example, <strong>Tag.1.Value</strong> specifies the value of the first tag and <strong>Tag.2.Value</strong> specifies the value of the second tag.</p>
+             * <p><strong>N</strong> indicates the sequence number of the tag value. For example, <strong>Tag.1.Value</strong> indicates the value of the first tag, and <strong>Tag.2.Value</strong> indicates the value of the second tag.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

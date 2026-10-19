@@ -67,7 +67,7 @@ public class ModifyInstanceBandwidthResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the order.</p>
+         * <p>The order ID.</p>
          * 
          * <strong>example:</strong>
          * <p>236934422960904</p>
@@ -78,7 +78,7 @@ public class ModifyInstanceBandwidthResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5D622714-AEDD-4609-9167-F5DDD3D1****</p>

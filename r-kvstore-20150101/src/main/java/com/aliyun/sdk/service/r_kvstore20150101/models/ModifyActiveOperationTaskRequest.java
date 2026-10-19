@@ -168,9 +168,9 @@ public class ModifyActiveOperationTaskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the O&amp;M task. Separate multiple IDs with commas (,).</p>
+         * <p>The O&amp;M task IDs, separated by commas (,).</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/473865.html">DescribeActiveOperationTask</a> operation to query the ID of an O&amp;M task.</p>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/473865.html">DescribeActiveOperationTask</a> to obtain the O&amp;M task IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -229,9 +229,9 @@ public class ModifyActiveOperationTaskRequest extends Request {
         }
 
         /**
-         * <p>The scheduled switchover time to be specified. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * <p>The scheduled switchover time to set. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
          * <blockquote>
-         * <p>The time cannot be later than the latest operation time. You can call the <a href="https://help.aliyun.com/document_detail/473865.html">DescribeActiveOperationTask</a> operation to obtain the latest operation time, which is the value of the <strong>Deadline</strong> parameter in the response.</p>
+         * <p>The time cannot be later than the latest operation time. You can call <a href="https://help.aliyun.com/document_detail/473865.html">DescribeActiveOperationTask</a> and check the value of the <strong>Deadline</strong> response parameter to obtain the latest operation time.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

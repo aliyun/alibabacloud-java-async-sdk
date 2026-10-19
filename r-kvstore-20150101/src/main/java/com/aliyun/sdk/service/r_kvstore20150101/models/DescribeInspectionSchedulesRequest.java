@@ -130,7 +130,10 @@ public class DescribeInspectionSchedulesRequest extends Request {
         } 
 
         /**
-         * Enabled.
+         * <p>Specifies whether the scheduled task is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder enabled(Long enabled) {
             this.putQueryParameter("Enabled", enabled);
@@ -139,6 +142,7 @@ public class DescribeInspectionSchedulesRequest extends Request {
         }
 
         /**
+         * <p>The instance ID of the assistant.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -151,7 +155,10 @@ public class DescribeInspectionSchedulesRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Long pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -160,7 +167,10 @@ public class DescribeInspectionSchedulesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -169,7 +179,10 @@ public class DescribeInspectionSchedulesRequest extends Request {
         }
 
         /**
-         * ScheduleId.
+         * <p>The ID of the timed scheduling.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>scheduleId-202604141xxxx</p>
          */
         public Builder scheduleId(String scheduleId) {
             this.putQueryParameter("ScheduleId", scheduleId);

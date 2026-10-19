@@ -132,7 +132,7 @@ public class DescribeCacheAnalysisReportResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Details of the large keys.</p>
+         * <p>The list of big keys.</p>
          */
         public Builder bigKeys(java.util.List<java.util.Map<String, ?>> bigKeys) {
             this.bigKeys = bigKeys;
@@ -140,9 +140,9 @@ public class DescribeCacheAnalysisReportResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Details of the hotkeys.</p>
+         * <p>The list of hot keys.</p>
          * <blockquote>
-         * <p>This parameter is not returned because Tair (Redis OSS-compatible) does not support hotkey analytics.</p>
+         * <p>Hot key analysis is not supported. No value is returned.</p>
          * </blockquote>
          */
         public Builder hotKeys(java.util.List<java.util.Map<String, ?>> hotKeys) {
@@ -151,7 +151,7 @@ public class DescribeCacheAnalysisReportResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -184,7 +184,7 @@ public class DescribeCacheAnalysisReportResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>A057C066-C3F5-4CC9-9FE4-A8D8B0DC****</p>
@@ -195,7 +195,7 @@ public class DescribeCacheAnalysisReportResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries returned across all pages.</p>
          * 
          * <strong>example:</strong>
          * <p>160</p>

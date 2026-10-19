@@ -80,7 +80,7 @@ public class DescribeInspectionTaskReportResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The task report.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -88,7 +88,10 @@ public class DescribeInspectionTaskReportResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>561AFBF1-BE20-44DB-9BD1-6988B53E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class DescribeInspectionTaskReportResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -188,7 +194,10 @@ public class DescribeInspectionTaskReportResponseBody extends TeaModel {
             } 
 
             /**
-             * Error.
+             * <p>The number of high-risk items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder error(Long error) {
                 this.error = error;
@@ -196,7 +205,10 @@ public class DescribeInspectionTaskReportResponseBody extends TeaModel {
             }
 
             /**
-             * Failed.
+             * <p>The number of failed items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder failed(Long failed) {
                 this.failed = failed;
@@ -204,7 +216,10 @@ public class DescribeInspectionTaskReportResponseBody extends TeaModel {
             }
 
             /**
-             * Normal.
+             * <p>The number of normal items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder normal(Long normal) {
                 this.normal = normal;
@@ -212,7 +227,10 @@ public class DescribeInspectionTaskReportResponseBody extends TeaModel {
             }
 
             /**
-             * Warning.
+             * <p>The number of warning items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder warning(Long warning) {
                 this.warning = warning;
@@ -331,7 +349,7 @@ public class DescribeInspectionTaskReportResponseBody extends TeaModel {
             } 
 
             /**
-             * InstanceIds.
+             * <p>The list of associated instance IDs.</p>
              */
             public Builder instanceIds(java.util.List<String> instanceIds) {
                 this.instanceIds = instanceIds;
@@ -339,7 +357,10 @@ public class DescribeInspectionTaskReportResponseBody extends TeaModel {
             }
 
             /**
-             * MarkdownText.
+             * <p>The Markdown text of the report details.</p>
+             * 
+             * <strong>example:</strong>
+             * <h1>Tair Intelligent Inspection Report\n\n## Overview..</h1>
              */
             public Builder markdownText(String markdownText) {
                 this.markdownText = markdownText;
@@ -347,7 +368,10 @@ public class DescribeInspectionTaskReportResponseBody extends TeaModel {
             }
 
             /**
-             * ReportLanguage.
+             * <p>The report language.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zh-CN</p>
              */
             public Builder reportLanguage(String reportLanguage) {
                 this.reportLanguage = reportLanguage;
@@ -355,7 +379,10 @@ public class DescribeInspectionTaskReportResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The task status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCEEDED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -363,7 +390,7 @@ public class DescribeInspectionTaskReportResponseBody extends TeaModel {
             }
 
             /**
-             * Summary.
+             * <p>The summary.</p>
              */
             public Builder summary(Summary summary) {
                 this.summary = summary;
@@ -371,7 +398,10 @@ public class DescribeInspectionTaskReportResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tit-dca42f85c73644e0ab5c80ef6412xxx</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

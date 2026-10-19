@@ -106,7 +106,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Details about returned accounts of the instance.</p>
+         * Accounts.
          */
         public Builder accounts(Accounts accounts) {
             this.accounts = accounts;
@@ -114,7 +114,10 @@ public class DescribeAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class DescribeAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>6C9E114C-217C-4118-83C0-B4070222****</p>
@@ -141,7 +147,10 @@ public class DescribeAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -194,14 +203,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The permission of the account. Default value: RoleReadWrite. Valid values:</p>
-             * <ul>
-             * <li><strong>RoleReadOnly</strong>: The account has the read-only permissions.</li>
-             * <li><strong>RoleReadWrite</strong>: The account has the read and write permissions.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>RoleReadWrite</p>
+             * AccountPrivilege.
              */
             public Builder accountPrivilege(String accountPrivilege) {
                 this.accountPrivilege = accountPrivilege;
@@ -387,10 +389,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the account.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testdec</p>
+             * AccountDescription.
              */
             public Builder accountDescription(String accountDescription) {
                 this.accountDescription = accountDescription;
@@ -398,10 +397,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the account.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>demoaccount</p>
+             * AccountName.
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -409,14 +405,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the account. Valid values:</p>
-             * <ul>
-             * <li><strong>Unavailable</strong>: The account is unavailable.</li>
-             * <li><strong>Available</strong>: The account is available.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Available</p>
+             * AccountStatus.
              */
             public Builder accountStatus(String accountStatus) {
                 this.accountStatus = accountStatus;
@@ -424,14 +413,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the account. Valid values:</p>
-             * <ul>
-             * <li><strong>Normal</strong>: standard account</li>
-             * <li><strong>Super</strong>: super account</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Normal</p>
+             * AccountType.
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;
@@ -439,7 +421,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Details about account permissions.</p>
+             * DatabasePrivileges.
              */
             public Builder databasePrivileges(DatabasePrivileges databasePrivileges) {
                 this.databasePrivileges = databasePrivileges;
@@ -447,10 +429,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>r-bp10noxlhcoim2****</p>
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;

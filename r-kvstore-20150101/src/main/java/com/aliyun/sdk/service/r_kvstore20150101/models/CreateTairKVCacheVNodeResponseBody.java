@@ -145,7 +145,7 @@ public class CreateTairKVCacheVNodeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the Tair VNode instance.</p>
+         * <p>The instance ID of the virtual node.</p>
          * 
          * <strong>example:</strong>
          * <p>tv-2zeb1ce76fee****</p>
@@ -156,7 +156,7 @@ public class CreateTairKVCacheVNodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the VNode.</p>
+         * <p>The ID of the virtual node.</p>
          * 
          * <strong>example:</strong>
          * <p>vn-03a49876edb****</p>
@@ -178,7 +178,7 @@ public class CreateTairKVCacheVNodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the region where the instance resides.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
@@ -189,7 +189,7 @@ public class CreateTairKVCacheVNodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2BE6E619-A657-42E3-AD2D-18F8428A****</p>
@@ -200,7 +200,7 @@ public class CreateTairKVCacheVNodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the VCluster.</p>
+         * <p>The ID of the virtual cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>vc-16965a9267*****-*****</p>
@@ -211,7 +211,7 @@ public class CreateTairKVCacheVNodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the VCluster instance.</p>
+         * <p>The instance ID of the virtual cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>tk-2ze4bba3c8fe****</p>
@@ -222,7 +222,7 @@ public class CreateTairKVCacheVNodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The zone ID of the instance.</p>
+         * <p>The zone ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing-f</p>

@@ -106,7 +106,7 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the returned Tair (Redis OSS-compatible) KVCache instance.</p>
+         * Instances.
          */
         public Builder instances(Instances instances) {
             this.instances = instances;
@@ -125,7 +125,7 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries returned per page.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -147,7 +147,7 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of returned records.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -216,10 +216,7 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The tag key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>thread</p>
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -227,10 +224,7 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>900</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -663,10 +657,7 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ACK cluster ID corresponding to the virtual cluster instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>c809******************************</p>
+             * AckId.
              */
             public Builder ackId(String ackId) {
                 this.ackId = ackId;
@@ -674,10 +665,7 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The capacity of the KVCache. Unit: GB.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>256</p>
+             * Capacity.
              */
             public Builder capacity(Long capacity) {
                 this.capacity = capacity;
@@ -685,10 +673,7 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing method of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>PostPaid</p>
+             * ChargeType.
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -696,10 +681,7 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of compute units.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * ComputeUnitNum.
              */
             public Builder computeUnitNum(Integer computeUnitNum) {
                 this.computeUnitNum = computeUnitNum;
@@ -707,10 +689,7 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2025-04-07T04:46Z</p>
+             * CreateTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -718,10 +697,7 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the instance was deleted.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2025-04-07T04:46Z</p>
+             * DestroyTime.
              */
             public Builder destroyTime(String destroyTime) {
                 this.destroyTime = destroyTime;
@@ -737,10 +713,7 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the subscription instance expires.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2025-11-04T02:09:26Z</p>
+             * EndTime.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -756,10 +729,7 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance type.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>kvcache.cu.g4b.2</p>
+             * InstanceClass.
              */
             public Builder instanceClass(String instanceClass) {
                 this.instanceClass = instanceClass;
@@ -767,10 +737,7 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>tk-9dp7e37bab*****</p>
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -778,10 +745,7 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>kvcache-7</p>
+             * InstanceName.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -789,14 +753,7 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance state. Valid values:</p>
-             * <ul>
-             * <li><strong>Normal</strong>: The instance is normal.</li>
-             * <li><strong>Creating</strong>: The instance is being created.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Normal</p>
+             * InstanceStatus.
              */
             public Builder instanceStatus(String instanceStatus) {
                 this.instanceStatus = instanceStatus;
@@ -804,15 +761,7 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the instance. Valid values:</p>
-             * <ul>
-             * <li><strong>TairInfer</strong>: the inference operator instance</li>
-             * <li><strong>TairKVCacheVnode</strong>: the virtual cluster instance.</li>
-             * <li><strong>TairKVCacheService</strong>: the cache service instance.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>TairInfer</p>
+             * InstanceType.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -820,10 +769,7 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The built-in model of the inference operator instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>DeepSeek-OCR</p>
+             * Model.
              */
             public Builder model(String model) {
                 this.model = model;
@@ -831,10 +777,7 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of model services of the inference operator instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * ModelServiceNum.
              */
             public Builder modelServiceNum(Integer modelServiceNum) {
                 this.modelServiceNum = modelServiceNum;
@@ -842,10 +785,7 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network type of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>VPC</p>
+             * NetworkType.
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -853,10 +793,7 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The private IP address of the instance. This parameter is deprecated.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>172.16.49.***</p>
+             * PrivateIp.
              */
             public Builder privateIp(String privateIp) {
                 this.privateIp = privateIp;
@@ -864,10 +801,7 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-beijing</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -875,10 +809,7 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource group ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rg-acfm4bdru5z****</p>
+             * ResourceGroupId.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -886,7 +817,7 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Details of the tags.</p>
+             * Tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -894,10 +825,7 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of vNodes in the virtual cluster.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * VNodeCount.
              */
             public Builder vNodeCount(Integer vNodeCount) {
                 this.vNodeCount = vNodeCount;
@@ -905,10 +833,7 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of vNode instance names under the virtual cluster instance. This parameter is deprecated.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>tv-xxxxx</p>
+             * VNodeName.
              */
             public Builder vNodeName(String vNodeName) {
                 this.vNodeName = vNodeName;
@@ -916,10 +841,7 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The vSwitch ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vsw-8vbf0ksk774ai6q1d****</p>
+             * VSwitchId.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -927,10 +849,7 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The VPC ID of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vpc-2zef5w848p4j5g***</p>
+             * VpcId.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -938,10 +857,7 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The zone ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou-g</p>
+             * ZoneId.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

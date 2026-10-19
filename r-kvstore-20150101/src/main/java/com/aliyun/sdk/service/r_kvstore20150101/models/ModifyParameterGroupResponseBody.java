@@ -67,7 +67,7 @@ public class ModifyParameterGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The parameter template ID.</p>
+         * <p>The ID of the parameter template.</p>
          * 
          * <strong>example:</strong>
          * <p>testGroupName</p>

@@ -168,7 +168,7 @@ public class DescribeDbInstanceConnectivityRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -226,7 +226,7 @@ public class DescribeDbInstanceConnectivityRequest extends Request {
         }
 
         /**
-         * <p>The IP address of the client.</p>
+         * <p>The source IP address of the user.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

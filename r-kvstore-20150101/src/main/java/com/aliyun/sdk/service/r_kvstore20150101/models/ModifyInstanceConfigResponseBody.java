@@ -54,7 +54,7 @@ public class ModifyInstanceConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>请求ID。</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>8D0C0AFC-E9CD-47A4-8395-5C31BF9B****</p>

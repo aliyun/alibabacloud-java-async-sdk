@@ -80,7 +80,7 @@ public class DescribeInspectionSchedulesResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -88,7 +88,10 @@ public class DescribeInspectionSchedulesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A501A191-BD70-5E50-98A9-C2A486A82****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class DescribeInspectionSchedulesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -305,7 +311,11 @@ public class DescribeInspectionSchedulesResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The time when the scheduled task configuration was created.</p>
+             * <p>The time is displayed in the YYYY-MM-DDTHH:mm:ssZ format in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-04-21T02:26:18Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -313,7 +323,10 @@ public class DescribeInspectionSchedulesResponseBody extends TeaModel {
             }
 
             /**
-             * CronExpression.
+             * <p>The cron expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0 0 3 * * ?</p>
              */
             public Builder cronExpression(String cronExpression) {
                 this.cronExpression = cronExpression;
@@ -321,7 +334,10 @@ public class DescribeInspectionSchedulesResponseBody extends TeaModel {
             }
 
             /**
-             * Enabled.
+             * <p>Indicates whether the task is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Long enabled) {
                 this.enabled = enabled;
@@ -329,7 +345,15 @@ public class DescribeInspectionSchedulesResponseBody extends TeaModel {
             }
 
             /**
-             * InspectionItems.
+             * <p>The inspection items.</p>
+             * <blockquote>
+             * <ul>
+             * <li>Supported inspection items include RESOURCE_USAGE, BIGKEY, HOTKEY, PERFORMANCE_METRICS, and SLOWLOG.</li>
+             * </ul>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>HOTKEY</p>
              */
             public Builder inspectionItems(String inspectionItems) {
                 this.inspectionItems = inspectionItems;
@@ -337,7 +361,10 @@ public class DescribeInspectionSchedulesResponseBody extends TeaModel {
             }
 
             /**
-             * InspectionWindow.
+             * <p>The time window.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1h</p>
              */
             public Builder inspectionWindow(String inspectionWindow) {
                 this.inspectionWindow = inspectionWindow;
@@ -345,7 +372,10 @@ public class DescribeInspectionSchedulesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceIds.
+             * <p>The list of associated instance IDs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>r-2zed6typz5j6djmb2x</p>
              */
             public Builder instanceIds(String instanceIds) {
                 this.instanceIds = instanceIds;
@@ -353,7 +383,11 @@ public class DescribeInspectionSchedulesResponseBody extends TeaModel {
             }
 
             /**
-             * NextFireTime.
+             * <p>The next time the task is scheduled to run.</p>
+             * <p>The time is displayed in the YYYY-MM-DDTHH:mm:ssZ format in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-07-29T10:00:00Z</p>
              */
             public Builder nextFireTime(String nextFireTime) {
                 this.nextFireTime = nextFireTime;
@@ -361,7 +395,10 @@ public class DescribeInspectionSchedulesResponseBody extends TeaModel {
             }
 
             /**
-             * NotifyConfig.
+             * <p>The notification configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder notifyConfig(String notifyConfig) {
                 this.notifyConfig = notifyConfig;
@@ -369,7 +406,10 @@ public class DescribeInspectionSchedulesResponseBody extends TeaModel {
             }
 
             /**
-             * ReportLanguage.
+             * <p>The language of the report.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zh-CN</p>
              */
             public Builder reportLanguage(String reportLanguage) {
                 this.reportLanguage = reportLanguage;
@@ -377,7 +417,10 @@ public class DescribeInspectionSchedulesResponseBody extends TeaModel {
             }
 
             /**
-             * ScheduleId.
+             * <p>The ID of the timed scheduling.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sch-b45811bf4bba46c8b6d233551da9xxxx</p>
              */
             public Builder scheduleId(String scheduleId) {
                 this.scheduleId = scheduleId;
@@ -385,7 +428,10 @@ public class DescribeInspectionSchedulesResponseBody extends TeaModel {
             }
 
             /**
-             * ScheduleName.
+             * <p>The name of the timed scheduling.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sch-test</p>
              */
             public Builder scheduleName(String scheduleName) {
                 this.scheduleName = scheduleName;
@@ -393,7 +439,10 @@ public class DescribeInspectionSchedulesResponseBody extends TeaModel {
             }
 
             /**
-             * Timezone.
+             * <p>The time zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Asia/Shanghai</p>
              */
             public Builder timezone(String timezone) {
                 this.timezone = timezone;
@@ -401,7 +450,11 @@ public class DescribeInspectionSchedulesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The update time.</p>
+             * <p>The time is displayed in the YYYY-MM-DDTHH:mm:ssZ format in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-07-29T06:50:04Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -494,7 +547,7 @@ public class DescribeInspectionSchedulesResponseBody extends TeaModel {
             } 
 
             /**
-             * Items.
+             * <p>The array of scheduled task configurations.</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;
@@ -502,7 +555,10 @@ public class DescribeInspectionSchedulesResponseBody extends TeaModel {
             }
 
             /**
-             * PageNum.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNum(Long pageNum) {
                 this.pageNum = pageNum;
@@ -510,7 +566,10 @@ public class DescribeInspectionSchedulesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -518,7 +577,10 @@ public class DescribeInspectionSchedulesResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder total(Long total) {
                 this.total = total;

@@ -80,7 +80,7 @@ public class DescribeInspectionTasksResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The task data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -88,7 +88,10 @@ public class DescribeInspectionTasksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2D9F3768-EDA9-4811-943E-42C8006E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class DescribeInspectionTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -279,7 +285,11 @@ public class DescribeInspectionTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The time when the task was created.</p>
+             * <p>The time is displayed in UTC time in the YYYY-MM-DDTHH:mm:ssZ format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-07-01T02:06:34Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -287,7 +297,11 @@ public class DescribeInspectionTasksResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time of the task.</p>
+             * <p>The time is displayed in UTC time in the YYYY-MM-DDTHH:mm:ssZ format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-09-23T00:00:00Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -295,7 +309,11 @@ public class DescribeInspectionTasksResponseBody extends TeaModel {
             }
 
             /**
-             * FinishTime.
+             * <p>The completion time of the task.</p>
+             * <p>The time is displayed in UTC time in the YYYY-MM-DDTHH:mm:ssZ format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-01-09T02:13:01Z</p>
              */
             public Builder finishTime(String finishTime) {
                 this.finishTime = finishTime;
@@ -303,7 +321,17 @@ public class DescribeInspectionTasksResponseBody extends TeaModel {
             }
 
             /**
-             * InspectionItems.
+             * <p>The specified inspection items. The following inspection items are supported:</p>
+             * <ul>
+             * <li>RESOURCE_USAGE</li>
+             * <li>BIGKEY</li>
+             * <li>HOTKEY</li>
+             * <li>PERFORMANCE_METRICS</li>
+             * <li>SLOWLOG</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PERFORMANCE_METRICS</p>
              */
             public Builder inspectionItems(String inspectionItems) {
                 this.inspectionItems = inspectionItems;
@@ -311,7 +339,10 @@ public class DescribeInspectionTasksResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceIds.
+             * <p>The list of associated instance IDs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>r-uf6ns8txov3mp9jxxx</p>
              */
             public Builder instanceIds(String instanceIds) {
                 this.instanceIds = instanceIds;
@@ -319,7 +350,10 @@ public class DescribeInspectionTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ReportLanguage.
+             * <p>The language of the report.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zh-CN</p>
              */
             public Builder reportLanguage(String reportLanguage) {
                 this.reportLanguage = reportLanguage;
@@ -327,7 +361,10 @@ public class DescribeInspectionTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ScheduleId.
+             * <p>The ID of the scheduled task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sch-4dfb08ddf9f84855bacca35axxx</p>
              */
             public Builder scheduleId(String scheduleId) {
                 this.scheduleId = scheduleId;
@@ -335,7 +372,10 @@ public class DescribeInspectionTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * <p>The source of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>scheduler|</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -343,7 +383,11 @@ public class DescribeInspectionTasksResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the task.</p>
+             * <p>The time is displayed in UTC time in the YYYY-MM-DDTHH:mm:ssZ format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-05-30T02:11:01Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -351,7 +395,10 @@ public class DescribeInspectionTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCEEDED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -359,7 +406,10 @@ public class DescribeInspectionTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tit-dca42f85c73644e0ab5c80ef641xxx</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -452,7 +502,7 @@ public class DescribeInspectionTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * Items.
+             * <p>The list of tasks.</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;
@@ -460,7 +510,10 @@ public class DescribeInspectionTasksResponseBody extends TeaModel {
             }
 
             /**
-             * PageNum.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNum(Long pageNum) {
                 this.pageNum = pageNum;
@@ -468,7 +521,10 @@ public class DescribeInspectionTasksResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -476,7 +532,10 @@ public class DescribeInspectionTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder total(Long total) {
                 this.total = total;

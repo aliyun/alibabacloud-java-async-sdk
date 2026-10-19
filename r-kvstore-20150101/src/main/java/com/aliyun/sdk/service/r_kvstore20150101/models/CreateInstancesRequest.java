@@ -267,11 +267,11 @@ public class CreateInstancesRequest extends Request {
         /**
          * <p>Specifies whether to enable automatic payment. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong> (default).</li>
-         * <li><strong>false</strong>. If automatic payment is disabled, you must perform the following steps to complete the payment in the Tair (Redis OSS-compatible) console: In the top navigation bar, choose <strong>Expenses</strong> &gt; <strong>Renewal Management</strong>. In the left-side navigation pane, click <strong>Orders</strong>. On the <strong>Orders</strong> page, find the order and complete the payment.</li>
+         * <li><strong>true</strong>: enables automatic payment. This is the default value.</li>
+         * <li><strong>false</strong>: disables automatic payment. You must manually pay for the order. In the top navigation bar of the console, choose <strong>Billing</strong> &gt; <strong>Renewal Management</strong>. In the left-side navigation pane, choose <strong>Order Management</strong> &gt; <strong>My Orders</strong>, find the order, and then complete the payment.</li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is valid only if the value of the <strong>ChargeType</strong> field in the <strong>Instances</strong> parameter is set to <strong>PrePaid</strong>.</p>
+         * <p>This parameter is available only when the <strong>ChargeType</strong> parameter in the <strong>Instances</strong> array is set to <strong>PrePaid</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -284,13 +284,13 @@ public class CreateInstancesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable auto-renewal for the instance. Default value: false. Valid values:</p>
+         * <p>Specifies whether to enable auto-renewal. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: yes</li>
-         * <li><strong>false</strong>: no</li>
+         * <li><strong>true</strong>: enables auto-renewal.</li>
+         * <li><strong>false</strong>: disables auto-renewal. This is the default value.</li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is available only if <strong>ChargeType</strong> in the <strong>Instances</strong> parameter is set to <strong>PrePaid</strong>.</p>
+         * <p>This parameter is available only when the <strong>ChargeType</strong> parameter in the <strong>Instances</strong> array is set to <strong>PrePaid</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -303,7 +303,7 @@ public class CreateInstancesRequest extends Request {
         }
 
         /**
-         * <p>The additional business information about the instance.</p>
+         * <p>The extended business information.</p>
          * 
          * <strong>example:</strong>
          * <p>000000000</p>
@@ -327,16 +327,10 @@ public class CreateInstancesRequest extends Request {
         }
 
         /**
-         * <p>The database engine version of the instance. Valid values: <strong>4.0</strong> and <strong>5.0</strong>.</p>
+         * <p>The Redis-compatible engine version of the instance. Valid values: <strong>4.0</strong> and <strong>5.0</strong>.</p>
          * <blockquote>
-         * <p> The default value is <strong>5.0</strong>.</p>
+         * <p>Default value: <strong>5.0</strong>.</p>
          * </blockquote>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>2.8</li>
-         * <li>4.0</li>
-         * <li>5.0</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>5.0</p>
@@ -348,11 +342,23 @@ public class CreateInstancesRequest extends Request {
         }
 
         /**
-         * <p>The JSON-formatted configurations of the instance. For more information, see the &quot;Additional description of the Instances parameter&quot; section.</p>
+         * <p>The configuration information of the new instances. The value must be in JSON format. For more information, see the supplementary description of the Instances parameter.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{	&quot;RegionId&quot;: &quot;cn-hangzhou&quot;,	&quot;izNo&quot;: &quot;cn-hangzhou-b&quot;,	&quot;quantity&quot;: 2,	&quot;instanceType&quot;: &quot;Redis&quot;,	&quot;instanceClass&quot;: &quot;redis.master.small.default&quot;,	&quot;EngineVersion&quot;: &quot;5.0&quot;,	&quot;ChargeType&quot;: &quot;PostPaid&quot;}]</p>
+         * <p>[{
+         *     &quot;RegionId&quot;: &quot;cn-hangzhou&quot;,
+         *     &quot;izNo&quot;: &quot;cn-hangzhou-b&quot;,
+         *     &quot;quantity&quot;: 1,
+         *     &quot;instanceType&quot;: &quot;Redis&quot;,
+         *     &quot;instanceClass&quot;: &quot;redis.logic.sharding.1g.2db.0rodb.4proxy.default&quot;,
+         *     &quot;EngineVersion&quot;: &quot;5.0&quot;, 
+         *     &quot;ChargeType&quot;:&quot;PrePaid&quot;,
+         *     &quot;Period&quot;:&quot;1&quot;,
+         *     &quot;networkType&quot;: &quot;VPC&quot; ,
+         *     &quot;vpcId&quot;: &quot;vpc-2zex6u1nu32k3ux35oxxx&quot;, 
+         *     &quot;vSwitchId&quot;: &quot;vsw-2zesk464e647104kw3xxx&quot;
+         * }]</p>
          */
         public Builder instances(String instances) {
             this.putQueryParameter("Instances", instances);
@@ -379,13 +385,13 @@ public class CreateInstancesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to restore the source instance from the recycle bin. Valid values:</p>
+         * <p>Specifies whether to rebuild and restore the source instance from the recycle bin. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong> (default)</li>
+         * <li><strong>true</strong>: yes.</li>
+         * <li><strong>false</strong>: no. This is the default value.</li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is valid only if the <strong>SrcDBInstanceId</strong> field in the <strong>Instances</strong> parameter is specified.</p>
+         * <p>This parameter is available only when the <strong>SrcDBInstanceId</strong> parameter is specified in the <strong>Instances</strong> array.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -398,7 +404,7 @@ public class CreateInstancesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which to assign the instance.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-resourcegroupid1</p>
@@ -437,7 +443,7 @@ public class CreateInstancesRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token is case-sensitive. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token is case-sensitive and can be up to 64 ASCII characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>ETnLKlblzczshOTUbOCz****</p>

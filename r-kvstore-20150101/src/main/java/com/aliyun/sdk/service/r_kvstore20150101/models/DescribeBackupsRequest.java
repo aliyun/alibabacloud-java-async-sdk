@@ -265,7 +265,7 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * <p>The backup task ID, returned by CreateBackup. If CreateBackup returns multiple BackupJobIds, you need to use this interface to query each of them separately.</p>
+         * <p>The ID of the backup job. This ID is returned by the CreateBackup operation. If CreateBackup returns multiple BackupJobIds, you must call this operation to query each of them separately.</p>
          * 
          * <strong>example:</strong>
          * <p>10001</p>
@@ -277,7 +277,7 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC. The end time must be later than the start time.</p>
+         * <p>The end time of the query. The end time must be later than the start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format. The time must be in UTC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -290,7 +290,7 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance whose backup files you want to query.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -303,13 +303,13 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable append-only files (AOFs) persistence. Valid values:</p>
+         * <p>Specifies whether to enable AOF persistence. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: no</li>
-         * <li><strong>1</strong>: yes</li>
+         * <li><strong>0</strong>: Disabled.</li>
+         * <li><strong>1</strong>: Enabled.</li>
          * </ul>
          * <blockquote>
-         * <p> The default value is <strong>0</strong>.</p>
+         * <p>Default value: <strong>0</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -340,7 +340,7 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * <p>The page number. The value must be an integer that is greater than <strong>0</strong>. Default value: <strong>1</strong>.</p>
+         * <p>The page number. The value must be greater than <strong>0</strong> and cannot exceed the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -391,7 +391,7 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+         * <p>The start time of the query. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format. The time must be in UTC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

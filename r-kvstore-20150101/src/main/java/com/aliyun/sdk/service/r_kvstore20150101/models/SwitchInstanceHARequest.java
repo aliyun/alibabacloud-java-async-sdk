@@ -237,7 +237,7 @@ public class SwitchInstanceHARequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to query the ID of the instance.</p>
+         * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to query the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -250,9 +250,9 @@ public class SwitchInstanceHARequest extends Request {
         }
 
         /**
-         * <p>The ID of the data shard. You can call the <a href="https://help.aliyun.com/document_detail/473782.html">DescribeRoleZoneInfo</a> operation to obtain the value of the CustinsId parameter. Separate multiple data shard IDs with commas (,). <code>all</code> indicates that all data shards are specified.</p>
+         * <p>The ID of the data shard node. You can call the <a href="https://help.aliyun.com/document_detail/473782.html">DescribeRoleZoneInfo</a> operation to obtain the CustinsId parameter. Separate multiple data shard node IDs with commas (,). To specify all nodes, enter <code>all</code>.</p>
          * <blockquote>
-         * <p>This parameter is available and required only for read/write splitting and cluster instances.</p>
+         * <p>This parameter is available and required only when the instance uses the cluster or read/write splitting architecture.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -310,7 +310,10 @@ public class SwitchInstanceHARequest extends Request {
         }
 
         /**
-         * SourceNodeId.
+         * <p>The ID of the original primary node of the shard.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>52717408</p>
          */
         public Builder sourceNodeId(String sourceNodeId) {
             this.putQueryParameter("SourceNodeId", sourceNodeId);
@@ -319,13 +322,13 @@ public class SwitchInstanceHARequest extends Request {
         }
 
         /**
-         * <p>The time when to perform the switchover. Default value: 0. Valid values:</p>
+         * <p>The execution time. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: immediately performs the switchover.</li>
-         * <li><strong>1</strong>: performs the switchover during the maintenance window.</li>
+         * <li><strong>0</strong>: executes the operation immediately. This is the default value.</li>
+         * <li><strong>1</strong>: executes the operation within the maintenance window.</li>
          * </ul>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/473775.html">ModifyInstanceMaintainTime</a> operation to modify the maintenance window of a Tair (Redis OSS-compatible) instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/473775.html">ModifyInstanceMaintainTime</a> operation to modify the maintenance window of the instance.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -338,17 +341,17 @@ public class SwitchInstanceHARequest extends Request {
         }
 
         /**
-         * <p>The switching mode. Valid values:</p>
+         * <p>The switchover mode. Valid values:</p>
          * <ul>
-         * <li><strong>AvailablePriority</strong>: immediately performs a switchover by prioritizing availability. No latency of data synchronization between the master and replica nodes is considered. This may cause data loss.</li>
-         * <li><strong>ReliabilityPriority</strong>: performs a switchover by prioritizing reliability. Make sure that no latency of data synchronization between the master and replica nodes exists. This ensures data integrity. This mode may cause switchover failures in scenarios where a large volume of data is written and data synchronization latency consistently exists.</li>
+         * <li><strong>ReliabilityPriority</strong> (default): prioritizes reliability. The primary/secondary switchover is performed only when there is no synchronization latency between the primary and secondary nodes, ensuring no data loss. In scenarios with a large write volume and continuous synchronization latency, this mode may cause the switchover to fail.</li>
+         * <li><strong>AvailablePriority</strong>: prioritizes availability. The primary/secondary switchover is performed immediately regardless of the synchronization latency between the primary and secondary nodes, which may result in a small amount of data loss.</li>
          * </ul>
          * <blockquote>
-         * <p> You must evaluate the requirements for data and services based on your business scenarios and then select a switching mode.</p>
+         * <p>Select a switchover mode based on your business requirements for data and services.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>AvailablePriority</p>
+         * <p>ReliabilityPriority</p>
          */
         public Builder switchType(String switchType) {
             this.putQueryParameter("SwitchType", switchType);
@@ -357,7 +360,10 @@ public class SwitchInstanceHARequest extends Request {
         }
 
         /**
-         * TargetNodeId.
+         * <p>The ID of the target primary node after the switchover.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>52717403</p>
          */
         public Builder targetNodeId(String targetNodeId) {
             this.putQueryParameter("TargetNodeId", targetNodeId);
@@ -366,7 +372,10 @@ public class SwitchInstanceHARequest extends Request {
         }
 
         /**
-         * TargetShardName.
+         * <p>The name of the instance shard.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-2zegk3jyxxxwixfo6c-db-1</p>
          */
         public Builder targetShardName(String targetShardName) {
             this.putQueryParameter("TargetShardName", targetShardName);

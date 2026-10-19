@@ -154,6 +154,7 @@ public class CreateInstanceMultiVIPRequest extends Request {
         }
 
         /**
+         * <p>The number of LBs to add.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -166,6 +167,7 @@ public class CreateInstanceMultiVIPRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

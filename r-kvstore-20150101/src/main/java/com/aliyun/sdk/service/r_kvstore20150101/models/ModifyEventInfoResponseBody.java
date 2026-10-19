@@ -106,7 +106,7 @@ public class ModifyEventInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code that is returned if the request failed.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>mst.errorcode.success.errormessage</p>
@@ -117,7 +117,7 @@ public class ModifyEventInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error ID.</p>
+         * <p>The error event IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>12343</p>
@@ -150,7 +150,7 @@ public class ModifyEventInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the successful event.</p>
+         * <p>The success event IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>234221</p>

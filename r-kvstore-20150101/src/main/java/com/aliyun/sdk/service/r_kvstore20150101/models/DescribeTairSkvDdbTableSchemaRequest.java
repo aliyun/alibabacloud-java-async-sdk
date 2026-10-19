@@ -167,7 +167,10 @@ public class DescribeTairSkvDdbTableSchemaRequest extends Request {
         }
 
         /**
-         * BackupId.
+         * <p>The ID of the backup file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>78241****</p>
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -176,10 +179,11 @@ public class DescribeTairSkvDdbTableSchemaRequest extends Request {
         }
 
         /**
+         * <p>The ID of the instance to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>tt-bp1zxszhcgatnx\<em>\</em>\<em>\</em></p>
+         * <p>tt-bp1zxszhcgatnx\\<em>\\</em>\\<em>\\</em></p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
