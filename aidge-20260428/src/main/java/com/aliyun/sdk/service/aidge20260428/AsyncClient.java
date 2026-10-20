@@ -20,44 +20,50 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of AddDisplayKnowledge  AddDisplayKnowledgeRequest
+     * @return AddDisplayKnowledgeResponse
+     */
+    CompletableFuture<AddDisplayKnowledgeResponse> addDisplayKnowledge(AddDisplayKnowledgeRequest request);
+
+    /**
      * <b>description</b> :
      * <h2>Scenarios</h2>
      * <ul>
-     * <li><strong>Virtual try-on for clothing products:</strong>
-     * Supports multiple clothing categories including tops, bottoms, jumpsuits, and dresses. After uploading a person image and a product image, the service generates natural and realistic try-on results that intuitively showcase how the clothing looks when worn.</li>
+     * <li><strong>Virtual try-on for clothing:</strong>
+     * Supports various clothing categories such as tops, bottoms, jumpsuits, and dresses. After you upload a model image and a garment image, the service generates natural and realistic try-on effects to visually demonstrate how the garment looks on the model.</li>
      * <li><strong>Virtual try-on for shoes and hats:</strong>
-     * Supports virtual try-on for shoes, hats, and similar products. The service intelligently matches the product position and proportion based on the person\&quot;s pose and body parts, producing coordinated and lifelike wearing effects.</li>
+     * Supports virtual try-on for accessories such as shoes and hats. The service intelligently matches the position and proportion of the product based on the model\&quot;s pose and body parts to present a coordinated and realistic wearing effect.</li>
      * <li><strong>E-commerce product display and marketing:</strong>
-     * Helps merchants quickly generate model try-on images for different products, reducing the costs of traditional photography, outfit changes, and post-production, and improving the production efficiency of product images.  </li>
+     * Helps merchants quickly generate model try-on images for different products. This reduces the costs of traditional photography, outfit changes, and post-production, and improves the production efficiency of product images.</li>
      * <li><strong>Online shopping experience optimization:</strong>
-     * Consumers can preview how products look when worn through virtual try-on, gaining a more intuitive understanding of the product\&quot;s style, coordination, and overall appearance, which assists purchase decisions and enhances the shopping experience.</li>
+     * Allows consumers to preview the wearing effect of products through virtual try-on. This provides a more intuitive understanding of the style, matching, and overall effect of the product, which assists in purchase decisions and enhances the shopping experience.</li>
      * </ul>
      * <h2>Features</h2>
      * <ul>
-     * <li><strong>First, the user needs to provide a model image and a product image. The system uses the model image as the try-on subject and applies the clothing from the product image onto the model:</strong><ul>
-     * <li>a. Model image: The person image on which the virtual try-on is performed.</li>
-     * <li>b. Product image: The clothing, shoes, or hat image to be applied onto the model.</li>
+     * <li><strong>Provide a model image and a product image. The system uses the model image as the try-on subject and applies the garment from the product image to the model:</strong><ul>
+     * <li>a. Model image: The image of the person who will wear the garment in the virtual try-on.</li>
+     * <li>b. Product image: The image of the clothing, shoes, or hat to be worn by the model.</li>
      * </ul>
      * </li>
-     * <li><strong>Second, the user can select the corresponding product type based on the actual product. Supported types include tops, bottoms, jumpsuits, dresses, shoes, and hats:</strong><ul>
-     * <li>a. Specify product type: The user can directly specify the product type, and the system processes accordingly.</li>
-     * <li>b. Automatic type recognition: If the user does not specify a product type, the system automatically identifies the product category from the product image and performs the virtual try-on based on the recognition result.</li>
+     * <li><strong>Select the corresponding product type based on the actual product. Supported types include tops, bottoms, jumpsuits, dresses, shoes, and hats:</strong><ul>
+     * <li>a. Specify product type: You can directly specify the type of the current product, and the system will process it accordingly.</li>
+     * <li>b. Automatic type recognition: If you do not specify the product type, the system automatically recognizes the product category in the product image and performs the virtual try-on based on the recognition result.</li>
      * </ul>
      * </li>
-     * <li><strong>Finally, the system combines the model image, product image, and product type to generate a virtual try-on image that showcases how the product looks on the model:</strong><ul>
-     * <li>a. Preserve model details: The generation process does not alter the person\&quot;s appearance, hairstyle, pose, body shape, or other details in the original model image.</li>
-     * <li>b. Maintain scene consistency: The background, composition, lighting, and overall visual effect of the original model image remain unchanged. Only the wearing area corresponding to the product is processed.</li>
-     * <li>c. Generate try-on results: The product is naturally applied onto the model, conforming to the person\&quot;s pose and body structure, producing a coordinated and realistic virtual try-on image.</li>
+     * <li><strong>The system generates a virtual try-on image by combining the model image, product image, and product type to show the wearing effect of the product on the model:</strong><ul>
+     * <li>a. Preserve model details: The generation process does not alter the appearance, hairstyle, pose, body shape, or other details of the person in the original model image.</li>
+     * <li>b. Maintain image consistency: The background, composition, lighting, and overall visual effect of the original model image remain unchanged. Only the wearing area corresponding to the product is processed.</li>
+     * <li>c. Generate try-on effect: The product is naturally applied to the model, fitting the person\&quot;s pose and body structure to generate a coordinated and realistic virtual try-on image.</li>
      * </ul>
      * </li>
      * </ul>
-     * <h2>Sample results</h2>
+     * <h2>Examples</h2>
      * <table>
      * <thead>
      * <tr>
      * <th><strong>Type</strong></th>
      * <th><strong>Model image</strong></th>
-     * <th><strong>Clothing image</strong></th>
+     * <th><strong>Garment image</strong></th>
      * <th><strong>Try-on result</strong></th>
      * </tr>
      * </thead>
@@ -464,6 +470,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CategoryMatchResponse
      */
     CompletableFuture<CategoryMatchResponse> categoryMatch(CategoryMatchRequest request);
+
+    /**
+     * @param request the request parameters of DeleteDisplayKnowledge  DeleteDisplayKnowledgeRequest
+     * @return DeleteDisplayKnowledgeResponse
+     */
+    CompletableFuture<DeleteDisplayKnowledgeResponse> deleteDisplayKnowledge(DeleteDisplayKnowledgeRequest request);
 
     /**
      * <b>description</b> :
@@ -1934,6 +1946,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryAsyncTaskResultResponse> queryAsyncTaskResult(QueryAsyncTaskResultRequest request);
 
     /**
+     * @param request the request parameters of QueryDisplayKnowledge  QueryDisplayKnowledgeRequest
+     * @return QueryDisplayKnowledgeResponse
+     */
+    CompletableFuture<QueryDisplayKnowledgeResponse> queryDisplayKnowledge(QueryDisplayKnowledgeRequest request);
+
+    /**
      * <b>description</b> :
      * <h1>1. Product Introduction</h1>
      * <p>Detects whether an image contains a size chart. (Synchronous)</p>
@@ -2432,70 +2450,76 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>适用场景</h2>
+     * <h2>Scenarios</h2>
      * <ul>
-     * <li><p>商品标题：Maas MT大模型翻译可以将商品标题中的短语、关键词、流行词等准确翻译成目标语言，提升商品在电商平台的曝光率。</p>
+     * <li><p>Product titles: The Maas MT large language model accurately translates phrases, keywords, and trending words in product titles into the target language to increase product exposure on e-commerce platforms.</p>
      * </li>
-     * <li><p>商品详描：商品详描整体文本较长、格式多样且复杂，Maas 大模型翻译支持长文本翻译和 HTML 格式，翻译效果和格式还原能力表现出色。</p>
+     * <li><p>Product descriptions: Product descriptions are typically long and have diverse and complex formats. The Maas large language model supports long-text translation and HTML formatting, delivering excellent translation quality and format restoration.</p>
      * </li>
-     * <li><p>商品属性：商品属性词汇较短，且存在电商专有词（如型号、参数）等。</p>
+     * <li><p>Product attributes: Product attribute terms are short and contain e-commerce-specific words such as models and parameters.</p>
      * </li>
-     * <li><p>客服对话：在客服场景中，可优化“上下文缺失、打字错误“等问题，并在部分语向上支持礼貌用语。</p>
+     * <li><p>Customer service conversations: In customer service scenarios, the model optimizes issues such as missing context and typos, and supports polite expressions in specific language pairs.</p>
+     * <p>  The Maas MT large language model can also be used for translation in general scenarios, such as office work, meetings, and daily conversations.</p>
      * </li>
      * </ul>
-     * <p>      同时，Maas MT大模型翻译也可以用于通用场景的翻译，如办公、会议、日常对话等。</p>
-     * <h2>功能介绍</h2>
+     * <h2>Features</h2>
      * <ul>
-     * <li><p><strong>超低幻觉率与高速推理</strong> Maas MT大模型翻译是在翻译场景上经过偏好对齐的大语言模型，与通用大语言模型相比，翻译推理速度快，幻觉率极低，尤其适合大规模调用的场景。</p>
+     * <li><p><strong>Ultra-low hallucination rate and high-speed inference</strong> The Maas MT large language model is aligned with preferences for translation scenarios. Compared with general-purpose large language models, it provides faster translation inference and an extremely low hallucination rate, making it especially suitable for large-scale invocation scenarios.</p>
      * </li>
-     * <li><p><strong>支持翻译的文本格式类型</strong> 当前支持 text 和 html 的文本类型。</p>
+     * <li><p><strong>Supported text formats</strong> The model supports text and HTML formats.</p>
      * </li>
-     * <li><p><strong>翻译干预能力支持</strong> 支持自定义翻译结果，包含不被翻译（ABC-ABC），指定翻译（ABC-DEF），不翻译（ABC-空值）。常用于品牌词保护等场景。只需调用接口时传入相应的干预词表ID，即可实现，可满足您在不同场景下的翻译需求。一般您可以上传10万条干预词，如有更多需要可以联系平台进行处理。</p>
+     * <li><p><strong>Translation intervention</strong> You can customize translation results, including keeping terms untranslated (ABC-ABC), specifying translations (ABC-DEF), and omitting translations (ABC-null value). This feature is commonly used for brand word protection. You only need to pass the corresponding intervention glossary ID when calling the API. This meets your translation needs in different scenarios. Generally, you can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</p>
      * </li>
-     * <li><p><strong>翻译效果对比</strong></p>
+     * <li><p><strong>Translation quality comparison</strong></p>
      * <table>
      * <thead>
      * <tr>
-     * <th><strong>原文</strong></th>
-     * <th><strong>Aidge译后</strong></th>
-     * <th><strong>其他翻译产品1</strong></th>
-     * <th><strong>其他翻译产品2</strong></th>
-     * <th><strong>Aidge翻译优势</strong></th>
+     * <th><strong>Source text</strong></th>
+     * <th><strong>Aidge translation</strong></th>
+     * <th><strong>Other translation product 1</strong></th>
+     * <th><strong>Other translation product 2</strong></th>
+     * <th><strong>Aidge translation advantages</strong></th>
      * </tr>
      * </thead>
      * <tbody><tr>
-     * <td>75mm 4Pin 0.38A GA81S2U 12V GTX 960 Cooling Fan for Zotac GTX960 Graphics Card Cooling Fan</td>
-     * <td>75mm 4Pin 0.38A GA81S2U 12V GTX 960, ventilador de enfriamiento para tarjeta gráfica Zotac GTX960.</td>
-     * <td>Ventilador de refrigeración de 75mm 4Pin 0.38A GA81S2U 12V para la tarjeta gráfica Zotac GTX960 Ventilador de enfriamiento GTX 960.</td>
-     * <td>Ventilador de refrigeración para tarjeta gráfica Zotac GTX960, 75mm, 4 pines, 0,38A, GA81S2U, 12V, GTX 960</td>
-     * <td>商品主体更清晰</td>
+     * <td>75mm 4Pin 0.38A GA81S2U 12V GTX 960 Cooling Fan for Zotac GTX960 Graphics Card Cooling Fan</td>
+     * <td>75mm 4Pin 0.38A GA81S2U 12V GTX 960, ventilador de enfriamiento para tarjeta gráfica Zotac GTX960.</td>
+     * <td>Ventilador de refrigeración de 75mm 4Pin 0.38A GA81S2U 12V para la tarjeta gráfica Zotac GTX960 Ventilador de enfriamiento GTX 960.</td>
+     * <td>Ventilador de refrigeración para tarjeta gráfica Zotac GTX960, 75mm, 4 pines, 0,38A, GA81S2U, 12V, GTX 960</td>
+     * <td>Clearer product subject</td>
      * </tr>
      * <tr>
-     * <td>New Arrival Classic Style Luxury Brand 6 Hands Swiss Automatic Mechanical Men\&quot;s Business Steel Watch</td>
-     * <td>Nueva llegada, reloj mecánico automático de lujo con 6 manecillas, estilo clásico, de acero para hombres de negocios</td>
-     * <td>Nueva Llegada Reloj De Acero de Negocios para Hombre con Mecanismo Automático Suizo y 6 Agujas de Estilo Clásico de Marca de Lujo.</td>
-     * <td>Reloj de acero de negocios para hombre, mecánico automático suizo, marca de lujo, estilo clásico, 6 manos, nueva llegada</td>
-     * <td>句式更完整，表述更清晰，断句更合理</td>
+     * <td>New Arrival Classic Style Luxury Brand 6 Hands Swiss Automatic Mechanical Men\&quot;s Business Steel Watch</td>
+     * <td>Nueva llegada, reloj mecánico automático de lujo con 6 manecillas, estilo clásico, de acero para hombres de negocios</td>
+     * <td>Nueva Llegada Reloj De Acero de Negocios para Hombre con Mecanismo Automático Suizo y 6 Agujas de Estilo Clásico de Marca de Lujo.</td>
+     * <td>Reloj de acero de negocios para hombre, mecánico automático suizo, marca de lujo, estilo clásico, 6 manos, nueva llegada</td>
+     * <td>More complete sentence structure, clearer expression, and more reasonable punctuation</td>
      * </tr>
      * <tr>
-     * <td>Men Key Bag Genuine Cow Leather Buckets Key Cases Pouch Zipper Keychain Auto Car Key Case Women Home Key Holder Wallet</td>
-     * <td>Sac à clés pour hommes en cuir de vache véritable, étuis à clés, pochette à fermeture éclair, porte-clés, étui à clé de voiture, porte-clés pour femmes, organisateur de portefeuille</td>
-     * <td>Porte-clés sac en cuir de vache véritable, étuis à clés en forme de seau, pochette à fermeture éclair, porte-clés auto pour voiture, étui à clés pour femmes, organisateur de clés de maison, portefeuille.</td>
-     * <td>Hommes porte-clés en cuir de vache véritable sac/pochette fermature éclair porte-clés Auto voiture porte-clés femmes maison porte-clés organisateur portefeuille</td>
-     * <td>产品主体表述更清晰明确，是“钥匙包”而非“钥匙扣”，其它译文容易对产品主体产生歧义</td>
+     * <td>Men Key Bag Genuine Cow Leather Buckets Key Cases Pouch Zipper Keychain Auto Car Key Case Women Home Key Holder Wallet</td>
+     * <td>Sac à clés pour hommes en cuir de vache véritable, étuis à clés, pochette à fermeture éclair, porte-clés, étui à clé de voiture, porte-clés pour femmes, organisateur de portefeuille</td>
+     * <td>Porte-clés sac en cuir de vache véritable, étuis à clés en forme de seau, pochette à fermeture éclair, porte-clés auto pour voiture, étui à clés pour femmes, organisateur de clés de maison, portefeuille.</td>
+     * <td>Hommes porte-clés en cuir de vache véritable sac/pochette fermeture éclair porte-clés Auto voiture porte-clés femmes maison porte-clés organisateur portefeuille</td>
+     * <td>Clearer and more explicit product subject expression, identifying it as a &quot;key bag&quot; rather than a &quot;keychain&quot;, avoiding ambiguity in other translations</td>
      * </tr>
      * </tbody></table>
      * </li>
      * </ul>
-     * <h2>接入准备与调用流程</h2>
-     * <p>文本翻译支持同步和异步两种调用方式。本文介绍异步调用接口，如需使用同步调用，请参阅<a href="https://api.aliyun.com/document/Aidge/2026-04-28/TextTranslate">《文本翻译-同步接口》</a>。
-     * 文本翻译及其他能力的异步接口共用结果获取流程、RocketMQ 订阅规则、消息加密协议、依赖配置，以及 Java 消费与解密代码。
-     * 异步调用的接入流程，订阅规则，消息格式与加密协议，以及详细的接入方案请参阅<a href="https://help.aliyun.com/zh/aidge/asynchronous-interface-call-instructions">异步接口调用说明</a>。</p>
+     * <h2>Preparations and invocation flow</h2>
+     * <p>Text translation supports both synchronous and asynchronous invocation methods. This topic describes the asynchronous invocation API. To use synchronous calls, see <a href="https://api.aliyun.com/document/Aidge/2026-04-28/TextTranslate">Text Translation - Synchronous API</a>.
+     * The asynchronous APIs for text translation and other features share the same result retrieval flow, RocketMQ subscribe rules, message encryption protocols, dependency configurations, and Java consumption and decryption code.
+     * For the asynchronous invocation onboarding flow, subscribe rules, message formats and encryption protocols, and detailed integration solutions, see <a href="https://www.alibabacloud.com/help/en/aidge/asynchronous-interface-call-instructions">Asynchronous API invocation instructions</a>.</p>
      * 
      * @param request the request parameters of TextTranslateAsync  TextTranslateAsyncRequest
      * @return TextTranslateAsyncResponse
      */
     CompletableFuture<TextTranslateAsyncResponse> textTranslateAsync(TextTranslateAsyncRequest request);
+
+    /**
+     * @param request the request parameters of UpdateDisplayKnowledge  UpdateDisplayKnowledgeRequest
+     * @return UpdateDisplayKnowledgeResponse
+     */
+    CompletableFuture<UpdateDisplayKnowledgeResponse> updateDisplayKnowledge(UpdateDisplayKnowledgeRequest request);
 
     /**
      * <b>description</b> :
@@ -2528,17 +2552,17 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <h2>Product introduction</h2>
-     * <p>The video translation API translates speech and on-screen text in videos into a target language. You can select speech and subtitle translation, on-screen text translation, or both. This API is suitable for scenarios such as multi-language distribution of e-commerce videos, international social media marketing, and global brand advertising.
-     * This API uses asynchronous invocation. After you submit a translation task, you obtain a TaskId. You can use the query API to poll the task status until the task is completed and then obtain the result.</p>
+     * <p>The video translation API translates the speech and on-screen text in a video into a target language. You can select speech subtitle translation, on-screen text translation, or both. This API applies to scenarios such as multilingual distribution of e-commerce videos, international social media marketing, and global brand advertising.
+     * The API uses an asynchronous invocation mode. After you submit a translation task, you can obtain the <code>TaskId</code> and poll the task status by calling the query API until the task is completed and the result is returned.</p>
      * <h2>Scenarios</h2>
      * <ul>
-     * <li><p><strong>Cross-border e-commerce video localization</strong>: Translates selling point text in product introduction videos into the language of the target market to promote products on overseas platforms.</p>
+     * <li><p><strong>Cross-border e-commerce video localization</strong>: Translates the selling point text in product introduction videos into the language of the target market to facilitate promotion on overseas platforms.</p>
      * </li>
-     * <li><p><strong>International social media marketing</strong>: Localizes on-screen text in videos for platforms such as TikTok, Instagram, and YouTube with one click to improve comprehension and conversion rates among overseas users.</p>
+     * <li><p><strong>International social media marketing</strong>: Localizes the on-screen text in videos for platforms such as TikTok, Instagram, and YouTube with one click to improve comprehension and conversion rates among overseas users.</p>
      * </li>
-     * <li><p><strong>Global brand advertising</strong>: Automatically generates video versions in the languages of the delivery regions to reduce manual production costs.</p>
+     * <li><p><strong>Global brand advertising</strong>: Automatically generates video versions in the languages of the target regions to reduce manual production costs.</p>
      * </li>
-     * <li><p><strong>Training and product instructions</strong>: Translates on-screen text in training courses or product demo videos into multiple languages for global teams.</p>
+     * <li><p><strong>Training and product instructions</strong>: Translates the on-screen text in training courses or product demo videos into multiple languages for global teams.</p>
      * </li>
      * </ul>
      * <h2>Features</h2>
@@ -2551,27 +2575,27 @@ public interface AsyncClient extends SdkAutoCloseable {
      * </tr>
      * </thead>
      * <tbody><tr>
-     * <td>Speech and subtitle translation</td>
-     * <td>speech</td>
-     * <td>Translates video speech into target language voiceovers. Does not erase original subtitles or add new subtitles.</td>
+     * <td>Speech subtitle translation</td>
+     * <td><code>speech</code></td>
+     * <td>Translates the video speech into target language dubbing. Original subtitles are not removed, and no new subtitles are added.</td>
      * </tr>
      * <tr>
      * <td>On-screen text translation</td>
-     * <td>visual</td>
-     * <td>Translates embedded text in video frames, such as subtitles and selling points, and erases the original text. You can enable quality check for on-screen text processing by using the API.</td>
+     * <td><code>visual</code></td>
+     * <td>Translates the embedded text (subtitles, selling point text, etc.) in the video frames and erases the original text. You can enable quality check for on-screen text processing by using the API.</td>
      * </tr>
      * <tr>
-     * <td>Speech and subtitle translation (speech) generates target language voiceovers based on the spoken content in the video and synthesizes them into the video. It does not erase original subtitles or add new subtitles. Original subtitles refer to the existing subtitles in the video frames that correspond to the spoken content.</td>
-     * <td></td>
-     * <td></td>
-     * </tr>
-     * <tr>
-     * <td>On-screen text translation (visual) targets recognizable text in the original video language within the video frames, such as titles, product selling points, and descriptive text. It can be used independently without selecting speech and subtitle translation first. The text does not need to appear in the speech. Original subtitles within the processing scope may also be processed.</td>
+     * <td>Speech subtitle translation (<code>speech</code>) generates target language dubbing based on the spoken content in the video and synthesizes it into the video. It does not remove original subtitles or add new subtitles. Original subtitles refer to the existing subtitles in the video frames that correspond to the spoken content.</td>
      * <td></td>
      * <td></td>
      * </tr>
      * <tr>
-     * <td>When both speech and visual are selected, the speech and subtitle translation is completed and the video is synthesized first. Then, on-screen text processing is performed on this video. The translated voiceover is retained, and a final video is output. The order of features in the array does not affect the execution order. Therefore, not processing original subtitles only means that the speech and subtitle phase does not erase or add subtitles. The subsequent on-screen text processing may still change the original subtitles.</td>
+     * <td>On-screen text translation (<code>visual</code>) targets the recognizable original language text in the video frames, such as titles, product selling points, and descriptive text. It can be used independently without selecting speech subtitle translation first, and the text does not need to appear in the speech. Original subtitles within the processing scope may also be processed.</td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>When both <code>speech</code> and <code>visual</code> are selected, the speech subtitle translation is completed and the video is synthesized first. Then, on-screen text processing is performed on this video, retaining the translated dubbing and outputting a final video. The order of features in the array does not affect the execution order. Therefore, not processing original subtitles only means that no subtitles are removed or added during the speech subtitle phase. Subsequent on-screen text processing may still alter the original subtitles.</td>
      * <td></td>
      * <td></td>
      * </tr>

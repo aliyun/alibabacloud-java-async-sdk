@@ -104,7 +104,7 @@ public class AiTryOnRequest extends Request {
         } 
 
         /**
-         * <p>The URL of the clothing image. Only one image is supported. The URL must be a publicly accessible <code>http</code>/<code>https</code> address. The image must be in JPG, JPEG, PNG, BMP, or WEBP format, with a resolution between 256 × 256 and 2049 × 2049 pixels, and a file size of no more than 10 MB.<br></p>
+         * <p>The URL of the garment image. Only one image is supported. The URL must be a publicly accessible <code>http</code> or <code>https</code> address. The image must be in JPG, JPEG, PNG, BMP, or WEBP format, with a resolution between 256×256 and 2049×2049 pixels, and a file size not exceeding 10 MB.<br></p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,7 +117,7 @@ public class AiTryOnRequest extends Request {
         }
 
         /**
-         * <p>The clothing type. If specified, the value must be one of the following: tops/bottoms/dresses/tops_and_bottoms/shoes/hats. If not specified, the system automatically identifies the type.</p>
+         * <p>The type of the garment. Valid values: tops, bottoms, dresses, tops_and_bottoms, shoes, and hats. If this parameter is not specified, the system automatically recognizes the garment type.</p>
          * 
          * <strong>example:</strong>
          * <p>tops</p>
@@ -129,7 +129,7 @@ public class AiTryOnRequest extends Request {
         }
 
         /**
-         * <p>The URL of the model image. Only one image is supported. The URL must be a publicly accessible <code>http</code>/<code>https</code> address. The image must be in JPG, JPEG, PNG, BMP, or WEBP format, with a resolution between 256 × 256 and 2049 × 2049 pixels, and a file size of no more than 10 MB.<br></p>
+         * <p>The URL of the model image. Only one image is supported. The URL must be a publicly accessible <code>http</code> or <code>https</code> address. The image must be in JPG, JPEG, PNG, BMP, or WEBP format, with a resolution between 256×256 and 2049×2049 pixels, and a file size not exceeding 10 MB.<br></p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,7 +142,7 @@ public class AiTryOnRequest extends Request {
         }
 
         /**
-         * <p>The output image resolution. The synchronous API supports only 1K.</p>
+         * <p>The resolution of the output image. Synchronous API operations only support 1K resolution.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
