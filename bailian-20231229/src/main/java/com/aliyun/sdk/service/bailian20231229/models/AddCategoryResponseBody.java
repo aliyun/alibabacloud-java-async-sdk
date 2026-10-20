@@ -119,7 +119,10 @@ public class AddCategoryResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class AddCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data field returned by the operation.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class AddCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Requests throttling triggered.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,10 +149,10 @@ public class AddCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>778C0B3B-03C1-5FC1-A947-36EDD13606AB</p>
+         * <p>778C0B3B-xxxx-5FC1-A947-36EDD13606AB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +160,10 @@ public class AddCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status code returned by the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -162,7 +171,14 @@ public class AddCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The call was successful. </li>
+         * <li>false: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -228,7 +244,10 @@ public class AddCategoryResponseBody extends TeaModel {
             } 
 
             /**
-             * CategoryId.
+             * <p>The category ID. Store this value properly because it is required for all subsequent API operations related to this category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cate_cdd11b1b79a74e8bbd675c356a91ee3xxxxxxxx</p>
              */
             public Builder categoryId(String categoryId) {
                 this.categoryId = categoryId;
@@ -236,7 +255,10 @@ public class AddCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * CategoryName.
+             * <p>The category name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CategoryName</p>
              */
             public Builder categoryName(String categoryName) {
                 this.categoryName = categoryName;

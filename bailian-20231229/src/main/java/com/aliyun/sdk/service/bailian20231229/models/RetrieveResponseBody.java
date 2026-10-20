@@ -119,7 +119,7 @@ public class RetrieveResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>HTTP status code</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>Index.InvalidParameter</p>
@@ -130,7 +130,7 @@ public class RetrieveResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>The business data field returned by the operation.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -160,7 +160,7 @@ public class RetrieveResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The status code returned.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -171,10 +171,10 @@ public class RetrieveResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indications whether the API call is successful. Valid values:</p>
+         * <p>Indicates whether the operation was successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: The operation was successful.</li>
+         * <li>false: The operation failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -257,7 +257,46 @@ public class RetrieveResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The metadata map of the chunk.</p>
+             * <p>&lt;props=&quot;china&quot;&gt;</p>
+             * <p>The metadata map of the text chunk.</p>
+             * <blockquote>
+             * <p>The file_path field in the metadata map of a document search knowledge base is meaningless. Do not use it in your business code.</p>
+             * </blockquote>
+             * <blockquote>
+             * <p>When you retrieve a document search knowledge base, if a chunk contains an image, the image is returned in the image_url field of the metadata map, along with an expiration time.</p>
+             * </blockquote>
+             * <blockquote>
+             * <p>When you retrieve an audio and video search knowledge base, if a chunk contains audio, the audio is returned in the audio_url field of the metadata map, along with an expiration time.</p>
+             * </blockquote>
+             * <blockquote>
+             * <p>When you retrieve an audio and video search knowledge base, if a chunk contains a video, the video is returned in the video_url field of the metadata map, along with an expiration time.</p>
+             * </blockquote>
+             * <p>&lt;props=&quot;intl&quot;&gt;</p>
+             * <p>The metadata map of the text chunk.</p>
+             * <blockquote>
+             * <p>The file_path field in the metadata map of a document search knowledge base is meaningless. Do not use it in your business code.</p>
+             * </blockquote>
+             * <blockquote>
+             * <p>When you retrieve a document search knowledge base, if a chunk contains an image, the image is returned in the image_url field of the metadata map, along with an expiration time.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *   &quot;parent&quot;: &quot;&quot;,
+             *   &quot;file_path&quot;: &quot;https://<em><strong>&quot;,
+             *   &quot;image_url&quot;: [
+             *     &quot;http://</strong></em>&quot;
+             *   ],
+             *   &quot;nid&quot;: &quot;<em><strong>&quot;,
+             *   &quot;title&quot;: &quot;Alibaba Cloud Model Studio Documentation&quot;,
+             *   &quot;doc_id&quot;: &quot;doc_</strong></em>&quot;,
+             *   &quot;content&quot;: &quot;Alibaba Cloud Model Studio is a one-stop large model development platform based on Tongyi large models, industry large models, and third-party large models. It provides enterprise customers and individual developers with a complete set of model service tools and full-link application development kits, pre-installed with rich capability plugins, and offers convenient integration methods such as APIs and SDKs to efficiently build large model applications.&quot;,
+             *   &quot;workspace_id&quot;: &quot;ws_***&quot;,
+             *   &quot;hier_title&quot;: &quot;Alibaba Cloud Model Studio Documentation&quot;,
+             *   &quot;doc_name&quot;: &quot;Introduction to Alibaba Cloud Model Studio Documentation.pdpf&quot;,
+             *   &quot;pipeline_id&quot;: &quot;rhd***&quot;,
+             *   &quot;<em>id&quot;: &quot;ws</em>***&quot;
+             * }</p>
              */
             public Builder metadata(Object metadata) {
                 this.metadata = metadata;
@@ -265,7 +304,7 @@ public class RetrieveResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The similarity score of the chunk. Valid values:[0-1].</p>
+             * <p>The similarity score of the text chunk. Valid values: 0 to 1.</p>
              * 
              * <strong>example:</strong>
              * <p>0.3</p>
@@ -276,7 +315,10 @@ public class RetrieveResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The text of the chunk.</p>
+             * <p>The content of the text chunk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alibaba Cloud Model Studio is a one-stop large model development platform based on Tongyi large models, industry large models, and third-party large models. It provides enterprise customers and individual developers with a complete set of model service tools and full-link application development kits, pre-installed with rich capability plugins, and offers convenient integration methods such as APIs and SDKs to efficiently build large model applications</p>
              */
             public Builder text(String text) {
                 this.text = text;
@@ -330,7 +372,7 @@ public class RetrieveResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of queried chunks.</p>
+             * <p>The list of matched text chunks.</p>
              */
             public Builder nodes(java.util.List<Nodes> nodes) {
                 this.nodes = nodes;

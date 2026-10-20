@@ -165,6 +165,9 @@ public class ListPromptTemplatesRequest extends Request {
 
         /**
          * <p>The keyword that is used to search for templates.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>小红书</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);

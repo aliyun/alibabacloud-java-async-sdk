@@ -119,7 +119,10 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidParameter</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The business data field of the operation.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Required parameter(%s) missing or invalid, please check the request parameters.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +149,7 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>35A267BF-xxxx-54DB-8394-AA3B0742D833</p>
@@ -154,7 +160,10 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status code returned by the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -162,7 +171,14 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the operation was successful. Valid values:</p>
+         * <ul>
+         * <li>true: Successful.</li>
+         * <li>false: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -397,7 +413,10 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
             } 
 
             /**
-             * ChunkMode.
+             * <p>The custom chunking mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DashSplitter</p>
              */
             public Builder chunkMode(String chunkMode) {
                 this.chunkMode = chunkMode;
@@ -405,7 +424,10 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * ChunkSize.
+             * <p>The chunk length, which is the number of characters in a text chunk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>600</p>
              */
             public Builder chunkSize(String chunkSize) {
                 this.chunkSize = chunkSize;
@@ -413,7 +435,10 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Code.
+             * <p>The file import error status code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>110002</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -421,7 +446,10 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * DocumentType.
+             * <p>The file format type. Valid values: pdf, docx, doc, txt, md, pptx, ppt, png, jpg, jpeg, bmp, gif, EXCEL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pdf</p>
              */
             public Builder documentType(String documentType) {
                 this.documentType = documentType;
@@ -429,7 +457,10 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * EnableHeaders.
+             * <p>Indicates whether Excel file headers support concatenation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableHeaders(String enableHeaders) {
                 this.enableHeaders = enableHeaders;
@@ -437,7 +468,10 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The time when the file was imported to the knowledge base, in UNIX timestamp format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1744856423000</p>
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -445,7 +479,10 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The file ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>doc_c134aa2073204a5d936d870bf960f56axxxxxxxx</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -453,7 +490,10 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The file import error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>check fileUrlKey[file_path] / fileNameKey[null] / fileExtensionKey[file_extension] is invalid</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -461,7 +501,13 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * MetaExtractInfo.
+             * <p>The metadata extracted from the document.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *   &quot;doc_summary&quot;: [&quot;Example 1.&quot;],
+             *   &quot;health_rule&quot;: [&quot;Example 2&quot;]
+             * }</p>
              */
             public Builder metaExtractInfo(String metaExtractInfo) {
                 this.metaExtractInfo = metaExtractInfo;
@@ -469,7 +515,10 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The file name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TranslationPlatformO&amp;MDocument.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -477,7 +526,10 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * OverlapSize.
+             * <p>The chunk overlap length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder overlapSize(String overlapSize) {
                 this.overlapSize = overlapSize;
@@ -485,7 +537,10 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * <p>The file size, in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>996764</p>
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -493,7 +548,10 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceId.
+             * <p>The category ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cate_21a407a3372c4ba7aedc649709143f0cxxxxxxxx</p>
              */
             public Builder sourceId(String sourceId) {
                 this.sourceId = sourceId;
@@ -501,7 +559,16 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The file import status. Valid values:</p>
+             * <ul>
+             * <li>INSERT_ERROR: File import failed.</li>
+             * <li>RUNNING: File import in progress.</li>
+             * <li>DELETED: File deleted.</li>
+             * <li>FINISH: File import succeeded.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -509,7 +576,10 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * separator.
+             * <p>The sentence separator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot; &quot;</p>
              */
             public Builder separator(String separator) {
                 this.separator = separator;
@@ -615,7 +685,7 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
             } 
 
             /**
-             * Documents.
+             * <p>The list of files in the knowledge base, sorted in descending order by file import time (consistent with the console).</p>
              */
             public Builder documents(java.util.List<Documents> documents) {
                 this.documents = documents;
@@ -623,7 +693,10 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * IndexId.
+             * <p>The knowledge base ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>79c0alxxxx</p>
              */
             public Builder indexId(String indexId) {
                 this.indexId = indexId;
@@ -631,7 +704,10 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The returned page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -639,7 +715,10 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The returned number of items per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -647,7 +726,10 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of returned results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2437</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

@@ -67,7 +67,10 @@ public class CreatePromptTemplateResponseBody extends TeaModel {
         } 
 
         /**
-         * promptTemplateId.
+         * <p>Prompt template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6e49109bfeb94a39bb268f4e483ccxxx</p>
          */
         public Builder promptTemplateId(String promptTemplateId) {
             this.promptTemplateId = promptTemplateId;
@@ -75,7 +78,10 @@ public class CreatePromptTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FE9B6CBF-47E6-5D76-9C5D-B814DD5ABxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

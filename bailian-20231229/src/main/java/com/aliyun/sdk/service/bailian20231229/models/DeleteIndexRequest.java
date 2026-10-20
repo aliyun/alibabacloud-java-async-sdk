@@ -75,11 +75,11 @@ public class DeleteIndexRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the workspace to which the knowledge base belongs. You can click the Workspace Details icon in the upper-left corner on the <a href="https://bailian.console.aliyun.com/#/home">homepage</a> of the console to view the workspace ID.</p>
+         * <p>The workspace ID of the knowledge base. For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/2587495.html">How to use a workspace</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ws_3AXoiweeTyTd03IN</p>
+         * <p>llm-3z7uw7fwz0vexxxx</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("WorkspaceId", workspaceId);
@@ -88,11 +88,11 @@ public class DeleteIndexRequest extends Request {
         }
 
         /**
-         * <p>The primary key ID of the knowledge base, which is the <code>Data.Id</code> parameter returned by the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-createindex">CreateIndex</a> operation.</p>
+         * <p>The knowledge base ID, which is the <code>Data.Id</code> returned by the <strong>CreateIndex</strong> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>f89ie0fj5a</p>
+         * <p>f89ie0xxxx</p>
          */
         public Builder indexId(String indexId) {
             this.putQueryParameter("IndexId", indexId);

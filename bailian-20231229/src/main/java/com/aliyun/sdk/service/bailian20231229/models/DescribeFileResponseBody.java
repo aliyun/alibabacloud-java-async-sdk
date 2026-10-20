@@ -119,7 +119,7 @@ public class DescribeFileResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -130,7 +130,7 @@ public class DescribeFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data fields.</p>
+         * <p>The business data field.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -149,7 +149,7 @@ public class DescribeFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>17204B98-xxxx-4F9A-8464-2446A84821CA</p>
@@ -160,7 +160,7 @@ public class DescribeFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The status code returned.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -171,10 +171,10 @@ public class DescribeFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indications whether the API call is successful. Valid values:</p>
+         * <p>Indicates whether the operation was successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: The operation was successful.</li>
+         * <li>false: The operation failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -213,6 +213,9 @@ public class DescribeFileResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FileType")
         private String fileType;
 
+        @com.aliyun.core.annotation.NameInMap("OriginFileDownloadUrl")
+        private String originFileDownloadUrl;
+
         @com.aliyun.core.annotation.NameInMap("ParseErrorMessage")
         private String parseErrorMessage;
 
@@ -237,6 +240,7 @@ public class DescribeFileResponseBody extends TeaModel {
             this.fileId = builder.fileId;
             this.fileName = builder.fileName;
             this.fileType = builder.fileType;
+            this.originFileDownloadUrl = builder.originFileDownloadUrl;
             this.parseErrorMessage = builder.parseErrorMessage;
             this.parseResultDownloadUrl = builder.parseResultDownloadUrl;
             this.parser = builder.parser;
@@ -289,6 +293,13 @@ public class DescribeFileResponseBody extends TeaModel {
         }
 
         /**
+         * @return originFileDownloadUrl
+         */
+        public String getOriginFileDownloadUrl() {
+            return this.originFileDownloadUrl;
+        }
+
+        /**
          * @return parseErrorMessage
          */
         public String getParseErrorMessage() {
@@ -336,6 +347,7 @@ public class DescribeFileResponseBody extends TeaModel {
             private String fileId; 
             private String fileName; 
             private String fileType; 
+            private String originFileDownloadUrl; 
             private String parseErrorMessage; 
             private String parseResultDownloadUrl; 
             private String parser; 
@@ -352,6 +364,7 @@ public class DescribeFileResponseBody extends TeaModel {
                 this.fileId = model.fileId;
                 this.fileName = model.fileName;
                 this.fileType = model.fileType;
+                this.originFileDownloadUrl = model.originFileDownloadUrl;
                 this.parseErrorMessage = model.parseErrorMessage;
                 this.parseResultDownloadUrl = model.parseResultDownloadUrl;
                 this.parser = model.parser;
@@ -361,10 +374,10 @@ public class DescribeFileResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the category to which the document belongs.</p>
+             * <p>The ID of the category to which the file belongs.</p>
              * 
              * <strong>example:</strong>
-             * <p>cate_cdd11b1b79a74e8bbd675c356a91ee3XXXXXXXX</p>
+             * <p>cate_cdd11b1b79a74e8bbd675c356a91ee3xxxxxxxx</p>
              */
             public Builder categoryId(String categoryId) {
                 this.categoryId = categoryId;
@@ -372,10 +385,10 @@ public class DescribeFileResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp when the document was uploaded to Model Studio. Format: yyyy-MM-dd HH:mm:ss. Time zone: UTC + 8.</p>
+             * <p>The timestamp when the file was added to Model Studio. Format: yyyy-MM-dd HH:mm:ss. Time zone: UTC+8.</p>
              * 
              * <strong>example:</strong>
-             * <p>2024-05-26 12:45:43</p>
+             * <p>2024-09-09 12:45:43</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -383,10 +396,10 @@ public class DescribeFileResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The primary key ID of the document.</p>
+             * <p>The ID of the file.</p>
              * 
              * <strong>example:</strong>
-             * <p>file_9a65732555b54d5ea10796ca5742ba22_XXXXXXXX</p>
+             * <p>file_9a65732555b54d5ea10796ca5742ba22_xxxxxxxx</p>
              */
             public Builder fileId(String fileId) {
                 this.fileId = fileId;
@@ -394,10 +407,10 @@ public class DescribeFileResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the document.</p>
+             * <p>The name of the file.</p>
              * 
              * <strong>example:</strong>
-             * <p>test.pdf</p>
+             * <p>XXX Product Introduction.pdf</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -405,7 +418,7 @@ public class DescribeFileResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The file type of the document. The value is an extension. Valid values: pdf, docx, doc, txt, md, pptx, and ppt.</p>
+             * <p>The file type, which is the file extension. Valid values: pdf, docx, doc, txt, md, pptx, ppt, xlsx, xls, html, png, jpg, jpeg, bmp, and gif.</p>
              * 
              * <strong>example:</strong>
              * <p>pdf</p>
@@ -416,7 +429,21 @@ public class DescribeFileResponseBody extends TeaModel {
             }
 
             /**
-             * ParseErrorMessage.
+             * <p>The download URL of the source file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>https:xxxx.com/xxx.pdf?sign=xxxx&amp;expiredAt=xxxx</p>
+             */
+            public Builder originFileDownloadUrl(String originFileDownloadUrl) {
+                this.originFileDownloadUrl = originFileDownloadUrl;
+                return this;
+            }
+
+            /**
+             * <p>The cause of the parsing failure.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Error Message</p>
              */
             public Builder parseErrorMessage(String parseErrorMessage) {
                 this.parseErrorMessage = parseErrorMessage;
@@ -424,7 +451,10 @@ public class DescribeFileResponseBody extends TeaModel {
             }
 
             /**
-             * ParseResultDownloadUrl.
+             * <p>The download URL of the file parsing result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example.com/parse-result">https://example.com/parse-result</a></p>
              */
             public Builder parseResultDownloadUrl(String parseResultDownloadUrl) {
                 this.parseResultDownloadUrl = parseResultDownloadUrl;
@@ -432,9 +462,9 @@ public class DescribeFileResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parser that is used to parse the document. Valid value:</p>
+             * <p>The type of the parser used to parse the file. Valid values:</p>
              * <ul>
-             * <li>DASHSCOPE_DOCMIND: The default document parser.</li>
+             * <li>DASHSCOPE_DOCMIND: the default document parser.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -446,7 +476,7 @@ public class DescribeFileResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the document. Unit: bytes.</p>
+             * <p>The size of the file, in bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>1234</p>
@@ -457,12 +487,36 @@ public class DescribeFileResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the document. Valid values:</p>
+             * <p>&lt;props=&quot;china&quot;&gt;</p>
+             * <p>The status of a file used for a document knowledge base (type: UNSTRUCTURED). Valid values:</p>
+             * <p>&lt;props=&quot;intl&quot;&gt;</p>
+             * <p>The status of a file used for an unstructured knowledge base (type: UNSTRUCTURED). Valid values:</p>
              * <ul>
-             * <li>INIT: pending parsing.</li>
-             * <li>PARSING</li>
-             * <li>PARSE_SUCCESS</li>
-             * <li>PARSE_FAILED</li>
+             * <li>INIT: to be parsed.</li>
+             * <li>IN_PARSE_QUEUE: queuing for parsing.</li>
+             * <li>PARSING: parsing.</li>
+             * <li>PARSE_SUCCESS: parsed.
+             * <note>You can import a document into a knowledge base only after its status changes to PARSE_SUCCESS.</note></li>
+             * <li>PARSE_FAILED: parsing failed.</li>
+             * </ul>
+             * <p>&lt;props=&quot;china&quot;&gt;
+             * The status of a file used for <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/file-interaction">session interaction</a> in an agent application (type: SESSION_FILE). Valid values:</p>
+             * <ul>
+             * <li>INIT: to be parsed.</li>
+             * <li>IN_PARSE_QUEUE: queuing for parsing.</li>
+             * <li>PARSING: parsing.</li>
+             * <li>PARSE_SUCCESS: parsed.</li>
+             * <li>PARSE_FAILED: parsing failed.</li>
+             * <li>SAFE_CHECKING: undergoing security check.</li>
+             * <li>SAFE_CHECK_FAILED: security check failed.</li>
+             * <li>INDEX_BUILDING: building index.</li>
+             * <li>INDEX_BUILD_SUCCESS: index built.</li>
+             * <li>INDEX_BUILDING_FAILED: index building failed.</li>
+             * <li>INDEX_DELETED: file index deleted.</li>
+             * <li>FILE_IS_READY: file ready.
+             * <note>You can perform Q&amp;A only after the status changes to FILE_IS_READY.</note></li>
+             * <li>FILE_EXPIRED: file expired.
+             * <note>The file is valid only for the current session of the user. After the user closes the session, the file expires. The maximum validity period is 7 days. Long-term storage is not supported.</note></li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -474,7 +528,7 @@ public class DescribeFileResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags that are associated with the document. A document can be associated with multiple tags.</p>
+             * <p>The list of tags associated with the file. A file can be associated with multiple tags.</p>
              */
             public Builder tags(java.util.List<String> tags) {
                 this.tags = tags;

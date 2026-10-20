@@ -119,7 +119,7 @@ public class ListIndexDocumentsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>HTTP status code</p>
+         * <p>The error status code.</p>
          * 
          * <strong>example:</strong>
          * <p>InvalidParameter</p>
@@ -130,7 +130,7 @@ public class ListIndexDocumentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>The business data field of the operation.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -160,7 +160,7 @@ public class ListIndexDocumentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status code.</p>
+         * <p>The status code returned by the operation.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -171,10 +171,10 @@ public class ListIndexDocumentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indications whether the API call is successful. Valid values:</p>
+         * <p>Indicates whether the operation was successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: Successful.</li>
+         * <li>false: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -335,7 +335,7 @@ public class ListIndexDocumentsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The error status code of document import.</p>
+             * <p>The error status code for file import.</p>
              * 
              * <strong>example:</strong>
              * <p>110002</p>
@@ -346,7 +346,7 @@ public class ListIndexDocumentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The format of the document. Valid values: pdf, docx, doc, txt, md, pptx, ppt, and EXCEL.</p>
+             * <p>The file format type. Valid values: pdf, docx, doc, txt, md, pptx, ppt, png, jpg, jpeg, bmp, gif, EXCEL.</p>
              * 
              * <strong>example:</strong>
              * <p>pdf</p>
@@ -357,7 +357,10 @@ public class ListIndexDocumentsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The time when the file was imported to the knowledge base, in UNIX timestamp format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1744856423000</p>
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -365,10 +368,10 @@ public class ListIndexDocumentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The primary key ID of the document.</p>
+             * <p>The file ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>doc_c134aa2073204a5d936d870bf960f56a10024701</p>
+             * <p>doc_c134aa2073204a5d936d870bf960f56axxxxxxxx</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -376,7 +379,7 @@ public class ListIndexDocumentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error message of document import.</p>
+             * <p>The error message for file import.</p>
              * 
              * <strong>example:</strong>
              * <p>check fileUrlKey[file_path] / fileNameKey[null] / fileExtensionKey[file_extension] is invalid</p>
@@ -387,7 +390,10 @@ public class ListIndexDocumentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the document.</p>
+             * <p>The file name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>product-overview</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -395,10 +401,10 @@ public class ListIndexDocumentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the document. Unit: bytes.</p>
+             * <p>The file size, in bytes.</p>
              * 
              * <strong>example:</strong>
-             * <p>996764</p>
+             * <p>996765</p>
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -406,11 +412,15 @@ public class ListIndexDocumentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>For unstructured knowledge base, this parameter is the category ID. To view the category ID, you can click the ID icon next to the category name on the Unstructured Data tab of the <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a> page.</p>
-             * <p>For structured knowledge base, this parameter is the data table ID. To view the table ID, you can click the ID icon next to the table name on the Structured Data tab of the <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a> page.</p>
+             * <p>&lt;props=&quot;china&quot;&gt;</p>
+             * <p>For document search or audio/video search knowledge bases, this parameter specifies the category ID, which is the <code>CategoryId</code> returned by the <strong>AddCategory</strong> operation. You can also obtain it by clicking the ID icon next to the category name on the Files tab of <a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a>.</p>
+             * <p>For data query or image Q&amp;A knowledge bases, this parameter specifies the data table ID. You can obtain it by clicking the ID icon next to the data table name on the Tables tab of <a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a>.</p>
+             * <p>&lt;props=&quot;intl&quot;&gt;</p>
+             * <p>For document search knowledge bases, this parameter specifies the category ID, which is the <code>CategoryId</code> returned by the <strong>AddCategory</strong> operation. You can also obtain it by clicking the ID icon next to the category name on the Files tab of <a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a>.</p>
+             * <p>For data query or image Q&amp;A knowledge bases, this parameter specifies the data table ID. You can obtain it by clicking the ID icon next to the data table name on the Tables tab of <a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">Application Data</a>.</p>
              * 
              * <strong>example:</strong>
-             * <p>cate_21a407a3372c4ba7aedc649709143f0c10021401</p>
+             * <p>cate_21a407a3372c4ba7aedc649709143f0cxxxxxxxx</p>
              */
             public Builder sourceId(String sourceId) {
                 this.sourceId = sourceId;
@@ -418,12 +428,12 @@ public class ListIndexDocumentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The import status of the document. Valid values:</p>
+             * <p>The file import status. Valid values:</p>
              * <ul>
-             * <li>INSERT_ERROR</li>
-             * <li>RUNNING</li>
-             * <li>DELETED</li>
-             * <li>FINISH</li>
+             * <li>INSERT_ERROR: File import failed.</li>
+             * <li>RUNNING: File import in progress.</li>
+             * <li>DELETED: File deleted.</li>
+             * <li>FINISH: File import succeeded.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -533,7 +543,7 @@ public class ListIndexDocumentsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of documents in the knowledge base.</p>
+             * <p>The list of files in the knowledge base, sorted by document import time in descending order (consistent with the console).</p>
              */
             public Builder documents(java.util.List<Documents> documents) {
                 this.documents = documents;
@@ -541,10 +551,10 @@ public class ListIndexDocumentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The primary key ID of the knowledge base.</p>
+             * <p>The knowledge base ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>pno97tn8iu</p>
+             * <p>pno97txxxx</p>
              */
             public Builder indexId(String indexId) {
                 this.indexId = indexId;
@@ -552,7 +562,7 @@ public class ListIndexDocumentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The specified page number.</p>
+             * <p>The returned page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -563,7 +573,7 @@ public class ListIndexDocumentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The specified number of documents on each page.</p>
+             * <p>The returned number of entries per page.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -574,7 +584,7 @@ public class ListIndexDocumentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of documents returned.</p>
+             * <p>The total number of returned results.</p>
              * 
              * <strong>example:</strong>
              * <p>2437</p>

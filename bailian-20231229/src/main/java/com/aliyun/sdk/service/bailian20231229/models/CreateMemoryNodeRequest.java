@@ -103,7 +103,10 @@ public class CreateMemoryNodeRequest extends Request {
         } 
 
         /**
-         * workspaceId.
+         * <p>The ID of the workspace to which the long-term memory belongs. For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/2587495.html">How to use workspaces</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm-us9hjmt32nysdm5v</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -112,6 +115,7 @@ public class CreateMemoryNodeRequest extends Request {
         }
 
         /**
+         * <p>The long-term memory ID, which is the memoryId returned by the <strong>CreateMemory</strong> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,7 +137,11 @@ public class CreateMemoryNodeRequest extends Request {
         }
 
         /**
+         * <p>The content of the memory node. The content must be 1 to 200 characters in length and can contain letters, digits, underscores (_), hyphens (-), periods (.), and colons (:).</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>用户喜欢吃西红柿炒鸡蛋</p>
          */
         public Builder content(String content) {
             this.putQueryParameter("content", content);

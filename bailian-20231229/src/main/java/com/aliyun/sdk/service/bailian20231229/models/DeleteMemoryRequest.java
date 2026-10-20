@@ -89,10 +89,11 @@ public class DeleteMemoryRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the workspace to which the long-term memory belongs. For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/2587495.html">How to use a workspace</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>llm-us9hjmt32nysdm5v</p>
+         * <p>llm-3z7uw7fwz0vexxxx</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -101,10 +102,11 @@ public class DeleteMemoryRequest extends Request {
         }
 
         /**
+         * <p>The ID of the long-term memory, which corresponds to the memoryId returned by the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-creatememory">CreateMemory</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>6bff4f317a14442fbc9f73d29dbd5fc3</p>
+         * <p>6bff4f317a14442fbc9f73d29dbdxxxx</p>
          */
         public Builder memoryId(String memoryId) {
             this.putPathParameter("memoryId", memoryId);

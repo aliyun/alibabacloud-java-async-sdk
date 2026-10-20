@@ -271,11 +271,11 @@ public class RetrieveRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the workspace to which the knowledge base belongs. To view the workspace ID, you can click the Workspace Details icon in the upper-left corner on the <a href="https://bailian.console.aliyun.com/#/home">homepage</a> of the console.</p>
+         * <p>The ID of the workspace to which the knowledge base belongs. For more information about how to obtain the ID, see <a href="https://help.aliyun.com/document_detail/2587495.html">How to use a workspace</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ws_3Nt27MYcoK191ISp</p>
+         * <p>llm-3shx2gu255oqxxxx</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("WorkspaceId", workspaceId);
@@ -284,7 +284,8 @@ public class RetrieveRequest extends Request {
         }
 
         /**
-         * <p>Vector retrieval top K. After generating vectors based on input text, the top K chunks in the knowledge base that are most similar to the vector representation of the input text are retrieved. Valid values: 0 to 100. The sum of the <code>DenseSimilarityTopK</code> and <code>SparseSimilarityTopK</code> parameters must be less than or equal to 200.</p>
+         * <p>The top K value for AISearch. The system generates a vector for the input text and retrieves the top K text chunks in the knowledge base that are most similar to the vector representation. Valid values: 0 to 100.
+         * The sum of DenseSimilarityTopK and SparseSimilarityTopK must be less than or equal to 200.</p>
          * <p>Default value: 100.</p>
          * 
          * <strong>example:</strong>
@@ -297,10 +298,10 @@ public class RetrieveRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable reranking. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values:</p>
+         * <p>Specifies whether to enable reranking. For more information, see <a href="https://help.aliyun.com/document_detail/2807740.html">Knowledge base</a>. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: Enabled.</li>
+         * <li>false: Disabled.</li>
          * </ul>
          * <p>Default value: true.</p>
          * 
@@ -314,10 +315,11 @@ public class RetrieveRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable multi-round conversation rewriting. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values:</p>
+         * <p>Specifies whether to enable &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/model-studio/use-cases/rag-optimization#b7031e2ad6cji">multi-turn conversation rewriting</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/model-studio/use-cases/rag-optimization#b7031e2ad6cji">multi-turn conversation rewriting</a>.
+         * Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: Enabled.</li>
+         * <li>false: Disabled.</li>
          * </ul>
          * <p>Default value: false.</p>
          * 
@@ -341,7 +343,7 @@ public class RetrieveRequest extends Request {
         }
 
         /**
-         * Images.
+         * <p>The URLs of the images passed in the query.</p>
          */
         public Builder images(java.util.List<String> images) {
             String imagesShrink = shrink(images, "Images", "simple");
@@ -351,11 +353,16 @@ public class RetrieveRequest extends Request {
         }
 
         /**
-         * <p>The primary key ID of the knowledge base, which is the <code>Data.Id</code> parameter returned by the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-createindex">CreateIndex</a> operation.</p>
+         * <p>The ID of the knowledge base, which is the Data.Id returned by the CreateIndex operation.</p>
+         * <blockquote>
+         * <ul>
+         * <li>Make sure that the corresponding knowledge base is created and not deleted.</li>
+         * </ul>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>5pwe0m2g6t</p>
+         * <p>5pwe0mxxxx</p>
          */
         public Builder indexId(String indexId) {
             this.putQueryParameter("IndexId", indexId);
@@ -364,7 +371,10 @@ public class RetrieveRequest extends Request {
         }
 
         /**
-         * <p>The input query prompt. The length and characters of the query are not limited.</p>
+         * <p>The input text, which is the original input prompt. The length and characters of Query are not limited.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Introduction to Alibaba Cloud Model Studio</p>
          */
         public Builder query(String query) {
             this.putQueryParameter("Query", query);
@@ -373,7 +383,7 @@ public class RetrieveRequest extends Request {
         }
 
         /**
-         * QueryHistory.
+         * <p>&lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/model-studio/use-cases/rag-optimization#b7031e2ad6cji">Multi-turn conversation rewriting</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/model-studio/use-cases/rag-optimization#b7031e2ad6cji">Multi-turn conversation rewriting</a> allows you to pass in your own managed conversation history. This parameter takes effect only when EnableRewrite is set to <strong>true</strong>. Otherwise, it does not take effect even if you specify it.</p>
          */
         public Builder queryHistory(java.util.List<QueryHistory> queryHistory) {
             String queryHistoryShrink = shrink(queryHistory, "QueryHistory", "json");
@@ -383,7 +393,7 @@ public class RetrieveRequest extends Request {
         }
 
         /**
-         * <p>Ranking configurations.</p>
+         * <p>The reranking configuration.</p>
          */
         public Builder rerank(java.util.List<Rerank> rerank) {
             String rerankShrink = shrink(rerank, "Rerank", "json");
@@ -393,8 +403,8 @@ public class RetrieveRequest extends Request {
         }
 
         /**
-         * <p>Similarity Threshold The lowest similarity score of chunks that can be returned. This parameter is used to filter text chunks returned by the rank model. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values: [0.01-1.00]. The priority of this parameter is greater than the similarity threshold configured for the knowledge base.</p>
-         * <p>By default, this parameter is left empty. In this case, the similarity threshold of the knowledge base is used.</p>
+         * <p>The similarity threshold. This threshold specifies the minimum similarity score allowed for recalled text chunks and is used to filter the text chunks returned by the ranking model. Only text chunks with a score greater than this value are recalled. Valid values: 0.01 to 1.00. This parameter has a higher priority than the similarity threshold configured for the knowledge base.</p>
+         * <p>If no specific value is specified, the similarity threshold configured for the knowledge base is used by default.</p>
          * 
          * <strong>example:</strong>
          * <p>0.20</p>
@@ -406,7 +416,7 @@ public class RetrieveRequest extends Request {
         }
 
         /**
-         * <p>The top N return data after reranking. Valid values: 1 to 20. Default value: 5.</p>
+         * <p>The top N text chunks to return after reranking. Valid values: 1 to 20. Default value: 5.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -418,7 +428,7 @@ public class RetrieveRequest extends Request {
         }
 
         /**
-         * <p>Conversation rewriting configurations.</p>
+         * <p>The multi-turn conversation rewriting configuration.</p>
          */
         public Builder rewrite(java.util.List<Rewrite> rewrite) {
             String rewriteShrink = shrink(rewrite, "Rewrite", "json");
@@ -428,10 +438,10 @@ public class RetrieveRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to save the retrieve test history. Valid values:</p>
+         * <p>Specifies whether to save the historical text chunk recall test data. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: Save.</li>
+         * <li>false: Do not save.</li>
          * </ul>
          * <p>Default value: false.</p>
          * 
@@ -445,7 +455,8 @@ public class RetrieveRequest extends Request {
         }
 
         /**
-         * <p>Specifies complex filter conditions. For more information about the syntax of SearchFilters, see the SearchFilter syntax section of this topic.</p>
+         * <p>The personalized retrieval conditions, such as tags, configured by using SearchFilter to filter semantic retrieval results and exclude information irrelevant to the query.
+         * The filtering logic takes effect when the is_displayed_chunk_content parameter is set to true. For more information, see <a href="https://help.aliyun.com/document_detail/2869641.html">Knowledge base SearchFilters</a>.</p>
          */
         public Builder searchFilters(java.util.List<java.util.Map<String, String>> searchFilters) {
             String searchFiltersShrink = shrink(searchFilters, "SearchFilters", "json");
@@ -455,7 +466,9 @@ public class RetrieveRequest extends Request {
         }
 
         /**
-         * <p>The top K of keyword retrieval. Chunks that exactly match the keywords of the input text are retrieved from the knowledge base. This filters out irrelevant chunks and boosts accuracy. Valid values: 0 to 100. The sum of the <code>DenseSimilarityTopK</code> and <code>SparseSimilarityTopK</code> parameters must be less than or equal to 200.</p>
+         * <p>The top K value for keyword retrieval. The system retrieves chunks from the knowledge base that are an exact match for the keywords in the input text. This helps you filter out irrelevant text chunks and provides more accurate results.
+         * Valid values: 0 to 100.
+         * The sum of DenseSimilarityTopK and SparseSimilarityTopK must be less than or equal to 200.</p>
          * <p>Default value: 100.</p>
          * 
          * <strong>example:</strong>
@@ -582,7 +595,10 @@ public class RetrieveRequest extends Request {
             } 
 
             /**
-             * content.
+             * <p>The question or answer content of the corresponding role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>A piece of text</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -590,7 +606,15 @@ public class RetrieveRequest extends Request {
             }
 
             /**
-             * role.
+             * <p>The role.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>user: If this role is passed, content indicates the text that you input to the Alibaba Cloud Model Studio application.</li>
+             * <li>assistant: If this role is passed, content indicates the reply from the Alibaba Cloud Model Studio application.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>user</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -670,11 +694,32 @@ public class RetrieveRequest extends Request {
             } 
 
             /**
-             * <p>The name of the rank model. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values:</p>
+             * <p>The specified reranking model. The value specified here overrides the reranking model selected when the knowledge base was created. Valid values:</p>
+             * <p>&lt;props=&quot;china&quot;&gt;</p>
              * <ul>
-             * <li>gte-rerank-hybrid: Recommended official model.</li>
-             * <li>gte-rerank</li>
+             * <li>qwen3-rerank-hybrid: qwen3-rerank (hybrid) reranking.</li>
+             * <li>qwen3-rerank: qwen3-rerank reranking.</li>
+             * <li>gte-rerank-hybrid: gte-rerank (hybrid) reranking.</li>
+             * <li>gte-rerank: gte-rerank reranking.</li>
              * </ul>
+             * <p>&lt;props=&quot;intl&quot;&gt;</p>
+             * <ul>
+             * <li>gte-rerank-hybrid: Official reranking.</li>
+             * <li>gte-rerank: gte-rerank reranking.</li>
+             * </ul>
+             * <p>Default value: null. The reranking model selected when the knowledge base was created is used.</p>
+             * <p>&lt;props=&quot;china&quot;&gt;</p>
+             * <blockquote>
+             * <p>If you only need semantic reranking, use qwen3-rerank. If you need both semantic reranking and text matching features to ensure relevance, use qwen3-rerank-hybrid.</p>
+             * </blockquote>
+             * <p>&lt;props=&quot;intl&quot;&gt;</p>
+             * <blockquote>
+             * <p>If you only need semantic reranking, use gte-rerank. If you need both semantic reranking and text matching features to ensure relevance, use gte-rerank-hybrid.</p>
+             * </blockquote>
+             * <p>&lt;props=&quot;china&quot;&gt;</p>
+             * <blockquote>
+             * <p>gte-rerank-hybrid and gte-rerank will no longer be updated and are not recommended.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>gte-rerank-hybrid</p>
@@ -685,7 +730,12 @@ public class RetrieveRequest extends Request {
             }
 
             /**
-             * RerankInstruct.
+             * <p>&lt;props=&quot;intl&quot;&gt;This parameter is not available. Do not specify this parameter.</p>
+             * <p>&lt;props=&quot;china&quot;&gt;A natural language instruction used to fine-tune the behavior of the reranking model.
+             * <notice>This parameter takes effect only when rerank_mode is set to custom.</notice></p>
+             * 
+             * <strong>example:</strong>
+             * <p>Given a web search query, retrieve relevant passages that answer the query.</p>
              */
             public Builder rerankInstruct(String rerankInstruct) {
                 this.rerankInstruct = rerankInstruct;
@@ -693,7 +743,21 @@ public class RetrieveRequest extends Request {
             }
 
             /**
-             * RerankMode.
+             * <p>&lt;props=&quot;china&quot;&gt;
+             * The instruction intervention mode of the reranking model, which determines its scoring preference.</p>
+             * <p><strong>Valid values:</strong></p>
+             * <ul>
+             * <li><p><strong>qa</strong>: (Default) Q&amp;A mode. The model tends to assign higher scores to candidates that can directly answer the query. Recommended for Q&amp;A scenarios.</p>
+             * </li>
+             * <li><p><strong>similar</strong>: Similarity mode. The model tends to assign higher scores to candidates that are highly consistent with the query content. Recommended for matching and retrieval scenarios.</p>
+             * </li>
+             * <li><p><strong>custom</strong>: Custom mode. The reranking behavior of the model is determined by the instruction in the rerank_instruct parameter.</p>
+             * </li>
+             * </ul>
+             * <p>&lt;props=&quot;intl&quot;&gt;This parameter is not available. Do not specify this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qa</p>
              */
             public Builder rerankMode(String rerankMode) {
                 this.rerankMode = rerankMode;
@@ -747,11 +811,11 @@ public class RetrieveRequest extends Request {
             } 
 
             /**
-             * <p>Conversation rewriting model name. The query rewriting model automatically adjusts the original prompt based on the context to improve retrieval performance. Valid value:</p>
+             * <p>The name of the multi-turn conversation rewriting model. The model automatically adjusts the original input prompt (user question) based on the conversation context to improve retrieval performance. Valid values:</p>
              * <ul>
-             * <li>conv-rewrite-qwen-1.8b</li>
+             * <li>conv-rewrite-qwen-1.8b: The conv-rewrite-qwen-1.8b model. Currently, only this model is supported.</li>
              * </ul>
-             * <p>By default, this parameter is left empty, which means conv-rewrite-qwen-1.8b is used.</p>
+             * <p>Default value: null. The conv-rewrite-qwen-1.8b model is used.</p>
              * 
              * <strong>example:</strong>
              * <p>conv-rewrite-qwen-1.8b</p>

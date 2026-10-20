@@ -118,6 +118,7 @@ public class ListMemoryNodesRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,6 +131,7 @@ public class ListMemoryNodesRequest extends Request {
         }
 
         /**
+         * <p>The long-term memory ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -151,7 +153,10 @@ public class ListMemoryNodesRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of results to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -160,7 +165,10 @@ public class ListMemoryNodesRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token returned from a previous request. If specified, the query results are paginated based on the previous request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dc270401186b433f975d7e1faaa34e0e</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);

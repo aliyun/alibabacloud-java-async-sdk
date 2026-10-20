@@ -119,7 +119,10 @@ public class ListFileResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ListFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>The data field returned by the operation.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ListFileResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Requests throttling triggered.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,10 +149,10 @@ public class ListFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>8F97A63B-55F1-527F-9D6E-467B6A7E8CF1</p>
+         * <p>8F97A63B-xxxx-527F-9D6E-467B6A7E8CF1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +160,10 @@ public class ListFileResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status code returned by the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -162,7 +171,14 @@ public class ListFileResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the operation was successful. Valid values:</p>
+         * <ul>
+         * <li>true: Successful. </li>
+         * <li>false: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -332,7 +348,10 @@ public class ListFileResponseBody extends TeaModel {
             } 
 
             /**
-             * CategoryId.
+             * <p>The ID of the category to which the file belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cate_cdd11b1b79a74e8bbd675c356a91ee35xxxxxxxx</p>
              */
             public Builder categoryId(String categoryId) {
                 this.categoryId = categoryId;
@@ -340,7 +359,10 @@ public class ListFileResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The timestamp when the file was added to Alibaba Cloud Model Studio. Format: yyyy-MM-dd HH:mm:ss. Time zone: UTC+8.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-09-09 11:03:35</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -348,10 +370,10 @@ public class ListFileResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The document ID, which is the <code>FileId</code> parameter returned by the <a href="~~AddFile~~">AddFile</a> operation. To view the ID, click the icon next to the file name on the <a href="https://bailian.console.alibabacloud.com/#/data-center">Data Management</a> page.</p>
+             * <p>The file ID, which is the <code>FileId</code> returned by the <strong>AddFile</strong> operation. You can also obtain it on the &lt;props=&quot;china&quot;&gt;<a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a>&lt;props=&quot;intl&quot;&gt;<a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">Application Data</a> page by clicking the icon next to the file name.</p>
              * 
              * <strong>example:</strong>
-             * <p>file_5ff599b3455a45db8c41b0054b361518_10098576</p>
+             * <p>file_5ff599b3455a45db8c41b0054b361518_xxxxxxxx</p>
              */
             public Builder fileId(String fileId) {
                 this.fileId = fileId;
@@ -359,7 +381,10 @@ public class ListFileResponseBody extends TeaModel {
             }
 
             /**
-             * FileName.
+             * <p>The file name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>product-overview.pdf</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -367,7 +392,10 @@ public class ListFileResponseBody extends TeaModel {
             }
 
             /**
-             * FileType.
+             * <p>The file format type. Valid values: pdf, docx, doc, txt, md, pptx, ppt, xlsx, xls, html, png, jpg, jpeg, bmp, and gif.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>docx</p>
              */
             public Builder fileType(String fileType) {
                 this.fileType = fileType;
@@ -375,7 +403,10 @@ public class ListFileResponseBody extends TeaModel {
             }
 
             /**
-             * ParseErrorMessage.
+             * <p>The reason for the parsing failure.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Error Message</p>
              */
             public Builder parseErrorMessage(String parseErrorMessage) {
                 this.parseErrorMessage = parseErrorMessage;
@@ -383,7 +414,13 @@ public class ListFileResponseBody extends TeaModel {
             }
 
             /**
-             * Parser.
+             * <p>The document parser. Valid values:</p>
+             * <ul>
+             * <li>DASHSCOPE_DOCMIND: Alibaba Cloud intelligent document parsing.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>DASHSCOPE_DOCMIND</p>
              */
             public Builder parser(String parser) {
                 this.parser = parser;
@@ -391,7 +428,10 @@ public class ListFileResponseBody extends TeaModel {
             }
 
             /**
-             * SizeInBytes.
+             * <p>The file size, in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>512</p>
              */
             public Builder sizeInBytes(Long sizeInBytes) {
                 this.sizeInBytes = sizeInBytes;
@@ -399,7 +439,16 @@ public class ListFileResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The file parsing status. Valid values:</p>
+             * <ul>
+             * <li>INIT: Initialization. The file is waiting to be scheduled.</li>
+             * <li>PARSING: Parsing in progress.</li>
+             * <li>PARSE_SUCCESS: Parsing succeeded.</li>
+             * <li>PARSE_FAILED: Parsing failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PARSE_SUCCESS</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -407,7 +456,7 @@ public class ListFileResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The list of tags associated with the file. A document can be associated with multiple tags.</p>
              */
             public Builder tags(java.util.List<String> tags) {
                 this.tags = tags;
@@ -513,7 +562,7 @@ public class ListFileResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of documents in the category.</p>
+             * <p>The list of files in the category.</p>
              */
             public Builder fileList(java.util.List<FileList> fileList) {
                 this.fileList = fileList;
@@ -521,7 +570,14 @@ public class ListFileResponseBody extends TeaModel {
             }
 
             /**
-             * HasNext.
+             * <p>Indicates whether a next page exists for the category data that matches the query conditions. Valid values:</p>
+             * <ul>
+             * <li>true: A next page exists.</li>
+             * <li>false: No next page exists.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasNext(Boolean hasNext) {
                 this.hasNext = hasNext;
@@ -529,7 +585,10 @@ public class ListFileResponseBody extends TeaModel {
             }
 
             /**
-             * MaxResults.
+             * <p>The number of entries per page for a paged query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder maxResults(Integer maxResults) {
                 this.maxResults = maxResults;
@@ -537,7 +596,10 @@ public class ListFileResponseBody extends TeaModel {
             }
 
             /**
-             * NextToken.
+             * <p>The pagination token returned by this call.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4jzbJk9J6lNeuXD9hP0viA==</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -545,7 +607,10 @@ public class ListFileResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>48</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

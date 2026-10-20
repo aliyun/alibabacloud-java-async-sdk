@@ -119,7 +119,10 @@ public class UpdateTableFromAuthorizedOssResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DataCenter.FileTooLarge</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class UpdateTableFromAuthorizedOssResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data field returned by the operation.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class UpdateTableFromAuthorizedOssResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Required parameter(%s) missing or invalid, please check the request parameters.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -154,7 +160,10 @@ public class UpdateTableFromAuthorizedOssResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status code returned by the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -162,7 +171,10 @@ public class UpdateTableFromAuthorizedOssResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the operation was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -228,7 +240,10 @@ public class UpdateTableFromAuthorizedOssResponseBody extends TeaModel {
             } 
 
             /**
-             * Status.
+             * <p>The current table status. After upload, the status typically changes to TO_IMPORT, indicating the system has received the uploaded file and is waiting to schedule the write to the data table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TO_IMPORT</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -236,7 +251,10 @@ public class UpdateTableFromAuthorizedOssResponseBody extends TeaModel {
             }
 
             /**
-             * TableId.
+             * <p>The table ID, which is the same as the input parameter TableId.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>table_df96ebd5da8640e5a0991b3d15f39d4d_12792097</p>
              */
             public Builder tableId(String tableId) {
                 this.tableId = tableId;

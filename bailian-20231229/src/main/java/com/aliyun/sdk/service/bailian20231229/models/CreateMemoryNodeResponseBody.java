@@ -67,7 +67,10 @@ public class CreateMemoryNodeResponseBody extends TeaModel {
         } 
 
         /**
-         * memoryNodeId.
+         * <p>The memory node ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>68de06c95368463a8be4a84efcxxxxxx</p>
          */
         public Builder memoryNodeId(String memoryNodeId) {
             this.memoryNodeId = memoryNodeId;
@@ -75,7 +78,10 @@ public class CreateMemoryNodeResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8C56C7AF-xxxx-19CE-B018-E05E1EDCF4C5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

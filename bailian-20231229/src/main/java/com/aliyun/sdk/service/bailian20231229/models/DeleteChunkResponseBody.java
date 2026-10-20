@@ -119,7 +119,7 @@ public class DeleteChunkResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code.</p>
+         * <p>The error status code.</p>
          * 
          * <strong>example:</strong>
          * <p>InvalidParameter</p>
@@ -130,7 +130,7 @@ public class DeleteChunkResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned if the request is successful.</p>
+         * <p>The business data returned when the request succeeds.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -163,7 +163,7 @@ public class DeleteChunkResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The status code returned by the operation.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -174,10 +174,10 @@ public class DeleteChunkResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indications whether the API call is successful. Valid values:</p>
+         * <p>Indicates whether the operation was successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: The operation was successful.</li>
+         * <li>false: The operation failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

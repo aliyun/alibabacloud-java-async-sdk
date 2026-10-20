@@ -93,7 +93,10 @@ public class GetMemoryResponseBody extends TeaModel {
         } 
 
         /**
-         * description.
+         * <p>The description of the long-term memory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>我的大模型应用$APP_ID关于A用户的长期记忆体</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -101,7 +104,10 @@ public class GetMemoryResponseBody extends TeaModel {
         }
 
         /**
-         * memoryId.
+         * <p>The ID of the long-term memory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6bff4f317a14442fbc9f73d29dbdxxxx</p>
          */
         public Builder memoryId(String memoryId) {
             this.memoryId = memoryId;
@@ -109,7 +115,10 @@ public class GetMemoryResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6a71f2d9-f1c9-913b-818b-11402910xxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,10 @@ public class GetMemoryResponseBody extends TeaModel {
         }
 
         /**
-         * workspaceId.
+         * <p>The ID of the workspace to which the long-term memory belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm-3z7uw7fwz0vexxxx</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = workspaceId;

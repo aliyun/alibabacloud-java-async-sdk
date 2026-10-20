@@ -102,11 +102,11 @@ public class ListIndicesRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the workspace to which the knowledge base belongs. To view the workspace ID, you can click the Workspace Details icon in the upper-left corner on the <a href="https://bailian.console.aliyun.com/#/home">homepage</a> of the console.</p>
+         * <p>The ID of the workspace to which the knowledge base belongs. For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/2587495.html">How to use a workspace</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ws_3Nt27MYcoK191ISp</p>
+         * <p>llm-3shx2gu255oq6xxxx</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("WorkspaceId", workspaceId);
@@ -115,8 +115,8 @@ public class ListIndicesRequest extends Request {
         }
 
         /**
-         * <p>The name of the knowledge base. You can query knowledge base by name. The name must be 1 to 20 characters in length and can contain characters classified as letter in Unicode, including English letters, Chinese characters, digits, among others. The name can also contain colons (:), underscores (_), periods (.), and hyphens (-).</p>
-         * <p>This parameter is left empty by default, which means that all knowledge bases in the specified workspace are queried.</p>
+         * <p>The name of the knowledge base. You can use this parameter to search for a knowledge base by name. The name must be 1 to 20 characters in length and can contain characters classified as letters in Unicode (including English letters, Chinese characters, and digits). The name can also contain colons (:), underscores (_), periods (.), or hyphens (-).</p>
+         * <p>Default value: empty, which queries all knowledge bases in the specified workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>idx_status_score</p>
@@ -128,7 +128,7 @@ public class ListIndicesRequest extends Request {
         }
 
         /**
-         * <p>The number of the pages to return. Pages start from page 1. Default value: 1.</p>
+         * <p>The page number. Minimum value: 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -140,7 +140,8 @@ public class ListIndicesRequest extends Request {
         }
 
         /**
-         * <p>The number of knowledge bases to display on each page. No maximum value. Default value: 10.</p>
+         * <p>The number of knowledge bases to display per page in a paging query. No maximum limit.
+         * Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

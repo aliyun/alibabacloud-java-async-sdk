@@ -119,7 +119,10 @@ public class DeleteConnectorResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Index.InvalidParameter</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class DeleteConnectorResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The business data field of the operation.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class DeleteConnectorResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>User not authorized to operate on the specified resource</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -154,7 +160,10 @@ public class DeleteConnectorResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status code returned by the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -162,7 +171,14 @@ public class DeleteConnectorResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the operation was successful. Valid values:</p>
+         * <ul>
+         * <li>true: Succeeded.</li>
+         * <li>false: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -215,7 +231,10 @@ public class DeleteConnectorResponseBody extends TeaModel {
             } 
 
             /**
-             * ConnectorId.
+             * <p>The connector ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>conn_file_e0c9db4030b2465a9478028f7d76cd92_1234</p>
              */
             public Builder connectorId(String connectorId) {
                 this.connectorId = connectorId;

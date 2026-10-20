@@ -104,6 +104,7 @@ public class DeleteMemoryNodeRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,6 +117,7 @@ public class DeleteMemoryNodeRequest extends Request {
         }
 
         /**
+         * <p>The long-term memory ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,6 +130,7 @@ public class DeleteMemoryNodeRequest extends Request {
         }
 
         /**
+         * <p>The memory fragment ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

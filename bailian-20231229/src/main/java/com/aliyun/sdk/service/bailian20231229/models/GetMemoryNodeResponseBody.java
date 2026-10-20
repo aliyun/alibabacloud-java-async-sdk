@@ -106,7 +106,10 @@ public class GetMemoryNodeResponseBody extends TeaModel {
         } 
 
         /**
-         * content.
+         * <p>The content of the memory fragment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>用户喜欢吃西红柿炒鸡蛋</p>
          */
         public Builder content(String content) {
             this.content = content;
@@ -114,7 +117,10 @@ public class GetMemoryNodeResponseBody extends TeaModel {
         }
 
         /**
-         * memoryId.
+         * <p>The long-term memory ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6bff4f317a14442fbc9f73d29dbd5fc3</p>
          */
         public Builder memoryId(String memoryId) {
             this.memoryId = memoryId;
@@ -122,7 +128,10 @@ public class GetMemoryNodeResponseBody extends TeaModel {
         }
 
         /**
-         * memoryNodeId.
+         * <p>The memory fragment ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>68de06c95368463a8be4a84efc872cc5</p>
          */
         public Builder memoryNodeId(String memoryNodeId) {
             this.memoryNodeId = memoryNodeId;
@@ -130,7 +139,10 @@ public class GetMemoryNodeResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8C56C7AF-6573-19CE-B018-E05E1EDCF4C5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,10 @@ public class GetMemoryNodeResponseBody extends TeaModel {
         }
 
         /**
-         * workspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm-us9hjmt32nysdm5v</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = workspaceId;

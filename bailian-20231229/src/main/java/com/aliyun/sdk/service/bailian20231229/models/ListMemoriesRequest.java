@@ -102,10 +102,11 @@ public class ListMemoriesRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the workspace to which the long-term memory entities belong. For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/2587495.html">How to use a workspace</a>. bailian 2023-12-29 No API is currently available for listing workspaces. Obtain the workspace ID from the Bailian console before invoking this operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>llm-us9hjmt32nysdm5v</p>
+         * <p>llm-3z7uw7fwz0vexxxx</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -123,7 +124,11 @@ public class ListMemoriesRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The number of entries per page in a paged query. Valid values: 1 to 50.</p>
+         * <p>Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -132,7 +137,10 @@ public class ListMemoriesRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dc270401186b433f975d7e1faaa3xxxx</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);

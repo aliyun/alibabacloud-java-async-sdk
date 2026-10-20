@@ -103,6 +103,7 @@ public class GetConnectorRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the business space. To obtain this ID, see <a href="https://help.aliyun.com/document_detail/2587495.html">Use business spaces</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,7 +125,10 @@ public class GetConnectorRequest extends Request {
         }
 
         /**
-         * ConnectorId.
+         * <p>The ID of the connector. You can find this ID in the <a href="https://bailian.console.aliyun.com/cn-beijing/?tab=app#/connector/list">Model Studio console</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>conn_file_xxxx</p>
          */
         public Builder connectorId(String connectorId) {
             this.putQueryParameter("ConnectorId", connectorId);
@@ -133,7 +137,10 @@ public class GetConnectorRequest extends Request {
         }
 
         /**
-         * ConnectorName.
+         * <p>The name of the connector to query. An exact match is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>连接器名称</p>
          */
         public Builder connectorName(String connectorName) {
             this.putQueryParameter("ConnectorName", connectorName);

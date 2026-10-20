@@ -119,7 +119,10 @@ public class ListCategoryResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ListCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The business data field of the operation.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ListCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workspace id is null or invalid.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +149,7 @@ public class ListCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>17204B98-xxxx-4F9A-8464-2446A84821CA</p>
@@ -154,7 +160,10 @@ public class ListCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status code returned by the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -162,7 +171,14 @@ public class ListCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li>true: Successful.</li>
+         * <li>false: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -267,7 +283,10 @@ public class ListCategoryResponseBody extends TeaModel {
             } 
 
             /**
-             * CategoryId.
+             * <p>The category ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cate_cdd11b1b79a74e8bbd675c356a91ee3xxxxxxxx</p>
              */
             public Builder categoryId(String categoryId) {
                 this.categoryId = categoryId;
@@ -275,7 +294,10 @@ public class ListCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * CategoryName.
+             * <p>The category name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Category1</p>
              */
             public Builder categoryName(String categoryName) {
                 this.categoryName = categoryName;
@@ -283,7 +305,13 @@ public class ListCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * CategoryType.
+             * <p>The category type. Valid values:</p>
+             * <ul>
+             * <li>UNSTRUCTURED: category.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>UNSTRUCTURED</p>
              */
             public Builder categoryType(String categoryType) {
                 this.categoryType = categoryType;
@@ -291,7 +319,15 @@ public class ListCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * IsDefault.
+             * <p>Indicates whether the category is a default category. Valid values:</p>
+             * <ul>
+             * <li>true: Yes.</li>
+             * <li>false: No.</li>
+             * </ul>
+             * <p>Default categories cannot be deleted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -299,7 +335,10 @@ public class ListCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * ParentCategoryId.
+             * <p>The category ID of the parent category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cate_addd11b1b79a74e8bbd675c356a91ee3xxxxxxxx</p>
              */
             public Builder parentCategoryId(String parentCategoryId) {
                 this.parentCategoryId = parentCategoryId;
@@ -405,7 +444,7 @@ public class ListCategoryResponseBody extends TeaModel {
             } 
 
             /**
-             * CategoryList.
+             * <p>The category list.</p>
              */
             public Builder categoryList(java.util.List<CategoryList> categoryList) {
                 this.categoryList = categoryList;
@@ -413,7 +452,14 @@ public class ListCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * HasNext.
+             * <p>Indicates whether a next page of category data that matches the query conditions exists. Valid values:</p>
+             * <ul>
+             * <li>true: Yes.</li>
+             * <li>false: No.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasNext(Boolean hasNext) {
                 this.hasNext = hasNext;
@@ -421,7 +467,10 @@ public class ListCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * MaxResults.
+             * <p>The number of categories per page in a paged query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder maxResults(Integer maxResults) {
                 this.maxResults = maxResults;
@@ -429,7 +478,10 @@ public class ListCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * NextToken.
+             * <p>The pagination token returned in this call.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AAAAALHWGpGoYCcYMxiFfmlhvh7Z4G8jiXR6IjHYd+M9WQVJ</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -437,7 +489,10 @@ public class ListCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of categories in the returned results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

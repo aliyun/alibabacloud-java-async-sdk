@@ -103,6 +103,7 @@ public class BatchUpdateFileTagRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID. On the &lt;props=&quot;china&quot;&gt;<a href="https://bailian.console.aliyun.com/knowledge-base#/home">console homepage</a>&lt;props=&quot;intl&quot;&gt;<a href="https://bailian.console.alibabacloud.com/#/home">console homepage</a> of Model Studio, click the workspace details icon in the upper-left corner to obtain the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,6 +125,7 @@ public class BatchUpdateFileTagRequest extends Request {
         }
 
         /**
+         * <p>The list of documents to update.</p>
          * <p>This parameter is required.</p>
          */
         public Builder fileInfos(java.util.List<FileInfos> fileInfos) {
@@ -134,7 +136,10 @@ public class BatchUpdateFileTagRequest extends Request {
         }
 
         /**
-         * UpdateMode.
+         * <p>The update mode. Valid values: APPEND (append) and OVERWRITE (overwrite).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OVERWRITE</p>
          */
         public Builder updateMode(String updateMode) {
             this.putBodyParameter("UpdateMode", updateMode);
@@ -204,6 +209,7 @@ public class BatchUpdateFileTagRequest extends Request {
             } 
 
             /**
+             * <p>The file ID in the data center. On the &lt;props=&quot;china&quot;&gt;<a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a>&lt;props=&quot;intl&quot;&gt;<a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">Application Data</a> page, click the ID icon next to the file name to obtain the ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -215,6 +221,9 @@ public class BatchUpdateFileTagRequest extends Request {
             }
 
             /**
+             * <ul>
+             * <li>The list of tags associated with the file. You can specify up to 100 tags. The total character length of all tags cannot exceed 700.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              */
             public Builder tags(java.util.List<String> tags) {

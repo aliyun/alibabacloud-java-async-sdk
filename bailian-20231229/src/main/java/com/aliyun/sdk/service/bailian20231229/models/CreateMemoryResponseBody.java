@@ -67,7 +67,13 @@ public class CreateMemoryResponseBody extends TeaModel {
         } 
 
         /**
-         * memoryId.
+         * <p>The long-term memory ID.</p>
+         * <blockquote>
+         * <p>Store this value properly. It is required for all subsequent API operations related to this long-term memory.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>6bff4f317a14442fbc9f73d29dbxxxx</p>
          */
         public Builder memoryId(String memoryId) {
             this.memoryId = memoryId;
@@ -75,7 +81,10 @@ public class CreateMemoryResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17204B98-xxxx-4F9A--2446A84821CA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

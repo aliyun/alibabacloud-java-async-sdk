@@ -119,7 +119,10 @@ public class UpdateFileTagResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class UpdateFileTagResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class UpdateFileTagResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Requests throttling triggered.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +149,7 @@ public class UpdateFileTagResponseBody extends TeaModel {
         }
 
         /**
-         * <p>RequestId</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>35A267BF-xxxx-54DB-8394-AA3B0742D833</p>
@@ -154,7 +160,10 @@ public class UpdateFileTagResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status code returned by the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -162,7 +171,14 @@ public class UpdateFileTagResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the operation was successful. Valid values:</p>
+         * <ul>
+         * <li>true: Successful.</li>
+         * <li>false: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -215,7 +231,10 @@ public class UpdateFileTagResponseBody extends TeaModel {
             } 
 
             /**
-             * FileId.
+             * <p>The file ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>file_9a65732555b54d5ea10796ca5742ba22_xxxxxxxx</p>
              */
             public Builder fileId(String fileId) {
                 this.fileId = fileId;

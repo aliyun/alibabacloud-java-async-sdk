@@ -89,11 +89,11 @@ public class DescribeFileRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the workspace to which the document belongs. On the <a href="https://bailian.console.aliyun.com/knowledge-base#/home">homepage</a> of the console, click the workspace Details icon in the upper-left corner to view the workspace ID.</p>
+         * <p>The ID of the workspace to which the file belongs. For more information about how to obtain the ID, see <a href="https://help.aliyun.com/document_detail/2587495.html">How to use a workspace</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ws_3AXoiweeTyTd03IN</p>
+         * <p>llm-3shx2gu255oqxxxx</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("WorkspaceId", workspaceId);
@@ -102,11 +102,11 @@ public class DescribeFileRequest extends Request {
         }
 
         /**
-         * <p>The primary key ID of the document. You can click the ID icon next to the file name on the <a href="https://bailian.console.aliyun.com/knowledge-base#/data-center">Data Management</a> page to view the ID.</p>
+         * <p>The ID of the file, which is the <code>FileId</code> returned by the <strong>AddFile</strong> operation. You can also obtain the ID by clicking the ID icon next to the file name on the &lt;props=&quot;china&quot;&gt;<a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a> - Files tab&lt;props=&quot;intl&quot;&gt;<a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">Application Data</a> - Files tab.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>file_9a65732555b54d5ea10796ca5742ba22_XXXXXXXX</p>
+         * <p>file_9a65732555b54d5ea10796ca5742ba22_xxxxxxxx</p>
          */
         public Builder fileId(String fileId) {
             this.putPathParameter("FileId", fileId);

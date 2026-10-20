@@ -104,6 +104,7 @@ public class UpdateFileTagRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID to which the file belongs. For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/2587495.html">How to use a workspace</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,6 +126,7 @@ public class UpdateFileTagRequest extends Request {
         }
 
         /**
+         * <p>The file ID in the Data Center. You can obtain the file ID by clicking the ID icon next to the file name on the &lt;props=&quot;china&quot;&gt;<a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a>&lt;props=&quot;intl&quot;&gt;<a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">Application Data</a> page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,6 +139,9 @@ public class UpdateFileTagRequest extends Request {
         }
 
         /**
+         * <ul>
+         * <li>The list of tags associated with the file. You can specify up to 100 tags, and the total character length of all tags cannot exceed 700.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          */
         public Builder tags(java.util.List<String> tags) {

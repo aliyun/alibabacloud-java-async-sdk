@@ -175,11 +175,11 @@ public class AddFileRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the workspace to which the document is uploaded. On the <a href="https://modelstudio.console.alibabacloud.com/?tab=playground#/efm/prompt">homepage</a> of the console, click the workspace Details icon in the upper-left corner to view the workspace ID.</p>
+         * <p>The workspace ID. The file is uploaded to this workspace. For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/2587495.html">How to use a workspace</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ws_3AXoiweeTyTd03IN</p>
+         * <p>llm-3shx2gu255oqxxxx</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("WorkspaceId", workspaceId);
@@ -197,11 +197,19 @@ public class AddFileRequest extends Request {
         }
 
         /**
-         * <p>The primary key ID of the category to which the document is uploaded. This parameter corresponds to the <code>CategoryId</code> returned by the <a href="https://www.alibabacloud.com/help/eh/model-studio/developer-reference/api-bailian-2023-12-29-addcategory">AddCategory</a> operation. You can also click the ID icon next to the category name on the Unstructured Data tab of the <a href="https://modelstudio.console.alibabacloud.com/#/data-center">Application Data</a> page to view the ID. You can set the parameter to default, which specifies the Default Category created by the system.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;</p>
+         * <ul>
+         * <li><p>When CategoryType is set to UNSTRUCTURED, specify the category ID to which the uploaded file belongs. This is the <code>CategoryId</code> returned by the <strong>AddCategory</strong> operation. You can also go to <a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a> &gt; File tab and click the ID icon next to the category name to obtain the category ID. You can set this parameter to default to use the system-created &quot;Default Category&quot;.</p>
+         * </li>
+         * <li><p>When CategoryType is set to SESSION_FILE, set this parameter to &quot;default&quot;.</p>
+         * </li>
+         * </ul>
+         * <p>&lt;props=&quot;intl&quot;&gt;</p>
+         * <p>Specify the category ID to which the uploaded file belongs. This is the <code>CategoryId</code> returned by the <strong>AddCategory</strong> operation. You can also go to <a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">Application Data</a> &gt; File tab and click the ID icon next to the category name to obtain the category ID. You can set this parameter to default to use the system-created &quot;Default Category&quot;.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>cate_cdd11b1b79a74e8bbd675c356a91ee3510024405</p>
+         * <p>cate_cdd11b1b79a74e8bbd675c356a91ee35xxxxxxxx</p>
          */
         public Builder categoryId(String categoryId) {
             this.putBodyParameter("CategoryId", categoryId);
@@ -210,10 +218,15 @@ public class AddFileRequest extends Request {
         }
 
         /**
-         * <p>The type of the category. Valid values:</p>
+         * <p>The category type. Optional. Default value: UNSTRUCTURED. Valid values:</p>
          * <ul>
-         * <li>UNSTRUCTURED</li>
-         * <li>SESSION_FILE</li>
+         * <li>UNSTRUCTURED: category, used for building knowledge base scenarios.</li>
+         * </ul>
+         * <p>&lt;props=&quot;china&quot;&gt;</p>
+         * <ul>
+         * <li>SESSION_FILE: a file used for <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/file-interaction">conversation interaction</a> in agent applications.
+         * <note>When using <code>SESSION_FILE</code>, the CategoryType parameter must also be set to <code>SESSION_FILE</code> when calling the ApplyFileUploadLease operation.</note>
+         * <note>The file is valid only for the current user session. After the user closes the session, the file expires (maximum validity period is 7 days) and long-term storage is not supported.</note></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -226,11 +239,11 @@ public class AddFileRequest extends Request {
         }
 
         /**
-         * <p>The lease ID, which corresponds to the <code>FileUploadLeaseId</code> parameter returned by the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-applyfileuploadlease">ApplyFileUploadLease</a> operation.</p>
+         * <p>The upload lease ID, which corresponds to the <code>FileUploadLeaseId</code> returned by the <strong>ApplyFileUploadLease</strong> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>68abd1dea7b6404d8f7d7b9f7fbd332d.1716698936847</p>
+         * <p>68abd1dea7b6404d8f7d7b9f7fbd332d.17166xxxxxxxx</p>
          */
         public Builder leaseId(String leaseId) {
             this.putBodyParameter("LeaseId", leaseId);
@@ -239,7 +252,19 @@ public class AddFileRequest extends Request {
         }
 
         /**
-         * OriginalFileUrl.
+         * <p>&lt;props=&quot;china&quot;&gt;</p>
+         * <p>Adds a URL to the file through this parameter. The system records this link when building a <a href="https://help.aliyun.com/document_detail/2807740.html">document search knowledge base</a>. When you use the Alibaba Cloud Model Studio console to chat with an <a href="https://help.aliyun.com/document_detail/2842749.html">agent application</a>, this URL is returned with the file retrieval results (through the <code>docUrl</code> field).</p>
+         * <blockquote>
+         * <p>The agent application must have <strong>Knowledge Base</strong> enabled and the <strong>Show Answer Sources</strong> feature turned on. Otherwise, this parameter does not take effect.</p>
+         * </blockquote>
+         * <p>&lt;props=&quot;intl&quot;&gt;</p>
+         * <p>Adds a URL to the file through this parameter. The system records this link when building a <a href="https://help.aliyun.com/document_detail/2807740.html">document search knowledge base</a>. When you use the Alibaba Cloud Model Studio console to chat with an <a href="https://help.aliyun.com/document_detail/2842749.html">agent application</a>, this URL is returned with the file retrieval results (through the <code>docUrl</code> field).</p>
+         * <blockquote>
+         * <p>The agent application must have <strong>Knowledge Base</strong> enabled and the <strong>Show Answer Sources</strong> feature turned on. Otherwise, this parameter does not take effect.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.test.com/111.docx">www.test.com/111.docx</a></p>
          */
         public Builder originalFileUrl(String originalFileUrl) {
             this.putBodyParameter("OriginalFileUrl", originalFileUrl);
@@ -248,14 +273,24 @@ public class AddFileRequest extends Request {
         }
 
         /**
-         * <p>The parser. Valid value:</p>
+         * <p>The parser type. Valid values:</p>
          * <ul>
-         * <li>DASHSCOPE_DOCMIND: Intelligent document parsing by Alibaba Cloud.</li>
+         * <li>DOCMIND: intelligent document parsing.</li>
+         * <li>DOCMIND_DIGITAL: electronic document parsing.</li>
+         * <li>DOCMIND_LLM_VERSION: large language model-based document parsing.</li>
+         * <li>DASH_QWEN_VL_PARSER: Qwen VL parsing.</li>
+         * <li>DOCMIND_LLM_VERSION_MEDIA: audio and video parsing.</li>
+         * <li>AUTO_SELECT: automatic parser selection.</li>
          * </ul>
+         * <p>&lt;props=&quot;intl&quot;&gt;
+         * <note>The file you upload is parsed by the currently specified parser. If you set this parameter to AUTO_SELECT, the parser configured for the category is used.</note></p>
+         * <p>&lt;props=&quot;china&quot;&gt;
+         * <note>When CategoryType is set to UNSTRUCTURED, the parser parses the uploaded file based on the data parsing settings of the current category.</note>
+         * <note>When CategoryType is set to SESSION_FILE, the system parses the file content by using the default method, which cannot be changed.</note></p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>DASHSCOPE_DOCMIND</p>
+         * <p>AUTO_SELECT</p>
          */
         public Builder parser(String parser) {
             this.putBodyParameter("Parser", parser);
@@ -264,7 +299,7 @@ public class AddFileRequest extends Request {
         }
 
         /**
-         * ParserConfig.
+         * <p>The parser configuration. This parameter is required only when the parser type is set to Qwen VL parsing.</p>
          */
         public Builder parserConfig(ParserConfig parserConfig) {
             String parserConfigShrink = shrink(parserConfig, "ParserConfig", "json");
@@ -274,7 +309,10 @@ public class AddFileRequest extends Request {
         }
 
         /**
-         * <p>A list of tags associated with the document. The default value is null, which means no tags. You can specify up to 10 tags.</p>
+         * <ul>
+         * <li>The list of tags associated with the file. You can specify up to 100 tags, and the total character length of all tags cannot exceed 700.</li>
+         * <li>Default value: empty, which means no tags are set.</li>
+         * </ul>
          */
         public Builder tags(java.util.List<String> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -344,7 +382,10 @@ public class AddFileRequest extends Request {
             } 
 
             /**
-             * ModelName.
+             * <p>The model name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen-vl-max</p>
              */
             public Builder modelName(String modelName) {
                 this.modelName = modelName;
@@ -352,7 +393,13 @@ public class AddFileRequest extends Request {
             }
 
             /**
-             * ModelPrompt.
+             * <p>The prompt used when calling Qwen VL parsing.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>#Role
+             * You are a professional image content annotator who excels at identifying and describing the content in images.</p>
+             * <h1>Task Objective</h1>
+             * <p>Based on the input image, describe the content in the image in detail</p>
              */
             public Builder modelPrompt(String modelPrompt) {
                 this.modelPrompt = modelPrompt;

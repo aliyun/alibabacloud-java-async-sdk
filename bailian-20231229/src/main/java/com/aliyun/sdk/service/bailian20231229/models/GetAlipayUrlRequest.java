@@ -73,7 +73,10 @@ public class GetAlipayUrlRequest extends Request {
         } 
 
         /**
-         * app_id.
+         * <p>The ID of the Bailian application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asfasdfxxasdf</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("app_id", appId);
@@ -82,7 +85,10 @@ public class GetAlipayUrlRequest extends Request {
         }
 
         /**
-         * workspace_id.
+         * <p>The ID of the Bailian workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxllm-czb8d47ks</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("workspace_id", workspaceId);

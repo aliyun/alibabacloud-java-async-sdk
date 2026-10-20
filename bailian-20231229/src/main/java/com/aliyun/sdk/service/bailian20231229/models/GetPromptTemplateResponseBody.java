@@ -120,6 +120,9 @@ public class GetPromptTemplateResponseBody extends TeaModel {
 
         /**
          * <p>The template content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>请写一篇小红书种草笔记，增加丰富的emoji元素，结尾作总结，并加上相关标签。主题为：${theme}</p>
          */
         public Builder content(String content) {
             this.content = content;
@@ -128,6 +131,9 @@ public class GetPromptTemplateResponseBody extends TeaModel {
 
         /**
          * <p>The template name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>小红书文案助手</p>
          */
         public Builder name(String name) {
             this.name = name;

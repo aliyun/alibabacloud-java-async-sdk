@@ -119,7 +119,7 @@ public class AddFileResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code.</p>
+         * <p>The error status code.</p>
          * 
          * <strong>example:</strong>
          * <p>DataCenter.FileTooLarge</p>
@@ -130,7 +130,7 @@ public class AddFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data fields.</p>
+         * <p>The business data field of the operation.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -160,7 +160,7 @@ public class AddFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The status code returned by the operation.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -171,10 +171,10 @@ public class AddFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indications whether the call is successful. Valid values:</p>
+         * <p>Indicates whether the operation was successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: Successful.</li>
+         * <li>false: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -244,10 +244,10 @@ public class AddFileResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The primary key ID of the document. We recommend that you store the ID because it is required for all subsequent API operations related to this document.</p>
+             * <p>The file ID. Keep this value safe because it is used in all subsequent API operations related to this file.</p>
              * 
              * <strong>example:</strong>
-             * <p>file_9a65732555b54d5ea10796ca5742ba22_XXXXXXXX</p>
+             * <p>file_9a65732555b54d5ea10796ca5742ba22_xxxxxxxx</p>
              */
             public Builder fileId(String fileId) {
                 this.fileId = fileId;
@@ -255,9 +255,9 @@ public class AddFileResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parser that is used to parse the document. Valid value:</p>
+             * <p>The parser type used to parse this file. Valid values:</p>
              * <ul>
-             * <li>DASHSCOPE_DOCMIND: Intelligent document parsing by Alibaba Cloud.</li>
+             * <li>DASHSCOPE_DOCMIND: Alibaba Cloud intelligent document parsing.</li>
              * </ul>
              * 
              * <strong>example:</strong>

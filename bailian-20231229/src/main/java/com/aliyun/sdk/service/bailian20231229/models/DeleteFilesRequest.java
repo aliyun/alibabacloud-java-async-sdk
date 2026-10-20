@@ -89,6 +89,7 @@ public class DeleteFilesRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID to which the category belongs. For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/2587495.html">How to use a workspace</a>. The bailian 2023-12-29 version does not provide an API for listing workspaces. Obtain the workspace ID from the Model Studio console before calling this operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +111,7 @@ public class DeleteFilesRequest extends Request {
         }
 
         /**
+         * <p>The list of file IDs to delete. A maximum of 20 files can be deleted at a time.</p>
          * <p>This parameter is required.</p>
          */
         public Builder fileIds(java.util.List<String> fileIds) {

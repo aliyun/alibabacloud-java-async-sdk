@@ -142,6 +142,7 @@ public class AddConnectorRequest extends Request {
         }
 
         /**
+         * <p>The ID of the workspace where the knowledge base resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,6 +155,7 @@ public class AddConnectorRequest extends Request {
         }
 
         /**
+         * <p>The name of the connector.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -166,6 +168,7 @@ public class AddConnectorRequest extends Request {
         }
 
         /**
+         * <p>The type of the connector.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -178,7 +181,11 @@ public class AddConnectorRequest extends Request {
         }
 
         /**
+         * <p>The description of the connector.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>File connector</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -187,7 +194,7 @@ public class AddConnectorRequest extends Request {
         }
 
         /**
-         * FileConnectorConfig.
+         * <p>The configuration parameters for the file connector.</p>
          */
         public Builder fileConnectorConfig(FileConnectorConfig fileConnectorConfig) {
             String fileConnectorConfigShrink = shrink(fileConnectorConfig, "FileConnectorConfig", "json");
@@ -269,7 +276,10 @@ public class AddConnectorRequest extends Request {
             } 
 
             /**
-             * BucketName.
+             * <p>The name of the storage bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zyb-docker-registry-jn</p>
              */
             public Builder bucketName(String bucketName) {
                 this.bucketName = bucketName;
@@ -277,7 +287,10 @@ public class AddConnectorRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required.</p>
+             * <p>The region of the storage bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -285,7 +298,14 @@ public class AddConnectorRequest extends Request {
             }
 
             /**
-             * StorageType.
+             * <p>The file storage location. Valid values:</p>
+             * <ul>
+             * <li>OSS_CUSTOM: Use your own OSS storage. </li>
+             * <li>OSS_PLATFORM: Use platform OSS storage.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS_CUSTOM</p>
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;

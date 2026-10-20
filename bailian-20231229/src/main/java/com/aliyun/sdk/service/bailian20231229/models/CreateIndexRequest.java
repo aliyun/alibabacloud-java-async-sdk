@@ -540,11 +540,11 @@ public class CreateIndexRequest extends Request {
         } 
 
         /**
-         * <p>The workspace ID. The knowledge base will be created in this workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2587495.html">How to use workspace</a>.</p>
+         * <p>The workspace ID. The knowledge base is created in this workspace. For more information about how to obtain the ID, refer to <a href="https://help.aliyun.com/document_detail/2587495.html">How to use workspaces</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ws_3Nt27MYcoK191ISp</p>
+         * <p>llm-3z7uw7fwz0vexxxx</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("WorkspaceId", workspaceId);
@@ -553,7 +553,7 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * <p>The files to imported to the knowledge base. Specify the category IDs. All files under the categories will be imported (up to 10,000 files). To add more files later, call <strong>SubmitIndexAddDocumentsJob</strong>.</p>
+         * <p>You can import files synchronously when you create a knowledge base. Here, you can import all files under a specified category by specifying the category ID. We recommend that you import no more than 500 files. If you have remaining files, you can call the <strong>SubmitIndexAddDocumentsJob</strong> operation to continue importing them later.</p>
          */
         public Builder categoryIds(java.util.List<String> categoryIds) {
             String categoryIdsShrink = shrink(categoryIds, "CategoryIds", "json");
@@ -563,10 +563,17 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * <p>The chunk size, which is the maximum number of characters in each chunk. Text exceeding this length may be truncated.</p>
-         * <p>Valid values: 1 to 6000. Default value: 500.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;</p>
+         * <p>The chunk size, which is the maximum number of characters in each text chunk. If the text exceeds this length:</p>
+         * <ul>
+         * <li><strong>Intelligent chunking</strong> (chunkMode is not specified): The text is highly likely to be truncated.</li>
+         * <li><strong>Custom chunking</strong> (chunkMode is specified): The text is forcibly truncated.</li>
+         * </ul>
+         * <p>&lt;props=&quot;intl&quot;&gt;
+         * The chunk size, which is the maximum number of characters in each text chunk. If the text exceeds this length, it is highly likely to be truncated.</p>
+         * <p>Valid values: [1, 6000]. Default value: 500.</p>
          * <blockquote>
-         * <p>If <code>ChunkSize</code> is set to a value less than 100, <code>OverlapSize</code> is required. Or, if you do not pass these two parameters, the system uses the default values of the two.</p>
+         * <p>If you set ChunkSize to a value less than 100, you must also set OverlapSize. You can also leave these two parameters unspecified, and the system uses the default values.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -579,7 +586,12 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * Columns.
+         * <p>&lt;props=&quot;china&quot;&gt;
+         * The structure of the data table, such as column names and types.</p>
+         * <p>&lt;props=&quot;intl&quot;&gt;</p>
+         * <blockquote>
+         * <p>This parameter is not available. Do not pass this parameter.</p>
+         * </blockquote>
          */
         public Builder columns(java.util.List<Columns> columns) {
             String columnsShrink = shrink(columns, "Columns", "json");
@@ -590,8 +602,11 @@ public class CreateIndexRequest extends Request {
 
         /**
          * <blockquote>
-         * <p>This parameter is not available. Do not specify this parameter.</p>
+         * <p>This parameter is not available. Do not pass this parameter.</p>
          * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>standard</p>
          */
         public Builder createIndexType(String createIndexType) {
             this.putQueryParameter("CreateIndexType", createIndexType);
@@ -600,7 +615,11 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * <p>The description of the knowledge base. The description must be 0 to 1,000 characters in length. This parameter is empty by default.</p>
+         * <p>The description of the knowledge base. The description must be 0 to 200 characters in length and can contain English and Chinese characters.
+         * Default value: empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The enterprise help document library includes important materials such as company policies and product lists</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -609,7 +628,7 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * <p>The files to imported to the knowledge base. Specify the file IDs to import (up to 10,000 files). To add more files later, call <strong>SubmitIndexAddDocumentsJob</strong>.</p>
+         * <p>You can import files synchronously when you create a knowledge base. Here, you can specify the list of files to be imported by passing file IDs. We recommend that you import no more than 10,000 files. If you have remaining files, you can call the <strong>SubmitIndexAddDocumentsJob</strong> operation to continue importing them later.</p>
          */
         public Builder documentIds(java.util.List<String> documentIds) {
             String documentIdsShrink = shrink(documentIds, "DocumentIds", "json");
@@ -619,14 +638,22 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * <p>The embedding model used in the knowledge base. The embedding model converts the original input prompt and knowledge text into numerical embeddings for similarity comparison. The default and only model available is text-embedding-v2. It supports multiple languages including Chinese and English and normalizes the embedding results. For more information, see <a href="https://help.aliyun.com/document_detail/2842587.html">Embedding</a>. Valid values:</p>
+         * <p>&lt;props=&quot;china&quot;&gt;</p>
+         * <p>The embedding model used by the knowledge base. The embedding model is used to transform the original input prompt and knowledge text into numerical vectors for similarity comparison. Compared with the text-embedding-v3 model, the text-embedding-v4 model is comprehensively upgraded in terms of language support, code snippet vectorization effect, and selection of vector dimensions, and is suitable for most scenarios. For more information, refer to <a href="https://help.aliyun.com/document_detail/2842587.html">Quantization</a>. Valid values:</p>
+         * <ul>
+         * <li>text-embedding-v4</li>
+         * <li>text-embedding-v3</li>
+         * </ul>
+         * <p>Default value: empty. In this case, the text-embedding-v3 model is used.</p>
+         * <p>&lt;props=&quot;intl&quot;&gt;</p>
+         * <p>The embedding model used by the knowledge base. The embedding model is used to transform the original input prompt and knowledge text into numerical vectors for similarity comparison. The default text-embedding-v2 model (which cannot be changed at the moment) supports not only Chinese and English but also multiple other languages, and performs normalization on the vector results. For more information, refer to <a href="https://help.aliyun.com/document_detail/2842587.html">Quantization</a>. Valid values:</p>
          * <ul>
          * <li>text-embedding-v2</li>
          * </ul>
-         * <p>The default value is null, which means using text-embedding-v2.</p>
+         * <p>Default value: empty. In this case, the text-embedding-v2 model is used.</p>
          * 
          * <strong>example:</strong>
-         * <p>text-embedding-v2</p>
+         * <p>text-embedding-v4</p>
          */
         public Builder embeddingModelName(String embeddingModelName) {
             this.putQueryParameter("EmbeddingModelName", embeddingModelName);
@@ -635,10 +662,10 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * <p>Whether to enable rewriting for multi-turn conversations. Valid values:</p>
+         * <p>Specifies whether to enable multi-turn conversation rewriting. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: enabled.</li>
+         * <li>false: disabled.</li>
          * </ul>
          * <p>Default value: true.</p>
          * 
@@ -652,8 +679,11 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * <p>The name of the knowledge base. The name must be 1 to 20 characters in length, and can contain Chinese characters, letters, digits, underscores (_), hyphens (-), periods (.), and colons (:).</p>
+         * <p>The name of the knowledge base. The name must be 1 to 20 characters in length and can contain Chinese characters, English letters, digits, underscores (_), hyphens (-), periods (.), and colons (:).</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Enterprise help document library</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -662,10 +692,10 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * <p>The overlap size, which is the number of overlapping characters between two consecutive chunks. Valid values: 0 to 1024.</p>
+         * <p>The chunk overlap size, which indicates the number of overlapping characters between the current text chunk and the previous text chunk. Valid values: [0, 1024].</p>
          * <p>Default value: 100.</p>
          * <blockquote>
-         * <p><code>OverlapSize</code> must be less than <code>ChunkSize</code>. Otherwise, chunking errors may occur.</p>
+         * <p>OverlapSize must be less than ChunkSize. Otherwise, chunking exceptions occur.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -678,7 +708,12 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * RerankInstruct.
+         * <p>&lt;props=&quot;intl&quot;&gt;This parameter is not available. Do not specify this parameter.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;Provides a natural language instruction to fine-tune the behavior of the reranking model.
+         * <notice>This parameter takes effect only when rerank_mode is set to &quot;custom&quot;.</notice></p>
+         * 
+         * <strong>example:</strong>
+         * <p>Given a web search query, retrieve relevant passages that answer the query.</p>
          */
         public Builder rerankInstruct(String rerankInstruct) {
             this.putQueryParameter("RerankInstruct", rerankInstruct);
@@ -687,7 +722,7 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * <p>The similarity threshold. Only chunks with a similarity score higher than this value can be recalled. This parameter is used to filter chunks returned by the re-rank model. Valid values: 0.01 to 1.00.</p>
+         * <p>The similarity threshold. Only text chunks with a similarity score greater than this value are recalled. This parameter is used to filter the text chunks returned by the reranking model. Valid values: [0.01, 1.00].</p>
          * <p>Default value: 0.01.</p>
          * 
          * <strong>example:</strong>
@@ -700,7 +735,20 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * RerankMode.
+         * <p>&lt;props=&quot;china&quot;&gt;
+         * Specifies the instruction intervention mode of the reranking model to determine its scoring preference. Valid values:</p>
+         * <ul>
+         * <li><p><strong>qa</strong>: question answering mode. This is the default value. The model tends to assign higher scores to candidates that can directly answer the query. We recommend that you use this mode in question answering scenarios.</p>
+         * </li>
+         * <li><p><strong>similar</strong>: similarity mode. The model tends to assign higher scores to candidates that are highly consistent with the query content. We recommend that you use this mode in matching and retrieval scenarios.</p>
+         * </li>
+         * <li><p><strong>custom</strong>: custom mode. The ranking behavior of the model is determined by the instruction in the rerank_instruct parameter.</p>
+         * </li>
+         * </ul>
+         * <p>&lt;props=&quot;intl&quot;&gt;This parameter is not available. Do not specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qa</p>
          */
         public Builder rerankMode(String rerankMode) {
             this.putQueryParameter("RerankMode", rerankMode);
@@ -709,14 +757,32 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * <p>The re-ranking model used in the knowledge base. The re-rank model is a scoring system outside the knowledge base. It calculates the similarity score of the query and text chunks in the knowledge base and ranks them in descending order. Then, the model returns the top K chunks with the highest scores. Valid values:</p>
+         * <p>The reranking model used by the knowledge base. The reranking model is a scoring system external to the knowledge base. It calculates the similarity score between the user\&quot;s question and each text chunk in the knowledge base, sorts the chunks in descending order of the scores, and returns the top K text chunks with the highest scores. Valid values:</p>
+         * <p>&lt;props=&quot;china&quot;&gt;</p>
          * <ul>
-         * <li>gte-rerank-hybrid</li>
-         * <li>gte-rerank</li>
+         * <li>qwen3-rerank-hybrid: qwen3-rerank (hybrid) reranking.</li>
+         * <li>qwen3-rerank: qwen3-rerank reranking.</li>
+         * <li>gte-rerank-hybrid: gte-rerank (hybrid) reranking.</li>
+         * <li>gte-rerank: gte-rerank reranking.</li>
          * </ul>
-         * <p>The default value is empty, which means using gte-rerank-hybrid.</p>
+         * <p>&lt;props=&quot;intl&quot;&gt;</p>
+         * <ul>
+         * <li>gte-rerank-hybrid: official reranking.</li>
+         * <li>gte-rerank: gte-rerank reranking.</li>
+         * </ul>
+         * <p>&lt;props=&quot;china&quot;&gt;</p>
+         * <p>Default value: empty. In this case, qwen3-rerank is used.</p>
          * <blockquote>
-         * <p>If you need only semantic ranking, we recommend gte-rerank. If you need both semantic ranking and text matching features to ensure relevance, we recommend gte-rerank-hybrid.</p>
+         * <p>If you only need semantic reranking, you can use qwen3-rerank. If you need both semantic reranking and text matching features to ensure relevance, use qwen3-rerank-hybrid.</p>
+         * </blockquote>
+         * <p>&lt;props=&quot;intl&quot;&gt;</p>
+         * <p>Default value: empty. In this case, gte-rerank-hybrid is used.</p>
+         * <blockquote>
+         * <p>If you only need semantic reranking, you can use gte-rerank. If you need both semantic reranking and text matching features to ensure relevance, use gte-rerank-hybrid.</p>
+         * </blockquote>
+         * <p>&lt;props=&quot;china&quot;&gt;</p>
+         * <blockquote>
+         * <p>gte-rerank-hybrid and gte-rerank will stop receiving updates and are not recommended.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -729,12 +795,16 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
+         * <p>&lt;props=&quot;china&quot;&gt;</p>
+         * <p>The sentence separator. This parameter takes effect only when chunkMode is set to <strong>regex</strong>. In other modes, this parameter does not take effect even if it is passed. You can pass a regular expression (multiple regular expressions are not supported) to split the file into small text chunks.</p>
+         * <p>When you use intelligent chunking (chunkMode is not specified), leave this parameter empty.</p>
+         * <p>&lt;props=&quot;intl&quot;&gt;</p>
          * <blockquote>
-         * <p>This parameter is not available. Do not specify this parameter.</p>
+         * <p>This parameter is not available. Do not pass this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>,</p>
+         * <p>(?&lt;=。)</p>
          */
         public Builder separator(String separator) {
             this.putQueryParameter("Separator", separator);
@@ -743,10 +813,10 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * <p>The ID of the AnalyticDB for PostgreSQL instance. Required only when <code>SinkType</code> is set to ADB. Get the ID on the <a href="https://gpdbnext.console.aliyun.com/gpdb/list">Instances</a> page of AnalyticDB for PostgreSQL.</p>
+         * <p>The ID of the AnalyticDB for PostgreSQL instance. This parameter is required only when SinkType is set to ADB. Go to the <a href="https://gpdbnext.console.aliyun.com/gpdb/list">AnalyticDB for PostgreSQL Instance List</a> page to obtain the ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>gp-bp321093j84</p>
+         * <p>gp-bp32109xxxx</p>
          */
         public Builder sinkInstanceId(String sinkInstanceId) {
             this.putQueryParameter("SinkInstanceId", sinkInstanceId);
@@ -755,7 +825,7 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * <p>The region of the AnalyticDB for PostgreSQL instance. Required only when <code>SinkType</code> is set to ADB. Call <a href="https://www.alibabacloud.com/help/zh/analyticdb/analyticdb-for-postgresql/developer-reference/api-gpdb-2016-05-03-describeregions?spm=a2c63.p38356.0.i3">DescribeRegions</a> to obtain the region list.</p>
+         * <p>The region where the AnalyticDB for PostgreSQL instance resides. This parameter is required only when SinkType is set to ADB. You can call the &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/analyticdb-for-postgresql/developer-reference/api-gpdb-2016-05-03-describeregions">DescribeRegions</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/analyticdb/analyticdb-for-postgresql/developer-reference/api-gpdb-2016-05-03-describeregions?spm=a2c63.p38356.0.i3">DescribeRegions</a> operation to obtain the region list.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -767,18 +837,18 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * <p>The vector storage type of the knowledge base. For more information, see <a href="https://help.aliyun.com/document_detail/2807740.html">Knowledge base</a>. Valid values:</p>
+         * <p>The vector storage type of the knowledge base. For more information, refer to <a href="https://help.aliyun.com/document_detail/2807740.html">Knowledge base</a>. Valid values:</p>
          * <ul>
-         * <li>BUILT_IN: The vector data is hosted by Alibaba Cloud Model Studio.</li>
-         * <li>ADB: AnalyticDB for PostgreSQL database. If you need advanced features, such as managing, auditing, and monitoring, we recommend ADB.</li>
-         * </ul>
-         * <blockquote>
-         * <p>If you have not used AnalyticDB for AnalyticDB in Model Studio before, go to the <a href="https://bailian.console.alibabacloud.com/#/knowledge-base/create">Create Knowledge Base</a> page, select ADB-PG as Vector Storage Type, and follow the instructions to grant permissions. If you specify ADB, the <code>SinkInstanceId</code> and <code>SinkRegion</code> parameters are required.</p>
+         * <li>BUILT_IN: stores vector data in Alibaba Cloud Model Studio.</li>
+         * <li>ADB: AnalyticDB for PostgreSQL database. If you need advanced features such as managing, auditing, and monitoring the database, select ADB.<blockquote>
+         * <p>If you have not used ADB storage in Alibaba Cloud Model Studio, go to the &lt;props=&quot;china&quot;&gt;<a href="https://bailian.console.aliyun.com/#/knowledge-base/create">Create Knowledge Base</a>&lt;props=&quot;intl&quot;&gt;<a href="https://bailian.console.alibabacloud.com/#/knowledge-base/create">Create Knowledge Base</a> page, select ADB-PG as the vector storage type, and complete the authorization as prompted. If you pass ADB, you must specify the SinkInstanceId and SinkRegion parameters.</p>
          * </blockquote>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>DEFAULT</p>
+         * <p>BUILT_IN</p>
          */
         public Builder sinkType(String sinkType) {
             this.putQueryParameter("SinkType", sinkType);
@@ -788,18 +858,18 @@ public class CreateIndexRequest extends Request {
 
         /**
          * <blockquote>
-         * <p>This parameter is required in the latest version of the SDK. Otherwise, when you call SubmitIndexJob, an error will occur: Required parameter(data_sources) missing or invalid.</p>
+         * <p>Notice: This parameter is required in the latest SDK version. Otherwise, an error is reported when you call the SubmitIndexJob operation: Required parameter(data_sources) missing or invalid.</notice></p>
          * </blockquote>
          * <p>The source of the imported data. Valid values:</p>
          * <ul>
-         * <li>DATA_CENTER_CATEGORY: The category type, that is to import all files in one or more specified categories in <a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">Application Data</a>.</li>
-         * <li>DATA_CENTER_FILE: The file type, that is to import one or more specified files in <a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">Application Data</a>.</li>
+         * <li>DATA_CENTER_CATEGORY: the category type. This value indicates that all files under a specified category in &lt;props=&quot;china&quot;&gt;<a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a>&lt;props=&quot;intl&quot;&gt;<a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">Application Data</a> are imported. You can import multiple categories at a time.</li>
+         * <li>DATA_CENTER_FILE: the file type. This value indicates that specified files in &lt;props=&quot;china&quot;&gt;<a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a>&lt;props=&quot;intl&quot;&gt;<a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">Application Data</a> are imported. You can import multiple files at a time.</li>
          * </ul>
          * <blockquote>
-         * <p>If set to DATA_CENTER_CATEGORY, <code>CategoryIds</code> is required. If set to DATA_CENTER_FILE, <code>DocumentIds</code> is required.</p>
+         * <p>If you set this parameter to DATA_CENTER_CATEGORY, you must specify the CategoryIds parameter. If you set this parameter to DATA_CENTER_FILE, you must specify the DocumentIds parameter.</p>
          * </blockquote>
          * <blockquote>
-         * <p>To create an empty knowledge base, you can use an empty category with no files: Set this parameter to DATA_CENTER_CATEGORY, and <code>CategoryIds</code> to the ID of an empty category.</p>
+         * <p>To create an empty knowledge base, you can use an empty category that contains no files: set this parameter to DATA_CENTER_CATEGORY and set CategoryIds to the ID of the empty category.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -812,17 +882,22 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * <p>The type of the knowledge base. Valid values:</p>
+         * <p>The type of the knowledge base.</p>
+         * <p><strong>Valid values</strong>:</p>
          * <ul>
-         * <li>unstructured: The document search type.</li>
+         * <li>unstructured: a knowledge base for document search or audio and video. The default use scenario for the document search type is basic document question answering. &lt;props=&quot;china&quot;&gt;To create a knowledge base for other scenarios, you must also pass the knowledgeType and knowledgeScene parameters.</li>
+         * </ul>
+         * <p>&lt;props=&quot;china&quot;&gt;</p>
+         * <ul>
+         * <li>structured: a knowledge base for data querying or image question answering.</li>
          * </ul>
          * <blockquote>
-         * <p>After you create a knowledge base, its type cannot be changed. This operation does not support data query and image Q&amp;A types. Use the console instead.</p>
+         * <p>Note that the type of a knowledge base cannot be changed after it is created.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>structured</p>
+         * <p>unstructured</p>
          */
         public Builder structureType(String structureType) {
             this.putQueryParameter("StructureType", structureType);
@@ -831,8 +906,11 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
+         * <p>&lt;props=&quot;china&quot;&gt;</p>
+         * <p>You can obtain the ID by clicking the ID icon next to the table name on the Tables tab of the Table Connector in <a href="https://bailian.console.aliyun.com/cn-beijing?tab=app#/connector/list">Data Connection</a>. If the list contains multiple IDs, only the first one is used.</p>
+         * <p>&lt;props=&quot;intl&quot;&gt;</p>
          * <blockquote>
-         * <p>This parameter is not available. Do not specify this parameter.</p>
+         * <p>This parameter is not available. Do not pass this parameter.</p>
          * </blockquote>
          */
         public Builder tableIds(java.util.List<String> tableIds) {
@@ -852,8 +930,20 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
+         * <p>&lt;props=&quot;china&quot;&gt;</p>
+         * <p>Enables custom chunking and specifies the chunking strategy. For more information, refer to <a href="https://help.aliyun.com/document_detail/2807740.html">Knowledge base</a>.</p>
+         * <p>Valid values (you cannot pass multiple values at a time):</p>
+         * <ul>
+         * <li><strong>length</strong>: chunks by length. The text is strictly chunked according to the ChunkSize and OverlapSize you specify. If you do not pass these two parameters, the system uses the default values (ChunkSize is 500 and OverlapSize is 100). Chunking by length does not support Separator (it does not take effect even if passed).</li>
+         * <li><strong>page</strong>: chunks by page. If ChunkSize is specified, it is considered during chunking (if not passed, the default value 500 is used). Chunking by page does not support OverlapSize and Separator (they do not take effect even if passed).</li>
+         * <li><strong>h1</strong>: chunks by level-1 heading. If ChunkSize is specified, it is considered during chunking (if not passed, the default value 500 is used). Chunking by level-1 heading does not support OverlapSize and Separator (they do not take effect even if passed).</li>
+         * <li><strong>h2</strong>: chunks by level-2 heading. If ChunkSize is specified, it is considered during chunking (if not passed, the default value 500 is used). Chunking by level-2 heading does not support OverlapSize and Separator (they do not take effect even if passed).</li>
+         * <li><strong>regex</strong>: chunks by regular expression. In this case, you must specify the Separator parameter. If ChunkSize is specified, it is considered during chunking (if not passed, the default value 500 is used). Chunking by regular expression does not support OverlapSize (it does not take effect even if passed).</li>
+         * </ul>
+         * <p>Default value: empty. In this case, intelligent chunking is used.</p>
+         * <p>&lt;props=&quot;intl&quot;&gt;</p>
          * <blockquote>
-         * <p>This parameter is not available. Do not specify this parameter.</p>
+         * <p>This parameter is not available. Do not pass this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -893,14 +983,14 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * <p>Whether to treat the first row of all .xlsx and .xls files as headers and concatenate them into each text chunk. This prevents the models from mistakenly interpreting headers as regular data rows.</p>
+         * <p>Specifies whether to use the first row of all .xlsx and .xls files as the header and concatenate it to each text chunk to prevent the large language model from mistakenly treating the header as a normal data row.</p>
          * <blockquote>
-         * <p>Enable this feature only when all imported files are in .xlsx or .xls format and contain headers. Otherwise, leave it disabled.</p>
+         * <p>Enable this feature only when all imported files are in .xlsx or .xls format and contain headers. Otherwise, do not enable it.</p>
          * </blockquote>
          * <p>Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: enabled.</li>
+         * <li>false: disabled.</li>
          * </ul>
          * <p>Default value: false.</p>
          * 
@@ -923,7 +1013,21 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * knowledgeType.
+         * <p>&lt;props=&quot;china&quot;&gt;
+         * The specific knowledge type, which is used to further specify the type of data processed by the knowledge base.
+         * <notice>This parameter must be provided or omitted together with knowledgeScene. It cannot be set separately. If both are omitted, the system uses the default configurations based on structureType.</notice></p>
+         * <p><strong>Settings</strong> constraints: The value of this parameter must match the structureType you select and determines the active values for knowledgeScene.</p>
+         * <p><strong>Valid values</strong>:</p>
+         * <ul>
+         * <li>document: document search. Must be used with structureType: unstructured.</li>
+         * <li>table: data querying. Must be used with structureType: structured.</li>
+         * <li>image: image question answering. Must be used with structureType: structured.</li>
+         * <li>multimedia: audio and video search. Must be used with structureType: unstructured.</li>
+         * </ul>
+         * <p>&lt;props=&quot;intl&quot;&gt;This parameter is not available. Do not pass this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>document</p>
          */
         public Builder knowledgeType(String knowledgeType) {
             this.putQueryParameter("knowledgeType", knowledgeType);
@@ -932,7 +1036,7 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * <p>The metadata extraction configurations. Metadata refers to a set of additional attributes associated with unstructured data, which are integrated into text chunks in key-value pairs. For more information, see <a href="https://help.aliyun.com/document_detail/2807740.html">Knowledge base</a>.</p>
+         * <p>The metadata extraction configuration. Metadata is a series of additional attributes related to the content of unstructured data. These attributes are integrated into text chunks in the form of key-value pairs. For more information, refer to <a href="https://help.aliyun.com/document_detail/2807740.html">Knowledge base</a>.</p>
          */
         public Builder metaExtractColumns(java.util.List<MetaExtractColumns> metaExtractColumns) {
             String metaExtractColumnsShrink = shrink(metaExtractColumns, "metaExtractColumns", "json");
@@ -942,7 +1046,14 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * pipelineCommercialCu.
+         * <p>&lt;props=&quot;china&quot;&gt;The number of RCUs for the knowledge base. This parameter is required only when pipelineCommercialType is set to enterprise. Valid values: [1, 200].</p>
+         * <p>&lt;props=&quot;intl&quot;&gt;</p>
+         * <blockquote>
+         * <p>This parameter is not available. Do not pass this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pipelineCommercialCu(Integer pipelineCommercialCu) {
             this.putQueryParameter("pipelineCommercialCu", pipelineCommercialCu);
@@ -951,7 +1062,19 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * pipelineCommercialType.
+         * <p>&lt;props=&quot;china&quot;&gt;</p>
+         * <p>The <a href="https://help.aliyun.com/document_detail/2997110.html">edition</a> of the knowledge base. Valid values:</p>
+         * <ul>
+         * <li>standard: Standard Edition</li>
+         * <li>enterprise: Ultimate Edition</li>
+         * </ul>
+         * <p>&lt;props=&quot;intl&quot;&gt;</p>
+         * <blockquote>
+         * <p>This parameter is not available. Do not pass this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>standard</p>
          */
         public Builder pipelineCommercialType(String pipelineCommercialType) {
             this.putQueryParameter("pipelineCommercialType", pipelineCommercialType);
@@ -960,7 +1083,17 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * pipelineRetrieveRateLimitStrategy.
+         * <p>&lt;props=&quot;china&quot;&gt;The throttling handling strategy for the knowledge base dependency link. This parameter is required only when pipelineCommercialType is set to enterprise.
+         * Valid values:
+         * downgrade: downgrade processing (switches to lightweight link retrieval).
+         * Default value: downgrade.</p>
+         * <p>&lt;props=&quot;intl&quot;&gt;</p>
+         * <blockquote>
+         * <p>This parameter is not available. Do not pass this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>downgrade</p>
          */
         public Builder pipelineRetrieveRateLimitStrategy(String pipelineRetrieveRateLimitStrategy) {
             this.putQueryParameter("pipelineRetrieveRateLimitStrategy", pipelineRetrieveRateLimitStrategy);
@@ -1076,7 +1209,12 @@ public class CreateIndexRequest extends Request {
             } 
 
             /**
-             * Column.
+             * <blockquote>
+             * <p>This parameter is not available. Do not pass this parameter.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>school</p>
              */
             public Builder column(String column) {
                 this.column = column;
@@ -1084,7 +1222,19 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * IsRecall.
+             * <p>&lt;props=&quot;china&quot;&gt;</p>
+             * <p>Specifies whether the column participates in model responses. If this parameter is set to true, the retrieval results of this column are used as input information when the large language model generates responses. Valid values:</p>
+             * <ul>
+             * <li>true: enabled.</li>
+             * <li>false: disabled.</li>
+             * </ul>
+             * <p>&lt;props=&quot;intl&quot;&gt;</p>
+             * <blockquote>
+             * <p>This parameter is not available. Do not pass this parameter.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isRecall(Boolean isRecall) {
                 this.isRecall = isRecall;
@@ -1092,7 +1242,19 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * IsSearch.
+             * <p>&lt;props=&quot;china&quot;&gt;</p>
+             * <p>Specifies whether the column participates in knowledge base retrieval. If this parameter is set to true, the knowledge base is allowed to search in the data of this column. Valid values:</p>
+             * <ul>
+             * <li>true: enabled.</li>
+             * <li>false: disabled.</li>
+             * </ul>
+             * <p>&lt;props=&quot;intl&quot;&gt;</p>
+             * <blockquote>
+             * <p>This parameter is not available. Do not pass this parameter.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isSearch(Boolean isSearch) {
                 this.isSearch = isSearch;
@@ -1100,8 +1262,15 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * <p>The name of the knowledge base. The name must be 1 to 20 characters in length, and can contain Chinese characters, letters, digits, underscores (_), hyphens (-), periods (.), and colons (:).</p>
-             * <p>This parameter is required.</p>
+             * <p>&lt;props=&quot;china&quot;&gt;
+             * The field name. The name must be consistent with the header of the data table created in Application Data.</p>
+             * <p>&lt;props=&quot;intl&quot;&gt;</p>
+             * <blockquote>
+             * <p>This parameter is not available. Do not pass this parameter.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>School</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1109,7 +1278,22 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>&lt;props=&quot;china&quot;&gt;</p>
+             * <p>The field type. The type must be consistent with the header of the data table created in Application Data. Valid values:</p>
+             * <ul>
+             * <li>string</li>
+             * <li>double</li>
+             * <li>long</li>
+             * <li>datetime</li>
+             * <li>image_url</li>
+             * </ul>
+             * <p>&lt;props=&quot;intl&quot;&gt;</p>
+             * <blockquote>
+             * <p>This parameter is not available. Do not pass this parameter.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>string</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1228,10 +1412,10 @@ public class CreateIndexRequest extends Request {
             } 
 
             /**
-             * <p>The description of the metadata field. The description must be 0 to 1,000 characters in length, and can contain Chinese characters, letters, digits, underscores (_), hyphens (-), periods (.), and colons (:). This parameter is left empty by default.</p>
+             * <p>The Chinese description of the metadata field. The description must be 0 to 1,000 characters in length and can contain Chinese characters, English letters, digits, underscores (_), hyphens (-), periods (.), and colons (:). Default value: empty.</p>
              * 
              * <strong>example:</strong>
-             * <p>AuthorName</p>
+             * <p>Author name</p>
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -1239,10 +1423,10 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * <p>When set to true, the key and value of this metadata filed will participate in the generation process of the model, together with the chunk. Valid values:</p>
+             * <p>Specifies whether the metadata field and its value participate in the response generation process of the large language model together with the content of the text chunk. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li>true: enabled.</li>
+             * <li>false: disabled.</li>
              * </ul>
              * <p>Default value: false.</p>
              * 
@@ -1255,10 +1439,10 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * <p>When set to true, the key and value of this metadata filed will participate in the knowledge base retrieval, together with the chunk. Valid values:</p>
+             * <p>Specifies whether the metadata field and its value participate in knowledge base retrieval together with the content of the text chunk. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li>true: enabled.</li>
+             * <li>false: disabled.</li>
              * </ul>
              * <p>Default value: false.</p>
              * 
@@ -1271,7 +1455,7 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * <p>The metadata key. It must be 1 to 50 characters in length and must be English letters or underscores. If you specify this parameter, the <code>Value</code> and <code>Type</code> parameters are required.</p>
+             * <p>The metadata field. The field must be 1 to 50 characters in length and can contain only English letters and underscores (_). If you specify this parameter, you must also specify the Value and Type parameters.</p>
              * 
              * <strong>example:</strong>
              * <p>author</p>
@@ -1282,21 +1466,13 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * <p>The type of the metadata field. Valid values:</p>
+             * <p>The value extraction method for the metadata field. Valid values:</p>
              * <ul>
-             * <li>constant</li>
-             * <li>variable</li>
-             * <li>custom_prompt</li>
-             * <li>regular</li>
-             * <li>keywords</li>
-             * </ul>
-             * <p>Enumerated value:</p>
-             * <ul>
-             * <li>constant: constant extraction.</li>
-             * <li>keywords: keyword extraction.</li>
-             * <li>custom_prompt: LLM.</li>
-             * <li>variable: variable extraction.</li>
+             * <li>constant: constant.</li>
+             * <li>variable: variable.</li>
+             * <li>custom_prompt: large language model.</li>
              * <li>regular: regular expression.</li>
+             * <li>keywords: keyword search.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1308,7 +1484,7 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * <p>The metadata value.</p>
+             * <p>The value of the metadata field.</p>
              * 
              * <strong>example:</strong>
              * <p>Tim</p>

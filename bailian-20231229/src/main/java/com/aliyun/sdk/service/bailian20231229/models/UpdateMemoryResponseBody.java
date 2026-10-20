@@ -54,7 +54,10 @@ public class UpdateMemoryResponseBody extends TeaModel {
         } 
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6a71f2d9-f1c9-913b-818b-11402910xxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

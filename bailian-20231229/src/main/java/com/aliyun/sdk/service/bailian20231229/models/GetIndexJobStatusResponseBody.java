@@ -119,7 +119,7 @@ public class GetIndexJobStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>HTTP status code</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>Index.Forbidden</p>
@@ -130,7 +130,7 @@ public class GetIndexJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>The business data field of the operation.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -160,7 +160,7 @@ public class GetIndexJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The status code returned by the operation.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -171,10 +171,10 @@ public class GetIndexJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indications whether the API call is successful. Valid values:</p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: The call was successful.</li>
+         * <li>false: The call failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -296,7 +296,7 @@ public class GetIndexJobStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>HTTP status code</p>
+             * <p>The error code.</p>
              * 
              * <strong>example:</strong>
              * <p>Index.Document.ChunkError</p>
@@ -307,10 +307,10 @@ public class GetIndexJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The primary key ID of the document.</p>
+             * <p>The file ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>file_9a65732555b54d5ea10796ca5742ba22_XXXXXXXX</p>
+             * <p>file_9a65732555b54d5ea10796ca5742ba22_xxxxxxxx</p>
              */
             public Builder docId(String docId) {
                 this.docId = docId;
@@ -318,7 +318,10 @@ public class GetIndexJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the document.</p>
+             * <p>The file name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>XXX Product Introduction</p>
              */
             public Builder docName(String docName) {
                 this.docName = docName;
@@ -326,7 +329,10 @@ public class GetIndexJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The time when the file was last modified. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1782209511000</p>
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -345,12 +351,14 @@ public class GetIndexJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The import status of the document. Valid values:</p>
+             * <p>The file import status. Valid values:</p>
              * <ul>
-             * <li>INSERT_ERROR</li>
-             * <li>RUNNING</li>
-             * <li>DELETED</li>
-             * <li>FINISH</li>
+             * <li>INSERT_ERROR: The index import failed.</li>
+             * <li>RUNNING: The index is being built.</li>
+             * <li>DELETED: The file is deleted.</li>
+             * <li>FINISH: The index is built successfully.</li>
+             * <li>PARSE_FAILED: The parsing failed.</li>
+             * <li>DOC_PARSING: The file is being parsed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -434,7 +442,7 @@ public class GetIndexJobStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of imported documents.</p>
+             * <p>The list of files imported in this task.</p>
              */
             public Builder documents(java.util.List<Documents> documents) {
                 this.documents = documents;
@@ -442,10 +450,10 @@ public class GetIndexJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the job.</p>
+             * <p>The job task ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>66122af12a4e45ddae6bd6c845556647</p>
+             * <p>66122af12a4e45ddae6bd6c84555xxxx</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -453,12 +461,12 @@ public class GetIndexJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the knowledge base job. Valid values:</p>
+             * <p>The current status of the knowledge base job task. Valid values:</p>
              * <ul>
-             * <li>COMPLETED</li>
-             * <li>FAILED</li>
-             * <li>RUNNING</li>
-             * <li>PENDING</li>
+             * <li>COMPLETED: The task is executed successfully.</li>
+             * <li>FAILED: The task failed to be executed.</li>
+             * <li>RUNNING: The task is being executed.</li>
+             * <li>PENDING: The task is pending execution.</li>
              * </ul>
              * 
              * <strong>example:</strong>

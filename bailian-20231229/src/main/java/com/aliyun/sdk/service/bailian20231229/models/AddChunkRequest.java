@@ -103,6 +103,7 @@ public class AddChunkRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,6 +116,7 @@ public class AddChunkRequest extends Request {
         }
 
         /**
+         * <p>The knowledge base ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -127,7 +129,10 @@ public class AddChunkRequest extends Request {
         }
 
         /**
-         * dataId.
+         * <p>The file ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>doc_xxx</p>
          */
         public Builder dataId(String dataId) {
             this.putQueryParameter("dataId", dataId);
@@ -136,7 +141,23 @@ public class AddChunkRequest extends Request {
         }
 
         /**
-         * field.
+         * <p>The chunk content to insert, passed as key-value pairs. For document search knowledge bases, use the following fixed key list:</p>
+         * <ul>
+         * <li>content (<strong>String</strong>): <strong>Required</strong>. The body content of the chunk.</li>
+         * <li>title (<strong>String</strong>): <strong>Optional</strong>. The title of the chunk.</li>
+         * <li>image_urls (<strong>Array</strong>): <strong>Optional</strong>. Image URLs included in the chunk. A maximum of 10 images are supported.</li>
+         * </ul>
+         * <p>For data query and image Q&amp;A knowledge bases, the keys are not fixed and are determined by the data source spreadsheet of the knowledge base. The key is the Excel column header, and the value is the corresponding column value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;content&quot;: &quot;The Bailian platform supports parsing multiple document formats including PDF, Word, and PPT.&quot;,
+         *   &quot;title&quot;: &quot;Document Parsing and Chunking&quot;,
+         *   &quot;image_urls&quot;: [
+         * &quot;<a href="https://example.com/images/chunk-flow.png">https://example.com/images/chunk-flow.png</a>&quot;,
+         *   &quot;<a href="https://example.com/images/parsing-result.png">https://example.com/images/parsing-result.png</a>&quot;
+         *   ]
+         * }</p>
          */
         public Builder field(java.util.Map<String, ?> field) {
             String fieldShrink = shrink(field, "field", "json");

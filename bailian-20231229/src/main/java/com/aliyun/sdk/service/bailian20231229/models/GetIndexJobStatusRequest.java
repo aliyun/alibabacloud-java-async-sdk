@@ -118,11 +118,11 @@ public class GetIndexJobStatusRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the workspace to which the knowledge base belongs. To view the workspace ID, you can click the Workspace Details icon in the upper-left corner on the <a href="https://bailian.console.aliyun.com/#/home">homepage</a> of the console.</p>
+         * <p>The workspace ID. Make sure that the knowledge base you want to manage is in this workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2587495.html">Use workspaces</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ws_3Nt27MYcoK191ISp</p>
+         * <p>llm-3z7uw7fwz0vexxxx</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("WorkspaceId", workspaceId);
@@ -131,11 +131,11 @@ public class GetIndexJobStatusRequest extends Request {
         }
 
         /**
-         * <p>The primary key ID of the knowledge base, which is the <code>Data.Id</code> parameter returned by the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-createindex">CreateIndex</a> operation.</p>
+         * <p>The knowledge base ID, which is the Data.Id returned by the CreateIndex operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>79c0aly8zw</p>
+         * <p>79c0alxxxx</p>
          */
         public Builder indexId(String indexId) {
             this.putQueryParameter("IndexId", indexId);
@@ -144,7 +144,7 @@ public class GetIndexJobStatusRequest extends Request {
         }
 
         /**
-         * <p>The knowledge base job ID, which is the <code>Data.Id</code> parameter returned by the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-submitindexjob">SubmitIndexJob</a> or <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-submitindexadddocumentsjob">SubmitIndexAddDocumentsJob</a> operations.</p>
+         * <p>The knowledge base job task ID, which is the Data.Id returned by the SubmitIndexJob or SubmitIndexAddDocumentsJob operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,7 +157,7 @@ public class GetIndexJobStatusRequest extends Request {
         }
 
         /**
-         * <p>Both the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-submitindexjob">SubmitIndexJob</a> and <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-submitindexadddocumentsjob">SubmitIndexAddDocumentsJob</a> operations support batch import of documents. This operation returns both the overall <code>Status</code> of the job and the <code>Document.Status</code> of each document. If there are a large number of documents, you can use the <code>PageNumber</code> parameter to perform a paged query. Pages start from page 1. Default value: 1.</p>
+         * <p>Both the <strong>SubmitIndexJob</strong> and <strong>SubmitIndexAddDocumentsJob</strong> operations support batch file import. The fields returned by this operation include the overall status of the knowledge base job task (<code>Status</code>) and the import status of each file (<code>Document.Status</code>). If a large number of files are imported, you can use the <code>PageNumber</code> parameter for paging. The starting value is 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -169,7 +169,7 @@ public class GetIndexJobStatusRequest extends Request {
         }
 
         /**
-         * <p>The number of document import jobs that are displayed on each page. No maximum value. Default value: 10.</p>
+         * <p>The number of file import tasks to return on each page during paging. Maximum value: unlimited. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

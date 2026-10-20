@@ -119,7 +119,7 @@ public class SubmitIndexAddDocumentsJobResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>HTTP status code</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>Index.InvalidParameter</p>
@@ -130,7 +130,7 @@ public class SubmitIndexAddDocumentsJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The business data returned by the operation.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -152,7 +152,7 @@ public class SubmitIndexAddDocumentsJobResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>778C0B3B-03C1-5FC1-A947-36EDD13606AB</p>
+         * <p>778C0B3B-xxxx-5FC1-A947-36EDD13606AB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -160,7 +160,7 @@ public class SubmitIndexAddDocumentsJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The status code returned by the operation.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -171,10 +171,10 @@ public class SubmitIndexAddDocumentsJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indications whether the API call is successful. Valid values:</p>
+         * <p>Indicates whether the operation was successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: Successful.</li>
+         * <li>false: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -231,7 +231,7 @@ public class SubmitIndexAddDocumentsJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The primary key ID of the task, <code>JobId</code>.</p>
+             * <p>The task ID, also known as <code>JobId</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>42687eb254a34802bed398357f5498ae</p>

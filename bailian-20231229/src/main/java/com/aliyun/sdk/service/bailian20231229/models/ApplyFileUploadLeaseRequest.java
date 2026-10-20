@@ -162,11 +162,22 @@ public class ApplyFileUploadLeaseRequest extends Request {
         } 
 
         /**
-         * <p>The primary key ID of the category to which the uploaded document belongs. You can click the ID icon next to the category name on the Unstructured Data tab of the <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a> page to view the ID. You can set the parameter to default, which specifies the Default Category created by the system.</p>
+         * <p>When uploading a file for building a <a href="https://help.aliyun.com/document_detail/2807740.html">knowledge base</a>:</p>
+         * <ul>
+         * <li><p>This parameter specifies the category ID to which the uploaded file belongs, which is the <code>CategoryId</code> returned by the <strong>AddCategory</strong> operation. You can also obtain it on the &lt;props=&quot;china&quot;&gt;<a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a> - Files tab&lt;props=&quot;intl&quot;&gt;<a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">Application Data</a> - Files tab by clicking the ID icon next to the category name. You can pass in default to use the system-created &quot;Default Category&quot;.</p>
+         * <blockquote>
+         * <p>To create a new data table and upload data, use the Alibaba Cloud Model Studio console. This is not supported through the API.</p>
+         * </blockquote>
+         * <p>&lt;props=&quot;china&quot;&gt;
+         * When uploading a file for agent application <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/file-interaction">session interaction</a>:</p>
+         * </li>
+         * <li><p>Pass in default. The system performs automatic creation or matches the default category. Dynamic file category APIs and console management pages will be available in the future.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>cate_cdd11b1b79a74e8bbd675c356a91ee3510024405</p>
+         * <p>cate_cdd11b1b79a74e8bbd675c356a91ee35xxxxxxxx</p>
          */
         public Builder categoryId(String categoryId) {
             this.putPathParameter("CategoryId", categoryId);
@@ -175,11 +186,11 @@ public class ApplyFileUploadLeaseRequest extends Request {
         }
 
         /**
-         * <p>The ID of the workspace to which the uploaded document belongs. On the <a href="https://bailian.console.aliyun.com/knowledge-base#/home">homepage</a> of the console, click the workspace Details icon in the upper-left corner to view the workspace ID.</p>
+         * <p>The workspace ID to which the uploaded file belongs. For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/2587495.html">How to use a workspace</a>. The bailian 2023-12-29 version does not provide an API for listing workspaces. Obtain the workspace ID from the Model Studio console before calling this operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ws_3AXoiweeTyTd03IN</p>
+         * <p>llm-3z7uw7fwz0vexxxx</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("WorkspaceId", workspaceId);
@@ -197,7 +208,16 @@ public class ApplyFileUploadLeaseRequest extends Request {
         }
 
         /**
-         * CategoryType.
+         * <p>The category type. If this parameter is not specified, the default value is UNSTRUCTURED. Valid values:</p>
+         * <p>UNSTRUCTURED: category, used for building <a href="https://help.aliyun.com/document_detail/2807740.html">knowledge base</a> scenarios.
+         * &lt;props=&quot;china&quot;&gt;
+         * SESSION_FILE: upload a file for agent application <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/file-interaction">session interaction</a>.</p>
+         * <blockquote>
+         * <p>To create a new data table and upload data, use the Alibaba Cloud Model Studio console. This is not supported through the API.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>UNSTRUCTURED</p>
          */
         public Builder categoryType(String categoryType) {
             this.putBodyParameter("CategoryType", categoryType);
@@ -206,8 +226,40 @@ public class ApplyFileUploadLeaseRequest extends Request {
         }
 
         /**
-         * <p>The name of the uploaded document, including the extension. Supported formats: pdf, doc, docx, md, txt, ppt, and pptx. The document name must be 4 to 128 characters in length.</p>
+         * <p>When uploading a file for building a <a href="https://help.aliyun.com/document_detail/2807740.html">knowledge base</a>:</p>
+         * <ul>
+         * <li><p>This parameter specifies the name of the file to upload. The file name extension must match the file format. Supported formats:</p>
+         * <ul>
+         * <li>Documents (less than 150 MB): doc, docx, wps, ppt, pptx, xls, xlsx, md, txt, pdf, epub, mobi.</li>
+         * <li>Spreadsheets (10 MB or less recommended, 100,000 rows or less): xls, xlsx.</li>
+         * <li>Plain text (10 MB or less recommended): md, txt.</li>
+         * <li>Images (less than 20 MB, shortest side &gt; 15 px, longest side &lt; 8192 px, aspect ratio &lt; 50): png, jpg, jpeg, bmp, gif.</li>
+         * <li>Audio: aac, amr, flac, flv, m4a, mp3, mpeg, ogg, opus, wav, webm, wma.</li>
+         * <li>Video: mp4, mkv, avi, mov, wmv.</li>
+         * </ul>
+         * </li>
+         * <li><p>The file name must be 4 to 128 characters in length. For other limits, see <a href="https://help.aliyun.com/document_detail/2880605.html">Knowledge base quotas and limits</a>.</p>
+         * <blockquote>
+         * <p>To create a new data table and upload data, use the Alibaba Cloud Model Studio console. This is not supported through the API.</p>
+         * </blockquote>
+         * <p>&lt;props=&quot;china&quot;&gt;
+         * When uploading a file for agent application <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/file-interaction">session interaction</a>:</p>
+         * </li>
+         * <li><p>This parameter specifies the name of the file to upload. The file name extension must match the file format. Supported formats:</p>
+         * <ul>
+         * <li>Documents: doc, docx, wps, ppt, pptx, xls, xlsx, md, txt, pdf, epub, mobi.</li>
+         * <li>Images: png, jpg, jpeg, bmp, gif.</li>
+         * <li>Audio: aac, amr, flac, flv, m4a, mp3, mpeg, ogg, opus, wav, webm, wma.</li>
+         * <li>Video: mp4, mkv, avi, mov, wmv.</li>
+         * </ul>
+         * </li>
+         * <li><p>The file name must be 4 to 128 characters in length.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ProductList.pdf</p>
          */
         public Builder fileName(String fileName) {
             this.putBodyParameter("FileName", fileName);
@@ -216,7 +268,7 @@ public class ApplyFileUploadLeaseRequest extends Request {
         }
 
         /**
-         * <p>The MD5 value of the uploaded document. This parameter is verified by the server (not in the current version).</p>
+         * <p>The MD5 value of the file to upload. The server validates this parameter (validation is not currently enabled). Specify the correct value.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -229,7 +281,7 @@ public class ApplyFileUploadLeaseRequest extends Request {
         }
 
         /**
-         * <p>The size of the uploaded document, in bytes. This parameter is verified by the server (not in the current version). Valid values: 1 to 100000000.</p>
+         * <p>The size of the file to upload, in bytes. The server validates this parameter (validation is not currently enabled). Specify the correct value. Valid values: 1 B to 100 MB.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -242,7 +294,19 @@ public class ApplyFileUploadLeaseRequest extends Request {
         }
 
         /**
-         * UseInternalEndpoint.
+         * <p>&lt;props=&quot;china&quot;&gt;</p>
+         * <p>If you use <a href="https://www.alibabacloud.com/help/en/model-studio/configure-resources-in-private-network">Alibaba Cloud Model Studio secure storage</a> and need to generate a lease URL accessible only from the Alibaba Cloud internal network in the same region, set this parameter to true for improved security. If this parameter is not specified, the default value is false, which generates a publicly accessible lease URL.</p>
+         * <blockquote>
+         * <p>If you have not activated Alibaba Cloud Model Studio secure storage, or are unsure whether you are using it, do not set this parameter to true (the upload will fail).</p>
+         * </blockquote>
+         * <p>&lt;props=&quot;intl&quot;&gt;</p>
+         * <p>If you use Alibaba Cloud Model Studio secure storage and need to generate a lease URL accessible only from the Alibaba Cloud internal network in the same region, set this parameter to true for improved security. If this parameter is not specified, the default value is false, which generates a publicly accessible lease URL.</p>
+         * <blockquote>
+         * <p>If you have not activated Alibaba Cloud Model Studio secure storage, or are unsure whether you are using it, do not set this parameter to true (the upload will fail).</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder useInternalEndpoint(Boolean useInternalEndpoint) {
             this.putBodyParameter("UseInternalEndpoint", useInternalEndpoint);

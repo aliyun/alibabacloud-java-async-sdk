@@ -145,11 +145,11 @@ public class ListFileRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the workspace to which the category belongs. To view the workspace ID, click the Workspace Details icon in the upper-left corner on the <a href="https://bailian.console.alibabacloud.com/#/home">homepage</a> of the console.</p>
+         * <p>The ID of the workspace to which the category belongs. For more information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/2587495.html">How to use a workspace</a>. The bailian 2023-12-29 version does not provide an API for listing workspaces. Obtain the workspace ID from the Model Studio console before calling this operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ws_3Nt27MYcoK191ISp</p>
+         * <p>llm-3shx2gu255oqxxxx</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("WorkspaceId", workspaceId);
@@ -167,11 +167,14 @@ public class ListFileRequest extends Request {
         }
 
         /**
-         * <p>The category ID, which is the <code>CategoryId</code> returned by the <a href="~~AddCategory~~">AddCategory</a> operation. To view the category ID, click the ID icon next to the category name on the Unstructured Data tab of the <a href="https://bailian.console.alibabacloud.com/#/data-center">Data Management</a> page.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;</p>
+         * <p>The category ID, which is the <code>CategoryId</code> returned by the <strong>AddCategory</strong> operation. You can also obtain it on the <a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a> page by clicking the Files tab and then clicking the ID icon next to the category name.</p>
+         * <p>&lt;props=&quot;intl&quot;&gt;</p>
+         * <p>The category ID, which is the <code>CategoryId</code> returned by the <strong>AddCategory</strong> operation. You can also obtain it on the <a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">Application Data</a> page by clicking the Files tab and then clicking the ID icon next to the category name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>cate_cdd11b1b79a74e8bbd675c356a91ee3510024405</p>
+         * <p>cate_cdd11b1b79a74e8bbd675c356a91ee35xxxxxxxx</p>
          */
         public Builder categoryId(String categoryId) {
             this.putQueryParameter("CategoryId", categoryId);
@@ -180,7 +183,7 @@ public class ListFileRequest extends Request {
         }
 
         /**
-         * FileIds.
+         * <p>The list of file IDs to query. A maximum of 20 files can be queried in a single request.</p>
          */
         public Builder fileIds(java.util.List<String> fileIds) {
             String fileIdsShrink = shrink(fileIds, "FileIds", "json");
@@ -190,7 +193,10 @@ public class ListFileRequest extends Request {
         }
 
         /**
-         * FileName.
+         * <p>The file name (without the extension). Only exact match is supported. Fuzzy search is not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>product-overview</p>
          */
         public Builder fileName(String fileName) {
             this.putQueryParameter("FileName", fileName);
@@ -199,7 +205,12 @@ public class ListFileRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page for a paged query. Valid values: 1 to 200.</p>
+         * <p>Default value:
+         * If the value is not set or is less than 1, the default value is 20. If the value is greater than 200, the default value is 200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -208,7 +219,10 @@ public class ListFileRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdH70eOCSCKtacdomNzak4U=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);

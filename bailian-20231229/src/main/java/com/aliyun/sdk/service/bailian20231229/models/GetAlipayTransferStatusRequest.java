@@ -73,7 +73,10 @@ public class GetAlipayTransferStatusRequest extends Request {
         } 
 
         /**
-         * code.
+         * <p>The tipping code returned by the Alipay tipping link request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx-xxxx</p>
          */
         public Builder code(String code) {
             this.putQueryParameter("code", code);
@@ -82,7 +85,10 @@ public class GetAlipayTransferStatusRequest extends Request {
         }
 
         /**
-         * workspace_id.
+         * <p>The Bailian workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm-cxxxxxxb8d47ks</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("workspace_id", workspaceId);

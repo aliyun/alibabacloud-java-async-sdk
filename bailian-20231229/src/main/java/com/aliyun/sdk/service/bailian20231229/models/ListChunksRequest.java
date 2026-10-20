@@ -145,11 +145,11 @@ public class ListChunksRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the workspace to which the knowledge base belongs. To view the workspace ID, you can click the Workspace Details icon in the upper-left corner on the <a href="https://bailian.console.aliyun.com/#/home">homepage</a> of the console.</p>
+         * <p>The workspace ID of the knowledge base. For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/2587495.html">How to use a workspace</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ws_3AXoiweeTyTd03IN</p>
+         * <p>llm-3z7uw7fwz0vxxxx</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("WorkspaceId", workspaceId);
@@ -158,7 +158,8 @@ public class ListChunksRequest extends Request {
         }
 
         /**
-         * <p>An array of field names. This parameter is used to filter non-private fields (prefixed with_underscores) in the Metadata parameter returned by this operation. By default, this parameter is left empty, which means all non-private fields in the Metadata parameter are returned. If you only want specified non-private fields, such as title, set this parameter to title.</p>
+         * <p>An array of field names used to filter non-private fields (those not prefixed with an underscore _) in the Metadata field returned by this operation. By default, Fields is empty, and all non-private fields in Metadata are returned. To return only specific non-private fields in Metadata, such as title, pass title in this parameter.</p>
+         * <p>Default value: empty.</p>
          */
         public Builder fields(java.util.List<String> fields) {
             this.putBodyParameter("Fields", fields);
@@ -167,7 +168,15 @@ public class ListChunksRequest extends Request {
         }
 
         /**
-         * FileId.
+         * <p>&lt;props=&quot;china&quot;&gt;</p>
+         * <p>The file ID, which is the <code>FileId</code> returned by the <strong>AddFile</strong> operation. This field is not required for data query or image Q&amp;A knowledge bases. This field is required for document search or audio/video search knowledge bases. You can also obtain the file ID by clicking the ID icon next to the file name on the Files tab of <a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a>. You can use the file ID to filter the returned chunks. Default value: empty.</p>
+         * <p>&lt;props=&quot;intl&quot;&gt;</p>
+         * <p>The file ID, which is the <code>FileId</code> returned by the <strong>AddFile</strong> operation. This field is not required for data query or image Q&amp;A knowledge bases. This field is required for document search knowledge bases. You can also obtain the file ID by clicking the ID icon next to the file name on the Files tab of
+         * <a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">Application Data</a>. You can use the file ID to filter the returned chunks. Default value: empty.</p>
+         * <p>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>file_5f03dfea56da4050ab68d61871fc4cb3_xxxxxxxx</p>
          */
         public Builder fileId(String fileId) {
             this.putBodyParameter("FileId", fileId);
@@ -176,10 +185,23 @@ public class ListChunksRequest extends Request {
         }
 
         /**
-         * <p>The primary key ID of the document. This parameter is not required for structured knowledge base, but is required for unstructured knowledge base. To view the ID, you can click the ID icon next to the file name on the <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a> page. You can filter returned chunks by the document ID. This parameter is left empty by default.</p>
+         * <p>The file ID field in the legacy Model Studio SDK. The usage and default value are identical to those of the <code>FileId</code> field. If you are using the following versions (or later) of the Model Studio SDK, use the <code>FileId</code> field instead. If you are using the SWIFT Model Studio SDK, continue to use this field.</p>
+         * <ul>
+         * <li>Java (async): 1.0.18</li>
+         * <li>Java: 1.10.2</li>
+         * <li>TypeScript: 1.10.2</li>
+         * <li>Go: 1.10.2</li>
+         * <li>PHP: 1.10.2</li>
+         * <li>Python: 1.10.2</li>
+         * <li>C#: 1.10.2</li>
+         * <li>C++: 1.10.17</li>
+         * </ul>
+         * <blockquote>
+         * <p><strong>How to check the Model Studio SDK version</strong>: Visit the &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Model Studio SDK center</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Model Studio SDK center</a>, click &quot;<strong>Install</strong>&quot; in the left-side navigation pane, set the API version to &quot;<strong>2023-12-29</strong>&quot;, select your programming language, and then click &quot;<strong>History Versions</strong>&quot; to view the version.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>file_5f03dfea56da4050ab68d61871fc4cb3_10151493</p>
+         * <p>file_5f03dfea56da4050ab68d61871fc4cb3_xxxxxxxx</p>
          */
         public Builder filed(String filed) {
             this.putBodyParameter("Filed", filed);
@@ -188,11 +210,11 @@ public class ListChunksRequest extends Request {
         }
 
         /**
-         * <p>The primary key ID of the knowledge base, which is the <code>Data.Id</code> parameter returned by the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-createindex">CreateIndex</a> operation.</p>
+         * <p>The knowledge base ID, which is the <code>Data.Id</code> returned by the <strong>CreateIndex</strong> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>otoru9en4v</p>
+         * <p>otoru9xxxx</p>
          */
         public Builder indexId(String indexId) {
             this.putBodyParameter("IndexId", indexId);
@@ -201,7 +223,7 @@ public class ListChunksRequest extends Request {
         }
 
         /**
-         * <p>The number of the pages to return. Pages start from page 1. Default value: 1.</p>
+         * <p>The page number to query. Minimum value: 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -213,7 +235,7 @@ public class ListChunksRequest extends Request {
         }
 
         /**
-         * <p>The number of chunks to display on each page. Maximum value: 100. Default value: 10.</p>
+         * <p>The number of text chunks to display per page in a paged query. Maximum value: 100. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

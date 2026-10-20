@@ -89,10 +89,11 @@ public class DeleteFileRequest extends Request {
         } 
 
         /**
+         * <p>The file ID, which is the <code>FileId</code> returned by the <strong>AddFile</strong> operation. The value is 32 to 128 characters in length. You can also obtain the file ID on the &lt;props=&quot;china&quot;&gt;<a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a>&lt;props=&quot;intl&quot;&gt;<a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">Application Data</a> page by clicking the ID icon next to the file name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>file_9a65732555b54d5ea10796ca5742ba22_XXXXXXXX</p>
+         * <p>file_9a65732555b54d5ea10796ca5742ba22_xxxxxxxx</p>
          */
         public Builder fileId(String fileId) {
             this.putPathParameter("FileId", fileId);
@@ -101,10 +102,11 @@ public class DeleteFileRequest extends Request {
         }
 
         /**
+         * <p>The workspace ID to which the file belongs. For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/2587495.html">How to use a workspace</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ws_3Nt27MYcoK191ISp</p>
+         * <p>llm-3shx2gu255oxxxx</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("WorkspaceId", workspaceId);

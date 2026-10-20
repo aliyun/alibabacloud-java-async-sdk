@@ -144,6 +144,7 @@ public class ListIndexFileDetailsRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID to which the knowledge base belongs. For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/2587495.html">How to use a workspace</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,7 +157,10 @@ public class ListIndexFileDetailsRequest extends Request {
         }
 
         /**
-         * DocumentName.
+         * <p>Filters the returned file details list by file name. Default value: empty, which means no filtering by file name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TranslationPlatformO&amp;MDocument.</p>
          */
         public Builder documentName(String documentName) {
             this.putQueryParameter("DocumentName", documentName);
@@ -165,7 +169,19 @@ public class ListIndexFileDetailsRequest extends Request {
         }
 
         /**
-         * DocumentStatus.
+         * <p>Filters the returned file list by file import status. Valid values:</p>
+         * <ul>
+         * <li>INSERT_ERROR: Import to index failed.</li>
+         * <li>RUNNING: Index building in progress.</li>
+         * <li>DELETED: Deleted.</li>
+         * <li>FINISH: Index building succeeded.</li>
+         * <li>PARSE_FAILED: Parsing failed.</li>
+         * <li>DOC_PARSING: Parsing in progress.</li>
+         * </ul>
+         * <p>Default value: empty, which means no filtering by file import status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FINISH</p>
          */
         public Builder documentStatus(String documentStatus) {
             this.putQueryParameter("DocumentStatus", documentStatus);
@@ -174,7 +190,15 @@ public class ListIndexFileDetailsRequest extends Request {
         }
 
         /**
-         * EnableNameLike.
+         * <p>Specifies whether to enable fuzzy matching for file names. This parameter is used together with the <code>DocumentName</code> parameter. Valid values:</p>
+         * <ul>
+         * <li>true: Performs fuzzy matching on the returned file list based on the file name.</li>
+         * <li>false: Performs exact matching on the returned file list based on the file name.</li>
+         * </ul>
+         * <p>Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableNameLike(String enableNameLike) {
             this.putQueryParameter("EnableNameLike", enableNameLike);
@@ -183,7 +207,10 @@ public class ListIndexFileDetailsRequest extends Request {
         }
 
         /**
-         * IndexId.
+         * <p>The knowledge base ID, which is the <code>Data.Id</code> returned by the <strong>CreateIndex</strong> operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>79c0alxxxx</p>
          */
         public Builder indexId(String indexId) {
             this.putQueryParameter("IndexId", indexId);
@@ -192,7 +219,10 @@ public class ListIndexFileDetailsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number to query. Minimum value: 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -201,7 +231,10 @@ public class ListIndexFileDetailsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of files to display per page in a paging query. Maximum value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

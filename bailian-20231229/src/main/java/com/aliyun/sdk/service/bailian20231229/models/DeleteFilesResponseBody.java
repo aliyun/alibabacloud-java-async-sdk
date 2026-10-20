@@ -119,7 +119,10 @@ public class DeleteFilesResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DataCenter.FileTooLarge</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class DeleteFilesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class DeleteFilesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Required parameter(%s) missing or invalid, please check the request parameters.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -154,7 +160,10 @@ public class DeleteFilesResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status code returned by the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -162,7 +171,14 @@ public class DeleteFilesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The call was successful.</li>
+         * <li>false: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -228,7 +244,10 @@ public class DeleteFilesResponseBody extends TeaModel {
             } 
 
             /**
-             * FileId.
+             * <p>The file ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>file_6b193b9b4b1546ef9eaa7340e69adfca_10052857</p>
              */
             public Builder fileId(String fileId) {
                 this.fileId = fileId;
@@ -236,7 +255,15 @@ public class DeleteFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The file deletion status. Valid values:</p>
+             * <ul>
+             * <li>DELETED: The file was deleted.</li>
+             * <li>FAILED: The file failed to be deleted.</li>
+             * <li>NOT_FOUND: The file was not found.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>DELETED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -290,7 +317,7 @@ public class DeleteFilesResponseBody extends TeaModel {
             } 
 
             /**
-             * DeleteFileResultList.
+             * <p>The deletion results.</p>
              */
             public Builder deleteFileResultList(java.util.List<DeleteFileResultList> deleteFileResultList) {
                 this.deleteFileResultList = deleteFileResultList;

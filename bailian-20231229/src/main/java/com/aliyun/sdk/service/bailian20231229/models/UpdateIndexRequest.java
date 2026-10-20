@@ -176,6 +176,7 @@ public class UpdateIndexRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -188,7 +189,12 @@ public class UpdateIndexRequest extends Request {
         }
 
         /**
-         * DenseSimilarityTopK.
+         * <p>The top K value for AISearch. The system generates a vector for the input text and retrieves the K text chunks with the most similar vector representations from the knowledge base. Valid values: 0 to 100.
+         * The sum of <code>DenseSimilarityTopK</code> and <code>SparseSimilarityTopK</code> must be less than or equal to 200.</p>
+         * <p>Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder denseSimilarityTopK(Integer denseSimilarityTopK) {
             this.putQueryParameter("DenseSimilarityTopK", denseSimilarityTopK);
@@ -197,7 +203,10 @@ public class UpdateIndexRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The knowledge base description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Enterprise knowledge base</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -206,6 +215,7 @@ public class UpdateIndexRequest extends Request {
         }
 
         /**
+         * <p>The knowledge base ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -218,7 +228,10 @@ public class UpdateIndexRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The knowledge base name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Enterprise help documentation library</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -227,7 +240,11 @@ public class UpdateIndexRequest extends Request {
         }
 
         /**
-         * PipelineCommercialCu.
+         * <p>The number of RCUs for an Ultimate Edition knowledge base. This parameter is required only when pipelineCommercialType is set to enterprise.</p>
+         * <p>Valid values: 1 to 200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder pipelineCommercialCu(Integer pipelineCommercialCu) {
             this.putQueryParameter("PipelineCommercialCu", pipelineCommercialCu);
@@ -236,7 +253,16 @@ public class UpdateIndexRequest extends Request {
         }
 
         /**
-         * PipelineCommercialType.
+         * <p>The specification type of the knowledge base. Valid values:</p>
+         * <ul>
+         * <li><p>standard: Standard Edition.</p>
+         * </li>
+         * <li><p>enterprise: Ultimate Edition.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>standard</p>
          */
         public Builder pipelineCommercialType(String pipelineCommercialType) {
             this.putQueryParameter("PipelineCommercialType", pipelineCommercialType);
@@ -245,7 +271,10 @@ public class UpdateIndexRequest extends Request {
         }
 
         /**
-         * RerankMinScore.
+         * <p>The minimum reranking score. Valid values: 0 to 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.01</p>
          */
         public Builder rerankMinScore(String rerankMinScore) {
             this.putQueryParameter("RerankMinScore", rerankMinScore);
@@ -254,7 +283,13 @@ public class UpdateIndexRequest extends Request {
         }
 
         /**
-         * SparseSimilarityTopK.
+         * <p>The top K value for keyword retrieval. The system retrieves text chunks in the knowledge base that are an exact match for the keywords of the input text. This helps filter out irrelevant text chunks and provides more accurate results.
+         * Valid values: 0 to 100.
+         * The sum of <code>DenseSimilarityTopK</code> and <code>SparseSimilarityTopK</code> must be less than or equal to 200.</p>
+         * <p>Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder sparseSimilarityTopK(Integer sparseSimilarityTopK) {
             this.putQueryParameter("SparseSimilarityTopK", sparseSimilarityTopK);

@@ -119,7 +119,7 @@ public class ListIndicesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>HTTP status code</p>
+         * <p>The error status code.</p>
          * 
          * <strong>example:</strong>
          * <p>Index.InvalidParameter</p>
@@ -160,7 +160,7 @@ public class ListIndicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The status code returned by the operation.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -171,10 +171,10 @@ public class ListIndicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indications whether the API call is successful. Valid values:</p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: Successful.</li>
+         * <li>false: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -270,7 +270,10 @@ public class ListIndicesResponseBody extends TeaModel {
             } 
 
             /**
-             * IsRecall.
+             * <p>Specifies whether this field participates in model responses. A value of <strong>true</strong> indicates that the retrieval results of this column are used as input for the large language model to generate answers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isRecall(Boolean isRecall) {
                 this.isRecall = isRecall;
@@ -278,7 +281,10 @@ public class ListIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * IsSearch.
+             * <p>Specifies whether this field participates in knowledge base retrieval. A value of <strong>true</strong> indicates that the knowledge base can search within the data of this column.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isSearch(Boolean isSearch) {
                 this.isSearch = isSearch;
@@ -286,7 +292,10 @@ public class ListIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the index field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -294,7 +303,10 @@ public class ListIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the index field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>string</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -608,7 +620,7 @@ public class ListIndicesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The estimated length of chunks. Valid values: [1-2048].</p>
+             * <p>The estimated chunk size. Valid value range: [1-2048].</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -619,7 +631,14 @@ public class ListIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * ConfgModel.
+             * <p>The configuration mode used by this knowledge base. Valid values:</p>
+             * <ul>
+             * <li>recommend: recommended configuration.</li>
+             * <li>user-defined: custom configuration.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>recommend</p>
              */
             public Builder confgModel(String confgModel) {
                 this.confgModel = confgModel;
@@ -630,7 +649,7 @@ public class ListIndicesResponseBody extends TeaModel {
              * <p>The description of the knowledge base.</p>
              * 
              * <strong>example:</strong>
-             * <p>If each RAM user belongs to a RAM group, the configuration is considered compliant.</p>
+             * <p>Products in this catalog are mainly for overseas customers</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -638,7 +657,7 @@ public class ListIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of the primary key IDs of the documents.</p>
+             * <p>The list of file IDs.</p>
              */
             public Builder documentIds(java.util.List<String> documentIds) {
                 this.documentIds = documentIds;
@@ -647,12 +666,19 @@ public class ListIndicesResponseBody extends TeaModel {
 
             /**
              * <p>The name of the embedding model. Valid values:</p>
+             * <p>&lt;props=&quot;china&quot;&gt;</p>
              * <ul>
-             * <li>text-embedding-v2</li>
+             * <li>text-embedding-v4: text-embedding-v4 model.</li>
+             * <li>text-embedding-v3: text-embedding-v3 model.</li>
+             * <li>text-embedding-v2: text-embedding-v2 model.</li>
+             * </ul>
+             * <p>&lt;props=&quot;intl&quot;&gt;</p>
+             * <ul>
+             * <li>text-embedding-v2: text-embedding-v2 model.</li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>conv-rewrite-qwen-1.8b</p>
+             * <p>text-embedding-v2</p>
              */
             public Builder embeddingModelName(String embeddingModelName) {
                 this.embeddingModelName = embeddingModelName;
@@ -660,7 +686,14 @@ public class ListIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * EnableRewrite.
+             * <p>Indicates whether &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/model-studio/use-cases/rag-optimization#b7031e2ad6cji">multi-turn conversation rewriting</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/model-studio/use-cases/rag-optimization#b7031e2ad6cji">multi-turn conversation rewriting</a> is enabled for this knowledge base. Valid values:</p>
+             * <ul>
+             * <li>true: Enabled.</li>
+             * <li>false: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableRewrite(Boolean enableRewrite) {
                 this.enableRewrite = enableRewrite;
@@ -668,10 +701,10 @@ public class ListIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The primary key ID of the knowledge base, which is the <code>Data.Id</code> parameter returned by the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-createindex">CreateIndex</a> operation.</p>
+             * <p>The knowledge base ID, which is the <code>Data.Id</code> returned by the <strong>CreateIndex</strong> operation.</p>
              * 
              * <strong>example:</strong>
-             * <p>259899</p>
+             * <p>lecxr5xxxx</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -682,7 +715,7 @@ public class ListIndicesResponseBody extends TeaModel {
              * <p>The name of the knowledge base.</p>
              * 
              * <strong>example:</strong>
-             * <p>temp_mUB4j</p>
+             * <p>Product Catalog</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -690,7 +723,7 @@ public class ListIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The overlap length. Valid values: [0-1024].</p>
+             * <p>The chunk overlap size. Valid value range: [0-1024].</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -701,7 +734,10 @@ public class ListIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * PipelineCommercialCu.
+             * <p>The compute unit (CU) specification of the commercial knowledge base. This parameter is valid only for Enterprise Edition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pipelineCommercialCu(Integer pipelineCommercialCu) {
                 this.pipelineCommercialCu = pipelineCommercialCu;
@@ -709,7 +745,10 @@ public class ListIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * PipelineCommercialType.
+             * <p>The commercial knowledge base edition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>standard</p>
              */
             public Builder pipelineCommercialType(String pipelineCommercialType) {
                 this.pipelineCommercialType = pipelineCommercialType;
@@ -717,7 +756,10 @@ public class ListIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * PipelineStorageUsage.
+             * <p>The storage usage of the knowledge base. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.03</p>
              */
             public Builder pipelineStorageUsage(Double pipelineStorageUsage) {
                 this.pipelineStorageUsage = pipelineStorageUsage;
@@ -725,7 +767,7 @@ public class ListIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Similarity Threshold Valid values: [0.01-1.00].</p>
+             * <p>The similarity threshold. Valid value range: [0.01-1.00].</p>
              * 
              * <strong>example:</strong>
              * <p>0.01</p>
@@ -736,10 +778,18 @@ public class ListIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the rank model. Valid values:</p>
+             * <p>The name of the rerank model. Valid values:</p>
+             * <p>&lt;props=&quot;china&quot;&gt;</p>
              * <ul>
-             * <li>gte-rerank-hybrid</li>
-             * <li>gte-rerank</li>
+             * <li>qwen3-rerank-hybrid: qwen3-rerank (hybrid) reranking.</li>
+             * <li>qwen3-rerank: qwen3-rerank reranking.</li>
+             * <li>gte-rerank-hybrid: gte-rerank (hybrid) reranking.</li>
+             * <li>gte-rerank: gte-rerank reranking.</li>
+             * </ul>
+             * <p>&lt;props=&quot;intl&quot;&gt;</p>
+             * <ul>
+             * <li>gte-rerank-hybrid: official reranking.</li>
+             * <li>gte-rerank: gte-rerank reranking.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -751,18 +801,19 @@ public class ListIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The clause identifier. Separate multiple clause identifiers with |. Valid values:</p>
+             * <p>The sentence separator. If multiple separators are used, they are separated by |. Valid values:</p>
              * <ul>
-             * <li>\n: line break</li>
+             * <li>\
+             * : line break</li>
              * <li>，: Chinese comma</li>
              * <li>,: English comma</li>
-             * <li>。 : Chinese full stop</li>
-             * <li>.: English full stop</li>
-             * <li>！ : Chinese exclamation point</li>
-             * <li>! : English exclamation point</li>
+             * <li>。: Chinese period</li>
+             * <li>.: English period</li>
+             * <li>！: Chinese exclamation mark</li>
+             * <li>!: English exclamation mark</li>
              * <li>；: Chinese semicolon</li>
              * <li>;: English semicolon</li>
-             * <li>？ : Chinese question mark</li>
+             * <li>？: Chinese question mark</li>
              * <li>?: English question mark</li>
              * </ul>
              * 
@@ -775,10 +826,10 @@ public class ListIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the vector storage instance.</p>
+             * <p>The instance ID of the vector storage for the knowledge base.</p>
              * 
              * <strong>example:</strong>
-             * <p>gp-bp1gq62t1788yw2ol</p>
+             * <p>gp-bp1gq62t1788yxxxx</p>
              */
             public Builder sinkInstanceId(String sinkInstanceId) {
                 this.sinkInstanceId = sinkInstanceId;
@@ -786,7 +837,7 @@ public class ListIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region of the vector storage instance.</p>
+             * <p>The region of the vector storage instance for the knowledge base.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -799,13 +850,13 @@ public class ListIndicesResponseBody extends TeaModel {
             /**
              * <p>The vector storage type of the knowledge base. Valid values:</p>
              * <ul>
-             * <li>ES: Built-in vector database.</li>
-             * <li>BUILT_IN: Built-in vector database.</li>
+             * <li>ES: built-in vector database.</li>
+             * <li>BUILT_IN: built-in vector database.</li>
              * <li>ADB: AnalyticDB for PostgreSQL database.</li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>es</p>
+             * <p>BUILT_IN</p>
              */
             public Builder sinkType(String sinkType) {
                 this.sinkType = sinkType;
@@ -813,14 +864,15 @@ public class ListIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data type of <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a>. For unstructured knowledge base, possible values:</p>
+             * <p>The data type in Alibaba Cloud Model Studio &lt;props=&quot;china&quot;&gt;<a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a>&lt;props=&quot;intl&quot;&gt;<a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">Application Data</a>.</p>
+             * <p>For document search&lt;props=&quot;china&quot;&gt;/audio and video search knowledge bases, valid values:</p>
              * <ul>
-             * <li>DATA_CENTER_CATEGORY: The category type.</li>
-             * <li>DATA_CENTER_FILE: The document type.</li>
+             * <li>DATA_CENTER_CATEGORY: category type.</li>
+             * <li>DATA_CENTER_FILE: file type.</li>
              * </ul>
-             * <p>For structured knowledge base, possible values:</p>
+             * <p>For data query/image Q&amp;A knowledge bases, valid values:</p>
              * <ul>
-             * <li>DATA_CENTER_STRUCTURED_TABLE: The data table type.</li>
+             * <li>DATA_CENTER_STRUCTURED_TABLE: data table type.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -832,13 +884,13 @@ public class ListIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The vector storage type of the knowledge base. Valid values:</p>
+             * <p>The type of the knowledge base. Valid values:</p>
              * <ul>
-             * <li>UNSTRUCTURED</li>
+             * <li>UNSTRUCTURED: document search.</li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>structured</p>
+             * <p>UNSTRUCTURED</p>
              */
             public Builder structureType(String structureType) {
                 this.structureType = structureType;
@@ -846,7 +898,7 @@ public class ListIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * StructuredIndexConfig.
+             * <p>The index configuration for data query or image Q&amp;A knowledge bases.</p>
              */
             public Builder structuredIndexConfig(java.util.List<StructuredIndexConfig> structuredIndexConfig) {
                 this.structuredIndexConfig = structuredIndexConfig;
@@ -947,7 +999,7 @@ public class ListIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The specified page number.</p>
+             * <p>The page number returned.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -958,7 +1010,7 @@ public class ListIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The specified number of documents on each page.</p>
+             * <p>The number of entries per page returned.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -969,7 +1021,7 @@ public class ListIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of knowledge bases returned.</p>
+             * <p>The total number of entries returned.</p>
              * 
              * <strong>example:</strong>
              * <p>48</p>

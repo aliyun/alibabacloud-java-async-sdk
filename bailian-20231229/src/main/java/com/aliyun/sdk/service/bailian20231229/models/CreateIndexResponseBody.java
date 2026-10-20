@@ -119,7 +119,7 @@ public class CreateIndexResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code.</p>
+         * <p>The error status code.</p>
          * 
          * <strong>example:</strong>
          * <p>Forbidden</p>
@@ -130,7 +130,7 @@ public class CreateIndexResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned if the request is successful.</p>
+         * <p>The business data returned when the request is successful.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -152,7 +152,7 @@ public class CreateIndexResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>17204B98-7734-4F9A-8464-2446A84821CA</p>
+         * <p>17204B98-xxxx-4F9A--2446A84821CA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -160,10 +160,10 @@ public class CreateIndexResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status code.</p>
+         * <p>The status code returned by the API.</p>
          * 
          * <strong>example:</strong>
-         * <p>200</p>
+         * <p>&quot;200&quot;</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -171,10 +171,10 @@ public class CreateIndexResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indications whether the request is successful. Valid values:</p>
+         * <p>Specifies whether the request is successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: The request is successful.</li>
+         * <li>false: The request fails.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -231,13 +231,13 @@ public class CreateIndexResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The knowledge base ID, or <code>IndexId</code>, is a unique identifier for the knowledge base created.</p>
+             * <p>The knowledge base ID, also known as <code>IndexId</code>, which is the unique identifier of the created knowledge base.</p>
              * <blockquote>
-             * <p>Keep this ID. It is required for all subsequent API operations related to this knowledge base.</p>
+             * <p>Keep this value secure because it is required for all subsequent API operations related to this knowledge base.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
-             * <p>jkurxhju6b</p>
+             * <p>jkurxhxxxx</p>
              */
             public Builder id(String id) {
                 this.id = id;

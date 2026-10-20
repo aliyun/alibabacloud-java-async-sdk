@@ -119,7 +119,10 @@ public class AddFilesFromAuthorizedOssResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class AddFilesFromAuthorizedOssResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The business data field of the operation.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class AddFilesFromAuthorizedOssResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Cant find out category for category_id param.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +149,7 @@ public class AddFilesFromAuthorizedOssResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>17204B98-xxxx-4F9A-8464-2446A84821CA</p>
@@ -154,7 +160,10 @@ public class AddFilesFromAuthorizedOssResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status code returned by the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -162,7 +171,14 @@ public class AddFilesFromAuthorizedOssResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the operation is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The operation is successful.</li>
+         * <li>false: The operation fails.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -254,7 +270,10 @@ public class AddFilesFromAuthorizedOssResponseBody extends TeaModel {
             } 
 
             /**
-             * FileId.
+             * <p>The file ID. Keep this value secure because it is used for all subsequent API operations related to this file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>file_809f469a59ac449586ec692576xxxxx_102248XXX</p>
              */
             public Builder fileId(String fileId) {
                 this.fileId = fileId;
@@ -262,7 +281,10 @@ public class AddFilesFromAuthorizedOssResponseBody extends TeaModel {
             }
 
             /**
-             * Msg.
+             * <p>The error message returned when the file fails to be imported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>size too large</p>
              */
             public Builder msg(String msg) {
                 this.msg = msg;
@@ -270,7 +292,10 @@ public class AddFilesFromAuthorizedOssResponseBody extends TeaModel {
             }
 
             /**
-             * OssKey.
+             * <p>The key of the imported file in the OSS bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root/path/this_is_temp_xxxx.pdf</p>
              */
             public Builder ossKey(String ossKey) {
                 this.ossKey = ossKey;
@@ -278,7 +303,17 @@ public class AddFilesFromAuthorizedOssResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The file import status. Valid values:</p>
+             * <ul>
+             * <li>SUCCESS: The application data is imported.</li>
+             * <li>FAILED: The application data fails to be imported.</li>
+             * </ul>
+             * <blockquote>
+             * <p>Only files whose status is SUCCESS can be used to create or update knowledge bases.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -332,7 +367,7 @@ public class AddFilesFromAuthorizedOssResponseBody extends TeaModel {
             } 
 
             /**
-             * AddFileResultList.
+             * <p>The list of file import results.</p>
              */
             public Builder addFileResultList(java.util.List<AddFileResultList> addFileResultList) {
                 this.addFileResultList = addFileResultList;

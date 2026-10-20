@@ -119,7 +119,10 @@ public class ListMemoriesResponseBody extends TeaModel {
         } 
 
         /**
-         * maxResults.
+         * <p>The number of long-term memory entities per page in a paged query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -127,7 +130,7 @@ public class ListMemoriesResponseBody extends TeaModel {
         }
 
         /**
-         * memories.
+         * <p>The list of long-term memory entities.</p>
          */
         public Builder memories(java.util.List<Memories> memories) {
             this.memories = memories;
@@ -135,7 +138,10 @@ public class ListMemoriesResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token returned in this call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dc270401186b433f975d7e1faaa3xxxx</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -143,7 +149,10 @@ public class ListMemoriesResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6a71f2d9-f1c9-913b-818b-11402910xxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +160,10 @@ public class ListMemoriesResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>105</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -159,7 +171,10 @@ public class ListMemoriesResponseBody extends TeaModel {
         }
 
         /**
-         * workspaceId.
+         * <p>The workspace ID to which the long-term memory list belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm-3z7uw7fwz0vexxxx</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = workspaceId;
@@ -225,7 +240,10 @@ public class ListMemoriesResponseBody extends TeaModel {
             } 
 
             /**
-             * description.
+             * <p>The description of the long-term memory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Long-term memory of user A for my large model application $APP_ID</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -233,7 +251,10 @@ public class ListMemoriesResponseBody extends TeaModel {
             }
 
             /**
-             * memoryId.
+             * <p>The long-term memory ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3fc531f4519444beaafffa4538f6xxxx</p>
              */
             public Builder memoryId(String memoryId) {
                 this.memoryId = memoryId;

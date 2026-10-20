@@ -89,6 +89,7 @@ public class DeleteConnectorRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID of the data connector. Obtain this from the Model Studio console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +102,7 @@ public class DeleteConnectorRequest extends Request {
         }
 
         /**
+         * <p>The workspace ID where the knowledge base resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -67,7 +67,7 @@ public class GetAlipayUrlResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class GetAlipayUrlResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The unique ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6a71f2d9-f1c9-913b-818b-11402910xxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,10 @@ public class GetAlipayUrlResponseBody extends TeaModel {
             } 
 
             /**
-             * code.
+             * <p>The tipping code used to query the tipping status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxsdfasfw</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -149,7 +155,10 @@ public class GetAlipayUrlResponseBody extends TeaModel {
             }
 
             /**
-             * qrUrl.
+             * <p>The generated tipping URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://xxxxxx.aliyun-inc.com">https://xxxxxx.aliyun-inc.com</a></p>
              */
             public Builder qrUrl(String qrUrl) {
                 this.qrUrl = qrUrl;

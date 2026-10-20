@@ -88,10 +88,11 @@ public class CreateMemoryRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the workspace to which the long-term memory belongs. For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/2587495.html">How to use a workspace</a>. The bailian 2023-12-29 version does not provide an API for listing workspaces. Obtain the workspace ID from the Model Studio console before calling this operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>llm-us9hjmt32nysdm5v</p>
+         * <p>llm-3z7uw7fwz0vexxxx</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -109,7 +110,10 @@ public class CreateMemoryRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>The description of the long-term memory. The description is empty by default. The value must be 1 to 50 characters in length and can contain characters in the letter category of Unicode, which includes letters, Chinese characters, and digits. The value can also contain colons (:), underscores (_), periods (.), and hyphens (-).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Long-term memory of user A for my LLM application $APP_ID</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("description", description);

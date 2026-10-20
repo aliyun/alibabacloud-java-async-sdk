@@ -119,7 +119,7 @@ public class ChangeParseSettingResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>InvalidParameter</p>
@@ -130,7 +130,7 @@ public class ChangeParseSettingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data fields.</p>
+         * <p>The business data returned when the request is successful.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -160,7 +160,7 @@ public class ChangeParseSettingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The status code returned by the operation.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -171,10 +171,10 @@ public class ChangeParseSettingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call is successful. Valid values:</p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: Successful.</li>
+         * <li>false: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -231,7 +231,11 @@ public class ChangeParseSettingResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The result of the modification.</p>
+             * <p>Indicates whether the configuration was changed.</p>
+             * <ul>
+             * <li>true: The configuration was updated.</li>
+             * <li>false: The configuration was not changed. The modification failed.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>true</p>

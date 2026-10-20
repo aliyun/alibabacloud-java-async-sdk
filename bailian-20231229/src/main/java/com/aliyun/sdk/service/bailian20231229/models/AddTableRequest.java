@@ -143,6 +143,7 @@ public class AddTableRequest extends Request {
         }
 
         /**
+         * <p>The ID of the workspace to which the file belongs. For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/2587495.html">How to use a workspace</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,6 +156,7 @@ public class AddTableRequest extends Request {
         }
 
         /**
+         * <p>The connector ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,6 +169,7 @@ public class AddTableRequest extends Request {
         }
 
         /**
+         * <p>The column information of the table.</p>
          * <p>This parameter is required.</p>
          */
         public Builder tableColumns(java.util.List<TableColumns> tableColumns) {
@@ -177,7 +180,10 @@ public class AddTableRequest extends Request {
         }
 
         /**
-         * TableDesc.
+         * <p>The table description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>table description</p>
          */
         public Builder tableDesc(String tableDesc) {
             this.putBodyParameter("TableDesc", tableDesc);
@@ -186,6 +192,7 @@ public class AddTableRequest extends Request {
         }
 
         /**
+         * <p>The table name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -273,7 +280,10 @@ public class AddTableRequest extends Request {
             } 
 
             /**
-             * ColumnDesc.
+             * <p>The column description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>desc</p>
              */
             public Builder columnDesc(String columnDesc) {
                 this.columnDesc = columnDesc;
@@ -281,6 +291,7 @@ public class AddTableRequest extends Request {
             }
 
             /**
+             * <p>The column name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -292,6 +303,14 @@ public class AddTableRequest extends Request {
             }
 
             /**
+             * <p>The data type. Valid values:</p>
+             * <ul>
+             * <li>datetime: datetime</li>
+             * <li>string: string</li>
+             * <li>double: double-precision floating point</li>
+             * <li>image_url: image URL</li>
+             * <li>long: long integer</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

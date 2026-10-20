@@ -89,10 +89,14 @@ public class DeleteCategoryRequest extends Request {
         } 
 
         /**
+         * <p>&lt;props=&quot;china&quot;&gt;</p>
+         * <p>The category ID, which is the <code>CategoryId</code> returned by the <strong>AddCategory</strong> operation. You can also obtain it on the <a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a> page by clicking the File tab and then clicking the ID icon next to the category name.</p>
+         * <p>&lt;props=&quot;intl&quot;&gt;</p>
+         * <p>The category ID, which is the <code>CategoryId</code> returned by the <strong>AddCategory</strong> operation. You can also obtain it on the <a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">Application Data</a> page by clicking the File tab and then clicking the ID icon next to the category name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>cate_cdd11b1b79a74e8bbd675c356a91ee3510024405</p>
+         * <p>cate_cdd11b1b79a74e8bbd675c356a91ee35xxxxxxxx</p>
          */
         public Builder categoryId(String categoryId) {
             this.putPathParameter("CategoryId", categoryId);
@@ -101,10 +105,11 @@ public class DeleteCategoryRequest extends Request {
         }
 
         /**
+         * <p>The ID of the workspace to which the category belongs. For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/2587495.html">How to use a workspace</a>. The bailian 2023-12-29 version does not provide an API for enumerating workspaces. Obtain the workspace ID from the Model Studio console before calling this operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ws_3AXoiweeTyTd03IN</p>
+         * <p>llm-3shx2gu255oqxxxx</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("WorkspaceId", workspaceId);

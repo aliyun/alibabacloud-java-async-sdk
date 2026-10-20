@@ -106,7 +106,10 @@ public class ListMemoryNodesResponseBody extends TeaModel {
         } 
 
         /**
-         * maxResults.
+         * <p>The maximum number of results returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -114,7 +117,7 @@ public class ListMemoryNodesResponseBody extends TeaModel {
         }
 
         /**
-         * memoryNodes.
+         * <p>The array of memory nodes.</p>
          */
         public Builder memoryNodes(java.util.List<MemoryNodes> memoryNodes) {
             this.memoryNodes = memoryNodes;
@@ -122,7 +125,10 @@ public class ListMemoryNodesResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The token used for token-based pagination.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dc270401186b433f975d7e1faaa34e0e</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -130,7 +136,10 @@ public class ListMemoryNodesResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6a71f2d9-f1c9-913b-818b-114029103cad</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListMemoryNodesResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * <p>The total number of memory nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -204,7 +216,10 @@ public class ListMemoryNodesResponseBody extends TeaModel {
             } 
 
             /**
-             * content.
+             * <p>The content of the memory node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>用户喜欢吃西红柿炒鸡蛋</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -212,7 +227,10 @@ public class ListMemoryNodesResponseBody extends TeaModel {
             }
 
             /**
-             * memoryNodeId.
+             * <p>The memory node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>68de06c95368463a8be4a84efc872cc5</p>
              */
             public Builder memoryNodeId(String memoryNodeId) {
                 this.memoryNodeId = memoryNodeId;

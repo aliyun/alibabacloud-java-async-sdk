@@ -119,10 +119,10 @@ public class UpdateChunkResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code.</p>
+         * <p>The error status code.</p>
          * 
          * <strong>example:</strong>
-         * <p>InvalidParameter</p>
+         * <p>Index.InvalidParameter</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -130,7 +130,7 @@ public class UpdateChunkResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned if the request is successful.</p>
+         * <p>The business data returned when the request succeeds.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -144,7 +144,7 @@ public class UpdateChunkResponseBody extends TeaModel {
          * <p>The error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>Required parameter(%s) missing or invalid, please check the request parameters.</p>
+         * <p>Required parameter missing or invalid.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -163,10 +163,10 @@ public class UpdateChunkResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The status code returned by the operation.</p>
          * 
          * <strong>example:</strong>
-         * <p>200</p>
+         * <p>&quot;200&quot;</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -174,10 +174,10 @@ public class UpdateChunkResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indications whether the API call is successful. Valid values:</p>
+         * <p>Indicates whether the operation was successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: Successful.</li>
+         * <li>false: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

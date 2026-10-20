@@ -149,7 +149,7 @@ public class UpdateChunkRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the workspace to which the knowledge base belongs. For more information, see <a href="https://help.aliyun.com/document_detail/2587495.html">How to use workspace</a>.</p>
+         * <p>The ID of the workspace to which the knowledge base belongs. For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/2587495.html">How to use a workspace</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -162,11 +162,11 @@ public class UpdateChunkRequest extends Request {
         }
 
         /**
-         * <p>The ID of the text chunk to be modified. You can find it in the Node.Metadata._id field returned by <strong>ListChunks</strong>.</p>
+         * <p>The ID of the text chunk to modify. You can obtain this value by calling the <strong>ListChunks</strong> operation. The value is in the Node.Metadata._id field of the response.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>llm-5ip55o1zrzxx_09fe52x_table_033b551e10024029992e79767b151fxx_10024xx_0</p>
+         * <p>llm-5ip55o1zrzxx_09fe52x_xxxxx_033b551e10024029992e79767b151fxx_10024xx_0</p>
          */
         public Builder chunkId(String chunkId) {
             this.putQueryParameter("ChunkId", chunkId);
@@ -175,7 +175,7 @@ public class UpdateChunkRequest extends Request {
         }
 
         /**
-         * <p>The file ID, which is the <code>FileId</code> returned by <strong>AddFile</strong>. You can also go to the <a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">Application Data</a> page. Click the ID icon next to your file to get its ID.</p>
+         * <p>The file ID, which is the <code>FileId</code> returned by the <strong>AddFile</strong> operation. You can also obtain it from the &lt;props=&quot;china&quot;&gt;<a href="https://bailian.console.aliyun.com/?tab=app#/data-center">application data</a>-Files&lt;props=&quot;intl&quot;&gt;<a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">application data</a>-Files tab in the Alibaba Cloud Model Studio console by clicking the ID icon next to the corresponding file.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -188,10 +188,10 @@ public class UpdateChunkRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether this text chunk participates in knowledge base retrieval. Valid values:</p>
+         * <p>Specifies whether the text chunk participates in knowledge base retrieval. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: Participates.</li>
+         * <li>false: Does not participate.</li>
          * </ul>
          * <p>Default value: true.</p>
          * <p>This parameter is required.</p>
@@ -206,7 +206,7 @@ public class UpdateChunkRequest extends Request {
         }
 
         /**
-         * <p>The knowledge base ID, which is the <code>Data.Id</code> returned by <strong>CreateIndex</strong>. You can also get it on the <a href="https://modelstudio.console.alibabacloud.com/?tab=app#/knowledge-base">Knowledge Base</a> page.</p>
+         * <p>The knowledge base ID, which is the <code>Data.Id</code> returned when you call the <strong>CreateIndex</strong> operation, or retrieved from the &lt;props=&quot;china&quot;&gt;<a href="https://bailian.console.aliyun.com/?tab=app#/knowledge-base">knowledge base</a>&lt;props=&quot;intl&quot;&gt;<a href="https://modelstudio.console.alibabacloud.com/?tab=app#/knowledge-base">knowledge base</a> page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -219,8 +219,11 @@ public class UpdateChunkRequest extends Request {
         }
 
         /**
-         * <p>The new content of the chunk. The content must be between 10 and 6,000 characters in length and cannot exceed the maximum chunk length set when the knowledge base was created.</p>
+         * <p>The new content of the text chunk. The content length must be between 10 and 6,000 characters, and must not exceed the maximum segment length set when the knowledge base was created.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The type of certainty obtained in philosophy is not scientific certainty (that is, certainty that is the same for every rational mind), but a kind of personal conviction that can only be obtained in the overall nature of humanity. Every form of philosophy differs from science in that no philosophy has received universal acceptance..</p>
          */
         public Builder content(String content) {
             this.putQueryParameter("content", content);
@@ -229,7 +232,10 @@ public class UpdateChunkRequest extends Request {
         }
 
         /**
-         * <p>The new title of the chunk. The title must be 0 to 50 characters in length and can be an empty string. If you specify an empty string, the existing title is cleared. If you do not pass this parameter, the original title remains unchanged.</p>
+         * <p>The new title of the text chunk. The length limit is 0–50 characters. An empty string is allowed. If you pass an empty string, the existing title is cleared. If you do not pass this parameter, the original title is retained.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>What is philosophy</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("title", title);

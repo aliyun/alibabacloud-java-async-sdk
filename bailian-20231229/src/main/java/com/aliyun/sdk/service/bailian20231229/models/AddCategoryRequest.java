@@ -141,11 +141,11 @@ public class AddCategoryRequest extends Request {
         }
 
         /**
-         * <p>The ID of the workspace, in which to create the new category. To view the workspace ID, click the Workspace Details icon in the upper-left corner on the <a href="https://bailian.console.alibabacloud.com/#/home">homepage</a> of the console.</p>
+         * <p>The workspace ID. The category is created in this workspace. For more information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/2587495.html">How to use a workspace</a>. The bailian 2023-12-29 version does not provide an API for listing workspaces. Obtain the workspace ID from the Model Studio console before calling this operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ws_3AXoiweeTyTd03IN</p>
+         * <p>llm-3z7uw7fwz0vxxxx</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("WorkspaceId", workspaceId);
@@ -154,7 +154,11 @@ public class AddCategoryRequest extends Request {
         }
 
         /**
+         * <p>The category name. The name must be 1 to 20 characters in length and can contain characters in the Unicode letter category, including letters, Chinese characters, and digits. The name can also contain colons (:), underscores (_), periods (.), or hyphens (-).</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ProductList</p>
          */
         public Builder categoryName(String categoryName) {
             this.putBodyParameter("CategoryName", categoryName);
@@ -163,6 +167,10 @@ public class AddCategoryRequest extends Request {
         }
 
         /**
+         * <p>The category type. Valid values:</p>
+         * <ul>
+         * <li>UNSTRUCTURED: category.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -175,7 +183,10 @@ public class AddCategoryRequest extends Request {
         }
 
         /**
-         * ConnectorId.
+         * <p>The instance ID of the data connector (Connector). Obtain this value from the Model Studio console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>conn_xxxx</p>
          */
         public Builder connectorId(String connectorId) {
             this.putBodyParameter("ConnectorId", connectorId);
@@ -184,7 +195,10 @@ public class AddCategoryRequest extends Request {
         }
 
         /**
-         * ParentCategoryId.
+         * <p>The ID of the parent category. The new category is created under this parent category. If this parameter is left empty, a first-level category is created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cate_cdd11b1b79a74e8bbd675c356a91ee3xxxxxxxx</p>
          */
         public Builder parentCategoryId(String parentCategoryId) {
             this.putBodyParameter("ParentCategoryId", parentCategoryId);

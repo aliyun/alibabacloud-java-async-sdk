@@ -145,11 +145,11 @@ public class ListIndexDocumentsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the workspace to which the knowledge base belongs. To view the workspace ID, you can click the Workspace Details icon in the upper-left corner on the <a href="https://bailian.console.aliyun.com/#/home">homepage</a> of the console.</p>
+         * <p>The workspace ID of the knowledge base. For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/2587495.html">How to use a workspace</a>. The bailian 2023-12-29 version does not provide an API for listing workspaces. Obtain the workspace ID from the Model Studio console before calling this operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ws_3Nt27MYcoK191ISp</p>
+         * <p>llm-3z7uw7fwz0vexxxx</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("WorkspaceId", workspaceId);
@@ -158,7 +158,10 @@ public class ListIndexDocumentsRequest extends Request {
         }
 
         /**
-         * <p>The names of the queried documents. The default value is null, which means the names are not used to filter the results.</p>
+         * <p>Filters the returned file list by file name (excluding the file extension). Default value: empty, which means no filtering by file name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>product-overview</p>
          */
         public Builder documentName(String documentName) {
             this.putQueryParameter("DocumentName", documentName);
@@ -167,14 +170,16 @@ public class ListIndexDocumentsRequest extends Request {
         }
 
         /**
-         * <p>The import status of the documents to be queried. Valid values:</p>
+         * <p>Filters the returned file list by file import status. Valid values:</p>
          * <ul>
-         * <li>INSERT_ERROR</li>
-         * <li>RUNNING</li>
-         * <li>DELETED</li>
-         * <li>FINISH</li>
+         * <li>INSERT_ERROR: Failed to import to the index.</li>
+         * <li>RUNNING: Index building in progress.</li>
+         * <li>DELETED: Deleted.</li>
+         * <li>FINISH: Index building succeeded.</li>
+         * <li>PARSE_FAILED: Parsing failed.</li>
+         * <li>DOC_PARSING: Parsing in progress.</li>
          * </ul>
-         * <p>The default value is null, which means the import status is not used to filter the results.</p>
+         * <p>Default value: empty, which means no filtering by file import status.</p>
          * 
          * <strong>example:</strong>
          * <p>FINISH</p>
@@ -186,7 +191,15 @@ public class ListIndexDocumentsRequest extends Request {
         }
 
         /**
-         * EnableNameLike.
+         * <p>Specifies whether to enable fuzzy matching for file names. This parameter is used together with the <code>DocumentName</code> parameter. Valid values:</p>
+         * <ul>
+         * <li>true: Performs fuzzy matching on the returned file list based on the file name.</li>
+         * <li>false: Performs exact matching based on the file name.</li>
+         * </ul>
+         * <p>Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableNameLike(String enableNameLike) {
             this.putQueryParameter("EnableNameLike", enableNameLike);
@@ -195,11 +208,11 @@ public class ListIndexDocumentsRequest extends Request {
         }
 
         /**
-         * <p>The primary key ID of the knowledge base, which is the <code>Data.Id</code> parameter returned by the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-createindex">CreateIndex</a> operation.</p>
+         * <p>The knowledge base ID, which is the <code>Data.Id</code> returned by the <strong>CreateIndex</strong> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>79c0aly8zw</p>
+         * <p>79c0alxxxx</p>
          */
         public Builder indexId(String indexId) {
             this.putQueryParameter("IndexId", indexId);
@@ -208,7 +221,7 @@ public class ListIndexDocumentsRequest extends Request {
         }
 
         /**
-         * <p>The page numbers of the pages to return. Pages start from page 1. Default value: 1.</p>
+         * <p>The page number to query. Minimum value: 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -220,7 +233,8 @@ public class ListIndexDocumentsRequest extends Request {
         }
 
         /**
-         * <p>The number of documents displayed on each page. No maximum value. Default value: 10.</p>
+         * <p>The number of files to display per page in a paged query. No maximum limit.
+         * Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

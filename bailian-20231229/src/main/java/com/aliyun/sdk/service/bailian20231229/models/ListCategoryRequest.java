@@ -160,10 +160,11 @@ public class ListCategoryRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID. For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/2587495.html">How to use a workspace</a>. The bailian 2023-12-29 API version does not provide an API operation for listing workspaces. Obtain the workspace ID from the Model Studio console before calling this operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ws_3Nt27MYcoK191ISp</p>
+         * <p>llm-3shx2gu255oqxxxx</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("WorkspaceId", workspaceId);
@@ -181,7 +182,10 @@ public class ListCategoryRequest extends Request {
         }
 
         /**
-         * CategoryName.
+         * <p>Performs an exact match or filter on the category list returned by the operation based on the category name. Default value: empty, which means category name filtering is not enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ProductList</p>
          */
         public Builder categoryName(String categoryName) {
             this.putBodyParameter("CategoryName", categoryName);
@@ -190,6 +194,18 @@ public class ListCategoryRequest extends Request {
         }
 
         /**
+         * <p>The type of category to query. Valid values:</p>
+         * <ul>
+         * <li>UNSTRUCTURED: category.</li>
+         * </ul>
+         * <p>&lt;props=&quot;china&quot;&gt;</p>
+         * <blockquote>
+         * <p>Querying tables (data tables) by using API operations is not supported.</p>
+         * </blockquote>
+         * <p>&lt;props=&quot;intl&quot;&gt;</p>
+         * <blockquote>
+         * <p>Querying structured data tables by using API operations is not supported.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -202,7 +218,10 @@ public class ListCategoryRequest extends Request {
         }
 
         /**
-         * ConnectorId.
+         * <p>The connector ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>file_conn_xxxxx</p>
          */
         public Builder connectorId(String connectorId) {
             this.putBodyParameter("ConnectorId", connectorId);
@@ -211,7 +230,12 @@ public class ListCategoryRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of categories per page in a paged query. Maximum value: 200. Valid values: 1 to 200.</p>
+         * <p>Default value:
+         * If the value is not set or is less than 1, the default value is 20. If the value is greater than 200, the default value is 200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -220,7 +244,10 @@ public class ListCategoryRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdH70eOCSCKtacdomNzak4U=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -229,7 +256,10 @@ public class ListCategoryRequest extends Request {
         }
 
         /**
-         * ParentCategoryId.
+         * <p>The ID of the parent category for the categories to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cate_cdd11b1b79a74e8bbd675c356a91ee3xxxxxxxx</p>
          */
         public Builder parentCategoryId(String parentCategoryId) {
             this.putBodyParameter("ParentCategoryId", parentCategoryId);

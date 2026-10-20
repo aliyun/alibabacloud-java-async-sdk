@@ -119,6 +119,7 @@ public class UpdateMemoryNodeRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,6 +132,7 @@ public class UpdateMemoryNodeRequest extends Request {
         }
 
         /**
+         * <p>The long-term memory ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,6 +145,7 @@ public class UpdateMemoryNodeRequest extends Request {
         }
 
         /**
+         * <p>The memory fragment ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -164,7 +167,11 @@ public class UpdateMemoryNodeRequest extends Request {
         }
 
         /**
+         * <p>The memory fragment content.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>用户喜欢吃西红柿炒鸡蛋</p>
          */
         public Builder content(String content) {
             this.putQueryParameter("content", content);

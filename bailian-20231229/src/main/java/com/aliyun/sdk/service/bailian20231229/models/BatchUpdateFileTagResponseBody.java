@@ -119,7 +119,10 @@ public class BatchUpdateFileTagResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class BatchUpdateFileTagResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The business data returned by the operation.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class BatchUpdateFileTagResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Required parameter(FileId) missing or invalid, please check the request parameters.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -154,7 +160,10 @@ public class BatchUpdateFileTagResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status code returned by the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -162,7 +171,14 @@ public class BatchUpdateFileTagResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li>true: Successful.</li>
+         * <li>false: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -254,7 +270,10 @@ public class BatchUpdateFileTagResponseBody extends TeaModel {
             } 
 
             /**
-             * ErrorCode.
+             * <p>The error code. This parameter is returned only when Success is false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NoPermission</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -262,7 +281,10 @@ public class BatchUpdateFileTagResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * <p>The error message. This parameter is returned only when Success is false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FileId not exists.</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -270,7 +292,10 @@ public class BatchUpdateFileTagResponseBody extends TeaModel {
             }
 
             /**
-             * FileId.
+             * <p>The file ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>file_f40f2a32205d44b4a93b11617113da15_10045951</p>
              */
             public Builder fileId(String fileId) {
                 this.fileId = fileId;
@@ -278,7 +303,14 @@ public class BatchUpdateFileTagResponseBody extends TeaModel {
             }
 
             /**
-             * Success.
+             * <p>Indicates whether the call was successful. Valid values:</p>
+             * <ul>
+             * <li>true: Successful.</li>
+             * <li>false: Failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;
@@ -332,7 +364,7 @@ public class BatchUpdateFileTagResponseBody extends TeaModel {
             } 
 
             /**
-             * UpdateFileTagResultList.
+             * <p>The list of tag update results.</p>
              */
             public Builder updateFileTagResultList(java.util.List<UpdateFileTagResultList> updateFileTagResultList) {
                 this.updateFileTagResultList = updateFileTagResultList;

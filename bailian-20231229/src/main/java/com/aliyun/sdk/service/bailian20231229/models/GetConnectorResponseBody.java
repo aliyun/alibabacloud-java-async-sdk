@@ -119,7 +119,10 @@ public class GetConnectorResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The result code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetConnectorResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetConnectorResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Requests throttling triggered.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +149,7 @@ public class GetConnectorResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>7BA8ADD9-53D6-53F0-918F-A1E776AD230E</p>
@@ -154,7 +160,10 @@ public class GetConnectorResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status code of the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -162,7 +171,16 @@ public class GetConnectorResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. The valid values are:</p>
+         * <ul>
+         * <li><p><code>true</code>: The call was successful.</p>
+         * </li>
+         * <li><p><code>false</code>: The call failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -254,7 +272,10 @@ public class GetConnectorResponseBody extends TeaModel {
             } 
 
             /**
-             * ConnectorId.
+             * <p>The ID of the connector.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>conn_file_e0c9db4030b2465a9478028f7d76cd92_1234</p>
              */
             public Builder connectorId(String connectorId) {
                 this.connectorId = connectorId;
@@ -262,7 +283,10 @@ public class GetConnectorResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectorName.
+             * <p>The name of the connector.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder connectorName(String connectorName) {
                 this.connectorName = connectorName;
@@ -270,7 +294,10 @@ public class GetConnectorResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectorType.
+             * <p>The type of the connector.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FILE</p>
              */
             public Builder connectorType(String connectorType) {
                 this.connectorType = connectorType;
@@ -278,7 +305,10 @@ public class GetConnectorResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the connector.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Description</p>
              */
             public Builder description(String description) {
                 this.description = description;

@@ -96,7 +96,7 @@ public class GetParseSettingsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the workspace to which the file belongs. For more information, see <a href="https://help.aliyun.com/document_detail/2587495.html">Use workspaces</a>.</p>
+         * <p>The ID of the workspace to which the file belongs. For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/2587495.html">How to use a workspace</a>. This field is in the request path and must be provided when you call this operation. The bailian 2023-12-29 version does not provide an API for listing workspaces. Obtain the workspace ID from the Model Studio console before calling this operation.</p>
          * 
          * <strong>example:</strong>
          * <p>llm-3shx2gu255oqxxxx</p>
@@ -108,7 +108,7 @@ public class GetParseSettingsRequest extends Request {
         }
 
         /**
-         * <p>The category ID, which is the <code>CategoryId</code> returned by <strong>AddCategory</strong>. To view the category ID, click the ID icon next to the category name on the Unstructured Data tab of the <a href="https://bailian.console.alibabacloud.com/?tab=app#/data-center">Application Data</a> page.</p>
+         * <p>The category ID, which is the <code>CategoryId</code> returned by the <strong>AddCategory</strong> operation. You can also obtain it from the &lt;props=&quot;china&quot;&gt;<a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a> - File tab&lt;props=&quot;intl&quot;&gt;<a href="https://bailian.console.alibabacloud.com/?tab=app#/data-center">Application Data</a> - Unstructured Data tab by clicking the ID icon next to the category name.</p>
          * 
          * <strong>example:</strong>
          * <p>cate_cdd11b1b79a74e8bbd675c356a91ee35xxxxxxxx</p>

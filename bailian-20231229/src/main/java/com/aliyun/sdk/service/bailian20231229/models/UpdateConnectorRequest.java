@@ -128,6 +128,7 @@ public class UpdateConnectorRequest extends Request {
         }
 
         /**
+         * <p>The ID of the workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,6 +141,7 @@ public class UpdateConnectorRequest extends Request {
         }
 
         /**
+         * <p>The instance ID of the connector. You can find this ID in the Model Studio console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,6 +154,7 @@ public class UpdateConnectorRequest extends Request {
         }
 
         /**
+         * <p>The name of the connector.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -164,6 +167,7 @@ public class UpdateConnectorRequest extends Request {
         }
 
         /**
+         * <p>A description of the connector.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

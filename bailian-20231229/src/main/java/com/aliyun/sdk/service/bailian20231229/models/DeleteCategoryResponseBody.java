@@ -119,7 +119,10 @@ public class DeleteCategoryResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class DeleteCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>data</p>
+         * <p>The business data field of the operation.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class DeleteCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workspace id is null or invalid.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +149,7 @@ public class DeleteCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>17204B98-xxxx-4F9A-8464-2446A84821CA</p>
@@ -154,7 +160,10 @@ public class DeleteCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status code returned by the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -162,7 +171,14 @@ public class DeleteCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The call was successful.</li>
+         * <li>false: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -215,7 +231,10 @@ public class DeleteCategoryResponseBody extends TeaModel {
             } 
 
             /**
-             * CategoryId.
+             * <p>The ID of the deleted category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cate_cdd11b1b79a74e8bbd675c356a91ee3xxxxxxxx</p>
              */
             public Builder categoryId(String categoryId) {
                 this.categoryId = categoryId;

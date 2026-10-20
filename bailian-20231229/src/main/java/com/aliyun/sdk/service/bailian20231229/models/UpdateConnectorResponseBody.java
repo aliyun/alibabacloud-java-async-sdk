@@ -119,7 +119,10 @@ public class UpdateConnectorResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Index.Forbidden</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class UpdateConnectorResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data returned by the operation.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class UpdateConnectorResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Required parameter(%s) missing or invalid, please check the request parameters.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +149,7 @@ public class UpdateConnectorResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>778C0B3B-03C1-5FC1-A947-36EDD13606AB</p>
@@ -154,7 +160,10 @@ public class UpdateConnectorResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status code of the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -162,7 +171,10 @@ public class UpdateConnectorResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -215,7 +227,10 @@ public class UpdateConnectorResponseBody extends TeaModel {
             } 
 
             /**
-             * ConnectorId.
+             * <p>The ID of the connector.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>conn_file_e0c9db4030b2465a9478028f7d76cd92_1234</p>
              */
             public Builder connectorId(String connectorId) {
                 this.connectorId = connectorId;

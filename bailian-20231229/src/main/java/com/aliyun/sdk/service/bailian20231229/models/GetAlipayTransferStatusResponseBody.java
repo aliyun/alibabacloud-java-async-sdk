@@ -67,7 +67,7 @@ public class GetAlipayTransferStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The tipping result data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class GetAlipayTransferStatusResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The unique ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6a71f2d9-f1c9-913b-818b-11402910xxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -284,7 +287,10 @@ public class GetAlipayTransferStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * accountId.
+             * <p>The sub-account ID (ignored by the API).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1348393307144609</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -292,7 +298,10 @@ public class GetAlipayTransferStatusResponseBody extends TeaModel {
             }
 
             /**
-             * alipayOrderDetail.
+             * <p>The payment details (ignored by the API).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder alipayOrderDetail(String alipayOrderDetail) {
                 this.alipayOrderDetail = alipayOrderDetail;
@@ -300,7 +309,10 @@ public class GetAlipayTransferStatusResponseBody extends TeaModel {
             }
 
             /**
-             * alipayOrderId.
+             * <p>The Alipay order ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234234</p>
              */
             public Builder alipayOrderId(String alipayOrderId) {
                 this.alipayOrderId = alipayOrderId;
@@ -308,7 +320,10 @@ public class GetAlipayTransferStatusResponseBody extends TeaModel {
             }
 
             /**
-             * code.
+             * <p>The code associated with the tipping.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -316,7 +331,10 @@ public class GetAlipayTransferStatusResponseBody extends TeaModel {
             }
 
             /**
-             * creator.
+             * <p>The creator (ignored by the API).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>234234</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -324,7 +342,10 @@ public class GetAlipayTransferStatusResponseBody extends TeaModel {
             }
 
             /**
-             * mainAccountId.
+             * <p>The primary account ID (ignored by the API).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1007576424487905</p>
              */
             public Builder mainAccountId(String mainAccountId) {
                 this.mainAccountId = mainAccountId;
@@ -332,7 +353,10 @@ public class GetAlipayTransferStatusResponseBody extends TeaModel {
             }
 
             /**
-             * modifier.
+             * <p>The modifier (ignored by the API).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>234234</p>
              */
             public Builder modifier(String modifier) {
                 this.modifier = modifier;
@@ -340,7 +364,10 @@ public class GetAlipayTransferStatusResponseBody extends TeaModel {
             }
 
             /**
-             * qrURL.
+             * <p>The tipping link (ignored by the API).</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://xxx.aliyun.com">https://xxx.aliyun.com</a></p>
              */
             public Builder qrURL(String qrURL) {
                 this.qrURL = qrURL;
@@ -348,7 +375,10 @@ public class GetAlipayTransferStatusResponseBody extends TeaModel {
             }
 
             /**
-             * scope.
+             * <p>The ownership status of the tipping application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>publish</p>
              */
             public Builder scope(String scope) {
                 this.scope = scope;
@@ -356,7 +386,20 @@ public class GetAlipayTransferStatusResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The tipping status. Valid values:</p>
+             * <ul>
+             * <li>1: Succeeded.</li>
+             * <li>0: Deleted.</li>
+             * <li>2: Pending tipping.</li>
+             * <li>3: Canceled.</li>
+             * <li>4: Refunded.</li>
+             * <li>5: Closed.</li>
+             * <li>6: Failed.</li>
+             * <li>7: Disputed or abnormal.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Long status) {
                 this.status = status;
@@ -364,7 +407,10 @@ public class GetAlipayTransferStatusResponseBody extends TeaModel {
             }
 
             /**
-             * title.
+             * <p>The transfer title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -372,7 +418,10 @@ public class GetAlipayTransferStatusResponseBody extends TeaModel {
             }
 
             /**
-             * transAmount.
+             * <p>The total order amount. Unit: CNY.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.22</p>
              */
             public Builder transAmount(String transAmount) {
                 this.transAmount = transAmount;
@@ -380,7 +429,10 @@ public class GetAlipayTransferStatusResponseBody extends TeaModel {
             }
 
             /**
-             * walletItemCode.
+             * <p>The Alipay product wallet code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xsdfsdf</p>
              */
             public Builder walletItemCode(String walletItemCode) {
                 this.walletItemCode = walletItemCode;

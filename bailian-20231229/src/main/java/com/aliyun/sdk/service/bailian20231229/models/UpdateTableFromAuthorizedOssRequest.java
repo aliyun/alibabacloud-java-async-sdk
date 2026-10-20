@@ -149,6 +149,7 @@ public class UpdateTableFromAuthorizedOssRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the workspace to which the file belongs. For more information, see <a href="https://help.aliyun.com/document_detail/2587495.html">How to use a workspace</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,6 +171,7 @@ public class UpdateTableFromAuthorizedOssRequest extends Request {
         }
 
         /**
+         * <p>The ID of the existing table to update. This operation only updates the specified table and does not create data tables.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -182,6 +184,7 @@ public class UpdateTableFromAuthorizedOssRequest extends Request {
         }
 
         /**
+         * <p>The name of the OSS bucket. For more information, see <a href="https://help.aliyun.com/document_detail/177682.html">Buckets</a>. The target bucket must have the tag key <code>bailian-datahub-access</code> and tag value <code>read</code> added.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -194,6 +197,7 @@ public class UpdateTableFromAuthorizedOssRequest extends Request {
         }
 
         /**
+         * <p>The key of the file to import in the OSS bucket. For more information, see <a href="https://help.aliyun.com/document_detail/273129.html">Object naming</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -206,6 +210,7 @@ public class UpdateTableFromAuthorizedOssRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the OSS bucket. For more information, see <a href="https://help.aliyun.com/document_detail/31837.html">OSS regions and endpoints</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -218,6 +223,11 @@ public class UpdateTableFromAuthorizedOssRequest extends Request {
         }
 
         /**
+         * <p>The update mode. Valid values:</p>
+         * <ul>
+         * <li>OVERWRITE: overwrites existing data.</li>
+         * <li>APPEND: appends data to existing data.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

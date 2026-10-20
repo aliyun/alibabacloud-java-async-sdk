@@ -119,6 +119,7 @@ public class GetIndexMonitorRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the workspace where the knowledge base is located.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,6 +141,7 @@ public class GetIndexMonitorRequest extends Request {
         }
 
         /**
+         * <p>The end of the time range to query. The end time can be a maximum of 30 days after the start time. This is a UNIX timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,6 +154,7 @@ public class GetIndexMonitorRequest extends Request {
         }
 
         /**
+         * <p>The unique ID of the target knowledge base.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -164,6 +167,7 @@ public class GetIndexMonitorRequest extends Request {
         }
 
         /**
+         * <p>The start of the time range to query. This is a UNIX timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

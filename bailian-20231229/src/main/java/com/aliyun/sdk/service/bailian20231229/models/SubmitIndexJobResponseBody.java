@@ -119,10 +119,10 @@ public class SubmitIndexJobResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>HTTP status code</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
-         * <p>InvalidParameter</p>
+         * <p>Index.InvalidParameter</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -130,7 +130,7 @@ public class SubmitIndexJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The business data returned by the operation.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -160,10 +160,10 @@ public class SubmitIndexJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status code.</p>
+         * <p>The status code returned by the operation.</p>
          * 
          * <strong>example:</strong>
-         * <p>Success</p>
+         * <p>200</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -171,14 +171,14 @@ public class SubmitIndexJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indications whether the API call is successful. Valid values:</p>
+         * <p>Indicates whether the operation was successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: Successful.</li>
+         * <li>false: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>True</p>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -244,10 +244,10 @@ public class SubmitIndexJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The primary key ID of the job, which is the <code>JobId</code> parameter of the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-getindexjobstatus">GetIndexJobStatus</a> operation.</p>
+             * <p>The task ID, which is the <code>JobId</code> required when calling the <strong>GetIndexJobStatus</strong> operation.</p>
              * 
              * <strong>example:</strong>
-             * <p>eFDr2fGRzP9gdDZWAdo3YQ==</p>
+             * <p>eFDr2fGRzP9gdDZWAdo3xxxx</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -255,10 +255,10 @@ public class SubmitIndexJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The primary key ID of the knowledge base.</p>
+             * <p>The knowledge base ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>khdyak1uuj</p>
+             * <p>79c0alxxxx</p>
              */
             public Builder indexId(String indexId) {
                 this.indexId = indexId;
