@@ -146,7 +146,7 @@ public class RemoveNodePoolNodesRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -172,7 +172,14 @@ public class RemoveNodePoolNodesRequest extends Request {
         }
 
         /**
-         * <p>Whether to remove concurrently.</p>
+         * <p>Specifies whether to remove nodes concurrently.</p>
+         * <ul>
+         * <li><p>true: Nodes are concurrently removed from the scaling group.</p>
+         * </li>
+         * <li><p>false: Nodes are sequentially removed from the scaling group.</p>
+         * </li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -184,10 +191,10 @@ public class RemoveNodePoolNodesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to drain the nodes that you want to remove. Valid values:</p>
+         * <p>Specifies whether to drain the nodes. Valid values:</p>
          * <ul>
-         * <li>true: drain the nodes that you want to remove.</li>
-         * <li>false: do not drain the nodes that you want to remove.</li>
+         * <li>true: Drain the nodes.</li>
+         * <li>false: Do not drain the nodes.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -200,7 +207,7 @@ public class RemoveNodePoolNodesRequest extends Request {
         }
 
         /**
-         * <p>A list of instances that you want to remove.</p>
+         * <p>The list of instances to remove.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             String instanceIdsShrink = shrink(instanceIds, "instance_ids", "json");
@@ -210,10 +217,10 @@ public class RemoveNodePoolNodesRequest extends Request {
         }
 
         /**
-         * <p>This parameter is deprecated.</p>
-         * <p>A list of nodes that you want to remove.</p>
+         * <p><strong>[Deprecated]</strong></p>
+         * <p>The list of nodes to remove.</p>
          * <blockquote>
-         * <p> This parameter is deprecated. Use instance_ids instead.</p>
+         * <p>Danger: This parameter is deprecated. Use <code>instance_ids</code> instead.</danger></p>
          * </blockquote>
          */
         public Builder nodes(java.util.List<String> nodes) {
@@ -224,10 +231,10 @@ public class RemoveNodePoolNodesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to release the nodes after they are removed. Valid values:</p>
+         * <p>Specifies whether to release the nodes. Valid values:</p>
          * <ul>
-         * <li>true: release the nodes after they are removed.</li>
-         * <li>false: do not release the nodes after they are removed.</li>
+         * <li>true: Release the nodes.</li>
+         * <li>false: Do not release the nodes.</li>
          * </ul>
          * 
          * <strong>example:</strong>

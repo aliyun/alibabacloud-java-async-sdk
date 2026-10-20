@@ -115,7 +115,7 @@ public class InstallNodePoolComponentsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>c82e6987e2961451182edacd74faf****</p>
@@ -127,7 +127,7 @@ public class InstallNodePoolComponentsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the node pool.</p>
+         * <p>The node pool ID.</p>
          * 
          * <strong>example:</strong>
          * <p>np7c4fa4a5f1ce412b849****</p>
@@ -139,7 +139,7 @@ public class InstallNodePoolComponentsRequest extends Request {
         }
 
         /**
-         * <p>A list of node components to be installed.</p>
+         * <p>The list of node components.</p>
          */
         public Builder components(java.util.List<Components> components) {
             this.putBodyParameter("components", components);
@@ -148,7 +148,7 @@ public class InstallNodePoolComponentsRequest extends Request {
         }
 
         /**
-         * <p>A list of specific node names where the component should be installed. If not specified, the component will be installed on all nodes in the node pool.</p>
+         * <p>The list of node names specified for the rolling update. Default value: all nodes.</p>
          */
         public Builder nodeNames(java.util.List<String> nodeNames) {
             this.putBodyParameter("nodeNames", nodeNames);
@@ -157,7 +157,7 @@ public class InstallNodePoolComponentsRequest extends Request {
         }
 
         /**
-         * <p>Configuration for the rolling update process.</p>
+         * <p>The rolling update configuration.</p>
          */
         public Builder rollingPolicy(RollingPolicy rollingPolicy) {
             this.putBodyParameter("rollingPolicy", rollingPolicy);
@@ -225,7 +225,10 @@ public class InstallNodePoolComponentsRequest extends Request {
             } 
 
             /**
-             * name.
+             * <p>The name of the environment variable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LOG_LEVEL</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -233,7 +236,10 @@ public class InstallNodePoolComponentsRequest extends Request {
             }
 
             /**
-             * value.
+             * <p>The value of the environment variable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>info</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -300,7 +306,7 @@ public class InstallNodePoolComponentsRequest extends Request {
             } 
 
             /**
-             * <p>Custom parameters for the component.</p>
+             * <p>The custom configuration of the component.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;cpuManagerPolicy&quot;:&quot;static&quot;}</p>
@@ -311,7 +317,7 @@ public class InstallNodePoolComponentsRequest extends Request {
             }
 
             /**
-             * envs.
+             * <p>The environment variables for the node component.</p>
              */
             public Builder envs(java.util.List<Envs> envs) {
                 this.envs = envs;
@@ -392,7 +398,7 @@ public class InstallNodePoolComponentsRequest extends Request {
             } 
 
             /**
-             * <p>The configuration details for the component.</p>
+             * <p>The configuration of the component.</p>
              */
             public Builder config(Config config) {
                 this.config = config;
@@ -508,7 +514,7 @@ public class InstallNodePoolComponentsRequest extends Request {
             } 
 
             /**
-             * <p>The time interval between update batches, in seconds.</p>
+             * <p>The upgrade interval between batches, in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -519,7 +525,10 @@ public class InstallNodePoolComponentsRequest extends Request {
             }
 
             /**
-             * maxFailedNodes.
+             * <p>The maximum number of nodes that are allowed to fail during the rolling update. Default value: 0. A value of 0 indicates that the task fails if any node fails. A value greater than 0 indicates that the task fails and stops if the cumulative number of failed nodes exceeds this value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder maxFailedNodes(Long maxFailedNodes) {
                 this.maxFailedNodes = maxFailedNodes;
@@ -527,7 +536,7 @@ public class InstallNodePoolComponentsRequest extends Request {
             }
 
             /**
-             * <p>The maximum number of nodes that can be updated concurrently in each batch. Default: 1.</p>
+             * <p>The maximum number of parallel operations per batch. Default value: 1.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -538,7 +547,7 @@ public class InstallNodePoolComponentsRequest extends Request {
             }
 
             /**
-             * <p>The strategy for automatic pausing during the update process. Valid values: NotPause, FirstBatchPause, EveryBatchPause.</p>
+             * <p>The automatic pause policy during the node upgrade process.</p>
              * 
              * <strong>example:</strong>
              * <p>NotPause</p>

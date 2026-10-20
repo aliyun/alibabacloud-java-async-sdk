@@ -68,11 +68,11 @@ public class DescribeSubaccountK8sClusterUserConfigResponseBody extends TeaModel
         } 
 
         /**
-         * <p>The cluster kubeconfig file. For more information about how to view the kubeconfig file content, see <a href="https://help.aliyun.com/document_detail/86494.html">Configure cluster credentials</a>.</p>
+         * <p>The KubeConfig of the cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>apiVersion: v1****</p>
+         * <p>apiVersion: v1\nclusters:\n- cluster:\n    server: <a href="https://114.55.xx.xx:6443%5C%5Cn">https://114.55.xx.xx:6443\\n</a>    certificate-authority-data: LS0tLS****</p>
          */
         public Builder config(String config) {
             this.config = config;
@@ -80,10 +80,10 @@ public class DescribeSubaccountK8sClusterUserConfigResponseBody extends TeaModel
         }
 
         /**
-         * <p>The expiration date of the kubeconfig file. The value is the UTC time displayed in RFC3339 format.</p>
+         * <p>The expiration time of the KubeConfig. Format: UTC time in RFC 3339 format.</p>
          * 
          * <strong>example:</strong>
-         * <p>2024-03-10T09:56:17Z</p>
+         * <p>2028-04-09T06:20:47Z</p>
          */
         public Builder expiration(String expiration) {
             this.expiration = expiration;

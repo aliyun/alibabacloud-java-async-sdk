@@ -54,7 +54,7 @@ public class ModifyPolicyInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of policy instances that are updated.</p>
+         * <p>The list of updated instances.</p>
          */
         public Builder instances(java.util.List<String> instances) {
             this.instances = instances;

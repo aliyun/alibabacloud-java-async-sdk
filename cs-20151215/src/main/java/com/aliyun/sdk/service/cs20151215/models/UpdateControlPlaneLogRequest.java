@@ -129,7 +129,7 @@ public class UpdateControlPlaneLogRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Alibaba Cloud account.</p>
+         * <p>The Alibaba Cloud account ID.</p>
          * 
          * <strong>example:</strong>
          * <p>162981*****</p>
@@ -141,7 +141,7 @@ public class UpdateControlPlaneLogRequest extends Request {
         }
 
         /**
-         * <p>The control plane components for which you want to enable log collection.</p>
+         * <p>The list of components for which control plane logging is enabled.</p>
          */
         public Builder components(java.util.List<String> components) {
             this.putBodyParameter("components", components);
@@ -150,7 +150,7 @@ public class UpdateControlPlaneLogRequest extends Request {
         }
 
         /**
-         * <p>The name of the Simple Log Service Project that you want to use to store the logs of control plane components.</p>
+         * <p>The name of the SLS project used to store control plane component logs.</p>
          * <p>Default value: k8s-log-$Cluster ID.</p>
          * 
          * <strong>example:</strong>
@@ -163,8 +163,8 @@ public class UpdateControlPlaneLogRequest extends Request {
         }
 
         /**
-         * <p>The retention period of the log data stored in the Logstore. Valid values: 1 to 3000. Unit: days.</p>
-         * <p>Default value: 30.</p>
+         * <p>The log retention period in the SLS Logstore. Valid values: 1 to 3000. Unit: days.</p>
+         * <p>Default value: 30 days.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>

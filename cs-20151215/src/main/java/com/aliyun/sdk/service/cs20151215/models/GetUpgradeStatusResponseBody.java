@@ -106,7 +106,7 @@ public class GetUpgradeStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error message returned during the update.</p>
+         * <p>The error message during the cluster upgrade.</p>
          * 
          * <strong>example:</strong>
          * <p>subject to actual return</p>
@@ -117,7 +117,7 @@ public class GetUpgradeStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the precheck report.</p>
+         * <p>The precheck report ID.</p>
          * 
          * <strong>example:</strong>
          * <p>be4c8eb72de94d459ea7ace7c811d119</p>
@@ -128,12 +128,12 @@ public class GetUpgradeStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the update. Valid values:</p>
+         * <p>The current upgrade status of the cluster. Valid values:</p>
          * <ul>
-         * <li><code>success</code>: The update is successful.</li>
-         * <li><code>fail</code>: The update failed.</li>
-         * <li><code>pause</code>: The update is paused.</li>
-         * <li><code>running</code>: The update is in progress.</li>
+         * <li><code>success</code>: The upgrade is successful.</li>
+         * <li><code>fail</code>: The upgrade failed.</li>
+         * <li><code>pause</code>: The upgrade is paused.</li>
+         * <li><code>running</code>: The upgrade is in progress.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -145,13 +145,13 @@ public class GetUpgradeStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The current phase of the update. Valid values:</p>
+         * <p>The current upgrade phase of the cluster. Valid values:</p>
          * <ul>
-         * <li><code>not_start</code>: The update is not started.</li>
-         * <li><code>prechecking</code>: The precheck is in progress.</li>
-         * <li><code>upgrading</code>: The cluster is being updated.</li>
-         * <li><code>pause</code>: The update is paused.</li>
-         * <li><code>success</code>: The update is successful.</li>
+         * <li><code>not_start</code>: Not started.</li>
+         * <li><code>prechecking</code>: Prechecking.</li>
+         * <li><code>upgrading</code>: Upgrading.</li>
+         * <li><code>pause</code>: Paused.</li>
+         * <li><code>success</code>: The upgrade is successful.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -163,7 +163,7 @@ public class GetUpgradeStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the update task.</p>
+         * <p>The upgrade task details.</p>
          */
         public Builder upgradeTask(UpgradeTask upgradeTask) {
             this.upgradeTask = upgradeTask;
@@ -229,7 +229,7 @@ public class GetUpgradeStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the update task.</p>
+             * <p>The description of the upgrade task.</p>
              * 
              * <strong>example:</strong>
              * <p>subject to actual return</p>
@@ -240,11 +240,11 @@ public class GetUpgradeStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the update task. Valid values:</p>
+             * <p>The upgrade task status. Valid values:</p>
              * <ul>
-             * <li><code>running</code>: The update task is being executed.</li>
-             * <li><code>Success</code>: The update task is successfully executed.</li>
-             * <li><code>Failed</code>: The update task failed.</li>
+             * <li><code>running</code>: Running.</li>
+             * <li><code>Success</code>: Successful.</li>
+             * <li><code>Failed</code>: Failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>

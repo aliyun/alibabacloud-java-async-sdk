@@ -116,7 +116,7 @@ public class DescribeSubaccountK8sClusterUserConfigRequest extends Request {
         }
 
         /**
-         * <p>The ID of the RAM user or RAM role whose cluster kubeconfig file that you want to obtain.</p>
+         * <p>The ID of the specified Resource Access Management (RAM) user or RAM role within the Alibaba Cloud account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,15 +129,15 @@ public class DescribeSubaccountK8sClusterUserConfigRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to obtain the kubeconfig file used to connect to the cluster over the internal network. Valid values:</p>
+         * <p>Specifies whether to obtain the internal network connection configuration. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: Obtain the kubeconfig file used to connect to the cluster over the internal network.</li>
-         * <li><code>false</code>: Obtain the kubeconfig file used to connect to the cluster over the Internet.</li>
+         * <li><code>true</code>: Obtains only the KubeConfig credentials for internal network connections.</li>
+         * <li><code>false</code>: Obtains only the KubeConfig credentials for public network connections.</li>
          * </ul>
          * <p>Default value: <code>false</code>.</p>
          * 
          * <strong>example:</strong>
-         * <p>true</p>
+         * <p>false</p>
          */
         public Builder privateIpAddress(Boolean privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
@@ -146,10 +146,10 @@ public class DescribeSubaccountK8sClusterUserConfigRequest extends Request {
         }
 
         /**
-         * <p>The validity period of the temporary kubeconfig file. Unit: minutes.</p>
-         * <p>Valid values: 15 to 4320 (three days).</p>
+         * <p>The validity period of the temporary KubeConfig. Unit: minutes.</p>
+         * <p>Valid values: [15, 4320], which is up to 3 days.</p>
          * <blockquote>
-         * <p>If you leave this parameter empty, the system sets a longer validity period and returns the value in the expiration parameter of the response.</p>
+         * <p>If you do not set this parameter, the system automatically determines a longer validity period. The specific expiration time is indicated by the value of the expiration field in the response.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

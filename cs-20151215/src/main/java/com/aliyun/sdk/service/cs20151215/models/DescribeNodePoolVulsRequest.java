@@ -89,7 +89,7 @@ public class DescribeNodePoolVulsRequest extends Request {
         } 
 
         /**
-         * <p>Cluster ID.</p>
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class DescribeNodePoolVulsRequest extends Request {
         }
 
         /**
-         * <p>Node pool ID.</p>
+         * <p>The node pool ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +115,7 @@ public class DescribeNodePoolVulsRequest extends Request {
         }
 
         /**
-         * <p>The priority to fix the vulnerability. Separate multiple priorities with commas (,). Valid values:</p>
+         * <p>The severity levels of vulnerabilities to query. Separate multiple levels with commas (,). Valid values:</p>
          * <ul>
          * <li><code>asap</code>: high</li>
          * <li><code>later</code>: medium</li>

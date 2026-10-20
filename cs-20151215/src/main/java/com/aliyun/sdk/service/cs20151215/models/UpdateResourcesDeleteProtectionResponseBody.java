@@ -106,7 +106,7 @@ public class UpdateResourcesDeleteProtectionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The namespace to which the resource belongs.</p>
+         * <p>The namespace of the resource.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -117,7 +117,7 @@ public class UpdateResourcesDeleteProtectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates the status of deletion protection. A value of true indicates that deletion protection is enabled and a value of false indicates that deletion protection is disabled.</p>
+         * <p>The deletion protection status of the resource.</p>
          * 
          * <strong>example:</strong>
          * <p>enable</p>
@@ -128,7 +128,7 @@ public class UpdateResourcesDeleteProtectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0527ac9a-c899-4341-a21a-xxxxxxxxx</p>
@@ -139,7 +139,7 @@ public class UpdateResourcesDeleteProtectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The type of resource for which deletion protection is enabled or disabled.</p>
+         * <p>The resource type.</p>
          * 
          * <strong>example:</strong>
          * <p>namespaces</p>

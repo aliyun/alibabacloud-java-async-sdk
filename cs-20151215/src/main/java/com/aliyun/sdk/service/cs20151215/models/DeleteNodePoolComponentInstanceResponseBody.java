@@ -80,7 +80,10 @@ public class DeleteNodePoolComponentInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * cluster_id.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c846d7d529e34413c9ab1****</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -88,7 +91,10 @@ public class DeleteNodePoolComponentInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * request_id.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EB022AB1-4CF7-5BB6-B44A-38****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +102,10 @@ public class DeleteNodePoolComponentInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * task_id.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>T-696de321273bb00****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

@@ -145,11 +145,10 @@ public class DescribeKubernetesVersionMetadataRequest extends Request {
         } 
 
         /**
-         * <p>The cluster type that you want to use. Valid values:</p>
+         * <p>The cluster type. Valid values:</p>
          * <ul>
          * <li><code>Kubernetes</code>: ACK dedicated cluster.</li>
-         * <li><code>ManagedKubernetes</code>: ACK managed cluster. ACK managed clusters include ACK Pro clusters, ACK Basic clusters, ACK Serverless Pro clusters, ACK Serverless Basic clusters, ACK Edge Pro clusters, and ACK Edge Basic clusters.</li>
-         * <li><code>ExternalKubernetes</code>: registered cluster.</li>
+         * <li><code>ManagedKubernetes</code>: ACK managed cluster, including ACK Pro clusters, ACK basic clusters, ACK Serverless Pro clusters, ACK Serverless basic clusters, ACK Edge Pro clusters, and ACK Edge basic clusters.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -163,11 +162,11 @@ public class DescribeKubernetesVersionMetadataRequest extends Request {
         }
 
         /**
-         * <p>The Kubernetes version of the cluster. The Kubernetes versions supported by ACK are the same as the Kubernetes versions supported by open source Kubernetes. We recommend that you specify the latest Kubernetes version. If you do not configure this parameter, the latest Kubernetes version is used.</p>
-         * <p>For more information about the Kubernetes versions supported by ACK, see <a href="https://help.aliyun.com/document_detail/185269.html">Release notes for Kubernetes versions</a>.</p>
+         * <p>The Kubernetes version of the cluster. This version is consistent with the Kubernetes community baseline version. We recommend that you select the latest version. If you do not specify this parameter, the latest version is used by default.</p>
+         * <p>For more information about the Kubernetes versions supported by ACK, see <a href="https://help.aliyun.com/document_detail/185269.html">Overview of Kubernetes versions</a>.</p>
          * 
          * <strong>example:</strong>
-         * <p>1.16.9-aliyun.1</p>
+         * <p>1.32.1-aliyun.1</p>
          */
         public Builder kubernetesVersion(String kubernetesVersion) {
             this.putQueryParameter("KubernetesVersion", kubernetesVersion);
@@ -178,11 +177,11 @@ public class DescribeKubernetesVersionMetadataRequest extends Request {
         /**
          * <p>The query mode. Valid values:</p>
          * <ul>
-         * <li><code>supported</code>: queries all supported Kubernetes versions.</li>
-         * <li><code>creatable</code>: queries only Kubernetes versions of clusters that you can create.</li>
+         * <li><code>supported</code>: Supported versions.</li>
+         * <li><code>creatable</code>: Versions available for cluster creation.</li>
          * </ul>
-         * <p>If you specify <code>KubernetesVersion</code>, this parameter does not take effect.</p>
-         * <p>If you do not specify a query mode, Kubernetes versions of clusters that you can create are returned.</p>
+         * <p>If you specify KubernetesVersion, the system ignores the query mode.</p>
+         * <p>If you do not specify a query mode, the system returns versions available for cluster creation by default.</p>
          * 
          * <strong>example:</strong>
          * <p>supported</p>
@@ -194,11 +193,11 @@ public class DescribeKubernetesVersionMetadataRequest extends Request {
         }
 
         /**
-         * <p>The scenario where clusters are used. Valid values:</p>
+         * <p>The cluster profile. Valid values:</p>
          * <ul>
-         * <li><code>Default</code>: non-edge computing scenarios</li>
-         * <li><code>Edge</code>: edge computing scenarios</li>
-         * <li><code>Serverless</code>: serverless scenarios.</li>
+         * <li><code>Default</code>: cluster for non-edge scenarios.</li>
+         * <li><code>Edge</code>: cluster for edge scenarios.</li>
+         * <li><code>Serverless</code>: ASK cluster.</li>
          * </ul>
          * <p>Default value: <code>Default</code>.</p>
          * 
@@ -212,10 +211,10 @@ public class DescribeKubernetesVersionMetadataRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to query the Kubernetes versions available for updates. This parameter takes effect only when the KubernetesVersion parameter is specified.</p>
+         * <p>Specifies whether to query the upgradable versions of the cluster version. This parameter takes effect only when the KubernetesVersion parameter is specified. Valid values:</p>
          * <ul>
-         * <li>true: queries the Kubernetes versions available for updates.</li>
-         * <li>false: does not query the Kubernetes versions available for updates.</li>
+         * <li>true: Queries upgradable versions.</li>
+         * <li>false: Does not query upgradable versions.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -228,7 +227,7 @@ public class DescribeKubernetesVersionMetadataRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the cluster.</p>
+         * <p>The ID of the region where the cluster is deployed.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -241,17 +240,17 @@ public class DescribeKubernetesVersionMetadataRequest extends Request {
         }
 
         /**
-         * <p>The container runtime type that you want to use. You can specify a runtime type to query only OS images that support the runtime type. Valid values:</p>
+         * <p>The runtime type. You can specify a runtime type to filter system images supported by the runtime. Valid values:</p>
          * <ul>
-         * <li><code>docker</code>: Docker</li>
-         * <li><code>containerd</code>: containerd</li>
-         * <li><code>Sandboxed-Container.runv</code>: Sandboxed-Container</li>
+         * <li><code>docker</code>: Docker runtime.</li>
+         * <li><code>containerd</code>: containerd runtime.</li>
+         * <li><code>Sandboxed-Container.runv</code>: sandboxed container.</li>
          * </ul>
-         * <p>If you specify a runtime type, only the OS images that support the specified runtime type are returned.</p>
-         * <p>Otherwise, all OS images are returned.</p>
+         * <p>If you specify a runtime type, the system returns the image versions supported by the specified runtime.</p>
+         * <p>If you do not specify a runtime type, the system returns all images by default.</p>
          * 
          * <strong>example:</strong>
-         * <p>docker</p>
+         * <p>containerd</p>
          */
         public Builder runtime(String runtime) {
             this.putQueryParameter("runtime", runtime);

@@ -73,7 +73,10 @@ public class DescribeAutoRepairPolicyRequest extends Request {
         } 
 
         /**
-         * cluster_id.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c82e6987e2961451182edacd74faf****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("cluster_id", clusterId);
@@ -82,7 +85,10 @@ public class DescribeAutoRepairPolicyRequest extends Request {
         }
 
         /**
-         * policy_id.
+         * <p>The self-healing rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-xxxxxx</p>
          */
         public Builder policyId(String policyId) {
             this.putPathParameter("policy_id", policyId);

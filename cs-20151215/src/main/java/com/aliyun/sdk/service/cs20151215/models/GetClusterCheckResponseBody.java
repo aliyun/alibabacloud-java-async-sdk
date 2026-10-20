@@ -132,7 +132,7 @@ public class GetClusterCheckResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the cluster check task.</p>
+         * <p>The check ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1697100584236600453-ce0da5a1d627e4e9e9f96cae8ad07****-clustercheck-lboto</p>
@@ -143,7 +143,7 @@ public class GetClusterCheckResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A list of check items.</p>
+         * <p>The check items.</p>
          */
         public Builder checkItems(java.util.Map<String, java.util.List<java.util.Map<String, ?>>> checkItems) {
             this.checkItems = checkItems;
@@ -151,7 +151,7 @@ public class GetClusterCheckResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the cluster check task was created.</p>
+         * <p>The creation time in ISO 8601 format with time zone information.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-10-16T08:31:20.292030178Z</p>
@@ -162,7 +162,7 @@ public class GetClusterCheckResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the cluster check task was completed.</p>
+         * <p>The completion time.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-10-16T08:35:20.292030178Z</p>
@@ -173,7 +173,7 @@ public class GetClusterCheckResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message that indicates the status of the cluster check task.</p>
+         * <p>The check status message.</p>
          * 
          * <strong>example:</strong>
          * <p>task succeed</p>
@@ -184,7 +184,7 @@ public class GetClusterCheckResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the cluster check.</p>
+         * <p>The check status.</p>
          * 
          * <strong>example:</strong>
          * <p>Succeeded</p>
@@ -195,7 +195,7 @@ public class GetClusterCheckResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The check method.</p>
+         * <p>The check type.</p>
          * 
          * <strong>example:</strong>
          * <p>ClusterUpgrade</p>

@@ -208,11 +208,11 @@ public class DescribeResourcesDeleteProtectionResponse extends Response {
             } 
 
             /**
-             * <p>The resource name.</p>
+             * <p>The name of the queried resource.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>test</p>
+             * <p>arms-prom</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -220,7 +220,7 @@ public class DescribeResourcesDeleteProtectionResponse extends Response {
             }
 
             /**
-             * <p>The namespace to which the resource belongs.</p>
+             * <p>The namespace of the queried resource.</p>
              * 
              * <strong>example:</strong>
              * <p>default</p>
@@ -231,7 +231,7 @@ public class DescribeResourcesDeleteProtectionResponse extends Response {
             }
 
             /**
-             * <p>The type of the resource.</p>
+             * <p>The type of the queried resource.</p>
              * 
              * <strong>example:</strong>
              * <p>namespaces</p>
@@ -242,10 +242,10 @@ public class DescribeResourcesDeleteProtectionResponse extends Response {
             }
 
             /**
-             * <p>Indicates whether deletion protection is enabled.</p>
+             * <p>Indicates whether deletion protection is enabled. Valid values:</p>
              * <ul>
-             * <li>true: deletion protection is enabled.</li>
-             * <li>false: deletion protection is disabled.</li>
+             * <li>true: Enabled.</li>
+             * <li>false: Disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>

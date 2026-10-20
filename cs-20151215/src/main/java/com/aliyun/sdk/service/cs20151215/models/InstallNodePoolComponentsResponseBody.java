@@ -80,7 +80,7 @@ public class InstallNodePoolComponentsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the asynchronous task. You can use this ID to track the installation progress.</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>c8155823d057948c69a****</p>
@@ -91,7 +91,7 @@ public class InstallNodePoolComponentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>49511F2D-D56A-5C24-B9AE-C8491E09B***</p>

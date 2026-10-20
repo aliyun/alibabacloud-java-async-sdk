@@ -67,10 +67,12 @@ public class GetClusterAuditProjectResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether the cluster auditing feature is enabled for the cluster. </p>
+         * <p>Indicates whether the API server audit feature is enabled for the cluster.</p>
          * <ul>
-         * <li><code>true</code>: The cluster auditing feature is enabled for the cluster. </li>
-         * <li><code>false</code>: The cluster auditing feature is disabled for the cluster.</li>
+         * <li><p><code>true</code>: Enabled.</p>
+         * </li>
+         * <li><p><code>false</code>: Not enabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -82,7 +84,7 @@ public class GetClusterAuditProjectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The SLS project in which the audit logs of the API server are stored.</p>
+         * <p>The SLS project that stores the API server audit logs of the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>k8s-log-cad1230511cbb4db4a488e58518******</p>

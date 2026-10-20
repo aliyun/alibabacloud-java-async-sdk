@@ -54,7 +54,7 @@ public class DeployPolicyInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A list of policy instances.</p>
+         * <p>The list of policy instances.</p>
          */
         public Builder instances(java.util.List<String> instances) {
             this.instances = instances;

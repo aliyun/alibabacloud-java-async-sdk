@@ -73,7 +73,7 @@ public class ListClusterAddonInstanceResourcesRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cb95aa626a47740afbf6aa099b650****</p>
@@ -85,7 +85,7 @@ public class ListClusterAddonInstanceResourcesRequest extends Request {
         }
 
         /**
-         * <p>The name of the add-on.</p>
+         * <p>The name of the component instance.</p>
          * 
          * <strong>example:</strong>
          * <p>terway-eniip</p>

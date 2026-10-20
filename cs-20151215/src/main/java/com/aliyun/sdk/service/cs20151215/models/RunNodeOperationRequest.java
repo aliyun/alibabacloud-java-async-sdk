@@ -119,6 +119,7 @@ public class RunNodeOperationRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,6 +132,7 @@ public class RunNodeOperationRequest extends Request {
         }
 
         /**
+         * <p>The node pool ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,6 +145,7 @@ public class RunNodeOperationRequest extends Request {
         }
 
         /**
+         * <p>The node on which the O&amp;M operation is executed.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,6 +158,7 @@ public class RunNodeOperationRequest extends Request {
         }
 
         /**
+         * <p>The name of the O&amp;M action to execute.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,7 +171,7 @@ public class RunNodeOperationRequest extends Request {
         }
 
         /**
-         * operationArgs.
+         * <p>The list of parameters accepted by the O&amp;M action.</p>
          */
         public Builder operationArgs(java.util.List<String> operationArgs) {
             this.putBodyParameter("operationArgs", operationArgs);

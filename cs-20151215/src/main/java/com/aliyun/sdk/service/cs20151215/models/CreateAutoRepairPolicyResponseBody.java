@@ -67,7 +67,10 @@ public class CreateAutoRepairPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * policy_id.
+         * <p>The ID of the self-healing rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-xxxxxxx</p>
          */
         public Builder policyId(String policyId) {
             this.policyId = policyId;
@@ -75,7 +78,10 @@ public class CreateAutoRepairPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * request_id.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E368C761-F8F6-4A36-9B58-BD53D5******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

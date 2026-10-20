@@ -130,7 +130,7 @@ public class DescribeEventsForRegionRequest extends Request {
         } 
 
         /**
-         * <p>The region.</p>
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,7 +155,7 @@ public class DescribeEventsForRegionRequest extends Request {
         }
 
         /**
-         * max_results.
+         * <p>The maximum number of results to return for a single request.</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("max_results", maxResults);
@@ -164,7 +164,7 @@ public class DescribeEventsForRegionRequest extends Request {
         }
 
         /**
-         * next_token.
+         * <p>The query token. The value is the next_token parameter value returned by the previous API call.</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("next_token", nextToken);
@@ -173,7 +173,7 @@ public class DescribeEventsForRegionRequest extends Request {
         }
 
         /**
-         * <p>The number of pages.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -185,7 +185,9 @@ public class DescribeEventsForRegionRequest extends Request {
         }
 
         /**
-         * <p>The number of records on each page.</p>
+         * <p>The maximum number of results to return per page.</p>
+         * <p>Valid values: 1 to 100.</p>
+         * <p>Default value: 50.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>

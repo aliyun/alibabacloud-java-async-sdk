@@ -80,7 +80,7 @@ public class DeleteClusterResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cb95aa626a47740afbf6aa099b650****</p>
@@ -102,7 +102,7 @@ public class DeleteClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the task.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>T-5a54309c80282e39ea****</p>

@@ -115,7 +115,10 @@ public class DescribeClusterAddonMetadataRequest extends Request {
         }
 
         /**
-         * version.
+         * <p>The component version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.8.4.1</p>
          */
         public Builder version(String version) {
             this.putQueryParameter("version", version);

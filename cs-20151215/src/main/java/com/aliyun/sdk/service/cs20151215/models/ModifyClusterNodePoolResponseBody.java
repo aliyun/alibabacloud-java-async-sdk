@@ -91,7 +91,7 @@ public class ModifyClusterNodePoolResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>687C5BAA-D103-4993-884B-C35E4314****</p>

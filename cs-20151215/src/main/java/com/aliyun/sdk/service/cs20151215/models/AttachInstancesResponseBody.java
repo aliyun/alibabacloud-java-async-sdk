@@ -67,7 +67,7 @@ public class AttachInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the added nodes.</p>
+         * <p>The list of node addition information.</p>
          */
         public Builder list(java.util.List<List> list) {
             this.list = list;
@@ -78,7 +78,7 @@ public class AttachInstancesResponseBody extends TeaModel {
          * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>T-5a544aff80282e39ea000039</p>
+         * <p>T-5a544aff80282e39ea00****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -157,7 +157,7 @@ public class AttachInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The code that indicates the task result.</p>
+             * <p>The status code of the node addition result.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -168,7 +168,7 @@ public class AttachInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the ECS instance.</p>
+             * <p>The ECS instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>i-2ze0lgm3y6iylcbt****</p>
@@ -179,7 +179,7 @@ public class AttachInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the ECS instance is successfully added to the ACK cluster.</p>
+             * <p>The description of the node addition result.</p>
              * 
              * <strong>example:</strong>
              * <p>successful</p>

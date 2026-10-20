@@ -160,6 +160,7 @@ public class DeleteNodePoolComponentInstanceRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -172,6 +173,7 @@ public class DeleteNodePoolComponentInstanceRequest extends Request {
         }
 
         /**
+         * <p>The node pool ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -184,6 +186,7 @@ public class DeleteNodePoolComponentInstanceRequest extends Request {
         }
 
         /**
+         * <p>The component name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -196,7 +199,10 @@ public class DeleteNodePoolComponentInstanceRequest extends Request {
         }
 
         /**
-         * batch_interval.
+         * <p>The interval between batches, in seconds. Default value: 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder batchInterval(Long batchInterval) {
             this.putQueryParameter("batch_interval", batchInterval);
@@ -205,7 +211,10 @@ public class DeleteNodePoolComponentInstanceRequest extends Request {
         }
 
         /**
-         * max_failed_nodes.
+         * <p>The maximum number of nodes that can fail during the rolling process. Default value: 0. A value of 0 indicates that the task fails if any node fails. A value greater than 0 indicates that the task fails and stops if the cumulative number of failed nodes exceeds this value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder maxFailedNodes(Long maxFailedNodes) {
             this.putQueryParameter("max_failed_nodes", maxFailedNodes);
@@ -214,7 +223,10 @@ public class DeleteNodePoolComponentInstanceRequest extends Request {
         }
 
         /**
-         * max_parallelism.
+         * <p>The maximum number of parallel operations per batch. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder maxParallelism(Long maxParallelism) {
             this.putQueryParameter("max_parallelism", maxParallelism);
@@ -223,7 +235,10 @@ public class DeleteNodePoolComponentInstanceRequest extends Request {
         }
 
         /**
-         * node_names.
+         * <p>The list of nodes to rotate. Default value: all nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;cn-hangzhou.10.91.xx.xx&quot;]</p>
          */
         public Builder nodeNames(java.util.List<String> nodeNames) {
             String nodeNamesShrink = shrink(nodeNames, "node_names", "json");
@@ -233,7 +248,16 @@ public class DeleteNodePoolComponentInstanceRequest extends Request {
         }
 
         /**
-         * pause_policy.
+         * <p>The auto-pause policy during a node upgrade. Valid values:</p>
+         * <ul>
+         * <li>NotPause</li>
+         * <li>FirstBatch</li>
+         * <li>EveryBatch</li>
+         * </ul>
+         * <p>Default value: NotPause.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NotPause</p>
          */
         public Builder pausePolicy(String pausePolicy) {
             this.putQueryParameter("pause_policy", pausePolicy);

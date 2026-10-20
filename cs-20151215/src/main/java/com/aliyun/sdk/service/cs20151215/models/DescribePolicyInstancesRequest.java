@@ -88,7 +88,7 @@ public class DescribePolicyInstancesRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The ID of the target cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +101,7 @@ public class DescribePolicyInstancesRequest extends Request {
         }
 
         /**
-         * <p>The name of the policy instance that you want to query.</p>
+         * <p>The name of the policy instance.</p>
          * 
          * <strong>example:</strong>
          * <p>allowed-repos-cz4s2</p>
@@ -113,7 +113,7 @@ public class DescribePolicyInstancesRequest extends Request {
         }
 
         /**
-         * <p>The name of the policy that you want to query.</p>
+         * <p>The name of the policy governance rule.</p>
          * 
          * <strong>example:</strong>
          * <p>ACKPSPCapabilities</p>

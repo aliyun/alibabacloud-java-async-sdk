@@ -101,7 +101,7 @@ public class ListClusterKubeconfigStatesRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>c82e6987e2961451182edacd74faf****</p>
@@ -113,7 +113,15 @@ public class ListClusterKubeconfigStatesRequest extends Request {
         }
 
         /**
-         * cloudServiceKubeConfig.
+         * <p>Specifies whether to query the list of KubeConfigs for cloud service roles in the cluster.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true: Queries the list of KubeConfigs for cloud service roles in the cluster.</li>
+         * <li>false: Queries the list of KubeConfigs for Resource Access Management (RAM) users or roles in the cluster.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder cloudServiceKubeConfig(Boolean cloudServiceKubeConfig) {
             this.putQueryParameter("cloudServiceKubeConfig", cloudServiceKubeConfig);
@@ -123,10 +131,8 @@ public class ListClusterKubeconfigStatesRequest extends Request {
 
         /**
          * <p>The page number.</p>
-         * <ul>
-         * <li>Valid values: ≥ 1.</li>
-         * <li>Default value: 1.</li>
-         * </ul>
+         * <p>Valid values: integers greater than or equal to 1.</p>
+         * <p>Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -139,10 +145,8 @@ public class ListClusterKubeconfigStatesRequest extends Request {
 
         /**
          * <p>The number of entries per page.</p>
-         * <ul>
-         * <li>Valid values: 10 to 50.</li>
-         * <li>Default value: 10</li>
-         * </ul>
+         * <p>Valid values: 1 to 50.</p>
+         * <p>Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

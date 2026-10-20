@@ -67,7 +67,7 @@ public class ListClusterAddonInstanceResourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Information about the Helm release instance corresponding to the add-on.</p>
+         * <p>The Helm release instance information corresponding to the component.</p>
          */
         public Builder helmRelease(HelmRelease helmRelease) {
             this.helmRelease = helmRelease;
@@ -75,7 +75,7 @@ public class ListClusterAddonInstanceResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A list of Kubernetes objects associated with the add-on.</p>
+         * <p>The list of Kubernetes objects contained in the component.</p>
          */
         public Builder kubernetesObjects(java.util.List<KubernetesObjects> kubernetesObjects) {
             this.kubernetesObjects = kubernetesObjects;
@@ -167,7 +167,7 @@ public class ListClusterAddonInstanceResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the Helm chart.</p>
+             * <p>The name of the Helm chart corresponding to the component.</p>
              * 
              * <strong>example:</strong>
              * <p>ack-node-problem-detector</p>
@@ -178,7 +178,7 @@ public class ListClusterAddonInstanceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the Helm chart.</p>
+             * <p>The version of the Helm chart corresponding to the component.</p>
              * 
              * <strong>example:</strong>
              * <p>1.2.28</p>
@@ -189,7 +189,7 @@ public class ListClusterAddonInstanceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The namespace where the Helm release is located.</p>
+             * <p>The namespace.</p>
              * 
              * <strong>example:</strong>
              * <p>kube-system</p>
@@ -320,7 +320,7 @@ public class ListClusterAddonInstanceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Kubernetes API type to which the object belongs.</p>
+             * <p>The Kubernetes API kind of the object.</p>
              * 
              * <strong>example:</strong>
              * <p>ClusterRole</p>
@@ -331,7 +331,7 @@ public class ListClusterAddonInstanceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the Kubernetes object.</p>
+             * <p>The name of the object.</p>
              * 
              * <strong>example:</strong>
              * <p>terway-pod-reader</p>

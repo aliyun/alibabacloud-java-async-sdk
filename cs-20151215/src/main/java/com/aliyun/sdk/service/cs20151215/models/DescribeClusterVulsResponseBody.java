@@ -198,7 +198,7 @@ public class DescribeClusterVulsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The CVE list.</p>
+             * <p>The list of CVEs.</p>
              */
             public Builder cveList(java.util.List<String> cveList) {
                 this.cveList = cveList;
@@ -206,13 +206,7 @@ public class DescribeClusterVulsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The severity level of the vulnerability.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>nntf: low</li>
-             * <li>later: medium     </li>
-             * <li>asap: high</li>
-             * </ul>
+             * <p>The vulnerability severity level.</p>
              * 
              * <strong>example:</strong>
              * <p>asap</p>
@@ -223,7 +217,7 @@ public class DescribeClusterVulsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of nodes that have the vulnerability.</p>
+             * <p>The number of nodes that have this vulnerability.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -237,7 +231,7 @@ public class DescribeClusterVulsResponseBody extends TeaModel {
              * <p>The node pool ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>np0156da1082b54fa987e32618dd45f5d3</p>
+             * <p>np0156da1082b54fa987e32618dd******</p>
              */
             public Builder nodepoolId(String nodepoolId) {
                 this.nodepoolId = nodepoolId;
@@ -245,7 +239,7 @@ public class DescribeClusterVulsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the node pool.</p>
+             * <p>The node pool name.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -256,10 +250,10 @@ public class DescribeClusterVulsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The alias of the vulnerability.</p>
+             * <p>The vulnerability alias.</p>
              * 
              * <strong>example:</strong>
-             * <p>CVE-2022-xxxx:rsync Security vulnerabilities</p>
+             * <p>CVE-2022-xxxx:rsync security vulnerability</p>
              */
             public Builder vulAliasName(String vulAliasName) {
                 this.vulAliasName = vulAliasName;
@@ -267,7 +261,7 @@ public class DescribeClusterVulsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the vulnerability.</p>
+             * <p>The vulnerability name.</p>
              * 
              * <strong>example:</strong>
              * <p>oval:com.redhat.rhsa:def:xxxxxxx</p>
@@ -278,16 +272,7 @@ public class DescribeClusterVulsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of vulnerability.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>app: application vulnerabilities</li>
-             * <li>sca: application vulnerabilities (software component analysis)</li>
-             * <li>cve: Linux vulnerabilities</li>
-             * <li>cms: Web-CMS vulnerabilities</li>
-             * <li>sys: Windows vulnerabilities</li>
-             * <li>emg:  emergency vulnerabilities</li>
-             * </ul>
+             * <p>The vulnerability type.</p>
              * 
              * <strong>example:</strong>
              * <p>cve</p>

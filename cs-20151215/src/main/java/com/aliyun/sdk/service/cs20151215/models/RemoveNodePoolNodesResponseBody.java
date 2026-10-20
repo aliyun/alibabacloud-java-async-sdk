@@ -70,7 +70,7 @@ public class RemoveNodePoolNodesResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>A9891419-D125-4D89-AFCA-68846675E2F7</p>
+         * <p>A9891419-D125-4D89-AFCA-68846675****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -116,15 +116,15 @@ public class DeleteClusterNodesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to remove all pods from the nodes you want to remove. Valid values:</p>
+         * <p>Specifies whether to automatically drain Pods on the nodes. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: removes all pods automatically.</li>
-         * <li><code>false</code>: skips removing pods.</li>
+         * <li><code>true</code>: Automatically drains Pods on the nodes.</li>
+         * <li><code>false</code>: Does not automatically drain Pods on the nodes.</li>
          * </ul>
-         * <p>Default value: <code>false</code></p>
+         * <p>Default value: <code>false</code>.</p>
          * 
          * <strong>example:</strong>
-         * <p>true</p>
+         * <p>false</p>
          */
         public Builder drainNode(Boolean drainNode) {
             this.putBodyParameter("drain_node", drainNode);
@@ -133,7 +133,7 @@ public class DeleteClusterNodesRequest extends Request {
         }
 
         /**
-         * <p>The list of nodes to remove. You must specify the node names used in the cluster, for example, <code>cn-hangzhou.192.168.xx.xx</code>.</p>
+         * <p>The list of nodes to remove. The node name must be the name of the node in the cluster, such as <code>cn-hangzhou.192.168.xx.xx</code>.</p>
          * <p>This parameter is required.</p>
          */
         public Builder nodes(java.util.List<String> nodes) {
@@ -143,14 +143,15 @@ public class DeleteClusterNodesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to release the ECS instances. Valid values:</p>
+         * <p>Specifies whether to release the ECS instances at the same time. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: releases the ECS instances.</li>
-         * <li><code>false</code>: retains the ECS instances.</li>
+         * <li><code>true</code>: Releases the ECS instances at the same time.</li>
+         * <li><code>false</code>: Retains the ECS instances.</li>
          * </ul>
-         * <p>Default value: <code>false</code></p>
-         * <p>**</p>
-         * <p><strong>Notes</strong> Unsupported for subscription ECS instances.</p>
+         * <p>Default value: <code>false</code>.</p>
+         * <blockquote>
+         * <p>Releasing ECS instances at the same time is not supported when the nodes are subscription instances.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>true</p>

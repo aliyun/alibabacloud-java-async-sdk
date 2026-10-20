@@ -99,7 +99,7 @@ public class DescribeClustersRequest extends Request {
         }
 
         /**
-         * <p>The cluster name based on which the system performs fuzzy searches among the clusters that belong to the current Alibaba Cloud account.</p>
+         * <p>Specifies the cluster name for fuzzy matching.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

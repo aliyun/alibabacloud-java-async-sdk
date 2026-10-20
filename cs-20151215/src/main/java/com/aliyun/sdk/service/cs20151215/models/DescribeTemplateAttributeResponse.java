@@ -285,7 +285,7 @@ public class DescribeTemplateAttributeResponse extends Response {
             } 
 
             /**
-             * <p>The ID of the template. When you update a template, a new template ID is generated.</p>
+             * <p>The orchestration template ID. A new ID is generated each time the template is modified.</p>
              * 
              * <strong>example:</strong>
              * <p>72d20cf8-a533-4ea9-a10d-e7630d3d****</p>
@@ -296,7 +296,12 @@ public class DescribeTemplateAttributeResponse extends Response {
             }
 
             /**
-             * <p>The access control policy of the template.</p>
+             * <p>The access permissions of the orchestration template. Valid values:</p>
+             * <ul>
+             * <li><code>private</code>: private.</li>
+             * <li><code>public</code>: public.</li>
+             * <li><code>shared</code>: shared.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>private</p>
@@ -307,7 +312,7 @@ public class DescribeTemplateAttributeResponse extends Response {
             }
 
             /**
-             * <p>The name of the template.</p>
+             * <p>The name of the orchestration template.</p>
              * 
              * <strong>example:</strong>
              * <p>web</p>
@@ -318,7 +323,7 @@ public class DescribeTemplateAttributeResponse extends Response {
             }
 
             /**
-             * <p>The template content in the YAML format.</p>
+             * <p>The YAML content of the orchestration template.</p>
              * 
              * <strong>example:</strong>
              * <p>apiVersion: V1\n***</p>
@@ -329,13 +334,13 @@ public class DescribeTemplateAttributeResponse extends Response {
             }
 
             /**
-             * <p>The type of template. The value can be a custom value.</p>
+             * <p>The templatetype.</p>
              * <ul>
-             * <li>If the parameter is set to <code>kubernetes</code>, the template is displayed on the Templates page in the console.</li>
-             * <li>If the parameter is set to <code>compose</code>, the template is displayed on the Container Service - Swarm page in the console. Container Service for Swarm is deprecated.</li>
-             * <li>If the value of the parameter is not <code>kubernetes</code>, the template is not displayed on the Templates page in the console. We recommend that you set the parameter to <code>kubernetes</code>.</li>
+             * <li><p>If the value is kubernetes, the template is displayed on the Orchestration Templates page in the console.</p>
+             * </li>
+             * <li><p>If this parameter is not set or is set to other values, the template is not displayed on the Orchestration Templates page in the console.</p>
+             * </li>
              * </ul>
-             * <p>Default value: <code>kubernetes</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>kubernetes</p>
@@ -346,7 +351,7 @@ public class DescribeTemplateAttributeResponse extends Response {
             }
 
             /**
-             * <p>The description of the template.</p>
+             * <p>The description of the orchestration template.</p>
              * 
              * <strong>example:</strong>
              * <p>test template</p>
@@ -357,7 +362,7 @@ public class DescribeTemplateAttributeResponse extends Response {
             }
 
             /**
-             * <p>The label of the template.</p>
+             * <p>The tags of the deployment template.</p>
              * 
              * <strong>example:</strong>
              * <p>sa</p>
@@ -368,7 +373,7 @@ public class DescribeTemplateAttributeResponse extends Response {
             }
 
             /**
-             * <p>The unique ID of the template. The value remains unchanged after the template is updated.</p>
+             * <p>The unique ID of the orchestration template. This ID does not change when the template is updated.</p>
              * 
              * <strong>example:</strong>
              * <p>874ec485-e7e6-4373-8a3b-47bde8ae****</p>
@@ -379,10 +384,10 @@ public class DescribeTemplateAttributeResponse extends Response {
             }
 
             /**
-             * <p>The time when the template was created.</p>
+             * <p>The time when the orchestration template was created.</p>
              * 
              * <strong>example:</strong>
-             * <p>2020-09-16T19:21:29+08:00</p>
+             * <p>2025-04-25T16:56:33+08:00</p>
              */
             public Builder created(String created) {
                 this.created = created;
@@ -390,10 +395,10 @@ public class DescribeTemplateAttributeResponse extends Response {
             }
 
             /**
-             * <p>The time when the template was updated.</p>
+             * <p>The time when the orchestration template was last updated.</p>
              * 
              * <strong>example:</strong>
-             * <p>2020-09-16T19:21:29+08:00</p>
+             * <p>2025-04-25T16:56:33+08:00</p>
              */
             public Builder updated(String updated) {
                 this.updated = updated;

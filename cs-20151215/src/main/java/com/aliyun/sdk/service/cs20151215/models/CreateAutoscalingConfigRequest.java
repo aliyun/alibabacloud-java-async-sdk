@@ -288,7 +288,7 @@ public class CreateAutoscalingConfigRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>c0XXXXXXX10</p>
+         * <p>cdde1f21ae22e483ebcb068a6eb7f****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -297,10 +297,12 @@ public class CreateAutoscalingConfigRequest extends Request {
         }
 
         /**
-         * <p>The waiting time before the auto scaling feature performs a scale-in activity. It is an interval between the time when the scale-in threshold is reached and the time when the scale-in activity (reducing the number of pods) starts. Unit: minutes. Default value: 10.</p>
+         * <p>The scale-in trigger delay, which is the time interval between when a scale-in need is detected (the scale-in threshold is reached) and when the scale-in operation (reducing the number of Pods) is actually performed.</p>
+         * <p>Valid values: [1,60]. Unit: minutes.</p>
+         * <p>Default value: 10.</p>
          * 
          * <strong>example:</strong>
-         * <p>10 m</p>
+         * <p>10</p>
          */
         public Builder coolDownDuration(String coolDownDuration) {
             this.putBodyParameter("cool_down_duration", coolDownDuration);
@@ -309,10 +311,10 @@ public class CreateAutoscalingConfigRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to evict pods created by DaemonSets when the cluster autoscaler performs a scale-in activity. Valid values:</p>
+         * <p>Specifies whether cluster-autoscaler evicts DaemonSet Pods on a node during scale-in. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: evicts DaemonSet pods.</li>
-         * <li><code>false</code>: does not evict DaemonSet pods.</li>
+         * <li><code>true</code>: Eviction is performed.</li>
+         * <li><code>false</code>: Eviction is not performed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -325,11 +327,11 @@ public class CreateAutoscalingConfigRequest extends Request {
         }
 
         /**
-         * <p>The node pool scale-out policy. Valid values:</p>
+         * <p>The node pool scale-out order policy. Valid values:</p>
          * <ul>
-         * <li><code>least-waste</code>: the default policy. If multiple node pools meet the requirement, this policy selects the node pool that will have the least idle resources after the scale-out activity is completed.</li>
-         * <li><code>random</code>: the random policy. If multiple node pools meet the requirement, this policy selects a random node pool for the scale-out activity.</li>
-         * <li><code>priority</code>: the priority-based policy If multiple node pools meet the requirement, this policy selects the node pool with the highest priority for the scale-out activity. The priority setting is stored in the ConfigMap named <code>cluster-autoscaler-priority-expander</code> in the kube-system namespace. When a scale-out activity is triggered, the policy obtains the node pool priorities from the ConfigMap based on the node pool IDs and then selects the node pool with the highest priority for the scale-out activity.</li>
+         * <li><code>least-waste</code>: The default policy. If multiple node pools are available for scale-out, the node pool with the least resource waste is selected.</li>
+         * <li><code>random</code>: The random policy. If multiple node pools are available for scale-out, a node pool is randomly selected.</li>
+         * <li><code>priority</code>: The priority policy. If multiple node pools are available for scale-out, the node pool with the highest priority based on your custom scaling group order is selected. Node pool priorities are defined by the <code>priorities</code> parameter.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -342,11 +344,13 @@ public class CreateAutoscalingConfigRequest extends Request {
         }
 
         /**
-         * <p>The scale-in threshold of GPU utilization. This threshold specifies the ratio of the GPU resources that are requested by pods to the total GPU resources on the node.</p>
-         * <p>A scale-in activity is performed only when the CPU utilization, memory utilization, and GPU utilization of a GPU-accelerated node are lower than the scale-in threshold of GPU utilization.</p>
+         * <p>The GPU scale-in threshold, which is the ratio of requested resources to total resources on a node.</p>
+         * <p>A GPU node can be scaled in only when this ratio falls below the configured threshold, meaning the CPU, memory, and GPU resource utilization of the node are all below the GPU scale-in threshold.</p>
+         * <p>Valid values: [0.1~1].</p>
+         * <p>Default value: 0.3, which indicates 30%.</p>
          * 
          * <strong>example:</strong>
-         * <p>0.5</p>
+         * <p>0.3</p>
          */
         public Builder gpuUtilizationThreshold(String gpuUtilizationThreshold) {
             this.putBodyParameter("gpu_utilization_threshold", gpuUtilizationThreshold);
@@ -355,10 +359,12 @@ public class CreateAutoscalingConfigRequest extends Request {
         }
 
         /**
-         * <p>The maximum amount of time to wait for pods on a node to terminate during a scale-in activity. Unit: seconds.</p>
+         * <p>The timeout period for cluster-autoscaler to wait for Pod termination during node draining in a scale-in scenario.</p>
+         * <p>Unit: seconds.</p>
+         * <p>Default value: 14400.</p>
          * 
          * <strong>example:</strong>
-         * <p>14400s</p>
+         * <p>14400</p>
          */
         public Builder maxGracefulTerminationSec(Integer maxGracefulTerminationSec) {
             this.putBodyParameter("max_graceful_termination_sec", maxGracefulTerminationSec);
@@ -367,7 +373,8 @@ public class CreateAutoscalingConfigRequest extends Request {
         }
 
         /**
-         * <p>The minimum number of pods allowed in each ReplicaSet before a scale-in activity is performed.</p>
+         * <p>The minimum number of Pods allowed in each ReplicaSet before a node can be scaled in.</p>
+         * <p>Default value: 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -379,7 +386,8 @@ public class CreateAutoscalingConfigRequest extends Request {
         }
 
         /**
-         * <p>Auto-scaling priority configuration. After creating a node pool with elasticity enabled, you can choose whether to configure a priority strategy and priority settings through <a href="https://help.aliyun.com/document_detail/119099.html">Enabling Node Auto-scaling</a>. This allows you to set priorities for the specified auto-scaling node pool scaling group. The priority value range is [1, 100] and must be a positive integer.</p>
+         * <p>The priority configuration for auto scaling. After you create a node pool with elastic scaling enabled, you can configure priority policies and priority settings for the scaling groups of specified auto scaling node pools by using <a href="https://help.aliyun.com/document_detail/119099.html">Enable node auto scaling</a>.</p>
+         * <p>Valid values: [1, 100]. The value must be a positive integer. A larger value indicates a higher priority.</p>
          */
         public Builder priorities(java.util.Map<String, java.util.List<String>> priorities) {
             this.putBodyParameter("priorities", priorities);
@@ -388,10 +396,10 @@ public class CreateAutoscalingConfigRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to delete the corresponding Kubernetes node objects after nodes are removed in swift mode. For more information about the swift mode, see <a href="https://help.aliyun.com/document_detail/119099.html">Scaling mode</a>. Default value: false Valid values:</p>
+         * <p>Specifies whether to delete the corresponding Kubernetes Node object after a node in rapid mode is successfully scaled in. For more information about rapid mode, see <a href="https://help.aliyun.com/document_detail/119099.html">Scaling modes</a>. Default value: false. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: deletes the corresponding Kubernetes node objects after nodes are removed in swift mode. We recommend that you do not set the value to true because data inconsistency may occur in Kubernetes objects.</li>
-         * <li><code>false</code>: retains the corresponding Kubernetes node objects after nodes are removed in swift mode.</li>
+         * <li><code>true</code>: The Kubernetes Node object is deleted after the node in rapid mode is stopped. Setting this parameter to true is not recommended because it may cause data inconsistency in Kubernetes objects.</li>
+         * <li><code>false</code>: The Kubernetes Node object is retained after the node in rapid mode is stopped.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -404,10 +412,10 @@ public class CreateAutoscalingConfigRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to allow node scale-in activities. Valid values:</p>
+         * <p>Specifies whether to allow node scale-in. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: allows node scale-in activities.</li>
-         * <li><code>false</code>: does not allow node scale-in activities.</li>
+         * <li><code>true</code>: Scale-in is allowed.</li>
+         * <li><code>false</code>: Scale-in is prohibited.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -420,10 +428,10 @@ public class CreateAutoscalingConfigRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the cluster autoscaler performs a scale-out activity when the number of ready nodes in the cluster is 0. Default value: true. Valid values:</p>
+         * <p>Specifies whether cluster-autoscaler performs scale-out when the number of Ready nodes in the cluster is 0. Default value: true. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: performs a scale-out activity.</li>
-         * <li><code>false</code>: does not perform a scale-out activity.</li>
+         * <li><code>true</code>: Scale-out is performed.</li>
+         * <li><code>false</code>: Scale-out is not performed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -436,10 +444,12 @@ public class CreateAutoscalingConfigRequest extends Request {
         }
 
         /**
-         * <p>Elastic component type, default is goatscaler for cluster version 1.24 and above, and cluster-autoscaler below that. Values:</p>
+         * <p>The elastic component type. For clusters running version 1.24 or later, the default value is goatscaler. For earlier versions, the default value is cluster-autoscaler. Valid values:</p>
          * <ul>
-         * <li><code>goatscaler</code>: Instant elasticity. </li>
-         * <li><code>cluster-autoscaler</code>: Auto-scaling.</li>
+         * <li><p><code>goatscaler</code>: Instant scaling.</p>
+         * </li>
+         * <li><p><code>cluster-autoscaler</code>: Auto scaling.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -452,10 +462,12 @@ public class CreateAutoscalingConfigRequest extends Request {
         }
 
         /**
-         * <p>The interval at which the system scans for events that trigger scaling activities. Unit: seconds. Default value: 60.</p>
+         * <p>The scaling sensitivity, which adjusts the interval for the system to evaluate scaling decisions.</p>
+         * <p>Valid values: 15, 30, 60, 120, 180, 300. Unit: seconds.</p>
+         * <p>Default value: 60.</p>
          * 
          * <strong>example:</strong>
-         * <p>30s</p>
+         * <p>30</p>
          */
         public Builder scanInterval(String scanInterval) {
             this.putBodyParameter("scan_interval", scanInterval);
@@ -464,10 +476,10 @@ public class CreateAutoscalingConfigRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the cluster autoscaler scales in nodes that host pods mounted with local volumes, such as EmptyDir or HostPath volumes. Valid values:</p>
+         * <p>Specifies whether cluster-autoscaler skips scale-in for nodes that run Pods with local storage (such as EmptyDir or HostPath). Valid values:</p>
          * <ul>
-         * <li><code>true</code>: does not allow the cluster autoscaler to scale in these nodes.</li>
-         * <li><code>false</code>: allows the cluster autoscaler to scale in these nodes.</li>
+         * <li><code>true</code>: Scale-in is skipped.</li>
+         * <li><code>false</code>: Scale-in is performed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -480,10 +492,10 @@ public class CreateAutoscalingConfigRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the cluster autoscaler scales in nodes that host pods in the kube-system namespace. This parameter does not take effect on pods created by DaemonSets and mirror pods. Valid values:</p>
+         * <p>Specifies whether cluster-autoscaler skips scale-in for nodes that run Pods in the kube-system namespace. This feature does not apply to DaemonSet Pods or Mirror Pods. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: does not allow the cluster autoscaler to scale in these nodes.</li>
-         * <li><code>false</code>: allows the cluster autoscaler to scale in these nodes.</li>
+         * <li><code>true</code>: Scale-in is skipped.</li>
+         * <li><code>false</code>: Scale-in is performed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -496,10 +508,12 @@ public class CreateAutoscalingConfigRequest extends Request {
         }
 
         /**
-         * <p>The cooldown period. After the autoscaler performs a scale-out activity, the autoscaler waits a cooldown period before it can perform a scale-in activity. Newly added nodes can be removed in scale-in activities only after the cooldown period ends. Unit: minutes.</p>
+         * <p>The cool-down period. The time interval after the most recent scale-out event during which the elastic component does not perform scale-in operations. A node that is scaled out can be considered for scale-in only after the cool-down period elapses.</p>
+         * <p>Valid values: [1,60]. Unit: minutes.</p>
+         * <p>Default value: 10.</p>
          * 
          * <strong>example:</strong>
-         * <p>10 m</p>
+         * <p>10</p>
          */
         public Builder unneededDuration(String unneededDuration) {
             this.putBodyParameter("unneeded_duration", unneededDuration);
@@ -508,8 +522,10 @@ public class CreateAutoscalingConfigRequest extends Request {
         }
 
         /**
-         * <p>The scale-in threshold. This threshold specifies the ratio of the resources that are requested by pods to the total resources on the node.</p>
-         * <p>A scale-in activity is performed only when the CPU utilization and memory utilization of a node are lower than the scale-in threshold.</p>
+         * <p>The scale-in threshold, which is the ratio of requested resources to total resources on a node.</p>
+         * <p>A node can be scaled in only when this ratio falls below the configured threshold, meaning both the CPU and memory resources utilization of the node are below the scale-in threshold.</p>
+         * <p>Valid values: [0.1~1].</p>
+         * <p>Default value: 0.5, which indicates 50%.</p>
          * 
          * <strong>example:</strong>
          * <p>0.5</p>

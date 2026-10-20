@@ -80,7 +80,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         } 
 
         /**
-         * Violation.
+         * <p>The policy violation information aggregated by severity level.</p>
          */
         public Builder violation(Violation violation) {
             this.violation = violation;
@@ -88,7 +88,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The audit logs of the policies in the cluster.</p>
+         * <p>The policy governance audit logs of the cluster.</p>
          */
         public Builder admitLog(AdmitLog admitLog) {
             this.admitLog = admitLog;
@@ -96,7 +96,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Details about the policies of different severity levels that are enabled for the cluster.</p>
+         * <p>The counts of enabled policies at different severity levels in the current cluster.</p>
          */
         public Builder onState(java.util.List<OnState> onState) {
             this.onState = onState;
@@ -162,7 +162,10 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             } 
 
             /**
-             * severity.
+             * <p>The severity level. Valid values: low, medium, and high.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>medium</p>
              */
             public Builder severity(String severity) {
                 this.severity = severity;
@@ -170,7 +173,10 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * violations.
+             * <p>The number of violations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder violations(String violations) {
                 this.violations = violations;
@@ -237,7 +243,10 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             } 
 
             /**
-             * severity.
+             * <p>The severity level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>high</p>
              */
             public Builder severity(String severity) {
                 this.severity = severity;
@@ -245,7 +254,10 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * violations.
+             * <p>The number of violations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder violations(Long violations) {
                 this.violations = violations;
@@ -312,7 +324,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             } 
 
             /**
-             * deny.
+             * <p>The aggregated interception records.</p>
              */
             public Builder deny(java.util.List<Deny> deny) {
                 this.deny = deny;
@@ -320,7 +332,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * warn.
+             * <p>The aggregated alert records.</p>
              */
             public Builder warn(java.util.List<Warn> warn) {
                 this.warn = warn;
@@ -413,7 +425,10 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             } 
 
             /**
-             * policyDescription.
+             * <p>The description of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Prevent specific namespaces from being deleted.</p>
              */
             public Builder policyDescription(String policyDescription) {
                 this.policyDescription = policyDescription;
@@ -421,7 +436,10 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * policyName.
+             * <p>The policy name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACKNamespacesDeleteProtection</p>
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -429,7 +447,10 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * severity.
+             * <p>The severity level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>medium</p>
              */
             public Builder severity(String severity) {
                 this.severity = severity;
@@ -437,7 +458,10 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * violations.
+             * <p>The number of violations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder violations(Long violations) {
                 this.violations = violations;
@@ -530,7 +554,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             } 
 
             /**
-             * policyDescription.
+             * <p>The description of the policy.</p>
              */
             public Builder policyDescription(String policyDescription) {
                 this.policyDescription = policyDescription;
@@ -538,7 +562,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * policyName.
+             * <p>The policy name.</p>
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -546,7 +570,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * severity.
+             * <p>The severity level.</p>
              */
             public Builder severity(String severity) {
                 this.severity = severity;
@@ -554,7 +578,10 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * violations.
+             * <p>The number of violations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder violations(Long violations) {
                 this.violations = violations;
@@ -621,7 +648,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             } 
 
             /**
-             * deny.
+             * <p>The aggregated interception records.</p>
              */
             public Builder deny(java.util.List<ViolationsDeny> deny) {
                 this.deny = deny;
@@ -629,7 +656,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * warn.
+             * <p>The aggregated alert information.</p>
              */
             public Builder warn(java.util.List<ViolationsWarn> warn) {
                 this.warn = warn;
@@ -696,7 +723,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             } 
 
             /**
-             * totalViolations.
+             * <p>The aggregated information.</p>
              */
             public Builder totalViolations(TotalViolations totalViolations) {
                 this.totalViolations = totalViolations;
@@ -704,7 +731,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * violations.
+             * <p>The violation records aggregated by policy name.</p>
              */
             public Builder violations(Violations violations) {
                 this.violations = violations;
@@ -940,7 +967,10 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             } 
 
             /**
-             * cluster_id.
+             * <p>The ID of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hash code</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -948,7 +978,14 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * constraint_action.
+             * <p>The action taken by the policy. Valid values:</p>
+             * <ul>
+             * <li>warn: Alerts on policy violations but does not intercept the requests.</li>
+             * <li>deny: Intercepts requests that violate the policy.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>deny</p>
              */
             public Builder constraintAction(String constraintAction) {
                 this.constraintAction = constraintAction;
@@ -956,7 +993,10 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * constraint_api_version.
+             * <p>The API version of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1beta1</p>
              */
             public Builder constraintApiVersion(String constraintApiVersion) {
                 this.constraintApiVersion = constraintApiVersion;
@@ -964,7 +1004,10 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * constraint_category.
+             * <p>The type of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cis-k8s</p>
              */
             public Builder constraintCategory(String constraintCategory) {
                 this.constraintCategory = constraintCategory;
@@ -972,7 +1015,10 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * constraint_group.
+             * <p>The API group of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>constraints.gatekeeper.sh</p>
              */
             public Builder constraintGroup(String constraintGroup) {
                 this.constraintGroup = constraintGroup;
@@ -980,7 +1026,10 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * constraint_kind.
+             * <p>The policy kind that corresponds to the policy name in policy management.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACKNamespacesDeleteProtection</p>
              */
             public Builder constraintKind(String constraintKind) {
                 this.constraintKind = constraintKind;
@@ -988,7 +1037,10 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * constraint_name.
+             * <p>The name of the policy instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>namespace-delete-protection-jpjwv</p>
              */
             public Builder constraintName(String constraintName) {
                 this.constraintName = constraintName;
@@ -996,7 +1048,10 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * event_msg.
+             * <p>The detailed information about the policy action.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Admission webhook \&quot;validation.gatekeeper.sh\&quot; denied request, Resource Namespace: , Constraint: namespace-delete-protection-jpjwv, Message: not allow to delete protection namespace test.</p>
              */
             public Builder eventMsg(String eventMsg) {
                 this.eventMsg = eventMsg;
@@ -1004,7 +1059,10 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * event_type.
+             * <p>The type of the event triggered by the policy, such as violation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>violation</p>
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -1012,7 +1070,10 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * request_uid.
+             * <p>The ID of the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hash code</p>
              */
             public Builder requestUid(String requestUid) {
                 this.requestUid = requestUid;
@@ -1020,7 +1081,10 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * request_userinfo.
+             * <p>The user information of the request that violated the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>account id</p>
              */
             public Builder requestUserinfo(String requestUserinfo) {
                 this.requestUserinfo = requestUserinfo;
@@ -1028,7 +1092,10 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * request_username.
+             * <p>The username of the request that violated the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>account user name</p>
              */
             public Builder requestUsername(String requestUsername) {
                 this.requestUsername = requestUsername;
@@ -1036,7 +1103,10 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * resource_kind.
+             * <p>The type of the resource that violated the policy. For example, if a request to operate on a namespace is rejected, the value is Namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Namespace</p>
              */
             public Builder resourceKind(String resourceKind) {
                 this.resourceKind = resourceKind;
@@ -1044,7 +1114,10 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * resource_name.
+             * <p>The name of the resource that violated the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -1052,7 +1125,10 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * time.
+             * <p>The time when the policy violation occurred. The time is in ISO 8601 format and includes time zone information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-10-27T11:31:40Z</p>
              */
             public Builder time(String time) {
                 this.time = time;
@@ -1158,7 +1234,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of audit log entries.</p>
+             * <p>The total number of logs queried.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -1169,7 +1245,10 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * log_project.
+             * <p>The Log Service project that stores the policy action information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k8s-log-clusterid</p>
              */
             public Builder logProject(String logProject) {
                 this.logProject = logProject;
@@ -1177,7 +1256,10 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * log_store.
+             * <p>The Log Service Logstore that stores the policy action information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>policyadmit-clusterid</p>
              */
             public Builder logStore(String logStore) {
                 this.logStore = logStore;
@@ -1185,7 +1267,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * logs.
+             * <p>The log entries for policy violations.</p>
              */
             public Builder logs(java.util.List<Logs> logs) {
                 this.logs = logs;
@@ -1193,10 +1275,10 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the query. Valid values:</p>
+             * <p>The status of the query result. Valid values:</p>
              * <ul>
-             * <li><code>Complete</code>: The query succeeded and the complete query result is returned.</li>
-             * <li><code>Incomplete</code>: The query succeeded but the query result is incomplete. To obtain the complete query result, you must repeat the request.</li>
+             * <li><code>Complete</code>: The query is complete and the returned result is complete.</li>
+             * <li><code>Incomplete</code>: The query is complete but the returned result is incomplete. You must repeat the request to obtain the complete result.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1280,7 +1362,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of policies that are enabled.</p>
+             * <p>The number of enabled policy types.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -1291,7 +1373,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The severity level of the policy.</p>
+             * <p>The severity level of the policy governance.</p>
              * 
              * <strong>example:</strong>
              * <p>high</p>
@@ -1302,7 +1384,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of policies of the severity level.</p>
+             * <p>The total number of policy types at the severity level.</p>
              * 
              * <strong>example:</strong>
              * <p>8</p>

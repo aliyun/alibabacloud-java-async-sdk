@@ -54,7 +54,7 @@ public class ListOperationPlansForRegionResponseBody extends TeaModel {
         } 
 
         /**
-         * plans.
+         * <p>The list of execution plans.</p>
          */
         public Builder plans(java.util.List<Plans> plans) {
             this.plans = plans;
@@ -120,7 +120,10 @@ public class ListOperationPlansForRegionResponseBody extends TeaModel {
             } 
 
             /**
-             * code.
+             * <p>The code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CanceledByUser</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -128,7 +131,10 @@ public class ListOperationPlansForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * message.
+             * <p>The message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>plan has been canceled by user</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -312,7 +318,10 @@ public class ListOperationPlansForRegionResponseBody extends TeaModel {
             } 
 
             /**
-             * cluster_id.
+             * <p>The ID of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c29ced64b3dfe4f33b57ca0aa9f68****</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -320,7 +329,10 @@ public class ListOperationPlansForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * created.
+             * <p>The time when the execution plan was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-11-21T20:01:22+08:00</p>
              */
             public Builder created(String created) {
                 this.created = created;
@@ -328,7 +340,10 @@ public class ListOperationPlansForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * end_time.
+             * <p>The expected end time of the execution. The time is in ISO 8601 format and includes time zone information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-11-22T18:00:00+08:00</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -336,7 +351,10 @@ public class ListOperationPlansForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * plan_id.
+             * <p>The ID of the execution plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>P-655c9c127e0e6603ef00****</p>
              */
             public Builder planId(String planId) {
                 this.planId = planId;
@@ -344,7 +362,10 @@ public class ListOperationPlansForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * start_time.
+             * <p>The expected start time of the execution. The time is in ISO 8601 format and includes time zone information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-11-22T15:18:00+08:00</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -352,7 +373,10 @@ public class ListOperationPlansForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * state.
+             * <p>The state of the execution plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Scheduled</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -360,7 +384,7 @@ public class ListOperationPlansForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * state_reason.
+             * <p>The reason for the current state.</p>
              */
             public Builder stateReason(StateReason stateReason) {
                 this.stateReason = stateReason;
@@ -368,7 +392,10 @@ public class ListOperationPlansForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * target_id.
+             * <p>The ID of the execution target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c29ced64b3dfe4f33b57ca0aa9f68****</p>
              */
             public Builder targetId(String targetId) {
                 this.targetId = targetId;
@@ -376,7 +403,10 @@ public class ListOperationPlansForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * target_type.
+             * <p>The type of the execution target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cluster</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -384,7 +414,10 @@ public class ListOperationPlansForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * task_id.
+             * <p>The ID of the task generated by the execution plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>T-681ac448b23ced010600****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -392,7 +425,10 @@ public class ListOperationPlansForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The type of the execution plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CLUSTER_UPGRADE_MASTER</p>
              */
             public Builder type(String type) {
                 this.type = type;

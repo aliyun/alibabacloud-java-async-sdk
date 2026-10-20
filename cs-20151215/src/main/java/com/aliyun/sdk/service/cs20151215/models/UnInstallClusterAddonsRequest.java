@@ -74,7 +74,7 @@ public class UnInstallClusterAddonsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,7 +87,7 @@ public class UnInstallClusterAddonsRequest extends Request {
         }
 
         /**
-         * <p>The list of add-ons to uninstall.</p>
+         * <p>The list of components.</p>
          */
         public Builder addons(java.util.List<Addons> addons) {
             this.putBodyParameter("addons", addons);
@@ -155,10 +155,10 @@ public class UnInstallClusterAddonsRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to clean up related cloud resources during uninstallation.</p>
+             * <p>Specifies whether to clean up associated cloud resources when uninstalling the component. Valid values:</p>
              * <ul>
-             * <li>true: clean up</li>
-             * <li>false: retain</li>
+             * <li>true: Clean up.</li>
+             * <li>false: Retain.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -170,7 +170,7 @@ public class UnInstallClusterAddonsRequest extends Request {
             }
 
             /**
-             * <p>The name of the add-on to uninstall. You can call the <a href="https://help.aliyun.com/document_detail/2667940.html">ListClusterAddonInstances</a> operation to query the installed add-ons.</p>
+             * <p>The name of the component to uninstall. You can call the <a href="https://help.aliyun.com/document_detail/2667940.html">ListClusterAddonInstances</a> operation to query the components installed in a cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>ack-node-problem-detector</p>

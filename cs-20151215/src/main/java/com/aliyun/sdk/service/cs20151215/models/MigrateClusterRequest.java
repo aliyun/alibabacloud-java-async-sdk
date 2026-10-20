@@ -101,7 +101,7 @@ public class MigrateClusterRequest extends Request {
         }
 
         /**
-         * <p>The endpoint of the OSS bucket.</p>
+         * <p>The bucket endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>*******.oss-cn-hangzhou.aliyuncs.com</p>
@@ -113,7 +113,7 @@ public class MigrateClusterRequest extends Request {
         }
 
         /**
-         * <p>The name of the Object Storage Service (OSS) bucket.</p>
+         * <p>The bucket name.</p>
          * 
          * <strong>example:</strong>
          * <p>bucket-****</p>

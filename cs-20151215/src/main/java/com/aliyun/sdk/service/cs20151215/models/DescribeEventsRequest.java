@@ -141,7 +141,10 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * max_results.
+         * <p>The maximum number of results to return for a single request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("max_results", maxResults);
@@ -150,7 +153,10 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * next_token.
+         * <p>The pagination token. Set this parameter to the NextToken value returned from the previous API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5c0a1c0f91c14c6****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("next_token", nextToken);
@@ -159,7 +165,7 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number for paging in the paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -171,7 +177,9 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The maximum number of results to return per page.</p>
+         * <p>Valid values: 1 to 100.</p>
+         * <p>Default value: 50.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -183,24 +191,24 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * <p>The event type. Valid values:</p>
+         * <p>The event type. If you do not specify this parameter, events of all types are queried. Valid values:</p>
          * <ul>
-         * <li><code>cluster_create</code>: cluster creation.</li>
-         * <li><code>cluster_scaleout</code>: cluster scale-out.</li>
-         * <li><code>cluster_attach</code>: node addition.</li>
-         * <li><code>cluster_delete</code>: cluster deletion.</li>
-         * <li><code>cluster_upgrade</code>: cluster upgrades.</li>
-         * <li><code>cluster_migrate</code>: cluster migration.</li>
-         * <li><code>cluster_node_delete</code>: node removal.</li>
-         * <li><code>cluster_node_drain</code>: node draining.</li>
-         * <li><code>cluster_modify</code>: cluster modifications.</li>
-         * <li><code>cluster_configuration_modify</code>: modifications of control plane configurations.</li>
-         * <li><code>cluster_addon_install</code>: component installation.</li>
-         * <li><code>cluster_addon_upgrade</code>: component updates.</li>
-         * <li><code>cluster_addon_uninstall</code>: component uninstallation.</li>
-         * <li><code>runtime_upgrade</code>: runtime updates.</li>
-         * <li><code>nodepool_upgrade</code>: node pool upgrades.</li>
-         * <li><code>nodepool_update</code>: node pool updates.</li>
+         * <li><code>cluster_create</code>: Cluster creation.</li>
+         * <li><code>cluster_scaleout</code>: Cluster scale-out.</li>
+         * <li><code>cluster_attach</code>: Addition of existing nodes.</li>
+         * <li><code>cluster_delete</code>: Cluster deletion.</li>
+         * <li><code>cluster_upgrade</code>: Cluster upgrade.</li>
+         * <li><code>cluster_migrate</code>: Cluster migration.</li>
+         * <li><code>cluster_node_delete</code>: Node removal.</li>
+         * <li><code>cluster_node_drain</code>: Node draining.</li>
+         * <li><code>cluster_modify</code>: Cluster modification.</li>
+         * <li><code>cluster_configuration_modify</code>: Cluster control configuration modification.</li>
+         * <li><code>cluster_addon_install</code>: Add-on installation.</li>
+         * <li><code>cluster_addon_upgrade</code>: Add-on upgrade.</li>
+         * <li><code>cluster_addon_uninstall</code>: Add-on uninstallation.</li>
+         * <li><code>runtime_upgrade</code>: Runtime upgrade.</li>
+         * <li><code>nodepool_upgrade</code>: Node pool upgrade.</li>
+         * <li><code>nodepool_update</code>: Node pool update.</li>
          * </ul>
          * 
          * <strong>example:</strong>

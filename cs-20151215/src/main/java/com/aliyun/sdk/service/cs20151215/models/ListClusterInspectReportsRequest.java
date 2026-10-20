@@ -101,7 +101,7 @@ public class ListClusterInspectReportsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of returned results. Maximum value: 50.</p>
+         * <p>The maximum number of results to return. The maximum value is 50.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

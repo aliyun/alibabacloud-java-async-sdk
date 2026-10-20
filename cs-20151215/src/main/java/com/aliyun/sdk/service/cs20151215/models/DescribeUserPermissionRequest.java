@@ -60,15 +60,17 @@ public class DescribeUserPermissionRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the RAM user or RAM role.</p>
+         * <p>The ID of the Resource Access Management (RAM) user or RAM role.</p>
          * <ul>
-         * <li>If you query RAM user permissions, the UID of the RAM user is used.</li>
-         * <li>If you query the permissions of a RAM role, the ID of the RAM role is used.</li>
+         * <li><p>To query the permissions of a RAM user, specify the UID of the RAM user.</p>
+         * </li>
+         * <li><p>To query the permissions of a RAM role, specify the ID of the RAM role.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>21175****</p>
+         * <p>206945240368******</p>
          */
         public Builder uid(String uid) {
             this.putPathParameter("uid", uid);

@@ -67,7 +67,7 @@ public class DescribeAddonsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of the returned components.</p>
+         * <p>The list of component groups.</p>
          */
         public Builder componentGroups(java.util.List<ComponentGroups> componentGroups) {
             this.componentGroups = componentGroups;
@@ -75,7 +75,7 @@ public class DescribeAddonsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Standard components.</p>
+         * <p>The standard components.</p>
          */
         public Builder standardComponents(java.util.Map<String, StandardComponentsValue> standardComponents) {
             this.standardComponents = standardComponents;
@@ -209,7 +209,7 @@ public class DescribeAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The names of the components in the component group.</p>
+             * <p>The names of the components in the group.</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;

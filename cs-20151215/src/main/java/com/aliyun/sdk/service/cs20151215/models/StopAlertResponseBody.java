@@ -67,7 +67,7 @@ public class StopAlertResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error message returned if the call fails.</p>
+         * <p>The message returned when the execution fails.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -78,10 +78,10 @@ public class StopAlertResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The operation result. Valid values:</p>
+         * <p>The execution result status. Valid values:</p>
          * <ul>
-         * <li>True: The operation is successful.</li>
-         * <li>False: The operation failed.</li>
+         * <li>True: The execution succeeded.</li>
+         * <li>False: The execution failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

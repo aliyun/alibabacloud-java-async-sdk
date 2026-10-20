@@ -89,7 +89,7 @@ public class StopAlertRequest extends Request {
 
         /**
          * <p>The cluster ID.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to obtain cluster IDs.</p>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> to obtain the cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class StopAlertRequest extends Request {
         }
 
         /**
-         * <p>The name of the alert rule group.</p>
+         * <p>The alert rule group name.</p>
          * 
          * <strong>example:</strong>
          * <p>sample</p>
@@ -114,7 +114,7 @@ public class StopAlertRequest extends Request {
         }
 
         /**
-         * <p>The name of the alert rule.</p>
+         * <p>The alert rule name.</p>
          * 
          * <strong>example:</strong>
          * <p>sample</p>

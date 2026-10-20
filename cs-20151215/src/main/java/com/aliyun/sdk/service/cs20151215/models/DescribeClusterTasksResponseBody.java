@@ -120,7 +120,7 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the tasks.</p>
+         * <p>The task array.</p>
          */
         public Builder tasks(java.util.List<Tasks> tasks) {
             this.tasks = tasks;
@@ -199,7 +199,7 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of the page returned.</p>
+             * <p>The page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -221,7 +221,7 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of results.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -291,7 +291,7 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The error code returned.</p>
+             * <p>The error code.</p>
              * 
              * <strong>example:</strong>
              * <p>BadRequest</p>
@@ -302,7 +302,7 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error message returned.</p>
+             * <p>The error message.</p>
              * 
              * <strong>example:</strong>
              * <p>Addon status not match</p>
@@ -424,7 +424,7 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the task was created.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-08-03T10:11:33+08:00</p>
@@ -435,7 +435,7 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error returned for the task.</p>
+             * <p>The node fault error message.</p>
              */
             public Builder error(Error error) {
                 this.error = error;
@@ -443,7 +443,7 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the task.</p>
+             * <p>The task status.</p>
              * 
              * <strong>example:</strong>
              * <p>success</p>
@@ -465,7 +465,7 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of task.</p>
+             * <p>The task type.</p>
              * 
              * <strong>example:</strong>
              * <p>cluster_addon_install</p>
@@ -476,7 +476,7 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the task was updated.</p>
+             * <p>The update time.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-08-03T10:12:03.482+08:00</p>

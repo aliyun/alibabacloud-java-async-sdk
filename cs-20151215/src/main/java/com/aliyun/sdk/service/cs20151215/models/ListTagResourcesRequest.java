@@ -118,7 +118,7 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * <p>The token for the next query.</p>
          * 
          * <strong>example:</strong>
          * <hr>
@@ -143,7 +143,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The list of cluster IDs.</p>
+         * <p>The list of resource IDs to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,7 +157,8 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The resource type. Set the value to <code>CLUSTER</code>.</p>
+         * <p>The resource type.</p>
+         * <p>CLUSTER: cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,10 +171,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The list of labels that you want to query. You can specify up to 20 labels.</p>
+         * <p>The list of tags to query. A maximum of 20 items can be specified.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;key&quot;:&quot;env&quot;,&quot;value&quot;,&quot;dev&quot;},{&quot;key&quot;:&quot;dev&quot;, &quot;value&quot;:&quot;IT&quot;}]</p>
+         * <p>[{\&quot;key\&quot;:\&quot;env\&quot;,\&quot;value\&quot;,\&quot;dev\&quot;},{\&quot;key\&quot;:\&quot;dev\&quot;, \&quot;value\&quot;:\&quot;IT\&quot;}]</p>
          */
         public Builder tags(java.util.List<Tag> tags) {
             String tagsShrink = shrink(tags, "tags", "json");

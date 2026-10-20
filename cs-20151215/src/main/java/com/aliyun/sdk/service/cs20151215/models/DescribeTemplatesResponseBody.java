@@ -75,7 +75,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of returned templates.</p>
+         * <p>The list of templates.</p>
          */
         public Builder templates(java.util.List<Templates> templates) {
             this.templates = templates;
@@ -154,7 +154,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The page number.</p>
+             * <p>The current page number.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -165,7 +165,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries per page.</p>
+             * <p>The maximum number of entries per page.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -176,7 +176,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of results.</p>
              * 
              * <strong>example:</strong>
              * <p>50</p>
@@ -350,13 +350,12 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The access control policy of the template. Valid values:</p>
+             * <p>The access permissions of the deployment template. Valid values:</p>
              * <ul>
-             * <li><code>private</code>: The template is private.</li>
-             * <li><code>public</code>: The template is public.</li>
-             * <li><code>shared</code>: The template can be shared.</li>
+             * <li><code>private</code>: Private.</li>
+             * <li><code>public</code>: Public.</li>
+             * <li><code>shared</code>: Shared.</li>
              * </ul>
-             * <p>Default value: <code>private</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>private</p>
@@ -367,10 +366,10 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the template was created.</p>
+             * <p>The time when the orchestration template was created.</p>
              * 
              * <strong>example:</strong>
-             * <p>2020-06-10T16:30:16+08:00</p>
+             * <p>2025-04-25T16:56:33+08:00</p>
              */
             public Builder created(String created) {
                 this.created = created;
@@ -378,7 +377,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the template.</p>
+             * <p>The description of the orchestration template.</p>
              * 
              * <strong>example:</strong>
              * <p>a web server</p>
@@ -389,10 +388,10 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the template.</p>
+             * <p>The orchestration template ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>874ec485-e7e6-4373-8a3b-47bde8ae789f</p>
+             * <p>874ec485-e7e6-4373-8a3b-47bde8******</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -400,7 +399,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the template.</p>
+             * <p>The orchestration template name.</p>
              * 
              * <strong>example:</strong>
              * <p>webserver</p>
@@ -411,7 +410,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The label of the template. By default, the value is the name of the template.</p>
+             * <p>The tag of the orchestration template. If not explicitly specified, the tag defaults to the template name.</p>
              * 
              * <strong>example:</strong>
              * <p>kubernetes</p>
@@ -422,7 +421,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The template content in the YAML format.</p>
+             * <p>The template content in YAML format.</p>
              * 
              * <strong>example:</strong>
              * <p>apiVersion: apps/v1\nkind: Deployment\nmetadata:\n  name: nginx-deployment-basic\n  labels:\n    app: nginx\nspec:\n  replicas: 2\n  selector:\n    matchLabels:\n      app: nginx\n  template:\n    metadata:\n      labels:\n        app: nginx\n    spec:\n      containers:\n      - name: nginx\n        image: busybox:latest\n        ports:\n        - containerPort: 80</p>
@@ -433,10 +432,12 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of template. This parameter can be set to a custom value.</p>
+             * <p>The templatetype.</p>
              * <ul>
-             * <li>If the parameter is set to <code>kubernetes</code>, the template is displayed on the Templates page in the console.</li>
-             * <li>If the parameter is set to <code>compose</code>, the template is displayed on the Container Service - Swarm page in the console. However, Container Service for Swarm is deprecated.</li>
+             * <li><p>If the value is kubernetes, the template is displayed on the Orchestration Templates page in the console.</p>
+             * </li>
+             * <li><p>If this parameter is left empty or set to other values, the template is not displayed on the Orchestration Templates page in the console.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -448,10 +449,10 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the parent template. The value of <code>template_with_hist_id</code> is the same for each template version. This allows you to manage different template versions.</p>
+             * <p>The ID of the parent template associated with the template. This parameter is used to implement the multi-version feature for templates. Different versions of the same template share the same <code>template_with_hist_id</code> value.</p>
              * 
              * <strong>example:</strong>
-             * <p>ad81d115-7c8b-47e7-a222-9c28d7f6e588</p>
+             * <p>ad81d115-7c8b-47e7-a222-9c28d7******</p>
              */
             public Builder templateWithHistId(String templateWithHistId) {
                 this.templateWithHistId = templateWithHistId;
@@ -459,10 +460,10 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the template was updated.</p>
+             * <p>The time when the orchestration template was last updated.</p>
              * 
              * <strong>example:</strong>
-             * <p>2020-06-10T16:30:16+08:00</p>
+             * <p>2025-04-25T16:56:33+08:00</p>
              */
             public Builder updated(String updated) {
                 this.updated = updated;

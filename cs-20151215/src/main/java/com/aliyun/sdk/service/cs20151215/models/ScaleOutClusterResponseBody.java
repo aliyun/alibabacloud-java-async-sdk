@@ -80,10 +80,7 @@ public class ScaleOutClusterResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The cluster ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>c82e6987e2961451182edacd74faf****</p>
+         * cluster_id.
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -91,10 +88,7 @@ public class ScaleOutClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>687C5BAA-D103-4993-884B-C35E4314A1E1</p>
+         * request_id.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -102,10 +96,7 @@ public class ScaleOutClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The task ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>T-5a54309c80282e39ea00002f</p>
+         * task_id.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

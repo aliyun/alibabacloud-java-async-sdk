@@ -115,7 +115,13 @@ public class DeleteClusterNodepoolRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to forcefully delete the node pool.</p>
+         * <p>Specifies whether to force delete the node pool.</p>
+         * <ul>
+         * <li><p>true: Force deletes the node pool. If the node pool contains existing instances, the existing nodes are forcefully deleted.</p>
+         * </li>
+         * <li><p>false: Does not force delete the node pool. If the node pool contains existing instances, the node pool cannot be deleted, and the API call returns an error.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>false</p>

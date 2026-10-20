@@ -67,7 +67,7 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of policy instances that are deployed in the cluster at different severity levels.</p>
+         * <p>The number of policy instances deployed at different governance levels in the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>{ &quot;high&quot;: 11,     &quot;medium&quot;: 1  }</p>
@@ -78,7 +78,7 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of policy instances of each policy type.</p>
+         * <p>The list of policy instance counts by policy type.</p>
          */
         public Builder policyInstances(java.util.List<PolicyInstances> policyInstances) {
             this.policyInstances = policyInstances;
@@ -183,7 +183,7 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The type of the policy. For more information about different types of policies and their descriptions, see <a href="https://help.aliyun.com/document_detail/359819.html">Predefined security policies of ACK</a>.</p>
+             * <p>The policy type. For more information about supported policy types and their descriptions, see <a href="https://help.aliyun.com/document_detail/359819.html">Container security policy rules</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>compliance</p>
@@ -194,7 +194,7 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the policy.</p>
+             * <p>The policy description.</p>
              * 
              * <strong>example:</strong>
              * <p>Restricts use of the cluster-admin role.</p>
@@ -205,7 +205,7 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of policy instances that are deployed. If this parameter is empty, no policy instance is deployed.</p>
+             * <p>The number of deployed policy instances. If this field is empty, no policy instances of this type are deployed.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -216,7 +216,7 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the policy.</p>
+             * <p>The policy name.</p>
              * 
              * <strong>example:</strong>
              * <p>ACKRestrictRoleBindings</p>
@@ -227,7 +227,7 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The severity level of the policy.</p>
+             * <p>The policy governance level.</p>
              * 
              * <strong>example:</strong>
              * <p>medium</p>

@@ -80,7 +80,19 @@ public class Taint extends TeaModel {
         } 
 
         /**
-         * effect.
+         * <p>The scheduling policy. Valid values:</p>
+         * <ul>
+         * <li><p><code>NoSchedule</code>: Not tolerated. This affects only the scheduling process. Already scheduled pods are not affected. This applies only to newly added pods.</p>
+         * </li>
+         * <li><p><code>NoExecute</code>: Not tolerated. When the taint changes, the pod is evicted.</p>
+         * </li>
+         * <li><p><code>PreferNoSchedule</code>: Soft constraint. Existing pods on the node are not affected. The scheduler tries to avoid scheduling pods that do not tolerate the taint to the node.</p>
+         * </li>
+         * </ul>
+         * <p>Default value: <code>NoSchedule</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NoSchedule</p>
          */
         public Builder effect(String effect) {
             this.effect = effect;
@@ -88,7 +100,10 @@ public class Taint extends TeaModel {
         }
 
         /**
-         * key.
+         * <p>The key of the taint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key</p>
          */
         public Builder key(String key) {
             this.key = key;
@@ -96,7 +111,10 @@ public class Taint extends TeaModel {
         }
 
         /**
-         * value.
+         * <p>The value of the taint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value</p>
          */
         public Builder value(String value) {
             this.value = value;

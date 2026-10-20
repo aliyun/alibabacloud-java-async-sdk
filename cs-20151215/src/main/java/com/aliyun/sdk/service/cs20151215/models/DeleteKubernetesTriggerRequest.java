@@ -60,7 +60,7 @@ public class DeleteKubernetesTriggerRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the application trigger.</p>
+         * <p>The trigger ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

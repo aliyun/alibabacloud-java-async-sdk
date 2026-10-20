@@ -115,7 +115,7 @@ public class ModifyClusterAddonRequest extends Request {
         }
 
         /**
-         * <p>The custom parameter settings that you want to use.</p>
+         * <p>The custom parameter settings.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;CpuRequest&quot;:&quot;800m&quot;}</p>

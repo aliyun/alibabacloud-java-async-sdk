@@ -157,7 +157,13 @@ public class FixNodePoolVulsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to allow the nodes to restart.</p>
+         * <p>Specifies whether to allow node restarts.</p>
+         * <ul>
+         * <li><p>true: Node restarts are allowed.</p>
+         * </li>
+         * <li><p>false: Node restarts are not allowed.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -169,7 +175,7 @@ public class FixNodePoolVulsRequest extends Request {
         }
 
         /**
-         * <p>The names of the nodes to be patched.</p>
+         * <p>The list of node names to fix. If this parameter is not specified, all nodes in the node pool are fixed by default.</p>
          */
         public Builder nodes(java.util.List<String> nodes) {
             this.putBodyParameter("nodes", nodes);
@@ -178,7 +184,7 @@ public class FixNodePoolVulsRequest extends Request {
         }
 
         /**
-         * <p>The batch patching policy.</p>
+         * <p>The rolling fix policy.</p>
          */
         public Builder rolloutPolicy(RolloutPolicy rolloutPolicy) {
             this.putBodyParameter("rollout_policy", rolloutPolicy);
@@ -242,7 +248,8 @@ public class FixNodePoolVulsRequest extends Request {
             } 
 
             /**
-             * <p>The maximum concurrency for batch patching. Minimum value: 1. The maximum value equals the number of nodes in the node pool.</p>
+             * <p>CVE fixes for nodes in the node pool are performed in batches. This parameter specifies the maximum number of nodes that can be fixed in parallel per batch.</p>
+             * <p>Valid values: The minimum value is 1 and the maximum value is the number of nodes in the node pool.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

@@ -88,11 +88,11 @@ public class StartAlertRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID. You can call the ListClusters operation to query the cluster ID.</p>
+         * <p>The cluster ID. You can call ListClusters to obtain the cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>c245ff43c717f494489f42f5f1575e98d</p>
+         * <p>c245ff43c717f49****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -101,7 +101,7 @@ public class StartAlertRequest extends Request {
         }
 
         /**
-         * <p>The name of the alert rule group.</p>
+         * <p>The alert rule group name.</p>
          * 
          * <strong>example:</strong>
          * <p>sample</p>
@@ -113,7 +113,7 @@ public class StartAlertRequest extends Request {
         }
 
         /**
-         * <p>The name of the alert rule.</p>
+         * <p>The alert rule name.</p>
          * 
          * <strong>example:</strong>
          * <p>sample</p>

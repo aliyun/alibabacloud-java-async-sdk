@@ -118,11 +118,11 @@ public class RepairClusterNodePoolRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>c2273b7f4a30d4ef6b43e0926cdd8****</p>
+         * <p>c2273b7f4a30d4ef6b43e0926cd******</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("cluster_id", clusterId);
@@ -131,11 +131,11 @@ public class RepairClusterNodePoolRequest extends Request {
         }
 
         /**
-         * <p>The ID of the node pool that you want to manage.</p>
+         * <p>The node pool ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>np613940c3593c4bea96faa8600cb9****</p>
+         * <p>np613940c3593c4bea96faa8600c******</p>
          */
         public Builder nodepoolId(String nodepoolId) {
             this.putPathParameter("nodepool_id", nodepoolId);
@@ -144,12 +144,10 @@ public class RepairClusterNodePoolRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable automatic instance restart.</p>
-         * <p>**</p>
-         * <p><strong>Warning</strong> This parameter is deprecated. Any configured values will be ignored.</p>
+         * <p><strong>[Deprecated]</strong> Specifies whether to allow instance restart.</p>
          * 
          * <strong>example:</strong>
-         * <p>true</p>
+         * <p>null</p>
          */
         public Builder autoRestart(Boolean autoRestart) {
             this.putBodyParameter("auto_restart", autoRestart);
@@ -158,7 +156,7 @@ public class RepairClusterNodePoolRequest extends Request {
         }
 
         /**
-         * <p>The list of nodes. If not specified, all nodes in the node pool are selected.</p>
+         * <p>The list of nodes.</p>
          */
         public Builder nodes(java.util.List<String> nodes) {
             this.putBodyParameter("nodes", nodes);
@@ -167,7 +165,7 @@ public class RepairClusterNodePoolRequest extends Request {
         }
 
         /**
-         * <p>The list of repair operations to execute. If not specified, all repair operations are executed. Typically, you do not need to specify this parameter.</p>
+         * <p>The repair operations to perform. If not specified, all repair operations are performed by default. In most scenarios, you do not need to specify this parameter.</p>
          */
         public Builder operations(java.util.List<Operations> operations) {
             this.putBodyParameter("operations", operations);
@@ -235,7 +233,7 @@ public class RepairClusterNodePoolRequest extends Request {
             } 
 
             /**
-             * <p>The parameters of a repair operation.</p>
+             * <p>The list of repair operation parameters.</p>
              */
             public Builder args(java.util.List<String> args) {
                 this.args = args;
@@ -243,7 +241,17 @@ public class RepairClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The ID of a repair operation.</p>
+             * <p>The repair operation ID. Valid values:</p>
+             * <ul>
+             * <li>restart.kubelet: Restarts kubelet.</li>
+             * <li>restart.docker: Restarts Docker.</li>
+             * <li>restart.containerd: Restarts Containerd.</li>
+             * <li>restart.ntp: Restarts ntpd or chronyd.</li>
+             * <li>remove.containerdContainerInSandbox: Removes a specified sandbox container under Containerd.</li>
+             * <li>remove.dockerContainerInSandbox: Removes a specified sandbox container under Docker.</li>
+             * <li>remove.containerdContainer: Removes a specified container under Containerd.</li>
+             * <li>remove.dockerContainer: Removes a specified container under Docker.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>remove.containerdContainer</p>

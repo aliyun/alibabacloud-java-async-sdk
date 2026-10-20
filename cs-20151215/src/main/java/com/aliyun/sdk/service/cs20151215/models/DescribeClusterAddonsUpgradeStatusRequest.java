@@ -75,7 +75,7 @@ public class DescribeClusterAddonsUpgradeStatusRequest extends Request {
         } 
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>The ID of the cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

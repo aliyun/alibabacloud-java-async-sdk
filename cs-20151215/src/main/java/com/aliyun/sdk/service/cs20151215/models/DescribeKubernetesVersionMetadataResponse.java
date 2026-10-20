@@ -259,10 +259,10 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             } 
 
             /**
-             * <p>The ID of the image.</p>
+             * <p>The image ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>centos_7_7_x64_20G_alibase_20200426.vhd</p>
+             * <p>aliyun_3_x64_20G_alibase_20241218.vhd</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -273,7 +273,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
              * <p>The image name.</p>
              * 
              * <strong>example:</strong>
-             * <p>CentOS 7.7</p>
+             * <p>Alibaba Cloud Linux 3.2104</p>
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -281,7 +281,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * <p>The OS platform. You can obtain the terminal ID by calling one of the following operations:</p>
+             * <p>The operating system platform. Valid values:</p>
              * <ul>
              * <li><code>AliyunLinux</code></li>
              * <li><code>CentOS</code></li>
@@ -290,7 +290,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>CentOS</p>
+             * <p>AliyunLinux</p>
              */
             public Builder platform(String platform) {
                 this.platform = platform;
@@ -298,10 +298,10 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * <p>The version of the image.</p>
+             * <p>The image version.</p>
              * 
              * <strong>example:</strong>
-             * <p>7.7</p>
+             * <p>3.2104</p>
              */
             public Builder osVersion(String osVersion) {
                 this.osVersion = osVersion;
@@ -309,7 +309,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * <p>The type of operating system distribution that you want to use. We recommend that you use this parameter to specify the node operating system. You can obtain the terminal ID by calling one of the following operations:</p>
+             * <p>The operating system distribution type. Use this field to specify the operating system for nodes. Valid values:</p>
              * <ul>
              * <li><code>CentOS</code></li>
              * <li><code>AliyunLinux</code></li>
@@ -323,7 +323,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>centos_7_7_20</p>
+             * <p>AliyunLinux3</p>
              */
             public Builder imageType(String imageType) {
                 this.imageType = imageType;
@@ -331,7 +331,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * <p>The type of OS. Examples:</p>
+             * <p>The operating system type. Examples:</p>
              * <ul>
              * <li><code>Windows</code></li>
              * <li><code>Linux</code></li>
@@ -346,12 +346,12 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * <p>The type of image. Valid values:</p>
+             * <p>The image category. Some valid values:</p>
              * <ul>
-             * <li><code>system</code>: public image</li>
-             * <li><code>self</code>: custom image</li>
-             * <li><code>others</code>: shared image from other Alibaba Cloud accounts</li>
-             * <li><code>marketplace</code>: image from the marketplace</li>
+             * <li><code>system</code>: public images.</li>
+             * <li><code>self</code>: your custom images.</li>
+             * <li><code>others</code>: public images from other users.</li>
+             * <li><code>marketplace</code>: Alibaba Cloud Marketplace images.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -363,7 +363,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * <p>The architecture of the image.</p>
+             * <p>The image architecture.</p>
              * 
              * <strong>example:</strong>
              * <p>x86_64</p>
@@ -524,7 +524,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             } 
 
             /**
-             * <p>Features of the queried Kubernetes version.</p>
+             * <p>The features of the Kubernetes version.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -538,7 +538,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * <p>The OS images that are returned.</p>
+             * <p>The list of system images.</p>
              */
             public Builder images(java.util.List<Images> images) {
                 this.images = images;
@@ -569,10 +569,10 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * <p>The Kubernetes version supported by ACK. For more information, see <a href="https://help.aliyun.com/document_detail/185269.html">Release notes for Kubernetes versions</a>.</p>
+             * <p>The Kubernetes version released by ACK. For more information about versions, see <a href="https://help.aliyun.com/document_detail/185269.html">Overview of Kubernetes version releases</a>.</p>
              * 
              * <strong>example:</strong>
-             * <p>1.16.9-aliyun.1</p>
+             * <p>1.31.1-aliyun.1</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -580,10 +580,10 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * <p>The release date of the Kubernetes version.</p>
+             * <p>The release time of the Kubernetes version. The time is in ISO 8601 format and includes time zone information.</p>
              * 
              * <strong>example:</strong>
-             * <p>2023-04-30T00:00:00Z</p>
+             * <p>2025-01-30T00:00:00Z</p>
              */
             public Builder releaseDate(String releaseDate) {
                 this.releaseDate = releaseDate;
@@ -591,10 +591,10 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * <p>The expiration date of the Kubernetes version.</p>
+             * <p>The expiration time of the Kubernetes version. The time is in ISO 8601 format and includes time zone information.</p>
              * 
              * <strong>example:</strong>
-             * <p>2025-04-30T00:00:00Z</p>
+             * <p>2026-01-30T00:00:00Z</p>
              */
             public Builder expirationDate(String expirationDate) {
                 this.expirationDate = expirationDate;
@@ -602,7 +602,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * <p>Indicates whether you can create clusters that run the Kubernetes version.</p>
+             * <p>Indicates whether the Kubernetes version can be created.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -613,7 +613,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * <p>The list of available Kubernetes versions for updates.</p>
+             * <p>The list of upgradable versions.</p>
              */
             public Builder upgradableVersions(java.util.List<String> upgradableVersions) {
                 this.upgradableVersions = upgradableVersions;

@@ -75,7 +75,7 @@ public class ListUserKubeConfigStatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the kubeconfig files.</p>
+         * <p>The KubeConfig status details of the user.</p>
          */
         public Builder states(java.util.List<States> states) {
             this.states = states;
@@ -154,7 +154,7 @@ public class ListUserKubeConfigStatesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The page number of the returned page.</p>
+             * <p>The current page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -165,7 +165,7 @@ public class ListUserKubeConfigStatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries per page.</p>
+             * <p>The number of records per page.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -176,7 +176,7 @@ public class ListUserKubeConfigStatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of results.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -285,10 +285,10 @@ public class ListUserKubeConfigStatesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The expiration date of the certificate used in a kubeconfig file. Format: the UTC time in the RFC3339 format.</p>
+             * <p>The expiration time of the KubeConfig certificate. Format: UTC time in RFC 3339 format.</p>
              * 
              * <strong>example:</strong>
-             * <p>2026-11-30T07:41:50Z</p>
+             * <p>2028-04-09T06:20:47Z</p>
              */
             public Builder certExpireTime(String certExpireTime) {
                 this.certExpireTime = certExpireTime;
@@ -296,13 +296,18 @@ public class ListUserKubeConfigStatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The current status of the certificate used in a kubeconfig file. Valid values:</p>
+             * <p>The current status of the KubeConfig certificate. Valid values:</p>
              * <ul>
-             * <li>Expired: The certificate is expired.</li>
-             * <li>Unexpired: The certificate is not expired.</li>
-             * <li>Unissued: The certificate is not issued.</li>
-             * <li>Unknown: The status of the certificate is unknown.</li>
-             * <li>Removed: The certificate is removed. An issue record is found for the certificate.</li>
+             * <li><p>Expired: The certificate has expired.</p>
+             * </li>
+             * <li><p>Unexpired: The certificate has not expired.</p>
+             * </li>
+             * <li><p>Unissued: The certificate has not been issued.</p>
+             * </li>
+             * <li><p>Unknown: The status is unknown.</p>
+             * </li>
+             * <li><p>Removed: The certificate has been removed (an issuance record exists for the certificate).</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -325,8 +330,7 @@ public class ListUserKubeConfigStatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the cluster.</p>
-             * <p>The name must be 1 to 63 characters in length, and can contain digits, underscores (_), and hyphens (-). The name must start with a letter or number.</p>
+             * <p>The cluster name.</p>
              * 
              * <strong>example:</strong>
              * <p>cluster-demo</p>
@@ -337,17 +341,17 @@ public class ListUserKubeConfigStatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the cluster. Valid values:</p>
+             * <p>The running status of the cluster. Valid values:</p>
              * <ul>
              * <li><code>initial</code>: The cluster is being created.</li>
              * <li><code>failed</code>: The cluster failed to be created.</li>
              * <li><code>running</code>: The cluster is running.</li>
              * <li><code>updating</code>: The cluster is being upgraded.</li>
-             * <li><code>updating_failed</code>: The cluster failed to be updated.</li>
+             * <li><code>updating_failed</code>: The cluster failed to be upgraded.</li>
              * <li><code>scaling</code>: The cluster is being scaled.</li>
-             * <li><code>stopped</code>: The cluster is stopped.</li>
+             * <li><code>stopped</code>: The cluster has stopped running.</li>
              * <li><code>deleting</code>: The cluster is being deleted.</li>
-             * <li><code>deleted</code>: The cluster is deleted.</li>
+             * <li><code>deleted</code>: The cluster has been deleted.</li>
              * <li><code>delete_failed</code>: The cluster failed to be deleted.</li>
              * </ul>
              * 

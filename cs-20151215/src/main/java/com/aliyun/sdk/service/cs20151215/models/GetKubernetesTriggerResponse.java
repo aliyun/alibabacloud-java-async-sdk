@@ -246,7 +246,7 @@ public class GetKubernetesTriggerResponse extends Response {
             } 
 
             /**
-             * <p>The ID of the trigger.</p>
+             * <p>The trigger ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1234</p>
@@ -257,7 +257,7 @@ public class GetKubernetesTriggerResponse extends Response {
             }
 
             /**
-             * <p>The name of the trigger.</p>
+             * <p>The trigger name.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -268,7 +268,7 @@ public class GetKubernetesTriggerResponse extends Response {
             }
 
             /**
-             * <p>The ID of the associated cluster.</p>
+             * <p>The cluster ID.</p>
              * 
              * <strong>example:</strong>
              * <p>c259f563386444ebb8d7**</p>
@@ -279,8 +279,7 @@ public class GetKubernetesTriggerResponse extends Response {
             }
 
             /**
-             * <p>The name of the project.</p>
-             * <p>The name consists of the namespace where the application is deployed and the name of the application. The format is <code>${namespace}/${name}</code>. Example: default/test-app.</p>
+             * <p>The trigger project name. It consists of the namespace and the name of the application, in the format of <code>${namespace}/${name}</code>. Example: default/test-app.</p>
              * 
              * <strong>example:</strong>
              * <p>default/test-app</p>
@@ -291,11 +290,12 @@ public class GetKubernetesTriggerResponse extends Response {
             }
 
             /**
-             * <p>The type of trigger.</p>
-             * <p>Valid values:</p>
+             * <p>The trigger type. Valid values:</p>
              * <ul>
-             * <li><code>deployment</code>: performs actions on Deployments.</li>
-             * <li><code>application</code>: performs actions on applications that are deployed in Application Center.</li>
+             * <li><p><code>deployment</code>: the trigger for stateless applications. </p>
+             * </li>
+             * <li><p><code>application</code>: the trigger for applications in the Hybrid Cloud Application Center.</p>
+             * </li>
              * </ul>
              * <p>Default value: <code>deployment</code>.</p>
              * 
@@ -308,8 +308,8 @@ public class GetKubernetesTriggerResponse extends Response {
             }
 
             /**
-             * <p>The action that the trigger performs. The value is set to redeploy.</p>
-             * <p><code>redeploy</code>: redeploys the resource specified by project_id.</p>
+             * <p>The trigger action. Valid values:</p>
+             * <p><code>redeploy</code>: redeploys the resources defined in project_id.</p>
              * 
              * <strong>example:</strong>
              * <p>redeploy</p>

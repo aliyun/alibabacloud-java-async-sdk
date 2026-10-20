@@ -133,7 +133,7 @@ public class UpgradeClusterRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the cluster that you want to upgrade.</p>
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,10 +146,10 @@ public class UpgradeClusterRequest extends Request {
         }
 
         /**
-         * <p>This parameter is deprecated. No need to pass values.</p>
+         * <p><strong>[Deprecated]</strong> You do not need to specify this parameter.</p>
          * 
          * <strong>example:</strong>
-         * <p>k8s</p>
+         * <p>null</p>
          */
         public Builder componentName(String componentName) {
             this.putBodyParameter("component_name", componentName);
@@ -158,10 +158,10 @@ public class UpgradeClusterRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to upgrade only master nodes. Valid values:</p>
+         * <p>Specifies whether to upgrade only the control plane.</p>
          * <ul>
-         * <li>true: upgrades master nodes only.</li>
-         * <li>false: upgrades both master and worker nodes.</li>
+         * <li>true: Upgrades only the control plane.</li>
+         * <li>false: Upgrades both the control plane and worker nodes.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -174,10 +174,10 @@ public class UpgradeClusterRequest extends Request {
         }
 
         /**
-         * <p>The target Kubernetes version for cluster upgrade.</p>
+         * <p>The target version for the cluster upgrade.</p>
          * 
          * <strong>example:</strong>
-         * <p>1.16.9-aliyun.1</p>
+         * <p>1.32.1-aliyun.1</p>
          */
         public Builder nextVersion(String nextVersion) {
             this.putBodyParameter("next_version", nextVersion);
@@ -186,7 +186,7 @@ public class UpgradeClusterRequest extends Request {
         }
 
         /**
-         * <p>The rolling update configuration.</p>
+         * <p>The rolling upgrade configuration.</p>
          */
         public Builder rollingPolicy(RollingPolicy rollingPolicy) {
             this.putBodyParameter("rolling_policy", rollingPolicy);
@@ -195,10 +195,10 @@ public class UpgradeClusterRequest extends Request {
         }
 
         /**
-         * <p>This parameter is deprecated. Use next_version to specify the upgrade target Kubernetes version.</p>
+         * <p><strong>[Deprecated]</strong> Use the <code>next_version</code> parameter instead.</p>
          * 
          * <strong>example:</strong>
-         * <p>1.14.8-aliyun.1</p>
+         * <p>null</p>
          */
         public Builder version(String version) {
             this.putBodyParameter("version", version);
@@ -254,7 +254,8 @@ public class UpgradeClusterRequest extends Request {
             } 
 
             /**
-             * <p>The maximum number of nodes concurrently upgraded per batch.</p>
+             * <p>The maximum number of worker nodes that can be upgraded in parallel per batch.</p>
+             * <p>During the worker node upgrade, nodes are upgraded in batches based on the specified maximum parallelism. The number of nodes upgraded in each batch increases as follows: 1, 2, 4, 8, and so on until the maximum parallelism is reached. After the maximum parallelism is reached, each subsequent batch upgrades the maximum number of nodes.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>

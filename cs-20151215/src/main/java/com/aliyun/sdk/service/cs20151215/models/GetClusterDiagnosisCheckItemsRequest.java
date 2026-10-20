@@ -99,7 +99,7 @@ public class GetClusterDiagnosisCheckItemsRequest extends Request {
         }
 
         /**
-         * <p>The diagnostic ID.</p>
+         * <p>The diagnosis ID.</p>
          * 
          * <strong>example:</strong>
          * <p>6f719f23098240818eb26fe3a37d****</p>

@@ -91,7 +91,7 @@ public class ListClusterInspectReportsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of inspection reports.</p>
+         * <p>The inspection reports.</p>
          */
         public Builder reports(java.util.List<Reports> reports) {
             this.reports = reports;
@@ -207,7 +207,7 @@ public class ListClusterInspectReportsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of items whose result is advice.</p>
+             * <p>The number of check items whose result is advice.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -218,7 +218,7 @@ public class ListClusterInspectReportsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Aggregated inspection task result code.</p>
+             * <p>The status code of the check task result.</p>
              * 
              * <strong>example:</strong>
              * <p>warning</p>
@@ -229,7 +229,7 @@ public class ListClusterInspectReportsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of items whose result is error.</p>
+             * <p>The number of check items whose result is error.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -240,7 +240,7 @@ public class ListClusterInspectReportsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of items whose result is normal.</p>
+             * <p>The number of check items whose result is normal.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -251,7 +251,7 @@ public class ListClusterInspectReportsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of items whose result is warning.</p>
+             * <p>The number of check items whose result is warning.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -360,7 +360,7 @@ public class ListClusterInspectReportsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The report completion time.</p>
+             * <p>The completion time of the inspection report, in ISO 8601 format with time zone information.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-12-18T19:40:16.778333+08:00</p>
@@ -371,7 +371,7 @@ public class ListClusterInspectReportsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>An inspection report ID.</p>
+             * <p>The inspection report ID.</p>
              * 
              * <strong>example:</strong>
              * <p>782df89346054a0000562063a6****</p>
@@ -382,7 +382,7 @@ public class ListClusterInspectReportsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The report start time.</p>
+             * <p>The start time of the inspection report, in ISO 8601 format with time zone information.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-12-18T19:40:16.778333+08:00</p>
@@ -393,7 +393,7 @@ public class ListClusterInspectReportsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The inspection report status.</p>
+             * <p>The generation status of the inspection report.</p>
              * 
              * <strong>example:</strong>
              * <p>completed</p>
@@ -404,7 +404,7 @@ public class ListClusterInspectReportsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The inspection summary.</p>
+             * <p>The inspection report summary.</p>
              */
             public Builder summary(Summary summary) {
                 this.summary = summary;

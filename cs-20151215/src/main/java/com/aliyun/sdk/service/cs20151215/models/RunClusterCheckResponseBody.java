@@ -67,10 +67,10 @@ public class RunClusterCheckResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the cluster check task.</p>
+         * <p>The check ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>1697100584236600453-ce0da5a1d627e4e9e9f96cae8ad07****-clustercheck-lboto</p>
+         * <p>1697100584236******-ce0da5a1d627e4e9e9f96cae8ad******-clustercheck-lboto</p>
          */
         public Builder checkId(String checkId) {
             this.checkId = checkId;
@@ -78,10 +78,10 @@ public class RunClusterCheckResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>F04DF81D-5C12-1524-B36A-86E02526****</p>
+         * <p>F04DF81D-5C12-1524-B36A-86E025******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

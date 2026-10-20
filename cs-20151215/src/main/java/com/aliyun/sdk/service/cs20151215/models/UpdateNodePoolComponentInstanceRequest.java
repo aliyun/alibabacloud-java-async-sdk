@@ -160,6 +160,7 @@ public class UpdateNodePoolComponentInstanceRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -172,6 +173,7 @@ public class UpdateNodePoolComponentInstanceRequest extends Request {
         }
 
         /**
+         * <p>The node pool ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -184,6 +186,7 @@ public class UpdateNodePoolComponentInstanceRequest extends Request {
         }
 
         /**
+         * <p>The component name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -196,7 +199,7 @@ public class UpdateNodePoolComponentInstanceRequest extends Request {
         }
 
         /**
-         * config.
+         * <p>The node component configuration.</p>
          */
         public Builder config(Config config) {
             this.putBodyParameter("config", config);
@@ -205,7 +208,10 @@ public class UpdateNodePoolComponentInstanceRequest extends Request {
         }
 
         /**
-         * disable_rolling.
+         * <p>Specifies whether to disable the rolling update. Default value: false. Updating the baseline configuration triggers a rolling update of the nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder disableRolling(Boolean disableRolling) {
             this.putBodyParameter("disable_rolling", disableRolling);
@@ -214,7 +220,7 @@ public class UpdateNodePoolComponentInstanceRequest extends Request {
         }
 
         /**
-         * node_names.
+         * <p>The list of nodes to be updated in a rolling manner. By default, all nodes are updated.</p>
          */
         public Builder nodeNames(java.util.List<String> nodeNames) {
             this.putBodyParameter("node_names", nodeNames);
@@ -223,7 +229,7 @@ public class UpdateNodePoolComponentInstanceRequest extends Request {
         }
 
         /**
-         * rolling_policy.
+         * <p>The rolling update configuration.</p>
          */
         public Builder rollingPolicy(RollingPolicy rollingPolicy) {
             this.putBodyParameter("rolling_policy", rollingPolicy);
@@ -232,7 +238,10 @@ public class UpdateNodePoolComponentInstanceRequest extends Request {
         }
 
         /**
-         * version.
+         * <p>The node component version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.33.3-aliyun.1</p>
          */
         public Builder version(String version) {
             this.putBodyParameter("version", version);
@@ -300,10 +309,10 @@ public class UpdateNodePoolComponentInstanceRequest extends Request {
             } 
 
             /**
-             * <p>This parameter is required.</p>
+             * <p>The name of the environment variable.</p>
              * 
              * <strong>example:</strong>
-             * <p>kubelet</p>
+             * <p>LOG_LEVEL</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -311,7 +320,10 @@ public class UpdateNodePoolComponentInstanceRequest extends Request {
             }
 
             /**
-             * value.
+             * <p>The value of the environment variable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>info</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -378,7 +390,10 @@ public class UpdateNodePoolComponentInstanceRequest extends Request {
             } 
 
             /**
-             * custom_config.
+             * <p>The custom configuration of the node component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;cpuManagerPolicy&quot;:&quot;static&quot;}</p>
              */
             public Builder customConfig(java.util.Map<String, ?> customConfig) {
                 this.customConfig = customConfig;
@@ -386,7 +401,7 @@ public class UpdateNodePoolComponentInstanceRequest extends Request {
             }
 
             /**
-             * envs.
+             * <p>The environment variables of the node component.</p>
              */
             public Builder envs(java.util.List<Envs> envs) {
                 this.envs = envs;
@@ -479,7 +494,10 @@ public class UpdateNodePoolComponentInstanceRequest extends Request {
             } 
 
             /**
-             * batch_interval.
+             * <p>The upgrade interval between batches, in seconds. Default value: 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder batchInterval(Long batchInterval) {
                 this.batchInterval = batchInterval;
@@ -487,7 +505,10 @@ public class UpdateNodePoolComponentInstanceRequest extends Request {
             }
 
             /**
-             * max_failed_nodes.
+             * <p>The maximum number of nodes that are allowed to fail during the rolling update. Default value: 0. A value of 0 indicates that the task fails if any node fails. A value greater than 0 indicates that the task fails and stops if the cumulative number of failed nodes exceeds this value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder maxFailedNodes(Long maxFailedNodes) {
                 this.maxFailedNodes = maxFailedNodes;
@@ -495,7 +516,10 @@ public class UpdateNodePoolComponentInstanceRequest extends Request {
             }
 
             /**
-             * max_parallelism.
+             * <p>The maximum number of parallel updates per batch. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder maxParallelism(Long maxParallelism) {
                 this.maxParallelism = maxParallelism;
@@ -503,7 +527,10 @@ public class UpdateNodePoolComponentInstanceRequest extends Request {
             }
 
             /**
-             * pause_policy.
+             * <p>The auto-pause policy during the node upgrade process. Valid values: NotPause, FirstBatch, and EveryBatch. Default value: NotPause.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NotPause</p>
              */
             public Builder pausePolicy(String pausePolicy) {
                 this.pausePolicy = pausePolicy;

@@ -220,10 +220,10 @@ public class DescribeClusterLogsResponse extends Response {
             } 
 
             /**
-             * <p>The ID of the log entry.</p>
+             * <p>The log ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>590749245</p>
+             * <p>73117232145******</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -253,10 +253,10 @@ public class DescribeClusterLogsResponse extends Response {
             }
 
             /**
-             * <p>The time when the log entry was generated.</p>
+             * <p>The time when the log was created.</p>
              * 
              * <strong>example:</strong>
-             * <p>2020-09-11T10:11:51+08:00</p>
+             * <p>2025-04-10T17:54:26+08:00</p>
              */
             public Builder created(String created) {
                 this.created = created;
@@ -264,10 +264,10 @@ public class DescribeClusterLogsResponse extends Response {
             }
 
             /**
-             * <p>The time when the log entry was updated.</p>
+             * <p>The time when the log was updated.</p>
              * 
              * <strong>example:</strong>
-             * <p>2020-09-11T10:11:51+08:00</p>
+             * <p>2025-04-10T17:54:26+08:00</p>
              */
             public Builder updated(String updated) {
                 this.updated = updated;

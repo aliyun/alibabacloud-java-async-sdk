@@ -103,6 +103,7 @@ public class ListNodePoolComponentInstancesRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,6 +116,7 @@ public class ListNodePoolComponentInstancesRequest extends Request {
         }
 
         /**
+         * <p>The node pool ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -127,7 +129,10 @@ public class ListNodePoolComponentInstancesRequest extends Request {
         }
 
         /**
-         * max_results.
+         * <p>The maximum number of results to return. Default value: 200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("max_results", maxResults);
@@ -136,7 +141,10 @@ public class ListNodePoolComponentInstancesRequest extends Request {
         }
 
         /**
-         * next_token.
+         * <p>The pagination token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5c0a1c0f91c14c6****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("next_token", nextToken);

@@ -80,7 +80,7 @@ public class CreateClusterResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cb95aa626a47740afbf6aa099b650****</p>
@@ -94,7 +94,7 @@ public class CreateClusterResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>687C5BAA-D103-4993-884B-C35E4314A1E1</p>
+         * <p>687C5BAA-D103-4993-884B-C35E4314****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -105,7 +105,7 @@ public class CreateClusterResponseBody extends TeaModel {
          * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>T-5a54309c80282e39ea00002f</p>
+         * <p>T-5a54309c80282e39ea****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

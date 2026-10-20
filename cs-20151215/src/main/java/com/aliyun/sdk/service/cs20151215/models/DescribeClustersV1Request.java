@@ -160,7 +160,7 @@ public class DescribeClustersV1Request extends Request {
          * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>ca418e5e6fa2849d78301341700axxxxx</p>
+         * <p>c3fb96524f9274b4495df0f12a6b5****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("cluster_id", clusterId);
@@ -169,11 +169,16 @@ public class DescribeClustersV1Request extends Request {
         }
 
         /**
-         * <p>After you set <code>cluster_type</code> to <code>ManagedKubernetes</code> and configure the <code>profile</code> parameter, you can further specify the edition of the cluster. Valid values:</p>
+         * <p>The cluster specification. This parameter is valid when cluster_type is set to ManagedKubernetes and profile is configured. Valid values:</p>
          * <ul>
-         * <li><code>ack.pro.small</code>: ACK Pro cluster.</li>
-         * <li><code>ack.standard</code>: ACK Basic cluster. If you leave the parameter empty, ACK Basic cluster is selected.</li>
+         * <li>ack.standard: Basic Edition.</li>
+         * <li>ack.pro.small: Pro Edition.</li>
+         * <li>ack.pro.xlarge: Pro XL.</li>
+         * <li>ack.pro.2xlarge: Pro 2XL.</li>
+         * <li>ack.pro.4xlarge: Pro 4XL. To use this specification, contact customer service to apply for whitelist access.</li>
          * </ul>
+         * <p>Pro XL, Pro 2XL, and Pro 4XL are the three tiers provided by the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro provisioned control plane</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro provisioned control plane</a>. By pre-allocating and dedicating control plane resources, these tiers ensure consistently high levels of API concurrency and pod scheduling capabilities. They are suitable for AI training and inference, ultra-large-scale clusters, and mission-critical workloads.</p>
+         * <p>For information about the cluster management fees for the Pro Edition and provisioned control plane editions, see &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fees</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fees</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>ack.pro.small</p>
@@ -185,11 +190,11 @@ public class DescribeClustersV1Request extends Request {
         }
 
         /**
-         * <p>The type of the instance.</p>
+         * <p>The cluster type. Valid values:</p>
          * <ul>
-         * <li><code>Kubernetes</code>: ACK dedicated cluster.</li>
-         * <li><code>ManagedKubernetes</code>: ACK managed cluster. ACK managed clusters include ACK Basic clusters, ACK Pro clusters, ACK Serverless Basic clusters, ACK Serverless Pro clusters, ACK Edge Basic clusters, ACK Edge Pro clusters, and ACK Lingjun Pro clusters.</li>
-         * <li><code>ExternalKubernetes</code>: registered cluster</li>
+         * <li>Kubernetes: ACK dedicated cluster.</li>
+         * <li>ManagedKubernetes: ACK managed clusters, including ACK managed clusters (Pro Edition and Basic Edition), ACK Serverless clusters (Pro Edition and Basic Edition), ACK Edge clusters (Pro Edition and Basic Edition), and ACK Lingjun clusters (Pro Edition).</li>
+         * <li>ExternalKubernetes: registered cluster.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -202,7 +207,7 @@ public class DescribeClustersV1Request extends Request {
         }
 
         /**
-         * <p>The cluster name.</p>
+         * <p>The cluster name. Fuzzy match is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>cluster-demo</p>
@@ -214,10 +219,10 @@ public class DescribeClustersV1Request extends Request {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number of the current page.</p>
          * 
          * <strong>example:</strong>
-         * <p>3</p>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("page_number", pageNumber);
@@ -226,7 +231,7 @@ public class DescribeClustersV1Request extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries to return on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -238,12 +243,12 @@ public class DescribeClustersV1Request extends Request {
         }
 
         /**
-         * <p>If you set <code>cluster_type</code> to <code>ManagedKubernetes</code>, an ACK managed cluster is created. In this case, you can further specify the cluster edition. Valid values:</p>
+         * <p>The cluster subtype. This parameter is valid only when cluster_type is set to ManagedKubernetes. Valid values:</p>
          * <ul>
-         * <li><code>Default</code>: ACK managed cluster. ACK managed clusters include ACK Basic clusters and ACK Pro clusters.</li>
-         * <li><code>Edge</code>: ACK Edge cluster. ACK Edge clusters include ACK Edge Basic clusters and ACK Edge Pro clusters.</li>
-         * <li><code>Serverless</code>: ACK Serverless cluster. ACK Serverless clusters include ACK Serverless Basic clusters and ACK Serverless Pro clusters.</li>
-         * <li><code>Lingjun</code>: ACK Lingjun Pro cluster.</li>
+         * <li>Default: ACK serverless clusters, including ACK serverless cluster Pro Edition and Basic Edition.</li>
+         * <li>Edge: ACK Edge clusters, including ACK Edge cluster Pro Edition and Basic Edition.</li>
+         * <li>Serverless: ACK ACK clusters, including ACK ACK cluster Pro Edition and Basic Edition.</li>
+         * <li>Lingjun: ACK Lingjun clusters, providing Pro Edition.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -256,7 +261,7 @@ public class DescribeClustersV1Request extends Request {
         }
 
         /**
-         * <p>The region ID of the clusters. You can use this parameter to query all clusters in the specified region.</p>
+         * <p>The region of the cluster. Specify this parameter to filter clusters by region.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

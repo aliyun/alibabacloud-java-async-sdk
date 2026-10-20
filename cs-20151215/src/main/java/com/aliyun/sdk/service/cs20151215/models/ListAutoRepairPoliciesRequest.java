@@ -59,7 +59,10 @@ public class ListAutoRepairPoliciesRequest extends Request {
         } 
 
         /**
-         * cluster_id.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ce0da5a1d627e4e9e9f96cae8ad07****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("cluster_id", clusterId);

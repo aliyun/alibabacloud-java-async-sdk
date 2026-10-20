@@ -54,7 +54,7 @@ public class ListClusterAddonInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A list of components that are installed in the cluster.</p>
+         * <p>The list of installed component instances.</p>
          */
         public Builder addons(java.util.List<Addons> addons) {
             this.addons = addons;
@@ -144,12 +144,12 @@ public class ListClusterAddonInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the component. Valid values:</p>
+             * <p>The component status. Valid values:</p>
              * <ul>
-             * <li>active: The component is installed.</li>
-             * <li>updating: The component is being modified.</li>
-             * <li>upgrading: The component is being updated.</li>
-             * <li>deleting: The component is being uninstalled.</li>
+             * <li>active: installed</li>
+             * <li>updating: being updated</li>
+             * <li>upgrading: being upgraded</li>
+             * <li>deleting: being uninstalled</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -161,7 +161,7 @@ public class ListClusterAddonInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the component.</p>
+             * <p>The component version.</p>
              * 
              * <strong>example:</strong>
              * <p>v1.9.3.10-7dfca203-aliyun</p>

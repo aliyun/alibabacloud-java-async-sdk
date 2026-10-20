@@ -103,7 +103,7 @@ public class DescribeResourcesDeleteProtectionRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the Container Service for Kubernetes (ACK) cluster.</p>
+         * <p>The ID of the ACK cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,10 +116,12 @@ public class DescribeResourcesDeleteProtectionRequest extends Request {
         }
 
         /**
-         * <p>The type of the resource that you want to query. Valid values:</p>
+         * <p>The type of the resource to query. Valid values:</p>
          * <ul>
-         * <li>Namespaces</li>
-         * <li>services</li>
+         * <li><p>namespaces: namespace.</p>
+         * </li>
+         * <li><p>services: service.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -133,8 +135,8 @@ public class DescribeResourcesDeleteProtectionRequest extends Request {
         }
 
         /**
-         * <p>The namespace in which the resources that you want to query reside.</p>
-         * <p>This parameter is required when you set resource_type to services. Default value: default.</p>
+         * <p>The namespace of the resource to query.</p>
+         * <p>This parameter is required when resource_type is set to services. If this parameter is not specified, the default namespace is used.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -146,10 +148,12 @@ public class DescribeResourcesDeleteProtectionRequest extends Request {
         }
 
         /**
-         * <p>The names of the resources that you want to query. Separate multiple resource names with commas (,).</p>
+         * <p>The names of the resources to query. Separate multiple resource names with commas (,).</p>
          * <ul>
-         * <li>When you set resource_type to namespaces, you must specify namespace names. If you leave this parameter empty, all namespaces in the cluster are queried.</li>
-         * <li>If you set resource_type to services, you must specify Service names.</li>
+         * <li><p>If resource_type is set to namespaces, specify namespace names. If this parameter is not specified, the deletion protection status of all namespaces in the cluster is queried.</p>
+         * </li>
+         * <li><p>If resource_type is set to services, this parameter is required. Specify service names.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

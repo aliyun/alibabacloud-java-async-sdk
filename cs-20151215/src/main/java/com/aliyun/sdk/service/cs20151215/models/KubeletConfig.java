@@ -457,7 +457,7 @@ public class KubeletConfig extends TeaModel {
         } 
 
         /**
-         * allowedUnsafeSysctls.
+         * <p>The whitelist of allowed unsafe sysctl patterns.</p>
          */
         public Builder allowedUnsafeSysctls(java.util.List<String> allowedUnsafeSysctls) {
             this.allowedUnsafeSysctls = allowedUnsafeSysctls;
@@ -465,7 +465,7 @@ public class KubeletConfig extends TeaModel {
         }
 
         /**
-         * clusterDNS.
+         * <p>The list of IP addresses for the cluster DNS servers.</p>
          */
         public Builder clusterDNS(java.util.List<String> clusterDNS) {
             this.clusterDNS = clusterDNS;
@@ -473,7 +473,10 @@ public class KubeletConfig extends TeaModel {
         }
 
         /**
-         * containerLogMaxFiles.
+         * <p>The maximum number of log files that can exist per container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder containerLogMaxFiles(Long containerLogMaxFiles) {
             this.containerLogMaxFiles = containerLogMaxFiles;
@@ -481,7 +484,10 @@ public class KubeletConfig extends TeaModel {
         }
 
         /**
-         * containerLogMaxSize.
+         * <p>The maximum size a log file can reach before log rotation is performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10Mi</p>
          */
         public Builder containerLogMaxSize(String containerLogMaxSize) {
             this.containerLogMaxSize = containerLogMaxSize;
@@ -489,7 +495,10 @@ public class KubeletConfig extends TeaModel {
         }
 
         /**
-         * containerLogMaxWorkers.
+         * <p>The maximum number of concurrent workers for log rotation operations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder containerLogMaxWorkers(Integer containerLogMaxWorkers) {
             this.containerLogMaxWorkers = containerLogMaxWorkers;
@@ -497,7 +506,10 @@ public class KubeletConfig extends TeaModel {
         }
 
         /**
-         * containerLogMonitorInterval.
+         * <p>The interval for monitoring container logs to perform log rotation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10s</p>
          */
         public Builder containerLogMonitorInterval(String containerLogMonitorInterval) {
             this.containerLogMonitorInterval = containerLogMonitorInterval;
@@ -505,7 +517,10 @@ public class KubeletConfig extends TeaModel {
         }
 
         /**
-         * cpuCFSQuota.
+         * <p>Specifies whether to enable CPU CFS quota enforcement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder cpuCFSQuota(Boolean cpuCFSQuota) {
             this.cpuCFSQuota = cpuCFSQuota;
@@ -513,7 +528,10 @@ public class KubeletConfig extends TeaModel {
         }
 
         /**
-         * cpuCFSQuotaPeriod.
+         * <p>The CPU CFS quota period value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100ms</p>
          */
         public Builder cpuCFSQuotaPeriod(String cpuCFSQuotaPeriod) {
             this.cpuCFSQuotaPeriod = cpuCFSQuotaPeriod;
@@ -521,7 +539,10 @@ public class KubeletConfig extends TeaModel {
         }
 
         /**
-         * cpuManagerPolicy.
+         * <p>The CPU manager policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>none</p>
          */
         public Builder cpuManagerPolicy(String cpuManagerPolicy) {
             this.cpuManagerPolicy = cpuManagerPolicy;
@@ -529,7 +550,10 @@ public class KubeletConfig extends TeaModel {
         }
 
         /**
-         * eventBurst.
+         * <p>The maximum burst size for event records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder eventBurst(Long eventBurst) {
             this.eventBurst = eventBurst;
@@ -537,7 +561,10 @@ public class KubeletConfig extends TeaModel {
         }
 
         /**
-         * eventRecordQPS.
+         * <p>The maximum number of events that can be generated per second.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder eventRecordQPS(Long eventRecordQPS) {
             this.eventRecordQPS = eventRecordQPS;
@@ -545,7 +572,7 @@ public class KubeletConfig extends TeaModel {
         }
 
         /**
-         * evictionHard.
+         * <p>The set of hard eviction thresholds that trigger pod eviction.</p>
          */
         public Builder evictionHard(java.util.Map<String, ?> evictionHard) {
             this.evictionHard = evictionHard;
@@ -553,7 +580,7 @@ public class KubeletConfig extends TeaModel {
         }
 
         /**
-         * evictionSoft.
+         * <p>The set of soft eviction thresholds.</p>
          */
         public Builder evictionSoft(java.util.Map<String, ?> evictionSoft) {
             this.evictionSoft = evictionSoft;
@@ -561,7 +588,7 @@ public class KubeletConfig extends TeaModel {
         }
 
         /**
-         * evictionSoftGracePeriod.
+         * <p>The set of eviction grace periods.</p>
          */
         public Builder evictionSoftGracePeriod(java.util.Map<String, ?> evictionSoftGracePeriod) {
             this.evictionSoftGracePeriod = evictionSoftGracePeriod;
@@ -569,7 +596,7 @@ public class KubeletConfig extends TeaModel {
         }
 
         /**
-         * featureGates.
+         * <p>The feature gates configuration used to enable experimental features.</p>
          */
         public Builder featureGates(java.util.Map<String, ?> featureGates) {
             this.featureGates = featureGates;
@@ -577,7 +604,10 @@ public class KubeletConfig extends TeaModel {
         }
 
         /**
-         * imageGCHighThresholdPercent.
+         * <p>The threshold above which image garbage collection runs continuously.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>85</p>
          */
         public Builder imageGCHighThresholdPercent(Integer imageGCHighThresholdPercent) {
             this.imageGCHighThresholdPercent = imageGCHighThresholdPercent;
@@ -585,7 +615,10 @@ public class KubeletConfig extends TeaModel {
         }
 
         /**
-         * imageGCLowThresholdPercent.
+         * <p>The threshold below which image garbage collection is not performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder imageGCLowThresholdPercent(Integer imageGCLowThresholdPercent) {
             this.imageGCLowThresholdPercent = imageGCLowThresholdPercent;
@@ -593,7 +626,10 @@ public class KubeletConfig extends TeaModel {
         }
 
         /**
-         * kubeAPIBurst.
+         * <p>The maximum number of burst requests sent to the API server per second.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder kubeAPIBurst(Long kubeAPIBurst) {
             this.kubeAPIBurst = kubeAPIBurst;
@@ -601,7 +637,10 @@ public class KubeletConfig extends TeaModel {
         }
 
         /**
-         * kubeAPIQPS.
+         * <p>The number of queries per second when communicating with the API server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder kubeAPIQPS(Long kubeAPIQPS) {
             this.kubeAPIQPS = kubeAPIQPS;
@@ -609,7 +648,7 @@ public class KubeletConfig extends TeaModel {
         }
 
         /**
-         * kubeReserved.
+         * <p>The resource configuration reserved for Kubernetes system components.</p>
          */
         public Builder kubeReserved(java.util.Map<String, ?> kubeReserved) {
             this.kubeReserved = kubeReserved;
@@ -617,7 +656,10 @@ public class KubeletConfig extends TeaModel {
         }
 
         /**
-         * maxPods.
+         * <p>The maximum number of pods that can run on the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>110</p>
          */
         public Builder maxPods(Long maxPods) {
             this.maxPods = maxPods;
@@ -625,7 +667,10 @@ public class KubeletConfig extends TeaModel {
         }
 
         /**
-         * memoryManagerPolicy.
+         * <p>The policy used by the memory management manager.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>none</p>
          */
         public Builder memoryManagerPolicy(String memoryManagerPolicy) {
             this.memoryManagerPolicy = memoryManagerPolicy;
@@ -633,7 +678,10 @@ public class KubeletConfig extends TeaModel {
         }
 
         /**
-         * podPidsLimit.
+         * <p>The maximum number of PIDs that can be used in a pod.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder podPidsLimit(Long podPidsLimit) {
             this.podPidsLimit = podPidsLimit;
@@ -641,7 +689,10 @@ public class KubeletConfig extends TeaModel {
         }
 
         /**
-         * readOnlyPort.
+         * <p>The read-only port number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder readOnlyPort(Long readOnlyPort) {
             this.readOnlyPort = readOnlyPort;
@@ -649,7 +700,10 @@ public class KubeletConfig extends TeaModel {
         }
 
         /**
-         * registryBurst.
+         * <p>The maximum number of burst image pulls.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder registryBurst(Long registryBurst) {
             this.registryBurst = registryBurst;
@@ -657,7 +711,10 @@ public class KubeletConfig extends TeaModel {
         }
 
         /**
-         * registryPullQPS.
+         * <p>The QPS limit for the image registry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder registryPullQPS(Long registryPullQPS) {
             this.registryPullQPS = registryPullQPS;
@@ -665,7 +722,7 @@ public class KubeletConfig extends TeaModel {
         }
 
         /**
-         * reservedMemory.
+         * <p>The memory reserved for NUMA nodes.</p>
          */
         public Builder reservedMemory(java.util.List<ReservedMemory> reservedMemory) {
             this.reservedMemory = reservedMemory;
@@ -673,7 +730,10 @@ public class KubeletConfig extends TeaModel {
         }
 
         /**
-         * serializeImagePulls.
+         * <p>Specifies whether to pull images one at a time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder serializeImagePulls(Boolean serializeImagePulls) {
             this.serializeImagePulls = serializeImagePulls;
@@ -681,7 +741,16 @@ public class KubeletConfig extends TeaModel {
         }
 
         /**
-         * serverTLSBootstrap.
+         * <p>Enables automatic issuance and rotation of kubelet server certificates. When enabled, you must also set &quot;RotateKubeletServerCertificate&quot;: true in the kubelet featureGates configuration.</p>
+         * <blockquote>
+         * <ul>
+         * <li>Available only for clusters running version 1.30 or later.</li>
+         * <li>For clusters running version 1.30 to v1.33, submit a ticket to apply for this feature.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder serverTLSBootstrap(Boolean serverTLSBootstrap) {
             this.serverTLSBootstrap = serverTLSBootstrap;
@@ -689,7 +758,7 @@ public class KubeletConfig extends TeaModel {
         }
 
         /**
-         * systemReserved.
+         * <p>The resource configuration reserved for the system.</p>
          */
         public Builder systemReserved(java.util.Map<String, ?> systemReserved) {
             this.systemReserved = systemReserved;
@@ -697,7 +766,10 @@ public class KubeletConfig extends TeaModel {
         }
 
         /**
-         * topologyManagerPolicy.
+         * <p>The Policy Name of the topology management manager to use.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>restricted</p>
          */
         public Builder topologyManagerPolicy(String topologyManagerPolicy) {
             this.topologyManagerPolicy = topologyManagerPolicy;
@@ -705,7 +777,7 @@ public class KubeletConfig extends TeaModel {
         }
 
         /**
-         * tracing.
+         * <p>The versioned configuration for the OpenTelemetry tracing client.</p>
          */
         public Builder tracing(Tracing tracing) {
             this.tracing = tracing;
@@ -771,7 +843,10 @@ public class KubeletConfig extends TeaModel {
             } 
 
             /**
-             * limits.
+             * <p>The memory resources limit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;memory&quot;: &quot;1Gi&quot;}</p>
              */
             public Builder limits(java.util.Map<String, ?> limits) {
                 this.limits = limits;
@@ -779,7 +854,10 @@ public class KubeletConfig extends TeaModel {
             }
 
             /**
-             * numaNode.
+             * <p>The NUMA node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder numaNode(Integer numaNode) {
                 this.numaNode = numaNode;
@@ -846,7 +924,10 @@ public class KubeletConfig extends TeaModel {
             } 
 
             /**
-             * endpoint.
+             * <p>The endpoint of the collector.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>localhost:4317</p>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -854,7 +935,10 @@ public class KubeletConfig extends TeaModel {
             }
 
             /**
-             * samplingRatePerMillion.
+             * <p>The number of samples to collect per million spans.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200000</p>
              */
             public Builder samplingRatePerMillion(Integer samplingRatePerMillion) {
                 this.samplingRatePerMillion = samplingRatePerMillion;

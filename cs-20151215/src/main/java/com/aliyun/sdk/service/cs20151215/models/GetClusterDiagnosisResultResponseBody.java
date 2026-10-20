@@ -158,10 +158,10 @@ public class GetClusterDiagnosisResultResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The code that indicates the diagnostic result. Valid values:</p>
+         * <p>The diagnosis result code. Valid values:</p>
          * <ul>
-         * <li>0: the diagnostic is completed.</li>
-         * <li>1: the diagnostic failed.</li>
+         * <li>0: Diagnosis completed.</li>
+         * <li>1: Diagnosis failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -173,7 +173,7 @@ public class GetClusterDiagnosisResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the diagnostic is initiated.</p>
+         * <p>The time when the diagnosis was initiated.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-05-28T11:29Z</p>
@@ -184,7 +184,7 @@ public class GetClusterDiagnosisResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The diagnostic ID.</p>
+         * <p>The diagnosis ID.</p>
          * 
          * <strong>example:</strong>
          * <p>6cf6b62e334e4583bdfd26707516****</p>
@@ -195,7 +195,7 @@ public class GetClusterDiagnosisResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the diagnostic is completed.</p>
+         * <p>The time when the diagnosis was completed.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-05-28T11:29Z</p>
@@ -206,7 +206,7 @@ public class GetClusterDiagnosisResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The diagnostic status information.</p>
+         * <p>The diagnosis status information.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -217,7 +217,7 @@ public class GetClusterDiagnosisResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The diagnostic result.</p>
+         * <p>The diagnosis result.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;phase&quot;:5,&quot;version&quot;:&quot;20240101&quot;}</p>
@@ -228,11 +228,11 @@ public class GetClusterDiagnosisResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the diagnostic. Valid values:</p>
+         * <p>The diagnosis status. Valid values:</p>
          * <ul>
-         * <li>0: The diagnostic is created.</li>
-         * <li>1: The diagnostic is running.</li>
-         * <li>2: The diagnostic is completed.</li>
+         * <li>0: Diagnosis created.</li>
+         * <li>1: Diagnosis running.</li>
+         * <li>2: Diagnosis completed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -244,7 +244,7 @@ public class GetClusterDiagnosisResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The diagnostic object.</p>
+         * <p>The diagnosis target.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;name&quot;:&quot;cn-hongkong.10.0.0.246&quot;}</p>
@@ -255,17 +255,7 @@ public class GetClusterDiagnosisResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The type of the diagnostic.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>node</li>
-         * <li>ingress</li>
-         * <li>cluster</li>
-         * <li>memory</li>
-         * <li>pod</li>
-         * <li>service</li>
-         * <li>network</li>
-         * </ul>
+         * <p>The diagnosis type.</p>
          * 
          * <strong>example:</strong>
          * <p>Node</p>

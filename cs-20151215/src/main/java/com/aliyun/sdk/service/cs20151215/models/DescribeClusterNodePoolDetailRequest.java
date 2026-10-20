@@ -75,7 +75,7 @@ public class DescribeClusterNodePoolDetailRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the cluster that you want to query.</p>
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -59,7 +59,7 @@ public class CancelOperationPlanRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the O&amp;M plan.</p>
+         * <p>The execution plan ID.</p>
          * 
          * <strong>example:</strong>
          * <p>P-655c9c127e0e6603ef00****</p>

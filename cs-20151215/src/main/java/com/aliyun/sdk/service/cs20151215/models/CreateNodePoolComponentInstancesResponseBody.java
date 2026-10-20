@@ -80,7 +80,10 @@ public class CreateNodePoolComponentInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * cluster_id.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c2230fxxxxx</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -88,7 +91,10 @@ public class CreateNodePoolComponentInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * request_id.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +102,10 @@ public class CreateNodePoolComponentInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * task_id.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>T-xxxx</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

@@ -118,6 +118,7 @@ public class CreateNodePoolComponentInstancesRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,6 +131,7 @@ public class CreateNodePoolComponentInstancesRequest extends Request {
         }
 
         /**
+         * <p>The node pool ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,6 +144,7 @@ public class CreateNodePoolComponentInstancesRequest extends Request {
         }
 
         /**
+         * <p>The list of node components.</p>
          * <p>This parameter is required.</p>
          */
         public Builder components(java.util.List<Components> components) {
@@ -151,7 +154,7 @@ public class CreateNodePoolComponentInstancesRequest extends Request {
         }
 
         /**
-         * node_names.
+         * <p>The list of nodes for the rolling update. Default value: all nodes.</p>
          */
         public Builder nodeNames(java.util.List<String> nodeNames) {
             this.putBodyParameter("node_names", nodeNames);
@@ -160,7 +163,7 @@ public class CreateNodePoolComponentInstancesRequest extends Request {
         }
 
         /**
-         * rolling_policy.
+         * <p>The rolling update configuration.</p>
          */
         public Builder rollingPolicy(RollingPolicy rollingPolicy) {
             this.putBodyParameter("rolling_policy", rollingPolicy);
@@ -228,7 +231,10 @@ public class CreateNodePoolComponentInstancesRequest extends Request {
             } 
 
             /**
-             * name.
+             * <p>The name of the environment variable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LOG_LEVEL</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -236,7 +242,10 @@ public class CreateNodePoolComponentInstancesRequest extends Request {
             }
 
             /**
-             * value.
+             * <p>The value of the environment variable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>info</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -303,7 +312,10 @@ public class CreateNodePoolComponentInstancesRequest extends Request {
             } 
 
             /**
-             * custom_config.
+             * <p>The custom configuration of the component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;cpuManagerPolicy&quot;:&quot;static&quot;}</p>
              */
             public Builder customConfig(java.util.Map<String, ?> customConfig) {
                 this.customConfig = customConfig;
@@ -311,7 +323,7 @@ public class CreateNodePoolComponentInstancesRequest extends Request {
             }
 
             /**
-             * envs.
+             * <p>The environment variables of the node component.</p>
              */
             public Builder envs(java.util.List<Envs> envs) {
                 this.envs = envs;
@@ -393,7 +405,7 @@ public class CreateNodePoolComponentInstancesRequest extends Request {
             } 
 
             /**
-             * config.
+             * <p>The configuration of the component.</p>
              */
             public Builder config(Config config) {
                 this.config = config;
@@ -401,6 +413,7 @@ public class CreateNodePoolComponentInstancesRequest extends Request {
             }
 
             /**
+             * <p>The name of the component.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -412,6 +425,7 @@ public class CreateNodePoolComponentInstancesRequest extends Request {
             }
 
             /**
+             * <p>The version of the component.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -508,7 +522,10 @@ public class CreateNodePoolComponentInstancesRequest extends Request {
             } 
 
             /**
-             * batch_interval.
+             * <p>The interval between batches in seconds. Default value: 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder batchInterval(Long batchInterval) {
                 this.batchInterval = batchInterval;
@@ -516,7 +533,10 @@ public class CreateNodePoolComponentInstancesRequest extends Request {
             }
 
             /**
-             * max_failed_nodes.
+             * <p>The maximum number of nodes that can fail during the rolling update. Default value: 0. A value of 0 indicates that the task fails if any node fails. A value greater than 0 indicates that the task fails and stops if the cumulative number of failed nodes exceeds this value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder maxFailedNodes(Long maxFailedNodes) {
                 this.maxFailedNodes = maxFailedNodes;
@@ -524,7 +544,10 @@ public class CreateNodePoolComponentInstancesRequest extends Request {
             }
 
             /**
-             * max_parallelism.
+             * <p>The maximum number of parallel updates per batch. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder maxParallelism(Long maxParallelism) {
                 this.maxParallelism = maxParallelism;
@@ -532,7 +555,10 @@ public class CreateNodePoolComponentInstancesRequest extends Request {
             }
 
             /**
-             * pause_policy.
+             * <p>The auto-pause policy during the node upgrade. Valid values: NotPause, FirstBatch, and EveryBatch. Default value: NotPause.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NotPause</p>
              */
             public Builder pausePolicy(String pausePolicy) {
                 this.pausePolicy = pausePolicy;

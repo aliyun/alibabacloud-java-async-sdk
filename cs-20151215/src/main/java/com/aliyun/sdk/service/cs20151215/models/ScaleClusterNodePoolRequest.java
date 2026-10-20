@@ -115,7 +115,7 @@ public class ScaleClusterNodePoolRequest extends Request {
         }
 
         /**
-         * <p>The number of worker nodes that you want to add. For example, the current node pool contains two nodes. After the two node is scaled out, the node pool contains four nodes. Due to the limit of the node quota, you can add at most 500 nodes in each request.</p>
+         * <p>The number of nodes to add. For example, if the node pool currently has 2 nodes and you set this parameter to 2, the node pool will have 4 nodes after the scale-out. Due to the node quota limit of the current cluster, you can add up to 500 nodes in a single operation.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>

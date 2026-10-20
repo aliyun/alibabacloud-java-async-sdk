@@ -74,7 +74,7 @@ public class ModifyClusterTagsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,7 +87,7 @@ public class ModifyClusterTagsRequest extends Request {
         }
 
         /**
-         * <p>The data of the tags that you want to modify.</p>
+         * <p>The data to update.</p>
          */
         public Builder body(java.util.List<Tag> body) {
             this.putBodyParameter("body", body);

@@ -60,7 +60,7 @@ public class GetClusterAuditProjectRequest extends Request {
         } 
 
         /**
-         * <p>Cluster ID</p>
+         * <p>The ACK cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

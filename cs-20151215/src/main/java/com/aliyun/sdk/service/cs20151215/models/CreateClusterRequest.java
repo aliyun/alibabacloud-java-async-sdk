@@ -59,6 +59,10 @@ public class CreateClusterRequest extends Request {
     private Boolean cisEnabled;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("client_token")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("cloud_monitor_flags")
     @Deprecated
     private Boolean cloudMonitorFlags;
@@ -503,6 +507,7 @@ public class CreateClusterRequest extends Request {
         this.autoRenewPeriod = builder.autoRenewPeriod;
         this.chargeType = builder.chargeType;
         this.cisEnabled = builder.cisEnabled;
+        this.clientToken = builder.clientToken;
         this.cloudMonitorFlags = builder.cloudMonitorFlags;
         this.clusterDomain = builder.clusterDomain;
         this.clusterSpec = builder.clusterSpec;
@@ -673,6 +678,13 @@ public class CreateClusterRequest extends Request {
      */
     public Boolean getCisEnabled() {
         return this.cisEnabled;
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -1343,6 +1355,7 @@ public class CreateClusterRequest extends Request {
         private Long autoRenewPeriod; 
         private String chargeType; 
         private Boolean cisEnabled; 
+        private String clientToken; 
         private Boolean cloudMonitorFlags; 
         private String clusterDomain; 
         private String clusterSpec; 
@@ -1453,6 +1466,7 @@ public class CreateClusterRequest extends Request {
             this.autoRenewPeriod = request.autoRenewPeriod;
             this.chargeType = request.chargeType;
             this.cisEnabled = request.cisEnabled;
+            this.clientToken = request.clientToken;
             this.cloudMonitorFlags = request.cloudMonitorFlags;
             this.clusterDomain = request.clusterDomain;
             this.clusterSpec = request.clusterSpec;
@@ -1550,7 +1564,7 @@ public class CreateClusterRequest extends Request {
         } 
 
         /**
-         * <p>The network access control list (ACL) rule of the SLB instance associated with the API server if the cluster is a registered cluster.</p>
+         * <p><strong>[Deprecated]</strong> The access control list (ACL) of the SLB instance for the API server of a registered cluster.</p>
          */
         public Builder accessControlList(java.util.List<String> accessControlList) {
             this.putBodyParameter("access_control_list", accessControlList);
@@ -1559,27 +1573,27 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The components that you want to install in the cluster. When you create a cluster, you can configure the <code>addons</code> parameter to specify the components that you want to install.</p>
-         * <p><strong>Network plug-in</strong>: required. The Flannel and Terway plug-ins are supported. Select one of the plug-ins for the cluster.</p>
+         * <p>The list of cluster components. When you create a cluster, use <code>addons</code> to specify the components that you want to install.</p>
+         * <p><strong>Network component</strong>: Required. Two network types are available: Flannel and Terway. Select one when you create a cluster:</p>
          * <ul>
-         * <li>If you want to use the Terway component, specify the network plug-in in the [{&quot;name&quot;:&quot;flannel&quot;,&quot;config&quot;:&quot;&quot;}] format.</li>
-         * <li>If you want to use the Terway component, specify the value network plug-in in the [{&quot;name&quot;: &quot;terway-eniip&quot;,&quot;Config&quot;: &quot;&quot;}] format.</li>
+         * <li>Flannel: [{&quot;name&quot;:&quot;flannel&quot;,&quot;config&quot;:&quot;&quot;}\].</li>
+         * <li>Terway: [{&quot;name&quot;: &quot;terway-eniip&quot;,&quot;config&quot;: &quot;&quot;}\].</li>
          * </ul>
-         * <p><strong>Volume plug-in</strong>: optional. Only the <code>Container Storage Interface (CSI)</code> plug-in is supported.</p>
-         * <p>Specify the <code>CSI</code> plug-in in the following format: [{&quot;name&quot;:&quot;csi-plugin&quot;,&quot;config&quot;: &quot;&quot;},{&quot;name&quot;: &quot;csi-provisioner&quot;,&quot;config&quot;: &quot;&quot;}].</p>
-         * <p><strong>Simple Log Service component</strong>: optional. We recommend that you enable Simple Log Service. If Simple Log Service is disabled, you cannot use the cluster auditing feature.</p>
+         * <p><strong>Storage component</strong>: Optional. Only the <code>csi</code> type is supported:</p>
+         * <p><code>csi</code>: [{&quot;name&quot;:&quot;csi-plugin&quot;,&quot;config&quot;: &quot;&quot;},{&quot;name&quot;: &quot;csi-provisioner&quot;,&quot;config&quot;: &quot;&quot;}\].</p>
+         * <p><strong>Log component</strong>: Optional. We recommend that you enable this component. If you do not enable the log service, you cannot use the cluster auditing feature.</p>
          * <ul>
-         * <li>Specify an existing <code>Simple Log Service project</code> in the following format: [{&quot;name&quot;: &quot;logtail-ds&quot;,&quot;config&quot;: &quot;{&quot;IngressDashboardEnabled&quot;:&quot;true&quot;,&quot;sls_project_name&quot;:&quot;your_sls_project_name&quot;}&quot;}].</li>
-         * <li>To create a <code>Simple Log Service project</code>, specify the component in the following format: [{&quot;name&quot;: &quot;logtail-ds&quot;,&quot;config&quot;: &quot;{&quot;IngressDashboardEnabled&quot;:&quot;true&quot;}&quot;}].</li>
+         * <li>Use an existing <code>SLS Project</code>: [{&quot;name&quot;: &quot;loongcollector&quot;,&quot;config&quot;: &quot;{\&quot;IngressDashboardEnabled\&quot;:\&quot;true\&quot;,\&quot;sls_project_name\&quot;:\&quot;your_sls_project_name\&quot;}&quot;}\].</li>
+         * <li>Create a new <code>SLS Project</code>: [{&quot;name&quot;: &quot;loongcollector&quot;,&quot;config&quot;: &quot;{\&quot;IngressDashboardEnabled\&quot;:\&quot;true\&quot;}&quot;}\].</li>
          * </ul>
-         * <p><strong>Ingress controller</strong>: optional. By default, the <code>nginx-ingress-controller</code> component is installed in ACK dedicated clusters.</p>
+         * <p><strong>Ingress component</strong>: Optional. By default, the Ingress component <code>nginx-ingress-controller</code> is installed for ACK dedicated clusters.</p>
          * <ul>
-         * <li>To install nginx-ingress-controller and enable Internet access, specify the Ingress controller in the following format: [{&quot;name&quot;:&quot;nginx-ingress-controller&quot;,&quot;config&quot;:&quot;{&quot;IngressSlbNetworkType&quot;:&quot;internet&quot;}&quot;}].</li>
-         * <li>To disable the automatic installation of nginx-ingress-controller, specify the Ingress controller in the following format: [{&quot;name&quot;: &quot;nginx-ingress-controller&quot;,&quot;config&quot;: &quot;&quot;,&quot;disabled&quot;: true}].</li>
+         * <li>Install Ingress and enable Internet access: [{&quot;name&quot;:&quot;nginx-ingress-controller&quot;,&quot;config&quot;:&quot;{\&quot;IngressSlbNetworkType\&quot;:\&quot;internet\&quot;}&quot;}\].</li>
+         * <li>Disable default Ingress installation: [{&quot;name&quot;: &quot;nginx-ingress-controller&quot;,&quot;config&quot;: &quot;&quot;,&quot;disabled&quot;: true}\].</li>
          * </ul>
-         * <p><strong>Event center</strong>: optional. By default, the event center feature is enabled.</p>
-         * <p>You can use ACK event centers to store and query events and configure alerts. You can use the Logstores that are associated with ACK event centers free of charge within 90 days. For more information, see <a href="https://help.aliyun.com/document_detail/150476.html">Create and use an event center</a>.</p>
-         * <p>To enable the event center feature, specify the event center component in the following format: [{&quot;name&quot;:&quot;ack-node-problem-detector&quot;,&quot;config&quot;:&quot;{&quot;sls_project_name&quot;:&quot;your_sls_project_name&quot;}&quot;}].</p>
+         * <p><strong>Event Center</strong>: Optional. Enabled by default.</p>
+         * <p>Event Center provides the capabilities to store, query, and alert on Kubernetes events. The Logstore associated with Kubernetes Event Center is free of charge for 90 days. For more information about the free policy, see <a href="https://help.aliyun.com/document_detail/150476.html">Create and use Kubernetes Event Center</a>.</p>
+         * <p>Example of enabling Event Center: [{&quot;name&quot;:&quot;ack-node-problem-detector&quot;,&quot;config&quot;:&quot;{\&quot;sls_project_name\&quot;:\&quot;your_sls_project_name\&quot;}&quot;}\].</p>
          */
         public Builder addons(java.util.List<Addon> addons) {
             this.putBodyParameter("addons", addons);
@@ -1588,8 +1602,8 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>Service accounts provide identities for pods when pods communicate with the <code>API server</code> of the cluster. The <code>api-audiences</code> parameter validates <code>tokens</code> and is used by the <code>API server</code> to check whether the <code>tokens</code> of requests are valid. Separate multiple values with commas (,).``</p>
-         * <p>For more information about <code>service accounts</code>, see <a href="https://help.aliyun.com/document_detail/160384.html">Enable service account token volume projection</a>.</p>
+         * <p>A ServiceAccount is the access credential used by a pod to communicate with the cluster API server. The <code>api-audiences</code> parameter specifies the valid request <code>token</code> identities used by the <code>apiserver</code> to authenticate whether request <code>tokens</code> are legitimate. You can configure multiple <code>audiences</code> separated by commas (,).</p>
+         * <p>For more information about <code>ServiceAccount</code>, see <a href="https://help.aliyun.com/document_detail/160384.html">Deploy service account token volume projection</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>kubernetes.default.svc</p>
@@ -1601,7 +1615,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * audit_log_config.
+         * <p>The cluster audit log configuration.</p>
          */
         public Builder auditLogConfig(AuditLogConfig auditLogConfig) {
             this.putBodyParameter("audit_log_config", auditLogConfig);
@@ -1610,7 +1624,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * auto_mode.
+         * <p>The <a href="https://help.aliyun.com/document_detail/2938898.html">intelligent managed mode</a> configuration.</p>
          */
         public Builder autoMode(AutoMode autoMode) {
             this.putBodyParameter("auto_mode", autoMode);
@@ -1619,14 +1633,14 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>[<strong>Deprecated</strong>]</p>
+         * <p><strong>[Deprecated]</strong></p>
          * <p>Specifies whether to enable auto-renewal. This parameter takes effect only when <code>charge_type</code> is set to <code>PrePaid</code>. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: enables auto-renewal.</li>
-         * <li><code>false</code>: disables auto-renewal.</li>
+         * <li><code>true</code>: Enable auto-renewal.</li>
+         * <li><code>false</code>: Disable auto-renewal.</li>
          * </ul>
          * <p>Default value: <code>false</code>.</p>
-         * <p>This parameter was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Announcement on changes to the parameter behavior of the CreateCluster operation</a>.</p>
+         * <p>This parameter was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Notice on behavior changes of the CreateCluster parameter</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -1638,10 +1652,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>[<strong>Deprecated</strong>]</p>
-         * <p>The auto-renewal duration. This parameter takes effect only if charge_type is set to PrePaid and auto_renew is set to true. If you set <code>period_unit</code> to Month, the valid values of auto_renew_period are 1, 2, 3, 6, and 12.</p>
+         * <p><strong>[Deprecated]</strong></p>
+         * <p>The auto-renewal epoch. This parameter takes effect only when the billing method is subscription and auto-renewal is enabled. When <code>PeriodUnit=Month</code>, valid values: {1, 2, 3, 6, 12}.</p>
          * <p>Default value: 1.</p>
-         * <p>This parameter was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Announcement on changes to the parameter behavior of the CreateCluster operation</a>.</p>
+         * <p>This parameter was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Notice on behavior changes of the CreateCluster parameter</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1653,24 +1667,24 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>[<strong>Deprecated</strong>]</p>
-         * <p>The billing method of the CLB instance that is used by the API server. Default value: PostPaid. Valid values:</p>
+         * <p><strong>[Deprecated]</strong></p>
+         * <p>The billing method of the CLB instance used by the API server. Default value: PostPaid. Valid values:</p>
          * <ul>
          * <li>PostPaid: pay-as-you-go.</li>
-         * <li>PrePaid: subscription. This billing method is not supported by newly created CLB instances. Existing CLB instances are not affected.</li>
+         * <li>PrePaid: subscription. The subscription billing method is no longer supported for newly created CLB instances. Existing instances are not affected.</li>
          * </ul>
          * <blockquote>
+         * <p>Notice: </p>
          * </blockquote>
          * <ul>
-         * <li><p>This parameter was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Announcement on changes to the parameter behavior of the CreateCluster operation</a>.</p>
-         * </li>
-         * <li><p>Starting from December 1, 2024, newly created CLB instances no longer support the subscription billing method, and an instance fee will be charged for newly created CLB instances</p>
-         * </li>
+         * <li>This parameter was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Notice on behavior changes of the CreateCluster parameter</a>.</li>
+         * <li>Starting from December 01, 2024, newly created CLB instances no longer support the subscription billing method, and an instance fee will be charged.</notice>
+         * <props="china">For more information, see [Service notices: Notice on canceling subscription billing for CLB load balancing instances of cluster API servers](https://help.aliyun.com/document_detail/2851191.html) and [Notice on billing item changes for Classic Load Balancer (CLB)](https://help.aliyun.com/document_detail/2839797.html).
+         * <props="intl">For more information, see [Notice on billing item changes for Classic Load Balancer (CLB)](https://help.aliyun.com/document_detail/2839797.html).</li>
          * </ul>
-         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/2839797.html">CLB billing adjustments</a>.</p>
          * 
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>PostPaid</p>
          */
         public Builder chargeType(String chargeType) {
             this.putBodyParameter("charge_type", chargeType);
@@ -1679,7 +1693,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>[Deprecated] When you configure the control plane, use the <code>security_hardening_os</code> parameter in the <code>control_plane_config</code> section instead. When you configure a node pool, use the <code>security_hardening_os</code> parameter of the <code>scaling_group</code> field in the <code>nodepool</code> section instead.</p>
+         * <p><strong>[Deprecated]</strong> For cluster control plane configuration, use the <code>security_hardening_os</code> parameter under <code>control_plane_config</code> instead. For node pool configuration, use the <code>security_hardening_os</code> parameter under <code>scaling_group</code> in <code>nodepool</code> instead.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1691,16 +1705,28 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>[<strong>Deprecated</strong>] When you configure the control plane, use the <code>cloud_monitor_flags</code> parameter in the <code>control_plane_config</code> section instead. When you configure a node pool, use the <code>cms_enabled</code> parameter of the <code>kubernetes_config</code> field in the nodepool section instead.</p>
-         * <p>Specifies whether to install the CloudMonitor agent. Valid values:</p>
+         * <p>The client token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0a287651-1277-4c0d-80d2-623a4*****</p>
+         */
+        public Builder clientToken(String clientToken) {
+            this.putBodyParameter("client_token", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * <p><strong>[Deprecated]</strong> For cluster control plane node configuration, use the <code>cloud_monitor_flags</code> parameter under <code>control_plane_config</code> instead. For node pool configuration, use the <code>cms_enabled</code> parameter under <code>kubernetes_config</code> in nodepool instead.</p>
+         * <p>Specifies whether to install the CloudMonitor agent on the cluster. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: installs the CloudMonitor agent.</li>
-         * <li><code>false</code>: does not install the CloudMonitor agent.</li>
+         * <li><code>true</code>: Install the CloudMonitor agent.</li>
+         * <li><code>false</code>: Do not install the CloudMonitor agent.</li>
          * </ul>
          * <p>Default value: <code>false</code>.</p>
          * 
          * <strong>example:</strong>
-         * <p>true</p>
+         * <p>false</p>
          */
         public Builder cloudMonitorFlags(Boolean cloudMonitorFlags) {
             this.putBodyParameter("cloud_monitor_flags", cloudMonitorFlags);
@@ -1709,8 +1735,8 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The domain name of the cluster.</p>
-         * <p>The domain name can contain one or more parts that are separated by periods (.). Each part cannot exceed 63 characters in length, and can contain lowercase letters, digits, and hyphens (-). Each part must start and end with a lowercase letter or digit.</p>
+         * <p>The cluster local domain name.</p>
+         * <p>Naming rules: A domain name consists of one or more parts separated by periods (.). Each part can be up to 63 characters long and can contain lowercase letters, digits, and hyphens (-). Each part must start and end with a lowercase letter or digit.</p>
          * 
          * <strong>example:</strong>
          * <p>cluster.local</p>
@@ -1722,11 +1748,16 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>If you set <code>cluster_type</code> to <code>ManagedKubernetes</code> and specify <code>profile</code>, you can further specify the edition of the cluster. Valid values:</p>
+         * <p>After you set <code>cluster_type</code> to <code>ManagedKubernetes</code> and configure <code>profile</code>, you can further specify the cluster specification. Valid values:</p>
          * <ul>
-         * <li><code>ack.pro.small</code>: Pro Edition.</li>
-         * <li><code>ack.standard</code>: Basic Edition. If you leave the parameter empty, an ACK Basic cluster is created.</li>
+         * <li><code>ack.standard</code>: Basic Edition (selected by default if the value is empty)</li>
+         * <li><code>ack.pro.small</code>: Pro Edition</li>
+         * <li><code>ack.pro.xlarge</code>: Pro XL</li>
+         * <li><code>ack.pro.2xlarge</code>: Pro 2XL</li>
+         * <li><code>ack.pro.4xlarge</code>: Pro 4XL (requires contacting customer service to enable the whitelist)</li>
          * </ul>
+         * <p>Pro XL, Pro 2XL, and Pro 4XL are three tiers provided by &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro Provisioned Control Plane</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro Provisioned Control Plane</a>. By pre-allocating and dedicating control plane resources, these tiers ensure that API concurrency and pod scheduling capabilities remain at a deterministic high level. They are suitable for AI training and inference, ultra-large-scale clusters, and mission-critical workloads.</p>
+         * <p>For information about the cluster management fees for Pro Edition and Provisioned Control Plane editions, see &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fee</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fee</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>ack.pro.small</p>
@@ -1740,7 +1771,7 @@ public class CreateClusterRequest extends Request {
         /**
          * <ul>
          * <li><code>Kubernetes</code>: ACK dedicated cluster.</li>
-         * <li><code>ManagedKubernetes</code>: ACK managed cluster. ACK managed clusters include ACK Basic clusters, ACK Pro clusters, ACK Serverless clusters (Basic Edition and Pro Edition), ACK Edge clusters (Basic Edition and Pro Edition), and ACK Lingjun clusters (Pro Edition).</li>
+         * <li><code>ManagedKubernetes</code>: ACK managed cluster types, including ACK managed clusters (Pro and Basic editions), ACK Serverless clusters (Pro and Basic editions), ACK Edge clusters (Pro and Basic editions), and ACK Lingjun clusters (Pro Edition).</li>
          * <li><code>ExternalKubernetes</code>: registered cluster.</li>
          * </ul>
          * 
@@ -1754,10 +1785,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The pod CIDR block. You can specify 10.0.0.0/8, 172.16-31.0.0/12-16, 192.168.0.0/16, or their subnets as the pod CIDR block. The pod CIDR block cannot overlap with the CIDR block of the VPC in which the cluster is deployed and the CIDR blocks of existing clusters in the VPC. You cannot modify the pod CIDR block after you create the cluster.</p>
-         * <p>For more information about how to plan the network of an ACK cluster, see <a href="https://help.aliyun.com/document_detail/86500.html">Plan the network of an ACK cluster</a>.</p>
+         * <p>The pod network CIDR block. It must be a valid private CIDR block, specifically the following CIDR blocks and their subnets: 10.0.0.0/8, 172.16-31.0.0/12-16, and 192.168.0.0/16. It cannot overlap with the CIDR blocks used by the VPC or existing Kubernetes clusters in the VPC. This value cannot be modified after the cluster is created.</p>
+         * <p>For more information about cluster network planning, see <a href="https://help.aliyun.com/document_detail/86500.html">ACK managed cluster network planning</a>.</p>
          * <blockquote>
-         * <p> This parameter is required if the cluster uses the Flannel plug-in.</p>
+         * <p>This parameter is required for Flannel clusters.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1770,7 +1801,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The control plane configurations of an ACK dedicated cluster.</p>
+         * <p>The control plane configuration for ACK dedicated clusters.</p>
          */
         public Builder controlPlaneConfig(ControlPlaneConfig controlPlaneConfig) {
             this.putBodyParameter("control_plane_config", controlPlaneConfig);
@@ -1779,7 +1810,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * control_plane_endpoints_config.
+         * <p>The cluster endpoint configuration.</p>
          */
         public Builder controlPlaneEndpointsConfig(ControlPlaneEndpointsConfig controlPlaneEndpointsConfig) {
             this.putBodyParameter("control_plane_endpoints_config", controlPlaneEndpointsConfig);
@@ -1788,8 +1819,8 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The control plane components for which you want to enable log collection.</p>
-         * <p>By default, the logs of kube-apiserver, kube-controller-manager, and kube-scheduler are collected.</p>
+         * <p>The list of component names that specifies which control plane components to collect logs from.</p>
+         * <p>By default, logs are collected from kube-apiserver, kube-controller-manager, kube-scheduler, and cloud-controller-manager.</p>
          */
         public Builder controlplaneLogComponents(java.util.List<String> controlplaneLogComponents) {
             this.putBodyParameter("controlplane_log_components", controlplaneLogComponents);
@@ -1798,7 +1829,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The Simple Log Service project that is used to store the logs of control plane components. You can use an existing project or create one. If you choose to create a Simple Log Service project, the created project is named in the <code>k8s-log-{ClusterID}</code> format.</p>
+         * <p>The Simple Log Service project for control plane component logs. You can use an existing project for log storage or allow the system to automatically create a project. If you choose automatic creation, a Simple Log Service project named <code>k8s-log-{ClusterID}</code> is created.</p>
          * 
          * <strong>example:</strong>
          * <p>k8s-log-xxx</p>
@@ -1810,7 +1841,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The retention period of control plane logs in days.</p>
+         * <p>The log retention period for control plane component logs, in days.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -1822,11 +1853,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>[<strong>Deprecated</strong>] When you configure the control plane, use the <code>cpu_policy</code> parameter in the <code>control_plane_config</code> section instead. When you configure a node pool, use the <code>cpu_policy</code> parameter of the <code>kubernetes_config</code> field in the <code>nodepool</code> section instead.</p>
-         * <p>The CPU management policy of the node. The following policies are supported if the Kubernetes version of the cluster is 1.12.6 or later:</p>
+         * <p><strong>[Deprecated]</strong> Use the <code>cpu_policy</code> parameter under <code>control_plane_config</code> for cluster control plane configuration, or use the <code>cpu_policy</code> parameter under <code>kubernetes_config</code> in <code>nodepool</code> for node pool configuration.</p>
+         * <p>The CPU management policy for nodes. The following policies are supported for clusters of version 1.12.6 or later:</p>
          * <ul>
-         * <li><code>static</code>: allows pods with specific resource characteristics on the node to be granted enhanced CPU affinity and exclusivity.</li>
-         * <li><code>none</code>: specifies that the default CPU affinity is used.</li>
+         * <li><code>static</code>: Allows pods with certain resource characteristics on the node to be granted enhanced CPU affinity and exclusivity.</li>
+         * <li><code>none</code>: Uses the existing default CPU affinity scheme.</li>
          * </ul>
          * <p>Default value: <code>none</code>.</p>
          * 
@@ -1840,7 +1871,8 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The custom subject alternative names (SANs) for the API server certificate to accept requests from specified IP addresses or domain names. Separate multiple IP addresses and domain names with commas (,).</p>
+         * <p><strong>[Deprecated]</strong> Use the <code>extra_sans</code> parameter instead.</p>
+         * <p>The custom certificate Subject Alternative Name (SAN). Separate multiple IP addresses or domain names with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>cs.aliyun.com</p>
@@ -1852,10 +1884,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable cluster deletion protection. If you enable this option, the cluster cannot be deleted in the console or by calling API operations. Valid values:</p>
+         * <p>Specifies whether to enable cluster deletion protection, which prevents the cluster from being accidentally deleted in the console or by calling API operations. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: enables cluster deletion protection.</li>
-         * <li><code>false</code>: disables cluster deletion protection.</li>
+         * <li><code>true</code>: Enables cluster deletion protection. The cluster cannot be deleted in the console or by calling API operations.</li>
+         * <li><code>false</code>: Disables cluster deletion protection. The cluster can be deleted in the console or by calling API operations.</li>
          * </ul>
          * <p>Default value: <code>false</code>.</p>
          * 
@@ -1869,11 +1901,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>[<strong>Deprecated</strong>] By default, the system does not perform a rollback when the cluster fails to be created. You must manually delete the cluster that fails to be created.</p>
-         * <p>Specifies whether to perform a rollback when the cluster fails to be created. Valid values:</p>
+         * <p><strong>[Deprecated]</strong> When cluster creation fails, no rollback is performed by default. You must manually clean up the failed cluster.</p>
+         * <p>Specifies whether to roll back the cluster if creation fails. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: performs a rollback when the cluster fails to be created.</li>
-         * <li><code>false</code>: does not perform a rollback when the cluster fails to be created.</li>
+         * <li><code>true</code>: Rolls back the cluster when creation fails.</li>
+         * <li><code>false</code>: Does not roll back the cluster when creation fails.</li>
          * </ul>
          * <p>Default value: <code>true</code>.</p>
          * 
@@ -1887,10 +1919,17 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the RAM Roles for Service Accounts (RRSA) feature.</p>
+         * <p><strong>[Deprecated]</strong> Use the <code>rrsa_config</code> parameter instead.</p>
+         * <p>Specifies whether to enable the RRSA feature.</p>
+         * <ul>
+         * <li><p>true: Enables the feature.</p>
+         * </li>
+         * <li><p>false: Does not enable the feature.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
-         * <p>true</p>
+         * <p>false</p>
          */
         public Builder enableRrsa(Boolean enableRrsa) {
             this.putBodyParameter("enable_rrsa", enableRrsa);
@@ -1899,9 +1938,9 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Key Management Service (KMS) key that is used to encrypt the system disk. For more information, see <a href="https://help.aliyun.com/document_detail/28935.html">What is KMS?</a></p>
+         * <p>The ID of the Key Management Service (KMS) key used to encrypt cloud disks. For more information, see <a href="https://help.aliyun.com/document_detail/28935.html">Key Management Service</a>.</p>
          * <blockquote>
-         * <p> The key can be used only in ACK Pro clusters.</p>
+         * <p>This feature takes effect only in ACK Pro clusters.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1914,10 +1953,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable Internet access for the cluster. You can use an elastic IP address (EIP) to expose the API server. This way, you can access the cluster over the Internet. Valid values:</p>
+         * <p>Specifies whether to enable public network access. An Elastic IP Address (EIP) is used to expose the API Server for public network access to the cluster.</p>
          * <ul>
-         * <li><code>true</code>: enables Internet access for the cluster.</li>
-         * <li><code>false</code>: disables Internet access for the cluster. If you set the value to false, the API server cannot be accessed over the Internet.</li>
+         * <li><code>true</code>: Enables public network access.</li>
+         * <li><code>false</code>: Disables public network access. If you select this option, the cluster API Server cannot be accessed over the Internet.</li>
          * </ul>
          * <p>Default value: <code>false</code>.</p>
          * 
@@ -1931,7 +1970,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * extra_sans.
+         * <p>The custom Subject Alternative Name (SAN) for the API Server certificate.</p>
          */
         public Builder extraSans(java.util.List<String> extraSans) {
             this.putBodyParameter("extra_sans", extraSans);
@@ -1940,17 +1979,19 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>[<strong>Deprecated</strong>] When you configure a node pool, you cannot add existing nodes to the cluster. If you want to add existing nodes, you must first create a node pool and then call the <a href="https://help.aliyun.com/document_detail/2667920.html">AttachInstancesToNodePool</a> operation.</p>
-         * <p>Specifies whether to mount a data disk to a node that is created based on an existing ECS instance. Valid values:</p>
+         * <p><strong>[Deprecated]</strong> Selecting existing nodes during cluster creation is not supported. To add existing nodes to a cluster, create a node pool first and call the <a href="https://help.aliyun.com/document_detail/2667920.html">AttachInstancesToNodePool</a> operation.</p>
+         * <p>Specifies whether to mount data disks to existing instances when creating a cluster with existing instances. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: stores the data of containers and images on a data disk. The existing data stored in the data disk is lost. Back up the existing data first.</li>
-         * <li><code>false</code>: does not store the data of containers and images on a data disk.</li>
+         * <li><p><code>true</code>: Stores containers and images on data disks. Existing data on the data disks will be lost. Back up your data in advance.</p>
+         * </li>
+         * <li><p><code>false</code>: Does not store containers and images on data disks.</p>
+         * </li>
          * </ul>
          * <p>Default value: <code>false</code>.</p>
-         * <p>How data disks are mounted:</p>
+         * <p>Data disk mounting rules:</p>
          * <ul>
-         * <li>If an ECS instance has data disks mounted and the file system of the last data disk is not initialized, the system automatically formats the data disk to ext4. Then, the system mounts the data disk to /var/lib/docker and /var/lib/kubelet.</li>
-         * <li>If no data disk is mounted to the ECS instance, the system does not purchase a new data disk.</li>
+         * <li>If the ECS instance has data disks attached and the file system of the last data disk is not initialized, the system automatically formats the data disk as ext4 to store /var/lib/docker and /var/lib/kubelet.</li>
+         * <li>If the ECS instance has no data disks attached, no new data disks are mounted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1963,8 +2004,8 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>[<strong>Deprecated</strong>] When you configure the control plane, use the <code>image_id</code> parameter in the <code>control_plane_config</code> section instead. When you configure a node pool, use the <code>image_id</code> parameter of the <code>scaling_group</code> field in the <code>nodepool</code> section instead.</p>
-         * <p>The custom image for nodes. By default, the image provided by ACK is used. You can select a custom image to replace the default image. For more information, see <a href="https://help.aliyun.com/document_detail/146647.html">Use a custom image to create an ACK cluster</a>.</p>
+         * <p><strong>[Deprecated]</strong> For cluster control plane configuration, use the <code>image_id</code> parameter under <code>control_plane_config</code> instead. For node pool configuration, use the <code>image_id</code> parameter under <code>scaling_group</code> in <code>nodepool</code> instead.</p>
+         * <p>The custom image for nodes. The system image is used by default. When a custom image is selected, it replaces the default system image. For more information, see <a href="https://help.aliyun.com/document_detail/146647.html">Custom images</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>m-bp16z7xko3vvv8gt****</p>
@@ -1976,8 +2017,8 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>[<strong>Deprecated</strong>] When you configure the control plane, use the <code>image_type</code> parameter in the <code>control_plane_config</code> section instead. When you configure a node pool, use the <code>image_type</code> parameter of the <code>scaling_group</code> field in the <code>nodepool</code> section instead.</p>
-         * <p>The type of OS distribution that you want to use. To specify the node OS, we recommend that you use this parameter. Valid values:</p>
+         * <p><strong>[Deprecated]</strong> For cluster control plane configuration, use the <code>image_type</code> parameter under <code>control_plane_config</code> instead. For node pool configuration, use the <code>image_type</code> parameter under <code>scaling_group</code> in <code>nodepool</code> instead.</p>
+         * <p>The operating system distribution type. We recommend that you use this field to specify the node operating system. Valid values:</p>
          * <ul>
          * <li>CentOS</li>
          * <li>AliyunLinux</li>
@@ -2001,10 +2042,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>[<strong>Deprecated</strong>] When you configure a node pool, you cannot add existing nodes to the cluster. If you want to add existing nodes, you must first create a node pool and then call the <a href="https://help.aliyun.com/document_detail/2667920.html">AttachInstancesToNodePool</a> operation.</p>
-         * <p>The existing ECS instances that are specified as worker nodes for the cluster.</p>
+         * <p><strong>[Deprecated]</strong> Selecting existing nodes during cluster creation is not supported. To add existing nodes to a cluster, create a node pool first and call the <a href="https://help.aliyun.com/document_detail/2667920.html">AttachInstancesToNodePool</a> operation.</p>
+         * <p>The list of ECS instances to use when creating a cluster with existing nodes. These instances are added to the cluster as worker nodes.</p>
          * <blockquote>
-         * <p> This parameter is required if you create worker nodes on existing ECS instances.</p>
+         * <p>This field is required when you create a cluster with existing instances.</p>
          * </blockquote>
          */
         public Builder instances(java.util.List<String> instances) {
@@ -2014,11 +2055,12 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The IP stack of the cluster.</p>
+         * <p>The IP protocol stack of the cluster.</p>
          * 
          * <strong>example:</strong>
-         * <p>Optional value: ipv4 (Single stack) or ipv6 (Dual Stack)
-         * Default value: IPV4</p>
+         * <p>Valid values:
+         * ipv4 (single stack)
+         * dual (dual stack). Default value: ipv4</p>
          */
         public Builder ipStack(String ipStack) {
             this.putBodyParameter("ip_stack", ipStack);
@@ -2027,13 +2069,13 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to create an advanced security group. This parameter takes effect only if <code>security_group_id</code> is left empty.</p>
+         * <p>Specifies whether to enable automatic creation of an advanced security group. This parameter takes effect when <code>security_group_id</code> is empty.</p>
          * <blockquote>
-         * <p> To use a basic security group, make sure that the sum of the number of nodes in the cluster and the number of pods that use Terway does not exceed 2,000. Therefore, we recommend that you specify an advanced security group for a cluster that uses Terway.</p>
+         * <p>When a basic security group is used, the total number of nodes and Terway pods in the cluster cannot exceed 2,000. Therefore, when creating a Terway network type cluster, use an advanced security group.</p>
          * </blockquote>
          * <ul>
-         * <li><code>true</code>: creates an advanced security group.</li>
-         * <li><code>false</code>: does not create an advanced security group.</li>
+         * <li><code>true</code>: Creates and uses an advanced security group.</li>
+         * <li><code>false</code>: Uses a basic security group.</li>
          * </ul>
          * <p>Default value: <code>true</code>.</p>
          * 
@@ -2047,11 +2089,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>[<strong>Deprecated</strong>] When you configure a node pool, you cannot add existing nodes to the cluster. If you want to add existing nodes, you must first create a node pool and then call the <a href="https://help.aliyun.com/document_detail/2667920.html">AttachInstancesToNodePool</a> operation.</p>
-         * <p>Specifies whether to retain the names of existing ECS instances that are used in the cluster. Valid values:</p>
+         * <p><strong>[Deprecated]</strong> Selecting existing nodes during cluster creation is not supported. To add existing nodes to a cluster, create a node pool first and call the <a href="https://help.aliyun.com/document_detail/2667920.html">AttachInstancesToNodePool</a> operation.</p>
+         * <p>Specifies whether to retain instance names when creating a cluster with existing instances.</p>
          * <ul>
-         * <li><code>true</code>: retains the names.</li>
-         * <li><code>false</code>: does not retain the names. The system assigns new names.</li>
+         * <li><code>true</code>: Retains the instance names.</li>
+         * <li><code>false</code>: Does not retain the instance names. The names are replaced based on system rules.</li>
          * </ul>
          * <p>Default value: <code>true</code>.</p>
          * 
@@ -2065,11 +2107,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>[<strong>Deprecated</strong>] When you configure the control plane, use the <code>key_pair</code> parameter in the <code>control_plane_config</code> section instead. When you configure a node pool, use the <code>key_pair</code> parameter of the <code>scaling_group</code> field in the <code>nodepool</code> section instead.</p>
-         * <p>The name of the key pair. You must configure this parameter or <code>login_password</code>.</p>
+         * <p><strong>[Deprecated]</strong> For cluster control plane configuration, use the <code>key_pair</code> parameter under <code>control_plane_config</code> instead. For node pool configuration, use the <code>key_pair</code> parameter under <code>scaling_group</code> in <code>nodepool</code> instead.</p>
+         * <p>The name of the key pair. Mutually exclusive with <code>login_password</code>.</p>
          * 
          * <strong>example:</strong>
-         * <p>secrity-key</p>
+         * <p>security-key</p>
          */
         public Builder keyPair(String keyPair) {
             this.putBodyParameter("key_pair", keyPair);
@@ -2078,11 +2120,12 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The Kubernetes version of the cluster. The Kubernetes versions supported by ACK are the same as the Kubernetes versions supported by open source Kubernetes. We recommend that you specify the latest Kubernetes version. If you do not specify this parameter, the latest Kubernetes version is used.</p>
-         * <p>You can create ACK clusters of the latest three Kubernetes versions in the ACK console. If you want to create clusters that run earlier Kubernetes versions, use the ACK API. For more information about the Kubernetes versions supported by ACK, see <a href="https://help.aliyun.com/document_detail/185269.html">Support for Kubernetes versions</a>.</p>
+         * <p>The cluster version, which is consistent with the Kubernetes community baseline version. Use the latest version. If you do not specify this parameter, the latest version is used by default.</p>
+         * <p>You can create clusters of the three most recent versions. Call the <a href="https://help.aliyun.com/document_detail/2667899.html">DescribeKubernetesVersionMetadata</a> operation to query supported cluster versions.</p>
+         * <p>For more information about Kubernetes versions supported by ACK, see <a href="https://help.aliyun.com/document_detail/185269.html">Kubernetes version release overview</a>.</p>
          * 
          * <strong>example:</strong>
-         * <p>1.16.9-aliyun.1</p>
+         * <p>1.32.1-aliyun.1</p>
          */
         public Builder kubernetesVersion(String kubernetesVersion) {
             this.putBodyParameter("kubernetes_version", kubernetesVersion);
@@ -2091,9 +2134,9 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>Specifies the ID of the CLB instance for accessing the API server. If this parameter is specified, the system does not automatically create a CLB instance for the API server.</p>
+         * <p>The Classic Load Balancer (CLB) instance ID used for API Server access. If this parameter is specified, automatic creation of an API Server CLB instance is skipped.</p>
          * <blockquote>
-         * <p> Make sure that the CLB instance does not have other dependencies, such as listeners and backend servers. You cannot specify shared-resource or Internet-facing CLB instances.</p>
+         * <p>Ensure that the CLB instance has no other dependencies such as listeners or backend servers. Shared and Internet-facing CLB instances are not supported.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -2106,8 +2149,8 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>[<strong>Deprecated</strong>] The pay-as-you-go billing method is used by Classic Load Balancer (CLB) instances. This parameter does not take effect.</p>
-         * <p>The specification of the Server Load Balancer (SLB) instance. Valid values:</p>
+         * <p><strong>[Deprecated]</strong> CLB uses pay-by-usage billing. This parameter does not take effect.</p>
+         * <p>The load balancing specification. Valid values:</p>
          * <ul>
          * <li>slb.s1.small</li>
          * <li>slb.s2.small</li>
@@ -2128,7 +2171,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>Enables Simple Log Service for the cluster. This parameter takes effect only for ACK Serverless clusters. Set the value to <code>SLS</code>.</p>
+         * <p><strong>[Deprecated]</strong> Enables the log service for the cluster. This parameter takes effect only for ACK Serverless clusters, and the value must be <code>SLS</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>SLS</p>
@@ -2140,11 +2183,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>[<strong>Deprecated</strong>] When you configure the control plane, use the <code>login_password</code> parameter in the <code>control_plane_config</code> section instead. When you configure a node pool, use the <code>login_password</code> parameter of the <code>scaling_group</code> field in the <code>nodepool</code> section instead.</p>
-         * <p>The password for SSH logon. You must set this parameter or <code>key_pair</code>. The password must be 8 to 30 characters in length, and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
+         * <p><strong>[Deprecated]</strong> For cluster control plane configuration, use the <code>login_password</code> parameter under <code>control_plane_config</code> instead. For node pool configuration, use the <code>login_password</code> parameter under <code>scaling_group</code> in <code>nodepool</code> instead.</p>
+         * <p>The SSH logon password. Mutually exclusive with <code>key_pair</code>. The password must be 8 to 30 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
          * 
          * <strong>example:</strong>
-         * <p>Hello@1234</p>
+         * <p>null</p>
          */
         public Builder loginPassword(String loginPassword) {
             this.putBodyParameter("login_password", loginPassword);
@@ -2153,7 +2196,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The configurations of the cluster maintenance window.</p>
+         * <p>The cluster O&amp;M window.</p>
          */
         public Builder maintenanceWindow(MaintenanceWindow maintenanceWindow) {
             this.putBodyParameter("maintenance_window", maintenanceWindow);
@@ -2162,11 +2205,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>[<strong>Deprecated</strong>] When you configure the control plane, use the <code>auto-renew</code> parameter in the <code>control_plane_config</code> section instead.</p>
+         * <p><strong>[Deprecated]</strong> For cluster control plane configuration, use the <code>auto_renew</code> parameter under <code>control_plane_config</code> instead.</p>
          * <p>Specifies whether to enable auto-renewal for master nodes. This parameter takes effect only when <code>master_instance_charge_type</code> is set to <code>PrePaid</code>. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: enables auto-renewal.</li>
-         * <li><code>false</code>: disables auto-renewal.</li>
+         * <li><code>true</code>: Enables auto-renewal.</li>
+         * <li><code>false</code>: Disables auto-renewal.</li>
          * </ul>
          * <p>Default value: <code>true</code>.</p>
          * 
@@ -2180,9 +2223,9 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>[<strong>Deprecated</strong>] When you configure the control plane, use the <code>auto-renew_period</code> parameter in the <code>control_plane_config</code> section instead.</p>
-         * <p>The auto-renewal duration. This parameter takes effect and is required only when the subscription billing method is selected for master nodes.</p>
-         * <p>Valid values: 1, 2, 3, 6, and 12.</p>
+         * <p><strong>[Deprecated]</strong> For cluster control plane configuration, use the <code>auto_renew_period</code> parameter under <code>control_plane_config</code> instead.</p>
+         * <p>The auto-renewal epoch for master nodes. This parameter takes effect and is required only when the subscription billing method is selected.</p>
+         * <p>Valid values: {1, 2, 3, 6, 12}.</p>
          * <p>Default value: 1.</p>
          * 
          * <strong>example:</strong>
@@ -2195,8 +2238,8 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>[<strong>Deprecated</strong>] When you configure the control plane, use the <code>size</code> parameter in the <code>control_plane_config</code> section instead.</p>
-         * <p>The number of master nodes. Valid values: <code>3</code> and <code>5</code>.</p>
+         * <p><strong>[Deprecated]</strong> For cluster control plane configuration, use the <code>size</code> parameter under <code>control_plane_config</code> instead.</p>
+         * <p>The number of master nodes. Valid values: <code>3</code> or <code>5</code>.</p>
          * <p>Default value: <code>3</code>.</p>
          * 
          * <strong>example:</strong>
@@ -2209,11 +2252,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>[<strong>Deprecated</strong>] When you configure the control plane, use the <code>instance_charge_type</code> parameter in the <code>control_plane_config</code> section instead.</p>
-         * <p>The billing method of master nodes. Valid values:</p>
+         * <p><strong>[Deprecated]</strong> For cluster control plane configuration, use the <code>instance_charge_type</code> parameter under <code>control_plane_config</code> instead.</p>
+         * <p>The billing method for master nodes. Valid values:</p>
          * <ul>
-         * <li><code>PrePaid</code>: subscription.</li>
-         * <li><code>PostPaid</code>: pay-as-you-go.</li>
+         * <li><code>PrePaid</code>: Subscription.</li>
+         * <li><code>PostPaid</code>: Pay-as-you-go.</li>
          * </ul>
          * <p>Default value: <code>PostPaid</code>.</p>
          * 
@@ -2227,8 +2270,8 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>[<strong>Deprecated</strong>] When you configure the control plane, use the <code>instance_types</code> parameter in the <code>control_plane_config</code> section instead.</p>
-         * <p>The instance types of master nodes. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</p>
+         * <p><strong>[Deprecated]</strong> For cluster control plane configuration, use the <code>instance_types</code> parameter under <code>control_plane_config</code> instead.</p>
+         * <p>The instance types for master nodes. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</p>
          */
         public Builder masterInstanceTypes(java.util.List<String> masterInstanceTypes) {
             this.putBodyParameter("master_instance_types", masterInstanceTypes);
@@ -2237,9 +2280,9 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>[<strong>Deprecated</strong>] When you configure the control plane, use the <code>unit</code> parameter in the <code>control_plane_config</code> section instead.</p>
-         * <p>The subscription duration of master nodes. This parameter takes effect and is required only when <code>master_instance_charge_type</code> is set to <code>PrePaid</code>.</p>
-         * <p>Valid values: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</p>
+         * <p><strong>[Deprecated]</strong> For cluster control plane configuration, use the <code>unit</code> parameter under <code>control_plane_config</code> instead.</p>
+         * <p>The subscription duration for master nodes. This parameter takes effect and is required only when <code>master_instance_charge_type</code> is set to <code>PrePaid</code>.</p>
+         * <p>Valid values: {1, 2, 3, 6, 12, 24, 36, 48, 60}.</p>
          * <p>Default value: 1.</p>
          * 
          * <strong>example:</strong>
@@ -2252,9 +2295,9 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>[<strong>Deprecated</strong>] When you configure the control plane, use the <code>period_unit</code> parameter in the <code>control_plane_config</code> section instead.</p>
-         * <p>The billing cycle of the master nodes in the cluster. This parameter is required if master_instance_charge_type is set to <code>PrePaid</code>.</p>
-         * <p>Valid value: <code>Month</code>, which indicates that master nodes are billed only on a monthly basis.</p>
+         * <p><strong>[Deprecated]</strong> For cluster control plane configuration, use the <code>period_unit</code> parameter under <code>control_plane_config</code> instead.</p>
+         * <p>The subscription period unit for master nodes. This parameter is required when the billing method is <code>PrePaid</code>.</p>
+         * <p>Valid values: <code>Month</code>. Currently, only monthly billing is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>Month</p>
@@ -2266,14 +2309,14 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>[<strong>Deprecated</strong>] When you configure the control plane, use the <code>system_disk_category</code> parameter in the <code>control_plane_config</code> section instead.</p>
-         * <p>The system disk category of master nodes. Valid values:</p>
+         * <p><strong>[Deprecated]</strong> For cluster control plane configuration, use the <code>system_disk_category</code> parameter under <code>control_plane_config</code> instead.</p>
+         * <p>The system cloud disk type for master nodes. Valid values:</p>
          * <ul>
-         * <li><code>cloud_efficiency</code>: ultra disk.</li>
-         * <li><code>cloud_ssd</code>: standard SSD.</li>
+         * <li><code>cloud_efficiency</code>: Ultra cloud disk.</li>
+         * <li><code>cloud_ssd</code>: Standard SSD.</li>
          * <li><code>cloud_essd</code>: Enterprise SSD (ESSD).</li>
          * </ul>
-         * <p>Default value: <code>cloud_ssd</code>. The default value may vary in different zones.</p>
+         * <p>Default value: <code>cloud_ssd</code>. The default value may vary by zone.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_ssd</p>
@@ -2285,8 +2328,8 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>[<strong>Deprecated</strong>] When you configure the control plane, use the <code>system_disk_performance_level</code> parameter in the <code>control_plane_config</code> section instead.</p>
-         * <p>The performance level (PL) of the system disk that you want to use for master nodes. This parameter takes effect only for ESSDs. For more information about the relationship between disk PLs and disk sizes, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
+         * <p><strong>[Deprecated]</strong> For cluster control plane configuration, use the <code>system_disk_performance_level</code> parameter under <code>control_plane_config</code> instead.</p>
+         * <p>The performance level of the system cloud disk for master nodes. This parameter takes effect only for ESSD cloud disks. The performance level is related to the disk size. For more information, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSD cloud disks</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>PL1</p>
@@ -2298,8 +2341,8 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>[<strong>Deprecated</strong>] When you configure the control plane, use the <code>system_disk_disk</code> parameter in the <code>control_plane_config</code> section instead.</p>
-         * <p>The system disk size of master nodes. Valid values: 40 to 500. Unit: GiB.</p>
+         * <p><strong>[Deprecated]</strong> For cluster control plane configuration, use the <code>system_disk_size</code> parameter under <code>control_plane_config</code> instead.</p>
+         * <p>The system cloud disk size for master nodes. Valid values: [40,500\]. Unit: GiB.</p>
          * <p>Default value: <code>120</code>.</p>
          * 
          * <strong>example:</strong>
@@ -2312,8 +2355,8 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>[<strong>Deprecated</strong>] When you configure the control plane, use the <code>system_disk_snapshot_policy_id</code> parameter in the <code>control_plane_config</code> section instead.</p>
-         * <p>The ID of the automatic snapshot policy that is used by the system disk specified for master nodes.</p>
+         * <p><strong>[Deprecated]</strong> For cluster control plane configuration, use the <code>system_disk_snapshot_policy_id</code> parameter under <code>control_plane_config</code> instead.</p>
+         * <p>The ID of the automatic snapshot policy for master node system cloud disks.</p>
          * 
          * <strong>example:</strong>
          * <p>sp-2zej1nogjvovnz4z****</p>
@@ -2325,9 +2368,9 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>[<strong>Deprecated</strong>] Use the <code>vswitch_ids</code> parameter instead.</p>
-         * <p>The IDs of the vSwitches that are specified for master nodes. You can specify up to three vSwitches. We recommend that you specify three vSwitches in different zones to ensure high availability.</p>
-         * <p>The number of vSwitches must be the same as the value of the <code>master_count</code> parameter and also the same as the number of vSwitches specified in the <code>master_vswitch_ids</code> parameter.</p>
+         * <p><strong>[Deprecated]</strong> Use the <code>vswitch_ids</code> parameter instead.</p>
+         * <p>The list of vSwitch IDs for master nodes. The number of vSwitches must be in the range of [1,3\]. To ensure high availability, select three vSwitches distributed across different zones.</p>
+         * <p>The number of specified instance types must match the value of <code>master_count</code> and correspond one-to-one with the elements in <code>master_vswitch_ids</code>.</p>
          */
         public Builder masterVswitchIds(java.util.List<String> masterVswitchIds) {
             this.putBodyParameter("master_vswitch_ids", masterVswitchIds);
@@ -2336,8 +2379,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The cluster name.</p>
-         * <p>The name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). The name cannot start with a hyphen (-).</p>
+         * <p>The custom cluster name. The name can contain digits, Chinese characters, letters, and hyphens (-). The name must be 1 to 63 characters in length and cannot start with a hyphen (-).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -2350,7 +2392,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>[Deprecated] Use the <code>snat_entry</code> parameter instead.</p>
+         * <p><strong>[Deprecated]</strong> Use the <code>snat_entry</code> parameter instead.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -2362,7 +2404,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of IP addresses that can be assigned to each node. This number is determined by the subnet mask of the specified CIDR block. This parameter takes effect only if the cluster uses the Flannel plug-in.</p>
+         * <p>The number of IP addresses per node, determined by specifying the network CIDR block. This parameter takes effect only for Flannel network type clusters.</p>
          * <p>Default value: <code>26</code>.</p>
          * 
          * <strong>example:</strong>
@@ -2375,17 +2417,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>[<strong>Deprecated</strong>] When you configure a node pool, use the <code>node_name_mode</code> parameter of the <code>kubernetes_config</code> field in the <code>nodepool</code> section instead.</p>
-         * <p>The custom node name.</p>
-         * <p>A custom node name consists of a prefix, a node IP address, and a suffix.</p>
-         * <ul>
-         * <li>The prefix and suffix can contain multiple parts that are separated by periods (.). Each part can contain lowercase letters, digits, and hyphens (-), and must start and end with a lowercase letter or digit.</li>
-         * <li>The IP substring length specifies the number of digits to be truncated from the end of the node IP address. The IP substring length ranges from 5 to 12.</li>
-         * </ul>
-         * <p>For example, if the node IP address is 192.168.0.55, the prefix is aliyun.com, the IP substring length is 5, and the suffix is test, the node name will aliyun.com00055test.</p>
+         * <p><strong>[Deprecated]</strong> For node pool configuration, use the <code>node_name_mode</code> parameter under <code>kubernetes_config</code> in <code>nodepool</code> instead.</p>
          * 
          * <strong>example:</strong>
-         * <p>aliyun.com00055test</p>
+         * <p>null</p>
          */
         public Builder nodeNameMode(String nodeNameMode) {
             this.putBodyParameter("node_name_mode", nodeNameMode);
@@ -2394,7 +2429,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The node port range. Valid values: 30000 to 65535.</p>
+         * <p>The node service port range. Valid port range: [30000,65535\].</p>
          * <p>Default value: <code>30000-32767</code>.</p>
          * 
          * <strong>example:</strong>
@@ -2416,7 +2451,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>[<strong>Deprecated</strong>] When you configure a node pool, use the <code>desired_size</code> parameter of the <code>scaling_group</code> field in the <code>nodepool</code> section instead.</p>
+         * <p><strong>[Deprecated]</strong> Use the desired_size parameter under scaling_group in nodepool instead.</p>
          * <p>The number of worker nodes. Valid values: 0 to 100.</p>
          * 
          * <strong>example:</strong>
@@ -2429,7 +2464,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The automatic O&amp;M policy of the cluster.</p>
+         * <p>The cluster automatic O&amp;M policy.</p>
          */
         public Builder operationPolicy(OperationPolicy operationPolicy) {
             this.putBodyParameter("operation_policy", operationPolicy);
@@ -2438,8 +2473,8 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>[<strong>Deprecated</strong>] When you configure the control plane, use the <code>image_type</code> parameter in the <code>control_plane_config</code> section instead. When you configure a node pool, use the <code>image_type</code> parameter of the <code>scaling_group</code> field in the <code>nodepool</code> section instead.</p>
-         * <p>The type of OS. Valid values:</p>
+         * <p><strong>[Deprecated]</strong> For cluster control plane node configuration, use the image_type parameter under control_plane_config instead. For node pool configuration, use the image_type parameter under scaling_group in nodepool instead.</p>
+         * <p>The operating system platform type. Valid values:</p>
          * <ul>
          * <li>Windows</li>
          * <li>Linux</li>
@@ -2456,14 +2491,14 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>[<strong>Deprecated</strong>]</p>
-         * <p>The subscription duration. This parameter takes effect and is required only when you set charge_type to PrePaid.</p>
+         * <p><strong>[Deprecated]</strong></p>
+         * <p>The subscription duration. This parameter takes effect and is required only when charge_type is set to PrePaid.</p>
          * <p>Valid values: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</p>
          * <p>Default value: 1.</p>
-         * <p>This parameter was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Announcement on changes to the parameter behavior of the CreateCluster operation</a>.</p>
+         * <p>This parameter was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Notice on behavior changes of the CreateCluster API parameters</a>.</p>
          * 
          * <strong>example:</strong>
-         * <p>FY2023</p>
+         * <p>1</p>
          */
         public Builder period(Long period) {
             this.putBodyParameter("period", period);
@@ -2472,10 +2507,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>[<strong>Deprecated</strong>]</p>
-         * <p>The billing cycle. This parameter is required if charge_type is set to PrePaid.</p>
-         * <p>Valid value: Month, which indicates that resources are billed only on a monthly basis.</p>
-         * <p>This parameter was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Announcement on changes to the parameter behavior of the CreateCluster operation</a>.</p>
+         * <p><strong>[Deprecated]</strong></p>
+         * <p>The billing cycle. This parameter is required when the billing method is set to PrePaid.</p>
+         * <p>Valid values: Month. Currently, only monthly billing cycles are supported.</p>
+         * <p>This parameter was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Notice on behavior changes of the CreateCluster API parameters</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>Month</p>
@@ -2487,8 +2522,8 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>[<strong>Deprecated</strong>] When you configure a node pool, use the <code>platform</code> parameter of the <code>scaling_group</code> field in the <code>nodepool</code> section instead.</p>
-         * <p>The OS distribution that is used. Valid values:</p>
+         * <p><strong>[Deprecated]</strong> For node pool configuration, use the platform parameter under scaling_group in nodepool instead.</p>
+         * <p>The operating system distribution. Valid values:</p>
          * <ul>
          * <li>CentOS</li>
          * <li>AliyunLinux</li>
@@ -2509,9 +2544,9 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>If you select Terway as the network plug-in, you must allocate vSwitches to pods. For each vSwitch that allocates IP addresses to worker nodes, you must select a vSwitch in the same zone to allocate IP addresses to pods.</p>
+         * <p><strong>[Deprecated]</strong> When the Terway network plugin is selected, specify vSwitches for Pod IP address allocation. Each Pod vSwitch corresponds to a worker node vSwitch, and the zones of the Pod vSwitch and the worker node vSwitch must be the same.</p>
          * <blockquote>
-         * <p> We recommend that you select pod vSwitches whose subnet masks do not exceed 19 bits in length. The maximum subnet mask length of a pod vSwitch is 25 bits. If you select a pod vSwitch whose subnet mask exceeds 25 bits in length, the IP addresses that can be allocated to pods may be insufficient.</p>
+         * <p>The CIDR block mask of the Pod vSwitch should not exceed 19 and must not exceed 25. Otherwise, the number of Pod IP addresses available in the cluster network is very limited, which affects normal cluster usage.</p>
          * </blockquote>
          */
         public Builder podVswitchIds(java.util.List<String> podVswitchIds) {
@@ -2521,12 +2556,12 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>If you set <code>cluster_type</code> to <code>ManagedKubernetes</code>, an ACK managed cluster is created. In this case, you can further specify the cluster edition. Valid values:</p>
+         * <p>When <code>cluster_type</code> is set to <code>ManagedKubernetes</code> (ACK managed clusters), you can further specify the cluster subtype.</p>
          * <ul>
-         * <li><code>Default</code>: ACK managed cluster. ACK managed clusters include ACK Basic clusters and ACK Pro clusters.</li>
-         * <li><code>Edge</code>: ACK Edge cluster. ACK Edge clusters include ACK Edge Basic clusters and ACK Edge Pro clusters.</li>
-         * <li><code>Serverless</code>: ACK Serverless cluster. ACK Serverless clusters include ACK Serverless Basic clusters and ACK Serverless Pro clusters.</li>
-         * <li><code>Lingjun</code>: ACK Lingjun Pro cluster.</li>
+         * <li><code>Default</code>: ACK managed cluster, including ACK clusters (Pro and Basic editions).</li>
+         * <li><code>Edge</code>: ACK Edge cluster, including ACK Edge clusters (Pro and Basic editions).</li>
+         * <li><code>Serverless</code>: ACK Serverless cluster, including ACK Serverless clusters (Pro and Basic editions).</li>
+         * <li><code>Lingjun</code>: ACK Lingjun cluster, available in Pro edition.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2539,10 +2574,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The kube-proxy mode. Valid values:</p>
+         * <p>The kube-proxy mode.</p>
          * <ul>
-         * <li><code>iptables</code>: a mature and stable mode that uses iptables rules to conduct service discovery and load balancing. The performance of this mode is limited by the size of the cluster. This mode is suitable for clusters that run a small number of Services.</li>
-         * <li><code>ipvs</code>: a mode that provides high performance and uses IP Virtual Server (IPVS) to conduct service discovery and load balancing. This mode is suitable for clusters that run a large number of Services. We recommend that you use this mode in scenarios that require high-performance load balancing.</li>
+         * <li><code>iptables</code>: A mature and stable kube-proxy mode. Service discovery and load balancing for Kubernetes Services are configured by using iptables rules. Performance is moderate and affected by cluster scale. This mode is suitable for clusters with a small number of Services.</li>
+         * <li><code>ipvs</code>: A high-performance kube-proxy mode. Service discovery and load balancing for Kubernetes Services are configured by using the Linux IPVS module. This mode is suitable for clusters with a large number of Services that require high load balancing performance.</li>
+         * <li><code>nftables</code>: A next-generation kube-proxy mode that implements Service discovery and load balancing based on Linux nftables. It is a modern replacement for iptables. Compared with iptables, nftables delivers better network performance, more efficient rule updates, and improved performance in large-scale Service scenarios.<br>Only supported for clusters running version 1.35 or later. The Kubernetes community deprecated IPVS starting from version 1.35. For new clusters, use nftables for longer-term community support.</li>
          * </ul>
          * <p>Default value: <code>ipvs</code>.</p>
          * 
@@ -2556,8 +2592,8 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>[<strong>Deprecated</strong>] When you configure a node pool, use the <code>rds_instances</code> parameter of the <code>scaling_group</code> field in the <code>nodepool</code> section instead.</p>
-         * <p>The ApsaraDB RDS instances. The pod CIDR block and node CIDR block are added to the whitelists of the ApsaraDB RDS instances. We recommend that you add the pod CIDR block and node CIDR block to the whitelists of the ApsaraDB RDS instances in the ApsaraDB RDS console. If the RDS instances are not in the Running state, new nodes cannot be added to the cluster.</p>
+         * <p><strong>[Deprecated]</strong> For node pool configuration, use the rds_instances parameter under scaling_group in nodepool instead.</p>
+         * <p>The list of ApsaraDB RDS instances to which you want to add the cluster nodes to the whitelist. Add the container Pod CIDR block and node CIDR block to the RDS whitelist directly. Setting RDS instances may fail if the instances are not in a running state.</p>
          */
         public Builder rdsInstances(java.util.List<String> rdsInstances) {
             this.putBodyParameter("rds_instances", rdsInstances);
@@ -2566,7 +2602,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region in which the cluster is deployed. For more information about the regions supported by ACK, see <a href="https://help.aliyun.com/document_detail/216938.html">Regions supported by ACK</a>.</p>
+         * <p>The ID of the region where the cluster is deployed. For details, see <a href="https://help.aliyun.com/document_detail/216938.html">Regions supported by container service</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -2579,7 +2615,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the cluster belongs. You can use resource groups to isolate clusters.</p>
+         * <p>The ID of the resource group to which the cluster belongs. Use this parameter to isolate different resources.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfm3mkrure****</p>
@@ -2591,7 +2627,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * rrsa_config.
+         * <p>The RRSA feature configuration.</p>
          */
         public Builder rrsaConfig(RrsaConfig rrsaConfig) {
             this.putBodyParameter("rrsa_config", rrsaConfig);
@@ -2600,8 +2636,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The container runtime. The default container runtime is Docker. containerd and Sandboxed-Container are also supported.</p>
-         * <p>For more information about how to select a proper container runtime, see <a href="https://help.aliyun.com/document_detail/160313.html">Comparison among Docker, containerd, and Sandboxed-Container</a>.</p>
+         * <p>The container runtime used by the cluster. Supported runtimes include containerd, sandboxed containers, and Docker.</p>
+         * <blockquote>
+         * <p>Kubernetes 1.24 no longer supports Docker as a built-in container runtime.</p>
+         * </blockquote>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/160313.html">Comparison of Docker, containerd, and sandboxed container runtimes</a>.</p>
          */
         public Builder runtime(Runtime runtime) {
             this.putBodyParameter("runtime", runtime);
@@ -2610,7 +2649,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The ID of an existing security group. You must specify this parameter or <code>is_enterprise_security_group</code>. Cluster nodes are automatically added to the security group.</p>
+         * <p>The ID of an existing security group. This parameter is mutually exclusive with <code>is_enterprise_security_group</code>. Cluster nodes are automatically added to this security group.</p>
          * 
          * <strong>example:</strong>
          * <p>sg-bp1bdue0qc1g7k****</p>
@@ -2622,11 +2661,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>[<strong>Deprecated</strong>] When you configure the control plane, use the <code>security_hardening_os</code> parameter in the <code>control_plane_config</code> section instead. When you configure a node pool, use the <code>security_hardening_os</code> parameter of the <code>scaling_group</code> field in the <code>nodepool</code> section instead.</p>
-         * <p>Specifies whether to enable Alibaba Cloud Linux Security Hardening. Valid values:</p>
+         * <p><strong>[Deprecated]</strong> For cluster control plane configuration, use the security_hardening_os parameter under control_plane_config instead. For node pool configuration, use the security_hardening_os parameter under scaling_group in nodepool instead.</p>
+         * <p>Alibaba Cloud OS security hardening. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: enables Alibaba Cloud Linux Security Hardening.</li>
-         * <li><code>false</code>: disables Alibaba Cloud Linux Security Hardening.</li>
+         * <li><code>true</code>: Enables Alibaba Cloud OS security hardening.</li>
+         * <li><code>false</code>: Does not enable Alibaba Cloud OS security hardening.</li>
          * </ul>
          * <p>Default value: <code>false</code>.</p>
          * 
@@ -2640,8 +2679,8 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>Service accounts provide identities for pods when pods communicate with the <code>API server</code> of the cluster. <code>service-account-issuer</code> specifies the issuer of the <code>serviceaccount token</code>, which is specified by using the <code>iss</code> field in the <code>token payload</code>.</p>
-         * <p>For more information about <code>ServiceAccount</code>, see <a href="https://help.aliyun.com/document_detail/160384.html">Enable service account token volume projection</a>.</p>
+         * <p>A ServiceAccount is the access credential used for communication between a Pod and the cluster API Server. The <code>service-account-issuer</code> is the issuer identity in the <code>serviceaccount token</code>, which is the <code>iss</code> field in the <code>token payload</code>.</p>
+         * <p>For more information about <code>ServiceAccount</code>, see <a href="https://help.aliyun.com/document_detail/160384.html">Deploy service account token volume projection</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>kubernetes.default.svc</p>
@@ -2653,8 +2692,8 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The Service CIDR block. Valid values: 10.0.0.0/16-24, 172.16-31.0.0/16-24, and 192.168.0.0/16-24. The Service CIDR block cannot overlap with the VPC CIDR block (10.1.0.0/21) or the CIDR blocks of existing clusters in the VPC. You cannot modify the Service CIDR block after the cluster is created.</p>
-         * <p>By default, the Service CIDR block is set to 172.19.0.0/20.</p>
+         * <p>The CIDR block for the Service network. Valid ranges: 10.0.0.0/16-24, 172.16-31.0.0/16-24, and 192.168.0.0/16-24. The CIDR block cannot overlap with the VPC CIDR block 10.1.0.0/21 or CIDR blocks used by existing Kubernetes clusters in the VPC. This value cannot be modified after the cluster is created.</p>
+         * <p>Default value: 172.19.0.0/20.</p>
          * 
          * <strong>example:</strong>
          * <p>172.21.0.0/20</p>
@@ -2666,12 +2705,12 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The methods for implementing service discovery in <code>ACK Serverless</code> clusters.</p>
+         * <p><strong>[Deprecated]</strong> The service discovery type within the cluster, used to specify the service discovery method in <code>ACK Serverless</code> clusters.</p>
          * <ul>
-         * <li><code>CoreDNS</code>: a standard service discovery plug-in that is provided by open source Kubernetes. To use DNS resolution, you must provision pods. By default, two elastic container instances are used. The specification of each instance is 0.25 vCores and 512 MiB of memory.</li>
-         * <li><code>PrivateZone</code>: a DNS resolution service provided by Alibaba Cloud. You must activate Alibaba Cloud DNS PrivateZone before you can use it for service discovery.</li>
+         * <li><code>CoreDNS</code>: Uses the Kubernetes-native standard service discovery component CoreDNS. A set of containers must be deployed in the cluster for DNS resolution. By default, two ECI instances with 0.25 Core and 512 MiB specifications are used.</li>
+         * <li><code>PrivateZone</code>: Uses Alibaba Cloud PrivateZone to provide service discovery capabilities. The PrivateZone service must be activated.</li>
          * </ul>
-         * <p>By default, this parameter is not specified.</p>
+         * <p>Default value: not enabled.</p>
          */
         public Builder serviceDiscoveryTypes(java.util.List<String> serviceDiscoveryTypes) {
             this.putBodyParameter("service_discovery_types", serviceDiscoveryTypes);
@@ -2680,18 +2719,18 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to configure SNAT rules for the VPC in which your cluster is deployed. Valid values:</p>
+         * <p>Specifies whether to configure SNAT for the VPC. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: automatically creates a NAT gateway and configures SNAT rules. Set the value to <code>true</code> if nodes and applications in the cluster need to access the Internet.</li>
-         * <li><code>false</code>: does not create a NAT gateway or configure SNAT rules. In this case, nodes and applications in the cluster cannot access the Internet.</li>
+         * <li><code>true</code>: Automatic creation of a NAT gateway and automatic configuration of SNAT rules. Settings this to <code>true</code> if nodes and applications in the cluster need to access the Internet.</li>
+         * <li><code>false</code>: Does not create a NAT gateway or SNAT rules. Nodes and applications in the cluster cannot access the Internet.</li>
          * </ul>
          * <blockquote>
-         * <p> If this feature is disabled when you create the cluster, you can also manually enable this feature after you create the cluster. For more information, see <a href="https://help.aliyun.com/document_detail/178480.html">Enable an existing ACK cluster to access the Internet</a>.</p>
+         * <p>If this is not enabled during cluster creation and Internet access is required later, you can <a href="https://help.aliyun.com/document_detail/178480.html">manually enable it</a>.</p>
          * </blockquote>
-         * <p>Default value: <code>true</code>.</p>
+         * <p>Default value: <code>false</code>.</p>
          * 
          * <strong>example:</strong>
-         * <p>true</p>
+         * <p>false</p>
          */
         public Builder snatEntry(Boolean snatEntry) {
             this.putBodyParameter("snat_entry", snatEntry);
@@ -2700,14 +2739,8 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>[<strong>Deprecated</strong>] When you configure the control plane, use the <code>soc_enabled</code> parameter in the <code>control_plane_config</code> section instead. When you configure a node pool, use the <code>soc_enabled</code> parameter of the <code>scaling_group</code> field in the <code>nodepool</code> section instead.</p>
-         * <p>Specifies whether to enable Multi-Level Protection Scheme (MLPS) security hardening. For more information, see <a href="https://help.aliyun.com/document_detail/196148.html">ACK security hardening based on MLPS</a>.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><code>true</code>: enables MLPS security hardening.</li>
-         * <li><code>false</code>: disables MLPS security hardening.</li>
-         * </ul>
-         * <p>Default value: <code>false</code>.</p>
+         * <p><strong>[Deprecated]</strong> For cluster control plane node configurations, use the <code>soc_enabled</code> parameter under <code>control_plane_config</code> instead. For node pool configurations, use the <code>soc_enabled</code> parameter under <code>scaling_group</code> in <code>nodepool</code> instead.</p>
+         * <p>MLPS 2.0 security hardening. For more information, see [China Chinese China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -2719,10 +2752,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable SSH logon. If this parameter is set to true, you can log on to master nodes in an ACK dedicated cluster over the Internet. This parameter does not take effect for ACK managed clusters. Valid values:</p>
+         * <p>Specifies whether to enable public network SSH logon. This parameter is used to log on to the master nodes of ACK dedicated clusters. This parameter does not take effect for managed clusters.</p>
          * <ul>
-         * <li><code>true</code>: enables SSH logon.</li>
-         * <li><code>false</code>: disables SSH logon.</li>
+         * <li><code>true</code>: Enabled.</li>
+         * <li><code>false</code>: Not enabled.</li>
          * </ul>
          * <p>Default value: <code>false</code>.</p>
          * 
@@ -2736,10 +2769,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The labels that you want to add to nodes. You must add labels based on the following rules:</p>
+         * <p>The node tags. Tag definition rules:</p>
          * <ul>
-         * <li>A label is a case-sensitive key-value pair. You can add up to 20 labels.</li>
-         * <li>When you add a label, you must specify a unique key, but you can leave the value empty. A key cannot exceed 64 characters in length, and a value cannot exceed 128 characters in length. Keys and values cannot start with aliyun, acs:, https://, or http://. For more information, see <a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set">Labels and Selectors</a>.</li>
+         * <li>Tags are case-sensitive key-value pairs. You can settings up to 20 tags.</li>
+         * <li>Tag keys cannot be duplicated and can be up to 64 characters in length. Tag values can be empty and can be up to 128 characters in length. Tag keys and tag values cannot start with &quot;aliyun&quot;, &quot;acs:&quot;, &quot;https://&quot;, or &quot;http://&quot;. For details, see <a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set">Labels and Selectors</a>.</li>
          * </ul>
          */
         public Builder tags(java.util.List<Tag> tags) {
@@ -2749,8 +2782,8 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>[<strong>Deprecated</strong>] When you configure a node pool, use the <code>taints</code> parameter of the <code>kubernetes_config</code> field in the <code>nodepool</code> section instead.</p>
-         * <p>The taints that you want to add to nodes. Taints can be used together with tolerations to avoid scheduling pods to specific nodes. For more information, see <a href="https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/">taint-and-toleration</a>.</p>
+         * <p><strong>[Deprecated]</strong> For node pool configuration, use the taints parameter under kubernetes_config in nodepool instead.</p>
+         * <p>The node taint information. Taints and tolerations work together to prevent Pods from being allocated to inappropriate nodes. For more information, see <a href="https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/">taint-and-toleration</a>.</p>
          */
         public Builder taints(java.util.List<Taint> taints) {
             this.putBodyParameter("taints", taints);
@@ -2759,8 +2792,8 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>[<strong>Deprecated</strong>] By default, the system does not perform a rollback when the cluster fails to be created. You must manually delete the cluster that fails to be created.</p>
-         * <p>Specifies the timeout period of cluster creation. Unit: minutes.</p>
+         * <p><strong>[Deprecated]</strong> When cluster creation fails, the system does not perform a rollback by default. You must manually clean up the failed cluster.</p>
+         * <p>The cluster creation timeout period, in minutes.</p>
          * <p>Default value: <code>60</code>.</p>
          * 
          * <strong>example:</strong>
@@ -2773,7 +2806,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The time zone of the cluster.</p>
+         * <p>The time zone used by the cluster. For more information, see <a href="https://help.aliyun.com/document_detail/354879.html">Supported time zones</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>Asia/Shanghai</p>
@@ -2785,7 +2818,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The custom Certificate Authority (CA) certificate used by the cluster.</p>
+         * <p>The custom cluster CA.</p>
          * 
          * <strong>example:</strong>
          * <p>-----BEGIN CERTIFICATE-----****</p>
@@ -2797,7 +2830,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The user data of nodes.</p>
+         * <p><strong>[Deprecated]</strong> The custom node data.</p>
          * 
          * <strong>example:</strong>
          * <p>IyEvdXNyL2Jpbi9iYXNoCmVjaG8gIkhlbGxvIEFD****</p>
@@ -2809,7 +2842,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The virtual private cloud (VPC) in which you want to deploy the cluster. This parameter is required.</p>
+         * <p>The VPC used by the cluster. You must provide a VPC when creating a cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-2zeik9h3ahvv2zz95****</p>
@@ -2821,7 +2854,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The vSwitches for nodes in the cluster. This parameter is required if you create an ACK managed cluster that does not contain nodes.</p>
+         * <p>The vSwitches where the cluster nodes reside. This parameter is required when creating a zero-node managed cluster.</p>
          */
         public Builder vswitchIds(java.util.List<String> vswitchIds) {
             this.putBodyParameter("vswitch_ids", vswitchIds);
@@ -2830,11 +2863,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>[<strong>Deprecated</strong>] When you configure a node pool, use the <code>auto_renew</code> parameter of the <code>scaling_group</code> field in the <code>nodepool</code> section instead.</p>
-         * <p>Specifies whether to enable auto-renewal for worker nodes. This parameter takes effect and is required only when <code>worker_instance_charge_type</code> is set to <code>PrePaid</code>. Valid values:</p>
+         * <p><strong>[Deprecated]</strong> For node pool configuration, use the auto_renew parameter under scaling_group in nodepool instead.</p>
+         * <p>Specifies whether to enable auto-renewal for worker nodes. This parameter takes effect only when <code>worker_instance_charge_type</code> is set to <code>PrePaid</code>. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: enables auto-renewal.</li>
-         * <li><code>false</code>: disables auto-renewal.</li>
+         * <li><code>true</code>: Enables auto-renewal.</li>
+         * <li><code>false</code>: Does not enable auto-renewal.</li>
          * </ul>
          * <p>Default value: <code>true</code>.</p>
          * 
@@ -2848,8 +2881,8 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>[<strong>Deprecated</strong>] When you configure a node pool, use the <code>auto_renew_period</code> parameter of the <code>scaling_group</code> field in the <code>nodepool</code> section instead.</p>
-         * <p>The auto-renewal duration of worker nodes. This parameter takes effect and is required only if the subscription billing method is selected for worker nodes.</p>
+         * <p><strong>[Deprecated]</strong> For node pool configuration, use the auto_renew_period parameter under scaling_group in nodepool instead.</p>
+         * <p>The Unified Auto Renewal Cycle for worker nodes. This parameter takes effect and is required only when the subscription billing method is selected.</p>
          * <p>Valid values: 1, 2, 3, 6, and 12.</p>
          * 
          * <strong>example:</strong>
@@ -2862,8 +2895,8 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>[<strong>Deprecated</strong>] When you configure a node pool, use the <code>data_disks</code> parameter of the <code>scaling_group</code> field in the <code>nodepool</code> section instead.</p>
-         * <p>The configurations of the data disks that you want to mount to worker nodes. The configurations include the disk category and disk size.</p>
+         * <p><strong>[Deprecated]</strong> Use the data_disks parameter under scaling_group in nodepool instead for node pool configurations.</p>
+         * <p>The combination of data cloud disk type, size, and other configurations for worker nodes.</p>
          */
         public Builder workerDataDisks(java.util.List<WorkerDataDisks> workerDataDisks) {
             this.putBodyParameter("worker_data_disks", workerDataDisks);
@@ -2872,13 +2905,13 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>[<strong>Deprecated</strong>] When you configure a node pool, use the <code>instance_charge_type</code> parameter of the <code>scaling_group</code> field in the <code>nodepool</code> section instead.</p>
-         * <p>The billing method of worker nodes. Valid values:</p>
+         * <p><strong>[Deprecated]</strong> Use the instance_charge_type parameter under scaling_group in nodepool instead for node pool configurations.</p>
+         * <p>The billing method for worker nodes. Valid values:</p>
          * <ul>
          * <li><code>PrePaid</code>: subscription.</li>
          * <li><code>PostPaid</code>: pay-as-you-go.</li>
          * </ul>
-         * <p>Default value: PostPaid.</p>
+         * <p>Default value: pay-as-you-go.</p>
          * 
          * <strong>example:</strong>
          * <p>PrePaid</p>
@@ -2890,8 +2923,8 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>[<strong>Deprecated</strong>] When you configure a node pool, use the <code>instance_types</code> parameter of the <code>scaling_group</code> field in the <code>nodepool</code> section instead.</p>
-         * <p>The instance configurations of worker nodes.</p>
+         * <p><strong>[Deprecated]</strong> Use the instance_types parameter under scaling_group in nodepool instead for node pool configurations.</p>
+         * <p>The instance configurations for worker nodes.</p>
          */
         public Builder workerInstanceTypes(java.util.List<String> workerInstanceTypes) {
             this.putBodyParameter("worker_instance_types", workerInstanceTypes);
@@ -2900,9 +2933,9 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>[<strong>Deprecated</strong>] When you configure a node pool, use the <code>period</code> parameter of the <code>scaling_group</code> field in the <code>nodepool</code> section instead.</p>
-         * <p>The subscription duration of worker nodes. This parameter takes effect and is required only when <code>worker_instance_charge_type</code> is set to <code>PrePaid</code>.</p>
-         * <p>Valid values: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</p>
+         * <p><strong>[Deprecated]</strong> Use the period parameter under scaling_group in nodepool instead for node pool configurations.</p>
+         * <p>The subscription duration for worker nodes. This parameter takes effect and is required only when <code>worker_instance_charge_type</code> is set to <code>PrePaid</code>.</p>
+         * <p>Valid values: {1, 2, 3, 6, 12, 24, 36, 48, 60}.</p>
          * <p>Default value: 1.</p>
          * 
          * <strong>example:</strong>
@@ -2915,9 +2948,9 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>[<strong>Deprecated</strong>] When you configure a node pool, use the <code>period_unit</code> parameter of the <code>scaling_group</code> field in the <code>nodepool</code> section instead.</p>
-         * <p>The billing cycle of worker nodes. This parameter is required if worker_instance_charge_type is set to <code>PrePaid</code>.</p>
-         * <p>Valid value: <code>Month</code>, which indicates that worker nodes are billed only on a monthly basis.</p>
+         * <p><strong>[Deprecated]</strong> Use the period_unit parameter under scaling_group in nodepool instead for node pool configurations.</p>
+         * <p>The billing period unit for worker nodes. This parameter is required when the billing method is <code>PrePaid</code>.</p>
+         * <p>Valid values: <code>Month</code>. Currently, only monthly billing is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>Month</p>
@@ -2929,11 +2962,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>[<strong>Deprecated</strong>] When you configure a node pool, use the <code>system_disk_category</code> parameter of the <code>scaling_group</code> field in the <code>nodepool</code> section instead.</p>
-         * <p>The system disk category of worker nodes. For more information, see <a href="https://help.aliyun.com/document_detail/63136.html">Elastic Block Storage devices</a>.</p>
+         * <p><strong>[Deprecated]</strong> Use the system_disk_category parameter under scaling_group in nodepool instead for node pool configurations.</p>
+         * <p>The system cloud disk type for worker nodes. For more information, see <a href="https://help.aliyun.com/document_detail/63136.html">Block storage overview</a>.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><code>cloud_efficiency</code>: ultra disk.</li>
+         * <li><code>cloud_efficiency</code>: ultra cloud disk.</li>
          * <li><code>cloud_ssd</code>: standard SSD.</li>
          * </ul>
          * <p>Default value: <code>cloud_ssd</code>.</p>
@@ -2948,8 +2981,8 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>[<strong>Deprecated</strong>] When you configure a node pool, use the <code>system_disk_performance_level</code> parameter of the <code>scaling_group</code> field in the <code>nodepool</code> section instead.</p>
-         * <p>If the system disk is an ESSD, you can specify the PL of the ESSD. For more information, see <a href="https://help.aliyun.com/document_detail/122389.html">Enterprise SSDs</a>.</p>
+         * <p><strong>[Deprecated]</strong> Use the system_disk_performance_level parameter under scaling_group in nodepool instead for node pool configurations.</p>
+         * <p>The performance level (PL) of the system cloud disk when the system cloud disk is an ESSD. For more information, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSD cloud disks</a>.</p>
          * <p>Valid values:</p>
          * <ul>
          * <li>PL0</li>
@@ -2968,10 +3001,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>[<strong>Deprecated</strong>] When you configure a node pool, use the <code>system_disk_size</code> parameter of the <code>scaling_group</code> field in the <code>nodepool</code> section instead.</p>
-         * <p>The system disk size of worker nodes. Unit: GiB.</p>
-         * <p>Valid values: 40 to 500.</p>
-         * <p>The value of this parameter must be at least 40 and greater than or equal to the image size.</p>
+         * <p><strong>[Deprecated]</strong> Use the system_disk_size parameter under scaling_group in nodepool instead for node pool configurations.</p>
+         * <p>The system cloud disk size for worker nodes. Unit: GiB.</p>
+         * <p>Valid values: [40,500\].</p>
+         * <p>The value of this parameter must be greater than or equal to max{40, ImageSize}.</p>
          * <p>Default value: <code>120</code>.</p>
          * 
          * <strong>example:</strong>
@@ -2984,8 +3017,8 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>[<strong>Deprecated</strong>] When you configure a node pool, use the <code>system_disk_snapshot_policy_id</code> parameter of the <code>scaling_group</code> field in the <code>nodepool</code> section instead.</p>
-         * <p>The ID of the automatic snapshot policy that is used by the system disk specified for worker nodes.</p>
+         * <p><strong>[Deprecated]</strong> Use the system_disk_snapshot_policy_id parameter under scaling_group in nodepool instead for node pool configurations.</p>
+         * <p>The ID of the automatic snapshot policy used by the system cloud disks of worker nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>sp-2zej1nogjvovnz4z****</p>
@@ -2997,9 +3030,9 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>[<strong>Deprecated</strong>] When you configure a node pool, use the <code>vswitch_ids</code> parameter of the <code>scaling_group</code> field in the <code>nodepool</code> section instead.</p>
-         * <p>The vSwitches for worker nodes. Each worker node is allocated a vSwitch.</p>
-         * <p><code>worker_vswitch_ids</code> is optional, but <code>vswitch_ids</code> is required if you create an ACK managed cluster that does not contain nodes.</p>
+         * <p><strong>[Deprecated]</strong> Use the vswitch_ids parameter under scaling_group in nodepool instead for node pool configurations.</p>
+         * <p>The list of vSwitches used by cluster nodes. Each node corresponds to one value.</p>
+         * <p>When you create a managed cluster with zero nodes, the <code>worker_vswitch_ids</code> field is not required, but you must provide <code>vswitch_ids</code>.</p>
          */
         public Builder workerVswitchIds(java.util.List<String> workerVswitchIds) {
             this.putBodyParameter("worker_vswitch_ids", workerVswitchIds);
@@ -3008,9 +3041,9 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>[Deprecated] Use the <code>zone_ids</code> parameter instead.</p>
-         * <p>The ID of the zone to which the cluster belongs. This parameter is specific to ACK Serverless clusters.</p>
-         * <p>When you create an ACK managed cluster, you must set the <code>zone_id</code> parameter if <code>vpc_id</code> and <code>vswitch_ids</code> are not specified. This way, the system automatically creates a VPC in the specified zone. This parameter is invalid if you specify the <code>vpc_id</code> and <code>vswitch_ids</code> parameters.</p>
+         * <p><strong>[Deprecated]</strong> Use the <code>zone_ids</code> parameter instead.</p>
+         * <p>The active zone ID of the region to which the cluster belongs. This parameter is specific to ACK managed clusters.</p>
+         * <p>When you create an ACK managed cluster without specifying <code>vpc_id</code> and <code>vswitch_ids</code>, you must specify <code>zone_id</code> for the cluster to automatically create a VPC and related network resources in the specified zone. This parameter is ignored when <code>vpc_id</code> and <code>vswitch_ids</code> are specified.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beiji****</p>
@@ -3022,8 +3055,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the zone in which the cluster is deployed. This parameter is specific to ACK managed clusters.</p>
-         * <p>When you create an ACK managed cluster, you must set the <code>zone_id</code> parameter if <code>vpc_id</code> and <code>vswitch_ids</code> are not specified. This way, the system automatically creates a VPC in the specified zone. This parameter is invalid if you specify the <code>vpc_id</code> and <code>vswitch_ids</code> parameters.</p>
+         * <p>The IDs of multiple zones in the region to which the cluster belongs. This parameter is specific to ACK managed clusters.</p>
          */
         public Builder zoneIds(java.util.List<String> zoneIds) {
             this.putBodyParameter("zone_ids", zoneIds);
@@ -3091,7 +3123,16 @@ public class CreateClusterRequest extends Request {
             } 
 
             /**
-             * enabled.
+             * <p>Specifies whether to enable the cluster audit log feature. Valid values:</p>
+             * <ul>
+             * <li><p>true: Enable.</p>
+             * </li>
+             * <li><p>false: Disable.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -3099,7 +3140,16 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * sls_project_name.
+             * <p>The <a href="https://help.aliyun.com/document_detail/48873.html">SLS Project</a> that contains the <a href="https://help.aliyun.com/document_detail/48873.html">Logstore</a> for cluster audit logs.</p>
+             * <ul>
+             * <li><p>Default value: <code>k8s-log-{clusterid}</code>.</p>
+             * </li>
+             * <li><p>After the cluster audit log feature is enabled, a Logstore for cluster audit logs is created in the specified SLS Project.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>k8s-log-c2345xxxxxxxxxxxx</p>
              */
             public Builder slsProjectName(String slsProjectName) {
                 this.slsProjectName = slsProjectName;
@@ -3153,7 +3203,16 @@ public class CreateClusterRequest extends Request {
             } 
 
             /**
-             * enable.
+             * <p>Specifies whether to enable intelligent managed mode. Valid values:</p>
+             * <ul>
+             * <li><p>true: Enable.</p>
+             * </li>
+             * <li><p>false: Disable.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -3519,7 +3578,12 @@ public class CreateClusterRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to enable auto-renewal for the node.</p>
+             * <p>Specifies whether to enable auto-renewal for control plane nodes. This parameter takes effect only when the billing method is set to <code>PrePaid</code>. Valid values:</p>
+             * <ul>
+             * <li>true: Enables auto-renewal.</li>
+             * <li>false: Disables auto-renewal.</li>
+             * </ul>
+             * <p>Default value: true.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -3530,7 +3594,9 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The auto-renewal duration for the node.</p>
+             * <p>The auto-renewal period for control plane nodes.</p>
+             * <p>Valid values: {1, 2, 3, 6, 12}. Unit: months.</p>
+             * <p>Default value: 1.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -3541,10 +3607,15 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The billing method of the node.</p>
+             * <p>The billing method for control plane nodes.</p>
+             * <ul>
+             * <li><code>PrePaid</code>: subscription.</li>
+             * <li><code>PostPaid</code>: pay-as-you-go.</li>
+             * </ul>
+             * <p>Default value: <code>PostPaid</code>.</p>
              * 
              * <strong>example:</strong>
-             * <p>PrePaid</p>
+             * <p>PostPaid</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -3552,10 +3623,17 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to install CloudMonitor on the node.</p>
+             * <p>Specifies whether to install CloudMonitor on nodes.</p>
+             * <ul>
+             * <li><p>true: Installs the CloudMonitor agent.</p>
+             * </li>
+             * <li><p>false: Does not install the CloudMonitor agent.</p>
+             * </li>
+             * </ul>
+             * <p>Default value: false.</p>
              * 
              * <strong>example:</strong>
-             * <p>true</p>
+             * <p>false</p>
              */
             public Builder cloudMonitorFlags(Boolean cloudMonitorFlags) {
                 this.cloudMonitorFlags = cloudMonitorFlags;
@@ -3563,7 +3641,14 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The CPU management policy of the node.</p>
+             * <p>The CPU management policy for nodes.</p>
+             * <ul>
+             * <li><p>static: Allows pods with certain resource characteristics on the node to be granted enhanced CPU affinity and exclusivity.</p>
+             * </li>
+             * <li><p>none: Uses the existing default CPU affinity scheme.</p>
+             * </li>
+             * </ul>
+             * <p>Default value: none.</p>
              * 
              * <strong>example:</strong>
              * <p>none</p>
@@ -3574,7 +3659,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The ID of the deployment set.</p>
+             * <p>The deployment set ID.</p>
              * 
              * <strong>example:</strong>
              * <p>ds-bp10b35imuam5amw****</p>
@@ -3596,7 +3681,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The type of the OS image.</p>
+             * <p>The operating system image type.</p>
              * 
              * <strong>example:</strong>
              * <p>AliyunLinux3</p>
@@ -3607,7 +3692,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * instance_metadata_options.
+             * <p>The instance metadata access configuration for ECS instances.</p>
              */
             public Builder instanceMetadataOptions(InstanceMetadataOptions instanceMetadataOptions) {
                 this.instanceMetadataOptions = instanceMetadataOptions;
@@ -3615,7 +3700,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The instance types of the nodes.</p>
+             * <p>The instance types for nodes.</p>
              */
             public Builder instanceTypes(java.util.List<String> instanceTypes) {
                 this.instanceTypes = instanceTypes;
@@ -3634,10 +3719,10 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The SSH logon password. The password must be 8 to 30 characters in length and contain a minimum of three of the following character types: uppercase letters, lowercase letters, digits, and special characters. You must set this parameter or key_pair.</p>
+             * <p>The SSH logon password. The password must be 8 to 30 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. You must set this parameter or key_pair.</p>
              * 
              * <strong>example:</strong>
-             * <p>ack@Test</p>
+             * <hr>
              */
             public Builder loginPassword(String loginPassword) {
                 this.loginPassword = loginPassword;
@@ -3645,7 +3730,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The node port range.</p>
+             * <p><strong>[Deprecated]</strong> The node service port range.</p>
              * 
              * <strong>example:</strong>
              * <p>30000-32767</p>
@@ -3656,7 +3741,9 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The subscription duration of the node.</p>
+             * <p>The subscription duration for control plane nodes. This parameter is required and takes effect only when the billing method is set to <code>PrePaid</code>.</p>
+             * <p>Valid values: {1, 2, 3, 6, 12, 24, 36, 48, 60}. Unit: months.</p>
+             * <p>Default value: 1.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -3667,7 +3754,8 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The unit of the subscription duration of the node.</p>
+             * <p>The unit of the subscription duration for control plane nodes. This parameter is required and takes effect only when the billing method is set to <code>PrePaid</code>.</p>
+             * <p>Valid value: <code>Month</code>. Currently, only month-based billing cycles are supported.</p>
              * 
              * <strong>example:</strong>
              * <p>Month</p>
@@ -3678,7 +3766,8 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The container runtime.</p>
+             * <p><strong>[Deprecated]</strong> The runtime name for control plane nodes. Valid values:</p>
+             * <p>containerd: The Containerd runtime, which is supported by all cluster versions.</p>
              * 
              * <strong>example:</strong>
              * <p>containerd</p>
@@ -3689,10 +3778,17 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable Alibaba Cloud Linux Security Hardening.</p>
+             * <p>Specifies whether to enable Alibaba Cloud OS security hardening.</p>
+             * <ul>
+             * <li><p>true: Enables Alibaba Cloud OS security hardening.</p>
+             * </li>
+             * <li><p>false: Disables Alibaba Cloud OS security hardening.</p>
+             * </li>
+             * </ul>
+             * <p>Default value: false.</p>
              * 
              * <strong>example:</strong>
-             * <p>true</p>
+             * <p>false</p>
              */
             public Builder securityHardeningOs(Boolean securityHardeningOs) {
                 this.securityHardeningOs = securityHardeningOs;
@@ -3701,6 +3797,7 @@ public class CreateClusterRequest extends Request {
 
             /**
              * <p>The number of control plane nodes.</p>
+             * <p>Valid values: <code>3</code> or <code>5</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -3712,9 +3809,16 @@ public class CreateClusterRequest extends Request {
 
             /**
              * <p>Specifies whether to enable MLPS security hardening.</p>
+             * <ul>
+             * <li><p>true: Enables MLPS 2.0 security hardening.</p>
+             * </li>
+             * <li><p>false: Disables MLPS 2.0 security hardening.</p>
+             * </li>
+             * </ul>
+             * <p>Default value: false.</p>
              * 
              * <strong>example:</strong>
-             * <p>true</p>
+             * <p>false</p>
              */
             public Builder socEnabled(Boolean socEnabled) {
                 this.socEnabled = socEnabled;
@@ -3722,7 +3826,14 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable the burst feature for the system disk.</p>
+             * <p>Specifies whether to enable burst performance for node system cloud disks.</p>
+             * <ul>
+             * <li><p>true: Enabled.</p>
+             * </li>
+             * <li><p>false: Disabled.</p>
+             * </li>
+             * </ul>
+             * <p>This parameter is supported only when <code>system_disk_category</code> is set to <code>cloud_auto</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -3733,10 +3844,18 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The system disk category for the node.</p>
+             * <p>The type of the node system cloud disk.</p>
+             * <ul>
+             * <li><code>cloud_efficiency</code>: ultra cloud disk.</li>
+             * <li><code>cloud_ssd</code>: standard SSD.</li>
+             * <li><code>cloud_essd</code>: ESSD.</li>
+             * <li><code>cloud_auto</code>: ESSD AutoPL cloud disk.</li>
+             * <li><code>cloud_essd_entry</code>: ESSD Entry cloud disk.</li>
+             * </ul>
+             * <p>Default value: <code>cloud_ssd</code>. The default value may vary by zone.</p>
              * 
              * <strong>example:</strong>
-             * <p>cloud_essd</p>
+             * <p>cloud_ssd</p>
              */
             public Builder systemDiskCategory(String systemDiskCategory) {
                 this.systemDiskCategory = systemDiskCategory;
@@ -3744,7 +3863,8 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The PL of the system disk that you want to use for the node. This parameter takes effect only for ESSDs.</p>
+             * <p>The performance level of the node system cloud disk. This parameter takes effect only for ESSD cloud disks.</p>
+             * <p>The performance level varies based on the cloud disk size. For more information, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSD cloud disks</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>PL1</p>
@@ -3755,7 +3875,9 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The preset read/write IOPS of the system disk.</p>
+             * <p>The provisioned read/write IOPS for node system cloud disks.</p>
+             * <p>Valid values: 0 to min{50,000, 1000 × capacity - baseline performance}. Baseline performance = min{1,800 + 50 × capacity, 50000}.</p>
+             * <p>This parameter is supported only when <code>system_disk_category</code> is set to <code>cloud_auto</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>1000</p>
@@ -3766,7 +3888,9 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The system disk size of the node. The value must be at least 40 GB.</p>
+             * <p>The size of the node system cloud disk.</p>
+             * <p>Valid values: [40, 500]. Unit: GiB.</p>
+             * <p>Default value: <code>120</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>120</p>
@@ -3777,7 +3901,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The automatic snapshot policy of the node.</p>
+             * <p>The automatic snapshot policy for node system cloud disks.</p>
              * 
              * <strong>example:</strong>
              * <p>sp-2zej1nogjvovnz4z****</p>
@@ -3834,7 +3958,7 @@ public class CreateClusterRequest extends Request {
             } 
 
             /**
-             * bind_vpcs.
+             * <p>The VPCs where the internal DNS records of the cluster take effect.</p>
              */
             public Builder bindVpcs(java.util.List<String> bindVpcs) {
                 this.bindVpcs = bindVpcs;
@@ -3901,7 +4025,10 @@ public class CreateClusterRequest extends Request {
             } 
 
             /**
-             * endpoint_type.
+             * <p>The endpoint type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>private</p>
              */
             public Builder endpointType(String endpointType) {
                 this.endpointType = endpointType;
@@ -3909,13 +4036,10 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>Specifies the ID of the CLB instance for accessing the API server. If this parameter is specified, the system does not automatically create a CLB instance for the API server.</p>
-             * <blockquote>
-             * <p> Make sure that the CLB instance does not have other dependencies, such as listeners and backend servers. You cannot specify shared-resource or Internet-facing CLB instances.</p>
-             * </blockquote>
+             * <p>The NLB instance ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>lb-wz9t256gqa3vbouk****</p>
+             * <p>nlb-0ogk9aaxxxxxxx</p>
              */
             public Builder loadBalancerId(String loadBalancerId) {
                 this.loadBalancerId = loadBalancerId;
@@ -3982,7 +4106,7 @@ public class CreateClusterRequest extends Request {
             } 
 
             /**
-             * internal_dns_config.
+             * <p>The internal DNS configuration for the cluster. This parameter applies to ACK managed clusters. The internal domain name is used by node-side system components such as kubelet and kube-proxy to access the API Server. If the internal domain name access is not enabled, node-side system components access the API Server through the CLB IP address.</p>
              */
             public Builder internalDnsConfig(InternalDnsConfig internalDnsConfig) {
                 this.internalDnsConfig = internalDnsConfig;
@@ -3990,7 +4114,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * load_balancers_config.
+             * <p>The cluster endpoint configuration. When this parameter is specified, the endpoint_public_access and load_balancer_id parameters do not take effect. ACK supports only automatic creation of NLB instances. To specify a CLB or NLB instance, use load_balancers_config to specify the corresponding instance ID.</p>
              */
             public Builder loadBalancersConfig(java.util.List<LoadBalancersConfig> loadBalancersConfig) {
                 this.loadBalancersConfig = loadBalancersConfig;
@@ -4057,15 +4181,15 @@ public class CreateClusterRequest extends Request {
             } 
 
             /**
-             * <p>The automatic update frequency. Valid values:</p>
+             * <p>The cluster auto upgrade frequency. Valid values:</p>
              * <ul>
-             * <li>patch</li>
-             * <li>stable</li>
-             * <li>rapid</li>
+             * <li>patch: Automatically upgrades to the latest available patch version within the current minor version. The new Kubernetes version does not contain breaking changes.</li>
+             * <li>stable: Automatically upgrades to the latest patch version of the second-latest minor version. The new Kubernetes version may involve API and feature changes, but its stability has been extensively validated.</li>
+             * <li>rapid: Automatically upgrades to the latest patch version of the latest minor version, allowing faster access to new features from the Kubernetes community.</li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>patch</p>
+             * <p>stable</p>
              */
             public Builder channel(String channel) {
                 this.channel = channel;
@@ -4073,7 +4197,13 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable auto cluster update.</p>
+             * <p>Specifies whether to enable cluster auto upgrade.</p>
+             * <ul>
+             * <li><p>true: Enabled.</p>
+             * </li>
+             * <li><p>false: Not enabled.</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -4130,7 +4260,7 @@ public class CreateClusterRequest extends Request {
             } 
 
             /**
-             * <p>The configurations of auto cluster upgrade.</p>
+             * <p>The cluster auto upgrade configuration.</p>
              */
             public Builder clusterAutoUpgrade(ClusterAutoUpgrade clusterAutoUpgrade) {
                 this.clusterAutoUpgrade = clusterAutoUpgrade;
@@ -4184,7 +4314,13 @@ public class CreateClusterRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to enable auto cluster update.</p>
+             * <p>Specifies whether to enable the RRSA feature.</p>
+             * <ul>
+             * <li><p>true: Enabled.</p>
+             * </li>
+             * <li><p>false: Not enabled.</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -4282,7 +4418,7 @@ public class CreateClusterRequest extends Request {
             } 
 
             /**
-             * <p>The data disk category.</p>
+             * <p>The data cloud disk type.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -4294,10 +4430,10 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to encrypt the data disk. Valid values:</p>
+             * <p>Specifies whether to encrypt data cloud disks. Valid values:</p>
              * <ul>
-             * <li><code>true</code>: encrypts the data disk.</li>
-             * <li><code>false</code>: does not encrypt the data disk.</li>
+             * <li><code>true</code>: Encrypts data cloud disks.</li>
+             * <li><code>false</code>: Does not encrypt data cloud disks.</li>
              * </ul>
              * <p>Default value: <code>false</code>.</p>
              * 
@@ -4310,7 +4446,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The PL of the data disk. This parameter takes effect only for ESSDs. You can specify a higher PL if you increase the size of a data disk. For more information, see <a href="https://help.aliyun.com/document_detail/122389.html">Enterprise SSDs</a>.</p>
+             * <p>The performance level (PL) of node data cloud disks. This parameter takes effect only for <a href="https://help.aliyun.com/document_detail/122389.html">ESSD cloud disks</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>PL1</p>
@@ -4321,7 +4457,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The data disk size. Valid values: 40 to 32767. Unit: GiB.</p>
+             * <p>The data cloud disk size. Valid values: 40 to 32767. Unit: GiB.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

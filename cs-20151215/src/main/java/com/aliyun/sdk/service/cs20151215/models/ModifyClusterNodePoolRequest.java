@@ -227,7 +227,7 @@ public class ModifyClusterNodePoolRequest extends Request {
         }
 
         /**
-         * <p>The configurations about auto scaling.</p>
+         * <p>The auto scaling configuration.</p>
          */
         public Builder autoScaling(AutoScaling autoScaling) {
             this.putBodyParameter("auto_scaling", autoScaling);
@@ -236,7 +236,7 @@ public class ModifyClusterNodePoolRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether concurrency is supported.</p>
+         * <p>Specifies whether to enable concurrency.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -248,7 +248,7 @@ public class ModifyClusterNodePoolRequest extends Request {
         }
 
         /**
-         * eflo_node_group.
+         * <p>The Lingjun AI Computing Service node pool configuration. (Not effective)</p>
          */
         public Builder efloNodeGroup(EfloNodeGroup efloNodeGroup) {
             this.putBodyParameter("eflo_node_group", efloNodeGroup);
@@ -257,7 +257,7 @@ public class ModifyClusterNodePoolRequest extends Request {
         }
 
         /**
-         * <p>The configurations of the cluster.</p>
+         * <p>The cluster-related configuration.</p>
          */
         public Builder kubernetesConfig(KubernetesConfig kubernetesConfig) {
             this.putBodyParameter("kubernetes_config", kubernetesConfig);
@@ -266,7 +266,7 @@ public class ModifyClusterNodePoolRequest extends Request {
         }
 
         /**
-         * <p>The configurations of the managed node pool feature.</p>
+         * <p>The managed node pool configuration.</p>
          */
         public Builder management(Management management) {
             this.putBodyParameter("management", management);
@@ -275,7 +275,7 @@ public class ModifyClusterNodePoolRequest extends Request {
         }
 
         /**
-         * <p>The configurations of the node pool.</p>
+         * <p>The node pool configuration.</p>
          */
         public Builder nodepoolInfo(NodepoolInfo nodepoolInfo) {
             this.putBodyParameter("nodepool_info", nodepoolInfo);
@@ -284,7 +284,7 @@ public class ModifyClusterNodePoolRequest extends Request {
         }
 
         /**
-         * <p>The configurations of the scaling group that is used by the node pool.</p>
+         * <p>The scaling group configuration of the node pool.</p>
          */
         public Builder scalingGroup(ScalingGroup scalingGroup) {
             this.putBodyParameter("scaling_group", scalingGroup);
@@ -293,7 +293,7 @@ public class ModifyClusterNodePoolRequest extends Request {
         }
 
         /**
-         * <p>The configurations of confidential computing for the cluster.</p>
+         * <p>The confidential computing cluster configuration.</p>
          */
         public Builder teeConfig(TeeConfig teeConfig) {
             this.putBodyParameter("tee_config", teeConfig);
@@ -302,7 +302,7 @@ public class ModifyClusterNodePoolRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to update node information, such as labels and taints.</p>
+         * <p>Specifies whether to synchronously update node labels and taints.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -442,11 +442,11 @@ public class ModifyClusterNodePoolRequest extends Request {
             } 
 
             /**
-             * <p>This parameter is deprecated. Use the internet_charge_type and internet_max_bandwidth_out parameters instead. The maximum bandwidth of the EIP.</p>
-             * <p>Valid values: 1 to 100. Unit: Mbit/s.</p>
+             * <p><strong>[Deprecated]</strong> Use internet_charge_type and internet_max_bandwidth_out instead. The peak bandwidth of the EIP.</p>
+             * <p>Valid values: [1, 100]. Unit: Mbit/s.</p>
              * 
              * <strong>example:</strong>
-             * <p>5</p>
+             * <p>null</p>
              */
             public Builder eipBandwidth(Long eipBandwidth) {
                 this.eipBandwidth = eipBandwidth;
@@ -454,16 +454,16 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>This parameter is deprecated. Use the internet_charge_type and internet_max_bandwidth_out parameters instead.</p>
-             * <p>The metering method of the EIP. Valid values:</p>
+             * <p><strong>[Deprecated]</strong> Use internet_charge_type and internet_max_bandwidth_out instead.</p>
+             * <p>The billing method of the EIP. Valid values:</p>
              * <ul>
-             * <li><code>PayByBandwidth</code>: pay-by-bandwidth.</li>
-             * <li><code>PayByTraffic</code>: pay-by-data-transfer.</li>
+             * <li><code>PayByBandwidth</code>: Pay-by-bandwidth.</li>
+             * <li><code>PayByTraffic</code>: Pay-by-traffic.</li>
              * </ul>
              * <p>Default value: <code>PayByBandwidth</code>.</p>
              * 
              * <strong>example:</strong>
-             * <p>PayByBandwidth</p>
+             * <p>null</p>
              */
             public Builder eipInternetChargeType(String eipInternetChargeType) {
                 this.eipInternetChargeType = eipInternetChargeType;
@@ -473,10 +473,12 @@ public class ModifyClusterNodePoolRequest extends Request {
             /**
              * <p>Specifies whether to enable auto scaling. Valid values:</p>
              * <ul>
-             * <li><code>true</code>: enables auto scaling for the node pool. When the capacity planning of the cluster cannot meet the requirements of pod scheduling, ACK automatically scales out nodes based on the configured minimum and maximum number of instances. By default, node instant scaling is enabled for clusters that run Kubernetes 1.24. By default, node auto scaling is enabled for clusters that run Kubernetes versions earlier than 1.24. For more information, see <a href="https://help.aliyun.com/document_detail/2746785.html">Auto scaling of nodes</a>.</li>
-             * <li><code>false</code>: disables auto scaling. Container Service for Kubernetes (ACK) adjusts the number of nodes in the node pool based on the value of the Expected Nodes parameter. The number of nodes is always the same as the value of the Expected Nodes parameter.</li>
+             * <li><p><code>true</code>: Enables the auto scaling feature for the node pool. When the capacity planning of the cluster cannot meet the scheduling requirements of application pods, ACK automatically scales node resources based on the configured minimum and maximum instance counts. Clusters of version 1.24 or later use instant node scaling by default. Clusters of versions earlier than 1.24 use auto scaling by default. For more information, see <a href="https://help.aliyun.com/document_detail/2746785.html">Node scaling</a>.</p>
+             * </li>
+             * <li><p><code>false</code>: Disables auto scaling. ACK adjusts the number of nodes in the node pool based on the configured desired node count and maintains the node count at the desired value.</p>
+             * </li>
              * </ul>
-             * <p>If you set this parameter to false, other parameters in the <code>auto_scaling</code> section do not take effect.</p>
+             * <p>When this parameter is set to false, other configuration parameters in <code>auto_scaling</code> do not take effect.</p>
              * <p>Default value: <code>false</code>.</p>
              * 
              * <strong>example:</strong>
@@ -488,15 +490,15 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>This parameter is deprecated. Use the internet_charge_type and internet_max_bandwidth_out parameters instead.</p>
+             * <p><strong>[Deprecated]</strong> This parameter is deprecated. Use internet_charge_type and internet_max_bandwidth_out instead.</p>
              * <ul>
-             * <li><code>true</code>: associates an elastic IP address (EIP) with the node pool.</li>
-             * <li><code>false</code>: does not associate an EIP with the node pool.</li>
+             * <li><code>true</code>: Associates an EIP.</li>
+             * <li><code>false</code>: Does not associate an EIP.</li>
              * </ul>
              * <p>Default value: <code>false</code>.</p>
              * 
              * <strong>example:</strong>
-             * <p>true</p>
+             * <p>null</p>
              */
             public Builder isBondEip(Boolean isBondEip) {
                 this.isBondEip = isBondEip;
@@ -504,8 +506,8 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The maximum number of nodes that can be created in the node pool. Existing instances are excluded. This parameter takes effect only when <code>enable=true</code> is specified.</p>
-             * <p>The value must be at least the value of min_instances and cannot exceed 2000. Default value: 0.</p>
+             * <p>The maximum number of scalable instances in the node pool, excluding your existing instances. This parameter takes effect only when <code>enable=true</code>.</p>
+             * <p>Valid values: [min_instances, 2000]. Default value: 0.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -516,16 +518,14 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The minimum number of nodes that must be kept in the node pool. Existing instances are excluded. This parameter takes effect only when <code>enable=true</code> is specified.</p>
-             * <p>The value must be at least 0 and cannot exceed the value of max_instances. Default value: 0.</p>
+             * <p>The minimum number of scalable instances in the node pool, excluding your existing instances. This parameter takes effect only when <code>enable=true</code>.</p>
+             * <p>Valid values: [0, max_instances]. Default value: 0.</p>
              * <blockquote>
-             * </blockquote>
              * <ul>
-             * <li><p>When the minimum number of instances is greater than 0 and a scaling group is set up, ECS instances are automatically created based on the minimum number.</p>
-             * </li>
-             * <li><p>We recommend that the value of max_instances is equal to or larger than the current number of nodes in the node pool. If the value of max_instances is less than the current number of nodes in the node pool, the node pool will be scaled in after you enable auto scaling for the node pool.</p>
-             * </li>
+             * <li>If the minimum number of instances is not 0, the corresponding number of ECS instances are automatically created after the scaling group takes effect.</li>
+             * <li>Set the maximum number of instances to a value that is not less than the current number of nodes in the node pool. Otherwise, nodes in the node pool are scaled in after the elastic scaling feature takes effect.</li>
              * </ul>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -536,12 +536,12 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The instance type that is used for auto scaling. Valid values:</p>
+             * <p>The auto scaling type, classified by instance type. Valid values:</p>
              * <ul>
-             * <li><code>cpu</code>: regular instance.</li>
-             * <li><code>gpu</code>: GPU-accelerated instance.</li>
-             * <li><code>gpushare</code>: shared GPU-accelerated instance.</li>
-             * <li><code>spot</code>: preemptible instance.</li>
+             * <li><code>cpu</code>: Regular instance type.</li>
+             * <li><code>gpu</code>: GPU instance type.</li>
+             * <li><code>gpushare</code>: GPU sharing type.</li>
+             * <li><code>spot</code>: Spot instance type.</li>
              * </ul>
              * <p>Default value: <code>cpu</code>.</p>
              * 
@@ -600,7 +600,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             } 
 
             /**
-             * auto_attach_enabled.
+             * <p>Specifies whether to enable automatic addition of the Lingjun AI Computing Service node pool. (Not effective)</p>
              */
             public Builder autoAttachEnabled(String autoAttachEnabled) {
                 this.autoAttachEnabled = autoAttachEnabled;
@@ -771,10 +771,10 @@ public class ModifyClusterNodePoolRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to install the CloudMonitor agent on ECS nodes. After the CloudMonitor agent is installed on ECS nodes, you can view monitoring information about the instances in the CloudMonitor console. We recommend that you install the CloudMonitor agent. Valid values:</p>
+             * <p>Specifies whether to install the CloudMonitor agent on ECS nodes. After installation, you can view monitoring information about the created ECS instances in the CloudMonitor console. We recommend that you enable this feature. Valid values:</p>
              * <ul>
-             * <li><code>true</code>: installs the CloudMonitor agent on ECS nodes.</li>
-             * <li><code>false</code>: does not install the CloudMonitor agent on ECS nodes.</li>
+             * <li><code>true</code>: Installs the CloudMonitor agent on ECS nodes.</li>
+             * <li><code>false</code>: Does not install the CloudMonitor agent on ECS nodes.</li>
              * </ul>
              * <p>Default value: <code>false</code>.</p>
              * 
@@ -787,10 +787,10 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The CPU management policy of nodes in the node pool. The following policies are supported if the Kubernetes version of the cluster is 1.12.6 or later:</p>
+             * <p>The CPU management policy for nodes. The following two policies are supported for clusters of version 1.12.6 and later:</p>
              * <ul>
-             * <li><code>static</code>: allows pods with specific resource characteristics on the node to be granted enhanced CPU affinity and exclusivity.</li>
-             * <li><code>none</code>: specifies that the default CPU affinity is used.</li>
+             * <li><code>static</code>: Allows pods with certain resource characteristics on the node to be granted enhanced CPU affinity and exclusivity.</li>
+             * <li><code>none</code>: Enables the existing default CPU affinity scheme.</li>
              * </ul>
              * <p>Default value: <code>none</code>.</p>
              * 
@@ -803,10 +803,10 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The labels that are added to the nodes in the cluster. You must add the label based on the following rules:</p>
+             * <p>The node labels. You can add labels to the nodes in the Kubernetes cluster. Label definition rules:</p>
              * <ul>
-             * <li>A label is a case-sensitive key-value pair. You can add up to 20 labels.</li>
-             * <li>The key must be unique and cannot exceed 64 characters in length. The value can be empty and cannot exceed 128 characters in length. Keys and values cannot start with <code>aliyun</code>, <code>acs:</code>, <code>https://</code>, or <code>http://</code>. For more information, see <a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set">Labels and Selectors</a>.</li>
+             * <li>Labels are case-sensitive key-value pairs. You can set up to 20 labels.</li>
+             * <li>Label keys must be unique and can be up to 64 characters in length. Label values can be empty and can be up to 128 characters in length. Label keys and label values cannot start with <code>aliyun</code>, <code>acs:</code>, <code>https://</code>, or <code>http://</code>. For more information, see <a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set">Labels and Selectors</a>.</li>
              * </ul>
              */
             public Builder labels(java.util.List<Tag> labels) {
@@ -815,7 +815,12 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * node_name_mode.
+             * <p>The custom node name parameter. A node name consists of three parts: prefix + node IP + suffix.</p>
+             * <p>Both the prefix and suffix can consist of one or more parts separated by &quot;.&quot;. Each part can contain lowercase letters, digits, and hyphens (-). The node name must start and end with a lowercase letter or digit. The node IP is the complete private IP address of the node.</p>
+             * <p>The parameter contains four parts separated by commas. For example, if you pass in the string &quot;customized,aliyun,ip,com&quot; (where &quot;customized&quot; and &quot;ip&quot; are fixed strings, &quot;aliyun&quot; is the prefix, and &quot;com&quot; is the suffix), the node name is: aliyun.192.168.xxx.xxx.com.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>customized,aliyun,ip,com</p>
              */
             public Builder nodeNameMode(String nodeNameMode) {
                 this.nodeNameMode = nodeNameMode;
@@ -823,7 +828,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>Predefined custom data. Nodes automatically run predefined scripts before they are added to the cluster. For more information, see <a href="https://help.aliyun.com/document_detail/49121.html">User-Data script</a>.</p>
+             * <p>The pre-user data of the instance. Before a node joins the cluster, the specified pre-user data script is run. For more information, see <a href="https://help.aliyun.com/document_detail/49121.html">User data scripts</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>IyEvdXNyL2Jpbi9iYXNoCmVjaG8gIkhlbGxvIEFDSyEi</p>
@@ -834,16 +839,16 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The name of the container runtime. The following types of runtime are supported by ACK:</p>
+             * <p>The container runtime name. ACK supports the following three container runtimes:</p>
              * <ul>
-             * <li>containerd: containerd is the recommended runtime and supports all Kubernetes versions.</li>
-             * <li>Sandboxed-Container.runv: The Sandbox-Container runtime provides improved isolation and supports Kubernetes 1.31 and earlier.</li>
-             * <li>docker: discontinued. The Docker runtime supports Kubernetes 1.22 and earlier.</li>
+             * <li>containerd: Recommended. Supported by all cluster versions.</li>
+             * <li>Sandboxed-Container.runv: Sandboxed container that provides higher isolation. Supported by clusters of version 1.31 and earlier.</li>
+             * <li>docker: No longer maintained. Supported by clusters of version 1.22 and earlier.</li>
              * </ul>
              * <p>Default value: containerd.</p>
              * 
              * <strong>example:</strong>
-             * <p>docker</p>
+             * <p>containerd</p>
              */
             public Builder runtime(String runtime) {
                 this.runtime = runtime;
@@ -851,10 +856,10 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The version of the container runtime.</p>
+             * <p>The container runtime version.</p>
              * 
              * <strong>example:</strong>
-             * <p>19.03.5</p>
+             * <p>1.6.38</p>
              */
             public Builder runtimeVersion(String runtimeVersion) {
                 this.runtimeVersion = runtimeVersion;
@@ -862,7 +867,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The configurations of node taints.</p>
+             * <p>The taint configuration for nodes.</p>
              */
             public Builder taints(java.util.List<Taint> taints) {
                 this.taints = taints;
@@ -870,10 +875,12 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether the nodes are unschedulable after a scale-out activity is performed.</p>
+             * <p>Specifies whether the nodes added after the scale-out are unschedulable.</p>
              * <ul>
-             * <li>true: The nodes are unschedulable after a scale-out activity is performed.</li>
-             * <li>false: The nodes are schedulable after a scale-out activity is performed.</li>
+             * <li><p>true: Unschedulable.</p>
+             * </li>
+             * <li><p>false: Schedulable.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -885,7 +892,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The user data of the instance. Nodes automatically run user-data scripts after they are added to the cluster. For more information, see <a href="https://help.aliyun.com/document_detail/49121.html">User-Data script</a>.</p>
+             * <p>The instance user data. After a node joins the cluster, the specified instance user data script is run. For more information, see <a href="https://help.aliyun.com/document_detail/49121.html">User data scripts</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>IyEvdXNyL2Jpbi9iYXNoCmVjaG8gIkhlbGxvIEFDSyEi</p>
@@ -994,7 +1001,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             } 
 
             /**
-             * approval_required.
+             * <p>Specifies whether manual approval is required for node repair.</p>
              */
             public Builder approvalRequired(Boolean approvalRequired) {
                 this.approvalRequired = approvalRequired;
@@ -1002,7 +1009,10 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * auto_repair_policy_id.
+             * <p>The ID of the auto repair policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>r-xxxxxxxxxx</p>
              */
             public Builder autoRepairPolicyId(String autoRepairPolicyId) {
                 this.autoRepairPolicyId = autoRepairPolicyId;
@@ -1010,7 +1020,10 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * max_parallel_repairing_nodes.
+             * <p>The maximum number of parallel repairs. When a large number of unhealthy nodes exist in the node pool, this specifies the maximum number or percentage of nodes that can be repaired simultaneously. You can specify a quantity (such as 5, valid range: 1 to 100000) or a percentage (such as 10%, valid range: 1% to 100%). Default value on the backend: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder maxParallelRepairingNodes(String maxParallelRepairingNodes) {
                 this.maxParallelRepairingNodes = maxParallelRepairingNodes;
@@ -1018,7 +1031,10 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * max_unhealthy_nodes_threshold.
+             * <p>The self-healing circuit breaker condition. When the number or percentage of faulty nodes exceeds this threshold, self-healing enters a circuit breaker state and stops initiating new repair actions. You can specify a quantity (such as 10, valid range: 1 to 100000) or a percentage (such as 20%, valid range: 1% to 100%). Default circuit breaker condition on the backend: 100%.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20%</p>
              */
             public Builder maxUnhealthyNodesThreshold(String maxUnhealthyNodesThreshold) {
                 this.maxUnhealthyNodesThreshold = maxUnhealthyNodesThreshold;
@@ -1026,11 +1042,12 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether ACK is allowed to automatically restart nodes after repairing the nodes. Valid values:</p>
+             * <p>Specifies whether to allow node restarts. This parameter takes effect only when <code>auto_repair=true</code>. Valid values:</p>
              * <ul>
-             * <li><code>true</code>: yes.</li>
-             * <li><code>false</code>: no.</li>
+             * <li><code>true</code>: Allows node restarts.</li>
+             * <li><code>false</code>: Does not allow node restarts.</li>
              * </ul>
+             * <p>Default value: <code>true</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1113,11 +1130,12 @@ public class ModifyClusterNodePoolRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether ACK is allowed to automatically upgrade the kubelet. Valid values:</p>
+             * <p>Specifies whether to allow automatic kubelet upgrade. This parameter takes effect only when <code>auto_upgrade=true</code>. Valid values:</p>
              * <ul>
-             * <li><code>true</code>: yes.</li>
-             * <li><code>false</code>: no.</li>
+             * <li><code>true</code>: Allows automatic kubelet upgrade.</li>
+             * <li><code>false</code>: Does not allow automatic kubelet upgrade.</li>
              * </ul>
+             * <p>Default value: <code>true</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1128,10 +1146,10 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether ACK is allowed to automatically upgrade the operating system. This parameter takes effect only when you specify <code>auto_upgrade=true</code>. Valid values:</p>
+             * <p>Specifies whether to allow automatic operating system upgrade. This parameter takes effect only when <code>auto_upgrade=true</code>. Valid values:</p>
              * <ul>
-             * <li><code>true</code>: yes.</li>
-             * <li><code>false</code>: no.</li>
+             * <li><code>true</code>: Allows automatic operating system upgrade.</li>
+             * <li><code>false</code>: Does not allow automatic operating system upgrade.</li>
              * </ul>
              * <p>Default value: <code>false</code>.</p>
              * 
@@ -1144,12 +1162,12 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether ACK is allowed to automatically upgrade the runtime. This parameter takes effect only when you specify <code>auto_upgrade=true</code>. Valid values:</p>
+             * <p>Specifies whether to allow automatic runtime upgrade. This parameter takes effect only when <code>auto_upgrade=true</code>. Valid values:</p>
              * <ul>
-             * <li><code>true</code>: yes.</li>
-             * <li><code>false</code>: no.</li>
+             * <li><code>true</code>: Allows automatic runtime upgrade.</li>
+             * <li><code>false</code>: Does not allow automatic runtime upgrade.</li>
              * </ul>
-             * <p>Default value: <code>false</code>.</p>
+             * <p>Default value: <code>true</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1232,7 +1250,11 @@ public class ModifyClusterNodePoolRequest extends Request {
             } 
 
             /**
-             * exclude_packages.
+             * <p>The packages to exclude during vulnerability fix.</p>
+             * <p>Default value: <code>kernel</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kernel</p>
              */
             public Builder excludePackages(String excludePackages) {
                 this.excludePackages = excludePackages;
@@ -1240,11 +1262,12 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether ACK is allowed to automatically restart nodes after repairing the nodes. Valid values:</p>
+             * <p>Specifies whether to allow node restarts. This parameter takes effect only when <code>auto_vul_fix=true</code>. Valid values:</p>
              * <ul>
-             * <li><code>true</code>: yes.</li>
-             * <li><code>false</code>: no.</li>
+             * <li><code>true</code>: Allows node restarts.</li>
+             * <li><code>false</code>: Does not allow node restarts.</li>
              * </ul>
+             * <p>Default value: <code>true</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1255,13 +1278,13 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The severity levels of CVEs that can be automatically patched. Separate multiple levels with commas (,). Example: <code>asap,later</code>. Valid values:</p>
+             * <p>The vulnerability levels allowed for automatic fix, separated by commas. Example: <code>asap,later</code>. Supported vulnerability levels:</p>
              * <ul>
-             * <li><code>asap</code>: high.</li>
-             * <li><code>later</code>: medium.</li>
-             * <li><code>nntf</code>: low.</li>
+             * <li><code>asap</code>: high</li>
+             * <li><code>later</code>: medium</li>
+             * <li><code>nntf</code>: low</li>
              * </ul>
-             * <p>If <code>auto_vul_fix=true</code> is specified, the default value is <code>asap</code>.</p>
+             * <p>Default value: <code>asap</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>asap,nntf</p>
@@ -1358,11 +1381,11 @@ public class ModifyClusterNodePoolRequest extends Request {
             } 
 
             /**
-             * <p>This parameter is deprecated. Use the preceding <code>auto_upgrade</code> parameter instead.</p>
-             * <p>Specifies whether to enable auto upgrade. Valid values:</p>
+             * <p><strong>[Deprecated]</strong> Use the <code>auto_upgrade</code> parameter at the upper level instead.</p>
+             * <p>Specifies whether to enable automatic upgrade:</p>
              * <ul>
-             * <li>true: enables auto upgrade.</li>
-             * <li>false: disables auto upgrade.</li>
+             * <li>true: Enabled.</li>
+             * <li>false: Disabled.</li>
              * </ul>
              * <p>Default value: <code>true</code>.</p>
              * 
@@ -1375,8 +1398,8 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The maximum number of nodes that can be in the Unavailable state.</p>
-             * <p>Valid values: 1 to 1000.</p>
+             * <p>The maximum number of unavailable nodes.</p>
+             * <p>Valid values: [1,1000\]</p>
              * <p>Default value: 1.</p>
              * 
              * <strong>example:</strong>
@@ -1388,10 +1411,10 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The number of additional nodes that are temporarily added to the node pool during an auto upgrade. Specify this parameter or <code>surge_percentage</code>.</p>
-             * <p>A node is unavailable during an upgrade. Additional nodes are used to temporarily host the workloads of nodes that are being upgraded.</p>
+             * <p>The number of extra nodes. Specify either this parameter or <code>surge_percentage</code>.</p>
+             * <p>Nodes become unavailable during an upgrade. You can create extra nodes to compensate for the cluster load.</p>
              * <blockquote>
-             * <p> We recommend that you specify a value that does not exceed the current number of nodes in the node pool.</p>
+             * <p>The number of extra nodes should not exceed the current number of nodes.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1403,8 +1426,8 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The percentage of additional nodes in the node pool. Specify this parameter or the <code>surge</code> parameter is specified.</p>
-             * <p>The number of additional nodes = The percentage of additional nodes × The number of nodes in the node pool. For example, if the percentage of additional nodes is 50% and the number of nodes in the node pool is 6, the number of additional nodes is 3.</p>
+             * <p>The percentage of extra nodes. Specify either this parameter or <code>surge</code>.</p>
+             * <p>Number of extra nodes = percentage of extra nodes × number of nodes. For example, if the percentage of extra nodes is set to 50% and 6 nodes exist, the number of extra nodes = 50% × 6 = 3.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1579,7 +1602,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             } 
 
             /**
-             * auto_fault_diagnosis.
+             * <p>Specifies whether to enable ECS fault detection for node self-healing.</p>
              */
             public Builder autoFaultDiagnosis(Boolean autoFaultDiagnosis) {
                 this.autoFaultDiagnosis = autoFaultDiagnosis;
@@ -1587,10 +1610,12 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable auto node repair. This parameter takes effect only if <code>enable</code> is set to true. Valid values:</p>
+             * <p>Specifies whether to automatically repair nodes. This parameter takes effect only when <code>enable=true</code>.</p>
              * <ul>
-             * <li><code>true</code>: enables auto repair.</li>
-             * <li><code>false</code>: disables auto repair.</li>
+             * <li><p><code>true</code>: Enables automatic repair.</p>
+             * </li>
+             * <li><p><code>false</code>: Disables automatic repair.</p>
+             * </li>
              * </ul>
              * <p>Default value: <code>true</code>.</p>
              * 
@@ -1603,7 +1628,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The auto node repair policy.</p>
+             * <p>The auto repair node policy.</p>
              */
             public Builder autoRepairPolicy(AutoRepairPolicy autoRepairPolicy) {
                 this.autoRepairPolicy = autoRepairPolicy;
@@ -1611,11 +1636,12 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable auto upgrade. Valid values:</p>
+             * <p>Specifies whether to automatically upgrade nodes. This parameter takes effect only when <code>enable=true</code>.</p>
              * <ul>
-             * <li><code>true</code>: enables auto upgrade.</li>
-             * <li><code>false</code>: disables auto upgrade.</li>
+             * <li><code>true</code>: Enables automatic upgrade.</li>
+             * <li><code>false</code>: Disables automatic upgrade.</li>
              * </ul>
+             * <p>Default value: <code>true</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1634,11 +1660,12 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether ACK is allowed to automatically patch CVE vulnerabilities. Valid values:</p>
+             * <p>Specifies whether to automatically fix CVE vulnerabilities. This parameter takes effect only when <code>enable=true</code>.</p>
              * <ul>
-             * <li><code>true</code>: enables auto CVE patching.</li>
-             * <li><code>true</code>: disables auto CVE patching.</li>
+             * <li><code>true</code>: Allows automatic CVE fixes.</li>
+             * <li><code>false</code>: Does not allow automatic CVE fixes.</li>
              * </ul>
+             * <p>Default value: <code>true</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1649,7 +1676,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The auto CVE patching policy.</p>
+             * <p>The auto CVE fix policy.</p>
              */
             public Builder autoVulFixPolicy(AutoVulFixPolicy autoVulFixPolicy) {
                 this.autoVulFixPolicy = autoVulFixPolicy;
@@ -1657,7 +1684,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * drift_enabled.
+             * <p>Specifies whether to enable node rotation. Only intelligent managed node pools support this feature, and it is enabled by default. Common node pools do not support this feature.</p>
              */
             public Builder driftEnabled(Boolean driftEnabled) {
                 this.driftEnabled = driftEnabled;
@@ -1665,10 +1692,10 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable the managed node pool feature. Valid values:</p>
+             * <p>Specifies whether to enable the managed node pool. Valid values:</p>
              * <ul>
-             * <li><code>true</code>: enables the managed node pool feature.</li>
-             * <li><code>false</code>: disables the managed node pool feature. Other parameters in this section take effect only when <code>enable=true</code> is specified.</li>
+             * <li><code>true</code>: Enables the managed node pool.</li>
+             * <li><code>false</code>: Disables the managed node pool. Other related configurations take effect only when <code>enable=true</code>.</li>
              * </ul>
              * <p>Default value: <code>false</code>.</p>
              * 
@@ -1681,8 +1708,8 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>This parameter is deprecated. Use the preceding <code>auto_upgrade</code> parameter instead.</p>
-             * <p>The configurations of auto upgrade. The configurations take effect only when <code>enable</code> is set to true.</p>
+             * <p><strong>[Deprecated]</strong> Use the <code>auto_upgrade</code> parameter at the upper level instead.</p>
+             * <p>The auto upgrade configuration. This parameter takes effect only when <code>enable=true</code>.</p>
              */
             public Builder upgradeConfig(UpgradeConfig upgradeConfig) {
                 this.upgradeConfig = upgradeConfig;
@@ -1749,8 +1776,8 @@ public class ModifyClusterNodePoolRequest extends Request {
             } 
 
             /**
-             * <p>The name of the node pool.</p>
-             * <p>The name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). It cannot start with a hyphen (-).</p>
+             * <p>The node pool name.</p>
+             * <p>Naming rules: The name must be 1 to 63 characters in length and can contain digits, Chinese characters, letters, and hyphens (-). It cannot start with a hyphen (-).</p>
              * 
              * <strong>example:</strong>
              * <p>default-nodepool</p>
@@ -1761,8 +1788,8 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The ID of the resource group to which the node pool belongs. Instances that are added to the node pool belong to this resource group.</p>
-             * <p>Each resource can belong only to one resource group. You can regard a resource group as a project, an application, or an organization based on your business scenarios.</p>
+             * <p>The resource group ID of the node pool. Instances scaled out from the node pool belong to this resource group.</p>
+             * <p>A resource can belong to only one resource group. You can map resource groups to concepts such as projects, applications, or organizations based on different business scenarios.</p>
              * 
              * <strong>example:</strong>
              * <p>rg-acfmyvw3wjm****</p>
@@ -1832,7 +1859,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             } 
 
             /**
-             * <p>The private node pool ID. This parameter is available only when <code>match_criteria</code> is set to <code>Target</code>.</p>
+             * <p>The private node pool ID. When <code>match_criteria</code> is set to <code>Target</code>, you must specify the private pool ID.</p>
              * 
              * <strong>example:</strong>
              * <p>eap-bp67acfmxazb4****</p>
@@ -1843,11 +1870,11 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The type of private node pool. This parameter specifies the type of private pool that you want to use to create instances. A private pool is generated when an elasticity assurance or a capacity reservation takes effect. The system selects a private pool to start instances. Valid values:</p>
+             * <p>The private node pool type, which specifies the private pool capacity option for launching instances. After an elasticity assurance or capacity reservation takes effect, a private pool is generated for instance launches. Valid values:</p>
              * <ul>
-             * <li><code>Open</code>: open private pool. The system selects an open private pool to start instances. If no matching open private pools are available, the resources in the public pool are used.</li>
-             * <li><code>Target</code>: uses a specified private pool. The system uses the resources of the specified private pool to start instances. If the specified private pool is unavailable, instances cannot be started.</li>
-             * <li><code>None</code>: no private pool is used. The resources of private pools are not used to launch the instances.</li>
+             * <li><code>Open</code>: Open mode. The system automatically matches open private pool capacity. If no matching private pool capacity is available, public pool resources are used.</li>
+             * <li><code>Target</code>: Targeted mode. The instance is launched using the specified private pool capacity. If the specified private pool capacity is unavailable, the instance fails to launch.</li>
+             * <li><code>None</code>: No private pool. The instance launch does not use private pool capacity.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1918,7 +1945,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             } 
 
             /**
-             * private_pool_ids.
+             * <p>The list of private pool IDs, which are elasticity assurance IDs or capacity reservation IDs. Only Target mode private pool IDs can be specified. Valid values of N: 1 to 20.</p>
              */
             public Builder privatePoolIds(java.util.List<String> privatePoolIds) {
                 this.privatePoolIds = privatePoolIds;
@@ -1926,7 +1953,14 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * strategy.
+             * <p>The resource pool strategy used when creating instances. Resource pools include private pools generated after an elasticity assurance or capacity reservation takes effect, as well as public pools, for instance launches. Valid values:
+             * PrivatePoolFirst: private pool first. When this strategy is selected, if resouce_pool_options.private_pool_ids is specified, the specified private pools are used first. If no private pool is specified or the specified private pool capacity is insufficient, open private pools are automatically matched. If no matching private pool is available, public pool resources are used to create instances.
+             * PrivatePoolOnly: private pool only. When this strategy is selected, you must specify resouce_pool_options.private_pool_ids. If the specified private pool capacity is insufficient, the instance fails to launch.
+             * None: no resource pool strategy is used.
+             * Default value: None.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PrivatePoolFirst</p>
              */
             public Builder strategy(String strategy) {
                 this.strategy = strategy;
@@ -1993,7 +2027,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             } 
 
             /**
-             * <p>The instance type of preemptible instances.</p>
+             * <p>The instance type of the spot instance.</p>
              * 
              * <strong>example:</strong>
              * <p>ecs.c6.large</p>
@@ -2004,8 +2038,9 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The price cap of a preemptible instance.</p>
-             * <p>Unit: USD/hour.</p>
+             * <p>The price limit per instance.</p>
+             * <p>&lt;props=&quot;china&quot;&gt;Unit: CNY/hour.</p>
+             * <p>&lt;props=&quot;intl&quot;&gt;Unit: USD/hour.</p>
              * 
              * <strong>example:</strong>
              * <p>0.39</p>
@@ -2622,10 +2657,10 @@ public class ModifyClusterNodePoolRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to enable auto-renewal for the nodes in the node pool. This parameter takes effect only when you set <code>instance_charge_type</code> to <code>PrePaid</code>. Valid values:</p>
+             * <p>Specifies whether to enable auto-renewal for nodes. This parameter takes effect only when <code>instance_charge_type</code> is set to <code>PrePaid</code>. Valid values:</p>
              * <ul>
-             * <li><code>true</code>: enables auto-renewal.</li>
-             * <li><code>false</code>: disables auto-renewal.</li>
+             * <li><code>true</code>: Auto-renewal is enabled.</li>
+             * <li><code>false</code>: Auto-renewal is disabled.</li>
              * </ul>
              * <p>Default value: <code>false</code>.</p>
              * 
@@ -2638,10 +2673,10 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The auto-renewal period. Valid values:</p>
+             * <p>The auto-renewal period for a single renewal. Valid values:</p>
              * <ul>
-             * <li>Valid values when PeriodUnit is set to Week: 1, 2, and 3.</li>
-             * <li>Valid values when PeriodUnit is set to Month: 1, 2, 3, 6, 12, 24, 36, 48, and 60</li>
+             * <li>When PeriodUnit=Week: 1, 2, and 3.</li>
+             * <li>When PeriodUnit=Month: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</li>
              * </ul>
              * <p>Default value: 1.</p>
              * 
@@ -2654,10 +2689,10 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to automatically create pay-as-you-go instances to meet the required number of ECS instances if preemptible instances cannot be created due to reasons such as the price or insufficient inventory. This parameter takes effect when you set <code>multi_az_policy</code> to <code>COST_OPTIMIZED</code>. Valid values:</p>
+             * <p>When <code>multi_az_policy</code> is set to <code>COST_OPTIMIZED</code>, specifies whether to allow the system to automatically create pay-as-you-go instances to meet the required number of ECS instances if spot instances cannot be created due to cost or inventory reasons. Valid values:</p>
              * <ul>
-             * <li><code>true</code>: automatically creates pay-as-you-go instances to meet the required number of ECS instances if preemptible instances cannot be created.</li>
-             * <li><code>false</code>: does not create pay-as-you-go instances to meet the required number of ECS instances if preemptible instances cannot be created.</li>
+             * <li><code>true</code>: Allows the system to automatically create pay-as-you-go instances to meet the required number of ECS instances.</li>
+             * <li><code>false</code>: Does not allow the system to automatically create pay-as-you-go instances to meet the required number of ECS instances.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2669,7 +2704,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The configurations of the data disks that are mounted to nodes in the node pool. Valid values: 0 to 10. You can mount at most 10 data disks to the nodes in the node pool.</p>
+             * <p>The data cloud disk configurations for nodes. Valid values: 0 to 10. You can attach up to 10 data cloud disks.</p>
              */
             public Builder dataDisks(java.util.List<DataDisk> dataDisks) {
                 this.dataDisks = dataDisks;
@@ -2677,7 +2712,10 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * deploymentset_id.
+             * <p>The deployment set to which the ECS instances created by the node pool belong. This setting takes effect only for new nodes. The deployment set of existing nodes is not changed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ds-bp1d19mmbsv3jf6xxxxx</p>
              */
             public Builder deploymentsetId(String deploymentsetId) {
                 this.deploymentsetId = deploymentsetId;
@@ -2685,9 +2723,9 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The expected number of nodes in the node pool.</p>
-             * <p>The expected number of nodes in the node pool. We recommend that you configure at least two nodes to ensure that cluster components run as expected. You can modify the Expected Nodes parameter to adjust the number of nodes in the node pool.</p>
-             * <p>If you do not want to create nodes in the node pool, set this parameter to 0. You can manually modify this parameter to add nodes later.</p>
+             * <p>The desired number of nodes in the node pool.</p>
+             * <p>The total number of nodes that the node pool should maintain. Configure at least 2 nodes to ensure that cluster components run properly. You can scale the node pool in or out by adjusting the desired number of nodes.</p>
+             * <p>If you do not need to create nodes, set this parameter to 0 and manually adjust the value later to add nodes.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -2698,7 +2736,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * disk_init.
+             * <p>The block device initialization configuration.</p>
              */
             public Builder diskInit(java.util.List<DiskInit> diskInit) {
                 this.diskInit = diskInit;
@@ -2706,7 +2744,10 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * enable_high_density_mode.
+             * <p>Specifies whether to enable high-density cloud disk mode. This is supported only when the node pool uses instance types. When enabled, the total number of system cloud disks and data cloud disks does not exceed the high-density cloud disk count supported by the instance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableHighDensityMode(Boolean enableHighDensityMode) {
                 this.enableHighDensityMode = enableHighDensityMode;
@@ -2714,10 +2755,10 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The custom image ID. You can call the <code>DescribeKubernetesVersionMetadata</code> operation to query the images supported by ACK. By default, the latest image is used.</p>
+             * <p>The custom image ID. You can call <code>DescribeKubernetesVersionMetadata</code> to query the images supported by the system. By default, the latest system image is used.</p>
              * 
              * <strong>example:</strong>
-             * <p>aliyun_2_1903_x64_20G_alibase_20200904.vhd</p>
+             * <p>aliyun_3_x64_20G_alibase_20241218.vhd</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -2725,22 +2766,22 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The type of operating system distribution that you want to use. We recommend that you use this parameter to specify the node operating system. Valid values:</p>
+             * <p>The operating system distribution type. We recommend that you use this field to specify the node operating system. Valid values:</p>
              * <ul>
-             * <li><code>AliyunLinux</code>: Alibaba Cloud Linux 2.</li>
-             * <li><code>AliyunLinuxSecurity</code>: Alibaba Cloud Linux 2 (UEFI).</li>
-             * <li><code>AliyunLinux3</code>: Alibaba Cloud Linux 3.</li>
-             * <li><code>AliyunLinux3Arm64</code>: Alibaba Cloud Linux 3 for ARM.</li>
-             * <li><code>AliyunLinux3Security</code>: Alibaba Cloud Linux 3 (UEFI).</li>
-             * <li><code>CentOS</code>: CentOS.</li>
-             * <li><code>Windows</code>: Windows.</li>
-             * <li><code>WindowsCore</code>: Windows Core.</li>
-             * <li><code>ContainerOS</code>: ContainerOS.</li>
-             * <li><code>AliyunLinux3ContainerOptimized</code>: Alibaba Cloud Linux 3 Container-optimized.</li>
+             * <li><code>AliyunLinux</code>: Alinux2 image.</li>
+             * <li><code>AliyunLinuxSecurity</code>: Alinux2 UEFI image.</li>
+             * <li><code>AliyunLinux3</code>: Alinux3 image.</li>
+             * <li><code>AliyunLinux3Arm64</code>: Alinux3 ARM image.</li>
+             * <li><code>AliyunLinux3Security</code>: Alinux3 UEFI image.</li>
+             * <li><code>CentOS</code>: CentOS image.</li>
+             * <li><code>Windows</code>: Windows image.</li>
+             * <li><code>WindowsCore</code>: WindowsCore image.</li>
+             * <li><code>ContainerOS</code>: container-optimized image.</li>
+             * <li><code>AliyunLinux3ContainerOptimized</code>: Alinux3 container-optimized image.</li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>AliyunLinux</p>
+             * <p>AliyunLinux3</p>
              */
             public Builder imageType(String imageType) {
                 this.imageType = imageType;
@@ -2764,7 +2805,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>.The instance attributes.</p>
+             * <p>The instance attribute configuration.</p>
              */
             public Builder instancePatterns(java.util.List<InstancePatterns> instancePatterns) {
                 this.instancePatterns = instancePatterns;
@@ -2772,8 +2813,8 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The instance types. You can specify multiple instance types. A node is assigned the instance type from the first instance type of the list until the node is created. The instance type that is used to create the node varies based on the actual instance stock.</p>
-             * <p>You can specify 1 to 10 instance types.</p>
+             * <p>The list of node instance types. You can select multiple instance types as alternatives. When each node is created, the system attempts to purchase instances starting from the first instance type until the creation succeeds. The actual instance type purchased may vary depending on inventory availability.</p>
+             * <p>Number of supported instance types: [1,10].</p>
              */
             public Builder instanceTypes(java.util.List<String> instanceTypes) {
                 this.instanceTypes = instanceTypes;
@@ -2781,10 +2822,10 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The metering method of the public IP address. Valid values:</p>
+             * <p>The billing method for public IP addresses. Valid values:</p>
              * <ul>
-             * <li><code>PayByBandwidth</code>: pay-by-bandwidth.</li>
-             * <li><code>PayByTraffic</code>: pay-by-data-transfer.</li>
+             * <li><code>PayByBandwidth</code>: billed by fixed bandwidth.</li>
+             * <li><code>PayByTraffic</code>: billed by traffic usage.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2796,7 +2837,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The maximum outbound bandwidth of the public IP address of the node. Unit: Mbit/s. Valid values: 1 to 100.</p>
+             * <p>The maximum outbound public bandwidth for nodes, in Mbps (Mega bit per second). Valid values: [1,100\].</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -2807,7 +2848,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The name of the key pair. You must specify this parameter or <code>login_password</code>. You must specify the <code>key_pair</code> parameter if the node pool is a managed node pool.</p>
+             * <p>The key pair name. Specify either this parameter or <code>login_password</code>. If the node pool is a managed node pool, only <code>key_pair</code> is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>pro-nodepool</p>
@@ -2818,7 +2859,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The password for SSH logon. You must specify this parameter or <code>key_pair</code>. The password must be 8 to 30 characters in length, and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
+             * <p>The SSH logon password. Specify either this parameter or <code>key_pair</code>. The password must be 8 to 30 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
              * 
              * <strong>example:</strong>
              * <p>Hello1234</p>
@@ -2829,15 +2870,16 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The ECS instance scaling policy for the multi-zone scaling group. Valid values:</p>
+             * <p>The multi-zone scaling policy for ECS instances in the scaling group. Valid values:</p>
              * <ul>
-             * <li><p><code>PRIORITY</code>: ECS instances are scaled based on the value of VSwitchIds.N. If an ECS instance cannot be created in the zone where the vSwitch that has the highest priority resides, the system creates the ECS instance in the zone where the vSwitch that has the next highest priority resides.</p>
+             * <li><p><code>PRIORITY</code>: scales in or out based on the vSwitches (VSwitchIds.N) that you define. When ECS instances cannot be created in the zone of the vSwitch with the highest priority, the system automatically uses the vSwitch with the next highest priority to create ECS instances.</p>
              * </li>
-             * <li><p><code>COST_OPTIMIZED</code>: ECS instances are created based on the vCPU unit price in ascending order. Preemptible instances are preferably created if preemptible instance types are specified in the scaling configurations. You can set the <code>CompensateWithOnDemand</code> parameter to specify whether to automatically create pay-as-you-go instances when preemptible instances cannot be created due to insufficient inventory.</p>
-             * <p>**</p>
-             * <p><strong>Note</strong> <code>COST_OPTIMIZED</code> takes effect only when multiple instance types are specified or at least one preemptible instance type is specified.</p>
+             * <li><p><code>COST_OPTIMIZED</code>: attempts to create instances in ascending order of vCPU unit price. When the scaling configuration sets multiple instance types with the spot billable methods, spot instances are created first. You can use the <code>CompensateWithOnDemand</code> parameter to specify whether to automatically attempt to create pay-as-you-go instances when spot instances cannot be created due to insufficient inventory.</p>
+             * <blockquote>
+             * <p><code>COST_OPTIMIZED</code> takes effect only when the scaling configuration sets multiple instance types or uses spot instances.</p>
+             * </blockquote>
              * </li>
-             * <li><p><code>BALANCE</code>: ECS instances are evenly distributed across multiple zones specified by the scaling group. If ECS instances become imbalanced among multiple zones due to insufficient inventory, you can call the <code>RebalanceInstances</code> operation of Auto Scaling to balance the instance distribution among zones. For more information, see <a href="https://help.aliyun.com/document_detail/71516.html">RebalanceInstances</a>.</p>
+             * <li><p><code>BALANCE</code>: evenly allocates ECS instances across the multiple active zones specified in the scaling group. If the zones become unbalanced due to insufficient inventory, you can call the <code>RebalanceInstances</code> API operation to rebalance resources. For more information, see <a href="https://help.aliyun.com/document_detail/71516.html">RebalanceInstances</a>.</p>
              * </li>
              * </ul>
              * <p>Default value: <code>PRIORITY</code>.</p>
@@ -2851,7 +2893,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The minimum number of pay-as-you-go instances that must be kept in the scaling group. Valid values: 0 to 1000. If the number of pay-as-you-go instances is less than the value of this parameter, the system preferably creates pay-as-you-go instances.</p>
+             * <p>The minimum number of pay-as-you-go instances required in the scaling group. Valid values: [0,1000\]. Pay-as-you-go instances are created first when the number of pay-as-you-go instances is less than this value.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -2862,7 +2904,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The percentage of pay-as-you-go instances among the extra instances that exceed the number specified by <code>on_demand_base_capacity</code>. Valid values: 0 to 100.</p>
+             * <p>The percentage of pay-as-you-go instances among the excess instances after the minimum number of pay-as-you-go instances (<code>on_demand_base_capacity</code>) is met. Valid values: [0,100\].</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -2873,10 +2915,10 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The subscription duration of nodes in the node pool. This parameter takes effect and is required if you set <code>instance_charge_type</code> to <code>PrePaid</code>.</p>
+             * <p>The subscription duration of nodes in the node pool. This parameter takes effect and is required only when <code>instance_charge_type</code> is set to <code>PrePaid</code>.</p>
              * <ul>
-             * <li>If <code>period_unit</code> is set to Week, the valid values of <code>period</code> are 1, 2, 3, and 4.</li>
-             * <li>If <code>period_unit</code> is set to Month, the valid values of <code>period</code> are 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</li>
+             * <li>When <code>period_unit=Week</code>, valid values of <code>period</code>: 1, 2, 3, and 4.</li>
+             * <li>When <code>period_unit=Month</code>, valid values of <code>period</code>: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2888,10 +2930,10 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The billing cycle of nodes in the node pool. This parameter takes effect and is required if you set <code>instance_charge_type</code> to <code>PrePaid</code>. Valid values:</p>
+             * <p>The billing cycle of nodes in the node pool. This parameter takes effect and is required only when <code>instance_charge_type</code> is set to <code>PrePaid</code>.</p>
              * <ul>
-             * <li><code>Month</code>: The subscription duration is measured in months.</li>
-             * <li><code>Week</code>: The subscription duration is measured in weeks.</li>
+             * <li><code>Month</code>: the billing cycle is measured in months.</li>
+             * <li><code>Week</code>: the billing cycle is measured in weeks.</li>
              * </ul>
              * <p>Default value: <code>Month</code>.</p>
              * 
@@ -2904,8 +2946,8 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>This parameter is obsolete. Use the <code>image_type</code> parameter instead.</p>
-             * <p>The OS platform. Valid values:</p>
+             * <p><strong>[Deprecated]</strong> Use the <code>image_type</code> parameter instead.</p>
+             * <p>The operating system platform. Valid values:</p>
              * <ul>
              * <li><code>AliyunLinux</code></li>
              * <li><code>CentOS</code></li>
@@ -2922,7 +2964,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The configurations of the private node pool.</p>
+             * <p>The private node pool configuration.</p>
              */
             public Builder privatePoolOptions(PrivatePoolOptions privatePoolOptions) {
                 this.privatePoolOptions = privatePoolOptions;
@@ -2930,7 +2972,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The IDs of ApsaraDB RDS instances.</p>
+             * <p>The list of ApsaraDB RDS instances.</p>
              */
             public Builder rdsInstances(java.util.List<String> rdsInstances) {
                 this.rdsInstances = rdsInstances;
@@ -2938,7 +2980,9 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * resource_pool_options.
+             * <p>The resource pool and resource pool strategy used when creating instances. After you set this parameter, note the following:
+             * This parameter takes effect only when creating pay-as-you-go instances.
+             * This parameter cannot be set together with private_pool_options.match_criteria or private_pool_options.id.</p>
              */
             public Builder resourcePoolOptions(ResourcePoolOptions resourcePoolOptions) {
                 this.resourcePoolOptions = resourcePoolOptions;
@@ -2946,10 +2990,10 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The scaling mode of the scaling group. Valid values:</p>
+             * <p>The scaling group mode. Valid values:</p>
              * <ul>
-             * <li><code>release</code>: the standard mode. ECS instances are created and released based on resource usage.</li>
-             * <li><code>recycle</code>: the swift mode. ECS instances are created, stopped, or started during scaling events. This reduces the time required for the next scale-out event. When the instance is stopped, you are charged only for the storage service. This does not apply to ECS instances that are attached with local disks.</li>
+             * <li><code>release</code>: standard mode. Scales in or out by creating or releasing ECS instances based on resource usage.</li>
+             * <li><code>recycle</code>: swift mode. Scales in or out by creating, stopping, or starting ECS instances, which improves the speed of subsequent scaling operations. Stopped instances are not charged for compute resources, but storage fees still apply, except for instances with local disks.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2961,7 +3005,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * security_group_ids.
+             * <p>The list of security group IDs.</p>
              */
             public Builder securityGroupIds(java.util.List<String> securityGroupIds) {
                 this.securityGroupIds = securityGroupIds;
@@ -2969,7 +3013,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The number of instance types that are available for creating preemptible instances. Auto Scaling creates preemptible instances of multiple instance types that are available at the lowest cost. Valid values: 1 to 10.</p>
+             * <p>The number of available instance types. The scaling group creates spot instances of multiple types at the lowest cost. Valid values: [1,10\].</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -2980,10 +3024,10 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable the supplementation of preemptible instances. If you set this parameter to true, when the scaling group receives a system message indicating that a preemptible instance is to be reclaimed, the scaling group attempts to create a new instance to replace the instance. Valid values:</p>
+             * <p>Specifies whether to enable spot instance supplementation. If enabled, when a system message is received indicating that a spot instance will be reclaimed, the scaling group attempts to create a new instance to replace the spot instance that is to be reclaimed. Valid values:</p>
              * <ul>
-             * <li><code>true</code>: supplements preemptible instances.</li>
-             * <li><code>false</code>: does not supplement preemptible instances.</li>
+             * <li><code>true</code>: Enables spot instance supplementation.</li>
+             * <li><code>false</code>: Disables spot instance supplementation.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2995,7 +3039,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The bid configurations of preemptible instances.</p>
+             * <p>The price limit configurations for spot instances.</p>
              */
             public Builder spotPriceLimit(java.util.List<SpotPriceLimit> spotPriceLimit) {
                 this.spotPriceLimit = spotPriceLimit;
@@ -3003,13 +3047,13 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The bidding policy of preemptible instances. Valid values:</p>
+             * <p>The type of spot instance. Valid values:</p>
              * <ul>
-             * <li><code>NoSpot</code>: non-preemptible instance.</li>
-             * <li><code>SpotWithPriceLimit</code>: specifies the highest bid.</li>
-             * <li><code>SpotAsPriceGo</code>: automatically submits bids based on the up-to-date market price.</li>
+             * <li><code>NoSpot</code>: non-spot instance.</li>
+             * <li><code>SpotWithPriceLimit</code>: spot instance with a price limit.</li>
+             * <li><code>SpotAsPriceGo</code>: spot instance priced at the market price at the time of purchase.</li>
              * </ul>
-             * <p>For more information, see <a href="https://help.aliyun.com/document_detail/157759.html">Create a preemptible elastic container instance</a>.</p>
+             * <p>For more information, see <a href="https://help.aliyun.com/document_detail/157759.html">Spot instances</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>SpotWithPriceLimit</p>
@@ -3020,12 +3064,12 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable the burst feature for the system disk. Valid values:</p>
+             * <p>Specifies whether to enable burst (performance bursting) for the node system cloud disk. Valid values:</p>
              * <ul>
-             * <li>true: enables the burst feature.</li>
-             * <li>false: disables the burst feature.</li>
+             * <li>true: Enabled. After burst is enabled, the cloud disk temporarily improves its performance to handle sudden data read/write pressure from fluctuating workloads until the workload returns to a steady state.</li>
+             * <li>false: Disabled.</li>
              * </ul>
-             * <p>This parameter is effective only when <code>system_disk_category</code> is set to <code>cloud_auto</code>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
+             * <p>This parameter is supported only when <code>system_disk_category</code> is set to <code>cloud_auto</code>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL cloud disks</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -3036,7 +3080,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The categories of the system disk. The system attempts to create system disks of a disk category with a lower priority if the disk category with a higher priority is unavailable.</p>
+             * <p>The multiple cloud disk types for the system cloud disk. If the cloud disk type with a higher priority cannot be used, the system automatically attempts the next priority cloud disk type to create the system cloud disk.</p>
              */
             public Builder systemDiskCategories(java.util.List<String> systemDiskCategories) {
                 this.systemDiskCategories = systemDiskCategories;
@@ -3044,13 +3088,13 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The category of the system disk. Valid values:</p>
+             * <p>The type of the node system cloud disk. Valid values:</p>
              * <ul>
-             * <li><code>cloud_efficiency</code>: ultra disk.</li>
+             * <li><code>cloud_efficiency</code>: ultra cloud disk.</li>
              * <li><code>cloud_ssd</code>: standard SSD.</li>
-             * <li><code>cloud_essd</code>: Enterprise ESSD (ESSD).</li>
-             * <li><code>cloud_auto</code>: ESSD AutoPL disk.</li>
-             * <li><code>cloud_essd_entry</code>: ESSD Entry disk.</li>
+             * <li><code>cloud_essd</code>: ESSD.</li>
+             * <li><code>cloud_auto</code>: ESSD AutoPL cloud disk.</li>
+             * <li><code>cloud_essd_entry</code>: ESSD Entry cloud disk.</li>
              * </ul>
              * <p>Default value: <code>cloud_efficiency</code>.</p>
              * 
@@ -3063,7 +3107,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The encryption algorithm that is used to encrypt the system disk. Set the value to aes-256.</p>
+             * <p>The encryption algorithm used by the system cloud disk. Valid value: aes-256.</p>
              * 
              * <strong>example:</strong>
              * <p>aes-256</p>
@@ -3074,10 +3118,12 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to encrypt the system disk. Valid values:</p>
+             * <p>Specifies whether to encrypt the system cloud disk. Valid values:</p>
              * <ul>
-             * <li>true: encrypts the system disk.</li>
-             * <li>false: does not encrypt the system disk.</li>
+             * <li><p>true: Encrypted.</p>
+             * </li>
+             * <li><p>false: Not encrypted.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -3089,7 +3135,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The ID of the Key Management Service (KMS) key that is used to encrypt the system disk.</p>
+             * <p>The KMS key ID used by the system cloud disk.</p>
              * 
              * <strong>example:</strong>
              * <p>0e478b7a-4262-4802-b8cb-00d3fb40****</p>
@@ -3100,12 +3146,12 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The performance level (PL) of the system disk. This parameter takes effect only for an ESSD. You can specify a higher PL if you increase the size of the data disk. For more information, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
+             * <p>The performance level of the node system cloud disk. This parameter takes effect only for ESSD cloud disks. The performance level varies based on the cloud disk size. For more information, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSD cloud disks</a>.</p>
              * <ul>
-             * <li>PL0: moderate maximum concurrent I/O performance and low I/O latency.</li>
-             * <li>PL1: moderate maximum concurrent I/O performance and low I/O latency.</li>
-             * <li>PL2: high maximum concurrent I/O performance and low I/O latency.</li>
-             * <li>PL3: ultra-high maximum concurrent I/O performance and ultra-low I/O latency.</li>
+             * <li>PL0: moderate maximum concurrent I/O performance with relatively stable read/write latency.</li>
+             * <li>PL1: moderate maximum concurrent I/O performance with relatively stable read/write latency.</li>
+             * <li>PL2: high maximum concurrent I/O performance with stable read/write latency.</li>
+             * <li>PL3: ultra-high maximum concurrent I/O performance with extremely stable read/write latency.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -3117,9 +3163,9 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The preset IOPS of the system disk.</p>
-             * <p>Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}. Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.</p>
-             * <p>This parameter is effective only when <code>system_disk_category</code> is set to <code>cloud_auto</code>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
+             * <p>The provisioned read/write IOPS of the node system cloud disk.</p>
+             * <p>Valid values: 0 to min{50,000, 1000 × capacity - baseline performance}. Baseline performance = min{1,800 + 50 × capacity, 50000}.</p>
+             * <p>This parameter is supported only when <code>system_disk_category</code> is set to <code>cloud_auto</code>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL cloud disks</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>1000</p>
@@ -3130,10 +3176,10 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The size of the system disk. Unit: GiB</p>
-             * <p>Valid values: 20 to 2048.</p>
-             * <p>The value of this parameter must be at least 20 and greater than or equal to the size of the image.</p>
-             * <p>Default value: the greater value between 40 and the image size.</p>
+             * <p>The size of the node system cloud disk, in GiB.</p>
+             * <p>Valid values: [20,2048\].</p>
+             * <p>The value of this parameter must be greater than or equal to max{20, ImageSize}.</p>
+             * <p>Default value: max{40, image size corresponding to the ImageId parameter}.</p>
              * 
              * <strong>example:</strong>
              * <p>120</p>
@@ -3144,7 +3190,10 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * system_disk_snapshot_policy_id.
+             * <p>The snapshot policy for the system cloud disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sp-0jl6xnmme8v7o935****</p>
              */
             public Builder systemDiskSnapshotPolicyId(String systemDiskSnapshotPolicyId) {
                 this.systemDiskSnapshotPolicyId = systemDiskSnapshotPolicyId;
@@ -3152,8 +3201,8 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The tags that you want to add only to ECS instances.</p>
-             * <p>The tag key must be unique and cannot exceed 128 characters in length. The tag key and value cannot start with aliyun or acs: or contain https:// or http://.</p>
+             * <p>The tags that are added only to ECS instances.</p>
+             * <p>Tag keys cannot be duplicated and can be up to 128 characters in length. Tag keys and tag values cannot start with &quot;aliyun&quot; or &quot;acs:&quot;, or contain &quot;https://&quot; or &quot;http://&quot;.</p>
              */
             public Builder tags(java.util.List<Tag> tags) {
                 this.tags = tags;
@@ -3161,9 +3210,9 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The vSwitch IDs. You can specify one to eight vSwitch IDs.</p>
+             * <p>The list of vSwitch IDs. Valid values: 1 to 8.</p>
              * <blockquote>
-             * <p> To ensure high availability, we recommend that you select vSwitches that reside in different zones.</p>
+             * <p>To ensure high availability, select vSwitches in different zones.</p>
              * </blockquote>
              */
             public Builder vswitchIds(java.util.List<String> vswitchIds) {
@@ -3220,8 +3269,8 @@ public class ModifyClusterNodePoolRequest extends Request {
             /**
              * <p>Specifies whether to enable confidential computing for the cluster. Valid values:</p>
              * <ul>
-             * <li><code>true</code>: enables confidential computing for the cluster.</li>
-             * <li><code>false</code>: disables confidential computing for the cluster.</li>
+             * <li><code>true</code>: Enabled.</li>
+             * <li><code>false</code>: Disabled.</li>
              * </ul>
              * <p>Default value: <code>false</code>.</p>
              * 

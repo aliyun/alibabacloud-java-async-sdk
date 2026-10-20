@@ -194,7 +194,7 @@ public class DescribeClusterResourcesResponse extends Response {
             } 
 
             /**
-             * <p>The ID of the cluster to which the dependent resource is related.</p>
+             * <p>The cluster ID of the dependent resource.</p>
              * 
              * <strong>example:</strong>
              * <p>cc5ee03f63e43425cb6f71f1a1756****</p>
@@ -205,7 +205,7 @@ public class DescribeClusterResourcesResponse extends Response {
             }
 
             /**
-             * <p>The dependent resource type.</p>
+             * <p>The type of the dependent resource.</p>
              * 
              * <strong>example:</strong>
              * <p>ALIYUN::VPC::NatGateway</p>
@@ -216,7 +216,7 @@ public class DescribeClusterResourcesResponse extends Response {
             }
 
             /**
-             * <p>The dependent resource ID.</p>
+             * <p>The instance ID of the dependent resource.</p>
              * 
              * <strong>example:</strong>
              * <p>ngw-wz9sphwk42sdtjixo****</p>
@@ -299,7 +299,7 @@ public class DescribeClusterResourcesResponse extends Response {
             } 
 
             /**
-             * <p>The Kubernetes object type.</p>
+             * <p>The object type of the Kubernetes object.</p>
              * 
              * <strong>example:</strong>
              * <p>Service</p>
@@ -310,7 +310,7 @@ public class DescribeClusterResourcesResponse extends Response {
             }
 
             /**
-             * <p>The namespace in which the Kubernetes object resides.</p>
+             * <p>The namespace of the Kubernetes object.</p>
              * 
              * <strong>example:</strong>
              * <p>kube-system</p>
@@ -321,7 +321,7 @@ public class DescribeClusterResourcesResponse extends Response {
             }
 
             /**
-             * <p>The Kubernetes object name.</p>
+             * <p>The name of the Kubernetes object.</p>
              * 
              * <strong>example:</strong>
              * <p>nginx-ingress-lb</p>
@@ -391,7 +391,13 @@ public class DescribeClusterResourcesResponse extends Response {
             } 
 
             /**
-             * <p>Specifies whether to delete the resource by default when the cluster is deleted.</p>
+             * <p>Indicates whether the resource is deleted by default when the cluster is deleted.</p>
+             * <ul>
+             * <li><p>true: The resource is deleted by default.</p>
+             * </li>
+             * <li><p>false: The resource is not deleted.</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -402,7 +408,13 @@ public class DescribeClusterResourcesResponse extends Response {
             }
 
             /**
-             * <p>Specifies whether the default behavior returned in delete_by_default can be changed.</p>
+             * <p>Indicates whether the default behavior of <code>delete_by_default</code> can be changed.</p>
+             * <ul>
+             * <li><p>true: The behavior can be changed.</p>
+             * </li>
+             * <li><p>false: The behavior cannot be changed.</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -616,7 +628,7 @@ public class DescribeClusterResourcesResponse extends Response {
              * <p>The time when the resource was created.</p>
              * 
              * <strong>example:</strong>
-             * <p>2020-09-11T10:11:54+08:00</p>
+             * <p>2023-08-15T14:34:42+08:00</p>
              */
             public Builder created(String created) {
                 this.created = created;
@@ -627,7 +639,7 @@ public class DescribeClusterResourcesResponse extends Response {
              * <p>The resource ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>lb-wz9poz4r0ymh8u0uf****</p>
+             * <p>ngw-wz9sphwk42sdtjixo****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -635,10 +647,10 @@ public class DescribeClusterResourcesResponse extends Response {
             }
 
             /**
-             * <p>The resource information. For more information about how to query the source information about the resource, see <a href="https://help.aliyun.com/document_detail/133836.html">ListStackResources</a>.</p>
+             * <p>The resource information. For source information about the resource, see <a href="https://help.aliyun.com/document_detail/133836.html">ListStackResources</a>.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;Id&quot;:&quot;k8s_master_slb&quot;,&quot;Name&quot;:&quot;k8s_master_slb&quot;,&quot;Type&quot;:&quot;ALIYUN::SLB::LoadBalancer&quot;,&quot;Status&quot;:&quot;CREATE_COMPLETE&quot;,&quot;StatusReason&quot;:&quot;state changed&quot;,&quot;Updated&quot;:&quot;2020-05-21T13:25:02&quot;,&quot;PhysicalId&quot;:&quot;lb-wz9poz4r0ymh8u0uf****&quot;}</p>
+             * <p>{\&quot;Id\&quot;:\&quot;KubernetesWorkerRole\&quot;,\&quot;Name\&quot;:\&quot;KubernetesWorkerRole\&quot;,\&quot;Type\&quot;:\&quot;ALIYUN::RAM::Role\&quot;,\&quot;Status\&quot;:\&quot;CREATE_COMPLETE\&quot;,\&quot;StatusReason\&quot;:\&quot;state changed\&quot;,\&quot;Updated\&quot;:\&quot;2025-04-10T06:21:17\&quot;,\&quot;PhysicalId\&quot;:\&quot;KubernetesWorkerRole-7e611193-225f-40f6-bc3c-ea8633******\&quot;}</p>
              */
             public Builder resourceInfo(String resourceInfo) {
                 this.resourceInfo = resourceInfo;
@@ -649,7 +661,7 @@ public class DescribeClusterResourcesResponse extends Response {
              * <p>The resource type.</p>
              * 
              * <strong>example:</strong>
-             * <p>ALIYUN::SLB::LoadBalancer</p>
+             * <p>ALIYUN::VPC::NatGateway</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -659,14 +671,14 @@ public class DescribeClusterResourcesResponse extends Response {
             /**
              * <p>The resource status. Valid values:</p>
              * <ul>
-             * <li><code>CREATE_COMPLETE</code>: the resource is created.</li>
-             * <li><code>CREATE_FAILED</code>: the resource failed to be created.</li>
-             * <li><code>CREATE_IN_PROGRESS</code>: the resource is being created.</li>
-             * <li><code>DELETE_FAILED</code>: the resource failed to be deleted.</li>
-             * <li><code>DELETE_IN_PROGRESS</code>: the resource is being deleted.</li>
-             * <li><code>ROLLBACK_COMPLETE</code>: the resource is rolled back.</li>
-             * <li><code>ROLLBACK_FAILED</code>: the resource failed to be rolled back.</li>
-             * <li><code>ROLLBACK_IN_PROGRESS</code>: the resource is being rolled back.</li>
+             * <li><code>CREATE_COMPLETE</code>: The resource was created.</li>
+             * <li><code>CREATE_FAILED</code>: The resource failed to be created.</li>
+             * <li><code>CREATE_IN_PROGRESS</code>: The resource is being created.</li>
+             * <li><code>DELETE_FAILED</code>: The resource failed to be deleted.</li>
+             * <li><code>DELETE_IN_PROGRESS</code>: The resource is being deleted.</li>
+             * <li><code>ROLLBACK_COMPLETE</code>: The rollback was successful.</li>
+             * <li><code>ROLLBACK_FAILED</code>: The rollback failed.</li>
+             * <li><code>ROLLBACK_IN_PROGRESS</code>: The rollback is in progress.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -678,10 +690,10 @@ public class DescribeClusterResourcesResponse extends Response {
             }
 
             /**
-             * <p>Specifies whether the resource is created by Container Service for Kubernetes (ACK). Valid values:</p>
+             * <p>Indicates whether the resource was created by ACK.</p>
              * <ul>
-             * <li>1: the resource is created by ACK.</li>
-             * <li>0: the resource is an existing resource.</li>
+             * <li>1: The resource was created by ACK.</li>
+             * <li>0: The resource is a pre-existing resource.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -693,7 +705,7 @@ public class DescribeClusterResourcesResponse extends Response {
             }
 
             /**
-             * <p>The dependent resources.</p>
+             * <p>The list of dependent resources.</p>
              */
             public Builder dependencies(java.util.List<Dependencies> dependencies) {
                 this.dependencies = dependencies;
@@ -701,7 +713,7 @@ public class DescribeClusterResourcesResponse extends Response {
             }
 
             /**
-             * <p>The Kubernetes object with which the resource is associated.</p>
+             * <p>The Kubernetes object associated with the resource.</p>
              */
             public Builder associatedObject(AssociatedObject associatedObject) {
                 this.associatedObject = associatedObject;
@@ -719,9 +731,9 @@ public class DescribeClusterResourcesResponse extends Response {
             /**
              * <p>The type of the resource creator. Valid values:</p>
              * <ul>
-             * <li>user: The resource is created by the user.</li>
-             * <li>system: The resource is created by the ACK management system.</li>
-             * <li>addon: The resource is created by a cluster component.</li>
+             * <li>user: Created by the user.</li>
+             * <li>system: Created by the ACK control system.</li>
+             * <li>addon: Created by a cluster component.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -736,7 +748,7 @@ public class DescribeClusterResourcesResponse extends Response {
              * <p>The additional information about the resource.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;IP&quot;: &quot;xx.xx.xx.xx&quot;}</p>
+             * <p>{ &quot;type&quot;: &quot;SLS_Data&quot; }</p>
              */
             public Builder extraInfo(java.util.Map<String, ?> extraInfo) {
                 this.extraInfo = extraInfo;

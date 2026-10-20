@@ -104,8 +104,10 @@ public class CreateKubernetesTriggerRequest extends Request {
         } 
 
         /**
-         * <p>The action that the trigger performs. Set the value to redeploy.</p>
-         * <p><code>redeploy</code>: redeploys the resources specified by <code>project_id</code>.</p>
+         * <p>The action of the trigger. Valid values:</p>
+         * <ul>
+         * <li><code>redeploy</code>: Redeploys the resources defined in <code>project_id</code>.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,8 +133,8 @@ public class CreateKubernetesTriggerRequest extends Request {
         }
 
         /**
-         * <p>The name of the trigger project.</p>
-         * <p>The name consists of the namespace where the application is deployed and the name of the application. The format is <code>${namespace}/${name}</code>.</p>
+         * <p>The project name of the trigger.</p>
+         * <p>It consists of the namespace and the name of the application, in the format of <code>${namespace}/${name}</code>.</p>
          * <p>Example: <code>default/test-app</code>.</p>
          * <p>This parameter is required.</p>
          * 
@@ -146,10 +148,10 @@ public class CreateKubernetesTriggerRequest extends Request {
         }
 
         /**
-         * <p>The type of trigger. Valid values:</p>
+         * <p>The type of the trigger. Valid values:</p>
          * <ul>
-         * <li><code>deployment</code>: performs actions on Deployments.</li>
-         * <li><code>application</code>: performs actions on applications that are deployed in Application Center.</li>
+         * <li><code>deployment</code>: The trigger for stateless applications. </li>
+         * <li><code>application</code>: The trigger for Hybrid Cloud Application Center applications.</li>
          * </ul>
          * <p>Default value: <code>deployment</code>.</p>
          * 

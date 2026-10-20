@@ -74,7 +74,7 @@ public class GrantPermissionsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the RAM user or RAM role whose permissions you want to update.</p>
+         * <p>The ID of the Resource Access Management (RAM) user or RAM role.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,7 +87,7 @@ public class GrantPermissionsRequest extends Request {
         }
 
         /**
-         * <p>The request body.</p>
+         * <p>The request body parameters.</p>
          */
         public Builder body(java.util.List<GrantPermissionsRequestBody> body) {
             this.putBodyParameter("body", body);
@@ -210,9 +210,9 @@ public class GrantPermissionsRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the cluster on which you want to grant permissions to the RAM role or RAM role.</p>
+             * <p>The ID of the target cluster for authorization.</p>
              * <ul>
-             * <li>Set this parameter to an empty string if <code>role_type</code> is set to <code>all-clusters</code>.</li>
+             * <li>If the <code>role_type</code> parameter is set to <code>all-clusters</code>, set this parameter to an empty string.</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -225,7 +225,7 @@ public class GrantPermissionsRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to assign a custom role to the RAM user or RAM role. If you want to assign a custom role to the RAM user or RAM role, set <code>role_name</code> to the name of the custom role.</p>
+             * <p>Specifies whether the authorization is a custom authorization (the <code>role_name</code> parameter uses a custom ClusterRole name).</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -236,7 +236,7 @@ public class GrantPermissionsRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to use a RAM role to grant permissions.</p>
+             * <p>Specifies whether the authorization is for a RAM role.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -247,7 +247,7 @@ public class GrantPermissionsRequest extends Request {
             }
 
             /**
-             * <p>The namespace that you want to authorize the RAM user or RAM role to manage. This parameter is required only if you set role_type to namespace.</p>
+             * <p>The namespace name. This parameter is empty by default for cluster-level authorization.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -258,19 +258,21 @@ public class GrantPermissionsRequest extends Request {
             }
 
             /**
-             * <p>The predefined role name. Valid values:</p>
+             * <p>The preset role name. Valid values:</p>
              * <ul>
-             * <li><code>admin</code>: administrator</li>
-             * <li><code>admin-view</code>: read-only administrator</li>
-             * <li><code>ops</code>: O&amp;M engineer</li>
-             * <li><code>dev</code>: developer</li>
-             * <li><code>restricted</code>: restricted user</li>
-             * <li>Custom role</li>
+             * <li><code>admin</code>: administrator.</li>
+             * <li><code>admin-view</code>: read-only administrator.</li>
+             * <li><code>ops</code>: O&amp;M engineer.</li>
+             * <li><code>dev</code>: developer.</li>
+             * <li><code>restricted</code>: restricted user.</li>
+             * <li>Custom ClusterRole name.</li>
              * </ul>
-             * <p>Note:</p>
+             * <blockquote>
+             * <p>Notice: </p>
+             * </blockquote>
              * <ul>
-             * <li>You cannot grant namespace-level permissions to the <code>admin</code>, <code>admin-view</code>, and <code>ops</code> roles.</li>
-             * <li>You cannot grant all cluster-level permissions to the <code>admin-view</code> role.</li>
+             * <li><code>admin</code>, <code>admin-view</code>, <code>ops</code>: cannot be granted at the namespace level.</li>
+             * <li><code>admin-view</code>: cannot be granted at the all-clusters level.</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -285,9 +287,9 @@ public class GrantPermissionsRequest extends Request {
             /**
              * <p>The authorization type. Valid values:</p>
              * <ul>
-             * <li><code>cluster</code>: authorizes the RAM user or RAM role to manage the specified clusters.</li>
-             * <li><code>namespace</code>: authorizes the RAM user or RAM role to manage the specified namespaces.</li>
-             * <li><code>all-clusters</code>: authorizes the RAM user or RAM role to manage all clusters.</li>
+             * <li><code>cluster</code>: cluster level.</li>
+             * <li><code>namespace</code>: namespace level.</li>
+             * <li><code>all-clusters</code>: all-clusters level.</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 

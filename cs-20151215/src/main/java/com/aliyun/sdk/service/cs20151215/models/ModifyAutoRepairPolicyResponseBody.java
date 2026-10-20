@@ -54,7 +54,10 @@ public class ModifyAutoRepairPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * request_id.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>db82195b-75a8-40e5-9be4-16f182******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

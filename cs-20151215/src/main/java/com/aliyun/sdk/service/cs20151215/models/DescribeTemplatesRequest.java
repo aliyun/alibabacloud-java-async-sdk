@@ -87,7 +87,7 @@ public class DescribeTemplatesRequest extends Request {
         } 
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number to return when paginating query results.</p>
          * <p>Default value: 1.</p>
          * 
          * <strong>example:</strong>
@@ -100,7 +100,7 @@ public class DescribeTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries per page when paginating query results.</p>
          * <p>Default value: 10.</p>
          * 
          * <strong>example:</strong>
@@ -113,12 +113,14 @@ public class DescribeTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The type of template. This parameter can be set to a custom value.</p>
+         * <p>The templatetype.</p>
          * <ul>
-         * <li>If the parameter is set to <code>kubernetes</code>, the template is displayed on the Templates page in the console.</li>
-         * <li>If you set the parameter to <code>compose</code>, the template is not displayed on the Templates page in the console.</li>
+         * <li><p>If the value is set to <code>kubernetes</code>, the template is displayed on the Orchestration Templates page in the console.</p>
+         * </li>
+         * <li><p>If this parameter is left empty or set to other values, the template is not displayed on the Orchestration Templates page in the console.</p>
+         * </li>
          * </ul>
-         * <p>Default value: <code>kubernetes</code>.</p>
+         * <p>Set this parameter to <code>kubernetes</code> in Settings.</p>
          * 
          * <strong>example:</strong>
          * <p>kubernetes</p>

@@ -139,10 +139,12 @@ public class StandardComponentsValue extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the component is a required component. Valid values:</p>
+         * <p>Indicates whether the component is required for the cluster. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: The component is required and must be installed when a cluster is created.</li>
-         * <li><code>false</code>: The component is optional. After a cluster is created, you can go to the <code>Add-ons</code> page to install the component.</li>
+         * <li><p><code>true</code>: The component is required and must be installed when the cluster is created.</p>
+         * </li>
+         * <li><p><code>false</code>: The component is not required. You can install it through component management after the cluster is created.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -154,10 +156,10 @@ public class StandardComponentsValue extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the automatic installation of the component is disabled. By default, some optional components, such as components for logging and Ingresses, are installed when a cluster is created. You can set this parameter to disable automatic component installation. Valid values:</p>
+         * <p>Specifies whether to disable default installation. When a cluster is created, in addition to the required components, some log-related or routing-related components (such as Ingress) are installed by default. If you do not want these components to be installed by default, set this parameter to disable default installation. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: disables automatic component installation.</li>
-         * <li><code>false</code>: enables automatic component installation.</li>
+         * <li><code>true</code>: Default installation is disabled.</li>
+         * <li><code>false</code>: Default installation is enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -355,7 +355,7 @@ public class DescribePolicyInstancesResponse extends Response {
             } 
 
             /**
-             * <p>The UID of the Alibaba Cloud account that is used to deploy the policy instance.</p>
+             * <p>The UID of the policy instance implementer.</p>
              * 
              * <strong>example:</strong>
              * <p>16298168****</p>
@@ -366,7 +366,7 @@ public class DescribePolicyInstancesResponse extends Response {
             }
 
             /**
-             * <p>The ID of the cluster.</p>
+             * <p>The ID of the target cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>c8155823d057948c69a****</p>
@@ -377,7 +377,7 @@ public class DescribePolicyInstancesResponse extends Response {
             }
 
             /**
-             * <p>The name of the policy instance.</p>
+             * <p>The name of the rule instance.</p>
              * 
              * <strong>example:</strong>
              * <p>no-env-var-secrets-****</p>
@@ -388,7 +388,7 @@ public class DescribePolicyInstancesResponse extends Response {
             }
 
             /**
-             * <p>The name of the policy.</p>
+             * <p>The name of the policy governance rule.</p>
              * 
              * <strong>example:</strong>
              * <p>ACKPSPCapabilities</p>
@@ -399,7 +399,7 @@ public class DescribePolicyInstancesResponse extends Response {
             }
 
             /**
-             * <p>The type of the policy.</p>
+             * <p>The name of the policy type.</p>
              * 
              * <strong>example:</strong>
              * <p>k8s-general</p>
@@ -410,7 +410,7 @@ public class DescribePolicyInstancesResponse extends Response {
             }
 
             /**
-             * <p>The description of the policy template.</p>
+             * <p>The description of the rule template.</p>
              * 
              * <strong>example:</strong>
              * <p>Restricts secrets used in pod envs</p>
@@ -421,7 +421,7 @@ public class DescribePolicyInstancesResponse extends Response {
             }
 
             /**
-             * <p>The parameters of the policy instance.</p>
+             * <p>The configuration parameters of the current rule instance.</p>
              * 
              * <strong>example:</strong>
              * <p>&quot;restrictedNamespaces&quot;: [ &quot;test&quot; ]</p>
@@ -432,7 +432,7 @@ public class DescribePolicyInstancesResponse extends Response {
             }
 
             /**
-             * <p>The severity level of the policy instance.</p>
+             * <p>The governance level of the rule instance.</p>
              * 
              * <strong>example:</strong>
              * <p>low</p>
@@ -443,9 +443,9 @@ public class DescribePolicyInstancesResponse extends Response {
             }
 
             /**
-             * <p>The applicable scope of the policy instance.</p>
-             * <p>A value of * indicates all namespaces in the cluster. This is the default value.</p>
-             * <p>Multiple namespaces are separated by commas (,).</p>
+             * <p>The scope of the policy instance.</p>
+             * <p>By default, an asterisk (*) indicates all namespaces in the cluster.</p>
+             * <p>Otherwise, the names of the namespaces to which the policy applies are returned. Multiple namespaces are separated by commas (,).</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -458,10 +458,12 @@ public class DescribePolicyInstancesResponse extends Response {
             }
 
             /**
-             * <p>The action of the policy. Valid values:</p>
+             * <p>The governance action of the rule. Valid values:</p>
              * <ul>
-             * <li><code>deny</code>: Deployments that match the policy are denied.</li>
-             * <li><code>warn</code>: Alerts are generated for deployments that match the policy.</li>
+             * <li><p><code>deny</code>: Blocks non-compliant deployments.</p>
+             * </li>
+             * <li><p><code>warn</code>: Generates an alert.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -473,7 +475,7 @@ public class DescribePolicyInstancesResponse extends Response {
             }
 
             /**
-             * <p>The creation time of the instance. This parameter is deprecated.</p>
+             * <p>The creation time. This parameter is deprecated. Do not use it.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-10-29T18:09:12+08:00</p>
@@ -484,7 +486,7 @@ public class DescribePolicyInstancesResponse extends Response {
             }
 
             /**
-             * <p>The update time of the instance. This parameter is deprecated.</p>
+             * <p>The update time. This parameter is deprecated. Do not use it.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-10-29T18:09:12+08:00</p>
@@ -495,7 +497,7 @@ public class DescribePolicyInstancesResponse extends Response {
             }
 
             /**
-             * <p>The ID of the resource. This parameter is deprecated.</p>
+             * <p>The resource ID. This parameter is deprecated. Do not use it.</p>
              * 
              * <strong>example:</strong>
              * <p>123456***</p>
@@ -506,7 +508,7 @@ public class DescribePolicyInstancesResponse extends Response {
             }
 
             /**
-             * <p>The number of violations processed in the cluster. This parameter is deprecated.</p>
+             * <p>The number of violations processed in the cluster. This parameter is deprecated. Do not use it.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -517,7 +519,7 @@ public class DescribePolicyInstancesResponse extends Response {
             }
 
             /**
-             * <p>The status of the deletion. This parameter is deprecated.</p>
+             * <p>The deletion status. This parameter is deprecated. Do not use it.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>

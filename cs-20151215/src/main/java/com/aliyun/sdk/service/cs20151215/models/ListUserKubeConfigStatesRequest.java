@@ -90,7 +90,7 @@ public class ListUserKubeConfigStatesRequest extends Request {
          * <p>The ID of the specified Resource Access Management (RAM) user or RAM role within the Alibaba Cloud account.</p>
          * 
          * <strong>example:</strong>
-         * <p>2xxxxxxxxxxxxxxxxxx</p>
+         * <p>206945240368******</p>
          */
         public Builder uid(String uid) {
             this.putPathParameter("Uid", uid);
@@ -99,10 +99,12 @@ public class ListUserKubeConfigStatesRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The current page number.</p>
          * <ul>
-         * <li>Valid values: ≥ 1.</li>
-         * <li>Default value: 1.</li>
+         * <li><p>Valid values: greater than or equal to 1.</p>
+         * </li>
+         * <li><p>Default value: 1.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -115,10 +117,12 @@ public class ListUserKubeConfigStatesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of results per page.</p>
          * <ul>
-         * <li>Value values: 1 to 100.</li>
-         * <li>Default value: 50.</li>
+         * <li><p>Valid values: 1 to 100.</p>
+         * </li>
+         * <li><p>Default value: 50.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

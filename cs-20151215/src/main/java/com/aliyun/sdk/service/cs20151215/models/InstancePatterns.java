@@ -292,7 +292,7 @@ public class InstancePatterns extends TeaModel {
         } 
 
         /**
-         * architectures.
+         * <p>[This parameter is deprecated and replaced by cpu_architectures] The architectures of instance types.</p>
          */
         public Builder architectures(java.util.List<String> architectures) {
             this.architectures = architectures;
@@ -300,7 +300,10 @@ public class InstancePatterns extends TeaModel {
         }
 
         /**
-         * burst_performance_option.
+         * <p>[This parameter is deprecated] Specifies whether to include burstable instance types.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Exclude</p>
          */
         public Builder burstPerformanceOption(String burstPerformanceOption) {
             this.burstPerformanceOption = burstPerformanceOption;
@@ -308,7 +311,10 @@ public class InstancePatterns extends TeaModel {
         }
 
         /**
-         * core.
+         * <p>[This parameter is deprecated and replaced by cores] The number of vCores provided by the instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder core(Long core) {
             this.core = core;
@@ -316,7 +322,10 @@ public class InstancePatterns extends TeaModel {
         }
 
         /**
-         * cores.
+         * <p>The number of vCPU cores for the instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder cores(Long cores) {
             this.cores = cores;
@@ -324,7 +333,7 @@ public class InstancePatterns extends TeaModel {
         }
 
         /**
-         * cpu_architectures.
+         * <p>The CPU architecture of the instance type.</p>
          */
         public Builder cpuArchitectures(java.util.List<String> cpuArchitectures) {
             this.cpuArchitectures = cpuArchitectures;
@@ -332,7 +341,7 @@ public class InstancePatterns extends TeaModel {
         }
 
         /**
-         * excluded_instance_types.
+         * <p>The instance type that you want to exclude.</p>
          */
         public Builder excludedInstanceTypes(java.util.List<String> excludedInstanceTypes) {
             this.excludedInstanceTypes = excludedInstanceTypes;
@@ -340,7 +349,7 @@ public class InstancePatterns extends TeaModel {
         }
 
         /**
-         * instance_categories.
+         * <p>The type of the instance.</p>
          */
         public Builder instanceCategories(java.util.List<String> instanceCategories) {
             this.instanceCategories = instanceCategories;
@@ -348,7 +357,10 @@ public class InstancePatterns extends TeaModel {
         }
 
         /**
-         * instance_family_level.
+         * <p>The instance family level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EnterpriseLevel</p>
          */
         public Builder instanceFamilyLevel(String instanceFamilyLevel) {
             this.instanceFamilyLevel = instanceFamilyLevel;
@@ -356,7 +368,7 @@ public class InstancePatterns extends TeaModel {
         }
 
         /**
-         * instance_type_families.
+         * <p>The specified instance family.</p>
          */
         public Builder instanceTypeFamilies(java.util.List<String> instanceTypeFamilies) {
             this.instanceTypeFamilies = instanceTypeFamilies;
@@ -364,7 +376,10 @@ public class InstancePatterns extends TeaModel {
         }
 
         /**
-         * max_cpu_cores.
+         * <p>The maximum vCPU cores allowed for the instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder maxCpuCores(Long maxCpuCores) {
             this.maxCpuCores = maxCpuCores;
@@ -372,7 +387,10 @@ public class InstancePatterns extends TeaModel {
         }
 
         /**
-         * max_memory_size.
+         * <p>The maximum allowed memory size. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
          */
         public Builder maxMemorySize(Float maxMemorySize) {
             this.maxMemorySize = maxMemorySize;
@@ -380,7 +398,10 @@ public class InstancePatterns extends TeaModel {
         }
 
         /**
-         * max_price.
+         * <p>[This parameter is deprecated] The maximum hourly price of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder maxPrice(Float maxPrice) {
             this.maxPrice = maxPrice;
@@ -388,7 +409,10 @@ public class InstancePatterns extends TeaModel {
         }
 
         /**
-         * maximum_gpu_amount.
+         * <p>The maximum allowed number of GPUs per instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder maximumGpuAmount(Long maximumGpuAmount) {
             this.maximumGpuAmount = maximumGpuAmount;
@@ -396,7 +420,10 @@ public class InstancePatterns extends TeaModel {
         }
 
         /**
-         * memory.
+         * <p>The memory size of the instance type. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder memory(Float memory) {
             this.memory = memory;
@@ -404,7 +431,10 @@ public class InstancePatterns extends TeaModel {
         }
 
         /**
-         * min_cpu_cores.
+         * <p>The minimum vCPU cores required for the instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder minCpuCores(Long minCpuCores) {
             this.minCpuCores = minCpuCores;
@@ -412,7 +442,10 @@ public class InstancePatterns extends TeaModel {
         }
 
         /**
-         * min_memory_size.
+         * <p>The minimum required memory size. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder minMemorySize(Float minMemorySize) {
             this.minMemorySize = minMemorySize;
@@ -420,7 +453,10 @@ public class InstancePatterns extends TeaModel {
         }
 
         /**
-         * minimum_eni_ipv6_address_quantity.
+         * <p>The minimum required number of IPv6 addresses per ENI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder minimumEniIpv6AddressQuantity(Long minimumEniIpv6AddressQuantity) {
             this.minimumEniIpv6AddressQuantity = minimumEniIpv6AddressQuantity;
@@ -428,7 +464,10 @@ public class InstancePatterns extends TeaModel {
         }
 
         /**
-         * minimum_eni_private_ip_address_quantity.
+         * <p>The minimum required number of IPv4 addresses per ENI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder minimumEniPrivateIpAddressQuantity(Long minimumEniPrivateIpAddressQuantity) {
             this.minimumEniPrivateIpAddressQuantity = minimumEniPrivateIpAddressQuantity;
@@ -436,7 +475,10 @@ public class InstancePatterns extends TeaModel {
         }
 
         /**
-         * minimum_eni_quantity.
+         * <p>The minimum required number of elastic network interfaces (ENIs) per instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder minimumEniQuantity(Long minimumEniQuantity) {
             this.minimumEniQuantity = minimumEniQuantity;

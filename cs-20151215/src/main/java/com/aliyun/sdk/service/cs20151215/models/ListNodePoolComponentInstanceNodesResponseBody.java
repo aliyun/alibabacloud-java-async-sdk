@@ -93,7 +93,10 @@ public class ListNodePoolComponentInstanceNodesResponseBody extends TeaModel {
         } 
 
         /**
-         * max_results.
+         * <p>The maximum number of records returned in a single response for pagination.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -101,7 +104,10 @@ public class ListNodePoolComponentInstanceNodesResponseBody extends TeaModel {
         }
 
         /**
-         * next_token.
+         * <p>The pagination cursor. Do not specify this parameter for the first request. For subsequent requests, specify the token returned in the previous response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5c0a1c0f91c14c6****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -109,7 +115,7 @@ public class ListNodePoolComponentInstanceNodesResponseBody extends TeaModel {
         }
 
         /**
-         * node_list.
+         * <p>The list of nodes.</p>
          */
         public Builder nodeList(java.util.List<NodeList> nodeList) {
             this.nodeList = nodeList;
@@ -117,7 +123,10 @@ public class ListNodePoolComponentInstanceNodesResponseBody extends TeaModel {
         }
 
         /**
-         * total_count.
+         * <p>The total number of nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -170,7 +179,7 @@ public class ListNodePoolComponentInstanceNodesResponseBody extends TeaModel {
             } 
 
             /**
-             * custom_config.
+             * <p>The custom configuration of the node component.</p>
              */
             public Builder customConfig(java.util.Map<String, ?> customConfig) {
                 this.customConfig = customConfig;
@@ -263,7 +272,7 @@ public class ListNodePoolComponentInstanceNodesResponseBody extends TeaModel {
             } 
 
             /**
-             * config.
+             * <p>The configuration of the node component.</p>
              */
             public Builder config(Config config) {
                 this.config = config;
@@ -271,7 +280,10 @@ public class ListNodePoolComponentInstanceNodesResponseBody extends TeaModel {
             }
 
             /**
-             * config_revision.
+             * <p>The custom configuration version number of the component on the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder configRevision(String configRevision) {
                 this.configRevision = configRevision;
@@ -279,7 +291,10 @@ public class ListNodePoolComponentInstanceNodesResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The name of the component on the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kubelet</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -287,7 +302,10 @@ public class ListNodePoolComponentInstanceNodesResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * <p>The version of the component on the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.28.9-aliyun.1</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -367,7 +385,7 @@ public class ListNodePoolComponentInstanceNodesResponseBody extends TeaModel {
             } 
 
             /**
-             * component.
+             * <p>The details of the component on the node.</p>
              */
             public Builder component(Component component) {
                 this.component = component;
@@ -375,7 +393,10 @@ public class ListNodePoolComponentInstanceNodesResponseBody extends TeaModel {
             }
 
             /**
-             * instance_id.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp1xxxxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -383,7 +404,10 @@ public class ListNodePoolComponentInstanceNodesResponseBody extends TeaModel {
             }
 
             /**
-             * node_name.
+             * <p>The node name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou.10.91.xx.xx</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;

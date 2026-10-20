@@ -80,7 +80,7 @@ public class ListNodePoolComponentInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * component_instances.
+         * <p>The list of node component instances.</p>
          */
         public Builder componentInstances(java.util.List<ComponentInstances> componentInstances) {
             this.componentInstances = componentInstances;
@@ -88,7 +88,10 @@ public class ListNodePoolComponentInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * max_results.
+         * <p>The maximum number of results to return. Default value: 200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -96,7 +99,10 @@ public class ListNodePoolComponentInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * next_token.
+         * <p>The pagination token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5c0a1c0f91c14c6****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -162,7 +168,10 @@ public class ListNodePoolComponentInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * name.
+             * <p>The name of the environment variable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LOG_LEVEL</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -170,7 +179,10 @@ public class ListNodePoolComponentInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The value of the environment variable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>info</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -237,7 +249,10 @@ public class ListNodePoolComponentInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * custom_config.
+             * <p>The custom configuration of the component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;cpuManagerPolicy&quot;:&quot;static&quot;}</p>
              */
             public Builder customConfig(java.util.Map<String, ?> customConfig) {
                 this.customConfig = customConfig;
@@ -245,7 +260,7 @@ public class ListNodePoolComponentInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * envs.
+             * <p>The environment variables of the node component.</p>
              */
             public Builder envs(java.util.List<Envs> envs) {
                 this.envs = envs;
@@ -351,7 +366,7 @@ public class ListNodePoolComponentInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * config.
+             * <p>The configuration of the component.</p>
              */
             public Builder config(Config config) {
                 this.config = config;
@@ -359,7 +374,10 @@ public class ListNodePoolComponentInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * config_revision.
+             * <p>The version number of the component configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder configRevision(String configRevision) {
                 this.configRevision = configRevision;
@@ -367,7 +385,10 @@ public class ListNodePoolComponentInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The name of the component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kubelet</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -375,7 +396,10 @@ public class ListNodePoolComponentInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * state.
+             * <p>The state of the component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>active</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -383,7 +407,10 @@ public class ListNodePoolComponentInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * <p>The version of the component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.33.3-aliyun.1</p>
              */
             public Builder version(String version) {
                 this.version = version;

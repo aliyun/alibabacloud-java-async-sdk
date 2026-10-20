@@ -158,7 +158,7 @@ public class DescribeClustersForRegionRequest extends Request {
         } 
 
         /**
-         * <p>The region.</p>
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -183,11 +183,16 @@ public class DescribeClustersForRegionRequest extends Request {
         }
 
         /**
-         * <p>The specification of the clusters to query. Valid values:</p>
+         * <p>The specification of the cluster to query. Valid values:</p>
          * <ul>
-         * <li>ack.pro.small: ACK Pro clusters.</li>
-         * <li>ack.standard: ACK Basic clusters.</li>
+         * <li><code>ack.standard</code>: Basic</li>
+         * <li><code>ack.pro.small</code>: Pro</li>
+         * <li><code>ack.pro.xlarge</code>: Pro XL</li>
+         * <li><code>ack.pro.2xlarge</code>: Pro 2XL</li>
+         * <li><code>ack.pro.4xlarge</code>: Pro 4XL (contact customer service to add your account to the whitelist)</li>
          * </ul>
+         * <p>Pro XL, Pro 2XL, and Pro 4XL are three tiers provided by &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro Provisioned Control Plane</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro Provisioned Control Plane</a>. By pre-allocating and dedicating control plane resources, these tiers ensure that API concurrency and pod scheduling capabilities remain at a deterministic high level. They are suitable for AI training and inference, ultra-large-scale clusters, and mission-critical workloads.</p>
+         * <p>For information about cluster management fees for Pro and provisioned control plane editions, see &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fees</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fees</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>ack.standard</p>
@@ -199,11 +204,11 @@ public class DescribeClustersForRegionRequest extends Request {
         }
 
         /**
-         * <p>The type of the clusters to query. Valid values:</p>
+         * <p>The type of cluster to query. Valid values:</p>
          * <ul>
-         * <li>Kubernetes: ACK dedicated clusters.</li>
-         * <li>ManagedKubernetes: ACK managed clusters. ACK managed clusters include ACK Basic clusters, ACK Pro clusters, ACK Serverless Basic clusters, ACK Serverless Pro clusters, ACK Edge Basic clusters, ACK Edge Pro clusters, and ACK Lingjun Pro clusters.</li>
-         * <li>ExternalKubernetes: registered clusters.</li>
+         * <li>Kubernetes: ACK dedicated cluster.</li>
+         * <li>ManagedKubernetes: ACK managed cluster types, including ACK managed clusters (ACK Pro and ACK Basic), ACK Serverless clusters (Pro and Basic), ACK Edge clusters (Pro and Basic), and ACK Lingjun clusters (Pro).</li>
+         * <li>ExternalKubernetes: registered cluster.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -216,7 +221,7 @@ public class DescribeClustersForRegionRequest extends Request {
         }
 
         /**
-         * <p>Perform a fuzzy search by using the cluster name.</p>
+         * <p>Fuzzy matches clusters by cluster name.</p>
          * 
          * <strong>example:</strong>
          * <p>test-cluster</p>
@@ -228,7 +233,7 @@ public class DescribeClustersForRegionRequest extends Request {
         }
 
         /**
-         * <p>The number of pages.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -240,7 +245,7 @@ public class DescribeClustersForRegionRequest extends Request {
         }
 
         /**
-         * <p>The number of records on each page.</p>
+         * <p>The number of records per page.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -252,12 +257,12 @@ public class DescribeClustersForRegionRequest extends Request {
         }
 
         /**
-         * <p>The subtype of the clusters to query. Valid values:</p>
+         * <p>The subtype of cluster to query. Valid values:</p>
          * <ul>
-         * <li>Default: ACK managed clusters. ACK managed clusters include ACK Basic clusters and ACK Pro clusters.</li>
-         * <li>Edge: ACK Edge clusters. ACK Edge clusters include ACK Edge Basic clusters and ACK Edge Pro clusters.</li>
-         * <li>Serverless: ACK Serverless clusters. ACK Serverless clusters include ACK Serverless Basic clusters and ACK Serverless Pro clusters.</li>
-         * <li>Lingjun: ACK Lingjun Pro clusters.</li>
+         * <li>Default: ACK managed cluster, including ACK Pro and ACK Basic.</li>
+         * <li>Edge: ACK Edge cluster, including ACK Edge Pro and ACK Edge Basic.</li>
+         * <li>Serverless: ACK Serverless cluster, including ACK Serverless Pro and ACK Serverless Basic.</li>
+         * <li>LingJun: ACK Lingjun cluster, available in Pro.</li>
          * </ul>
          * 
          * <strong>example:</strong>

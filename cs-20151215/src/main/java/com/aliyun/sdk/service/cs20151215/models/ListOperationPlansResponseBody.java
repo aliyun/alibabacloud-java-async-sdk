@@ -54,7 +54,7 @@ public class ListOperationPlansResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of auto O&amp;M execution plans.</p>
+         * <p>The list of execution plans.</p>
          */
         public Builder plans(java.util.List<Plans> plans) {
             this.plans = plans;
@@ -235,7 +235,7 @@ public class ListOperationPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the operation plan was created.</p>
+             * <p>The creation time of the execution plan.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-11-21T20:01:22+08:00</p>
@@ -246,7 +246,7 @@ public class ListOperationPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expected end time of the plan.</p>
+             * <p>The expected end time in ISO 8601 format, including time zone information.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-11-22T18:00:00+08:00</p>
@@ -257,7 +257,7 @@ public class ListOperationPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The operation plan ID.</p>
+             * <p>The execution plan ID.</p>
              * 
              * <strong>example:</strong>
              * <p>P-655c9c127e0e6603ef00****</p>
@@ -268,7 +268,7 @@ public class ListOperationPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expected start time of the plan.</p>
+             * <p>The expected start time in ISO 8601 format, including time zone information.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-11-22T15:18:00+08:00</p>
@@ -279,10 +279,10 @@ public class ListOperationPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The plan status. Valid values:</p>
+             * <p>The status. Valid values:</p>
              * <ul>
-             * <li>scheduled</li>
-             * <li>Canceled</li>
+             * <li>scheduled: Scheduled.</li>
+             * <li>canceled: Canceled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -294,7 +294,7 @@ public class ListOperationPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The target ID.</p>
+             * <p>The execution target ID.</p>
              * 
              * <strong>example:</strong>
              * <p>c29ced64b3dfe4f33b57ca0aa9f68****</p>
@@ -305,7 +305,7 @@ public class ListOperationPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The target type.</p>
+             * <p>The execution target type.</p>
              * 
              * <strong>example:</strong>
              * <p>cluster</p>
@@ -327,9 +327,9 @@ public class ListOperationPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The plan type. Valid values:</p>
+             * <p>The type. Valid values:</p>
              * <ul>
-             * <li>cluster_upgrade</li>
+             * <li>cluster_upgrade: Cluster upgrade.</li>
              * </ul>
              * 
              * <strong>example:</strong>

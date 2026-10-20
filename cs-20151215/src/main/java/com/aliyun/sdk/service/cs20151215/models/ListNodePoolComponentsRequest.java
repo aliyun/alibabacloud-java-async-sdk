@@ -157,7 +157,10 @@ public class ListNodePoolComponentsRequest extends Request {
         } 
 
         /**
-         * cluster_id.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c846d7d529e34****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("cluster_id", clusterId);
@@ -166,7 +169,10 @@ public class ListNodePoolComponentsRequest extends Request {
         }
 
         /**
-         * image_id.
+         * <p>The image ID of the node pool. Either this parameter or image_type is required if nodepool_id is not specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyun_3_x64_20G_container_optimized_alibase_20250629.vhd</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("image_id", imageId);
@@ -175,7 +181,10 @@ public class ListNodePoolComponentsRequest extends Request {
         }
 
         /**
-         * image_type.
+         * <p>The image type of the node pool. Either this parameter or image_id is required if nodepool_id is not specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AliyunLinux3</p>
          */
         public Builder imageType(String imageType) {
             this.putQueryParameter("image_type", imageType);
@@ -184,7 +193,10 @@ public class ListNodePoolComponentsRequest extends Request {
         }
 
         /**
-         * instance_types.
+         * <p>The instance types of the node pool. This parameter is required if nodepool_id is not specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;ecs.c6.xlarge&quot;]</p>
          */
         public Builder instanceTypes(java.util.List<String> instanceTypes) {
             String instanceTypesShrink = shrink(instanceTypes, "instance_types", "json");
@@ -194,7 +206,10 @@ public class ListNodePoolComponentsRequest extends Request {
         }
 
         /**
-         * max_results.
+         * <p>The maximum number of results to return. Default value: 200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("max_results", maxResults);
@@ -203,7 +218,10 @@ public class ListNodePoolComponentsRequest extends Request {
         }
 
         /**
-         * next_token.
+         * <p>The pagination token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5c0a1c0f91c14c6****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("next_token", nextToken);
@@ -212,7 +230,10 @@ public class ListNodePoolComponentsRequest extends Request {
         }
 
         /**
-         * nodepool_id.
+         * <p>The node pool ID. If you specify a node pool ID, the system queries the list of components available for the node pool and ignores other parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>np1855b102ac434f5990d87b77a****</p>
          */
         public Builder nodepoolId(String nodepoolId) {
             this.putQueryParameter("nodepool_id", nodepoolId);
@@ -221,7 +242,10 @@ public class ListNodePoolComponentsRequest extends Request {
         }
 
         /**
-         * nodepool_type.
+         * <p>The node pool type. This parameter is required if nodepool_id is not specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ess</p>
          */
         public Builder nodepoolType(String nodepoolType) {
             this.putQueryParameter("nodepool_type", nodepoolType);

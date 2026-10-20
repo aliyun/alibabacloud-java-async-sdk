@@ -145,7 +145,7 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -180,7 +180,7 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
         }
 
         /**
-         * <p>The kubelet configurations.</p>
+         * <p>The kubelet parameter settings.</p>
          */
         public Builder kubeletConfig(KubeletConfig kubeletConfig) {
             this.putBodyParameter("kubelet_config", kubeletConfig);
@@ -189,7 +189,7 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
         }
 
         /**
-         * node_names.
+         * <p>The list of nodes to upgrade.</p>
          */
         public Builder nodeNames(java.util.List<String> nodeNames) {
             this.putBodyParameter("node_names", nodeNames);
@@ -198,7 +198,7 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
         }
 
         /**
-         * <p>The OS configuration.</p>
+         * <p>The operating system parameter settings.</p>
          */
         public Builder osConfig(OsConfig osConfig) {
             this.putBodyParameter("os_config", osConfig);
@@ -207,7 +207,7 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
         }
 
         /**
-         * <p>The rolling policy configuration.</p>
+         * <p>The rolling update configuration.</p>
          */
         public Builder rollingPolicy(RollingPolicy rollingPolicy) {
             this.putBodyParameter("rolling_policy", rollingPolicy);
@@ -275,7 +275,7 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
             } 
 
             /**
-             * hugepage.
+             * <p>The hugepage configuration.</p>
              */
             public Builder hugepage(Hugepage hugepage) {
                 this.hugepage = hugepage;
@@ -283,7 +283,7 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
             }
 
             /**
-             * <p>The sysctl configuration.</p>
+             * <p>The custom sysctl parameter settings.</p>
              */
             public Builder sysctl(java.util.Map<String, ?> sysctl) {
                 this.sysctl = sysctl;
@@ -350,7 +350,10 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
             } 
 
             /**
-             * max_failed_nodes.
+             * <p>The maximum number of nodes that are allowed to fail during the rolling update. Default value: 0, which indicates that the task fails if any node fails. If the value is greater than 0, the task fails and stops when the cumulative number of failed nodes exceeds this value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder maxFailedNodes(Long maxFailedNodes) {
                 this.maxFailedNodes = maxFailedNodes;
@@ -358,7 +361,9 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
             }
 
             /**
-             * <p>The maximum number of unavailable nodes.</p>
+             * <p>Node updates in the node pool are performed in batches. This parameter specifies the maximum number of nodes that can be updated in parallel per batch.</p>
+             * <p>Valid values: [1,10].</p>
+             * <p>Default value: 10.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>

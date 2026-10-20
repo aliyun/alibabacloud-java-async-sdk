@@ -60,7 +60,7 @@ public class DescribePolicyDetailsRequest extends Request {
         } 
 
         /**
-         * <p>The name of the policy.</p>
+         * <p>The name of the policy governance rule.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

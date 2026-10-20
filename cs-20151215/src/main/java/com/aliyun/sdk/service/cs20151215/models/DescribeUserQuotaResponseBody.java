@@ -132,7 +132,7 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The quota of Container Service for Kubernetes (ACK) managed clusters. Default value: 20. If the default quota limit is reached, submit an application in the <a href="https://quotas.console.aliyun.com/products/csk/quotas">Quota Center console</a> to increase the quota.</p>
+         * <p>The quota of managed clusters. Default value: 20. If you need to exceed the default value, <a href="https://quotas.console.aliyun.com/products/csk/quotas">submit a request on the Quota Center page</a> to increase the quota.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -143,7 +143,7 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The quota of ACK Serverless clusters. Default value: 20. If the default quota limit is reached, submit an application in the <a href="https://quotas.console.aliyun.com/products/csk/quotas">Quota Center console</a> to increase the quota.</p>
+         * <p>The quota of ASK clusters. Default value: 20. If you need to exceed the default value, <a href="https://quotas.console.aliyun.com/products/csk/quotas">submit a request on the Quota Center page</a> to increase the quota.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -154,7 +154,7 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The quota of node pools in an ACK cluster. Default value: 20. If the default quota limit is reached, submit an application in the <a href="https://quotas.console.aliyun.com/products/csk/quotas">Quota Center console</a> to increase the quota.</p>
+         * <p>The node pool quota per cluster. Default value: 20. If you need to exceed the default value, <a href="https://quotas.console.aliyun.com/products/csk/quotas">submit a request on the Quota Center page</a> to increase the quota.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -165,7 +165,7 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The quota of clusters that belong to an Alibaba Cloud account. Default value: 50. If the default quota limit is reached, submit an application in the <a href="https://quotas.console.aliyun.com/products/csk/quotas">Quota Center console</a> to increase the quota.</p>
+         * <p>The total cluster quota per account. Default value: 50. If you need to exceed the default value, <a href="https://quotas.console.aliyun.com/products/csk/quotas">submit a request on the Quota Center page</a> to increase the quota.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -176,8 +176,7 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>This parameter is discontinued.</p>
-         * <p>The quotas of enhanced edge node pools.</p>
+         * edge_improved_nodepool_quota.
          */
         public Builder edgeImprovedNodepoolQuota(EdgeImprovedNodepoolQuota edgeImprovedNodepoolQuota) {
             this.edgeImprovedNodepoolQuota = edgeImprovedNodepoolQuota;
@@ -185,7 +184,7 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The quota of nodes in an ACK cluster. Default value: 100. If the default quota limit is reached, submit an application in the <a href="https://quotas.console.aliyun.com/products/csk/quotas">Quota Center console</a> to increase the quota.</p>
+         * <p>The node quota per cluster. Default value: 100. If you need to exceed the default value, <a href="https://quotas.console.aliyun.com/products/csk/quotas">submit a request on the Quota Center page</a> to increase the quota.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -196,7 +195,7 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Information about the new quota.</p>
+         * <p>The new quota items. If this field exists, the values in this field take precedence.</p>
          */
         public Builder quotas(java.util.Map<String, QuotasValue> quotas) {
             this.quotas = quotas;
@@ -275,11 +274,7 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>This parameter is discontinued.</p>
-             * <p>The maximum bandwidth of each enhanced edge node pool. Unit: Mbit/s.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>10</p>
+             * bandwidth.
              */
             public Builder bandwidth(Integer bandwidth) {
                 this.bandwidth = bandwidth;
@@ -287,11 +282,7 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This parameter is discontinued.</p>
-             * <p>The maximum number of enhanced edge node pools that you can create within an Alibaba Cloud account.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3</p>
+             * count.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -299,14 +290,7 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This parameter is discontinued.</p>
-             * <p>The maximum subscription duration of an enhanced edge node pool. Unit: months.</p>
-             * <blockquote>
-             * <p> You are charged for enhanced edge node pools based on the pay-as-you-go billing method. Therefore, you can ignore this parameter.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>3</p>
+             * period.
              */
             public Builder period(Integer period) {
                 this.period = period;

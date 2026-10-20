@@ -256,14 +256,14 @@ public class AttachInstancesRequest extends Request {
         }
 
         /**
-         * <p>The CPU management policy of the node. The following policies are supported if the Kubernetes version of the cluster is 1.12.6 or later:</p>
+         * <p>The CPU management policy of the node. The following policies are supported for clusters running version 1.12.6 or later:</p>
          * <ul>
-         * <li><code>static</code>: allows pods with specific resource characteristics on the node to be granted enhanced CPU affinity and exclusivity.</li>
-         * <li><code>none</code>: uses default CPU affinity.</li>
+         * <li><code>static</code>: Allows pods with certain resource characteristics on the node to be granted enhanced CPU affinity and exclusivity.</li>
+         * <li><code>none</code>: Uses the existing default CPU affinity scheme.</li>
          * </ul>
-         * <p>Default value: <code>none</code></p>
+         * <p>Default value: <code>none</code>.</p>
          * <blockquote>
-         * <p> This parameter is not supported if you specify <code>nodepool_id</code>.</p>
+         * <p>After you specify <code>nodepool_id</code>, this parameter is not supported.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -276,20 +276,22 @@ public class AttachInstancesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to store container data and images on data disks. Valid value:</p>
+         * <p>Specifies whether to store container data and images on a data cloud disk. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: stores container data and images on data disks.</li>
-         * <li><code>false</code>: does not store container data or images on data disks.</li>
+         * <li><p><code>true</code>: Stores container data and images on a data cloud disk.</p>
+         * </li>
+         * <li><p><code>false</code>: Does not store container data and images on a data cloud disk.</p>
+         * </li>
          * </ul>
          * <p>Default value: <code>false</code>.</p>
-         * <p>How data disks are attached:</p>
+         * <p>Data cloud disk mounting rules:</p>
          * <ul>
-         * <li>If the ECS instance is already attached with data disks and the file system of the last data disk is not initialized, the system automatically formats this data disk to ext4. Then, the system uses the disk to store the data in the /var/lib/docker and /var/lib/kubelet directories.</li>
-         * <li>If no data disk is attached to the ECS instance, the system does not purchase a new data disk.</li>
-         * </ul>
-         * <blockquote>
-         * <p> If you choose to store container data and images on data disks and a data disk is already attached to the ECS instance, the original data on this data disk is cleared. You can back up the disk to prevent data loss.</p>
+         * <li>If the ECS instance has data cloud disks attached and the file system of the last data cloud disk is not initialized, the system automatically formats the data cloud disk to EXT4. The data cloud disk is then used to store the content of /var/lib/docker and /var/lib/kubelet, which are the default data directories for the Docker container runtime and the kubelet component, respectively.</li>
+         * <li>If the ECS instance does not have data cloud disks attached, no new data cloud disk is mounted.<blockquote>
+         * <p>If you choose to store data on a data cloud disk and the ECS instance already has data cloud disks attached, the existing data on the data cloud disk will be lost. Back up your data in advance.</p>
          * </blockquote>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -301,15 +303,16 @@ public class AttachInstancesRequest extends Request {
         }
 
         /**
-         * <p>The custom image ID. If you do not specify this parameter, the default system image is used.</p>
-         * <blockquote>
-         * </blockquote>
+         * <p>The custom image ID.</p>
          * <ul>
-         * <li><p>If you specify a custom image, the custom image is used to deploy the operating system on the system disk of the node.</p>
+         * <li><p>If you specify a custom image ID, the system cloud disk image of the instance is replaced with the custom image.</p>
          * </li>
-         * <li><p>This parameter is not supported if you specify <code>nodepool_id</code>.</p>
+         * <li><p>If you do not specify this parameter, the default system image is used.</p>
          * </li>
          * </ul>
+         * <blockquote>
+         * <p>After you specify <code>nodepool_id</code>, this parameter is not supported.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>aliyun_2_1903_x64_20G_alibase_20200529.vhd</p>
@@ -321,7 +324,7 @@ public class AttachInstancesRequest extends Request {
         }
 
         /**
-         * <p>The ECS instances that you want to add.</p>
+         * <p>The list of ECS instances to be added.</p>
          * <p>This parameter is required.</p>
          */
         public Builder instances(java.util.List<String> instances) {
@@ -331,14 +334,16 @@ public class AttachInstancesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the node that you want to add is an Edge Node Service (ENS) node. Valid value:</p>
+         * <p>Specifies whether the node to be added is an edge node, which is an Edge Node Service (ENS) node. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: the node that you want to add is an ENS node.</li>
-         * <li><code>false</code>: the node that you want to add is not an ENS node.</li>
+         * <li><p><code>true</code>: The node to be added is an edge node.</p>
+         * </li>
+         * <li><p><code>false</code>: The node to be added is not an edge node.</p>
+         * </li>
          * </ul>
          * <p>Default value: <code>false</code>.</p>
          * <blockquote>
-         * <p> If the node that you want to add is an ENS node, you must set the value to <code>true</code>. This allows you to identify the node.</p>
+         * <p>If the node is an edge node, set this parameter to <code>true</code> to identify the node type as an ENS node.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -351,15 +356,17 @@ public class AttachInstancesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to retain the instance name. Valid value:</p>
+         * <p>Specifies whether to retain the original instance name. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: retains the instance name.</li>
-         * <li><code>false</code>: does not retain the instance name.</li>
+         * <li><p><code>true</code>: Retains the instance name.</p>
+         * </li>
+         * <li><p><code>false</code>: Does not retain the instance name.</p>
+         * </li>
          * </ul>
          * <p>Default value: <code>false</code>.</p>
          * 
          * <strong>example:</strong>
-         * <p>true</p>
+         * <p>false</p>
          */
         public Builder keepInstanceName(Boolean keepInstanceName) {
             this.putBodyParameter("keep_instance_name", keepInstanceName);
@@ -368,13 +375,14 @@ public class AttachInstancesRequest extends Request {
         }
 
         /**
-         * <p>The name of the key pair used to log on to the ECS instances. You must specify this parameter or <code>login_password</code>.</p>
+         * <p>The name of the key pair for the instances to be added.
+         * You need to specify only one of key_pair and password, or you can leave both parameters empty.</p>
          * <blockquote>
-         * <p> This parameter is not supported if you specify <code>nodepool_id</code>.</p>
+         * <p>After you specify <code>nodepool_id</code>, this parameter is not supported.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>secrity-key</p>
+         * <p>security-key</p>
          */
         public Builder keyPair(String keyPair) {
             this.putBodyParameter("key_pair", keyPair);
@@ -383,7 +391,7 @@ public class AttachInstancesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the node pool to which the node is added. If you do not specify this parameter, the node is added to the default node pool.</p>
+         * <p>The node pool ID. If you do not specify this parameter, the node is added to the default node pool.</p>
          * 
          * <strong>example:</strong>
          * <p>np615c0e0966124216a0412e10afe0****</p>
@@ -395,8 +403,14 @@ public class AttachInstancesRequest extends Request {
         }
 
         /**
-         * <p>The SSH logon password used to log on to the ECS instances. You must specify this parameter or <code>key_pair</code>. The password must be 8 to 30 characters in length, and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. The password cannot contain backslashes (\) or double quotation marks (&quot;).</p>
-         * <p>The password is encrypted during data transfer to ensure security.</p>
+         * <p>The SSH logon password for the instances to be added. You need to specify only one of key_pair and password, or you can leave both parameters empty.</p>
+         * <p>The password must meet the following requirements:</p>
+         * <ul>
+         * <li>The password must be 8 to 30 characters in length.</li>
+         * <li>The password must contain at least uppercase letters, lowercase letters, digits, and special characters.</li>
+         * <li>The password cannot contain backslashes (\) or double quotation marks (&quot;).</li>
+         * </ul>
+         * <p>For security purposes, the password is encrypted during transmission.</p>
          * 
          * <strong>example:</strong>
          * <p>Hello1234</p>
@@ -408,7 +422,7 @@ public class AttachInstancesRequest extends Request {
         }
 
         /**
-         * <p>A list of ApsaraDB RDS instances.</p>
+         * <p>The list of ApsaraDB RDS instances.</p>
          */
         public Builder rdsInstances(java.util.List<String> rdsInstances) {
             this.putBodyParameter("rds_instances", rdsInstances);
@@ -419,8 +433,17 @@ public class AttachInstancesRequest extends Request {
         /**
          * <p>The container runtime.</p>
          * <blockquote>
-         * <p> This parameter is not supported if you specify <code>nodepool_id</code>.</p>
+         * <p>After you specify <code>nodepool_id</code>, this parameter is not supported.</p>
          * </blockquote>
+         * <p>name: the name of the container runtime. ACK supports the following three container runtimes:</p>
+         * <ul>
+         * <li>containerd: Recommended. Supported by all cluster versions.</li>
+         * <li>Sandboxed-Container.runv: Sandboxed container that provides higher isolation. Supported by clusters running version 1.24 or earlier.</li>
+         * <li>docker: Supported by clusters running version 1.22 or earlier.</li>
+         * </ul>
+         * <p>Default value: containerd.</p>
+         * <p>containerd: the container runtime version. Default value: the latest version.</p>
+         * <p>For more information about changes to the sandboxed container runtime, see <a href="https://help.aliyun.com/document_detail/160312.html">Sandboxed container runtime release notes</a>.</p>
          */
         public Builder runtime(Runtime runtime) {
             this.putBodyParameter("runtime", runtime);
@@ -429,13 +452,16 @@ public class AttachInstancesRequest extends Request {
         }
 
         /**
-         * <p>The labels that you want to add to the node. When you add labels to a node, the following rules apply:</p>
+         * <p>The node labels. Label definition rules:</p>
          * <ul>
-         * <li>A label is a case-sensitive key-value pair. You can add up to 20 labels.</li>
-         * <li>The key must be unique and cannot exceed 64 characters in length. The value can be empty and cannot exceed 128 characters in length. Keys and values cannot start with <code>aliyun</code>, <code>acs:</code>, <code>https://</code>, or <code>http://</code>. For more information, see <a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set">Labels and Selectors</a>.</li>
+         * <li>Labels are case-sensitive key-value pairs. You can configure up to 20 labels.</li>
+         * <li>Label keys cannot be duplicate and can be up to 64 characters in length.</li>
+         * <li>Label values can be empty and can be up to 128 characters in length.</li>
+         * <li>Label keys and label values cannot start with <code>aliyun</code>, <code>acs:</code>, <code>https://</code>, or <code>http://</code>.</li>
          * </ul>
+         * <p>For more information, see <a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set">Labels and Selectors</a>.</p>
          * <blockquote>
-         * <p> This parameter is not supported if you specify <code>nodepool_id</code>.</p>
+         * <p>After you specify <code>nodepool_id</code>, this parameter is not supported.</p>
          * </blockquote>
          */
         public Builder tags(java.util.List<Tag> tags) {
@@ -445,9 +471,9 @@ public class AttachInstancesRequest extends Request {
         }
 
         /**
-         * <p>The user-defined data on the node. For more information, see <a href="https://help.aliyun.com/document_detail/49121.html">Use instance user data to automatically run commands or scripts on instance startup</a>.</p>
+         * <p>The node user data. For more information, see <a href="https://help.aliyun.com/document_detail/49121.html">Generate instance user data</a>.</p>
          * <blockquote>
-         * <p> This parameter is not supported if you specify <code>nodepool_id</code>.</p>
+         * <p>After you specify <code>nodepool_id</code>, this parameter is not supported.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

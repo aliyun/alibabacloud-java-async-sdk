@@ -102,7 +102,7 @@ public class CreateClusterNodePoolResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the task.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>T-613b19bbd160ad492800****</p>

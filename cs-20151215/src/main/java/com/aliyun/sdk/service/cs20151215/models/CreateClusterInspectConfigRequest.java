@@ -126,7 +126,7 @@ public class CreateClusterInspectConfigRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable cluster inspection.</p>
+         * <p>Specifies whether to enable inspection.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,7 +139,7 @@ public class CreateClusterInspectConfigRequest extends Request {
         }
 
         /**
-         * <p>The inspection period defined using RFC5545 Recurrence Rule. You must specify BYHOUR and BYMINUTE. Only FREQ=DAILY is supported. COUNT or UNTIL is not supported.</p>
+         * <p>The inspection cycle defined by using the RFC5545 Recurrence Rule syntax. You must specify BYHOUR and BYMINUTE. Only FREQ=DAILY is supported. COUNT and UNTIL are not supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

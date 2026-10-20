@@ -67,7 +67,7 @@ public class StartAlertResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The message returned.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>

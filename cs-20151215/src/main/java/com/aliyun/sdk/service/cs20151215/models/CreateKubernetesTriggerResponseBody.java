@@ -106,7 +106,7 @@ public class CreateKubernetesTriggerResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The action that the trigger performs. For example, a value of <code>redeploy</code> indicates that the trigger redeploys the application.</p>
+         * <p>The action of the trigger. Example: <code>redeploy</code>: Redeployment.</p>
          * 
          * <strong>example:</strong>
          * <p>redeploy</p>
@@ -117,7 +117,7 @@ public class CreateKubernetesTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>c5cdf7e3938bc4f8eb0e44b21a80f****</p>
@@ -128,7 +128,7 @@ public class CreateKubernetesTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the trigger.</p>
+         * <p>The trigger ID.</p>
          * 
          * <strong>example:</strong>
          * <p>111</p>
@@ -139,7 +139,7 @@ public class CreateKubernetesTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the trigger project.</p>
+         * <p>The project name of the trigger.</p>
          * 
          * <strong>example:</strong>
          * <p>default/test-app</p>
@@ -150,11 +150,10 @@ public class CreateKubernetesTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The type of trigger.</p>
-         * <p>Valid values:</p>
+         * <p>The type of the trigger. Valid values:</p>
          * <ul>
-         * <li><code>deployment</code>: performs actions on Deployments.</li>
-         * <li><code>application</code>: performs actions on applications that are deployed in Application Center.</li>
+         * <li><code>deployment</code>: The trigger for stateless applications. </li>
+         * <li><code>application</code>: The trigger for Hybrid Cloud Application Center applications.</li>
          * </ul>
          * 
          * <strong>example:</strong>

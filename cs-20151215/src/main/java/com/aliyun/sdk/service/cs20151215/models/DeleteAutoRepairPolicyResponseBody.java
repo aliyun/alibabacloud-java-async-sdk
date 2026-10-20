@@ -54,7 +54,10 @@ public class DeleteAutoRepairPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * request_id.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A9891419-D125-4D89-AFCA-68846675****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

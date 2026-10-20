@@ -157,13 +157,13 @@ public class GetKubernetesTriggerRequest extends Request {
         }
 
         /**
-         * <p>The type of trigger. Valid values:</p>
+         * <p>The trigger type. Valid values:</p>
          * <ul>
-         * <li><code>deployment</code>: performs actions on Deployments.</li>
-         * <li><code>application</code>: performs actions on applications that are deployed in Application Center.</li>
+         * <li><code>deployment</code>: the trigger for stateless applications.</li>
+         * <li><code>application</code>: the trigger for Application Center applications.
+         * Default value: <code>deployment</code>.
+         * If you do not specify the trigger type, the query results are not filtered by trigger type.</li>
          * </ul>
-         * <p>Default value: <code>deployment</code>.</p>
-         * <p>If you do not set this parameter, triggers are not filtered by type.</p>
          * 
          * <strong>example:</strong>
          * <p>deployment</p>
@@ -175,9 +175,11 @@ public class GetKubernetesTriggerRequest extends Request {
         }
 
         /**
-         * <p>The action that the trigger performs. Set the value to redeploy.</p>
-         * <p><code>redeploy</code>: redeploys the resources specified by <code>project_id</code>.</p>
-         * <p>If you do not specify this parameter, triggers are not filtered by action.</p>
+         * <p>The trigger action. Valid values:</p>
+         * <ul>
+         * <li><code>redeploy</code>: Redeploys the resources defined in <code>project_id</code>.
+         * If you do not specify the trigger action, the query results are not filtered by trigger action.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>redeploy</p>

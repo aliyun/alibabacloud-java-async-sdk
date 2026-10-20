@@ -102,6 +102,7 @@ public class ListOperationPlansForRegionRequest extends Request {
         } 
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +115,10 @@ public class ListOperationPlansForRegionRequest extends Request {
         }
 
         /**
-         * cluster_id.
+         * <p>Filters the results by cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c02b3e03be10643e8a644a843ffcb****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("cluster_id", clusterId);
@@ -123,7 +127,10 @@ public class ListOperationPlansForRegionRequest extends Request {
         }
 
         /**
-         * state.
+         * <p>Filters the results by execution plan state.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Scheduled</p>
          */
         public Builder state(String state) {
             this.putQueryParameter("state", state);
@@ -132,7 +139,10 @@ public class ListOperationPlansForRegionRequest extends Request {
         }
 
         /**
-         * type.
+         * <p>Filters the results by execution plan type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CLUSTER_UPGRADE_MASTER</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

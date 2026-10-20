@@ -131,7 +131,7 @@ public class ModifyPolicyInstanceRequest extends Request {
         } 
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>The ID of the target cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,7 +144,7 @@ public class ModifyPolicyInstanceRequest extends Request {
         }
 
         /**
-         * <p>The name of the policy.</p>
+         * <p>The name of the policy rule.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,10 +157,10 @@ public class ModifyPolicyInstanceRequest extends Request {
         }
 
         /**
-         * <p>The action of the policy. Valid values:</p>
+         * <p>The governance action of the rule. Valid values:</p>
          * <ul>
-         * <li><code>deny</code>: Deployments that match the policy are denied.</li>
-         * <li><code>warn</code>: Alerts are generated for deployments that match the policy.</li>
+         * <li><code>deny</code>: blocks non-compliant deployments.</li>
+         * <li><code>warn</code>: generates alerts.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -173,7 +173,7 @@ public class ModifyPolicyInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the policy instance.</p>
+         * <p>The instance ID of the policy rule instance.</p>
          * 
          * <strong>example:</strong>
          * <p>allowed-repos-cbhhb</p>
@@ -185,7 +185,7 @@ public class ModifyPolicyInstanceRequest extends Request {
         }
 
         /**
-         * <p>The namespaces to which the policy is applied. The policy is applied to all namespaces if this parameter is left empty.</p>
+         * <p>The namespaces to which the policy applies. An empty value indicates all namespaces.</p>
          */
         public Builder namespaces(java.util.List<String> namespaces) {
             this.putBodyParameter("namespaces", namespaces);
@@ -194,7 +194,7 @@ public class ModifyPolicyInstanceRequest extends Request {
         }
 
         /**
-         * <p>The parameters of the policy instance. For more information, see <a href="https://help.aliyun.com/document_detail/359819.html">Predefined security policies of ACK</a>.</p>
+         * <p>The configuration parameters of the current rule instance. For more information about parameter settings rules, see <a href="https://help.aliyun.com/document_detail/359819.html">Container Security Policy Rule Library</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;restrictedNamespaces&quot;: [ &quot;test&quot; ]</p>

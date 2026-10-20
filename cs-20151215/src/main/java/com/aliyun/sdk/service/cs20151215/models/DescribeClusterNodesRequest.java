@@ -185,7 +185,7 @@ public class DescribeClusterNodesRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the nodes that you want to query. Separate multiple node IDs with commas (,).</p>
+         * <p>The list of node instance IDs. Separate multiple values with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;i-bp11xjhwkj8k966u****,i-bp1dmhc2bu5igkyq****&quot;</p>
@@ -197,7 +197,10 @@ public class DescribeClusterNodesRequest extends Request {
         }
 
         /**
-         * nodeIps.
+         * <p>The list of node IP addresses used for filtering. Separate multiple values with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.0.1</p>
          */
         public Builder nodeIps(String nodeIps) {
             this.putQueryParameter("nodeIps", nodeIps);
@@ -206,7 +209,10 @@ public class DescribeClusterNodesRequest extends Request {
         }
 
         /**
-         * nodeLabels.
+         * <p>The node labels used for filtering. Specify the labels as key=value pairs separated by commas (,). Multiple labels are evaluated with the AND operator. Only nodes that match all specified labels are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nodeLabels=app=nginx,env=prod</p>
          */
         public Builder nodeLabels(String nodeLabels) {
             this.putQueryParameter("nodeLabels", nodeLabels);
@@ -215,7 +221,10 @@ public class DescribeClusterNodesRequest extends Request {
         }
 
         /**
-         * nodeNames.
+         * <p>The list of node names used for filtering. Separate multiple values with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou.192.168.0.1</p>
          */
         public Builder nodeNames(String nodeNames) {
             this.putQueryParameter("nodeNames", nodeNames);
@@ -227,7 +236,7 @@ public class DescribeClusterNodesRequest extends Request {
          * <p>The node pool ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>np****</p>
+         * <p>npe25633140a7d4fbea56cd0479c******</p>
          */
         public Builder nodepoolId(String nodepoolId) {
             this.putQueryParameter("nodepool_id", nodepoolId);
@@ -236,7 +245,7 @@ public class DescribeClusterNodesRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the current query.</p>
          * <p>Default value: 1.</p>
          * 
          * <strong>example:</strong>
@@ -249,7 +258,7 @@ public class DescribeClusterNodesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Valid values: 1 to 100.</p>
+         * <p>The maximum number of records to return per page. Valid values: 1 to 100.</p>
          * <p>Default value: 10.</p>
          * 
          * <strong>example:</strong>
@@ -262,13 +271,13 @@ public class DescribeClusterNodesRequest extends Request {
         }
 
         /**
-         * <p>The node state that you want to use to filter nodes. Valid values:</p>
+         * <p>The running states of the cluster nodes used for filtering. Valid values:</p>
          * <ul>
-         * <li><code>all</code>: query nodes in the following four states.</li>
-         * <li><code>running</code>: query nodes in the running state.</li>
-         * <li><code>removing</code>: query nodes that are being removed.</li>
-         * <li><code>initial</code>: query nodes that are being initialized.</li>
-         * <li><code>failed</code>: query nodes that fail to be created.</li>
+         * <li><code>all</code>: does not filter nodes by running state and queries nodes in all states.</li>
+         * <li><code>running</code>: the cluster nodes that are running.</li>
+         * <li><code>removing</code>: the cluster nodes that are being removed.</li>
+         * <li><code>initial</code>: the cluster nodes that are being initialized.</li>
+         * <li><code>failed</code>: the cluster nodes that failed to be created.</li>
          * </ul>
          * <p>Default value: <code>all</code>.</p>
          * 

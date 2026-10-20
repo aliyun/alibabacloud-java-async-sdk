@@ -106,7 +106,7 @@ public class CreateTriggerResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The actions performed by the trigger.</p>
+         * <p>The trigger action.</p>
          * 
          * <strong>example:</strong>
          * <p>redeploy</p>
@@ -117,7 +117,7 @@ public class CreateTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>c93095129fc41463aa455d89444fd****</p>
@@ -131,7 +131,7 @@ public class CreateTriggerResponseBody extends TeaModel {
          * <p>The trigger ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>102536</p>
+         * <p>75973497486******</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -139,7 +139,7 @@ public class CreateTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the trigger project.</p>
+         * <p>The trigger project name.</p>
          * 
          * <strong>example:</strong>
          * <p>default/test-app</p>

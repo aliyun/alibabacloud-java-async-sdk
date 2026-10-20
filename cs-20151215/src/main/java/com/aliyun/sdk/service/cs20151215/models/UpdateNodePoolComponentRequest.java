@@ -157,7 +157,7 @@ public class UpdateNodePoolComponentRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>c82e6987e2961451182edacd74faf****</p>
@@ -169,7 +169,7 @@ public class UpdateNodePoolComponentRequest extends Request {
         }
 
         /**
-         * <p>The ID of the node pool.</p>
+         * <p>The node pool ID.</p>
          * 
          * <strong>example:</strong>
          * <p>np7c4fa4a5f1ce412b84967089****</p>
@@ -181,7 +181,7 @@ public class UpdateNodePoolComponentRequest extends Request {
         }
 
         /**
-         * <p>The configuration details for the component update.</p>
+         * <p>The configuration of the node component.</p>
          */
         public Builder config(Config config) {
             this.putBodyParameter("config", config);
@@ -190,7 +190,7 @@ public class UpdateNodePoolComponentRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to disable rolling updates. Default: false. If set to false, nodes will be rolled automatically to apply the new configuration.</p>
+         * <p>Specifies whether to disable rolling updates. Default value: false. When set to false, updating the baseline configuration triggers a rolling update of nodes.</p>
          */
         public Builder disableRolling(Boolean disableRolling) {
             this.putBodyParameter("disableRolling", disableRolling);
@@ -211,7 +211,7 @@ public class UpdateNodePoolComponentRequest extends Request {
         }
 
         /**
-         * <p>A list of specific nodes to be rolled. If not specified, all nodes in the node pool will be updated.</p>
+         * <p>The list of nodes to include in the rolling update. By default, all nodes are included.</p>
          */
         public Builder nodeNames(java.util.List<String> nodeNames) {
             this.putBodyParameter("nodeNames", nodeNames);
@@ -229,7 +229,7 @@ public class UpdateNodePoolComponentRequest extends Request {
         }
 
         /**
-         * <p>The version of the node component to be updated to.</p>
+         * <p>The version of the node component.</p>
          * 
          * <strong>example:</strong>
          * <p>1.28.9-aliyun.1</p>
@@ -300,10 +300,10 @@ public class UpdateNodePoolComponentRequest extends Request {
             } 
 
             /**
-             * <p>The name of the node component.</p>
+             * <p>The name of the environment variable.</p>
              * 
              * <strong>example:</strong>
-             * <p>kubelet</p>
+             * <p>LOG_LEVEL</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -311,7 +311,10 @@ public class UpdateNodePoolComponentRequest extends Request {
             }
 
             /**
-             * value.
+             * <p>The value of the environment variable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>info</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -378,7 +381,7 @@ public class UpdateNodePoolComponentRequest extends Request {
             } 
 
             /**
-             * <p>Custom configuration parameters for the component.</p>
+             * <p>The custom configuration of the component.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;cpuManagerPolicy&quot;:&quot;static&quot;}</p>
@@ -389,7 +392,7 @@ public class UpdateNodePoolComponentRequest extends Request {
             }
 
             /**
-             * envs.
+             * <p>The environment variables of the node component.</p>
              */
             public Builder envs(java.util.List<Envs> envs) {
                 this.envs = envs;
@@ -482,7 +485,7 @@ public class UpdateNodePoolComponentRequest extends Request {
             } 
 
             /**
-             * <p>The time interval between update batches, in seconds.</p>
+             * <p>The interval between batches during the upgrade, in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -493,7 +496,10 @@ public class UpdateNodePoolComponentRequest extends Request {
             }
 
             /**
-             * maxFailedNodes.
+             * <p>The maximum number of nodes that can fail during the rolling update. Default value: 0, which means the task fails if any node fails. If the value is greater than 0, the task fails and stops when the cumulative number of failed nodes exceeds this value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder maxFailedNodes(Long maxFailedNodes) {
                 this.maxFailedNodes = maxFailedNodes;
@@ -501,7 +507,7 @@ public class UpdateNodePoolComponentRequest extends Request {
             }
 
             /**
-             * <p>The maximum number of nodes that can be updated concurrently. Default: 1.</p>
+             * <p>The maximum number of nodes that can be updated in parallel per batch. Default value: 1.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -512,7 +518,7 @@ public class UpdateNodePoolComponentRequest extends Request {
             }
 
             /**
-             * <p>The automatic pause strategy during the update process. Valid values: NotPause, FirstBatchPause, EveryBatchPause.</p>
+             * <p>The automatic pause policy during node upgrades.</p>
              * 
              * <strong>example:</strong>
              * <p>NotPause</p>

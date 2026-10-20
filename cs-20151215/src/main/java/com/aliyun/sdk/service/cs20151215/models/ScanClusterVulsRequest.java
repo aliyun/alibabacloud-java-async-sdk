@@ -59,7 +59,7 @@ public class ScanClusterVulsRequest extends Request {
         } 
 
         /**
-         * <p>Cluster ID.</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>c259f563386444ebb8d7****</p>

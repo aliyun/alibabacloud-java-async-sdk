@@ -67,7 +67,7 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The vulnerability list of all node pools.</p>
+         * <p>The list of node pool vulnerabilities.</p>
          */
         public Builder vulRecords(java.util.List<VulRecords> vulRecords) {
             this.vulRecords = vulRecords;
@@ -75,10 +75,12 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the CVE vulnerability patching service provided by Security Center is purchased.</p>
+         * <p>Indicates whether the China Cloud Security CVE fix service has been purchased.</p>
          * <ul>
-         * <li>true: yes</li>
-         * <li>false: no</li>
+         * <li><p>true: Purchased.</p>
+         * </li>
+         * <li><p>false: Not purchased.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -135,7 +137,10 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
             } 
 
             /**
-             * name.
+             * <p>The package name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WebLogic</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -254,7 +259,7 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The alias of the vulnerability.</p>
+             * <p>The vulnerability alias.</p>
              * 
              * <strong>example:</strong>
              * <p>RHSA-2019:3197-Important: sudo security update</p>
@@ -265,7 +270,7 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A list of CVE names corresponding to the vulnerabilities.</p>
+             * <p>The list of CVEs associated with the vulnerability.</p>
              */
             public Builder cveList(java.util.List<String> cveList) {
                 this.cveList = cveList;
@@ -273,7 +278,7 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the vulnerability.</p>
+             * <p>The vulnerability name.</p>
              * 
              * <strong>example:</strong>
              * <p>oval:com.redhat.rhsa:def:20193197</p>
@@ -284,13 +289,7 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The severity level of the vulnerability.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>nntf: You can ignore the vulnerability.</li>
-             * <li>later: You can fix the vulnerability later.</li>
-             * <li>asap: You need to fix the vulnerability at the earliest opportunity.</li>
-             * </ul>
+             * <p>The vulnerability severity level.</p>
              * 
              * <strong>example:</strong>
              * <p>asap</p>
@@ -312,7 +311,7 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
             }
 
             /**
-             * package_list.
+             * <p>The list of packages affected by the vulnerability.</p>
              */
             public Builder packageList(java.util.List<PackageList> packageList) {
                 this.packageList = packageList;
@@ -392,7 +391,7 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the node.</p>
+             * <p>The node instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>i-t4n2qolb0wtzt0pz****</p>
@@ -403,7 +402,7 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node name. This name is the identifier of the node in the cluster.</p>
+             * <p>The node name, which is the identifier of the node within the cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou.192.168.x.x</p>

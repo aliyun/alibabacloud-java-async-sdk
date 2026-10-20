@@ -59,7 +59,7 @@ public class DescribeClusterVulsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>c5cdf7e3938bc4f8eb0e44b21a80f****</p>

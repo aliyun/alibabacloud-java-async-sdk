@@ -88,7 +88,7 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
         }
 
         /**
-         * next_token.
+         * <p>The pagination token.</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -175,30 +175,7 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The severity level of the event.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li><p>warning</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>error</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>info</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- --></li>
-             * </ul>
+             * <p>The event level.</p>
              * 
              * <strong>example:</strong>
              * <p>info</p>
@@ -374,7 +351,7 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The event ID.</p>
+             * <p>The ID of the event.</p>
              * 
              * <strong>example:</strong>
              * <p>e-9ad04f72-8ee7-46bf-a02c-e4a06b39****</p>
@@ -385,10 +362,10 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The event source.</p>
+             * <p>The source of the event.</p>
              * 
              * <strong>example:</strong>
-             * <p>cluster</p>
+             * <p>task</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -396,7 +373,7 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The subject related to the event.</p>
+             * <p>The operation object associated with the event.</p>
              * 
              * <strong>example:</strong>
              * <p>npdd89dc2b76c04f14b06774883b******</p>
@@ -407,10 +384,10 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the event started.</p>
+             * <p>The start time of the event. The time is in ISO 8601 format and includes time zone information.</p>
              * 
              * <strong>example:</strong>
-             * <p>2020-12-01T17:31:00Z</p>
+             * <p>2025-05-14T10:00:56+08:00</p>
              */
             public Builder time(String time) {
                 this.time = time;
@@ -418,7 +395,25 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of event. Valid values:</p>
+             * <p>The event type. Valid values:</p>
+             * <ul>
+             * <li>cluster_create: Creates a cluster.</li>
+             * <li>cluster_scaleout: Scales out a cluster.</li>
+             * <li>cluster_attach: Adds existing nodes.</li>
+             * <li>cluster_delete: Deletes a cluster.</li>
+             * <li>cluster_upgrade: Upgrades a cluster.</li>
+             * <li>cluster_migrate: Migrates a cluster.</li>
+             * <li>cluster_node_delete: Removes a node.</li>
+             * <li>cluster_node_drain: Drains a node.</li>
+             * <li>cluster_modify: Modifies a cluster.</li>
+             * <li>cluster_configuration_modify: Modifies the control configurations of a cluster.</li>
+             * <li>cluster_addon_install: Installs a component.</li>
+             * <li>cluster_addon_upgrade: Upgrades a component.</li>
+             * <li>cluster_addon_uninstall: Uninstalls a component.</li>
+             * <li>runtime_upgrade: Upgrades the runtime.</li>
+             * <li>nodepool_upgrade: Upgrades a node pool.</li>
+             * <li>nodepool_update: Updates a node pool.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>nodepool_update</p>
@@ -501,7 +496,7 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of the page to return.</p>
+             * <p>The page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -512,7 +507,7 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries per page. Valid values: 1 to 50. Default value: 50.</p>
+             * <p>The maximum number of results to return per page.</p>
              * 
              * <strong>example:</strong>
              * <p>50</p>
@@ -523,10 +518,10 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of results.</p>
              * 
              * <strong>example:</strong>
-             * <p>3</p>
+             * <p>126</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

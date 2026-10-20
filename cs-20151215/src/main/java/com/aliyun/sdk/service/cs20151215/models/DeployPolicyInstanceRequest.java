@@ -117,7 +117,7 @@ public class DeployPolicyInstanceRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The ID of the target cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,11 +130,11 @@ public class DeployPolicyInstanceRequest extends Request {
         }
 
         /**
-         * <p>The policy name.</p>
+         * <p>The name of the policy governance rule.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ACKNoEnvVarSecrets</p>
+         * <p>ACKAllowedRepos</p>
          */
         public Builder policyName(String policyName) {
             this.putPathParameter("policy_name", policyName);
@@ -143,10 +143,10 @@ public class DeployPolicyInstanceRequest extends Request {
         }
 
         /**
-         * <p>The action of the policy. Valid values:</p>
+         * <p>The governance action of the rule. Valid values:</p>
          * <ul>
-         * <li><code>deny</code>: Deployments that match the policy are denied.</li>
-         * <li><code>warn</code>: Alerts are generated for Deployments that match the policy.</li>
+         * <li><code>deny</code>: blocks deployments that violate the policy.</li>
+         * <li><code>warn</code>: generates alerts.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -159,7 +159,7 @@ public class DeployPolicyInstanceRequest extends Request {
         }
 
         /**
-         * <p>The namespaces to which the policy applies. If you leave this parameter empty, the policy is applicable to all namespaces of the cluster.</p>
+         * <p>The namespaces to which the policy applies. An empty value indicates all namespaces.</p>
          */
         public Builder namespaces(java.util.List<String> namespaces) {
             this.putBodyParameter("namespaces", namespaces);
@@ -168,10 +168,10 @@ public class DeployPolicyInstanceRequest extends Request {
         }
 
         /**
-         * <p>The parameter settings of the policy. For more information about the parameters supported by each policy, see <a href="https://www.alibabacloud.com/help/doc-detail/359819.html">Predefined security policies of ACK</a>.</p>
+         * <p>The parameter settings of the current rule instance. For the parameters supported by each policy governance rule and the corresponding metric description, see <a href="https://www.alibabacloud.com/help/doc-detail/359819.html">Container security policy rules</a>.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;restrictedNamespaces&quot;: [ &quot;test&quot; ]}</p>
+         * <p>{   &quot;repos&quot;: [     &quot;registry-vpc.cn-hangzhou.aliyuncs.com/acs/&quot;,     &quot;registry.cn-hangzhou.aliyuncs.com/acs/&quot;   ] }</p>
          */
         public Builder parameters(java.util.Map<String, ?> parameters) {
             this.putBodyParameter("parameters", parameters);

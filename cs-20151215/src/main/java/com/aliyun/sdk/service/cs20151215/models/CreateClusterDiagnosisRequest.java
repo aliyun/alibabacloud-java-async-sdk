@@ -99,7 +99,7 @@ public class CreateClusterDiagnosisRequest extends Request {
         }
 
         /**
-         * <p>The parameter used to specify the diagnostic object. Examples of parameters for different types of diagnostic objects:</p>
+         * <p>The parameters used to specify the diagnosis target. The following examples show the parameters for different diagnosis types:</p>
          * <p>node:</p>
          * <pre><code>{&quot;name&quot;: &quot;cn-shanghai.10.10.10.107&quot;}
          * </code></pre>
@@ -129,17 +129,7 @@ public class CreateClusterDiagnosisRequest extends Request {
         }
 
         /**
-         * <p>The type of the diagnostic.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>node</li>
-         * <li>ingress</li>
-         * <li>cluster</li>
-         * <li>memory</li>
-         * <li>pod</li>
-         * <li>service</li>
-         * <li>network</li>
-         * </ul>
+         * <p>The diagnosis type.</p>
          * 
          * <strong>example:</strong>
          * <p>node</p>

@@ -93,7 +93,7 @@ public class DescribeClusterAddonInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The configuration of the component.</p>
+         * <p>The component configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;NetworkPolicy&quot;:&quot;true&quot;}</p>
@@ -104,7 +104,7 @@ public class DescribeClusterAddonInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the component.</p>
+         * <p>The component name.</p>
          * 
          * <strong>example:</strong>
          * <p>terway-eniip</p>
@@ -115,15 +115,15 @@ public class DescribeClusterAddonInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the component. Valid values:</p>
+         * <p>The component status. Valid values:</p>
          * <ul>
-         * <li>initial: The component is being installed.</li>
-         * <li>active: The component has been installed.</li>
-         * <li>unhealthy: The component is in an abnormal state.</li>
-         * <li>upgrading: The component is undergoing an upgrade.</li>
-         * <li>updating: Component configuration changes are being applied.</li>
-         * <li>deleting: The component is being uninstalled.</li>
-         * <li>deleted: The component has been deleted.</li>
+         * <li>initial: Installing.</li>
+         * <li>active: Installed.</li>
+         * <li>unhealthy: Unhealthy.</li>
+         * <li>upgrading: Upgrading.</li>
+         * <li>updating: Updating.</li>
+         * <li>deleting: Uninstalling.</li>
+         * <li>deleted: Deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -135,7 +135,7 @@ public class DescribeClusterAddonInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The version of the component.</p>
+         * <p>The component version.</p>
          * 
          * <strong>example:</strong>
          * <p>v1.4.3</p>

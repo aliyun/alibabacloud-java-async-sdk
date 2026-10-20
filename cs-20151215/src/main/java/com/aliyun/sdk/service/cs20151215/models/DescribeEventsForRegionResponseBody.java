@@ -80,7 +80,7 @@ public class DescribeEventsForRegionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The events.</p>
+         * <p>The list of events.</p>
          */
         public Builder events(java.util.List<Events> events) {
             this.events = events;
@@ -88,7 +88,7 @@ public class DescribeEventsForRegionResponseBody extends TeaModel {
         }
 
         /**
-         * next_token.
+         * <p>The pagination token.</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -96,7 +96,7 @@ public class DescribeEventsForRegionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination details.</p>
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -175,7 +175,7 @@ public class DescribeEventsForRegionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The severity level of the event.</p>
+             * <p>The event level.</p>
              * 
              * <strong>example:</strong>
              * <p>info</p>
@@ -186,7 +186,7 @@ public class DescribeEventsForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the event.</p>
+             * <p>The event details.</p>
              * 
              * <strong>example:</strong>
              * <p>Start to upgrade NodePool nodePool/nodePool-A</p>
@@ -335,7 +335,7 @@ public class DescribeEventsForRegionResponseBody extends TeaModel {
              * <p>The cluster ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>cluster-id</p>
+             * <p>c82e6987e2961451182edacd74faf****</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -343,7 +343,7 @@ public class DescribeEventsForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the event.</p>
+             * <p>The event description.</p>
              */
             public Builder data(Data data) {
                 this.data = data;
@@ -354,7 +354,7 @@ public class DescribeEventsForRegionResponseBody extends TeaModel {
              * <p>The event ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>A234-1234-1234</p>
+             * <p>e-9ad04f72-8ee7-46bf-a02c-e4a06b39****</p>
              */
             public Builder eventId(String eventId) {
                 this.eventId = eventId;
@@ -363,6 +363,9 @@ public class DescribeEventsForRegionResponseBody extends TeaModel {
 
             /**
              * <p>The event source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>task</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -373,7 +376,7 @@ public class DescribeEventsForRegionResponseBody extends TeaModel {
              * <p>The object associated with the event.</p>
              * 
              * <strong>example:</strong>
-             * <p>nodePool-id</p>
+             * <p>npdd89dc2b76c04f14b06774883b******</p>
              */
             public Builder subject(String subject) {
                 this.subject = subject;
@@ -381,10 +384,10 @@ public class DescribeEventsForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the event was generated.</p>
+             * <p>The time when the event was generated. The time follows the ISO 8601 standard and includes time zone information.</p>
              * 
              * <strong>example:</strong>
-             * <p>2020-12-01T17:31:00Z</p>
+             * <p>2025-05-14T10:00:56+08:00</p>
              */
             public Builder time(String time) {
                 this.time = time;
@@ -475,7 +478,7 @@ public class DescribeEventsForRegionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of pages.</p>
+             * <p>The page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -486,7 +489,7 @@ public class DescribeEventsForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of records on each page.</p>
+             * <p>The maximum number of results to return per page.</p>
              * 
              * <strong>example:</strong>
              * <p>50</p>
@@ -497,7 +500,7 @@ public class DescribeEventsForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of results.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>

@@ -132,7 +132,7 @@ public class ContainerdConfig extends TeaModel {
         } 
 
         /**
-         * ignoreImageDefinedVolume.
+         * <p>Whether to ignore volumes defined in the image.</p>
          */
         public Builder ignoreImageDefinedVolume(Boolean ignoreImageDefinedVolume) {
             this.ignoreImageDefinedVolume = ignoreImageDefinedVolume;
@@ -140,7 +140,7 @@ public class ContainerdConfig extends TeaModel {
         }
 
         /**
-         * insecureRegistries.
+         * <p>A list of insecure registries that skip TLS certificate verification.</p>
          */
         public Builder insecureRegistries(java.util.List<String> insecureRegistries) {
             this.insecureRegistries = insecureRegistries;
@@ -148,7 +148,7 @@ public class ContainerdConfig extends TeaModel {
         }
 
         /**
-         * limitCore.
+         * <p>Maximum core dump size in bytes.</p>
          */
         public Builder limitCore(Long limitCore) {
             this.limitCore = limitCore;
@@ -156,7 +156,7 @@ public class ContainerdConfig extends TeaModel {
         }
 
         /**
-         * limitMemLock.
+         * <p>Maximum locked memory in bytes.</p>
          */
         public Builder limitMemLock(Long limitMemLock) {
             this.limitMemLock = limitMemLock;
@@ -164,7 +164,7 @@ public class ContainerdConfig extends TeaModel {
         }
 
         /**
-         * limitNoFile.
+         * <p>Maximum number of open file handles.</p>
          */
         public Builder limitNoFile(Long limitNoFile) {
             this.limitNoFile = limitNoFile;
@@ -172,7 +172,7 @@ public class ContainerdConfig extends TeaModel {
         }
 
         /**
-         * maxConcurrentDownloads.
+         * <p>The maximum number of concurrent image layer downloads.</p>
          */
         public Builder maxConcurrentDownloads(Long maxConcurrentDownloads) {
             this.maxConcurrentDownloads = maxConcurrentDownloads;
@@ -180,7 +180,7 @@ public class ContainerdConfig extends TeaModel {
         }
 
         /**
-         * registryMirrors.
+         * <p>A list of registry mirrors to accelerate image pulls.</p>
          */
         public Builder registryMirrors(java.util.List<String> registryMirrors) {
             this.registryMirrors = registryMirrors;

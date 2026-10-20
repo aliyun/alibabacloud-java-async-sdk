@@ -93,7 +93,10 @@ public class Addon extends TeaModel {
         } 
 
         /**
-         * config.
+         * <p>The configuration of the component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;IngressSlbNetworkType\&quot;:\&quot;internet\&quot;}</p>
          */
         public Builder config(String config) {
             this.config = config;
@@ -101,7 +104,14 @@ public class Addon extends TeaModel {
         }
 
         /**
-         * disabled.
+         * <p>Specifies whether to disable default installation. When a cluster is created, required components and additional components such as log components are installed by default. You can disable this default behavior and install these components later by calling the component installation API or by using the console. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: Disables default installation.</li>
+         * <li><code>false</code>: Allows default installation.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder disabled(Boolean disabled) {
             this.disabled = disabled;
@@ -109,7 +119,10 @@ public class Addon extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The name of the component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nginx-ingress-controller</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -117,7 +130,10 @@ public class Addon extends TeaModel {
         }
 
         /**
-         * version.
+         * <p>The version of the component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1.9.3-aliyun.1</p>
          */
         public Builder version(String version) {
             this.version = version;

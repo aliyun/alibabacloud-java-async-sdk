@@ -116,7 +116,7 @@ public class UpdateResourcesDeleteProtectionRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The ID of the cluster to which the resource belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,7 +129,14 @@ public class UpdateResourcesDeleteProtectionRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable deletion protection. Set the value to true to enable deletion protection and set the value to false to disable deletion protection.</p>
+         * <p>Specifies whether to enable deletion protection for the resource. Valid values:</p>
+         * <ul>
+         * <li><p>true: Enables deletion protection. After deletion protection is enabled, you must manually disable deletion protection before you can delete the specified resource.</p>
+         * </li>
+         * <li><p>false: Disables deletion protection.</p>
+         * </li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -141,7 +148,8 @@ public class UpdateResourcesDeleteProtectionRequest extends Request {
         }
 
         /**
-         * <p>The namespace to which the resource belongs.</p>
+         * <p>The namespace of the resource.</p>
+         * <p>Default value: default.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -153,7 +161,13 @@ public class UpdateResourcesDeleteProtectionRequest extends Request {
         }
 
         /**
-         * <p>The type of resource for which deletion protection is enabled or disabled. You can specify namespaces or Services.</p>
+         * <p>The type of resource to update. Valid values:</p>
+         * <ul>
+         * <li><p>namespaces: namespace.</p>
+         * </li>
+         * <li><p>services: service.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>services</p>
@@ -165,7 +179,7 @@ public class UpdateResourcesDeleteProtectionRequest extends Request {
         }
 
         /**
-         * <p>The resources list.</p>
+         * <p>The list of target resources.</p>
          */
         public Builder resources(java.util.List<String> resources) {
             this.putBodyParameter("resources", resources);

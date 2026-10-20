@@ -74,7 +74,7 @@ public class DescribeClusterNodePoolsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the cluster that you want to query.</p>
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,7 +87,7 @@ public class DescribeClusterNodePoolsRequest extends Request {
         }
 
         /**
-         * <p>Node pool name.</p>
+         * <p>The node pool name.</p>
          * 
          * <strong>example:</strong>
          * <p>nodepool-test</p>

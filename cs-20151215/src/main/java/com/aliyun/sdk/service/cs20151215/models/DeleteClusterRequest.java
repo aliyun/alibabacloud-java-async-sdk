@@ -130,7 +130,7 @@ public class DeleteClusterRequest extends Request {
         }
 
         /**
-         * <p>The type of cluster resource that you want to delete or retain.</p>
+         * <p>The deletion options for cluster-associated resources.</p>
          */
         public Builder deleteOptions(java.util.List<DeleteOptions> deleteOptions) {
             String deleteOptionsShrink = shrink(deleteOptions, "delete_options", "json");
@@ -140,12 +140,13 @@ public class DeleteClusterRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to retain the Server Load Balancer (SLB) resources that are created by the cluster.</p>
+         * <p>Specifies whether to retain SLB instances. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: retains the SLB instances that are created by the cluster.</li>
-         * <li><code>false</code>: does not retain the SLB instances that are created by the cluster.</li>
+         * <li><code>true</code>: Retains the created SLB resources.</li>
+         * <li><code>false</code>: Does not retain the created SLB resources.</li>
          * </ul>
-         * <p>Default value: <code>false</code>. Set resource_type to <code>SLB</code> in the <code>delete_options</code> parameter to manage SLB instances.</p>
+         * <p>Default value: <code>false</code>.
+         * Use <code>SLB</code> in <code>delete_options</code> to manage this setting.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -157,10 +158,10 @@ public class DeleteClusterRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to retain all resources. If you set the parameter to <code>true</code>, the <code>retain_resources</code> parameter is ignored. The cloud resources that are created by the cluster are retained. You can call the <code>DescribeClusterResources</code> operation to query cloud resources created by the cluster. If you set the parameter to <code>false</code>, resources to be retained by default in the <code>delete_options</code> parameter are still retained. To delete these resources, set <code>delete_mode</code> to <code>delete</code> in <code>delete_options</code>.</p>
+         * <p>Specifies whether to retain all resources. If this parameter is set to <code>true</code>, <code>retain_resources</code> is ignored, and cloud resources created through the cluster that are queried by the <code>DescribeClusterResources</code> operation are retained. If this parameter is set to <code>false</code>, note that resources that are retained by default in <code>delete_options</code> are still retained. To delete these resources, set <code>delete_mode</code> to <code>delete</code> separately in <code>delete_options</code>.</p>
          * <ul>
-         * <li><code>true</code>: retains all resources, including cloud resources created by the cluster.</li>
-         * <li><code>false</code>: does not retain all resources. Resources to be retained by default in the <code>delete_options</code> parameter are retained. For example, <code>ALB</code> instances are retained when this parameter is set to <code>false</code>.</li>
+         * <li><code>true</code>: Retains all resources, including all cloud resources created through the cluster.</li>
+         * <li><code>false</code>: Does not retain all resources (except resources defined as retained by default in <code>delete_options</code>. For example, <code>ALB</code> is still retained when this parameter is set to <code>false</code>).</li>
          * </ul>
          * <p>Default value: <code>false</code>.</p>
          * 
@@ -174,7 +175,7 @@ public class DeleteClusterRequest extends Request {
         }
 
         /**
-         * <p>The list of resources. To retain resources when you delete a cluster, you need to specify the IDs of the resources to be retained.</p>
+         * <p>The list of resources. To retain resources when deleting a cluster, specify the IDs of the corresponding resources.</p>
          */
         public Builder retainResources(java.util.List<String> retainResources) {
             String retainResourcesShrink = shrink(retainResources, "retain_resources", "json");
@@ -243,10 +244,10 @@ public class DeleteClusterRequest extends Request {
             } 
 
             /**
-             * <p>The deletion policy for the specified type of resource. Valid values:</p>
+             * <p>The deletion policy for this resource type. Valid values:</p>
              * <ul>
-             * <li>delete: deletes the specified type of resource.</li>
-             * <li>retain: retains the specified type of resource.</li>
+             * <li>delete: Deletes this type of resource.</li>
+             * <li>retain: Retains this type of resource.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -258,13 +259,13 @@ public class DeleteClusterRequest extends Request {
             }
 
             /**
-             * <p>The type of the resource. Valid values:</p>
+             * <p>The resource type. Valid values:</p>
              * <ul>
-             * <li>SLB: SLB resources created for Services. By default, the SLB resources are automatically deleted.</li>
-             * <li>ALB: Application Load Balancer (ALB) resources created by the ALB Ingress controller. By default, the ALB resources are retained.</li>
-             * <li>SLS_Data: Simple Log Service projects used by the cluster logging feature. By default, the Simple Log Service projects are retained.</li>
-             * <li>SLS_ControlPlane: Simple Log Service projects used to store the logs of control planes in ACK managed clusters. By default, the Simple Log Service projects are retained.</li>
-             * <li>PrivateZone: PrivateZone resources created by ACK Serverless clusters. By default, the PrivateZone resources are retained.</li>
+             * <li>SLB: SLB resources created through services. Deleted by default. You can choose to retain them.</li>
+             * <li>ALB: ALB resources created by ALB Ingress Controller. Retained by default. You can choose to delete them.</li>
+             * <li>SLS_Data: The Simple Log Service project used by the cluster logging feature. Retained by default. You can choose to delete it.</li>
+             * <li>SLS_ControlPlane: The Simple Log Service project used by the control plane logs of managed clusters. Retained by default. You can choose to delete it.</li>
+             * <li>PrivateZone: PrivateZone resources created by ACK Serverless clusters. Retained by default. You can choose to delete them.</li>
              * </ul>
              * 
              * <strong>example:</strong>

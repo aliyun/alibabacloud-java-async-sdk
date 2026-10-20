@@ -115,7 +115,7 @@ public class DescribeClusterTasksRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>c23421cfa74454bc8b37163fd19af****</p>
@@ -145,7 +145,7 @@ public class DescribeClusterTasksRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

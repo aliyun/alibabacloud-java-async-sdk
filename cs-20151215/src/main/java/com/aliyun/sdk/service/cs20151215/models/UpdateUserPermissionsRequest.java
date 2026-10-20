@@ -87,7 +87,7 @@ public class UpdateUserPermissionsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the RAM user or RAM role whose permissions you want to update.</p>
+         * <p>The ID of the Resource Access Management (RAM) user or RAM role.</p>
          * 
          * <strong>example:</strong>
          * <p>2367****</p>
@@ -99,7 +99,7 @@ public class UpdateUserPermissionsRequest extends Request {
         }
 
         /**
-         * <p>The request body.</p>
+         * <p>The request body parameters.</p>
          */
         public Builder body(java.util.List<UpdateUserPermissionsRequestBody> body) {
             this.putBodyParameter("body", body);
@@ -108,11 +108,11 @@ public class UpdateUserPermissionsRequest extends Request {
         }
 
         /**
-         * <p>The authorization method. Valid values:</p>
+         * <p>The authorization mode. Valid values:</p>
          * <ul>
-         * <li><code>apply</code>: The global update mode. Overwrites all existing permissions of the RAM user or RAM role on the cluster. You must specify all the permissions you want to grant to the RAM user or RAM role in the request parameters when you call this operation.</li>
-         * <li><code>delete</code>: The deletion mode. Revokes only the cluster permissions specified in the request, preserving other existing permissions of the RAM user or RAM role.</li>
-         * <li><code>patch</code>: The incremental mode. Adds only the cluster permissions specified in the request, preserving other existing permissions of the RAM user or RAM role.</li>
+         * <li><code>apply</code>: full update. A full update overwrites all existing cluster permissions of the target RAM user or RAM role. The request must include all permission configurations that you want to grant to the target RAM user or RAM role.</li>
+         * <li><code>delete</code>: delete permissions. Only the cluster authorization information included in the request is deleted. Other cluster Resource Access Management (RAM) user or RAM role are not affected.</li>
+         * <li><code>patch</code>: add permissions. Only the cluster authorization information included in the request is added. Other cluster Resource Access Management (RAM) user or RAM role are not affected.</li>
          * </ul>
          * <p>Default value: <code>apply</code>.</p>
          * 
@@ -237,10 +237,8 @@ public class UpdateUserPermissionsRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the cluster on which you want to grant permissions to the RAM role or RAM role.</p>
-             * <ul>
-             * <li>Set this parameter to an empty string if <code>role_type</code> is set to <code>all-clusters</code>.</li>
-             * </ul>
+             * <p>The ID of the target cluster for authorization.</p>
+             * <p>If the <code>role_type</code> parameter is set to <code>all-clusters</code>, you do not need to specify this parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>c796c60***</p>
@@ -251,7 +249,13 @@ public class UpdateUserPermissionsRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to assign a custom role to the RAM user or RAM role. If you want to assign a custom role to the RAM user or RAM role, set <code>role_name</code> to the name of the custom role.</p>
+             * <p>Specifies whether the authorization is a custom authorization (the <code>role_name</code> uses a custom ClusterRole name).</p>
+             * <ul>
+             * <li><p>true: The authorized role is a custom cluster role.</p>
+             * </li>
+             * <li><p>false: The authorized role is a cluster preset role.</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -262,7 +266,13 @@ public class UpdateUserPermissionsRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to use a RAM role to grant permissions.</p>
+             * <p>Indicates whether the authorization is for a RAM role.</p>
+             * <ul>
+             * <li><p>true: The authorization is for a RAM role.</p>
+             * </li>
+             * <li><p>false: The authorization is for a Resource Access Management (RAM) user.</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -273,7 +283,7 @@ public class UpdateUserPermissionsRequest extends Request {
             }
 
             /**
-             * <p>The namespace that you want to authorize the RAM user or RAM role to manage. This parameter is required only if you set role_type to namespace.</p>
+             * <p>The namespace name. This parameter is empty by default for cluster-scoped authorization.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -284,20 +294,21 @@ public class UpdateUserPermissionsRequest extends Request {
             }
 
             /**
-             * <p>The predefined role name. Valid values:</p>
+             * <p>The name of the preset role. Valid values:</p>
              * <ul>
-             * <li><code>admin</code>: administrator</li>
-             * <li><code>admin-view</code>: read-only administrator</li>
-             * <li><code>ops</code>: O&amp;M engineer</li>
-             * <li><code>dev</code>: developer</li>
-             * <li><code>restricted</code>: restricted user</li>
-             * <li>Custom role</li>
+             * <li><code>admin</code>: administrator.</li>
+             * <li><code>admin-view</code>: read-only administrator.</li>
+             * <li><code>ops</code>: O&amp;M engineer.</li>
+             * <li><code>dev</code>: developer.</li>
+             * <li><code>restricted</code>: restricted user.</li>
+             * <li>Custom ClusterRole name.</li>
              * </ul>
-             * <p>Note:</p>
+             * <blockquote>
              * <ul>
-             * <li>You cannot grant <strong>namespace-level</strong> permissions to the <code>admin</code>, <code>admin-view</code>, and <code>ops</code> roles.</li>
-             * <li>You cannot grant <strong>all cluster-level</strong> permissions to the <code>admin-view</code> role.</li>
+             * <li><code>admin</code>, <code>admin-view</code>, <code>ops</code>: These roles do not support authorization at the <strong>namespace</strong> scope.</li>
+             * <li><code>admin-view</code>: This role does not support authorization at the <strong>all-clusters</strong> scope.</li>
              * </ul>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>ops</p>
@@ -310,9 +321,9 @@ public class UpdateUserPermissionsRequest extends Request {
             /**
              * <p>The authorization type. Valid values:</p>
              * <ul>
-             * <li><code>cluster</code>: authorizes the RAM user or RAM role to manage the specified clusters.</li>
-             * <li><code>namespace</code>: authorizes the RAM user or RAM role to manage the specified namespaces.</li>
-             * <li><code>all-clusters</code>: authorizes the RAM user or RAM role to manage all clusters.</li>
+             * <li><code>cluster</code>: cluster scope.</li>
+             * <li><code>namespace</code>: namespace scope.</li>
+             * <li><code>all-clusters</code>: all-clusters scope.</li>
              * </ul>
              * 
              * <strong>example:</strong>

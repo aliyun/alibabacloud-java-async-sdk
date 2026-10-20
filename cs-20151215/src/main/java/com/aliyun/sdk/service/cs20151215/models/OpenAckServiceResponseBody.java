@@ -67,7 +67,7 @@ public class OpenAckServiceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the order.</p>
+         * <p>The order ID for activating the service.</p>
          * 
          * <strong>example:</strong>
          * <p>2067*******0374</p>
@@ -81,7 +81,7 @@ public class OpenAckServiceResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>20758A-585D-4A41-A9B2-28DA8F4F534F</p>
+         * <p>20758A-585D-4A41-A9B2-28DA8F*******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

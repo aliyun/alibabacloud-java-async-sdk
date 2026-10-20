@@ -194,14 +194,7 @@ public class DeleteAlertContactResponse extends Response {
             } 
 
             /**
-             * <p>The deletion status.</p>
-             * <ul>
-             * <li>true: The alert contact was deleted.</li>
-             * <li>false: The alert contact failed to be deleted.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * status.
              */
             public Builder status(Boolean status) {
                 this.status = status;
@@ -209,10 +202,7 @@ public class DeleteAlertContactResponse extends Response {
             }
 
             /**
-             * <p>The error message returned if the call fails.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Delete contact resource failed.</p>
+             * msg.
              */
             public Builder msg(String msg) {
                 this.msg = msg;
@@ -220,10 +210,7 @@ public class DeleteAlertContactResponse extends Response {
             }
 
             /**
-             * <p>An alert contact ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>12345</p>
+             * contact_id.
              */
             public Builder contactId(String contactId) {
                 this.contactId = contactId;

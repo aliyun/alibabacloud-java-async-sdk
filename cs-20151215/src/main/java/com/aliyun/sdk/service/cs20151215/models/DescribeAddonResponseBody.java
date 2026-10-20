@@ -158,7 +158,7 @@ public class DescribeAddonResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The CPU architecture supported by the component.</p>
+         * <p>The CPU architectures supported by the component.</p>
          */
         public Builder architecture(java.util.List<String> architecture) {
             this.architecture = architecture;
@@ -166,7 +166,7 @@ public class DescribeAddonResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The category of the component.</p>
+         * <p>The component category.</p>
          * 
          * <strong>example:</strong>
          * <p>network</p>
@@ -177,7 +177,7 @@ public class DescribeAddonResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The custom parameter schema of the component.</p>
+         * <p>The schema of custom parameters for the component.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -188,7 +188,7 @@ public class DescribeAddonResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the component is automatically installed by default.</p>
+         * <p>Indicates whether the component is installed by default.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -199,7 +199,7 @@ public class DescribeAddonResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the component is fully managed.</p>
+         * <p>Indicates whether the component is managed.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -221,7 +221,7 @@ public class DescribeAddonResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The latest version information of the component.</p>
+         * <p>The information about newer versions of the component.</p>
          */
         public Builder newerVersions(java.util.List<NewerVersions> newerVersions) {
             this.newerVersions = newerVersions;
@@ -237,7 +237,7 @@ public class DescribeAddonResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The version of the component.</p>
+         * <p>The component version.</p>
          * 
          * <strong>example:</strong>
          * <p>v1.9.3.6-32932850-aliyun</p>
@@ -319,7 +319,7 @@ public class DescribeAddonResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The minimum cluster version required by the component version.</p>
+             * <p>The minimum cluster version required by this component version.</p>
              * 
              * <strong>example:</strong>
              * <p>1.20.4</p>
@@ -330,10 +330,12 @@ public class DescribeAddonResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the component can be updated to the version.</p>
+             * <p>Indicates whether the component can be upgraded to this version.</p>
              * <ul>
-             * <li>true: yes</li>
-             * <li>false: no</li>
+             * <li><p>true: The upgrade is supported.</p>
+             * </li>
+             * <li><p>false: The upgrade is not supported.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

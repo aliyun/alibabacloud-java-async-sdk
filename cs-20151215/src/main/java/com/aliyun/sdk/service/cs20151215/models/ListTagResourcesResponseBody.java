@@ -80,7 +80,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * <p>The token for the next query.</p>
          * 
          * <strong>example:</strong>
          * <p>c374bf4864448****</p>
@@ -102,7 +102,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the queried labels and resources.</p>
+         * <p>The collection of tag resources.</p>
          */
         public Builder tagResources(TagResources tagResources) {
             this.tagResources = tagResources;
@@ -194,7 +194,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the resource.</p>
+             * <p>The resource ID.</p>
              * 
              * <strong>example:</strong>
              * <p>c2e39566adf23481fa1164ed510****</p>
@@ -205,7 +205,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the resource. For more information, see <a href="https://help.aliyun.com/document_detail/110425.html">Labels</a>.</p>
+             * <p>The resource type.</p>
              * 
              * <strong>example:</strong>
              * <p>ALIYUN::CS::CLUSTER</p>
@@ -216,7 +216,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The key of the label.</p>
+             * <p>The tag key.</p>
              * 
              * <strong>example:</strong>
              * <p>ack.aliyun.com</p>
@@ -227,7 +227,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the label.</p>
+             * <p>The tag value.</p>
              * 
              * <strong>example:</strong>
              * <p>c71cf3d796c374bf48644482cb0c3****</p>
@@ -284,7 +284,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The resource and label.</p>
+             * <p>The tag resource.</p>
              */
             public Builder tagResource(java.util.List<TagResource> tagResource) {
                 this.tagResource = tagResource;

@@ -67,7 +67,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the queried clusters.</p>
+         * <p>The list of cluster details.</p>
          */
         public Builder clusters(java.util.List<Clusters> clusters) {
             this.clusters = clusters;
@@ -75,7 +75,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination details.</p>
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -441,7 +441,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The domain name of the cluster.</p>
+             * <p>The local domain name of the cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>cluster.local</p>
@@ -463,11 +463,16 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The types of ACK managed clusters:</p>
+             * <p>The specification of the cluster. Valid values:</p>
              * <ul>
-             * <li>ack.pro.small: ACK Pro cluster</li>
-             * <li>ack.standard: ACK Basic cluster</li>
+             * <li><code>ack.standard</code>: Basic</li>
+             * <li><code>ack.pro.small</code>: Pro</li>
+             * <li><code>ack.pro.xlarge</code>: Pro XL</li>
+             * <li><code>ack.pro.2xlarge</code>: Pro 2XL</li>
+             * <li><code>ack.pro.4xlarge</code>: Pro 4XL (Contact customer service to add your account to the whitelist.)</li>
              * </ul>
+             * <p>Pro XL, Pro 2XL, and Pro 4XL are three tiers provided by &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro provisioned control plane</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro provisioned control plane</a>. By pre-allocating and dedicating control plane resources, these tiers ensure that API concurrency and pod scheduling capabilities remain at a consistently high level. They are suitable for AI training and inference, ultra-large-scale clusters, and mission-critical workloads.</p>
+             * <p>For information about the cluster management fees for Pro and provisioned control plane editions, see &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fees</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fees</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>ack.standard</p>
@@ -478,11 +483,11 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the cluster. Valid values:</p>
+             * <p>The cluster type. Valid values:</p>
              * <ul>
-             * <li>Kubernetes: ACK dedicated cluster</li>
-             * <li>ManagedKubernetes: ACK managed clusters. ACK managed clusters include ACK Basic clusters, ACK Pro clusters, ACK Serverless Basic clusters, ACK Serverless Pro clusters, ACK Edge Basic clusters, ACK Edge Pro clusters, and ACK Lingjun Pro clusters.</li>
-             * <li>ExternalKubernetes: registered cluster</li>
+             * <li>Kubernetes: ACK dedicated cluster.</li>
+             * <li>ManagedKubernetes: ACK managed cluster types, including ACK managed clusters (ACK Pro and ACK Basic), ACK Serverless clusters (Pro and Basic), ACK Edge clusters (Pro and Basic), and ACK Lingjun clusters (Pro).</li>
+             * <li>ExternalKubernetes: registered cluster.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -494,7 +499,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The CIDR block of pods in the cluster.</p>
+             * <p>The CIDR block used by the cluster pods.</p>
              * 
              * <strong>example:</strong>
              * <p>172.20.0.0/16</p>
@@ -505,7 +510,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time at which the instance is created.</p>
+             * <p>The time when the cluster was created.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-12-01T20:40:40+08:00</p>
@@ -516,7 +521,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The current Kubernetes version of the cluster.</p>
+             * <p>The current version of the cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>1.16.6-aliyun.1</p>
@@ -527,10 +532,10 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to enable cluster deletion protection. If you enable this option, the cluster cannot be deleted in the console or by calling API operations. You can obtain the terminal ID by calling one of the following operations:</p>
+             * <p>Indicates whether deletion protection is enabled for the cluster. Deletion protection prevents the cluster from being accidentally deleted in the console or by calling API operations. Valid values:</p>
              * <ul>
-             * <li>true: enables deletion protection for the cluster. This way, the cluster cannot be deleted in the ACK console or by calling API operations.</li>
-             * <li>false: disables deletion protection for the cluster. This way, the cluster can be deleted in the ACK console or by calling API operations.</li>
+             * <li>true: Deletion protection is enabled. The cluster cannot be deleted in the console or by calling API operations.</li>
+             * <li>false: Deletion protection is disabled. The cluster can be deleted in the console or by calling API operations.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -542,7 +547,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The initial Kubernetes version of the cluster.</p>
+             * <p>The initial version of the cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>1.16.6-aliyun.1</p>
@@ -575,7 +580,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Kubernetes version to which the cluster can be updated.</p>
+             * <p>The version to which the cluster can be upgraded.</p>
              * 
              * <strong>example:</strong>
              * <p>1.18.8-aliyun.1</p>
@@ -586,12 +591,12 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The subtype of the clusters. Valid values:</p>
+             * <p>The cluster subtype. Valid values:</p>
              * <ul>
-             * <li>Default: ACK managed clusters. ACK managed clusters include ACK Basic clusters and ACK Pro clusters.</li>
-             * <li>Edge: ACK Edge clusters. ACK Edge clusters include ACK Edge Basic clusters and ACK Edge Pro clusters.</li>
-             * <li>Serverless: ACK Serverless clusters. ACK Serverless clusters include ACK Serverless Basic clusters and ACK Serverless Pro clusters.</li>
-             * <li>Lingjun: ACK Lingjun Pro clusters.</li>
+             * <li>Default: ACK managed cluster, including ACK Pro and ACK Basic.</li>
+             * <li>Edge: ACK Edge cluster, including ACK Edge Pro and ACK Edge Basic.</li>
+             * <li>Serverless: ACK Serverless cluster, including ACK Serverless Pro and ACK Serverless Basic.</li>
+             * <li>LingJun: ACK Lingjun cluster, available in Pro.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -604,11 +609,6 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
 
             /**
              * <p>The kube-proxy mode of the cluster.</p>
-             * <p>Valid value:</p>
-             * <ul>
-             * <li>iptables: iptables.</li>
-             * <li>ipvs: ipvs.</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>ipvs</p>
@@ -630,7 +630,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the cluster resource group.</p>
+             * <p>The ID of the resource group to which the cluster belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>rg-acfmyvw3wjm****</p>
@@ -641,7 +641,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the security group of the cluster.</p>
+             * <p>The ID of the security group associated with the cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>sg-2zeihch86ooz9io4****</p>
@@ -652,7 +652,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The CIDR block of the service network.</p>
+             * <p>The service CIDR block.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -664,7 +664,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of nodes in the ACK cluster.</p>
+             * <p>The number of nodes in the cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -675,20 +675,23 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the cluster. Valid values:</p>
+             * <p>The running status of the cluster. Valid values:</p>
              * <ul>
-             * <li>initial: The cluster is being created.</li>
-             * <li>failed: The cluster failed to be created.</li>
-             * <li>running: The cluster is running.</li>
-             * <li>Upgrading: The cluster is being updated.</li>
-             * <li>scaling: The cluster is being scaled.</li>
-             * <li>waiting: The cluster is waiting for connection requests.</li>
-             * <li>disconnected: The cluster is disconnected.</li>
-             * <li>inactive: The cluster is inactive.</li>
-             * <li>unavailable: The cluster is unavailable.</li>
-             * <li>deleting: The cluster is being deleted.</li>
-             * <li>deleted: The ACK cluster is deleted.</li>
-             * <li>delete_failed: The cluster failed to be deleted.</li>
+             * <li><code>initial</code>: The cluster is being created.</li>
+             * <li><code>failed</code>: The cluster failed to be created.</li>
+             * <li><code>running</code>: The cluster is running.</li>
+             * <li><code>updating</code>: The cluster is being updated.</li>
+             * <li><code>upgrading</code>: The cluster is being upgraded.</li>
+             * <li><code>removing</code>: Nodes are being removed.</li>
+             * <li><code>draining</code>: Nodes are being drained.</li>
+             * <li><code>scaling</code>: The cluster is being scaled.</li>
+             * <li><code>inactive</code>: The cluster is inactive.</li>
+             * <li><code>unavailable</code>: The cluster is unavailable.</li>
+             * <li><code>deleting</code>: The cluster is being deleted.</li>
+             * <li><code>deleted</code>: The cluster has been deleted.</li>
+             * <li><code>delete_failed</code>: The cluster failed to be deleted.</li>
+             * <li><code>waiting</code>: The cluster is in the accessed state, waiting to be connected.</li>
+             * <li><code>disconnected</code>: The cluster is disconnected.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -719,7 +722,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the cluster was updated.</p>
+             * <p>The time when the cluster was last updated.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-12-08T15:37:00+08:00</p>
@@ -730,7 +733,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the virtual private cloud (VPC) to which the cluster belongs.</p>
+             * <p>The ID of the VPC where the cluster is deployed.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-2zeg8nf1ukc0fcmvq****</p>
@@ -741,7 +744,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of vSwitches on the control plane of the cluster.</p>
+             * <p>The list of vSwitches used by the cluster control plane.</p>
              */
             public Builder vswitchIds(java.util.List<String> vswitchIds) {
                 this.vswitchIds = vswitchIds;
@@ -821,7 +824,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of pages.</p>
+             * <p>The page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -832,7 +835,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of records on each page.</p>
+             * <p>The number of records per page.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -843,7 +846,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of results.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>

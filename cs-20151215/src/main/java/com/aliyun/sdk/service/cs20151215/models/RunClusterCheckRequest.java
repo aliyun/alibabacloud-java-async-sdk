@@ -105,7 +105,7 @@ public class RunClusterCheckRequest extends Request {
          * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>ce0da5a1d627e4e9e9f96cae8ad07****</p>
+         * <p>ce0da5a1d627e4e9e9f96cae8ad******</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("cluster_id", clusterId);
@@ -114,7 +114,7 @@ public class RunClusterCheckRequest extends Request {
         }
 
         /**
-         * <p>The cluster check parameters.</p>
+         * <p>The check options.</p>
          */
         public Builder options(java.util.Map<String, String> options) {
             this.putBodyParameter("options", options);
@@ -124,10 +124,11 @@ public class RunClusterCheckRequest extends Request {
 
         /**
          * <p>The check target.</p>
-         * <p>If you set <code>type=NodePoolUpgrade</code>, you must set this parameter to the node pool ID. Otherwise, this parameter is optional.</p>
+         * <p>If the check type parameter <code>type</code> is set to <code>NodePoolUpgrade</code>, this parameter must be set to the node pool ID.</p>
+         * <p>If other check types are selected, this parameter does not need to be set.</p>
          * 
          * <strong>example:</strong>
-         * <p>np1f6779297c4444a3a1cdd29be8e5****</p>
+         * <p>np1f6779297c4444a3a1cdd29be8******</p>
          */
         public Builder target(String target) {
             this.putBodyParameter("target", target);
@@ -137,17 +138,10 @@ public class RunClusterCheckRequest extends Request {
 
         /**
          * <p>The check type.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>ClusterMigrate: cluster migration.</li>
-         * <li>MasterUpgrade: control plane upgrade.</li>
-         * <li>NodePoolUpgrade: node pool upgrade.</li>
-         * <li>ClusterUpgrade: cluster upgrade.</li>
-         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ClusterUpgrade</p>
+         * <p>NodePoolUpgrade</p>
          */
         public Builder type(String type) {
             this.putBodyParameter("type", type);

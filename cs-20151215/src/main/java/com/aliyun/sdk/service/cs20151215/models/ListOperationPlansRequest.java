@@ -85,7 +85,7 @@ public class ListOperationPlansRequest extends Request {
         }
 
         /**
-         * <p>The operation plan type.</p>
+         * <p>The execution plan type.</p>
          * 
          * <strong>example:</strong>
          * <p>cluster_upgrade</p>
