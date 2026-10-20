@@ -132,7 +132,10 @@ public class GetPipelineStatsResponseBody extends TeaModel {
         } 
 
         /**
-         * endTime.
+         * <p>The end time of the statistical window in UNIX seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1735660800</p>
          */
         public Builder endTime(Long endTime) {
             this.endTime = endTime;
@@ -140,7 +143,10 @@ public class GetPipelineStatsResponseBody extends TeaModel {
         }
 
         /**
-         * granularity.
+         * <p>The statistical granularity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hour</p>
          */
         public Builder granularity(String granularity) {
             this.granularity = granularity;
@@ -159,7 +165,7 @@ public class GetPipelineStatsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID, which is used to locate the request during troubleshooting.</p>
+         * <p>The request ID used to locate the request during troubleshooting.</p>
          * 
          * <strong>example:</strong>
          * <p>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</p>
@@ -170,7 +176,10 @@ public class GetPipelineStatsResponseBody extends TeaModel {
         }
 
         /**
-         * startTime.
+         * <p>The start time of the statistical window in UNIX seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1735574400</p>
          */
         public Builder startTime(Long startTime) {
             this.startTime = startTime;
@@ -178,7 +187,7 @@ public class GetPipelineStatsResponseBody extends TeaModel {
         }
 
         /**
-         * summary.
+         * <p>The aggregation summary.</p>
          */
         public Builder summary(Summary summary) {
             this.summary = summary;
@@ -186,7 +195,7 @@ public class GetPipelineStatsResponseBody extends TeaModel {
         }
 
         /**
-         * timeSeries.
+         * <p>The time series data.</p>
          */
         public Builder timeSeries(java.util.List<TimeSeries> timeSeries) {
             this.timeSeries = timeSeries;
@@ -382,7 +391,10 @@ public class GetPipelineStatsResponseBody extends TeaModel {
             } 
 
             /**
-             * avgElapsedMs.
+             * <p>The average execution duration in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2500</p>
              */
             public Builder avgElapsedMs(Long avgElapsedMs) {
                 this.avgElapsedMs = avgElapsedMs;
@@ -390,7 +402,10 @@ public class GetPipelineStatsResponseBody extends TeaModel {
             }
 
             /**
-             * cancelledRuns.
+             * <p>The number of cancelled runs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder cancelledRuns(Long cancelledRuns) {
                 this.cancelledRuns = cancelledRuns;
@@ -398,7 +413,10 @@ public class GetPipelineStatsResponseBody extends TeaModel {
             }
 
             /**
-             * committedWatermark.
+             * <p>The committed watermark in UNIX seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1735660800</p>
              */
             public Builder committedWatermark(Long committedWatermark) {
                 this.committedWatermark = committedWatermark;
@@ -406,7 +424,10 @@ public class GetPipelineStatsResponseBody extends TeaModel {
             }
 
             /**
-             * failedRuns.
+             * <p>The number of failed runs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder failedRuns(Long failedRuns) {
                 this.failedRuns = failedRuns;
@@ -414,7 +435,10 @@ public class GetPipelineStatsResponseBody extends TeaModel {
             }
 
             /**
-             * scheduleLagSeconds.
+             * <p>The schedule lag in seconds, calculated as the current time minus the watermark.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120</p>
              */
             public Builder scheduleLagSeconds(Long scheduleLagSeconds) {
                 this.scheduleLagSeconds = scheduleLagSeconds;
@@ -422,7 +446,10 @@ public class GetPipelineStatsResponseBody extends TeaModel {
             }
 
             /**
-             * succeededRuns.
+             * <p>The number of succeeded runs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>44</p>
              */
             public Builder succeededRuns(Long succeededRuns) {
                 this.succeededRuns = succeededRuns;
@@ -430,7 +457,10 @@ public class GetPipelineStatsResponseBody extends TeaModel {
             }
 
             /**
-             * successRate.
+             * <p>The success rate, ranging from 0 to 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder successRate(Double successRate) {
                 this.successRate = successRate;
@@ -438,7 +468,10 @@ public class GetPipelineStatsResponseBody extends TeaModel {
             }
 
             /**
-             * totalOutputBytes.
+             * <p>The total number of output bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3221225472</p>
              */
             public Builder totalOutputBytes(Long totalOutputBytes) {
                 this.totalOutputBytes = totalOutputBytes;
@@ -446,7 +479,10 @@ public class GetPipelineStatsResponseBody extends TeaModel {
             }
 
             /**
-             * totalOutputRows.
+             * <p>The total number of output rows.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1200000</p>
              */
             public Builder totalOutputRows(Long totalOutputRows) {
                 this.totalOutputRows = totalOutputRows;
@@ -454,7 +490,10 @@ public class GetPipelineStatsResponseBody extends TeaModel {
             }
 
             /**
-             * totalProcessedBytes.
+             * <p>The total number of processed bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5368709120</p>
              */
             public Builder totalProcessedBytes(Long totalProcessedBytes) {
                 this.totalProcessedBytes = totalProcessedBytes;
@@ -462,7 +501,10 @@ public class GetPipelineStatsResponseBody extends TeaModel {
             }
 
             /**
-             * totalProcessedRows.
+             * <p>The total number of processed rows.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1500000</p>
              */
             public Builder totalProcessedRows(Long totalProcessedRows) {
                 this.totalProcessedRows = totalProcessedRows;
@@ -470,7 +512,10 @@ public class GetPipelineStatsResponseBody extends TeaModel {
             }
 
             /**
-             * totalRuns.
+             * <p>The total number of runs in the window.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>44</p>
              */
             public Builder totalRuns(Long totalRuns) {
                 this.totalRuns = totalRuns;
@@ -615,7 +660,10 @@ public class GetPipelineStatsResponseBody extends TeaModel {
             } 
 
             /**
-             * avgElapsedMs.
+             * <p>The average execution duration in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2500</p>
              */
             public Builder avgElapsedMs(Long avgElapsedMs) {
                 this.avgElapsedMs = avgElapsedMs;
@@ -623,7 +671,10 @@ public class GetPipelineStatsResponseBody extends TeaModel {
             }
 
             /**
-             * outputBytes.
+             * <p>The number of output bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>322122547</p>
              */
             public Builder outputBytes(Long outputBytes) {
                 this.outputBytes = outputBytes;
@@ -631,7 +682,10 @@ public class GetPipelineStatsResponseBody extends TeaModel {
             }
 
             /**
-             * outputRows.
+             * <p>The number of output rows.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80000</p>
              */
             public Builder outputRows(Long outputRows) {
                 this.outputRows = outputRows;
@@ -639,7 +693,10 @@ public class GetPipelineStatsResponseBody extends TeaModel {
             }
 
             /**
-             * processedBytes.
+             * <p>The number of processed bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>536870912</p>
              */
             public Builder processedBytes(Long processedBytes) {
                 this.processedBytes = processedBytes;
@@ -647,7 +704,10 @@ public class GetPipelineStatsResponseBody extends TeaModel {
             }
 
             /**
-             * processedRows.
+             * <p>The number of processed rows.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100000</p>
              */
             public Builder processedRows(Long processedRows) {
                 this.processedRows = processedRows;
@@ -655,7 +715,10 @@ public class GetPipelineStatsResponseBody extends TeaModel {
             }
 
             /**
-             * runs.
+             * <p>The number of runs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder runs(Long runs) {
                 this.runs = runs;
@@ -663,7 +726,10 @@ public class GetPipelineStatsResponseBody extends TeaModel {
             }
 
             /**
-             * succeededRuns.
+             * <p>The number of succeeded runs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder succeededRuns(Long succeededRuns) {
                 this.succeededRuns = succeededRuns;
@@ -671,7 +737,10 @@ public class GetPipelineStatsResponseBody extends TeaModel {
             }
 
             /**
-             * timestamp.
+             * <p>The start timestamp of the time bucket in UNIX seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1735574400</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;

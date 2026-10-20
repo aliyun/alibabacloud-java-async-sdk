@@ -114,7 +114,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of results specified in this request.</p>
+         * <p>The maximum number of entries returned for this request.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -125,8 +125,8 @@ public class ListDatasetsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token for the next page of results.</p>
-         * <p>If the total number of results exceeds the maxResults limit, the data is truncated. You can use nextToken to query the next page of data.</p>
+         * <p>The token for the next page of query results.</p>
+         * <p>If the total number of returned results exceeds the maxResults limit, the data is truncated. You can use nextToken to query the next page of data.</p>
          * 
          * <strong>example:</strong>
          * <p>umaQfI7x758Ns4TgWrj8yA3fYlnk7dJgsfhMrSViRY8=</p>
@@ -295,7 +295,7 @@ public class ListDatasetsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The agent space name.</p>
+             * <p>The name of the agent workspace.</p>
              * 
              * <strong>example:</strong>
              * <p>sop-agent</p>
@@ -318,7 +318,7 @@ public class ListDatasetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The dataset name.</p>
+             * <p>The name of the dataset.</p>
              * 
              * <strong>example:</strong>
              * <p>product_faq_dataset</p>
@@ -329,7 +329,7 @@ public class ListDatasetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The dataset description.</p>
+             * <p>The description of the dataset.</p>
              * 
              * <strong>example:</strong>
              * <p>Product FAQ dataset for semantic search</p>
@@ -340,7 +340,7 @@ public class ListDatasetsResponseBody extends TeaModel {
             }
 
             /**
-             * isFavorite.
+             * <p>Indicates whether the dataset is added to favorites.</p>
              */
             public Builder isFavorite(Boolean isFavorite) {
                 this.isFavorite = isFavorite;
@@ -348,7 +348,7 @@ public class ListDatasetsResponseBody extends TeaModel {
             }
 
             /**
-             * labels.
+             * <p>The labels of the dataset.</p>
              */
             public Builder labels(java.util.Map<String, java.util.List<String>> labels) {
                 this.labels = labels;

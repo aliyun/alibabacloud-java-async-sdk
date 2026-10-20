@@ -171,7 +171,7 @@ public class GetDatasetResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The agent space name.</p>
+         * <p>The name of the agent space.</p>
          * 
          * <strong>example:</strong>
          * <p>sop-agent</p>
@@ -194,7 +194,7 @@ public class GetDatasetResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dataset name.</p>
+         * <p>The name of the dataset.</p>
          * 
          * <strong>example:</strong>
          * <p>product_faq_dataset</p>
@@ -205,7 +205,7 @@ public class GetDatasetResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dataset description.</p>
+         * <p>The description of the dataset.</p>
          * 
          * <strong>example:</strong>
          * <p>Product FAQ dataset for semantic search</p>
@@ -216,7 +216,7 @@ public class GetDatasetResponseBody extends TeaModel {
         }
 
         /**
-         * isFavorite.
+         * <p>Indicates whether the dataset is added to favorites.</p>
          */
         public Builder isFavorite(Boolean isFavorite) {
             this.isFavorite = isFavorite;
@@ -224,7 +224,7 @@ public class GetDatasetResponseBody extends TeaModel {
         }
 
         /**
-         * labels.
+         * <p>The labels of the dataset.</p>
          */
         public Builder labels(java.util.Map<String, java.util.List<String>> labels) {
             this.labels = labels;

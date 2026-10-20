@@ -139,7 +139,10 @@ public class GetPipelineStatsRequest extends Request {
         }
 
         /**
-         * endTime.
+         * <p>The end time of the statistical window in UNIX seconds. Default value: now.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1735660800</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("endTime", endTime);
@@ -148,7 +151,10 @@ public class GetPipelineStatsRequest extends Request {
         }
 
         /**
-         * granularity.
+         * <p>The statistical granularity. Valid values: Hour, Day, Week, and Month. Default value: automatically inferred.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hour</p>
          */
         public Builder granularity(String granularity) {
             this.putQueryParameter("granularity", granularity);
@@ -157,7 +163,10 @@ public class GetPipelineStatsRequest extends Request {
         }
 
         /**
-         * startTime.
+         * <p>The start time of the statistical window in UNIX seconds. Default value: now - 86400.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1735574400</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("startTime", startTime);

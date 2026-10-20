@@ -75,7 +75,7 @@ public class GetDatasetRequest extends Request {
         } 
 
         /**
-         * <p>The agent space name.</p>
+         * <p>The name of the agent space.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class GetDatasetRequest extends Request {
         }
 
         /**
-         * <p>The dataset name.</p>
+         * <p>The name of the dataset.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

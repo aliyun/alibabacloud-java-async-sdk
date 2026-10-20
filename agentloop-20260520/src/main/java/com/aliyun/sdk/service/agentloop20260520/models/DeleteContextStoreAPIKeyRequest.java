@@ -111,7 +111,7 @@ public class DeleteContextStoreAPIKeyRequest extends Request {
         }
 
         /**
-         * <p>The display name of the API key to delete.</p>
+         * <p>The display name of the API key to be deleted.</p>
          * 
          * <strong>example:</strong>
          * <p>my-api-key</p>

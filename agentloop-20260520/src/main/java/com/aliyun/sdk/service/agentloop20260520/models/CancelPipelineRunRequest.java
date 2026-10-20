@@ -87,7 +87,7 @@ public class CancelPipelineRunRequest extends Request {
         } 
 
         /**
-         * <p>The name of the AgentSpace.</p>
+         * <p>The AgentSpace name.</p>
          * 
          * <strong>example:</strong>
          * <p>my-agent-space</p>
@@ -99,7 +99,7 @@ public class CancelPipelineRunRequest extends Request {
         }
 
         /**
-         * <p>The name of the pipeline.</p>
+         * <p>The pipeline name.</p>
          * 
          * <strong>example:</strong>
          * <p>my-pipeline</p>

@@ -116,7 +116,7 @@ public class ListDatasetsRequest extends Request {
         } 
 
         /**
-         * <p>The agent space name.</p>
+         * <p>The name of the agent workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,7 +129,7 @@ public class ListDatasetsRequest extends Request {
         }
 
         /**
-         * <p>The dataset name.</p>
+         * <p>The name of the dataset.</p>
          * 
          * <strong>example:</strong>
          * <p>product_faq_dataset</p>
@@ -141,7 +141,7 @@ public class ListDatasetsRequest extends Request {
         }
 
         /**
-         * labels.
+         * <p>Filters datasets by labels.</p>
          */
         public Builder labels(java.util.Map<String, java.util.List<String>> labels) {
             String labelsShrink = shrink(labels, "labels", "json");
@@ -163,7 +163,7 @@ public class ListDatasetsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token. You do not need to set this parameter for the first request. For subsequent requests, set this parameter to the nextToken value returned in the previous response.</p>
+         * <p>The next token. You do not need to set this parameter for the first request. For subsequent requests, pass the nextToken value returned in the previous response.</p>
          * 
          * <strong>example:</strong>
          * <p>RsfoUqpOJd5nd0F1e4OquY/7dKNGp1JMgsKtvCagmtY=</p>

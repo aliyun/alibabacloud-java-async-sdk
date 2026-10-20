@@ -171,7 +171,7 @@ public class GetOptimizeTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * checkpoint.
+         * <p>The scheduling checkpoint, which stores states such as the general scheduling watermark.</p>
          */
         public Builder checkpoint(java.util.Map<String, ?> checkpoint) {
             this.checkpoint = checkpoint;
@@ -179,7 +179,10 @@ public class GetOptimizeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * config.
+         * <p>The type-specific configuration. Optional prompts for ExperienceMining or SkillOptimize support only inline Markdown. The body is saved to inputs.prompt.content, which must be a non-empty UTF-8 string of up to 16 KiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;ioVersion&quot;:2,&quot;inputs&quot;:{&quot;experienceLibrary&quot;:{&quot;type&quot;:&quot;dataset&quot;,&quot;dataset&quot;:&quot;experiences&quot;},&quot;trajectory&quot;:{&quot;type&quot;:&quot;sls&quot;,&quot;project&quot;:&quot;my-project&quot;,&quot;logstore&quot;:&quot;agent-trajectory&quot;,&quot;format&quot;:&quot;atif&quot;},&quot;prompt&quot;:{&quot;type&quot;:&quot;inline&quot;,&quot;format&quot;:&quot;markdown&quot;,&quot;content&quot;:&quot;# Guidance\\nExtract evidence-backed tool contracts.&quot;}},&quot;outputs&quot;:{&quot;changePlan&quot;:{&quot;type&quot;:&quot;dataset&quot;,&quot;dataset&quot;:&quot;experience-plans&quot;}},&quot;operators&quot;:[&quot;tool_contract&quot;],&quot;application&quot;:{&quot;mode&quot;:&quot;manual&quot;}}</p>
          */
         public Builder config(java.util.Map<String, ?> config) {
             this.config = config;
@@ -187,7 +190,10 @@ public class GetOptimizeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * createTime.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-08-12T10:00:00Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -195,7 +201,10 @@ public class GetOptimizeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * nextTriggerTime.
+         * <p>The next scheduling trigger time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-08-13T16:00:00Z</p>
          */
         public Builder nextTriggerTime(String nextTriggerTime) {
             this.nextTriggerTime = nextTriggerTime;
@@ -203,7 +212,10 @@ public class GetOptimizeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * optimizeTaskName.
+         * <p>The optimization task name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>efficiency-analysis</p>
          */
         public Builder optimizeTaskName(String optimizeTaskName) {
             this.optimizeTaskName = optimizeTaskName;
@@ -211,7 +223,10 @@ public class GetOptimizeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * regionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -219,7 +234,10 @@ public class GetOptimizeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -227,7 +245,10 @@ public class GetOptimizeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The task status. Valid values: Enabled, Disabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -235,7 +256,10 @@ public class GetOptimizeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * type.
+         * <p>The optimization task type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EfficiencyAnalysis</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -243,7 +267,10 @@ public class GetOptimizeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * updateTime.
+         * <p>The update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-08-12T10:00:00Z</p>
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;

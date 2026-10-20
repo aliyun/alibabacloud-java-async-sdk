@@ -73,7 +73,10 @@ public class GetOptimizeTaskRequest extends Request {
         } 
 
         /**
-         * agentSpace.
+         * <p>The AgentSpace name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-agent-space</p>
          */
         public Builder agentSpace(String agentSpace) {
             this.putPathParameter("agentSpace", agentSpace);
@@ -82,7 +85,10 @@ public class GetOptimizeTaskRequest extends Request {
         }
 
         /**
-         * optimizeTaskName.
+         * <p>The optimization task name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>efficiency-analysis</p>
          */
         public Builder optimizeTaskName(String optimizeTaskName) {
             this.putPathParameter("optimizeTaskName", optimizeTaskName);

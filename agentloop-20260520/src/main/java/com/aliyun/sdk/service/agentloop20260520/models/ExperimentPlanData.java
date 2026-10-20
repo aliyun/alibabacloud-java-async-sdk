@@ -184,7 +184,7 @@ public class ExperimentPlanData extends TeaModel {
         } 
 
         /**
-         * <p>The creation time in milliseconds.</p>
+         * <p>The creation time, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1767225600000</p>
@@ -209,7 +209,7 @@ public class ExperimentPlanData extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Offline evaluation plan for customer service Q&amp;A</p>
+         * <p>Customer service Q&amp;A offline evaluation plan</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -228,7 +228,7 @@ public class ExperimentPlanData extends TeaModel {
         }
 
         /**
-         * <p>The experiment type. Valid values: offline (offline experiment) and online (online experiment).</p>
+         * <p>The experiment type: offline (offline experiment) or online (online experiment).</p>
          * 
          * <strong>example:</strong>
          * <p>offline</p>
@@ -239,7 +239,7 @@ public class ExperimentPlanData extends TeaModel {
         }
 
         /**
-         * <p>The name of the associated data processing pipeline. This field is empty if no pipeline is associated. After association, when an experiment under this plan completes and writes results to a Logstore, the system filters by the trace ID of the experiment trace and calls PreviewPipeline to write the pipeline-processed results.</p>
+         * <p>The name of the associated data processing pipeline. This field is empty if no pipeline is associated. After a pipeline is associated, when an experiment under this plan completes and writes experiment results to the Logstore, the system filters by the traceId of the current experiment trace and calls PreviewPipeline to write the results processed by the pipeline.</p>
          * 
          * <strong>example:</strong>
          * <p>trace-process-pipeline</p>
@@ -251,6 +251,9 @@ public class ExperimentPlanData extends TeaModel {
 
         /**
          * <p>The experiment plan ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exp-plan-e95bff54685a4ae29ff3a834c1008a71</p>
          */
         public Builder planId(String planId) {
             this.planId = planId;
@@ -280,7 +283,7 @@ public class ExperimentPlanData extends TeaModel {
         }
 
         /**
-         * <p>The status. Valid values: pending, running, and stopped.</p>
+         * <p>The status: pending, running, or stopped.</p>
          * 
          * <strong>example:</strong>
          * <p>pending</p>
@@ -291,7 +294,7 @@ public class ExperimentPlanData extends TeaModel {
         }
 
         /**
-         * <p>The update time in milliseconds.</p>
+         * <p>The update time, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1767229200000</p>

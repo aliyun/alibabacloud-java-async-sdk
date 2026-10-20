@@ -85,7 +85,7 @@ public class ResumePipelineRequest extends Request {
         }
 
         /**
-         * <p>The name of the pipeline to resume.</p>
+         * <p>The name of the pipeline to be resumed.</p>
          * 
          * <strong>example:</strong>
          * <p>my-pipeline</p>

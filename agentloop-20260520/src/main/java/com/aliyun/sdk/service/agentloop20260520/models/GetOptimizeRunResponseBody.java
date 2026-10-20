@@ -288,7 +288,10 @@ public class GetOptimizeRunResponseBody extends TeaModel {
         } 
 
         /**
-         * attemptCount.
+         * <p>The number of executed attempts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder attemptCount(Integer attemptCount) {
             this.attemptCount = attemptCount;
@@ -296,7 +299,10 @@ public class GetOptimizeRunResponseBody extends TeaModel {
         }
 
         /**
-         * createTime.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-08-12T10:00:00Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -304,7 +310,10 @@ public class GetOptimizeRunResponseBody extends TeaModel {
         }
 
         /**
-         * currentStage.
+         * <p>The current execution stage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>attribution</p>
          */
         public Builder currentStage(String currentStage) {
             this.currentStage = currentStage;
@@ -312,7 +321,10 @@ public class GetOptimizeRunResponseBody extends TeaModel {
         }
 
         /**
-         * errorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InternalError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -320,7 +332,10 @@ public class GetOptimizeRunResponseBody extends TeaModel {
         }
 
         /**
-         * errorMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The optimize run failed.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -328,7 +343,7 @@ public class GetOptimizeRunResponseBody extends TeaModel {
         }
 
         /**
-         * extra.
+         * <p>The type-related information and immutable result references. For efficiency analysis, frozen outputBindings and tokenPublication release receipts are returned.</p>
          */
         public Builder extra(java.util.Map<String, ?> extra) {
             this.extra = extra;
@@ -336,7 +351,10 @@ public class GetOptimizeRunResponseBody extends TeaModel {
         }
 
         /**
-         * finishTime.
+         * <p>The completion time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-08-12T10:01:00Z</p>
          */
         public Builder finishTime(String finishTime) {
             this.finishTime = finishTime;
@@ -344,7 +362,10 @@ public class GetOptimizeRunResponseBody extends TeaModel {
         }
 
         /**
-         * maxAttempts.
+         * <p>The maximum number of attempts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder maxAttempts(Integer maxAttempts) {
             this.maxAttempts = maxAttempts;
@@ -352,7 +373,10 @@ public class GetOptimizeRunResponseBody extends TeaModel {
         }
 
         /**
-         * optimizeRunId.
+         * <p>The ID of the execution instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>or-20260812-0001</p>
          */
         public Builder optimizeRunId(String optimizeRunId) {
             this.optimizeRunId = optimizeRunId;
@@ -360,7 +384,10 @@ public class GetOptimizeRunResponseBody extends TeaModel {
         }
 
         /**
-         * optimizeTaskName.
+         * <p>The name of the optimization task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>efficiency-analysis</p>
          */
         public Builder optimizeTaskName(String optimizeTaskName) {
             this.optimizeTaskName = optimizeTaskName;
@@ -368,7 +395,7 @@ public class GetOptimizeRunResponseBody extends TeaModel {
         }
 
         /**
-         * progress.
+         * <p>The current execution progress. The fields are defined by the task type.</p>
          */
         public Builder progress(java.util.Map<String, ?> progress) {
             this.progress = progress;
@@ -376,7 +403,10 @@ public class GetOptimizeRunResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -384,7 +414,10 @@ public class GetOptimizeRunResponseBody extends TeaModel {
         }
 
         /**
-         * startTime.
+         * <p>The initial start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-08-12T10:00:01Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -392,7 +425,10 @@ public class GetOptimizeRunResponseBody extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The execution status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Succeeded</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -400,7 +436,10 @@ public class GetOptimizeRunResponseBody extends TeaModel {
         }
 
         /**
-         * trajectoryCount.
+         * <p>The number of analysis trajectories.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder trajectoryCount(Long trajectoryCount) {
             this.trajectoryCount = trajectoryCount;
@@ -408,7 +447,10 @@ public class GetOptimizeRunResponseBody extends TeaModel {
         }
 
         /**
-         * triggerType.
+         * <p>The trigger type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Scheduled</p>
          */
         public Builder triggerType(String triggerType) {
             this.triggerType = triggerType;
@@ -416,7 +458,10 @@ public class GetOptimizeRunResponseBody extends TeaModel {
         }
 
         /**
-         * type.
+         * <p>The task type snapshot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EfficiencyAnalysis</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -424,7 +469,10 @@ public class GetOptimizeRunResponseBody extends TeaModel {
         }
 
         /**
-         * windowEndTime.
+         * <p>The end time of the analysis window, in UNIX seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1786432690000</p>
          */
         public Builder windowEndTime(Long windowEndTime) {
             this.windowEndTime = windowEndTime;
@@ -432,7 +480,10 @@ public class GetOptimizeRunResponseBody extends TeaModel {
         }
 
         /**
-         * windowStartTime.
+         * <p>The start time of the analysis window, in UNIX seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1786432688000</p>
          */
         public Builder windowStartTime(Long windowStartTime) {
             this.windowStartTime = windowStartTime;

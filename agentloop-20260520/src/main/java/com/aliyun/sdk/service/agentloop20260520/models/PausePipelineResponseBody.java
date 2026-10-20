@@ -130,7 +130,7 @@ public class PausePipelineResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the pipeline was paused, in ISO 8601 UTC format.</p>
+         * <p>The pause time in ISO 8601 UTC format.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
          * 
          * <strong>example:</strong>
@@ -164,7 +164,7 @@ public class PausePipelineResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID, which is used to locate and troubleshoot issues.</p>
+         * <p>The request ID, which is used to locate the request during troubleshooting.</p>
          * 
          * <strong>example:</strong>
          * <p>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</p>
@@ -175,7 +175,7 @@ public class PausePipelineResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The scheduling status. The value is fixed as Paused.</p>
+         * <p>The scheduling status, which is fixed to Paused.</p>
          * 
          * <strong>example:</strong>
          * <p>Paused</p>

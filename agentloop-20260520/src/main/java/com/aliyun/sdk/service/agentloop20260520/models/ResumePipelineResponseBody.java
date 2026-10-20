@@ -119,7 +119,7 @@ public class ResumePipelineResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The name of the AgentSpace where the pipeline is located.</p>
+         * <p>The name of the AgentSpace.</p>
          * 
          * <strong>example:</strong>
          * <p>my-agent-space</p>
@@ -163,7 +163,7 @@ public class ResumePipelineResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID, which is used to locate and troubleshoot issues.</p>
+         * <p>The request ID used to locate the request during troubleshooting.</p>
          * 
          * <strong>example:</strong>
          * <p>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</p>
@@ -174,7 +174,7 @@ public class ResumePipelineResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The scheduling status. The value is fixed to Active.</p>
+         * <p>The scheduling status, which is fixed to Active.</p>
          * 
          * <strong>example:</strong>
          * <p>Active</p>

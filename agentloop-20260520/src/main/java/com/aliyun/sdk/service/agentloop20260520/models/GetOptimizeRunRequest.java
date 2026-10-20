@@ -87,7 +87,10 @@ public class GetOptimizeRunRequest extends Request {
         } 
 
         /**
-         * agentSpace.
+         * <p>The name of the AgentSpace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-agent-space</p>
          */
         public Builder agentSpace(String agentSpace) {
             this.putPathParameter("agentSpace", agentSpace);
@@ -96,7 +99,10 @@ public class GetOptimizeRunRequest extends Request {
         }
 
         /**
-         * optimizeTaskName.
+         * <p>The name of the optimization task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>efficiency-analysis</p>
          */
         public Builder optimizeTaskName(String optimizeTaskName) {
             this.putPathParameter("optimizeTaskName", optimizeTaskName);
@@ -105,7 +111,10 @@ public class GetOptimizeRunRequest extends Request {
         }
 
         /**
-         * optimizeRunId.
+         * <p>The ID of the execution instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>or-20260812-0001</p>
          */
         public Builder optimizeRunId(String optimizeRunId) {
             this.putPathParameter("optimizeRunId", optimizeRunId);

@@ -327,7 +327,7 @@ public class ExperimentRecord extends TeaModel {
         } 
 
         /**
-         * <p>The completion time in milliseconds.</p>
+         * <p>The completion timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1767229200000</p>
@@ -371,7 +371,7 @@ public class ExperimentRecord extends TeaModel {
         }
 
         /**
-         * <p>The SLS project where the dataset is located.</p>
+         * <p>The Simple Log Service (SLS) project where the dataset is located.</p>
          * 
          * <strong>example:</strong>
          * <p>agentspace-project</p>
@@ -394,6 +394,9 @@ public class ExperimentRecord extends TeaModel {
 
         /**
          * <p>The ID of the associated evaluation task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eval-task-6bec93bfa03740dd86ce2bf1496e65fb</p>
          */
         public Builder evaluationTaskId(String evaluationTaskId) {
             this.evaluationTaskId = evaluationTaskId;
@@ -412,7 +415,7 @@ public class ExperimentRecord extends TeaModel {
         }
 
         /**
-         * <p>The execution time in milliseconds.</p>
+         * <p>The execution timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1767225600000</p>
@@ -435,6 +438,9 @@ public class ExperimentRecord extends TeaModel {
 
         /**
          * <p>The ID of the associated experiment plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exp-plan-0242d983f5d340fd8479cf2c19eb279e</p>
          */
         public Builder experimentPlanId(String experimentPlanId) {
             this.experimentPlanId = experimentPlanId;
@@ -509,6 +515,9 @@ public class ExperimentRecord extends TeaModel {
 
         /**
          * <p>The experiment record ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exp-run-f6d419b0ed3d43a7b585948a55efc07b</p>
          */
         public Builder recordId(String recordId) {
             this.recordId = recordId;

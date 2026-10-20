@@ -87,7 +87,10 @@ public class TerminatePipelineRequest extends Request {
         } 
 
         /**
-         * agentSpace.
+         * <p>The name of the AgentSpace where the pipeline is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-agent-space</p>
          */
         public Builder agentSpace(String agentSpace) {
             this.putPathParameter("agentSpace", agentSpace);
@@ -96,7 +99,10 @@ public class TerminatePipelineRequest extends Request {
         }
 
         /**
-         * pipelineName.
+         * <p>The name of the pipeline to be terminated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-pipeline</p>
          */
         public Builder pipelineName(String pipelineName) {
             this.putPathParameter("pipelineName", pipelineName);
@@ -105,7 +111,10 @@ public class TerminatePipelineRequest extends Request {
         }
 
         /**
-         * reason.
+         * <p>The reason for termination.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>project deprecated</p>
          */
         public Builder reason(String reason) {
             this.putBodyParameter("reason", reason);
