@@ -80,7 +80,7 @@ public class ListTablesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The pagination result.</p>
+         * <p>The paging information.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -99,7 +99,7 @@ public class ListTablesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -205,7 +205,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page size.</p>
+             * <p>The number of entries per page.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -216,7 +216,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of data tables.</p>
+             * <p>The list of tables.</p>
              */
             public Builder tables(java.util.List<Table> tables) {
                 this.tables = tables;

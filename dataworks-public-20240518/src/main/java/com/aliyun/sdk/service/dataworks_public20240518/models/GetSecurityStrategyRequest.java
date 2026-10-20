@@ -83,7 +83,7 @@ public class GetSecurityStrategyRequest extends Request {
         }
 
         /**
-         * <p><strong>The ID of the security strategy.</strong></p>
+         * <p><strong>The security policy ID.</strong></p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

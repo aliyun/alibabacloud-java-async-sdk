@@ -246,6 +246,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>You must purchase DataWorks Enterprise Edition to use this feature.</p>
+     * 
+     * @param request the request parameters of CreateCalendar  CreateCalendarRequest
+     * @return CreateCalendarResponse
+     */
+    CompletableFuture<CreateCalendarResponse> createCalendar(CreateCalendarRequest request);
+
+    /**
+     * <b>description</b> :
      * <blockquote>
      * <p>Notice: This operation does not support batch operations. If you specify multiple publish entities in the parameters, all entities except the first one are ignored.</p>
      * </blockquote>
@@ -717,7 +726,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>DataWorks Basic Edition or later is required.</p>
+     * <p>You must purchase DataWorks Basic Edition or a later edition to use this feature.</p>
      * 
      * @param request the request parameters of CreateWorkflowInstances  CreateWorkflowInstancesRequest
      * @return CreateWorkflowInstancesResponse
@@ -745,6 +754,16 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteBusinessResponse
      */
     CompletableFuture<DeleteBusinessResponse> deleteBusiness(DeleteBusinessRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>DataWorks Enterprise Edition is required.
+     * You cannot delete a scheduling calendar that is referenced by nodes. Remove the node references first.</p>
+     * 
+     * @param request the request parameters of DeleteCalendar  DeleteCalendarRequest
+     * @return DeleteCalendarResponse
+     */
+    CompletableFuture<DeleteCalendarResponse> deleteCalendar(DeleteCalendarRequest request);
 
     /**
      * <b>description</b> :
@@ -1349,8 +1368,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Request Description</h2>
-     * <p>This API is used to find the most suitable security policy based on the provided control module, sub-module, and workspace ID. If a workspace ID is provided, the policy at the specified workspace level is matched first; otherwise, the tenant-level policy is returned. Note that system policies cannot be deleted or modified.</p>
+     * <h2>Operation description</h2>
+     * <p>This API operation queries the most suitable security policy based on the provided control module, submodule, and workspace ID. If a workspace ID is provided, the system preferentially matches policies at the specified workspace level. Otherwise, tenant-level policies are returned. Note that system policies cannot be deleted or modified.</p>
      * 
      * @param request the request parameters of FindBestMatchSecurityStrategy  FindBestMatchSecurityStrategyRequest
      * @return FindBestMatchSecurityStrategyResponse
@@ -1424,6 +1443,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetBusinessResponse
      */
     CompletableFuture<GetBusinessResponse> getBusiness(GetBusinessRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>DataWorks Enterprise Edition is required to use this API.</p>
+     * 
+     * @param request the request parameters of GetCalendar  GetCalendarRequest
+     * @return GetCalendarResponse
+     */
+    CompletableFuture<GetCalendarResponse> getCalendar(GetCalendarRequest request);
 
     /**
      * <b>description</b> :
@@ -1955,12 +1983,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This API retrieves the complete configuration information for a security policy by its ID.</li>
-     * <li>The API returns an error message if the provided <code>Id</code> is invalid or does not exist.</li>
-     * <li>The response includes basic policy information, such as its name and description, and policy details, such as control items and their settings.</li>
-     * <li>Note: Some fields in a system default policy cannot be modified or deleted.</li>
+     * <li>This API retrieves all configuration information of a specific security policy by using the specified security policy ID.</li>
+     * <li>Ensure that the provided <code>Id</code> parameter value is valid and exists. Otherwise, an error message is returned.</li>
+     * <li>The returned data structure includes the basic information of the policy, such as the name and description, and the detailed policy content, such as control items and their settings.</li>
+     * <li>Note: Some fields of system default policies may be protected from modification or deletion.</li>
      * </ul>
      * 
      * @param request the request parameters of GetSecurityStrategy  GetSecurityStrategyRequest
@@ -2200,6 +2228,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListBusinessResponse
      */
     CompletableFuture<ListBusinessResponse> listBusiness(ListBusinessRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>DataWorks Enterprise Edition is required.</p>
+     * 
+     * @param request the request parameters of ListCalendarVersions  ListCalendarVersionsRequest
+     * @return ListCalendarVersionsResponse
+     */
+    CompletableFuture<ListCalendarVersionsResponse> listCalendarVersions(ListCalendarVersionsRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>DataWorks Enterprise Edition is required.</p>
+     * 
+     * @param request the request parameters of ListCalendars  ListCalendarsRequest
+     * @return ListCalendarsResponse
+     */
+    CompletableFuture<ListCalendarsResponse> listCalendars(ListCalendarsRequest request);
 
     /**
      * <b>description</b> :
@@ -2883,7 +2929,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
+     * <p>You must purchase DataWorks Basic Edition or later to use this operation.</p>
      * 
      * @param request the request parameters of ListProjectRoles  ListProjectRolesRequest
      * @return ListProjectRolesResponse
@@ -2965,12 +3011,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This API retrieves a paginated list of configured security policies.</li>
-     * <li>The <code>ControlModule</code> and <code>ControlSubModule</code> parameters filter policies by a specific module or submodule.</li>
-     * <li>The <code>PageNum</code> and <code>PageSize</code> parameters control pagination. <code>PageNum</code> specifies the page number to retrieve (default: 1), and <code>PageSize</code> specifies the number of policies to return per page (default: 20).</li>
-     * <li>Use the <code>MaxResults</code> and <code>NextToken</code> private parameters for advanced pagination.</li>
+     * <li>This operation retrieves the configured security policies in the system in pages.</li>
+     * <li>You can use the <code>ControlModule</code> and <code>ControlSubModule</code> parameters to filter policies under specific modules or submodules.</li>
+     * <li>The pagination parameters include <code>PageNum</code> and <code>PageSize</code>, which indicate the page number and the number of entries per page. The default values are 1 and 20.</li>
+     * <li>If you need further pagination control, you can use the <code>MaxResults</code> and <code>NextToken</code> parameters (private parameters).</li>
      * </ul>
      * 
      * @param request the request parameters of ListSecurityStrategies  ListSecurityStrategiesRequest
@@ -3066,7 +3112,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</li>
+     * <li>You must purchase DataWorks Basic Edition or later to use this API.</li>
      * </ol>
      * 
      * @param request the request parameters of ListTables  ListTablesRequest
@@ -3577,6 +3623,16 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateBusinessResponse
      */
     CompletableFuture<UpdateBusinessResponse> updateBusiness(UpdateBusinessRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>You must purchase DataWorks Enterprise Edition to use this feature.
+     * The calendar name cannot be modified. Unsubmitted dates are not retained.</p>
+     * 
+     * @param request the request parameters of UpdateCalendar  UpdateCalendarRequest
+     * @return UpdateCalendarResponse
+     */
+    CompletableFuture<UpdateCalendarResponse> updateCalendar(UpdateCalendarRequest request);
 
     /**
      * <b>description</b> :
