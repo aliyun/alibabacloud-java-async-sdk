@@ -266,6 +266,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetTemplateResponse> getTemplate(GetTemplateRequest request);
 
     /**
+     * @param request the request parameters of GetWorkspace  GetWorkspaceRequest
+     * @return GetWorkspaceResponse
+     */
+    CompletableFuture<GetWorkspaceResponse> getWorkspace(GetWorkspaceRequest request);
+
+    /**
      * @param request the request parameters of GrantRoleToUsers  GrantRoleToUsersRequest
      * @return GrantRoleToUsersResponse
      */
