@@ -23,6 +23,9 @@ public class GetResourceOAuth2TokenResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AuthorizationURL")
     private String authorizationURL;
 
+    @com.aliyun.core.annotation.NameInMap("ExpiresIn")
+    private Long expiresIn;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
@@ -35,6 +38,7 @@ public class GetResourceOAuth2TokenResponseBody extends TeaModel {
     private GetResourceOAuth2TokenResponseBody(Builder builder) {
         this.accessToken = builder.accessToken;
         this.authorizationURL = builder.authorizationURL;
+        this.expiresIn = builder.expiresIn;
         this.requestId = builder.requestId;
         this.sessionStatus = builder.sessionStatus;
         this.sessionURI = builder.sessionURI;
@@ -67,6 +71,13 @@ public class GetResourceOAuth2TokenResponseBody extends TeaModel {
     }
 
     /**
+     * @return expiresIn
+     */
+    public Long getExpiresIn() {
+        return this.expiresIn;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -90,6 +101,7 @@ public class GetResourceOAuth2TokenResponseBody extends TeaModel {
     public static final class Builder {
         private String accessToken; 
         private String authorizationURL; 
+        private Long expiresIn; 
         private String requestId; 
         private String sessionStatus; 
         private String sessionURI; 
@@ -100,6 +112,7 @@ public class GetResourceOAuth2TokenResponseBody extends TeaModel {
         private Builder(GetResourceOAuth2TokenResponseBody model) {
             this.accessToken = model.accessToken;
             this.authorizationURL = model.authorizationURL;
+            this.expiresIn = model.expiresIn;
             this.requestId = model.requestId;
             this.sessionStatus = model.sessionStatus;
             this.sessionURI = model.sessionURI;
@@ -118,6 +131,14 @@ public class GetResourceOAuth2TokenResponseBody extends TeaModel {
          */
         public Builder authorizationURL(String authorizationURL) {
             this.authorizationURL = authorizationURL;
+            return this;
+        }
+
+        /**
+         * ExpiresIn.
+         */
+        public Builder expiresIn(Long expiresIn) {
+            this.expiresIn = expiresIn;
             return this;
         }
 

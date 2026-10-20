@@ -335,12 +335,16 @@ public class AssumeRoleForWorkloadIdentityResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Issuer")
         private String issuer;
 
+        @com.aliyun.core.annotation.NameInMap("JTI")
+        private String JTI;
+
         @com.aliyun.core.annotation.NameInMap("Subject")
         private String subject;
 
         private JwtClaims(Builder builder) {
             this.audiences = builder.audiences;
             this.issuer = builder.issuer;
+            this.JTI = builder.JTI;
             this.subject = builder.subject;
         }
 
@@ -367,6 +371,13 @@ public class AssumeRoleForWorkloadIdentityResponseBody extends TeaModel {
         }
 
         /**
+         * @return JTI
+         */
+        public String getJTI() {
+            return this.JTI;
+        }
+
+        /**
          * @return subject
          */
         public String getSubject() {
@@ -376,6 +387,7 @@ public class AssumeRoleForWorkloadIdentityResponseBody extends TeaModel {
         public static final class Builder {
             private String audiences; 
             private String issuer; 
+            private String JTI; 
             private String subject; 
 
             private Builder() {
@@ -384,6 +396,7 @@ public class AssumeRoleForWorkloadIdentityResponseBody extends TeaModel {
             private Builder(JwtClaims model) {
                 this.audiences = model.audiences;
                 this.issuer = model.issuer;
+                this.JTI = model.JTI;
                 this.subject = model.subject;
             } 
 
@@ -400,6 +413,14 @@ public class AssumeRoleForWorkloadIdentityResponseBody extends TeaModel {
              */
             public Builder issuer(String issuer) {
                 this.issuer = issuer;
+                return this;
+            }
+
+            /**
+             * JTI.
+             */
+            public Builder JTI(String JTI) {
+                this.JTI = JTI;
                 return this;
             }
 

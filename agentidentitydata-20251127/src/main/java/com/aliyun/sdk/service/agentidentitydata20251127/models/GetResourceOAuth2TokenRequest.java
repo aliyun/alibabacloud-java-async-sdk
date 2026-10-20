@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetResourceOAuth2TokenRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Audience")
+    private String audience;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("CustomParameters")
     private java.util.Map<String, ?> customParameters;
 
@@ -50,11 +54,16 @@ public class GetResourceOAuth2TokenRequest extends Request {
     private String sessionURI;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TokenVaultName")
+    private String tokenVaultName;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("WorkloadAccessToken")
     private String workloadAccessToken;
 
     private GetResourceOAuth2TokenRequest(Builder builder) {
         super(builder);
+        this.audience = builder.audience;
         this.customParameters = builder.customParameters;
         this.customState = builder.customState;
         this.forceAuthentication = builder.forceAuthentication;
@@ -63,6 +72,7 @@ public class GetResourceOAuth2TokenRequest extends Request {
         this.resourceOAuth2ReturnURL = builder.resourceOAuth2ReturnURL;
         this.scopes = builder.scopes;
         this.sessionURI = builder.sessionURI;
+        this.tokenVaultName = builder.tokenVaultName;
         this.workloadAccessToken = builder.workloadAccessToken;
     }
 
@@ -77,6 +87,13 @@ public class GetResourceOAuth2TokenRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return audience
+     */
+    public String getAudience() {
+        return this.audience;
     }
 
     /**
@@ -136,6 +153,13 @@ public class GetResourceOAuth2TokenRequest extends Request {
     }
 
     /**
+     * @return tokenVaultName
+     */
+    public String getTokenVaultName() {
+        return this.tokenVaultName;
+    }
+
+    /**
      * @return workloadAccessToken
      */
     public String getWorkloadAccessToken() {
@@ -143,6 +167,7 @@ public class GetResourceOAuth2TokenRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetResourceOAuth2TokenRequest, Builder> {
+        private String audience; 
         private java.util.Map<String, ?> customParameters; 
         private String customState; 
         private Boolean forceAuthentication; 
@@ -151,6 +176,7 @@ public class GetResourceOAuth2TokenRequest extends Request {
         private String resourceOAuth2ReturnURL; 
         private java.util.List<String> scopes; 
         private String sessionURI; 
+        private String tokenVaultName; 
         private String workloadAccessToken; 
 
         private Builder() {
@@ -159,6 +185,7 @@ public class GetResourceOAuth2TokenRequest extends Request {
 
         private Builder(GetResourceOAuth2TokenRequest request) {
             super(request);
+            this.audience = request.audience;
             this.customParameters = request.customParameters;
             this.customState = request.customState;
             this.forceAuthentication = request.forceAuthentication;
@@ -167,8 +194,18 @@ public class GetResourceOAuth2TokenRequest extends Request {
             this.resourceOAuth2ReturnURL = request.resourceOAuth2ReturnURL;
             this.scopes = request.scopes;
             this.sessionURI = request.sessionURI;
+            this.tokenVaultName = request.tokenVaultName;
             this.workloadAccessToken = request.workloadAccessToken;
         } 
+
+        /**
+         * Audience.
+         */
+        public Builder audience(String audience) {
+            this.putBodyParameter("Audience", audience);
+            this.audience = audience;
+            return this;
+        }
 
         /**
          * CustomParameters.
@@ -241,6 +278,15 @@ public class GetResourceOAuth2TokenRequest extends Request {
         public Builder sessionURI(String sessionURI) {
             this.putBodyParameter("SessionURI", sessionURI);
             this.sessionURI = sessionURI;
+            return this;
+        }
+
+        /**
+         * TokenVaultName.
+         */
+        public Builder tokenVaultName(String tokenVaultName) {
+            this.putBodyParameter("TokenVaultName", tokenVaultName);
+            this.tokenVaultName = tokenVaultName;
             return this;
         }
 

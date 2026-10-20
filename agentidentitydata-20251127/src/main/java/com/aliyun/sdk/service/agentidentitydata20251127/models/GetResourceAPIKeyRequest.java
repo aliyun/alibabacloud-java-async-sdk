@@ -22,12 +22,17 @@ public class GetResourceAPIKeyRequest extends Request {
     private String resourceCredentialProviderName;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TokenVaultName")
+    private String tokenVaultName;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("WorkloadAccessToken")
     private String workloadAccessToken;
 
     private GetResourceAPIKeyRequest(Builder builder) {
         super(builder);
         this.resourceCredentialProviderName = builder.resourceCredentialProviderName;
+        this.tokenVaultName = builder.tokenVaultName;
         this.workloadAccessToken = builder.workloadAccessToken;
     }
 
@@ -52,6 +57,13 @@ public class GetResourceAPIKeyRequest extends Request {
     }
 
     /**
+     * @return tokenVaultName
+     */
+    public String getTokenVaultName() {
+        return this.tokenVaultName;
+    }
+
+    /**
      * @return workloadAccessToken
      */
     public String getWorkloadAccessToken() {
@@ -60,6 +72,7 @@ public class GetResourceAPIKeyRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetResourceAPIKeyRequest, Builder> {
         private String resourceCredentialProviderName; 
+        private String tokenVaultName; 
         private String workloadAccessToken; 
 
         private Builder() {
@@ -69,6 +82,7 @@ public class GetResourceAPIKeyRequest extends Request {
         private Builder(GetResourceAPIKeyRequest request) {
             super(request);
             this.resourceCredentialProviderName = request.resourceCredentialProviderName;
+            this.tokenVaultName = request.tokenVaultName;
             this.workloadAccessToken = request.workloadAccessToken;
         } 
 
@@ -78,6 +92,15 @@ public class GetResourceAPIKeyRequest extends Request {
         public Builder resourceCredentialProviderName(String resourceCredentialProviderName) {
             this.putBodyParameter("ResourceCredentialProviderName", resourceCredentialProviderName);
             this.resourceCredentialProviderName = resourceCredentialProviderName;
+            return this;
+        }
+
+        /**
+         * TokenVaultName.
+         */
+        public Builder tokenVaultName(String tokenVaultName) {
+            this.putBodyParameter("TokenVaultName", tokenVaultName);
+            this.tokenVaultName = tokenVaultName;
             return this;
         }
 

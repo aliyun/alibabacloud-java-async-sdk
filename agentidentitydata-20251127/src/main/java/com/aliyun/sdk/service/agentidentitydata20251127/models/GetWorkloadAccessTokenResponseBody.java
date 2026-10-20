@@ -23,9 +23,13 @@ public class GetWorkloadAccessTokenResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("WorkloadAccessToken")
     private String workloadAccessToken;
 
+    @com.aliyun.core.annotation.NameInMap("WorkloadIdentityArn")
+    private String workloadIdentityArn;
+
     private GetWorkloadAccessTokenResponseBody(Builder builder) {
         this.requestId = builder.requestId;
         this.workloadAccessToken = builder.workloadAccessToken;
+        this.workloadIdentityArn = builder.workloadIdentityArn;
     }
 
     public static Builder builder() {
@@ -54,9 +58,17 @@ public class GetWorkloadAccessTokenResponseBody extends TeaModel {
         return this.workloadAccessToken;
     }
 
+    /**
+     * @return workloadIdentityArn
+     */
+    public String getWorkloadIdentityArn() {
+        return this.workloadIdentityArn;
+    }
+
     public static final class Builder {
         private String requestId; 
         private String workloadAccessToken; 
+        private String workloadIdentityArn; 
 
         private Builder() {
         } 
@@ -64,6 +76,7 @@ public class GetWorkloadAccessTokenResponseBody extends TeaModel {
         private Builder(GetWorkloadAccessTokenResponseBody model) {
             this.requestId = model.requestId;
             this.workloadAccessToken = model.workloadAccessToken;
+            this.workloadIdentityArn = model.workloadIdentityArn;
         } 
 
         /**
@@ -79,6 +92,14 @@ public class GetWorkloadAccessTokenResponseBody extends TeaModel {
          */
         public Builder workloadAccessToken(String workloadAccessToken) {
             this.workloadAccessToken = workloadAccessToken;
+            return this;
+        }
+
+        /**
+         * WorkloadIdentityArn.
+         */
+        public Builder workloadIdentityArn(String workloadIdentityArn) {
+            this.workloadIdentityArn = workloadIdentityArn;
             return this;
         }
 
