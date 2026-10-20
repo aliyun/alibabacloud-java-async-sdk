@@ -126,7 +126,10 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to remove all tags from the resources. This parameter and TagKey are mutually exclusive.</p>
+         * <p>Specifies whether to delete all tags from the resources. This parameter and the TagKey parameter are mutually exclusive.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("all", all);
@@ -135,7 +138,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The list of data catalog IDs from which to remove tags. The value is a JSON array. Maximum: 50.</p>
+         * <p>The list of resource IDs. You can specify up to 50 resource IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -149,11 +152,11 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The resource type. Valid value: CATALOGRESOURCE.</p>
+         * <p>The resource type. Valid value: catalog.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>CATALOGRESOURCE</p>
+         * <p>catalog</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("resourceType", resourceType);
@@ -162,7 +165,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The list of tag keys to remove. The value is a JSON array. This parameter and All are mutually exclusive.</p>
+         * <p>The list of tag keys. This parameter and the All parameter are mutually exclusive.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;team&quot;]</p>

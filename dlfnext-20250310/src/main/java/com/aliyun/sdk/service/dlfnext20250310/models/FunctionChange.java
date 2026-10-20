@@ -119,7 +119,10 @@ public class FunctionChange extends TeaModel {
         } 
 
         /**
-         * action.
+         * <p>The change type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>setOption</p>
          */
         public Builder action(String action) {
             this.action = action;
@@ -128,6 +131,9 @@ public class FunctionChange extends TeaModel {
 
         /**
          * <p>required in UpdateFunctionComment</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Function configuration update</p>
          */
         public Builder comment(String comment) {
             this.comment = comment;
@@ -144,6 +150,9 @@ public class FunctionChange extends TeaModel {
 
         /**
          * <p>required in SetFunctionOption/RemoveFunctionOption</p>
+         * 
+         * <strong>example:</strong>
+         * <p>namespaceSchema</p>
          */
         public Builder key(String key) {
             this.key = key;
@@ -152,6 +161,9 @@ public class FunctionChange extends TeaModel {
 
         /**
          * <p>required in AddDefinition/UpdateDefinition/DropDefinition</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_function</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -160,6 +172,9 @@ public class FunctionChange extends TeaModel {
 
         /**
          * <p>required in SetFunctionOption</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IDC_MOVE</p>
          */
         public Builder value(String value) {
             this.value = value;

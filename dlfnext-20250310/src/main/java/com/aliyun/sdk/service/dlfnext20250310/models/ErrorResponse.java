@@ -110,7 +110,10 @@ public class ErrorResponse extends Response {
         } 
 
         /**
-         * code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>404</p>
          */
         @Override
         public Builder code(Integer code) {
@@ -119,7 +122,10 @@ public class ErrorResponse extends Response {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Resource not found</p>
          */
         @Override
         public Builder message(String message) {
@@ -128,7 +134,10 @@ public class ErrorResponse extends Response {
         }
 
         /**
-         * resourceName.
+         * <p>The name of the resource involved in the error.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_table</p>
          */
         @Override
         public Builder resourceName(String resourceName) {
@@ -137,7 +146,10 @@ public class ErrorResponse extends Response {
         }
 
         /**
-         * resourceType.
+         * <p>The type of the resource involved in the error.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>table</p>
          */
         @Override
         public Builder resourceType(String resourceType) {

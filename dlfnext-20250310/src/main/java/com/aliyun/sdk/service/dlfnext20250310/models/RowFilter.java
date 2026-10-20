@@ -67,7 +67,10 @@ public class RowFilter extends TeaModel {
         } 
 
         /**
-         * expression.
+         * <p>The expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder expression(String expression) {
             this.expression = expression;
@@ -75,7 +78,10 @@ public class RowFilter extends TeaModel {
         }
 
         /**
-         * predicate.
+         * <p>The predicate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder predicate(String predicate) {
             this.predicate = predicate;

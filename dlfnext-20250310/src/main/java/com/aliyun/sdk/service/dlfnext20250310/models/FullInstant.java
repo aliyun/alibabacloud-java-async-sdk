@@ -80,7 +80,10 @@ public class FullInstant extends TeaModel {
         } 
 
         /**
-         * snapshotId.
+         * <p>The snapshot ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder snapshotId(Long snapshotId) {
             this.snapshotId = snapshotId;
@@ -88,7 +91,10 @@ public class FullInstant extends TeaModel {
         }
 
         /**
-         * tagName.
+         * <p>The tag name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_tag</p>
          */
         public Builder tagName(String tagName) {
             this.tagName = tagName;
@@ -96,7 +102,10 @@ public class FullInstant extends TeaModel {
         }
 
         /**
-         * type.
+         * <p>The location method type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>snapshot</p>
          */
         public Builder type(String type) {
             this.type = type;

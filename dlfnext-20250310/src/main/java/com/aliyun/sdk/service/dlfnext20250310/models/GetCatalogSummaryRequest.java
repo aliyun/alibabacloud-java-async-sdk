@@ -74,7 +74,7 @@ public class GetCatalogSummaryRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the data catalog.</p>
+         * <p>The data catalog ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,7 +87,7 @@ public class GetCatalogSummaryRequest extends Request {
         }
 
         /**
-         * <p>The date of the storage overview.</p>
+         * <p>The date of the storage overview, in the YYYY-MM-DD format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-09-18</p>

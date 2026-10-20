@@ -106,7 +106,7 @@ public class Predicate extends TeaModel {
         } 
 
         /**
-         * children.
+         * <p>The list of child nodes.</p>
          */
         public Builder children(java.util.List<Predicate> children) {
             this.children = children;
@@ -114,7 +114,10 @@ public class Predicate extends TeaModel {
         }
 
         /**
-         * function.
+         * <p>The assertion function.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder function(String function) {
             this.function = function;
@@ -122,7 +125,10 @@ public class Predicate extends TeaModel {
         }
 
         /**
-         * kind.
+         * <p>The assertion type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EXPRESSION</p>
          */
         public Builder kind(String kind) {
             this.kind = kind;
@@ -130,7 +136,7 @@ public class Predicate extends TeaModel {
         }
 
         /**
-         * literals.
+         * <p>The list of literal values.</p>
          */
         public Builder literals(java.util.List<?> literals) {
             this.literals = literals;
@@ -138,7 +144,7 @@ public class Predicate extends TeaModel {
         }
 
         /**
-         * transform.
+         * <p>The transform rule.</p>
          */
         public Builder transform(Transform transform) {
             this.transform = transform;

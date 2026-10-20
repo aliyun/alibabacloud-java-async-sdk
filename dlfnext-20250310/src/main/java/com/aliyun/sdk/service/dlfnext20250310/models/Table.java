@@ -262,7 +262,7 @@ public class Table extends TeaModel {
         } 
 
         /**
-         * <p>The time when the table was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1741266704867</p>
@@ -273,7 +273,7 @@ public class Table extends TeaModel {
         }
 
         /**
-         * <p>The creator of the table.</p>
+         * <p>The creator.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:ram::[accountId]:root</p>
@@ -284,7 +284,7 @@ public class Table extends TeaModel {
         }
 
         /**
-         * icebergTableMetadata.
+         * <p>The Iceberg table metadata.</p>
          */
         public Builder icebergTableMetadata(IcebergTableMetadata icebergTableMetadata) {
             this.icebergTableMetadata = icebergTableMetadata;
@@ -292,7 +292,7 @@ public class Table extends TeaModel {
         }
 
         /**
-         * <p>The UUID of the table.</p>
+         * <p>The table UUID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -303,7 +303,7 @@ public class Table extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the table is an external table.</p>
+         * <p>Specifies whether the table is an external table.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -314,7 +314,7 @@ public class Table extends TeaModel {
         }
 
         /**
-         * <p>The name of the table.</p>
+         * <p>The table name.</p>
          * 
          * <strong>example:</strong>
          * <p>table_test</p>
@@ -325,7 +325,7 @@ public class Table extends TeaModel {
         }
 
         /**
-         * <p>The owner of the table.</p>
+         * <p>The table owner.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:ram::[accountId]:root</p>
@@ -336,7 +336,7 @@ public class Table extends TeaModel {
         }
 
         /**
-         * <p>The path of the table.</p>
+         * <p>The table path.</p>
          * 
          * <strong>example:</strong>
          * <p>oss://clg-paimon-xxx/db-xxx/tbl-xxxx</p>
@@ -355,7 +355,7 @@ public class Table extends TeaModel {
         }
 
         /**
-         * <p>The ID of the table schema.</p>
+         * <p>The table schema ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -366,7 +366,10 @@ public class Table extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The table status. A value of active indicates that the table is normal. A value of retained indicates that the table is soft-deleted but still retained in the recycle bin. A value of releasing indicates that the table is about to be permanently purged.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -374,7 +377,10 @@ public class Table extends TeaModel {
         }
 
         /**
-         * storageAction.
+         * <p>The storage class transition status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder storageAction(String storageAction) {
             this.storageAction = storageAction;
@@ -382,7 +388,10 @@ public class Table extends TeaModel {
         }
 
         /**
-         * storageActionTimestamp.
+         * <p>The storage class transition time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1764556155852</p>
          */
         public Builder storageActionTimestamp(Long storageActionTimestamp) {
             this.storageActionTimestamp = storageActionTimestamp;
@@ -390,7 +399,10 @@ public class Table extends TeaModel {
         }
 
         /**
-         * storageClass.
+         * <p>The storage class.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STANDARD</p>
          */
         public Builder storageClass(String storageClass) {
             this.storageClass = storageClass;
@@ -398,7 +410,10 @@ public class Table extends TeaModel {
         }
 
         /**
-         * type.
+         * <p>The type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PAIMON</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -406,7 +421,7 @@ public class Table extends TeaModel {
         }
 
         /**
-         * <p>The time when the table was last updated.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>1741266704867</p>
@@ -417,7 +432,7 @@ public class Table extends TeaModel {
         }
 
         /**
-         * <p>The user who last updated the table.</p>
+         * <p>The updater.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:ram::[accountId]:root</p>

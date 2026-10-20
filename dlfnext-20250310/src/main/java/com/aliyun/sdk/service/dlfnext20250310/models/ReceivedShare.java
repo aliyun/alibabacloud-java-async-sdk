@@ -195,7 +195,7 @@ public class ReceivedShare extends TeaModel {
         }
 
         /**
-         * <p>The comment of the share.</p>
+         * <p>The comment on the share.</p>
          * 
          * <strong>example:</strong>
          * <p>demo</p>
@@ -217,7 +217,7 @@ public class ReceivedShare extends TeaModel {
         }
 
         /**
-         * <p>The creator of the share.</p>
+         * <p>The creator.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:ram::[accountId]:root</p>
@@ -228,7 +228,10 @@ public class ReceivedShare extends TeaModel {
         }
 
         /**
-         * enableWrite.
+         * <p>Specifies whether write operations are allowed on the shared resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableWrite(Boolean enableWrite) {
             this.enableWrite = enableWrite;
@@ -247,7 +250,7 @@ public class ReceivedShare extends TeaModel {
         }
 
         /**
-         * <p>The provider\&quot;s account ID.</p>
+         * <p>The account ID of the provider.</p>
          * 
          * <strong>example:</strong>
          * <p>1111</p>
@@ -291,7 +294,7 @@ public class ReceivedShare extends TeaModel {
         }
 
         /**
-         * <p>The user who last updated the share.</p>
+         * <p>The updater.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:ram::[accountId]:root</p>

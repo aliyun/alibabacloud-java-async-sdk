@@ -171,7 +171,7 @@ public class IcebergSnapshot extends TeaModel {
         } 
 
         /**
-         * <p>Number of added rows.</p>
+         * <p>The number of added rows.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -182,7 +182,7 @@ public class IcebergSnapshot extends TeaModel {
         }
 
         /**
-         * <p>The snapshot ID.</p>
+         * <p>id</p>
          * 
          * <strong>example:</strong>
          * <p>2443368274334000657</p>
@@ -193,7 +193,10 @@ public class IcebergSnapshot extends TeaModel {
         }
 
         /**
-         * idString.
+         * <p>The string representation of the snapshot ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2443368274334000657</p>
          */
         public Builder idString(String idString) {
             this.idString = idString;
@@ -212,7 +215,7 @@ public class IcebergSnapshot extends TeaModel {
         }
 
         /**
-         * <p>Parent ID.</p>
+         * <p>The parent ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -223,7 +226,10 @@ public class IcebergSnapshot extends TeaModel {
         }
 
         /**
-         * parentIdString.
+         * <p>The string representation of the parent snapshot ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder parentIdString(String parentIdString) {
             this.parentIdString = parentIdString;

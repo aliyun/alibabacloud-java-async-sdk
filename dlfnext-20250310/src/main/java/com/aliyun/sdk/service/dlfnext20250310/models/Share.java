@@ -171,7 +171,7 @@ public class Share extends TeaModel {
         } 
 
         /**
-         * <p>The comment for the share.</p>
+         * <p>The comment information of the share.</p>
          * 
          * <strong>example:</strong>
          * <p>demo</p>
@@ -182,7 +182,7 @@ public class Share extends TeaModel {
         }
 
         /**
-         * <p>The time when the share was created.</p>
+         * <p>The creation time of the share.</p>
          * 
          * <strong>example:</strong>
          * <p>1744970111419</p>
@@ -193,7 +193,7 @@ public class Share extends TeaModel {
         }
 
         /**
-         * <p>The user who created the share.</p>
+         * <p>The creator.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:ram::[accountId]:root</p>
@@ -204,7 +204,10 @@ public class Share extends TeaModel {
         }
 
         /**
-         * enableWrite.
+         * <p>Specifies whether write operations are allowed on shared resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableWrite(Boolean enableWrite) {
             this.enableWrite = enableWrite;
@@ -212,7 +215,7 @@ public class Share extends TeaModel {
         }
 
         /**
-         * <p>The resource descriptor of the share owner.</p>
+         * <p>The owner of the share.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:ram::[accountId]:root</p>
@@ -223,7 +226,7 @@ public class Share extends TeaModel {
         }
 
         /**
-         * <p>The provider\&quot;s account ID.</p>
+         * <p>The account ID of the provider.</p>
          * 
          * <strong>example:</strong>
          * <p>1111</p>
@@ -256,7 +259,7 @@ public class Share extends TeaModel {
         }
 
         /**
-         * <p>The time when the share was last updated.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>1744970111419</p>
@@ -267,7 +270,7 @@ public class Share extends TeaModel {
         }
 
         /**
-         * <p>The user who last updated the share.</p>
+         * <p>The updater.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:ram::[accountId]:root</p>

@@ -119,7 +119,10 @@ public class FunctionDefinition extends TeaModel {
         } 
 
         /**
-         * <p>Required in FileFunctionDefinition.</p>
+         * <p>required in FileFunctionDefinition</p>
+         * 
+         * <strong>example:</strong>
+         * <p>com.aliyun.pai.flinkjob.udf.CtrKV</p>
          */
         public Builder className(String className) {
             this.className = className;
@@ -127,7 +130,10 @@ public class FunctionDefinition extends TeaModel {
         }
 
         /**
-         * <p>Required in SQLFunctionDefinition and LambdaFunctionDefinition.</p>
+         * <p>required in SQLFunctionDefinition/LambdaFunctionDefinition</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder definition(String definition) {
             this.definition = definition;
@@ -135,7 +141,7 @@ public class FunctionDefinition extends TeaModel {
         }
 
         /**
-         * <p>Required in FileFunctionDefinition.</p>
+         * <p>required in FileFunctionDefinition</p>
          */
         public Builder fileResources(java.util.List<FunctionFileResource> fileResources) {
             this.fileResources = fileResources;
@@ -143,7 +149,10 @@ public class FunctionDefinition extends TeaModel {
         }
 
         /**
-         * <p>Required in FileFunctionDefinition.</p>
+         * <p>required in FileFunctionDefinition</p>
+         * 
+         * <strong>example:</strong>
+         * <p>function_name</p>
          */
         public Builder functionName(String functionName) {
             this.functionName = functionName;
@@ -151,7 +160,10 @@ public class FunctionDefinition extends TeaModel {
         }
 
         /**
-         * <p>Required in LambdaFunctionDefinition and FileFunctionDefinition.</p>
+         * <p>required in LambdaFunctionDefinition/FileFunctionDefinition</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder language(String language) {
             this.language = language;
@@ -159,7 +171,10 @@ public class FunctionDefinition extends TeaModel {
         }
 
         /**
-         * type.
+         * <p>The type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PAIMON</p>
          */
         public Builder type(String type) {
             this.type = type;

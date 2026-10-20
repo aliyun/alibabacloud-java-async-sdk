@@ -89,7 +89,7 @@ public class GetDatabaseSummaryRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the data catalog.</p>
+         * <p>The data catalog ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class GetDatabaseSummaryRequest extends Request {
         }
 
         /**
-         * <p>The name of the database.</p>
+         * <p>The database name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +115,7 @@ public class GetDatabaseSummaryRequest extends Request {
         }
 
         /**
-         * <p>The date of the storage overview.</p>
+         * <p>The date of the storage overview, in the YYYY-MM-DD format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-10-26</p>

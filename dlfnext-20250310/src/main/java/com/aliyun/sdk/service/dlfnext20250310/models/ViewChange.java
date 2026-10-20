@@ -119,7 +119,10 @@ public class ViewChange extends TeaModel {
         } 
 
         /**
-         * action.
+         * <p>The type of the view change operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>updateComment</p>
          */
         public Builder action(String action) {
             this.action = action;
@@ -127,7 +130,10 @@ public class ViewChange extends TeaModel {
         }
 
         /**
-         * <p>required in UpdateComment</p>
+         * <p>The view comment. Required when you perform the updateComment operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>View update description</p>
          */
         public Builder comment(String comment) {
             this.comment = comment;
@@ -135,7 +141,10 @@ public class ViewChange extends TeaModel {
         }
 
         /**
-         * <p>required in AddDialect/UpdateDialect/DropDialect</p>
+         * <p>The dialect used in the view query statement. Required when you perform the addDialect, updateDialect, or dropDialect operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>flink</p>
          */
         public Builder dialect(String dialect) {
             this.dialect = dialect;
@@ -143,7 +152,10 @@ public class ViewChange extends TeaModel {
         }
 
         /**
-         * <p>required in SetOption/RemoveOption</p>
+         * <p>The key of the view property. Required when you perform the setOption or removeOption operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>view_option</p>
          */
         public Builder key(String key) {
             this.key = key;
@@ -151,7 +163,10 @@ public class ViewChange extends TeaModel {
         }
 
         /**
-         * <p>required in AddDialect/UpdateDialect</p>
+         * <p>The view query statement. Required when you perform the addDialect or updateDialect operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SELECT region, SUM(amount) AS total_amount FROM sales GROUP BY region</p>
          */
         public Builder query(String query) {
             this.query = query;
@@ -159,7 +174,10 @@ public class ViewChange extends TeaModel {
         }
 
         /**
-         * <p>required in SetOption</p>
+         * <p>The value of the view property. Required when you perform the setOption operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         public Builder value(String value) {
             this.value = value;

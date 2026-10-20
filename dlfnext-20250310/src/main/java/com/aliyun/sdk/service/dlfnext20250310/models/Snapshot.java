@@ -314,7 +314,10 @@ public class Snapshot extends TeaModel {
         } 
 
         /**
-         * baseManifestList.
+         * <p>The file name of the base manifest list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>manifest-list-0c6fcaa1-b6bc-413d-9634-6471cce4f37e-2</p>
          */
         public Builder baseManifestList(String baseManifestList) {
             this.baseManifestList = baseManifestList;
@@ -322,7 +325,10 @@ public class Snapshot extends TeaModel {
         }
 
         /**
-         * changelogManifestList.
+         * <p>The file name of the manifest list that records all changelogs generated for the snapshot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>manifest-list-0c6fcaa1-b6bc-413d-9634-6471cce4f37e-4</p>
          */
         public Builder changelogManifestList(String changelogManifestList) {
             this.changelogManifestList = changelogManifestList;
@@ -330,7 +336,10 @@ public class Snapshot extends TeaModel {
         }
 
         /**
-         * changelogRecordCount.
+         * <p>The number of changelog records generated for the snapshot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder changelogRecordCount(Long changelogRecordCount) {
             this.changelogRecordCount = changelogRecordCount;
@@ -338,7 +347,10 @@ public class Snapshot extends TeaModel {
         }
 
         /**
-         * commitIdentifier.
+         * <p>The transaction ID of the streaming write.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9223372036854775807</p>
          */
         public Builder commitIdentifier(Long commitIdentifier) {
             this.commitIdentifier = commitIdentifier;
@@ -346,7 +358,10 @@ public class Snapshot extends TeaModel {
         }
 
         /**
-         * commitKind.
+         * <p>The streaming write type. Valid values: APPEND, COMPACT, OVERWRITE, and ANALYZE.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>COMPACT</p>
          */
         public Builder commitKind(String commitKind) {
             this.commitKind = commitKind;
@@ -354,7 +369,10 @@ public class Snapshot extends TeaModel {
         }
 
         /**
-         * commitUser.
+         * <p>The commit user, which is typically a UUID used to resume streaming writes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>446aac61-bd5c-4fa0-8b14-846fa8810651</p>
          */
         public Builder commitUser(String commitUser) {
             this.commitUser = commitUser;
@@ -362,7 +380,10 @@ public class Snapshot extends TeaModel {
         }
 
         /**
-         * deltaManifestList.
+         * <p>The file name of the manifest list that records all new changes in the snapshot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>manifest-list-0c6fcaa1-b6bc-413d-9634-6471cce4f37e-3</p>
          */
         public Builder deltaManifestList(String deltaManifestList) {
             this.deltaManifestList = deltaManifestList;
@@ -370,7 +391,10 @@ public class Snapshot extends TeaModel {
         }
 
         /**
-         * deltaRecordCount.
+         * <p>The number of new change records in the snapshot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder deltaRecordCount(Long deltaRecordCount) {
             this.deltaRecordCount = deltaRecordCount;
@@ -378,7 +402,10 @@ public class Snapshot extends TeaModel {
         }
 
         /**
-         * id.
+         * <p>The snapshot ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -386,7 +413,10 @@ public class Snapshot extends TeaModel {
         }
 
         /**
-         * idString.
+         * <p>The string representation of the snapshot ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder idString(String idString) {
             this.idString = idString;
@@ -394,7 +424,10 @@ public class Snapshot extends TeaModel {
         }
 
         /**
-         * indexManifest.
+         * <p>The file name of the manifest that records all index files of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>index-manifest-7cbdaa47-9578-43ac-ae6e-a7ec0486bba8-0</p>
          */
         public Builder indexManifest(String indexManifest) {
             this.indexManifest = indexManifest;
@@ -402,7 +435,7 @@ public class Snapshot extends TeaModel {
         }
 
         /**
-         * logOffsets.
+         * <p>The log offsets at the time of the commit.</p>
          */
         public Builder logOffsets(java.util.Map<String, Long> logOffsets) {
             this.logOffsets = logOffsets;
@@ -410,7 +443,10 @@ public class Snapshot extends TeaModel {
         }
 
         /**
-         * parentIdString.
+         * <p>The string representation of the parent snapshot ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder parentIdString(String parentIdString) {
             this.parentIdString = parentIdString;
@@ -418,7 +454,10 @@ public class Snapshot extends TeaModel {
         }
 
         /**
-         * schemaId.
+         * <p>The schema ID of the table when the snapshot was generated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder schemaId(Long schemaId) {
             this.schemaId = schemaId;
@@ -426,7 +465,10 @@ public class Snapshot extends TeaModel {
         }
 
         /**
-         * sequenceNumber.
+         * <p>The snapshot sequence number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder sequenceNumber(Long sequenceNumber) {
             this.sequenceNumber = sequenceNumber;
@@ -434,7 +476,10 @@ public class Snapshot extends TeaModel {
         }
 
         /**
-         * statistics.
+         * <p>The file name of the table statistics information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>stat-82c50592-2179-447b-906b-6fdb10ef32c6-0</p>
          */
         public Builder statistics(String statistics) {
             this.statistics = statistics;
@@ -442,7 +487,7 @@ public class Snapshot extends TeaModel {
         }
 
         /**
-         * summary.
+         * <p>The summary.</p>
          */
         public Builder summary(java.util.Map<String, String> summary) {
             this.summary = summary;
@@ -450,7 +495,10 @@ public class Snapshot extends TeaModel {
         }
 
         /**
-         * timeMillis.
+         * <p>The commit time, which is a UNIX timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1741701564261</p>
          */
         public Builder timeMillis(Long timeMillis) {
             this.timeMillis = timeMillis;
@@ -458,7 +506,10 @@ public class Snapshot extends TeaModel {
         }
 
         /**
-         * totalRecordCount.
+         * <p>The total number of records for all changes in the snapshot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         public Builder totalRecordCount(Long totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -466,7 +517,10 @@ public class Snapshot extends TeaModel {
         }
 
         /**
-         * version.
+         * <p>The file format version of the snapshot. The current version is 3.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder version(Integer version) {
             this.version = version;
@@ -474,7 +528,10 @@ public class Snapshot extends TeaModel {
         }
 
         /**
-         * watermark.
+         * <p>The watermark value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-9223372036854775808</p>
          */
         public Builder watermark(Long watermark) {
             this.watermark = watermark;

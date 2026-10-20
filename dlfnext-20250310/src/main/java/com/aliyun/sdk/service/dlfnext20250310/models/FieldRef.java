@@ -80,7 +80,7 @@ public class FieldRef extends TeaModel {
         } 
 
         /**
-         * <p>Text sequence</p>
+         * <p>The data sequence of the field.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -91,7 +91,7 @@ public class FieldRef extends TeaModel {
         }
 
         /**
-         * <p>Table name</p>
+         * <p>The field name.</p>
          * 
          * <strong>example:</strong>
          * <p>name</p>
@@ -102,7 +102,7 @@ public class FieldRef extends TeaModel {
         }
 
         /**
-         * <p>File type</p>
+         * <p>The data type of the field.</p>
          */
         public Builder type(FullDataType type) {
             this.type = type;

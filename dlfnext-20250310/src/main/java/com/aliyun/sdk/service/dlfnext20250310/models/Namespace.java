@@ -158,7 +158,10 @@ public class Namespace extends TeaModel {
         } 
 
         /**
-         * createdAt.
+         * <p>The creation time, represented as a UNIX timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1741266704867</p>
          */
         public Builder createdAt(Long createdAt) {
             this.createdAt = createdAt;
@@ -166,7 +169,10 @@ public class Namespace extends TeaModel {
         }
 
         /**
-         * createdBy.
+         * <p>The user who created the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram:1234567:root</p>
          */
         public Builder createdBy(String createdBy) {
             this.createdBy = createdBy;
@@ -174,7 +180,10 @@ public class Namespace extends TeaModel {
         }
 
         /**
-         * id.
+         * <p>The namespace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>namespace_id</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -182,7 +191,10 @@ public class Namespace extends TeaModel {
         }
 
         /**
-         * location.
+         * <p>The storage path of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://example-bucket/example-namespace/</p>
          */
         public Builder location(String location) {
             this.location = location;
@@ -190,7 +202,10 @@ public class Namespace extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The name of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -198,7 +213,7 @@ public class Namespace extends TeaModel {
         }
 
         /**
-         * options.
+         * <p>The extension options for the namespace.</p>
          */
         public Builder options(java.util.Map<String, String> options) {
             this.options = options;
@@ -206,7 +221,10 @@ public class Namespace extends TeaModel {
         }
 
         /**
-         * owner.
+         * <p>The namespace owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram:1234567:root</p>
          */
         public Builder owner(String owner) {
             this.owner = owner;
@@ -214,7 +232,10 @@ public class Namespace extends TeaModel {
         }
 
         /**
-         * updatedAt.
+         * <p>The update time, represented as a UNIX timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1741266704867</p>
          */
         public Builder updatedAt(Long updatedAt) {
             this.updatedAt = updatedAt;
@@ -222,7 +243,10 @@ public class Namespace extends TeaModel {
         }
 
         /**
-         * updatedBy.
+         * <p>The user who updated the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram:1045689747920334:root</p>
          */
         public Builder updatedBy(String updatedBy) {
             this.updatedBy = updatedBy;

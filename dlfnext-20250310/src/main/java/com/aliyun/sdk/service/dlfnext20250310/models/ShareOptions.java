@@ -93,7 +93,10 @@ public class ShareOptions extends TeaModel {
         } 
 
         /**
-         * catalogSizeLimit.
+         * <p>The maximum number of catalogs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder catalogSizeLimit(Integer catalogSizeLimit) {
             this.catalogSizeLimit = catalogSizeLimit;
@@ -101,7 +104,10 @@ public class ShareOptions extends TeaModel {
         }
 
         /**
-         * receiverSizeLimit.
+         * <p>The maximum number of recipients.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder receiverSizeLimit(Integer receiverSizeLimit) {
             this.receiverSizeLimit = receiverSizeLimit;
@@ -109,7 +115,10 @@ public class ShareOptions extends TeaModel {
         }
 
         /**
-         * shareResourceSizeLimit.
+         * <p>The maximum shared resource count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder shareResourceSizeLimit(Integer shareResourceSizeLimit) {
             this.shareResourceSizeLimit = shareResourceSizeLimit;
@@ -117,7 +126,10 @@ public class ShareOptions extends TeaModel {
         }
 
         /**
-         * shareSizeLimit.
+         * <p>The maximum number of shares.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder shareSizeLimit(Integer shareSizeLimit) {
             this.shareSizeLimit = shareSizeLimit;

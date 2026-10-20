@@ -67,7 +67,10 @@ public class TransformInput extends TeaModel {
         } 
 
         /**
-         * input.
+         * <p>The input content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INPUT</p>
          */
         public Builder input(Object input) {
             this.input = input;
@@ -75,7 +78,10 @@ public class TransformInput extends TeaModel {
         }
 
         /**
-         * type.
+         * <p>The input type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LITERAL</p>
          */
         public Builder type(String type) {
             this.type = type;

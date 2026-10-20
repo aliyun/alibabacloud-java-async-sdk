@@ -195,7 +195,7 @@ public class Permission extends TeaModel {
         }
 
         /**
-         * columnMasking.
+         * <p>The column masking transformation rules mapped by column name. The key is the column name, and the value is the corresponding masking transformation configuration.</p>
          */
         public Builder columnMasking(java.util.Map<String, ColumnMask> columnMasking) {
             this.columnMasking = columnMasking;
@@ -203,7 +203,7 @@ public class Permission extends TeaModel {
         }
 
         /**
-         * columns.
+         * <p>The custom columns.</p>
          */
         public Builder columns(Columns columns) {
             this.columns = columns;
@@ -222,7 +222,10 @@ public class Permission extends TeaModel {
         }
 
         /**
-         * expireTime.
+         * <p>The expiration time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1762398431157</p>
          */
         public Builder expireTime(String expireTime) {
             this.expireTime = expireTime;
@@ -230,7 +233,10 @@ public class Permission extends TeaModel {
         }
 
         /**
-         * function.
+         * <p>The function name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>function_name</p>
          */
         public Builder function(String function) {
             this.function = function;
@@ -260,7 +266,7 @@ public class Permission extends TeaModel {
         }
 
         /**
-         * rowFilter.
+         * <p>The row filter.</p>
          */
         public Builder rowFilter(RowFilter rowFilter) {
             this.rowFilter = rowFilter;
@@ -279,7 +285,10 @@ public class Permission extends TeaModel {
         }
 
         /**
-         * view.
+         * <p>The view name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>view_name</p>
          */
         public Builder view(String view) {
             this.view = view;
@@ -345,7 +354,7 @@ public class Permission extends TeaModel {
             } 
 
             /**
-             * columnNames.
+             * <p>The list of included column names.</p>
              */
             public Builder columnNames(java.util.List<String> columnNames) {
                 this.columnNames = columnNames;
@@ -353,7 +362,7 @@ public class Permission extends TeaModel {
             }
 
             /**
-             * excludedColumnNames.
+             * <p>The list of excluded column names.</p>
              */
             public Builder excludedColumnNames(java.util.List<String> excludedColumnNames) {
                 this.excludedColumnNames = excludedColumnNames;

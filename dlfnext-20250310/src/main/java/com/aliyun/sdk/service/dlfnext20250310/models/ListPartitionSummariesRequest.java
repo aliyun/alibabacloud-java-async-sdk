@@ -132,7 +132,7 @@ public class ListPartitionSummariesRequest extends Request {
         } 
 
         /**
-         * <p>The catalog ID.</p>
+         * <p>The data catalog ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -171,7 +171,7 @@ public class ListPartitionSummariesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -183,7 +183,7 @@ public class ListPartitionSummariesRequest extends Request {
         }
 
         /**
-         * <p>The token for the next page of results. If the response does not include this token, pass an empty string (&quot;&quot;).</p>
+         * <p>The pagination token used to retrieve the next page of data. If it is not provided in the response, pass an empty string (&quot;&quot;) or an empty character (\&quot;\&quot;).</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>

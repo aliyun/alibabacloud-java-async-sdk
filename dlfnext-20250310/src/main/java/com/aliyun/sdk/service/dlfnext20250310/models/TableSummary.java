@@ -32,6 +32,9 @@ public class TableSummary extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("lastRequester")
     private String lastRequester;
 
+    @com.aliyun.core.annotation.NameInMap("latestSnapshotDataSizeInBytes")
+    private Long latestSnapshotDataSizeInBytes;
+
     @com.aliyun.core.annotation.NameInMap("objTypeArchiveSize")
     private Long objTypeArchiveSize;
 
@@ -101,6 +104,7 @@ public class TableSummary extends TeaModel {
         this.generatedDate = builder.generatedDate;
         this.lastAccessTime = builder.lastAccessTime;
         this.lastRequester = builder.lastRequester;
+        this.latestSnapshotDataSizeInBytes = builder.latestSnapshotDataSizeInBytes;
         this.objTypeArchiveSize = builder.objTypeArchiveSize;
         this.objTypeColdArchiveSize = builder.objTypeColdArchiveSize;
         this.objTypeIaSize = builder.objTypeIaSize;
@@ -169,6 +173,13 @@ public class TableSummary extends TeaModel {
      */
     public String getLastRequester() {
         return this.lastRequester;
+    }
+
+    /**
+     * @return latestSnapshotDataSizeInBytes
+     */
+    public Long getLatestSnapshotDataSizeInBytes() {
+        return this.latestSnapshotDataSizeInBytes;
     }
 
     /**
@@ -324,6 +335,7 @@ public class TableSummary extends TeaModel {
         private String generatedDate; 
         private Long lastAccessTime; 
         private String lastRequester; 
+        private Long latestSnapshotDataSizeInBytes; 
         private Long objTypeArchiveSize; 
         private Long objTypeColdArchiveSize; 
         private Long objTypeIaSize; 
@@ -355,6 +367,7 @@ public class TableSummary extends TeaModel {
             this.generatedDate = model.generatedDate;
             this.lastAccessTime = model.lastAccessTime;
             this.lastRequester = model.lastRequester;
+            this.latestSnapshotDataSizeInBytes = model.latestSnapshotDataSizeInBytes;
             this.objTypeArchiveSize = model.objTypeArchiveSize;
             this.objTypeColdArchiveSize = model.objTypeColdArchiveSize;
             this.objTypeIaSize = model.objTypeIaSize;
@@ -379,7 +392,7 @@ public class TableSummary extends TeaModel {
         } 
 
         /**
-         * <p>The timestamp, in milliseconds, indicating when the table was created.</p>
+         * <p>The table creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1744970111419</p>
@@ -390,7 +403,7 @@ public class TableSummary extends TeaModel {
         }
 
         /**
-         * <p>The name of the database.</p>
+         * <p>The database name.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -401,7 +414,7 @@ public class TableSummary extends TeaModel {
         }
 
         /**
-         * <p>The generation date of the storage summary.</p>
+         * <p>The update date of the storage overview data.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-06-01</p>
@@ -412,7 +425,7 @@ public class TableSummary extends TeaModel {
         }
 
         /**
-         * <p>The timestamp, in milliseconds, indicating when the table data was last accessed.</p>
+         * <p>The last data access time of the table.</p>
          * 
          * <strong>example:</strong>
          * <p>1744970111419</p>
@@ -423,7 +436,10 @@ public class TableSummary extends TeaModel {
         }
 
         /**
-         * lastRequester.
+         * <p>The last requester.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::[accountId]:root</p>
          */
         public Builder lastRequester(String lastRequester) {
             this.lastRequester = lastRequester;
@@ -431,7 +447,18 @@ public class TableSummary extends TeaModel {
         }
 
         /**
-         * <p>The total size of data files in the Archive storage class, in bytes.</p>
+         * <p>The storage size of the latest snapshot, in bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
+         */
+        public Builder latestSnapshotDataSizeInBytes(Long latestSnapshotDataSizeInBytes) {
+            this.latestSnapshotDataSizeInBytes = latestSnapshotDataSizeInBytes;
+            return this;
+        }
+
+        /**
+         * <p>The storage size of archive data files.</p>
          * 
          * <strong>example:</strong>
          * <p>10240</p>
@@ -442,7 +469,7 @@ public class TableSummary extends TeaModel {
         }
 
         /**
-         * <p>The total size of data files in the Cold Archive storage class, in bytes.</p>
+         * <p>The storage size of cold archive data files.</p>
          * 
          * <strong>example:</strong>
          * <p>10240</p>
@@ -453,7 +480,7 @@ public class TableSummary extends TeaModel {
         }
 
         /**
-         * <p>The total size of data files in the Infrequent Access storage class, in bytes.</p>
+         * <p>The storage size of infrequent access data files.</p>
          * 
          * <strong>example:</strong>
          * <p>10240</p>
@@ -464,7 +491,7 @@ public class TableSummary extends TeaModel {
         }
 
         /**
-         * <p>The total size of data files in the Standard storage class, in bytes.</p>
+         * <p>The storage size of standard data files.</p>
          * 
          * <strong>example:</strong>
          * <p>10240</p>
@@ -475,7 +502,7 @@ public class TableSummary extends TeaModel {
         }
 
         /**
-         * <p>The total number of partitions in the table.</p>
+         * <p>The total number of partitions.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -486,7 +513,7 @@ public class TableSummary extends TeaModel {
         }
 
         /**
-         * <p>The storage location of the table.</p>
+         * <p>The storage location.</p>
          * 
          * <strong>example:</strong>
          * <p>oss://clg-xxxx/db-xxxx/tbl-xxxx</p>
@@ -505,7 +532,10 @@ public class TableSummary extends TeaModel {
         }
 
         /**
-         * storageActionTimestamp.
+         * <p>The storage class transition time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1767491579459</p>
          */
         public Builder storageActionTimestamp(Long storageActionTimestamp) {
             this.storageActionTimestamp = storageActionTimestamp;
@@ -514,6 +544,9 @@ public class TableSummary extends TeaModel {
 
         /**
          * <p>The storage class.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STANDARD</p>
          */
         public Builder storageClass(String storageClass) {
             this.storageClass = storageClass;
@@ -521,7 +554,7 @@ public class TableSummary extends TeaModel {
         }
 
         /**
-         * <p>The name of the table.</p>
+         * <p>The table name.</p>
          * 
          * <strong>example:</strong>
          * <p>table1</p>
@@ -532,7 +565,10 @@ public class TableSummary extends TeaModel {
         }
 
         /**
-         * topRequester.
+         * <p>The top requester of the day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::[accountId]:root</p>
          */
         public Builder topRequester(String topRequester) {
             this.topRequester = topRequester;
@@ -540,7 +576,10 @@ public class TableSummary extends TeaModel {
         }
 
         /**
-         * <p>Total file access count.</p>
+         * <p>The total number of file accesses.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalFileAccessNum(Long totalFileAccessNum) {
             this.totalFileAccessNum = totalFileAccessNum;
@@ -548,7 +587,10 @@ public class TableSummary extends TeaModel {
         }
 
         /**
-         * <p>Total file access count over the last 30 days.</p>
+         * <p>The total number of file accesses in the last 7 days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalFileAccessNum30d(Long totalFileAccessNum30d) {
             this.totalFileAccessNum30d = totalFileAccessNum30d;
@@ -556,7 +598,10 @@ public class TableSummary extends TeaModel {
         }
 
         /**
-         * <p>Total file access count over the last 7 days.</p>
+         * <p>The total number of file accesses in the last 30 days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder totalFileAccessNum7d(Long totalFileAccessNum7d) {
             this.totalFileAccessNum7d = totalFileAccessNum7d;
@@ -564,7 +609,7 @@ public class TableSummary extends TeaModel {
         }
 
         /**
-         * <p>The total number of files in the table.</p>
+         * <p>The total number of table files.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -575,7 +620,7 @@ public class TableSummary extends TeaModel {
         }
 
         /**
-         * <p>The total storage capacity of the table, in bytes.</p>
+         * <p>The table storage capacity, in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>1024</p>
@@ -586,7 +631,7 @@ public class TableSummary extends TeaModel {
         }
 
         /**
-         * <p>The total number of metadata files.</p>
+         * <p>The number of metadata files.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -597,7 +642,7 @@ public class TableSummary extends TeaModel {
         }
 
         /**
-         * <p>The total size of metadata files, in bytes.</p>
+         * <p>The storage size of metadata files.</p>
          * 
          * <strong>example:</strong>
          * <p>10240</p>
@@ -608,7 +653,7 @@ public class TableSummary extends TeaModel {
         }
 
         /**
-         * <p>The number of Standard or Infrequent Access partitions unaccessed in the last 180 days.</p>
+         * <p>The number of standard or infrequent access partitions that have not been accessed in the last 180 days.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -619,7 +664,7 @@ public class TableSummary extends TeaModel {
         }
 
         /**
-         * <p>The number of Standard partitions unaccessed in the last 30 days.</p>
+         * <p>The number of standard storage partitions that have not been accessed in the last 30 days.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -631,6 +676,9 @@ public class TableSummary extends TeaModel {
 
         /**
          * <p>The update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1764555981383</p>
          */
         public Builder updatedAt(Long updatedAt) {
             this.updatedAt = updatedAt;

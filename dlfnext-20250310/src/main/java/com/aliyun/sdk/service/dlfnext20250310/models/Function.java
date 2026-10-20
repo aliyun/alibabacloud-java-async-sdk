@@ -210,7 +210,10 @@ public class Function extends TeaModel {
         } 
 
         /**
-         * comment.
+         * <p>The comment information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>comment</p>
          */
         public Builder comment(String comment) {
             this.comment = comment;
@@ -218,7 +221,10 @@ public class Function extends TeaModel {
         }
 
         /**
-         * createdAt.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1741266704867</p>
          */
         public Builder createdAt(Long createdAt) {
             this.createdAt = createdAt;
@@ -226,7 +232,10 @@ public class Function extends TeaModel {
         }
 
         /**
-         * createdBy.
+         * <p>The creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::[accountId]:root</p>
          */
         public Builder createdBy(String createdBy) {
             this.createdBy = createdBy;
@@ -234,7 +243,7 @@ public class Function extends TeaModel {
         }
 
         /**
-         * definitions.
+         * <p>The function metadata definitions.</p>
          */
         public Builder definitions(java.util.Map<String, FunctionDefinition> definitions) {
             this.definitions = definitions;
@@ -242,7 +251,10 @@ public class Function extends TeaModel {
         }
 
         /**
-         * deterministic.
+         * <p>Specifies whether the same input always returns the same output.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder deterministic(Boolean deterministic) {
             this.deterministic = deterministic;
@@ -250,7 +262,10 @@ public class Function extends TeaModel {
         }
 
         /**
-         * id.
+         * <p>ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>db-xxxx</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -258,7 +273,7 @@ public class Function extends TeaModel {
         }
 
         /**
-         * inputParams.
+         * <p>The field input parameters.</p>
          */
         public Builder inputParams(java.util.List<DataField> inputParams) {
             this.inputParams = inputParams;
@@ -266,7 +281,10 @@ public class Function extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The function name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -274,7 +292,7 @@ public class Function extends TeaModel {
         }
 
         /**
-         * options.
+         * <p>The extension options.</p>
          */
         public Builder options(java.util.Map<String, String> options) {
             this.options = options;
@@ -282,7 +300,10 @@ public class Function extends TeaModel {
         }
 
         /**
-         * owner.
+         * <p>The owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::[accountId]:root</p>
          */
         public Builder owner(String owner) {
             this.owner = owner;
@@ -290,7 +311,7 @@ public class Function extends TeaModel {
         }
 
         /**
-         * returnParams.
+         * <p>The return fields of the function.</p>
          */
         public Builder returnParams(java.util.List<DataField> returnParams) {
             this.returnParams = returnParams;
@@ -298,7 +319,10 @@ public class Function extends TeaModel {
         }
 
         /**
-         * updatedAt.
+         * <p>The update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1764556033696</p>
          */
         public Builder updatedAt(Long updatedAt) {
             this.updatedAt = updatedAt;
@@ -306,7 +330,10 @@ public class Function extends TeaModel {
         }
 
         /**
-         * updatedBy.
+         * <p>The updater.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::[accountId]:root</p>
          */
         public Builder updatedBy(String updatedBy) {
             this.updatedBy = updatedBy;

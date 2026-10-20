@@ -184,7 +184,10 @@ public class TableCompactionHistory extends TeaModel {
         } 
 
         /**
-         * <p>The number of files after compaction.</p>
+         * <p>The total number of files after the merge.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder afterFilesCount(Long afterFilesCount) {
             this.afterFilesCount = afterFilesCount;
@@ -192,7 +195,10 @@ public class TableCompactionHistory extends TeaModel {
         }
 
         /**
-         * <p>The total size of files after compaction.</p>
+         * <p>The total size of the files after the merge.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>512</p>
          */
         public Builder afterFilesSize(Long afterFilesSize) {
             this.afterFilesSize = afterFilesSize;
@@ -200,7 +206,10 @@ public class TableCompactionHistory extends TeaModel {
         }
 
         /**
-         * <p>The number of files before compaction.</p>
+         * <p>The total number of files before the merge.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>150</p>
          */
         public Builder beforeFilesCount(Long beforeFilesCount) {
             this.beforeFilesCount = beforeFilesCount;
@@ -208,7 +217,10 @@ public class TableCompactionHistory extends TeaModel {
         }
 
         /**
-         * <p>The creation time of the last file before compaction.</p>
+         * <p>The latest creation time of the files before the merge.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1744969200000</p>
          */
         public Builder beforeFilesLastCreationTime(Long beforeFilesLastCreationTime) {
             this.beforeFilesLastCreationTime = beforeFilesLastCreationTime;
@@ -216,7 +228,10 @@ public class TableCompactionHistory extends TeaModel {
         }
 
         /**
-         * <p>The total size of files before compaction.</p>
+         * <p>The total size of the files before the merge.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         public Builder beforeFilesSize(Long beforeFilesSize) {
             this.beforeFilesSize = beforeFilesSize;
@@ -224,7 +239,10 @@ public class TableCompactionHistory extends TeaModel {
         }
 
         /**
-         * <p>The catalog ID.</p>
+         * <p>The ID of the data catalog.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>clg-paimon-d13*****</p>
          */
         public Builder catalogId(String catalogId) {
             this.catalogId = catalogId;
@@ -232,7 +250,10 @@ public class TableCompactionHistory extends TeaModel {
         }
 
         /**
-         * <p>The compaction commit time.</p>
+         * <p>The commit time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1765890111419</p>
          */
         public Builder commitTime(Long commitTime) {
             this.commitTime = commitTime;
@@ -240,7 +261,10 @@ public class TableCompactionHistory extends TeaModel {
         }
 
         /**
-         * <p>The snapshot ID.</p>
+         * <p>The ID of the snapshot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder snapshotId(Long snapshotId) {
             this.snapshotId = snapshotId;
@@ -248,7 +272,10 @@ public class TableCompactionHistory extends TeaModel {
         }
 
         /**
-         * <p>The table ID.</p>
+         * <p>The ID of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tbl-*****</p>
          */
         public Builder tableId(String tableId) {
             this.tableId = tableId;
@@ -256,7 +283,10 @@ public class TableCompactionHistory extends TeaModel {
         }
 
         /**
-         * <p>The time when the record was last updated.</p>
+         * <p>The time when the record was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1744970111419</p>
          */
         public Builder updatedAt(Long updatedAt) {
             this.updatedAt = updatedAt;
@@ -265,6 +295,9 @@ public class TableCompactionHistory extends TeaModel {
 
         /**
          * <p>The user who updated the record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::[accountId]:root</p>
          */
         public Builder updatedBy(String updatedBy) {
             this.updatedBy = updatedBy;

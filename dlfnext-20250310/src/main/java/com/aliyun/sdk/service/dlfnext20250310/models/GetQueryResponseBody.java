@@ -143,7 +143,7 @@ public class GetQueryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The creation time of the task.</p>
+         * <p>The creation time of the task, which is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1744970111419</p>
@@ -154,7 +154,7 @@ public class GetQueryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The query ID, used for subsequent polling of results.</p>
+         * <p>The query ID used to poll for subsequent results.</p>
          * 
          * <strong>example:</strong>
          * <p>d7b21d1ec4f441e79d5ba917c3283200</p>
@@ -165,7 +165,7 @@ public class GetQueryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result list.</p>
+         * <p>The list of results.</p>
          */
         public Builder results(java.util.List<StatementResult> results) {
             this.results = results;
@@ -173,7 +173,7 @@ public class GetQueryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The SQL text. Multiple statements separated by semicolons are supported and executed sequentially within the same session.</p>
+         * <p>The SQL text, which supports multiple statements separated by semicolons that are executed sequentially within the same session.</p>
          * 
          * <strong>example:</strong>
          * <p>select * from table_name;</p>
@@ -184,7 +184,7 @@ public class GetQueryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The task running status.</p>
+         * <p>The running status of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>COMPLETED</p>
@@ -195,7 +195,7 @@ public class GetQueryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The execution specifications. Default value: standard.</p>
+         * <p>The execution tier. Default value: standard.</p>
          * 
          * <strong>example:</strong>
          * <p>standard</p>

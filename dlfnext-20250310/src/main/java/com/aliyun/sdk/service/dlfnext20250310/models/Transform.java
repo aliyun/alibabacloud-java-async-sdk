@@ -93,7 +93,7 @@ public class Transform extends TeaModel {
         } 
 
         /**
-         * castType.
+         * <p>The target data type.</p>
          */
         public Builder castType(FullDataType castType) {
             this.castType = castType;
@@ -101,7 +101,7 @@ public class Transform extends TeaModel {
         }
 
         /**
-         * fieldRef.
+         * <p>The field reference object.</p>
          */
         public Builder fieldRef(FieldRef fieldRef) {
             this.fieldRef = fieldRef;
@@ -109,7 +109,7 @@ public class Transform extends TeaModel {
         }
 
         /**
-         * inputs.
+         * <p>The input parameters.</p>
          */
         public Builder inputs(java.util.List<TransformInput> inputs) {
             this.inputs = inputs;
@@ -117,7 +117,10 @@ public class Transform extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The name of the transformation function.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>transform_name</p>
          */
         public Builder name(String name) {
             this.name = name;

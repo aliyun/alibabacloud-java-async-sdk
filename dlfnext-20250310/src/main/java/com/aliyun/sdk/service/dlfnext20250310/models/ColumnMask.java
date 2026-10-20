@@ -67,7 +67,10 @@ public class ColumnMask extends TeaModel {
         } 
 
         /**
-         * expression.
+         * <p>The column masking expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CONCAT(\&quot;<em><strong>-</strong>-</em>***\&quot;)</p>
          */
         public Builder expression(String expression) {
             this.expression = expression;
@@ -75,7 +78,10 @@ public class ColumnMask extends TeaModel {
         }
 
         /**
-         * transform.
+         * <p>The column masking transform method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;name&quot;:&quot;CONCAT&quot;,&quot;inputs&quot;:[&quot;***-&quot;,{&quot;index&quot;:1,&quot;name&quot;:&quot;phone&quot;,&quot;type&quot;:&quot;STRING&quot;}]}</p>
          */
         public Builder transform(String transform) {
             this.transform = transform;

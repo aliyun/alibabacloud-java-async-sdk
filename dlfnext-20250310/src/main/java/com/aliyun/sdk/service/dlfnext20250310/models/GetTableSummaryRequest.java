@@ -104,7 +104,7 @@ public class GetTableSummaryRequest extends Request {
         } 
 
         /**
-         * <p>The catalog ID.</p>
+         * <p>The data catalog ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,7 +143,7 @@ public class GetTableSummaryRequest extends Request {
         }
 
         /**
-         * <p>The storage summary date.</p>
+         * <p>The date of the storage overview, in the YYYY-MM-DD format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-10-08</p>

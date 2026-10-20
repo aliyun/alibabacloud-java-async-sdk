@@ -258,7 +258,10 @@ public class Database extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The status of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -266,7 +269,10 @@ public class Database extends TeaModel {
         }
 
         /**
-         * tableCount.
+         * <p>The number of tables in the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder tableCount(Long tableCount) {
             this.tableCount = tableCount;
