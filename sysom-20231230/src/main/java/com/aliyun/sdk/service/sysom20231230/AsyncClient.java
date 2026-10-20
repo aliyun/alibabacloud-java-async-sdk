@@ -235,6 +235,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>Queries published hotfixes in batches by CVE ID. You can filter the results by full kernel version.</p>
+     * 
+     * @param request the request parameters of GetCveHotfix  GetCveHotfixRequest
+     * @return GetCveHotfixResponse
+     */
+    CompletableFuture<GetCveHotfixResponse> getCveHotfix(GetCveHotfixRequest request);
+
+    /**
+     * <b>description</b> :
      * <p>The diagnostic process is asynchronous. When you call this operation, the diagnosis may still be running. You can check the <code>data.status</code> field in the response to determine the status. When <code>data.status == Success</code>, the diagnosis is complete and you can read the diagnostic results from <code>data.result</code>.</p>
      * 
      * @param request the request parameters of GetDiagnosisResult  GetDiagnosisResultRequest

@@ -609,6 +609,27 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <p>Queries published hotfixes in batches by CVE ID. You can filter the results by full kernel version.</p>
+     * 
+     * @param request the request parameters of GetCveHotfix  GetCveHotfixRequest
+     * @return GetCveHotfixResponse
+     */
+    @Override
+    public CompletableFuture<GetCveHotfixResponse> getCveHotfix(GetCveHotfixRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetCveHotfix").setMethod(HttpMethod.POST).setPathRegex("/api/v1/hotfixManager/hotfixes/cve").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetCveHotfixResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetCveHotfixResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <p>The diagnostic process is asynchronous. When you call this operation, the diagnosis may still be running. You can check the <code>data.status</code> field in the response to determine the status. When <code>data.status == Success</code>, the diagnosis is complete and you can read the diagnostic results from <code>data.result</code>.</p>
      * 
      * @param request the request parameters of GetDiagnosisResult  GetDiagnosisResultRequest
