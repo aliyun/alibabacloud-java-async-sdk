@@ -988,10 +988,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Usage notes</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>When creating a Routine code version deployment, the <code>Env</code> parameter only supports <code>staging</code> for the staging environment or <code>production</code> for the production environment.</li>
-     * <li>The <code>CodeVersions</code> parameter supports a maximum of two versions for canary release, and the total percentage of these versions must equal 100%.</li>
+     * <li>When you create an Edge Routine code version deployment, the <code>Env</code> parameter only supports the test environment <code>staging</code> or the production environment <code>production</code>.</li>
+     * <li>The <code>CodeVersions</code> parameter supports publishing up to two versions in grayscale, and the sum of the percentages for these versions must be equal to 100%.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateRoutineCodeDeployment  CreateRoutineCodeDeploymentRequest
@@ -1104,9 +1104,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Before creating a site, you must have an active plan instance.</li>
-     * <li>If the acceleration area is set to the Chinese mainland only or global, the site domain name must have a valid Chinese Internet Content Provider (ICP) filing.</li>
-     * <li>Each user can invoke this operation up to 100 times per hour.</li>
+     * <li>Before you create a site, you must have an available plan instance.</li>
+     * <li>If the acceleration region is set to the Chinese mainland or global, the domain name of the site must have an ICP filing.</li>
+     * <li>Each user can call this API operation up to 100 times per hour.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateSite  CreateSiteRequest
@@ -1167,6 +1167,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateSiteDeliveryTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateSliderCaptchaPage  CreateSliderCaptchaPageRequest
+     * @return CreateSliderCaptchaPageResponse
+     */
+    @Override
+    public CompletableFuture<CreateSliderCaptchaPageResponse> createSliderCaptchaPage(CreateSliderCaptchaPageRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateSliderCaptchaPage").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateSliderCaptchaPageResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateSliderCaptchaPageResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1367,7 +1385,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Your site plan must be Advanced or higher to use this feature. The number of configurations for this feature cannot exceed the quota included in your site plan.</p>
+     * <p>To use this feature, the site plan must be the Premium Edition or higher. The number of configurations for this feature cannot exceed the quota allowed by your site plan.</p>
      * 
      * @param request the request parameters of CreateWaitingRoomEvent  CreateWaitingRoomEventRequest
      * @return CreateWaitingRoomEventResponse
@@ -1388,7 +1406,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Your site plan must be Enterprise Edition or higher to use this feature, and the site plan must support this feature.</p>
+     * <p>This feature is available only if your site is on the Enterprise plan and the plan supports this feature.</p>
      * 
      * @param request the request parameters of CreateWaitingRoomRule  CreateWaitingRoomRuleRequest
      * @return CreateWaitingRoomRuleResponse
@@ -2279,6 +2297,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteSiteOriginClientCertificateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteSliderCaptchaPage  DeleteSliderCaptchaPageRequest
+     * @return DeleteSliderCaptchaPageResponse
+     */
+    @Override
+    public CompletableFuture<DeleteSliderCaptchaPageResponse> deleteSliderCaptchaPage(DeleteSliderCaptchaPageRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteSliderCaptchaPage").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteSliderCaptchaPageResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteSliderCaptchaPageResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -4950,6 +4986,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetSliderCaptchaPage  GetSliderCaptchaPageRequest
+     * @return GetSliderCaptchaPageResponse
+     */
+    @Override
+    public CompletableFuture<GetSliderCaptchaPageResponse> getSliderCaptchaPage(GetSliderCaptchaPageRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetSliderCaptchaPage").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetSliderCaptchaPageResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetSliderCaptchaPageResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetTieredCache  GetTieredCacheRequest
      * @return GetTieredCacheResponse
      */
@@ -5050,7 +5104,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation allows you to query the real-time log delivery quota for different business types in your Alibaba Cloud account. You must provide your Alibaba Cloud user ID (aliUid) and the business type (BusinessType). The system returns the remaining quota for the specified business type, helping you understand the current quota usage.</p>
+     * <p>This operation allows you to query the real-time log delivery quota for different business types in your Alibaba Cloud account. You must provide your Alibaba Cloud user ID (aliUid) and the business type (BusinessType) of interest. The system returns the remaining quota for the specified business type to help you understand the current quota usage.</p>
      * 
      * @param request the request parameters of GetUserMaxPlanQuota  GetUserMaxPlanQuotaRequest
      * @return GetUserMaxPlanQuotaResponse
@@ -6085,7 +6139,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries the list of pay-as-you-go plan instances under your account. You can filter and sort results by multiple conditions.</p>
+     * <p>This operation queries pay-as-you-go plan instances under your account and supports filtering and sorting by various conditions.</p>
      * 
      * @param request the request parameters of ListPostpaidRatePlanInstances  ListPostpaidRatePlanInstancesRequest
      * @return ListPostpaidRatePlanInstancesResponse
@@ -6457,6 +6511,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListSitesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListSliderCaptchaPages  ListSliderCaptchaPagesRequest
+     * @return ListSliderCaptchaPagesResponse
+     */
+    @Override
+    public CompletableFuture<ListSliderCaptchaPagesResponse> listSliderCaptchaPages(ListSliderCaptchaPagesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListSliderCaptchaPages").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListSliderCaptchaPagesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListSliderCaptchaPagesResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -7432,12 +7504,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>If you do not specify StartTime and EndTime, this operation returns data from the past 24 hours. If you specify StartTime and EndTime, this operation returns data for the specified time range.</li>
-     * <li>The time granularity of returned data varies based on the time range specified by StartTime and EndTime.<ul>
-     * <li>If the time range is less than or equal to 3 hours, data is returned at a 1-minute granularity.</li>
-     * <li>If the time range is greater than 3 hours and less than or equal to 1 day, data is returned at a 5-minute granularity.</li>
-     * <li>If the time range is greater than 1 day and less than or equal to 10 days, data is returned at an hourly granularity.</li>
-     * <li>If the time range is greater than 10 days and less than or equal to 31 days, data is returned at a daily granularity.</li>
+     * <li>If you do not specify StartTime and EndTime, this operation returns data for the last 24 hours. If you specify StartTime and EndTime, this operation returns data for the specified time range.</li>
+     * <li>The time granularity varies based on the time span between StartTime and EndTime:<ul>
+     * <li>If the time span is 3 hours or less, data is returned at 1-minute granularity.</li>
+     * <li>If the time span is greater than 3 hours and less than or equal to 1 day, data is returned at 5-minute granularity.</li>
+     * <li>If the time span is greater than 1 day and less than or equal to 10 days, data is returned at 1-hour granularity.</li>
+     * <li>If the time span is greater than 10 days and less than or equal to 31 days, data is returned at 1-day granularity.</li>
      * </ul>
      * </li>
      * </ul>
@@ -8623,6 +8695,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of UpdateSliderCaptchaPage  UpdateSliderCaptchaPageRequest
+     * @return UpdateSliderCaptchaPageResponse
+     */
+    @Override
+    public CompletableFuture<UpdateSliderCaptchaPageResponse> updateSliderCaptchaPage(UpdateSliderCaptchaPageRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateSliderCaptchaPage").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateSliderCaptchaPageResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateSliderCaptchaPageResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of UpdateTieredCache  UpdateTieredCacheRequest
      * @return UpdateTieredCacheResponse
      */
@@ -8859,7 +8949,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Modifies the rule settings of a specific waiting room for a site, including the rule name, enabled status, and rule content.</p>
+     * <p>You can call this operation to update the rule settings of a specific waiting room on a site, including the rule name, status, and rule content.</p>
      * 
      * @param request the request parameters of UpdateWaitingRoomRule  UpdateWaitingRoomRuleRequest
      * @return UpdateWaitingRoomRuleResponse

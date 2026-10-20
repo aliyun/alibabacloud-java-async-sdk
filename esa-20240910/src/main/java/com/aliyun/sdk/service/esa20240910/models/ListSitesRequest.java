@@ -215,9 +215,9 @@ public class ListSitesRequest extends Request {
         /**
          * <p>The access type. Valid values:</p>
          * <ul>
-         * <li><p><strong>NS</strong>: NS-based access.</p>
+         * <li><p><strong>NS</strong>: NS hosting access</p>
          * </li>
-         * <li><p><strong>CNAME</strong>: CNAME-based access.</p>
+         * <li><p><strong>CNAME</strong>: CNAME access</p>
          * </li>
          * </ul>
          * 
@@ -233,9 +233,9 @@ public class ListSitesRequest extends Request {
         /**
          * <p>The acceleration region. Valid values:</p>
          * <ul>
-         * <li><strong>domestic</strong>: the Chinese mainland only.</li>
-         * <li><strong>global</strong>: global.</li>
-         * <li><strong>overseas</strong>: global (excluding the Chinese mainland).</li>
+         * <li><strong>domestic</strong>: the Chinese mainland</li>
+         * <li><strong>global</strong>: global</li>
+         * <li><strong>overseas</strong>: global (excluding the Chinese mainland)</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -248,7 +248,7 @@ public class ListSitesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to query only Enterprise Edition sites. Set this parameter to <strong>true</strong> to query only Enterprise Edition sites.</p>
+         * <p>Specifies whether to query only Enterprise Edition sites. If you set this parameter to <strong>true</strong>, only Enterprise Edition sites are queried.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -260,10 +260,10 @@ public class ListSitesRequest extends Request {
         }
 
         /**
-         * <p>The sort field. By default, results are sorted by creation time. Valid values:</p>
+         * <p>The sort field. By default, sites are sorted by creation time. Valid values:</p>
          * <ul>
-         * <li>gmtCreate: site creation time.</li>
-         * <li>visitTime: site access time.</li>
+         * <li>gmtCreate: site creation time</li>
+         * <li>visitTime: site access time</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -276,7 +276,7 @@ public class ListSitesRequest extends Request {
         }
 
         /**
-         * <p>The page number for paging. The value must be greater than or equal to 1.</p>
+         * <p>The page number Settings for paging in a paged query. The value must be greater than or equal to 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -288,7 +288,7 @@ public class ListSitesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page for paging. Valid values: 1 to 500.</p>
+         * <p>The number of entries per page for paging in a paged query. Valid values: 1 to 500.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -300,12 +300,12 @@ public class ListSitesRequest extends Request {
         }
 
         /**
-         * <p>The plan subscription type. Valid values:</p>
+         * <p>The subscription plan type. Valid values:</p>
          * <ul>
-         * <li><strong>basicplan</strong>: Basic Edition.</li>
-         * <li><strong>standardplan</strong>: Standard Edition.</li>
-         * <li><strong>advancedplan</strong>: Premium Edition.</li>
-         * <li><strong>enterpriseplan</strong>: Enterprise Edition.</li>
+         * <li><strong>basicplan</strong>: basic edition</li>
+         * <li><strong>standardplan</strong>: standard edition</li>
+         * <li><strong>advancedplan</strong>: advanced edition</li>
+         * <li><strong>enterpriseplan</strong>: enterprise edition</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -342,12 +342,12 @@ public class ListSitesRequest extends Request {
         }
 
         /**
-         * <p>The search matching mode for the site name. Default is exact match. Valid values:</p>
+         * <p>The search match mode for the site name. Default value: exact. Valid values:</p>
          * <ul>
-         * <li><strong>prefix</strong>: prefix match.</li>
-         * <li><strong>suffix</strong>: suffix match.</li>
-         * <li><strong>exact</strong>: exact match.</li>
-         * <li><strong>fuzzy</strong>: fuzzy match.</li>
+         * <li><strong>prefix</strong>: prefix match</li>
+         * <li><strong>suffix</strong>: suffix match</li>
+         * <li><strong>exact</strong>: exact match</li>
+         * <li><strong>fuzzy</strong>: fuzzy match</li>
          * </ul>
          * 
          * <strong>example:</strong>

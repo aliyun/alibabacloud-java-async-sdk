@@ -119,7 +119,7 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of cache reserve instances.</p>
+         * <p>The list of cache reservation instances.</p>
          */
         public Builder instanceInfo(java.util.List<InstanceInfo> instanceInfo) {
             this.instanceInfo = instanceInfo;
@@ -138,7 +138,7 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page. Default value: <strong>500</strong>. Valid values: <strong>1</strong> to <strong>500</strong>.</p>
+         * <p>The number of entries per page. Default value: <strong>500</strong>. Valid values: <strong>1 to 500</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>500</p>
@@ -318,7 +318,7 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The capacity of the cache reserve instance. Unit: GB.</p>
+             * <p>The cache reservation capacity. Unit: GB.</p>
              * 
              * <strong>example:</strong>
              * <p>512000</p>
@@ -329,7 +329,7 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region where the cache reserve instance is deployed.</p>
+             * <p>The region where the cache reservation is used.</p>
              * 
              * <strong>example:</strong>
              * <p>HK</p>
@@ -340,10 +340,10 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing type. Valid values:</p>
+             * <p>The billing method. Valid values:</p>
              * <ul>
-             * <li>PREPAY: subscription.</li>
-             * <li>POSTPAY: pay-as-you-go.</li>
+             * <li>PREPAY: Prepaid.</li>
+             * <li>POSTPAY: Pay-as-you-go.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -355,7 +355,7 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time of the instance.</p>
+             * <p>The creation time of the instance. The time is in UTC and formatted in accordance with the ISO 8601 standard, for example, 2024-04-12T05:41:51Z.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-04-12T05:41:51Z</p>
@@ -377,7 +377,7 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the instance expires.</p>
+             * <p>The time when the instance expires. The time is in UTC and formatted in accordance with the ISO 8601 standard, for example, 2024-10-05T16:00:00Z.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-10-05T16:00:00Z</p>
@@ -401,10 +401,10 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
             /**
              * <p>The instance status. Valid values:</p>
              * <ul>
-             * <li><strong>online</strong>: The instance is running normally.</li>
-             * <li><strong>offline</strong>: The instance has expired but has not exceeded the retention period and is unavailable.</li>
-             * <li><strong>disable</strong>: The instance has been released.</li>
-             * <li><strong>overdue</strong>: The instance is stopped due to an overdue payment.</li>
+             * <li><strong>online</strong>: Normal service status.</li>
+             * <li><strong>offline</strong>: Expired but not overdue, and in an inactive state.</li>
+             * <li><strong>disable</strong>: Released.</li>
+             * <li><strong>overdue</strong>: Stopped due to an overdue payment.</li>
              * </ul>
              * 
              * <strong>example:</strong>

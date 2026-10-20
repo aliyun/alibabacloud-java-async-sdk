@@ -105,7 +105,7 @@ public class CreateRoutineCodeDeploymentRequest extends Request {
         } 
 
         /**
-         * <p>The list of percentage-based canary release version configurations. A maximum of two versions are supported, and the total percentage must equal 100.</p>
+         * <p>The list of code version configurations for the percentage-based canary release. You can specify up to two code versions, and the sum of the percentages must be equal to 100.</p>
          * <p>This parameter is required.</p>
          */
         public Builder codeVersions(java.util.List<CodeVersions> codeVersions) {
@@ -116,10 +116,10 @@ public class CreateRoutineCodeDeploymentRequest extends Request {
         }
 
         /**
-         * <p>The environment name.<br>Valid values:</p>
+         * <p>The environment name. Valid values:</p>
          * <ul>
-         * <li><code>staging</code>: staging environment </li>
-         * <li><code>production</code>: production environment</li>
+         * <li><code>staging</code>: the staging environment.</li>
+         * <li><code>production</code>: the production environment.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -133,7 +133,7 @@ public class CreateRoutineCodeDeploymentRequest extends Request {
         }
 
         /**
-         * <p>The name of the Edge Function Routine.</p>
+         * <p>The name of the Edge Routine.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,9 +146,9 @@ public class CreateRoutineCodeDeploymentRequest extends Request {
         }
 
         /**
-         * <p>The deployment strategy.<br>Valid values:</p>
+         * <p>The deployment strategy. Valid values:</p>
          * <ul>
-         * <li><code>percentage</code>: percentage mode</li>
+         * <li><code>percentage</code>: percentage mode.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -235,7 +235,7 @@ public class CreateRoutineCodeDeploymentRequest extends Request {
             }
 
             /**
-             * <p>The canary release percentage for the code version. Valid values: 1 to 100.</p>
+             * <p>The traffic percentage for the canary release of the code version. Valid values: 1 to 100.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

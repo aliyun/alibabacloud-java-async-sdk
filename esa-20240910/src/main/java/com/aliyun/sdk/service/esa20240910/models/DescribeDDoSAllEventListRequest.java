@@ -132,9 +132,7 @@ public class DescribeDDoSAllEventListRequest extends Request {
         } 
 
         /**
-         * <p>The end time of the query.</p>
-         * <p>The time must be in ISO 8601 format and in UTC. Format: <code>yyyy-MM-ddTHH:mm:ssZ</code>. The time range between <code>StartTime</code> and <code>EndTime</code> cannot exceed 31 days.</p>
-         * <p>If this parameter is not specified, it defaults to the current time.</p>
+         * <p>The end time of the query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. The time span between the start time and the end time cannot exceed 31 days. If you do not specify this parameter, the current time is used as the end time.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-02-22T15:59:59Z</p>
@@ -146,16 +144,13 @@ public class DescribeDDoSAllEventListRequest extends Request {
         }
 
         /**
-         * <p>The type of DDoS attack events to query. Valid values:</p>
+         * <p>The type of the DDoS attack event to query. Valid values:</p>
          * <ul>
-         * <li><p><strong>web-cc</strong>: A web resource exhaustion attack.</p>
-         * </li>
-         * <li><p><strong>cc</strong>: A connection-based attack.</p>
-         * </li>
-         * <li><p><strong>traffic</strong>: A traffic-based attack.</p>
-         * </li>
+         * <li><strong>web-cc</strong>: web resource exhaustion attacks.</li>
+         * <li><strong>cc</strong>: connection flood attacks.</li>
+         * <li><strong>traffic</strong>: volumetric traffic attacks.</li>
          * </ul>
-         * <p>If you do not specify this parameter, the operation queries <code>web-cc</code> events by default.</p>
+         * <p>If the Settings for this parameter are not specified, web resource exhaustion attack events are queried.</p>
          * 
          * <strong>example:</strong>
          * <p>web-cc</p>
@@ -167,7 +162,7 @@ public class DescribeDDoSAllEventListRequest extends Request {
         }
 
         /**
-         * <p>The page number to return. Valid range: <strong>1</strong> to <strong>100000</strong>.</p>
+         * <p>The page number. Valid values: <strong>1</strong> to <strong>100000</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -192,7 +187,7 @@ public class DescribeDDoSAllEventListRequest extends Request {
         }
 
         /**
-         * <p>The ID of the site. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+         * <p>The ID of the site. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -205,8 +200,7 @@ public class DescribeDDoSAllEventListRequest extends Request {
         }
 
         /**
-         * <p>The start time of the query.</p>
-         * <p>The time must be in ISO 8601 format and in UTC. Format: <code>yyyy-MM-ddTHH:mm:ssZ</code>.</p>
+         * <p>The start time of the query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

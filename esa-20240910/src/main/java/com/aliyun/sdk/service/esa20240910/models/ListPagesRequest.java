@@ -99,7 +99,7 @@ public class ListPagesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 20.</p>
+         * <p>The page size. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -111,7 +111,7 @@ public class ListPagesRequest extends Request {
         }
 
         /**
-         * <p>The query parameters passed in JSON format, which contain various filter conditions.</p>
+         * <p>The query parameters passed in JSON format, which include various filter conditions.</p>
          */
         public Builder queryArgs(QueryArgs queryArgs) {
             String queryArgsShrink = shrink(queryArgs, "QueryArgs", "json");
@@ -180,7 +180,7 @@ public class ListPagesRequest extends Request {
             } 
 
             /**
-             * <p>The Content-Type field in the HTTP header. Example values:</p>
+             * <p>Specifies the Content-Type field in the HTTP header, such as:</p>
              * <ul>
              * <li>text/html</li>
              * <li>application/json</li>
@@ -195,7 +195,7 @@ public class ListPagesRequest extends Request {
             }
 
             /**
-             * <p>The fuzzy match string for the name or description of a custom page.</p>
+             * <p>Performs a fuzzy match on the name or description of the custom page.</p>
              * 
              * <strong>example:</strong>
              * <p>example</p>

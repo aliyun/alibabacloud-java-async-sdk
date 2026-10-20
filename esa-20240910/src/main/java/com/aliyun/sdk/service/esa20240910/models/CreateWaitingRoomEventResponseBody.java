@@ -67,7 +67,7 @@ public class CreateWaitingRoomEventResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>15C66C7B-671A-4297-9187-2C4477247A123425345</p>
@@ -78,7 +78,7 @@ public class CreateWaitingRoomEventResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The waiting room event ID. You can call the <a href="https://help.aliyun.com/document_detail/2850279.html">ListWaitingRoomEvents</a> operation to obtain the waiting room event ID.</p>
+         * <p>The ID of the waiting room event. You can obtain the waiting room event ID by calling the <a href="https://help.aliyun.com/document_detail/2850279.html">ListWaitingRoomEvents</a> operation.</p>
          * 
          * <strong>example:</strong>
          * <p>433277746085888</p>

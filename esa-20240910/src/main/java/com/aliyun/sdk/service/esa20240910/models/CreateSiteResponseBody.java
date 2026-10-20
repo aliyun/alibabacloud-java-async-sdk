@@ -93,7 +93,7 @@ public class CreateSiteResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of NS records assigned to the site, separated by commas (,). This field has a value when the access type of the site is NS. You must change the DNS servers of the site to these NS records. Then you can verify the site ownership and activate the site.</p>
+         * <p>The list of NS records assigned to the site, separated by commas (,). This field has a value only when the access type of the site is NS. You must change the DNS servers of the site to these NS records. Then, you can verify the ownership of the site and activate the site.</p>
          * 
          * <strong>example:</strong>
          * <p>ns1.example.com,ns2.example.com</p>
@@ -126,7 +126,7 @@ public class CreateSiteResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The verification code of the site. When the access type of the site is CNAME, you must add a TXT record to the DNS server of the site with the record name <strong>_esaauth.[site name]</strong> and the record value set to the <strong>verification code</strong>. Then you can verify the site ownership and activate the site.</p>
+         * <p>The verification code of the site. When the access type of the site is CNAME, you must add a TXT record with the name <strong>_esaauth.[site name]</strong> and the value <strong>verification code</strong> in the DNS server of the site. Then, you can verify the ownership of the site and activate the site.</p>
          * 
          * <strong>example:</strong>
          * <p>verify_aah9dioasmov****</p>

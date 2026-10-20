@@ -132,7 +132,7 @@ public class DescribeDDoSL7QpsListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The time granularity of the queried data, in seconds.</p>
+         * <p>The time granularity of the queried data. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -143,7 +143,7 @@ public class DescribeDDoSL7QpsListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Application layer time trend data list.</p>
+         * <p>The list of application-layer time-series data.</p>
          */
         public Builder dataModule(java.util.List<DataModule> dataModule) {
             this.dataModule = dataModule;
@@ -151,8 +151,7 @@ public class DescribeDDoSL7QpsListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The end time of the query.</p>
-         * <p>The date format follows ISO8601 notation and uses UTC+0, formatted as yyyy-MM-ddTHH:mm:ssZ.</p>
+         * <p>The end time of the query. The time is displayed in UTC and formatted based on ISO 8601 in the yyyy-MM-ddTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-04-19T19:00:00Z</p>
@@ -163,7 +162,7 @@ public class DescribeDDoSL7QpsListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Record ID.</p>
+         * <p>The record ID.</p>
          * 
          * <strong>example:</strong>
          * <p>86510927836942****</p>
@@ -174,7 +173,7 @@ public class DescribeDDoSL7QpsListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>156A6B-677B1A-4297B7-9187B7-2B44792</p>
@@ -185,7 +184,7 @@ public class DescribeDDoSL7QpsListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Site ID.</p>
+         * <p>The site ID.</p>
          * 
          * <strong>example:</strong>
          * <p>123456****</p>
@@ -196,8 +195,7 @@ public class DescribeDDoSL7QpsListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The start time of the query.</p>
-         * <p>The date format follows ISO8601 notation and uses UTC+0, formatted as yyyy-MM-ddTHH:mm:ssZ.</p>
+         * <p>The start time of the query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-04-19T16:00:00Z</p>
@@ -292,7 +290,7 @@ public class DescribeDDoSL7QpsListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Attack QPS.</p>
+             * <p>The attack QPS.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -303,7 +301,7 @@ public class DescribeDDoSL7QpsListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Normal QPS.</p>
+             * <p>The normal QPS.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
@@ -314,7 +312,7 @@ public class DescribeDDoSL7QpsListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Data time, following ISO8601 notation and using UTC+0, formatted as yyyy-MM-ddTHH:mm:ssZ.</p>
+             * <p>The data timestamp. The time is displayed in UTC and formatted based on ISO 8601 in the yyyy-MM-ddTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-04-19T16:00:00Z</p>
@@ -325,7 +323,7 @@ public class DescribeDDoSL7QpsListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Total QPS.</p>
+             * <p>The total QPS.</p>
              * 
              * <strong>example:</strong>
              * <p>9</p>

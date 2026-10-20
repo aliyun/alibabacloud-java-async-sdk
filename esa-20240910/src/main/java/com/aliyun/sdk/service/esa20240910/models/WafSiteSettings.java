@@ -145,7 +145,7 @@ public class WafSiteSettings extends TeaModel {
         } 
 
         /**
-         * <p>The bot protection headers.</p>
+         * <p>The configuration for adding bot protection headers.</p>
          */
         public Builder addBotProtectionHeaders(AddBotProtectionHeaders addBotProtectionHeaders) {
             this.addBotProtectionHeaders = addBotProtectionHeaders;
@@ -153,7 +153,7 @@ public class WafSiteSettings extends TeaModel {
         }
 
         /**
-         * <p>The security headers.</p>
+         * <p>The configuration for adding security headers.</p>
          */
         public Builder addSecurityHeaders(AddSecurityHeaders addSecurityHeaders) {
             this.addSecurityHeaders = addSecurityHeaders;
@@ -185,7 +185,7 @@ public class WafSiteSettings extends TeaModel {
         }
 
         /**
-         * <p>The disable security module configuration.</p>
+         * <p>The configuration for disabling the security module.</p>
          */
         public Builder disableSecurityModule(DisableSecurityModule disableSecurityModule) {
             this.disableSecurityModule = disableSecurityModule;
@@ -193,12 +193,11 @@ public class WafSiteSettings extends TeaModel {
         }
 
         /**
-         * <p>The request body inspection configuration. Controls the deep packet inspection behavior of WAF for HTTP request bodies. After this feature is enabled, content-based matching rules such as SQL injection and XSS detection take effect on request bodies.</p>
-         * <p>This configuration can contain the following fields:</p>
+         * <p>The request body inspection configuration. This configuration controls the deep packet inspection behavior of WAF for HTTP request bodies. For example, matching based on request body content, such as SQL injection and XSS, takes effect only after this feature is enabled. This configuration can include the following fields:</p>
          * <ul>
-         * <li><code>Id</code>: The unique identifier of the built-in inspection rule.</li>
-         * <li><code>SizeLimit</code>: The maximum size of the request body to inspect.</li>
-         * <li><code>Action</code>: The action to take when the request body exceeds the size limit.</li>
+         * <li>Id: The unique identifier of the built-in inspection rule.</li>
+         * <li>SizeLimit: The maximum size of the request body to be inspected.</li>
+         * <li>Action: The action to take when the size limit is exceeded.</li>
          * </ul>
          */
         public Builder requestBodyInspection(RequestBodyInspection requestBodyInspection) {
@@ -260,7 +259,7 @@ public class WafSiteSettings extends TeaModel {
             } 
 
             /**
-             * <p>The switch.</p>
+             * <p>The enable status.</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -314,7 +313,7 @@ public class WafSiteSettings extends TeaModel {
             } 
 
             /**
-             * <p>The switch.</p>
+             * <p>The enable status.</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -394,7 +393,7 @@ public class WafSiteSettings extends TeaModel {
             } 
 
             /**
-             * <p>The action of the bandwidth abuse protection rule.</p>
+             * <p>The action performed by the bandwidth abuse protection rule.</p>
              * 
              * <strong>example:</strong>
              * <p>deny</p>
@@ -416,7 +415,7 @@ public class WafSiteSettings extends TeaModel {
             }
 
             /**
-             * <p>The switch status of the bandwidth abuse protection rule.</p>
+             * <p>The enable status of the bandwidth abuse protection rule.</p>
              * 
              * <strong>example:</strong>
              * <p>on</p>
@@ -554,7 +553,7 @@ public class WafSiteSettings extends TeaModel {
             } 
 
             /**
-             * <p>The switch.</p>
+             * <p>The enable status.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -611,7 +610,7 @@ public class WafSiteSettings extends TeaModel {
             } 
 
             /**
-             * <p>The switch.</p>
+             * <p>The enable status.</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -1043,7 +1042,7 @@ public class WafSiteSettings extends TeaModel {
             } 
 
             /**
-             * <p>The status switch for disabling the security module.</p>
+             * <p>The enable status for disabling the security module.</p>
              * 
              * <strong>example:</strong>
              * <p>on</p>
@@ -1126,14 +1125,14 @@ public class WafSiteSettings extends TeaModel {
             } 
 
             /**
-             * <p>The action to take when the request body size exceeds <code>SizeLimit</code>.</p>
-             * <p>Common values (the complete enumeration is subject to the server-side configuration):</p>
+             * <p>The action to take when the request body size exceeds the SizeLimit.
+             * Common valid values (the complete enumeration is subject to the server configuration):</p>
              * <ul>
-             * <li><code>allow</code>: Allow directly without performing deep packet inspection on the excess portion.</li>
-             * </ul>
-             * <blockquote>
-             * <p>The complete enum is subject to the WAF server-side configuration.</p>
+             * <li>allow: Allows the request directly without performing deep packet inspection on the exceeded part.<blockquote>
+             * <p>The complete enumeration is subject to the WAF server configuration.</p>
              * </blockquote>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>allow</p>
@@ -1144,7 +1143,7 @@ public class WafSiteSettings extends TeaModel {
             }
 
             /**
-             * <p>The request body inspection rule ID (unique identifier of the built-in rule). When request body inspection is enabled, the server uses this ID to associate the matching logic of the built-in inspection rule. The ID value is subject to the WAF built-in rule list.</p>
+             * <p>The ID of the request body inspection rule, which is the unique identifier of the built-in rule. When request body inspection is enabled, the server uses this ID to associate the matching logic of the built-in inspection rule. The valid values of the ID are subject to the WAF built-in rule list.</p>
              * 
              * <strong>example:</strong>
              * <p>10000001</p>
@@ -1155,14 +1154,14 @@ public class WafSiteSettings extends TeaModel {
             }
 
             /**
-             * <p>The maximum size of the request body to inspect, in bytes.</p>
+             * <p>The maximum size of the request body to be inspected, in bytes.</p>
              * <ul>
-             * <li>When the request body is less than or equal to this value, the entire content is subject to WAF matching.</li>
-             * <li>When the request body exceeds this value, the action specified in the <code>Action</code> field is taken (for example, inspect only the first N bytes, reject, or allow directly).</li>
-             * </ul>
-             * <blockquote>
-             * <p>The specific value range and default value are subject to the WAF server-side configuration.</p>
+             * <li>If the request body is less than or equal to this value, the complete content is used for WAF matching.</li>
+             * <li>If the request body exceeds this value, the action specified by the Action field is performed, such as inspecting only the first N bytes, blocking, or allowing.<blockquote>
+             * <p>The specific valid values and default value are subject to the WAF server configuration.</p>
              * </blockquote>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>16KB</p>
@@ -1232,7 +1231,7 @@ public class WafSiteSettings extends TeaModel {
             } 
 
             /**
-             * <p>The request body inspection rule ID (unique identifier of the built-in rule). When request body inspection is enabled, the server uses this ID to associate the matching logic of the built-in inspection rule. The ID value is subject to the WAF built-in rule list.</p>
+             * <p>The security level rule ID.</p>
              * 
              * <strong>example:</strong>
              * <p>10000001</p>

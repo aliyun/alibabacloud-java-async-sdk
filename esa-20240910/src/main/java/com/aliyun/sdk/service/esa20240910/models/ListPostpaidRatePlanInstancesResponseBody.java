@@ -280,7 +280,7 @@ public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
              * <li>pending: The site is pending configuration.</li>
              * <li>active: The site is activated.</li>
              * <li>offline: The site is offline.</li>
-             * <li>moved: The site has been superseded.</li>
+             * <li>moved: The site has been replaced.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -507,9 +507,9 @@ public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The billing method. Valid values:</p>
+             * <p>The Billable methods. Valid values:</p>
              * <ul>
-             * <li>dps_month95: Monthly 95th Percentile.</li>
+             * <li>dps_month95: monthly 95th percentile billing.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -523,7 +523,7 @@ public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
             /**
              * <p>The billing mode. Valid values:</p>
              * <ul>
-             * <li>POSTPAY: Pay-as-you-go.</li>
+             * <li>POSTPAY: pay-as-you-go.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -535,11 +535,11 @@ public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The acceleration regions to which the instance can bindable sites. Multiple values are separated by commas (,). Valid values:</p>
+             * <p>The acceleration regions for sites that can be bound to the instance. Multiple values are separated by commas (,). Valid values:</p>
              * <ul>
-             * <li>domestic: The Chinese mainland.</li>
-             * <li>overseas: Global (excluding the Chinese mainland).</li>
-             * <li>global: Global (including the Chinese mainland).</li>
+             * <li>domestic: the Chinese mainland.</li>
+             * <li>overseas: global (excluding the Chinese mainland).</li>
+             * <li>global: global (including the Chinese mainland).</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -551,7 +551,7 @@ public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the instance was created. The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * <p>The time when the instance was created. The time is displayed in UTC and follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-04-19T11:15:20Z</p>
@@ -562,7 +562,7 @@ public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scheduled specification change time. The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * <p>The scheduled time for upgrade or downgrade. The time is displayed in UTC and follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-04-19T11:15:20Z</p>
@@ -603,7 +603,7 @@ public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Chinese name of the plan.</p>
+             * <p>The plan name in Chinese.</p>
              * 
              * <strong>example:</strong>
              * <p>test-plan</p>
@@ -614,10 +614,10 @@ public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The plan type of the instance. Valid values:</p>
+             * <p>The plan type corresponding to the plan instance. Valid values:</p>
              * <ul>
-             * <li>normal: Fixed edition plan.</li>
-             * <li>enterprise: Enterprise edition plan.</li>
+             * <li>normal: fixed plan.</li>
+             * <li>enterprise: enterprise plan.</li>
              * </ul>
              * 
              * <strong>example:</strong>

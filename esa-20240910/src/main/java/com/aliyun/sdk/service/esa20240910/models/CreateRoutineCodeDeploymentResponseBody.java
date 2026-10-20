@@ -93,7 +93,7 @@ public class CreateRoutineCodeDeploymentResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of percentage-based canary release code version configurations.</p>
+         * <p>The list of code version configurations for the percentage-based canary release.</p>
          */
         public Builder codeVersions(java.util.List<CodeVersions> codeVersions) {
             this.codeVersions = codeVersions;
@@ -101,7 +101,7 @@ public class CreateRoutineCodeDeploymentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The deployment record ID.</p>
+         * <p>The ID of the deployment record.</p>
          * 
          * <strong>example:</strong>
          * <p>234</p>
@@ -112,7 +112,7 @@ public class CreateRoutineCodeDeploymentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>EDBD3EB3-97DA-5465-AEF5-8DCA5DC5E395</p>
@@ -123,7 +123,7 @@ public class CreateRoutineCodeDeploymentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The canary release strategy. Fixed value: percentage.</p>
+         * <p>The canary release strategy. The value is fixed as <code>percentage</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>percentage</p>
@@ -203,7 +203,7 @@ public class CreateRoutineCodeDeploymentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The canary release percentage for the code version.</p>
+             * <p>The traffic percentage for the canary release of the code version.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>

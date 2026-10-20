@@ -307,7 +307,7 @@ public class CreateWaitingRoomRequest extends Request {
         }
 
         /**
-         * <p>The custom waiting room page content. This parameter is required when the waiting room type is set to custom. The content must use Base64 encoding.</p>
+         * <p>The custom HTML content of the waiting room page. This parameter is required when the waiting room type is set to custom. The content must use Base64 encoding.</p>
          * 
          * <strong>example:</strong>
          * <p>SGVsbG8gd29ybGQ=</p>
@@ -364,7 +364,7 @@ public class CreateWaitingRoomRequest extends Request {
         }
 
         /**
-         * <p>The hostname and path configurations.</p>
+         * <p>The hostnames and paths.</p>
          * <p>This parameter is required.</p>
          */
         public Builder hostNameAndPath(java.util.List<HostNameAndPath> hostNameAndPath) {
@@ -375,7 +375,7 @@ public class CreateWaitingRoomRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable JSON response. When enabled, requests with an Accept header containing &quot;application/json&quot; return JSON data. Valid values:</p>
+         * <p>Specifies whether to enable JSON responses. If enabled, JSON data is returned when the Accept request header contains &quot;application/json&quot;. Valid values:</p>
          * <ul>
          * <li><strong>on</strong>: Enabled.</li>
          * <li><strong>off</strong>: Disabled.</li>
@@ -434,7 +434,7 @@ public class CreateWaitingRoomRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to queue all visitors. Valid values:</p>
+         * <p>Specifies whether to queue all requests. Valid values:</p>
          * <ul>
          * <li><strong>on</strong>: Enabled.</li>
          * <li><strong>off</strong>: Disabled.</li>
@@ -453,7 +453,7 @@ public class CreateWaitingRoomRequest extends Request {
          * <p>The queuing method. Valid values:</p>
          * <ul>
          * <li><strong>random</strong>: Random.</li>
-         * <li><strong>fifo</strong>: First in, first out.</li>
+         * <li><strong>fifo</strong>: First-in, first-out (FIFO).</li>
          * <li><strong>passthrough</strong>: Passthrough.</li>
          * <li><strong>reject-all</strong>: Reject all.</li>
          * </ul>
@@ -469,11 +469,11 @@ public class CreateWaitingRoomRequest extends Request {
         }
 
         /**
-         * <p>The waiting room status code. Valid values:</p>
+         * <p>The HTTP status code of the waiting room. Valid values:</p>
          * <ul>
          * <li><strong>200</strong></li>
          * <li><strong>202</strong></li>
-         * <li><strong>429</strong>.</li>
+         * <li><strong>429</strong></li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -487,7 +487,7 @@ public class CreateWaitingRoomRequest extends Request {
         }
 
         /**
-         * <p>The session duration, in minutes.</p>
+         * <p>The session duration in minutes.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -500,7 +500,7 @@ public class CreateWaitingRoomRequest extends Request {
         }
 
         /**
-         * <p>The site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+         * <p>The site ID. You can obtain the site ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -528,8 +528,8 @@ public class CreateWaitingRoomRequest extends Request {
         /**
          * <p>The type of the waiting room. Valid values:</p>
          * <ul>
-         * <li><strong>default</strong>: Default type.</li>
-         * <li><strong>custom</strong>: Custom type.</li>
+         * <li><strong>default</strong>: Default.</li>
+         * <li><strong>custom</strong>: Custom.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

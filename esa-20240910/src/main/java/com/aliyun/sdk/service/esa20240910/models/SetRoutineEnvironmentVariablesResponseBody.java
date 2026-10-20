@@ -78,7 +78,7 @@ public class SetRoutineEnvironmentVariablesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of environment variable keys that were set successfully.</p>
+         * <p>The list of keys for the successfully set environment variables.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;key1&quot;,&quot;key2&quot;]</p>

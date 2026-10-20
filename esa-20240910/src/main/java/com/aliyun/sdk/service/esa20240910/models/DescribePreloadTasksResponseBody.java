@@ -117,7 +117,7 @@ public class DescribePreloadTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page size.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -279,7 +279,7 @@ public class DescribePreloadTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time.</p>
+             * <p>The creation time in the YYYY-MM-DD HH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-03-28 14:28:57</p>
@@ -290,11 +290,11 @@ public class DescribePreloadTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error description returned when the prefetch fails. Valid values:</p>
+             * <p>The error description returned when a prefetch task fails. Valid values:</p>
              * <ul>
              * <li><strong>Internal Error</strong>: An internal error occurred.</li>
              * <li><strong>Origin Timeout</strong>: The origin server response timed out.</li>
-             * <li><strong>Origin Return StatusCode 5XX</strong>: The origin server returned a 5xx error code.</li>
+             * <li><strong>Origin Return StatusCode 5XX</strong>: The origin server returned a 5xx status code.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -306,7 +306,7 @@ public class DescribePreloadTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task completion progress percentage.</p>
+             * <p>The task completion progress in percentage.</p>
              * 
              * <strong>example:</strong>
              * <p>100%</p>
@@ -319,9 +319,9 @@ public class DescribePreloadTasksResponseBody extends TeaModel {
             /**
              * <p>The task status. Valid values:</p>
              * <ul>
-             * <li><strong>Complete</strong>: Complete.</li>
-             * <li><strong>Refreshing</strong>: Prefetching.</li>
-             * <li><strong>Failed</strong>: Prefetch failed.</li>
+             * <li><strong>Complete</strong>: Completed.</li>
+             * <li><strong>Refreshing</strong>: Refreshing.</li>
+             * <li><strong>Failed</strong>: Failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>

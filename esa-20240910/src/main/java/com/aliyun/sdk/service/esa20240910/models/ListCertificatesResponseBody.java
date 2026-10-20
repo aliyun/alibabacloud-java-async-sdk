@@ -132,7 +132,7 @@ public class ListCertificatesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The page number of the data to return.</p>
+         * <p>The page number of the returned data.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -143,7 +143,7 @@ public class ListCertificatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of records per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -195,7 +195,7 @@ public class ListCertificatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of records.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -303,7 +303,7 @@ public class ListCertificatesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>DCV ID。</p>
+             * <p>The DCV ID.</p>
              * 
              * <strong>example:</strong>
              * <p>bababf7cdd1546a2ad04c0def1f4****</p>
@@ -336,7 +336,7 @@ public class ListCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The DCV type. Valid values: DNS, HTTP.</p>
+             * <p>The DCV type. Valid values: DNS and HTTP.</p>
              * 
              * <strong>example:</strong>
              * <p>HTTP</p>
@@ -721,7 +721,7 @@ public class ListCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time. Format: YYYY-MM-DD HH:MM:SS, in the UTC/GMT time zone.</p>
+             * <p>The creation time. The time is in the YYYY-MM-DD HH:MM:SS format and in the UTC/GMT time zone.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-06-24 07:48:51</p>
@@ -732,7 +732,7 @@ public class ListCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Domain Control Validation (DCV) information.</p>
+             * <p>The domain control validation (DCV) information.</p>
              */
             public Builder DCV(java.util.List<DCV> DCV) {
                 this.DCV = DCV;
@@ -784,7 +784,7 @@ public class ListCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Keyless server ID. This parameter is valid only when Type is set to keyless.</p>
+             * <p>The Keyless server ID. This parameter is valid only when the Type parameter is set to keyless.</p>
              * 
              * <strong>example:</strong>
              * <p>baba39055622c008b90285a8838e****</p>
@@ -806,7 +806,7 @@ public class ListCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the certificate validity period. Format: YYYY-MM-DD HH:MM:SS, in the UTC/GMT time zone.</p>
+             * <p>The end time of the certificate validity period. The time is in the YYYY-MM-DD HH:MM:SS format and in the UTC/GMT time zone.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-03-31 02:08:00</p>
@@ -817,7 +817,7 @@ public class ListCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the certificate validity period. Format: YYYY-MM-DD HH:MM:SS, in the UTC/GMT time zone.</p>
+             * <p>The start time of the certificate validity period. The time is in the YYYY-MM-DD HH:MM:SS format and in the UTC/GMT time zone.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-03-31 02:08:00</p>
@@ -850,7 +850,7 @@ public class ListCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Subject Alternative Name (SAN) of the certificate.</p>
+             * <p>The subject alternative name (SAN) of the certificate.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://www.example.com,*.example.com">www.example.com,*.example.com</a></p>
@@ -888,10 +888,10 @@ public class ListCertificatesResponseBody extends TeaModel {
              * <li>OK: Normal.</li>
              * <li>Expired: The certificate has expired.</li>
              * <li>Expiring: The certificate is about to expire (within 30 days).</li>
-             * <li>Issued: Free certificate - Issued.</li>
-             * <li>Applying: Free certificate - Applying.</li>
-             * <li>ApplyFailed: Free certificate - Application failed.</li>
-             * <li>Canceled: Free certificate - Canceled.</li>
+             * <li>Issued: The free certificate is issued.</li>
+             * <li>Applying: The free certificate is being applied for.</li>
+             * <li>ApplyFailed: The application for the free certificate failed.</li>
+             * <li>Canceled: The free certificate is canceled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -905,7 +905,7 @@ public class ListCertificatesResponseBody extends TeaModel {
             /**
              * <p>The certificate type. Valid values:</p>
              * <ul>
-             * <li>cas: Alibaba Cloud SSL certificate.</li>
+             * <li>cas: SSL Certificates Service certificate.</li>
              * <li>upload: Custom uploaded certificate.</li>
              * <li>free: Free certificate.</li>
              * <li>keyless: Keyless certificate.</li>
@@ -920,7 +920,7 @@ public class ListCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time. Format: YYYY-MM-DD HH:MM:SS, in the UTC/GMT time zone.</p>
+             * <p>The update time. The time is in the YYYY-MM-DD HH:MM:SS format and in the UTC/GMT time zone.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-04-20 06:18:42</p>

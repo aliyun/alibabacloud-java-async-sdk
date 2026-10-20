@@ -104,7 +104,7 @@ public class ApplyCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of free certificate application details.</p>
+         * <p>The list of details for the free certificate applications.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -123,7 +123,7 @@ public class ApplyCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of certificates applied for, which is the same as the number of input domain names.</p>
+         * <p>The number of certificates applied for, which is the same as the number of specified domain names.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -205,7 +205,7 @@ public class ApplyCertificateResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The certificate domain name.</p>
+             * <p>The domain name of the certificate.</p>
              * 
              * <strong>example:</strong>
              * <p>*.example.com</p>

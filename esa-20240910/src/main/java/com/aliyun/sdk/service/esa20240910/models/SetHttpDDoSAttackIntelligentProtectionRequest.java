@@ -90,12 +90,10 @@ public class SetHttpDDoSAttackIntelligentProtectionRequest extends Request {
         } 
 
         /**
-         * <p>The mode for the intelligent HTTP DDoS protection feature. Valid values:</p>
+         * <p>The HTTP DDoS depth learning and defense pattern. Valid values:</p>
          * <ul>
-         * <li><p><strong>observe</strong>: The system generates warnings for attack traffic but does not block it.</p>
-         * </li>
-         * <li><p><strong>defense</strong>: The system blocks detected attack traffic.</p>
-         * </li>
+         * <li><strong>observe</strong>: Monitor.</li>
+         * <li><strong>defense</strong>: Block.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -109,16 +107,12 @@ public class SetHttpDDoSAttackIntelligentProtectionRequest extends Request {
         }
 
         /**
-         * <p>The sensitivity level for the intelligent HTTP DDoS protection feature. Valid values:</p>
+         * <p>The HTTP DDoS deep learning and protection level. Valid values:</p>
          * <ul>
-         * <li><p><strong>level0</strong>: very loose</p>
-         * </li>
-         * <li><p><strong>level30</strong>: loose</p>
-         * </li>
-         * <li><p><strong>level60</strong>: normal</p>
-         * </li>
-         * <li><p><strong>level90</strong>: strict</p>
-         * </li>
+         * <li><strong>level0</strong>: Very loose.</li>
+         * <li><strong>level30</strong>: Loose.</li>
+         * <li><strong>level60</strong>: Normal.</li>
+         * <li><strong>level90</strong>: Strict.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -132,7 +126,7 @@ public class SetHttpDDoSAttackIntelligentProtectionRequest extends Request {
         }
 
         /**
-         * <p>The ID of the site. You can obtain the site ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+         * <p>The ID of the site. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

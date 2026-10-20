@@ -235,7 +235,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation time.</p>
+             * <p>The time when the environment was created. The time follows the ISO 8601 standard and is in UTC. Example: 2024-08-15T08:15:30Z.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-08-15T08:15:30Z</p>
@@ -246,7 +246,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The environment name.</p>
+             * <p>The name of the environment.</p>
              * 
              * <strong>example:</strong>
              * <p>yichao-test-yctest</p>
@@ -257,7 +257,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether this is the default environment.</p>
+             * <p>Indicates whether the environment is the default environment.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -312,7 +312,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The site version number.</p>
+             * <p>The version number of the site.</p>
              * 
              * <strong>example:</strong>
              * <p>8</p>
@@ -323,7 +323,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time.</p>
+             * <p>The time when the environment was updated. The time follows the ISO 8601 standard and is in UTC. Example: 2023-09-15T08:16:04Z.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-09-15T08:16:04Z</p>

@@ -171,6 +171,11 @@ public class ListSiteFunctionsRequest extends Request {
 
         /**
          * <p>The configuration type. You can use this parameter to query global configurations or rule configurations. Valid values:</p>
+         * <ul>
+         * <li>global: Queries global configurations.</li>
+         * <li>rule: Queries rule configurations.</li>
+         * </ul>
+         * <p>This parameter is optional. If you do not specify this parameter, global and rule configurations are not distinguished. This parameter takes effect only when the FunctionName parameter is specified.</p>
          * 
          * <strong>example:</strong>
          * <p>rule</p>
@@ -182,7 +187,7 @@ public class ListSiteFunctionsRequest extends Request {
         }
 
         /**
-         * <p>The function name of the feature.</p>
+         * <p>The name of the feature function.</p>
          * 
          * <strong>example:</strong>
          * <p>CacheRules</p>
@@ -218,7 +223,7 @@ public class ListSiteFunctionsRequest extends Request {
         }
 
         /**
-         * <p>The rule name. Filters the rule that matches the specified name. This parameter takes effect only when FunctionName is specified.</p>
+         * <p>The rule name. You can use this parameter to query the rule whose name matches the specified value. This parameter takes effect only when the FunctionName parameter is specified.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -230,7 +235,7 @@ public class ListSiteFunctionsRequest extends Request {
         }
 
         /**
-         * <p>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the site ID.</p>
+         * <p>The site ID. You can obtain the site ID by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -243,7 +248,7 @@ public class ListSiteFunctionsRequest extends Request {
         }
 
         /**
-         * <p>The version number of the site. For sites with version management enabled, you can use this parameter to specify the site version for which the configuration takes effect. Default value: 0.</p>
+         * <p>The version number of the site. For a site with version management enabled, you can use this parameter to specify the site version for which the configuration takes effect. Default value: 0.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

@@ -129,7 +129,7 @@ public class ListBotInstancesRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the ID.</p>
+         * <p>The instance ID. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
          * 
          * <strong>example:</strong>
          * <p>sp-xcdn-96wblslz****</p>
@@ -141,7 +141,7 @@ public class ListBotInstancesRequest extends Request {
         }
 
         /**
-         * <p>The page number for the paged query. Settings this parameter for paging. Default value: 1. Valid values: 1 to 100000.</p>
+         * <p>The page number Settings for paging in a paged query. Default value: 1. Valid values: 1 to 100000.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -153,7 +153,7 @@ public class ListBotInstancesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page for the paged query. This parameter is used for paging. Valid values: 1 to 500.</p>
+         * <p>The number of entries per page for paging in a paged query. Valid values: 1 to 500.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -165,9 +165,9 @@ public class ListBotInstancesRequest extends Request {
         }
 
         /**
-         * <p>The field by which to sort the results. By default, the results are sorted by purchase time. Valid values:</p>
+         * <p>The sort field. By default, instances are sorted by creation time. Valid values:</p>
          * <ul>
-         * <li><strong>CreateTime</strong>: purchase time.</li>
+         * <li><strong>CreateTime</strong>: creation time.</li>
          * <li><strong>ExpireTime</strong>: expiration time.</li>
          * </ul>
          * 
@@ -199,10 +199,10 @@ public class ListBotInstancesRequest extends Request {
         /**
          * <p>The instance status. Valid values:</p>
          * <ul>
-         * <li><strong>online</strong>: The instance is running normally.</li>
-         * <li><strong>offline</strong>: The instance has expired but has not exceeded the retention period and is unavailable.</li>
-         * <li><strong>disable</strong>: The instance has been released.</li>
-         * <li><strong>overdue</strong>: The instance has an overdue payment.</li>
+         * <li><strong>online</strong>: normal.</li>
+         * <li><strong>offline</strong>: expired but not overdue, and unavailable.</li>
+         * <li><strong>disable</strong>: released.</li>
+         * <li><strong>overdue</strong>: overdue payment.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -128,7 +128,7 @@ public class DescribeHttpDDoSAttackRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>D4030CD2-0D9D-5E92-B358-421AE58307C6</p>
@@ -139,7 +139,7 @@ public class DescribeHttpDDoSAttackRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A list of rule details.</p>
+         * <p>The list of rule information.</p>
          */
         public Builder ruleInfos(java.util.List<RuleInfos> ruleInfos) {
             this.ruleInfos = ruleInfos;
@@ -294,7 +294,7 @@ public class DescribeHttpDDoSAttackRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The action to perform.</p>
+             * <p>The action.</p>
              * 
              * <strong>example:</strong>
              * <p>deny</p>
@@ -316,7 +316,7 @@ public class DescribeHttpDDoSAttackRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the protection rule used for log records.</p>
+             * <p>The attack prevention rule ID for log records.</p>
              * 
              * <strong>example:</strong>
              * <p>100010</p>
@@ -327,7 +327,7 @@ public class DescribeHttpDDoSAttackRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the rule.</p>
+             * <p>The rule description.</p>
              * 
              * <strong>example:</strong>
              * <p>The HTTP request\&quot;s Accept header contains invalid features#1</p>
@@ -338,7 +338,7 @@ public class DescribeHttpDDoSAttackRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the HTTP DDoS protection rule.</p>
+             * <p>The HTTP DDoS rule ID.</p>
              * 
              * <strong>example:</strong>
              * <p>20203578</p>
@@ -360,7 +360,7 @@ public class DescribeHttpDDoSAttackRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the rule.</p>
+             * <p>The rule name.</p>
              * 
              * <strong>example:</strong>
              * <p>Illegal request。</p>
@@ -371,12 +371,10 @@ public class DescribeHttpDDoSAttackRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the rule. Valid values:</p>
+             * <p>The rule status. Valid values:</p>
              * <ul>
-             * <li><p><strong>on</strong>: The rule is enabled.</p>
-             * </li>
-             * <li><p><strong>off</strong>: The rule is disabled.</p>
-             * </li>
+             * <li><strong>on</strong>: The rule is enabled.</li>
+             * <li><strong>off</strong>: The rule is disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>

@@ -139,7 +139,7 @@ public class DescribeHttpDDoSIntelligentAclRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of rules.</p>
+         * <p>The list of rule information.</p>
          */
         public Builder ruleInfos(java.util.List<RuleInfos> ruleInfos) {
             this.ruleInfos = ruleInfos;
@@ -281,7 +281,7 @@ public class DescribeHttpDDoSIntelligentAclRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The protection action.</p>
+             * <p>The mitigation action.</p>
              * 
              * <strong>example:</strong>
              * <p>deny</p>
@@ -292,7 +292,7 @@ public class DescribeHttpDDoSIntelligentAclRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The rule trigger condition.</p>
+             * <p>The trigger condition of the rule.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;$and&quot;:[{&quot;key&quot;:&quot;URI&quot;,&quot;opValue&quot;:&quot;prefix-match&quot;,&quot;values&quot;:&quot;/&quot;}]}</p>
@@ -303,7 +303,7 @@ public class DescribeHttpDDoSIntelligentAclRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the protection rule for log records.</p>
+             * <p>The ID of the mitigation rule used for log records.</p>
              * 
              * <strong>example:</strong>
              * <p>1000030</p>
@@ -314,7 +314,7 @@ public class DescribeHttpDDoSIntelligentAclRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The action duration. Unit: seconds.</p>
+             * <p>The punishment duration. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1800</p>
@@ -325,7 +325,7 @@ public class DescribeHttpDDoSIntelligentAclRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The record name.</p>
+             * <p>The name of the record.</p>
              * 
              * <strong>example:</strong>
              * <p>test.example.com</p>
@@ -336,7 +336,7 @@ public class DescribeHttpDDoSIntelligentAclRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The rule ID.</p>
+             * <p>The ID of the rule.</p>
              * 
              * <strong>example:</strong>
              * <p>20569929</p>
@@ -347,7 +347,7 @@ public class DescribeHttpDDoSIntelligentAclRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The rule name.</p>
+             * <p>The name of the rule.</p>
              * 
              * <strong>example:</strong>
              * <p>smart_cc_***</p>

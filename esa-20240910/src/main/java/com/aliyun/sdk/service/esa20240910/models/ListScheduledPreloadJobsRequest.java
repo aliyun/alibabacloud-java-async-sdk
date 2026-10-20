@@ -117,7 +117,7 @@ public class ListScheduledPreloadJobsRequest extends Request {
         } 
 
         /**
-         * <p>The end of the time range to query based on task creation time. The value is a millisecond-level timestamp.</p>
+         * <p>The end time of the time range to query task creation time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1717225277000</p>
@@ -129,7 +129,7 @@ public class ListScheduledPreloadJobsRequest extends Request {
         }
 
         /**
-         * <p>The page number to return.</p>
+         * <p>The number of the page to return.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -141,7 +141,7 @@ public class ListScheduledPreloadJobsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries to return per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -166,7 +166,7 @@ public class ListScheduledPreloadJobsRequest extends Request {
         }
 
         /**
-         * <p>The start of the time range to query based on task creation time. The value is a millisecond-level timestamp.</p>
+         * <p>The start time of the time range to query task creation time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1717225276000</p>

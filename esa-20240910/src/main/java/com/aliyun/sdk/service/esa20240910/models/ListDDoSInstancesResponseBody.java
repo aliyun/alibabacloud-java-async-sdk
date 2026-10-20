@@ -160,7 +160,7 @@ public class ListDDoSInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of records.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -305,7 +305,7 @@ public class ListDDoSInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The purchase time of the instance. The time is in ISO 8601 format and displayed in UTC. The format is yyyy-MM-ddTHH:mm:ssZ.</p>
+             * <p>The creation time of the instance. The time is displayed in UTC and formatted in accordance with the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-07-01T07:59:07Z</p>
@@ -349,7 +349,7 @@ public class ListDDoSInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scheduled release time. The time is in ISO 8601 format and displayed in UTC. The format is yyyy-MM-ddTHH:mm:ssZ.</p>
+             * <p>The scheduled release time. The time is displayed in UTC and formatted in accordance with the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-03-25T16:00:00Z</p>
@@ -360,7 +360,7 @@ public class ListDDoSInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the associated site plan instance.</p>
+             * <p>The ID of the associated website plan instance.</p>
              * 
              * <strong>example:</strong>
              * <p>esa-site-b0s6kmx0r0n4</p>
@@ -373,10 +373,10 @@ public class ListDDoSInstancesResponseBody extends TeaModel {
             /**
              * <p>The instance status. Valid values:</p>
              * <ul>
-             * <li><strong>online</strong>: The instance is running normally.</li>
-             * <li><strong>offline</strong>: The instance has expired but is not overdue, and is unavailable.</li>
-             * <li><strong>disable</strong>: The instance has been released.</li>
-             * <li><strong>overdue</strong>: The instance is suspended due to overdue payment.</li>
+             * <li><strong>online</strong>: the instance is in normal service status.</li>
+             * <li><strong>offline</strong>: the instance has expired but is not overdue, and is in an unavailable state.</li>
+             * <li><strong>disable</strong>: the instance is released.</li>
+             * <li><strong>overdue</strong>: the instance is stopped due to an overdue payment.</li>
              * </ul>
              * 
              * <strong>example:</strong>

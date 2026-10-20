@@ -133,8 +133,8 @@ public class CreateCustomScenePolicyRequest extends Request {
         } 
 
         /**
-         * <p>The policy end time.</p>
-         * <p>The time must be in UTC and in ISO 8601 format: <code>yyyy-MM-ddTHH:mm:ssZ</code>.</p>
+         * <p>The end time of the policy.</p>
+         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -160,9 +160,9 @@ public class CreateCustomScenePolicyRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the sites to associate with the policy. Separate multiple site IDs with commas.</p>
+         * <p>The IDs of the websites to be associated. Separate multiple IDs with commas (,).</p>
          * <blockquote>
-         * <p>This parameter is deprecated. Use <code>SiteIds</code> instead. If <code>SiteIds</code> is specified, the value of this parameter is ignored. To prevent ambiguity, specify a value for either <code>SiteIds</code> or <code>Objects</code>.</p>
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated. Use the SiteIds parameter instead. If the SiteIds parameter is specified, the value of the SiteIds parameter takes precedence and the value of the Objects parameter does not take effect. To avoid ambiguity in update operations, you must specify at least one of the SiteIds and Objects parameters.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -175,7 +175,7 @@ public class CreateCustomScenePolicyRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the sites to associate with the policy. Separate multiple site IDs with commas.</p>
+         * <p>The IDs of the websites to be associated. Separate multiple IDs with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>7096621098****,7096621099****</p>
@@ -187,8 +187,8 @@ public class CreateCustomScenePolicyRequest extends Request {
         }
 
         /**
-         * <p>The policy start time.</p>
-         * <p>The time must be in UTC and in ISO 8601 format: <code>yyyy-MM-ddTHH:mm:ssZ</code>.</p>
+         * <p>The start time of the policy.</p>
+         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -201,9 +201,9 @@ public class CreateCustomScenePolicyRequest extends Request {
         }
 
         /**
-         * <p>The template name. Valid value:</p>
+         * <p>The name of the template. Valid values:</p>
          * <ul>
-         * <li><strong>promotion</strong>: a policy for major events.</li>
+         * <li><strong>promotion</strong>: Important Activity.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

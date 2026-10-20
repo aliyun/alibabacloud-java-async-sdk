@@ -299,7 +299,7 @@ public class UpdateWaitingRoomRequest extends Request {
         } 
 
         /**
-         * <p>The custom cookie name.</p>
+         * <p>The name of the custom cookie.</p>
          * 
          * <strong>example:</strong>
          * <p>__aliwaitingroom_example</p>
@@ -311,7 +311,7 @@ public class UpdateWaitingRoomRequest extends Request {
         }
 
         /**
-         * <p>The custom waiting room page content. This parameter is required when the waiting room type is set to custom. The content must be in Base64 encoding.</p>
+         * <p>The custom content of the waiting room page. This parameter is required when the waiting room type is custom. The content requires Base64 encoding.</p>
          * 
          * <strong>example:</strong>
          * <p>SGVsbG8gd29ybGQ=</p>
@@ -337,8 +337,8 @@ public class UpdateWaitingRoomRequest extends Request {
         /**
          * <p>Specifies whether to disable session renewal. Valid values:</p>
          * <ul>
-         * <li><strong>on</strong>: Enabled.</li>
-         * <li><strong>off</strong>: Disabled.</li>
+         * <li><strong>on</strong>: Disables session renewal.</li>
+         * <li><strong>off</strong>: Enables session renewal.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -353,8 +353,8 @@ public class UpdateWaitingRoomRequest extends Request {
         /**
          * <p>The status of the waiting room. Valid values:</p>
          * <ul>
-         * <li><strong>on</strong>: Enabled.</li>
-         * <li><strong>off</strong>: Disabled.</li>
+         * <li><strong>on</strong>: Enables the waiting room.</li>
+         * <li><strong>off</strong>: Disables the waiting room.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -367,7 +367,7 @@ public class UpdateWaitingRoomRequest extends Request {
         }
 
         /**
-         * <p>The hostname and path configurations.</p>
+         * <p>The hostnames and paths.</p>
          */
         public Builder hostNameAndPath(java.util.List<HostNameAndPath> hostNameAndPath) {
             String hostNameAndPathShrink = shrink(hostNameAndPath, "HostNameAndPath", "json");
@@ -377,10 +377,10 @@ public class UpdateWaitingRoomRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable JSON response. If enabled, requests with an Accept header containing &quot;application/json&quot; return JSON data. Valid values:</p>
+         * <p>Specifies whether to enable JSON responses. If this feature is enabled and the Accept request header contains &quot;application/json&quot;, JSON data is returned. Valid values:</p>
          * <ul>
-         * <li><strong>on</strong>: Enabled.</li>
-         * <li><strong>off</strong>: Disabled.</li>
+         * <li><strong>on</strong>: Enables the feature.</li>
+         * <li><strong>off</strong>: Disables the feature.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -393,11 +393,11 @@ public class UpdateWaitingRoomRequest extends Request {
         }
 
         /**
-         * <p>The language of the waiting room page. This parameter is required when the waiting room type is set to default. Valid values:</p>
+         * <p>The language of the waiting room page. This parameter is required when the waiting room type is default. Valid values:</p>
          * <ul>
-         * <li><strong>enus</strong>: English.</li>
-         * <li><strong>zhcn</strong>: Simplified Chinese.</li>
-         * <li><strong>zhhk</strong>: Traditional Chinese.</li>
+         * <li><strong>enus</strong>: English</li>
+         * <li><strong>zhcn</strong>: Simplified Chinese</li>
+         * <li><strong>zhhk</strong>: Traditional Chinese</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -434,10 +434,10 @@ public class UpdateWaitingRoomRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to queue all visitors. Valid values:</p>
+         * <p>Specifies whether to queue all users. Valid values:</p>
          * <ul>
-         * <li><strong>on</strong>: Enabled.</li>
-         * <li><strong>off</strong>: Disabled.</li>
+         * <li><strong>on</strong>: Enables the feature.</li>
+         * <li><strong>off</strong>: Disables the feature.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -452,10 +452,10 @@ public class UpdateWaitingRoomRequest extends Request {
         /**
          * <p>The queuing method. Valid values:</p>
          * <ul>
-         * <li><strong>random</strong>: random.</li>
-         * <li><strong>fifo</strong>: first-in, first-out.</li>
-         * <li><strong>passthrough</strong>: passthrough.</li>
-         * <li><strong>reject-all</strong>: reject all.</li>
+         * <li><strong>random</strong>: random</li>
+         * <li><strong>fifo</strong>: first in, first out (FIFO)</li>
+         * <li><strong>passthrough</strong>: passthrough</li>
+         * <li><strong>reject-all</strong>: reject all</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -468,7 +468,7 @@ public class UpdateWaitingRoomRequest extends Request {
         }
 
         /**
-         * <p>The status code returned by the waiting room. Valid values:</p>
+         * <p>The HTTP status code of the waiting room. Valid values:</p>
          * <ul>
          * <li><strong>200</strong></li>
          * <li><strong>202</strong></li>
@@ -485,7 +485,7 @@ public class UpdateWaitingRoomRequest extends Request {
         }
 
         /**
-         * <p>The session duration in minutes.</p>
+         * <p>The duration of a user session, in minutes.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -497,7 +497,7 @@ public class UpdateWaitingRoomRequest extends Request {
         }
 
         /**
-         * <p>The site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+         * <p>The ID of the site. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to query the site ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -522,7 +522,7 @@ public class UpdateWaitingRoomRequest extends Request {
         }
 
         /**
-         * <p>The waiting room ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850279.html">ListWaitingRooms</a> operation.</p>
+         * <p>The ID of the waiting room. You can call the <a href="https://help.aliyun.com/document_detail/2850279.html">ListWaitingRooms</a> operation to query the waiting room ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -537,8 +537,8 @@ public class UpdateWaitingRoomRequest extends Request {
         /**
          * <p>The type of the waiting room. Valid values:</p>
          * <ul>
-         * <li><strong>default</strong>: default type.</li>
-         * <li><strong>custom</strong>: custom type.</li>
+         * <li><strong>default</strong>: default type</li>
+         * <li><strong>custom</strong>: custom type</li>
          * </ul>
          * 
          * <strong>example:</strong>

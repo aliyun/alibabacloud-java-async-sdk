@@ -139,7 +139,7 @@ public class ListSitesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of queried site information.</p>
+         * <p>The list of queried sites.</p>
          */
         public Builder sites(java.util.List<Sites> sites) {
             this.sites = sites;
@@ -413,8 +413,8 @@ public class ListSitesResponseBody extends TeaModel {
             /**
              * <p>The site access type. Valid values:</p>
              * <ul>
-             * <li><strong>NS</strong>: NS-based access.</li>
-             * <li><strong>CNAME</strong>: CNAME-based access.</li>
+             * <li><strong>NS</strong>: NS access</li>
+             * <li><strong>CNAME</strong>: CNAME access</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -426,7 +426,7 @@ public class ListSitesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The CNAME suffix of the site. For sites that use CNAME-based access, this is the CNAME suffix that needs to be configured for records.</p>
+             * <p>The CNAME suffix of the site. For sites accessed through CNAME, this records the CNAME suffix that needs to be configured.</p>
              * 
              * <strong>example:</strong>
              * <p>example.cname.com</p>
@@ -437,11 +437,11 @@ public class ListSitesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The acceleration region of the site. Valid values:</p>
+             * <p>The site acceleration region. Valid values:</p>
              * <ul>
-             * <li><strong>domestic</strong>: the Chinese mainland only.</li>
-             * <li><strong>global</strong>: global.</li>
-             * <li><strong>overseas</strong>: global (excluding the Chinese mainland).</li>
+             * <li><strong>domestic</strong>: the Chinese mainland</li>
+             * <li><strong>global</strong>: global</li>
+             * <li><strong>overseas</strong>: global (excluding the Chinese mainland)</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -453,7 +453,7 @@ public class ListSitesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time of the site. The time is in ISO 8601 format and displayed in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
+             * <p>The creation time of the site. The time is displayed in UTC and formatted in accordance with ISO 8601 in the yyyy-MM-ddTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-12-24T02:01:11Z</p>
@@ -464,7 +464,7 @@ public class ListSitesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance ID of the plan attached to the site.</p>
+             * <p>The instance ID of the plan that you attach to the site.</p>
              * 
              * <strong>example:</strong>
              * <p>onBvtlmIyeXLbiDw81F9</p>
@@ -475,7 +475,7 @@ public class ListSitesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of name servers assigned to the site. Multiple values are separated by commas (,).</p>
+             * <p>The list of name servers assigned to the site. Multiple name servers are separated by commas (,).</p>
              * 
              * <strong>example:</strong>
              * <p>male1-1.ialicdn.com,female1-1.ialicdn.com</p>
@@ -488,11 +488,11 @@ public class ListSitesResponseBody extends TeaModel {
             /**
              * <p>The reason why the site is disabled. Valid values:</p>
              * <ul>
-             * <li><strong>expiration_ arrears</strong>: The subscription plan has expired or the account has an overdue payment.</li>
+             * <li><strong>expiration_ arrears</strong>: The plan you subscribe to has expired or the account has an overdue payment.</li>
              * <li><strong>internally_disabled</strong>: The site is disabled by the system.</li>
-             * <li><strong>missing_icp</strong>: The domain name does not have an ICP filing.</li>
-             * <li><strong>content_violation</strong>: Content violation.</li>
-             * <li><strong>proactively_disabled</strong>: You proactively disabled the site or the site is disabled because the usage cap you configured is reached.</li>
+             * <li><strong>missing_icp</strong>: The domain name lacks an ICP filing.</li>
+             * <li><strong>content_violation</strong>: The site is disabled due to a content violation.</li>
+             * <li><strong>proactively_disabled</strong>: You proactively disabled the site or the site is disabled because it reached the usage cap Settings.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -561,10 +561,10 @@ public class ListSitesResponseBody extends TeaModel {
             /**
              * <p>The site status. Valid values:</p>
              * <ul>
-             * <li><strong>pending</strong>: the site is pending configuration.</li>
-             * <li><strong>active</strong>: the site is activated.</li>
-             * <li><strong>offline</strong>: the site is offline.</li>
-             * <li><strong>moved</strong>: the site has been superseded.</li>
+             * <li><strong>pending</strong>: The site is pending configuration.</li>
+             * <li><strong>active</strong>: The site is activated.</li>
+             * <li><strong>offline</strong>: The site is offline.</li>
+             * <li><strong>moved</strong>: The site has been replaced.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -587,7 +587,7 @@ public class ListSitesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time of the site. The time is in ISO 8601 format and displayed in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
+             * <p>The update time of the site. The time is displayed in UTC and formatted in accordance with ISO 8601 in the yyyy-MM-ddTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-12-24T02:01:11Z</p>
@@ -598,7 +598,7 @@ public class ListSitesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The site ownership verification code. When a site uses CNAME-based access, this TXT verification code must be configured.</p>
+             * <p>The site ownership verification code. When a site is accessed through CNAME, this is the TXT verification code that needs to be configured.</p>
              * 
              * <strong>example:</strong>
              * <p>verify_d516cb3740f81f0cef77d162edd1****</p>
@@ -609,7 +609,7 @@ public class ListSitesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The access time of the site. The time is in ISO 8601 format and displayed in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
+             * <p>The access time of the site. The time is displayed in UTC and formatted in accordance with ISO 8601 in the yyyy-MM-ddTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-12-24T02:01:11Z</p>

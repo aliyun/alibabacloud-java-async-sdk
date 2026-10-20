@@ -90,10 +90,10 @@ public class SetRoutineEnvironmentVariablesRequest extends Request {
         } 
 
         /**
-         * <p>The environment name. Valid values:</p>
+         * <p>The name of the environment. Valid values:</p>
          * <ul>
-         * <li><code>staging</code>: staging environment.</li>
-         * <li><code>production</code>: production environment.</li>
+         * <li><code>staging</code>: staging environment</li>
+         * <li><code>production</code>: production environment</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -107,7 +107,7 @@ public class SetRoutineEnvironmentVariablesRequest extends Request {
         }
 
         /**
-         * <p>The dictionary of environment variables. The key is the environment variable name, and the value is the environment variable value.</p>
+         * <p>The environment variable dictionary. The key is the environment variable name, and the value is the environment variable value.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,7 +130,7 @@ public class SetRoutineEnvironmentVariablesRequest extends Request {
         }
 
         /**
-         * <p>The function name.</p>
+         * <p>The name of the function.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

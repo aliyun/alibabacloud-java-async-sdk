@@ -526,7 +526,7 @@ public class ListRoutineBuildsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The static assets directory.</p>
+             * <p>The directory of static resources.</p>
              * 
              * <strong>example:</strong>
              * <p>/root/usr</p>
@@ -573,7 +573,7 @@ public class ListRoutineBuildsResponseBody extends TeaModel {
              * <p>The commit message.</p>
              * 
              * <strong>example:</strong>
-             * <p>Add static files.</p>
+             * <p>Add static files</p>
              */
             public Builder commitMessage(String commitMessage) {
                 this.commitMessage = commitMessage;
@@ -581,7 +581,7 @@ public class ListRoutineBuildsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time, in the ISO 8601 format in UTC. The format is yyyy-MM-ddTHH:mm:ssZ.</p>
+             * <p>The creation time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-03-26T02:19:34Z</p>
@@ -600,7 +600,7 @@ public class ListRoutineBuildsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Git account ID.</p>
+             * <p>The ID of the Git account.</p>
              * 
              * <strong>example:</strong>
              * <p>162124764031208</p>
@@ -611,7 +611,7 @@ public class ListRoutineBuildsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Git account name.</p>
+             * <p>The name of the Git account.</p>
              * 
              * <strong>example:</strong>
              * <p>rwa</p>
@@ -622,7 +622,7 @@ public class ListRoutineBuildsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The install command.</p>
+             * <p>The installation command.</p>
              * 
              * <strong>example:</strong>
              * <p>npm install</p>
@@ -633,10 +633,10 @@ public class ListRoutineBuildsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the repository is private. Valid values:</p>
+             * <p>Specifies whether the repository is private. Valid values:</p>
              * <ul>
-             * <li>true: The repository is private.</li>
-             * <li>false: The repository is not private.</li>
+             * <li>true: Yes.</li>
+             * <li>false: No.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -648,7 +648,7 @@ public class ListRoutineBuildsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Node.js version. Valid values: <code>22.x</code>, <code>20.x</code>, <code>18.x</code>, <code>16.x</code>, <code>14.x</code>, <code>12.x</code>.</p>
+             * <p>The Node.js version. Valid values: <code>22.x</code>, <code>20.x</code>, <code>18.x</code>, <code>16.x</code>, <code>14.x</code>, and <code>12.x</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>22.x</p>
@@ -659,7 +659,7 @@ public class ListRoutineBuildsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Yunxiao pipeline ID.</p>
+             * <p>The ID of the Yunxiao pipeline.</p>
              * 
              * <strong>example:</strong>
              * <p>3850166</p>
@@ -670,7 +670,7 @@ public class ListRoutineBuildsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Yunxiao build task ID.</p>
+             * <p>The ID of the Yunxiao build task.</p>
              * 
              * <strong>example:</strong>
              * <p>70</p>
@@ -681,7 +681,7 @@ public class ListRoutineBuildsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The production branch name.</p>
+             * <p>The name of the production branch.</p>
              * 
              * <strong>example:</strong>
              * <p>main</p>
@@ -692,7 +692,7 @@ public class ListRoutineBuildsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The repository name.</p>
+             * <p>The name of the repository.</p>
              * 
              * <strong>example:</strong>
              * <p>rwa-test</p>
@@ -714,7 +714,7 @@ public class ListRoutineBuildsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ER build task ID.</p>
+             * <p>The ID of the ER build task.</p>
              * 
              * <strong>example:</strong>
              * <p>4133325046294912</p>
@@ -725,7 +725,7 @@ public class ListRoutineBuildsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ER entry file path.</p>
+             * <p>The path to the ER entry file.</p>
              * 
              * <strong>example:</strong>
              * <p>/home</p>
@@ -736,7 +736,7 @@ public class ListRoutineBuildsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ER name.</p>
+             * <p>The name of the ER.</p>
              * 
              * <strong>example:</strong>
              * <p>test-routine</p>
@@ -749,12 +749,12 @@ public class ListRoutineBuildsResponseBody extends TeaModel {
             /**
              * <p>The status of the build task. Valid values:</p>
              * <ul>
-             * <li>int: initialization</li>
-             * <li>pending: preparing</li>
-             * <li>building: building</li>
-             * <li>succeed: build succeeded</li>
-             * <li>failed: build failed</li>
-             * <li>canceled: canceled</li>
+             * <li>int: Initialized.</li>
+             * <li>pending: Preparing.</li>
+             * <li>building: Building.</li>
+             * <li>succeed: Succeeded.</li>
+             * <li>failed: Failed.</li>
+             * <li>canceled: Canceled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -766,7 +766,7 @@ public class ListRoutineBuildsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The template name.</p>
+             * <p>The name of the template.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -777,7 +777,7 @@ public class ListRoutineBuildsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The modification time, in the ISO 8601 format in UTC. The format is yyyy-MM-ddTHH:mm:ssZ.</p>
+             * <p>The update time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-06-20T00:44:23Z</p>
@@ -788,7 +788,7 @@ public class ListRoutineBuildsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user ID.</p>
+             * <p>The ID of the user.</p>
              * 
              * <strong>example:</strong>
              * <p>1427812834792318</p>

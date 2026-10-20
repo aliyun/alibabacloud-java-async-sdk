@@ -145,7 +145,7 @@ public class CreateHttpResponseHeaderModificationRuleRequest extends Request {
         } 
 
         /**
-         * <p>The response header modifications. Three operation types are supported: add, delete, and modify.</p>
+         * <p>The response header modifications. Add, delete, and modify operations are supported.</p>
          * <p>This parameter is required.</p>
          */
         public Builder responseHeaderModification(java.util.List<ResponseHeaderModification> responseHeaderModification) {
@@ -156,10 +156,10 @@ public class CreateHttpResponseHeaderModificationRuleRequest extends Request {
         }
 
         /**
-         * <p>The rule content, which uses conditional expressions to match user requests. This parameter is not required when you add a global configuration. Two scenarios are supported:</p>
+         * <p>The rule content, which uses a conditional expression to match user requests. This parameter is not required when you add a global configuration. Two scenarios are supported:</p>
          * <ul>
          * <li>Match all incoming requests: Set the value to true.</li>
-         * <li>Match specified requests: Set the value to a custom expression, such as (http.host eq \&quot;video.example.com\&quot;).</li>
+         * <li>Match specific requests: Set the value to a custom expression, such as (http.host eq &quot;video.example.com&quot;).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -172,10 +172,10 @@ public class CreateHttpResponseHeaderModificationRuleRequest extends Request {
         }
 
         /**
-         * <p>The rule switch. This parameter is not required when you add a global configuration. Valid values:</p>
+         * <p>Specifies whether to enable the rule. This parameter is not required when you add a global configuration. Valid values:</p>
          * <ul>
-         * <li>on: enabled.</li>
-         * <li>off: disabled.</li>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -200,7 +200,7 @@ public class CreateHttpResponseHeaderModificationRuleRequest extends Request {
         }
 
         /**
-         * <p>The rule execution order. A smaller value indicates a higher priority.</p>
+         * <p>The execution sequence of the rule. A smaller value indicates a higher priority.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -225,7 +225,7 @@ public class CreateHttpResponseHeaderModificationRuleRequest extends Request {
         }
 
         /**
-         * <p>The version number of the site configuration. For sites with version management enabled, you can use this parameter to specify the site version on which the configuration takes effect. The default value is 0.</p>
+         * <p>The version number of the site configuration. For sites with configuration version management enabled, you can use this parameter to specify the site version for which the configuration takes effect. Default value: 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -324,7 +324,7 @@ public class CreateHttpResponseHeaderModificationRuleRequest extends Request {
             } 
 
             /**
-             * <p>The response header name.</p>
+             * <p>The name of the response header.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -338,9 +338,9 @@ public class CreateHttpResponseHeaderModificationRuleRequest extends Request {
             /**
              * <p>The operation type. Valid values:</p>
              * <ul>
-             * <li>add: adds a response header.</li>
-             * <li>del: deletes a response header.</li>
-             * <li>modify: modifies a response header.</li>
+             * <li>add: Add.</li>
+             * <li>del: Delete.</li>
+             * <li>modify: Modify.</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -355,8 +355,8 @@ public class CreateHttpResponseHeaderModificationRuleRequest extends Request {
             /**
              * <p>The value type. Valid values:</p>
              * <ul>
-             * <li>static: static pattern.</li>
-             * <li>dynamic: dynamic schema.</li>
+             * <li>static: Static pattern.</li>
+             * <li>dynamic: Dynamic pattern.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -368,7 +368,7 @@ public class CreateHttpResponseHeaderModificationRuleRequest extends Request {
             }
 
             /**
-             * <p>The response header value.</p>
+             * <p>The value of the response header.</p>
              * 
              * <strong>example:</strong>
              * <p>headervalue</p>

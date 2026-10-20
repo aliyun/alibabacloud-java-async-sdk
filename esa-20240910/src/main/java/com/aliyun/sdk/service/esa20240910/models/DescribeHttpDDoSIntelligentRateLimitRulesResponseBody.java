@@ -128,7 +128,7 @@ public class DescribeHttpDDoSIntelligentRateLimitRulesResponseBody extends TeaMo
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>
@@ -139,7 +139,7 @@ public class DescribeHttpDDoSIntelligentRateLimitRulesResponseBody extends TeaMo
         }
 
         /**
-         * <p>The list of rules.</p>
+         * <p>The list of rule information.</p>
          */
         public Builder ruleInfos(java.util.List<RuleInfos> ruleInfos) {
             this.ruleInfos = ruleInfos;
@@ -307,7 +307,7 @@ public class DescribeHttpDDoSIntelligentRateLimitRulesResponseBody extends TeaMo
             } 
 
             /**
-             * <p>The action to perform.</p>
+             * <p>The action to be performed.</p>
              * 
              * <strong>example:</strong>
              * <p>js</p>
@@ -318,7 +318,7 @@ public class DescribeHttpDDoSIntelligentRateLimitRulesResponseBody extends TeaMo
             }
 
             /**
-             * <p>The conditions that trigger the rule.</p>
+             * <p>The trigger condition of the rule.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;$and&quot;:[{&quot;key&quot;:&quot;URI&quot;,&quot;opValue&quot;:&quot;prefix-match&quot;,&quot;values&quot;:&quot;/&quot;}]}</p>
@@ -329,7 +329,7 @@ public class DescribeHttpDDoSIntelligentRateLimitRulesResponseBody extends TeaMo
             }
 
             /**
-             * <p>The ID of the protection rule for log records.</p>
+             * <p>The ID of the protection rule (used for log records).</p>
              * 
              * <strong>example:</strong>
              * <p>100030</p>
@@ -340,7 +340,7 @@ public class DescribeHttpDDoSIntelligentRateLimitRulesResponseBody extends TeaMo
             }
 
             /**
-             * <p>The duration of the penalty in seconds.</p>
+             * <p>The block duration. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>86400</p>
@@ -351,7 +351,7 @@ public class DescribeHttpDDoSIntelligentRateLimitRulesResponseBody extends TeaMo
             }
 
             /**
-             * <p>The frequency information.</p>
+             * <p>The rate limit information.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;threshold&quot;:2000,&quot;interval&quot;:5,&quot;target&quot;:&quot;ip&quot;,&quot;ttl&quot;:600}</p>
@@ -395,7 +395,7 @@ public class DescribeHttpDDoSIntelligentRateLimitRulesResponseBody extends TeaMo
             }
 
             /**
-             * <p>The statistics.</p>
+             * <p>The statistics information.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;field&quot;:&quot;ip&quot;,&quot;mode&quot;:&quot;count&quot;}</p>

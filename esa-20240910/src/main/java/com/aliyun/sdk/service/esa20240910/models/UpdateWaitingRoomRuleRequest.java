@@ -120,10 +120,10 @@ public class UpdateWaitingRoomRuleRequest extends Request {
         } 
 
         /**
-         * <p>The rule content. A conditional expression is used to match user requests. This parameter is not required when you add a global configuration. Two scenarios are supported:</p>
+         * <p>The rule content. A conditional expression is used to match user requests. You do not need to specify this parameter when adding global Settings. Two scenarios are supported:</p>
          * <ul>
-         * <li>Match all incoming requests: set the value to true.</li>
-         * <li>Match specified requests: set the value to a custom expression, for example, (http.host eq \&quot;video.example.com\&quot;).</li>
+         * <li>Match all incoming requests: Set the value to true.</li>
+         * <li>Match specific requests: Set the value to a custom expression, such as (http.host eq \&quot;video.example.com\&quot;).</li>
          * </ul>
          * <p>For the complete syntax of rule expressions, refer to
          * &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/edge-security-acceleration/esa/user-guide/work-with-rules-engine/">https://www.alibabacloud.com/help/en/edge-security-acceleration/esa/user-guide/work-with-rules-engine/</a>
@@ -140,10 +140,10 @@ public class UpdateWaitingRoomRuleRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the rule. This parameter is not required when you add a global configuration. Valid values:</p>
+         * <p>Specifies whether to enable the rule. You do not need to specify this parameter when adding a global configuration. Valid values:</p>
          * <ul>
-         * <li>on: enabled.</li>
-         * <li>off: disabled.</li>
+         * <li>on: enables the rule.</li>
+         * <li>off: disables the rule.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -157,7 +157,7 @@ public class UpdateWaitingRoomRuleRequest extends Request {
         }
 
         /**
-         * <p>The rule name. This parameter is not required when you add a global configuration.</p>
+         * <p>The rule name. You do not need to specify this parameter when adding a global configuration.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,7 +170,7 @@ public class UpdateWaitingRoomRuleRequest extends Request {
         }
 
         /**
-         * <p>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</p>
+         * <p>The site ID. You can obtain the site ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -183,7 +183,7 @@ public class UpdateWaitingRoomRuleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the waiting room bypass rule to update. You can obtain this ID after creating a rule by calling CreateWaitingRoomRule, or by calling the <a href="https://help.aliyun.com/document_detail/2850279.html">ListWaitingRoomRules</a> operation.</p>
+         * <p>The ID of the waiting room bypass rule to be updated. You can obtain the rule ID after creating a rule by using CreateWaitingRoomRule or by calling the <a href="https://help.aliyun.com/document_detail/2850279.html">ListWaitingRoomRules</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

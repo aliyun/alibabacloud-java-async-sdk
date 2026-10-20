@@ -145,8 +145,8 @@ public class CreateCustomScenePolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The policy end time.</p>
-         * <p>The time must be in UTC and in ISO 8601 format: <code>yyyy-MM-ddTHH:mm:ssZ</code>.</p>
+         * <p>The end time of the policy.</p>
+         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-11-07T18:00:00Z</p>
@@ -168,9 +168,9 @@ public class CreateCustomScenePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A list of associated site IDs.</p>
+         * <p>The list of IDs of the associated websites.</p>
          * <blockquote>
-         * <p>This field is deprecated. Read the value from the <code>SiteIds</code> field instead.</p>
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated. Use the SiteIds parameter instead.</p>
          * </blockquote>
          */
         public Builder objects(java.util.List<String> objects) {
@@ -179,7 +179,7 @@ public class CreateCustomScenePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The policy ID.</p>
+         * <p>The ID of the policy.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -201,7 +201,7 @@ public class CreateCustomScenePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The associated site IDs, separated by commas.</p>
+         * <p>The IDs of the associated websites. Separate multiple IDs with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>7096621098****, 7096621099****</p>
@@ -212,8 +212,8 @@ public class CreateCustomScenePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The policy start time.</p>
-         * <p>The time must be in UTC and in ISO 8601 format: <code>yyyy-MM-ddTHH:mm:ssZ</code>.</p>
+         * <p>The start time of the policy.</p>
+         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-11-07T17:00:00Z</p>
@@ -224,7 +224,7 @@ public class CreateCustomScenePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The template name.</p>
+         * <p>The name of the template.</p>
          * 
          * <strong>example:</strong>
          * <p>promotion</p>

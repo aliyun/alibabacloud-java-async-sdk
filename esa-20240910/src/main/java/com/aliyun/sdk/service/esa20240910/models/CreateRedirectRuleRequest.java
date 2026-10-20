@@ -190,7 +190,7 @@ public class CreateRedirectRuleRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to preserve the query string. Valid values:</p>
+         * <p>Specifies whether to retain the query string. Valid values:</p>
          * <ul>
          * <li>on: Enabled.</li>
          * <li>off: Disabled.</li>
@@ -207,10 +207,10 @@ public class CreateRedirectRuleRequest extends Request {
         }
 
         /**
-         * <p>The rule content, which uses a conditional expression to match user requests. You do not need to set this parameter when adding a global configuration. Two scenarios are supported:</p>
+         * <p>The rule content, which uses a conditional expression to match user requests. You do not need to set this parameter when adding a global configuration. This parameter applies to the following scenarios:</p>
          * <ul>
          * <li>Match all incoming requests: Set the value to true.</li>
-         * <li>Match specified requests: Set the value to a custom expression, such as (http.host eq \&quot;video.example.com\&quot;).</li>
+         * <li>Match specific requests: Set the value to a custom expression, such as (http.host eq \&quot;video.example.com\&quot;).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -223,7 +223,7 @@ public class CreateRedirectRuleRequest extends Request {
         }
 
         /**
-         * <p>The rule switch. You do not need to set this parameter when adding a global configuration. Valid values:</p>
+         * <p>Specifies whether to enable the rule. You do not need to set this parameter when adding a global configuration. Valid values:</p>
          * <ul>
          * <li>on: Enabled.</li>
          * <li>off: Disabled.</li>
@@ -239,7 +239,7 @@ public class CreateRedirectRuleRequest extends Request {
         }
 
         /**
-         * <p>The rule name. You do not need to set this parameter when adding a global configuration.</p>
+         * <p>The name of the rule. You do not need to set this parameter when adding a global configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>rule_example</p>
@@ -251,7 +251,7 @@ public class CreateRedirectRuleRequest extends Request {
         }
 
         /**
-         * <p>The rule execution order. A smaller value indicates a higher priority.</p>
+         * <p>The execution sequence of the rule. A smaller value indicates a higher priority.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -263,7 +263,7 @@ public class CreateRedirectRuleRequest extends Request {
         }
 
         /**
-         * <p>The site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+         * <p>The ID of the site. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -276,7 +276,7 @@ public class CreateRedirectRuleRequest extends Request {
         }
 
         /**
-         * <p>The version number of the site configuration. For sites with configuration version management enabled, you can use this parameter to specify the site version on which the configuration takes effect. The default value is version 0.</p>
+         * <p>The version number of the site configuration. For sites with configuration version management enabled, you can use this parameter to specify the site version for which the configuration takes effect. Default value: 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -288,16 +288,13 @@ public class CreateRedirectRuleRequest extends Request {
         }
 
         /**
-         * <p>The response status code used by the node when responding to the client with the redirect address. Valid values:</p>
+         * <p>The HTTP status code used by the node to respond to the client with the redirect URL. Valid values:</p>
          * <ul>
          * <li>301</li>
          * <li>302</li>
          * <li>303</li>
          * <li>307</li>
-         * <li><ol start="308">
-         * <li></li>
-         * </ol>
-         * </li>
+         * <li>308</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -311,7 +308,7 @@ public class CreateRedirectRuleRequest extends Request {
         }
 
         /**
-         * <p>The target URL after redirection.</p>
+         * <p>The destination URL after the redirect.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -187,7 +187,7 @@ public class UpdateRedirectRuleRequest extends Request {
         } 
 
         /**
-         * <p>The configuration ID. You can call the <a href="https://help.aliyun.com/document_detail/2867474.html">ListRedirectRules</a> operation to obtain the configuration ID.</p>
+         * <p>The configuration ID. You can call the <a href="https://help.aliyun.com/document_detail/2867474.html">ListRedirectRules</a> operation to query the configuration ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -200,7 +200,7 @@ public class UpdateRedirectRuleRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to preserve the query string. Valid values:</p>
+         * <p>Specifies whether to retain the query string. Valid values:</p>
          * <ul>
          * <li>on: Enabled.</li>
          * <li>off: Disabled.</li>
@@ -216,10 +216,10 @@ public class UpdateRedirectRuleRequest extends Request {
         }
 
         /**
-         * <p>The rule content. A conditional expression is used to match user requests. This parameter is not required when you add a global configuration. Two scenarios are supported:</p>
+         * <p>The content of the rule, which uses a conditional expression to match user requests. You do not need to specify this parameter when you add a global configuration. This parameter applies to the following scenarios:</p>
          * <ul>
          * <li>Match all incoming requests: Set the value to true.</li>
-         * <li>Match specified requests: Set the value to a custom expression, such as (http.host eq \&quot;video.example.com\&quot;).</li>
+         * <li>Match specific requests: Set the value to a custom expression, such as (http.host eq &quot;video.example.com&quot;).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -232,7 +232,7 @@ public class UpdateRedirectRuleRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the rule. This parameter is not required when you add a global configuration. Valid values:</p>
+         * <p>Specifies whether to enable the rule. You do not need to specify this parameter when you add a global configuration. Valid values:</p>
          * <ul>
          * <li>on: Enabled.</li>
          * <li>off: Disabled.</li>
@@ -248,7 +248,7 @@ public class UpdateRedirectRuleRequest extends Request {
         }
 
         /**
-         * <p>The rule name. This parameter is not required when you add a global configuration.</p>
+         * <p>The name of the rule. You do not need to specify this parameter when you add a global configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>rule_example</p>
@@ -260,7 +260,7 @@ public class UpdateRedirectRuleRequest extends Request {
         }
 
         /**
-         * <p>The execution order of the rule. A smaller value indicates a higher priority.</p>
+         * <p>The execution sequence of the rule. A smaller value indicates a higher priority.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -272,7 +272,7 @@ public class UpdateRedirectRuleRequest extends Request {
         }
 
         /**
-         * <p>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</p>
+         * <p>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to query the site ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -285,7 +285,7 @@ public class UpdateRedirectRuleRequest extends Request {
         }
 
         /**
-         * <p>The HTTP status code used when the node responds to the client with the redirect address. Valid values:</p>
+         * <p>The HTTP status code used by the node to respond to the client with the redirect address. Valid values:</p>
          * <ul>
          * <li>301</li>
          * <li>302</li>
@@ -304,7 +304,7 @@ public class UpdateRedirectRuleRequest extends Request {
         }
 
         /**
-         * <p>The target URL after the redirect.</p>
+         * <p>The destination URL after the redirect.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.exapmle.com/index.html">http://www.exapmle.com/index.html</a></p>

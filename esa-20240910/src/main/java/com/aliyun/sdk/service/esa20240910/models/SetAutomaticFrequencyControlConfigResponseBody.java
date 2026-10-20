@@ -93,14 +93,11 @@ public class SetAutomaticFrequencyControlConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The action taken on requests that trigger the control. Valid values:</p>
+         * <p>The action to perform. Valid values:</p>
          * <ul>
-         * <li><p><strong>observe</strong>: Requests are monitored.</p>
-         * </li>
-         * <li><p><strong>deny</strong>: Requests are blocked.</p>
-         * </li>
-         * <li><p><strong>js</strong>: JS challenges are issued.</p>
-         * </li>
+         * <li><strong>observe</strong>: Monitor.</li>
+         * <li><strong>deny</strong>: Block.</li>
+         * <li><strong>js</strong>: JavaScript Challenge.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -112,7 +109,7 @@ public class SetAutomaticFrequencyControlConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether automatic frequency control is enabled. Valid values:</p>
+         * <p>Specifies whether to enable the feature. Valid values:</p>
          * <ul>
          * <li><p><strong>on</strong>: Enabled.</p>
          * </li>
@@ -131,12 +128,9 @@ public class SetAutomaticFrequencyControlConfigResponseBody extends TeaModel {
         /**
          * <p>The protection level. Valid values:</p>
          * <ul>
-         * <li><p><strong>loose</strong>: Loose protection.</p>
-         * </li>
-         * <li><p><strong>normal</strong>: Normal protection.</p>
-         * </li>
-         * <li><p><strong>strict</strong>: Strict protection.</p>
-         * </li>
+         * <li><strong>loose</strong>: Loose.</li>
+         * <li><strong>normal</strong>: Medium.</li>
+         * <li><strong>strict</strong>: Strict.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -148,7 +142,7 @@ public class SetAutomaticFrequencyControlConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>F32C57AA-7BF8-49AE-A2CC-9F42390F5A19</p>

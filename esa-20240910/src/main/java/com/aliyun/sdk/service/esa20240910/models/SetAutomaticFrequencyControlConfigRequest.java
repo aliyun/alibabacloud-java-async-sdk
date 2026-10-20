@@ -119,14 +119,11 @@ public class SetAutomaticFrequencyControlConfigRequest extends Request {
         } 
 
         /**
-         * <p>The action to take on requests that trigger the control. Valid values:</p>
+         * <p>The action to perform. Valid values:</p>
          * <ul>
-         * <li><p><strong>observe</strong>: Monitors the requests.</p>
-         * </li>
-         * <li><p><strong>deny</strong>: Blocks the requests.</p>
-         * </li>
-         * <li><p><strong>js</strong>: Issues a JS challenge.</p>
-         * </li>
+         * <li><strong>observe</strong>: Monitor.</li>
+         * <li><strong>deny</strong>: Block.</li>
+         * <li><strong>js</strong>: JavaScript Challenge.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -140,11 +137,11 @@ public class SetAutomaticFrequencyControlConfigRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable automatic frequency control. Valid values:</p>
+         * <p>Specifies whether to enable the feature. Valid values:</p>
          * <ul>
-         * <li><p><strong>on</strong>: Enables automatic frequency control.</p>
+         * <li><p><strong>on</strong>: Enabled.</p>
          * </li>
-         * <li><p><strong>off</strong>: Disables automatic frequency control.</p>
+         * <li><p><strong>off</strong>: Disabled.</p>
          * </li>
          * </ul>
          * <p>This parameter is required.</p>
@@ -161,12 +158,9 @@ public class SetAutomaticFrequencyControlConfigRequest extends Request {
         /**
          * <p>The protection level. Valid values:</p>
          * <ul>
-         * <li><p><strong>loose</strong>: Loose protection.</p>
-         * </li>
-         * <li><p><strong>normal</strong>: Normal protection.</p>
-         * </li>
-         * <li><p><strong>strict</strong>: Strict protection.</p>
-         * </li>
+         * <li><strong>loose</strong>: Loose.</li>
+         * <li><strong>normal</strong>: Medium.</li>
+         * <li><strong>strict</strong>: Strict.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -180,7 +174,7 @@ public class SetAutomaticFrequencyControlConfigRequest extends Request {
         }
 
         /**
-         * <p>The ID of the site. Call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain this ID.</p>
+         * <p>The ID of the site. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -193,7 +187,7 @@ public class SetAutomaticFrequencyControlConfigRequest extends Request {
         }
 
         /**
-         * <p>The version of the site. For a site with version management enabled, this parameter specifies the version to which the configuration applies. The default value is 0.</p>
+         * <p>The version number of the site. For sites with version management enabled, you can use this parameter to specify the site version to which the configuration applies. Default value: 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

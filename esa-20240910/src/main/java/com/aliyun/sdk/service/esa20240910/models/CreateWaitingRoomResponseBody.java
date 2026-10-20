@@ -78,7 +78,7 @@ public class CreateWaitingRoomResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The waiting room ID.</p>
+         * <p>The ID of the waiting room.</p>
          * 
          * <strong>example:</strong>
          * <p>8527e8405ac25bfb7fb7ca0d12b0ed83</p>

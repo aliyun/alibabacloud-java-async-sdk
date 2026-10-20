@@ -131,10 +131,10 @@ public class DescribeConditionIPBInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The returned data details, including the name of the country, ISP, or region and the corresponding identifier code.</p>
+             * <p>The returned data details, including the name of the country, ISP, or region, and its corresponding identifier.</p>
              * 
              * <strong>example:</strong>
-             * <p>[{\&quot;text\&quot;:\&quot;安徽\&quot;,\&quot;value\&quot;:\&quot;340000\&quot;},{\&quot;text\&quot;:\&quot;北京\&quot;,\&quot;value\&quot;:\&quot;110000\&quot;},{\&quot;text\&quot;:\&quot;重庆\&quot;,\&quot;value\&quot;:\&quot;500000\&quot;}]</p>
+             * <p>[{&quot;text&quot;:&quot;Anhui&quot;,&quot;value&quot;:&quot;340000&quot;},{&quot;text&quot;:&quot;Beijing&quot;,&quot;value&quot;:&quot;110000&quot;},{&quot;text&quot;:&quot;Chongqing&quot;,&quot;value&quot;:&quot;500000&quot;}]</p>
              */
             public Builder value(String value) {
                 this.value = value;

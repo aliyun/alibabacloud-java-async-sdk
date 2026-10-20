@@ -118,9 +118,7 @@ public class DescribeDDoSL7QpsListRequest extends Request {
         } 
 
         /**
-         * <p>The end time of the query.</p>
-         * <p>The date format follows ISO8601 notation and uses UTC+0, formatted as yyyy-MM-ddTHH:mm:ssZ. The maximum span between the start and end times is 31 days.</p>
-         * <p>If this parameter is not set, the current time will be used as the end time of the query.</p>
+         * <p>The end time of the query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. The time span between the start time and the end time cannot exceed 31 days. If you do not specify this parameter, the current time is used as the end time.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-04-19T19:00:00Z</p>
@@ -132,8 +130,7 @@ public class DescribeDDoSL7QpsListRequest extends Request {
         }
 
         /**
-         * <p>The time granularity of the queried data, in seconds.</p>
-         * <p>Depending on the maximum time span of a single query, this parameter supports values of 60 (1 minute), 300 (5 minutes), 1800 (half an hour), and 3600 (1 hour).</p>
+         * <p>The time granularity of the queried data. Unit: seconds. Valid values: 60 (1 minute), 300 (5 minutes), 1800 (30 minutes), and 3600 (1 hour). The supported values vary based on the maximum time span of a single query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,7 +143,7 @@ public class DescribeDDoSL7QpsListRequest extends Request {
         }
 
         /**
-         * <p>Record ID, which can be obtained by calling the <a href="~~ListRecords~~">ListRecords</a> interface.</p>
+         * <p>The record ID. You can call the <a href="~~ListRecords~~">ListRecords</a> operation to obtain the record ID.</p>
          * 
          * <strong>example:</strong>
          * <p>86510927836942****</p>
@@ -158,7 +155,7 @@ public class DescribeDDoSL7QpsListRequest extends Request {
         }
 
         /**
-         * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</p>
+         * <p>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the site ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -171,8 +168,7 @@ public class DescribeDDoSL7QpsListRequest extends Request {
         }
 
         /**
-         * <p>The start time of the query.</p>
-         * <p>The date format follows ISO8601 notation and uses UTC+0, formatted as yyyy-MM-ddTHH:mm:ssZ.</p>
+         * <p>The start time of the query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

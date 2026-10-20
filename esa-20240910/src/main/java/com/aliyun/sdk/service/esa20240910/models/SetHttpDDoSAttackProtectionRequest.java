@@ -75,12 +75,12 @@ public class SetHttpDDoSAttackProtectionRequest extends Request {
         } 
 
         /**
-         * <p>The level of HTTP DDoS attack protection. Valid values:</p>
+         * <p>The mode of the HTTP DDoS Attack prevention mitigation policies. Valid values:</p>
          * <ul>
-         * <li><strong>very weak</strong>: very loose.</li>
-         * <li><strong>weak</strong>: loose.</li>
-         * <li><strong>default</strong>: normal.</li>
-         * <li><strong>hard</strong>: strict.</li>
+         * <li><strong>very weak</strong>: Extremely loose.</li>
+         * <li><strong>weak</strong>: Loose.</li>
+         * <li><strong>default</strong>: Normal.</li>
+         * <li><strong>hard</strong>: Strict.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -94,7 +94,7 @@ public class SetHttpDDoSAttackProtectionRequest extends Request {
         }
 
         /**
-         * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+         * <p>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

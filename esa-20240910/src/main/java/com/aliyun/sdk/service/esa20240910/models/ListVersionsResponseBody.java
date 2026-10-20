@@ -78,7 +78,7 @@ public class ListVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The version list of the site.</p>
+         * <p>The list of versions for the site.</p>
          */
         public Builder siteVersionList(java.util.List<SiteVersionList> siteVersionList) {
             this.siteVersionList = siteVersionList;
@@ -222,7 +222,7 @@ public class ListVersionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation time.</p>
+             * <p>The creation time. The time follows the ISO 8601 standard and includes a time zone offset. Example: 2024-06-15T17:41:27+08:00.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-06-15T17:41:27+08:00</p>
@@ -236,7 +236,7 @@ public class ListVersionsResponseBody extends TeaModel {
              * <p>The description.</p>
              * 
              * <strong>example:</strong>
-             * <p>站点A使用多个环境。</p>
+             * <p>Site A uses multiple environments</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -244,7 +244,7 @@ public class ListVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The environment list of the site version. The version may have no environment or one or more environments configured, such as the default environment or environment 2.</p>
+             * <p>The list of environments for the site version. No environment is configured, or one or more environments are configured, such as the default environment and Environment 2.</p>
              */
             public Builder environmentNameList(java.util.List<String> environmentNameList) {
                 this.environmentNameList = environmentNameList;
@@ -263,7 +263,7 @@ public class ListVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the version is read-only. Default value: false.</p>
+             * <p>Specifies whether the version is read-only. Default value: false.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -287,11 +287,11 @@ public class ListVersionsResponseBody extends TeaModel {
             /**
              * <p>The status. Valid values:</p>
              * <ul>
-             * <li><p><strong>online</strong>: active.</p>
+             * <li><p><strong>online</strong>: Available.</p>
              * </li>
-             * <li><p><strong>configuring</strong>: being configured.</p>
+             * <li><p><strong>configuring</strong>: Configuring.</p>
              * </li>
-             * <li><p><strong>configure_faild</strong>: configuration failed.</p>
+             * <li><p><strong>configure_faild</strong>: Configuration failed.</p>
              * </li>
              * </ul>
              * 
@@ -304,7 +304,7 @@ public class ListVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time.</p>
+             * <p>The update time. The time follows the ISO 8601 standard and includes a time zone offset. Example: 2024-06-15T17:41:27+08:00.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-06-15T17:41:27+08:00</p>

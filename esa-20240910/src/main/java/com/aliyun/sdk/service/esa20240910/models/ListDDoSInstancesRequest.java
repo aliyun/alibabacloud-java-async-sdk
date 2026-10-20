@@ -155,7 +155,7 @@ public class ListDDoSInstancesRequest extends Request {
         }
 
         /**
-         * <p>The page number for a paged query. The value must be greater than or equal to 1. Default value: <strong>1</strong>.</p>
+         * <p>The page number for paging. The value must be greater than or equal to 1. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -167,7 +167,7 @@ public class ListDDoSInstancesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page for a paged query. Default value: 20. Maximum value: 500. Valid values: any integer from 1 to 500.</p>
+         * <p>The number of entries per page for paging. Default value: 20. Maximum value: 500. Valid values: any integer from 1 to 500.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -191,9 +191,9 @@ public class ListDDoSInstancesRequest extends Request {
         }
 
         /**
-         * <p>The sort field. By default, results are sorted by purchase time. Valid values:</p>
+         * <p>The sort field. By default, instances are sorted by creation time. Valid values:</p>
          * <ul>
-         * <li><strong>CreateTime</strong>: purchase time.</li>
+         * <li><strong>CreateTime</strong>: the creation time.</li>
          * </ul>
          * 
          * <strong>example:</strong>

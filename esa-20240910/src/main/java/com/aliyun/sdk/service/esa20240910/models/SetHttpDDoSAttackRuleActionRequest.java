@@ -90,13 +90,13 @@ public class SetHttpDDoSAttackRuleActionRequest extends Request {
         } 
 
         /**
-         * <p>Rule action, with values:</p>
+         * <p>The action of the rule. Valid values:</p>
          * <ul>
-         * <li><p><strong>deny</strong>: Block.</p>
+         * <li><p><strong>deny</strong>: Blocks the request.</p>
          * </li>
-         * <li><p><strong>js</strong>: JS Verification.</p>
+         * <li><p><strong>js</strong>: Performs a JavaScript challenge.</p>
          * </li>
-         * <li><p><strong>observe</strong>: Observe.</p>
+         * <li><p><strong>observe</strong>: Monitors the request.</p>
          * </li>
          * </ul>
          * <p>This parameter is required.</p>
@@ -111,9 +111,9 @@ public class SetHttpDDoSAttackRuleActionRequest extends Request {
         }
 
         /**
-         * <p>List of rule IDs to be operated on, separated by English commas (,).</p>
+         * <p>The IDs of the rules to be managed. Separate multiple IDs with commas (,).</p>
          * <blockquote>
-         * <p>You can call the <a href="~~DescribeHttpDDoSAttackRules~~">DescribeHttpDDoSAttackRules</a> API to get this parameter.</p>
+         * <p>You can call the <a href="~~DescribeHttpDDoSAttackRules~~">DescribeHttpDDoSAttackRules</a> operation to query the IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -127,7 +127,7 @@ public class SetHttpDDoSAttackRuleActionRequest extends Request {
         }
 
         /**
-         * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API.</p>
+         * <p>The ID of the site. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to query the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -77,8 +77,8 @@ public class UpdateCnameFlatteningRequest extends Request {
         /**
          * <p>The flattening mode. Valid values:</p>
          * <ul>
-         * <li>flatten_all: flattens all records.</li>
-         * <li>flatten_at_root: flattens only the root domain. This is the default value.</li>
+         * <li>flatten_all: Flattens all records.</li>
+         * <li>flatten_at_root: Flattens only the root domain. This is the default value.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -92,7 +92,7 @@ public class UpdateCnameFlatteningRequest extends Request {
         }
 
         /**
-         * <p>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</p>
+         * <p>The site ID. You can obtain the site ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

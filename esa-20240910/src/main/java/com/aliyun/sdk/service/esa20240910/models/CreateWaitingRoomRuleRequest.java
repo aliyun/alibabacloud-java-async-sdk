@@ -120,12 +120,12 @@ public class CreateWaitingRoomRuleRequest extends Request {
         } 
 
         /**
-         * <p>The rule content. Use a conditional expression to match user requests. This parameter is not required when you add a global configuration. Two scenarios are supported:</p>
+         * <p>The rule content. It uses a conditional expression to match user requests. You do not need to specify this parameter when you add a global configuration. Two scenarios are supported:</p>
          * <ul>
          * <li>Match all incoming requests: Set the value to true.</li>
-         * <li>Match specified requests: Set the value to a custom expression, for example, (http.host eq \&quot;video.example.com\&quot;).</li>
+         * <li>Match specific requests: Set the value to a custom expression, such as (http.host eq &quot;video.example.com&quot;).</li>
          * </ul>
-         * <p>For the complete syntax of rule expressions, refer to &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/edge-security-acceleration/esa/user-guide/work-with-rules-engine/">https://www.alibabacloud.com/help/en/edge-security-acceleration/esa/user-guide/work-with-rules-engine/</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/edge-security-acceleration/esa/user-guide/work-with-rules-engine/">https://www.alibabacloud.com/help/edge-security-acceleration/esa/user-guide/work-with-rules-engine/</a></p>
+         * <p>For the complete syntax of rule expressions, refer to &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/edge-security-acceleration/esa/user-guide/work-with-rules-engine/">https://www.alibabacloud.com/help/en/edge-security-acceleration/esa/user-guide/work-with-rules-engine/</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/edge-security-acceleration/esa/user-guide/work-with-rules-engine/">https://www.alibabacloud.com/help/edge-security-acceleration/esa/user-guide/work-with-rules-engine/</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,10 +138,10 @@ public class CreateWaitingRoomRuleRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the rule. This parameter is not required when you add a global configuration. Valid values:</p>
+         * <p>The rule switch. You do not need to specify this parameter when you add a global configuration. Valid values:</p>
          * <ul>
-         * <li>on: enabled.</li>
-         * <li>off: disabled.</li>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -155,7 +155,7 @@ public class CreateWaitingRoomRuleRequest extends Request {
         }
 
         /**
-         * <p>The rule name. This parameter is not required when you add a global configuration.</p>
+         * <p>The rule name. You do not need to specify this parameter when you add a global configuration.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -168,7 +168,7 @@ public class CreateWaitingRoomRuleRequest extends Request {
         }
 
         /**
-         * <p>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</p>
+         * <p>The site ID. You can obtain the site ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -93,7 +93,7 @@ public class GetUserMaxPlanQuotaResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The plan instance ID. You can obtain this value by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+         * <p>The plan instance ID. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
          * 
          * <strong>example:</strong>
          * <p>esa-site-b09z4sk9pbls</p>
@@ -108,9 +108,9 @@ public class GetUserMaxPlanQuotaResponseBody extends TeaModel {
          * <p>&lt;props=&quot;china&quot;&gt;</p>
          * <ul>
          * <li>Free Edition: entranceplan</li>
-         * <li>Basic: basic</li>
-         * <li>Standard: medium</li>
-         * <li>Premium Edition: high</li>
+         * <li>Basic Edition: basic</li>
+         * <li>Standard Edition: medium</li>
+         * <li>Advanced Edition: high</li>
          * </ul>
          * <p>&lt;props=&quot;intl&quot;&gt;</p>
          * <ul>

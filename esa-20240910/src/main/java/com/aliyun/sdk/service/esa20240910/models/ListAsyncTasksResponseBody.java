@@ -119,7 +119,7 @@ public class ListAsyncTasksResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The task list.</p>
+         * <p>The list of tasks.</p>
          */
         public Builder asyncTasks(java.util.List<AsyncTasks> asyncTasks) {
             this.asyncTasks = asyncTasks;
@@ -368,7 +368,7 @@ public class ListAsyncTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last modification time.</p>
+             * <p>The last update time.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-09-19 09:37:04</p>
@@ -431,7 +431,7 @@ public class ListAsyncTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The custom identifier that is set to associate with this task.</p>
+             * <p>The custom identifier set to associate with the task.</p>
              * 
              * <strong>example:</strong>
              * <p>linke-quality-sign</p>
@@ -444,9 +444,9 @@ public class ListAsyncTasksResponseBody extends TeaModel {
             /**
              * <p>The current status of the task. Valid values:</p>
              * <ul>
-             * <li>in_progress: in progress.</li>
-             * <li>success: completed.</li>
-             * <li>fail: failed.</li>
+             * <li>in_progress: The task is in progress.</li>
+             * <li>success: The task is completed.</li>
+             * <li>fail: The task failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>

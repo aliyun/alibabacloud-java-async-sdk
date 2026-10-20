@@ -247,7 +247,7 @@ public class GetScheduledPreloadJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the task was created, in ISO 8601 format (for example, 2024-01-01T00:00:00+Z).</p>
+         * <p>The task creation time in ISO 8601 format, such as 2024-01-01T00:00:00+Z.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-06-02T02:23:26Z</p>
@@ -258,7 +258,7 @@ public class GetScheduledPreloadJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of domain names for prefetch.</p>
+         * <p>The list of prefetched domain names.</p>
          * 
          * <strong>example:</strong>
          * <p>testurl.com</p>
@@ -269,7 +269,7 @@ public class GetScheduledPreloadJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned if a fault occurs.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>invalid domain:test.com</p>
@@ -280,7 +280,7 @@ public class GetScheduledPreloadJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The OSS address of the failed file.</p>
+         * <p>The OSS URL of the failed file.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://xxxobject.oss-cn-reginon.aliyuncs.com/9d91_xxxxxxxxxxx_158bb6e0f97c477791209bb46bd599f7">https://xxxobject.oss-cn-reginon.aliyuncs.com/9d91_xxxxxxxxxxx_158bb6e0f97c477791209bb46bd599f7</a></p>
@@ -291,7 +291,7 @@ public class GetScheduledPreloadJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the URL list file, used for downloading.</p>
+         * <p>The file ID of the URL list, which is used for download.</p>
          * 
          * <strong>example:</strong>
          * <p>665d3b48621bccf3fe29e1a7</p>
@@ -313,11 +313,7 @@ public class GetScheduledPreloadJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The URL insertion method. Valid values:</p>
-         * <ul>
-         * <li>oss: Import URLs in bulk from an OSS file.</li>
-         * <li>testBox: Enter URLs one by one in a text box.</li>
-         * </ul>
+         * <p>The URL insertion method.</p>
          * 
          * <strong>example:</strong>
          * <p>oss</p>
@@ -361,7 +357,7 @@ public class GetScheduledPreloadJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of URLs that have been submitted to the system for prefetch.</p>
+         * <p>The number of URLs submitted to the system for prefetch tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -372,12 +368,7 @@ public class GetScheduledPreloadJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The task type (refresh or prefetch). Valid values:</p>
-         * <ul>
-         * <li>path: Directory refresh.</li>
-         * <li>refresh: URL refresh.</li>
-         * <li>preload: URL prefetch.</li>
-         * </ul>
+         * <p>The task type (refresh or prefetch).</p>
          * 
          * <strong>example:</strong>
          * <p>preload</p>

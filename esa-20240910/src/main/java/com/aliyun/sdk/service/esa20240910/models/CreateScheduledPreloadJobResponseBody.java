@@ -247,7 +247,7 @@ public class CreateScheduledPreloadJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the task was created, in ISO 8601 format (for example, 2024-01-01T00:00:00+08:00).</p>
+         * <p>The time when the task was created. The time is displayed in the ISO 8601 format, such as 2024-01-01T00:00:00+08:00.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-06-05T10:04:20+0800</p>
@@ -258,7 +258,7 @@ public class CreateScheduledPreloadJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of domain names for prefetch.</p>
+         * <p>The list of prefetched domain names.</p>
          * 
          * <strong>example:</strong>
          * <p>testurl.com</p>
@@ -269,12 +269,12 @@ public class CreateScheduledPreloadJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message. Multiple faults are separated by commas. Valid values:</p>
+         * <p>The error message. Multiple error messages are separated by commas. Valid values:</p>
          * <ul>
          * <li><strong>InvalidUrl</strong>: The URL format is invalid.</li>
          * <li><strong>InvalidDomain</strong>: The domain name ownership verification failed.</li>
          * <li><strong>QuotaExcess</strong>: The quota limit is exceeded.</li>
-         * <li><strong>OtherErrors</strong>: Other faults.</li>
+         * <li><strong>OtherErrors</strong>: Other errors.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -286,7 +286,7 @@ public class CreateScheduledPreloadJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The OSS address of the failed file.</p>
+         * <p>The OSS URL of the failed file.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://xxxobject.oss-cn-reginon.aliyuncs.com/9d91_xxxxxxxxxxx_158bb6e0f97c477791209bb46bd599f7">https://xxxobject.oss-cn-reginon.aliyuncs.com/9d91_xxxxxxxxxxx_158bb6e0f97c477791209bb46bd599f7</a></p>
@@ -297,7 +297,7 @@ public class CreateScheduledPreloadJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The URL list file ID, which is used for download.</p>
+         * <p>The file ID of the URL list. This ID is used when you download the file.</p>
          * 
          * <strong>example:</strong>
          * <p>665d3b48621bccf3fe29e1a7</p>
@@ -363,7 +363,7 @@ public class CreateScheduledPreloadJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of URLs that have been submitted to the system for prefetch.</p>
+         * <p>The number of URLs that have been submitted to the system for prefetch tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -374,7 +374,7 @@ public class CreateScheduledPreloadJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The task type (refresh/prefetch).</p>
+         * <p>The task type, such as refresh or prefetch.</p>
          * 
          * <strong>example:</strong>
          * <p>preload</p>

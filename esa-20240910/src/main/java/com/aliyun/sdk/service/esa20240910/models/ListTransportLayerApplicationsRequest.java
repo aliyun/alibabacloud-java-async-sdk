@@ -116,12 +116,12 @@ public class ListTransportLayerApplicationsRequest extends Request {
         } 
 
         /**
-         * <p>The query type for the host record of Layer 4 applications. The following four types are supported, and the default is exact match.</p>
+         * <p>The query type for the host record of the Layer 4 application. Default value: exact. Valid values:</p>
          * <ul>
-         * <li>fuzzy: Fuzzy match.</li>
-         * <li>exact: Exact match.</li>
-         * <li>prefix: Prefix match.</li>
-         * <li>suffix: Suffix match.</li>
+         * <li>fuzzy: fuzzy match</li>
+         * <li>exact: exact match</li>
+         * <li>prefix: prefix match</li>
+         * <li>suffix: suffix match</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -134,7 +134,7 @@ public class ListTransportLayerApplicationsRequest extends Request {
         }
 
         /**
-         * <p>The page number for paginated queries. The value must be greater than or equal to 1.</p>
+         * <p>The page number Settings for paging in a paged query. Valid values: integers greater than or equal to 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -146,7 +146,7 @@ public class ListTransportLayerApplicationsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page for paginated queries. Valid values: 1-500.</p>
+         * <p>The number of entries per page for paging in a paged query. Valid values: 1 to 500.</p>
          * 
          * <strong>example:</strong>
          * <p>500</p>
@@ -170,7 +170,7 @@ public class ListTransportLayerApplicationsRequest extends Request {
         }
 
         /**
-         * <p>Site ID. You can obtain it by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API.</p>
+         * <p>The site ID. You can obtain the site ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -75,10 +75,10 @@ public class UpdateSeoBypassRequest extends Request {
         } 
 
         /**
-         * <p>The switch. Valid values:</p>
+         * <p>Specifies whether to enable the feature. Valid values:</p>
          * <ul>
-         * <li><strong>on</strong>: enabled.</li>
-         * <li><strong>off</strong>: disabled.</li>
+         * <li><strong>on</strong>: Enabled.</li>
+         * <li><strong>off</strong>: Disabled.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -92,7 +92,7 @@ public class UpdateSeoBypassRequest extends Request {
         }
 
         /**
-         * <p>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</p>
+         * <p>The site ID. You can obtain the site ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

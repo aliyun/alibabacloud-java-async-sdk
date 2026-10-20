@@ -80,7 +80,7 @@ public class SetHttpDDoSAttackProtectionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The level of HTTP DDoS attack protection.</p>
+         * <p>The mode of the HTTP DDoS Attack prevention mitigation policies.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -102,7 +102,7 @@ public class SetHttpDDoSAttackProtectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The website ID.</p>
+         * <p>The site ID.</p>
          * 
          * <strong>example:</strong>
          * <p>123456****</p>

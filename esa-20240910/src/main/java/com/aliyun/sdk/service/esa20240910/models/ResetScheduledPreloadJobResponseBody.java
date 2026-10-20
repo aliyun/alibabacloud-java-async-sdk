@@ -247,7 +247,7 @@ public class ResetScheduledPreloadJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the task was created, in ISO 8601 format (for example, 2024-01-01T00:00:00+Z).</p>
+         * <p>The time when the task was created, in ISO 8601 format, such as 2024-01-01T00:00:00+Z.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-06-02T02:23:26Z</p>
@@ -258,7 +258,7 @@ public class ResetScheduledPreloadJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of domain names to prefetch.</p>
+         * <p>The list of prefetched domain names.</p>
          * 
          * <strong>example:</strong>
          * <p>testurl.com</p>
@@ -313,11 +313,7 @@ public class ResetScheduledPreloadJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The URL insertion method. Valid values:</p>
-         * <ul>
-         * <li>oss: URLs are imported in batches from an OSS file.</li>
-         * <li>testBox: URLs are entered one by one in a text box.</li>
-         * </ul>
+         * <p>The URL insertion method.</p>
          * 
          * <strong>example:</strong>
          * <p>oss</p>
@@ -361,7 +357,7 @@ public class ResetScheduledPreloadJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of URLs that have been submitted to the system for prefetching.</p>
+         * <p>The number of URLs submitted to the system for prefetch tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -372,12 +368,7 @@ public class ResetScheduledPreloadJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The task type (refresh or prefetch). Valid values:</p>
-         * <ul>
-         * <li>path: directory refresh.</li>
-         * <li>refresh: URL refresh.</li>
-         * <li>preload: URL prefetch.</li>
-         * </ul>
+         * <p>The task type (refresh or prefetch).</p>
          * 
          * <strong>example:</strong>
          * <p>preload</p>

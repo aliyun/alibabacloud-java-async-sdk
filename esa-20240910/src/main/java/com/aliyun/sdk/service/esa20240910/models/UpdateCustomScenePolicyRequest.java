@@ -149,7 +149,7 @@ public class UpdateCustomScenePolicyRequest extends Request {
 
         /**
          * <p>The end time of the policy.</p>
-         * <p>The time must be in UTC and in the ISO 8601 format: yyyy-MM-ddTHH:mm:ssZ.</p>
+         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -162,7 +162,7 @@ public class UpdateCustomScenePolicyRequest extends Request {
         }
 
         /**
-         * <p>The name of the policy.</p>
+         * <p>The policy name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -175,9 +175,9 @@ public class UpdateCustomScenePolicyRequest extends Request {
         }
 
         /**
-         * <p>The site IDs to associate with the policy. Use a comma (,) to separate multiple IDs.</p>
+         * <p>The IDs of the websites to associate. Separate multiple IDs with commas (,).</p>
          * <blockquote>
-         * <p>This parameter is deprecated. We recommend using the <code>SiteIds</code> parameter instead. If the <code>SiteIds</code> parameter is specified, the <code>Objects</code> parameter is ignored. You must specify a value for either the <code>Objects</code> or <code>SiteIds</code> parameter.</p>
+         * <p><strong>[Deprecated]</strong> We recommend that you use the SiteIds parameter instead. If the SiteIds parameter is specified, the API operation uses the value of SiteIds and ignores the value of Objects. To avoid ambiguity in update operations, you must specify at least one of the SiteIds and Objects parameters.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -190,7 +190,7 @@ public class UpdateCustomScenePolicyRequest extends Request {
         }
 
         /**
-         * <p>To obtain the policy ID, call the <a href="https://help.aliyun.com/document_detail/2850508.html">DescribeCustomScenePolicies</a> operation.</p>
+         * <p>The ID of the policy. You can call the <a href="https://help.aliyun.com/document_detail/2850508.html">DescribeCustomScenePolicies</a> operation to query the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -203,7 +203,7 @@ public class UpdateCustomScenePolicyRequest extends Request {
         }
 
         /**
-         * <p>The site IDs to associate with the policy. Use a comma (,) to separate multiple IDs.</p>
+         * <p>The IDs of the websites to associate. Separate multiple IDs with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>123456****,123457****</p>
@@ -216,7 +216,7 @@ public class UpdateCustomScenePolicyRequest extends Request {
 
         /**
          * <p>The start time of the policy.</p>
-         * <p>The time must be in UTC and in the ISO 8601 format: yyyy-MM-ddTHH:mm:ssZ.</p>
+         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -229,9 +229,9 @@ public class UpdateCustomScenePolicyRequest extends Request {
         }
 
         /**
-         * <p>The name of the template. Valid value:</p>
+         * <p>The name of the template. Valid values:</p>
          * <ul>
-         * <li><strong>promotion</strong>: major promotion</li>
+         * <li><strong>promotion</strong>: Important Activity.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

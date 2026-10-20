@@ -141,7 +141,7 @@ public class ListAsyncTasksRequest extends Request {
         }
 
         /**
-         * <p>The number of tasks to display per page.</p>
+         * <p>The number of tasks to return on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -153,7 +153,7 @@ public class ListAsyncTasksRequest extends Request {
         }
 
         /**
-         * <p>The resource ID to which the task belongs, such as a site ID. You can obtain the site ID by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
+         * <p>The IDs of the resources to which the tasks belong, such as site IDs. You can obtain site IDs by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
          * 
          * <strong>example:</strong>
          * <p>4080****3752512</p>
@@ -179,9 +179,9 @@ public class ListAsyncTasksRequest extends Request {
         /**
          * <p>The current status of the task. Valid values:</p>
          * <ul>
-         * <li>in_progress: in progress.</li>
-         * <li>success: completed.</li>
-         * <li>fail: failed.</li>
+         * <li>in_progress: The task is in progress.</li>
+         * <li>success: The task is completed.</li>
+         * <li>fail: The task failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -194,7 +194,7 @@ public class ListAsyncTasksRequest extends Request {
         }
 
         /**
-         * <p>The task type. For example, the task type for applying for a free certificate is free_cert.</p>
+         * <p>The task type. For example, the value for a free certificate application is free_cert.</p>
          * 
          * <strong>example:</strong>
          * <p>free_cert</p>

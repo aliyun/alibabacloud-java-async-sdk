@@ -142,7 +142,7 @@ public class ListCertificatesRequest extends Request {
         }
 
         /**
-         * <p>The page number of the data to return.</p>
+         * <p>The page number of the returned data.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -154,7 +154,7 @@ public class ListCertificatesRequest extends Request {
         }
 
         /**
-         * <p>The number of records per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -179,7 +179,10 @@ public class ListCertificatesRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The certificate type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>free</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

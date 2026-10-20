@@ -119,7 +119,7 @@ public class ListBotInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The instances that match the specified conditions under the current account.</p>
+         * <p>The instances that meet the query conditions for the user.</p>
          */
         public Builder instanceInfo(java.util.List<InstanceInfo> instanceInfo) {
             this.instanceInfo = instanceInfo;
@@ -292,11 +292,11 @@ public class ListBotInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The Bot protection instance level. If this parameter is empty, the plan does not include a Bot protection instance. If a value is returned, the plan includes a Bot protection instance. Valid values:</p>
+             * <p>The bot protection edition. If this parameter is empty, no bot protection instance is purchased in the plan. If a value is returned, a bot protection instance is purchased in the plan. Valid values:</p>
              * <ul>
-             * <li><p>enterprise_bot: web edition.</p>
+             * <li><p>enterprise_bot: Web edition.</p>
              * </li>
-             * <li><p>enterprise_bot_with_app: app edition.</p>
+             * <li><p>enterprise_bot_with_app: App edition.</p>
              * </li>
              * </ul>
              * 
@@ -309,7 +309,7 @@ public class ListBotInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the instance was purchased. The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * <p>The creation time of the instance. The time is displayed in UTC and formatted in accordance with the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-04-12T05:41:51Z</p>
@@ -331,7 +331,7 @@ public class ListBotInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scheduled release time. The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * <p>The scheduled release time. The time is displayed in UTC and formatted in accordance with the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-03-25T16:00:00Z</p>
@@ -355,10 +355,10 @@ public class ListBotInstancesResponseBody extends TeaModel {
             /**
              * <p>The instance status. Valid values:</p>
              * <ul>
-             * <li><strong>online</strong>: The instance is running normally.</li>
-             * <li><strong>offline</strong>: The instance has expired but has not exceeded the retention period and is unavailable.</li>
-             * <li><strong>disable</strong>: The instance has been released.</li>
-             * <li><strong>overdue</strong>: The instance has been stopped due to an overdue payment.</li>
+             * <li><strong>online</strong>: normal.</li>
+             * <li><strong>offline</strong>: expired but not overdue, and unavailable.</li>
+             * <li><strong>disable</strong>: released.</li>
+             * <li><strong>overdue</strong>: suspended due to overdue payment.</li>
              * </ul>
              * 
              * <strong>example:</strong>

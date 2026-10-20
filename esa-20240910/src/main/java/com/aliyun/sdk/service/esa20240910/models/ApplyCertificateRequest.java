@@ -104,6 +104,9 @@ public class ApplyCertificateRequest extends Request {
 
         /**
          * <p>The algorithm type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RSA</p>
          */
         public Builder algType(String algType) {
             this.putQueryParameter("AlgType", algType);
@@ -112,7 +115,7 @@ public class ApplyCertificateRequest extends Request {
         }
 
         /**
-         * <p>The list of domain names, separated by commas.</p>
+         * <p>The list of domain names. Separate multiple domain names with commas.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,9 +143,9 @@ public class ApplyCertificateRequest extends Request {
         /**
          * <p>The certificate type. Valid values:</p>
          * <ul>
-         * <li>lets_encrypt: Let\&quot;s Encrypt certificate.</li>
-         * <li>digicert_single: DigiCert single-domain certificate.</li>
-         * <li>digicert_wildcard: DigiCert wildcard domain certificate.</li>
+         * <li>lets_encrypt: Let\&quot;s Encrypt certificate</li>
+         * <li>digicert_single: DigiCert single-domain certificate</li>
+         * <li>digicert_wildcard: DigiCert wildcard certificate</li>
          * </ul>
          * 
          * <strong>example:</strong>
