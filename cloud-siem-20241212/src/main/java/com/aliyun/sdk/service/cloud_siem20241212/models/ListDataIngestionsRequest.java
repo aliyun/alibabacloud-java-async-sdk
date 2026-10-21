@@ -157,7 +157,7 @@ public class ListDataIngestionsRequest extends Request {
         } 
 
         /**
-         * DataIngestionIds.
+         * <p>The list of data ingestion policy IDs.</p>
          */
         public Builder dataIngestionIds(java.util.List<String> dataIngestionIds) {
             String dataIngestionIdsShrink = shrink(dataIngestionIds, "DataIngestionIds", "simple");
@@ -167,7 +167,14 @@ public class ListDataIngestionsRequest extends Request {
         }
 
         /**
-         * DataIngestionStatus.
+         * <p>The accessed state of data ingestion. Valid values:</p>
+         * <ul>
+         * <li>enabled: Enabled.</li>
+         * <li>disabled: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         public Builder dataIngestionStatus(String dataIngestionStatus) {
             this.putBodyParameter("DataIngestionStatus", dataIngestionStatus);
@@ -176,7 +183,7 @@ public class ListDataIngestionsRequest extends Request {
         }
 
         /**
-         * DataIngestionTemplateIds.
+         * <p>The list of data ingestion template IDs.</p>
          */
         public Builder dataIngestionTemplateIds(java.util.List<String> dataIngestionTemplateIds) {
             String dataIngestionTemplateIdsShrink = shrink(dataIngestionTemplateIds, "DataIngestionTemplateIds", "simple");
@@ -186,7 +193,14 @@ public class ListDataIngestionsRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -195,7 +209,7 @@ public class ListDataIngestionsRequest extends Request {
         }
 
         /**
-         * NormalizationSchemaIds.
+         * <p>The list of normalization schema IDs.</p>
          */
         public Builder normalizationSchemaIds(java.util.List<String> normalizationSchemaIds) {
             String normalizationSchemaIdsShrink = shrink(normalizationSchemaIds, "NormalizationSchemaIds", "simple");
@@ -205,7 +219,10 @@ public class ListDataIngestionsRequest extends Request {
         }
 
         /**
-         * ProductId.
+         * <p>The product ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alibaba_cloud_sas</p>
          */
         public Builder productId(String productId) {
             this.putBodyParameter("ProductId", productId);
@@ -214,7 +231,14 @@ public class ListDataIngestionsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The data management center of the threat analysis feature. Specify this parameter based on the region where your assets reside. Valid values:</p>
+         * <ul>
+         * <li>cn-hangzhou: Your assets reside in the Chinese mainland.</li>
+         * <li>ap-southeast-1: Your assets reside outside China.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -223,7 +247,10 @@ public class ListDataIngestionsRequest extends Request {
         }
 
         /**
-         * RoleFor.
+         * <p>The user ID of the member to which the administrator switches the view.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>173326*******</p>
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);

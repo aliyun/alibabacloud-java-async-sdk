@@ -132,7 +132,7 @@ public class ListDetectionRulesResponseBody extends TeaModel {
         } 
 
         /**
-         * DetectionRules.
+         * <p>The list of detection rules.</p>
          */
         public Builder detectionRules(java.util.List<DetectionRules> detectionRules) {
             this.detectionRules = detectionRules;
@@ -140,7 +140,10 @@ public class ListDetectionRulesResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return in this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -148,7 +151,10 @@ public class ListDetectionRulesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -156,7 +162,10 @@ public class ListDetectionRulesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -164,7 +173,10 @@ public class ListDetectionRulesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -172,7 +184,10 @@ public class ListDetectionRulesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>508DCFFD-4508-54BF-A8A0-E97A0FA6****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +195,10 @@ public class ListDetectionRulesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -259,7 +277,10 @@ public class ListDetectionRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * MappingFieldName.
+             * <p>The mapping field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ip</p>
              */
             public Builder mappingFieldName(String mappingFieldName) {
                 this.mappingFieldName = mappingFieldName;
@@ -267,7 +288,10 @@ public class ListDetectionRulesResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationFieldName.
+             * <p>The normalized entity field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>src_ip</p>
              */
             public Builder normalizationFieldName(String normalizationFieldName) {
                 this.normalizationFieldName = normalizationFieldName;
@@ -275,7 +299,10 @@ public class ListDetectionRulesResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationFieldType.
+             * <p>The data type of the normalized entity field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vachar</p>
              */
             public Builder normalizationFieldType(String normalizationFieldType) {
                 this.normalizationFieldType = normalizationFieldType;
@@ -342,7 +369,7 @@ public class ListDetectionRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * NormalizationFieldMappings.
+             * <p>The entity mapping configuration.</p>
              */
             public Builder normalizationFieldMappings(java.util.List<NormalizationFieldMappings> normalizationFieldMappings) {
                 this.normalizationFieldMappings = normalizationFieldMappings;
@@ -350,7 +377,10 @@ public class ListDetectionRulesResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationSchemaId.
+             * <p>The entity type ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ip</p>
              */
             public Builder normalizationSchemaId(String normalizationSchemaId) {
                 this.normalizationSchemaId = normalizationSchemaId;
@@ -417,7 +447,22 @@ public class ListDetectionRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * Config.
+             * <p>The input parameter configuration for invoking the playbook.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[
+             *     {
+             *         &quot;name&quot;: &quot;expireDay&quot;,
+             *         &quot;dataType&quot;: &quot;Integer&quot;,
+             *         &quot;required&quot;: true,
+             *         &quot;isArray&quot;: false,
+             *         &quot;example&quot;: &quot;7&quot;,
+             *         &quot;description&quot;: &quot;desc&quot;,
+             *         &quot;typeName&quot;: &quot;Integer&quot;,
+             *         &quot;dataClass&quot;: &quot;normal&quot;,
+             *         &quot;stanchDefaultValue&quot;: &quot;7&quot;
+             *     }
+             * ]</p>
              */
             public Builder config(String config) {
                 this.config = config;
@@ -425,7 +470,27 @@ public class ListDetectionRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Flow.
+             * <p>The flow configuration of the playbook.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[
+             *     {
+             *         &quot;id&quot;: &quot;EndEvent_1fqpq4h&quot;,
+             *         &quot;zIndex&quot;: 1,
+             *         &quot;data&quot;: {
+             *             &quot;nodeType&quot;: &quot;endEvent&quot;,
+             *             &quot;appType&quot;: &quot;basic&quot;,
+             *             &quot;valueData&quot;: {</p>
+             * <pre><code>        },
+             *         &quot;icon&quot;: &quot;icon-radio-off-full&quot;
+             *     },
+             *     &quot;position&quot;: {
+             *         &quot;x&quot;: 1369,
+             *         &quot;y&quot;: 174
+             *     }
+             * }
+             * </code></pre>
+             * <p>]</p>
              */
             public Builder flow(String flow) {
                 this.flow = flow;
@@ -934,7 +999,10 @@ public class ListDetectionRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * AlertAttCk.
+             * <p>The alert ATT&amp;CK technique.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Discovery</p>
              */
             public Builder alertAttCk(String alertAttCk) {
                 this.alertAttCk = alertAttCk;
@@ -942,7 +1010,7 @@ public class ListDetectionRulesResponseBody extends TeaModel {
             }
 
             /**
-             * AlertAttCkMapping.
+             * <p>The ATT&amp;CK technique mapping.</p>
              */
             public Builder alertAttCkMapping(String alertAttCkMapping) {
                 this.alertAttCkMapping = alertAttCkMapping;
@@ -950,7 +1018,10 @@ public class ListDetectionRulesResponseBody extends TeaModel {
             }
 
             /**
-             * AlertDescription.
+             * <p>The alert description. You can use $$ to reference query output fields.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alert from: $product_code$, detected network attack from $src_ip$, affected assets include: $dst_ip$</p>
              */
             public Builder alertDescription(String alertDescription) {
                 this.alertDescription = alertDescription;
@@ -958,7 +1029,17 @@ public class ListDetectionRulesResponseBody extends TeaModel {
             }
 
             /**
-             * AlertLevel.
+             * <p>The threat level of the alert. Valid values:</p>
+             * <ul>
+             * <li>5: Critical.</li>
+             * <li>4: High.</li>
+             * <li>3: Medium.</li>
+             * <li>2: Low.</li>
+             * <li>1: Informational.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder alertLevel(String alertLevel) {
                 this.alertLevel = alertLevel;
@@ -966,7 +1047,7 @@ public class ListDetectionRulesResponseBody extends TeaModel {
             }
 
             /**
-             * AlertLevelMapping.
+             * <p>The alert level mapping.</p>
              */
             public Builder alertLevelMapping(String alertLevelMapping) {
                 this.alertLevelMapping = alertLevelMapping;
@@ -974,7 +1055,10 @@ public class ListDetectionRulesResponseBody extends TeaModel {
             }
 
             /**
-             * AlertName.
+             * <p>The alert name. You can use $$ to reference query output fields.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Detected high-frequency multi-type network attacks from $src_ip$</p>
              */
             public Builder alertName(String alertName) {
                 this.alertName = alertName;
@@ -982,7 +1066,16 @@ public class ListDetectionRulesResponseBody extends TeaModel {
             }
 
             /**
-             * AlertSchemaId.
+             * <p>The alert template ID of the detection rule. Valid values:</p>
+             * <ul>
+             * <li>ALERT_ACTIVITY: other alerts.</li>
+             * <li>EDR_ALERT_ACTIVITY: endpoint detection and response alerts.</li>
+             * <li>FIREWALL_ALERT_ACTIVITY: firewall alerts.</li>
+             * <li>WAF_ALERT_ACTIVITY: web application firewall alerts.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ALERT_ACTIVITY</p>
              */
             public Builder alertSchemaId(String alertSchemaId) {
                 this.alertSchemaId = alertSchemaId;
@@ -990,7 +1083,10 @@ public class ListDetectionRulesResponseBody extends TeaModel {
             }
 
             /**
-             * AlertTacticId.
+             * <p>The alert tactic phase.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TA0042</p>
              */
             public Builder alertTacticId(String alertTacticId) {
                 this.alertTacticId = alertTacticId;
@@ -998,7 +1094,10 @@ public class ListDetectionRulesResponseBody extends TeaModel {
             }
 
             /**
-             * AlertThresholdCount.
+             * <p>The alert threshold count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder alertThresholdCount(Integer alertThresholdCount) {
                 this.alertThresholdCount = alertThresholdCount;
@@ -1006,7 +1105,10 @@ public class ListDetectionRulesResponseBody extends TeaModel {
             }
 
             /**
-             * AlertThresholdGroup.
+             * <p>The list of alert threshold fields, separated by commas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alert_type,ip</p>
              */
             public Builder alertThresholdGroup(String alertThresholdGroup) {
                 this.alertThresholdGroup = alertThresholdGroup;
@@ -1014,7 +1116,10 @@ public class ListDetectionRulesResponseBody extends TeaModel {
             }
 
             /**
-             * AlertThresholdPeriod.
+             * <p>The alert threshold period length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5m</p>
              */
             public Builder alertThresholdPeriod(String alertThresholdPeriod) {
                 this.alertThresholdPeriod = alertThresholdPeriod;
@@ -1022,7 +1127,10 @@ public class ListDetectionRulesResponseBody extends TeaModel {
             }
 
             /**
-             * AlertType.
+             * <p>The alerting type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WebShell</p>
              */
             public Builder alertType(String alertType) {
                 this.alertType = alertType;
@@ -1030,7 +1138,7 @@ public class ListDetectionRulesResponseBody extends TeaModel {
             }
 
             /**
-             * AlertTypeMapping.
+             * <p>The alerting type mapping.</p>
              */
             public Builder alertTypeMapping(String alertTypeMapping) {
                 this.alertTypeMapping = alertTypeMapping;
@@ -1038,7 +1146,10 @@ public class ListDetectionRulesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time. Format: YYYY-MM-DD HH:mm:ss.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-21 13:47:01</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -1046,7 +1157,23 @@ public class ListDetectionRulesResponseBody extends TeaModel {
             }
 
             /**
-             * DetectionExpressionContent.
+             * <p>The expression content of the detection rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>*|set session mode=scan;SELECT * FROM log
+             * WHERE schema = \&quot;PROCESS_START_ACTIVITY\&quot;
+             * AND (
+             *     proc_path LIKE \&quot;%/groups\&quot;
+             *     OR (
+             *         (
+             *             proc_path LIKE \&quot;%/cat\&quot;
+             *             OR proc_path LIKE \&quot;%/head\&quot;
+             *             OR proc_path LIKE \&quot;%/tail\&quot;
+             *             OR proc_path LIKE \&quot;%/more\&quot;
+             *         )
+             *         AND cmdline LIKE \&quot;%/etc/group%\&quot;
+             *     )
+             * )</p>
              */
             public Builder detectionExpressionContent(String detectionExpressionContent) {
                 this.detectionExpressionContent = detectionExpressionContent;
@@ -1054,7 +1181,10 @@ public class ListDetectionRulesResponseBody extends TeaModel {
             }
 
             /**
-             * DetectionExpressionType.
+             * <p>The expression content of the detection rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>playbook</p>
              */
             public Builder detectionExpressionType(String detectionExpressionType) {
                 this.detectionExpressionType = detectionExpressionType;
@@ -1062,7 +1192,10 @@ public class ListDetectionRulesResponseBody extends TeaModel {
             }
 
             /**
-             * DetectionRuleDescription.
+             * <p>The description of the detection rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Check the enumeration behavior of local system groups. An attacker may attempt to find the Local Systems group and its permission settings.</p>
              */
             public Builder detectionRuleDescription(String detectionRuleDescription) {
                 this.detectionRuleDescription = detectionRuleDescription;
@@ -1070,7 +1203,10 @@ public class ListDetectionRulesResponseBody extends TeaModel {
             }
 
             /**
-             * DetectionRuleId.
+             * <p>The ID of the detection rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>jndi-attack-success_http_netstat</p>
              */
             public Builder detectionRuleId(String detectionRuleId) {
                 this.detectionRuleId = detectionRuleId;
@@ -1078,7 +1214,10 @@ public class ListDetectionRulesResponseBody extends TeaModel {
             }
 
             /**
-             * DetectionRuleName.
+             * <p>The name of the detection rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Detect Discovery Behavior for Local Systems Groups</p>
              */
             public Builder detectionRuleName(String detectionRuleName) {
                 this.detectionRuleName = detectionRuleName;
@@ -1086,7 +1225,15 @@ public class ListDetectionRulesResponseBody extends TeaModel {
             }
 
             /**
-             * DetectionRuleStatus.
+             * <p>The status of the detection rule. Valid values:</p>
+             * <ul>
+             * <li>enabled: Enabled.</li>
+             * <li>disabled: Disabled.</li>
+             * <li>testing: Testing.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder detectionRuleStatus(String detectionRuleStatus) {
                 this.detectionRuleStatus = detectionRuleStatus;
@@ -1094,7 +1241,15 @@ public class ListDetectionRulesResponseBody extends TeaModel {
             }
 
             /**
-             * DetectionRuleType.
+             * <p>The type of the detection rule. Valid values:</p>
+             * <ul>
+             * <li>preset: preset detection rule.</li>
+             * <li>custom: custom detection rule.</li>
+             * <li>custom_template: rule template.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>custom</p>
              */
             public Builder detectionRuleType(String detectionRuleType) {
                 this.detectionRuleType = detectionRuleType;
@@ -1102,7 +1257,7 @@ public class ListDetectionRulesResponseBody extends TeaModel {
             }
 
             /**
-             * EntityMappings.
+             * <p>The entity mapping configuration.</p>
              */
             public Builder entityMappings(java.util.List<EntityMappings> entityMappings) {
                 this.entityMappings = entityMappings;
@@ -1110,7 +1265,10 @@ public class ListDetectionRulesResponseBody extends TeaModel {
             }
 
             /**
-             * IncidentAggregationExpression.
+             * <p>The event aggregation period configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5m</p>
              */
             public Builder incidentAggregationExpression(String incidentAggregationExpression) {
                 this.incidentAggregationExpression = incidentAggregationExpression;
@@ -1118,7 +1276,17 @@ public class ListDetectionRulesResponseBody extends TeaModel {
             }
 
             /**
-             * IncidentAggregationType.
+             * <p>The event aggregation type. Valid values:</p>
+             * <ul>
+             * <li>none: No event is generated.</li>
+             * <li>graph_compute: Graph computing (supported by predefined rules).</li>
+             * <li>expert: Expert rule.</li>
+             * <li>passthrough: Alerting pass-through (one-to-one).</li>
+             * <li>window: Same-type aggregation (window).</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>passthrough</p>
              */
             public Builder incidentAggregationType(String incidentAggregationType) {
                 this.incidentAggregationType = incidentAggregationType;
@@ -1126,7 +1294,10 @@ public class ListDetectionRulesResponseBody extends TeaModel {
             }
 
             /**
-             * LogCategoryId.
+             * <p>The ID of the log normalization category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NETWORK_CATEGORY</p>
              */
             public Builder logCategoryId(String logCategoryId) {
                 this.logCategoryId = logCategoryId;
@@ -1134,7 +1305,10 @@ public class ListDetectionRulesResponseBody extends TeaModel {
             }
 
             /**
-             * LogSchemaId.
+             * <p>The ID of the log normalization schema.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>API_RISK_ACTIVITY</p>
              */
             public Builder logSchemaId(String logSchemaId) {
                 this.logSchemaId = logSchemaId;
@@ -1142,7 +1316,7 @@ public class ListDetectionRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Playbook.
+             * <p>The XML configuration of the playbook.</p>
              */
             public Builder playbook(Playbook playbook) {
                 this.playbook = playbook;
@@ -1150,7 +1324,14 @@ public class ListDetectionRulesResponseBody extends TeaModel {
             }
 
             /**
-             * PlaybookParameters.
+             * <p>The user-defined parameters of the playbook.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *     &quot;ip&quot;: {
+             *         &quot;ip&quot;: &quot;124.23.<em>.</em>&quot;
+             *     }
+             * }</p>
              */
             public Builder playbookParameters(String playbookParameters) {
                 this.playbookParameters = playbookParameters;
@@ -1158,7 +1339,10 @@ public class ListDetectionRulesResponseBody extends TeaModel {
             }
 
             /**
-             * PlaybookUuid.
+             * <p>The playbook UUID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dde983ed-eb56-45ea-ac2e-3b12b2a9****</p>
              */
             public Builder playbookUuid(String playbookUuid) {
                 this.playbookUuid = playbookUuid;
@@ -1166,7 +1350,10 @@ public class ListDetectionRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ScheduleBeginTime.
+             * <p>The scheduling start time (13-digit timestamp).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1733269771123</p>
              */
             public Builder scheduleBeginTime(Long scheduleBeginTime) {
                 this.scheduleBeginTime = scheduleBeginTime;
@@ -1174,7 +1361,10 @@ public class ListDetectionRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ScheduleExpression.
+             * <p>The scheduling cron expression. This parameter is required when ScheduleType is set to cron.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5m</p>
              */
             public Builder scheduleExpression(String scheduleExpression) {
                 this.scheduleExpression = scheduleExpression;
@@ -1182,7 +1372,10 @@ public class ListDetectionRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ScheduleMaxRetries.
+             * <p>The maximum number of retries upon timeout. Valid values: 1 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder scheduleMaxRetries(Integer scheduleMaxRetries) {
                 this.scheduleMaxRetries = scheduleMaxRetries;
@@ -1190,7 +1383,10 @@ public class ListDetectionRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ScheduleMaxTimeout.
+             * <p>The maximum timeout period, in seconds. Valid values: 60 to 1800.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder scheduleMaxTimeout(Integer scheduleMaxTimeout) {
                 this.scheduleMaxTimeout = scheduleMaxTimeout;
@@ -1198,7 +1394,14 @@ public class ListDetectionRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ScheduleType.
+             * <p>The scheduling type. Valid values:</p>
+             * <ul>
+             * <li>fixed_rate: fixed interval.</li>
+             * <li>cron: cron expression.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>fixed_rate</p>
              */
             public Builder scheduleType(String scheduleType) {
                 this.scheduleType = scheduleType;
@@ -1206,7 +1409,10 @@ public class ListDetectionRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ScheduleWindow.
+             * <p>The scheduling window length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5m</p>
              */
             public Builder scheduleWindow(String scheduleWindow) {
                 this.scheduleWindow = scheduleWindow;
@@ -1214,7 +1420,10 @@ public class ListDetectionRulesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The update time. Format: YYYY-MM-DD HH:mm:ss.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-04-16 10:51:00</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

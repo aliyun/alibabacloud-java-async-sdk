@@ -130,7 +130,10 @@ public class UpdateDataSetRecordRequest extends Request {
         } 
 
         /**
-         * DataSetFileName.
+         * <p>The name of the uploaded dataset file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloudsiem-dataset/1358117679873357_174338773****.csv</p>
          */
         public Builder dataSetFileName(String dataSetFileName) {
             this.putBodyParameter("DataSetFileName", dataSetFileName);
@@ -139,6 +142,7 @@ public class UpdateDataSetRecordRequest extends Request {
         }
 
         /**
+         * <p>The ID of the dataset.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -151,7 +155,11 @@ public class UpdateDataSetRecordRequest extends Request {
         }
 
         /**
-         * DataSetRecords.
+         * <p>The content of the dataset records, in JSON array format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{\&quot;ip\&quot;:\&quot;1.1.1.1\&quot;,\&quot;userid\&quot;:\&quot;1234\&quot;,\&quot;name\&quot;:\&quot;a12401\&quot;},
+         *  {\&quot;ip\&quot;:\&quot;2.2.2.2\&quot;,\&quot;userid\&quot;:\&quot;33333\&quot;,\&quot;name\&quot;:\&quot;a12401\&quot;}]</p>
          */
         public Builder dataSetRecords(String dataSetRecords) {
             this.putBodyParameter("DataSetRecords", dataSetRecords);
@@ -160,7 +168,16 @@ public class UpdateDataSetRecordRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li><p><strong>zh</strong> (default): Chinese.</p>
+         * </li>
+         * <li><p><strong>en</strong>: English.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -169,7 +186,16 @@ public class UpdateDataSetRecordRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region where the Data Management center for threat analysis is located. Select a region for the management center based on the region of your asset. Valid values:</p>
+         * <ul>
+         * <li><p>cn-hangzhou: The asset is in the Chinese mainland.</p>
+         * </li>
+         * <li><p>ap-southeast-1: The asset is in a region outside China.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -178,7 +204,10 @@ public class UpdateDataSetRecordRequest extends Request {
         }
 
         /**
-         * RoleFor.
+         * <p>The user ID of the member. An administrator can use this parameter to switch to the perspective of a specific member.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>113091674488****</p>
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);

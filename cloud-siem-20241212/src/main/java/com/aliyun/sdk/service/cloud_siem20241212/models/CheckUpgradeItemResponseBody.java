@@ -67,7 +67,10 @@ public class CheckUpgradeItemResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class CheckUpgradeItemResponseBody extends TeaModel {
         }
 
         /**
-         * UpgradeItem.
+         * <p>The upgrade item.</p>
          */
         public Builder upgradeItem(UpgradeItem upgradeItem) {
             this.upgradeItem = upgradeItem;
@@ -154,7 +157,10 @@ public class CheckUpgradeItemResponseBody extends TeaModel {
             } 
 
             /**
-             * CheckResult.
+             * <p>The check result of the check item. Example values: OK and FAIL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OK</p>
              */
             public Builder checkResult(String checkResult) {
                 this.checkResult = checkResult;
@@ -162,7 +168,10 @@ public class CheckUpgradeItemResponseBody extends TeaModel {
             }
 
             /**
-             * CheckStatus.
+             * <p>The checkpoint status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder checkStatus(String checkStatus) {
                 this.checkStatus = checkStatus;
@@ -170,7 +179,10 @@ public class CheckUpgradeItemResponseBody extends TeaModel {
             }
 
             /**
-             * UpgradeItemId.
+             * <p>The upgrade item ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>incident_upgrade</p>
              */
             public Builder upgradeItemId(String upgradeItemId) {
                 this.upgradeItemId = upgradeItemId;

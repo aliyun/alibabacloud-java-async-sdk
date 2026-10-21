@@ -54,7 +54,10 @@ public class UpdateDataStorageResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EA7FC160-8D86-5ABE-A08A-7962FDC1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

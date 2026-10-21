@@ -106,7 +106,7 @@ public class ListLogStoresResponseBody extends TeaModel {
         } 
 
         /**
-         * LogStores.
+         * <p>The list of Simple Log Service Logstores.</p>
          */
         public Builder logStores(java.util.List<String> logStores) {
             this.logStores = logStores;
@@ -114,7 +114,10 @@ public class ListLogStoresResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return in this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -122,7 +125,10 @@ public class ListLogStoresResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token for the next query. You do not need to specify this parameter for the first query or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -130,7 +136,10 @@ public class ListLogStoresResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListLogStoresResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>57</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

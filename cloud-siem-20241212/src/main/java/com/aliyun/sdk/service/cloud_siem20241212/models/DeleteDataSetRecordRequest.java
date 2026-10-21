@@ -117,6 +117,7 @@ public class DeleteDataSetRecordRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the dataset.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,6 +130,7 @@ public class DeleteDataSetRecordRequest extends Request {
         }
 
         /**
+         * <p>A list of dataset record IDs in a JSON array format.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,7 +143,16 @@ public class DeleteDataSetRecordRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li><p><strong>zh</strong> (default): Chinese.</p>
+         * </li>
+         * <li><p><strong>en</strong>: English.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -150,7 +161,16 @@ public class DeleteDataSetRecordRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region of the Data Management center for Threat Analysis. Select a region based on where your assets are located. Valid values:</p>
+         * <ul>
+         * <li><p>cn-hangzhou: Your assets are in the Chinese mainland.</p>
+         * </li>
+         * <li><p>ap-southeast-1: Your assets are outside China.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -159,7 +179,10 @@ public class DeleteDataSetRecordRequest extends Request {
         }
 
         /**
-         * RoleFor.
+         * <p>The user ID of a member. An administrator can specify this parameter to operate as the member.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>113091674488****</p>
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);

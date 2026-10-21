@@ -227,7 +227,14 @@ public class UpdateResponseRuleRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>The language of the response messages. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -236,7 +243,10 @@ public class UpdateResponseRuleRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of data records to read in this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -245,7 +255,10 @@ public class UpdateResponseRuleRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token that marks the start position of the current read. Leave this parameter empty to start from the beginning.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -254,7 +267,14 @@ public class UpdateResponseRuleRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region where the data management center of Cloud Threat Detection and Response (CTDR) is located. Select the management center region based on the region where your assets reside. Valid values:</p>
+         * <ul>
+         * <li>cn-hangzhou: Your assets reside in the Chinese mainland.</li>
+         * <li>ap-southeast-1: Your assets reside outside China.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -263,7 +283,10 @@ public class UpdateResponseRuleRequest extends Request {
         }
 
         /**
-         * ResponseActionConfig.
+         * <p>The action configuration of the automated response rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;actionType&quot;:&quot;doPlaybook&quot;,&quot;playbookName&quot;:&quot;block waf IP&quot;,&quot;playbookUuid&quot;:&quot;system_aliyun_waf_whole_process_book&quot;,&quot;disposeParam&quot;:{&quot;period&quot;:&quot;7d&quot;}}]</p>
          */
         public Builder responseActionConfig(String responseActionConfig) {
             this.putBodyParameter("ResponseActionConfig", responseActionConfig);
@@ -272,7 +295,18 @@ public class UpdateResponseRuleRequest extends Request {
         }
 
         /**
-         * ResponseActionType.
+         * <p>The action type of the automated response rule. Valid values:</p>
+         * <ul>
+         * <li>doPlaybook: runs a playbook.</li>
+         * <li>changeEventStatus: updates the event status.</li>
+         * <li>changeThreatLevel: updates the threat level of an event.</li>
+         * <li>addEventTag: adds a label to an event.</li>
+         * <li>deleteEventTag: deletes a label from an event.</li>
+         * <li>alertWhitelist: adds an alert to the whitelist.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>alertWhitelist</p>
          */
         public Builder responseActionType(String responseActionType) {
             this.putBodyParameter("ResponseActionType", responseActionType);
@@ -281,7 +315,10 @@ public class UpdateResponseRuleRequest extends Request {
         }
 
         /**
-         * ResponseExecutionCondition.
+         * <p>The trigger condition configuration of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;left&quot;:{&quot;value&quot;:&quot;threat_level&quot;},&quot;operator&quot;:&quot;equals&quot;,&quot;right&quot;:{&quot;value&quot;:&quot;suspicious&quot;}}]</p>
          */
         public Builder responseExecutionCondition(String responseExecutionCondition) {
             this.putBodyParameter("ResponseExecutionCondition", responseExecutionCondition);
@@ -290,7 +327,10 @@ public class UpdateResponseRuleRequest extends Request {
         }
 
         /**
-         * ResponseRuleId.
+         * <p>The ID of the automated response rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>440918</p>
          */
         public Builder responseRuleId(String responseRuleId) {
             this.putBodyParameter("ResponseRuleId", responseRuleId);
@@ -299,7 +339,10 @@ public class UpdateResponseRuleRequest extends Request {
         }
 
         /**
-         * ResponseRuleName.
+         * <p>The name of the automated response rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Send Notification When Generating Urgent Incident</p>
          */
         public Builder responseRuleName(String responseRuleName) {
             this.putBodyParameter("ResponseRuleName", responseRuleName);
@@ -308,7 +351,10 @@ public class UpdateResponseRuleRequest extends Request {
         }
 
         /**
-         * ResponseRulePriority.
+         * <p>The execution priority of the automated response rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder responseRulePriority(Integer responseRulePriority) {
             this.putBodyParameter("ResponseRulePriority", responseRulePriority);
@@ -317,7 +363,7 @@ public class UpdateResponseRuleRequest extends Request {
         }
 
         /**
-         * ResponseRuleRemark.
+         * <p>The remarks for the response rule.</p>
          */
         public Builder responseRuleRemark(String responseRuleRemark) {
             this.putBodyParameter("ResponseRuleRemark", responseRuleRemark);
@@ -326,7 +372,14 @@ public class UpdateResponseRuleRequest extends Request {
         }
 
         /**
-         * ResponseRuleStatus.
+         * <p>The status of the automated response rule. Valid values:</p>
+         * <ul>
+         * <li>0: disabled.</li>
+         * <li>100: enabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder responseRuleStatus(Integer responseRuleStatus) {
             this.putBodyParameter("ResponseRuleStatus", responseRuleStatus);
@@ -335,7 +388,15 @@ public class UpdateResponseRuleRequest extends Request {
         }
 
         /**
-         * ResponseTriggerType.
+         * <p>The trigger type of the automated response rule. Valid values:</p>
+         * <ul>
+         * <li>event: an event occurs.</li>
+         * <li>event_update: an event is updated.</li>
+         * <li>alert: an alert occurs.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>event</p>
          */
         public Builder responseTriggerType(String responseTriggerType) {
             this.putBodyParameter("ResponseTriggerType", responseTriggerType);

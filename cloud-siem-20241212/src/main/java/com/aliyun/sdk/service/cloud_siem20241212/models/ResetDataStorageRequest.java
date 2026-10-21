@@ -87,7 +87,17 @@ public class ResetDataStorageRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese.</li>
+         * <li><strong>en</strong>: English.<blockquote>
+         * <p>Note: This parameter is required. If you do not specify this parameter, the API returns a 400 error: &quot;The specified Lang can not be empty.&quot;</p>
+         * </blockquote>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -96,7 +106,14 @@ public class ResetDataStorageRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region where the threat analysis data management center resides. Specify the management center region based on the region of your assets. Valid values:</p>
+         * <ul>
+         * <li>cn-hangzhou: Your assets reside in the Chinese mainland.</li>
+         * <li>ap-southeast-1: Your assets reside outside China.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -105,7 +122,10 @@ public class ResetDataStorageRequest extends Request {
         }
 
         /**
-         * RoleFor.
+         * <p>The ID of the China Threat Detection and Response (CTDR) member to which the administrator switches the view.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>113091674488****</p>
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);

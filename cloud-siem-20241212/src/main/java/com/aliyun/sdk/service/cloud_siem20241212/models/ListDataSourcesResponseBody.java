@@ -145,7 +145,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * DataSources.
+         * <p>The alert source products associated with events.</p>
          */
         public Builder dataSources(java.util.List<DataSources> dataSources) {
             this.dataSources = dataSources;
@@ -153,7 +153,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return in this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -161,7 +164,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token for the next query. Leave this parameter empty for the first query or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -169,7 +175,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -177,7 +186,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -185,7 +197,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +208,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -201,7 +219,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPage.
+         * <p>The total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalPage(Integer totalPage) {
             this.totalPage = totalPage;
@@ -254,7 +275,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * DataIngestionId.
+             * <p>The data ingestion ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alibaba_cloud_sas_account_snapshot_log_173326*******</p>
              */
             public Builder dataIngestionId(String dataIngestionId) {
                 this.dataIngestionId = dataIngestionId;
@@ -425,7 +449,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * CheckTime.
+             * <p>The check time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1733269771123</p>
              */
             public Builder checkTime(Long checkTime) {
                 this.checkTime = checkTime;
@@ -433,7 +460,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1733269771123</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -441,7 +471,14 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceStoreFrom.
+             * <p>The data source origin. Valid values:</p>
+             * <ul>
+             * <li>center</li>
+             * <li>custom</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>center</p>
              */
             public Builder dataSourceStoreFrom(String dataSourceStoreFrom) {
                 this.dataSourceStoreFrom = dataSourceStoreFrom;
@@ -449,7 +486,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceStoreId.
+             * <p>The log store ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>di_xxxx_source_1</p>
              */
             public Builder dataSourceStoreId(String dataSourceStoreId) {
                 this.dataSourceStoreId = dataSourceStoreId;
@@ -457,7 +497,14 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceStoreStatus.
+             * <p>The log store status. Valid values:</p>
+             * <ul>
+             * <li>normal</li>
+             * <li>abnormal</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder dataSourceStoreStatus(String dataSourceStoreStatus) {
                 this.dataSourceStoreStatus = dataSourceStoreStatus;
@@ -465,7 +512,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceStoreStatusCode.
+             * <p>The log store status code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LogStoreNotExist</p>
              */
             public Builder dataSourceStoreStatusCode(String dataSourceStoreStatusCode) {
                 this.dataSourceStoreStatusCode = dataSourceStoreStatusCode;
@@ -473,7 +523,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * LogProjectName.
+             * <p>The Simple Log Service project name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliyun-cloudsiem-data-173326*******-cn-hangzhou</p>
              */
             public Builder logProjectName(String logProjectName) {
                 this.logProjectName = logProjectName;
@@ -481,7 +534,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * LogRegionId.
+             * <p>The log storage region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder logRegionId(String logRegionId) {
                 this.logRegionId = logRegionId;
@@ -489,7 +545,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * LogStoreName.
+             * <p>The Simple Log Service Logstore name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>audit-activity</p>
              */
             public Builder logStoreName(String logStoreName) {
                 this.logStoreName = logStoreName;
@@ -497,7 +556,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1733269771123</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -746,7 +808,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1733269771123</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -754,7 +819,14 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceFrom.
+             * <p>The data source origin. Valid values:</p>
+             * <ul>
+             * <li>center</li>
+             * <li>custom</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>center</p>
              */
             public Builder dataSourceFrom(String dataSourceFrom) {
                 this.dataSourceFrom = dataSourceFrom;
@@ -762,7 +834,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceId.
+             * <p>The data source ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ds-scpfegri73oyoknbc90c</p>
              */
             public Builder dataSourceId(String dataSourceId) {
                 this.dataSourceId = dataSourceId;
@@ -770,7 +845,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceName.
+             * <p>The data source name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AD_LOG</p>
              */
             public Builder dataSourceName(String dataSourceName) {
                 this.dataSourceName = dataSourceName;
@@ -778,7 +856,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceRecognizeEnabled.
+             * <p>Indicates whether automatic discovery of new Logstores is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder dataSourceRecognizeEnabled(Boolean dataSourceRecognizeEnabled) {
                 this.dataSourceRecognizeEnabled = dataSourceRecognizeEnabled;
@@ -786,7 +867,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceRecognizer.
+             * <p>The data source recognizer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alibaba_cloud_sas_account_snapshot</p>
              */
             public Builder dataSourceRecognizer(String dataSourceRecognizer) {
                 this.dataSourceRecognizer = dataSourceRecognizer;
@@ -794,7 +878,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceReferences.
+             * <p>The list of data ingestion IDs associated with the data source.</p>
              */
             public Builder dataSourceReferences(java.util.List<DataSourceReferences> dataSourceReferences) {
                 this.dataSourceReferences = dataSourceReferences;
@@ -802,7 +886,15 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceStatus.
+             * <p>The data source status. Valid values:</p>
+             * <ul>
+             * <li>unconfigured</li>
+             * <li>normal</li>
+             * <li>abnormal</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>unconfigured</p>
              */
             public Builder dataSourceStatus(String dataSourceStatus) {
                 this.dataSourceStatus = dataSourceStatus;
@@ -810,7 +902,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceStores.
+             * <p>The list of log services.</p>
              */
             public Builder dataSourceStores(java.util.List<DataSourceStores> dataSourceStores) {
                 this.dataSourceStores = dataSourceStores;
@@ -818,7 +910,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceTemplateId.
+             * <p>The data source template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alibaba_cloud_sas_account_snapshot_log_173326*******</p>
              */
             public Builder dataSourceTemplateId(String dataSourceTemplateId) {
                 this.dataSourceTemplateId = dataSourceTemplateId;
@@ -826,7 +921,14 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceType.
+             * <p>The data source type. Valid values:</p>
+             * <ul>
+             * <li>preset</li>
+             * <li>custom</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>custom</p>
              */
             public Builder dataSourceType(String dataSourceType) {
                 this.dataSourceType = dataSourceType;
@@ -834,7 +936,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * LogProjectName.
+             * <p>The Simple Log Service project name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliyun-cloudsiem-data-173326*******-cn-hangzhou</p>
              */
             public Builder logProjectName(String logProjectName) {
                 this.logProjectName = logProjectName;
@@ -842,7 +947,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * LogRegionId.
+             * <p>The log storage region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder logRegionId(String logRegionId) {
                 this.logRegionId = logRegionId;
@@ -850,7 +958,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * LogStoreName.
+             * <p>The Simple Log Service Logstore name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>audit-activity</p>
              */
             public Builder logStoreName(String logStoreName) {
                 this.logStoreName = logStoreName;
@@ -858,7 +969,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * LogUserId.
+             * <p>The data ingestion user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>173326*******</p>
              */
             public Builder logUserId(Long logUserId) {
                 this.logUserId = logUserId;
@@ -866,7 +980,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1733269771123</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

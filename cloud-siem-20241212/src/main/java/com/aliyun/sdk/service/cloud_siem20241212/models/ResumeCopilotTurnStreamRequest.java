@@ -132,10 +132,11 @@ public class ResumeCopilotTurnStreamRequest extends Request {
         } 
 
         /**
+         * <p>The conversation ID. This parameter is required for the second and subsequent turns in a multi-turn conversation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>BABCD2D02C73A3E6CBD6EDC7A4488939</p>
+         * <p>54b6c969-4b75-47be-9f43-71f88aeb****</p>
          */
         public Builder conversationId(String conversationId) {
             this.putBodyParameter("ConversationId", conversationId);
@@ -144,6 +145,7 @@ public class ResumeCopilotTurnStreamRequest extends Request {
         }
 
         /**
+         * <p>The native run cursor mapping.</p>
          * <p>This parameter is required.</p>
          */
         public Builder cursorByRun(java.util.Map<String, Long> cursorByRun) {
@@ -154,7 +156,14 @@ public class ResumeCopilotTurnStreamRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -163,7 +172,14 @@ public class ResumeCopilotTurnStreamRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region where the data management center for threat analysis is located. You need to select the management center based on the region of your assets. Valid values:</p>
+         * <ul>
+         * <li>cn-hangzhou: The asset belongs to the Chinese mainland and China (Hong Kong).</li>
+         * <li>ap-southeast-1: The asset belongs to a region outside the Chinese mainland.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -172,7 +188,10 @@ public class ResumeCopilotTurnStreamRequest extends Request {
         }
 
         /**
-         * TraceId.
+         * <p>The trace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>550e8400e29b41d4a71644665544****</p>
          */
         public Builder traceId(String traceId) {
             this.putBodyParameter("TraceId", traceId);
@@ -181,10 +200,11 @@ public class ResumeCopilotTurnStreamRequest extends Request {
         }
 
         /**
+         * <p>The primary key ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>dc18b894-19a3-45ee-8768-a59478e00f65</p>
+         * <p>dc18b894-19a3-45ee-8768-a59478e0****</p>
          */
         public Builder turnId(String turnId) {
             this.putBodyParameter("TurnId", turnId);

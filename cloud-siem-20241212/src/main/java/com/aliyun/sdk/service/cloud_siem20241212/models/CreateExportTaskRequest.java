@@ -115,7 +115,15 @@ public class CreateExportTaskRequest extends Request {
         } 
 
         /**
-         * ExportTaskParameter.
+         * <p>The export task parameters, which are concatenated based on query conditions in JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;IncidentName&quot;: &quot;name&quot;,
+         *     &quot;IncidentStatus&quot;: &quot;1&quot;,
+         *     &quot;ThreatLevel&quot;:[&quot;1&quot;,&quot;2&quot;],
+         *     &quot;IncidentUuids&quot;:&quot;315EE627-39DC-560A-8DFD-CBF66AD9****&quot;
+         * }</p>
          */
         public Builder exportTaskParameter(String exportTaskParameter) {
             this.putBodyParameter("ExportTaskParameter", exportTaskParameter);
@@ -124,7 +132,13 @@ public class CreateExportTaskRequest extends Request {
         }
 
         /**
-         * ExportTaskType.
+         * <p>The export type. Valid values:</p>
+         * <ul>
+         * <li>incident_list: Event list.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>incident_list</p>
          */
         public Builder exportTaskType(String exportTaskType) {
             this.putBodyParameter("ExportTaskType", exportTaskType);
@@ -133,7 +147,17 @@ public class CreateExportTaskRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese.</li>
+         * <li><strong>en</strong>: English.<blockquote>
+         * <p>Note: This parameter is required. If you do not specify this parameter, the API returns a 400 error: &quot;The specified Lang can not be empty.&quot;</p>
+         * </blockquote>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -142,7 +166,14 @@ public class CreateExportTaskRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region where the threat analysis data management center resides. Specify the management center region based on the region of your assets. Valid values:</p>
+         * <ul>
+         * <li>cn-hangzhou: Your assets reside in the Chinese mainland.</li>
+         * <li>ap-southeast-1: Your assets reside outside China.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -151,7 +182,10 @@ public class CreateExportTaskRequest extends Request {
         }
 
         /**
-         * RoleFor.
+         * <p>The ID of the member to which the administrator switches the view.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>113091674488****</p>
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);

@@ -269,7 +269,7 @@ public class ListDataConnectorsRequest extends Request {
         } 
 
         /**
-         * DataConnectorIds.
+         * <p>The list of collector IDs.</p>
          */
         public Builder dataConnectorIds(java.util.List<String> dataConnectorIds) {
             String dataConnectorIdsShrink = shrink(dataConnectorIds, "DataConnectorIds", "json");
@@ -279,7 +279,10 @@ public class ListDataConnectorsRequest extends Request {
         }
 
         /**
-         * DataConnectorName.
+         * <p>The collector name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SAS-CTDR-2026070210****</p>
          */
         public Builder dataConnectorName(String dataConnectorName) {
             this.putBodyParameter("DataConnectorName", dataConnectorName);
@@ -288,7 +291,14 @@ public class ListDataConnectorsRequest extends Request {
         }
 
         /**
-         * DataConnectorStatus.
+         * <p>The collector status. Valid values:</p>
+         * <ul>
+         * <li>enabled: Enabled.</li>
+         * <li>disabled (default): Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         public Builder dataConnectorStatus(String dataConnectorStatus) {
             this.putBodyParameter("DataConnectorStatus", dataConnectorStatus);
@@ -297,7 +307,15 @@ public class ListDataConnectorsRequest extends Request {
         }
 
         /**
-         * DataConnectorType.
+         * <p>The collector type. Valid values:</p>
+         * <ul>
+         * <li>oss</li>
+         * <li>s3</li>
+         * <li>kafka</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>s3</p>
          */
         public Builder dataConnectorType(String dataConnectorType) {
             this.putBodyParameter("DataConnectorType", dataConnectorType);
@@ -306,7 +324,10 @@ public class ListDataConnectorsRequest extends Request {
         }
 
         /**
-         * DestDataSourceId.
+         * <p>The destination data source ID. This parameter is required only for synchronization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ds-5sfe68t122pxnti1cjpl</p>
          */
         public Builder destDataSourceId(String destDataSourceId) {
             this.putBodyParameter("DestDataSourceId", destDataSourceId);
@@ -315,7 +336,15 @@ public class ListDataConnectorsRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * <p>Note: This parameter is required. If you do not specify this parameter, the service returns a 400 error: &quot;The specified Lang can not be empty.&quot; Explicitly pass a language code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -324,7 +353,10 @@ public class ListDataConnectorsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of results to return when you use the NextToken-based pagination method. Valid values: 1 to 100. Default value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -333,7 +365,10 @@ public class ListDataConnectorsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token for the next query. Leave this parameter empty for the first query or if no more results exist. If a next page exists, set this parameter to the NextToken value returned by the previous API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -342,7 +377,10 @@ public class ListDataConnectorsRequest extends Request {
         }
 
         /**
-         * OrderField.
+         * <p>The sort field. Currently, only sorting by updateTime is supported. If OrderField is empty, the default order returned by the database is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Id</p>
          */
         public Builder orderField(String orderField) {
             this.putBodyParameter("OrderField", orderField);
@@ -351,7 +389,14 @@ public class ListDataConnectorsRequest extends Request {
         }
 
         /**
-         * OrderType.
+         * <p>The sort order. Valid values:</p>
+         * <ul>
+         * <li>asc: ascending order.</li>
+         * <li>desc (default): descending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder orderType(String orderType) {
             this.putBodyParameter("OrderType", orderType);
@@ -360,7 +405,10 @@ public class ListDataConnectorsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The current page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -369,7 +417,10 @@ public class ListDataConnectorsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of records per page. Default value: 1000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -378,7 +429,14 @@ public class ListDataConnectorsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region where the threat analysis data management center resides. Specify the management center region based on the region of your assets. Valid values:</p>
+         * <ul>
+         * <li>cn-hangzhou: The assets reside in the Chinese mainland.</li>
+         * <li>ap-southeast-1: The assets reside outside China.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -387,7 +445,10 @@ public class ListDataConnectorsRequest extends Request {
         }
 
         /**
-         * RoleFor.
+         * <p>The ID of the member to which the administrator switches the view.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>113091674488****</p>
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);
@@ -396,7 +457,10 @@ public class ListDataConnectorsRequest extends Request {
         }
 
         /**
-         * SlsIngestionJobName.
+         * <p>The name of the Simple Log Service (SLS) data import job for the collector.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ingest-oss-dc-1a2b3c4d5e6f7a8****</p>
          */
         public Builder slsIngestionJobName(String slsIngestionJobName) {
             this.putBodyParameter("SlsIngestionJobName", slsIngestionJobName);
@@ -405,7 +469,10 @@ public class ListDataConnectorsRequest extends Request {
         }
 
         /**
-         * SrcDataType.
+         * <p>The source data type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s3</p>
          */
         public Builder srcDataType(String srcDataType) {
             this.putBodyParameter("SrcDataType", srcDataType);

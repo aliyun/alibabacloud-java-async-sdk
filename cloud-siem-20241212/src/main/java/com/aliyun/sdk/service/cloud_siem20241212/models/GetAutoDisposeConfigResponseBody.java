@@ -67,7 +67,7 @@ public class GetAutoDisposeConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * AutoDisposeConfig.
+         * <p>The automatic response configuration.</p>
          */
         public Builder autoDisposeConfig(AutoDisposeConfig autoDisposeConfig) {
             this.autoDisposeConfig = autoDisposeConfig;
@@ -75,7 +75,7 @@ public class GetAutoDisposeConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9AAA9ED9-78F4-5021-86DC-D51C7511****</p>
@@ -144,7 +144,16 @@ public class GetAutoDisposeConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * AutoDecisionStatus.
+             * <p>Indicates whether automatic response is enabled. Valid values:</p>
+             * <ul>
+             * <li><p>enabled: Enabled.</p>
+             * </li>
+             * <li><p>disabled: Disabled.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder autoDecisionStatus(String autoDecisionStatus) {
                 this.autoDecisionStatus = autoDecisionStatus;
@@ -152,7 +161,10 @@ public class GetAutoDisposeConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ProductCode.
+             * <p>The code for the cloud product.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alibaba_cloud_sas</p>
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;

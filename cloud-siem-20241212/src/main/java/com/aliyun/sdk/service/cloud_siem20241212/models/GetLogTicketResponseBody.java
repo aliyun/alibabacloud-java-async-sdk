@@ -67,7 +67,10 @@ public class GetLogTicketResponseBody extends TeaModel {
         } 
 
         /**
-         * LogTicket.
+         * <p>The Simple Log Service ticket.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder logTicket(String logTicket) {
             this.logTicket = logTicket;
@@ -75,7 +78,10 @@ public class GetLogTicketResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>173326*******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

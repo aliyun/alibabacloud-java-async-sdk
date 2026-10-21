@@ -115,7 +115,15 @@ public class GetNormalizationSchemaRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>The language of the response message. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * <p>Note: This parameter is required in actual API calls. If you do not specify this parameter, the service returns a 400 error with the message &quot;The specified Lang can not be empty.&quot; Explicitly specify the language code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -124,7 +132,10 @@ public class GetNormalizationSchemaRequest extends Request {
         }
 
         /**
-         * NormalizationSchemaId.
+         * <p>The ID of the normalized rule category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP_ACTIVITY</p>
          */
         public Builder normalizationSchemaId(String normalizationSchemaId) {
             this.putBodyParameter("NormalizationSchemaId", normalizationSchemaId);
@@ -133,7 +144,14 @@ public class GetNormalizationSchemaRequest extends Request {
         }
 
         /**
-         * NormalizationSchemaType.
+         * <p>The type of the normalized schema. Valid values:</p>
+         * <ul>
+         * <li>log: Log.</li>
+         * <li>entity: Entity. This parameter is required in actual API calls. If you do not specify this parameter, the service returns a 400 error.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>log</p>
          */
         public Builder normalizationSchemaType(String normalizationSchemaType) {
             this.putBodyParameter("NormalizationSchemaType", normalizationSchemaType);
@@ -142,7 +160,14 @@ public class GetNormalizationSchemaRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region of the data management center for Threat Analysis. Select the region of the management center based on the region where your assets are located. Valid values:</p>
+         * <ul>
+         * <li>cn-hangzhou: Assets are located in the Chinese mainland.</li>
+         * <li>ap-southeast-1: Assets are located outside the Chinese mainland.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -151,7 +176,10 @@ public class GetNormalizationSchemaRequest extends Request {
         }
 
         /**
-         * RoleFor.
+         * <p>The ID of the user whose perspective the administrator switches to.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>173326*******</p>
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);

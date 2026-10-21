@@ -67,7 +67,10 @@ public class CreateProductResponseBody extends TeaModel {
         } 
 
         /**
-         * ProductId.
+         * <p>The product ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alibaba_cloud_sas</p>
          */
         public Builder productId(String productId) {
             this.productId = productId;
@@ -75,7 +78,10 @@ public class CreateProductResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -157,7 +157,15 @@ public class ListNormalizationFieldsRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese.</li>
+         * <li><strong>en</strong>: English.
+         * This parameter is required and cannot be omitted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -166,7 +174,10 @@ public class ListNormalizationFieldsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -175,7 +186,10 @@ public class ListNormalizationFieldsRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The field name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>category</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -184,7 +198,10 @@ public class ListNormalizationFieldsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>Specifies whether a next query token exists. Leave this parameter empty for the first query or when no more results are available. If a next page exists, set this parameter to the NextToken value returned by the previous API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -193,7 +210,10 @@ public class ListNormalizationFieldsRequest extends Request {
         }
 
         /**
-         * NormalizationFieldSource.
+         * <p>The field source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>native</p>
          */
         public Builder normalizationFieldSource(String normalizationFieldSource) {
             this.putBodyParameter("NormalizationFieldSource", normalizationFieldSource);
@@ -202,7 +222,10 @@ public class ListNormalizationFieldsRequest extends Request {
         }
 
         /**
-         * NormalizationSchemaType.
+         * <p>The schema type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>log</p>
          */
         public Builder normalizationSchemaType(String normalizationSchemaType) {
             this.putBodyParameter("NormalizationSchemaType", normalizationSchemaType);
@@ -211,7 +234,14 @@ public class ListNormalizationFieldsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region where the threat analysis data management center resides. Specify the management center region based on the region of your assets. Valid values:</p>
+         * <ul>
+         * <li>cn-hangzhou: The assets reside in the Chinese mainland.</li>
+         * <li>ap-southeast-1: The assets reside outside China.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -220,7 +250,10 @@ public class ListNormalizationFieldsRequest extends Request {
         }
 
         /**
-         * RoleFor.
+         * <p>The user ID that the administrator switches to when viewing as another member.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>173326*******</p>
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);

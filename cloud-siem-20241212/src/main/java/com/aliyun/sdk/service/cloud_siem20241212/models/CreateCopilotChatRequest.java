@@ -271,7 +271,10 @@ public class CreateCopilotChatRequest extends Request {
         } 
 
         /**
-         * ClientConversationId.
+         * <p>The client conversation ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>54b6c969-4b75-47be-9f43-71f88aeb****</p>
          */
         public Builder clientConversationId(String clientConversationId) {
             this.putBodyParameter("ClientConversationId", clientConversationId);
@@ -280,10 +283,11 @@ public class CreateCopilotChatRequest extends Request {
         }
 
         /**
+         * <p>The client message ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>366932fb-9a83-4a2d-94dd-c925b35fcc0c</p>
+         * <p>366932fb-9a83-4a2d-94dd-c925b35f****</p>
          */
         public Builder clientMessageId(String clientMessageId) {
             this.putBodyParameter("ClientMessageId", clientMessageId);
@@ -292,7 +296,10 @@ public class CreateCopilotChatRequest extends Request {
         }
 
         /**
-         * ConversationId.
+         * <p>The conversation ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>54b6c969-4b75-47be-9f43-71f88aeb****</p>
          */
         public Builder conversationId(String conversationId) {
             this.putBodyParameter("ConversationId", conversationId);
@@ -301,7 +308,7 @@ public class CreateCopilotChatRequest extends Request {
         }
 
         /**
-         * CreateConversation.
+         * <p>The conversation creation configuration.</p>
          */
         public Builder createConversation(CreateConversation createConversation) {
             String createConversationShrink = shrink(createConversation, "CreateConversation", "json");
@@ -311,7 +318,14 @@ public class CreateCopilotChatRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the returned messages. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -320,6 +334,7 @@ public class CreateCopilotChatRequest extends Request {
         }
 
         /**
+         * <p>The list of messages.</p>
          * <p>This parameter is required.</p>
          */
         public Builder messages(java.util.List<Messages> messages) {
@@ -330,7 +345,10 @@ public class CreateCopilotChatRequest extends Request {
         }
 
         /**
-         * Model.
+         * <p>The model identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen3.7-max</p>
          */
         public Builder model(String model) {
             this.putBodyParameter("Model", model);
@@ -339,7 +357,10 @@ public class CreateCopilotChatRequest extends Request {
         }
 
         /**
-         * PlanMode.
+         * <p>The planning configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         public Builder planMode(String planMode) {
             this.putBodyParameter("PlanMode", planMode);
@@ -348,7 +369,10 @@ public class CreateCopilotChatRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The security project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>project-incident-****</p>
          */
         public Builder projectId(String projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -357,7 +381,14 @@ public class CreateCopilotChatRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region of the data management center for threat analysis. Specify the management center based on the region where your assets reside. Valid values:</p>
+         * <ul>
+         * <li>cn-hangzhou: Your assets reside in the Chinese mainland.</li>
+         * <li>ap-southeast-1: Your assets reside in regions outside the Chinese mainland.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -366,7 +397,10 @@ public class CreateCopilotChatRequest extends Request {
         }
 
         /**
-         * ReplaceTurnId.
+         * <p>The ID of the conversation turn to replace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dc18b894-19a3-45ee-8768-a59478e0****</p>
          */
         public Builder replaceTurnId(String replaceTurnId) {
             this.putBodyParameter("ReplaceTurnId", replaceTurnId);
@@ -375,7 +409,10 @@ public class CreateCopilotChatRequest extends Request {
         }
 
         /**
-         * RouteTarget.
+         * <p>The route target identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>security-agent-route-****</p>
          */
         public Builder routeTarget(String routeTarget) {
             this.putBodyParameter("RouteTarget", routeTarget);
@@ -384,7 +421,10 @@ public class CreateCopilotChatRequest extends Request {
         }
 
         /**
-         * Source.
+         * <p>The request source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>console</p>
          */
         public Builder source(String source) {
             this.putBodyParameter("Source", source);
@@ -393,7 +433,10 @@ public class CreateCopilotChatRequest extends Request {
         }
 
         /**
-         * Stream.
+         * <p>Specifies whether to enable streaming responses.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder stream(Boolean stream) {
             this.putBodyParameter("Stream", stream);
@@ -402,7 +445,10 @@ public class CreateCopilotChatRequest extends Request {
         }
 
         /**
-         * ThinkingMode.
+         * <p>The deep thinking configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         public Builder thinkingMode(String thinkingMode) {
             this.putBodyParameter("ThinkingMode", thinkingMode);
@@ -411,7 +457,10 @@ public class CreateCopilotChatRequest extends Request {
         }
 
         /**
-         * TraceId.
+         * <p>The trace ID, which is used to query specific call information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>550e8400e29b41d4a71644665544****</p>
          */
         public Builder traceId(String traceId) {
             this.putBodyParameter("TraceId", traceId);
@@ -518,7 +567,10 @@ public class CreateCopilotChatRequest extends Request {
             } 
 
             /**
-             * Model.
+             * <p>The model identifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen3.7-max</p>
              */
             public Builder model(String model) {
                 this.model = model;
@@ -526,7 +578,10 @@ public class CreateCopilotChatRequest extends Request {
             }
 
             /**
-             * PlanMode.
+             * <p>The planning configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder planMode(String planMode) {
                 this.planMode = planMode;
@@ -534,7 +589,10 @@ public class CreateCopilotChatRequest extends Request {
             }
 
             /**
-             * ProjectId.
+             * <p>The security project ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>project-incident-****</p>
              */
             public Builder projectId(String projectId) {
                 this.projectId = projectId;
@@ -542,7 +600,10 @@ public class CreateCopilotChatRequest extends Request {
             }
 
             /**
-             * ThinkingMode.
+             * <p>The deep thinking configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder thinkingMode(String thinkingMode) {
                 this.thinkingMode = thinkingMode;
@@ -550,7 +611,10 @@ public class CreateCopilotChatRequest extends Request {
             }
 
             /**
-             * Title.
+             * <p>The conversation title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Security incident investigation</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -617,7 +681,10 @@ public class CreateCopilotChatRequest extends Request {
             } 
 
             /**
-             * Content.
+             * <p>The message content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Investigate abnormal login activities in the last hour</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -625,7 +692,10 @@ public class CreateCopilotChatRequest extends Request {
             }
 
             /**
-             * Role.
+             * <p>The message role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user</p>
              */
             public Builder role(String role) {
                 this.role = role;

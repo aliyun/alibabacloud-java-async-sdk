@@ -115,7 +115,15 @@ public class CreateProductRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese.</li>
+         * <li><strong>en</strong>: English.
+         * Note: This parameter is required in practice. If you do not specify this parameter, the service returns a 400 error: &quot;The specified Lang can not be empty.&quot;</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -124,7 +132,10 @@ public class CreateProductRequest extends Request {
         }
 
         /**
-         * ProductName.
+         * <p>The product name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alibaba_cloud_sas</p>
          */
         public Builder productName(String productName) {
             this.putBodyParameter("ProductName", productName);
@@ -133,7 +144,14 @@ public class CreateProductRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region where the threat analysis data management center resides. Specify the management center based on the region of your assets. Valid values:</p>
+         * <ul>
+         * <li>cn-hangzhou: Your assets reside in the Chinese mainland.</li>
+         * <li>ap-southeast-1: Your assets reside outside China.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -142,7 +160,10 @@ public class CreateProductRequest extends Request {
         }
 
         /**
-         * RoleFor.
+         * <p>The user ID that the administrator uses to switch to the view of another member.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>173326*******</p>
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);
@@ -151,7 +172,10 @@ public class CreateProductRequest extends Request {
         }
 
         /**
-         * VendorName.
+         * <p>The vendor name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111</p>
          */
         public Builder vendorName(String vendorName) {
             this.putBodyParameter("VendorName", vendorName);

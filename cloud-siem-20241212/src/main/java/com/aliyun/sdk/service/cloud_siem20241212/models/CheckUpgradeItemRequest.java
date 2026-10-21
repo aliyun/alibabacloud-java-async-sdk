@@ -101,7 +101,15 @@ public class CheckUpgradeItemRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese.</li>
+         * <li><strong>en</strong>: English.
+         * Note: This parameter is required in practice. If you do not specify this parameter, the API returns a 400 error: &quot;The specified Lang can not be empty.&quot;</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -110,7 +118,14 @@ public class CheckUpgradeItemRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region where the threat analysis data management center resides. Specify the management center region based on the region of your assets. Valid values:</p>
+         * <ul>
+         * <li>cn-hangzhou: The assets reside in the Chinese mainland.</li>
+         * <li>ap-southeast-1: The assets reside outside China.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -119,7 +134,10 @@ public class CheckUpgradeItemRequest extends Request {
         }
 
         /**
-         * RoleFor.
+         * <p>The ID of the member to which the administrator switches the view.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>113091674488****</p>
          */
         public Builder roleFor(String roleFor) {
             this.putBodyParameter("RoleFor", roleFor);
@@ -128,7 +146,10 @@ public class CheckUpgradeItemRequest extends Request {
         }
 
         /**
-         * UpgradeItemId.
+         * <p>The upgrade item ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dispose_task_upgrade</p>
          */
         public Builder upgradeItemId(String upgradeItemId) {
             this.putBodyParameter("UpgradeItemId", upgradeItemId);

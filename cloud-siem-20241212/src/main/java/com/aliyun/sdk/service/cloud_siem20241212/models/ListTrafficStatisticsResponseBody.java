@@ -67,7 +67,10 @@ public class ListTrafficStatisticsResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class ListTrafficStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * TrafficStatistics.
+         * <p>The list of traffic statistics.</p>
          */
         public Builder trafficStatistics(java.util.List<TrafficStatistics> trafficStatistics) {
             this.trafficStatistics = trafficStatistics;
@@ -141,7 +144,10 @@ public class ListTrafficStatisticsResponseBody extends TeaModel {
             } 
 
             /**
-             * TrafficStatisticTime.
+             * <p>The statistical time. The value is a date number in the YYYYMMDD format. For example, 20250815 indicates August 15, 2025.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20250815</p>
              */
             public Builder trafficStatisticTime(Long trafficStatisticTime) {
                 this.trafficStatisticTime = trafficStatisticTime;
@@ -149,7 +155,10 @@ public class ListTrafficStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * TrafficStatisticValue.
+             * <p>The statistical value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.699814</p>
              */
             public Builder trafficStatisticValue(Double trafficStatisticValue) {
                 this.trafficStatisticValue = trafficStatisticValue;
@@ -216,7 +225,7 @@ public class ListTrafficStatisticsResponseBody extends TeaModel {
             } 
 
             /**
-             * TrafficStatisticData.
+             * <p>The statistics information.</p>
              */
             public Builder trafficStatisticData(java.util.List<TrafficStatisticData> trafficStatisticData) {
                 this.trafficStatisticData = trafficStatisticData;
@@ -224,7 +233,10 @@ public class ListTrafficStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * TrafficStatisticTarget.
+             * <p>The statistical target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>all</p>
              */
             public Builder trafficStatisticTarget(String trafficStatisticTarget) {
                 this.trafficStatisticTarget = trafficStatisticTarget;

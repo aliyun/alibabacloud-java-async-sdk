@@ -283,7 +283,15 @@ public class ListNormalizationRulesRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese.</li>
+         * <li><strong>en</strong>: English.
+         * This parameter is required in practice. If you do not specify this parameter, the API returns a 400 error (The specified Lang can not be empty.).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -292,7 +300,10 @@ public class ListNormalizationRulesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return in this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -301,7 +312,10 @@ public class ListNormalizationRulesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token for the next query. You do not need to specify this parameter for the first query or if no more results exist. If a next query is required, set this parameter to the NextToken value returned by the previous API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -310,7 +324,10 @@ public class ListNormalizationRulesRequest extends Request {
         }
 
         /**
-         * NormalizationCategoryId.
+         * <p>The normalization rule category ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NETWORK_CATEGORY</p>
          */
         public Builder normalizationCategoryId(String normalizationCategoryId) {
             this.putBodyParameter("NormalizationCategoryId", normalizationCategoryId);
@@ -319,7 +336,7 @@ public class ListNormalizationRulesRequest extends Request {
         }
 
         /**
-         * NormalizationRuleIds.
+         * <p>The list of normalization rule IDs.</p>
          */
         public Builder normalizationRuleIds(java.util.List<String> normalizationRuleIds) {
             String normalizationRuleIdsShrink = shrink(normalizationRuleIds, "NormalizationRuleIds", "simple");
@@ -329,7 +346,10 @@ public class ListNormalizationRulesRequest extends Request {
         }
 
         /**
-         * NormalizationRuleName.
+         * <p>The normalization rule name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>normalization_rule_Z57np</p>
          */
         public Builder normalizationRuleName(String normalizationRuleName) {
             this.putBodyParameter("NormalizationRuleName", normalizationRuleName);
@@ -338,7 +358,14 @@ public class ListNormalizationRulesRequest extends Request {
         }
 
         /**
-         * NormalizationRuleType.
+         * <p>The normalization rule type. Valid values:</p>
+         * <ul>
+         * <li>predefined: predefined normalization rule.</li>
+         * <li>custom: custom normalization rule.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>predefined</p>
          */
         public Builder normalizationRuleType(String normalizationRuleType) {
             this.putBodyParameter("NormalizationRuleType", normalizationRuleType);
@@ -347,7 +374,10 @@ public class ListNormalizationRulesRequest extends Request {
         }
 
         /**
-         * NormalizationSchemaId.
+         * <p>The normalization schema ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP_ACTIVITY</p>
          */
         public Builder normalizationSchemaId(String normalizationSchemaId) {
             this.putBodyParameter("NormalizationSchemaId", normalizationSchemaId);
@@ -356,7 +386,10 @@ public class ListNormalizationRulesRequest extends Request {
         }
 
         /**
-         * NormalizationSecurityDomainId.
+         * <p>The security domain ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NETWORK_AND_WEB_SECURITY</p>
          */
         public Builder normalizationSecurityDomainId(String normalizationSecurityDomainId) {
             this.putBodyParameter("NormalizationSecurityDomainId", normalizationSecurityDomainId);
@@ -365,7 +398,10 @@ public class ListNormalizationRulesRequest extends Request {
         }
 
         /**
-         * OrderField.
+         * <p>The field used for sorting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UpdateTime</p>
          */
         public Builder orderField(String orderField) {
             this.putBodyParameter("OrderField", orderField);
@@ -374,7 +410,14 @@ public class ListNormalizationRulesRequest extends Request {
         }
 
         /**
-         * OrderType.
+         * <p>The sort order. Valid values:</p>
+         * <ul>
+         * <li>desc</li>
+         * <li>asc</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder orderType(String orderType) {
             this.putBodyParameter("OrderType", orderType);
@@ -383,7 +426,10 @@ public class ListNormalizationRulesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -392,7 +438,10 @@ public class ListNormalizationRulesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -401,7 +450,10 @@ public class ListNormalizationRulesRequest extends Request {
         }
 
         /**
-         * ProductId.
+         * <p>The product ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alibaba_cloud_sas</p>
          */
         public Builder productId(String productId) {
             this.putBodyParameter("ProductId", productId);
@@ -410,7 +462,14 @@ public class ListNormalizationRulesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The data management center of threat analysis. Specify the management center based on the region where your assets reside. Valid values:</p>
+         * <ul>
+         * <li>cn-hangzhou: Your assets reside in the Chinese mainland.</li>
+         * <li>ap-southeast-1: Your assets reside outside China.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -419,7 +478,10 @@ public class ListNormalizationRulesRequest extends Request {
         }
 
         /**
-         * RoleFor.
+         * <p>The ID of the member to which the administrator switches the view.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>173326*******</p>
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);
@@ -428,7 +490,10 @@ public class ListNormalizationRulesRequest extends Request {
         }
 
         /**
-         * VendorId.
+         * <p>The vendor ID associated with the normalization rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alibaba_cloud</p>
          */
         public Builder vendorId(String vendorId) {
             this.putBodyParameter("VendorId", vendorId);

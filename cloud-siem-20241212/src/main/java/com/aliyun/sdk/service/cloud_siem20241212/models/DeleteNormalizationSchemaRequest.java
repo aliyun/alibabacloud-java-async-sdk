@@ -117,7 +117,14 @@ public class DeleteNormalizationSchemaRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -126,6 +133,7 @@ public class DeleteNormalizationSchemaRequest extends Request {
         }
 
         /**
+         * <p>The normalization schema ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,6 +146,11 @@ public class DeleteNormalizationSchemaRequest extends Request {
         }
 
         /**
+         * <p>The normalization schema type. Valid values:</p>
+         * <ul>
+         * <li>log: log.</li>
+         * <li>entity: entity.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -150,7 +163,14 @@ public class DeleteNormalizationSchemaRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region where the threat analysis data management center resides. Specify the management center based on the region where your assets reside. Valid values:</p>
+         * <ul>
+         * <li>cn-hangzhou: Your assets reside in the Chinese mainland.</li>
+         * <li>ap-southeast-1: Your assets reside outside China.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -159,7 +179,10 @@ public class DeleteNormalizationSchemaRequest extends Request {
         }
 
         /**
-         * RoleFor.
+         * <p>The user ID of the member to which the administrator switches the view.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>113091674488****</p>
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);

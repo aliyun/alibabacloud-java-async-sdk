@@ -80,7 +80,10 @@ public class CreateExportTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * FileName.
+         * <p>The name of the exported file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>event_1193842352994186_17344888****.xlsx</p>
          */
         public Builder fileName(String fileName) {
             this.fileName = fileName;
@@ -88,7 +91,10 @@ public class CreateExportTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Id.
+         * <p>The export task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400151</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -96,7 +102,10 @@ public class CreateExportTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

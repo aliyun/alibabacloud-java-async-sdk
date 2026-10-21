@@ -101,7 +101,17 @@ public class CreateVendorRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * <blockquote>
+         * <p>Note: This parameter is required in practice. If you omit it, the API returns a 400 error: &quot;The specified Lang can not be empty.&quot;</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -110,7 +120,14 @@ public class CreateVendorRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region where the threat analysis data management center is located. Specify the management center based on the region of your assets. Valid values:</p>
+         * <ul>
+         * <li>cn-hangzhou: Your assets belong to the Chinese mainland.</li>
+         * <li>ap-southeast-1: Your assets belong to regions outside China.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -119,7 +136,10 @@ public class CreateVendorRequest extends Request {
         }
 
         /**
-         * RoleFor.
+         * <p>The ID of the member account that the administrator switches to.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>173326*******</p>
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);
@@ -128,7 +148,10 @@ public class CreateVendorRequest extends Request {
         }
 
         /**
-         * VendorName.
+         * <p>The vendor name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111</p>
          */
         public Builder vendorName(String vendorName) {
             this.putBodyParameter("VendorName", vendorName);

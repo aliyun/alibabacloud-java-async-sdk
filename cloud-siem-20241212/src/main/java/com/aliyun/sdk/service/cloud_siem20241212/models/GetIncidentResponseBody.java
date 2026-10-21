@@ -67,7 +67,7 @@ public class GetIncidentResponseBody extends TeaModel {
         } 
 
         /**
-         * Incident.
+         * <p>The event information.</p>
          */
         public Builder incident(Incident incident) {
             this.incident = incident;
@@ -75,7 +75,10 @@ public class GetIncidentResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9AAA9ED9-78F4-5021-86DC-D51C7511****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -362,7 +365,18 @@ public class GetIncidentResponseBody extends TeaModel {
             } 
 
             /**
-             * AttckTactics.
+             * <p>The number of attack phases in the alerts associated with the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *     &quot;AttckTactics&quot;: [
+             *         {
+             *             &quot;tacticName&quot;: &quot;Reconnaissance&quot;,
+             *             &quot;alertNum&quot;: 0,
+             *             &quot;tacticId&quot;: &quot;TA0040&quot;
+             *         }
+             *     ]
+             * }</p>
              */
             public Builder attckTactics(Object attckTactics) {
                 this.attckTactics = attckTactics;
@@ -370,7 +384,10 @@ public class GetIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1757386075000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -378,7 +395,10 @@ public class GetIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * DetectionRuleId.
+             * <p>The ID of the detection rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dr-fy2zvgiykjifbiim****</p>
              */
             public Builder detectionRuleId(String detectionRuleId) {
                 this.detectionRuleId = detectionRuleId;
@@ -386,7 +406,17 @@ public class GetIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * IncidentAggregationType.
+             * <p>The event aggregation type. Valid values:</p>
+             * <ul>
+             * <li>none: No event is generated.</li>
+             * <li>graph_compute: Graph computing (supported by predefined rules).</li>
+             * <li>expert: Expert rules.</li>
+             * <li>passthrough: Alert pass-through (one-to-one).</li>
+             * <li>window: Similar event aggregation (window).</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>window</p>
              */
             public Builder incidentAggregationType(String incidentAggregationType) {
                 this.incidentAggregationType = incidentAggregationType;
@@ -394,7 +424,10 @@ public class GetIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * IncidentDescription.
+             * <p>The description of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Forti incident desc</p>
              */
             public Builder incidentDescription(String incidentDescription) {
                 this.incidentDescription = incidentDescription;
@@ -402,7 +435,10 @@ public class GetIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * IncidentName.
+             * <p>The name of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Forti</p>
              */
             public Builder incidentName(String incidentName) {
                 this.incidentName = incidentName;
@@ -410,7 +446,10 @@ public class GetIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * IncidentRemark.
+             * <p>The remarks on the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Remark</p>
              */
             public Builder incidentRemark(String incidentRemark) {
                 this.incidentRemark = incidentRemark;
@@ -418,7 +457,16 @@ public class GetIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * IncidentStatus.
+             * <p>The status of the event. Valid values:</p>
+             * <ul>
+             * <li>0: Unhandled.</li>
+             * <li>1: Processing.</li>
+             * <li>5: Processing failed.</li>
+             * <li>10: Handled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder incidentStatus(Integer incidentStatus) {
                 this.incidentStatus = incidentStatus;
@@ -426,7 +474,10 @@ public class GetIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * IncidentTags.
+             * <p>The tags of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;sys:data_source:waf&quot;]</p>
              */
             public Builder incidentTags(String incidentTags) {
                 this.incidentTags = incidentTags;
@@ -434,7 +485,10 @@ public class GetIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * IncidentUuid.
+             * <p>The UUID of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>85ea4241-798f-4684-a876-65d4f0c3****</p>
              */
             public Builder incidentUuid(String incidentUuid) {
                 this.incidentUuid = incidentUuid;
@@ -442,7 +496,10 @@ public class GetIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>The owner of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234567890xxxxxx</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -450,7 +507,10 @@ public class GetIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * RelateAlertCount.
+             * <p>The number of alerts associated with the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23</p>
              */
             public Builder relateAlertCount(Integer relateAlertCount) {
                 this.relateAlertCount = relateAlertCount;
@@ -458,7 +518,10 @@ public class GetIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * RelateAssetCount.
+             * <p>The number of assets associated with the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder relateAssetCount(Integer relateAssetCount) {
                 this.relateAssetCount = relateAssetCount;
@@ -466,7 +529,10 @@ public class GetIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * RelateDataSourceIds.
+             * <p>The list of associated data sources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;siem&quot;]</p>
              */
             public Builder relateDataSourceIds(Object relateDataSourceIds) {
                 this.relateDataSourceIds = relateDataSourceIds;
@@ -474,7 +540,10 @@ public class GetIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * RelateUserIds.
+             * <p>The list of user IDs associated with the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;176618589410****&quot;,&quot;1130916744888****&quot;]</p>
              */
             public Builder relateUserIds(Object relateUserIds) {
                 this.relateUserIds = relateUserIds;
@@ -482,7 +551,10 @@ public class GetIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseTime.
+             * <p>The response time in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1757386075000</p>
              */
             public Builder responseTime(Long responseTime) {
                 this.responseTime = responseTime;
@@ -490,7 +562,17 @@ public class GetIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * ThreatLevel.
+             * <p>The threat level. Valid values:</p>
+             * <ul>
+             * <li>5: Critical.</li>
+             * <li>4: High.</li>
+             * <li>3: Medium.</li>
+             * <li>2: Low.</li>
+             * <li>1: Informational.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder threatLevel(String threatLevel) {
                 this.threatLevel = threatLevel;
@@ -498,7 +580,10 @@ public class GetIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * ThreatScore.
+             * <p>The threat score of the event. Valid values: 0 to 100. A higher score indicates a higher risk level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>90</p>
              */
             public Builder threatScore(String threatScore) {
                 this.threatScore = threatScore;
@@ -506,7 +591,10 @@ public class GetIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The update time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1757386075000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

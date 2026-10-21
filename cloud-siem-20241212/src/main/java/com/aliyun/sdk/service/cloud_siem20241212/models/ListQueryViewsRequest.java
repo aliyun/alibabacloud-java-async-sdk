@@ -157,7 +157,15 @@ public class ListQueryViewsRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese.</li>
+         * <li><strong>en</strong>: English.
+         * Note: This parameter is required in practice. If you do not specify this parameter, the API returns a 400 error: &quot;The specified Lang can not be empty.&quot; You must explicitly pass zh or en.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -166,7 +174,10 @@ public class ListQueryViewsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of results to return when you use the NextToken-based pagination method. Valid values: 1 to 100. Default value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -175,7 +186,10 @@ public class ListQueryViewsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request or if no more results exist. Set this parameter to the NextToken value returned in the previous API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -184,7 +198,10 @@ public class ListQueryViewsRequest extends Request {
         }
 
         /**
-         * QueryViewScene.
+         * <p>The scene to which the query view belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alert</p>
          */
         public Builder queryViewScene(String queryViewScene) {
             this.putBodyParameter("QueryViewScene", queryViewScene);
@@ -193,7 +210,10 @@ public class ListQueryViewsRequest extends Request {
         }
 
         /**
-         * QueryViewType.
+         * <p>The view type. If this parameter is left empty, all views are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>preset</p>
          */
         public Builder queryViewType(String queryViewType) {
             this.putBodyParameter("QueryViewType", queryViewType);
@@ -202,7 +222,14 @@ public class ListQueryViewsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region where the Cloud Threat Detection and Response (CTDR) data management center resides. Specify this parameter based on the region of your assets. Valid values:</p>
+         * <ul>
+         * <li>cn-hangzhou: Your assets belong to the Chinese mainland or Hong Kong (China).</li>
+         * <li>ap-southeast-1: Your assets belong to regions outside China.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -211,7 +238,10 @@ public class ListQueryViewsRequest extends Request {
         }
 
         /**
-         * RoleFor.
+         * <p>The user ID of the member to which the administrator switches the view.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>113091674488****</p>
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);
@@ -220,7 +250,14 @@ public class ListQueryViewsRequest extends Request {
         }
 
         /**
-         * RoleType.
+         * <p>The view type.</p>
+         * <ul>
+         * <li>0: The view of the current Alibaba Cloud account.</li>
+         * <li>1: The view of all accounts in the enterprise.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder roleType(Integer roleType) {
             this.putBodyParameter("RoleType", roleType);

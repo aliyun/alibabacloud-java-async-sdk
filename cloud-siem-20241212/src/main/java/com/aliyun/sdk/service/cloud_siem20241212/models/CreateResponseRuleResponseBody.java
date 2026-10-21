@@ -78,7 +78,10 @@ public class CreateResponseRuleResponseBody extends TeaModel {
         }
 
         /**
-         * ResponseRuleId.
+         * <p>The ID of the automatic response rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>399827</p>
          */
         public Builder responseRuleId(String responseRuleId) {
             this.responseRuleId = responseRuleId;

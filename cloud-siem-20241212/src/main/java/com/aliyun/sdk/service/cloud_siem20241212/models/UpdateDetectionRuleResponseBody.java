@@ -54,7 +54,10 @@ public class UpdateDetectionRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B88A2D41-87B8-537E-A7D3-3416A39F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

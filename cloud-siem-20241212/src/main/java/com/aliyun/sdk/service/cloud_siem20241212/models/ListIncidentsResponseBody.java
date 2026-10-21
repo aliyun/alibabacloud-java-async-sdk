@@ -132,7 +132,7 @@ public class ListIncidentsResponseBody extends TeaModel {
         } 
 
         /**
-         * Incidents.
+         * <p>The list of incidents.</p>
          */
         public Builder incidents(java.util.List<Incidents> incidents) {
             this.incidents = incidents;
@@ -140,7 +140,10 @@ public class ListIncidentsResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to read in this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -148,7 +151,10 @@ public class ListIncidentsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token used to retrieve the next page of results. Leave this parameter empty for the first request or when there are no more pages. If more pages exist, set this parameter to the NextToken value returned by the previous API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -156,7 +162,10 @@ public class ListIncidentsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The current page number for pagination.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -164,7 +173,10 @@ public class ListIncidentsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to display per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -172,7 +184,10 @@ public class ListIncidentsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +195,10 @@ public class ListIncidentsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>57</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -493,7 +511,7 @@ public class ListIncidentsResponseBody extends TeaModel {
             } 
 
             /**
-             * AlertInfos.
+             * <p>The list of associated alert information.</p>
              */
             public Builder alertInfos(String alertInfos) {
                 this.alertInfos = alertInfos;
@@ -501,7 +519,7 @@ public class ListIncidentsResponseBody extends TeaModel {
             }
 
             /**
-             * AlertSources.
+             * <p>The list of alert source codes or modules.</p>
              */
             public Builder alertSources(java.util.List<String> alertSources) {
                 this.alertSources = alertSources;
@@ -509,7 +527,7 @@ public class ListIncidentsResponseBody extends TeaModel {
             }
 
             /**
-             * AttckTactics.
+             * <p>The list of MITRE ATT&amp;CK tactics.</p>
              */
             public Builder attckTactics(String attckTactics) {
                 this.attckTactics = attckTactics;
@@ -517,7 +535,10 @@ public class ListIncidentsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1603248483000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -525,7 +546,10 @@ public class ListIncidentsResponseBody extends TeaModel {
             }
 
             /**
-             * DetectionRuleId.
+             * <p>The ID of the detection rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dr-qo5ww6ux0uc28*****</p>
              */
             public Builder detectionRuleId(String detectionRuleId) {
                 this.detectionRuleId = detectionRuleId;
@@ -533,7 +557,7 @@ public class ListIncidentsResponseBody extends TeaModel {
             }
 
             /**
-             * DetectionRuleName.
+             * <p>The name of the detection rule.</p>
              */
             public Builder detectionRuleName(String detectionRuleName) {
                 this.detectionRuleName = detectionRuleName;
@@ -541,7 +565,7 @@ public class ListIncidentsResponseBody extends TeaModel {
             }
 
             /**
-             * EntityInfos.
+             * <p>The list of associated entity information.</p>
              */
             public Builder entityInfos(String entityInfos) {
                 this.entityInfos = entityInfos;
@@ -549,7 +573,7 @@ public class ListIncidentsResponseBody extends TeaModel {
             }
 
             /**
-             * IncidentDescription.
+             * <p>The description of the incident.</p>
              */
             public Builder incidentDescription(String incidentDescription) {
                 this.incidentDescription = incidentDescription;
@@ -557,7 +581,10 @@ public class ListIncidentsResponseBody extends TeaModel {
             }
 
             /**
-             * IncidentName.
+             * <p>The event name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ECS unusual log in</p>
              */
             public Builder incidentName(String incidentName) {
                 this.incidentName = incidentName;
@@ -565,7 +592,10 @@ public class ListIncidentsResponseBody extends TeaModel {
             }
 
             /**
-             * IncidentRemark.
+             * <p>The remark for the incident.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>remark</p>
              */
             public Builder incidentRemark(String incidentRemark) {
                 this.incidentRemark = incidentRemark;
@@ -573,7 +603,16 @@ public class ListIncidentsResponseBody extends TeaModel {
             }
 
             /**
-             * IncidentStatus.
+             * <p>The event status. Valid values:</p>
+             * <ul>
+             * <li>0: Unhandled.</li>
+             * <li>1: Handling.</li>
+             * <li>5: Handling failed.</li>
+             * <li>10: Handled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder incidentStatus(Integer incidentStatus) {
                 this.incidentStatus = incidentStatus;
@@ -581,7 +620,10 @@ public class ListIncidentsResponseBody extends TeaModel {
             }
 
             /**
-             * IncidentTags.
+             * <p>The event tags.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;sys:data_source:siem&quot;,&quot;sys:trigger_type:auto&quot;]</p>
              */
             public Builder incidentTags(String incidentTags) {
                 this.incidentTags = incidentTags;
@@ -589,7 +631,10 @@ public class ListIncidentsResponseBody extends TeaModel {
             }
 
             /**
-             * IncidentUuid.
+             * <p>The UUID of the incident.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dbb1d7211c9285c862aa89385098****</p>
              */
             public Builder incidentUuid(String incidentUuid) {
                 this.incidentUuid = incidentUuid;
@@ -597,7 +642,10 @@ public class ListIncidentsResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>The UID of the account responsible for the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234567890xxxxxx</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -605,7 +653,10 @@ public class ListIncidentsResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerName.
+             * <p>The display name of the incident owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alice</p>
              */
             public Builder ownerName(String ownerName) {
                 this.ownerName = ownerName;
@@ -613,7 +664,10 @@ public class ListIncidentsResponseBody extends TeaModel {
             }
 
             /**
-             * RelateAlertCount.
+             * <p>The number of alerts associated with the incident.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder relateAlertCount(Integer relateAlertCount) {
                 this.relateAlertCount = relateAlertCount;
@@ -621,7 +675,10 @@ public class ListIncidentsResponseBody extends TeaModel {
             }
 
             /**
-             * RelateAssetCount.
+             * <p>The number of assets associated with the incident.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder relateAssetCount(Integer relateAssetCount) {
                 this.relateAssetCount = relateAssetCount;
@@ -629,7 +686,10 @@ public class ListIncidentsResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseTime.
+             * <p>The response time, in milliseconds (ms).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1603248483000</p>
              */
             public Builder responseTime(Long responseTime) {
                 this.responseTime = responseTime;
@@ -637,7 +697,7 @@ public class ListIncidentsResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseTypes.
+             * <p>The list of response types. Valid values: auto, manual, ai.</p>
              */
             public Builder responseTypes(java.util.List<String> responseTypes) {
                 this.responseTypes = responseTypes;
@@ -645,7 +705,17 @@ public class ListIncidentsResponseBody extends TeaModel {
             }
 
             /**
-             * ThreatLevel.
+             * <p>The threat level. Valid values:</p>
+             * <ul>
+             * <li>5: Critical.</li>
+             * <li>4: High.</li>
+             * <li>3: Medium.</li>
+             * <li>2: Low.</li>
+             * <li>1: Informational.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder threatLevel(String threatLevel) {
                 this.threatLevel = threatLevel;
@@ -653,7 +723,10 @@ public class ListIncidentsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The update time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1603248483000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

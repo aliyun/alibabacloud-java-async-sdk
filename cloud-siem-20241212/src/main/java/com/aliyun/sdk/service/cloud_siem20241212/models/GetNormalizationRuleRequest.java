@@ -115,7 +115,14 @@ public class GetNormalizationRuleRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>The language of the response message. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -124,7 +131,10 @@ public class GetNormalizationRuleRequest extends Request {
         }
 
         /**
-         * NormalizationRuleId.
+         * <p>The ID of the normalization rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nr-z0b2ssjteut85uoh9nzp</p>
          */
         public Builder normalizationRuleId(String normalizationRuleId) {
             this.putBodyParameter("NormalizationRuleId", normalizationRuleId);
@@ -133,7 +143,10 @@ public class GetNormalizationRuleRequest extends Request {
         }
 
         /**
-         * NormalizationSecurityDomainId.
+         * <p>The ID of the normalization security domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NETWORK_AND_WEB_SECURITY</p>
          */
         public Builder normalizationSecurityDomainId(String normalizationSecurityDomainId) {
             this.putBodyParameter("NormalizationSecurityDomainId", normalizationSecurityDomainId);
@@ -142,7 +155,14 @@ public class GetNormalizationRuleRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region where the data management center of Threat Analysis is located. You must select the region of the management center based on the region where your assets are located. Valid values:</p>
+         * <ul>
+         * <li>cn-hangzhou: Assets are located in the Chinese mainland.</li>
+         * <li>ap-southeast-1: Assets are located outside the Chinese mainland.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -151,7 +171,10 @@ public class GetNormalizationRuleRequest extends Request {
         }
 
         /**
-         * RoleFor.
+         * <p>The ID of the user whose perspective the administrator switches to.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>173326*******</p>
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);

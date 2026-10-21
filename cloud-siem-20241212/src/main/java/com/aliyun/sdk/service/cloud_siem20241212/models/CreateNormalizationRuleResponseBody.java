@@ -67,7 +67,10 @@ public class CreateNormalizationRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * NormalizationRuleId.
+         * <p>The normalization rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nr-z0b2ssjteut85uoh9nzp</p>
          */
         public Builder normalizationRuleId(String normalizationRuleId) {
             this.normalizationRuleId = normalizationRuleId;
@@ -75,7 +78,10 @@ public class CreateNormalizationRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request message ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

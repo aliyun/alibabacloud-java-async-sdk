@@ -132,7 +132,7 @@ public class ListDataSetsResponseBody extends TeaModel {
         } 
 
         /**
-         * DataSets.
+         * <p>The list of datasets.</p>
          */
         public Builder dataSets(java.util.List<DataSets> dataSets) {
             this.dataSets = dataSets;
@@ -140,7 +140,10 @@ public class ListDataSetsResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of results to return when you use the NextToken-based pagination method. Valid values: 1 to 100. Default value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -148,7 +151,10 @@ public class ListDataSetsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token for the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -156,7 +162,10 @@ public class ListDataSetsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -164,7 +173,10 @@ public class ListDataSetsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -172,7 +184,10 @@ public class ListDataSetsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>157CFBB5-B56F-566F-8991-B3C51799****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +195,10 @@ public class ListDataSetsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>57</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -272,7 +290,10 @@ public class ListDataSetsResponseBody extends TeaModel {
             } 
 
             /**
-             * DataSetId.
+             * <p>The dataset ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dataset-nhcrmjpx1zsorlaq****</p>
              */
             public Builder dataSetId(String dataSetId) {
                 this.dataSetId = dataSetId;
@@ -280,7 +301,10 @@ public class ListDataSetsResponseBody extends TeaModel {
             }
 
             /**
-             * DataSetReferenceId.
+             * <p>The ID of the rule or playbook associated with the dataset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>456232</p>
              */
             public Builder dataSetReferenceId(String dataSetReferenceId) {
                 this.dataSetReferenceId = dataSetReferenceId;
@@ -288,7 +312,10 @@ public class ListDataSetsResponseBody extends TeaModel {
             }
 
             /**
-             * DataSetReferenceName.
+             * <p>The name of the rule or playbook associated with the dataset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>playbook_name</p>
              */
             public Builder dataSetReferenceName(String dataSetReferenceName) {
                 this.dataSetReferenceName = dataSetReferenceName;
@@ -296,7 +323,14 @@ public class ListDataSetsResponseBody extends TeaModel {
             }
 
             /**
-             * DataSetReferenceType.
+             * <p>The type of service associated with the dataset. Valid values:</p>
+             * <ul>
+             * <li>custom_rule: custom rule.</li>
+             * <li>playbook: playbook.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>playbook</p>
              */
             public Builder dataSetReferenceType(String dataSetReferenceType) {
                 this.dataSetReferenceType = dataSetReferenceType;
@@ -389,7 +423,14 @@ public class ListDataSetsResponseBody extends TeaModel {
             } 
 
             /**
-             * AutoRecognizeStatus.
+             * <p>The automatic recognition status. Valid values:</p>
+             * <ul>
+             * <li>enabled: enabled.</li>
+             * <li>disabled: disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder autoRecognizeStatus(String autoRecognizeStatus) {
                 this.autoRecognizeStatus = autoRecognizeStatus;
@@ -397,7 +438,21 @@ public class ListDataSetsResponseBody extends TeaModel {
             }
 
             /**
-             * IpWhitelistRecognizerType.
+             * <p>The IP type identified by the recognizer. Valid values:</p>
+             * <ul>
+             * <li>sas_vulnerability_scanner_ip: IP addresses of the Security Center vulnerability web scanner.</li>
+             * <li>waf_back_source_ip: back-to-origin IP addresses of Web Application Firewall (WAF).</li>
+             * <li>ddos_back_source_ip: back-to-origin IP addresses of Anti-DDoS.</li>
+             * <li>esa_back_source_ip: back-to-origin node IP addresses of Edge Security Acceleration (ESA).</li>
+             * <li>ecs_public_ip: public IP addresses of Elastic Compute Service (ECS) instances.</li>
+             * <li>slb_public_ip: public IP addresses of Server Load Balancer (SLB) instances.</li>
+             * <li>vpc_eip: elastic IP addresses (EIPs).</li>
+             * <li>cdn_back_source_ip: back-to-origin IP addresses of Content Delivery Network (CDN).</li>
+             * <li>ga_back_source_ip: back-to-origin IP addresses of Global Accelerator (GA).</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>waf_back_source_ip</p>
              */
             public Builder ipWhitelistRecognizerType(String ipWhitelistRecognizerType) {
                 this.ipWhitelistRecognizerType = ipWhitelistRecognizerType;
@@ -405,7 +460,14 @@ public class ListDataSetsResponseBody extends TeaModel {
             }
 
             /**
-             * RecognizeScope.
+             * <p>The recognition scope. Valid values:</p>
+             * <ul>
+             * <li>current_account: current account only.</li>
+             * <li>rd_accounts: multi-account enabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>current_account</p>
              */
             public Builder recognizeScope(String recognizeScope) {
                 this.recognizeScope = recognizeScope;
@@ -413,7 +475,10 @@ public class ListDataSetsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The update time. This value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1713787368000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -610,7 +675,10 @@ public class ListDataSetsResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The creation time. This value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1713787368000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -618,7 +686,10 @@ public class ListDataSetsResponseBody extends TeaModel {
             }
 
             /**
-             * DataSetDescription.
+             * <p>The dataset description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lmftest desc</p>
              */
             public Builder dataSetDescription(String dataSetDescription) {
                 this.dataSetDescription = dataSetDescription;
@@ -626,7 +697,10 @@ public class ListDataSetsResponseBody extends TeaModel {
             }
 
             /**
-             * DataSetFieldKeyName.
+             * <p>The unique key name of the dataset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ip</p>
              */
             public Builder dataSetFieldKeyName(String dataSetFieldKeyName) {
                 this.dataSetFieldKeyName = dataSetFieldKeyName;
@@ -634,7 +708,10 @@ public class ListDataSetsResponseBody extends TeaModel {
             }
 
             /**
-             * DataSetFieldNames.
+             * <p>The field names of the dataset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;ip&quot;,&quot;region&quot;]</p>
              */
             public Builder dataSetFieldNames(String dataSetFieldNames) {
                 this.dataSetFieldNames = dataSetFieldNames;
@@ -642,7 +719,10 @@ public class ListDataSetsResponseBody extends TeaModel {
             }
 
             /**
-             * DataSetFileName.
+             * <p>The name of the uploaded dataset file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloudsiem-dataset/1358117679873357_174338773****.csv</p>
              */
             public Builder dataSetFileName(String dataSetFileName) {
                 this.dataSetFileName = dataSetFileName;
@@ -650,7 +730,10 @@ public class ListDataSetsResponseBody extends TeaModel {
             }
 
             /**
-             * DataSetId.
+             * <p>The dataset ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dataset-t8ha6p7k61rmniqw****</p>
              */
             public Builder dataSetId(String dataSetId) {
                 this.dataSetId = dataSetId;
@@ -658,7 +741,10 @@ public class ListDataSetsResponseBody extends TeaModel {
             }
 
             /**
-             * DataSetName.
+             * <p>The dataset name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lmftest</p>
              */
             public Builder dataSetName(String dataSetName) {
                 this.dataSetName = dataSetName;
@@ -666,7 +752,7 @@ public class ListDataSetsResponseBody extends TeaModel {
             }
 
             /**
-             * DataSetReferences.
+             * <p>The dataset reference data.</p>
              */
             public Builder dataSetReferences(java.util.List<DataSetReferences> dataSetReferences) {
                 this.dataSetReferences = dataSetReferences;
@@ -674,7 +760,14 @@ public class ListDataSetsResponseBody extends TeaModel {
             }
 
             /**
-             * DataSetStatus.
+             * <p>The dataset status. Valid values:</p>
+             * <ul>
+             * <li>0: deleted.</li>
+             * <li>1: enabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder dataSetStatus(Integer dataSetStatus) {
                 this.dataSetStatus = dataSetStatus;
@@ -682,7 +775,14 @@ public class ListDataSetsResponseBody extends TeaModel {
             }
 
             /**
-             * DataSetType.
+             * <p>The dataset type. Valid values:</p>
+             * <ul>
+             * <li>custom: custom dataset.</li>
+             * <li>preset: predefined dataset.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>preset</p>
              */
             public Builder dataSetType(String dataSetType) {
                 this.dataSetType = dataSetType;
@@ -690,7 +790,7 @@ public class ListDataSetsResponseBody extends TeaModel {
             }
 
             /**
-             * IpWhitelistRecognizers.
+             * <p>The list of recognizers.</p>
              */
             public Builder ipWhitelistRecognizers(java.util.List<IpWhitelistRecognizers> ipWhitelistRecognizers) {
                 this.ipWhitelistRecognizers = ipWhitelistRecognizers;
@@ -698,7 +798,10 @@ public class ListDataSetsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The update time. This value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1713787368000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

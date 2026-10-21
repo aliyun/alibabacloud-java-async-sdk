@@ -106,7 +106,10 @@ public class ListNormalizationSchemasResponseBody extends TeaModel {
         } 
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return in this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -114,7 +117,10 @@ public class ListNormalizationSchemasResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token for the next query. You do not need to specify this parameter for the first query or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -122,7 +128,7 @@ public class ListNormalizationSchemasResponseBody extends TeaModel {
         }
 
         /**
-         * NormalizationSchemas.
+         * <p>The list of normalization schemas.</p>
          */
         public Builder normalizationSchemas(java.util.List<NormalizationSchemas> normalizationSchemas) {
             this.normalizationSchemas = normalizationSchemas;
@@ -130,7 +136,10 @@ public class ListNormalizationSchemasResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListNormalizationSchemasResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>57</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -386,7 +398,10 @@ public class ListNormalizationSchemasResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1736386610000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -394,7 +409,10 @@ public class ListNormalizationSchemasResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationCategoryId.
+             * <p>The normalization rule category ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NETWORK_CATEGORY</p>
              */
             public Builder normalizationCategoryId(String normalizationCategoryId) {
                 this.normalizationCategoryId = normalizationCategoryId;
@@ -402,7 +420,14 @@ public class ListNormalizationSchemasResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationFieldSource.
+             * <p>The field source. Valid values:</p>
+             * <ul>
+             * <li>normalized: normalized field.</li>
+             * <li>native: native field.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>normalized</p>
              */
             public Builder normalizationFieldSource(String normalizationFieldSource) {
                 this.normalizationFieldSource = normalizationFieldSource;
@@ -410,7 +435,10 @@ public class ListNormalizationSchemasResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationSchemaDescription.
+             * <p>The normalization schema description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Network flow log</p>
              */
             public Builder normalizationSchemaDescription(String normalizationSchemaDescription) {
                 this.normalizationSchemaDescription = normalizationSchemaDescription;
@@ -418,7 +446,14 @@ public class ListNormalizationSchemasResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationSchemaFrom.
+             * <p>The normalization schema source. Valid values:</p>
+             * <ul>
+             * <li>preset: predefined.</li>
+             * <li>custom: custom.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>preset</p>
              */
             public Builder normalizationSchemaFrom(String normalizationSchemaFrom) {
                 this.normalizationSchemaFrom = normalizationSchemaFrom;
@@ -426,7 +461,10 @@ public class ListNormalizationSchemasResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationSchemaId.
+             * <p>The normalization schema ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTP_ACTIVITY</p>
              */
             public Builder normalizationSchemaId(String normalizationSchemaId) {
                 this.normalizationSchemaId = normalizationSchemaId;
@@ -434,7 +472,10 @@ public class ListNormalizationSchemasResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationSchemaName.
+             * <p>The normalization schema name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>normalization_rule_Z57np</p>
              */
             public Builder normalizationSchemaName(String normalizationSchemaName) {
                 this.normalizationSchemaName = normalizationSchemaName;
@@ -442,7 +483,10 @@ public class ListNormalizationSchemasResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationSchemaTargetLogStore.
+             * <p>The LogStore to which the normalization output is written.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>network-activity</p>
              */
             public Builder normalizationSchemaTargetLogStore(String normalizationSchemaTargetLogStore) {
                 this.normalizationSchemaTargetLogStore = normalizationSchemaTargetLogStore;
@@ -450,7 +494,10 @@ public class ListNormalizationSchemasResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationSchemaType.
+             * <p>The normalization schema type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>log</p>
              */
             public Builder normalizationSchemaType(String normalizationSchemaType) {
                 this.normalizationSchemaType = normalizationSchemaType;
@@ -458,7 +505,10 @@ public class ListNormalizationSchemasResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationSecurityDomainId.
+             * <p>The security domain ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NETWORK_AND_WEB_SECURITY</p>
              */
             public Builder normalizationSecurityDomainId(String normalizationSecurityDomainId) {
                 this.normalizationSecurityDomainId = normalizationSecurityDomainId;
@@ -466,7 +516,10 @@ public class ListNormalizationSchemasResponseBody extends TeaModel {
             }
 
             /**
-             * ProductId.
+             * <p>The product ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sas</p>
              */
             public Builder productId(String productId) {
                 this.productId = productId;
@@ -482,7 +535,10 @@ public class ListNormalizationSchemasResponseBody extends TeaModel {
             }
 
             /**
-             * TargetLogStore.
+             * <p>The Simple Log Service LogStore.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>network-activity</p>
              */
             public Builder targetLogStore(String targetLogStore) {
                 this.targetLogStore = targetLogStore;
@@ -490,7 +546,10 @@ public class ListNormalizationSchemasResponseBody extends TeaModel {
             }
 
             /**
-             * TargetStoreView.
+             * <p>The Simple Log Service StoreView.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>network-activity</p>
              */
             public Builder targetStoreView(String targetStoreView) {
                 this.targetStoreView = targetStoreView;
@@ -498,7 +557,10 @@ public class ListNormalizationSchemasResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1736386610000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -506,7 +568,10 @@ public class ListNormalizationSchemasResponseBody extends TeaModel {
             }
 
             /**
-             * VendorId.
+             * <p>The vendor ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alibaba</p>
              */
             public Builder vendorId(String vendorId) {
                 this.vendorId = vendorId;

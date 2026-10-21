@@ -101,7 +101,15 @@ public class GetLogTicketRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * <p>Note: This parameter is required in actual calls. If this parameter is not specified, the service returns a 400 error &quot;The specified Lang can not be empty.&quot; Explicitly pass in the language code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -110,7 +118,10 @@ public class GetLogTicketRequest extends Request {
         }
 
         /**
-         * LogUserId.
+         * <p>The user ID for data access.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>173326*******</p>
          */
         public Builder logUserId(Long logUserId) {
             this.putBodyParameter("LogUserId", logUserId);
@@ -119,7 +130,14 @@ public class GetLogTicketRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region where the Cloud Threat Detection and Response (CTDR) data management center is located. Specify the management center based on the region of your assets. Valid values:</p>
+         * <ul>
+         * <li>cn-hangzhou: The assets are located in the Chinese mainland.</li>
+         * <li>ap-southeast-1: The assets are located outside China.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -128,7 +146,10 @@ public class GetLogTicketRequest extends Request {
         }
 
         /**
-         * RoleFor.
+         * <p>The user ID that the administrator switches to when viewing as another member.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>173326*******</p>
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);

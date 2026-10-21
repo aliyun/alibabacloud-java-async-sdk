@@ -143,7 +143,17 @@ public class DeleteLogStoreRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese.</li>
+         * <li><strong>en</strong>: English.<blockquote>
+         * <p>Note: This parameter is required in practice. If this parameter is not specified, the API returns a 400 error: &quot;The specified Lang can not be empty.&quot;</p>
+         * </blockquote>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -152,7 +162,13 @@ public class DeleteLogStoreRequest extends Request {
         }
 
         /**
-         * LogProjectName.
+         * <p>The Simple Log Service project name.</p>
+         * <blockquote>
+         * <p>Note: This parameter is required in practice. If this parameter is not specified, the API returns a 400 error: &quot;SLS log project name is empty.&quot;</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyun-cloudsiem-data-173326*******-cn-hangzhou</p>
          */
         public Builder logProjectName(String logProjectName) {
             this.putBodyParameter("LogProjectName", logProjectName);
@@ -161,7 +177,10 @@ public class DeleteLogStoreRequest extends Request {
         }
 
         /**
-         * LogRegionId.
+         * <p>The log storage region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder logRegionId(String logRegionId) {
             this.putBodyParameter("LogRegionId", logRegionId);
@@ -170,7 +189,10 @@ public class DeleteLogStoreRequest extends Request {
         }
 
         /**
-         * LogStoreName.
+         * <p>The Simple Log Service LogStore name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds-logstore</p>
          */
         public Builder logStoreName(String logStoreName) {
             this.putBodyParameter("LogStoreName", logStoreName);
@@ -179,7 +201,10 @@ public class DeleteLogStoreRequest extends Request {
         }
 
         /**
-         * LogUserId.
+         * <p>The user ID for data access.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>173326*******</p>
          */
         public Builder logUserId(Long logUserId) {
             this.putBodyParameter("LogUserId", logUserId);
@@ -188,7 +213,14 @@ public class DeleteLogStoreRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region where the Cloud Threat Detection and Response (CTDR) data management center is located. Specify the management center based on the region of your assets. Valid values:</p>
+         * <ul>
+         * <li>cn-hangzhou: Your assets belong to the Chinese mainland.</li>
+         * <li>ap-southeast-1: Your assets belong to regions outside China.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -197,7 +229,10 @@ public class DeleteLogStoreRequest extends Request {
         }
 
         /**
-         * RoleFor.
+         * <p>The user ID that the administrator switches to when viewing from the perspective of another member.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>173326*******</p>
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);

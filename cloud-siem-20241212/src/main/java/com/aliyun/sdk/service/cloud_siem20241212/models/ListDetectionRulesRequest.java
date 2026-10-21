@@ -354,7 +354,10 @@ public class ListDetectionRulesRequest extends Request {
         } 
 
         /**
-         * AlertAttCk.
+         * <p>The alert ATT&amp;CK technique.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Discovery</p>
          */
         public Builder alertAttCk(String alertAttCk) {
             this.putBodyParameter("AlertAttCk", alertAttCk);
@@ -363,7 +366,17 @@ public class ListDetectionRulesRequest extends Request {
         }
 
         /**
-         * AlertLevel.
+         * <p>The threat level of the alert. Valid values:</p>
+         * <ul>
+         * <li>5: Critical.</li>
+         * <li>4: High.</li>
+         * <li>3: Medium.</li>
+         * <li>2: Low.</li>
+         * <li>1: Informational.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder alertLevel(String alertLevel) {
             this.putBodyParameter("AlertLevel", alertLevel);
@@ -372,7 +385,10 @@ public class ListDetectionRulesRequest extends Request {
         }
 
         /**
-         * AlertTacticId.
+         * <p>The alert tactic phase.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TA0042</p>
          */
         public Builder alertTacticId(String alertTacticId) {
             this.putBodyParameter("AlertTacticId", alertTacticId);
@@ -381,7 +397,10 @@ public class ListDetectionRulesRequest extends Request {
         }
 
         /**
-         * AlertType.
+         * <p>The Alarm Metric of the alerting rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>siem_rule_type_alert_storm</p>
          */
         public Builder alertType(String alertType) {
             this.putBodyParameter("AlertType", alertType);
@@ -390,7 +409,10 @@ public class ListDetectionRulesRequest extends Request {
         }
 
         /**
-         * DetectionExpressionType.
+         * <p>The expression content of the detection rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>playbook</p>
          */
         public Builder detectionExpressionType(String detectionExpressionType) {
             this.putBodyParameter("DetectionExpressionType", detectionExpressionType);
@@ -399,7 +421,10 @@ public class ListDetectionRulesRequest extends Request {
         }
 
         /**
-         * DetectionRuleId.
+         * <p>The ID of the detection rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dr-ppa85gfw69tgwkys****</p>
          */
         public Builder detectionRuleId(String detectionRuleId) {
             this.putBodyParameter("DetectionRuleId", detectionRuleId);
@@ -408,7 +433,7 @@ public class ListDetectionRulesRequest extends Request {
         }
 
         /**
-         * DetectionRuleIds.
+         * <p>The list of detection rule IDs.</p>
          */
         public Builder detectionRuleIds(java.util.List<String> detectionRuleIds) {
             String detectionRuleIdsShrink = shrink(detectionRuleIds, "DetectionRuleIds", "simple");
@@ -418,7 +443,10 @@ public class ListDetectionRulesRequest extends Request {
         }
 
         /**
-         * DetectionRuleName.
+         * <p>The name of the detection rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Detect Discovery Behavior for Local Systems Groups</p>
          */
         public Builder detectionRuleName(String detectionRuleName) {
             this.putBodyParameter("DetectionRuleName", detectionRuleName);
@@ -427,7 +455,10 @@ public class ListDetectionRulesRequest extends Request {
         }
 
         /**
-         * DetectionRuleStatus.
+         * <p>The status of the detection rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         public Builder detectionRuleStatus(String detectionRuleStatus) {
             this.putBodyParameter("DetectionRuleStatus", detectionRuleStatus);
@@ -436,7 +467,15 @@ public class ListDetectionRulesRequest extends Request {
         }
 
         /**
-         * DetectionRuleType.
+         * <p>The type of the detection rule. Valid values:</p>
+         * <ul>
+         * <li>preset: preset detection rule.</li>
+         * <li>custom: custom detection rule.</li>
+         * <li>custom_template: rule template.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>preset</p>
          */
         public Builder detectionRuleType(String detectionRuleType) {
             this.putBodyParameter("DetectionRuleType", detectionRuleType);
@@ -445,7 +484,17 @@ public class ListDetectionRulesRequest extends Request {
         }
 
         /**
-         * IncidentAggregationType.
+         * <p>The event summaries type. Valid values:</p>
+         * <ul>
+         * <li>none: No event is generated.</li>
+         * <li>graph_compute: Graph computing (supported by predefined rules).</li>
+         * <li>expert: Expert rule.</li>
+         * <li>passthrough: Alerting pass-through (one-to-one).</li>
+         * <li>window: Same-type aggregation (window).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>graph_compute</p>
          */
         public Builder incidentAggregationType(String incidentAggregationType) {
             this.putBodyParameter("IncidentAggregationType", incidentAggregationType);
@@ -454,7 +503,15 @@ public class ListDetectionRulesRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * <p>Note: This parameter is required. If you do not specify this parameter, the service returns a 400 error: &quot;The specified Lang can not be empty.&quot; Explicitly pass a language code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -463,7 +520,10 @@ public class ListDetectionRulesRequest extends Request {
         }
 
         /**
-         * LogCategoryId.
+         * <p>The ID of the log normalization category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NETWORK_CATEGORY</p>
          */
         public Builder logCategoryId(String logCategoryId) {
             this.putBodyParameter("LogCategoryId", logCategoryId);
@@ -472,7 +532,10 @@ public class ListDetectionRulesRequest extends Request {
         }
 
         /**
-         * LogSchemaId.
+         * <p>The ID of the log normalization schema.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>API_RISK_ACTIVITY</p>
          */
         public Builder logSchemaId(String logSchemaId) {
             this.putBodyParameter("LogSchemaId", logSchemaId);
@@ -481,7 +544,10 @@ public class ListDetectionRulesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return in this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -490,7 +556,10 @@ public class ListDetectionRulesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -499,7 +568,14 @@ public class ListDetectionRulesRequest extends Request {
         }
 
         /**
-         * OrderDirection.
+         * <p>The sort order. Valid values:</p>
+         * <ul>
+         * <li><strong>asc</strong>: Ascending order. This is the default value.</li>
+         * <li><strong>desc</strong>: Descending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>asc</p>
          */
         public Builder orderDirection(String orderDirection) {
             this.putBodyParameter("OrderDirection", orderDirection);
@@ -508,7 +584,14 @@ public class ListDetectionRulesRequest extends Request {
         }
 
         /**
-         * OrderFieldName.
+         * <p>The field used for sorting. Valid values:</p>
+         * <ul>
+         * <li>GmtCreate: creation time.</li>
+         * <li>GmtModified: update time.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>GmtModified</p>
          */
         public Builder orderFieldName(String orderFieldName) {
             this.putBodyParameter("OrderFieldName", orderFieldName);
@@ -517,7 +600,10 @@ public class ListDetectionRulesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -526,7 +612,10 @@ public class ListDetectionRulesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -535,7 +624,14 @@ public class ListDetectionRulesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region where the threat analysis data management center is located. Specify the management center based on the region of your assets. Valid values:</p>
+         * <ul>
+         * <li>cn-hangzhou: The assets are located in the Chinese mainland.</li>
+         * <li>ap-southeast-1: The assets are located outside China.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -544,7 +640,10 @@ public class ListDetectionRulesRequest extends Request {
         }
 
         /**
-         * RoleFor.
+         * <p>The ID of the member to which the administrator switches the view.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>113091674488****</p>
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);

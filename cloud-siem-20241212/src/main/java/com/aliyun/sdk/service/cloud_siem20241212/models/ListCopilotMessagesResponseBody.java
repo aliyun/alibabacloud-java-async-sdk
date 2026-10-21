@@ -106,7 +106,13 @@ public class ListCopilotMessagesResponseBody extends TeaModel {
         } 
 
         /**
-         * ApiVersion.
+         * <p>The API version.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeGroupProductions~~">DescribeGroupProductions</a> operation to obtain this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>v1.2</p>
          */
         public Builder apiVersion(String apiVersion) {
             this.apiVersion = apiVersion;
@@ -114,7 +120,7 @@ public class ListCopilotMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * <p>The list of conversation messages.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -122,7 +128,10 @@ public class ListCopilotMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum amount of data read in this query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -130,7 +139,10 @@ public class ListCopilotMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -138,7 +150,10 @@ public class ListCopilotMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9AAA9ED9-78F4-5021-86DC-D51C7511****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -282,7 +297,10 @@ public class ListCopilotMessagesResponseBody extends TeaModel {
             } 
 
             /**
-             * ClientMessageId.
+             * <p>The client message ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>366932fb-9a83-4a2d-94dd-c925b35f****</p>
              */
             public Builder clientMessageId(String clientMessageId) {
                 this.clientMessageId = clientMessageId;
@@ -290,7 +308,10 @@ public class ListCopilotMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * Content.
+             * <p>The sent content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The correlation analysis of alerts and network logs has been completed</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -298,7 +319,10 @@ public class ListCopilotMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedAt.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-01-11T02:01:36Z</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -306,7 +330,10 @@ public class ListCopilotMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * MessageId.
+             * <p>The message ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AB917534-C484-5BA0-9077-0D5D1D2F****</p>
              */
             public Builder messageId(String messageId) {
                 this.messageId = messageId;
@@ -314,7 +341,10 @@ public class ListCopilotMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * MessageSequence.
+             * <p>The message sequence number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder messageSequence(Long messageSequence) {
                 this.messageSequence = messageSequence;
@@ -322,7 +352,10 @@ public class ListCopilotMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * Role.
+             * <p>The message role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -330,7 +363,10 @@ public class ListCopilotMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>completed</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -338,7 +374,10 @@ public class ListCopilotMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * TurnId.
+             * <p>The primary key ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dc18b894-19a3-45ee-8768-a59478e0****</p>
              */
             public Builder turnId(String turnId) {
                 this.turnId = turnId;

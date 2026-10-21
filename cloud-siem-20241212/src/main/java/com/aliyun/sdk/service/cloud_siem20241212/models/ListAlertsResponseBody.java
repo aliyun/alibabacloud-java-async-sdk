@@ -132,7 +132,7 @@ public class ListAlertsResponseBody extends TeaModel {
         } 
 
         /**
-         * Alerts.
+         * <p>The alert details.</p>
          */
         public Builder alerts(java.util.List<Alerts> alerts) {
             this.alerts = alerts;
@@ -140,7 +140,10 @@ public class ListAlertsResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -148,7 +151,10 @@ public class ListAlertsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -156,7 +162,10 @@ public class ListAlertsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -164,7 +173,10 @@ public class ListAlertsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -172,7 +184,10 @@ public class ListAlertsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +195,10 @@ public class ListAlertsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>57</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -246,7 +264,10 @@ public class ListAlertsResponseBody extends TeaModel {
             } 
 
             /**
-             * AlertRecord.
+             * <p>The detailed content of the alert.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;alert_uuid&quot;:&quot;a3f8c2e1-9b7d-4f6a-8c2e-1d5b9a7f****&quot;}</p>
              */
             public Builder alertRecord(String alertRecord) {
                 this.alertRecord = alertRecord;
@@ -254,7 +275,10 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * AlertUuid.
+             * <p>The UUID of the alert.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>798341271677187</p>
              */
             public Builder alertUuid(String alertUuid) {
                 this.alertUuid = alertUuid;

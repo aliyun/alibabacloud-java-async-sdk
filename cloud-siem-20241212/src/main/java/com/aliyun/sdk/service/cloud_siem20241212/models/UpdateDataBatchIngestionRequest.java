@@ -157,7 +157,16 @@ public class UpdateDataBatchIngestionRequest extends Request {
         } 
 
         /**
-         * AutoScanNew.
+         * <p>Specifies whether to automatically discover new users.</p>
+         * <ul>
+         * <li><p>enabled: Enables the feature.</p>
+         * </li>
+         * <li><p>disabled: Disables the feature.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         public Builder autoScanNew(String autoScanNew) {
             this.putBodyParameter("AutoScanNew", autoScanNew);
@@ -166,7 +175,16 @@ public class UpdateDataBatchIngestionRequest extends Request {
         }
 
         /**
-         * DataBatchIngestionMode.
+         * <p>The mode for batch data ingestion. Valid values:</p>
+         * <ul>
+         * <li><p>full</p>
+         * </li>
+         * <li><p>increment</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>full</p>
          */
         public Builder dataBatchIngestionMode(String dataBatchIngestionMode) {
             this.putBodyParameter("DataBatchIngestionMode", dataBatchIngestionMode);
@@ -175,7 +193,7 @@ public class UpdateDataBatchIngestionRequest extends Request {
         }
 
         /**
-         * DataIngestionIds.
+         * <p>The list of ingestion policy IDs.</p>
          */
         public Builder dataIngestionIds(java.util.List<String> dataIngestionIds) {
             String dataIngestionIdsShrink = shrink(dataIngestionIds, "DataIngestionIds", "simple");
@@ -185,7 +203,10 @@ public class UpdateDataBatchIngestionRequest extends Request {
         }
 
         /**
-         * DataSourceRecognizeEnabled.
+         * <p>Specifies whether to automatically discover new Logstores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder dataSourceRecognizeEnabled(Boolean dataSourceRecognizeEnabled) {
             this.putBodyParameter("DataSourceRecognizeEnabled", dataSourceRecognizeEnabled);
@@ -194,7 +215,16 @@ public class UpdateDataBatchIngestionRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li><p><strong>zh</strong> (default): Chinese.</p>
+         * </li>
+         * <li><p><strong>en</strong>: English.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -203,7 +233,7 @@ public class UpdateDataBatchIngestionRequest extends Request {
         }
 
         /**
-         * LogUserIds.
+         * <p>The list of user IDs for batch data ingestion.</p>
          */
         public Builder logUserIds(java.util.List<Long> logUserIds) {
             String logUserIdsShrink = shrink(logUserIds, "LogUserIds", "simple");
@@ -213,7 +243,16 @@ public class UpdateDataBatchIngestionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region of the Data Management hub for threat analysis. Select a region for the management hub based on the region of your assets. Valid values:</p>
+         * <ul>
+         * <li><p>cn-hangzhou: Your assets are in the Chinese mainland.</p>
+         * </li>
+         * <li><p>ap-southeast-1: Your assets are in a region outside China.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -222,7 +261,10 @@ public class UpdateDataBatchIngestionRequest extends Request {
         }
 
         /**
-         * RoleFor.
+         * <p>The user ID of the member whose perspective the administrator wants to switch to.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>173326*******</p>
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);

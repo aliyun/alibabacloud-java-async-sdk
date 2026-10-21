@@ -90,6 +90,13 @@ public class CreateAutoDisposeConfigRequest extends Request {
         } 
 
         /**
+         * <p>Specifies whether to enable automated analysis. Valid values:</p>
+         * <ul>
+         * <li><p>enabled: Enables automated analysis.</p>
+         * </li>
+         * <li><p>disabled: Disables automated analysis.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +109,13 @@ public class CreateAutoDisposeConfigRequest extends Request {
         }
 
         /**
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li><p><strong>zh</strong> (default): Chinese.</p>
+         * </li>
+         * <li><p><strong>en</strong>: English.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +128,7 @@ public class CreateAutoDisposeConfigRequest extends Request {
         }
 
         /**
+         * <p>The code of the cloud product.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -106,7 +106,10 @@ public class ListVendorsResponseBody extends TeaModel {
         } 
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return in this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -114,7 +117,10 @@ public class ListVendorsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token for the next query. You do not need to specify this parameter for the first request or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -122,7 +128,10 @@ public class ListVendorsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,10 @@ public class ListVendorsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>57</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -138,7 +150,7 @@ public class ListVendorsResponseBody extends TeaModel {
         }
 
         /**
-         * Vendors.
+         * <p>The vendors.</p>
          */
         public Builder vendors(java.util.List<Vendors> vendors) {
             this.vendors = vendors;
@@ -243,7 +255,10 @@ public class ListVendorsResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The creation time. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1733269771123</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -251,7 +266,10 @@ public class ListVendorsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The update time. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1733269771123</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -259,7 +277,10 @@ public class ListVendorsResponseBody extends TeaModel {
             }
 
             /**
-             * VendorId.
+             * <p>The vendor ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vd-qlsw5eocx94w9</p>
              */
             public Builder vendorId(String vendorId) {
                 this.vendorId = vendorId;
@@ -267,7 +288,10 @@ public class ListVendorsResponseBody extends TeaModel {
             }
 
             /**
-             * VendorName.
+             * <p>The vendor name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder vendorName(String vendorName) {
                 this.vendorName = vendorName;
@@ -275,7 +299,14 @@ public class ListVendorsResponseBody extends TeaModel {
             }
 
             /**
-             * VendorType.
+             * <p>The vendor type. Valid values:</p>
+             * <ul>
+             * <li>preset</li>
+             * <li>custom</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>preset</p>
              */
             public Builder vendorType(String vendorType) {
                 this.vendorType = vendorType;

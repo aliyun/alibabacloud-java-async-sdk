@@ -115,7 +115,16 @@ public class DeleteResponseRuleRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>The language of the response message. Valid values:</p>
+         * <ul>
+         * <li><p><strong>zh</strong> (default): Chinese.</p>
+         * </li>
+         * <li><p><strong>en</strong>: English.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -124,7 +133,10 @@ public class DeleteResponseRuleRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -133,7 +145,10 @@ public class DeleteResponseRuleRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token used to retrieve the next page of results. If you do not specify this parameter, the service returns the first page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -142,7 +157,16 @@ public class DeleteResponseRuleRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the data management center for threat analysis. This must be the region where your assets are located. Valid values:</p>
+         * <ul>
+         * <li><p><code>cn-hangzhou</code>: for assets in the Chinese mainland or Hong Kong (China).</p>
+         * </li>
+         * <li><p><code>ap-southeast-1</code>: for assets in international regions.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -151,7 +175,10 @@ public class DeleteResponseRuleRequest extends Request {
         }
 
         /**
-         * ResponseRuleId.
+         * <p>The ID of the automatic response rule to delete.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>403235</p>
          */
         public Builder responseRuleId(String responseRuleId) {
             this.putBodyParameter("ResponseRuleId", responseRuleId);

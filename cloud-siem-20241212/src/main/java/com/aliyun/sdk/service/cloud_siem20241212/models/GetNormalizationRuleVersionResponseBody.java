@@ -67,7 +67,7 @@ public class GetNormalizationRuleVersionResponseBody extends TeaModel {
         } 
 
         /**
-         * NormalizationRuleVersion.
+         * <p>The version of the normalization rule.</p>
          */
         public Builder normalizationRuleVersion(NormalizationRuleVersion normalizationRuleVersion) {
             this.normalizationRuleVersion = normalizationRuleVersion;
@@ -75,7 +75,10 @@ public class GetNormalizationRuleVersionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -323,7 +326,10 @@ public class GetNormalizationRuleVersionResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1733269771123</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -331,7 +337,10 @@ public class GetNormalizationRuleVersionResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationCategoryId.
+             * <p>The category ID of the normalization rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NETWORK_CATEGORY</p>
              */
             public Builder normalizationCategoryId(String normalizationCategoryId) {
                 this.normalizationCategoryId = normalizationCategoryId;
@@ -339,7 +348,10 @@ public class GetNormalizationRuleVersionResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationRuleDescription.
+             * <p>The description of the normalization rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>normalization_rule_Z57np</p>
              */
             public Builder normalizationRuleDescription(String normalizationRuleDescription) {
                 this.normalizationRuleDescription = normalizationRuleDescription;
@@ -347,7 +359,12 @@ public class GetNormalizationRuleVersionResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationRuleExpression.
+             * <p>The expression of the normalization rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li>| pack-fields -include=\&quot;[\s\S]+\&quot; as extend_content</li>
+             * </ul>
              */
             public Builder normalizationRuleExpression(String normalizationRuleExpression) {
                 this.normalizationRuleExpression = normalizationRuleExpression;
@@ -355,7 +372,10 @@ public class GetNormalizationRuleVersionResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationRuleFormat.
+             * <p>The format of the normalization rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SPL</p>
              */
             public Builder normalizationRuleFormat(String normalizationRuleFormat) {
                 this.normalizationRuleFormat = normalizationRuleFormat;
@@ -363,7 +383,10 @@ public class GetNormalizationRuleVersionResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationRuleId.
+             * <p>The ID of the normalization rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nr-z0b2ssjteut85uoh9nzp</p>
              */
             public Builder normalizationRuleId(String normalizationRuleId) {
                 this.normalizationRuleId = normalizationRuleId;
@@ -371,7 +394,10 @@ public class GetNormalizationRuleVersionResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationRuleName.
+             * <p>The name of the normalization rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>normalization_rule_Z57np</p>
              */
             public Builder normalizationRuleName(String normalizationRuleName) {
                 this.normalizationRuleName = normalizationRuleName;
@@ -379,7 +405,10 @@ public class GetNormalizationRuleVersionResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationRuleStatus.
+             * <p>The status of the normalization rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>started</p>
              */
             public Builder normalizationRuleStatus(String normalizationRuleStatus) {
                 this.normalizationRuleStatus = normalizationRuleStatus;
@@ -387,7 +416,14 @@ public class GetNormalizationRuleVersionResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationRuleType.
+             * <p>The type of the normalization rule. Valid values:</p>
+             * <ul>
+             * <li>predefined: predefined normalization rule.</li>
+             * <li>custom: custom normalization rule.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>predefined</p>
              */
             public Builder normalizationRuleType(String normalizationRuleType) {
                 this.normalizationRuleType = normalizationRuleType;
@@ -395,7 +431,10 @@ public class GetNormalizationRuleVersionResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationRuleVersion.
+             * <p>The version of the normalization rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>V1</p>
              */
             public Builder normalizationRuleVersion(Integer normalizationRuleVersion) {
                 this.normalizationRuleVersion = normalizationRuleVersion;
@@ -403,7 +442,10 @@ public class GetNormalizationRuleVersionResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationRuleVersionName.
+             * <p>The version name of the normalization rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder normalizationRuleVersionName(String normalizationRuleVersionName) {
                 this.normalizationRuleVersionName = normalizationRuleVersionName;
@@ -411,7 +453,10 @@ public class GetNormalizationRuleVersionResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationSchemaId.
+             * <p>The ID of the normalization schema.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTP_ACTIVITY</p>
              */
             public Builder normalizationSchemaId(String normalizationSchemaId) {
                 this.normalizationSchemaId = normalizationSchemaId;
@@ -419,7 +464,10 @@ public class GetNormalizationRuleVersionResponseBody extends TeaModel {
             }
 
             /**
-             * ProductId.
+             * <p>The ID of the product.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alibaba_cloud_sas</p>
              */
             public Builder productId(String productId) {
                 this.productId = productId;
@@ -427,7 +475,14 @@ public class GetNormalizationRuleVersionResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region where the data management center of Threat Analysis is located. Select the region of the management center based on the region where your assets are located. Valid values:</p>
+             * <ul>
+             * <li>cn-hangzhou: Assets are located in the Chinese mainland.</li>
+             * <li>ap-southeast-1: Assets are located outside the Chinese mainland.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -435,7 +490,10 @@ public class GetNormalizationRuleVersionResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The update time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1733269771123</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -443,7 +501,10 @@ public class GetNormalizationRuleVersionResponseBody extends TeaModel {
             }
 
             /**
-             * VendorId.
+             * <p>The ID of the vendor that corresponds to the normalization rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alibaba_cloud</p>
              */
             public Builder vendorId(String vendorId) {
                 this.vendorId = vendorId;

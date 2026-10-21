@@ -311,7 +311,14 @@ public class UpdateNormalizationRuleRequest extends Request {
         } 
 
         /**
-         * ExtendContentPacked.
+         * <p>Specifies whether to pack non-standard fields into the extended field extend_content. Valid values:</p>
+         * <ul>
+         * <li>enabled: Enabled.</li>
+         * <li>disabled: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         public Builder extendContentPacked(String extendContentPacked) {
             this.putBodyParameter("ExtendContentPacked", extendContentPacked);
@@ -320,7 +327,10 @@ public class UpdateNormalizationRuleRequest extends Request {
         }
 
         /**
-         * ExtendFieldStoreMode.
+         * <p>The extended field storage mode. Valid values: flat, pack, reject.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>flat</p>
          */
         public Builder extendFieldStoreMode(String extendFieldStoreMode) {
             this.putBodyParameter("ExtendFieldStoreMode", extendFieldStoreMode);
@@ -329,7 +339,14 @@ public class UpdateNormalizationRuleRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response messages. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -338,7 +355,10 @@ public class UpdateNormalizationRuleRequest extends Request {
         }
 
         /**
-         * NormalizationCategoryId.
+         * <p>The normalization category to which the rule belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HOST_CATEGORY</p>
          */
         public Builder normalizationCategoryId(String normalizationCategoryId) {
             this.putBodyParameter("NormalizationCategoryId", normalizationCategoryId);
@@ -347,7 +367,10 @@ public class UpdateNormalizationRuleRequest extends Request {
         }
 
         /**
-         * NormalizationRuleDescription.
+         * <p>The normalization rule description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>normalization_rule_Z57np</p>
          */
         public Builder normalizationRuleDescription(String normalizationRuleDescription) {
             this.putBodyParameter("NormalizationRuleDescription", normalizationRuleDescription);
@@ -356,7 +379,12 @@ public class UpdateNormalizationRuleRequest extends Request {
         }
 
         /**
-         * NormalizationRuleExpression.
+         * <p>The normalization rule expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li>| pack-fields -include=\&quot;[\s\S]+\&quot; as extend_content</li>
+         * </ul>
          */
         public Builder normalizationRuleExpression(String normalizationRuleExpression) {
             this.putBodyParameter("NormalizationRuleExpression", normalizationRuleExpression);
@@ -365,7 +393,10 @@ public class UpdateNormalizationRuleRequest extends Request {
         }
 
         /**
-         * NormalizationRuleFormat.
+         * <p>The normalization rule format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SPL</p>
          */
         public Builder normalizationRuleFormat(String normalizationRuleFormat) {
             this.putBodyParameter("NormalizationRuleFormat", normalizationRuleFormat);
@@ -374,7 +405,10 @@ public class UpdateNormalizationRuleRequest extends Request {
         }
 
         /**
-         * NormalizationRuleId.
+         * <p>The normalization rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nr-z0b2ssjteut85uoh9nzp</p>
          */
         public Builder normalizationRuleId(String normalizationRuleId) {
             this.putBodyParameter("NormalizationRuleId", normalizationRuleId);
@@ -383,7 +417,7 @@ public class UpdateNormalizationRuleRequest extends Request {
         }
 
         /**
-         * NormalizationRuleIds.
+         * <p>The list of normalization rule IDs.</p>
          */
         public Builder normalizationRuleIds(java.util.List<String> normalizationRuleIds) {
             String normalizationRuleIdsShrink = shrink(normalizationRuleIds, "NormalizationRuleIds", "json");
@@ -393,7 +427,15 @@ public class UpdateNormalizationRuleRequest extends Request {
         }
 
         /**
-         * NormalizationRuleMode.
+         * <p>The normalization rule mode. Valid values:</p>
+         * <ul>
+         * <li>both</li>
+         * <li>scan</li>
+         * <li>realtime</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>both</p>
          */
         public Builder normalizationRuleMode(String normalizationRuleMode) {
             this.putBodyParameter("NormalizationRuleMode", normalizationRuleMode);
@@ -402,7 +444,10 @@ public class UpdateNormalizationRuleRequest extends Request {
         }
 
         /**
-         * NormalizationRuleName.
+         * <p>The normalization rule name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>normalization_rule_Z57np</p>
          */
         public Builder normalizationRuleName(String normalizationRuleName) {
             this.putBodyParameter("NormalizationRuleName", normalizationRuleName);
@@ -411,7 +456,14 @@ public class UpdateNormalizationRuleRequest extends Request {
         }
 
         /**
-         * NormalizationRuleType.
+         * <p>The normalization rule type. Valid values:</p>
+         * <ul>
+         * <li>predefined: predefined normalization rule.</li>
+         * <li>custom: custom normalization rule.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>custom</p>
          */
         public Builder normalizationRuleType(String normalizationRuleType) {
             this.putBodyParameter("NormalizationRuleType", normalizationRuleType);
@@ -420,7 +472,10 @@ public class UpdateNormalizationRuleRequest extends Request {
         }
 
         /**
-         * NormalizationSchemaId.
+         * <p>The normalization schema ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP_ACTIVITY</p>
          */
         public Builder normalizationSchemaId(String normalizationSchemaId) {
             this.putBodyParameter("NormalizationSchemaId", normalizationSchemaId);
@@ -429,7 +484,10 @@ public class UpdateNormalizationRuleRequest extends Request {
         }
 
         /**
-         * NormalizationSecurityDomainId.
+         * <p>The normalization security domain ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NETWORK_AND_WEB_SECURITY</p>
          */
         public Builder normalizationSecurityDomainId(String normalizationSecurityDomainId) {
             this.putBodyParameter("NormalizationSecurityDomainId", normalizationSecurityDomainId);
@@ -438,7 +496,14 @@ public class UpdateNormalizationRuleRequest extends Request {
         }
 
         /**
-         * OrderField.
+         * <p>The field used to sort the rule list. Valid values:</p>
+         * <ul>
+         * <li>GmtModified: Sort by modification time.</li>
+         * <li>Id: Sort by rule ID (default).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Id</p>
          */
         public Builder orderField(String orderField) {
             this.putBodyParameter("OrderField", orderField);
@@ -447,7 +512,10 @@ public class UpdateNormalizationRuleRequest extends Request {
         }
 
         /**
-         * ProductId.
+         * <p>The product ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alibaba_cloud_sas</p>
          */
         public Builder productId(String productId) {
             this.putBodyParameter("ProductId", productId);
@@ -456,7 +524,14 @@ public class UpdateNormalizationRuleRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region where the data management center of the threat detection service is located. Select the management center region based on the region where your assets reside. Valid values:</p>
+         * <ul>
+         * <li>cn-hangzhou: Your assets are located in the Chinese mainland.</li>
+         * <li>ap-southeast-1: Your assets are located outside China.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -465,7 +540,10 @@ public class UpdateNormalizationRuleRequest extends Request {
         }
 
         /**
-         * RoleFor.
+         * <p>The user ID of the member account that the administrator switches to.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>173326*******</p>
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);
@@ -474,7 +552,10 @@ public class UpdateNormalizationRuleRequest extends Request {
         }
 
         /**
-         * VendorId.
+         * <p>The vendor ID associated with the normalization rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alibaba_cloud</p>
          */
         public Builder vendorId(String vendorId) {
             this.putBodyParameter("VendorId", vendorId);

@@ -160,7 +160,7 @@ public class ListAutoDisposeEntitiesRequest extends Request {
         } 
 
         /**
-         * AutoDisposeRecordIds.
+         * <p>The list of decision-making disposal IDs.</p>
          */
         public Builder autoDisposeRecordIds(java.util.List<String> autoDisposeRecordIds) {
             String autoDisposeRecordIdsShrink = shrink(autoDisposeRecordIds, "AutoDisposeRecordIds", "simple");
@@ -170,6 +170,7 @@ public class ListAutoDisposeEntitiesRequest extends Request {
         }
 
         /**
+         * <p>The current page number. The value must be greater than or equal to 1.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -182,6 +183,7 @@ public class ListAutoDisposeEntitiesRequest extends Request {
         }
 
         /**
+         * <p>The data source type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -194,7 +196,15 @@ public class ListAutoDisposeEntitiesRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * <p>Note: This parameter is required. If you do not specify this parameter, the service returns a 400 error: &quot;The specified Lang can not be empty.&quot; Explicitly pass a language code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -203,7 +213,10 @@ public class ListAutoDisposeEntitiesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return in this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -212,7 +225,10 @@ public class ListAutoDisposeEntitiesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that indicates the position from which the current call starts reading. An empty value indicates that all data has been read.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -221,6 +237,7 @@ public class ListAutoDisposeEntitiesRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -233,7 +250,10 @@ public class ListAutoDisposeEntitiesRequest extends Request {
         }
 
         /**
-         * Uuid.
+         * <p>The UUID of the playbook. This is the unique identifier of the playbook.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b2491e39-ddf2-478a-8c07-*****</p>
          */
         public Builder uuid(String uuid) {
             this.putBodyParameter("Uuid", uuid);

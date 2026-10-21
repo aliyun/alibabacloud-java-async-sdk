@@ -271,7 +271,14 @@ public class ListAlertsRequest extends Request {
         } 
 
         /**
-         * AlertLevel.
+         * <p>The threat level of the alert. Valid values:</p>
+         * <ul>
+         * <li>5: Critical.</li>
+         * <li>4: High.</li>
+         * <li>3: Medium.</li>
+         * <li>2: Low.</li>
+         * <li>1: Informational.</li>
+         * </ul>
          */
         public Builder alertLevel(java.util.List<String> alertLevel) {
             this.putBodyParameter("AlertLevel", alertLevel);
@@ -280,7 +287,10 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * AlertUuid.
+         * <p>The ID of the alert that is associated with the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas_71e24437d2797ce8fc59692905a4****</p>
          */
         public Builder alertUuid(String alertUuid) {
             this.putBodyParameter("AlertUuid", alertUuid);
@@ -289,7 +299,10 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time of the alert. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1766801904000</p>
          */
         public Builder endTime(Long endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -298,7 +311,15 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * <p>Note: This parameter is required in practice. If you do not specify this parameter, the API returns a 400 error: &quot;The specified Lang can not be empty.&quot;</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -307,7 +328,10 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -316,7 +340,10 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token. You do not need to specify this parameter for the first request or if no more results exist. If more results exist, set this parameter to the NextToken value returned in the previous API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -325,7 +352,14 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * OrderDirection.
+         * <p>The sort order. Valid values:</p>
+         * <ul>
+         * <li><strong>asc</strong> (default): ascending order.</li>
+         * <li><strong>desc</strong>: descending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>asc</p>
          */
         public Builder orderDirection(String orderDirection) {
             this.putBodyParameter("OrderDirection", orderDirection);
@@ -334,7 +368,14 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * OrderFieldName.
+         * <p>The field used for sorting. Valid values:</p>
+         * <ul>
+         * <li>GmtCreate: creation time.</li>
+         * <li>GmtModified: last modified time.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>GmtModified</p>
          */
         public Builder orderFieldName(String orderFieldName) {
             this.putBodyParameter("OrderFieldName", orderFieldName);
@@ -343,6 +384,7 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
+         * <p>The page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -355,6 +397,7 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -367,7 +410,21 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * QueryCondition.
+         * <p>The query filter condition in JSON format. Valid values:</p>
+         * <ul>
+         * <li><code>{&quot;Type&quot;:&quot;maxCost&quot;, &quot;Value&quot;:&quot;100&quot;}</code>: The 100 queries with the longest execution duration.</li>
+         * <li><code>{&quot;Type&quot;:&quot;status&quot;,&quot;Value&quot;:&quot;finished&quot;}</code>: Completed queries.</li>
+         * <li><code>{&quot;Type&quot;:&quot;status&quot;,&quot;Value&quot;:&quot;running&quot;}</code>: Running queries.</li>
+         * <li><code>{&quot;Type&quot;:&quot;cost&quot;,&quot;Min&quot;:&quot;30&quot;,&quot;Max&quot;:&quot;50&quot;}</code>: Custom execution duration queries. You can specify the minimum and maximum execution duration. <strong>Min</strong> specifies the minimum execution duration. <strong>Max</strong> specifies the maximum execution duration. Unit: milliseconds (ms).<ul>
+         * <li>If only <strong>Min</strong> is specified, queries with an execution duration greater than this value are returned.</li>
+         * <li>If only <strong>Max</strong> is specified, queries with an execution duration less than this value are returned.</li>
+         * <li>If both <strong>Min</strong> and <strong>Max</strong> are specified, queries with an execution duration greater than or equal to <strong>Min</strong> and less than or equal to <strong>Max</strong> are returned.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;Type\&quot;:\&quot;cost\&quot;,\&quot;Max\&quot;:\&quot;200\&quot;}</p>
          */
         public Builder queryCondition(String queryCondition) {
             this.putBodyParameter("QueryCondition", queryCondition);
@@ -376,7 +433,10 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * QueryViewId.
+         * <p>The unique identifier of the query view.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qv-a1b2c3d4e5f6g7****</p>
          */
         public Builder queryViewId(String queryViewId) {
             this.putBodyParameter("QueryViewId", queryViewId);
@@ -385,7 +445,14 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region where the threat detection and response data management center resides. Specify the management center based on the region of your assets. Valid values:</p>
+         * <ul>
+         * <li>cn-hangzhou: Your assets reside in the Chinese mainland or Hong Kong (China).</li>
+         * <li>ap-southeast-1: Your assets reside in regions outside the Chinese mainland.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -394,7 +461,10 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * RoleFor.
+         * <p>The ID of the member accounts in the resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>113091674488****</p>
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);
@@ -403,7 +473,14 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * RoleType.
+         * <p>The view type. Valid values:</p>
+         * <ul>
+         * <li>0: the view of the current Alibaba Cloud account.</li>
+         * <li>1: the view of all accounts in the enterprise.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder roleType(Integer roleType) {
             this.putBodyParameter("RoleType", roleType);
@@ -412,7 +489,10 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The time when the alert first occurred. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1759198980000</p>
          */
         public Builder startTime(Long startTime) {
             this.putBodyParameter("StartTime", startTime);

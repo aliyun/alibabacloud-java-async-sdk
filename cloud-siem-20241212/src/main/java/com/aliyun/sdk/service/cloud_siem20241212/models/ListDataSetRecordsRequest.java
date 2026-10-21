@@ -202,6 +202,7 @@ public class ListDataSetRecordsRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the dataset.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -214,7 +215,11 @@ public class ListDataSetRecordsRequest extends Request {
         }
 
         /**
-         * Filter.
+         * <p>The JSON string for field fuzzy match. Example:
+         * {&quot;field1&quot;:&quot;value1&quot;,&quot;field2&quot;:&quot;value2&quot;}</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;field1&quot;:&quot;value1&quot;,&quot;field2&quot;:&quot;value2&quot;}</p>
          */
         public Builder filter(String filter) {
             this.putBodyParameter("Filter", filter);
@@ -223,7 +228,14 @@ public class ListDataSetRecordsRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response message. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -232,7 +244,10 @@ public class ListDataSetRecordsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of results to return per query when you use the NextToken parameter. Valid values: 1 to 100. Default value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -241,7 +256,10 @@ public class ListDataSetRecordsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token used to start the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -250,7 +268,14 @@ public class ListDataSetRecordsRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sort direction. Valid values:</p>
+         * <ul>
+         * <li>&quot;desc&quot; (default): Descending order.</li>
+         * <li>&quot;asc&quot;: Ascending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder order(String order) {
             this.putBodyParameter("Order", order);
@@ -259,7 +284,14 @@ public class ListDataSetRecordsRequest extends Request {
         }
 
         /**
-         * OrderField.
+         * <p>The field by which to sort. Valid values:</p>
+         * <ul>
+         * <li>&quot;updatetime&quot; (default): Update time.</li>
+         * <li>&quot;createtime&quot;: Creation time.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>updatetime</p>
          */
         public Builder orderField(String orderField) {
             this.putBodyParameter("OrderField", orderField);
@@ -268,6 +300,7 @@ public class ListDataSetRecordsRequest extends Request {
         }
 
         /**
+         * <p>The current page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -280,6 +313,7 @@ public class ListDataSetRecordsRequest extends Request {
         }
 
         /**
+         * <p>The number of entries to return on each page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -292,7 +326,14 @@ public class ListDataSetRecordsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region where the data management center for threat analysis is located. Select the region of the management center based on the region where your assets are located. Valid values:</p>
+         * <ul>
+         * <li>cn-hangzhou: Assets are located in the Chinese mainland.</li>
+         * <li>ap-southeast-1: Assets are located outside the Chinese mainland.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -301,7 +342,10 @@ public class ListDataSetRecordsRequest extends Request {
         }
 
         /**
-         * RoleFor.
+         * <p>The ID of the user whose perspective the administrator switches to.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>113091674488****</p>
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);

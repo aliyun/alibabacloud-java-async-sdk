@@ -90,6 +90,13 @@ public class UpdateAutoDisposeConfigRequest extends Request {
         } 
 
         /**
+         * <p>Specifies whether to enable auto decision. Valid values:</p>
+         * <ul>
+         * <li><p><code>enabled</code>: Enables auto decision.</p>
+         * </li>
+         * <li><p><code>disabled</code>: Disables auto decision.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +109,13 @@ public class UpdateAutoDisposeConfigRequest extends Request {
         }
 
         /**
+         * <p>The language of the response message. Valid values:</p>
+         * <ul>
+         * <li><p><strong>zh</strong> (default): Chinese.</p>
+         * </li>
+         * <li><p><strong>en</strong>: English.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +128,7 @@ public class UpdateAutoDisposeConfigRequest extends Request {
         }
 
         /**
+         * <p>The code for the cloud product.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

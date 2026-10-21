@@ -106,7 +106,10 @@ public class ListNormalizationSecurityDomainsResponseBody extends TeaModel {
         } 
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries returned for this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -114,7 +117,10 @@ public class ListNormalizationSecurityDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token for the next query. You do not need to specify this parameter for the first query or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -122,7 +128,7 @@ public class ListNormalizationSecurityDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * NormalizationSecurityDomains.
+         * <p>The list of security domains.</p>
          */
         public Builder normalizationSecurityDomains(java.util.List<NormalizationSecurityDomains> normalizationSecurityDomains) {
             this.normalizationSecurityDomains = normalizationSecurityDomains;
@@ -141,7 +147,10 @@ public class ListNormalizationSecurityDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>57</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -207,7 +216,10 @@ public class ListNormalizationSecurityDomainsResponseBody extends TeaModel {
             } 
 
             /**
-             * NormalizationSecurityDomainId.
+             * <p>The security domain ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OTHER</p>
              */
             public Builder normalizationSecurityDomainId(String normalizationSecurityDomainId) {
                 this.normalizationSecurityDomainId = normalizationSecurityDomainId;
@@ -215,7 +227,10 @@ public class ListNormalizationSecurityDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationSecurityDomainName.
+             * <p>The security domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>net</p>
              */
             public Builder normalizationSecurityDomainName(String normalizationSecurityDomainName) {
                 this.normalizationSecurityDomainName = normalizationSecurityDomainName;

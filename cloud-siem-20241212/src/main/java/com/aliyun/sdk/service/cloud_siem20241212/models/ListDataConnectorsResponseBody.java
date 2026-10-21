@@ -132,7 +132,7 @@ public class ListDataConnectorsResponseBody extends TeaModel {
         } 
 
         /**
-         * DataConnector.
+         * <p>The list of collectors.</p>
          */
         public Builder dataConnector(java.util.List<DataConnector> dataConnector) {
             this.dataConnector = dataConnector;
@@ -140,7 +140,10 @@ public class ListDataConnectorsResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of records returned in this query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -148,7 +151,10 @@ public class ListDataConnectorsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAASLVeIxed4466E0LVmGkzwS6hJKd9DGVGMDRM6Lu****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -156,7 +162,10 @@ public class ListDataConnectorsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -164,7 +173,10 @@ public class ListDataConnectorsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of records per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -172,7 +184,10 @@ public class ListDataConnectorsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +195,10 @@ public class ListDataConnectorsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>57</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -441,7 +459,10 @@ public class ListDataConnectorsResponseBody extends TeaModel {
             } 
 
             /**
-             * AuthConfigId.
+             * <p>The configuration item ID of the collector access object in the multi-cloud configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-smbc-prod-cloudtrail.s3.cn-north-1.amazonaws.com.cn_AKIAX4AUG6AYSJO7FAG4</p>
              */
             public Builder authConfigId(String authConfigId) {
                 this.authConfigId = authConfigId;
@@ -449,7 +470,10 @@ public class ListDataConnectorsResponseBody extends TeaModel {
             }
 
             /**
-             * AuthConfigProduct.
+             * <p>The cloud product to which the authentication configuration belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>salesForceRestAPI</p>
              */
             public Builder authConfigProduct(String authConfigProduct) {
                 this.authConfigProduct = authConfigProduct;
@@ -457,7 +481,10 @@ public class ListDataConnectorsResponseBody extends TeaModel {
             }
 
             /**
-             * AuthConfigVendor.
+             * <p>The cloud vendor to which the authentication configuration belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SALESFORCE</p>
              */
             public Builder authConfigVendor(String authConfigVendor) {
                 this.authConfigVendor = authConfigVendor;
@@ -465,7 +492,10 @@ public class ListDataConnectorsResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-06-01T02:14:24Z</p>
              */
             public Builder creationTime(Long creationTime) {
                 this.creationTime = creationTime;
@@ -473,7 +503,10 @@ public class ListDataConnectorsResponseBody extends TeaModel {
             }
 
             /**
-             * DataConnectorConfig.
+             * <p>The collector configuration information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;endpoint\&quot;:\&quot;csrm-sentinel.s3.cn-north-1.amazonaws.com.cn_AKIARGUYUGSX6A6VUXQJ\&quot;,\&quot;bucket\&quot;:\&quot;csrm-sentinel\&quot;,\&quot;prefix\&quot;:\&quot;AliTest/\&quot;,\&quot;format\&quot;:{\&quot;type\&quot;:\&quot;JSON\&quot;},\&quot;encoding\&quot;:\&quot;UTF-8\&quot;}</p>
              */
             public Builder dataConnectorConfig(String dataConnectorConfig) {
                 this.dataConnectorConfig = dataConnectorConfig;
@@ -481,7 +514,10 @@ public class ListDataConnectorsResponseBody extends TeaModel {
             }
 
             /**
-             * DataConnectorId.
+             * <p>The collector ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dc-07423146117d77db266f78bc41f4fd80</p>
              */
             public Builder dataConnectorId(String dataConnectorId) {
                 this.dataConnectorId = dataConnectorId;
@@ -489,7 +525,10 @@ public class ListDataConnectorsResponseBody extends TeaModel {
             }
 
             /**
-             * DataConnectorName.
+             * <p>The data connector name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dc-***</p>
              */
             public Builder dataConnectorName(String dataConnectorName) {
                 this.dataConnectorName = dataConnectorName;
@@ -497,7 +536,10 @@ public class ListDataConnectorsResponseBody extends TeaModel {
             }
 
             /**
-             * DataConnectorStatus.
+             * <p>The connector status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>enable</p>
              */
             public Builder dataConnectorStatus(String dataConnectorStatus) {
                 this.dataConnectorStatus = dataConnectorStatus;
@@ -505,7 +547,10 @@ public class ListDataConnectorsResponseBody extends TeaModel {
             }
 
             /**
-             * DataConnectorType.
+             * <p>The connector type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss</p>
              */
             public Builder dataConnectorType(String dataConnectorType) {
                 this.dataConnectorType = dataConnectorType;
@@ -513,7 +558,10 @@ public class ListDataConnectorsResponseBody extends TeaModel {
             }
 
             /**
-             * DestDataSourceId.
+             * <p>The destination data source ID. This parameter is required only for synchronization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ds-t3ywipile7gctobaunx0</p>
              */
             public Builder destDataSourceId(String destDataSourceId) {
                 this.destDataSourceId = destDataSourceId;
@@ -521,7 +569,10 @@ public class ListDataConnectorsResponseBody extends TeaModel {
             }
 
             /**
-             * LogProjectName.
+             * <p>The Simple Log Service project name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliyun-cloudsiem-channel-1371069058301795-cn-shanghai</p>
              */
             public Builder logProjectName(String logProjectName) {
                 this.logProjectName = logProjectName;
@@ -529,7 +580,10 @@ public class ListDataConnectorsResponseBody extends TeaModel {
             }
 
             /**
-             * LogRegionId.
+             * <p>The log storage region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder logRegionId(String logRegionId) {
                 this.logRegionId = logRegionId;
@@ -537,7 +591,10 @@ public class ListDataConnectorsResponseBody extends TeaModel {
             }
 
             /**
-             * LogStoreName.
+             * <p>The Simple Log Service Logstore name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ls-wecom-crontasklog-prod</p>
              */
             public Builder logStoreName(String logStoreName) {
                 this.logStoreName = logStoreName;
@@ -545,7 +602,10 @@ public class ListDataConnectorsResponseBody extends TeaModel {
             }
 
             /**
-             * SlsIngestionJobName.
+             * <p>The name of the SLS data import job for the collector.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1a2b3c4d5e6f7a8b9c0d1e2f3a4b****</p>
              */
             public Builder slsIngestionJobName(String slsIngestionJobName) {
                 this.slsIngestionJobName = slsIngestionJobName;
@@ -553,7 +613,10 @@ public class ListDataConnectorsResponseBody extends TeaModel {
             }
 
             /**
-             * SlsIngestionJobState.
+             * <p>The status of the SLS data import job for the collector.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>running</p>
              */
             public Builder slsIngestionJobState(String slsIngestionJobState) {
                 this.slsIngestionJobState = slsIngestionJobState;
@@ -561,7 +624,10 @@ public class ListDataConnectorsResponseBody extends TeaModel {
             }
 
             /**
-             * SrcDataType.
+             * <p>The source data type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>s3</p>
              */
             public Builder srcDataType(String srcDataType) {
                 this.srcDataType = srcDataType;
@@ -569,7 +635,10 @@ public class ListDataConnectorsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-01-04 22:31:54</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

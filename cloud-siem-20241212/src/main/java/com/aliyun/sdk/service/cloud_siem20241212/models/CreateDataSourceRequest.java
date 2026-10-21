@@ -283,7 +283,16 @@ public class CreateDataSourceRequest extends Request {
         } 
 
         /**
-         * DataSourceFrom.
+         * <p>The source of the data. Valid values:</p>
+         * <ul>
+         * <li><p>center</p>
+         * </li>
+         * <li><p>custom</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>center</p>
          */
         public Builder dataSourceFrom(String dataSourceFrom) {
             this.putBodyParameter("DataSourceFrom", dataSourceFrom);
@@ -292,7 +301,7 @@ public class CreateDataSourceRequest extends Request {
         }
 
         /**
-         * DataSourceIds.
+         * <p>A list of data source IDs.</p>
          */
         public Builder dataSourceIds(java.util.List<String> dataSourceIds) {
             String dataSourceIdsShrink = shrink(dataSourceIds, "DataSourceIds", "json");
@@ -302,7 +311,10 @@ public class CreateDataSourceRequest extends Request {
         }
 
         /**
-         * DataSourceName.
+         * <p>The name of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AD_LOG</p>
          */
         public Builder dataSourceName(String dataSourceName) {
             this.putBodyParameter("DataSourceName", dataSourceName);
@@ -311,7 +323,10 @@ public class CreateDataSourceRequest extends Request {
         }
 
         /**
-         * DataSourceRecognizeEnabled.
+         * <p>Specifies whether to automatically discover new data sources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder dataSourceRecognizeEnabled(Boolean dataSourceRecognizeEnabled) {
             this.putBodyParameter("DataSourceRecognizeEnabled", dataSourceRecognizeEnabled);
@@ -320,7 +335,10 @@ public class CreateDataSourceRequest extends Request {
         }
 
         /**
-         * DataSourceRecognizer.
+         * <p>The data source recognizer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alibaba_cloud_waf_flow_log_1766185894104675</p>
          */
         public Builder dataSourceRecognizer(String dataSourceRecognizer) {
             this.putBodyParameter("DataSourceRecognizer", dataSourceRecognizer);
@@ -329,7 +347,7 @@ public class CreateDataSourceRequest extends Request {
         }
 
         /**
-         * DataSourceReferences.
+         * <p>The IDs of associated data access instances.</p>
          */
         public Builder dataSourceReferences(java.util.List<String> dataSourceReferences) {
             String dataSourceReferencesShrink = shrink(dataSourceReferences, "DataSourceReferences", "json");
@@ -339,7 +357,7 @@ public class CreateDataSourceRequest extends Request {
         }
 
         /**
-         * DataSourceStores.
+         * <p>The list of Simple Log Service projects.</p>
          */
         public Builder dataSourceStores(java.util.List<DataSourceStores> dataSourceStores) {
             this.putBodyParameter("DataSourceStores", dataSourceStores);
@@ -348,7 +366,10 @@ public class CreateDataSourceRequest extends Request {
         }
 
         /**
-         * DataSourceTemplateId.
+         * <p>The ID of the data source template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dst_alibaba_cloud_nas_audit_log_1358117679873357</p>
          */
         public Builder dataSourceTemplateId(String dataSourceTemplateId) {
             this.putBodyParameter("DataSourceTemplateId", dataSourceTemplateId);
@@ -357,7 +378,16 @@ public class CreateDataSourceRequest extends Request {
         }
 
         /**
-         * DataSourceType.
+         * <p>The type of the data source. Valid values:</p>
+         * <ul>
+         * <li><p>preset</p>
+         * </li>
+         * <li><p>custom</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>preset</p>
          */
         public Builder dataSourceType(String dataSourceType) {
             this.putBodyParameter("DataSourceType", dataSourceType);
@@ -366,7 +396,16 @@ public class CreateDataSourceRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li><p><strong>zh</strong> (default): Chinese.</p>
+         * </li>
+         * <li><p><strong>en</strong>: English.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -375,7 +414,10 @@ public class CreateDataSourceRequest extends Request {
         }
 
         /**
-         * LogProjectName.
+         * <p>The name of the Simple Log Service project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyun-cloudsiem-data-173326*******-cn-hangzhou</p>
          */
         public Builder logProjectName(String logProjectName) {
             this.putBodyParameter("LogProjectName", logProjectName);
@@ -384,7 +426,10 @@ public class CreateDataSourceRequest extends Request {
         }
 
         /**
-         * LogRegionId.
+         * <p>The ID of the log storage region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder logRegionId(String logRegionId) {
             this.putBodyParameter("LogRegionId", logRegionId);
@@ -393,7 +438,10 @@ public class CreateDataSourceRequest extends Request {
         }
 
         /**
-         * LogStoreName.
+         * <p>The name of the Simple Log Service Logstore.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mde_raw</p>
          */
         public Builder logStoreName(String logStoreName) {
             this.putBodyParameter("LogStoreName", logStoreName);
@@ -402,7 +450,10 @@ public class CreateDataSourceRequest extends Request {
         }
 
         /**
-         * LogUserId.
+         * <p>The user ID for data ingestion.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>173326*******</p>
          */
         public Builder logUserId(Long logUserId) {
             this.putBodyParameter("LogUserId", logUserId);
@@ -411,7 +462,16 @@ public class CreateDataSourceRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sort order. Valid values:</p>
+         * <ul>
+         * <li><p>desc: descending.</p>
+         * </li>
+         * <li><p>asc: ascending.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder order(String order) {
             this.putBodyParameter("Order", order);
@@ -420,7 +480,16 @@ public class CreateDataSourceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region of the Management Hub. Select a region based on the location of your assets. Valid values:</p>
+         * <ul>
+         * <li><p>cn-hangzhou: Assets are in the Chinese mainland.</p>
+         * </li>
+         * <li><p>ap-southeast-1: Assets are outside China.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -429,7 +498,10 @@ public class CreateDataSourceRequest extends Request {
         }
 
         /**
-         * RoleFor.
+         * <p>The user ID of the member whose perspective the administrator assumes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>173326*******</p>
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);
@@ -549,7 +621,16 @@ public class CreateDataSourceRequest extends Request {
             } 
 
             /**
-             * DataSourceStoreFrom.
+             * <p>The source of the data. Valid values:</p>
+             * <ul>
+             * <li><p>center</p>
+             * </li>
+             * <li><p>custom</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>center</p>
              */
             public Builder dataSourceStoreFrom(String dataSourceStoreFrom) {
                 this.dataSourceStoreFrom = dataSourceStoreFrom;
@@ -557,7 +638,10 @@ public class CreateDataSourceRequest extends Request {
             }
 
             /**
-             * DataSourceStoreId.
+             * <p>The ID of the log storage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder dataSourceStoreId(String dataSourceStoreId) {
                 this.dataSourceStoreId = dataSourceStoreId;
@@ -565,7 +649,16 @@ public class CreateDataSourceRequest extends Request {
             }
 
             /**
-             * DataSourceStoreStatus.
+             * <p>The status of the log storage. Valid values:</p>
+             * <ul>
+             * <li><p>normal</p>
+             * </li>
+             * <li><p>abnormal</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder dataSourceStoreStatus(String dataSourceStoreStatus) {
                 this.dataSourceStoreStatus = dataSourceStoreStatus;
@@ -573,7 +666,10 @@ public class CreateDataSourceRequest extends Request {
             }
 
             /**
-             * LogProjectName.
+             * <p>The name of the Simple Log Service project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliyun-cloudsiem-data-173326*******-cn-hangzhou</p>
              */
             public Builder logProjectName(String logProjectName) {
                 this.logProjectName = logProjectName;
@@ -581,7 +677,10 @@ public class CreateDataSourceRequest extends Request {
             }
 
             /**
-             * LogRegionId.
+             * <p>The ID of the log storage region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder logRegionId(String logRegionId) {
                 this.logRegionId = logRegionId;
@@ -589,7 +688,10 @@ public class CreateDataSourceRequest extends Request {
             }
 
             /**
-             * LogStoreName.
+             * <p>The name of the Simple Log Service Logstore.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>actiontrail_management-events</p>
              */
             public Builder logStoreName(String logStoreName) {
                 this.logStoreName = logStoreName;

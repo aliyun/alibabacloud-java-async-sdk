@@ -132,7 +132,7 @@ public class ListAutoDisposeEntitiesResponseBody extends TeaModel {
         } 
 
         /**
-         * AutoDecisionEntities.
+         * <p>The list of AI automatic decision-making entity information.</p>
          */
         public Builder autoDecisionEntities(java.util.List<AutoDecisionEntities> autoDecisionEntities) {
             this.autoDecisionEntities = autoDecisionEntities;
@@ -140,7 +140,10 @@ public class ListAutoDisposeEntitiesResponseBody extends TeaModel {
         }
 
         /**
-         * CurrentPage.
+         * <p>The current page number. The value must be greater than or equal to 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -148,7 +151,10 @@ public class ListAutoDisposeEntitiesResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries returned in this call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -156,7 +162,10 @@ public class ListAutoDisposeEntitiesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token for the next query. You do not need to specify this parameter for the first query or if no more results exist. If a next query exists, set this parameter to the NextToken value returned by the previous API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -164,7 +173,10 @@ public class ListAutoDisposeEntitiesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -183,7 +195,10 @@ public class ListAutoDisposeEntitiesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>57</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -327,7 +342,10 @@ public class ListAutoDisposeEntitiesResponseBody extends TeaModel {
             } 
 
             /**
-             * AlertId.
+             * <p>The alert rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20403189</p>
              */
             public Builder alertId(String alertId) {
                 this.alertId = alertId;
@@ -335,7 +353,14 @@ public class ListAutoDisposeEntitiesResponseBody extends TeaModel {
             }
 
             /**
-             * DisposalMethod.
+             * <p>The disposal method. Valid values:</p>
+             * <ul>
+             * <li>ignore: Ignored.</li>
+             * <li>dispose: Playbook-based disposal.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>dispose</p>
              */
             public Builder disposalMethod(String disposalMethod) {
                 this.disposalMethod = disposalMethod;
@@ -343,7 +368,10 @@ public class ListAutoDisposeEntitiesResponseBody extends TeaModel {
             }
 
             /**
-             * DisposeRecordId.
+             * <p>The disposal ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1ec121479b341a61886dbd2c4ccd*****</p>
              */
             public Builder disposeRecordId(String disposeRecordId) {
                 this.disposeRecordId = disposeRecordId;
@@ -351,7 +379,10 @@ public class ListAutoDisposeEntitiesResponseBody extends TeaModel {
             }
 
             /**
-             * EntityName.
+             * <p>The entity name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/apps/ext/ka****</p>
              */
             public Builder entityName(String entityName) {
                 this.entityName = entityName;
@@ -359,7 +390,17 @@ public class ListAutoDisposeEntitiesResponseBody extends TeaModel {
             }
 
             /**
-             * EntityType.
+             * <p>The entity type. Valid values:</p>
+             * <ul>
+             * <li>ip: IP address.</li>
+             * <li>domain: domain name.</li>
+             * <li>process: process.</li>
+             * <li>file: file.</li>
+             * <li>host: host.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>process</p>
              */
             public Builder entityType(String entityType) {
                 this.entityType = entityType;
@@ -367,7 +408,10 @@ public class ListAutoDisposeEntitiesResponseBody extends TeaModel {
             }
 
             /**
-             * EntityUuid.
+             * <p>The entity UUID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>022ed6c601514a370cc9e3acd37a****</p>
              */
             public Builder entityUuid(String entityUuid) {
                 this.entityUuid = entityUuid;
@@ -375,7 +419,10 @@ public class ListAutoDisposeEntitiesResponseBody extends TeaModel {
             }
 
             /**
-             * PlaybookUuid.
+             * <p>The playbook UUID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6fd2b143-e420-4c1b-a118-e764*****</p>
              */
             public Builder playbookUuid(String playbookUuid) {
                 this.playbookUuid = playbookUuid;
@@ -383,7 +430,10 @@ public class ListAutoDisposeEntitiesResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * <p>The UUID of the playbook. This is the unique identifier of the playbook.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0d23f133-22d7-4388-b738-ab******</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

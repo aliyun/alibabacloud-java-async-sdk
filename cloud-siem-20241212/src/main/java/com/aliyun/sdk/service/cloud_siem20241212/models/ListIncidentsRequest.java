@@ -369,7 +369,10 @@ public class ListIncidentsRequest extends Request {
         } 
 
         /**
-         * AlertUuid.
+         * <p>The alert ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas_71e24437d2797ce8fc59692905a4****</p>
          */
         public Builder alertUuid(String alertUuid) {
             this.putBodyParameter("AlertUuid", alertUuid);
@@ -378,7 +381,7 @@ public class ListIncidentsRequest extends Request {
         }
 
         /**
-         * DetectionRuleIds.
+         * <p>The list of detection rule IDs.</p>
          */
         public Builder detectionRuleIds(java.util.List<String> detectionRuleIds) {
             this.putBodyParameter("DetectionRuleIds", detectionRuleIds);
@@ -387,7 +390,10 @@ public class ListIncidentsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time timestamp, in milliseconds (ms).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1749090526055</p>
          */
         public Builder endTime(Long endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -396,7 +402,10 @@ public class ListIncidentsRequest extends Request {
         }
 
         /**
-         * IncidentName.
+         * <p>The event name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS unusual log in</p>
          */
         public Builder incidentName(String incidentName) {
             this.putQueryParameter("IncidentName", incidentName);
@@ -405,7 +414,16 @@ public class ListIncidentsRequest extends Request {
         }
 
         /**
-         * IncidentStatus.
+         * <p>The event status. Valid values:</p>
+         * <ul>
+         * <li>0: Unhandled.</li>
+         * <li>1: Handling.</li>
+         * <li>5: Handling failed.</li>
+         * <li>10: Handled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder incidentStatus(Integer incidentStatus) {
             this.putBodyParameter("IncidentStatus", incidentStatus);
@@ -414,7 +432,10 @@ public class ListIncidentsRequest extends Request {
         }
 
         /**
-         * IncidentStatusList.
+         * <p>The list of event statuses.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[0,1,5]</p>
          */
         public Builder incidentStatusList(java.util.List<String> incidentStatusList) {
             this.putBodyParameter("IncidentStatusList", incidentStatusList);
@@ -423,7 +444,10 @@ public class ListIncidentsRequest extends Request {
         }
 
         /**
-         * IncidentTags.
+         * <p>The event tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{\&quot;data_source\&quot;:[\&quot;sas\&quot;]}]</p>
          */
         public Builder incidentTags(String incidentTags) {
             this.putBodyParameter("IncidentTags", incidentTags);
@@ -432,7 +456,7 @@ public class ListIncidentsRequest extends Request {
         }
 
         /**
-         * IncidentUuids.
+         * <p>The list of event UUIDs, separated by commas (half-width).</p>
          */
         public Builder incidentUuids(java.util.List<String> incidentUuids) {
             String incidentUuidsShrink = shrink(incidentUuids, "IncidentUuids", "simple");
@@ -442,7 +466,15 @@ public class ListIncidentsRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response messages. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * <p>Note: This parameter is required in actual API calls. If it is not provided, the service returns a 400 error: &quot;The specified Lang can not be empty.&quot; Pass the language code explicitly.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -451,7 +483,10 @@ public class ListIncidentsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to read in this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -460,7 +495,10 @@ public class ListIncidentsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token used to retrieve the next page of results. Leave this parameter empty for the first request or when there are no more pages. If more pages exist, set this parameter to the NextToken value returned by the previous API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAASLVeIxed4466E0LVmGkzwS6hJKd9DGVGMDRM6Lu****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -469,7 +507,14 @@ public class ListIncidentsRequest extends Request {
         }
 
         /**
-         * OrderDirection.
+         * <p>The sort direction. Valid values:</p>
+         * <ul>
+         * <li><strong>desc</strong> (default): Descending order.</li>
+         * <li><strong>asc</strong>: Ascending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder orderDirection(String orderDirection) {
             this.putBodyParameter("OrderDirection", orderDirection);
@@ -478,7 +523,14 @@ public class ListIncidentsRequest extends Request {
         }
 
         /**
-         * OrderFieldName.
+         * <p>The field used to sort the list. Valid values:</p>
+         * <ul>
+         * <li>GmtModified: The event update time (default).</li>
+         * <li>ThreatScore: The threat score.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>GmtModified</p>
          */
         public Builder orderFieldName(String orderFieldName) {
             this.putBodyParameter("OrderFieldName", orderFieldName);
@@ -487,7 +539,7 @@ public class ListIncidentsRequest extends Request {
         }
 
         /**
-         * Owners.
+         * <p>The UID of the account responsible for the event.</p>
          */
         public Builder owners(java.util.List<String> owners) {
             this.putBodyParameter("Owners", owners);
@@ -496,6 +548,7 @@ public class ListIncidentsRequest extends Request {
         }
 
         /**
+         * <p>The current page number for pagination.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -508,6 +561,7 @@ public class ListIncidentsRequest extends Request {
         }
 
         /**
+         * <p>The number of entries to display per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -520,7 +574,14 @@ public class ListIncidentsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The location of the data management center for Cloud Threat Detection and Response (CTDR). Select the management center location based on the region where your assets reside. Valid values:</p>
+         * <ul>
+         * <li>cn-hangzhou: Assets are located in the Chinese mainland.</li>
+         * <li>ap-southeast-1: Assets are located outside China.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -529,7 +590,10 @@ public class ListIncidentsRequest extends Request {
         }
 
         /**
-         * RelateAssetId.
+         * <p>The ID of the asset associated with the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6c740667-80b2-476d-8924-2e706feb****</p>
          */
         public Builder relateAssetId(String relateAssetId) {
             this.putBodyParameter("RelateAssetId", relateAssetId);
@@ -538,7 +602,10 @@ public class ListIncidentsRequest extends Request {
         }
 
         /**
-         * RelateEntityId.
+         * <p>The ID of the entity associated with the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b920ed22259f5412099e97dfda96****</p>
          */
         public Builder relateEntityId(String relateEntityId) {
             this.putBodyParameter("RelateEntityId", relateEntityId);
@@ -547,7 +614,10 @@ public class ListIncidentsRequest extends Request {
         }
 
         /**
-         * RoleFor.
+         * <p>The user ID that the administrator uses to switch to another member\&quot;s view.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>113091674488****</p>
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);
@@ -556,7 +626,14 @@ public class ListIncidentsRequest extends Request {
         }
 
         /**
-         * RoleType.
+         * <p>The view type. Valid values:</p>
+         * <ul>
+         * <li>0: The current Alibaba Cloud account view.</li>
+         * <li>1: The view of all accounts in the enterprise.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder roleType(Integer roleType) {
             this.putBodyParameter("RoleType", roleType);
@@ -565,7 +642,10 @@ public class ListIncidentsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time timestamp, in milliseconds (ms).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1690102943000</p>
          */
         public Builder startTime(Long startTime) {
             this.putBodyParameter("StartTime", startTime);
@@ -574,7 +654,17 @@ public class ListIncidentsRequest extends Request {
         }
 
         /**
-         * ThreatLevel.
+         * <p>The threat level. Valid values:</p>
+         * <ul>
+         * <li>5: Critical.</li>
+         * <li>4: High.</li>
+         * <li>3: Medium.</li>
+         * <li>2: Low.</li>
+         * <li>1: Informational.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder threatLevel(java.util.List<String> threatLevel) {
             this.putBodyParameter("ThreatLevel", threatLevel);

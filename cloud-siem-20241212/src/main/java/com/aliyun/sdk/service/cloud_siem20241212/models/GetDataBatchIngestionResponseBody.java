@@ -67,7 +67,7 @@ public class GetDataBatchIngestionResponseBody extends TeaModel {
         } 
 
         /**
-         * DataBatchIngestion.
+         * <p>The data batch ingestion configuration.</p>
          */
         public Builder dataBatchIngestion(DataBatchIngestion dataBatchIngestion) {
             this.dataBatchIngestion = dataBatchIngestion;
@@ -75,7 +75,10 @@ public class GetDataBatchIngestionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +183,10 @@ public class GetDataBatchIngestionResponseBody extends TeaModel {
             } 
 
             /**
-             * DataIngestionId.
+             * <p>The data ingestion ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alibaba_cloud_sas_process_ingestion_173326*******</p>
              */
             public Builder dataIngestionId(String dataIngestionId) {
                 this.dataIngestionId = dataIngestionId;
@@ -188,7 +194,14 @@ public class GetDataBatchIngestionResponseBody extends TeaModel {
             }
 
             /**
-             * DataIngestionStatus.
+             * <p>The accessed state of the data ingestion. Valid values:</p>
+             * <ul>
+             * <li>enabled: Enabled.</li>
+             * <li>disabled: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder dataIngestionStatus(String dataIngestionStatus) {
                 this.dataIngestionStatus = dataIngestionStatus;
@@ -196,7 +209,10 @@ public class GetDataBatchIngestionResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceId.
+             * <p>The data source ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alibaba_cloud_sas_process_log_173326*******</p>
              */
             public Builder dataSourceId(String dataSourceId) {
                 this.dataSourceId = dataSourceId;
@@ -204,7 +220,10 @@ public class GetDataBatchIngestionResponseBody extends TeaModel {
             }
 
             /**
-             * ProductId.
+             * <p>The product ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alibaba_cloud_sas</p>
              */
             public Builder productId(String productId) {
                 this.productId = productId;
@@ -212,7 +231,10 @@ public class GetDataBatchIngestionResponseBody extends TeaModel {
             }
 
             /**
-             * VendorId.
+             * <p>The vendor ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alibaba_cloud</p>
              */
             public Builder vendorId(String vendorId) {
                 this.vendorId = vendorId;
@@ -383,7 +405,7 @@ public class GetDataBatchIngestionResponseBody extends TeaModel {
             } 
 
             /**
-             * ApsaraDataIngestionIds.
+             * <p>The list of cloud native mode ingestion IDs.</p>
              */
             public Builder apsaraDataIngestionIds(java.util.List<String> apsaraDataIngestionIds) {
                 this.apsaraDataIngestionIds = apsaraDataIngestionIds;
@@ -391,7 +413,14 @@ public class GetDataBatchIngestionResponseBody extends TeaModel {
             }
 
             /**
-             * AutoScanNew.
+             * <p>Indicates whether new users are automatically discovered. Valid values:</p>
+             * <ul>
+             * <li>enabled: Enabled.</li>
+             * <li>disabled: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder autoScanNew(String autoScanNew) {
                 this.autoScanNew = autoScanNew;
@@ -399,7 +428,10 @@ public class GetDataBatchIngestionResponseBody extends TeaModel {
             }
 
             /**
-             * DataBatchIngestionEffectTime.
+             * <p>The effective period of the data batch ingestion. This value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1733269771123</p>
              */
             public Builder dataBatchIngestionEffectTime(String dataBatchIngestionEffectTime) {
                 this.dataBatchIngestionEffectTime = dataBatchIngestionEffectTime;
@@ -407,7 +439,10 @@ public class GetDataBatchIngestionResponseBody extends TeaModel {
             }
 
             /**
-             * DataBatchIngestionMode.
+             * <p>The batch data ingestion mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>full</p>
              */
             public Builder dataBatchIngestionMode(String dataBatchIngestionMode) {
                 this.dataBatchIngestionMode = dataBatchIngestionMode;
@@ -415,7 +450,10 @@ public class GetDataBatchIngestionResponseBody extends TeaModel {
             }
 
             /**
-             * DataBatchIngestionSetTime.
+             * <p>The time when the data batch ingestion was configured. This value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1733269771123</p>
              */
             public Builder dataBatchIngestionSetTime(String dataBatchIngestionSetTime) {
                 this.dataBatchIngestionSetTime = dataBatchIngestionSetTime;
@@ -423,7 +461,16 @@ public class GetDataBatchIngestionResponseBody extends TeaModel {
             }
 
             /**
-             * DataBatchIngestionStatus.
+             * <p>The accessed state of the data batch ingestion. Valid values:</p>
+             * <ul>
+             * <li>pending: Pending.</li>
+             * <li>running: In effect.</li>
+             * <li>success: Succeeded.</li>
+             * <li>failed: Failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>pending</p>
              */
             public Builder dataBatchIngestionStatus(String dataBatchIngestionStatus) {
                 this.dataBatchIngestionStatus = dataBatchIngestionStatus;
@@ -431,7 +478,7 @@ public class GetDataBatchIngestionResponseBody extends TeaModel {
             }
 
             /**
-             * DataIngestions.
+             * <p>The list of data ingestions.</p>
              */
             public Builder dataIngestions(java.util.List<DataIngestions> dataIngestions) {
                 this.dataIngestions = dataIngestions;
@@ -439,7 +486,10 @@ public class GetDataBatchIngestionResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceRecognizeEnabled.
+             * <p>Indicates whether automatic discovery of new Logstores is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder dataSourceRecognizeEnabled(Boolean dataSourceRecognizeEnabled) {
                 this.dataSourceRecognizeEnabled = dataSourceRecognizeEnabled;
@@ -447,7 +497,7 @@ public class GetDataBatchIngestionResponseBody extends TeaModel {
             }
 
             /**
-             * LogUserIds.
+             * <p>The list of user IDs for data batch ingestion.</p>
              */
             public Builder logUserIds(java.util.List<String> logUserIds) {
                 this.logUserIds = logUserIds;
@@ -455,7 +505,7 @@ public class GetDataBatchIngestionResponseBody extends TeaModel {
             }
 
             /**
-             * RecommendDataIngestionIds.
+             * <p>The list of recommended ingestion IDs.</p>
              */
             public Builder recommendDataIngestionIds(java.util.List<String> recommendDataIngestionIds) {
                 this.recommendDataIngestionIds = recommendDataIngestionIds;

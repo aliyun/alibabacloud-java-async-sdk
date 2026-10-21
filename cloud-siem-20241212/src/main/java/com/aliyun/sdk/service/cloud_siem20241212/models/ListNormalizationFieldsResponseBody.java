@@ -106,7 +106,10 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
         } 
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -114,7 +117,10 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>Specifies whether a next query token exists. Leave this parameter empty for the first query or when no more results are available. If a next page exists, set this parameter to the NextToken value returned by the previous API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -122,7 +128,7 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
         }
 
         /**
-         * NormalizationFields.
+         * <p>The list of normalization fields.</p>
          */
         public Builder normalizationFields(java.util.List<NormalizationFields> normalizationFields) {
             this.normalizationFields = normalizationFields;
@@ -130,7 +136,10 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>57</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -308,7 +320,10 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The creation time. This value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1736386610000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -316,7 +331,10 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationFieldDescription.
+             * <p>The description of the JSON-type standard field key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alert_level</p>
              */
             public Builder normalizationFieldDescription(String normalizationFieldDescription) {
                 this.normalizationFieldDescription = normalizationFieldDescription;
@@ -324,7 +342,10 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationFieldExample.
+             * <p>The example value of the JSON-type standard field key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder normalizationFieldExample(String normalizationFieldExample) {
                 this.normalizationFieldExample = normalizationFieldExample;
@@ -332,7 +353,10 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationFieldFrom.
+             * <p>The source of the JSON-type standard field key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>preset</p>
              */
             public Builder normalizationFieldFrom(String normalizationFieldFrom) {
                 this.normalizationFieldFrom = normalizationFieldFrom;
@@ -340,7 +364,10 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationFieldName.
+             * <p>The name of the JSON-type standard field key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alert_level</p>
              */
             public Builder normalizationFieldName(String normalizationFieldName) {
                 this.normalizationFieldName = normalizationFieldName;
@@ -348,7 +375,7 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationFieldRequired.
+             * <p>Indicates whether the JSON-type standard field key is required.</p>
              */
             public Builder normalizationFieldRequired(Boolean normalizationFieldRequired) {
                 this.normalizationFieldRequired = normalizationFieldRequired;
@@ -356,7 +383,7 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationFieldReserved.
+             * <p>Indicates whether the standard field key is a system built-in key.</p>
              */
             public Builder normalizationFieldReserved(Boolean normalizationFieldReserved) {
                 this.normalizationFieldReserved = normalizationFieldReserved;
@@ -364,7 +391,7 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationFieldTokenize.
+             * <p>Indicates whether the JSON-type standard field key is tokenized.</p>
              */
             public Builder normalizationFieldTokenize(Boolean normalizationFieldTokenize) {
                 this.normalizationFieldTokenize = normalizationFieldTokenize;
@@ -372,7 +399,10 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationFieldType.
+             * <p>The type of the JSON-type standard field key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>text</p>
              */
             public Builder normalizationFieldType(String normalizationFieldType) {
                 this.normalizationFieldType = normalizationFieldType;
@@ -380,7 +410,10 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The update time. This value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1736386610000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -629,7 +662,10 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The creation time. This value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1736386610000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -637,7 +673,10 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationCategoryId.
+             * <p>The normalization category ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NETWORK_CATEGORY</p>
              */
             public Builder normalizationCategoryId(String normalizationCategoryId) {
                 this.normalizationCategoryId = normalizationCategoryId;
@@ -645,7 +684,10 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationFieldDescription.
+             * <p>The description of the normalization field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_user</p>
              */
             public Builder normalizationFieldDescription(String normalizationFieldDescription) {
                 this.normalizationFieldDescription = normalizationFieldDescription;
@@ -653,7 +695,10 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationFieldExample.
+             * <p>The example value of the normalization field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>173326*******</p>
              */
             public Builder normalizationFieldExample(String normalizationFieldExample) {
                 this.normalizationFieldExample = normalizationFieldExample;
@@ -661,7 +706,10 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationFieldFrom.
+             * <p>The source of the JSON-type standard field key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>preset</p>
              */
             public Builder normalizationFieldFrom(String normalizationFieldFrom) {
                 this.normalizationFieldFrom = normalizationFieldFrom;
@@ -669,7 +717,7 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationFieldJsonIndexAll.
+             * <p>Indicates whether indexes are created for all keys of the JSON-type standard field.</p>
              */
             public Builder normalizationFieldJsonIndexAll(Boolean normalizationFieldJsonIndexAll) {
                 this.normalizationFieldJsonIndexAll = normalizationFieldJsonIndexAll;
@@ -677,7 +725,7 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationFieldJsonKeys.
+             * <p>The list of keys for the JSON-type standard field.</p>
              */
             public Builder normalizationFieldJsonKeys(java.util.List<NormalizationFieldJsonKeys> normalizationFieldJsonKeys) {
                 this.normalizationFieldJsonKeys = normalizationFieldJsonKeys;
@@ -685,7 +733,10 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationFieldName.
+             * <p>The name of the normalization field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_user</p>
              */
             public Builder normalizationFieldName(String normalizationFieldName) {
                 this.normalizationFieldName = normalizationFieldName;
@@ -693,7 +744,7 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationFieldRequired.
+             * <p>Indicates whether the standard field key is required.</p>
              */
             public Builder normalizationFieldRequired(Boolean normalizationFieldRequired) {
                 this.normalizationFieldRequired = normalizationFieldRequired;
@@ -701,7 +752,10 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationFieldRequirement.
+             * <p>Indicates whether the normalization field is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder normalizationFieldRequirement(Boolean normalizationFieldRequirement) {
                 this.normalizationFieldRequirement = normalizationFieldRequirement;
@@ -709,7 +763,10 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationFieldReserved.
+             * <p>Indicates whether the normalization field is reserved.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder normalizationFieldReserved(Boolean normalizationFieldReserved) {
                 this.normalizationFieldReserved = normalizationFieldReserved;
@@ -717,7 +774,7 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationFieldTokenize.
+             * <p>Indicates whether the standard field is tokenized.</p>
              */
             public Builder normalizationFieldTokenize(Boolean normalizationFieldTokenize) {
                 this.normalizationFieldTokenize = normalizationFieldTokenize;
@@ -725,7 +782,15 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationFieldType.
+             * <p>The type of the normalization field. Valid values:</p>
+             * <ul>
+             * <li>varchar</li>
+             * <li>bigint</li>
+             * <li>double</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>varchar</p>
              */
             public Builder normalizationFieldType(String normalizationFieldType) {
                 this.normalizationFieldType = normalizationFieldType;
@@ -733,7 +798,10 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationSchemaId.
+             * <p>The normalization schema ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NETWORK_SESSION_ACTIVITY</p>
              */
             public Builder normalizationSchemaId(String normalizationSchemaId) {
                 this.normalizationSchemaId = normalizationSchemaId;
@@ -741,7 +809,10 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationSecurityDomainId.
+             * <p>The security domain ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NETWORK_AND_WEB_SECURITY</p>
              */
             public Builder normalizationSecurityDomainId(String normalizationSecurityDomainId) {
                 this.normalizationSecurityDomainId = normalizationSecurityDomainId;
@@ -749,7 +820,10 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The update time. This value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1736386610000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

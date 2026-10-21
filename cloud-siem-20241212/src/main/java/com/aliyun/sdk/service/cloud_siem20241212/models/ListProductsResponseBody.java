@@ -106,7 +106,10 @@ public class ListProductsResponseBody extends TeaModel {
         } 
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return in this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -114,7 +117,10 @@ public class ListProductsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token. You do not need to specify this parameter for the first request or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -122,7 +128,7 @@ public class ListProductsResponseBody extends TeaModel {
         }
 
         /**
-         * Products.
+         * <p>The list of products.</p>
          */
         public Builder products(java.util.List<Products> products) {
             this.products = products;
@@ -130,7 +136,10 @@ public class ListProductsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListProductsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>57</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -360,7 +372,10 @@ public class ListProductsResponseBody extends TeaModel {
             } 
 
             /**
-             * AbnormalDataIngestionCount.
+             * <p>The number of abnormal data ingestion entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder abnormalDataIngestionCount(Integer abnormalDataIngestionCount) {
                 this.abnormalDataIngestionCount = abnormalDataIngestionCount;
@@ -368,7 +383,10 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * ActiveTime.
+             * <p>The activation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1733269771123</p>
              */
             public Builder activeTime(Long activeTime) {
                 this.activeTime = activeTime;
@@ -376,7 +394,10 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * AllowAddDataIngestion.
+             * <p>Indicates whether data collection can be added.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder allowAddDataIngestion(Boolean allowAddDataIngestion) {
                 this.allowAddDataIngestion = allowAddDataIngestion;
@@ -384,7 +405,10 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1733269771123</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -392,7 +416,14 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * DataIngestionStatus.
+             * <p>The accessed state of data ingestion. Valid values:</p>
+             * <ul>
+             * <li>enabled: Enabled.</li>
+             * <li>disabled: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder dataIngestionStatus(Boolean dataIngestionStatus) {
                 this.dataIngestionStatus = dataIngestionStatus;
@@ -400,7 +431,10 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * EnabledDataIngestionCount.
+             * <p>The number of enabled data ingestion entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder enabledDataIngestionCount(Integer enabledDataIngestionCount) {
                 this.enabledDataIngestionCount = enabledDataIngestionCount;
@@ -408,7 +442,10 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * ProductAlias.
+             * <p>The product alias.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alibaba_cloud_sas</p>
              */
             public Builder productAlias(String productAlias) {
                 this.productAlias = productAlias;
@@ -416,7 +453,10 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * ProductId.
+             * <p>The product ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alibaba_cloud_sas</p>
              */
             public Builder productId(String productId) {
                 this.productId = productId;
@@ -424,7 +464,10 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * ProductName.
+             * <p><strong>[Deprecated]</strong> This parameter is deprecated and does not need to be specified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sas</p>
              */
             public Builder productName(String productName) {
                 this.productName = productName;
@@ -432,7 +475,14 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * ProductType.
+             * <p>The product type. Valid values:</p>
+             * <ul>
+             * <li>preset</li>
+             * <li>custom</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>preset</p>
              */
             public Builder productType(String productType) {
                 this.productType = productType;
@@ -440,7 +490,10 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalDataIngestionCount.
+             * <p>The total number of data ingestion entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalDataIngestionCount(Integer totalDataIngestionCount) {
                 this.totalDataIngestionCount = totalDataIngestionCount;
@@ -448,7 +501,10 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1733269771123</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -456,7 +512,10 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * VendorId.
+             * <p>The vendor ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vd-qlsw5eocx94w9</p>
              */
             public Builder vendorId(String vendorId) {
                 this.vendorId = vendorId;
@@ -464,7 +523,10 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * VendorName.
+             * <p>The vendor name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder vendorName(String vendorName) {
                 this.vendorName = vendorName;

@@ -144,7 +144,16 @@ public class UpdateDataStorageTtlRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li><p><strong>zh</strong> (default): Chinese.</p>
+         * </li>
+         * <li><p><strong>en</strong>: English.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -153,7 +162,10 @@ public class UpdateDataStorageTtlRequest extends Request {
         }
 
         /**
-         * LogStoreColdTtl.
+         * <p>The storage duration for cold storage in Simple Log Service. This setting is not yet available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder logStoreColdTtl(String logStoreColdTtl) {
             this.putBodyParameter("LogStoreColdTtl", logStoreColdTtl);
@@ -162,7 +174,10 @@ public class UpdateDataStorageTtlRequest extends Request {
         }
 
         /**
-         * LogStoreHotTtl.
+         * <p>The storage duration for hot storage in Simple Log Service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>180</p>
          */
         public Builder logStoreHotTtl(String logStoreHotTtl) {
             this.putBodyParameter("LogStoreHotTtl", logStoreHotTtl);
@@ -171,7 +186,10 @@ public class UpdateDataStorageTtlRequest extends Request {
         }
 
         /**
-         * LogStoreName.
+         * <p>The name of the Logstore for threat analysis.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>network-activity</p>
          */
         public Builder logStoreName(String logStoreName) {
             this.putBodyParameter("LogStoreName", logStoreName);
@@ -180,7 +198,10 @@ public class UpdateDataStorageTtlRequest extends Request {
         }
 
         /**
-         * LogStoreTtl.
+         * <p>The storage duration of the Logstore.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>180</p>
          */
         public Builder logStoreTtl(String logStoreTtl) {
             this.putBodyParameter("LogStoreTtl", logStoreTtl);
@@ -189,7 +210,16 @@ public class UpdateDataStorageTtlRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region of the Data Management Center for threat analysis. Select a region based on the location of your assets. Valid values:</p>
+         * <ul>
+         * <li><p>cn-hangzhou: The Chinese mainland.</p>
+         * </li>
+         * <li><p>ap-southeast-1: Regions outside the Chinese mainland.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -198,7 +228,10 @@ public class UpdateDataStorageTtlRequest extends Request {
         }
 
         /**
-         * RoleFor.
+         * <p>The user ID of the member whose perspective the administrator assumes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>113091674488****</p>
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);

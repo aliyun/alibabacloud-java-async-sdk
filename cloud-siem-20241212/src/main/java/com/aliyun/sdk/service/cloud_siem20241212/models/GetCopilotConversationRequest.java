@@ -102,10 +102,11 @@ public class GetCopilotConversationRequest extends Request {
         } 
 
         /**
+         * <p>The session ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p><a href="http://anchashi5nRNJxqz.prod.xaliyun.com/prodpopscan5nRNJxqz">http://anchashi5nRNJxqz.prod.xaliyun.com/prodpopscan5nRNJxqz</a></p>
+         * <p>54b6c969-4b75-47be-9f43-71f88aeb****</p>
          */
         public Builder conversationId(String conversationId) {
             this.putBodyParameter("ConversationId", conversationId);
@@ -114,7 +115,14 @@ public class GetCopilotConversationRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response message. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -123,7 +131,14 @@ public class GetCopilotConversationRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region where the data management center for threat analysis is located. Select the region of the management center based on the region where your assets are located. Valid values:</p>
+         * <ul>
+         * <li>cn-hangzhou: Select this value if your assets are located in the Chinese mainland and Hong Kong (China).</li>
+         * <li>ap-southeast-1: Select this value if your assets are located outside China.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -132,7 +147,10 @@ public class GetCopilotConversationRequest extends Request {
         }
 
         /**
-         * TraceId.
+         * <p>The trace ID used to precisely query invocation information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>550e8400e29b41d4a71644665544****</p>
          */
         public Builder traceId(String traceId) {
             this.putBodyParameter("TraceId", traceId);

@@ -129,7 +129,17 @@ public class ListResponseRuleFieldsRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese.</li>
+         * <li><strong>en</strong>: English.<blockquote>
+         * <p>This parameter is required. If you do not specify this parameter, the API returns a 400 error.</p>
+         * </blockquote>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -138,7 +148,10 @@ public class ListResponseRuleFieldsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return in this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -147,7 +160,10 @@ public class ListResponseRuleFieldsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that marks the current position for reading. Leave this parameter empty to read from the beginning.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -156,7 +172,14 @@ public class ListResponseRuleFieldsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the region where your assets reside. Valid values:</p>
+         * <ul>
+         * <li>cn-hangzhou: Your assets reside in the Chinese mainland.</li>
+         * <li>ap-southeast-1: Your assets reside outside China.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -165,7 +188,10 @@ public class ListResponseRuleFieldsRequest extends Request {
         }
 
         /**
-         * RoleFor.
+         * <p>The ID of the member to which the administrator switches the view.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>113091674488****</p>
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);
@@ -174,7 +200,14 @@ public class ListResponseRuleFieldsRequest extends Request {
         }
 
         /**
-         * RoleType.
+         * <p>The view type. Valid values:</p>
+         * <ul>
+         * <li>0: The view of the current Alibaba Cloud account.</li>
+         * <li>1: The view of all accounts in the enterprise.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder roleType(Integer roleType) {
             this.putBodyParameter("RoleType", roleType);

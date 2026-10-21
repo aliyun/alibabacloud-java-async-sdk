@@ -67,7 +67,10 @@ public class CreateDataSourceResponseBody extends TeaModel {
         } 
 
         /**
-         * DataSourceId.
+         * <p>The ID of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ds-jl67vixpe1scwysgyu3x</p>
          */
         public Builder dataSourceId(String dataSourceId) {
             this.dataSourceId = dataSourceId;
@@ -75,7 +78,10 @@ public class CreateDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

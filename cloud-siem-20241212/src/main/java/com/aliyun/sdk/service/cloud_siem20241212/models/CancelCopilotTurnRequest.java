@@ -117,10 +117,11 @@ public class CancelCopilotTurnRequest extends Request {
         } 
 
         /**
+         * <p>The session ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>580C4B900CB273E6768A0BE3578B7347</p>
+         * <p>54b6c969-4b75-47be-9f43-71f88aeb****</p>
          */
         public Builder conversationId(String conversationId) {
             this.putBodyParameter("ConversationId", conversationId);
@@ -129,7 +130,14 @@ public class CancelCopilotTurnRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response messages. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -138,7 +146,14 @@ public class CancelCopilotTurnRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region where the data management center for threat analysis is located. Select the management center region based on the region where your assets reside. Valid values:</p>
+         * <ul>
+         * <li>cn-hangzhou: Assets are located in the Chinese mainland.</li>
+         * <li>ap-southeast-1: Assets are located outside China.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -147,7 +162,10 @@ public class CancelCopilotTurnRequest extends Request {
         }
 
         /**
-         * TraceId.
+         * <p>The trace ID used to track service requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>550e8400e29b41d4a71644665544****</p>
          */
         public Builder traceId(String traceId) {
             this.putBodyParameter("TraceId", traceId);
@@ -156,10 +174,11 @@ public class CancelCopilotTurnRequest extends Request {
         }
 
         /**
+         * <p>The conversation turn ID, obtained from the streaming response of CreateCopilotChat.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>dc18b894-19a3-45ee-8768-a59478e00f65</p>
+         * <p>dc18b894-19a3-45ee-8768-a59478e0****</p>
          */
         public Builder turnId(String turnId) {
             this.putBodyParameter("TurnId", turnId);

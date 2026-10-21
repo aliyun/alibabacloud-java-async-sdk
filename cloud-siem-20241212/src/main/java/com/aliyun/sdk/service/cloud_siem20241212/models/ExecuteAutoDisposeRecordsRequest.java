@@ -88,6 +88,11 @@ public class ExecuteAutoDisposeRecordsRequest extends Request {
         } 
 
         /**
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,7 +105,7 @@ public class ExecuteAutoDisposeRecordsRequest extends Request {
         }
 
         /**
-         * SelectedEntityList.
+         * <p>The list of entities selected for manual handling.</p>
          */
         public Builder selectedEntityList(java.util.List<SelectedEntityList> selectedEntityList) {
             this.putBodyParameter("SelectedEntityList", selectedEntityList);
@@ -109,7 +114,7 @@ public class ExecuteAutoDisposeRecordsRequest extends Request {
         }
 
         /**
-         * UnSelectedEntityList.
+         * <p>The list of entities not selected for manual handling.</p>
          */
         public Builder unSelectedEntityList(java.util.List<UnSelectedEntityList> unSelectedEntityList) {
             this.putBodyParameter("UnSelectedEntityList", unSelectedEntityList);
@@ -177,7 +182,10 @@ public class ExecuteAutoDisposeRecordsRequest extends Request {
             } 
 
             /**
-             * AutoDisposeRecordId.
+             * <p>The unique ID of the investigation record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0000089b040b8935fed2e24ca2ec8335</p>
              */
             public Builder autoDisposeRecordId(String autoDisposeRecordId) {
                 this.autoDisposeRecordId = autoDisposeRecordId;
@@ -185,7 +193,10 @@ public class ExecuteAutoDisposeRecordsRequest extends Request {
             }
 
             /**
-             * EntityUuid.
+             * <p>The UUID of the entity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9938fc2708ddc7b7651f3a19e4f09962</p>
              */
             public Builder entityUuid(String entityUuid) {
                 this.entityUuid = entityUuid;
@@ -252,7 +263,10 @@ public class ExecuteAutoDisposeRecordsRequest extends Request {
             } 
 
             /**
-             * AutoDisposeRecordId.
+             * <p>The unique ID of the investigation record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0000089b040b8935fed2e24ca2ec8335</p>
              */
             public Builder autoDisposeRecordId(String autoDisposeRecordId) {
                 this.autoDisposeRecordId = autoDisposeRecordId;
@@ -260,7 +274,10 @@ public class ExecuteAutoDisposeRecordsRequest extends Request {
             }
 
             /**
-             * EntityUuid.
+             * <p>The UUID of the entity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ae6ac3e1c9ada174eb8dadd029a2e9d1</p>
              */
             public Builder entityUuid(String entityUuid) {
                 this.entityUuid = entityUuid;

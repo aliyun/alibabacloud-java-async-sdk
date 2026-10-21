@@ -143,7 +143,10 @@ public class UpdateDataIngestionRequest extends Request {
         } 
 
         /**
-         * DataIngestionId.
+         * <p>The data ingestion ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alibaba_cloud_actiontrail_event_ingestion_173326*******</p>
          */
         public Builder dataIngestionId(String dataIngestionId) {
             this.putBodyParameter("DataIngestionId", dataIngestionId);
@@ -152,7 +155,16 @@ public class UpdateDataIngestionRequest extends Request {
         }
 
         /**
-         * DataIngestionMode.
+         * <p>The data ingestion mode. Valid values:</p>
+         * <ul>
+         * <li><p>realtime</p>
+         * </li>
+         * <li><p>scan</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>realtime</p>
          */
         public Builder dataIngestionMode(String dataIngestionMode) {
             this.putBodyParameter("DataIngestionMode", dataIngestionMode);
@@ -161,7 +173,10 @@ public class UpdateDataIngestionRequest extends Request {
         }
 
         /**
-         * DataSourceId.
+         * <p>The data source ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alibaba_cloud_actiontrail_event_log_173326*******</p>
          */
         public Builder dataSourceId(String dataSourceId) {
             this.putBodyParameter("DataSourceId", dataSourceId);
@@ -170,7 +185,16 @@ public class UpdateDataIngestionRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response messages. Valid values:</p>
+         * <ul>
+         * <li><p><strong>zh</strong> (default): Chinese.</p>
+         * </li>
+         * <li><p><strong>en</strong>: English.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -179,7 +203,10 @@ public class UpdateDataIngestionRequest extends Request {
         }
 
         /**
-         * NormalizationRuleId.
+         * <p>The normalization rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alibaba_cloud_actiontrail_event_rule</p>
          */
         public Builder normalizationRuleId(String normalizationRuleId) {
             this.putBodyParameter("NormalizationRuleId", normalizationRuleId);
@@ -188,7 +215,16 @@ public class UpdateDataIngestionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region of the Data Management center for threat analysis. Select the region where your assets are located. Valid values:</p>
+         * <ul>
+         * <li><p>cn-hangzhou: The assets are in the Chinese mainland.</p>
+         * </li>
+         * <li><p>ap-southeast-1: The assets are in a region outside China.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -197,7 +233,10 @@ public class UpdateDataIngestionRequest extends Request {
         }
 
         /**
-         * RoleFor.
+         * <p>The user ID of a member. An administrator can perform operations on behalf of this member.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>173326*******</p>
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);

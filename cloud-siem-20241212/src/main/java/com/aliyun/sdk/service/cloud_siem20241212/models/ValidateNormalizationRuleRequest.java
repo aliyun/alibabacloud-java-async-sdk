@@ -213,7 +213,10 @@ public class ValidateNormalizationRuleRequest extends Request {
         } 
 
         /**
-         * Data.
+         * <p>The ID of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder data(String data) {
             this.putBodyParameter("Data", data);
@@ -222,7 +225,10 @@ public class ValidateNormalizationRuleRequest extends Request {
         }
 
         /**
-         * ExtendFieldStoreMode.
+         * <p>The storage mode of extended fields. Valid values: flat, pack, and reject.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>flat</p>
          */
         public Builder extendFieldStoreMode(String extendFieldStoreMode) {
             this.putBodyParameter("ExtendFieldStoreMode", extendFieldStoreMode);
@@ -231,7 +237,15 @@ public class ValidateNormalizationRuleRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response message. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * <p>Note: This parameter is required in actual API calls. If this parameter is not provided, the service returns a 400 error with the message \&quot;The specified Lang can not be empty.\&quot; Explicitly specify the language code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -240,7 +254,10 @@ public class ValidateNormalizationRuleRequest extends Request {
         }
 
         /**
-         * LogSample.
+         * <p>The log sample in JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;aaa&quot;:&quot;bbb&quot;,&quot;xxx&quot;:&quot;yyy&quot;}</p>
          */
         public Builder logSample(String logSample) {
             this.putBodyParameter("LogSample", logSample);
@@ -249,7 +266,10 @@ public class ValidateNormalizationRuleRequest extends Request {
         }
 
         /**
-         * NormalizationCategoryId.
+         * <p>The normalization category to which the rule belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NETWORK_CATEGORY</p>
          */
         public Builder normalizationCategoryId(String normalizationCategoryId) {
             this.putBodyParameter("NormalizationCategoryId", normalizationCategoryId);
@@ -258,7 +278,12 @@ public class ValidateNormalizationRuleRequest extends Request {
         }
 
         /**
-         * NormalizationRuleExpression.
+         * <p>The expression of the normalization rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder normalizationRuleExpression(String normalizationRuleExpression) {
             this.putBodyParameter("NormalizationRuleExpression", normalizationRuleExpression);
@@ -267,7 +292,10 @@ public class ValidateNormalizationRuleRequest extends Request {
         }
 
         /**
-         * NormalizationRuleMode.
+         * <p>The mode of the normalization rule. Valid values: both and realtime.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>realtime</p>
          */
         public Builder normalizationRuleMode(String normalizationRuleMode) {
             this.putBodyParameter("NormalizationRuleMode", normalizationRuleMode);
@@ -276,7 +304,10 @@ public class ValidateNormalizationRuleRequest extends Request {
         }
 
         /**
-         * NormalizationSchemaId.
+         * <p>The ID of the normalization schema to which the rule belongs. This parameter is required in actual API calls. If this parameter is not provided, the service returns a 400 error.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP_ACTIVITY</p>
          */
         public Builder normalizationSchemaId(String normalizationSchemaId) {
             this.putBodyParameter("NormalizationSchemaId", normalizationSchemaId);
@@ -285,7 +316,10 @@ public class ValidateNormalizationRuleRequest extends Request {
         }
 
         /**
-         * ProductId.
+         * <p>The ID of the product.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alibaba_cloud_sas</p>
          */
         public Builder productId(String productId) {
             this.putBodyParameter("ProductId", productId);
@@ -294,7 +328,14 @@ public class ValidateNormalizationRuleRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region where the data management center of Threat Analysis is located. Select the region of the management center based on the region where your assets are located. Valid values:</p>
+         * <ul>
+         * <li>cn-hangzhou: The assets are located in the Chinese mainland.</li>
+         * <li>ap-southeast-1: The assets are located outside the Chinese mainland.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -303,7 +344,10 @@ public class ValidateNormalizationRuleRequest extends Request {
         }
 
         /**
-         * RoleFor.
+         * <p>The ID of the user whose perspective the administrator switches to.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>173326*******</p>
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);
@@ -312,7 +356,10 @@ public class ValidateNormalizationRuleRequest extends Request {
         }
 
         /**
-         * VendorId.
+         * <p>The ID of the vendor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alibaba_cloud</p>
          */
         public Builder vendorId(String vendorId) {
             this.putBodyParameter("VendorId", vendorId);

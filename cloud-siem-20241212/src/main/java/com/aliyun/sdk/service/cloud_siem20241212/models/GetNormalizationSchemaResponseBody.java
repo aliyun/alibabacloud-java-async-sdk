@@ -67,7 +67,7 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
         } 
 
         /**
-         * NormalizationSchema.
+         * <p>The normalization schema.</p>
          */
         public Builder normalizationSchema(NormalizationSchema normalizationSchema) {
             this.normalizationSchema = normalizationSchema;
@@ -75,7 +75,10 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -245,7 +248,10 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1736386610000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -253,7 +259,10 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationFieldDescription.
+             * <p>The description of the key for a JSON normalization field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Cloud Provider Code</p>
              */
             public Builder normalizationFieldDescription(String normalizationFieldDescription) {
                 this.normalizationFieldDescription = normalizationFieldDescription;
@@ -261,7 +270,10 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationFieldExample.
+             * <p>The example of the key for a JSON normalization field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alibaba_cloud</p>
              */
             public Builder normalizationFieldExample(String normalizationFieldExample) {
                 this.normalizationFieldExample = normalizationFieldExample;
@@ -269,7 +281,10 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationFieldFrom.
+             * <p>The source of the key for a JSON normalization field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>preset</p>
              */
             public Builder normalizationFieldFrom(String normalizationFieldFrom) {
                 this.normalizationFieldFrom = normalizationFieldFrom;
@@ -277,7 +292,10 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationFieldName.
+             * <p>The name of the key for a JSON normalization field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_code</p>
              */
             public Builder normalizationFieldName(String normalizationFieldName) {
                 this.normalizationFieldName = normalizationFieldName;
@@ -285,7 +303,7 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationFieldRequired.
+             * <p>Specifies whether the key of a JSON normalization field is required.</p>
              */
             public Builder normalizationFieldRequired(Boolean normalizationFieldRequired) {
                 this.normalizationFieldRequired = normalizationFieldRequired;
@@ -293,7 +311,7 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationFieldReserved.
+             * <p>Specifies whether the normalization field name is a system built-in name.</p>
              */
             public Builder normalizationFieldReserved(Boolean normalizationFieldReserved) {
                 this.normalizationFieldReserved = normalizationFieldReserved;
@@ -301,7 +319,7 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationFieldTokenize.
+             * <p>Specifies whether the key of a JSON normalization field is tokenized.</p>
              */
             public Builder normalizationFieldTokenize(Boolean normalizationFieldTokenize) {
                 this.normalizationFieldTokenize = normalizationFieldTokenize;
@@ -309,7 +327,10 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationFieldType.
+             * <p>The type of the key for a JSON normalization field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>varchar</p>
              */
             public Builder normalizationFieldType(String normalizationFieldType) {
                 this.normalizationFieldType = normalizationFieldType;
@@ -317,7 +338,10 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The update time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1736386610000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -527,7 +551,10 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1736386610000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -535,7 +562,10 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationFieldDescription.
+             * <p>The description of the normalization field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_user</p>
              */
             public Builder normalizationFieldDescription(String normalizationFieldDescription) {
                 this.normalizationFieldDescription = normalizationFieldDescription;
@@ -543,7 +573,10 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationFieldExample.
+             * <p>The example of the normalization field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>173326*******</p>
              */
             public Builder normalizationFieldExample(String normalizationFieldExample) {
                 this.normalizationFieldExample = normalizationFieldExample;
@@ -551,7 +584,14 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationFieldFrom.
+             * <p>The source of the normalization field. Valid values:</p>
+             * <ul>
+             * <li>preset: built-in.</li>
+             * <li>custom: custom.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>preset</p>
              */
             public Builder normalizationFieldFrom(String normalizationFieldFrom) {
                 this.normalizationFieldFrom = normalizationFieldFrom;
@@ -559,7 +599,7 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationFieldJsonIndexAll.
+             * <p>Specifies whether indexes are created for all keys of a JSON normalization field.</p>
              */
             public Builder normalizationFieldJsonIndexAll(Boolean normalizationFieldJsonIndexAll) {
                 this.normalizationFieldJsonIndexAll = normalizationFieldJsonIndexAll;
@@ -567,7 +607,7 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationFieldJsonKeys.
+             * <p>The list of keys for a JSON normalization field.</p>
              */
             public Builder normalizationFieldJsonKeys(java.util.List<NormalizationFieldJsonKeys> normalizationFieldJsonKeys) {
                 this.normalizationFieldJsonKeys = normalizationFieldJsonKeys;
@@ -575,7 +615,10 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationFieldName.
+             * <p>The name of the normalization field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_user</p>
              */
             public Builder normalizationFieldName(String normalizationFieldName) {
                 this.normalizationFieldName = normalizationFieldName;
@@ -583,7 +626,7 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationFieldRequired.
+             * <p>Specifies whether the field is required.</p>
              */
             public Builder normalizationFieldRequired(Boolean normalizationFieldRequired) {
                 this.normalizationFieldRequired = normalizationFieldRequired;
@@ -591,7 +634,10 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationFieldRequirement.
+             * <p>Specifies whether the normalization field is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder normalizationFieldRequirement(Boolean normalizationFieldRequirement) {
                 this.normalizationFieldRequirement = normalizationFieldRequirement;
@@ -599,7 +645,10 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationFieldReserved.
+             * <p>Specifies whether the normalization field is reserved.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder normalizationFieldReserved(Boolean normalizationFieldReserved) {
                 this.normalizationFieldReserved = normalizationFieldReserved;
@@ -607,7 +656,7 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationFieldTokenize.
+             * <p>Specifies whether the normalization field is tokenized.</p>
              */
             public Builder normalizationFieldTokenize(Boolean normalizationFieldTokenize) {
                 this.normalizationFieldTokenize = normalizationFieldTokenize;
@@ -615,7 +664,15 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationFieldType.
+             * <p>The type of the normalization field. Valid values:</p>
+             * <ul>
+             * <li>varchar</li>
+             * <li>bigint</li>
+             * <li>double</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>varchar</p>
              */
             public Builder normalizationFieldType(String normalizationFieldType) {
                 this.normalizationFieldType = normalizationFieldType;
@@ -623,7 +680,10 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The update time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1736386610000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -677,7 +737,10 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
             } 
 
             /**
-             * NormalizationRuleId.
+             * <p>The ID of the normalization rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alibaba_cloud_cfw_flow_rule</p>
              */
             public Builder normalizationRuleId(String normalizationRuleId) {
                 this.normalizationRuleId = normalizationRuleId;
@@ -939,7 +1002,10 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1733269771123</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -947,7 +1013,10 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationCategoryId.
+             * <p>The ID of the normalized rule category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NETWORK_CATEGORY</p>
              */
             public Builder normalizationCategoryId(String normalizationCategoryId) {
                 this.normalizationCategoryId = normalizationCategoryId;
@@ -955,7 +1024,10 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationFieldSource.
+             * <p>The source of the field. Valid values: normalized: normalized field, native: native field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>native</p>
              */
             public Builder normalizationFieldSource(String normalizationFieldSource) {
                 this.normalizationFieldSource = normalizationFieldSource;
@@ -963,7 +1035,7 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationFields.
+             * <p>The list of normalization fields.</p>
              */
             public Builder normalizationFields(java.util.List<NormalizationFields> normalizationFields) {
                 this.normalizationFields = normalizationFields;
@@ -971,7 +1043,10 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationSchemaDescription.
+             * <p>The description of the normalization schema.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Network 5-Tuple Logs</p>
              */
             public Builder normalizationSchemaDescription(String normalizationSchemaDescription) {
                 this.normalizationSchemaDescription = normalizationSchemaDescription;
@@ -979,7 +1054,14 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationSchemaFrom.
+             * <p>The source of the normalization schema. Valid values:</p>
+             * <ul>
+             * <li>preset: predefined.</li>
+             * <li>custom: custom.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>preset</p>
              */
             public Builder normalizationSchemaFrom(String normalizationSchemaFrom) {
                 this.normalizationSchemaFrom = normalizationSchemaFrom;
@@ -987,7 +1069,10 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationSchemaId.
+             * <p>The ID of the normalization schema.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTP_ACTIVITY</p>
              */
             public Builder normalizationSchemaId(String normalizationSchemaId) {
                 this.normalizationSchemaId = normalizationSchemaId;
@@ -995,7 +1080,10 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationSchemaName.
+             * <p>The name of the normalization schema.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>normalization_rule_Z57np</p>
              */
             public Builder normalizationSchemaName(String normalizationSchemaName) {
                 this.normalizationSchemaName = normalizationSchemaName;
@@ -1003,7 +1091,7 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationSchemaReferences.
+             * <p>The list of normalization schema references.</p>
              */
             public Builder normalizationSchemaReferences(java.util.List<NormalizationSchemaReferences> normalizationSchemaReferences) {
                 this.normalizationSchemaReferences = normalizationSchemaReferences;
@@ -1011,7 +1099,15 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationSchemaType.
+             * <p>The type of the normalization schema. Valid values:</p>
+             * <ul>
+             * <li>log</li>
+             * <li>entity</li>
+             * <li>incident</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>log</p>
              */
             public Builder normalizationSchemaType(String normalizationSchemaType) {
                 this.normalizationSchemaType = normalizationSchemaType;
@@ -1019,7 +1115,10 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationSecurityDomainId.
+             * <p>The security domain ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DATA_SECURITY</p>
              */
             public Builder normalizationSecurityDomainId(String normalizationSecurityDomainId) {
                 this.normalizationSecurityDomainId = normalizationSecurityDomainId;
@@ -1027,7 +1126,10 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * ProductId.
+             * <p>The product ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alibaba_cloud_bastionhost</p>
              */
             public Builder productId(String productId) {
                 this.productId = productId;
@@ -1035,7 +1137,7 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * RecommendEntities.
+             * <p>The list of recommended entities.</p>
              */
             public Builder recommendEntities(java.util.List<String> recommendEntities) {
                 this.recommendEntities = recommendEntities;
@@ -1043,7 +1145,10 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * TargetLogStore.
+             * <p>The Simple Log Service Logstore.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>network-activity</p>
              */
             public Builder targetLogStore(String targetLogStore) {
                 this.targetLogStore = targetLogStore;
@@ -1051,7 +1156,10 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * TargetStoreView.
+             * <p>The Simple Log Service StoreView.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>network_activity</p>
              */
             public Builder targetStoreView(String targetStoreView) {
                 this.targetStoreView = targetStoreView;
@@ -1059,7 +1167,10 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The update time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1733269771123</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -1067,7 +1178,10 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * VendorId.
+             * <p>The vendor ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alibaba_cloud</p>
              */
             public Builder vendorId(String vendorId) {
                 this.vendorId = vendorId;

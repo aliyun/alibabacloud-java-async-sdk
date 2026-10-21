@@ -101,7 +101,15 @@ public class GetResponseRuleStatisticRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * <p>Note: This parameter is required. If this parameter is not specified, the API returns a 400 error.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -110,7 +118,14 @@ public class GetResponseRuleStatisticRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the region where your assets reside. Valid values:</p>
+         * <ul>
+         * <li>cn-hangzhou: the Chinese mainland and Hong Kong (China).</li>
+         * <li>ap-southeast-1: regions outside China.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -119,7 +134,11 @@ public class GetResponseRuleStatisticRequest extends Request {
         }
 
         /**
-         * RoleFor.
+         * <p>The Alibaba Cloud account ID that the administrator switches to for viewing as another member.</p>
+         * <p>Note: This parameter requires administrator permissions or multi-account settings. If you do not have sufficient permissions, the API returns a Forbidden.NoPermission error.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>113091674488****</p>
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);
@@ -128,7 +147,14 @@ public class GetResponseRuleStatisticRequest extends Request {
         }
 
         /**
-         * RoleType.
+         * <p>The view type. Valid values:</p>
+         * <ul>
+         * <li>0: the view of the current Alibaba Cloud account.</li>
+         * <li>1: the view of all accounts in the enterprise.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder roleType(Integer roleType) {
             this.putBodyParameter("RoleType", roleType);

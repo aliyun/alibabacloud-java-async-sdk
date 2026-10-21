@@ -145,7 +145,10 @@ public class ListCopilotMessagesRequest extends Request {
         } 
 
         /**
-         * Ascending.
+         * <p>Used together with the SortingField parameter. A value of <strong>true</strong> specifies ascending order, and a value of <strong>false</strong> specifies descending order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder ascending(Boolean ascending) {
             this.putBodyParameter("Ascending", ascending);
@@ -154,10 +157,11 @@ public class ListCopilotMessagesRequest extends Request {
         }
 
         /**
+         * <p>The conversation ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>7E35BF3830D95043C5C1270AAD6A5CC8</p>
+         * <p>54b6c969-4b75-47be-9f43-71f88aeb****</p>
          */
         public Builder conversationId(String conversationId) {
             this.putBodyParameter("ConversationId", conversationId);
@@ -166,7 +170,14 @@ public class ListCopilotMessagesRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the returned messages. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -175,7 +186,10 @@ public class ListCopilotMessagesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of results to return when you use the NextToken-based pagination method. Valid values: 1 to 100. Default value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -184,7 +198,10 @@ public class ListCopilotMessagesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token that marks the position from which you want to start the query. Leave this parameter empty to query from the beginning.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -193,7 +210,14 @@ public class ListCopilotMessagesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region where the Cloud Threat Detection and Response (CTDR) data management center resides. Specify the management center based on the region where your assets reside. Valid values:</p>
+         * <ul>
+         * <li>cn-hangzhou: Your assets reside in the Chinese mainland or Hong Kong (China).</li>
+         * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -202,7 +226,10 @@ public class ListCopilotMessagesRequest extends Request {
         }
 
         /**
-         * TraceId.
+         * <p>The trace ID, which is used to query specific call information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>550e8400e29b41d4a71644665544****</p>
          */
         public Builder traceId(String traceId) {
             this.putBodyParameter("TraceId", traceId);

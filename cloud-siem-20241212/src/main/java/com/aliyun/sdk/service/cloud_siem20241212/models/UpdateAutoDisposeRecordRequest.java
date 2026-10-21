@@ -117,7 +117,10 @@ public class UpdateAutoDisposeRecordRequest extends Request {
         } 
 
         /**
-         * AutoDecisionConclusion.
+         * <p>The conclusion of the automatic alert analysis.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>疑似误报</p>
          */
         public Builder autoDecisionConclusion(String autoDecisionConclusion) {
             this.putBodyParameter("AutoDecisionConclusion", autoDecisionConclusion);
@@ -126,7 +129,10 @@ public class UpdateAutoDisposeRecordRequest extends Request {
         }
 
         /**
-         * AutoDecisionEntityList.
+         * <p>The list of entities for analysis.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;entityType&quot;:&quot;file&quot;,&quot;entityName&quot;:&quot;/path/file.file&quot;,&quot;entityUuid&quot;:&quot;b7efb45ce7ff09758****&quot;,&quot;disposalMethod&quot;:&quot;delete&quot;,&quot;playbookUuid&quot;:&quot;9213bhdjagdja****&quot;}]</p>
          */
         public Builder autoDecisionEntityList(String autoDecisionEntityList) {
             this.putBodyParameter("AutoDecisionEntityList", autoDecisionEntityList);
@@ -135,7 +141,10 @@ public class UpdateAutoDisposeRecordRequest extends Request {
         }
 
         /**
-         * AutoDecisionResult.
+         * <p>The analysis result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder autoDecisionResult(String autoDecisionResult) {
             this.putBodyParameter("AutoDecisionResult", autoDecisionResult);
@@ -144,6 +153,7 @@ public class UpdateAutoDisposeRecordRequest extends Request {
         }
 
         /**
+         * <p>The unique ID of the analysis record.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,6 +166,13 @@ public class UpdateAutoDisposeRecordRequest extends Request {
         }
 
         /**
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li><p><strong>zh</strong> (default): Chinese.</p>
+         * </li>
+         * <li><p><strong>en</strong>: English.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

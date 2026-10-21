@@ -93,7 +93,10 @@ public class ListTagsResponseBody extends TeaModel {
         } 
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return when you use NextToken for pagination. Valid values: 1 to 100. Default value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -101,7 +104,10 @@ public class ListTagsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. If not all results are returned in a query, a value is returned for NextToken. In the next query, set NextToken to this value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -109,7 +115,10 @@ public class ListTagsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9AAA9ED9-78F4-5021-86DC-D51C7511****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,8 @@ public class ListTagsResponseBody extends TeaModel {
         }
 
         /**
-         * Tags.
+         * <p>The entity tags. The value is a JSON array string in the following format:</p>
+         * <p><code>&quot;[{&quot;tagKey1&quot;:&quot;tagValue1&quot;},{&quot;tagKey2&quot;:&quot;tagValue2&quot;}]&quot;</code></p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.tags = tags;
@@ -183,7 +193,10 @@ public class ListTagsResponseBody extends TeaModel {
             } 
 
             /**
-             * Count.
+             * <p>The number of custom queries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -191,7 +204,10 @@ public class ListTagsResponseBody extends TeaModel {
             }
 
             /**
-             * Tag.
+             * <p>The key of the tag to query. You can specify multiple keys. N is a positive integer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>False</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;

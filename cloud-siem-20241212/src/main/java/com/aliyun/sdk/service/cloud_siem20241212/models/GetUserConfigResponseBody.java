@@ -67,7 +67,10 @@ public class GetUserConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class GetUserConfigResponseBody extends TeaModel {
         }
 
         /**
-         * User.
+         * <p>The user.</p>
          */
         public Builder user(User user) {
             this.user = user;
@@ -167,7 +170,10 @@ public class GetUserConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * CtdrVersion.
+             * <p>The current Cloud Threat Detection and Response (CTDR) version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v2</p>
              */
             public Builder ctdrVersion(String ctdrVersion) {
                 this.ctdrVersion = ctdrVersion;
@@ -175,7 +181,16 @@ public class GetUserConfigResponseBody extends TeaModel {
             }
 
             /**
-             * DataStorageVersion.
+             * <p>The upgrade status. Valid values:</p>
+             * <ul>
+             * <li>pending: Pending upgrade.</li>
+             * <li>upgrading: Upgrading.</li>
+             * <li>success: Upgrade succeeded.</li>
+             * <li>failed: Upgrade failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>pending</p>
              */
             public Builder dataStorageVersion(String dataStorageVersion) {
                 this.dataStorageVersion = dataStorageVersion;
@@ -183,7 +198,10 @@ public class GetUserConfigResponseBody extends TeaModel {
             }
 
             /**
-             * UpgradeCtdrVersion.
+             * <p>The log management version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v2</p>
              */
             public Builder upgradeCtdrVersion(String upgradeCtdrVersion) {
                 this.upgradeCtdrVersion = upgradeCtdrVersion;
@@ -191,7 +209,10 @@ public class GetUserConfigResponseBody extends TeaModel {
             }
 
             /**
-             * UpgradeStatus.
+             * <p>The CTDR version to upgrade to.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v2</p>
              */
             public Builder upgradeStatus(String upgradeStatus) {
                 this.upgradeStatus = upgradeStatus;

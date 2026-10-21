@@ -115,7 +115,14 @@ public class SetDefaultNormalizationRuleVersionRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>The language of the response messages. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -124,7 +131,10 @@ public class SetDefaultNormalizationRuleVersionRequest extends Request {
         }
 
         /**
-         * NormalizationRuleId.
+         * <p>The normalization rule ID. Only custom-type normalization rules are supported. This operation does not support preset normalization rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nr-z0b2ssjteut85uoh9nzp</p>
          */
         public Builder normalizationRuleId(String normalizationRuleId) {
             this.putBodyParameter("NormalizationRuleId", normalizationRuleId);
@@ -133,7 +143,10 @@ public class SetDefaultNormalizationRuleVersionRequest extends Request {
         }
 
         /**
-         * NormalizationRuleVersion.
+         * <p>The normalization rule version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>V1</p>
          */
         public Builder normalizationRuleVersion(Integer normalizationRuleVersion) {
             this.putBodyParameter("NormalizationRuleVersion", normalizationRuleVersion);
@@ -142,7 +155,14 @@ public class SetDefaultNormalizationRuleVersionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region where the data management center of the threat analysis feature is located. Select the region based on the region where your assets reside. Valid values:</p>
+         * <ul>
+         * <li>cn-hangzhou: Your assets reside in the Chinese mainland.</li>
+         * <li>ap-southeast-1: Your assets reside outside China.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -151,7 +171,10 @@ public class SetDefaultNormalizationRuleVersionRequest extends Request {
         }
 
         /**
-         * RoleFor.
+         * <p>The user ID that the administrator uses to switch to the view of another member account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>173326*******</p>
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);

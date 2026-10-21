@@ -132,7 +132,7 @@ public class ListDataSetRecordsResponseBody extends TeaModel {
         } 
 
         /**
-         * DataSetRecords.
+         * <p>The list of dataset records.</p>
          */
         public Builder dataSetRecords(java.util.List<DataSetRecords> dataSetRecords) {
             this.dataSetRecords = dataSetRecords;
@@ -140,7 +140,10 @@ public class ListDataSetRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of results to return per query when you use the NextToken parameter. Valid values: 1 to 100. Default value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -148,7 +151,10 @@ public class ListDataSetRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token used to start the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -156,7 +162,10 @@ public class ListDataSetRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -164,7 +173,10 @@ public class ListDataSetRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -172,7 +184,10 @@ public class ListDataSetRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9AAA9ED9-78F4-5021-86DC-D51C7511****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +195,10 @@ public class ListDataSetRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>57</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -298,7 +316,10 @@ public class ListDataSetRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1658974643000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -306,7 +327,10 @@ public class ListDataSetRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * DataSetId.
+             * <p>The ID of the dataset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dataset-t8ha6p7k61rmniqw****</p>
              */
             public Builder dataSetId(String dataSetId) {
                 this.dataSetId = dataSetId;
@@ -314,7 +338,10 @@ public class ListDataSetRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * DataSetName.
+             * <p>The name of the dataset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lmftest</p>
              */
             public Builder dataSetName(String dataSetName) {
                 this.dataSetName = dataSetName;
@@ -322,7 +349,10 @@ public class ListDataSetRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * DataSetRecordId.
+             * <p>The ID of the dataset record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>124566</p>
              */
             public Builder dataSetRecordId(String dataSetRecordId) {
                 this.dataSetRecordId = dataSetRecordId;
@@ -330,7 +360,7 @@ public class ListDataSetRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * DataSetRecordValues.
+             * <p>The values of the dataset record.</p>
              */
             public Builder dataSetRecordValues(String dataSetRecordValues) {
                 this.dataSetRecordValues = dataSetRecordValues;
@@ -338,7 +368,10 @@ public class ListDataSetRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The update time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1658974643000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

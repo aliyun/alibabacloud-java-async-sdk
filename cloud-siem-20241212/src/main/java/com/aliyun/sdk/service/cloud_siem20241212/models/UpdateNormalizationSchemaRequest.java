@@ -160,7 +160,14 @@ public class UpdateNormalizationSchemaRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -169,7 +176,7 @@ public class UpdateNormalizationSchemaRequest extends Request {
         }
 
         /**
-         * NormalizationFields.
+         * <p>The normalization fields.</p>
          */
         public Builder normalizationFields(java.util.List<NormalizationFields> normalizationFields) {
             this.putBodyParameter("NormalizationFields", normalizationFields);
@@ -178,7 +185,10 @@ public class UpdateNormalizationSchemaRequest extends Request {
         }
 
         /**
-         * NormalizationSchemaDescription.
+         * <p>The normalization schema description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ProcessQuery</p>
          */
         public Builder normalizationSchemaDescription(String normalizationSchemaDescription) {
             this.putBodyParameter("NormalizationSchemaDescription", normalizationSchemaDescription);
@@ -187,6 +197,7 @@ public class UpdateNormalizationSchemaRequest extends Request {
         }
 
         /**
+         * <p>The normalization schema ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -199,6 +210,7 @@ public class UpdateNormalizationSchemaRequest extends Request {
         }
 
         /**
+         * <p>The normalization schema name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -211,6 +223,11 @@ public class UpdateNormalizationSchemaRequest extends Request {
         }
 
         /**
+         * <p>The normalization schema type. Valid values:</p>
+         * <ul>
+         * <li>log: Log.</li>
+         * <li>entity: Entity.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -223,7 +240,14 @@ public class UpdateNormalizationSchemaRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region where the threat analysis data management center resides. Specify the management center based on the region of your assets. Valid values:</p>
+         * <ul>
+         * <li>cn-hangzhou: Your assets reside in the Chinese mainland.</li>
+         * <li>ap-southeast-1: Your assets reside outside China.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -232,7 +256,10 @@ public class UpdateNormalizationSchemaRequest extends Request {
         }
 
         /**
-         * RoleFor.
+         * <p>The user ID of the member to which the administrator switches the view.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>113091674488****</p>
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);
@@ -367,7 +394,10 @@ public class UpdateNormalizationSchemaRequest extends Request {
             } 
 
             /**
-             * NormalizationFieldDescription.
+             * <p>The key description of the JSON-type normalization field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alert level</p>
              */
             public Builder normalizationFieldDescription(String normalizationFieldDescription) {
                 this.normalizationFieldDescription = normalizationFieldDescription;
@@ -375,7 +405,10 @@ public class UpdateNormalizationSchemaRequest extends Request {
             }
 
             /**
-             * NormalizationFieldExample.
+             * <p>The key example of the JSON-type normalization field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Enum values: 1, 2, 3, 4, 5</p>
              */
             public Builder normalizationFieldExample(String normalizationFieldExample) {
                 this.normalizationFieldExample = normalizationFieldExample;
@@ -383,7 +416,10 @@ public class UpdateNormalizationSchemaRequest extends Request {
             }
 
             /**
-             * NormalizationFieldFrom.
+             * <p>The key source of the JSON-type normalization field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>preset</p>
              */
             public Builder normalizationFieldFrom(String normalizationFieldFrom) {
                 this.normalizationFieldFrom = normalizationFieldFrom;
@@ -391,6 +427,7 @@ public class UpdateNormalizationSchemaRequest extends Request {
             }
 
             /**
+             * <p>The key name of the JSON-type normalization field.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -402,7 +439,7 @@ public class UpdateNormalizationSchemaRequest extends Request {
             }
 
             /**
-             * NormalizationFieldRequired.
+             * <p>Specifies whether the key of the JSON-type normalization field is required.</p>
              */
             public Builder normalizationFieldRequired(Boolean normalizationFieldRequired) {
                 this.normalizationFieldRequired = normalizationFieldRequired;
@@ -410,7 +447,10 @@ public class UpdateNormalizationSchemaRequest extends Request {
             }
 
             /**
-             * NormalizationFieldTokenize.
+             * <p>Specifies whether the key of the JSON-type normalization field is tokenized.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder normalizationFieldTokenize(Boolean normalizationFieldTokenize) {
                 this.normalizationFieldTokenize = normalizationFieldTokenize;
@@ -418,6 +458,7 @@ public class UpdateNormalizationSchemaRequest extends Request {
             }
 
             /**
+             * <p>The key type of the JSON-type normalization field. Valid values: text, long, double, and json.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -581,7 +622,10 @@ public class UpdateNormalizationSchemaRequest extends Request {
             } 
 
             /**
-             * NormalizationFieldDescription.
+             * <p>The normalization field description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_user</p>
              */
             public Builder normalizationFieldDescription(String normalizationFieldDescription) {
                 this.normalizationFieldDescription = normalizationFieldDescription;
@@ -589,7 +633,10 @@ public class UpdateNormalizationSchemaRequest extends Request {
             }
 
             /**
-             * NormalizationFieldExample.
+             * <p>The normalization field example.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>173326*******</p>
              */
             public Builder normalizationFieldExample(String normalizationFieldExample) {
                 this.normalizationFieldExample = normalizationFieldExample;
@@ -597,7 +644,10 @@ public class UpdateNormalizationSchemaRequest extends Request {
             }
 
             /**
-             * NormalizationFieldFrom.
+             * <p>The key source of the JSON-type normalization field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>preset</p>
              */
             public Builder normalizationFieldFrom(String normalizationFieldFrom) {
                 this.normalizationFieldFrom = normalizationFieldFrom;
@@ -605,7 +655,7 @@ public class UpdateNormalizationSchemaRequest extends Request {
             }
 
             /**
-             * NormalizationFieldJsonIndexAll.
+             * <p>Specifies whether indexes are created for all keys of the JSON-type normalization field.</p>
              */
             public Builder normalizationFieldJsonIndexAll(Boolean normalizationFieldJsonIndexAll) {
                 this.normalizationFieldJsonIndexAll = normalizationFieldJsonIndexAll;
@@ -613,7 +663,7 @@ public class UpdateNormalizationSchemaRequest extends Request {
             }
 
             /**
-             * NormalizationFieldJsonKeys.
+             * <p>The key list of the JSON-type normalization field.</p>
              */
             public Builder normalizationFieldJsonKeys(java.util.List<NormalizationFieldJsonKeys> normalizationFieldJsonKeys) {
                 this.normalizationFieldJsonKeys = normalizationFieldJsonKeys;
@@ -621,6 +671,7 @@ public class UpdateNormalizationSchemaRequest extends Request {
             }
 
             /**
+             * <p>The normalization field name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -632,7 +683,7 @@ public class UpdateNormalizationSchemaRequest extends Request {
             }
 
             /**
-             * NormalizationFieldRequired.
+             * <p>Specifies whether the normalization field is required.</p>
              */
             public Builder normalizationFieldRequired(Boolean normalizationFieldRequired) {
                 this.normalizationFieldRequired = normalizationFieldRequired;
@@ -640,7 +691,7 @@ public class UpdateNormalizationSchemaRequest extends Request {
             }
 
             /**
-             * NormalizationFieldTokenize.
+             * <p>Specifies whether the normalization field is tokenized.</p>
              */
             public Builder normalizationFieldTokenize(Boolean normalizationFieldTokenize) {
                 this.normalizationFieldTokenize = normalizationFieldTokenize;
@@ -648,6 +699,7 @@ public class UpdateNormalizationSchemaRequest extends Request {
             }
 
             /**
+             * <p>The normalization field type. Valid values: text, long, double, and json.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

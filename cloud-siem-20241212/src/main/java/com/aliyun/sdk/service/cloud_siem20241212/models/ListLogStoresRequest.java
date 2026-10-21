@@ -157,7 +157,15 @@ public class ListLogStoresRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese.</li>
+         * <li><strong>en</strong>: English.
+         * Note: This parameter is required in practice. If you do not specify this parameter, the API returns a 400 error (The specified Lang can not be empty.).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -166,7 +174,10 @@ public class ListLogStoresRequest extends Request {
         }
 
         /**
-         * LogProjectName.
+         * <p>The name of the Simple Log Service project. The project name follows the naming convention aliyun-cloudsiem-data-{userId}-{regionId}. You can call the GetDataStorage operation and obtain a valid project name from the Data.LogProject field in the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyun-cloudsiem-data-173326*******-cn-hangzhou</p>
          */
         public Builder logProjectName(String logProjectName) {
             this.putBodyParameter("LogProjectName", logProjectName);
@@ -175,7 +186,10 @@ public class ListLogStoresRequest extends Request {
         }
 
         /**
-         * LogRegionId.
+         * <p>The log storage region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder logRegionId(String logRegionId) {
             this.putBodyParameter("LogRegionId", logRegionId);
@@ -184,7 +198,10 @@ public class ListLogStoresRequest extends Request {
         }
 
         /**
-         * LogUserId.
+         * <p>The user ID for data ingestion.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>173326*******</p>
          */
         public Builder logUserId(Long logUserId) {
             this.putBodyParameter("LogUserId", logUserId);
@@ -193,7 +210,10 @@ public class ListLogStoresRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return in this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -202,7 +222,10 @@ public class ListLogStoresRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token for the next query. You do not need to specify this parameter for the first query or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -211,7 +234,14 @@ public class ListLogStoresRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region where the threat analysis data management center is located. Specify the management center based on the region of your assets. Valid values:</p>
+         * <ul>
+         * <li>cn-hangzhou: Your assets are located in the Chinese mainland.</li>
+         * <li>ap-southeast-1: Your assets are located outside China.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -220,7 +250,10 @@ public class ListLogStoresRequest extends Request {
         }
 
         /**
-         * RoleFor.
+         * <p>The user ID that the administrator wants to switch to for viewing from another member\&quot;s perspective.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>173326*******</p>
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);

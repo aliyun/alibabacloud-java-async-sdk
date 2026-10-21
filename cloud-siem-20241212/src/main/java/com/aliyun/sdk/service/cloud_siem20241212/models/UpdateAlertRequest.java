@@ -129,7 +129,10 @@ public class UpdateAlertRequest extends Request {
         } 
 
         /**
-         * AlertStatus.
+         * <p>The alert status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder alertStatus(String alertStatus) {
             this.putBodyParameter("AlertStatus", alertStatus);
@@ -138,7 +141,10 @@ public class UpdateAlertRequest extends Request {
         }
 
         /**
-         * AlertUuid.
+         * <p>The alert ID associated with the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas_71e24437d2797ce8fc59692905a4****</p>
          */
         public Builder alertUuid(String alertUuid) {
             this.putBodyParameter("AlertUuid", alertUuid);
@@ -147,7 +153,14 @@ public class UpdateAlertRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -156,7 +169,14 @@ public class UpdateAlertRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The data management center of the threat analysis feature. Specify this parameter based on the region where your assets reside. Valid values:</p>
+         * <ul>
+         * <li>cn-hangzhou: the Chinese mainland and Hong Kong (China).</li>
+         * <li>ap-southeast-1: regions outside China.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -165,7 +185,10 @@ public class UpdateAlertRequest extends Request {
         }
 
         /**
-         * RoleFor.
+         * <p>The ID of the user to which the administrator switches the view.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>113091674488****</p>
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);
@@ -174,7 +197,14 @@ public class UpdateAlertRequest extends Request {
         }
 
         /**
-         * RoleType.
+         * <p>The view type. Valid values:</p>
+         * <ul>
+         * <li>0: the current Alibaba Cloud account view.</li>
+         * <li>1: the view of all accounts in the enterprise.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder roleType(Long roleType) {
             this.putBodyParameter("RoleType", roleType);

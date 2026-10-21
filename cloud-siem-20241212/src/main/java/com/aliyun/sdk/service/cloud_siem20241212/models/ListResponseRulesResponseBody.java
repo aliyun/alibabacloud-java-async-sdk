@@ -133,7 +133,10 @@ public class ListResponseRulesResponseBody extends TeaModel {
         } 
 
         /**
-         * MaxResults.
+         * <p>The maximum number of records returned in this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -141,6 +144,7 @@ public class ListResponseRulesResponseBody extends TeaModel {
         }
 
         /**
+         * <p>The position from which the current call starts reading. An empty value indicates that all data has been read.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,7 +156,10 @@ public class ListResponseRulesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -160,7 +167,10 @@ public class ListResponseRulesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -179,7 +189,7 @@ public class ListResponseRulesResponseBody extends TeaModel {
         }
 
         /**
-         * ResponseRules.
+         * <p>The list of automatic response rules.</p>
          */
         public Builder responseRules(java.util.List<ResponseRules> responseRules) {
             this.responseRules = responseRules;
@@ -187,7 +197,10 @@ public class ListResponseRulesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records that match the request conditions. This parameter is optional and is not returned by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>57</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -383,7 +396,10 @@ public class ListResponseRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The time when the rule was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1769843323000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -391,7 +407,10 @@ public class ListResponseRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseActionConfig.
+             * <p>The action configuration of the automatic response rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;actionType&quot;:&quot;doPlaybook&quot;,&quot;playbookName&quot;:&quot;block waf IP&quot;,&quot;playbookUuid&quot;:&quot;system_aliyun_waf_whole_process_book&quot;,&quot;disposeParam&quot;:{&quot;period&quot;:&quot;7d&quot;}}]</p>
              */
             public Builder responseActionConfig(String responseActionConfig) {
                 this.responseActionConfig = responseActionConfig;
@@ -399,7 +418,18 @@ public class ListResponseRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseActionType.
+             * <p>The action type of the automatic response rule. Valid values:</p>
+             * <ul>
+             * <li>doPlaybook: execute a playbook</li>
+             * <li>changeEventStatus: update event status</li>
+             * <li>changeThreatLevel: update event threat level</li>
+             * <li>addEventTag: add an event label</li>
+             * <li>deleteEventTag: delete an event label</li>
+             * <li>alertWhitelist: add alert to whitelist</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>doPlaybook</p>
              */
             public Builder responseActionType(String responseActionType) {
                 this.responseActionType = responseActionType;
@@ -407,7 +437,10 @@ public class ListResponseRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseExecutionCondition.
+             * <p>The trigger condition configuration of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;left&quot;:{&quot;value&quot;:&quot;threat_level&quot;},&quot;operator&quot;:&quot;equals&quot;,&quot;right&quot;:{&quot;value&quot;:&quot;suspicious&quot;}}]</p>
              */
             public Builder responseExecutionCondition(String responseExecutionCondition) {
                 this.responseExecutionCondition = responseExecutionCondition;
@@ -415,7 +448,10 @@ public class ListResponseRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseRuleId.
+             * <p>The ID of the automatic response rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>403235</p>
              */
             public Builder responseRuleId(String responseRuleId) {
                 this.responseRuleId = responseRuleId;
@@ -423,7 +459,10 @@ public class ListResponseRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseRuleName.
+             * <p>The name of the automatic response rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Send Notification When Generating Urgent Incident</p>
              */
             public Builder responseRuleName(String responseRuleName) {
                 this.responseRuleName = responseRuleName;
@@ -431,7 +470,10 @@ public class ListResponseRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseRulePriority.
+             * <p>The execution priority of the automatic response rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder responseRulePriority(Integer responseRulePriority) {
                 this.responseRulePriority = responseRulePriority;
@@ -447,7 +489,14 @@ public class ListResponseRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseRuleStatus.
+             * <p>The status of the automatic response rule. Valid values:</p>
+             * <ul>
+             * <li>0: disabled</li>
+             * <li>100: enabled</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder responseRuleStatus(Integer responseRuleStatus) {
                 this.responseRuleStatus = responseRuleStatus;
@@ -455,7 +504,14 @@ public class ListResponseRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseRuleType.
+             * <p>The type of the response rule. Valid values:</p>
+             * <ul>
+             * <li>preset: predefined</li>
+             * <li>custom: custom</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>custom</p>
              */
             public Builder responseRuleType(String responseRuleType) {
                 this.responseRuleType = responseRuleType;
@@ -463,7 +519,15 @@ public class ListResponseRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseTriggerType.
+             * <p>The trigger type of the automatic response rule. Valid values:</p>
+             * <ul>
+             * <li>event: event occurred</li>
+             * <li>event_update: event updated</li>
+             * <li>alert: alert occurred</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>event</p>
              */
             public Builder responseTriggerType(String responseTriggerType) {
                 this.responseTriggerType = responseTriggerType;
@@ -471,7 +535,10 @@ public class ListResponseRulesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The time when the rule was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1769843323000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

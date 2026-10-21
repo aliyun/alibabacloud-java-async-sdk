@@ -229,7 +229,14 @@ public class ListResponseRulesRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -238,7 +245,10 @@ public class ListResponseRulesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of data records to read in this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -247,7 +257,10 @@ public class ListResponseRulesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that marks the current reading position. Leave this parameter empty to read from the beginning.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAASLVeIxed4466E0LVmGkzwS6hJKd9DGVGMDRM6Lu****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -256,6 +269,7 @@ public class ListResponseRulesRequest extends Request {
         }
 
         /**
+         * <p>The page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -268,6 +282,7 @@ public class ListResponseRulesRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -280,7 +295,14 @@ public class ListResponseRulesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region where the threat analysis data management center resides. Select the management center based on the region of your assets. Valid values:</p>
+         * <ul>
+         * <li>cn-hangzhou: Your assets belong to the Chinese mainland or Hong Kong (China).</li>
+         * <li>ap-southeast-1: Your assets belong to regions outside China.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -289,7 +311,18 @@ public class ListResponseRulesRequest extends Request {
         }
 
         /**
-         * ResponseActionType.
+         * <p>The action type of the automatic response rule. Valid values:</p>
+         * <ul>
+         * <li>doPlaybook: execute a playbook</li>
+         * <li>changeEventStatus: update event status</li>
+         * <li>changeThreatLevel: update event threat level</li>
+         * <li>addEventTag: add an event label</li>
+         * <li>deleteEventTag: delete an event label</li>
+         * <li>alertWhitelist: add alert to whitelist</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>doPlaybook</p>
          */
         public Builder responseActionType(String responseActionType) {
             this.putBodyParameter("ResponseActionType", responseActionType);
@@ -298,7 +331,10 @@ public class ListResponseRulesRequest extends Request {
         }
 
         /**
-         * ResponseRuleName.
+         * <p>The name of the automatic response rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Send Notification When Generating Urgent Incident</p>
          */
         public Builder responseRuleName(String responseRuleName) {
             this.putBodyParameter("ResponseRuleName", responseRuleName);
@@ -307,7 +343,14 @@ public class ListResponseRulesRequest extends Request {
         }
 
         /**
-         * ResponseRuleStatus.
+         * <p>The status of the automatic response rule. Valid values:</p>
+         * <ul>
+         * <li>0: disabled</li>
+         * <li>100: enabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder responseRuleStatus(Integer responseRuleStatus) {
             this.putBodyParameter("ResponseRuleStatus", responseRuleStatus);
@@ -316,7 +359,14 @@ public class ListResponseRulesRequest extends Request {
         }
 
         /**
-         * ResponseRuleType.
+         * <p>The type of the response rule. Valid values:</p>
+         * <ul>
+         * <li>preset: predefined</li>
+         * <li>custom: custom</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>custom</p>
          */
         public Builder responseRuleType(String responseRuleType) {
             this.putBodyParameter("ResponseRuleType", responseRuleType);
@@ -325,7 +375,15 @@ public class ListResponseRulesRequest extends Request {
         }
 
         /**
-         * ResponseTriggerType.
+         * <p>The trigger type of the automatic response rule. Valid values:</p>
+         * <ul>
+         * <li>event: event occurred</li>
+         * <li>event_update: event updated</li>
+         * <li>alert: alert occurred</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>event</p>
          */
         public Builder responseTriggerType(String responseTriggerType) {
             this.putBodyParameter("ResponseTriggerType", responseTriggerType);
@@ -334,7 +392,10 @@ public class ListResponseRulesRequest extends Request {
         }
 
         /**
-         * RoleFor.
+         * <p>The user ID that the administrator switches to when viewing from another member\&quot;s perspective.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>173326*******</p>
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);
@@ -343,7 +404,14 @@ public class ListResponseRulesRequest extends Request {
         }
 
         /**
-         * RoleType.
+         * <p>The view type. Valid values:</p>
+         * <ul>
+         * <li>0: the current Alibaba Cloud account view.</li>
+         * <li>1: the view of all accounts in the enterprise.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder roleType(Integer roleType) {
             this.putBodyParameter("RoleType", roleType);

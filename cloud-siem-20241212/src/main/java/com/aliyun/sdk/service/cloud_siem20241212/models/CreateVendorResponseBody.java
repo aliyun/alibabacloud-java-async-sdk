@@ -67,7 +67,10 @@ public class CreateVendorResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class CreateVendorResponseBody extends TeaModel {
         }
 
         /**
-         * VendorId.
+         * <p>The vendor ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vd-qlsw5eocx94w9</p>
          */
         public Builder vendorId(String vendorId) {
             this.vendorId = vendorId;

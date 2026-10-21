@@ -101,7 +101,10 @@ public class GetIncidentRequest extends Request {
         } 
 
         /**
-         * IncidentUuid.
+         * <p>The UUID of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>85ea4241-798f-4684-a876-65d4f0c3****</p>
          */
         public Builder incidentUuid(String incidentUuid) {
             this.putBodyParameter("IncidentUuid", incidentUuid);
@@ -110,7 +113,14 @@ public class GetIncidentRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response message. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -119,7 +129,14 @@ public class GetIncidentRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region where the data management center of Threat Analysis is located. Select the region of the management center based on the region where your assets are located. Valid values:</p>
+         * <ul>
+         * <li>cn-hangzhou: Assets are located in the Chinese mainland.</li>
+         * <li>ap-southeast-1: Assets are located outside the Chinese mainland.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -128,7 +145,10 @@ public class GetIncidentRequest extends Request {
         }
 
         /**
-         * RoleFor.
+         * <p>The ID of the user whose perspective the administrator switches to.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>113091674488****</p>
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);

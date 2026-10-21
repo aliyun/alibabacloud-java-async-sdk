@@ -67,7 +67,10 @@ public class CreateDetectionRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * DetectionRuleId.
+         * <p>The ID of the detection rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dr-ha1i09ob3zmqrs85****</p>
          */
         public Builder detectionRuleId(String detectionRuleId) {
             this.detectionRuleId = detectionRuleId;
@@ -75,7 +78,10 @@ public class CreateDetectionRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5CC09D0C-1CD7-54BD-A853-DCB2D945****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

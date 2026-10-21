@@ -93,7 +93,7 @@ public class ListResponseRuleFieldsResponseBody extends TeaModel {
         } 
 
         /**
-         * ListResponseRuleFields.
+         * <p>The list of response rule fields.</p>
          */
         public Builder listResponseRuleFields(java.util.List<ListResponseRuleFields> listResponseRuleFields) {
             this.listResponseRuleFields = listResponseRuleFields;
@@ -101,7 +101,10 @@ public class ListResponseRuleFieldsResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return in this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -109,7 +112,10 @@ public class ListResponseRuleFieldsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token for the next query. You do not need to specify this parameter for the first query or if no more results exist. If a next query exists, set this parameter to the NextToken value returned by the previous API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -117,7 +123,10 @@ public class ListResponseRuleFieldsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -183,7 +192,10 @@ public class ListResponseRuleFieldsResponseBody extends TeaModel {
             } 
 
             /**
-             * Value.
+             * <p>The right-side value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dev_selectdb_cluster</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -191,7 +203,10 @@ public class ListResponseRuleFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * ValueName.
+             * <p>The display name of the enumeration value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>high</p>
              */
             public Builder valueName(String valueName) {
                 this.valueName = valueName;
@@ -297,7 +312,14 @@ public class ListResponseRuleFieldsResponseBody extends TeaModel {
             } 
 
             /**
-             * HasRightValue.
+             * <p>Indicates whether a right-side value is required. Valid values:</p>
+             * <ul>
+             * <li>true: Required.</li>
+             * <li>false: Not required.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasRightValue(String hasRightValue) {
                 this.hasRightValue = hasRightValue;
@@ -305,7 +327,10 @@ public class ListResponseRuleFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * Index.
+             * <p>The position of the operator in the operator list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder index(Integer index) {
                 this.index = index;
@@ -313,7 +338,18 @@ public class ListResponseRuleFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * Operator.
+             * <p>The aggregation method for the dispatch rule condition. Valid values:</p>
+             * <ul>
+             * <li><code>=</code>: Equal to.</li>
+             * <li><code>&lt;&gt;</code>: Not equal to.</li>
+             * <li><code>in</code>: Contains.</li>
+             * <li><code>not in</code>: Does not contain.</li>
+             * <li><code>REGEXP</code>: Matches the regular expression.</li>
+             * <li><code>NOT REGEXP</code>: Does not match the regular expression.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>BETWEEN</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -321,7 +357,10 @@ public class ListResponseRuleFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * OperatorName.
+             * <p>The display name of the operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>autotest-operator</p>
              */
             public Builder operatorName(String operatorName) {
                 this.operatorName = operatorName;
@@ -329,7 +368,10 @@ public class ListResponseRuleFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * SupportDataType.
+             * <p>The data types supported by the current operator, separated by commas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ip</p>
              */
             public Builder supportDataType(String supportDataType) {
                 this.supportDataType = supportDataType;
@@ -448,7 +490,10 @@ public class ListResponseRuleFieldsResponseBody extends TeaModel {
             } 
 
             /**
-             * DataType.
+             * <p>The data type of the automated response rule condition field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ip</p>
              */
             public Builder dataType(String dataType) {
                 this.dataType = dataType;
@@ -456,7 +501,10 @@ public class ListResponseRuleFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * Field.
+             * <p>The whitelisted field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>appname</p>
              */
             public Builder field(String field) {
                 this.field = field;
@@ -464,7 +512,10 @@ public class ListResponseRuleFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * FieldName.
+             * <p>The name of the rule field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OriginIP,ConsoleLog,CPUTime,Duration,ErrorCode,ErrorMessage,ResponseSize,ResponseStatus,RoutineName,ClientRequestID,LogTimestamp,FetchStatus,SubRequestID</p>
              */
             public Builder fieldName(String fieldName) {
                 this.fieldName = fieldName;
@@ -472,7 +523,10 @@ public class ListResponseRuleFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * FieldNormalization.
+             * <p>The normalized object type to which the field belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alert</p>
              */
             public Builder fieldNormalization(String fieldNormalization) {
                 this.fieldNormalization = fieldNormalization;
@@ -480,7 +534,7 @@ public class ListResponseRuleFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * RightValue.
+             * <p>The list of optional enumeration values for the field. This parameter is not returned if no enumeration values exist.</p>
              */
             public Builder rightValue(java.util.List<RightValue> rightValue) {
                 this.rightValue = rightValue;
@@ -488,7 +542,7 @@ public class ListResponseRuleFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * SupportOperators.
+             * <p>The English descriptions of the operators.</p>
              */
             public Builder supportOperators(java.util.List<SupportOperators> supportOperators) {
                 this.supportOperators = supportOperators;

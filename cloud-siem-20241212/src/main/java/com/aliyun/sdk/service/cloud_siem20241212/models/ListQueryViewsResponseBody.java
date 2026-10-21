@@ -132,7 +132,10 @@ public class ListQueryViewsResponseBody extends TeaModel {
         } 
 
         /**
-         * LogProjectName.
+         * <p>The Simple Log Service project name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyun-cloudsiem-data-173326*******-cn-hangzhou</p>
          */
         public Builder logProjectName(String logProjectName) {
             this.logProjectName = logProjectName;
@@ -140,7 +143,10 @@ public class ListQueryViewsResponseBody extends TeaModel {
         }
 
         /**
-         * LogRegionId.
+         * <p>The log storage region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder logRegionId(String logRegionId) {
             this.logRegionId = logRegionId;
@@ -148,7 +154,10 @@ public class ListQueryViewsResponseBody extends TeaModel {
         }
 
         /**
-         * LogStoreName.
+         * <p>The Simple Log Service Logstore name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>audit-activity</p>
          */
         public Builder logStoreName(String logStoreName) {
             this.logStoreName = logStoreName;
@@ -156,7 +165,10 @@ public class ListQueryViewsResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of results to return when you use the NextToken-based pagination method. Valid values: 1 to 100. Default value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -164,7 +176,10 @@ public class ListQueryViewsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request or if no more results exist. Set this parameter to the NextToken value returned in the previous API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAASLVeIxed4466E0LVmGkzwS6hJKd9DGVGMDRM6Lu****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -172,7 +187,7 @@ public class ListQueryViewsResponseBody extends TeaModel {
         }
 
         /**
-         * QueryViews.
+         * <p>The list of query views.</p>
          */
         public Builder queryViews(java.util.List<QueryViews> queryViews) {
             this.queryViews = queryViews;
@@ -180,7 +195,10 @@ public class ListQueryViewsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9AAA9ED9-78F4-5021-86DC-D51C7511****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -337,7 +355,10 @@ public class ListQueryViewsResponseBody extends TeaModel {
             } 
 
             /**
-             * QueryViewCondition.
+             * <p>The custom query condition of the view.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>preset</p>
              */
             public Builder queryViewCondition(String queryViewCondition) {
                 this.queryViewCondition = queryViewCondition;
@@ -345,7 +366,10 @@ public class ListQueryViewsResponseBody extends TeaModel {
             }
 
             /**
-             * QueryViewCriteria.
+             * <p>The alert filter statement of the view.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>module_code: alibaba_cloud_sas_custom_rule</p>
              */
             public Builder queryViewCriteria(String queryViewCriteria) {
                 this.queryViewCriteria = queryViewCriteria;
@@ -353,7 +377,10 @@ public class ListQueryViewsResponseBody extends TeaModel {
             }
 
             /**
-             * QueryViewFields.
+             * <p>The list of displayed fields.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;alert_name_cn&quot;,&quot;alert_type_cn&quot;,&quot;entity_list&quot;,&quot;alert_level&quot;,&quot;alert_status&quot;,&quot;start_time&quot;,&quot;end_time&quot;]</p>
              */
             public Builder queryViewFields(String queryViewFields) {
                 this.queryViewFields = queryViewFields;
@@ -361,7 +388,10 @@ public class ListQueryViewsResponseBody extends TeaModel {
             }
 
             /**
-             * QueryViewId.
+             * <p>The unique identifier of the query view.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qv-a1b2c3d4e5f6g7h8****</p>
              */
             public Builder queryViewId(String queryViewId) {
                 this.queryViewId = queryViewId;
@@ -369,7 +399,10 @@ public class ListQueryViewsResponseBody extends TeaModel {
             }
 
             /**
-             * QueryViewName.
+             * <p>The view name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alert</p>
              */
             public Builder queryViewName(String queryViewName) {
                 this.queryViewName = queryViewName;
@@ -377,7 +410,10 @@ public class ListQueryViewsResponseBody extends TeaModel {
             }
 
             /**
-             * QueryViewOrder.
+             * <p>The display order.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder queryViewOrder(String queryViewOrder) {
                 this.queryViewOrder = queryViewOrder;
@@ -385,7 +421,10 @@ public class ListQueryViewsResponseBody extends TeaModel {
             }
 
             /**
-             * QueryViewScene.
+             * <p>The scene to which the view belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alert</p>
              */
             public Builder queryViewScene(String queryViewScene) {
                 this.queryViewScene = queryViewScene;
@@ -393,7 +432,10 @@ public class ListQueryViewsResponseBody extends TeaModel {
             }
 
             /**
-             * QueryViewStatus.
+             * <p>The view status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder queryViewStatus(String queryViewStatus) {
                 this.queryViewStatus = queryViewStatus;
@@ -401,7 +443,10 @@ public class ListQueryViewsResponseBody extends TeaModel {
             }
 
             /**
-             * QueryViewType.
+             * <p>The view type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>preset</p>
              */
             public Builder queryViewType(String queryViewType) {
                 this.queryViewType = queryViewType;

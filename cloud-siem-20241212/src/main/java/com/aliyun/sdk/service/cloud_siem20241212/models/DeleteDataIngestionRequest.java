@@ -101,7 +101,10 @@ public class DeleteDataIngestionRequest extends Request {
         } 
 
         /**
-         * DataIngestionId.
+         * <p>The data ingestion ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alibaba_cloud_sas_netstat_ingestion_173326*******</p>
          */
         public Builder dataIngestionId(String dataIngestionId) {
             this.putBodyParameter("DataIngestionId", dataIngestionId);
@@ -110,7 +113,16 @@ public class DeleteDataIngestionRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response message. Valid values:</p>
+         * <ul>
+         * <li><p><strong>zh</strong> (default): Chinese.</p>
+         * </li>
+         * <li><p><strong>en</strong>: English.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -119,7 +131,16 @@ public class DeleteDataIngestionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region of the Management Hub for threat analysis. Select the region of the Management Hub based on the region where your assets are located. Valid values:</p>
+         * <ul>
+         * <li><p>cn-hangzhou: Your assets are in the Chinese mainland.</p>
+         * </li>
+         * <li><p>ap-southeast-1: Your assets are in a region outside China.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -128,7 +149,10 @@ public class DeleteDataIngestionRequest extends Request {
         }
 
         /**
-         * RoleFor.
+         * <p>The user ID of a member. This parameter allows an administrator to operate on behalf of the member.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>173326*******</p>
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);

@@ -80,7 +80,10 @@ public class CreateCopilotConversationResponseBody extends TeaModel {
         } 
 
         /**
-         * ApiVersion.
+         * <p>The API version number. The value is 1.0.0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1.2</p>
          */
         public Builder apiVersion(String apiVersion) {
             this.apiVersion = apiVersion;
@@ -88,7 +91,7 @@ public class CreateCopilotConversationResponseBody extends TeaModel {
         }
 
         /**
-         * Conversation.
+         * <p>The conversation timestamp.</p>
          */
         public Builder conversation(Conversation conversation) {
             this.conversation = conversation;
@@ -96,7 +99,10 @@ public class CreateCopilotConversationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -292,7 +298,10 @@ public class CreateCopilotConversationResponseBody extends TeaModel {
             } 
 
             /**
-             * ConversationId.
+             * <p>The security operations Agent session ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>54b6c969-4b75-47be-9f43-71f88aeb****</p>
              */
             public Builder conversationId(String conversationId) {
                 this.conversationId = conversationId;
@@ -300,7 +309,10 @@ public class CreateCopilotConversationResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedAt.
+             * <p>The creation time. The time follows the ISO 8601 standard in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-01-31T10:10:20Z</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -308,7 +320,10 @@ public class CreateCopilotConversationResponseBody extends TeaModel {
             }
 
             /**
-             * Feedback.
+             * <p>The returned conversation information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder feedback(Long feedback) {
                 this.feedback = feedback;
@@ -316,7 +331,10 @@ public class CreateCopilotConversationResponseBody extends TeaModel {
             }
 
             /**
-             * Model.
+             * <p>The model configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen3.7-max</p>
              */
             public Builder model(String model) {
                 this.model = model;
@@ -324,7 +342,10 @@ public class CreateCopilotConversationResponseBody extends TeaModel {
             }
 
             /**
-             * PlanMode.
+             * <p>Specifies whether planning is enabled. Valid values: disable, enable, force. Default value: enable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder planMode(String planMode) {
                 this.planMode = planMode;
@@ -332,7 +353,10 @@ public class CreateCopilotConversationResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The security project ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>project-incident-****</p>
              */
             public Builder projectId(String projectId) {
                 this.projectId = projectId;
@@ -340,7 +364,10 @@ public class CreateCopilotConversationResponseBody extends TeaModel {
             }
 
             /**
-             * ScheduledTaskId.
+             * <p>The ID of the scheduled task. The ID is system-generated and globally unique.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>task-e34f770da4f04f6db21c2819****</p>
              */
             public Builder scheduledTaskId(String scheduledTaskId) {
                 this.scheduledTaskId = scheduledTaskId;
@@ -348,7 +375,10 @@ public class CreateCopilotConversationResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>active</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -356,7 +386,10 @@ public class CreateCopilotConversationResponseBody extends TeaModel {
             }
 
             /**
-             * ThinkingMode.
+             * <p>The thinking mode configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder thinkingMode(String thinkingMode) {
                 this.thinkingMode = thinkingMode;
@@ -364,7 +397,10 @@ public class CreateCopilotConversationResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * <p>The session title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Security incident investigation</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -372,7 +408,10 @@ public class CreateCopilotConversationResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedAt.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-11-27 16:02:28</p>
              */
             public Builder updatedAt(String updatedAt) {
                 this.updatedAt = updatedAt;
@@ -380,7 +419,10 @@ public class CreateCopilotConversationResponseBody extends TeaModel {
             }
 
             /**
-             * Visibility.
+             * <p>The session visibility.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[]</p>
              */
             public Builder visibility(String visibility) {
                 this.visibility = visibility;

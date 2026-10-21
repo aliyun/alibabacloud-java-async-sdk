@@ -171,7 +171,15 @@ public class ListProductsRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * <p>Note: This parameter is required in actual calls. If this parameter is not specified, the service returns a 400 error: &quot;The specified Lang can not be empty.&quot; Explicitly pass a language code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -180,7 +188,10 @@ public class ListProductsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return in this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -189,7 +200,10 @@ public class ListProductsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token. You do not need to specify this parameter for the first request or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -198,7 +212,7 @@ public class ListProductsRequest extends Request {
         }
 
         /**
-         * ProductIds.
+         * <p>The list of product IDs.</p>
          */
         public Builder productIds(java.util.List<String> productIds) {
             String productIdsShrink = shrink(productIds, "ProductIds", "simple");
@@ -208,7 +222,10 @@ public class ListProductsRequest extends Request {
         }
 
         /**
-         * ProductName.
+         * <p>The product name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas</p>
          */
         public Builder productName(String productName) {
             this.putBodyParameter("ProductName", productName);
@@ -217,7 +234,14 @@ public class ListProductsRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * <p>The product type. Valid values:</p>
+         * <ul>
+         * <li>preset</li>
+         * <li>custom</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>preset</p>
          */
         public Builder productType(String productType) {
             this.putBodyParameter("ProductType", productType);
@@ -226,7 +250,14 @@ public class ListProductsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region where the threat analysis data management center is located. Specify the management center based on the region of your assets. Valid values:</p>
+         * <ul>
+         * <li>cn-hangzhou: The assets are located in the Chinese mainland or Hong Kong (China).</li>
+         * <li>ap-southeast-1: The assets are located outside China.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -235,7 +266,10 @@ public class ListProductsRequest extends Request {
         }
 
         /**
-         * RoleFor.
+         * <p>The user ID of the member to which the administrator switches the view.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>173326*******</p>
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);
@@ -244,7 +278,10 @@ public class ListProductsRequest extends Request {
         }
 
         /**
-         * VendorId.
+         * <p>The vendor ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vd-qlsw5eocx94w9</p>
          */
         public Builder vendorId(String vendorId) {
             this.putBodyParameter("VendorId", vendorId);

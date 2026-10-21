@@ -129,7 +129,7 @@ public class ListDataSourceTemplatesRequest extends Request {
         } 
 
         /**
-         * DataSourceTemplateIds.
+         * <p>The list of data source template IDs.</p>
          */
         public Builder dataSourceTemplateIds(java.util.List<String> dataSourceTemplateIds) {
             String dataSourceTemplateIdsShrink = shrink(dataSourceTemplateIds, "DataSourceTemplateIds", "simple");
@@ -139,7 +139,15 @@ public class ListDataSourceTemplatesRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese.</li>
+         * <li><strong>en</strong>: English.
+         * This parameter is required in practice. If you do not specify this parameter, the API returns a 400 error (The specified Lang can not be empty.). Valid values: zh and en.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -148,7 +156,10 @@ public class ListDataSourceTemplatesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -157,7 +168,10 @@ public class ListDataSourceTemplatesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -166,7 +180,14 @@ public class ListDataSourceTemplatesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region where the data management center of the threat analysis feature resides. Specify this parameter based on the region where your assets reside. Valid values:</p>
+         * <ul>
+         * <li>cn-hangzhou: Chinese mainland. Your assets reside in the Chinese mainland.</li>
+         * <li>ap-southeast-1: Outside China. Your assets reside outside China.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -175,7 +196,10 @@ public class ListDataSourceTemplatesRequest extends Request {
         }
 
         /**
-         * RoleFor.
+         * <p>The ID of the member to which the administrator switches the view.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>173326*******</p>
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);

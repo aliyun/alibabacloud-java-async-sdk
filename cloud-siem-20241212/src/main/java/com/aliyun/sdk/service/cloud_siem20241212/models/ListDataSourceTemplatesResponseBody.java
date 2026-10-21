@@ -93,7 +93,7 @@ public class ListDataSourceTemplatesResponseBody extends TeaModel {
         } 
 
         /**
-         * DataSourceTemplates.
+         * <p>The list of data source templates.</p>
          */
         public Builder dataSourceTemplates(java.util.List<DataSourceTemplates> dataSourceTemplates) {
             this.dataSourceTemplates = dataSourceTemplates;
@@ -101,7 +101,10 @@ public class ListDataSourceTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -109,7 +112,10 @@ public class ListDataSourceTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -117,7 +123,10 @@ public class ListDataSourceTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -313,7 +322,14 @@ public class ListDataSourceTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * AutoScanNew.
+             * <p>Indicates whether automatic discovery of new users is enabled. Valid values:</p>
+             * <ul>
+             * <li>enabled: Enabled.</li>
+             * <li>disabled: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder autoScanNew(String autoScanNew) {
                 this.autoScanNew = autoScanNew;
@@ -321,7 +337,10 @@ public class ListDataSourceTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time. This value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1733269771123</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -329,7 +348,14 @@ public class ListDataSourceTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceFrom.
+             * <p>The data source origin. Valid values:</p>
+             * <ul>
+             * <li>center</li>
+             * <li>custom</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>custom</p>
              */
             public Builder dataSourceFrom(String dataSourceFrom) {
                 this.dataSourceFrom = dataSourceFrom;
@@ -337,7 +363,10 @@ public class ListDataSourceTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceRecognizeEnabled.
+             * <p>Indicates whether automatic discovery of new data sources is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder dataSourceRecognizeEnabled(Boolean dataSourceRecognizeEnabled) {
                 this.dataSourceRecognizeEnabled = dataSourceRecognizeEnabled;
@@ -345,7 +374,10 @@ public class ListDataSourceTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceRecognizer.
+             * <p>The data source recognizer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alibaba_cloud_actiontrail_event_ingestion</p>
              */
             public Builder dataSourceRecognizer(String dataSourceRecognizer) {
                 this.dataSourceRecognizer = dataSourceRecognizer;
@@ -353,7 +385,10 @@ public class ListDataSourceTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceTemplateId.
+             * <p>The data source template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alibaba_cloud_actiontrail_event_ingestion</p>
              */
             public Builder dataSourceTemplateId(String dataSourceTemplateId) {
                 this.dataSourceTemplateId = dataSourceTemplateId;
@@ -361,7 +396,10 @@ public class ListDataSourceTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceTemplateName.
+             * <p>The data source template name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alibaba_cloud_actiontrail_event_ingestion</p>
              */
             public Builder dataSourceTemplateName(String dataSourceTemplateName) {
                 this.dataSourceTemplateName = dataSourceTemplateName;
@@ -369,7 +407,10 @@ public class ListDataSourceTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * LogProjectPattern.
+             * <p>The matching rule for the Simple Log Service project name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliyun-cloudsiem-data-173326*******</p>
              */
             public Builder logProjectPattern(String logProjectPattern) {
                 this.logProjectPattern = logProjectPattern;
@@ -377,7 +418,7 @@ public class ListDataSourceTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * LogRegionIds.
+             * <p>The list of log storage region IDs.</p>
              */
             public Builder logRegionIds(java.util.List<String> logRegionIds) {
                 this.logRegionIds = logRegionIds;
@@ -385,7 +426,10 @@ public class ListDataSourceTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * LogStorePattern.
+             * <p>The matching rule for the Simple Log Service Logstore name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>audit-activity</p>
              */
             public Builder logStorePattern(String logStorePattern) {
                 this.logStorePattern = logStorePattern;
@@ -393,7 +437,7 @@ public class ListDataSourceTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * LogUserIds.
+             * <p>The list of user IDs for batch data ingestion.</p>
              */
             public Builder logUserIds(java.util.List<String> logUserIds) {
                 this.logUserIds = logUserIds;
@@ -401,7 +445,10 @@ public class ListDataSourceTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The update time. This value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1733269771123</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

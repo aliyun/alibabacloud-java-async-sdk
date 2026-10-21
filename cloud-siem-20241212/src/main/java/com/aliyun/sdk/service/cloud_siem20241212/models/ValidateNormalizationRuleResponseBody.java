@@ -67,7 +67,10 @@ public class ValidateNormalizationRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class ValidateNormalizationRuleResponseBody extends TeaModel {
         }
 
         /**
-         * ValidateResult.
+         * <p>The list of validation results.</p>
          */
         public Builder validateResult(java.util.List<ValidateResult> validateResult) {
             this.validateResult = validateResult;
@@ -284,7 +287,10 @@ public class ValidateNormalizationRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * FieldName.
+             * <p>The name of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>host</p>
              */
             public Builder fieldName(String fieldName) {
                 this.fieldName = fieldName;
@@ -292,7 +298,10 @@ public class ValidateNormalizationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * FieldValue.
+             * <p>The field information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ze</p>
              */
             public Builder fieldValue(String fieldValue) {
                 this.fieldValue = fieldValue;
@@ -300,7 +309,10 @@ public class ValidateNormalizationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * LogFieldName.
+             * <p>The name of the log field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aaa</p>
              */
             public Builder logFieldName(String logFieldName) {
                 this.logFieldName = logFieldName;
@@ -308,7 +320,10 @@ public class ValidateNormalizationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * LogFieldValue.
+             * <p>The value of the log field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bbb</p>
              */
             public Builder logFieldValue(String logFieldValue) {
                 this.logFieldValue = logFieldValue;
@@ -316,7 +331,19 @@ public class ValidateNormalizationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The reason for the validation result. Valid values:</p>
+             * <ul>
+             * <li>OperationDenied.TheValueIsRequired: A required parameter is empty.</li>
+             * <li>OperationDenied.TheValueIsNull: The parameter value is null.</li>
+             * <li>OperationDenied.TheEnumValueNotSupport: The field value is not within the valid enum values.</li>
+             * <li>OperationDenied.TheValueLessThanMin: The field value is less than the specified minimum value.</li>
+             * <li>OperationDenied.TheValueMoreThanMax: The field value is greater than the specified maximum value.</li>
+             * <li>OperationDenied.TheValueNotMatchRegularExpression: The field value fails the regular expression match.</li>
+             * <li>success: The validation is passed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -324,7 +351,14 @@ public class ValidateNormalizationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationFieldFrom.
+             * <p>The source of the normalized field. Valid values:</p>
+             * <ul>
+             * <li>preset: Built-in.</li>
+             * <li>custom: Custom.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>preset</p>
              */
             public Builder normalizationFieldFrom(String normalizationFieldFrom) {
                 this.normalizationFieldFrom = normalizationFieldFrom;
@@ -332,7 +366,10 @@ public class ValidateNormalizationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationFieldName.
+             * <p>The name of the normalized field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>host</p>
              */
             public Builder normalizationFieldName(String normalizationFieldName) {
                 this.normalizationFieldName = normalizationFieldName;
@@ -340,7 +377,10 @@ public class ValidateNormalizationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationFieldRequired.
+             * <p>Specifies whether the normalized field is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder normalizationFieldRequired(Boolean normalizationFieldRequired) {
                 this.normalizationFieldRequired = normalizationFieldRequired;
@@ -348,7 +388,7 @@ public class ValidateNormalizationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationFieldReserved.
+             * <p>Specifies whether the normalized field name is built into the system.</p>
              */
             public Builder normalizationFieldReserved(Boolean normalizationFieldReserved) {
                 this.normalizationFieldReserved = normalizationFieldReserved;
@@ -356,7 +396,10 @@ public class ValidateNormalizationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationFieldType.
+             * <p>The type of the normalized field. Valid values: text, long, double, and json.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>text</p>
              */
             public Builder normalizationFieldType(String normalizationFieldType) {
                 this.normalizationFieldType = normalizationFieldType;
@@ -364,7 +407,10 @@ public class ValidateNormalizationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationFieldValidationReason.
+             * <p>The reason why the normalized field fails the validation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OperationDenied.TheValueIsRequired</p>
              */
             public Builder normalizationFieldValidationReason(String normalizationFieldValidationReason) {
                 this.normalizationFieldValidationReason = normalizationFieldValidationReason;
@@ -372,7 +418,10 @@ public class ValidateNormalizationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationFieldValidationStatus.
+             * <p>The validation status of the normalized field. Valid values: pass and fail.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pass</p>
              */
             public Builder normalizationFieldValidationStatus(String normalizationFieldValidationStatus) {
                 this.normalizationFieldValidationStatus = normalizationFieldValidationStatus;
@@ -380,7 +429,15 @@ public class ValidateNormalizationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * <p>The validation result. Valid values:</p>
+             * <ul>
+             * <li>1: The validation is passed.</li>
+             * <li>0: A warning is returned.</li>
+             * <li>1: The validation fails.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder result(Integer result) {
                 this.result = result;

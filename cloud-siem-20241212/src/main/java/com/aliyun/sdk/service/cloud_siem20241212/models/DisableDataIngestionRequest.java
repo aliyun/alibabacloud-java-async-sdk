@@ -101,7 +101,10 @@ public class DisableDataIngestionRequest extends Request {
         } 
 
         /**
-         * DataIngestionId.
+         * <p>The data ingestion ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alibaba_cloud_sas_netstat_ingestion_173326*******</p>
          */
         public Builder dataIngestionId(String dataIngestionId) {
             this.putBodyParameter("DataIngestionId", dataIngestionId);
@@ -110,7 +113,15 @@ public class DisableDataIngestionRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * <p>Note: This parameter is actually required. If you do not specify this parameter, the API returns a 400 error: &quot;The specified Lang can not be empty.&quot;</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -119,7 +130,14 @@ public class DisableDataIngestionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region in which the threat analysis data management center resides. Specify this parameter based on the region where your assets reside. Valid values:</p>
+         * <ul>
+         * <li>cn-hangzhou: Your assets reside in the Chinese mainland.</li>
+         * <li>ap-southeast-1: Your assets reside outside China.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -128,7 +146,10 @@ public class DisableDataIngestionRequest extends Request {
         }
 
         /**
-         * RoleFor.
+         * <p>The ID of the member to which the administrator switches the view.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>173326*******</p>
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);

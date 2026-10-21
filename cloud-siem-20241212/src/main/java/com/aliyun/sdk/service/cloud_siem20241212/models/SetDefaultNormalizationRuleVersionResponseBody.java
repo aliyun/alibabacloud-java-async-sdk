@@ -67,7 +67,7 @@ public class SetDefaultNormalizationRuleVersionResponseBody extends TeaModel {
         } 
 
         /**
-         * NormalizationRuleVersion.
+         * <p>The normalization rule version.</p>
          */
         public Builder normalizationRuleVersion(NormalizationRuleVersion normalizationRuleVersion) {
             this.normalizationRuleVersion = normalizationRuleVersion;
@@ -75,7 +75,10 @@ public class SetDefaultNormalizationRuleVersionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -310,7 +313,10 @@ public class SetDefaultNormalizationRuleVersionResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The time when the normalization rule version was created. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1733269771123</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -318,7 +324,10 @@ public class SetDefaultNormalizationRuleVersionResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationCategoryId.
+             * <p>The normalization rule category ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NETWORK_CATEGORY</p>
              */
             public Builder normalizationCategoryId(String normalizationCategoryId) {
                 this.normalizationCategoryId = normalizationCategoryId;
@@ -326,7 +335,10 @@ public class SetDefaultNormalizationRuleVersionResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationRuleDescription.
+             * <p>The normalization rule description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>normalization_rule_Z57np</p>
              */
             public Builder normalizationRuleDescription(String normalizationRuleDescription) {
                 this.normalizationRuleDescription = normalizationRuleDescription;
@@ -334,7 +346,12 @@ public class SetDefaultNormalizationRuleVersionResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationRuleExpression.
+             * <p>The normalization rule expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li>| pack-fields -include=\&quot;[\s\S]+\&quot; as extend_content</li>
+             * </ul>
              */
             public Builder normalizationRuleExpression(String normalizationRuleExpression) {
                 this.normalizationRuleExpression = normalizationRuleExpression;
@@ -342,7 +359,10 @@ public class SetDefaultNormalizationRuleVersionResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationRuleFormat.
+             * <p>The normalization rule format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SPL</p>
              */
             public Builder normalizationRuleFormat(String normalizationRuleFormat) {
                 this.normalizationRuleFormat = normalizationRuleFormat;
@@ -350,7 +370,10 @@ public class SetDefaultNormalizationRuleVersionResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationRuleId.
+             * <p>The normalization rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nr-z0b2ssjteut85uoh9nzp</p>
              */
             public Builder normalizationRuleId(String normalizationRuleId) {
                 this.normalizationRuleId = normalizationRuleId;
@@ -358,7 +381,10 @@ public class SetDefaultNormalizationRuleVersionResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationRuleName.
+             * <p>The normalization rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>normalization_rule_Z57np</p>
              */
             public Builder normalizationRuleName(String normalizationRuleName) {
                 this.normalizationRuleName = normalizationRuleName;
@@ -366,7 +392,10 @@ public class SetDefaultNormalizationRuleVersionResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationRuleStatus.
+             * <p>The normalization rule status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>started</p>
              */
             public Builder normalizationRuleStatus(String normalizationRuleStatus) {
                 this.normalizationRuleStatus = normalizationRuleStatus;
@@ -374,7 +403,14 @@ public class SetDefaultNormalizationRuleVersionResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationRuleType.
+             * <p>The normalization rule type. Valid values:</p>
+             * <ul>
+             * <li>predefined: predefined normalization rule.</li>
+             * <li>custom: custom normalization rule.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>predefined</p>
              */
             public Builder normalizationRuleType(String normalizationRuleType) {
                 this.normalizationRuleType = normalizationRuleType;
@@ -382,7 +418,10 @@ public class SetDefaultNormalizationRuleVersionResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationRuleVersion.
+             * <p>The current version of the normalization rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>V1</p>
              */
             public Builder normalizationRuleVersion(Integer normalizationRuleVersion) {
                 this.normalizationRuleVersion = normalizationRuleVersion;
@@ -390,7 +429,10 @@ public class SetDefaultNormalizationRuleVersionResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationSchemaId.
+             * <p>The normalization schema ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTP_ACTIVITY</p>
              */
             public Builder normalizationSchemaId(String normalizationSchemaId) {
                 this.normalizationSchemaId = normalizationSchemaId;
@@ -398,7 +440,10 @@ public class SetDefaultNormalizationRuleVersionResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationSecurityDomainId.
+             * <p>The normalization security domain ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NETWORK_AND_WEB_SECURITY</p>
              */
             public Builder normalizationSecurityDomainId(String normalizationSecurityDomainId) {
                 this.normalizationSecurityDomainId = normalizationSecurityDomainId;
@@ -406,7 +451,10 @@ public class SetDefaultNormalizationRuleVersionResponseBody extends TeaModel {
             }
 
             /**
-             * ProductId.
+             * <p>The product ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alibaba_cloud_sas</p>
              */
             public Builder productId(String productId) {
                 this.productId = productId;
@@ -414,7 +462,10 @@ public class SetDefaultNormalizationRuleVersionResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The time when the normalization rule version was last updated. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1733269771123</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -422,7 +473,10 @@ public class SetDefaultNormalizationRuleVersionResponseBody extends TeaModel {
             }
 
             /**
-             * VendorId.
+             * <p>The vendor ID associated with the normalization rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alibaba_cloud</p>
              */
             public Builder vendorId(String vendorId) {
                 this.vendorId = vendorId;

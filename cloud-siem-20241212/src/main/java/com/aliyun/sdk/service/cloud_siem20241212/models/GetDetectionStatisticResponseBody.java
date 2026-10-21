@@ -67,7 +67,7 @@ public class GetDetectionStatisticResponseBody extends TeaModel {
         } 
 
         /**
-         * DetectionStatistic.
+         * <p>The count results of detection rules.</p>
          */
         public Builder detectionStatistic(DetectionStatistic detectionStatistic) {
             this.detectionStatistic = detectionStatistic;
@@ -75,7 +75,10 @@ public class GetDetectionStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6FB890AC-90B2-5EEA-845B-F7C86FB2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -206,7 +209,7 @@ public class GetDetectionStatisticResponseBody extends TeaModel {
             } 
 
             /**
-             * AiPoweredAggregationRuleCount.
+             * <p>The number of AI-powered aggregation rules.</p>
              */
             public Builder aiPoweredAggregationRuleCount(Integer aiPoweredAggregationRuleCount) {
                 this.aiPoweredAggregationRuleCount = aiPoweredAggregationRuleCount;
@@ -214,7 +217,10 @@ public class GetDetectionStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * DetectionRuleOnlineCount.
+             * <p>The number of online rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder detectionRuleOnlineCount(Integer detectionRuleOnlineCount) {
                 this.detectionRuleOnlineCount = detectionRuleOnlineCount;
@@ -222,7 +228,10 @@ public class GetDetectionStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * DetectionRuleTemplateCount.
+             * <p>The number of rule templates.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder detectionRuleTemplateCount(Integer detectionRuleTemplateCount) {
                 this.detectionRuleTemplateCount = detectionRuleTemplateCount;
@@ -230,7 +239,10 @@ public class GetDetectionStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * DetectionRuleTestCount.
+             * <p>The number of test rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder detectionRuleTestCount(Integer detectionRuleTestCount) {
                 this.detectionRuleTestCount = detectionRuleTestCount;
@@ -238,7 +250,10 @@ public class GetDetectionStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * GraphComputeRuleCount.
+             * <p>The number of graph computing rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder graphComputeRuleCount(Integer graphComputeRuleCount) {
                 this.graphComputeRuleCount = graphComputeRuleCount;
@@ -246,7 +261,10 @@ public class GetDetectionStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * PassthroughRuleCount.
+             * <p>The number of alert pass-through rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder passthroughRuleCount(Integer passthroughRuleCount) {
                 this.passthroughRuleCount = passthroughRuleCount;
@@ -254,7 +272,10 @@ public class GetDetectionStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * WindowRuleCount.
+             * <p>The number of same-type aggregation rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder windowRuleCount(Integer windowRuleCount) {
                 this.windowRuleCount = windowRuleCount;

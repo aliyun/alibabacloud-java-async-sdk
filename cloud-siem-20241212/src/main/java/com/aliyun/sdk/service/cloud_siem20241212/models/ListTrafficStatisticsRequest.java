@@ -185,7 +185,15 @@ public class ListTrafficStatisticsRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese.</li>
+         * <li><strong>en</strong>: English.
+         * Note: This parameter is required in practice. If this parameter is not specified, the API returns a 400 error: &quot;The specified Lang can not be empty.&quot;</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -194,7 +202,7 @@ public class ListTrafficStatisticsRequest extends Request {
         }
 
         /**
-         * LogUserIds.
+         * <p>The list of user IDs for batch data ingestion.</p>
          */
         public Builder logUserIds(java.util.List<Long> logUserIds) {
             String logUserIdsShrink = shrink(logUserIds, "LogUserIds", "simple");
@@ -204,7 +212,10 @@ public class ListTrafficStatisticsRequest extends Request {
         }
 
         /**
-         * ProductId.
+         * <p>The product ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alibaba_cloud_sas</p>
          */
         public Builder productId(String productId) {
             this.putBodyParameter("ProductId", productId);
@@ -213,7 +224,14 @@ public class ListTrafficStatisticsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region where the threat detection and response data management center resides. Specify the management center based on the region of your assets. Valid values:</p>
+         * <ul>
+         * <li>cn-hangzhou: The assets reside in the Chinese mainland.</li>
+         * <li>ap-southeast-1: The assets reside outside China.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -222,7 +240,10 @@ public class ListTrafficStatisticsRequest extends Request {
         }
 
         /**
-         * RegionTag.
+         * <p>The region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder regionTag(Integer regionTag) {
             this.putBodyParameter("RegionTag", regionTag);
@@ -231,7 +252,10 @@ public class ListTrafficStatisticsRequest extends Request {
         }
 
         /**
-         * RoleFor.
+         * <p>The user ID that the administrator switches to when viewing from another member\&quot;s perspective.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>173326*******</p>
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);
@@ -240,7 +264,10 @@ public class ListTrafficStatisticsRequest extends Request {
         }
 
         /**
-         * TrafficStatisticPeriod.
+         * <p>The statistical period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder trafficStatisticPeriod(String trafficStatisticPeriod) {
             this.putBodyParameter("TrafficStatisticPeriod", trafficStatisticPeriod);
@@ -249,7 +276,14 @@ public class ListTrafficStatisticsRequest extends Request {
         }
 
         /**
-         * TrafficStatisticPeriodType.
+         * <p>The statistical granularity. Valid values:</p>
+         * <ul>
+         * <li>day: day. This is the default value.</li>
+         * <li>hour: hour.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>day</p>
          */
         public Builder trafficStatisticPeriodType(String trafficStatisticPeriodType) {
             this.putBodyParameter("TrafficStatisticPeriodType", trafficStatisticPeriodType);
@@ -258,7 +292,16 @@ public class ListTrafficStatisticsRequest extends Request {
         }
 
         /**
-         * TrafficStatisticType.
+         * <p>The statistical dimension. Valid values:</p>
+         * <ul>
+         * <li>Region</li>
+         * <li>Product</li>
+         * <li>DataIngetion</li>
+         * <li>logUserId</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Region</p>
          */
         public Builder trafficStatisticType(String trafficStatisticType) {
             this.putBodyParameter("TrafficStatisticType", trafficStatisticType);
@@ -267,7 +310,10 @@ public class ListTrafficStatisticsRequest extends Request {
         }
 
         /**
-         * TrafficType.
+         * <p>The log traffic type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agentAnalysisLogTraffic</p>
          */
         public Builder trafficType(String trafficType) {
             this.putBodyParameter("TrafficType", trafficType);

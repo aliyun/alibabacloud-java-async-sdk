@@ -106,7 +106,10 @@ public class ListUpgradeItemsResponseBody extends TeaModel {
         } 
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return in a single call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -114,7 +117,10 @@ public class ListUpgradeItemsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request or if there are no more results to return. If a next page exists, set this parameter to the value of NextToken returned by the previous API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -122,7 +128,10 @@ public class ListUpgradeItemsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,10 @@ public class ListUpgradeItemsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>57</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -138,7 +150,7 @@ public class ListUpgradeItemsResponseBody extends TeaModel {
         }
 
         /**
-         * UpgradeItems.
+         * <p>The list of upgrade items.</p>
          */
         public Builder upgradeItems(java.util.List<UpgradeItems> upgradeItems) {
             this.upgradeItems = upgradeItems;
@@ -191,7 +203,10 @@ public class ListUpgradeItemsResponseBody extends TeaModel {
             } 
 
             /**
-             * UpgradeItemId.
+             * <p>The upgrade item ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>data_storage_2_upgrade</p>
              */
             public Builder upgradeItemId(String upgradeItemId) {
                 this.upgradeItemId = upgradeItemId;

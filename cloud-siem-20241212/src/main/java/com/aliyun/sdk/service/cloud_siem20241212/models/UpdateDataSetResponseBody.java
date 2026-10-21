@@ -54,7 +54,10 @@ public class UpdateDataSetResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DE7E77A9-BFAD-5EAA-9B48-A96760E9DF0B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

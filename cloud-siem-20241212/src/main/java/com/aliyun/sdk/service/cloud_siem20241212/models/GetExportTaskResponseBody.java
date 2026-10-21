@@ -145,7 +145,14 @@ public class GetExportTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * ExportStatus.
+         * <p>The task status. Valid values:</p>
+         * <ul>
+         * <li>success: The export is successful.</li>
+         * <li>exporting: The export is in progress.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder exportStatus(String exportStatus) {
             this.exportStatus = exportStatus;
@@ -153,7 +160,13 @@ public class GetExportTaskResponseBody extends TeaModel {
         }
 
         /**
-         * ExportType.
+         * <p>The export type. Valid values:</p>
+         * <ul>
+         * <li>incident_list: incident list.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>incident_list</p>
          */
         public Builder exportType(String exportType) {
             this.exportType = exportType;
@@ -161,7 +174,10 @@ public class GetExportTaskResponseBody extends TeaModel {
         }
 
         /**
-         * FileName.
+         * <p>The file name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>event_1193842352994186_17344888****.xlsx</p>
          */
         public Builder fileName(String fileName) {
             this.fileName = fileName;
@@ -169,7 +185,10 @@ public class GetExportTaskResponseBody extends TeaModel {
         }
 
         /**
-         * GmtCreate.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1605076118000</p>
          */
         public Builder gmtCreate(String gmtCreate) {
             this.gmtCreate = gmtCreate;
@@ -177,7 +196,10 @@ public class GetExportTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Id.
+         * <p>The export task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400185</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -185,7 +207,10 @@ public class GetExportTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Link.
+         * <p>The download URL of the exported Excel file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://cloud-siem-user-dataset.oss-cn-shanghai.aliyuncs.com/export_file/17661858******5/event_17661858******5_175748****.xlsx">https://cloud-siem-user-dataset.oss-cn-shanghai.aliyuncs.com/export_file/17661858******5/event_17661858******5_175748****.xlsx</a></p>
          */
         public Builder link(String link) {
             this.link = link;
@@ -193,7 +218,10 @@ public class GetExportTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Progress.
+         * <p>The export progress.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>66</p>
          */
         public Builder progress(Integer progress) {
             this.progress = progress;
@@ -201,7 +229,10 @@ public class GetExportTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9AAA9ED9-78F4-5021-86DC-D51C7511****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

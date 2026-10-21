@@ -54,7 +54,7 @@ public class DeleteResponseRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9BCE0BF1-4F0C-5860-87D2-C391799AF4F2</p>

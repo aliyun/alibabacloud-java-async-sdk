@@ -115,7 +115,16 @@ public class UpdateVendorRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li><p><strong>zh</strong> (default): Chinese.</p>
+         * </li>
+         * <li><p><strong>en</strong>: English.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -124,7 +133,16 @@ public class UpdateVendorRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region of the Data Management center for threat analysis. Select the region based on where your asset is located. Valid values:</p>
+         * <ul>
+         * <li><p>cn-hangzhou: The asset is in the Chinese mainland.</p>
+         * </li>
+         * <li><p>ap-southeast-1: The asset is outside China.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -133,7 +151,10 @@ public class UpdateVendorRequest extends Request {
         }
 
         /**
-         * RoleFor.
+         * <p>The user ID of the member. This parameter allows an administrator to switch to the perspective of a member.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>173326*******</p>
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);
@@ -142,7 +163,10 @@ public class UpdateVendorRequest extends Request {
         }
 
         /**
-         * VendorId.
+         * <p>The ID of the vendor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vd-qlsw5eocx94w9</p>
          */
         public Builder vendorId(String vendorId) {
             this.putBodyParameter("VendorId", vendorId);
@@ -151,7 +175,10 @@ public class UpdateVendorRequest extends Request {
         }
 
         /**
-         * VendorName.
+         * <p>The name of the vendor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111</p>
          */
         public Builder vendorName(String vendorName) {
             this.putBodyParameter("VendorName", vendorName);

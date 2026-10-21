@@ -145,7 +145,10 @@ public class ListNormalizationRuleCapacitiesResponseBody extends TeaModel {
         } 
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return in this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -153,7 +156,10 @@ public class ListNormalizationRuleCapacitiesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token for the next query. You do not need to specify this parameter for the first query or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -161,7 +167,7 @@ public class ListNormalizationRuleCapacitiesResponseBody extends TeaModel {
         }
 
         /**
-         * NormalizationRuleCapacities.
+         * <p>The list of security capabilities associated with normalization rules.</p>
          */
         public Builder normalizationRuleCapacities(java.util.List<NormalizationRuleCapacities> normalizationRuleCapacities) {
             this.normalizationRuleCapacities = normalizationRuleCapacities;
@@ -169,7 +175,10 @@ public class ListNormalizationRuleCapacitiesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -177,7 +186,10 @@ public class ListNormalizationRuleCapacitiesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -185,7 +197,10 @@ public class ListNormalizationRuleCapacitiesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +208,10 @@ public class ListNormalizationRuleCapacitiesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>57</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -201,7 +219,10 @@ public class ListNormalizationRuleCapacitiesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPage.
+         * <p>The total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder totalPage(Integer totalPage) {
             this.totalPage = totalPage;
@@ -280,7 +301,7 @@ public class ListNormalizationRuleCapacitiesResponseBody extends TeaModel {
             } 
 
             /**
-             * Capacities.
+             * <p>The list of security capabilities.</p>
              */
             public Builder capacities(java.util.List<String> capacities) {
                 this.capacities = capacities;
@@ -288,7 +309,16 @@ public class ListNormalizationRuleCapacitiesResponseBody extends TeaModel {
             }
 
             /**
-             * CapacityType.
+             * <p>The type of the security capability. Valid values:</p>
+             * <ul>
+             * <li>detection_preset_rule: predefined analysis rule.</li>
+             * <li>detection_custom_rule: custom analysis rule.</li>
+             * <li>incident_investigation: security incident handling.</li>
+             * <li>soar_playbooks: predefined playbook.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>detection_preset_rule</p>
              */
             public Builder capacityType(String capacityType) {
                 this.capacityType = capacityType;
@@ -296,7 +326,10 @@ public class ListNormalizationRuleCapacitiesResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationRuleId.
+             * <p>The normalization rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nr-z0b2ssjteut85uoh9nzp</p>
              */
             public Builder normalizationRuleId(String normalizationRuleId) {
                 this.normalizationRuleId = normalizationRuleId;

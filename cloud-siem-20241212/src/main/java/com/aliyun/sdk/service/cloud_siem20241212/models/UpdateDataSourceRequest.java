@@ -227,7 +227,14 @@ public class UpdateDataSourceRequest extends Request {
         } 
 
         /**
-         * DataSourceFrom.
+         * <p>The data source. Valid values:</p>
+         * <ul>
+         * <li>center</li>
+         * <li>custom</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>custom</p>
          */
         public Builder dataSourceFrom(String dataSourceFrom) {
             this.putBodyParameter("DataSourceFrom", dataSourceFrom);
@@ -236,7 +243,10 @@ public class UpdateDataSourceRequest extends Request {
         }
 
         /**
-         * DataSourceId.
+         * <p>The data source ID. This parameter is required and specifies the ID of the data source to update. If it is not provided, the API returns a 400 error.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ds-014frtpy28m5ct2eoyo1</p>
          */
         public Builder dataSourceId(String dataSourceId) {
             this.putBodyParameter("DataSourceId", dataSourceId);
@@ -245,7 +255,10 @@ public class UpdateDataSourceRequest extends Request {
         }
 
         /**
-         * DataSourceName.
+         * <p>The data source name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ActiontrailLog</p>
          */
         public Builder dataSourceName(String dataSourceName) {
             this.putBodyParameter("DataSourceName", dataSourceName);
@@ -254,7 +267,10 @@ public class UpdateDataSourceRequest extends Request {
         }
 
         /**
-         * DataSourceRecognizeEnabled.
+         * <p>Specifies whether to automatically discover new Logstores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder dataSourceRecognizeEnabled(Boolean dataSourceRecognizeEnabled) {
             this.putBodyParameter("DataSourceRecognizeEnabled", dataSourceRecognizeEnabled);
@@ -263,7 +279,7 @@ public class UpdateDataSourceRequest extends Request {
         }
 
         /**
-         * DataSourceStores.
+         * <p>The list of Simple Log Service Logstores.</p>
          */
         public Builder dataSourceStores(java.util.List<DataSourceStores> dataSourceStores) {
             this.putBodyParameter("DataSourceStores", dataSourceStores);
@@ -272,7 +288,14 @@ public class UpdateDataSourceRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response messages. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese.</li>
+         * <li><strong>en</strong>: English. This parameter is required. If it is not provided, the service returns a 400 error.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -281,7 +304,10 @@ public class UpdateDataSourceRequest extends Request {
         }
 
         /**
-         * LogProjectName.
+         * <p>The Simple Log Service project name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyun-cloudsiem-data-173326*******-cn-hangzhou</p>
          */
         public Builder logProjectName(String logProjectName) {
             this.putBodyParameter("LogProjectName", logProjectName);
@@ -290,7 +316,10 @@ public class UpdateDataSourceRequest extends Request {
         }
 
         /**
-         * LogRegionId.
+         * <p>The ID of the log storage region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder logRegionId(String logRegionId) {
             this.putBodyParameter("LogRegionId", logRegionId);
@@ -299,7 +328,10 @@ public class UpdateDataSourceRequest extends Request {
         }
 
         /**
-         * LogStoreName.
+         * <p>The Simple Log Service Logstore name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-rds-sqlaudit</p>
          */
         public Builder logStoreName(String logStoreName) {
             this.putBodyParameter("LogStoreName", logStoreName);
@@ -308,7 +340,10 @@ public class UpdateDataSourceRequest extends Request {
         }
 
         /**
-         * LogUserId.
+         * <p>The user ID for data ingestion.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>173326*******</p>
          */
         public Builder logUserId(Long logUserId) {
             this.putBodyParameter("LogUserId", logUserId);
@@ -317,7 +352,14 @@ public class UpdateDataSourceRequest extends Request {
         }
 
         /**
-         * OrderField.
+         * <p>The field used to sort the rule list. Valid values:</p>
+         * <ul>
+         * <li>GmtModified: Sort by modification time.</li>
+         * <li>Id: Sort by rule ID (default).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Id</p>
          */
         public Builder orderField(String orderField) {
             this.putBodyParameter("OrderField", orderField);
@@ -326,7 +368,14 @@ public class UpdateDataSourceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region where the data management center of the threat analysis service is located. Select the management center region based on the region where your assets reside. Valid values:</p>
+         * <ul>
+         * <li>cn-hangzhou: Assets are located in the Chinese mainland.</li>
+         * <li>ap-southeast-1: Assets are located outside China.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -335,7 +384,10 @@ public class UpdateDataSourceRequest extends Request {
         }
 
         /**
-         * RoleFor.
+         * <p>The user ID of the member account that the administrator switches to.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>173326*******</p>
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);
@@ -442,7 +494,14 @@ public class UpdateDataSourceRequest extends Request {
             } 
 
             /**
-             * DataSourceStoreFrom.
+             * <p>The data source. Valid values:</p>
+             * <ul>
+             * <li>center</li>
+             * <li>custom</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>custom</p>
              */
             public Builder dataSourceStoreFrom(String dataSourceStoreFrom) {
                 this.dataSourceStoreFrom = dataSourceStoreFrom;
@@ -450,7 +509,10 @@ public class UpdateDataSourceRequest extends Request {
             }
 
             /**
-             * DataSourceStoreId.
+             * <p>The log storage ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder dataSourceStoreId(String dataSourceStoreId) {
                 this.dataSourceStoreId = dataSourceStoreId;
@@ -458,7 +520,10 @@ public class UpdateDataSourceRequest extends Request {
             }
 
             /**
-             * LogProjectName.
+             * <p>The Simple Log Service project name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliyun-cloudsiem-data-173326*******-cn-hangzhou</p>
              */
             public Builder logProjectName(String logProjectName) {
                 this.logProjectName = logProjectName;
@@ -466,7 +531,10 @@ public class UpdateDataSourceRequest extends Request {
             }
 
             /**
-             * LogRegionId.
+             * <p>The ID of the log storage region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder logRegionId(String logRegionId) {
                 this.logRegionId = logRegionId;
@@ -474,7 +542,10 @@ public class UpdateDataSourceRequest extends Request {
             }
 
             /**
-             * LogStoreName.
+             * <p>The Simple Log Service Logstore name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-rds-sqlaudit</p>
              */
             public Builder logStoreName(String logStoreName) {
                 this.logStoreName = logStoreName;

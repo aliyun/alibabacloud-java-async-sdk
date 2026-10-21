@@ -143,7 +143,15 @@ public class CreateLogStoreRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese.</li>
+         * <li><strong>en</strong>: English.
+         * Note: This parameter is required. If this parameter is not specified, the API returns a 400 error. Valid values: zh (Chinese) or en (English).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -152,7 +160,10 @@ public class CreateLogStoreRequest extends Request {
         }
 
         /**
-         * LogProjectName.
+         * <p>The Simple Log Service project name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyun-cloudsiem-channel-173326*******-cn-hangzhou</p>
          */
         public Builder logProjectName(String logProjectName) {
             this.putBodyParameter("LogProjectName", logProjectName);
@@ -161,7 +172,10 @@ public class CreateLogStoreRequest extends Request {
         }
 
         /**
-         * LogRegionId.
+         * <p>The log storage region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder logRegionId(String logRegionId) {
             this.putBodyParameter("LogRegionId", logRegionId);
@@ -170,7 +184,10 @@ public class CreateLogStoreRequest extends Request {
         }
 
         /**
-         * LogStoreName.
+         * <p>The Simple Log Service LogStore name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>logstoreqykug</p>
          */
         public Builder logStoreName(String logStoreName) {
             this.putBodyParameter("LogStoreName", logStoreName);
@@ -179,7 +196,10 @@ public class CreateLogStoreRequest extends Request {
         }
 
         /**
-         * LogUserId.
+         * <p>The user ID for data access.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>173326*******</p>
          */
         public Builder logUserId(Long logUserId) {
             this.putBodyParameter("LogUserId", logUserId);
@@ -188,7 +208,14 @@ public class CreateLogStoreRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region where the data management center of Cloud Threat Detection and Response (CTDR) is located. Specify the management center based on the region of your assets. Valid values:</p>
+         * <ul>
+         * <li>cn-hangzhou: Your assets reside in the Chinese mainland.</li>
+         * <li>ap-southeast-1: Your assets reside outside China.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -197,7 +224,10 @@ public class CreateLogStoreRequest extends Request {
         }
 
         /**
-         * RoleFor.
+         * <p>The user ID that the administrator switches to when viewing as another member.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>173326*******</p>
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);

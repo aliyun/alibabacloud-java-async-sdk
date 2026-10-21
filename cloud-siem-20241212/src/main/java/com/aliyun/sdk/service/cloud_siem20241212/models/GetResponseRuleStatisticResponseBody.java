@@ -67,7 +67,10 @@ public class GetResponseRuleStatisticResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class GetResponseRuleStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * ResponseStatistic.
+         * <p>The statistics of automated response rules.</p>
          */
         public Builder responseStatistic(ResponseStatistic responseStatistic) {
             this.responseStatistic = responseStatistic;
@@ -141,7 +144,10 @@ public class GetResponseRuleStatisticResponseBody extends TeaModel {
             } 
 
             /**
-             * ResponseRuleAllCount.
+             * <p>The total number of automated response rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder responseRuleAllCount(Integer responseRuleAllCount) {
                 this.responseRuleAllCount = responseRuleAllCount;
@@ -149,7 +155,10 @@ public class GetResponseRuleStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseRuleOnlineCount.
+             * <p>The number of online automated response rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder responseRuleOnlineCount(Integer responseRuleOnlineCount) {
                 this.responseRuleOnlineCount = responseRuleOnlineCount;

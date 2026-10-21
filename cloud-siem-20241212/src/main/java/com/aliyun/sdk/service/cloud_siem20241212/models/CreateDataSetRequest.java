@@ -189,7 +189,10 @@ public class CreateDataSetRequest extends Request {
         } 
 
         /**
-         * DataSetDescription.
+         * <p>The description of the dataset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lmftest contains ip list</p>
          */
         public Builder dataSetDescription(String dataSetDescription) {
             this.putBodyParameter("DataSetDescription", dataSetDescription);
@@ -198,6 +201,7 @@ public class CreateDataSetRequest extends Request {
         }
 
         /**
+         * <p>The unique key name of the dataset.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -210,6 +214,7 @@ public class CreateDataSetRequest extends Request {
         }
 
         /**
+         * <p>The name of the uploaded dataset file.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -222,6 +227,7 @@ public class CreateDataSetRequest extends Request {
         }
 
         /**
+         * <p>The name of the dataset.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -234,7 +240,14 @@ public class CreateDataSetRequest extends Request {
         }
 
         /**
-         * DataSetStatus.
+         * <p>The status of the dataset. Valid values:</p>
+         * <ul>
+         * <li>0: Deleted.</li>
+         * <li>1: Enabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder dataSetStatus(Integer dataSetStatus) {
             this.putBodyParameter("DataSetStatus", dataSetStatus);
@@ -243,7 +256,14 @@ public class CreateDataSetRequest extends Request {
         }
 
         /**
-         * DataSetType.
+         * <p>The type of the dataset. Valid values:</p>
+         * <ul>
+         * <li>custom: custom.</li>
+         * <li>preset: predefined.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>custom</p>
          */
         public Builder dataSetType(String dataSetType) {
             this.putBodyParameter("DataSetType", dataSetType);
@@ -252,7 +272,7 @@ public class CreateDataSetRequest extends Request {
         }
 
         /**
-         * IpWhitelistRecognizers.
+         * <p>The list of recognizers.</p>
          */
         public Builder ipWhitelistRecognizers(java.util.List<IpWhitelistRecognizers> ipWhitelistRecognizers) {
             this.putBodyParameter("IpWhitelistRecognizers", ipWhitelistRecognizers);
@@ -261,7 +281,15 @@ public class CreateDataSetRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese.</li>
+         * <li><strong>en</strong>: English.
+         * Note: This parameter is required. If you do not specify this parameter, the API returns a 400 error: &quot;The specified Lang can not be empty.&quot;</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -270,7 +298,14 @@ public class CreateDataSetRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region where the threat analysis data management center resides. Specify the management center based on the region of your assets. Valid values:</p>
+         * <ul>
+         * <li>cn-hangzhou: Your assets reside in the Chinese mainland.</li>
+         * <li>ap-southeast-1: Your assets reside outside China.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -279,7 +314,10 @@ public class CreateDataSetRequest extends Request {
         }
 
         /**
-         * RoleFor.
+         * <p>The ID of the member to which the administrator switches the view.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>113091674488****</p>
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);
@@ -360,7 +398,14 @@ public class CreateDataSetRequest extends Request {
             } 
 
             /**
-             * AutoRecognizeStatus.
+             * <p>The automatic recognition status. Valid values:</p>
+             * <ul>
+             * <li>enabled: Enabled.</li>
+             * <li>disabled: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder autoRecognizeStatus(String autoRecognizeStatus) {
                 this.autoRecognizeStatus = autoRecognizeStatus;
@@ -368,7 +413,21 @@ public class CreateDataSetRequest extends Request {
             }
 
             /**
-             * IpWhitelistRecognizerType.
+             * <p>The IP address type identified by the recognizer. Valid values:</p>
+             * <ul>
+             * <li>sas_vulnerability_scanner_ip: IP addresses of the Security Center vulnerability web scanner.</li>
+             * <li>waf_back_source_ip: back-to-origin IP addresses of Web Application Firewall (WAF).</li>
+             * <li>ddos_back_source_ip: back-to-origin IP addresses of Anti-DDoS.</li>
+             * <li>esa_back_source_ip: back-to-origin node IP addresses of Edge secure acceleration (ESA).</li>
+             * <li>ecs_public_ip: public IP addresses of Elastic Compute Service (ECS) instances.</li>
+             * <li>slb_public_ip: public IP addresses of Server Load Balancer (SLB) instances.</li>
+             * <li>vpc_eip: elastic IP addresses (EIPs).</li>
+             * <li>cdn_back_source_ip: back-to-origin IP addresses of content delivery network (CDN).</li>
+             * <li>ga_back_source_ip: back-to-origin IP addresses of Global Accelerator (GA).</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>waf_back_source_ip</p>
              */
             public Builder ipWhitelistRecognizerType(String ipWhitelistRecognizerType) {
                 this.ipWhitelistRecognizerType = ipWhitelistRecognizerType;
@@ -376,7 +435,14 @@ public class CreateDataSetRequest extends Request {
             }
 
             /**
-             * RecognizeScope.
+             * <p>The recognition scope. Valid values:</p>
+             * <ul>
+             * <li>current_account: the current account only.</li>
+             * <li>rd_accounts: multi-account mode enabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>current_account</p>
              */
             public Builder recognizeScope(String recognizeScope) {
                 this.recognizeScope = recognizeScope;

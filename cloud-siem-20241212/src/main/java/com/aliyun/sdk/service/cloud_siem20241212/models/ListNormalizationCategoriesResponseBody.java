@@ -106,7 +106,10 @@ public class ListNormalizationCategoriesResponseBody extends TeaModel {
         } 
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return in this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -114,7 +117,10 @@ public class ListNormalizationCategoriesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token for the next query. You do not need to specify this parameter for the first query or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -122,7 +128,7 @@ public class ListNormalizationCategoriesResponseBody extends TeaModel {
         }
 
         /**
-         * NormalizationCategories.
+         * <p>The list of standardized categories.</p>
          */
         public Builder normalizationCategories(java.util.List<NormalizationCategories> normalizationCategories) {
             this.normalizationCategories = normalizationCategories;
@@ -130,7 +136,10 @@ public class ListNormalizationCategoriesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListNormalizationCategoriesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>57</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -204,7 +216,10 @@ public class ListNormalizationCategoriesResponseBody extends TeaModel {
             } 
 
             /**
-             * NormalizationCategoryId.
+             * <p>The ID of the standardized category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>COMMON_CATEGORY</p>
              */
             public Builder normalizationCategoryId(String normalizationCategoryId) {
                 this.normalizationCategoryId = normalizationCategoryId;
@@ -212,7 +227,10 @@ public class ListNormalizationCategoriesResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationCategoryName.
+             * <p>The name of the standardized category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>COMMON_CATEGORY</p>
              */
             public Builder normalizationCategoryName(String normalizationCategoryName) {
                 this.normalizationCategoryName = normalizationCategoryName;

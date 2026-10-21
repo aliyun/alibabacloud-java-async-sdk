@@ -67,7 +67,7 @@ public class UpdateDataSetRecordResponseBody extends TeaModel {
         } 
 
         /**
-         * DataSetRecordStatistic.
+         * <p>The result of the dataset update.</p>
          */
         public Builder dataSetRecordStatistic(DataSetRecordStatistic dataSetRecordStatistic) {
             this.dataSetRecordStatistic = dataSetRecordStatistic;
@@ -75,7 +75,10 @@ public class UpdateDataSetRecordResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9AAA9ED9-78F4-5021-86DC-D51C7511****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,10 @@ public class UpdateDataSetRecordResponseBody extends TeaModel {
             } 
 
             /**
-             * NewDataSetRecordCount.
+             * <p>The number of new dataset records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder newDataSetRecordCount(Integer newDataSetRecordCount) {
                 this.newDataSetRecordCount = newDataSetRecordCount;
@@ -149,7 +155,10 @@ public class UpdateDataSetRecordResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateDataSetRecordCount.
+             * <p>The number of updated dataset records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder updateDataSetRecordCount(Integer updateDataSetRecordCount) {
                 this.updateDataSetRecordCount = updateDataSetRecordCount;

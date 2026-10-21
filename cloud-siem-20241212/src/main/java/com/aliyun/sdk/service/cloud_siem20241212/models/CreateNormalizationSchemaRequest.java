@@ -245,7 +245,15 @@ public class CreateNormalizationSchemaRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>The language of the response messages. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * <p>Note: This parameter is required in actual API calls. If it is not provided, the service returns a 400 error: &quot;The specified Lang can not be empty.&quot; Pass the language code explicitly.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -254,7 +262,10 @@ public class CreateNormalizationSchemaRequest extends Request {
         }
 
         /**
-         * NormalizationCategoryId.
+         * <p>The normalization category ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NETWORK_CATEGORY</p>
          */
         public Builder normalizationCategoryId(String normalizationCategoryId) {
             this.putBodyParameter("NormalizationCategoryId", normalizationCategoryId);
@@ -263,7 +274,10 @@ public class CreateNormalizationSchemaRequest extends Request {
         }
 
         /**
-         * NormalizationFieldSource.
+         * <p>The field source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>native</p>
          */
         public Builder normalizationFieldSource(String normalizationFieldSource) {
             this.putBodyParameter("NormalizationFieldSource", normalizationFieldSource);
@@ -272,7 +286,7 @@ public class CreateNormalizationSchemaRequest extends Request {
         }
 
         /**
-         * NormalizationFields.
+         * <p>The normalization fields.</p>
          */
         public Builder normalizationFields(java.util.List<NormalizationFields> normalizationFields) {
             this.putBodyParameter("NormalizationFields", normalizationFields);
@@ -281,7 +295,10 @@ public class CreateNormalizationSchemaRequest extends Request {
         }
 
         /**
-         * NormalizationSchemaDescription.
+         * <p>The normalization schema description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ProcessQuery</p>
          */
         public Builder normalizationSchemaDescription(String normalizationSchemaDescription) {
             this.putBodyParameter("NormalizationSchemaDescription", normalizationSchemaDescription);
@@ -290,6 +307,7 @@ public class CreateNormalizationSchemaRequest extends Request {
         }
 
         /**
+         * <p>The normalization schema ID. When creating a custom schema, the ID must start with custom- and can contain only lowercase letters, digits, and hyphens. Example: custom-my-log-schema.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -302,6 +320,7 @@ public class CreateNormalizationSchemaRequest extends Request {
         }
 
         /**
+         * <p>The normalization schema name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -314,6 +333,11 @@ public class CreateNormalizationSchemaRequest extends Request {
         }
 
         /**
+         * <p>The normalization schema type. Valid values:</p>
+         * <ul>
+         * <li>log: log.</li>
+         * <li>entity: entity.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -326,7 +350,10 @@ public class CreateNormalizationSchemaRequest extends Request {
         }
 
         /**
-         * NormalizationSecurityDomainId.
+         * <p>The security domain ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NETWORK_AND_WEB_SECURITY</p>
          */
         public Builder normalizationSecurityDomainId(String normalizationSecurityDomainId) {
             this.putBodyParameter("NormalizationSecurityDomainId", normalizationSecurityDomainId);
@@ -335,7 +362,10 @@ public class CreateNormalizationSchemaRequest extends Request {
         }
 
         /**
-         * ProductId.
+         * <p>The product ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas</p>
          */
         public Builder productId(String productId) {
             this.putBodyParameter("ProductId", productId);
@@ -344,7 +374,14 @@ public class CreateNormalizationSchemaRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region where the data management center of Cloud Threat Detection and Response (CTDR) is located. Select the management center region based on the region where your assets reside. Valid values:</p>
+         * <ul>
+         * <li>cn-hangzhou: assets in the Chinese mainland or Hong Kong (China).</li>
+         * <li>ap-southeast-1: assets in regions outside China.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -353,7 +390,10 @@ public class CreateNormalizationSchemaRequest extends Request {
         }
 
         /**
-         * RoleFor.
+         * <p>The user ID that the administrator uses to switch to the view of another member account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>113091674488****</p>
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);
@@ -362,6 +402,7 @@ public class CreateNormalizationSchemaRequest extends Request {
         }
 
         /**
+         * <p>The Simple Log Service LogStore.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -374,7 +415,10 @@ public class CreateNormalizationSchemaRequest extends Request {
         }
 
         /**
-         * VendorId.
+         * <p>The vendor ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alibaba</p>
          */
         public Builder vendorId(String vendorId) {
             this.putBodyParameter("VendorId", vendorId);
@@ -509,7 +553,10 @@ public class CreateNormalizationSchemaRequest extends Request {
             } 
 
             /**
-             * NormalizationFieldDescription.
+             * <p>The key description for a standard field of the JSON type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The alert severity levels are represented by the values 1, 2, 3, and 4.</p>
              */
             public Builder normalizationFieldDescription(String normalizationFieldDescription) {
                 this.normalizationFieldDescription = normalizationFieldDescription;
@@ -517,7 +564,10 @@ public class CreateNormalizationSchemaRequest extends Request {
             }
 
             /**
-             * NormalizationFieldExample.
+             * <p>The key example for a standard field of the JSON type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1, 2, 3, 4</p>
              */
             public Builder normalizationFieldExample(String normalizationFieldExample) {
                 this.normalizationFieldExample = normalizationFieldExample;
@@ -525,7 +575,10 @@ public class CreateNormalizationSchemaRequest extends Request {
             }
 
             /**
-             * NormalizationFieldFrom.
+             * <p>The key source for a standard field of the JSON type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>preset</p>
              */
             public Builder normalizationFieldFrom(String normalizationFieldFrom) {
                 this.normalizationFieldFrom = normalizationFieldFrom;
@@ -533,10 +586,11 @@ public class CreateNormalizationSchemaRequest extends Request {
             }
 
             /**
+             * <p>The key name for a standard field of the JSON type.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>alert_name</p>
+             * <p>alert_level</p>
              */
             public Builder normalizationFieldName(String normalizationFieldName) {
                 this.normalizationFieldName = normalizationFieldName;
@@ -544,7 +598,10 @@ public class CreateNormalizationSchemaRequest extends Request {
             }
 
             /**
-             * NormalizationFieldRequired.
+             * <p>Specifies whether the key for a standard field of the JSON type is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder normalizationFieldRequired(Boolean normalizationFieldRequired) {
                 this.normalizationFieldRequired = normalizationFieldRequired;
@@ -552,7 +609,10 @@ public class CreateNormalizationSchemaRequest extends Request {
             }
 
             /**
-             * NormalizationFieldTokenize.
+             * <p>Specifies whether the key for a standard field of the JSON type is tokenized.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder normalizationFieldTokenize(Boolean normalizationFieldTokenize) {
                 this.normalizationFieldTokenize = normalizationFieldTokenize;
@@ -560,6 +620,7 @@ public class CreateNormalizationSchemaRequest extends Request {
             }
 
             /**
+             * <p>The key type for a standard field of the JSON type. Valid values: text, long, double, and json.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -749,7 +810,10 @@ public class CreateNormalizationSchemaRequest extends Request {
             } 
 
             /**
-             * NormalizationFieldDescription.
+             * <p>The standard field description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_user</p>
              */
             public Builder normalizationFieldDescription(String normalizationFieldDescription) {
                 this.normalizationFieldDescription = normalizationFieldDescription;
@@ -757,7 +821,10 @@ public class CreateNormalizationSchemaRequest extends Request {
             }
 
             /**
-             * NormalizationFieldExample.
+             * <p>The standard field example.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>173326*******</p>
              */
             public Builder normalizationFieldExample(String normalizationFieldExample) {
                 this.normalizationFieldExample = normalizationFieldExample;
@@ -765,7 +832,10 @@ public class CreateNormalizationSchemaRequest extends Request {
             }
 
             /**
-             * NormalizationFieldFrom.
+             * <p>The key source for a standard field of the JSON type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>preset</p>
              */
             public Builder normalizationFieldFrom(String normalizationFieldFrom) {
                 this.normalizationFieldFrom = normalizationFieldFrom;
@@ -773,7 +843,10 @@ public class CreateNormalizationSchemaRequest extends Request {
             }
 
             /**
-             * NormalizationFieldJsonIndexAll.
+             * <p>Specifies whether to create indexes for all keys in a standard field of the JSON type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder normalizationFieldJsonIndexAll(Boolean normalizationFieldJsonIndexAll) {
                 this.normalizationFieldJsonIndexAll = normalizationFieldJsonIndexAll;
@@ -781,7 +854,7 @@ public class CreateNormalizationSchemaRequest extends Request {
             }
 
             /**
-             * NormalizationFieldJsonKeys.
+             * <p>The key list for a standard field of the JSON type.</p>
              */
             public Builder normalizationFieldJsonKeys(java.util.List<NormalizationFieldJsonKeys> normalizationFieldJsonKeys) {
                 this.normalizationFieldJsonKeys = normalizationFieldJsonKeys;
@@ -789,6 +862,7 @@ public class CreateNormalizationSchemaRequest extends Request {
             }
 
             /**
+             * <p>The normalization field name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -800,7 +874,10 @@ public class CreateNormalizationSchemaRequest extends Request {
             }
 
             /**
-             * NormalizationFieldRequired.
+             * <p>Specifies whether the standard field is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder normalizationFieldRequired(Boolean normalizationFieldRequired) {
                 this.normalizationFieldRequired = normalizationFieldRequired;
@@ -808,7 +885,10 @@ public class CreateNormalizationSchemaRequest extends Request {
             }
 
             /**
-             * NormalizationFieldRequirement.
+             * <p>Specifies whether the normalization field is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder normalizationFieldRequirement(Boolean normalizationFieldRequirement) {
                 this.normalizationFieldRequirement = normalizationFieldRequirement;
@@ -816,7 +896,10 @@ public class CreateNormalizationSchemaRequest extends Request {
             }
 
             /**
-             * NormalizationFieldReserved.
+             * <p>Specifies whether the normalization field is reserved.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder normalizationFieldReserved(Boolean normalizationFieldReserved) {
                 this.normalizationFieldReserved = normalizationFieldReserved;
@@ -824,7 +907,10 @@ public class CreateNormalizationSchemaRequest extends Request {
             }
 
             /**
-             * NormalizationFieldTokenize.
+             * <p>Specifies whether the standard field is tokenized.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder normalizationFieldTokenize(Boolean normalizationFieldTokenize) {
                 this.normalizationFieldTokenize = normalizationFieldTokenize;
@@ -832,10 +918,11 @@ public class CreateNormalizationSchemaRequest extends Request {
             }
 
             /**
+             * <p>The standard field type. Valid values: text, long, double, and json.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>varchar</p>
+             * <p>text</p>
              */
             public Builder normalizationFieldType(String normalizationFieldType) {
                 this.normalizationFieldType = normalizationFieldType;

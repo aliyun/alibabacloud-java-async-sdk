@@ -80,7 +80,10 @@ public class CancelCopilotTurnResponseBody extends TeaModel {
         } 
 
         /**
-         * ApiVersion.
+         * <p>The API version number. The value is 1.0.0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1.2</p>
          */
         public Builder apiVersion(String apiVersion) {
             this.apiVersion = apiVersion;
@@ -88,7 +91,10 @@ public class CancelCopilotTurnResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9AAA9ED9-78F4-5021-86DC-D51C7511****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +102,7 @@ public class CancelCopilotTurnResponseBody extends TeaModel {
         }
 
         /**
-         * Turn.
+         * <p>The security operations Agent conversation turn.</p>
          */
         public Builder turn(Turn turn) {
             this.turn = turn;
@@ -279,7 +285,10 @@ public class CancelCopilotTurnResponseBody extends TeaModel {
             } 
 
             /**
-             * ClientMessageId.
+             * <p>The client message ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>366932fb-9a83-4a2d-94dd-c925b35f****</p>
              */
             public Builder clientMessageId(String clientMessageId) {
                 this.clientMessageId = clientMessageId;
@@ -287,7 +296,10 @@ public class CancelCopilotTurnResponseBody extends TeaModel {
             }
 
             /**
-             * ConversationId.
+             * <p>The session ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>54b6c969-4b75-47be-9f43-71f88aeb****</p>
              */
             public Builder conversationId(String conversationId) {
                 this.conversationId = conversationId;
@@ -295,7 +307,10 @@ public class CancelCopilotTurnResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedAt.
+             * <p>The creation time. The time follows the ISO 8601 standard in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-08-23T02:13:49Z</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -303,7 +318,10 @@ public class CancelCopilotTurnResponseBody extends TeaModel {
             }
 
             /**
-             * Feedback.
+             * <p>The conversation feedback information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder feedback(Long feedback) {
                 this.feedback = feedback;
@@ -311,7 +329,10 @@ public class CancelCopilotTurnResponseBody extends TeaModel {
             }
 
             /**
-             * InputTokens.
+             * <p>The number of tokens used for input.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1280</p>
              */
             public Builder inputTokens(Long inputTokens) {
                 this.inputTokens = inputTokens;
@@ -319,7 +340,10 @@ public class CancelCopilotTurnResponseBody extends TeaModel {
             }
 
             /**
-             * ModelId.
+             * <p>The model ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>model-****</p>
              */
             public Builder modelId(String modelId) {
                 this.modelId = modelId;
@@ -327,7 +351,10 @@ public class CancelCopilotTurnResponseBody extends TeaModel {
             }
 
             /**
-             * OutputTokens.
+             * <p>The number of tokens used for output.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>856</p>
              */
             public Builder outputTokens(Long outputTokens) {
                 this.outputTokens = outputTokens;
@@ -335,7 +362,10 @@ public class CancelCopilotTurnResponseBody extends TeaModel {
             }
 
             /**
-             * ReasoningTokens.
+             * <p>The number of reasoning tokens used on the current day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>420</p>
              */
             public Builder reasoningTokens(Long reasoningTokens) {
                 this.reasoningTokens = reasoningTokens;
@@ -343,7 +373,7 @@ public class CancelCopilotTurnResponseBody extends TeaModel {
             }
 
             /**
-             * RetryAllowed.
+             * <p>Indicates whether a retry is allowed.</p>
              */
             public Builder retryAllowed(Boolean retryAllowed) {
                 this.retryAllowed = retryAllowed;
@@ -351,7 +381,10 @@ public class CancelCopilotTurnResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the conversation turn.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -359,7 +392,10 @@ public class CancelCopilotTurnResponseBody extends TeaModel {
             }
 
             /**
-             * TurnId.
+             * <p>The primary key ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dc18b894-19a3-45ee-8768-a59478e0****</p>
              */
             public Builder turnId(String turnId) {
                 this.turnId = turnId;

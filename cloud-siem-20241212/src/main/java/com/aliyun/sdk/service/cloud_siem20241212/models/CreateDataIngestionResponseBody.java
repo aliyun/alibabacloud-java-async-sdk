@@ -67,7 +67,10 @@ public class CreateDataIngestionResponseBody extends TeaModel {
         } 
 
         /**
-         * DataIngestionId.
+         * <p>The data ingestion ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>di-yxtm3l2rwa7fr5uvxtc7</p>
          */
         public Builder dataIngestionId(String dataIngestionId) {
             this.dataIngestionId = dataIngestionId;
@@ -75,7 +78,10 @@ public class CreateDataIngestionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

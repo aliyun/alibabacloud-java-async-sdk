@@ -67,7 +67,10 @@ public class UpdateResponseRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class UpdateResponseRuleResponseBody extends TeaModel {
         }
 
         /**
-         * ResponseRuleId.
+         * <p>The ID of the automated response rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>440918</p>
          */
         public Builder responseRuleId(String responseRuleId) {
             this.responseRuleId = responseRuleId;

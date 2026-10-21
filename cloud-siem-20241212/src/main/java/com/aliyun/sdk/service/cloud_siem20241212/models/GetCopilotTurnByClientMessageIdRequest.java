@@ -117,10 +117,11 @@ public class GetCopilotTurnByClientMessageIdRequest extends Request {
         } 
 
         /**
+         * <p>The client message ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>366932fb-9a83-4a2d-94dd-c925b35fcc0c</p>
+         * <p>366932fb-9a83-4a2d-94dd-c925b35f****</p>
          */
         public Builder clientMessageId(String clientMessageId) {
             this.putBodyParameter("ClientMessageId", clientMessageId);
@@ -129,10 +130,11 @@ public class GetCopilotTurnByClientMessageIdRequest extends Request {
         }
 
         /**
+         * <p>The conversation ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>7c91c1b0-9435-11f0-850d-adf64b261ca0</p>
+         * <p>54b6c969-4b75-47be-9f43-71f88aeb****</p>
          */
         public Builder conversationId(String conversationId) {
             this.putBodyParameter("ConversationId", conversationId);
@@ -141,7 +143,14 @@ public class GetCopilotTurnByClientMessageIdRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the returned message. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -150,7 +159,14 @@ public class GetCopilotTurnByClientMessageIdRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region of the data management center for threat analysis. Select the region of the management center based on the region where your assets are located. Valid values:</p>
+         * <ul>
+         * <li>cn-hangzhou: Select this value if your assets are located in the Chinese mainland and Hong Kong (China).</li>
+         * <li>ap-southeast-1: Select this value if your assets are located outside China.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -159,7 +175,10 @@ public class GetCopilotTurnByClientMessageIdRequest extends Request {
         }
 
         /**
-         * TraceId.
+         * <p>The trace ID used to track the service request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>550e8400e29b41d4a71644665544****</p>
          */
         public Builder traceId(String traceId) {
             this.putBodyParameter("TraceId", traceId);

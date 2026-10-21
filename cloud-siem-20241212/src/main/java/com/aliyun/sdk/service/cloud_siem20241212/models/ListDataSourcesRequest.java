@@ -325,7 +325,14 @@ public class ListDataSourcesRequest extends Request {
         } 
 
         /**
-         * DataSourceFrom.
+         * <p>The data source origin. Valid values:</p>
+         * <ul>
+         * <li>center</li>
+         * <li>custom</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>center</p>
          */
         public Builder dataSourceFrom(String dataSourceFrom) {
             this.putBodyParameter("DataSourceFrom", dataSourceFrom);
@@ -334,7 +341,7 @@ public class ListDataSourcesRequest extends Request {
         }
 
         /**
-         * DataSourceIds.
+         * <p>The list of data source IDs.</p>
          */
         public Builder dataSourceIds(java.util.List<String> dataSourceIds) {
             String dataSourceIdsShrink = shrink(dataSourceIds, "DataSourceIds", "simple");
@@ -344,7 +351,10 @@ public class ListDataSourcesRequest extends Request {
         }
 
         /**
-         * DataSourceName.
+         * <p>The data source name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alibaba_cloud_waf_alert_log</p>
          */
         public Builder dataSourceName(String dataSourceName) {
             this.putBodyParameter("DataSourceName", dataSourceName);
@@ -353,7 +363,15 @@ public class ListDataSourcesRequest extends Request {
         }
 
         /**
-         * DataSourceStatus.
+         * <p>The data source status. Valid values:</p>
+         * <ul>
+         * <li>unconfigured</li>
+         * <li>normal</li>
+         * <li>abnormal</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>unconfigured</p>
          */
         public Builder dataSourceStatus(String dataSourceStatus) {
             this.putBodyParameter("DataSourceStatus", dataSourceStatus);
@@ -362,7 +380,14 @@ public class ListDataSourcesRequest extends Request {
         }
 
         /**
-         * DataSourceStoreStatus.
+         * <p>The Logstore status. Valid values:</p>
+         * <ul>
+         * <li>normal</li>
+         * <li>abnormal</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         public Builder dataSourceStoreStatus(String dataSourceStoreStatus) {
             this.putBodyParameter("DataSourceStoreStatus", dataSourceStoreStatus);
@@ -371,7 +396,7 @@ public class ListDataSourcesRequest extends Request {
         }
 
         /**
-         * DataSourceTemplateIds.
+         * <p>The list of data source template IDs.</p>
          */
         public Builder dataSourceTemplateIds(java.util.List<String> dataSourceTemplateIds) {
             String dataSourceTemplateIdsShrink = shrink(dataSourceTemplateIds, "DataSourceTemplateIds", "simple");
@@ -381,7 +406,14 @@ public class ListDataSourcesRequest extends Request {
         }
 
         /**
-         * DataSourceType.
+         * <p>The data source type. Valid values:</p>
+         * <ul>
+         * <li>preset</li>
+         * <li>custom</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>custom</p>
          */
         public Builder dataSourceType(String dataSourceType) {
             this.putBodyParameter("DataSourceType", dataSourceType);
@@ -390,7 +422,15 @@ public class ListDataSourcesRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * <p>Note: This parameter is required. If you do not specify this parameter, the service returns a 400 error: &quot;The specified Lang can not be empty.&quot; Explicitly pass a language code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -399,7 +439,10 @@ public class ListDataSourcesRequest extends Request {
         }
 
         /**
-         * LogProjectName.
+         * <p>The Simple Log Service project name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyun-cloudsiem-data-173326*******-cn-hangzhou</p>
          */
         public Builder logProjectName(String logProjectName) {
             this.putBodyParameter("LogProjectName", logProjectName);
@@ -408,7 +451,10 @@ public class ListDataSourcesRequest extends Request {
         }
 
         /**
-         * LogRegionId.
+         * <p>The log storage region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder logRegionId(String logRegionId) {
             this.putBodyParameter("LogRegionId", logRegionId);
@@ -417,7 +463,10 @@ public class ListDataSourcesRequest extends Request {
         }
 
         /**
-         * LogStoreName.
+         * <p>The Simple Log Service Logstore name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>audit-activity</p>
          */
         public Builder logStoreName(String logStoreName) {
             this.putBodyParameter("LogStoreName", logStoreName);
@@ -426,7 +475,7 @@ public class ListDataSourcesRequest extends Request {
         }
 
         /**
-         * LogUserIds.
+         * <p>The list of data ingestion user IDs.</p>
          */
         public Builder logUserIds(java.util.List<Long> logUserIds) {
             String logUserIdsShrink = shrink(logUserIds, "LogUserIds", "simple");
@@ -436,7 +485,10 @@ public class ListDataSourcesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return in this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -445,7 +497,10 @@ public class ListDataSourcesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token for the next query. Leave this parameter empty for the first query or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -454,7 +509,14 @@ public class ListDataSourcesRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sort order. Valid values:</p>
+         * <ul>
+         * <li>desc</li>
+         * <li>asc</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder order(String order) {
             this.putBodyParameter("Order", order);
@@ -463,7 +525,10 @@ public class ListDataSourcesRequest extends Request {
         }
 
         /**
-         * OrderField.
+         * <p>The field used for sorting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UpdateTime</p>
          */
         public Builder orderField(String orderField) {
             this.putBodyParameter("OrderField", orderField);
@@ -472,7 +537,10 @@ public class ListDataSourcesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -481,7 +549,10 @@ public class ListDataSourcesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder pageSize(String pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -490,7 +561,14 @@ public class ListDataSourcesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region where the threat analysis data management center is located. Specify the management center based on the region of your assets. Valid values:</p>
+         * <ul>
+         * <li>cn-hangzhou: The assets are located in the Chinese mainland.</li>
+         * <li>ap-southeast-1: The assets are located outside China.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -499,7 +577,10 @@ public class ListDataSourcesRequest extends Request {
         }
 
         /**
-         * RoleFor.
+         * <p>The user ID of the member to which the administrator switches the view.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>173326*******</p>
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);
