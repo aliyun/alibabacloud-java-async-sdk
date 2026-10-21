@@ -91,7 +91,7 @@ public class GetVerificationInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the email.</p>
+         * <p>The security email address information.</p>
          */
         public Builder securityEmailDevice(SecurityEmailDevice securityEmailDevice) {
             this.securityEmailDevice = securityEmailDevice;
@@ -99,7 +99,7 @@ public class GetVerificationInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the mobile phone.</p>
+         * <p>The secure phone information.</p>
          */
         public Builder securityPhoneDevice(SecurityPhoneDevice securityPhoneDevice) {
             this.securityPhoneDevice = securityPhoneDevice;
@@ -165,7 +165,7 @@ public class GetVerificationInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The email address.</p>
+             * <p>The security email address.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="mailto:username@example.com">username@example.com</a></p>
@@ -176,12 +176,10 @@ public class GetVerificationInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the email. Valid values:</p>
+             * <p>The status of the security email address. Valid values:</p>
              * <ul>
-             * <li><p>active: The email is activated.</p>
-             * </li>
-             * <li><p>pending: The email is pending for activation.</p>
-             * </li>
+             * <li>active: Activated.</li>
+             * <li>pending: Pending activation.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -265,7 +263,7 @@ public class GetVerificationInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The international dialing code.</p>
+             * <p>The area code.</p>
              * 
              * <strong>example:</strong>
              * <p>86</p>
@@ -276,7 +274,7 @@ public class GetVerificationInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The mobile phone number.</p>
+             * <p>The phone number.</p>
              * 
              * <strong>example:</strong>
              * <p>13900001234</p>
@@ -287,12 +285,10 @@ public class GetVerificationInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the mobile phone. Valid values:</p>
+             * <p>The status of the secure phone. Valid values:</p>
              * <ul>
-             * <li><p>active: The mobile phone is activated.</p>
-             * </li>
-             * <li><p>pending: The mobile phone is pending for activation.</p>
-             * </li>
+             * <li>active: Activated.</li>
+             * <li>pending: Pending activation.</li>
              * </ul>
              * 
              * <strong>example:</strong>

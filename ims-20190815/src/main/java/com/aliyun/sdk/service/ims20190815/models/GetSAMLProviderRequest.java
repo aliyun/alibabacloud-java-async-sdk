@@ -60,7 +60,7 @@ public class GetSAMLProviderRequest extends Request {
         } 
 
         /**
-         * <p>The name of the IdP whose information you want to query.</p>
+         * <p>The name of the identity provider. You can call ListSAMLProviders to view existing identity providers or CreateSAMLProvider to create a new identity provider.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

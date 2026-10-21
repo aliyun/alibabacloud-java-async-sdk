@@ -78,7 +78,7 @@ public class GetSAMLProviderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the IdP.</p>
+         * <p>The identity provider information.</p>
          */
         public Builder SAMLProvider(SAMLProvider SAMLProvider) {
             this.SAMLProvider = SAMLProvider;
@@ -209,7 +209,7 @@ public class GetSAMLProviderResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The Alibaba Cloud Resource Name (ARN) of the IdP.</p>
+             * <p>The ARN of the identity provider.</p>
              * 
              * <strong>example:</strong>
              * <p>acs:ram::177242285274****:saml-provider/test-provider</p>
@@ -220,12 +220,10 @@ public class GetSAMLProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The supported signature algorithm. Valid values:</p>
+             * <p>The signature algorithm supported by the Alibaba Cloud service provider (SP). Valid values:</p>
              * <ul>
-             * <li><p>rsa-sha256</p>
-             * </li>
-             * <li><p>rsa-sha1</p>
-             * </li>
+             * <li>rsa-sha256</li>
+             * <li>rsa-sha1</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -237,7 +235,7 @@ public class GetSAMLProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the information was created. It is displayed in UTC.</p>
+             * <p>The creation time. Format: RFC 3339 (UTC). Example: 2020-10-22T02:37:05Z.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-10-22T02:37:05Z</p>
@@ -248,7 +246,7 @@ public class GetSAMLProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IdP description.</p>
+             * <p>The description.</p>
              * 
              * <strong>example:</strong>
              * <p>This is a provider.</p>
@@ -259,7 +257,7 @@ public class GetSAMLProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The metadata file, which is Base64-encoded.</p>
+             * <p>The metadata document. The document is Base64-encoded.</p>
              * 
              * <strong>example:</strong>
              * <p>PD94bWwgdmVy****</p>
@@ -270,7 +268,7 @@ public class GetSAMLProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IdP name.</p>
+             * <p>The name of the identity provider.</p>
              * 
              * <strong>example:</strong>
              * <p>test-provider</p>
@@ -281,7 +279,7 @@ public class GetSAMLProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the information was last updated. It is displayed in UTC.</p>
+             * <p>The update time. Format: RFC 3339 (UTC). Example: 2020-10-22T02:51:20Z.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-10-22T02:51:20Z</p>

@@ -733,6 +733,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetAccessKeyPolicyForAccount  GetAccessKeyPolicyForAccountRequest
+     * @return GetAccessKeyPolicyForAccountResponse
+     */
+    @Override
+    public CompletableFuture<GetAccessKeyPolicyForAccountResponse> getAccessKeyPolicyForAccount(GetAccessKeyPolicyForAccountRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetAccessKeyPolicyForAccount").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAccessKeyPolicyForAccountResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetAccessKeyPolicyForAccountResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetAccountMFAInfo  GetAccountMFAInfoRequest
      * @return GetAccountMFAInfoResponse
      */
@@ -827,7 +845,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>调用本接口前，目标应用必须已经安装；可先调用 <code>ProvisionApplication</code> 安装应用，并使用已安装应用的 <code>AppId</code>。仅使用 <code>CreateApplication</code> 返回、但尚未安装的应用 ID 调用会失败。</p>
+     * <p>Before you call this operation, the target application must be installed. You can call ProvisionApplication to install the application and use the AppId of the installed application. Calling this operation with an application ID returned by CreateApplication for an application that has not been installed will fail.</p>
      * 
      * @param request the request parameters of GetApplicationProvisionInfo  GetApplicationProvisionInfoRequest
      * @return GetApplicationProvisionInfoResponse
@@ -1592,7 +1610,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <h3>Usage notes</h3>
-     * <p>This topic provides an example on how to remove the client ID <code>498469743454717****</code> from the OIDC IdP named <code>TestOIDCProvider</code>.</p>
+     * <p>This topic provides an example on how to remove the client ID <code>498469743454717****</code> from an OIDC IdP named <code>TestOIDCProvider</code>.</p>
      * 
      * @param request the request parameters of RemoveClientIdFromOIDCProvider  RemoveClientIdFromOIDCProviderRequest
      * @return RemoveClientIdFromOIDCProviderResponse
@@ -1700,6 +1718,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<SetAccessKeyPolicyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SetAccessKeyPolicyForAccount  SetAccessKeyPolicyForAccountRequest
+     * @return SetAccessKeyPolicyForAccountResponse
+     */
+    @Override
+    public CompletableFuture<SetAccessKeyPolicyForAccountResponse> setAccessKeyPolicyForAccount(SetAccessKeyPolicyForAccountRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SetAccessKeyPolicyForAccount").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SetAccessKeyPolicyForAccountResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SetAccessKeyPolicyForAccountResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
