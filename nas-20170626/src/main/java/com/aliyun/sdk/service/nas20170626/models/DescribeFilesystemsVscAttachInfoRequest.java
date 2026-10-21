@@ -103,7 +103,7 @@ public class DescribeFilesystemsVscAttachInfoRequest extends Request {
         } 
 
         /**
-         * <p>The number of results returned per query.</p>
+         * <p>The number of entries to return per query.</p>
          * <p>Valid values: 10 to 100.
          * Default value: 10.</p>
          * 
@@ -117,7 +117,7 @@ public class DescribeFilesystemsVscAttachInfoRequest extends Request {
         }
 
         /**
-         * <p>The query token. Set this parameter to the NextToken value returned in the previous API call.</p>
+         * <p>The query token. The value is the NextToken parameter value returned by the previous API call.</p>
          * 
          * <strong>example:</strong>
          * <p>TGlzdFJlc291cmNlU****mVzJjE1MTI2NjY4NzY5MTAzOTEmMiZORnI4NDhVeEtrUT0=</p>
@@ -129,7 +129,7 @@ public class DescribeFilesystemsVscAttachInfoRequest extends Request {
         }
 
         /**
-         * <p>The ID information of file systems and virtual storage channels. A maximum of 10 entries can be specified per batch.</p>
+         * <p>The ID information of the file systems and virtual storage channels. A maximum of 10 items are supported per batch.</p>
          * <p>This parameter is required.</p>
          */
         public Builder resourceIds(java.util.List<ResourceIds> resourceIds) {
@@ -210,7 +210,7 @@ public class DescribeFilesystemsVscAttachInfoRequest extends Request {
             } 
 
             /**
-             * <p>The file system ID.</p>
+             * <p>The ID of the file system. This parameter is required in each ResourceIds entry and must be provided together with VscId.</p>
              * 
              * <strong>example:</strong>
              * <p>bmcpfs-290t15yn4uo8lid****</p>
@@ -221,7 +221,7 @@ public class DescribeFilesystemsVscAttachInfoRequest extends Request {
             }
 
             /**
-             * <p>The virtual storage channel ID.</p>
+             * <p>The ID of the virtual storage channel. This parameter is required in each ResourceIds entry and must be provided together with FileSystemId. The ID starts with vsc-. You can call the ListVscs operation of Lingjun AI Computing Service eflo-controller/2022-12-15 to query the ID. If the virtual storage channel is not created, call CreateVsc to create one.</p>
              * 
              * <strong>example:</strong>
              * <p>vsc-8vb864o3ppwfvh****</p>
@@ -304,7 +304,7 @@ public class DescribeFilesystemsVscAttachInfoRequest extends Request {
             } 
 
             /**
-             * <p>The UID of the Alibaba Cloud account (primary account), which specifies the account on whose behalf the service assumes the role.</p>
+             * <p>The UID of the Alibaba Cloud account (the primary account UID). This parameter specifies the Alibaba Cloud account for which the service assumes the role.</p>
              * 
              * <strong>example:</strong>
              * <p>101522855006****</p>

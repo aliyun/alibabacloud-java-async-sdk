@@ -117,7 +117,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of regions on each page.</p>
+         * <p>The number of regions returned per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -147,7 +147,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of regions returned.</p>
+         * <p>The total number of regions returned.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

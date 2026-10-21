@@ -258,11 +258,11 @@ public class CreateAccessPointRequest extends Request {
         } 
 
         /**
-         * <p>The permission group name.</p>
-         * <p>This parameter is required if the file system is a General-purpose NAS file system.</p>
+         * <p>The name of the permission group.</p>
+         * <p>This parameter is required when the target file system is a General-purpose NAS file system.</p>
          * <p>Default permission group: DEFAULT_VPC_GROUP_NAME (the default permission group for VPCs).</p>
          * <blockquote>
-         * <p>Not supported for Agentic file systems.</p>
+         * <p>Not supported by Agentic file systems.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -275,7 +275,7 @@ public class CreateAccessPointRequest extends Request {
         }
 
         /**
-         * <p>The access point name.</p>
+         * <p>The name of the access point.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -287,9 +287,9 @@ public class CreateAccessPointRequest extends Request {
         }
 
         /**
-         * <p>The AgenticSpace ID.</p>
+         * <p>The ID of the Agentic space.</p>
          * <blockquote>
-         * <p>This parameter is required for Agentic file systems.</p>
+         * <p>Required for Agentic file systems.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -306,10 +306,10 @@ public class CreateAccessPointRequest extends Request {
          * Valid values:</p>
          * <ul>
          * <li>true: Enabled.</li>
-         * <li>false (default): Not enabled.</li>
+         * <li>false: Disabled. This is the default value.</li>
          * </ul>
          * <blockquote>
-         * <p>After you enable the RAM policy for the access point, all Resource Access Management (RAM) users are denied access to mount and access data through the access point by default. You must grant authorization for the corresponding access permissions to the accounts and mount the file system through the access point. After you disable the RAM policy, the access point allows anonymous mounting. For more information about how to configure access point permissions, see <a href="https://help.aliyun.com/document_detail/2545998.html">Configure an access point policy</a>.</p>
+         * <p>After you enable the access point RAM policy, all Resource Access Management (RAM) users are denied by default from using the access point to mount and access data. You must grant authorization to the accounts to enable the corresponding access permissions, and mount the file system through the access point. If this feature is disabled, the access point allows anonymous mounting. For more information about how to configure access point permissions, see <a href="https://help.aliyun.com/document_detail/2545998.html">Configure access point policy</a>.</p>
          * </blockquote>
          * <blockquote>
          * <p>For Agentic file systems, this parameter must be set to true.</p>
@@ -325,7 +325,7 @@ public class CreateAccessPointRequest extends Request {
         }
 
         /**
-         * <p>The file system ID.</p>
+         * <p>The ID of the file system.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -338,10 +338,10 @@ public class CreateAccessPointRequest extends Request {
         }
 
         /**
-         * <p>The owner group ID.</p>
-         * <p>This parameter is required if the RootDirectory directory does not exist.</p>
+         * <p>The ID of the owner user group.</p>
+         * <p>This parameter is required when the RootDirectory directory does not exist.</p>
          * <blockquote>
-         * <p>Not supported for Agentic file systems.</p>
+         * <p>Not supported by Agentic file systems.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -354,10 +354,10 @@ public class CreateAccessPointRequest extends Request {
         }
 
         /**
-         * <p>The owner user ID.</p>
-         * <p>This parameter is required if the RootDirectory directory does not exist.</p>
+         * <p>The ID of the owner user.</p>
+         * <p>This parameter is required when the RootDirectory directory does not exist.</p>
          * <blockquote>
-         * <p>Not supported for Agentic file systems.</p>
+         * <p>Not supported by Agentic file systems.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -370,10 +370,10 @@ public class CreateAccessPointRequest extends Request {
         }
 
         /**
-         * <p>The POSIX permission. Default value: &quot;0755&quot;. The value must be a four-digit octal number that starts with 0.</p>
-         * <p>This parameter takes effect after you specify the OwnerUserId and OwnerGroupId parameters.</p>
+         * <p>The POSIX permissions. Default value: 0755. The value must be a four-digit octal number starting with 0.</p>
+         * <p>This parameter takes effect only after you specify the OwnerUserId and OwnerGroupId parameters.</p>
          * <blockquote>
-         * <p>Not supported for Agentic file systems.</p>
+         * <p>Not supported by Agentic file systems.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -386,9 +386,9 @@ public class CreateAccessPointRequest extends Request {
         }
 
         /**
-         * <p>The POSIX group ID.</p>
+         * <p>The POSIX user group ID.</p>
          * <blockquote>
-         * <p>Not supported for Agentic file systems.</p>
+         * <p>Not supported by Agentic file systems.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -401,9 +401,9 @@ public class CreateAccessPointRequest extends Request {
         }
 
         /**
-         * <p>The secondary group IDs. Separate multiple group IDs with commas (,).</p>
+         * <p>The secondary user groups. Separate multiple user group IDs with commas (,).</p>
          * <blockquote>
-         * <p>Not supported for Agentic file systems.</p>
+         * <p>Not supported by Agentic file systems.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -418,7 +418,7 @@ public class CreateAccessPointRequest extends Request {
         /**
          * <p>The POSIX user ID.</p>
          * <blockquote>
-         * <p>Not supported for Agentic file systems.</p>
+         * <p>Not supported by Agentic file systems.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -432,9 +432,9 @@ public class CreateAccessPointRequest extends Request {
 
         /**
          * <p>The root directory of the access point.
-         * Default value: &quot;/&quot;. If the access point directory does not exist, you must also specify the OwnerUserId and OwnerGroupId parameters.</p>
+         * Default value: /. If the access point directory does not exist, you must also specify the OwnerUserId and OwnerGroupId parameters.</p>
          * <blockquote>
-         * <p>Not supported for Agentic file systems.</p>
+         * <p>Not supported by Agentic file systems.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -447,7 +447,7 @@ public class CreateAccessPointRequest extends Request {
         }
 
         /**
-         * <p>The access point tags.</p>
+         * <p>The list of tags for the access point.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -456,7 +456,7 @@ public class CreateAccessPointRequest extends Request {
         }
 
         /**
-         * <p>The virtual private cloud (VPC) ID.</p>
+         * <p>The ID of the VPC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -469,7 +469,7 @@ public class CreateAccessPointRequest extends Request {
         }
 
         /**
-         * <p>The vSwitch ID.</p>
+         * <p>The ID of the vSwitch.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
