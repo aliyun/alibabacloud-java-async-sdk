@@ -159,7 +159,7 @@ public class VideoTranslationRequest extends Request {
         } 
 
         /**
-         * <p>The list of translation features. Valid values: <code>speech</code> and <code>visual</code>. You can select both. At least one feature must be specified. Duplicate values are not allowed.</p>
+         * <p>The list of translation features. Valid values: speech and visual. You can select both. At least one feature is required. Duplicate values are not accepted.</p>
          * <p>This parameter is required.</p>
          */
         public Builder capabilities(java.util.List<String> capabilities) {
@@ -170,10 +170,10 @@ public class VideoTranslationRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the quality check for on-screen text processing. Default value: <code>false</code>. The quality check is enabled only when <code>visual</code> is included and this parameter is explicitly set to <code>true</code>. If only <code>speech</code> is selected, this parameter is ignored. No quality check is performed, no quality check fields are returned, and no errors are reported due to this parameter. Enabling the quality check may increase the waiting time. Do not enable it unless necessary.</p>
+         * <p>Specifies whether to enable quality inspection for on-screen text processing. Effective only when visual is included and this parameter is explicitly set to true. If only speech is selected, this parameter is ignored, no quality inspection is performed, no quality inspection fields are returned, and no error is reported due to this parameter. Enabling quality inspection may increase the processing time. Do not enable it unless necessary. Default value: false.</p>
          * 
          * <strong>example:</strong>
-         * <p>true</p>
+         * <p>false</p>
          */
         public Builder enableQualityCheck(Boolean enableQualityCheck) {
             this.putBodyParameter("EnableQualityCheck", enableQualityCheck);
@@ -182,10 +182,10 @@ public class VideoTranslationRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to only erase the source language text on the screen without translating it. This parameter is valid only when <code>visual</code> is included. Valid values: <code>true</code> (only erases the text) and <code>false</code> (translates the on-screen text). Default value: <code>false</code>.</p>
+         * <p>Applicable only when visual is included. Specifies whether to erase on-screen text without translation. Valid values: true: erases on-screen text without translation. false: translates on-screen text. Default value: false.</p>
          * 
          * <strong>example:</strong>
-         * <p>true</p>
+         * <p>false</p>
          */
         public Builder eraseOnly(Boolean eraseOnly) {
             this.putQueryParameter("EraseOnly", eraseOnly);
@@ -194,10 +194,10 @@ public class VideoTranslationRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to remove the brand logo. This parameter is valid only when <code>visual</code> is included. Valid values: <code>true</code> (removes the brand logo) and <code>false</code> (retains the logo). Default value: <code>false</code>. This parameter is independent of <code>EraseOnly</code>.</p>
+         * <p>Applicable only when visual is included. Specifies whether to erase brand logos. Valid values: true: erases brand logos. false: retains brand logos. Default value: false. This parameter is independent of EraseOnly.</p>
          * 
          * <strong>example:</strong>
-         * <p>true</p>
+         * <p>false</p>
          */
         public Builder removeLogo(Boolean removeLogo) {
             this.putQueryParameter("RemoveLogo", removeLogo);
@@ -206,7 +206,7 @@ public class VideoTranslationRequest extends Request {
         }
 
         /**
-         * <p>The source language. For supported languages, see Language support.</p>
+         * <p>The original language of the video (source language). For supported languages, see Language support.</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -218,10 +218,10 @@ public class VideoTranslationRequest extends Request {
         }
 
         /**
-         * <p>The subtitle processing mode. This parameter is valid only when <code>speech</code> is included. Valid values: <code>erase</code> (removes only the original subtitles) and <code>replace</code> (removes the original subtitles and adds new subtitles). If this parameter is omitted, the original subtitles are not processed and no new subtitles are added.</p>
+         * <p>Applicable only when speech is included. Valid values: erase: erases the original subtitles only. replace: replaces the original subtitles with translated subtitles, which means erasing the original subtitles and adding subtitles synchronized with the translated speech. If not specified, the original subtitles are not processed, which means neither erasing the original subtitles nor adding new subtitles.</p>
          * 
          * <strong>example:</strong>
-         * <p>erase</p>
+         * <p>replace</p>
          */
         public Builder subtitleMode(String subtitleMode) {
             this.putQueryParameter("SubtitleMode", subtitleMode);
@@ -230,10 +230,10 @@ public class VideoTranslationRequest extends Request {
         }
 
         /**
-         * <p>The target language. This parameter is required.</p>
+         * <p>Required when speech is included. Optional when only visual is included and EraseOnly is set to true. If specified in this case, it is ignored. Required in other cases.</p>
          * 
          * <strong>example:</strong>
-         * <p>ru</p>
+         * <p>en</p>
          */
         public Builder targetLanguage(String targetLanguage) {
             this.putBodyParameter("TargetLanguage", targetLanguage);

@@ -27,6 +27,10 @@ public class ImageMattingAsyncRequest extends Request {
     private String bgColor;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizId")
+    private String bizId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ImageUrl")
     @com.aliyun.core.annotation.Validation(required = true)
     private String imageUrl;
@@ -43,6 +47,7 @@ public class ImageMattingAsyncRequest extends Request {
         super(builder);
         this.backGroundType = builder.backGroundType;
         this.bgColor = builder.bgColor;
+        this.bizId = builder.bizId;
         this.imageUrl = builder.imageUrl;
         this.targetHeight = builder.targetHeight;
         this.targetWidth = builder.targetWidth;
@@ -76,6 +81,13 @@ public class ImageMattingAsyncRequest extends Request {
     }
 
     /**
+     * @return bizId
+     */
+    public String getBizId() {
+        return this.bizId;
+    }
+
+    /**
      * @return imageUrl
      */
     public String getImageUrl() {
@@ -99,6 +111,7 @@ public class ImageMattingAsyncRequest extends Request {
     public static final class Builder extends Request.Builder<ImageMattingAsyncRequest, Builder> {
         private String backGroundType; 
         private String bgColor; 
+        private String bizId; 
         private String imageUrl; 
         private Integer targetHeight; 
         private Integer targetWidth; 
@@ -111,6 +124,7 @@ public class ImageMattingAsyncRequest extends Request {
             super(request);
             this.backGroundType = request.backGroundType;
             this.bgColor = request.bgColor;
+            this.bizId = request.bizId;
             this.imageUrl = request.imageUrl;
             this.targetHeight = request.targetHeight;
             this.targetWidth = request.targetWidth;
@@ -146,7 +160,19 @@ public class ImageMattingAsyncRequest extends Request {
         }
 
         /**
-         * <p>The URL of the original image. The image must be in JPG, JPEG, PNG, BMP, or WEBP format. The resolution must be between 100 × 100 and 3000 × 3000 pixels, and the file size cannot exceed 10 MB.</p>
+         * <p>The business order ID of the caller. It is recorded upon acceptance and returned as is when you query the result of the asynchronous task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>order-20260928-001</p>
+         */
+        public Builder bizId(String bizId) {
+            this.putQueryParameter("BizId", bizId);
+            this.bizId = bizId;
+            return this;
+        }
+
+        /**
+         * <p>The URL of the original image. The image must be in JPG, JPEG, PNG, BMP, or WEBP format. The resolution must be between 100 × 100 and 3000 × 3000 pixels, and the file size must not exceed 10 MB.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

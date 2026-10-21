@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ImageRecognitionAsyncRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizId")
+    private String bizId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ImageUrl")
     @com.aliyun.core.annotation.Validation(required = true)
     private String imageUrl;
@@ -52,6 +56,7 @@ public class ImageRecognitionAsyncRequest extends Request {
 
     private ImageRecognitionAsyncRequest(Builder builder) {
         super(builder);
+        this.bizId = builder.bizId;
         this.imageUrl = builder.imageUrl;
         this.nonObjectDetectElements = builder.nonObjectDetectElements;
         this.objectDetectElements = builder.objectDetectElements;
@@ -73,6 +78,13 @@ public class ImageRecognitionAsyncRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return bizId
+     */
+    public String getBizId() {
+        return this.bizId;
     }
 
     /**
@@ -132,6 +144,7 @@ public class ImageRecognitionAsyncRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ImageRecognitionAsyncRequest, Builder> {
+        private String bizId; 
         private String imageUrl; 
         private java.util.List<Integer> nonObjectDetectElements; 
         private java.util.List<Integer> objectDetectElements; 
@@ -147,6 +160,7 @@ public class ImageRecognitionAsyncRequest extends Request {
 
         private Builder(ImageRecognitionAsyncRequest request) {
             super(request);
+            this.bizId = request.bizId;
             this.imageUrl = request.imageUrl;
             this.nonObjectDetectElements = request.nonObjectDetectElements;
             this.objectDetectElements = request.objectDetectElements;
@@ -158,7 +172,19 @@ public class ImageRecognitionAsyncRequest extends Request {
         } 
 
         /**
-         * <p>The URL of the image. The image must be in JPG, JPEG, PNG, BMP, or WEBP format. The resolution must be between 256 × 256 and 3000 × 3000 pixels, and the file size cannot exceed 10 MB.</p>
+         * <p>The business ID of the caller. It is recorded upon acceptance and returned as is when you query the result of the asynchronous task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>order-20260928-001</p>
+         */
+        public Builder bizId(String bizId) {
+            this.putQueryParameter("BizId", bizId);
+            this.bizId = bizId;
+            return this;
+        }
+
+        /**
+         * <p>The image URL. The image must be in JPG, JPEG, PNG, BMP, or WEBP format. The resolution must be between 256 × 256 and 3000 × 3000 pixels, and the file size cannot exceed 10 MB.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -171,13 +197,13 @@ public class ImageRecognitionAsyncRequest extends Request {
         }
 
         /**
-         * <p>Specifies the types of elements to be detected outside the image subject. Valid values:</p>
+         * <p>The types of elements to detect outside the image subject. Valid values:</p>
          * <ul>
-         * <li>1: Watermark.</li>
-         * <li>2: Logo.</li>
-         * <li>3: Text.</li>
-         * <li>4: Text-containing color block.
-         * You can specify multiple element types. This parameter and ObjectDetectElements cannot be empty at the same time.</li>
+         * <li>1: watermark</li>
+         * <li>2: logo</li>
+         * <li>3: text</li>
+         * <li>4: text-containing color block
+         * You can specify multiple values. This parameter and ObjectDetectElements cannot be empty at the same time.</li>
          * </ul>
          */
         public Builder nonObjectDetectElements(java.util.List<Integer> nonObjectDetectElements) {
@@ -188,13 +214,13 @@ public class ImageRecognitionAsyncRequest extends Request {
         }
 
         /**
-         * <p>Specifies the types of elements to be detected on the image subject. Valid values:</p>
+         * <p>The types of elements to detect on the image subject. Valid values:</p>
          * <ul>
-         * <li>1: Watermark.</li>
-         * <li>2: Logo.</li>
-         * <li>3: Text.</li>
-         * <li>4: Text-containing color block.
-         * You can specify multiple element types.</li>
+         * <li>1: watermark</li>
+         * <li>2: logo</li>
+         * <li>3: text</li>
+         * <li>4: text-containing color block
+         * You can specify multiple values.</li>
          * </ul>
          */
         public Builder objectDetectElements(java.util.List<Integer> objectDetectElements) {
@@ -207,8 +233,8 @@ public class ImageRecognitionAsyncRequest extends Request {
         /**
          * <p>Specifies whether to return the marginalization distance of the subject. Valid values:</p>
          * <ul>
-         * <li>1: Yes.</li>
-         * <li>0: No.
+         * <li>1: yes</li>
+         * <li>0: no
          * Default value: 0.</li>
          * </ul>
          * 
@@ -222,10 +248,10 @@ public class ImageRecognitionAsyncRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return the OCR results of the text in the recognized area. Valid values:</p>
+         * <p>Specifies whether to return the OCR result of the text in the recognized area. Valid values:</p>
          * <ul>
-         * <li>1: Yes.</li>
-         * <li>0: No.
+         * <li>1: yes</li>
+         * <li>0: no
          * Default value: 0.</li>
          * </ul>
          * 
@@ -241,14 +267,14 @@ public class ImageRecognitionAsyncRequest extends Request {
         /**
          * <p>Specifies whether to return the text proportion. Valid values:</p>
          * <ul>
-         * <li>1: Yes.</li>
-         * <li>0: No.
+         * <li>1: yes</li>
+         * <li>0: no
          * Default value: 0.
          * This parameter takes effect only when the following two conditions are met:</li>
          * </ul>
          * <ol>
          * <li>ReturnCharacter is set to 1.</li>
-         * <li>ObjectDetectElements or NonObjectDetectElements is set to 3, which means text recognition is required.</li>
+         * <li>ObjectDetectElements or NonObjectDetectElements is set to 3, which means text needs to be recognized.</li>
          * </ol>
          * 
          * <strong>example:</strong>
@@ -263,8 +289,8 @@ public class ImageRecognitionAsyncRequest extends Request {
         /**
          * <p>Specifies whether to return the number of subjects. Valid values:</p>
          * <ul>
-         * <li>1: Yes.</li>
-         * <li>0: No.
+         * <li>1: yes</li>
+         * <li>0: no
          * Default value: 0.</li>
          * </ul>
          * 
@@ -280,8 +306,8 @@ public class ImageRecognitionAsyncRequest extends Request {
         /**
          * <p>Specifies whether to return the area proportion of the subject. Valid values:</p>
          * <ul>
-         * <li>1: Yes.</li>
-         * <li>0: No.
+         * <li>1: yes</li>
+         * <li>0: no
          * Default value: 0.</li>
          * </ul>
          * 

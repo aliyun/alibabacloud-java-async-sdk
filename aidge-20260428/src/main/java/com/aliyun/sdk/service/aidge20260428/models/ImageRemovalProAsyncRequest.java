@@ -18,12 +18,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ImageRemovalProAsyncRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizId")
+    private String bizId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ImageUrl")
     @com.aliyun.core.annotation.Validation(required = true)
     private String imageUrl;
 
     private ImageRemovalProAsyncRequest(Builder builder) {
         super(builder);
+        this.bizId = builder.bizId;
         this.imageUrl = builder.imageUrl;
     }
 
@@ -41,6 +46,13 @@ public class ImageRemovalProAsyncRequest extends Request {
     }
 
     /**
+     * @return bizId
+     */
+    public String getBizId() {
+        return this.bizId;
+    }
+
+    /**
      * @return imageUrl
      */
     public String getImageUrl() {
@@ -48,6 +60,7 @@ public class ImageRemovalProAsyncRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ImageRemovalProAsyncRequest, Builder> {
+        private String bizId; 
         private String imageUrl; 
 
         private Builder() {
@@ -56,11 +69,25 @@ public class ImageRemovalProAsyncRequest extends Request {
 
         private Builder(ImageRemovalProAsyncRequest request) {
             super(request);
+            this.bizId = request.bizId;
             this.imageUrl = request.imageUrl;
         } 
 
         /**
-         * <p>The URL of the original image. The image must be in JPG, JPEG, PNG, BMP, or WEBP format. The resolution must be between 256×256 and 3000×3000, and the file size must be less than or equal to 10 MB.</p>
+         * <p>The business order ID of the caller. This ID is recorded when the request is accepted and returned as-is when you query the asynchronous task result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>order-20260928-001</p>
+         */
+        public Builder bizId(String bizId) {
+            this.putQueryParameter("BizId", bizId);
+            this.bizId = bizId;
+            return this;
+        }
+
+        /**
+         * <p>The URL of the original image. The image must be in the JPG, JPEG, PNG, BMP, or WEBP format.
+         * · Resolution: 256×256 to 3000×3000. File size: ≤ 10 MB.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

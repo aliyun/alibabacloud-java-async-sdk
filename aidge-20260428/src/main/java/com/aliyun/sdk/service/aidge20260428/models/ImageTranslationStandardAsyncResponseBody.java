@@ -106,7 +106,7 @@ public class ImageTranslationStandardAsyncResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code. This parameter is not returned for successful calls.</p>
+         * <p>The error code. This parameter is not returned for normal calls.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class ImageTranslationStandardAsyncResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The submission result of the asynchronous task for Image Translation Standard Edition.</p>
+         * <p>The asynchronous task submission result of Image Translation Standard Edition.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class ImageTranslationStandardAsyncResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message. This parameter is not returned for successful calls.</p>
+         * <p>The error message. This parameter is not returned for normal calls.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -203,7 +203,7 @@ public class ImageTranslationStandardAsyncResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the task used to query the asynchronous task result.</p>
+             * <p>The task ID used to query the asynchronous task result.</p>
              * 
              * <strong>example:</strong>
              * <p>TID_550e8400-e29b-41d4-a716-446655440000</p>

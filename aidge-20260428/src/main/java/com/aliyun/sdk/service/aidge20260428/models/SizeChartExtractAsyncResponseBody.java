@@ -106,7 +106,7 @@ public class SizeChartExtractAsyncResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code. This parameter is not returned when the call is successful.</p>
+         * <p>The error code. This parameter is not returned for normal calls.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -117,7 +117,7 @@ public class SizeChartExtractAsyncResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The submission result of the asynchronous task for size chart extraction.</p>
+         * <p>The commit result of the size chart fetch asynchronous task node.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class SizeChartExtractAsyncResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message. This parameter is not returned when the call is successful.</p>
+         * <p>The error message. This parameter is not returned for normal calls.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -147,7 +147,7 @@ public class SizeChartExtractAsyncResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call is successful. Valid values: true and false. A value of true indicates that the call is successful. A value of false indicates that the call fails.</p>
+         * <p>Indicates whether the call is successful. Valid values: true for success and false for failure.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -203,7 +203,7 @@ public class SizeChartExtractAsyncResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the asynchronous task used to query the result.</p>
+             * <p>The task ID used to query the asynchronous task result.</p>
              * 
              * <strong>example:</strong>
              * <p>TID_550e8400-e29b-41d4-a716-446655440000</p>

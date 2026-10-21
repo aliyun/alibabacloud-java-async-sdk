@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class SizeChartExtractAsyncRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizId")
+    private String bizId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ColumnNameList")
     private java.util.List<String> columnNameList;
 
@@ -32,6 +36,7 @@ public class SizeChartExtractAsyncRequest extends Request {
 
     private SizeChartExtractAsyncRequest(Builder builder) {
         super(builder);
+        this.bizId = builder.bizId;
         this.columnNameList = builder.columnNameList;
         this.imageUrl = builder.imageUrl;
         this.languageModel = builder.languageModel;
@@ -48,6 +53,13 @@ public class SizeChartExtractAsyncRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return bizId
+     */
+    public String getBizId() {
+        return this.bizId;
     }
 
     /**
@@ -72,6 +84,7 @@ public class SizeChartExtractAsyncRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SizeChartExtractAsyncRequest, Builder> {
+        private String bizId; 
         private java.util.List<String> columnNameList; 
         private String imageUrl; 
         private String languageModel; 
@@ -82,10 +95,23 @@ public class SizeChartExtractAsyncRequest extends Request {
 
         private Builder(SizeChartExtractAsyncRequest request) {
             super(request);
+            this.bizId = request.bizId;
             this.columnNameList = request.columnNameList;
             this.imageUrl = request.imageUrl;
             this.languageModel = request.languageModel;
         } 
+
+        /**
+         * <p>The business order number of the caller. It is recorded when the request is accepted and returned as is when you query the asynchronous task result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>order-20260928-001</p>
+         */
+        public Builder bizId(String bizId) {
+            this.putQueryParameter("BizId", bizId);
+            this.bizId = bizId;
+            return this;
+        }
 
         /**
          * <p>The list of column names to extract, such as Size, Bust, and Length.</p>
@@ -98,7 +124,7 @@ public class SizeChartExtractAsyncRequest extends Request {
         }
 
         /**
-         * <p>The image URL. The image must be in the JPG, JPEG, PNG, BMP, or WEBP format. The resolution must be between 256 × 256 pixels and 3000 × 3000 pixels. The file size cannot exceed 10 MB.</p>
+         * <p>The image URL. The image must be in the JPG, JPEG, PNG, BMP, or WEBP format. The resolution must be between 256 × 256 pixels and 3000 × 3000 pixels, and the file size cannot exceed 10 MB.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

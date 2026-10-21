@@ -106,7 +106,7 @@ public class ImageMattingAsyncResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code, such as success.</p>
+         * <p>The status code, such as &quot;success&quot;. This parameter is not returned for normal calls.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -117,7 +117,7 @@ public class ImageMattingAsyncResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The commit result of the intelligent image matting asynchronous task node.</p>
+         * <p>The submission result of the asynchronous task for intelligent image matting.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class ImageMattingAsyncResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message. This parameter is not returned when the call is successful.</p>
+         * <p>The error message. This parameter is not returned for normal calls.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -136,7 +136,7 @@ public class ImageMattingAsyncResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request, which is used to identify a unique request.</p>
+         * <p>The ID of the request. It is used to identify a unique request.</p>
          * 
          * <strong>example:</strong>
          * <p>E1AD60F1-BAC7-546B-9533-E7AD02B16E3F</p>
@@ -207,7 +207,7 @@ public class ImageMattingAsyncResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the task that is used to query the asynchronous task result.</p>
+             * <p>The task ID used to query the result of the asynchronous task.</p>
              * 
              * <strong>example:</strong>
              * <p>TID_550e8400-e29b-41d4-a716-446655440000</p>

@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ImageTranslationProAsyncRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizId")
+    private String bizId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Glossary")
     private String glossary;
 
@@ -50,6 +54,7 @@ public class ImageTranslationProAsyncRequest extends Request {
 
     private ImageTranslationProAsyncRequest(Builder builder) {
         super(builder);
+        this.bizId = builder.bizId;
         this.glossary = builder.glossary;
         this.imageUrl = builder.imageUrl;
         this.includingProductArea = builder.includingProductArea;
@@ -70,6 +75,13 @@ public class ImageTranslationProAsyncRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return bizId
+     */
+    public String getBizId() {
+        return this.bizId;
     }
 
     /**
@@ -122,6 +134,7 @@ public class ImageTranslationProAsyncRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ImageTranslationProAsyncRequest, Builder> {
+        private String bizId; 
         private String glossary; 
         private String imageUrl; 
         private Boolean includingProductArea; 
@@ -136,6 +149,7 @@ public class ImageTranslationProAsyncRequest extends Request {
 
         private Builder(ImageTranslationProAsyncRequest request) {
             super(request);
+            this.bizId = request.bizId;
             this.glossary = request.glossary;
             this.imageUrl = request.imageUrl;
             this.includingProductArea = request.includingProductArea;
@@ -144,6 +158,18 @@ public class ImageTranslationProAsyncRequest extends Request {
             this.translatingBrandInTheProduct = request.translatingBrandInTheProduct;
             this.useImageEditor = request.useImageEditor;
         } 
+
+        /**
+         * <p>The business ID of the caller. This ID is recorded when the request is accepted and returned as-is when you query the asynchronous task result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>order-20260928-001</p>
+         */
+        public Builder bizId(String bizId) {
+            this.putQueryParameter("BizId", bizId);
+            this.bizId = bizId;
+            return this;
+        }
 
         /**
          * <p>The ID of the intervention glossary. You must create the glossary in the console and provide its ID. If this parameter is left empty, the translation results are not modified.</p>
@@ -158,7 +184,7 @@ public class ImageTranslationProAsyncRequest extends Request {
         }
 
         /**
-         * <p>• Image URL: Must be accessible over the Internet.<br>• Format: PNG, JPEG, JPG, BMP, or WEBP.<br>• Pixels: Both the width and height must not exceed 4,000.<br>• File size: The original file size must be less than or equal to 10 MB.</p>
+         * <p>• Image URL: The URL must be publicly accessible over the Internet.<br>• Formats: PNG, JPEG, JPG, BMP, and WEBP.<br>• Pixels: The width and height cannot exceed 4,000 pixels.<br>• File size: The original file size cannot exceed 10 MB.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -171,7 +197,7 @@ public class ImageTranslationProAsyncRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to translate the text on the product subject in the image. Set this parameter to false to protect the subject information, such as the product name, from being translated. Default value: false.</p>
+         * <p>Specifies whether to translate the text on the image subject. Set this parameter to false to protect the subject information, such as the product name, from being translated. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -209,7 +235,7 @@ public class ImageTranslationProAsyncRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to translate the brand names in the image. Default value: false, which indicates that brand names are not translated.</p>
+         * <p>Specifies whether to translate brand names in the image. Default value: false, which indicates that brand names are not translated.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -221,7 +247,7 @@ public class ImageTranslationProAsyncRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return layout information such as the position, font, and color of the text. If you set this parameter to true, layer information is returned, which can be used for secondary editing in an image editor. Default value: false.</p>
+         * <p>Specifies whether to return layout information such as the position, font, and color of the text. If you set this parameter to true, layer information is returned, which can be used for secondary editing when you integrate an image editor. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
