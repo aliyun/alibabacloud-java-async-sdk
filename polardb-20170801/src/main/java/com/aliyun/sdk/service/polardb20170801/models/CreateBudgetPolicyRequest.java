@@ -147,7 +147,7 @@ public class CreateBudgetPolicyRequest extends Request {
         } 
 
         /**
-         * <p>The alert threshold, as a percentage. Valid values: 0 to 100.</p>
+         * <p>The alert threshold percentage (0 to 100).</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -159,7 +159,7 @@ public class CreateBudgetPolicyRequest extends Request {
         }
 
         /**
-         * <p>The ID of the dimension object. This parameter is required if <code>BudgetType</code> is set to <code>ConsumerTotal</code> or <code>ConsumerGroupTotal</code>.</p>
+         * <p>The ID of the dimension object. This parameter is required when BudgetType is set to ConsumerGroupTotal or Consumer.</p>
          * 
          * <strong>example:</strong>
          * <p>mi-xxxxx</p>
@@ -171,7 +171,7 @@ public class CreateBudgetPolicyRequest extends Request {
         }
 
         /**
-         * <p>The number of budget points.</p>
+         * <p>The budget points.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,17 +186,15 @@ public class CreateBudgetPolicyRequest extends Request {
         /**
          * <p>The budget type. Valid values:</p>
          * <ul>
-         * <li><p><code>GlobalTotal</code>: global total budget</p>
-         * </li>
-         * <li><p><code>ConsumerTotal</code>: consumer total budget</p>
-         * </li>
-         * <li><p><code>ConsumerGroupTotal</code>: consumer group total budget</p>
-         * </li>
+         * <li><strong>GlobalTotal</strong>: Global total budget.</li>
+         * <li><strong>ConsumerGroupTotal</strong>: Total budget for a consumer group.</li>
+         * <li><strong>ConsumerGroupMemberDefault</strong>: Default budget for a consumer group member.</li>
+         * <li><strong>Consumer</strong>: Budget for a single consumer.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ConsumerTotal</p>
+         * <p>GlobalTotal</p>
          */
         public Builder budgetType(String budgetType) {
             this.putQueryParameter("BudgetType", budgetType);
@@ -205,7 +203,7 @@ public class CreateBudgetPolicyRequest extends Request {
         }
 
         /**
-         * <p>The gateway cluster ID.</p>
+         * <p>The gateway instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -230,7 +228,7 @@ public class CreateBudgetPolicyRequest extends Request {
         }
 
         /**
-         * <p>The day of the month on which the budget resets. Valid values: 1 to 28.</p>
+         * <p>The day of the month when the budget is reset (1 to 28).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

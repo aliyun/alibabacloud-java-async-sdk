@@ -158,7 +158,7 @@ public class ModifyAIDBClusterModelResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether the request is a dry-run request.</p>
+         * <p>Indicates whether the request is a dry run.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -191,7 +191,7 @@ public class ModifyAIDBClusterModelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The resolved target model name.</p>
+         * <p>The parsed target model name.</p>
          * 
          * <strong>example:</strong>
          * <p>Qwen3-32B</p>
@@ -202,7 +202,7 @@ public class ModifyAIDBClusterModelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The resolved target OSS path.</p>
+         * <p>The parsed target OSS path.</p>
          * 
          * <strong>example:</strong>
          * <p>/my-model-bucket/models/qwen3</p>
@@ -224,7 +224,7 @@ public class ModifyAIDBClusterModelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of change batches.</p>
+         * <p>The total number of modification batches.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -235,7 +235,7 @@ public class ModifyAIDBClusterModelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of affected model serving instances.</p>
+         * <p>The number of affected model service instances.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -246,7 +246,7 @@ public class ModifyAIDBClusterModelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The change warnings returned by the upstream. The caller must display these warnings.</p>
+         * <p>The modification warnings returned by the upstream service. The caller must display these warnings.</p>
          */
         public Builder warnings(java.util.List<String> warnings) {
             this.warnings = warnings;

@@ -80,7 +80,7 @@ public class CreateBudgetPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The budget policy ID.</p>
+         * <p>The ID of the budget policy.</p>
          * 
          * <strong>example:</strong>
          * <p>05a5a8603df444a8a605af712ffexxx</p>
@@ -91,7 +91,7 @@ public class CreateBudgetPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The gateway cluster ID.</p>
+         * <p>The gateway instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pg-xxxxxxx</p>
@@ -102,7 +102,7 @@ public class CreateBudgetPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>3E5CD764-FCCA-5C9C-838E-20E0DE84B2AF</p>
