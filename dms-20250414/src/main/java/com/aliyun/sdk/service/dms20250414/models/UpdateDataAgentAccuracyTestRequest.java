@@ -277,7 +277,10 @@ public class UpdateDataAgentAccuracyTestRequest extends Request {
         }
 
         /**
-         * Datasource.
+         * <p>The data source information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;DataSourceType&quot;:&quot;remote_data_center&quot;,&quot;DmsDatabaseId&quot;:&quot;f-894<em><strong>01m&quot;,&quot;FileId&quot;:&quot;f-894</strong></em>01m&quot;,&quot;Database&quot;:&quot;data.csv&quot;,&quot;Tables&quot;:[&quot;example&quot;],&quot;TableIds&quot;:[&quot;aij5***qf8&quot;],&quot;RegionId&quot;:&quot;cn-hangzhou&quot;}]</p>
          */
         public Builder datasource(String datasource) {
             this.putQueryParameter("Datasource", datasource);
@@ -298,7 +301,7 @@ public class UpdateDataAgentAccuracyTestRequest extends Request {
         }
 
         /**
-         * <p>The current Data Management unit.</p>
+         * <p>The current DMS unit.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -370,7 +373,7 @@ public class UpdateDataAgentAccuracyTestRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether sessions are displayed after analysis. This parameter is not supported.</p>
+         * <p>Specifies whether to display sessions after analysis. This parameter is currently not supported.</p>
          * 
          * <strong>example:</strong>
          * <p>no use</p>

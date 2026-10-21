@@ -83,7 +83,11 @@ public class GetAgenticAgentByInstallTokenRequest extends Request {
         }
 
         /**
+         * <p>The one-time install token issued by IssueAgenticInstallToken. The token starts with dit_ followed by 40 URL-safe Base64 characters, making a total length of 44 characters.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dit_0123456789abcdefghijklmnopqrstuvwxyzABCD</p>
          */
         public Builder installToken(String installToken) {
             this.putQueryParameter("InstallToken", installToken);

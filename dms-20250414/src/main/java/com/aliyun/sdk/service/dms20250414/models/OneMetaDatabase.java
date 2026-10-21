@@ -236,7 +236,7 @@ public class OneMetaDatabase extends TeaModel {
         } 
 
         /**
-         * <p>The catalog name.</p>
+         * CatalogName.
          */
         public Builder catalogName(String catalogName) {
             this.catalogName = catalogName;
@@ -244,7 +244,7 @@ public class OneMetaDatabase extends TeaModel {
         }
 
         /**
-         * <p>The catalog type.</p>
+         * CatalogType.
          */
         public Builder catalogType(String catalogType) {
             this.catalogType = catalogType;
@@ -252,7 +252,7 @@ public class OneMetaDatabase extends TeaModel {
         }
 
         /**
-         * <p>The catalog UUID.</p>
+         * CatalogUuid.
          */
         public Builder catalogUuid(String catalogUuid) {
             this.catalogUuid = catalogUuid;
@@ -260,7 +260,7 @@ public class OneMetaDatabase extends TeaModel {
         }
 
         /**
-         * <p>The data source type.</p>
+         * DataSourceType.
          */
         public Builder dataSourceType(String dataSourceType) {
             this.dataSourceType = dataSourceType;
@@ -268,7 +268,7 @@ public class OneMetaDatabase extends TeaModel {
         }
 
         /**
-         * <p>The business attributes of the database.</p>
+         * DatabaseBizAttrs.
          */
         public Builder databaseBizAttrs(java.util.Map<String, ?> databaseBizAttrs) {
             this.databaseBizAttrs = databaseBizAttrs;
@@ -276,7 +276,7 @@ public class OneMetaDatabase extends TeaModel {
         }
 
         /**
-         * <p>The database UUID.</p>
+         * DatabaseUuid.
          */
         public Builder databaseUuid(String databaseUuid) {
             this.databaseUuid = databaseUuid;
@@ -284,7 +284,7 @@ public class OneMetaDatabase extends TeaModel {
         }
 
         /**
-         * <p>The database description.</p>
+         * Description.
          */
         public Builder description(String description) {
             this.description = description;
@@ -300,7 +300,7 @@ public class OneMetaDatabase extends TeaModel {
         }
 
         /**
-         * <p>The database name.</p>
+         * Name.
          */
         public Builder name(String name) {
             this.name = name;
@@ -308,7 +308,7 @@ public class OneMetaDatabase extends TeaModel {
         }
 
         /**
-         * <p>The extended properties of the database.</p>
+         * Properties.
          */
         public Builder properties(java.util.Map<String, ?> properties) {
             this.properties = properties;
@@ -316,7 +316,7 @@ public class OneMetaDatabase extends TeaModel {
         }
 
         /**
-         * <p>The qualified name of the database.</p>
+         * QualifiedName.
          */
         public Builder qualifiedName(String qualifiedName) {
             this.qualifiedName = qualifiedName;
@@ -324,7 +324,7 @@ public class OneMetaDatabase extends TeaModel {
         }
 
         /**
-         * <p>The region ID.</p>
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -332,7 +332,7 @@ public class OneMetaDatabase extends TeaModel {
         }
 
         /**
-         * <p>The name used to search the database.</p>
+         * SearchName.
          */
         public Builder searchName(String searchName) {
             this.searchName = searchName;
@@ -340,7 +340,7 @@ public class OneMetaDatabase extends TeaModel {
         }
 
         /**
-         * <p>The database state.</p>
+         * State.
          */
         public Builder state(Integer state) {
             this.state = state;
@@ -348,7 +348,7 @@ public class OneMetaDatabase extends TeaModel {
         }
 
         /**
-         * <p>The database storage location.</p>
+         * StorageLocation.
          */
         public Builder storageLocation(String storageLocation) {
             this.storageLocation = storageLocation;

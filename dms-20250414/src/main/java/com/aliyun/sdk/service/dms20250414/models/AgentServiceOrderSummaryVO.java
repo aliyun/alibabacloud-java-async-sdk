@@ -119,7 +119,7 @@ public class AgentServiceOrderSummaryVO extends TeaModel {
         } 
 
         /**
-         * <p>The name of the agent service.</p>
+         * AgentService.
          */
         public Builder agentService(String agentService) {
             this.agentService = agentService;
@@ -127,7 +127,7 @@ public class AgentServiceOrderSummaryVO extends TeaModel {
         }
 
         /**
-         * <p>The deep research quota for the service.</p>
+         * DeepResearchQuota.
          */
         public Builder deepResearchQuota(Long deepResearchQuota) {
             this.deepResearchQuota = deepResearchQuota;
@@ -135,7 +135,7 @@ public class AgentServiceOrderSummaryVO extends TeaModel {
         }
 
         /**
-         * <p>The model call quota for the service.</p>
+         * ModelCallQuota.
          */
         public Builder modelCallQuota(Long modelCallQuota) {
             this.modelCallQuota = modelCallQuota;
@@ -143,7 +143,7 @@ public class AgentServiceOrderSummaryVO extends TeaModel {
         }
 
         /**
-         * <p>The order count for the agent service.</p>
+         * OrderCount.
          */
         public Builder orderCount(Integer orderCount) {
             this.orderCount = orderCount;
@@ -151,7 +151,7 @@ public class AgentServiceOrderSummaryVO extends TeaModel {
         }
 
         /**
-         * <p>The total number of services.</p>
+         * ServiceNumTotal.
          */
         public Builder serviceNumTotal(Integer serviceNumTotal) {
             this.serviceNumTotal = serviceNumTotal;
@@ -159,7 +159,7 @@ public class AgentServiceOrderSummaryVO extends TeaModel {
         }
 
         /**
-         * <p>The skill plan call quota for the service.</p>
+         * SkillPlanCallQuota.
          */
         public Builder skillPlanCallQuota(Long skillPlanCallQuota) {
             this.skillPlanCallQuota = skillPlanCallQuota;

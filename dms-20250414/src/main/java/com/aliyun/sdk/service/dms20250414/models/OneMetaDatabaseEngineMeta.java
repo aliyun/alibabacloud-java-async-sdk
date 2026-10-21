@@ -93,7 +93,7 @@ public class OneMetaDatabaseEngineMeta extends TeaModel {
         } 
 
         /**
-         * <p>The catalog name.</p>
+         * CatalogName.
          */
         public Builder catalogName(String catalogName) {
             this.catalogName = catalogName;
@@ -101,7 +101,7 @@ public class OneMetaDatabaseEngineMeta extends TeaModel {
         }
 
         /**
-         * <p>The character encoding for the database.</p>
+         * Encoding.
          */
         public Builder encoding(String encoding) {
             this.encoding = encoding;
@@ -109,7 +109,7 @@ public class OneMetaDatabaseEngineMeta extends TeaModel {
         }
 
         /**
-         * <p>The schema name.</p>
+         * SchemaName.
          */
         public Builder schemaName(String schemaName) {
             this.schemaName = schemaName;
@@ -117,7 +117,7 @@ public class OneMetaDatabaseEngineMeta extends TeaModel {
         }
 
         /**
-         * <p>The database storage capacity, in GB.</p>
+         * StorageCapacity.
          */
         public Builder storageCapacity(Long storageCapacity) {
             this.storageCapacity = storageCapacity;

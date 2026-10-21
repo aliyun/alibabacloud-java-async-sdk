@@ -87,10 +87,10 @@ public class DescribeFileUploadSignatureRequest extends Request {
         } 
 
         /**
-         * <p>The parameter used only by the frontend.</p>
+         * <p>For frontend use only.</p>
          * 
          * <strong>example:</strong>
-         * <p>仅前端使用</p>
+         * <p>For frontend use only</p>
          */
         public Builder callFrom(String callFrom) {
             this.putQueryParameter("CallFrom", callFrom);
@@ -111,7 +111,10 @@ public class DescribeFileUploadSignatureRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yrgug4e*******ypey63v</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

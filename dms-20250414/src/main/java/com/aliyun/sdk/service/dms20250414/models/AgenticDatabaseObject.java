@@ -119,7 +119,7 @@ public class AgenticDatabaseObject extends TeaModel {
         } 
 
         /**
-         * <p>The fully qualified name of the database. This name uniquely identifies the database within the system.</p>
+         * DatabaseQualifiedName.
          */
         public Builder databaseQualifiedName(String databaseQualifiedName) {
             this.databaseQualifiedName = databaseQualifiedName;
@@ -127,7 +127,7 @@ public class AgenticDatabaseObject extends TeaModel {
         }
 
         /**
-         * <p>The unique identifier (UUID) of the database that contains the object.</p>
+         * DatabaseUuid.
          */
         public Builder databaseUuid(String databaseUuid) {
             this.databaseUuid = databaseUuid;
@@ -135,7 +135,7 @@ public class AgenticDatabaseObject extends TeaModel {
         }
 
         /**
-         * <p>The Data Definition Language (DDL) SQL statement that defines the object\&quot;s structure.</p>
+         * DdlSql.
          */
         public Builder ddlSql(String ddlSql) {
             this.ddlSql = ddlSql;
@@ -143,7 +143,7 @@ public class AgenticDatabaseObject extends TeaModel {
         }
 
         /**
-         * <p>The name of the database object, such as a table, view, or index.</p>
+         * ObjectName.
          */
         public Builder objectName(String objectName) {
             this.objectName = objectName;
@@ -151,7 +151,7 @@ public class AgenticDatabaseObject extends TeaModel {
         }
 
         /**
-         * <p>The fully qualified name that uniquely identifies the object, typically formatted as <database>.<schema>.<object>.</p>
+         * ObjectQualifiedName.
          */
         public Builder objectQualifiedName(String objectQualifiedName) {
             this.objectQualifiedName = objectQualifiedName;
@@ -159,7 +159,7 @@ public class AgenticDatabaseObject extends TeaModel {
         }
 
         /**
-         * <p>The type of the database object. For example, <code>TABLE</code>, <code>VIEW</code>, or <code>INDEX</code>.</p>
+         * ObjectType.
          */
         public Builder objectType(String objectType) {
             this.objectType = objectType;

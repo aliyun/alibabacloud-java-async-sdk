@@ -106,7 +106,7 @@ public class GetAgenticAgentByInstallTokenResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The agent information associated with the install token after redemption. This parameter is empty if the token has not been redeemed, or if the associated credential or agent does not exist.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,10 @@ public class GetAgenticAgentByInstallTokenResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code returned when the request fails. Programs use this code to determine the failure type. This parameter is empty when the request succeeds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INSTALL_TOKEN_INVALID</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -122,7 +125,10 @@ public class GetAgenticAgentByInstallTokenResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned when the request fails. This message helps with manual troubleshooting. This parameter is empty when the request succeeds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>install_token not found</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -130,7 +136,10 @@ public class GetAgenticAgentByInstallTokenResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique identifier of the request, used for troubleshooting and log correlation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AD222E9-E606-4A42-BF6C-2C4DD51BD5E7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,7 @@ public class GetAgenticAgentByInstallTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful. A value of true indicates that the query succeeded. A value of false indicates that the query failed. In this case, you can use ErrorCode and ErrorMessage to identify the cause.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -295,7 +304,7 @@ public class GetAgenticAgentByInstallTokenResponseBody extends TeaModel {
             } 
 
             /**
-             * ActiveApiKeyPrefixes.
+             * <p>The prefix list of visible access tokens that are neither revoked nor expired under the agent. This parameter is empty if no access tokens are returned or no access tokens meet the conditional criteria. The prefix is used only to identify the credential and does not contain the complete secret.</p>
              */
             public Builder activeApiKeyPrefixes(java.util.List<String> activeApiKeyPrefixes) {
                 this.activeApiKeyPrefixes = activeApiKeyPrefixes;
@@ -303,7 +312,10 @@ public class GetAgenticAgentByInstallTokenResponseBody extends TeaModel {
             }
 
             /**
-             * AgentId.
+             * <p>The unique identifier of the agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent-7f3c9a2b</p>
              */
             public Builder agentId(String agentId) {
                 this.agentId = agentId;
@@ -311,7 +323,10 @@ public class GetAgenticAgentByInstallTokenResponseBody extends TeaModel {
             }
 
             /**
-             * AgentName.
+             * <p>The name of the agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-data-agent</p>
              */
             public Builder agentName(String agentName) {
                 this.agentName = agentName;
@@ -319,7 +334,10 @@ public class GetAgenticAgentByInstallTokenResponseBody extends TeaModel {
             }
 
             /**
-             * AgentType.
+             * <p>The permission type of the agent. Valid values: HUMAN_BOUND (inherits user permissions), PERMISSION_NARROW (narrowed down from user permissions), and STANDALONE (independent permissions). The agent generated through the install token redemption process is of the HUMAN_BOUND type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HUMAN_BOUND</p>
              */
             public Builder agentType(String agentType) {
                 this.agentType = agentType;
@@ -327,7 +345,10 @@ public class GetAgenticAgentByInstallTokenResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedAt.
+             * <p>The creation time of the agent, in the yyyy-MM-dd HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-07-13 10:30:00</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -335,7 +356,10 @@ public class GetAgenticAgentByInstallTokenResponseBody extends TeaModel {
             }
 
             /**
-             * CreationType.
+             * <p>The creation method of the agent. A value of auto indicates automatic creation by the system, and a value of manual indicates manual creation by a user. The agent generated through the install token redemption process is auto.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>auto</p>
              */
             public Builder creationType(String creationType) {
                 this.creationType = creationType;
@@ -343,7 +367,10 @@ public class GetAgenticAgentByInstallTokenResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the agent. This parameter is empty if it is not set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Agent for data analytics</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -351,7 +378,10 @@ public class GetAgenticAgentByInstallTokenResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerId.
+             * <p>The ID of the user to whom the agent belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>27400000000000001</p>
              */
             public Builder ownerId(String ownerId) {
                 this.ownerId = ownerId;
@@ -359,7 +389,10 @@ public class GetAgenticAgentByInstallTokenResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the agent. A value of active indicates that the agent is enabled, and a value of disabled indicates that the agent is disabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>active</p>
              */
             public Builder status(String status) {
                 this.status = status;

@@ -20,6 +20,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Enter the connection and authentication information for the data source. The connection is automatically tested before saving. If the test succeeds, the data source is created and metadata synchronization starts.</p>
+     * 
+     * @param request the request parameters of AddAgenticDataSource  AddAgenticDataSourceRequest
+     * @return AddAgenticDataSourceResponse
+     */
+    CompletableFuture<AddAgenticDataSourceResponse> addAgenticDataSource(AddAgenticDataSourceRequest request);
+
+    /**
      * @param request the request parameters of AddDataAgentMemory  AddDataAgentMemoryRequest
      * @return AddDataAgentMemoryResponse
      */
@@ -57,6 +66,20 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateAgentResponse
      */
     CompletableFuture<CreateAgentResponse> createAgent(CreateAgentRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>The credential is used to execute SQL statements through the data gateway (OneQuery) and can be restricted to the instance level or the database level.
+     * Fixed properties of the credential:</p>
+     * <ul>
+     * <li>Validity period: 10 minutes after creation.</li>
+     * <li>Maximum number of connections: 500.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateAgenticSqlExecuteCredential  CreateAgenticSqlExecuteCredentialRequest
+     * @return CreateAgenticSqlExecuteCredentialResponse
+     */
+    CompletableFuture<CreateAgenticSqlExecuteCredentialResponse> createAgenticSqlExecuteCredential(CreateAgenticSqlExecuteCredentialRequest request);
 
     /**
      * <b>description</b> :
@@ -126,6 +149,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateOneMetaSqlTemplateResponse
      */
     CompletableFuture<CreateOneMetaSqlTemplateResponse> createOneMetaSqlTemplate(CreateOneMetaSqlTemplateRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>After deletion, the data source cannot establish connections and cannot be restored by calling the enable API operation.</p>
+     * 
+     * @param request the request parameters of DeleteAgenticDataSource  DeleteAgenticDataSourceRequest
+     * @return DeleteAgenticDataSourceResponse
+     */
+    CompletableFuture<DeleteAgenticDataSourceResponse> deleteAgenticDataSource(DeleteAgenticDataSourceRequest request);
 
     /**
      * @param request the request parameters of DeleteAirflow  DeleteAirflowRequest
@@ -290,10 +322,46 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<FileUploadCallbackResponse> fileUploadCallback(FileUploadCallbackRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Specify the install token issued by IssueAgenticInstallToken to query the agent generated or reused after the token is redeemed. The request fails if the install token does not exist. If the token has not been redeemed, or the associated credential or agent does not exist, the API call succeeds but Data is empty.</p>
+     * 
      * @param request the request parameters of GetAgenticAgentByInstallToken  GetAgenticAgentByInstallTokenRequest
      * @return GetAgenticAgentByInstallTokenResponse
      */
     CompletableFuture<GetAgenticAgentByInstallTokenResponse> getAgenticAgentByInstallToken(GetAgenticAgentByInstallTokenRequest request);
+
+    /**
+     * @param request the request parameters of GetAgenticCatalog  GetAgenticCatalogRequest
+     * @return GetAgenticCatalogResponse
+     */
+    CompletableFuture<GetAgenticCatalogResponse> getAgenticCatalog(GetAgenticCatalogRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the connection, authentication, status, and metadata catalog information of a specified data source under the current account. Only masked values are returned for passwords.</p>
+     * 
+     * @param request the request parameters of GetAgenticDataSource  GetAgenticDataSourceRequest
+     * @return GetAgenticDataSourceResponse
+     */
+    CompletableFuture<GetAgenticDataSourceResponse> getAgenticDataSource(GetAgenticDataSourceRequest request);
+
+    /**
+     * @param request the request parameters of GetAgenticDatabase  GetAgenticDatabaseRequest
+     * @return GetAgenticDatabaseResponse
+     */
+    CompletableFuture<GetAgenticDatabaseResponse> getAgenticDatabase(GetAgenticDatabaseRequest request);
+
+    /**
+     * @param request the request parameters of GetAgenticTableColumn  GetAgenticTableColumnRequest
+     * @return GetAgenticTableColumnResponse
+     */
+    CompletableFuture<GetAgenticTableColumnResponse> getAgenticTableColumn(GetAgenticTableColumnRequest request);
+
+    /**
+     * @param request the request parameters of GetAgenticTableIndex  GetAgenticTableIndexRequest
+     * @return GetAgenticTableIndexResponse
+     */
+    CompletableFuture<GetAgenticTableIndexResponse> getAgenticTableIndex(GetAgenticTableIndexRequest request);
 
     /**
      * @param request the request parameters of GetAirflow  GetAirflowRequest
@@ -330,7 +398,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the model usage summary of DataAgent analysis tasks within a specified time range, including the number of models used, total model call count, total tokens consumed, and peak TPM. This operation is used to analyze and monitor the model resource consumption of DataAgent analysis tasks.</p>
+     * <p>Queries the model usage summary of DataAgent analysis tasks within a specified time range, including the number of models used, total number of model calls, total tokens consumed, and peak TPM. This data is used to analyze and monitor the model resource consumption of DataAgent analysis tasks.</p>
      * 
      * @param request the request parameters of GetDataAgentTaskModelUsage  GetDataAgentTaskModelUsageRequest
      * @return GetDataAgentTaskModelUsageResponse
@@ -339,7 +407,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the TPM time series metrics of DataAgent analysis task model usage within a specified time range. The metrics are returned at minute-level granularity, showing the number of tokens consumed in each statistical interval for analyzing model usage trends over time.</p>
+     * <p>Queries the time-series metrics of tokens per minute (TPM) for DataAgent analysis task model usage within a specified time range. It returns the number of tokens consumed in each statistical interval at a minute-level granularity to help you analyze the trend of model usage over time.</p>
      * 
      * @param request the request parameters of GetDataAgentTaskModelUsageMetrics  GetDataAgentTaskModelUsageMetricsRequest
      * @return GetDataAgentTaskModelUsageMetricsResponse
@@ -438,6 +506,45 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return InstallDataAgentMcpResponse
      */
     CompletableFuture<InstallDataAgentMcpResponse> installDataAgentMcp(InstallDataAgentMcpRequest request);
+
+    /**
+     * @param request the request parameters of ListAgenticCatalog  ListAgenticCatalogRequest
+     * @return ListAgenticCatalogResponse
+     */
+    CompletableFuture<ListAgenticCatalogResponse> listAgenticCatalog(ListAgenticCatalogRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>You can filter data sources by type, status, endpoint, port, source, and connection target name. You can also perform a fuzzy search by name or endpoint. If multiple filter conditions are specified, the intersection of the conditions is used.</p>
+     * 
+     * @param request the request parameters of ListAgenticDataSources  ListAgenticDataSourcesRequest
+     * @return ListAgenticDataSourcesResponse
+     */
+    CompletableFuture<ListAgenticDataSourcesResponse> listAgenticDataSources(ListAgenticDataSourcesRequest request);
+
+    /**
+     * @param request the request parameters of ListAgenticDatabase  ListAgenticDatabaseRequest
+     * @return ListAgenticDatabaseResponse
+     */
+    CompletableFuture<ListAgenticDatabaseResponse> listAgenticDatabase(ListAgenticDatabaseRequest request);
+
+    /**
+     * @param request the request parameters of ListAgenticGlobalSqlExecutionHistories  ListAgenticGlobalSqlExecutionHistoriesRequest
+     * @return ListAgenticGlobalSqlExecutionHistoriesResponse
+     */
+    CompletableFuture<ListAgenticGlobalSqlExecutionHistoriesResponse> listAgenticGlobalSqlExecutionHistories(ListAgenticGlobalSqlExecutionHistoriesRequest request);
+
+    /**
+     * @param request the request parameters of ListAgenticSqlExecutionHistories  ListAgenticSqlExecutionHistoriesRequest
+     * @return ListAgenticSqlExecutionHistoriesResponse
+     */
+    CompletableFuture<ListAgenticSqlExecutionHistoriesResponse> listAgenticSqlExecutionHistories(ListAgenticSqlExecutionHistoriesRequest request);
+
+    /**
+     * @param request the request parameters of ListAgenticTableBaseInfo  ListAgenticTableBaseInfoRequest
+     * @return ListAgenticTableBaseInfoResponse
+     */
+    CompletableFuture<ListAgenticTableBaseInfoResponse> listAgenticTableBaseInfo(ListAgenticTableBaseInfoRequest request);
 
     /**
      * <b>description</b> :
@@ -656,6 +763,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SaveWorkspaceCodeResponse> saveWorkspaceCode(SaveWorkspaceCodeRequest request);
 
     /**
+     * @param request the request parameters of SearchAgenticCatalog  SearchAgenticCatalogRequest
+     * @return SearchAgenticCatalogResponse
+     */
+    CompletableFuture<SearchAgenticCatalogResponse> searchAgenticCatalog(SearchAgenticCatalogRequest request);
+
+    /**
+     * @param request the request parameters of SearchAgenticDatabase  SearchAgenticDatabaseRequest
+     * @return SearchAgenticDatabaseResponse
+     */
+    CompletableFuture<SearchAgenticDatabaseResponse> searchAgenticDatabase(SearchAgenticDatabaseRequest request);
+
+    /**
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
@@ -713,6 +832,27 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StopDataAgentAccuracyTestTaskResponse> stopDataAgentAccuracyTestTask(StopDataAgentAccuracyTestTaskRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Validates only the connection information passed in the current request without creating or modifying a data source. When testing an existing data source, you can pass DataSourceUuid to reuse the saved password.</p>
+     * 
+     * @param request the request parameters of TestAgenticDataSourceConnection  TestAgenticDataSourceConnectionRequest
+     * @return TestAgenticDataSourceConnectionResponse
+     */
+    CompletableFuture<TestAgenticDataSourceConnectionResponse> testAgenticDataSourceConnection(TestAgenticDataSourceConnectionRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Only the parameters passed in the current request are modified. Unpassed parameters remain unchanged. The data source type cannot be modified.</p>
+     * 
+     * @param request the request parameters of UpdateAgenticDataSource  UpdateAgenticDataSourceRequest
+     * @return UpdateAgenticDataSourceResponse
+     */
+    CompletableFuture<UpdateAgenticDataSourceResponse> updateAgenticDataSource(UpdateAgenticDataSourceRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Creates an Airflow instance in a workspace.</p>
+     * 
      * @param request the request parameters of UpdateAirflow  UpdateAirflowRequest
      * @return UpdateAirflowResponse
      */
@@ -720,7 +860,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Updates the content of an accuracy test item.</p>
+     * <p>Updates the accuracy test item.</p>
      * 
      * @param request the request parameters of UpdateDataAgentAccuracyTest  UpdateDataAgentAccuracyTestRequest
      * @return UpdateDataAgentAccuracyTestResponse

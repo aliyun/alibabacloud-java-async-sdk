@@ -26,6 +26,9 @@ public class AgenticDmsInstanceSyncTask extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ActorType")
     private String actorType;
 
+    @com.aliyun.core.annotation.NameInMap("AuthorizeAddVpcNatWhiteList")
+    private Boolean authorizeAddVpcNatWhiteList;
+
     @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
@@ -69,6 +72,7 @@ public class AgenticDmsInstanceSyncTask extends TeaModel {
         this.actorId = builder.actorId;
         this.actorName = builder.actorName;
         this.actorType = builder.actorType;
+        this.authorizeAddVpcNatWhiteList = builder.authorizeAddVpcNatWhiteList;
         this.errorCode = builder.errorCode;
         this.errorSummary = builder.errorSummary;
         this.failedCount = builder.failedCount;
@@ -115,6 +119,13 @@ public class AgenticDmsInstanceSyncTask extends TeaModel {
      */
     public String getActorType() {
         return this.actorType;
+    }
+
+    /**
+     * @return authorizeAddVpcNatWhiteList
+     */
+    public Boolean getAuthorizeAddVpcNatWhiteList() {
+        return this.authorizeAddVpcNatWhiteList;
     }
 
     /**
@@ -212,6 +223,7 @@ public class AgenticDmsInstanceSyncTask extends TeaModel {
         private String actorId; 
         private String actorName; 
         private String actorType; 
+        private Boolean authorizeAddVpcNatWhiteList; 
         private String errorCode; 
         private String errorSummary; 
         private Integer failedCount; 
@@ -233,6 +245,7 @@ public class AgenticDmsInstanceSyncTask extends TeaModel {
             this.actorId = model.actorId;
             this.actorName = model.actorName;
             this.actorType = model.actorType;
+            this.authorizeAddVpcNatWhiteList = model.authorizeAddVpcNatWhiteList;
             this.errorCode = model.errorCode;
             this.errorSummary = model.errorSummary;
             this.failedCount = model.failedCount;
@@ -269,6 +282,14 @@ public class AgenticDmsInstanceSyncTask extends TeaModel {
          */
         public Builder actorType(String actorType) {
             this.actorType = actorType;
+            return this;
+        }
+
+        /**
+         * AuthorizeAddVpcNatWhiteList.
+         */
+        public Builder authorizeAddVpcNatWhiteList(Boolean authorizeAddVpcNatWhiteList) {
+            this.authorizeAddVpcNatWhiteList = authorizeAddVpcNatWhiteList;
             return this;
         }
 

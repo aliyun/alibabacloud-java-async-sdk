@@ -136,7 +136,7 @@ public class GetDataAgentWorkspaceInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>E0D2-*****-A63B6</p>
@@ -333,7 +333,7 @@ public class GetDataAgentWorkspaceInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation time of the session. Unit: seconds. The value is a UNIX timestamp.</p>
+             * <p>The creation time of the workspace. The value is a UNIX timestamp in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1765960516</p>
@@ -355,7 +355,10 @@ public class GetDataAgentWorkspaceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * IsSessionShareEnabled.
+             * <p>Indicates whether sessions are shared within the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isSessionShareEnabled(Boolean isSessionShareEnabled) {
                 this.isSessionShareEnabled = isSessionShareEnabled;
@@ -363,7 +366,7 @@ public class GetDataAgentWorkspaceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The most recent modification time of the workspace. Unit: seconds. The value is a UNIX timestamp.</p>
+             * <p>The last modification time of the workspace. The value is a UNIX timestamp in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1765961516</p>
@@ -396,7 +399,10 @@ public class GetDataAgentWorkspaceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>personal</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -404,7 +410,7 @@ public class GetDataAgentWorkspaceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the collaborative workspace.</p>
+             * <p>The description of the workspace.</p>
              * 
              * <strong>example:</strong>
              * <p>space for test</p>
@@ -415,7 +421,7 @@ public class GetDataAgentWorkspaceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the collaborative workspace.</p>
+             * <p>The ID of the workspace.</p>
              * 
              * <strong>example:</strong>
              * <p>20923*****7291</p>

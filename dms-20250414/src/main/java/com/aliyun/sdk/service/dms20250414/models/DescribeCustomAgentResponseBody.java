@@ -147,7 +147,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <p>Specifies whether the request is successful. Valid values:</p>
          * <ul>
          * <li><strong>true</strong>: The request is successful.                                 </li>
          * <li><strong>false</strong>: The request fails.</li>
@@ -259,7 +259,10 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * CallbackArgs.
+             * <p>The parameters to invoke callback tool calling.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;ID&quot;:&quot;test&quot;}</p>
              */
             public Builder callbackArgs(String callbackArgs) {
                 this.callbackArgs = callbackArgs;
@@ -267,7 +270,10 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * CallbackPrompt.
+             * <p>The prompt for generating parameters to invoke callback tool calling.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>send web report to <a href="mailto:123456@163.com">123456@163.com</a></p>
              */
             public Builder callbackPrompt(String callbackPrompt) {
                 this.callbackPrompt = callbackPrompt;
@@ -275,7 +281,10 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * CallbackTime.
+             * <p>The timing to invoke callback tool calling.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder callbackTime(Integer callbackTime) {
                 this.callbackTime = callbackTime;
@@ -283,7 +292,10 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * ToolId.
+             * <p>The callback tool identifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Mcp serverId (6te...g7a)</p>
              */
             public Builder toolId(String toolId) {
                 this.toolId = toolId;
@@ -291,7 +303,10 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The callback tool type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Mcp</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -397,7 +412,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Specifies whether to prohibit appending data sources during a session.</p>
+             * <p>Specifies whether to prohibit appending data sources in a session.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -408,7 +423,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to prohibit user inquiries during the process.</p>
+             * <p>Specifies whether to disable user inquiries during the process.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -441,7 +456,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to skip the confirmation for generating a web report.</p>
+             * <p>Specifies whether to skip the confirmation for drawing a web report.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -526,8 +541,8 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
             /**
              * <p>The access type. Valid values:</p>
              * <ul>
-             * <li>mcp: Accessed through MCP.</li>
-             * <li>dms_kb: Accessed through DMS knowledge base.</li>
+             * <li>mcp: MCP access</li>
+             * <li>dms_kb: DMS knowledge base access</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -646,7 +661,10 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * DbId.
+             * <p>The DMS database ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>71991648</p>
              */
             public Builder dbId(String dbId) {
                 this.dbId = dbId;
@@ -654,7 +672,10 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The DMS instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2190779</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -662,7 +683,10 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * KnowledgeUuid.
+             * <p>The knowledge UUID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7ca8f50d78234******e87</p>
              */
             public Builder knowledgeUuid(String knowledgeUuid) {
                 this.knowledgeUuid = knowledgeUuid;
@@ -670,7 +694,14 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The knowledge semantic type. Valid values:</p>
+             * <ul>
+             * <li>sql_template: SQL template</li>
+             * <li>ossie_model: Ossie semantic view</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>sql_template</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -750,7 +781,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The cron expression for time-based scheduling.</p>
+             * <p>The cron expression for time-based periodic scheduling.</p>
              * 
              * <strong>example:</strong>
              * <p>0 0 0 ? * 1-7</p>
@@ -761,7 +792,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The query for the scheduled task.</p>
+             * <p>The question for the periodic task.</p>
              * 
              * <strong>example:</strong>
              * <p>Analyze the data and provide the report</p>
@@ -796,6 +827,9 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
      * <p>DescribeCustomAgentResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AgentType")
+        private String agentType;
+
         @com.aliyun.core.annotation.NameInMap("AliyunParentUid")
         private String aliyunParentUid;
 
@@ -865,6 +899,9 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OfflineTime")
         private String offlineTime;
 
+        @com.aliyun.core.annotation.NameInMap("RecommendQuestionList")
+        private java.util.List<String> recommendQuestionList;
+
         @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
@@ -896,6 +933,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
         private String workspaceId;
 
         private Data(Builder builder) {
+            this.agentType = builder.agentType;
             this.aliyunParentUid = builder.aliyunParentUid;
             this.aliyunUid = builder.aliyunUid;
             this.callbackConfig = builder.callbackConfig;
@@ -919,6 +957,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
             this.name = builder.name;
             this.nextRuntime = builder.nextRuntime;
             this.offlineTime = builder.offlineTime;
+            this.recommendQuestionList = builder.recommendQuestionList;
             this.region = builder.region;
             this.relatedSessionId = builder.relatedSessionId;
             this.releaseTime = builder.releaseTime;
@@ -937,6 +976,13 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return agentType
+         */
+        public String getAgentType() {
+            return this.agentType;
         }
 
         /**
@@ -1101,6 +1147,13 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
         }
 
         /**
+         * @return recommendQuestionList
+         */
+        public java.util.List<String> getRecommendQuestionList() {
+            return this.recommendQuestionList;
+        }
+
+        /**
          * @return region
          */
         public String getRegion() {
@@ -1171,6 +1224,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String agentType; 
             private String aliyunParentUid; 
             private String aliyunUid; 
             private CallbackConfig callbackConfig; 
@@ -1194,6 +1248,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
             private String name; 
             private Long nextRuntime; 
             private String offlineTime; 
+            private java.util.List<String> recommendQuestionList; 
             private String region; 
             private String relatedSessionId; 
             private String releaseTime; 
@@ -1209,6 +1264,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
+                this.agentType = model.agentType;
                 this.aliyunParentUid = model.aliyunParentUid;
                 this.aliyunUid = model.aliyunUid;
                 this.callbackConfig = model.callbackConfig;
@@ -1232,6 +1288,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
                 this.name = model.name;
                 this.nextRuntime = model.nextRuntime;
                 this.offlineTime = model.offlineTime;
+                this.recommendQuestionList = model.recommendQuestionList;
                 this.region = model.region;
                 this.relatedSessionId = model.relatedSessionId;
                 this.releaseTime = model.releaseTime;
@@ -1245,7 +1302,22 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The primary Alibaba Cloud account ID.</p>
+             * <p>The custom agent type. Valid values:</p>
+             * <ul>
+             * <li>Default: system-built-in custom agent</li>
+             * <li>Common: common custom agent</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Common</p>
+             */
+            public Builder agentType(String agentType) {
+                this.agentType = agentType;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the Alibaba Cloud main account.</p>
              * 
              * <strong>example:</strong>
              * <p>16738266********</p>
@@ -1267,7 +1339,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * CallbackConfig.
+             * <p>The callback feature configuration.</p>
              */
             public Builder callbackConfig(CallbackConfig callbackConfig) {
                 this.callbackConfig = callbackConfig;
@@ -1330,7 +1402,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the agent is displayed by default.</p>
+             * <p>Specifies whether the agent is displayed by default.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1341,7 +1413,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the custom agent.</p>
+             * <p>The custom agent description.</p>
              * 
              * <strong>example:</strong>
              * <p>Description for the test agent</p>
@@ -1407,7 +1479,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether a scheduled task is configured.</p>
+             * <p>Specifies whether a periodic task is configured.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1441,7 +1513,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * KnowledgeSemanticConfigList.
+             * <p>The knowledge semantic configuration list.</p>
              */
             public Builder knowledgeSemanticConfigList(java.util.List<KnowledgeSemanticConfigList> knowledgeSemanticConfigList) {
                 this.knowledgeSemanticConfigList = knowledgeSemanticConfigList;
@@ -1471,7 +1543,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the custom agent.</p>
+             * <p>The custom agent name.</p>
              * 
              * <strong>example:</strong>
              * <p>Test agent name</p>
@@ -1482,7 +1554,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The next run time of the scheduled task.</p>
+             * <p>The next run time of the periodic task.</p>
              * 
              * <strong>example:</strong>
              * <p>1767715200</p>
@@ -1500,6 +1572,14 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
              */
             public Builder offlineTime(String offlineTime) {
                 this.offlineTime = offlineTime;
+                return this;
+            }
+
+            /**
+             * <p>The list of recommended questions. You can configure up to 10 recommended questions.</p>
+             */
+            public Builder recommendQuestionList(java.util.List<String> recommendQuestionList) {
+                this.recommendQuestionList = recommendQuestionList;
                 return this;
             }
 
@@ -1537,7 +1617,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scheduled task configuration.</p>
+             * <p>The periodic task configuration.</p>
              */
             public Builder scheduleTaskConfig(ScheduleTaskConfig scheduleTaskConfig) {
                 this.scheduleTaskConfig = scheduleTaskConfig;
@@ -1545,7 +1625,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the custom agent.</p>
+             * <p>The custom agent status.</p>
              * 
              * <strong>example:</strong>
              * <p>RELEASED</p>
@@ -1588,11 +1668,11 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
             /**
              * <p>The web report theme. Valid values:</p>
              * <ul>
-             * <li>default: Default.</li>
-             * <li>journal: Journal.</li>
-             * <li>legacy: Classic.</li>
-             * <li>neobrutalism: Stylized.</li>
-             * <li>infographic: Infographic.</li>
+             * <li>default: default</li>
+             * <li>journal: journal</li>
+             * <li>legacy: classic</li>
+             * <li>neobrutalism: stylized</li>
+             * <li>infographic: infographic</li>
              * </ul>
              * 
              * <strong>example:</strong>

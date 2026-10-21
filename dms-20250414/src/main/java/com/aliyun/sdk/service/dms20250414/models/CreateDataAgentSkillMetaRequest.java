@@ -103,7 +103,7 @@ public class CreateDataAgentSkillMetaRequest extends Request {
         /**
          * <p>The skill description.</p>
          * <ul>
-         * <li>By default, this parameter is optional. The backend parses the ZIP package specified by UploadLocation to obtain the skill description.</li>
+         * <li>Optional. If not specified, the system parses the ZIP package specified by UploadLocation to obtain the skill description.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -118,7 +118,7 @@ public class CreateDataAgentSkillMetaRequest extends Request {
         /**
          * <p>The skill name.</p>
          * <ul>
-         * <li>By default, this parameter is optional. The backend parses the ZIP package specified by UploadLocation to obtain the skill name.</li>
+         * <li>Optional. If not specified, the system parses the ZIP package specified by UploadLocation to obtain the skill name.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -131,9 +131,9 @@ public class CreateDataAgentSkillMetaRequest extends Request {
         }
 
         /**
-         * <p>The full path for uploading the skill ZIP file.</p>
+         * <p>The full path to the uploaded skill ZIP file.</p>
          * <ul>
-         * <li>Format: The UploadDir field returned by the DescribeSkillFileUploadSignature operation concatenated with the file name.</li>
+         * <li>Format: Concatenate the file name to the UploadDir value returned by the DescribeSkillFileUploadSignature operation.</li>
          * <li>Example: ${UploadDir}/${Filename}</li>
          * </ul>
          */

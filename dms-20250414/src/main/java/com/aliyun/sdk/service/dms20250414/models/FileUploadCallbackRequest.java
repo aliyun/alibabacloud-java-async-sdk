@@ -157,7 +157,7 @@ public class FileUploadCallbackRequest extends Request {
         }
 
         /**
-         * <p>The current Data Management unit.</p>
+         * <p>The current DMS unit.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -169,7 +169,7 @@ public class FileUploadCallbackRequest extends Request {
         }
 
         /**
-         * <p>The file size, in bytes.</p>
+         * <p>The size of the file, in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>8110</p>
@@ -181,7 +181,7 @@ public class FileUploadCallbackRequest extends Request {
         }
 
         /**
-         * <p>The file name.</p>
+         * <p>The name of the file.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -194,7 +194,13 @@ public class FileUploadCallbackRequest extends Request {
         }
 
         /**
-         * OssBucket.
+         * <p>The name of the user\&quot;s OSS bucket.</p>
+         * <ul>
+         * <li>Specify this parameter to use a file in the user\&quot;s OSS bucket and register the file as a data center file through the callback.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>bgc-hangzhou-test-bucket</p>
          */
         public Builder ossBucket(String ossBucket) {
             this.putQueryParameter("OssBucket", ossBucket);
@@ -205,7 +211,7 @@ public class FileUploadCallbackRequest extends Request {
         /**
          * <p>The full path of the uploaded file.</p>
          * <ul>
-         * <li>Format: The UploadDir field returned by the DescribeFileUploadSignature operation concatenated with the file name.</li>
+         * <li>Format: Concatenate the UploadDir field returned by the DescribeFileUploadSignature operation with the file name.</li>
          * <li>Example: ${UploadDir}/${Filename}</li>
          * </ul>
          * <p>This parameter is required.</p>
@@ -217,7 +223,10 @@ public class FileUploadCallbackRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The ID of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccihe433d3*******lxljv</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

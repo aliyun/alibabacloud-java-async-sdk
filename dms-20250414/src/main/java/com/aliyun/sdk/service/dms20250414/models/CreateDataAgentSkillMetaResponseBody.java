@@ -125,7 +125,7 @@ public class CreateDataAgentSkillMetaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned when a system-level request failure occurs.</p>
+         * <p>The error message returned when a system-level request fails.</p>
          * 
          * <strong>example:</strong>
          * <p>Specified parameter Tid is not valid.</p>
@@ -147,10 +147,10 @@ public class CreateDataAgentSkillMetaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The request was successful.                                 </li>
-         * <li><strong>false</strong>: The request failed.</li>
+         * <li><strong>true</strong>: The request is successful.                                 </li>
+         * <li><strong>false</strong>: The request fails.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -376,7 +376,7 @@ public class CreateDataAgentSkillMetaResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The Alibaba Cloud account ID of the parent account.</p>
+             * <p>The Alibaba Cloud account ID.</p>
              * 
              * <strong>example:</strong>
              * <p>16738266********</p>
@@ -387,7 +387,7 @@ public class CreateDataAgentSkillMetaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Alibaba Cloud account ID.</p>
+             * <p>The Alibaba Cloud user ID.</p>
              * 
              * <strong>example:</strong>
              * <p>20372822********</p>
@@ -398,7 +398,7 @@ public class CreateDataAgentSkillMetaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creator name.</p>
+             * <p>The name of the creator.</p>
              * 
              * <strong>example:</strong>
              * <p>HaoY*****</p>
@@ -420,7 +420,11 @@ public class CreateDataAgentSkillMetaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the skill is available. Valid values: true and false.</p>
+             * <p>Indicates whether the skill is available. Valid values:</p>
+             * <ul>
+             * <li>true: The skill is available.</li>
+             * <li>false: The skill is not available.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -442,7 +446,7 @@ public class CreateDataAgentSkillMetaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The modification time.</p>
+             * <p>The update time.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-12-11T14:04:32.000+00:00</p>
@@ -455,7 +459,7 @@ public class CreateDataAgentSkillMetaResponseBody extends TeaModel {
             /**
              * <p>The skill parsing error message.</p>
              * <ul>
-             * <li>When the skill status is INVALID, the parsing error message is returned.</li>
+             * <li>This message is returned when the skill status is INVALID.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -513,9 +517,9 @@ public class CreateDataAgentSkillMetaResponseBody extends TeaModel {
             /**
              * <p>The skill status. Valid values:</p>
              * <ul>
-             * <li>INIT: Not ready.</li>
-             * <li>ACTIVE: Active.</li>
-             * <li>INVALID: Invalid.</li>
+             * <li>INIT: The skill is not ready.</li>
+             * <li>ACTIVE: The skill is active.</li>
+             * <li>INVALID: The skill is invalid.</li>
              * </ul>
              * 
              * <strong>example:</strong>

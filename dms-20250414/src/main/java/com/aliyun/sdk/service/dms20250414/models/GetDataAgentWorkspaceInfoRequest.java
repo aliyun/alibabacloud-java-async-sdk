@@ -85,7 +85,7 @@ public class GetDataAgentWorkspaceInfoRequest extends Request {
         }
 
         /**
-         * <p>The ID of the collaborative workspace.</p>
+         * <p>The ID of the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>20923*****7291</p>

@@ -41,6 +41,27 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Enter the connection and authentication information for the data source. The connection is automatically tested before saving. If the test succeeds, the data source is created and metadata synchronization starts.</p>
+     * 
+     * @param request the request parameters of AddAgenticDataSource  AddAgenticDataSourceRequest
+     * @return AddAgenticDataSourceResponse
+     */
+    @Override
+    public CompletableFuture<AddAgenticDataSourceResponse> addAgenticDataSource(AddAgenticDataSourceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AddAgenticDataSource").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AddAgenticDataSourceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AddAgenticDataSourceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of AddDataAgentMemory  AddDataAgentMemoryRequest
      * @return AddDataAgentMemoryResponse
      */
@@ -146,6 +167,32 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateAgentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The credential is used to execute SQL statements through the data gateway (OneQuery) and can be restricted to the instance level or the database level.
+     * Fixed properties of the credential:</p>
+     * <ul>
+     * <li>Validity period: 10 minutes after creation.</li>
+     * <li>Maximum number of connections: 500.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateAgenticSqlExecuteCredential  CreateAgenticSqlExecuteCredentialRequest
+     * @return CreateAgenticSqlExecuteCredentialResponse
+     */
+    @Override
+    public CompletableFuture<CreateAgenticSqlExecuteCredentialResponse> createAgenticSqlExecuteCredential(CreateAgenticSqlExecuteCredentialRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateAgenticSqlExecuteCredential").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateAgenticSqlExecuteCredentialResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateAgenticSqlExecuteCredentialResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -347,6 +394,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateOneMetaSqlTemplateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>After deletion, the data source cannot establish connections and cannot be restored by calling the enable API operation.</p>
+     * 
+     * @param request the request parameters of DeleteAgenticDataSource  DeleteAgenticDataSourceRequest
+     * @return DeleteAgenticDataSourceResponse
+     */
+    @Override
+    public CompletableFuture<DeleteAgenticDataSourceResponse> deleteAgenticDataSource(DeleteAgenticDataSourceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteAgenticDataSource").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteAgenticDataSourceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteAgenticDataSourceResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -827,6 +895,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Specify the install token issued by IssueAgenticInstallToken to query the agent generated or reused after the token is redeemed. The request fails if the install token does not exist. If the token has not been redeemed, or the associated credential or agent does not exist, the API call succeeds but Data is empty.</p>
+     * 
      * @param request the request parameters of GetAgenticAgentByInstallToken  GetAgenticAgentByInstallTokenRequest
      * @return GetAgenticAgentByInstallTokenResponse
      */
@@ -839,6 +910,99 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetAgenticAgentByInstallTokenResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetAgenticCatalog  GetAgenticCatalogRequest
+     * @return GetAgenticCatalogResponse
+     */
+    @Override
+    public CompletableFuture<GetAgenticCatalogResponse> getAgenticCatalog(GetAgenticCatalogRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetAgenticCatalog").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAgenticCatalogResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetAgenticCatalogResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the connection, authentication, status, and metadata catalog information of a specified data source under the current account. Only masked values are returned for passwords.</p>
+     * 
+     * @param request the request parameters of GetAgenticDataSource  GetAgenticDataSourceRequest
+     * @return GetAgenticDataSourceResponse
+     */
+    @Override
+    public CompletableFuture<GetAgenticDataSourceResponse> getAgenticDataSource(GetAgenticDataSourceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetAgenticDataSource").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAgenticDataSourceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetAgenticDataSourceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetAgenticDatabase  GetAgenticDatabaseRequest
+     * @return GetAgenticDatabaseResponse
+     */
+    @Override
+    public CompletableFuture<GetAgenticDatabaseResponse> getAgenticDatabase(GetAgenticDatabaseRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetAgenticDatabase").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAgenticDatabaseResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetAgenticDatabaseResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetAgenticTableColumn  GetAgenticTableColumnRequest
+     * @return GetAgenticTableColumnResponse
+     */
+    @Override
+    public CompletableFuture<GetAgenticTableColumnResponse> getAgenticTableColumn(GetAgenticTableColumnRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetAgenticTableColumn").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAgenticTableColumnResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetAgenticTableColumnResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetAgenticTableIndex  GetAgenticTableIndexRequest
+     * @return GetAgenticTableIndexResponse
+     */
+    @Override
+    public CompletableFuture<GetAgenticTableIndexResponse> getAgenticTableIndex(GetAgenticTableIndexRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetAgenticTableIndex").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAgenticTableIndexResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetAgenticTableIndexResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -935,7 +1099,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the model usage summary of DataAgent analysis tasks within a specified time range, including the number of models used, total model call count, total tokens consumed, and peak TPM. This operation is used to analyze and monitor the model resource consumption of DataAgent analysis tasks.</p>
+     * <p>Queries the model usage summary of DataAgent analysis tasks within a specified time range, including the number of models used, total number of model calls, total tokens consumed, and peak TPM. This data is used to analyze and monitor the model resource consumption of DataAgent analysis tasks.</p>
      * 
      * @param request the request parameters of GetDataAgentTaskModelUsage  GetDataAgentTaskModelUsageRequest
      * @return GetDataAgentTaskModelUsageResponse
@@ -956,7 +1120,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the TPM time series metrics of DataAgent analysis task model usage within a specified time range. The metrics are returned at minute-level granularity, showing the number of tokens consumed in each statistical interval for analyzing model usage trends over time.</p>
+     * <p>Queries the time-series metrics of tokens per minute (TPM) for DataAgent analysis task model usage within a specified time range. It returns the number of tokens consumed in each statistical interval at a minute-level granularity to help you analyze the trend of model usage over time.</p>
      * 
      * @param request the request parameters of GetDataAgentTaskModelUsageMetrics  GetDataAgentTaskModelUsageMetricsRequest
      * @return GetDataAgentTaskModelUsageMetricsResponse
@@ -1219,6 +1383,117 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<InstallDataAgentMcpResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListAgenticCatalog  ListAgenticCatalogRequest
+     * @return ListAgenticCatalogResponse
+     */
+    @Override
+    public CompletableFuture<ListAgenticCatalogResponse> listAgenticCatalog(ListAgenticCatalogRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListAgenticCatalog").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListAgenticCatalogResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListAgenticCatalogResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>You can filter data sources by type, status, endpoint, port, source, and connection target name. You can also perform a fuzzy search by name or endpoint. If multiple filter conditions are specified, the intersection of the conditions is used.</p>
+     * 
+     * @param request the request parameters of ListAgenticDataSources  ListAgenticDataSourcesRequest
+     * @return ListAgenticDataSourcesResponse
+     */
+    @Override
+    public CompletableFuture<ListAgenticDataSourcesResponse> listAgenticDataSources(ListAgenticDataSourcesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListAgenticDataSources").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListAgenticDataSourcesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListAgenticDataSourcesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListAgenticDatabase  ListAgenticDatabaseRequest
+     * @return ListAgenticDatabaseResponse
+     */
+    @Override
+    public CompletableFuture<ListAgenticDatabaseResponse> listAgenticDatabase(ListAgenticDatabaseRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListAgenticDatabase").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListAgenticDatabaseResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListAgenticDatabaseResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListAgenticGlobalSqlExecutionHistories  ListAgenticGlobalSqlExecutionHistoriesRequest
+     * @return ListAgenticGlobalSqlExecutionHistoriesResponse
+     */
+    @Override
+    public CompletableFuture<ListAgenticGlobalSqlExecutionHistoriesResponse> listAgenticGlobalSqlExecutionHistories(ListAgenticGlobalSqlExecutionHistoriesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListAgenticGlobalSqlExecutionHistories").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListAgenticGlobalSqlExecutionHistoriesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListAgenticGlobalSqlExecutionHistoriesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListAgenticSqlExecutionHistories  ListAgenticSqlExecutionHistoriesRequest
+     * @return ListAgenticSqlExecutionHistoriesResponse
+     */
+    @Override
+    public CompletableFuture<ListAgenticSqlExecutionHistoriesResponse> listAgenticSqlExecutionHistories(ListAgenticSqlExecutionHistoriesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListAgenticSqlExecutionHistories").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListAgenticSqlExecutionHistoriesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListAgenticSqlExecutionHistoriesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListAgenticTableBaseInfo  ListAgenticTableBaseInfoRequest
+     * @return ListAgenticTableBaseInfoResponse
+     */
+    @Override
+    public CompletableFuture<ListAgenticTableBaseInfoResponse> listAgenticTableBaseInfo(ListAgenticTableBaseInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListAgenticTableBaseInfo").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListAgenticTableBaseInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListAgenticTableBaseInfoResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1825,6 +2100,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of SearchAgenticCatalog  SearchAgenticCatalogRequest
+     * @return SearchAgenticCatalogResponse
+     */
+    @Override
+    public CompletableFuture<SearchAgenticCatalogResponse> searchAgenticCatalog(SearchAgenticCatalogRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SearchAgenticCatalog").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SearchAgenticCatalogResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SearchAgenticCatalogResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SearchAgenticDatabase  SearchAgenticDatabaseRequest
+     * @return SearchAgenticDatabaseResponse
+     */
+    @Override
+    public CompletableFuture<SearchAgenticDatabaseResponse> searchAgenticDatabase(SearchAgenticDatabaseRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SearchAgenticDatabase").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SearchAgenticDatabaseResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SearchAgenticDatabaseResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
@@ -1954,6 +2265,51 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Validates only the connection information passed in the current request without creating or modifying a data source. When testing an existing data source, you can pass DataSourceUuid to reuse the saved password.</p>
+     * 
+     * @param request the request parameters of TestAgenticDataSourceConnection  TestAgenticDataSourceConnectionRequest
+     * @return TestAgenticDataSourceConnectionResponse
+     */
+    @Override
+    public CompletableFuture<TestAgenticDataSourceConnectionResponse> testAgenticDataSourceConnection(TestAgenticDataSourceConnectionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("TestAgenticDataSourceConnection").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TestAgenticDataSourceConnectionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<TestAgenticDataSourceConnectionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Only the parameters passed in the current request are modified. Unpassed parameters remain unchanged. The data source type cannot be modified.</p>
+     * 
+     * @param request the request parameters of UpdateAgenticDataSource  UpdateAgenticDataSourceRequest
+     * @return UpdateAgenticDataSourceResponse
+     */
+    @Override
+    public CompletableFuture<UpdateAgenticDataSourceResponse> updateAgenticDataSource(UpdateAgenticDataSourceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateAgenticDataSource").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateAgenticDataSourceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateAgenticDataSourceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates an Airflow instance in a workspace.</p>
+     * 
      * @param request the request parameters of UpdateAirflow  UpdateAirflowRequest
      * @return UpdateAirflowResponse
      */
@@ -1973,7 +2329,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Updates the content of an accuracy test item.</p>
+     * <p>Updates the accuracy test item.</p>
      * 
      * @param request the request parameters of UpdateDataAgentAccuracyTest  UpdateDataAgentAccuracyTestRequest
      * @return UpdateDataAgentAccuracyTestResponse

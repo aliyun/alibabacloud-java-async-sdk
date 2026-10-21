@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListCustomAgentRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentType")
+    private String agentType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
@@ -43,6 +47,7 @@ public class ListCustomAgentRequest extends Request {
 
     private ListCustomAgentRequest(Builder builder) {
         super(builder);
+        this.agentType = builder.agentType;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.queryAllReleased = builder.queryAllReleased;
@@ -62,6 +67,13 @@ public class ListCustomAgentRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return agentType
+     */
+    public String getAgentType() {
+        return this.agentType;
     }
 
     /**
@@ -107,6 +119,7 @@ public class ListCustomAgentRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListCustomAgentRequest, Builder> {
+        private String agentType; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private Boolean queryAllReleased; 
@@ -120,6 +133,7 @@ public class ListCustomAgentRequest extends Request {
 
         private Builder(ListCustomAgentRequest request) {
             super(request);
+            this.agentType = request.agentType;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.queryAllReleased = request.queryAllReleased;
@@ -127,6 +141,22 @@ public class ListCustomAgentRequest extends Request {
             this.status = request.status;
             this.workspaceId = request.workspaceId;
         } 
+
+        /**
+         * <p>The custom agent type. Valid values:</p>
+         * <ul>
+         * <li>Default: system built-in custom agent</li>
+         * <li>Common: regular custom agent</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Common</p>
+         */
+        public Builder agentType(String agentType) {
+            this.putQueryParameter("AgentType", agentType);
+            this.agentType = agentType;
+            return this;
+        }
 
         /**
          * <p>The page number. Pages start from 1.</p>
@@ -165,10 +195,10 @@ public class ListCustomAgentRequest extends Request {
         }
 
         /**
-         * <p>The search keyword. Fuzzy search is supported for custom agent names and descriptions.</p>
+         * <p>The search keyword. Supports fuzzy search for custom agent names and descriptions.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test Agent</p>
+         * <p>Test agent</p>
          */
         public Builder searchKey(String searchKey) {
             this.putQueryParameter("SearchKey", searchKey);
@@ -177,7 +207,7 @@ public class ListCustomAgentRequest extends Request {
         }
 
         /**
-         * <p>The status of the custom agent.</p>
+         * <p>The custom agent status.</p>
          * 
          * <strong>example:</strong>
          * <p>RELEASED</p>

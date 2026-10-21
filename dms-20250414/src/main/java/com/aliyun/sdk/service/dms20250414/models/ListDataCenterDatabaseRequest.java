@@ -141,7 +141,7 @@ public class ListDataCenterDatabaseRequest extends Request {
         }
 
         /**
-         * <p>The current Data Management unit.</p>
+         * <p>The current DMS unit.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -153,7 +153,7 @@ public class ListDataCenterDatabaseRequest extends Request {
         }
 
         /**
-         * <p>The import type.</p>
+         * <p>The import type. Valid values:</p>
          * <ul>
          * <li>FILE</li>
          * </ul>
@@ -180,7 +180,7 @@ public class ListDataCenterDatabaseRequest extends Request {
         }
 
         /**
-         * <p>The keyword for fuzzy match of databases.</p>
+         * <p>The keyword used for fuzzy search of databases.</p>
          * 
          * <strong>example:</strong>
          * <p>testdb</p>
@@ -192,7 +192,10 @@ public class ListDataCenterDatabaseRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8vrxbemhm*******v91y3fjy</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

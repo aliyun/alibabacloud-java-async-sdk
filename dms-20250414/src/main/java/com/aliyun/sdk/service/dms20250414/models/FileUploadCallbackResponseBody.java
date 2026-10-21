@@ -125,7 +125,7 @@ public class FileUploadCallbackResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned if the call failed.</p>
+         * <p>The error message returned if the call fails.</p>
          * 
          * <strong>example:</strong>
          * <p>Specified parameter Tid is not valid.</p>
@@ -147,9 +147,9 @@ public class FileUploadCallbackResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The request was successful.                                 </li>
+         * <li><strong>true</strong>: The request is successful.                                 </li>
          * <li><strong>false</strong>: The request failed.</li>
          * </ul>
          * 
@@ -207,7 +207,7 @@ public class FileUploadCallbackResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The file ID.</p>
+             * <p>The ID of the file.</p>
              * 
              * <strong>example:</strong>
              * <p>f-8*******01m</p>

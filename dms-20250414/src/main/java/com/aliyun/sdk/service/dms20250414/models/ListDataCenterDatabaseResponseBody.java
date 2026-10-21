@@ -114,7 +114,7 @@ public class ListDataCenterDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned if the request failed.</p>
+         * <p>The error code returned when an exception occurs in the request.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -147,10 +147,10 @@ public class ListDataCenterDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The request was successful.                                 </li>
-         * <li><strong>false</strong>: The request failed.</li>
+         * <li><strong>true</strong>: The request is successful.</li>
+         * <li><strong>false</strong>: The request fails.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -405,7 +405,7 @@ public class ListDataCenterDatabaseResponseBody extends TeaModel {
              * <p>The database description.</p>
              * 
              * <strong>example:</strong>
-             * <p>This is a sample database.</p>
+             * <p>This is diamonds dataset.</p>
              */
             public Builder databaseDesc(String databaseDesc) {
                 this.databaseDesc = databaseDesc;
@@ -454,7 +454,7 @@ public class ListDataCenterDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the database description was last updated.</p>
+             * <p>The update time of the database description.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-12-11T14:04:32.000+00:00</p>
@@ -465,7 +465,7 @@ public class ListDataCenterDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Data Management database that hosts the instance.</p>
+             * <p>The ID of the DMS database where the instance is hosted.</p>
              * <ul>
              * <li>This parameter is not returned when ImportType is FILE.</li>
              * </ul>
@@ -479,7 +479,7 @@ public class ListDataCenterDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Data Management instance that hosts the instance.</p>
+             * <p>The ID of the DMS instance where the instance is hosted.</p>
              * <ul>
              * <li>This parameter is not returned when ImportType is FILE.</li>
              * </ul>
@@ -493,7 +493,10 @@ public class ListDataCenterDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * DownloadLink.
+             * <p>The public network download link.</p>
+             * <ul>
+             * <li><strong>[Deprecated]</strong></li>
+             * </ul>
              */
             public Builder downloadLink(String downloadLink) {
                 this.downloadLink = downloadLink;
@@ -501,7 +504,7 @@ public class ListDataCenterDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the file was created.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-12-11T14:04:32.000+00:00</p>
@@ -512,7 +515,7 @@ public class ListDataCenterDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The import type.</p>
+             * <p>The import type. Valid values:</p>
              * <ul>
              * <li>FILE</li>
              * <li>RDS</li>
@@ -545,7 +548,10 @@ public class ListDataCenterDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetDownloadLink.
+             * <p>The internal network download link.</p>
+             * <ul>
+             * <li><strong>[Deprecated]</strong></li>
+             * </ul>
              */
             public Builder intranetDownloadLink(String intranetDownloadLink) {
                 this.intranetDownloadLink = intranetDownloadLink;
@@ -568,7 +574,10 @@ public class ListDataCenterDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * OssBucket.
+             * <p>The name of the user\&quot;s OSS bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bgc-hangzhou-test-bucket</p>
              */
             public Builder ossBucket(String ossBucket) {
                 this.ossBucket = ossBucket;
@@ -587,7 +596,10 @@ public class ListDataCenterDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * UseUserOssBucket.
+             * <p>Indicates whether the user\&quot;s OSS bucket is used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder useUserOssBucket(Boolean useUserOssBucket) {
                 this.useUserOssBucket = useUserOssBucket;

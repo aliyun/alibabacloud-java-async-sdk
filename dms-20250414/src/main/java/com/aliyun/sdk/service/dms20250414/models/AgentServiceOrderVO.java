@@ -210,7 +210,7 @@ public class AgentServiceOrderVO extends TeaModel {
         } 
 
         /**
-         * <p>The agent service.</p>
+         * AgentService.
          */
         public Builder agentService(String agentService) {
             this.agentService = agentService;
@@ -218,7 +218,7 @@ public class AgentServiceOrderVO extends TeaModel {
         }
 
         /**
-         * <p>The deep research quota.</p>
+         * DeepResearchQuota.
          */
         public Builder deepResearchQuota(Integer deepResearchQuota) {
             this.deepResearchQuota = deepResearchQuota;
@@ -226,7 +226,7 @@ public class AgentServiceOrderVO extends TeaModel {
         }
 
         /**
-         * <p>The quantity of deep research used.</p>
+         * DeepResearchUsed.
          */
         public Builder deepResearchUsed(Integer deepResearchUsed) {
             this.deepResearchUsed = deepResearchUsed;
@@ -234,7 +234,7 @@ public class AgentServiceOrderVO extends TeaModel {
         }
 
         /**
-         * <p>The service expiration time, specified in UTC.</p>
+         * ExpireTime.
          */
         public Builder expireTime(String expireTime) {
             this.expireTime = expireTime;
@@ -242,7 +242,7 @@ public class AgentServiceOrderVO extends TeaModel {
         }
 
         /**
-         * <p>The order creation time, specified in UTC.</p>
+         * GmtCreate.
          */
         public Builder gmtCreate(String gmtCreate) {
             this.gmtCreate = gmtCreate;
@@ -250,7 +250,7 @@ public class AgentServiceOrderVO extends TeaModel {
         }
 
         /**
-         * <p>The order modification time, specified in UTC.</p>
+         * GmtModified.
          */
         public Builder gmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
@@ -258,7 +258,7 @@ public class AgentServiceOrderVO extends TeaModel {
         }
 
         /**
-         * <p>The model call quota.</p>
+         * ModelCallQuota.
          */
         public Builder modelCallQuota(Integer modelCallQuota) {
             this.modelCallQuota = modelCallQuota;
@@ -266,7 +266,7 @@ public class AgentServiceOrderVO extends TeaModel {
         }
 
         /**
-         * <p>The number of model calls used.</p>
+         * ModelCallUsed.
          */
         public Builder modelCallUsed(Integer modelCallUsed) {
             this.modelCallUsed = modelCallUsed;
@@ -274,7 +274,7 @@ public class AgentServiceOrderVO extends TeaModel {
         }
 
         /**
-         * <p>The order instance ID.</p>
+         * OrderInstanceId.
          */
         public Builder orderInstanceId(String orderInstanceId) {
             this.orderInstanceId = orderInstanceId;
@@ -282,7 +282,7 @@ public class AgentServiceOrderVO extends TeaModel {
         }
 
         /**
-         * <p>The number of services.</p>
+         * ServiceNum.
          */
         public Builder serviceNum(Integer serviceNum) {
             this.serviceNum = serviceNum;
@@ -290,7 +290,7 @@ public class AgentServiceOrderVO extends TeaModel {
         }
 
         /**
-         * <p>The skill plan call quota.</p>
+         * SkillPlanCallQuota.
          */
         public Builder skillPlanCallQuota(Integer skillPlanCallQuota) {
             this.skillPlanCallQuota = skillPlanCallQuota;
@@ -298,7 +298,7 @@ public class AgentServiceOrderVO extends TeaModel {
         }
 
         /**
-         * <p>The number of skill plan calls used.</p>
+         * SkillPlanCallUsed.
          */
         public Builder skillPlanCallUsed(Integer skillPlanCallUsed) {
             this.skillPlanCallUsed = skillPlanCallUsed;
@@ -306,7 +306,7 @@ public class AgentServiceOrderVO extends TeaModel {
         }
 
         /**
-         * <p>The order status.</p>
+         * Status.
          */
         public Builder status(String status) {
             this.status = status;

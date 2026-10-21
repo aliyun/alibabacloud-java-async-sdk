@@ -132,7 +132,7 @@ public class DmsKnowledgeSearchOrderInfoDO extends TeaModel {
         } 
 
         /**
-         * <p>The UID of the Alibaba Cloud account.</p>
+         * AliyunAccountUid.
          */
         public Builder aliyunAccountUid(String aliyunAccountUid) {
             this.aliyunAccountUid = aliyunAccountUid;
@@ -140,7 +140,7 @@ public class DmsKnowledgeSearchOrderInfoDO extends TeaModel {
         }
 
         /**
-         * <p>The API key used for authentication.</p>
+         * ApiKey.
          */
         public Builder apiKey(String apiKey) {
             this.apiKey = apiKey;
@@ -148,7 +148,7 @@ public class DmsKnowledgeSearchOrderInfoDO extends TeaModel {
         }
 
         /**
-         * <p>The time when the entry was created.</p>
+         * GmtCreate.
          */
         public Builder gmtCreate(String gmtCreate) {
             this.gmtCreate = gmtCreate;
@@ -156,7 +156,7 @@ public class DmsKnowledgeSearchOrderInfoDO extends TeaModel {
         }
 
         /**
-         * <p>The time when the entry was last modified.</p>
+         * GmtModified.
          */
         public Builder gmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
@@ -164,7 +164,7 @@ public class DmsKnowledgeSearchOrderInfoDO extends TeaModel {
         }
 
         /**
-         * <p>The unique ID of the entry.</p>
+         * Id.
          */
         public Builder id(Long id) {
             this.id = id;
@@ -172,7 +172,7 @@ public class DmsKnowledgeSearchOrderInfoDO extends TeaModel {
         }
 
         /**
-         * <p>The unique ID of the order.</p>
+         * OrderId.
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -180,7 +180,7 @@ public class DmsKnowledgeSearchOrderInfoDO extends TeaModel {
         }
 
         /**
-         * <p>The endpoint URL for the web search API.</p>
+         * WebSearchApiUrl.
          */
         public Builder webSearchApiUrl(String webSearchApiUrl) {
             this.webSearchApiUrl = webSearchApiUrl;

@@ -129,7 +129,7 @@ public class GetDataAgentTaskModelUsageRequest extends Request {
         } 
 
         /**
-         * <p>The start time of the query time range. The value is a UNIX timestamp in seconds. The recommended interval length is no longer than one month.</p>
+         * <p>The start time of the query time range. The value is a UNIX timestamp in seconds. The recommended interval length is no more than one month.</p>
          * 
          * <strong>example:</strong>
          * <p>1735660800</p>
@@ -141,7 +141,7 @@ public class GetDataAgentTaskModelUsageRequest extends Request {
         }
 
         /**
-         * <p>The current Data Management unit.</p>
+         * <p>The current DMS unit.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -153,7 +153,7 @@ public class GetDataAgentTaskModelUsageRequest extends Request {
         }
 
         /**
-         * <p>The end time of the query time range. The value is a UNIX timestamp in seconds. The recommended interval length is no longer than one month.</p>
+         * <p>The end time of the query time range. The value is a UNIX timestamp in seconds. The recommended interval length is no more than one month.</p>
          * 
          * <strong>example:</strong>
          * <p>1735747200</p>
@@ -165,7 +165,7 @@ public class GetDataAgentTaskModelUsageRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * <p>The list of billing instance IDs to be queried.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             String instanceIdsShrink = shrink(instanceIds, "InstanceIds", "json");
@@ -175,7 +175,10 @@ public class GetDataAgentTaskModelUsageRequest extends Request {
         }
 
         /**
-         * PayLevel.
+         * <p>The billing level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENTERPRISE</p>
          */
         public Builder payLevel(String payLevel) {
             this.putQueryParameter("PayLevel", payLevel);

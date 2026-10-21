@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateCustomAgentRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentType")
+    private String agentType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CallbackConfig")
     private CallbackConfig callbackConfig;
 
@@ -58,6 +62,10 @@ public class CreateCustomAgentRequest extends Request {
     private String name;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RecommendQuestionList")
+    private java.util.List<String> recommendQuestionList;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RelatedSessionId")
     private String relatedSessionId;
 
@@ -87,6 +95,7 @@ public class CreateCustomAgentRequest extends Request {
 
     private CreateCustomAgentRequest(Builder builder) {
         super(builder);
+        this.agentType = builder.agentType;
         this.callbackConfig = builder.callbackConfig;
         this.DMSUnit = builder.DMSUnit;
         this.dataJson = builder.dataJson;
@@ -97,6 +106,7 @@ public class CreateCustomAgentRequest extends Request {
         this.knowledgeConfigList = builder.knowledgeConfigList;
         this.knowledgeSemanticConfigList = builder.knowledgeSemanticConfigList;
         this.name = builder.name;
+        this.recommendQuestionList = builder.recommendQuestionList;
         this.relatedSessionId = builder.relatedSessionId;
         this.scheduleTaskConfig = builder.scheduleTaskConfig;
         this.textReportConfig = builder.textReportConfig;
@@ -117,6 +127,13 @@ public class CreateCustomAgentRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return agentType
+     */
+    public String getAgentType() {
+        return this.agentType;
     }
 
     /**
@@ -190,6 +207,13 @@ public class CreateCustomAgentRequest extends Request {
     }
 
     /**
+     * @return recommendQuestionList
+     */
+    public java.util.List<String> getRecommendQuestionList() {
+        return this.recommendQuestionList;
+    }
+
+    /**
      * @return relatedSessionId
      */
     public String getRelatedSessionId() {
@@ -239,6 +263,7 @@ public class CreateCustomAgentRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateCustomAgentRequest, Builder> {
+        private String agentType; 
         private CallbackConfig callbackConfig; 
         private String DMSUnit; 
         private String dataJson; 
@@ -249,6 +274,7 @@ public class CreateCustomAgentRequest extends Request {
         private java.util.List<KnowledgeConfigList> knowledgeConfigList; 
         private java.util.List<KnowledgeSemanticConfigList> knowledgeSemanticConfigList; 
         private String name; 
+        private java.util.List<String> recommendQuestionList; 
         private String relatedSessionId; 
         private ScheduleTaskConfig scheduleTaskConfig; 
         private String textReportConfig; 
@@ -263,6 +289,7 @@ public class CreateCustomAgentRequest extends Request {
 
         private Builder(CreateCustomAgentRequest request) {
             super(request);
+            this.agentType = request.agentType;
             this.callbackConfig = request.callbackConfig;
             this.DMSUnit = request.DMSUnit;
             this.dataJson = request.dataJson;
@@ -273,6 +300,7 @@ public class CreateCustomAgentRequest extends Request {
             this.knowledgeConfigList = request.knowledgeConfigList;
             this.knowledgeSemanticConfigList = request.knowledgeSemanticConfigList;
             this.name = request.name;
+            this.recommendQuestionList = request.recommendQuestionList;
             this.relatedSessionId = request.relatedSessionId;
             this.scheduleTaskConfig = request.scheduleTaskConfig;
             this.textReportConfig = request.textReportConfig;
@@ -283,7 +311,23 @@ public class CreateCustomAgentRequest extends Request {
         } 
 
         /**
-         * CallbackConfig.
+         * <p>The type of the custom agent. Valid values:</p>
+         * <ul>
+         * <li>Default: the system-built-in custom agent. Each workspace can have at most one Default agent, and it cannot be deleted.</li>
+         * <li>Common: a regular custom agent.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Common</p>
+         */
+        public Builder agentType(String agentType) {
+            this.putQueryParameter("AgentType", agentType);
+            this.agentType = agentType;
+            return this;
+        }
+
+        /**
+         * <p>The callback feature configuration.</p>
          */
         public Builder callbackConfig(CallbackConfig callbackConfig) {
             String callbackConfigShrink = shrink(callbackConfig, "CallbackConfig", "json");
@@ -307,21 +351,21 @@ public class CreateCustomAgentRequest extends Request {
         /**
          * <p>The specified data scope, in <strong>JSON character string format</strong>.</p>
          * <ul>
-         * <li>Common parameter description<ul>
+         * <li>General parameter descriptions<ul>
          * <li>tableFlag: true specifies the data scope.</li>
          * <li>scope: personal is a fixed value.</li>
          * <li>personal: the parameters for file and database types.</li>
          * </ul>
          * </li>
          * </ul>
-         * <p><strong>File type</strong>: Pass parameters in the following format:</p>
+         * <p><strong>File type</strong>: pass parameters in the following format:</p>
          * <ul>
          * <li>DataSourceType: remote_data_center is a fixed value.</li>
-         * <li>FileId: The file ID.</li>
-         * <li>Database: The database name returned by the ListDataCenterTable operation, which is usually the file name.</li>
-         * <li>Tables: The table names returned by the ListDataCenterTable operation.</li>
-         * <li>TableIds: The table IDs returned by the ListDataCenterTable operation.</li>
-         * <li>RegionId: The current region.</li>
+         * <li>FileId: the file ID.</li>
+         * <li>Database: the database name returned by the ListDataCenterTable operation, which is usually the file name.</li>
+         * <li>Tables: the table names returned by the ListDataCenterTable operation.</li>
+         * <li>TableIds: the table IDs returned by the ListDataCenterTable operation.</li>
+         * <li>RegionId: the current region.</li>
          * </ul>
          * <pre><code>{
          *   &quot;tableFlag&quot;: true,
@@ -340,18 +384,18 @@ public class CreateCustomAgentRequest extends Request {
          *   }
          * }
          * </code></pre>
-         * <p><strong>Database type</strong>: Pass parameters as follows:</p>
+         * <p><strong>Database type</strong>: pass parameters in the following format:</p>
          * <ul>
          * <li>DataSourceType: database is a fixed value.</li>
-         * <li>DmsInstanceId: The DMS instance ID returned by the Data Center API.</li>
-         * <li>DmsDatabaseId: The DMS database ID returned by the Data Center API.</li>
-         * <li>FileId: The instance name. <strong>[Deprecated]</strong></li>
-         * <li>DbName: The database name returned by the Data Center API.</li>
-         * <li>Database: The database name returned by the Data Center API.</li>
-         * <li>Tables: The table names returned by the Data Center API.</li>
-         * <li>TableIds: The table IDs returned by the Data Center API.</li>
-         * <li>Engine: The engine type, such as mysql or postgresql.</li>
-         * <li>RegionId: The current region.</li>
+         * <li>DmsInstanceId: the DMS instance ID returned by the data center API.</li>
+         * <li>DmsDatabaseId: the DMS database ID returned by the data center API.</li>
+         * <li>FileId: the instance name (<strong>[Deprecated]</strong>).</li>
+         * <li>DbName: the database name returned by the data center API.</li>
+         * <li>Database: the database name returned by the data center API.</li>
+         * <li>Tables: the table names returned by the data center API.</li>
+         * <li>TableIds: the table IDs returned by the data center API.</li>
+         * <li>Engine: the database engine type, such as mysql or postgresql.</li>
+         * <li>RegionId: the current region.</li>
          * </ul>
          * <pre><code>{
          *   &quot;tableFlag&quot;: true,
@@ -382,7 +426,7 @@ public class CreateCustomAgentRequest extends Request {
          *   &quot;personal&quot; : {
          *     &quot;DataSourceType&quot; : &quot;remote_data_center&quot;,
          *     &quot;FileId&quot; : &quot;f-5qlrwaw10<strong><strong><strong><strong>s3gpw1z&quot;,
-         *     &quot;Database&quot; : &quot;TestTable</strong></strong></strong>.xlsx&quot;,
+         *     &quot;Database&quot; : &quot;Test table</strong></strong></strong>.xlsx&quot;,
          *     &quot;Tables&quot; : [ &quot;Sheet1&quot; ],
          *     &quot;TableIds&quot; : [ &quot;</strong>****&quot; ],
          *     &quot;RegionId&quot; : &quot;cn-hangzhou&quot;
@@ -420,16 +464,16 @@ public class CreateCustomAgentRequest extends Request {
         /**
          * <p>The instructions.</p>
          * <ul>
-         * <li>Input limit: A maximum of 10,000 characters.</li>
+         * <li>Input limit: up to 10,000 characters.</li>
          * </ul>
          * 
          * <strong>example:</strong>
          * <p>Core metric definitions:</p>
          * <ol>
          * <li>GMV (Gross Merchandise Volume) refers to the total order amount, including both paid and unpaid orders.</li>
-         * <li>Order volume refers to the number of valid orders placed per day.</li>
-         * <li>UV (Unique Visitors) refers to the number of deduplicated users who visit the website or app.</li>
-         * <li>Conversion rate = Number of paid orders / UV, which reflects the traffic conversion efficiency</li>
+         * <li>Order volume refers to the number of valid daily orders.</li>
+         * <li>UV (Unique Visitors) refers to the number of deduplicated users visiting the website or app.</li>
+         * <li>Conversion rate = Paid orders / UV, reflecting the traffic conversion efficiency</li>
          * </ol>
          */
         public Builder instruction(String instruction) {
@@ -441,16 +485,16 @@ public class CreateCustomAgentRequest extends Request {
         /**
          * <p>The knowledge.</p>
          * <ul>
-         * <li>Input limit: A maximum of 10,000 characters.</li>
+         * <li>Input limit: up to 10,000 characters.</li>
          * </ul>
          * 
          * <strong>example:</strong>
          * <p>Core metric definitions:</p>
          * <ol>
          * <li>GMV (Gross Merchandise Volume) refers to the total order amount, including both paid and unpaid orders.</li>
-         * <li>Order volume refers to the number of valid orders placed per day.</li>
-         * <li>UV (Unique Visitors) refers to the number of deduplicated users who visit the website or app.</li>
-         * <li>Conversion rate = Number of paid orders / UV, which reflects the traffic conversion efficiency</li>
+         * <li>Order volume refers to the number of valid daily orders.</li>
+         * <li>UV (Unique Visitors) refers to the number of deduplicated users visiting the website or app.</li>
+         * <li>Conversion rate = Paid orders / UV, reflecting the traffic conversion efficiency</li>
          * </ol>
          */
         public Builder knowledge(String knowledge) {
@@ -470,7 +514,7 @@ public class CreateCustomAgentRequest extends Request {
         }
 
         /**
-         * KnowledgeSemanticConfigList.
+         * <p>The knowledge semantic configuration list.</p>
          */
         public Builder knowledgeSemanticConfigList(java.util.List<KnowledgeSemanticConfigList> knowledgeSemanticConfigList) {
             String knowledgeSemanticConfigListShrink = shrink(knowledgeSemanticConfigList, "KnowledgeSemanticConfigList", "json");
@@ -488,6 +532,19 @@ public class CreateCustomAgentRequest extends Request {
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
             this.name = name;
+            return this;
+        }
+
+        /**
+         * <p>The list of recommended questions.</p>
+         * <ul>
+         * <li>You can configure up to 10 recommended questions.</li>
+         * </ul>
+         */
+        public Builder recommendQuestionList(java.util.List<String> recommendQuestionList) {
+            String recommendQuestionListShrink = shrink(recommendQuestionList, "RecommendQuestionList", "json");
+            this.putQueryParameter("RecommendQuestionList", recommendQuestionListShrink);
+            this.recommendQuestionList = recommendQuestionList;
             return this;
         }
 
@@ -517,7 +574,7 @@ public class CreateCustomAgentRequest extends Request {
          * <p>The text report format.</p>
          * 
          * <strong>example:</strong>
-         * <p>All numbers in the text report must be written in Chinese characters instead of Arabic numerals</p>
+         * <p>The text report requires that all numbers be written as Chinese numerals instead of Arabic numerals</p>
          */
         public Builder textReportConfig(String textReportConfig) {
             this.putQueryParameter("TextReportConfig", textReportConfig);
@@ -539,7 +596,7 @@ public class CreateCustomAgentRequest extends Request {
          * <p>The web report format.</p>
          * 
          * <strong>example:</strong>
-         * <p>All numbers in the web report must be written in Chinese characters instead of Arabic numerals</p>
+         * <p>The web report requires that all numbers be written as Chinese numerals instead of Arabic numerals</p>
          */
         public Builder webReportConfig(String webReportConfig) {
             this.putQueryParameter("WebReportConfig", webReportConfig);
@@ -670,7 +727,10 @@ public class CreateCustomAgentRequest extends Request {
             } 
 
             /**
-             * CallbackArgs.
+             * <p>The parameters to invoke the callback tool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;ID&quot;:&quot;test&quot;}</p>
              */
             public Builder callbackArgs(String callbackArgs) {
                 this.callbackArgs = callbackArgs;
@@ -678,7 +738,10 @@ public class CreateCustomAgentRequest extends Request {
             }
 
             /**
-             * CallbackPrompt.
+             * <p>The prompt for generating the parameters to invoke the callback tool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>send web report to <a href="mailto:123456@163.com">123456@163.com</a></p>
              */
             public Builder callbackPrompt(String callbackPrompt) {
                 this.callbackPrompt = callbackPrompt;
@@ -686,7 +749,10 @@ public class CreateCustomAgentRequest extends Request {
             }
 
             /**
-             * CallbackTime.
+             * <p>The timing to invoke the callback tool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder callbackTime(Integer callbackTime) {
                 this.callbackTime = callbackTime;
@@ -694,7 +760,10 @@ public class CreateCustomAgentRequest extends Request {
             }
 
             /**
-             * ToolId.
+             * <p>The callback tool identifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Mcp serverId (6te...g7a)</p>
              */
             public Builder toolId(String toolId) {
                 this.toolId = toolId;
@@ -702,7 +771,10 @@ public class CreateCustomAgentRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The callback tool type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Mcp</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -808,7 +880,7 @@ public class CreateCustomAgentRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to prohibit appending data sources during a session.</p>
+             * <p>Specifies whether to prohibit appending data sources in a session.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -819,7 +891,7 @@ public class CreateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to disable user inquiries during the process.</p>
+             * <p>Specifies whether to prohibit user inquiries during the process.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -852,7 +924,7 @@ public class CreateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to skip the web report generation confirmation.</p>
+             * <p>Specifies whether to skip the confirmation for generating a web report.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -937,8 +1009,8 @@ public class CreateCustomAgentRequest extends Request {
             /**
              * <p>The access type. If you do not specify this parameter, the default value is mcp. Valid values:</p>
              * <ul>
-             * <li>mcp: Access through MCP. The McpServerId parameter is required.</li>
-             * <li>dms_kb: Access through a DMS knowledge base. The KbUuid parameter is required.</li>
+             * <li>mcp: access through MCP. You must pass the McpServerId parameter.</li>
+             * <li>dms_kb: access through DMS knowledge base. You must pass the KbUuid parameter.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -961,7 +1033,7 @@ public class CreateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The ID of the MCP server.</p>
+             * <p>The MCP server ID.</p>
              * 
              * <strong>example:</strong>
              * <p>nhdpt9adf6ac**********ca</p>
@@ -1057,7 +1129,10 @@ public class CreateCustomAgentRequest extends Request {
             } 
 
             /**
-             * DbId.
+             * <p>The DMS database ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>81512473</p>
              */
             public Builder dbId(String dbId) {
                 this.dbId = dbId;
@@ -1065,7 +1140,10 @@ public class CreateCustomAgentRequest extends Request {
             }
 
             /**
-             * InstanceId.
+             * <p>The DMS instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1532071</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1073,7 +1151,10 @@ public class CreateCustomAgentRequest extends Request {
             }
 
             /**
-             * KnowledgeUuid.
+             * <p>The knowledge UUID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7ca8f50d782*******02e87</p>
              */
             public Builder knowledgeUuid(String knowledgeUuid) {
                 this.knowledgeUuid = knowledgeUuid;
@@ -1081,7 +1162,14 @@ public class CreateCustomAgentRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The knowledge semantic type. Valid values:</p>
+             * <ul>
+             * <li>sql_template: SQL template.</li>
+             * <li>ossie_model: Ossie semantic view.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>sql_template</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1161,7 +1249,7 @@ public class CreateCustomAgentRequest extends Request {
             } 
 
             /**
-             * <p>The cron expression for periodic scheduling.</p>
+             * <p>The cron expression for time-based scheduling.</p>
              * 
              * <strong>example:</strong>
              * <p>0 0 0 ? * 1-7</p>
@@ -1172,7 +1260,7 @@ public class CreateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The query for the periodic task.</p>
+             * <p>The query for the scheduled task.</p>
              * 
              * <strong>example:</strong>
              * <p>Analyze this data and provide a brief report</p>
