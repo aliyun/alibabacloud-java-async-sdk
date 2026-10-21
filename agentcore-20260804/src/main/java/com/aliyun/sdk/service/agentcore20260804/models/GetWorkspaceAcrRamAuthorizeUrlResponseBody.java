@@ -18,21 +18,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetWorkspaceAcrRamAuthorizeUrlResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("code")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("data")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Data data;
 
     @com.aliyun.core.annotation.NameInMap("httpStatusCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer httpStatusCode;
 
     @com.aliyun.core.annotation.NameInMap("message")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String message;
 
     @com.aliyun.core.annotation.NameInMap("requestId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("success")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean success;
 
     private GetWorkspaceAcrRamAuthorizeUrlResponseBody(Builder builder) {
@@ -120,6 +126,7 @@ public class GetWorkspaceAcrRamAuthorizeUrlResponseBody extends TeaModel {
 
         /**
          * <p>The business status code.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -131,6 +138,7 @@ public class GetWorkspaceAcrRamAuthorizeUrlResponseBody extends TeaModel {
 
         /**
          * <p>The response data.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -139,6 +147,7 @@ public class GetWorkspaceAcrRamAuthorizeUrlResponseBody extends TeaModel {
 
         /**
          * <p>The HTTP status code.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -150,6 +159,7 @@ public class GetWorkspaceAcrRamAuthorizeUrlResponseBody extends TeaModel {
 
         /**
          * <p>The response message.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -161,6 +171,7 @@ public class GetWorkspaceAcrRamAuthorizeUrlResponseBody extends TeaModel {
 
         /**
          * <p>The request ID.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>12345678-1234-1234-1234-123456789012</p>
@@ -172,6 +183,7 @@ public class GetWorkspaceAcrRamAuthorizeUrlResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether the request is successful.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -195,18 +207,23 @@ public class GetWorkspaceAcrRamAuthorizeUrlResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("acrInstanceId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String acrInstanceId;
 
         @com.aliyun.core.annotation.NameInMap("authorizeUrl")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String authorizeUrl;
 
         @com.aliyun.core.annotation.NameInMap("roleName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String roleName;
 
         @com.aliyun.core.annotation.NameInMap("roleSource")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String roleSource;
 
         @com.aliyun.core.annotation.NameInMap("workspaceId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String workspaceId;
 
         private Data(Builder builder) {
@@ -280,6 +297,7 @@ public class GetWorkspaceAcrRamAuthorizeUrlResponseBody extends TeaModel {
 
             /**
              * <p>The ID of the ACR Enterprise instance.</p>
+             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>cri-1234567890abcdef</p>
@@ -291,6 +309,7 @@ public class GetWorkspaceAcrRamAuthorizeUrlResponseBody extends TeaModel {
 
             /**
              * <p>The RAM authorization URL used to create or append target ACR permissions for the shared role.</p>
+             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://ram.console.aliyun.com/authorize?request=%7B%22referrer%22%3A%22AgentCore%22%2C%22payloads%22%3A%5B%7B%22missionId%22%3A%22AgentCore.CustomRoleForOSSObjectRestore%22%2C%22roleName%22%3A%22AliyunAgentCoreWorkspace-ws-1234567890abcdef12345%22%2C%22rolePolicies%22%3A%5B%7B%22policyName%22%3A%22AgentCoreAcrPull-63373f3802583663d49465d8061e410a899d8f2936b8fc0cb9ec905b71f273c6%22%2C%22policyType%22%3A%22Custom%22%2C%22templateId%22%3A%22CrPullInstanceImage%22%2C%22templateValue%22%3A%7B%22crInstance%22%3A%22acs%3Acr%3Acn-hangzhou%3A1234567890123456%3Ainstance%2Fcri-1234567890abcdef%22%2C%22crRepository%22%3A%22acs%3Acr%3Acn-hangzhou%3A1234567890123456%3Arepository%2Fcri-1234567890abcdef%2Fexample%2Fagent-image%22%7D%7D%5D%7D%5D%7D">https://ram.console.aliyun.com/authorize?request=%7B%22referrer%22%3A%22AgentCore%22%2C%22payloads%22%3A%5B%7B%22missionId%22%3A%22AgentCore.CustomRoleForOSSObjectRestore%22%2C%22roleName%22%3A%22AliyunAgentCoreWorkspace-ws-1234567890abcdef12345%22%2C%22rolePolicies%22%3A%5B%7B%22policyName%22%3A%22AgentCoreAcrPull-63373f3802583663d49465d8061e410a899d8f2936b8fc0cb9ec905b71f273c6%22%2C%22policyType%22%3A%22Custom%22%2C%22templateId%22%3A%22CrPullInstanceImage%22%2C%22templateValue%22%3A%7B%22crInstance%22%3A%22acs%3Acr%3Acn-hangzhou%3A1234567890123456%3Ainstance%2Fcri-1234567890abcdef%22%2C%22crRepository%22%3A%22acs%3Acr%3Acn-hangzhou%3A1234567890123456%3Arepository%2Fcri-1234567890abcdef%2Fexample%2Fagent-image%22%7D%7D%5D%7D%5D%7D</a></p>
@@ -301,7 +320,8 @@ public class GetWorkspaceAcrRamAuthorizeUrlResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The shared role name selected by the backend. This field is not editable on the frontend.</p>
+             * <p>The name of the shared role selected by the backend. This field is not editable on the frontend.</p>
+             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>AliyunAgentCoreWorkspace-ws-1234567890abcdef12345</p>
@@ -313,6 +333,7 @@ public class GetWorkspaceAcrRamAuthorizeUrlResponseBody extends TeaModel {
 
             /**
              * <p>The source of the shared role. This does not indicate that authorization is complete.</p>
+             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>WORKSPACE_SHARED</p>
@@ -324,6 +345,7 @@ public class GetWorkspaceAcrRamAuthorizeUrlResponseBody extends TeaModel {
 
             /**
              * <p>The workspace ID.</p>
+             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>ws-1234567890abcdef12345</p>
