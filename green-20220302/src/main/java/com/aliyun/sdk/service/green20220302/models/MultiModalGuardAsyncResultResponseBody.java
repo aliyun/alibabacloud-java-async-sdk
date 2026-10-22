@@ -231,7 +231,7 @@ public class MultiModalGuardAsyncResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The confidence score, ranging from 0 to 100, rounded to two decimal places.</p>
+             * <p>The confidence score, which ranges from 0 to 100 and is accurate to two decimal places.</p>
              * 
              * <strong>example:</strong>
              * <p>90</p>
@@ -245,7 +245,7 @@ public class MultiModalGuardAsyncResultResponseBody extends TeaModel {
              * <p>The label description.</p>
              * 
              * <strong>example:</strong>
-             * <p>drugs.</p>
+             * <p>Drugs</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -253,7 +253,7 @@ public class MultiModalGuardAsyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The extended information of the moderation result.</p>
+             * <p>The extended information of the detection result.</p>
              * 
              * <strong>example:</strong>
              * <p>{}</p>
@@ -277,7 +277,7 @@ public class MultiModalGuardAsyncResultResponseBody extends TeaModel {
             /**
              * <p>The risk level. Valid values:</p>
              * <ul>
-             * <li>high: High risk. If a custom keyword library is hit, the risk level defaults to high.</li>
+             * <li>high: High risk. If a custom dictionary is hit, the risk level defaults to high.</li>
              * <li>medium: Medium risk.</li>
              * <li>low: Low risk.</li>
              * <li>none: No risk detected.</li>
@@ -379,7 +379,7 @@ public class MultiModalGuardAsyncResultResponseBody extends TeaModel {
             /**
              * <p>The risk level. Valid values:</p>
              * <ul>
-             * <li>high: High risk. If a custom keyword library is hit, the risk level defaults to high.</li>
+             * <li>high: High risk. If a custom dictionary is hit, the risk level defaults to high.</li>
              * <li>medium: Medium risk.</li>
              * <li>low: Low risk.</li>
              * <li>none: No risk detected.</li>
@@ -394,7 +394,7 @@ public class MultiModalGuardAsyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of moderation results.</p>
+             * <p>The list of detection results.</p>
              */
             public Builder result(java.util.List<Result> result) {
                 this.result = result;
@@ -402,11 +402,11 @@ public class MultiModalGuardAsyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The recommended action. Valid values:</p>
+             * <p>The moderation suggestion. Valid values:</p>
              * <ul>
              * <li>block: Block the content.</li>
              * <li>pass: Allow the content.</li>
-             * <li>watch: Manually review the content.</li>
+             * <li>watch: Review the content.</li>
              * <li>mask: Mask the content.</li>
              * </ul>
              * 
@@ -419,13 +419,13 @@ public class MultiModalGuardAsyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The moderation type. Valid values:</p>
+             * <p>The detection type. Valid values:</p>
              * <ul>
-             * <li>contentModeration: content compliance moderation</li>
-             * <li>promptAttack: prompt attack detection</li>
-             * <li>sensitiveData: sensitive content detection</li>
-             * <li>modelHallucination: model hallucination detection</li>
-             * <li>maliciousFile: malicious file detection</li>
+             * <li>contentModeration: Content compliance detection.</li>
+             * <li>promptAttack: Prompt attack detection.</li>
+             * <li>sensitiveData: Sensitive content detection.</li>
+             * <li>modelHallucination: Model hallucination detection.</li>
+             * <li>maliciousFile: Malicious file detection.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -548,7 +548,7 @@ public class MultiModalGuardAsyncResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The moderation details.</p>
+             * <p>The detection details.</p>
              */
             public Builder detail(java.util.List<Detail> detail) {
                 this.detail = detail;
@@ -578,11 +578,11 @@ public class MultiModalGuardAsyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The recommended action. Valid values:</p>
+             * <p>The moderation suggestion. Valid values:</p>
              * <ul>
              * <li>block: Block the content.</li>
              * <li>pass: Allow the content.</li>
-             * <li>watch: Manually review the content.</li>
+             * <li>watch: Review the content.</li>
              * <li>mask: Mask the content.</li>
              * </ul>
              * 
@@ -598,7 +598,7 @@ public class MultiModalGuardAsyncResultResponseBody extends TeaModel {
              * <p>The transcribed text of the audio segment.</p>
              * 
              * <strong>example:</strong>
-             * <p>The weather is really nice today.</p>
+             * <p>The weather is really nice today</p>
              */
             public Builder text(String text) {
                 this.text = text;
@@ -708,7 +708,7 @@ public class MultiModalGuardAsyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The recommended action.</p>
+             * <p>The suggestion.</p>
              * 
              * <strong>example:</strong>
              * <p>pass</p>
@@ -817,7 +817,7 @@ public class MultiModalGuardAsyncResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The confidence score, ranging from 0 to 100, rounded to two decimal places.</p>
+             * <p>The confidence score, which ranges from 0 to 100 and is accurate to two decimal places.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>
@@ -831,7 +831,7 @@ public class MultiModalGuardAsyncResultResponseBody extends TeaModel {
              * <p>The label description.</p>
              * 
              * <strong>example:</strong>
-             * <p>advertisement.</p>
+             * <p>Advertisement</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -839,7 +839,7 @@ public class MultiModalGuardAsyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The extended information of the moderation result.</p>
+             * <p>The extended information of the detection result.</p>
              * 
              * <strong>example:</strong>
              * <p>{}</p>
@@ -863,7 +863,7 @@ public class MultiModalGuardAsyncResultResponseBody extends TeaModel {
             /**
              * <p>The risk level. Valid values:</p>
              * <ul>
-             * <li>high: High risk. If a custom keyword library is hit, the risk level defaults to high.</li>
+             * <li>high: High risk. If a custom dictionary is hit, the risk level defaults to high.</li>
              * <li>medium: Medium risk.</li>
              * <li>low: Low risk.</li>
              * <li>none: No risk detected.</li>
@@ -965,7 +965,7 @@ public class MultiModalGuardAsyncResultResponseBody extends TeaModel {
             /**
              * <p>The risk level. Valid values:</p>
              * <ul>
-             * <li>high: High risk. If a custom keyword library is hit, the risk level defaults to high.</li>
+             * <li>high: High risk. If a custom dictionary is hit, the risk level defaults to high.</li>
              * <li>medium: Medium risk.</li>
              * <li>low: Low risk.</li>
              * <li>none: No risk detected.</li>
@@ -980,7 +980,7 @@ public class MultiModalGuardAsyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The moderation result.</p>
+             * <p>The detection result.</p>
              */
             public Builder result(java.util.List<DetailResult> result) {
                 this.result = result;
@@ -988,11 +988,11 @@ public class MultiModalGuardAsyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The recommended action. Valid values:</p>
+             * <p>The moderation suggestion. Valid values:</p>
              * <ul>
              * <li>block: Block the content.</li>
              * <li>pass: Allow the content.</li>
-             * <li>watch: Manually review the content.</li>
+             * <li>watch: Review the content.</li>
              * <li>mask: Mask the content.</li>
              * </ul>
              * 
@@ -1005,13 +1005,13 @@ public class MultiModalGuardAsyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The moderation type. Valid values:</p>
+             * <p>The detection type. Valid values:</p>
              * <ul>
-             * <li>contentModeration: content compliance moderation</li>
-             * <li>promptAttack: prompt attack detection</li>
-             * <li>sensitiveData: sensitive content detection</li>
-             * <li>modelHallucination: model hallucination detection</li>
-             * <li>maliciousFile: malicious file detection</li>
+             * <li>contentModeration: Content compliance detection.</li>
+             * <li>promptAttack: Prompt attack detection.</li>
+             * <li>sensitiveData: Sensitive content detection.</li>
+             * <li>modelHallucination: Model hallucination detection.</li>
+             * <li>maliciousFile: Malicious file detection.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1147,7 +1147,7 @@ public class MultiModalGuardAsyncResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of moderation results.</p>
+             * <p>The list of detection results.</p>
              */
             public Builder detail(java.util.List<FramesDetail> detail) {
                 this.detail = detail;
@@ -1177,7 +1177,7 @@ public class MultiModalGuardAsyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The frame capture position.</p>
+             * <p>The offset of the captured frame.</p>
              * 
              * <strong>example:</strong>
              * <p>1.5</p>
@@ -1188,11 +1188,11 @@ public class MultiModalGuardAsyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The recommended action. Valid values:</p>
+             * <p>The moderation suggestion. Valid values:</p>
              * <ul>
              * <li>block: Block the content.</li>
              * <li>pass: Allow the content.</li>
-             * <li>watch: Manually review the content.</li>
+             * <li>watch: Review the content.</li>
              * <li>mask: Mask the content.</li>
              * </ul>
              * 
@@ -1299,7 +1299,7 @@ public class MultiModalGuardAsyncResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The frame moderation results.</p>
+             * <p>The frame detection results.</p>
              */
             public Builder frames(java.util.List<Frames> frames) {
                 this.frames = frames;
@@ -1318,11 +1318,11 @@ public class MultiModalGuardAsyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The recommended action. Valid values:</p>
+             * <p>The moderation suggestion. Valid values:</p>
              * <ul>
              * <li>block: Block the content.</li>
              * <li>pass: Allow the content.</li>
-             * <li>watch: Manually review the content.</li>
+             * <li>watch: Review the content.</li>
              * <li>mask: Mask the content.</li>
              * </ul>
              * 
@@ -1347,6 +1347,207 @@ public class MultiModalGuardAsyncResultResponseBody extends TeaModel {
      *
      * <p>MultiModalGuardAsyncResultResponseBody</p>
      */
+    public static class RedactResult extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ProcessType")
+        private String processType;
+
+        @com.aliyun.core.annotation.NameInMap("ResultOssBucketName")
+        private String resultOssBucketName;
+
+        @com.aliyun.core.annotation.NameInMap("ResultOssObjectName")
+        private String resultOssObjectName;
+
+        @com.aliyun.core.annotation.NameInMap("ResultOssRegionId")
+        private String resultOssRegionId;
+
+        @com.aliyun.core.annotation.NameInMap("ResultUrl")
+        private String resultUrl;
+
+        @com.aliyun.core.annotation.NameInMap("SourceUrl")
+        private String sourceUrl;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
+        private RedactResult(Builder builder) {
+            this.processType = builder.processType;
+            this.resultOssBucketName = builder.resultOssBucketName;
+            this.resultOssObjectName = builder.resultOssObjectName;
+            this.resultOssRegionId = builder.resultOssRegionId;
+            this.resultUrl = builder.resultUrl;
+            this.sourceUrl = builder.sourceUrl;
+            this.status = builder.status;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RedactResult create() {
+            return builder().build();
+        }
+
+        /**
+         * @return processType
+         */
+        public String getProcessType() {
+            return this.processType;
+        }
+
+        /**
+         * @return resultOssBucketName
+         */
+        public String getResultOssBucketName() {
+            return this.resultOssBucketName;
+        }
+
+        /**
+         * @return resultOssObjectName
+         */
+        public String getResultOssObjectName() {
+            return this.resultOssObjectName;
+        }
+
+        /**
+         * @return resultOssRegionId
+         */
+        public String getResultOssRegionId() {
+            return this.resultOssRegionId;
+        }
+
+        /**
+         * @return resultUrl
+         */
+        public String getResultUrl() {
+            return this.resultUrl;
+        }
+
+        /**
+         * @return sourceUrl
+         */
+        public String getSourceUrl() {
+            return this.sourceUrl;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        public static final class Builder {
+            private String processType; 
+            private String resultOssBucketName; 
+            private String resultOssObjectName; 
+            private String resultOssRegionId; 
+            private String resultUrl; 
+            private String sourceUrl; 
+            private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(RedactResult model) {
+                this.processType = model.processType;
+                this.resultOssBucketName = model.resultOssBucketName;
+                this.resultOssObjectName = model.resultOssObjectName;
+                this.resultOssRegionId = model.resultOssRegionId;
+                this.resultUrl = model.resultUrl;
+                this.sourceUrl = model.sourceUrl;
+                this.status = model.status;
+            } 
+
+            /**
+             * <p>The processing type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>faceBlur</p>
+             */
+            public Builder processType(String processType) {
+                this.processType = processType;
+                return this;
+            }
+
+            /**
+             * <p>The name of the OSS bucket that stores the masked object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_bucket</p>
+             */
+            public Builder resultOssBucketName(String resultOssBucketName) {
+                this.resultOssBucketName = resultOssBucketName;
+                return this;
+            }
+
+            /**
+             * <p>The name of the masked OSS object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>video.mp4</p>
+             */
+            public Builder resultOssObjectName(String resultOssObjectName) {
+                this.resultOssObjectName = resultOssObjectName;
+                return this;
+            }
+
+            /**
+             * <p>The region of the masked OSS object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
+             */
+            public Builder resultOssRegionId(String resultOssRegionId) {
+                this.resultOssRegionId = resultOssRegionId;
+                return this;
+            }
+
+            /**
+             * <p>The temporary URL of the masked object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://XX">https://XX</a></p>
+             */
+            public Builder resultUrl(String resultUrl) {
+                this.resultUrl = resultUrl;
+                return this;
+            }
+
+            /**
+             * <p>The original URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://XX">https://XX</a></p>
+             */
+            public Builder sourceUrl(String sourceUrl) {
+                this.sourceUrl = sourceUrl;
+                return this;
+            }
+
+            /**
+             * <p>The status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            public RedactResult build() {
+                return new RedactResult(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link MultiModalGuardAsyncResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>MultiModalGuardAsyncResultResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AudioResult")
         private AudioResult audioResult;
@@ -1360,6 +1561,9 @@ public class MultiModalGuardAsyncResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LiveId")
         private String liveId;
 
+        @com.aliyun.core.annotation.NameInMap("RedactResult")
+        private RedactResult redactResult;
+
         @com.aliyun.core.annotation.NameInMap("Suggestion")
         private String suggestion;
 
@@ -1371,6 +1575,7 @@ public class MultiModalGuardAsyncResultResponseBody extends TeaModel {
             this.dataId = builder.dataId;
             this.frameResult = builder.frameResult;
             this.liveId = builder.liveId;
+            this.redactResult = builder.redactResult;
             this.suggestion = builder.suggestion;
             this.taskId = builder.taskId;
         }
@@ -1412,6 +1617,13 @@ public class MultiModalGuardAsyncResultResponseBody extends TeaModel {
         }
 
         /**
+         * @return redactResult
+         */
+        public RedactResult getRedactResult() {
+            return this.redactResult;
+        }
+
+        /**
          * @return suggestion
          */
         public String getSuggestion() {
@@ -1430,6 +1642,7 @@ public class MultiModalGuardAsyncResultResponseBody extends TeaModel {
             private String dataId; 
             private FrameResult frameResult; 
             private String liveId; 
+            private RedactResult redactResult; 
             private String suggestion; 
             private String taskId; 
 
@@ -1441,12 +1654,13 @@ public class MultiModalGuardAsyncResultResponseBody extends TeaModel {
                 this.dataId = model.dataId;
                 this.frameResult = model.frameResult;
                 this.liveId = model.liveId;
+                this.redactResult = model.redactResult;
                 this.suggestion = model.suggestion;
                 this.taskId = model.taskId;
             } 
 
             /**
-             * <p>The audio moderation segment results.</p>
+             * <p>The segmented results of audio moderation.</p>
              */
             public Builder audioResult(AudioResult audioResult) {
                 this.audioResult = audioResult;
@@ -1454,7 +1668,7 @@ public class MultiModalGuardAsyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of dataId passed in the API request. This field is not returned if dataId was not specified in the request.</p>
+             * <p>The value of dataId passed in the API request. If dataId is not passed in the request, this field is not returned.</p>
              * 
              * <strong>example:</strong>
              * <p>data1234</p>
@@ -1484,11 +1698,19 @@ public class MultiModalGuardAsyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The recommended action. Valid values:</p>
+             * <p>The data masking result.</p>
+             */
+            public Builder redactResult(RedactResult redactResult) {
+                this.redactResult = redactResult;
+                return this;
+            }
+
+            /**
+             * <p>The suggestion. Valid values:</p>
              * <ul>
              * <li>block: Block the content.</li>
              * <li>pass: Allow the content.</li>
-             * <li>watch: Manually review the content.</li>
+             * <li>watch: Review the content.</li>
              * <li>mask: Mask the content.</li>
              * </ul>
              * 

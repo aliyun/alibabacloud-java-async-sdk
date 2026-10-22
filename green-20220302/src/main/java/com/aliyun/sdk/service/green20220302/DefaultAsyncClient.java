@@ -447,7 +447,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>If the API incurs fees, add the following bold statement as the first sentence: <strong>Before using this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of XXX.</strong></p>
+     * <p>If the API operation incurs fees, add the bold text &quot;<strong>Make sure that you fully understand the billing methods and pricing of the XXX product before you call this API operation.</strong>&quot; as the first sentence. Make &quot;pricing&quot; a hyperlink to <a href="https://www.aliyun.com/price/product#/ecs/detail">https://www.aliyun.com/price/product#/ecs/detail</a>.</p>
      * 
      * @param request the request parameters of MultiModalGuardAsyncResult  MultiModalGuardAsyncResultRequest
      * @return MultiModalGuardAsyncResultResponse

@@ -73,7 +73,7 @@ public class MultiModalGuardAsyncResultRequest extends Request {
         } 
 
         /**
-         * <p>The moderation service type.</p>
+         * <p>The moderation service.</p>
          * 
          * <strong>example:</strong>
          * <p>audio_security_check</p>
@@ -85,7 +85,7 @@ public class MultiModalGuardAsyncResultRequest extends Request {
         }
 
         /**
-         * <p>The parameters required by the moderation service. The value is a JSON string.</p>
+         * <p>The set of parameters required by the moderation service. The value is a JSON string.</p>
          * 
          * <strong>example:</strong>
          * <p>{
