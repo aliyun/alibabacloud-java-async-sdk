@@ -2139,10 +2139,10 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li><code>message_type</code> defaults to <code>primary</code>. To append information or cancel a session, set it to <code>additional</code> or <code>cancel</code>.</li>
-     * <li>The <code>reply_to</code> field indicates which Agent message this message is a response to. The default value is <code>0</code>.</li>
+     * <li><code>message_type</code> defaults to <code>primary</code>. When you need to append information or cancel a session, set it to <code>additional</code> or <code>cancel</code>.</li>
+     * <li>The <code>reply_to</code> field indicates which agent message this message is responding to. The default value is <code>0</code>.</li>
      * <li>When <code>message_type</code> is <code>additional</code>, the <code>question</code> field is required.</li>
-     * <li><code>quoted_message</code> can be used to quote the content of a previous user message.</li>
+     * <li><code>quoted_message</code> can be used to quote previous user messages.</li>
      * </ul>
      * 
      * @param request the request parameters of SendChatMessage  SendChatMessageRequest
