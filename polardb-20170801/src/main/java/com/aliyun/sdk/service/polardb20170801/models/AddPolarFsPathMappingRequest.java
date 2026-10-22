@@ -220,7 +220,10 @@ public class AddPolarFsPathMappingRequest extends Request {
             }
 
             /**
-             * BucketAccessKeyId.
+             * <p>The AccessKey ID of the storage bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder bucketAccessKeyId(String bucketAccessKeyId) {
                 this.bucketAccessKeyId = bucketAccessKeyId;
@@ -228,7 +231,10 @@ public class AddPolarFsPathMappingRequest extends Request {
             }
 
             /**
-             * BucketAccessKeySecret.
+             * <p>The AccessKey secret of the storage bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder bucketAccessKeySecret(String bucketAccessKeySecret) {
                 this.bucketAccessKeySecret = bucketAccessKeySecret;

@@ -138,7 +138,7 @@ public class DescribeCostRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries on the current page.</p>
+         * <p>The number of entries returned on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -566,7 +566,7 @@ public class DescribeCostRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cache creation or write cost points per million tokens.</p>
+             * <p>The cache creation cost points per million tokens.</p>
              * 
              * <strong>example:</strong>
              * <p>400</p>
@@ -588,7 +588,7 @@ public class DescribeCostRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the effective period.</p>
+             * <p>The end time of the effective period. The time is displayed in UTC in the YYYY-MM-DDTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-10-01T00:00:00Z</p>
@@ -599,7 +599,7 @@ public class DescribeCostRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the effective period.</p>
+             * <p>The start time of the effective period. The time is displayed in UTC in the YYYY-MM-DDTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-09-01T00:00:00Z</p>
@@ -709,7 +709,7 @@ public class DescribeCostRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The non-cumulative tiered pricing for input tokens. Each element includes the tier and the input cost points per million tokens.</p>
+             * <p>The non-cumulative tiered pricing for input tokens. Each element contains Tier and InputCostPointsPerMillion.</p>
              */
             public Builder inputTokenTiers(java.util.List<InputTokenTiers> inputTokenTiers) {
                 this.inputTokenTiers = inputTokenTiers;

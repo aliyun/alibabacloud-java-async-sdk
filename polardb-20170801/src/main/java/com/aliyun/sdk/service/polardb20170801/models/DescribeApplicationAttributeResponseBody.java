@@ -634,7 +634,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of DNAT mapping entries for NAT mapping.</p>
+         * <p>The NAT mapping: the list of DNAT mapping entries.</p>
          */
         public Builder dnatMappings(java.util.List<DnatMappings> dnatMappings) {
             this.dnatMappings = dnatMappings;
@@ -698,8 +698,8 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         /**
          * <p>The lock mode. Valid values:</p>
          * <ul>
-         * <li>Unlock: The application is not locked.</li>
-         * <li>Lock: The application is locked.</li>
+         * <li>Unlock: unlocked.</li>
+         * <li>Lock: locked.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -754,7 +754,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the NAT gateway.</p>
+         * <p>The NAT gateway ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-xxx</p>
@@ -765,7 +765,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The SNAT IP address bound to the vSwitch where the application resides for NAT mapping. This refers to customer-managed SNAT entries that are discovered and returned in real time by the control plane, and is independent of the Internet NAT gateway SNAT.</p>
+         * <p>The NAT mapping: the SNAT IP address bound to the vSwitch where the application resides. This refers to a customer-managed SNAT entry that is discovered and returned in real time by the control plane, and is unrelated to the SNAT of the Internet NAT gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>10.64.0.20</p>
@@ -852,7 +852,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The serverless type. Valid values:</p>
+         * <p>The Serverless type. Valid values:</p>
          * <ul>
          * <li>2: Agile.</li>
          * <li>3: Stable.</li>
@@ -867,7 +867,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The SNAT status. Valid values: on and off.</p>
+         * <p>The SNAT status. Valid values: on, off.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -883,7 +883,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
          * <li>Creating: The application is being created.</li>
          * <li>Activated: The application is running.</li>
          * <li>Maintaining: The application is under maintenance.</li>
-         * <li>ClassChanging: The application specifications are being changed.</li>
+         * <li>ClassChanging: The application configuration is being changed.</li>
          * <li>Transing: The application is being migrated.</li>
          * <li>MinorVersionUpgrading: The minor version of the application is being upgraded.</li>
          * <li>NetCreating: The endpoint of the application is being created.</li>
@@ -905,7 +905,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The storage resources.</p>
+         * <p>The storage resource description.</p>
          */
         public Builder storages(java.util.List<Storages> storages) {
             this.storages = storages;
@@ -913,7 +913,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether an upgrade is available.</p>
+         * <p>Indicates whether an upgrade is available.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -957,7 +957,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The customer-managed VPC NAT gateway ID for NAT mapping.</p>
+         * <p>The NAT mapping: the customer-managed VPC NAT gateway ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ngw-xxx</p>
@@ -1088,7 +1088,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the security group.</p>
+             * <p>The security group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>sg-*******************</p>
@@ -1099,7 +1099,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the security group.</p>
+             * <p>The security group name.</p>
              * 
              * <strong>example:</strong>
              * <p>MyGroupName</p>
@@ -1549,7 +1549,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the specifications for the application subcomponent.</p>
+             * <p>The description of the application subcomponent specifications.</p>
              * 
              * <strong>example:</strong>
              * <p>2C4GB</p>
@@ -1560,7 +1560,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the subcomponent.</p>
+             * <p>The subcomponent ID.</p>
              * 
              * <strong>example:</strong>
              * <p>pac-*******************</p>
@@ -1593,7 +1593,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the replica group for the application subcomponent.</p>
+             * <p>The replica group name of the application subcomponent.</p>
              * 
              * <strong>example:</strong>
              * <p>default</p>
@@ -1633,7 +1633,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the component. The valid values are the same as those of the application status.</p>
+             * <p>The component status. The valid values are the same as the application status.</p>
              * 
              * <strong>example:</strong>
              * <p>Activated</p>
@@ -1785,7 +1785,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the DNAT entry.</p>
+             * <p>The DNAT entry ID.</p>
              * 
              * <strong>example:</strong>
              * <p>fwd-xxx</p>
@@ -1807,7 +1807,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the port. Valid values: webui, hermesagent, dashboard, and ssh.</p>
+             * <p>The port name. Valid values: webui, hermesagent, dashboard, and ssh.</p>
              * 
              * <strong>example:</strong>
              * <p>webui</p>
@@ -1818,7 +1818,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the entry.</p>
+             * <p>The entry status.</p>
              * 
              * <strong>example:</strong>
              * <p>Available</p>
@@ -1964,7 +1964,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Domain.
+             * <p>The domain name of the application endpoint.</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -1972,7 +1972,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the endpoint.</p>
+             * <p>The endpoint ID.</p>
              * 
              * <strong>example:</strong>
              * <p>pa-**************</p>
@@ -1994,10 +1994,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the endpoint. Valid values:</p>
+             * <p>The endpoint type. Valid values:</p>
              * <ul>
              * <li>Private: VPC address.</li>
-             * <li>Public: public network address.</li>
+             * <li>Public: Internet address.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2020,7 +2020,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the port.</p>
+             * <p>The port description.</p>
              * 
              * <strong>example:</strong>
              * <p>kong_http</p>
@@ -2116,7 +2116,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The account source. Valid values: reuse_vector and existing. This parameter is returned only when the status is ENABLED.</p>
+             * <p>The account source. Valid values: reuse_vector, existing. This parameter is returned only when the status is ENABLED.</p>
              * 
              * <strong>example:</strong>
              * <p>existing</p>
@@ -2149,7 +2149,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the session store. Valid values: DISABLED, ENABLING, ENABLED, and DISABLING.</p>
+             * <p>The session storage status. Valid values: DISABLED, ENABLING, ENABLED, DISABLING.</p>
              * 
              * <strong>example:</strong>
              * <p>ENABLED</p>
@@ -2375,7 +2375,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the database.</p>
+             * <p>The database name.</p>
              * 
              * <strong>example:</strong>
              * <p>test-database-name</p>
@@ -2386,7 +2386,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the embedder model.</p>
+             * <p>The embedder model name.</p>
              * 
              * <strong>example:</strong>
              * <p>text-embedding-v4</p>
@@ -2408,7 +2408,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the LLM model.</p>
+             * <p>The LLM model name.</p>
              * 
              * <strong>example:</strong>
              * <p>qwen3-max</p>
@@ -2419,7 +2419,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The active memory type.</p>
+             * <p>The currently active memory type.</p>
              * 
              * <strong>example:</strong>
              * <p>MULTIMODAL_TEXT</p>
@@ -2430,7 +2430,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the multimodal feature is enabled.</p>
+             * <p>Indicates whether multimodal capabilities are currently enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -2441,7 +2441,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the project, which corresponds to the schema in the database where project data is stored.</p>
+             * <p>The project name, which corresponds to the schema where project data is stored in the database.</p>
              * 
              * <strong>example:</strong>
              * <p>test-project-name</p>
@@ -2452,7 +2452,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the reranker model.</p>
+             * <p>The name of the Reranker model.</p>
              * 
              * <strong>example:</strong>
              * <p>qwen3-rerank</p>
@@ -2482,7 +2482,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The current dimensions of the VisualEmbedder.</p>
+             * <p>The current VisualEmbedder dimensions.</p>
              * 
              * <strong>example:</strong>
              * <p>2560</p>
@@ -2634,7 +2634,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The effective period of the attach. The value is a UNIX timestamp.</p>
+             * <p>The effective period of the attachment. The value is a UNIX timestamp.</p>
              * 
              * <strong>example:</strong>
              * <p>1788771141</p>
@@ -2667,7 +2667,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Langfuse application.</p>
+             * <p>The Langfuse application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>pa-xxx</p>
@@ -2678,7 +2678,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The phase of the binding.</p>
+             * <p>The binding phase.</p>
              * 
              * <strong>example:</strong>
              * <p>ACTIVE</p>
@@ -2689,7 +2689,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Langfuse project.</p>
+             * <p>The Langfuse project ID.</p>
              * 
              * <strong>example:</strong>
              * <p>project-xxx</p>
@@ -2837,7 +2837,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * AuthProviders.
+             * <p>The list of authentication providers for the application.</p>
              */
             public Builder authProviders(java.util.List<String> authProviders) {
                 this.authProviders = authProviders;
@@ -2845,7 +2845,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The identifier of the Supabase cluster.</p>
+             * <p>The Supabase cluster identifier.</p>
              * 
              * <strong>example:</strong>
              * <p>pa-**************</p>
@@ -2966,7 +2966,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the security group.</p>
+             * <p>The security group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>sg-**************</p>
@@ -2977,7 +2977,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the security group.</p>
+             * <p>The security group name.</p>
              * 
              * <strong>example:</strong>
              * <p>MyGroupName</p>

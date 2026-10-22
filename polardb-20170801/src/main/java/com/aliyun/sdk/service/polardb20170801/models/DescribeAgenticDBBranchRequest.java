@@ -133,7 +133,7 @@ public class DescribeAgenticDBBranchRequest extends Request {
         }
 
         /**
-         * <p>The AgenticDB cluster ID.</p>
+         * <p>The ID of the AgenticDB cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,7 +146,7 @@ public class DescribeAgenticDBBranchRequest extends Request {
         }
 
         /**
-         * <p>The ID of the project to which the branch belongs.</p>
+         * <p>The project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -172,7 +172,7 @@ public class DescribeAgenticDBBranchRequest extends Request {
         }
 
         /**
-         * <p>The ID of the tenant to which the branch belongs.</p>
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

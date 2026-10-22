@@ -138,7 +138,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of records on the current page.</p>
+         * <p>The number of entries on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -164,8 +164,8 @@ public class DescribeBackupsResponseBody extends TeaModel {
          * <blockquote>
          * <ul>
          * <li>Only PSL4 and PSL5 storage types are supported.</li>
-         * <li>Only clusters with the level-2 backup feature enabled are supported.</li>
-         * <li>If this parameter is not returned, the level-2 backup size is 0.</li>
+         * <li>Only clusters that have the level-2 backup feature enabled are supported.</li>
+         * <li>If this parameter is not returned, the size of level-2 backups is 0.</li>
          * </ul>
          * </blockquote>
          * 
@@ -178,7 +178,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of records.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

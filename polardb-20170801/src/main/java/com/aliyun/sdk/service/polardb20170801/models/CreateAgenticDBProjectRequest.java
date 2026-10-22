@@ -31,6 +31,10 @@ public class CreateAgenticDBProjectRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HistoryRetentionSeconds")
+    private Long historyRetentionSeconds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProjectName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String projectName;
@@ -50,6 +54,7 @@ public class CreateAgenticDBProjectRequest extends Request {
         this.DBClusterId = builder.DBClusterId;
         this.defaultBranchName = builder.defaultBranchName;
         this.description = builder.description;
+        this.historyRetentionSeconds = builder.historyRetentionSeconds;
         this.projectName = builder.projectName;
         this.regionId = builder.regionId;
         this.tenantId = builder.tenantId;
@@ -90,6 +95,13 @@ public class CreateAgenticDBProjectRequest extends Request {
     }
 
     /**
+     * @return historyRetentionSeconds
+     */
+    public Long getHistoryRetentionSeconds() {
+        return this.historyRetentionSeconds;
+    }
+
+    /**
      * @return projectName
      */
     public String getProjectName() {
@@ -114,6 +126,7 @@ public class CreateAgenticDBProjectRequest extends Request {
         private String DBClusterId; 
         private String defaultBranchName; 
         private String description; 
+        private Long historyRetentionSeconds; 
         private String projectName; 
         private String regionId; 
         private String tenantId; 
@@ -127,13 +140,14 @@ public class CreateAgenticDBProjectRequest extends Request {
             this.DBClusterId = request.DBClusterId;
             this.defaultBranchName = request.defaultBranchName;
             this.description = request.description;
+            this.historyRetentionSeconds = request.historyRetentionSeconds;
             this.projectName = request.projectName;
             this.regionId = request.regionId;
             this.tenantId = request.tenantId;
         } 
 
         /**
-         * <p>The AgenticDB cluster ID.</p>
+         * <p>The ID of the AgenticDB cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,7 +160,7 @@ public class CreateAgenticDBProjectRequest extends Request {
         }
 
         /**
-         * <p>The default branch name. Default value: main.</p>
+         * <p>The name of the default branch. Default value: main.</p>
          * 
          * <strong>example:</strong>
          * <p>main</p>
@@ -170,7 +184,19 @@ public class CreateAgenticDBProjectRequest extends Request {
         }
 
         /**
-         * <p>The project name. The name must be unique within the same tenant.</p>
+         * <p>The retention period for historical data to support creating branches at specific points in time. Default value: 604800 seconds (7 days). Valid values: 3600 to 2592000 seconds (1 hour to 30 days), inclusive. The actual range is subject to the service configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>604800</p>
+         */
+        public Builder historyRetentionSeconds(Long historyRetentionSeconds) {
+            this.putQueryParameter("HistoryRetentionSeconds", historyRetentionSeconds);
+            this.historyRetentionSeconds = historyRetentionSeconds;
+            return this;
+        }
+
+        /**
+         * <p>The name of the project. The name must be unique within the tenant.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -196,7 +222,7 @@ public class CreateAgenticDBProjectRequest extends Request {
         }
 
         /**
-         * <p>The ID of the tenant to which the project belongs.</p>
+         * <p>The ID of the tenant.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -201,7 +201,10 @@ public class DescribeAIDBClusterTasksRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -210,7 +213,10 @@ public class DescribeAIDBClusterTasksRequest extends Request {
         }
 
         /**
-         * <p>The number of items per page.</p>
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -231,7 +237,7 @@ public class DescribeAIDBClusterTasksRequest extends Request {
         }
 
         /**
-         * <p>The PolarDB instance ID.</p>
+         * <p>The instance ID of the associated PolarDB instance.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-2ze88***</p>

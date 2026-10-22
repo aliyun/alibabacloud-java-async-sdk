@@ -36,6 +36,10 @@ public class CreateAgenticDBBranchRequest extends Request {
     private String parentBranchId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParentTimestamp")
+    private String parentTimestamp;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProjectId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String projectId;
@@ -56,6 +60,7 @@ public class CreateAgenticDBBranchRequest extends Request {
         this.DBClusterId = builder.DBClusterId;
         this.description = builder.description;
         this.parentBranchId = builder.parentBranchId;
+        this.parentTimestamp = builder.parentTimestamp;
         this.projectId = builder.projectId;
         this.regionId = builder.regionId;
         this.tenantId = builder.tenantId;
@@ -103,6 +108,13 @@ public class CreateAgenticDBBranchRequest extends Request {
     }
 
     /**
+     * @return parentTimestamp
+     */
+    public String getParentTimestamp() {
+        return this.parentTimestamp;
+    }
+
+    /**
      * @return projectId
      */
     public String getProjectId() {
@@ -128,6 +140,7 @@ public class CreateAgenticDBBranchRequest extends Request {
         private String DBClusterId; 
         private String description; 
         private String parentBranchId; 
+        private String parentTimestamp; 
         private String projectId; 
         private String regionId; 
         private String tenantId; 
@@ -142,6 +155,7 @@ public class CreateAgenticDBBranchRequest extends Request {
             this.DBClusterId = request.DBClusterId;
             this.description = request.description;
             this.parentBranchId = request.parentBranchId;
+            this.parentTimestamp = request.parentTimestamp;
             this.projectId = request.projectId;
             this.regionId = request.regionId;
             this.tenantId = request.tenantId;
@@ -194,6 +208,18 @@ public class CreateAgenticDBBranchRequest extends Request {
         public Builder parentBranchId(String parentBranchId) {
             this.putQueryParameter("ParentBranchId", parentBranchId);
             this.parentBranchId = parentBranchId;
+            return this;
+        }
+
+        /**
+         * <p>基于父分支在指定时间点的数据创建分支；不传则使用最新数据。采用带时区的 RFC3339 格式，最多支持 9 位小数秒；不支持空字符串或未来时间。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-10-15T07:32:00.123456Z</p>
+         */
+        public Builder parentTimestamp(String parentTimestamp) {
+            this.putQueryParameter("ParentTimestamp", parentTimestamp);
+            this.parentTimestamp = parentTimestamp;
             return this;
         }
 

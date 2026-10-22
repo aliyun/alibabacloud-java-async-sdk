@@ -29,6 +29,9 @@ public class DescribeAgenticDBProjectResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
+    @com.aliyun.core.annotation.NameInMap("HistoryRetentionSeconds")
+    private Long historyRetentionSeconds;
+
     @com.aliyun.core.annotation.NameInMap("ProjectId")
     private String projectId;
 
@@ -49,6 +52,7 @@ public class DescribeAgenticDBProjectResponseBody extends TeaModel {
         this.defaultBranchId = builder.defaultBranchId;
         this.defaultBranchName = builder.defaultBranchName;
         this.description = builder.description;
+        this.historyRetentionSeconds = builder.historyRetentionSeconds;
         this.projectId = builder.projectId;
         this.projectName = builder.projectName;
         this.requestId = builder.requestId;
@@ -97,6 +101,13 @@ public class DescribeAgenticDBProjectResponseBody extends TeaModel {
     }
 
     /**
+     * @return historyRetentionSeconds
+     */
+    public Long getHistoryRetentionSeconds() {
+        return this.historyRetentionSeconds;
+    }
+
+    /**
      * @return projectId
      */
     public String getProjectId() {
@@ -136,6 +147,7 @@ public class DescribeAgenticDBProjectResponseBody extends TeaModel {
         private String defaultBranchId; 
         private String defaultBranchName; 
         private String description; 
+        private Long historyRetentionSeconds; 
         private String projectId; 
         private String projectName; 
         private String requestId; 
@@ -150,6 +162,7 @@ public class DescribeAgenticDBProjectResponseBody extends TeaModel {
             this.defaultBranchId = model.defaultBranchId;
             this.defaultBranchName = model.defaultBranchName;
             this.description = model.description;
+            this.historyRetentionSeconds = model.historyRetentionSeconds;
             this.projectId = model.projectId;
             this.projectName = model.projectName;
             this.requestId = model.requestId;
@@ -199,6 +212,17 @@ public class DescribeAgenticDBProjectResponseBody extends TeaModel {
          */
         public Builder description(String description) {
             this.description = description;
+            return this;
+        }
+
+        /**
+         * <p>项目最近记录的保留时长，旧项目可能为空。查询当前生效值请调用 DescribeAgenticDBProjectHistoryRetention。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>604800</p>
+         */
+        public Builder historyRetentionSeconds(Long historyRetentionSeconds) {
+            this.historyRetentionSeconds = historyRetentionSeconds;
             return this;
         }
 

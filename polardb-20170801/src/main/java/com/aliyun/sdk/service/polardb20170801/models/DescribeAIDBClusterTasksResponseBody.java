@@ -182,7 +182,7 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The DPI engine version.</p>
+         * <p>The database engine version.</p>
          * 
          * <strong>example:</strong>
          * <p>3.1</p>
@@ -201,7 +201,10 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -209,7 +212,10 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of records on the page.</p>
+         * <p>The total number of entries on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageRecordCount(String pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -217,7 +223,10 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of records per page.</p>
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -225,7 +234,7 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the PolarDB cluster.</p>
+         * <p>The ID of the associated PolarDB cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-2ze***</p>
@@ -258,7 +267,10 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of records.</p>
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalRecordCount(String totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -520,7 +532,7 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
 
             /**
              * <p>The task completion time.</p>
-             * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * <p>The time follows the ISO 8601 standard and is displayed in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
              * 
              * <strong>example:</strong>
              * <p>2020-06-09T18:00:00Z</p>
@@ -532,7 +544,7 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
 
             /**
              * <p>The creation time.</p>
-             * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * <p>The time follows the ISO 8601 standard and is displayed in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
              * 
              * <strong>example:</strong>
              * <p>2025-03-25T09:37:10Z</p>
@@ -554,7 +566,7 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The model operator instance ID.</p>
+             * <p>The instance ID of the model operator.</p>
              * 
              * <strong>example:</strong>
              * <p>pm-2ze***</p>
@@ -565,7 +577,7 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance status. This parameter may not be returned.</p>
+             * <p>The instance status. This field may not be returned.</p>
              * 
              * <strong>example:</strong>
              * <p>RUNNING</p>
@@ -609,7 +621,7 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The DPI engine version.</p>
+             * <p>The database engine version.</p>
              * 
              * <strong>example:</strong>
              * <p>3.1</p>
@@ -665,7 +677,7 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
 
             /**
              * <p>The task start time.</p>
-             * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * <p>The time follows the ISO 8601 standard and is displayed in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
              * 
              * <strong>example:</strong>
              * <p>2020-06-09T18:00:00Z</p>
@@ -698,7 +710,10 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The fine-tuning framework.</p>
+             * <p>The tuning framework.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lora</p>
              */
             public Builder tuneArch(String tuneArch) {
                 this.tuneArch = tuneArch;

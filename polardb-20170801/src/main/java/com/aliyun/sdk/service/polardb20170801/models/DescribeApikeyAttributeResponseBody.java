@@ -279,7 +279,7 @@ public class DescribeApikeyAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time.</p>
+             * <p>The creation time. The format is YYYY-MM-DDTHH:mm:ssZ (UTC time).</p>
              * 
              * <strong>example:</strong>
              * <p>2021-07-18T07:32:30Z</p>
@@ -301,7 +301,7 @@ public class DescribeApikeyAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last modification time.</p>
+             * <p>The last modification time. The format is YYYY-MM-DDTHH:mm:ssZ (UTC time).</p>
              * 
              * <strong>example:</strong>
              * <p>2026-04-10T01:48:25Z</p>
@@ -536,7 +536,7 @@ public class DescribeApikeyAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The dimension reference ID, which is the ConsumerId.</p>
+             * <p>The dimension reference ID, which is the consumer ID.</p>
              * 
              * <strong>example:</strong>
              * <p>c-xxxxxx</p>
@@ -547,7 +547,7 @@ public class DescribeApikeyAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The statistics dimension. The value is typically Consumer.</p>
+             * <p>The statistical dimension. The value is typically Consumer.</p>
              * 
              * <strong>example:</strong>
              * <p>Consumer</p>
@@ -569,7 +569,7 @@ public class DescribeApikeyAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of cache tokens for the current month.</p>
+             * <p>The number of cached tokens for the current month.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -580,7 +580,7 @@ public class DescribeApikeyAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cost points consumed for the current month.</p>
+             * <p>The number of consumed points for the current month.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -624,7 +624,7 @@ public class DescribeApikeyAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cumulative number of cache tokens.</p>
+             * <p>The total number of cached tokens.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -635,7 +635,7 @@ public class DescribeApikeyAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cumulative cost points consumed.</p>
+             * <p>The total number of consumed points.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -646,7 +646,7 @@ public class DescribeApikeyAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cumulative number of input tokens.</p>
+             * <p>The total number of input tokens.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -657,7 +657,7 @@ public class DescribeApikeyAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cumulative number of output tokens.</p>
+             * <p>The total number of output tokens.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -668,7 +668,7 @@ public class DescribeApikeyAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cumulative number of tokens.</p>
+             * <p>The total number of tokens.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -746,7 +746,7 @@ public class DescribeApikeyAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The usage statistics for the consumer.</p>
+             * <p>The usage statistics records for the consumer.</p>
              */
             public Builder usageStatistics(java.util.List<UsageStatistics> usageStatistics) {
                 this.usageStatistics = usageStatistics;

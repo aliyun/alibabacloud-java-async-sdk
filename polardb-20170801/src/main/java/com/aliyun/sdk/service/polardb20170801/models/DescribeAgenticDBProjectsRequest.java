@@ -182,7 +182,7 @@ public class DescribeAgenticDBProjectsRequest extends Request {
         }
 
         /**
-         * <p>The project ID for exact match.</p>
+         * <p>The project ID used for exact matching.</p>
          * 
          * <strong>example:</strong>
          * <p>proj-a1b2c3d4e5f6</p>
@@ -194,7 +194,7 @@ public class DescribeAgenticDBProjectsRequest extends Request {
         }
 
         /**
-         * <p>The project name for fuzzy match.</p>
+         * <p>The project name used for fuzzy matching.</p>
          * 
          * <strong>example:</strong>
          * <p>analytics</p>
@@ -219,7 +219,7 @@ public class DescribeAgenticDBProjectsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the tenant to which the project belongs.</p>
+         * <p>The tenant ID.</p>
          * 
          * <strong>example:</strong>
          * <p>t-4b83e0da66674951</p>

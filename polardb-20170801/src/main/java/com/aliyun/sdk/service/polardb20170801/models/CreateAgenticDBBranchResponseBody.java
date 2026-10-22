@@ -35,6 +35,9 @@ public class CreateAgenticDBBranchResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ParentBranchName")
     private String parentBranchName;
 
+    @com.aliyun.core.annotation.NameInMap("ParentTimestamp")
+    private String parentTimestamp;
+
     @com.aliyun.core.annotation.NameInMap("ProjectId")
     private String projectId;
 
@@ -54,6 +57,7 @@ public class CreateAgenticDBBranchResponseBody extends TeaModel {
         this.DBClusterId = builder.DBClusterId;
         this.parentBranchId = builder.parentBranchId;
         this.parentBranchName = builder.parentBranchName;
+        this.parentTimestamp = builder.parentTimestamp;
         this.projectId = builder.projectId;
         this.projectName = builder.projectName;
         this.requestId = builder.requestId;
@@ -115,6 +119,13 @@ public class CreateAgenticDBBranchResponseBody extends TeaModel {
     }
 
     /**
+     * @return parentTimestamp
+     */
+    public String getParentTimestamp() {
+        return this.parentTimestamp;
+    }
+
+    /**
      * @return projectId
      */
     public String getProjectId() {
@@ -149,6 +160,7 @@ public class CreateAgenticDBBranchResponseBody extends TeaModel {
         private String DBClusterId; 
         private String parentBranchId; 
         private String parentBranchName; 
+        private String parentTimestamp; 
         private String projectId; 
         private String projectName; 
         private String requestId; 
@@ -164,6 +176,7 @@ public class CreateAgenticDBBranchResponseBody extends TeaModel {
             this.DBClusterId = model.DBClusterId;
             this.parentBranchId = model.parentBranchId;
             this.parentBranchName = model.parentBranchName;
+            this.parentTimestamp = model.parentTimestamp;
             this.projectId = model.projectId;
             this.projectName = model.projectName;
             this.requestId = model.requestId;
@@ -233,6 +246,17 @@ public class CreateAgenticDBBranchResponseBody extends TeaModel {
          */
         public Builder parentBranchName(String parentBranchName) {
             this.parentBranchName = parentBranchName;
+            return this;
+        }
+
+        /**
+         * <p>创建分支时指定的父分支历史时间，采用 UTC RFC3339 格式。未指定历史时间或旧记录可能为空。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-10-15T07:32:00.123456Z</p>
+         */
+        public Builder parentTimestamp(String parentTimestamp) {
+            this.parentTimestamp = parentTimestamp;
             return this;
         }
 

@@ -1160,6 +1160,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
 
         /**
          * <p>The connection resource quota (AgenticDB exclusive).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder connectionResourceQuota(Long connectionResourceQuota) {
             this.connectionResourceQuota = connectionResourceQuota;
@@ -1168,6 +1171,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
 
         /**
          * <p>The number of connection resources used (AgenticDB exclusive).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder connectionResourceUsed(Long connectionResourceUsed) {
             this.connectionResourceUsed = connectionResourceUsed;

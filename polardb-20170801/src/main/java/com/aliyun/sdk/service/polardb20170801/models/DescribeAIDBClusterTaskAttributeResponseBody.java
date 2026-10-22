@@ -327,7 +327,7 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The access information of the model in the test deployment scenario.</p>
+         * <p>The access information of the model in test deployment scenarios.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;networkInterfaceId\&quot;:\&quot;eni-2zea***\&quot;,\&quot;port\&quot;:\&quot;8000\&quot;,\&quot;host\&quot;:\&quot;192.<strong>.</strong>.**\&quot;}</p>
@@ -350,6 +350,7 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
 
         /**
          * <p>The creation time.</p>
+         * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-11-12T03:45:13Z</p>
@@ -360,7 +361,7 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * CustomBucketInfo.
+         * <p>The custom OSS bucket information.</p>
          */
         public Builder customBucketInfo(CustomBucketInfo customBucketInfo) {
             this.customBucketInfo = customBucketInfo;
@@ -392,9 +393,9 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
         /**
          * <p>The training status. Valid values:</p>
          * <ul>
-         * <li><strong>ACTIVATION</strong>: Training in progress.</li>
-         * <li><strong>COMPLETED</strong>: Training succeeded.</li>
-         * <li><strong>FAILED</strong>: Training failed.</li>
+         * <li><strong>ACTIVATION</strong>: training in progress</li>
+         * <li><strong>COMPLETED</strong>: training succeeded</li>
+         * <li><strong>FAILED</strong>: training failed</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -408,9 +409,9 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
         /**
          * <p>The training status. Valid values:</p>
          * <ul>
-         * <li><strong>ACTIVATION</strong>: Training in progress.</li>
-         * <li><strong>COMPLETED</strong>: Training succeeded.</li>
-         * <li><strong>FAILED</strong>: Training failed.</li>
+         * <li><strong>ACTIVATION</strong>: training in progress</li>
+         * <li><strong>COMPLETED</strong>: training succeeded</li>
+         * <li><strong>FAILED</strong>: training failed</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -435,7 +436,7 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
         /**
          * <p>The version. Valid values:</p>
          * <ul>
-         * <li><strong>3.1</strong>: model operator tuning.</li>
+         * <li><strong>3.1</strong>: model operator tuning</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -455,7 +456,7 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The additional information, including runtime parameters.</p>
+         * <p>The extra information, including runtime parameters.</p>
          */
         public Builder extraInfo(java.util.List<java.util.Map<String, ?>> extraInfo) {
             this.extraInfo = extraInfo;
@@ -463,9 +464,9 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The type of the instance. Valid values:</p>
+         * <p>The instance type. Valid values:</p>
          * <ul>
-         * <li><strong>18</strong>.</li>
+         * <li><strong>18</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -479,8 +480,8 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
         /**
          * <p>The lock mode. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: locked.</li>
-         * <li><strong>1</strong>: unlocked.</li>
+         * <li><strong>0</strong>: locked</li>
+         * <li><strong>1</strong>: unlocked</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -492,7 +493,8 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maintenance end time.</p>
+         * <p>The end time of the maintenance window.</p>
+         * <p>The time is displayed in UTC in the HH:mmZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>12:00Z</p>
@@ -503,7 +505,8 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maintenance start time.</p>
+         * <p>The start time of the maintenance window.</p>
+         * <p>The time is displayed in UTC. Example: 8:00Z.</p>
          * 
          * <strong>example:</strong>
          * <p>8:00Z</p>
@@ -514,7 +517,7 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of model paths output in the model fine-tuning scenario.</p>
+         * <p>The list of output model paths in model fine-tuning scenarios.</p>
          */
         public Builder modelPath(String modelPath) {
             this.modelPath = modelPath;
@@ -541,7 +544,10 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * TuneArch.
+         * <p>The model fine-tuning architecture.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lora</p>
          */
         public Builder tuneArch(String tuneArch) {
             this.tuneArch = tuneArch;
@@ -616,7 +622,10 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * CustomOssBucketName.
+             * <p>The name of the custom OSS bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-bucket</p>
              */
             public Builder customOssBucketName(String customOssBucketName) {
                 this.customOssBucketName = customOssBucketName;
@@ -709,7 +718,7 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The dataset name.</p>
+             * <p>The name of the dataset.</p>
              * 
              * <strong>example:</strong>
              * <p>dataset02</p>
@@ -720,7 +729,7 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The dataset path.</p>
+             * <p>The path of the dataset.</p>
              * 
              * <strong>example:</strong>
              * <p>polardb_ai/datasets/train/grpo/dataset02/test-**.jsonl#1000</p>
@@ -731,7 +740,7 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ratio split from the training set.</p>
+             * <p>The split ratio from the training set.</p>
              * 
              * <strong>example:</strong>
              * <p>0.1</p>
@@ -744,8 +753,8 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
             /**
              * <p>The type. Valid values:</p>
              * <ul>
-             * <li><strong>train</strong>: training set.</li>
-             * <li><strong>eval</strong>: validation set.</li>
+             * <li><strong>train</strong>: training set</li>
+             * <li><strong>eval</strong>: validation set</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -894,7 +903,8 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The task completion time.</p>
+             * <p>The completion time of the task.</p>
+             * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-09-10T01:56:00Z</p>
@@ -929,8 +939,8 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
             /**
              * <p>The model source. Valid values:</p>
              * <ul>
-             * <li><strong>public</strong>: pre-trained model.</li>
-             * <li><strong>custom</strong>: custom model.</li>
+             * <li><strong>public</strong>: preset model</li>
+             * <li><strong>custom</strong>: custom model</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -953,7 +963,8 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task start time.</p>
+             * <p>The start time of the task.</p>
+             * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-09-10T01:56:00Z</p>
@@ -966,8 +977,8 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
             /**
              * <p>The task type. Valid values:</p>
              * <ul>
-             * <li><strong>sft</strong>: SFT efficient training.</li>
-             * <li><strong>grpo</strong>: GRPO reinforcement learning.</li>
+             * <li><strong>sft</strong>: SFT - efficient training</li>
+             * <li><strong>grpo</strong>: GRPO - reinforcement learning</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -982,7 +993,7 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
              * <p>The training method. Valid values:</p>
              * <ul>
              * <li><strong>lora</strong></li>
-             * <li><strong>full</strong>: full-parameter fine-tuning.</li>
+             * <li><strong>full</strong>: full-parameter training</li>
              * </ul>
              * 
              * <strong>example:</strong>

@@ -93,7 +93,7 @@ public class DescribeExtensionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The extensions that are installed in the specified database.</p>
+         * <p>The information about installed plugins in the specified database.</p>
          */
         public Builder installedExtensions(java.util.List<InstalledExtensions> installedExtensions) {
             this.installedExtensions = installedExtensions;
@@ -101,10 +101,10 @@ public class DescribeExtensionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The overview of the extension.</p>
+         * <p>The plugin overview information.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试建单，请忽略</p>
+         * <p>Test ticket creation, please ignore</p>
          */
         public Builder overview(String overview) {
             this.overview = overview;
@@ -112,7 +112,7 @@ public class DescribeExtensionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>309073D4-9C99-511C-AF84-0C67A6F52E67</p>
@@ -123,7 +123,7 @@ public class DescribeExtensionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The extensions that are not installed in the specified database.</p>
+         * <p>The information about uninstalled plugins in the specified database.</p>
          */
         public Builder uninstalledExtensions(java.util.List<UninstalledExtensions> uninstalledExtensions) {
             this.uninstalledExtensions = uninstalledExtensions;
@@ -280,7 +280,7 @@ public class DescribeExtensionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The extension type.</p>
+             * <p>The plugin category.</p>
              * 
              * <strong>example:</strong>
              * <p>geography_space, self_develop</p>
@@ -291,7 +291,7 @@ public class DescribeExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the extension.</p>
+             * <p>The plugin description.</p>
              * 
              * <strong>example:</strong>
              * <p>OK</p>
@@ -302,7 +302,7 @@ public class DescribeExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The default version of the extension.</p>
+             * <p>The default version of the plugin.</p>
              * 
              * <strong>example:</strong>
              * <p>7.7</p>
@@ -313,7 +313,7 @@ public class DescribeExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The currently installed version of the extension.</p>
+             * <p>The currently installed version of the plugin.</p>
              * 
              * <strong>example:</strong>
              * <p>7.7</p>
@@ -324,7 +324,7 @@ public class DescribeExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The extension name.</p>
+             * <p>The plugin name.</p>
              * 
              * <strong>example:</strong>
              * <p>jueming</p>
@@ -335,7 +335,7 @@ public class DescribeExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The owner of the extension.</p>
+             * <p>The owner of the plugin.</p>
              * 
              * <strong>example:</strong>
              * <p>alton</p>
@@ -346,7 +346,7 @@ public class DescribeExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The priority of the extension.</p>
+             * <p>The priority of the plugin.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -357,7 +357,7 @@ public class DescribeExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The extensions on which this extension depends.</p>
+             * <p>The plugins that this plugin depends on during installation.</p>
              * 
              * <strong>example:</strong>
              * <p>ganos_networking</p>
@@ -368,7 +368,7 @@ public class DescribeExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to restart the application. \<code>true\\</code>: The application is restarted. \<code>false\\</code>: The application is not restarted.</p>
+             * <p>Specifies whether to restart the application. Valid values: true: Restart. false: Do not restart.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -529,7 +529,7 @@ public class DescribeExtensionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The extension type.</p>
+             * <p>The plugin category.</p>
              * 
              * <strong>example:</strong>
              * <p>geography_space, self_develop</p>
@@ -540,7 +540,7 @@ public class DescribeExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The purpose of the extension.</p>
+             * <p>The purpose of the plugin.</p>
              * 
              * <strong>example:</strong>
              * <p>OK</p>
@@ -551,7 +551,7 @@ public class DescribeExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The default version of the extension.</p>
+             * <p>The default version of the plugin.</p>
              * 
              * <strong>example:</strong>
              * <p>7.7</p>
@@ -562,7 +562,7 @@ public class DescribeExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The currently installed version of the extension.</p>
+             * <p>The currently installed version of the plugin.</p>
              * 
              * <strong>example:</strong>
              * <p>7.7</p>
@@ -573,7 +573,7 @@ public class DescribeExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The extension name.</p>
+             * <p>The plugin name.</p>
              * 
              * <strong>example:</strong>
              * <p>jueming</p>
@@ -584,7 +584,7 @@ public class DescribeExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The owner of the extension.</p>
+             * <p>The owner of the plugin.</p>
              * 
              * <strong>example:</strong>
              * <p>alton</p>
@@ -595,7 +595,7 @@ public class DescribeExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The priority of the extension.</p>
+             * <p>The priority of the plugin.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -606,7 +606,7 @@ public class DescribeExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The extensions on which this extension depends.</p>
+             * <p>The plugins that this plugin depends on during installation.</p>
              * 
              * <strong>example:</strong>
              * <p>ganos_networking</p>
@@ -617,7 +617,7 @@ public class DescribeExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to restart the application. \<code>true\\</code>: The application is restarted. \<code>false\\</code>: The application is not restarted.</p>
+             * <p>Specifies whether to restart the application. Valid values: true: Restart. false: Do not restart.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>

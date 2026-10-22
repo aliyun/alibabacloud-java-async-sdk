@@ -93,7 +93,7 @@ public class DescribeAIDBClusterApiKeysResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>API Keys。</p>
+         * <p>The API keys.</p>
          */
         public Builder apiKeys(java.util.List<ApiKeys> apiKeys) {
             this.apiKeys = apiKeys;
@@ -101,7 +101,10 @@ public class DescribeAIDBClusterApiKeysResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -109,7 +112,10 @@ public class DescribeAIDBClusterApiKeysResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -237,7 +243,7 @@ public class DescribeAIDBClusterApiKeysResponseBody extends TeaModel {
 
             /**
              * <p>The creation time.</p>
-             * <p>The time is displayed in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+             * <p>The time is displayed in ISO 8601 format in UTC (YYYY-MM-DDTHH:mm:ssZ).</p>
              * 
              * <strong>example:</strong>
              * <p>2026-04-09T03:19:19Z</p>

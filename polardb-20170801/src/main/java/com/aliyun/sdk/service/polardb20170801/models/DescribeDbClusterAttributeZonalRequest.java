@@ -143,7 +143,7 @@ public class DescribeDbClusterAttributeZonalRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to obtain information about AI-related nodes.</p>
+         * <p>Specifies whether to retrieve AI-related node information.</p>
          * 
          * <strong>example:</strong>
          * <p>AI</p>

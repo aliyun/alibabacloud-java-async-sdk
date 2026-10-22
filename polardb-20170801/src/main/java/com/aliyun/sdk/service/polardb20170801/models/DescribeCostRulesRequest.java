@@ -198,7 +198,7 @@ public class DescribeCostRulesRequest extends Request {
         }
 
         /**
-         * <p>The type of the effective target. Valid values: global, consumerGroup, and consumer.</p>
+         * <p>The effective target type used to filter the results. Valid values: global, consumerGroup, and consumer.</p>
          * 
          * <strong>example:</strong>
          * <p>global</p>
@@ -210,7 +210,7 @@ public class DescribeCostRulesRequest extends Request {
         }
 
         /**
-         * <p>The value of the effective target used to filter results.</p>
+         * <p>The effective target value used to filter the results.</p>
          * 
          * <strong>example:</strong>
          * <p>user</p>
@@ -235,7 +235,7 @@ public class DescribeCostRulesRequest extends Request {
         }
 
         /**
-         * <p>The input token tier used to filter results. Rules that include this tier are returned. Valid values: 0-32K, 32K-64K, 64K-128K, 128K-256K, 256K-512K, 512K-1M, and 1M+.</p>
+         * <p>The input token tier used to filter the results. Returns rules that include this tier. Valid values: 0-32K, 32K-64K, 64K-128K, 128K-256K, 256K-512K, 512K-1M, and 1M+.</p>
          * 
          * <strong>example:</strong>
          * <p>0-32K</p>

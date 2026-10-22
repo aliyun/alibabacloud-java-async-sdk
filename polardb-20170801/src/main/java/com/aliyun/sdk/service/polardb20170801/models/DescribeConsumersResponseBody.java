@@ -119,7 +119,7 @@ public class DescribeConsumersResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of users.</p>
+         * <p>The list of consumers.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -138,7 +138,7 @@ public class DescribeConsumersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of records on the current page.</p>
+         * <p>The number of entries on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -171,7 +171,7 @@ public class DescribeConsumersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of records.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -394,7 +394,7 @@ public class DescribeConsumersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The full API key, returned only in this response.</p>
+             * <p>The complete API key. This value is returned only in the current response.</p>
              * 
              * <strong>example:</strong>
              * <p>xxxxxxxx</p>
@@ -405,7 +405,7 @@ public class DescribeConsumersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user group ID.</p>
+             * <p>The ID of the consumer group.</p>
              * 
              * <strong>example:</strong>
              * <p>cg-xxxxxx</p>
@@ -416,7 +416,7 @@ public class DescribeConsumersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user group name.</p>
+             * <p>The name of the consumer group.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -427,7 +427,7 @@ public class DescribeConsumersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user ID.</p>
+             * <p>The ID of the consumer.</p>
              * 
              * <strong>example:</strong>
              * <p>c-mqveroemc***</p>
@@ -460,7 +460,7 @@ public class DescribeConsumersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total cumulative usage.</p>
+             * <p>The cumulative usage.</p>
              * 
              * <strong>example:</strong>
              * <p>1000</p>
@@ -493,7 +493,7 @@ public class DescribeConsumersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total cumulative cost.</p>
+             * <p>The cumulative total cost.</p>
              * 
              * <strong>example:</strong>
              * <p>10000</p>
@@ -504,7 +504,7 @@ public class DescribeConsumersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The username.</p>
+             * <p>The name of the consumer.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -515,7 +515,7 @@ public class DescribeConsumersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The nickname.</p>
+             * <p>The nickname of the consumer.</p>
              * 
              * <strong>example:</strong>
              * <p>yonghu</p>

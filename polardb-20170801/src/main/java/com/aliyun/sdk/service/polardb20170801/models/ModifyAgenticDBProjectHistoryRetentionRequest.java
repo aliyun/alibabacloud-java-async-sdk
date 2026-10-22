@@ -1,0 +1,194 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.polardb20170801.models;
+
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * 
+ * {@link ModifyAgenticDBProjectHistoryRetentionRequest} extends {@link RequestModel}
+ *
+ * <p>ModifyAgenticDBProjectHistoryRetentionRequest</p>
+ */
+public class ModifyAgenticDBProjectHistoryRetentionRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String DBClusterId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HistoryRetentionSeconds")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private Long historyRetentionSeconds;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String projectId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TenantId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String tenantId;
+
+    private ModifyAgenticDBProjectHistoryRetentionRequest(Builder builder) {
+        super(builder);
+        this.DBClusterId = builder.DBClusterId;
+        this.historyRetentionSeconds = builder.historyRetentionSeconds;
+        this.projectId = builder.projectId;
+        this.regionId = builder.regionId;
+        this.tenantId = builder.tenantId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static ModifyAgenticDBProjectHistoryRetentionRequest create() {
+        return builder().build();
+    }
+
+@Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return DBClusterId
+     */
+    public String getDBClusterId() {
+        return this.DBClusterId;
+    }
+
+    /**
+     * @return historyRetentionSeconds
+     */
+    public Long getHistoryRetentionSeconds() {
+        return this.historyRetentionSeconds;
+    }
+
+    /**
+     * @return projectId
+     */
+    public String getProjectId() {
+        return this.projectId;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return tenantId
+     */
+    public String getTenantId() {
+        return this.tenantId;
+    }
+
+    public static final class Builder extends Request.Builder<ModifyAgenticDBProjectHistoryRetentionRequest, Builder> {
+        private String DBClusterId; 
+        private Long historyRetentionSeconds; 
+        private String projectId; 
+        private String regionId; 
+        private String tenantId; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(ModifyAgenticDBProjectHistoryRetentionRequest request) {
+            super(request);
+            this.DBClusterId = request.DBClusterId;
+            this.historyRetentionSeconds = request.historyRetentionSeconds;
+            this.projectId = request.projectId;
+            this.regionId = request.regionId;
+            this.tenantId = request.tenantId;
+        } 
+
+        /**
+         * <p>The AgenticDB cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pagc-bp1abcdef1234567</p>
+         */
+        public Builder DBClusterId(String DBClusterId) {
+            this.putQueryParameter("DBClusterId", DBClusterId);
+            this.DBClusterId = DBClusterId;
+            return this;
+        }
+
+        /**
+         * <p>The default valid range is 3,600 to 2,592,000 seconds (1 hour to 30 days), inclusive, subject to service configurations. Shortening the duration may clear historical data. Extending the duration does not restore cleared data.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>604800</p>
+         */
+        public Builder historyRetentionSeconds(Long historyRetentionSeconds) {
+            this.putQueryParameter("HistoryRetentionSeconds", historyRetentionSeconds);
+            this.historyRetentionSeconds = historyRetentionSeconds;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the target project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>proj-a1b2c3d4e5f6</p>
+         */
+        public Builder projectId(String projectId) {
+            this.putQueryParameter("ProjectId", projectId);
+            this.projectId = projectId;
+            return this;
+        }
+
+        /**
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>The tenant ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-4b83e0da66674951</p>
+         */
+        public Builder tenantId(String tenantId) {
+            this.putQueryParameter("TenantId", tenantId);
+            this.tenantId = tenantId;
+            return this;
+        }
+
+        @Override
+        public ModifyAgenticDBProjectHistoryRetentionRequest build() {
+            return new ModifyAgenticDBProjectHistoryRetentionRequest(this);
+        } 
+
+    } 
+
+}

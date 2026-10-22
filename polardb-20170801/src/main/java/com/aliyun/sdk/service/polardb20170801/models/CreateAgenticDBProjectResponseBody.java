@@ -29,6 +29,9 @@ public class CreateAgenticDBProjectResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DefaultBranchName")
     private String defaultBranchName;
 
+    @com.aliyun.core.annotation.NameInMap("HistoryRetentionSeconds")
+    private Long historyRetentionSeconds;
+
     @com.aliyun.core.annotation.NameInMap("ProjectId")
     private String projectId;
 
@@ -46,6 +49,7 @@ public class CreateAgenticDBProjectResponseBody extends TeaModel {
         this.createTime = builder.createTime;
         this.defaultBranchId = builder.defaultBranchId;
         this.defaultBranchName = builder.defaultBranchName;
+        this.historyRetentionSeconds = builder.historyRetentionSeconds;
         this.projectId = builder.projectId;
         this.projectName = builder.projectName;
         this.requestId = builder.requestId;
@@ -93,6 +97,13 @@ public class CreateAgenticDBProjectResponseBody extends TeaModel {
     }
 
     /**
+     * @return historyRetentionSeconds
+     */
+    public Long getHistoryRetentionSeconds() {
+        return this.historyRetentionSeconds;
+    }
+
+    /**
      * @return projectId
      */
     public String getProjectId() {
@@ -125,6 +136,7 @@ public class CreateAgenticDBProjectResponseBody extends TeaModel {
         private String createTime; 
         private String defaultBranchId; 
         private String defaultBranchName; 
+        private Long historyRetentionSeconds; 
         private String projectId; 
         private String projectName; 
         private String requestId; 
@@ -138,6 +150,7 @@ public class CreateAgenticDBProjectResponseBody extends TeaModel {
             this.createTime = model.createTime;
             this.defaultBranchId = model.defaultBranchId;
             this.defaultBranchName = model.defaultBranchName;
+            this.historyRetentionSeconds = model.historyRetentionSeconds;
             this.projectId = model.projectId;
             this.projectName = model.projectName;
             this.requestId = model.requestId;
@@ -145,7 +158,7 @@ public class CreateAgenticDBProjectResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the compute instance associated with the default branch.</p>
+         * <p>The ID of the compute instance bound to the default branch.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-g0lsayq8c5qe</p>
@@ -156,8 +169,7 @@ public class CreateAgenticDBProjectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the project was created.</p>
-         * <p>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+         * <p>The time when the project was created. The time is displayed in ISO 8601 format in UTC (YYYY-MM-DDTHH:mm:ssZ).</p>
          * 
          * <strong>example:</strong>
          * <p>2026-06-10T11:00:00Z</p>
@@ -168,7 +180,7 @@ public class CreateAgenticDBProjectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The default branch ID.</p>
+         * <p>The ID of the default branch.</p>
          * 
          * <strong>example:</strong>
          * <p>br-1a2b3c4d5e6f</p>
@@ -179,13 +191,24 @@ public class CreateAgenticDBProjectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The default branch name.</p>
+         * <p>The name of the default branch.</p>
          * 
          * <strong>example:</strong>
          * <p>main</p>
          */
         public Builder defaultBranchName(String defaultBranchName) {
             this.defaultBranchName = defaultBranchName;
+            return this;
+        }
+
+        /**
+         * <p>The retention period for recent records of the project. This parameter may be empty for older projects. To query the current effective value, call DescribeAgenticDBProjectHistoryRetention.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>604800</p>
+         */
+        public Builder historyRetentionSeconds(Long historyRetentionSeconds) {
+            this.historyRetentionSeconds = historyRetentionSeconds;
             return this;
         }
 
@@ -201,7 +224,7 @@ public class CreateAgenticDBProjectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The project name.</p>
+         * <p>The name of the project.</p>
          * 
          * <strong>example:</strong>
          * <p>analytics-prod</p>
@@ -212,7 +235,7 @@ public class CreateAgenticDBProjectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>E5F6A7B8-C9D0-1234-EFAB-345678901234</p>
@@ -223,7 +246,7 @@ public class CreateAgenticDBProjectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The tenant ID.</p>
+         * <p>The ID of the tenant.</p>
          * 
          * <strong>example:</strong>
          * <p>t-4b83e0da66674951</p>

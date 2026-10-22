@@ -171,7 +171,10 @@ public class DescribeExtensionsRequest extends Request {
         }
 
         /**
-         * ExtensionName.
+         * <p>The name of the database plugin to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>jueming</p>
          */
         public Builder extensionName(String extensionName) {
             this.putQueryParameter("ExtensionName", extensionName);

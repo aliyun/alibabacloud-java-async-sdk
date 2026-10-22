@@ -246,8 +246,8 @@ public class DescribeBackupsRequest extends Request {
         /**
          * <p>The backup mode. Valid values: </p>
          * <ul>
-         * <li><strong>Automated</strong>: automatic backup.</li>
-         * <li><strong>Manual</strong>: manual backup.</li>
+         * <li><strong>Automated</strong>: automatic backup</li>
+         * <li><strong>Manual</strong>: manual backup</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -262,7 +262,7 @@ public class DescribeBackupsRequest extends Request {
         /**
          * <p>The destination region for cross-region backups.</p>
          * <blockquote>
-         * <p>Currently, only PolarDB for MySQL supports this parameter.</p>
+         * <p>This parameter is supported only by PolarDB for MySQL.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -277,7 +277,7 @@ public class DescribeBackupsRequest extends Request {
         /**
          * <p>The backup status. Valid values:</p>
          * <ul>
-         * <li><strong>Success</strong>: The backup is complete.</li>
+         * <li><strong>Success</strong>: The backup is completed.</li>
          * <li><strong>Failed</strong>: The backup failed.</li>
          * </ul>
          * 
@@ -304,7 +304,7 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the <code>YYYY-MM-DDThh:mmZ</code> format (UTC).</p>
+         * <p>The end time of the query. The end time must be later than the start time. The time is in the <code>YYYY-MM-DDThh:mmZ</code> format (UTC).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -335,7 +335,7 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * <p>The page number. Set the value to an integer that is greater than 0 and does not exceed the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
+         * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer type. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -383,7 +383,7 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Specify the time in the <code>YYYY-MM-DDThh:mmZ</code> format (UTC).</p>
+         * <p>The start time of the query. The time is in the <code>YYYY-MM-DDThh:mmZ</code> format (UTC).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

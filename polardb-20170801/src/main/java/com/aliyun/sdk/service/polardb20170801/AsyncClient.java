@@ -344,6 +344,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateAgenticDBProjectResponse> createAgenticDBProject(CreateAgenticDBProjectRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Creates an independent business tenant without creating an API key.</p>
+     * 
+     * @param request the request parameters of CreateAgenticDBTenant  CreateAgenticDBTenantRequest
+     * @return CreateAgenticDBTenantResponse
+     */
+    CompletableFuture<CreateAgenticDBTenantResponse> createAgenticDBTenant(CreateAgenticDBTenantRequest request);
+
+    /**
      * @param request the request parameters of CreateAgenticDBTenantApiKey  CreateAgenticDBTenantApiKeyRequest
      * @return CreateAgenticDBTenantApiKeyResponse
      */
@@ -377,9 +386,9 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>Each cluster can have up to three manually created backups at the same time.</li>
-     * <li>If the error message <code>Exceeding the daily backup times of this DB cluster</code> is returned, three manually created backups already exist in your cluster. <a href="https://help.aliyun.com/document_detail/98101.html">Delete backups</a> before you call this operation.</li>
-     * <li>After you call this operation, a backup task is created in the background. If the data volume is large, the backup may take a long time. Wait until the backup is complete.</li>
+     * <li>Each cluster can have up to three manually created backups at a time.</li>
+     * <li>If the error message <code>Exceeding the daily backup times of this DB cluster</code> appears, it indicates that three manually created backups already exist in your cluster. <a href="https://help.aliyun.com/document_detail/98101.html">Delete a backup</a> before you call this operation.</li>
+     * <li>After you call this operation, a backup task is created in the background. If the data volume is large, the task may take a long time to complete.</li>
      * </ul>
      * </blockquote>
      * 
@@ -794,6 +803,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteAgenticDBProjectResponse> deleteAgenticDBProject(DeleteAgenticDBProjectRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Only tenants whose projects and branches have been completely cleaned up can be deleted. After a successful deletion, all API keys associated with the tenant become invalid. This operation does not automatically clean up projects, branches, or storage.</p>
+     * 
+     * @param request the request parameters of DeleteAgenticDBTenant  DeleteAgenticDBTenantRequest
+     * @return DeleteAgenticDBTenantResponse
+     */
+    CompletableFuture<DeleteAgenticDBTenantResponse> deleteAgenticDBTenant(DeleteAgenticDBTenantRequest request);
+
+    /**
      * @param request the request parameters of DeleteAgenticDBTenantApiKey  DeleteAgenticDBTenantApiKeyRequest
      * @return DeleteAgenticDBTenantApiKeyResponse
      */
@@ -1206,8 +1224,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>This operation filters and returns a list of model operators based on the RelativeDBClusterId and KubeType parameters.</li>
-     * <li>Note: Make sure that the RelativeDBClusterId provided in the request matches the instance ID of an existing PolarDB database instance. Otherwise, the data cannot be retrieved.</li>
+     * <li>This operation allows you to filter and retrieve a list of model operators by using the <code>RelativeDBClusterId</code> and <code>KubeType</code> parameters.</li>
+     * <li>Note: Make sure that the <code>RelativeDBClusterId</code> you provide matches the instance ID of an existing PolarDB database. Otherwise, the data cannot be retrieved.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeAIDBClusterTasks  DescribeAIDBClusterTasksRequest
@@ -1282,6 +1300,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeAgenticDBBranchLineageResponse> describeAgenticDBBranchLineage(DescribeAgenticDBBranchLineageRequest request);
 
     /**
+     * @param request the request parameters of DescribeAgenticDBBranchRestoreWindow  DescribeAgenticDBBranchRestoreWindowRequest
+     * @return DescribeAgenticDBBranchRestoreWindowResponse
+     */
+    CompletableFuture<DescribeAgenticDBBranchRestoreWindowResponse> describeAgenticDBBranchRestoreWindow(DescribeAgenticDBBranchRestoreWindowRequest request);
+
+    /**
      * @param request the request parameters of DescribeAgenticDBBranches  DescribeAgenticDBBranchesRequest
      * @return DescribeAgenticDBBranchesResponse
      */
@@ -1313,6 +1337,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeAgenticDBProjectResponse> describeAgenticDBProject(DescribeAgenticDBProjectRequest request);
 
     /**
+     * @param request the request parameters of DescribeAgenticDBProjectHistoryRetention  DescribeAgenticDBProjectHistoryRetentionRequest
+     * @return DescribeAgenticDBProjectHistoryRetentionResponse
+     */
+    CompletableFuture<DescribeAgenticDBProjectHistoryRetentionResponse> describeAgenticDBProjectHistoryRetention(DescribeAgenticDBProjectHistoryRetentionRequest request);
+
+    /**
      * @param request the request parameters of DescribeAgenticDBProjects  DescribeAgenticDBProjectsRequest
      * @return DescribeAgenticDBProjectsResponse
      */
@@ -1332,7 +1362,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This API queries all relevant information about a specific PolarDB application, including but not limited to component details and connection endpoints.</p>
+     * <p>This API queries all relevant information about a specific PolarDB application, including but not limited to component details and endpoints.</p>
      * 
      * @param request the request parameters of DescribeApplicationAttribute  DescribeApplicationAttributeRequest
      * @return DescribeApplicationAttributeResponse
@@ -2635,6 +2665,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyActiveOperationTasksResponse
      */
     CompletableFuture<ModifyActiveOperationTasksResponse> modifyActiveOperationTasks(ModifyActiveOperationTasksRequest request);
+
+    /**
+     * @param request the request parameters of ModifyAgenticDBProjectHistoryRetention  ModifyAgenticDBProjectHistoryRetentionRequest
+     * @return ModifyAgenticDBProjectHistoryRetentionResponse
+     */
+    CompletableFuture<ModifyAgenticDBProjectHistoryRetentionResponse> modifyAgenticDBProjectHistoryRetention(ModifyAgenticDBProjectHistoryRetentionRequest request);
 
     /**
      * @param request the request parameters of ModifyApplicationDescription  ModifyApplicationDescriptionRequest

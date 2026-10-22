@@ -147,7 +147,7 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -437,7 +437,7 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the associated branch.</p>
+             * <p>The associated branch ID.</p>
              * 
              * <strong>example:</strong>
              * <p>br-7g8h9i0j1k2l</p>
@@ -448,7 +448,7 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the associated branch.</p>
+             * <p>The associated branch name.</p>
              * 
              * <strong>example:</strong>
              * <p>feature-analytics</p>
@@ -470,7 +470,7 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of compute nodes. The value is fixed to 1 in the first phase.</p>
+             * <p>The number of compute nodes (fixed to 1 in the first phase).</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -481,8 +481,7 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the compute instance was created.</p>
-             * <p>The time is in the ISO 8601 standard in the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+             * <p>The creation time. The time is in ISO 8601 format and uses the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</p>
              * 
              * <strong>example:</strong>
              * <p>2026-06-10T11:00:00Z</p>
@@ -493,7 +492,7 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the compute instance.</p>
+             * <p>The description.</p>
              * 
              * <strong>example:</strong>
              * <p>Compute cluster for analytics</p>
@@ -504,7 +503,7 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the compute instance is the default branch.</p>
+             * <p>Indicates whether it is the default branch.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -515,7 +514,8 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the compute instance was last activated.</p>
+             * <p>The last activation time.
+             * The time is in ISO 8601 format and uses the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</p>
              * 
              * <strong>example:</strong>
              * <p>2026-06-10T12:30:00Z</p>
@@ -559,7 +559,10 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the parent branch. This value is an empty string for the root branch.</p>
+             * <p>The parent branch ID. An empty string indicates the root branch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>br-1a2b3c4d5e6f</p>
              */
             public Builder parentBranchId(String parentBranchId) {
                 this.parentBranchId = parentBranchId;
@@ -567,7 +570,10 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the parent branch. This value is an empty string for the root branch.</p>
+             * <p>The parent branch name. An empty string indicates the root branch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>main</p>
              */
             public Builder parentBranchName(String parentBranchName) {
                 this.parentBranchName = parentBranchName;
@@ -575,7 +581,7 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the associated project.</p>
+             * <p>The associated project ID.</p>
              * 
              * <strong>example:</strong>
              * <p>proj-a1b2c3d4e5f6</p>
@@ -586,7 +592,7 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the associated project.</p>
+             * <p>The associated project name.</p>
              * 
              * <strong>example:</strong>
              * <p>analytics-prod</p>
@@ -597,7 +603,7 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the compute instance.</p>
+             * <p>The status.</p>
              * 
              * <strong>example:</strong>
              * <p>Running</p>
@@ -608,7 +614,7 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The amount of data used, in bytes.</p>
+             * <p>The used data volume (in bytes).</p>
              * 
              * <strong>example:</strong>
              * <p>1073741824</p>
@@ -619,7 +625,7 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the associated tenant.</p>
+             * <p>The associated tenant ID.</p>
              * 
              * <strong>example:</strong>
              * <p>t-4b83e0da66674951</p>
@@ -630,7 +636,7 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the associated tenant.</p>
+             * <p>The associated tenant name.</p>
              * 
              * <strong>example:</strong>
              * <p>my-saas-app</p>
