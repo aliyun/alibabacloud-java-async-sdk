@@ -130,7 +130,7 @@ public class UpdateIdentityProviderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The binding information of the external identity provider after the update.</p>
+         * <p>The updated external identity provider binding information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -149,7 +149,7 @@ public class UpdateIdentityProviderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message. An error description is returned if the request failed.</p>
+         * <p>The response message. An error description is returned when the request fails.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -171,7 +171,7 @@ public class UpdateIdentityProviderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -190,12 +190,461 @@ public class UpdateIdentityProviderResponseBody extends TeaModel {
      *
      * <p>UpdateIdentityProviderResponseBody</p>
      */
+    public static class Configuration extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("bindingType")
+        private String bindingType;
+
+        @com.aliyun.core.annotation.NameInMap("entityId")
+        private String entityId;
+
+        @com.aliyun.core.annotation.NameInMap("jitProvisionStatus")
+        private String jitProvisionStatus;
+
+        @com.aliyun.core.annotation.NameInMap("jitUpdateStatus")
+        private String jitUpdateStatus;
+
+        @com.aliyun.core.annotation.NameInMap("loginUrl")
+        private String loginUrl;
+
+        @com.aliyun.core.annotation.NameInMap("ssoStatus")
+        private String ssoStatus;
+
+        private Configuration(Builder builder) {
+            this.bindingType = builder.bindingType;
+            this.entityId = builder.entityId;
+            this.jitProvisionStatus = builder.jitProvisionStatus;
+            this.jitUpdateStatus = builder.jitUpdateStatus;
+            this.loginUrl = builder.loginUrl;
+            this.ssoStatus = builder.ssoStatus;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Configuration create() {
+            return builder().build();
+        }
+
+        /**
+         * @return bindingType
+         */
+        public String getBindingType() {
+            return this.bindingType;
+        }
+
+        /**
+         * @return entityId
+         */
+        public String getEntityId() {
+            return this.entityId;
+        }
+
+        /**
+         * @return jitProvisionStatus
+         */
+        public String getJitProvisionStatus() {
+            return this.jitProvisionStatus;
+        }
+
+        /**
+         * @return jitUpdateStatus
+         */
+        public String getJitUpdateStatus() {
+            return this.jitUpdateStatus;
+        }
+
+        /**
+         * @return loginUrl
+         */
+        public String getLoginUrl() {
+            return this.loginUrl;
+        }
+
+        /**
+         * @return ssoStatus
+         */
+        public String getSsoStatus() {
+            return this.ssoStatus;
+        }
+
+        public static final class Builder {
+            private String bindingType; 
+            private String entityId; 
+            private String jitProvisionStatus; 
+            private String jitUpdateStatus; 
+            private String loginUrl; 
+            private String ssoStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(Configuration model) {
+                this.bindingType = model.bindingType;
+                this.entityId = model.entityId;
+                this.jitProvisionStatus = model.jitProvisionStatus;
+                this.jitUpdateStatus = model.jitUpdateStatus;
+                this.loginUrl = model.loginUrl;
+                this.ssoStatus = model.ssoStatus;
+            } 
+
+            /**
+             * <p>HTTP-Redirect or HTTP-POST. This parameter is required for manual entry. Queries return the short name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTP-Redirect</p>
+             */
+            public Builder bindingType(String bindingType) {
+                this.bindingType = bindingType;
+                return this;
+            }
+
+            /**
+             * <p>Required for manual entry. It must be non-empty and up to 2,048 characters in length. Existing configurations do not support replacement. It is different from the local entity ID returned by SP queries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://idp.example.com/entity">https://idp.example.com/entity</a></p>
+             */
+            public Builder entityId(String entityId) {
+                this.entityId = entityId;
+                return this;
+            }
+
+            /**
+             * <p>The actual switch value. Valid values: Enabled and Disabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Disabled</p>
+             */
+            public Builder jitProvisionStatus(String jitProvisionStatus) {
+                this.jitProvisionStatus = jitProvisionStatus;
+                return this;
+            }
+
+            /**
+             * <p>The actual switch value. Valid values: Enabled and Disabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Disabled</p>
+             */
+            public Builder jitUpdateStatus(String jitUpdateStatus) {
+                this.jitUpdateStatus = jitUpdateStatus;
+                return this;
+            }
+
+            /**
+             * <p>Required for manual entry. It must be an absolute HTTPS URL without user credentials or fragments.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://idp.example.com/sso">https://idp.example.com/sso</a></p>
+             */
+            public Builder loginUrl(String loginUrl) {
+                this.loginUrl = loginUrl;
+                return this;
+            }
+
+            /**
+             * <p>The actual switch value. Valid values: Enabled and Disabled. This value is not equivalent to the expected loginEnabled value saved in AC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Enabled</p>
+             */
+            public Builder ssoStatus(String ssoStatus) {
+                this.ssoStatus = ssoStatus;
+                return this;
+            }
+
+            public Configuration build() {
+                return new Configuration(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateIdentityProviderResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateIdentityProviderResponseBody</p>
+     */
+    public static class Saml extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("bindingType")
+        private String bindingType;
+
+        @com.aliyun.core.annotation.NameInMap("entityId")
+        private String entityId;
+
+        @com.aliyun.core.annotation.NameInMap("jitProvisionEnabled")
+        private Boolean jitProvisionEnabled;
+
+        @com.aliyun.core.annotation.NameInMap("jitUpdateEnabled")
+        private Boolean jitUpdateEnabled;
+
+        @com.aliyun.core.annotation.NameInMap("loginUrl")
+        private String loginUrl;
+
+        @com.aliyun.core.annotation.NameInMap("x509Certificates")
+        private java.util.List<String> x509Certificates;
+
+        private Saml(Builder builder) {
+            this.bindingType = builder.bindingType;
+            this.entityId = builder.entityId;
+            this.jitProvisionEnabled = builder.jitProvisionEnabled;
+            this.jitUpdateEnabled = builder.jitUpdateEnabled;
+            this.loginUrl = builder.loginUrl;
+            this.x509Certificates = builder.x509Certificates;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Saml create() {
+            return builder().build();
+        }
+
+        /**
+         * @return bindingType
+         */
+        public String getBindingType() {
+            return this.bindingType;
+        }
+
+        /**
+         * @return entityId
+         */
+        public String getEntityId() {
+            return this.entityId;
+        }
+
+        /**
+         * @return jitProvisionEnabled
+         */
+        public Boolean getJitProvisionEnabled() {
+            return this.jitProvisionEnabled;
+        }
+
+        /**
+         * @return jitUpdateEnabled
+         */
+        public Boolean getJitUpdateEnabled() {
+            return this.jitUpdateEnabled;
+        }
+
+        /**
+         * @return loginUrl
+         */
+        public String getLoginUrl() {
+            return this.loginUrl;
+        }
+
+        /**
+         * @return x509Certificates
+         */
+        public java.util.List<String> getX509Certificates() {
+            return this.x509Certificates;
+        }
+
+        public static final class Builder {
+            private String bindingType; 
+            private String entityId; 
+            private Boolean jitProvisionEnabled; 
+            private Boolean jitUpdateEnabled; 
+            private String loginUrl; 
+            private java.util.List<String> x509Certificates; 
+
+            private Builder() {
+            } 
+
+            private Builder(Saml model) {
+                this.bindingType = model.bindingType;
+                this.entityId = model.entityId;
+                this.jitProvisionEnabled = model.jitProvisionEnabled;
+                this.jitUpdateEnabled = model.jitUpdateEnabled;
+                this.loginUrl = model.loginUrl;
+                this.x509Certificates = model.x509Certificates;
+            } 
+
+            /**
+             * <p>HTTP-Redirect or HTTP-POST. This parameter is required for manual entry. Queries return the short name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTP-Redirect</p>
+             */
+            public Builder bindingType(String bindingType) {
+                this.bindingType = bindingType;
+                return this;
+            }
+
+            /**
+             * <p>Required for manual entry. It must be non-empty and up to 2,048 characters in length. Existing configurations do not support replacement. It is different from the local entity ID returned by SP queries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://idp.example.com/entity">https://idp.example.com/entity</a></p>
+             */
+            public Builder entityId(String entityId) {
+                this.entityId = entityId;
+                return this;
+            }
+
+            /**
+             * <p>Can be set independently. If omitted during an update, the existing value is retained. If omitted for the first time, the default value is false. A valid SAML configuration is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder jitProvisionEnabled(Boolean jitProvisionEnabled) {
+                this.jitProvisionEnabled = jitProvisionEnabled;
+                return this;
+            }
+
+            /**
+             * <p>Can be set independently. If omitted during an update, the existing value is retained. If omitted for the first time, the default value is false. A valid SAML configuration is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder jitUpdateEnabled(Boolean jitUpdateEnabled) {
+                this.jitUpdateEnabled = jitUpdateEnabled;
+                return this;
+            }
+
+            /**
+             * <p>Required for manual entry. It must be an absolute HTTPS URL without user credentials or fragments.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://idp.example.com/sso">https://idp.example.com/sso</a></p>
+             */
+            public Builder loginUrl(String loginUrl) {
+                this.loginUrl = loginUrl;
+                return this;
+            }
+
+            /**
+             * <p>Required for manual entry. It must be a non-empty array using PEM X.509 certificate text. The current validity period is validated, and up to 10 certificates are supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;-----BEGIN CERTIFICATE-----\\nMIICwDCCAaigAwIBAgIULlsHLfcADyBax5ZtFlj+YGzZVo0wDQYJKoZIhvcNAQEL\\nBQAwGjEYMBYGA1UEAwwPaWRwLmV4YW1wbGUuY29tMB4XDTI2MDEwMTAwMDAwMFoX\\nDTM2MDEwMTAwMDAwMFowGjEYMBYGA1UEAwwPaWRwLmV4YW1wbGUuY29tMIIBIjAN\\nBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAto0DN0W1CrPRzK9QZ9A1aApb4Lg8\\noGlp2c0PbN3LokXe/HzwxCMXx65IDnrenttxzTwp9BgUnUN/3LRzWaOL2UQ/vNYN\\nW9LFLkI1T64UPyI7eyi28YlALhb41xkYhEp7rz+MjqifBzVZeTDUxBYtbK2hAhbY\\nEL1+udwsXEx0KB7xuQ/rbI2OKeqAEAD1tfYg7T/SM2wrXNYhx+o1HtchM4/0I8Ok\\nkk27JQ4y3ofzC5sTySmFF1Y7XcpSd+5WSyazedhkAieo8AB01DkJV6nnKfH8sH0E\\nBsnH3FP8FhqCLrIeEkjX9B9OcIRLGjiZqx4u/ryW1QhMldnv+pFfNjWy/wIDAQAB\\nMA0GCSqGSIb3DQEBCwUAA4IBAQC1hSQG8AwtGOoX2gKBK4Hi5XBrBreij8WlLTUW\\nld0FINQ0Rg84f/27CjDthywj6wgxCesCuOVFhpxQa1UacsP/Gcai1aKABtLWImca\\nWECRYK5gDkwhTMFKM9mXA26hH1l4v/UR2iTpEK9H78egC4W7bs2LDTpPryuaNKTq\\nP2O0tMbNkAHB8yecz5LxHXnxadL9Egow25g2RClvpifWqDnuS9TSbKkIWLcPLjoc\\nJj2K9ILpBwhXiXi/BiSgyYTLiYvVvih9vX4s+hKGZNJc0j92YLiOHDF0XH1oxgdV\\njfTmRiedeb2VZJZElptD92z0AqFR7z2d5B+OqpPA2gjuMLV5\\n-----END CERTIFICATE-----&quot;]</p>
+             */
+            public Builder x509Certificates(java.util.List<String> x509Certificates) {
+                this.x509Certificates = x509Certificates;
+                return this;
+            }
+
+            public Saml build() {
+                return new Saml(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateIdentityProviderResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateIdentityProviderResponseBody</p>
+     */
+    public static class SyncScope extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("departmentIds")
+        private java.util.List<String> departmentIds;
+
+        @com.aliyun.core.annotation.NameInMap("mode")
+        private String mode;
+
+        private SyncScope(Builder builder) {
+            this.departmentIds = builder.departmentIds;
+            this.mode = builder.mode;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SyncScope create() {
+            return builder().build();
+        }
+
+        /**
+         * @return departmentIds
+         */
+        public java.util.List<String> getDepartmentIds() {
+            return this.departmentIds;
+        }
+
+        /**
+         * @return mode
+         */
+        public String getMode() {
+            return this.mode;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> departmentIds; 
+            private String mode; 
+
+            private Builder() {
+            } 
+
+            private Builder(SyncScope model) {
+                this.departmentIds = model.departmentIds;
+                this.mode = model.mode;
+            } 
+
+            /**
+             * <p>When the mode is SelectedDepartments, it must contain at least one non-empty department ID, which should be obtained from ListIdentityProviderDepartments. When the mode is AllAuthorized, pass an empty array or omit this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;10001&quot;]</p>
+             */
+            public Builder departmentIds(java.util.List<String> departmentIds) {
+                this.departmentIds = departmentIds;
+                return this;
+            }
+
+            /**
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>AllAuthorized: The full authorization scope, subject to the application address book authorization limits.</li>
+             * <li>SelectedDepartments: The selected departments and all their sub-departments.
+             * When explicitly submitting syncScope, you must provide a valid mode, which is validated by the backend.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SelectedDepartments</p>
+             */
+            public Builder mode(String mode) {
+                this.mode = mode;
+                return this;
+            }
+
+            public SyncScope build() {
+                return new SyncScope(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateIdentityProviderResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateIdentityProviderResponseBody</p>
+     */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("configuration")
+        private Configuration configuration;
+
         @com.aliyun.core.annotation.NameInMap("identityProviderType")
         private String identityProviderType;
 
         @com.aliyun.core.annotation.NameInMap("loginEnabled")
         private Boolean loginEnabled;
+
+        @com.aliyun.core.annotation.NameInMap("protocol")
+        private String protocol;
+
+        @com.aliyun.core.annotation.NameInMap("saml")
+        private Saml saml;
 
         @com.aliyun.core.annotation.NameInMap("status")
         private String status;
@@ -203,14 +652,21 @@ public class UpdateIdentityProviderResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("syncEnabled")
         private Boolean syncEnabled;
 
+        @com.aliyun.core.annotation.NameInMap("syncScope")
+        private SyncScope syncScope;
+
         @com.aliyun.core.annotation.NameInMap("workspaceId")
         private String workspaceId;
 
         private Data(Builder builder) {
+            this.configuration = builder.configuration;
             this.identityProviderType = builder.identityProviderType;
             this.loginEnabled = builder.loginEnabled;
+            this.protocol = builder.protocol;
+            this.saml = builder.saml;
             this.status = builder.status;
             this.syncEnabled = builder.syncEnabled;
+            this.syncScope = builder.syncScope;
             this.workspaceId = builder.workspaceId;
         }
 
@@ -220,6 +676,13 @@ public class UpdateIdentityProviderResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return configuration
+         */
+        public Configuration getConfiguration() {
+            return this.configuration;
         }
 
         /**
@@ -237,6 +700,20 @@ public class UpdateIdentityProviderResponseBody extends TeaModel {
         }
 
         /**
+         * @return protocol
+         */
+        public String getProtocol() {
+            return this.protocol;
+        }
+
+        /**
+         * @return saml
+         */
+        public Saml getSaml() {
+            return this.saml;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -251,6 +728,13 @@ public class UpdateIdentityProviderResponseBody extends TeaModel {
         }
 
         /**
+         * @return syncScope
+         */
+        public SyncScope getSyncScope() {
+            return this.syncScope;
+        }
+
+        /**
          * @return workspaceId
          */
         public String getWorkspaceId() {
@@ -258,25 +742,41 @@ public class UpdateIdentityProviderResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Configuration configuration; 
             private String identityProviderType; 
             private Boolean loginEnabled; 
+            private String protocol; 
+            private Saml saml; 
             private String status; 
             private Boolean syncEnabled; 
+            private SyncScope syncScope; 
             private String workspaceId; 
 
             private Builder() {
             } 
 
             private Builder(Data model) {
+                this.configuration = model.configuration;
                 this.identityProviderType = model.identityProviderType;
                 this.loginEnabled = model.loginEnabled;
+                this.protocol = model.protocol;
+                this.saml = model.saml;
                 this.status = model.status;
                 this.syncEnabled = model.syncEnabled;
+                this.syncScope = model.syncScope;
                 this.workspaceId = model.workspaceId;
             } 
 
             /**
-             * <p>The type of the external identity provider. Valid values: DingTalk, Feishu.</p>
+             * <p>The actual SAML configuration is read back on demand only by GetIdentityProvider. SCIM queries and preparations return the actual received status and URL.</p>
+             */
+            public Builder configuration(Configuration configuration) {
+                this.configuration = configuration;
+                return this;
+            }
+
+            /**
+             * <p>The type of the external identity provider. Valid values: DingTalk and Feishu.</p>
              * 
              * <strong>example:</strong>
              * <p>DingTalk</p>
@@ -287,7 +787,7 @@ public class UpdateIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether workspace users are allowed to log on through this external identity provider.</p>
+             * <p>Specifies whether to allow workspace users to log on through the external identity provider.</p>
              */
             public Builder loginEnabled(Boolean loginEnabled) {
                 this.loginEnabled = loginEnabled;
@@ -295,18 +795,26 @@ public class UpdateIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The binding status. Valid values:</p>
-             * <ul>
-             * <li>CONFIGURED: The configuration has been accepted and is waiting for user pool provisioning.</li>
-             * <li>SYNCING: Organization members are being synchronized.</li>
-             * <li>SYNCED: Organization member synchronization is complete.</li>
-             * <li>READY: The binding is active.</li>
-             * <li>SYNC_FAILED: Organization member synchronization failed.</li>
-             * <li>UPDATING: The configuration is being updated.</li>
-             * <li>UPDATE_FAILED: The configuration update failed.</li>
-             * <li>DISCONNECTING: The binding is being removed.</li>
-             * <li>DISCONNECT_FAILED: The unbinding failed.</li>
-             * </ul>
+             * <p>Currently, only SAML is supported. This parameter may not be returned if no valid configuration is saved. OIDC placeholder initialization is not supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SAML</p>
+             */
+            public Builder protocol(String protocol) {
+                this.protocol = protocol;
+                return this;
+            }
+
+            /**
+             * <p>The input supports either XML or complete manual entry. Queries return standardized configurations and do not echo the original XML. This parameter can be omitted if it is not configured.</p>
+             */
+            public Builder saml(Saml saml) {
+                this.saml = saml;
+                return this;
+            }
+
+            /**
+             * <p>The binding status. Valid values: CONFIGURED (the configuration is accepted and waiting for the user pool to be activated), SYNCING (synchronizing organization members), SYNCED (organization member synchronization is completed), READY (the binding is in effect), SYNC_FAILED (organization member synchronization failed), UPDATING (updating the configuration), UPDATE_FAILED (configuration update failed), DISCONNECTING (disconnecting), and DISCONNECT_FAILED (disconnection failed).</p>
              * 
              * <strong>example:</strong>
              * <p>READY</p>
@@ -317,10 +825,18 @@ public class UpdateIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to enable organization member synchronization. When enabled, the external identity provider synchronizes organization members as workspace users.</p>
+             * <p>Specifies whether to enable organization member synchronization. After it is enabled, the external identity provider synchronizes organization members as workspace users.</p>
              */
             public Builder syncEnabled(Boolean syncEnabled) {
                 this.syncEnabled = syncEnabled;
+                return this;
+            }
+
+            /**
+             * <p>Follows the synchronization scope definition by department. If omitted during creation, the default value is AllAuthorized. The first vendor synchronization is determined by syncOnBind. If omitted or set to null during an update, the original value is retained. Updating and saving the scope does not automatically perform full synchronization.</p>
+             */
+            public Builder syncScope(SyncScope syncScope) {
+                this.syncScope = syncScope;
                 return this;
             }
 

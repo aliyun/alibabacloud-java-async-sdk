@@ -167,7 +167,7 @@ public class ListMemorySessionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The session list.</p>
+         * <p>The list of sessions.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;

@@ -167,7 +167,7 @@ public class ListMemoriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The memory list.</p>
+         * <p>The list of memory records.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;

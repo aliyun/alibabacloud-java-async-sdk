@@ -21,7 +21,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Writes messages or text to a memory store. By default, sync is set to true, which synchronously waits for extraction and returns only memories (an empty array is allowed). If sync is set to false, the operation returns only a taskId that can be queried by using GetMemoryTask.</p>
+     * <p>Writes messages or text to a memory store. By default, sync is set to true, which means the operation synchronously waits for extraction and returns only memories (an empty array is allowed). If sync is set to false, the operation returns only a taskId, which you can query by calling GetMemoryTask.</p>
      * 
      * @param request the request parameters of AddMemories  AddMemoriesRequest
      * @return AddMemoriesResponse
@@ -93,10 +93,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, prepare a writable workspace, a RAM role ARN, an ACR container image, and a runtime configuration. You must specify name, artifact, roleArn, and runtime. The runtime parameter must include both compute and sessionPolicy.
-     * Currently, only ACR container image deployment is supported. Use artifact.container and specify the service listening port in artifact.port. Omit artifact.code. The image must have the required access permissions and be accessible over the network allowed by the workspace.
-     * The creation is an asynchronous process. A successful response indicates that the request is accepted. Use the returned agentId to call GetCustomAgent and check latestVersionStatus, latestExecutionError, and status for the corresponding latestSpecVersion to confirm the deployment result. After the deployment is ready, you can call CreateServiceEndpoint to configure an access endpoint.
-     * The clientToken parameter does not currently provide idempotency guarantees. Do not rely on this parameter to prevent duplicate requests. The healthyThreshold parameter for health checks does not currently take effect. Omit this parameter.</p>
+     * <p>Before you call this operation, prepare a writable workspace, a RAM role ARN, a container image or code package, and runtime configurations. You must specify name, artifact, roleArn, and runtime. The runtime parameter must include both compute and sessionPolicy.
+     * In container mode, use artifact.container and specify artifact.port. The image must have the required access permissions and be accessible over the network allowed by the workspace.
+     * In code package pattern, specify artifact.port, and the sourceUri, languageRuntime, and entrypoint of artifact.code. Do not specify container at the same time. Dependencies must be packaged by the user. ZIP and TAR.GZ formats are supported. The compressed package size cannot exceed 500,000,000 bytes. You can call ListAgentCodeRuntimes to query the runtime environment identity. The sourceUri parameter supports oss:// addresses or HTTPS object addresses of standard OSS public domain names, including signed URLs. For local files, call GetAgentCodePackageUploadUrl to obtain an upload URL, upload the file directly, and then commit the returned sourceUri.
+     * When you submit a new code package source, the backend rechecks the read permissions, object, and size. The configuration is saved only after the transfer succeeds. If the transfer fails, the configuration is not saved. Saved fixed packages can be reused. Set the client timeout to 210 seconds for code package requests. Archive integrity and secure decompression are checked at startup. A successful acceptance does not mean that the agent is ready to run.
+     * The creation process is asynchronous. A successful response indicates that the request is accepted. You can use the returned agentId to call GetCustomAgent and check the latestVersionStatus, latestExecutionError, and status corresponding to latestSpecVersion to confirm the deployment result. After the deployment is ready, you can call CreateServiceEndpoint to configure the access endpoint.
+     * The clientToken parameter does not provide idempotency guarantees. Do not rely on this parameter to prevent duplicate requests. The healthyThreshold parameter for health checks does not take effect. Omit this parameter.</p>
      * 
      * @param request the request parameters of CreateCustomAgent  CreateCustomAgentRequest
      * @return CreateCustomAgentResponse
@@ -122,10 +124,61 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateExternalAgentBootstrapTokenResponse> createExternalAgentBootstrapToken(CreateExternalAgentBootstrapTokenRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Features and prerequisites</h2>
+     * <p>A workspace can be bound to only one external identity provider. The identityProviderType parameter supports DingTalk, Feishu, and CustomSSO. CustomSSO only initializes the shared user pool. Do not pass non-empty metadata, and do not pass true for loginEnabled or syncEnabled. By default, both switches are turned off. Protocols and SAML configurations are saved by calling UpdateIdentityProvider. SCIM is configured through a separate API. You do not need to save SAML first. After the request is accepted and CONFIGURED is returned, call GetIdentityProvider and wait for the user pool initialization to complete. READY only indicates that the resource is ready, not that SAML is configured. If the same CustomSSO binding is in the CONFIGURED or READY state, the existing binding can be returned. You cannot treat all states as repeatable creations.
+     * For DingTalk, the metadata parameter requires appKey, appSecret, and corpId. For Feishu, appId and appSecret are required. The vendor logon switch is enabled by default, and the synchronization switch is disabled by default. When synchronization is enabled, encryptKey and verificationToken are also required. The vendor syncOnBind and syncScope parameters retain the existing department-based synchronization definitions. Do not use these vendor pull parameters to replace SCIM configurations during CustomSSO initialization.</p>
+     * <h2>Requests and examples</h2>
+     * <p>POST /workspaces/{workspaceId}/identity-providers
+     * Call conventions: Call the API based on the region of the target workspace. Use an AccessKey pair or STS token that has permissions on the identity provider resources of the corresponding workspace. The ws-example, URLs, certificates, and tokens in the following examples are placeholder values and must be replaced with actual values. The request body example represents the body parameters of the public API, not the extra body wrapper of the backend direct connection API. The response example only shows the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Keep the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</p>
+     * <pre><code class="language-text">POST /workspaces/ws-example/identity-providers
+     * {&quot;identityProviderType&quot;: &quot;CustomSSO&quot;}
+     * </code></pre>
+     * <h2>Response example</h2>
+     * <pre><code class="language-json">{
+     *   &quot;data&quot;: {
+     *     &quot;workspaceId&quot;: &quot;ws-example&quot;,
+     *     &quot;identityProviderType&quot;: &quot;CustomSSO&quot;,
+     *     &quot;loginEnabled&quot;: false,
+     *     &quot;syncEnabled&quot;: false,
+     *     &quot;status&quot;: &quot;CONFIGURED&quot;
+     *   }
+     * }
+     * </code></pre>
+     * <h2>Errors and handling</h2>
+     * <p>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. A synchronous call to the upstream service may return 503 IdentityProviderProvisioningUnavailable if it fails. Keep the request ID for troubleshooting and do not interpret a read failure as unconfigured. Actual authentication and workspace non-existence errors follow the common error handling.
+     * 409 IdentityProviderAlreadyBound: An external binding already exists. Query and reuse the correct binding first. Do not automatically unbind the entire binding. Asynchronous initialization failure does not equal HTTP request failure. You must continue to query the status.</p>
+     * 
      * @param request the request parameters of CreateIdentityProvider  CreateIdentityProviderRequest
      * @return CreateIdentityProviderResponse
      */
     CompletableFuture<CreateIdentityProviderResponse> createIdentityProvider(CreateIdentityProviderRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Initiates a one-time user synchronization based on the saved scope without saving the configuration or requiring syncEnabled=true. Prerequisites: the identity provider is in the READY or SYNC_FAILED state, a user pool exists, and no other pending identity provider operations are in progress. The returned taskId only indicates that the request is accepted. Call GetIdentityProviderSyncJob to poll the status until it reaches SUCCESS, FAILED, or CANCELED. If the task fails, check the failureReason. The workspace user quota still applies, and previously synchronized users are not automatically deleted if the scope is reduced.
+     * Authorization information: RAM action agentcore:CreateIdentityProviderSyncJob, access level Write, resource ARN: acs:agentcore:{regionId}:{accountId}:workspace/{workspaceId}/identityProvider/{identityProviderType}. This resource is required for authorization.
+     * Idempotency and retry: This operation does not provide a ClientToken parameter for conditional idempotency. Repeated submissions do not guarantee the same task is returned. If an operation is already in progress, an operation conflict is returned. Submitting again after the task ends creates a new synchronization task. If a submission times out, query the identity provider status first to avoid blindly resubmitting the request.
+     * Calling this API is free of charge, and operation records support ActionTrail auditing.
+     * Initial selective synchronization process: CreateIdentityProvider (syncOnBind=false, it is recommended to keep syncEnabled=false initially) → GetIdentityProvider and wait for READY → ListIdentityProviderDepartments to select departments → UpdateIdentityProvider to save syncScope and wait for READY → CreateIdentityProviderSyncJob → GetIdentityProviderSyncJob to query the terminal state. If incremental synchronization is required, configure callbacks and event subscriptions, and then update syncEnabled=true.
+     * Response example:</p>
+     * <pre><code class="language-json">{
+     *   &quot;requestId&quot;: &quot;01234567-89AB-CDEF-0123-456789ABCDEF&quot;,
+     *   &quot;message&quot;: &quot;success&quot;,
+     *   &quot;httpStatusCode&quot;: 200,
+     *   &quot;code&quot;: &quot;SUCCESS&quot;,
+     *   &quot;success&quot;: true,
+     *   &quot;data&quot;: {
+     *     &quot;taskId&quot;: &quot;12345678-1234-4234-8234-123456789abc&quot;,
+     *     &quot;status&quot;: &quot;PENDING&quot;
+     *   }
+     * }
+     * </code></pre>
+     * 
+     * @param request the request parameters of CreateIdentityProviderSyncJob  CreateIdentityProviderSyncJobRequest
+     * @return CreateIdentityProviderSyncJobResponse
+     */
+    CompletableFuture<CreateIdentityProviderSyncJobResponse> createIdentityProviderSyncJob(CreateIdentityProviderSyncJobRequest request);
 
     /**
      * <b>description</b> :
@@ -269,6 +322,28 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteExternalAgentResponse> deleteExternalAgent(DeleteExternalAgentRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Features and prerequisites</h2>
+     * <p>This is a complete disconnection, not just disabling logon. Disconnecting CustomSSO cleans up the AC users imported from this identity source, remote shared user pools and related resources, logon publishing configurations, and bindings. Therefore, both SAML and SCIM are affected. It does not delete the enterprise applications created by users on external platforms such as Azure. The system first checks the references between users and Teams. If references exist, the disconnection is rejected.
+     * After the request is accepted, the system returns DISCONNECTING. You can call GetIdentityProvider to query the status. The cleanup is complete only when the binding does not exist (IdentityProviderNotFound). The binding should also no longer appear in the list. DISCONNECT_FAILED indicates that a partial cleanup may have occurred and the state cannot be restored to a brand new unconfigured state. You can retry based on the returned status. If the binding does not exist in the first place, the API returns a placeholder result indicating no binding without creating new resources. An ongoing disconnection task may return the current binding. Do not use this API as a substitute for setting loginEnabled=false, syncEnabled=false, or deleting a single token.</p>
+     * <h2>Requests and examples</h2>
+     * <p>DELETE /workspaces/{workspaceId}/identity-providers/{identityProviderType}
+     * Call conventions: Call the API in the region of the target workspace by using an AccessKey pair or STS credential that has permissions on the identity source resources of the workspace. The ws-example, URLs, certificates, and tokens in the following examples are placeholder values and must be replaced with actual values. The request body example represents the body parameter content of the public API, not the extra body wrapper of the backend direct connection API. The response example only shows the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Keep the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</p>
+     * <pre><code class="language-text">DELETE /workspaces/ws-example/identity-providers/CustomSSO
+     * </code></pre>
+     * <h2>Response examples</h2>
+     * <pre><code class="language-json">{
+     *   &quot;data&quot;: {
+     *     &quot;workspaceId&quot;: &quot;ws-example&quot;,
+     *     &quot;identityProviderType&quot;: &quot;CustomSSO&quot;,
+     *     &quot;status&quot;: &quot;DISCONNECTING&quot;
+     *   }
+     * }
+     * </code></pre>
+     * <h2>Errors and handling</h2>
+     * <p>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. A synchronous call failure to the upstream may return 503 IdentityProviderProvisioningUnavailable. Keep the request ID for troubleshooting and do not interpret a read failure as unconfigured. Actual authentication and workspace non-existence errors follow the common error handling.
+     * 409 IdentityProvider.Disconnect.Conflict: Users of this identity source still belong to a Team. Remove the references first. 409 IdentityProviderOperationConflict: The current status does not allow disconnection. 404 IdentityProviderNotFound: An external binding exists but the type does not match. An asynchronous failure may result in a partial cleanup. You cannot claim completion based solely on the first response.</p>
+     * 
      * @param request the request parameters of DeleteIdentityProvider  DeleteIdentityProviderRequest
      * @return DeleteIdentityProviderResponse
      */
@@ -310,7 +385,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Asynchronously deletes a MemoryStore and all its long-term memory.</p>
+     * <p>Asynchronously deletes a MemoryStore and all long-term memory within it.</p>
      * 
      * @param request the request parameters of DeleteMemoryStore  DeleteMemoryStoreRequest
      * @return DeleteMemoryStoreResponse
@@ -420,6 +495,35 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>Generates a time-limited, read-only download URL for the code package referenced by the currently saved agent configuration. This applies to code packages uploaded locally or imported from Object Storage Service (OSS). The operation uses workspaceId and agentId for locating and does not accept arbitrary bucket, object key, or historical version parameters. The current configuration must reference an available, fixed code package, and does not require waiting for a running instance to be ready. An error is returned if the code package does not exist, has changed, or is unreadable. The link is valid for up to 10 minutes and does not exceed the underlying credential expiration time. Call the operation again after it expires. The resourceVersionId indicates the saved configuration version corresponding to this download. The sample download link is redacted. Use the downloadUrl in the response.</p>
+     * 
+     * @param request the request parameters of GetAgentCodePackageDownloadUrl  GetAgentCodePackageDownloadUrlRequest
+     * @return GetAgentCodePackageDownloadUrlResponse
+     */
+    CompletableFuture<GetAgentCodePackageDownloadUrlResponse> getAgentCodePackageDownloadUrl(GetAgentCodePackageDownloadUrlRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Generates a RAM authorization URL for the resource role of the current workspace for a specified source bucket. The client cannot specify or override the role. After you open the authorizeUrl and confirm the authorization, call VerifyAgentCodePackageOssRamAuthorization to check the policy binding, and call ValidateAgentCodePackageFromOss to check specific objects.
+     * This authorization reuses the OSSObjectRestoreCustom template, which includes permissions to read, write, and delete objects, and is not a read-only authorization. Retrieving the URL itself does not complete the authorization, transfer the code package, or modify the default OSS binding of the workspace. Existing authorizations for the same role and bucket can be reused. The example URL is provided to demonstrate the format. Use the actual authorization URL returned by the API operation.</p>
+     * 
+     * @param request the request parameters of GetAgentCodePackageOssRamAuthorizeUrl  GetAgentCodePackageOssRamAuthorizeUrlRequest
+     * @return GetAgentCodePackageOssRamAuthorizeUrlResponse
+     */
+    CompletableFuture<GetAgentCodePackageOssRamAuthorizeUrlResponse> getAgentCodePackageOssRamAuthorizeUrl(GetAgentCodePackageOssRamAuthorizeUrlRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves a time-limited upload URL for a code package without uploading the file content. The fileName must be a ZIP or TAR.GZ filename without directories. The format must match the file extension. The fileSize is in bytes, with valid values ranging from 1 to 500,000,000.
+     * Use the uploadMethod, uploadUrl, and headers from the response to upload the file directly. After the upload is complete, pass the sourceUri to the artifact.code.sourceUri parameter of CreateCustomAgent or UpdateCustomAgent. The actual object and size are verified and a fixed copy is saved during creation or update. The upload URL is valid for up to 10 minutes and does not exceed the expiration time of the underlying temporary credentials. Retrieve a new URL after it expires. The example URL is desensitized and cannot be used for actual uploads. Use the original URL and request headers from this response.</p>
+     * 
+     * @param request the request parameters of GetAgentCodePackageUploadUrl  GetAgentCodePackageUploadUrlRequest
+     * @return GetAgentCodePackageUploadUrlResponse
+     */
+    CompletableFuture<GetAgentCodePackageUploadUrlResponse> getAgentCodePackageUploadUrl(GetAgentCodePackageUploadUrlRequest request);
+
+    /**
+     * <b>description</b> :
      * <p>Queries the details of a specified agent IM channel.</p>
      * 
      * @param request the request parameters of GetAgentIMChannel  GetAgentIMChannelRequest
@@ -478,8 +582,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>After you create or update a custom agent, you can poll this operation to query the execution result of the latest configuration version. <code>latestVersionStatus</code> corresponds to <code>latestSpecVersion</code>. <code>latestExecutionError</code> indicates the cause of the pending or failed status for this version. If <code>retryable</code> is true, you can query again later.
-     * The returned configuration is the most recently submitted configuration and may not have taken effect. Verify the deployment and running status by checking <code>latestVersionStatus</code>, the overall agent status <code>status</code>, and the running instance statistics <code>sandboxPhaseCounts</code>.
+     * <p>After creating or updating a custom agent, you can poll this operation to query the execution result of the latest configuration version. latestVersionStatus corresponds to latestSpecVersion. latestExecutionError indicates the cause of the pending or failed status for this version. If retryable is true, you can query again later.
+     * The returned configuration is the latest submitted configuration and may not have taken effect. Verify the deployment and running status by checking latestVersionStatus, the overall agent status, and the running instance statistics sandboxPhaseCounts.
      * If the queried custom agent does not exist, has been deleted, or does not belong to the specified workspace, a resource not found error is returned.</p>
      * 
      * @param request the request parameters of GetCustomAgent  GetCustomAgentRequest
@@ -506,10 +610,101 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetExternalAgentBootstrapOptionsResponse> getExternalAgentBootstrapOptions(GetExternalAgentBootstrapOptionsRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Features and prerequisites</h2>
+     * <p>Reads existing bindings by type. For CustomSSO, the API returns the saved protocol, standardized SAML, expected loginEnabled, syncEnabled, and shared binding status. If SAML is not configured, the saml and configuration fields may not be returned. If SAML is configured, the API additionally queries AgentIdentity, and the configuration field represents the actual SSO/JIT configuration. The saml field serves as the data source for the edit form. The status switches in the configuration field are Enabled and Disabled. If the upstream query fails, an error is returned. This failure must not be treated as an unconfigured state.
+     * Only this API reads back the actual SAML configuration. The list and write APIs do not guarantee that the configuration field is returned. A READY user pool does not indicate that SAML is configured. The UPDATING and UPDATE_FAILED statuses describe logon configuration tasks, not SCIM tasks. The vendor callback URL for CustomSSO is empty. Use GetIdentityProviderSCIM.operationStatus to query SCIM operation results.</p>
+     * <h2>Requests and examples</h2>
+     * <p>GET /workspaces/{workspaceId}/identity-providers/{identityProviderType}
+     * Calling convention: Call this API in the region of the target workspace by using an AccessKey pair or STS token that has permissions on the identity source resources of the workspace. The ws-example, URLs, certificates, and tokens in the following examples are placeholder values and must be replaced with actual values. The request body example shows the body parameters of the public API, rather than the extra body wrapper of the backend direct-connection API. The response example shows only the business data. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not log secrets. Asynchronous business tasks do not imply that the HTTP request uses a persistent connection to wait for completion.</p>
+     * <pre><code class="language-text">GET /workspaces/ws-example/identity-providers/CustomSSO
+     * </code></pre>
+     * <h2>Response example</h2>
+     * <pre><code class="language-json">{
+     *   &quot;data&quot;: {
+     *     &quot;workspaceId&quot;: &quot;ws-example&quot;,
+     *     &quot;identityProviderType&quot;: &quot;CustomSSO&quot;,
+     *     &quot;status&quot;: &quot;READY&quot;,
+     *     &quot;loginEnabled&quot;: false,
+     *     &quot;syncEnabled&quot;: false
+     *   }
+     * }
+     * </code></pre>
+     * <h2>Errors and handling</h2>
+     * <p>Error handling: A 400 InvalidParameter error indicates that the parameters or current configuration prerequisites are not met. A 404 IdentityProviderNotFound error indicates that no binding of the specified type exists. Synchronous calls to the upstream service may return a 503 IdentityProviderProvisioningUnavailable error if they fail. Retain the request ID for troubleshooting and do not interpret read failures as an unconfigured state. Authentication errors and workspace-not-found errors follow common error handling procedures.
+     * 404 IdentityProviderNotFound: No binding exists, or the specified type is inconsistent with the current binding. If SAML is already configured, an upstream read failure does not degrade to a successful empty configuration.</p>
+     * 
      * @param request the request parameters of GetIdentityProvider  GetIdentityProviderRequest
      * @return GetIdentityProviderResponse
      */
     CompletableFuture<GetIdentityProviderResponse> getIdentityProvider(GetIdentityProviderRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the status, current step, number of processed users, and failure cause of a manual synchronization task by using the local taskId of AgentCore. The taskId must be obtained from CreateIdentityProviderSyncJob in the same workspace and identity provider. It is not the synchronizationJobId of AgentIdentity. Poll the task until the status is SUCCESS, FAILED, or CANCELED. The PENDING, RUNNING, and PAUSED statuses do not indicate completion. The syncedUserCount includes updated existing users and does not equal the number of newly added users or the progress percentage.
+     * Authorization information: The RAM operation is agentcore:GetIdentityProviderSyncJob, the access level is Read, and the resource ARN is acs:agentcore:{regionId}:{accountId}:workspace/{workspaceId}/identityProvider/{identityProviderType}. This resource is a required authorization resource.
+     * Idempotence and retry: This operation is read-only and can be repeatedly queried.
+     * Calling this API operation is free of charge, and operation records support ActionTrail auditing.
+     * Response example:</p>
+     * <pre><code class="language-json">{
+     *   &quot;requestId&quot;: &quot;01234567-89AB-CDEF-0123-456789ABCDEF&quot;,
+     *   &quot;message&quot;: &quot;success&quot;,
+     *   &quot;httpStatusCode&quot;: 200,
+     *   &quot;code&quot;: &quot;SUCCESS&quot;,
+     *   &quot;success&quot;: true,
+     *   &quot;data&quot;: {
+     *     &quot;taskId&quot;: &quot;12345678-1234-4234-8234-123456789abc&quot;,
+     *     &quot;status&quot;: &quot;SUCCESS&quot;,
+     *     &quot;currentStep&quot;: &quot;SYNC&quot;,
+     *     &quot;synchronizationJobId&quot;: &quot;syncjob_0123456789abcdef0123456789abcdef&quot;,
+     *     &quot;syncedUserCount&quot;: 12
+     *   }
+     * }
+     * </code></pre>
+     * 
+     * @param request the request parameters of GetIdentityProviderSyncJob  GetIdentityProviderSyncJobRequest
+     * @return GetIdentityProviderSyncJobResponse
+     */
+    CompletableFuture<GetIdentityProviderSyncJobResponse> getIdentityProviderSyncJob(GetIdentityProviderSyncJobRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the saved synchronization scope, the validity of selected departments, and the estimated user count downstream of the identity provider. This operation is not used for real-time estimation of unsaved selections. AllAuthorized indicates the address book scope authorized for the application, which is not equivalent to the entire enterprise organization. An empty selectedDepartments array does not prove that the organization has no sub-departments. The estimation can be used only when estimateStatus is Ready and a count is returned. A missing count does not indicate 0.
+     * Authorization information: RAM operation agentcore:GetIdentityProviderSyncScope, access level Read, resource ARN: acs:agentcore:{regionId}:{accountId}:workspace/{workspaceId}/identityProvider/{identityProviderType}. This resource is a required authorization resource.
+     * Idempotence and retry: This operation is read-only and can be queried repeatedly.
+     * Calling this API operation is free of charge. Operation records support ActionTrail auditing.
+     * Sample response:</p>
+     * <pre><code class="language-json">{
+     *   &quot;requestId&quot;: &quot;01234567-89AB-CDEF-0123-456789ABCDEF&quot;,
+     *   &quot;message&quot;: &quot;success&quot;,
+     *   &quot;httpStatusCode&quot;: 200,
+     *   &quot;code&quot;: &quot;SUCCESS&quot;,
+     *   &quot;success&quot;: true,
+     *   &quot;data&quot;: {
+     *     &quot;syncScope&quot;: {
+     *       &quot;mode&quot;: &quot;SelectedDepartments&quot;,
+     *       &quot;departmentIds&quot;: [
+     *         &quot;10001&quot;
+     *       ]
+     *     },
+     *     &quot;selectedDepartments&quot;: [
+     *       {
+     *         &quot;id&quot;: &quot;10001&quot;,
+     *         &quot;name&quot;: &quot;R&amp;D Department&quot;,
+     *         &quot;exists&quot;: true
+     *       }
+     *     ],
+     *     &quot;estimateStatus&quot;: &quot;Ready&quot;,
+     *     &quot;expandedDepartmentCount&quot;: 2,
+     *     &quot;estimatedUserCount&quot;: 12
+     *   }
+     * }
+     * </code></pre>
+     * 
+     * @param request the request parameters of GetIdentityProviderSyncScope  GetIdentityProviderSyncScopeRequest
+     * @return GetIdentityProviderSyncScopeResponse
+     */
+    CompletableFuture<GetIdentityProviderSyncScopeResponse> getIdentityProviderSyncScope(GetIdentityProviderSyncScopeRequest request);
 
     /**
      * <b>description</b> :
@@ -700,6 +895,16 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>Queries the directories in the current workspace that can be used to create code package agents or switch runtime environments. Runtime environments are dynamically provided based on the current version configuration, and internal image addresses are not returned.
+     * If maxResults is omitted or set to 0, the default value is 10. If the value is greater than 100, it is processed as 100. Omit nextToken in the first request. For subsequent requests, use the token returned in the previous response as is, and keep the workspace unchanged. If a directory change invalidates the token, query from the first page again. An empty nextToken indicates that there are no more pages. Existing agents continue to use the saved images for restarts, scaling, and regular updates.</p>
+     * 
+     * @param request the request parameters of ListAgentCodeRuntimes  ListAgentCodeRuntimesRequest
+     * @return ListAgentCodeRuntimesResponse
+     */
+    CompletableFuture<ListAgentCodeRuntimesResponse> listAgentCodeRuntimes(ListAgentCodeRuntimesRequest request);
+
+    /**
+     * <b>description</b> :
      * <p>Queries the list of IM channels for a specified agent.</p>
      * 
      * @param request the request parameters of ListAgentIMChannels  ListAgentIMChannelsRequest
@@ -752,9 +957,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The default value of maxResults is 20, and the maximum value is 100. If this parameter is omitted or set to 0, the default value is used.
-     * Omit nextToken in the first request. In subsequent requests, pass the nextToken value returned in the previous response as is, and keep the same workspace. The nextToken is an opaque token. Do not parse or construct it. If the token in the response is empty, it indicates that no more pages are available.
-     * This operation returns the summaries of the current page and does not return the complete deployment configuration or the execution errors of the latest version. To obtain this information, call GetCustomAgent by using the agentId in items.</p>
+     * <p>The default value of maxResults is 20 and the maximum value is 100. If this parameter is omitted or set to 0, the default value is used.
+     * Omit nextToken in the first request. For subsequent requests, pass the nextToken returned in the previous response as is and keep the same workspace. The nextToken is an opaque token. Do not parse or construct it. An empty token in the response indicates that there are no more pages.
+     * This operation returns the summaries of the current page and does not return the complete deployment configurations or the execution errors of the latest version. To obtain this information, call GetCustomAgent by using the agentId in items.</p>
      * 
      * @param request the request parameters of ListCustomAgents  ListCustomAgentsRequest
      * @return ListCustomAgentsResponse
@@ -771,6 +976,43 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListExternalAgentsResponse> listExternalAgents(ListExternalAgentsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Queries DingTalk or Feishu departments by hierarchy and page. Prerequisites include a bound identity provider, a user pool, valid application credentials, and address book read authorization. If you do not specify parentDepartmentId, the root hierarchy is queried. When expanding a node, specify the ID of the node to query its direct child departments. The hasChildren field indicates whether the node can be expanded and does not mean that child nodes are returned. The nextToken field is used only to query the next page of child departments under the current parent department. This query only reads the directory. It does not save the synchronization scope or import users. If a new department is added to a DingTalk or Feishu organization, re-query the corresponding parent department because the previous list does not reflect the latest directory.\n\nAuthorization information: The RAM action is agentcore:ListIdentityProviderDepartments, the access level is List, and the resource ARN is acs:agentcore:{regionId}:{accountId}:workspace/{workspaceId}/identityProvider/{identityProviderType}. This resource is required for authorization.\n\nIdempotency and retry: This operation is read-only and can be called repeatedly.\n\nCalling this API is free of charge. Operation records support ActionTrail auditing.\n\nResponse example:\n<code>json\\n{\\n  &quot;requestId&quot;: &quot;01234567-89AB-CDEF-0123-456789ABCDEF&quot;,\\n  &quot;message&quot;: &quot;success&quot;,\\n  &quot;httpStatusCode&quot;: 200,\\n  &quot;code&quot;: &quot;SUCCESS&quot;,\\n  &quot;success&quot;: true,\\n  &quot;maxResults&quot;: 50,\\n  &quot;nextToken&quot;: &quot;&quot;,\\n  &quot;items&quot;: [\\n    {\\n      &quot;id&quot;: &quot;10001&quot;,\\n      &quot;name&quot;: &quot;R&amp;D Department&quot;,\\n      &quot;parentId&quot;: &quot;1&quot;,\\n      &quot;memberCount&quot;: 12,\\n      &quot;hasChildren&quot;: true\\n    }\\n  ]\\n}\\n</code></p>
+     * 
+     * @param request the request parameters of ListIdentityProviderDepartments  ListIdentityProviderDepartmentsRequest
+     * @return ListIdentityProviderDepartmentsResponse
+     */
+    CompletableFuture<ListIdentityProviderDepartmentsResponse> listIdentityProviderDepartments(ListIdentityProviderDepartmentsRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h2>Features and prerequisites</h2>
+     * <p>Returns the local binding summary without querying the actual SAML or SCIM configurations of AgentIdentity. If no binding exists, items is an empty array. A workspace currently supports only one external binding. The default value of maxResults is 10, and the valid range is 1 to 100. Currently, nextToken must be omitted or left empty. A non-empty value returns InvalidParameter, and fictitious multi-page results are not supported.
+     * The status of CustomSSO indicates the task status of shared resources and logon configurations. You must check protocol and saml to determine whether SAML is configured. To query SCIM configurations, independently call GetIdentityProviderSCIM. The list operation does not issue tokens and does not return the vendor appSecret, encryptKey, or verificationToken.</p>
+     * <h2>Requests and examples</h2>
+     * <p>GET /workspaces/{workspaceId}/identity-providers
+     * Call conventions: Call the API in the region of the target workspace by using an AccessKey pair or Security Token Service (STS) token that has the required permissions on the identity source resources of the workspace. In the following examples, ws-example, URLs, certificates, and tokens are placeholder values and must be replaced with actual values. The request body example shows the body parameters of the public API, not the extra body wrapper of the backend direct connection API. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not record secrets. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</p>
+     * <pre><code class="language-text">GET /workspaces/ws-example/identity-providers?maxResults=10
+     * </code></pre>
+     * <h2>Response examples</h2>
+     * <pre><code class="language-json">{
+     *   &quot;items&quot;: [
+     *     {
+     *       &quot;workspaceId&quot;: &quot;ws-example&quot;,
+     *       &quot;identityProviderType&quot;: &quot;CustomSSO&quot;,
+     *       &quot;status&quot;: &quot;READY&quot;,
+     *       &quot;loginEnabled&quot;: false,
+     *       &quot;syncEnabled&quot;: false
+     *     }
+     *   ],
+     *   &quot;maxResults&quot;: 10,
+     *   &quot;totalCount&quot;: 1
+     * }
+     * </code></pre>
+     * <h2>Errors and handling</h2>
+     * <p>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. Synchronous calls to upstream services that fail may return 503 IdentityProviderProvisioningUnavailable. Retain the request ID for troubleshooting and do not interpret read failures as unconfigured. Actual authentication and workspace non-existence errors follow common error handling.
+     * 400 InvalidParameter: maxResults is out of bounds, or nextToken is not empty, which is currently not supported. If a query fails, an error is displayed instead of resetting the status to unconfigured.</p>
+     * 
      * @param request the request parameters of ListIdentityProviders  ListIdentityProvidersRequest
      * @return ListIdentityProvidersResponse
      */
@@ -825,7 +1067,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paged query on long-term memory. Paging is supported, and you can filter the results independently by user ID, agent ID, and session ID.</p>
+     * <p>Performs a paged query on long-term memory records. The results can be filtered independently by user ID, agent ID, and session ID. Paging is supported.</p>
      * 
      * @param request the request parameters of ListMemories  ListMemoriesRequest
      * @return ListMemoriesResponse
@@ -834,7 +1076,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paged query for raw messages by exact scope with paging. SessionId is required, and at least one of UserId and AgentId must be provided.</p>
+     * <p>Performs a paging query for raw messages by exact scope. SessionId is required, and at least one of UserId and AgentId must be provided.</p>
      * 
      * @param request the request parameters of ListMemorySessionMessages  ListMemorySessionMessagesRequest
      * @return ListMemorySessionMessagesResponse
@@ -843,7 +1085,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paging query for sessions in a MemoryStore, and allows independent filtering by user ID and agent ID.</p>
+     * <p>Performs a paging query for sessions in a MemoryStore. You can filter the sessions independently by user ID and agent ID.</p>
      * 
      * @param request the request parameters of ListMemorySessions  ListMemorySessionsRequest
      * @return ListMemorySessionsResponse
@@ -852,7 +1094,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries MemoryStores in a specified workspace by using paging.</p>
+     * <p>Performs a paged query for MemoryStores in a specified workspace with paging.</p>
      * 
      * @param request the request parameters of ListMemoryStores  ListMemoryStoresRequest
      * @return ListMemoryStoresResponse
@@ -1017,7 +1259,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves long-term memory from a MemoryStore based on semantics queries.</p>
+     * <p>Retrieves long-term memory from a MemoryStore based on semantics.</p>
      * 
      * @param request the request parameters of SearchMemories  SearchMemoriesRequest
      * @return SearchMemoriesResponse
@@ -1092,10 +1334,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Specify at least one top-level field to update. Omitted top-level fields retain their original configurations. When providing a configuration object, specify its required subfields and include any optional configurations that you want to retain. Arrays are replaced as a whole. Pass an empty array [] to clear a list. The agenticFsMounts field does not accept null. Pass null for the description field to clear the description, and pass null for the healthCheck field to remove the health check.
-     * When updating an image, you must specify artifact.port and the type, instanceId, namespace, repo, and tag fields of artifact.container. To retain a custom startup command, also provide the entrypoint field. Currently, only ACR container image deployment is supported. Omit the artifact.code field.
-     * When providing the runtime field, both compute and sessionPolicy must be present. If you omit hpa or any of its fields, unspecified elastic configurations use default values. To retain the original elastic configurations, provide them all. When providing the network field, omitted access items are treated as allowed, but actual access is still subject to the workspace network restrictions. To retain the original restrictions, provide both accessInternet and accessVpc. When providing healthCheck, you must specify the port field, and other unspecified items use default values. When providing logging.sls, you must specify both project and logstore.
-     * The update is an asynchronous process. A successful response indicates that the request is accepted. You can call the GetCustomAgent operation to query latestSpecVersion, latestVersionStatus, and latestExecutionError, and check the status field to confirm the update result.
+     * <p>Provide at least one top-level field to update. Omitted top-level fields retain their original configurations. When providing a configuration object, specify its required subfields and include any optional configurations that you want to retain. Arrays are replaced as a whole. Pass an empty array [] to clear a list. The agenticFsMounts field does not accept null. Pass null for the description field to clear the description, and pass null for the healthCheck field to remove the health check.
+     * When updating an image, you must specify artifact.port and the type, instanceId, namespace, repo, and tag fields of artifact.container. To retain a custom startup command, also provide the entrypoint field.
+     * In code package pattern, specify artifact.port and the sourceUri, languageRuntime, and entrypoint fields of artifact.code. Do not specify the container field at the same time. Dependencies must be packaged by the user. ZIP and TAR.GZ formats are supported, and the compressed package size cannot exceed 500,000,000 bytes. Query the runtime environment identity by calling the ListAgentCodeRuntimes operation. The sourceUri field supports oss:// addresses or HTTPS object addresses of standard OSS public domain names, including signed URLs. For local files, first call the GetAgentCodePackageUploadUrl operation to obtain an upload URL, upload the file directly, and then commit the returned sourceUri.
+     * When submitting a new code package source, the backend rechecks read permissions, objects, and sizes. The configuration is saved only after the transfer succeeds. If the transfer fails, the current configuration is not saved. Saved fixed packages can be reused. Set the client timeout to 210 seconds for code package requests. Archive integrity and secure decompression are checked at startup. A successful acceptance does not indicate that the agent is ready to run.
+     * When providing the runtime field, the compute and sessionPolicy fields must be provided at the same time. If the hpa field or its subfields are omitted, unspecified elastic configurations use default values. To retain the original elastic configurations, provide them together. When providing the network field, omitted access items are treated as allowed, but actual access is still restricted by the workspace network configurations. To retain the original restrictions, provide both accessInternet and accessVpc. When providing the healthCheck field, the port field is required, and other unspecified items use default values. When providing the logging.sls field, both project and logstore must be specified.
+     * The update is an asynchronous process. A successful response indicates that the request is accepted. Call the GetCustomAgent operation to query latestSpecVersion, latestVersionStatus, and latestExecutionError, and check the status field to confirm the update result.
      * The clientToken field currently does not provide idempotency guarantees. Do not rely on this parameter to prevent duplicate requests. The healthyThreshold field for health checks currently does not take effect. Omit this field.</p>
      * 
      * @param request the request parameters of UpdateCustomAgent  UpdateCustomAgentRequest
@@ -1113,6 +1357,46 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateExternalAgentResponse> updateExternalAgent(UpdateExternalAgentRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Features and prerequisites</h2>
+     * <p>CustomSSO uses protocol=SAML and saml to save logon configurations. It does not accept legacy metadata or syncEnabled. To toggle the SCIM switch, you must call UpdateIdentityProviderSCIM. OIDC is not supported. You can either import XML or manually enter fields. If you import XML, metadataXml must be a single IdP EntityDescriptor XML text of up to 1 MiB. URLs or file paths are not accepted, and DTDs or external entities are prohibited. If you manually enter fields, you must provide entityId, loginUrl, bindingType, and a non-empty x509Certificates array at the same time. The entityId must be non-empty and up to 2,048 characters in length, and cannot be replaced after configuration. The loginUrl must be an absolute HTTPS URL without user credentials or fragments. The bindingType must be HTTP-Redirect or HTTP-POST. Signing certificates must be valid X.509 certificates, and up to 10 certificates are supported.
+     * Saving the configuration does not automatically enable logon. A valid SAML configuration must exist before you enable logon. Setting loginEnabled=false only disables logon and does not clear SAML or SCIM configurations. You can independently pass Boolean values for jitProvisionEnabled and jitUpdateEnabled. If omitted, the existing values are retained. If omitted for the first time, the default value is false. Updating only the JIT switches also requires a valid SAML configuration. If the request is unchanged, the current binding may be returned directly without generating a new task. A successful update returns UPDATING. You can call GetIdentityProvider and wait for READY or UPDATE_FAILED. If the update fails, you can resubmit the request. An HTTP success response does not indicate that the upstream configuration has taken effect.
+     * DingTalk and Feishu continue to use vendor metadata and logon or synchronization switches. They do not accept protocol or saml. Updating vendor metadata supports partial updates. You only need to submit the fields to be modified. Unsubmitted fields and saved credentials remain unchanged. The server merges the new and old values and then validates the complete configuration. Explicitly submitted fields cannot be null, empty strings, or blank strings. For example, you can submit only appSecret to update the secret. The existing vendor semantics of syncScope are retained. Saving the scope does not automatically trigger full synchronization.</p>
+     * <h2>Request and examples</h2>
+     * <p>PUT /workspaces/{workspaceId}/identity-providers/{identityProviderType}
+     * Call conventions: Call the API in the region of the target workspace by using an AccessKey pair or STS token that has permissions on the identity provider resources of the workspace. In the following examples, ws-example, URLs, certificates, and tokens are placeholder values and must be replaced with actual values. The request body example shows the body parameters of the public API, not the extra body wrapper of the backend direct connection API. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Keep the requestId for troubleshooting and do not log secrets. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</p>
+     * <pre><code class="language-text">PUT /workspaces/ws-example/identity-providers/CustomSSO
+     * {
+     *   &quot;protocol&quot;: &quot;SAML&quot;,
+     *   &quot;saml&quot;: {
+     *     &quot;entityId&quot;: &quot;https://idp.example.com/entity&quot;,
+     *     &quot;loginUrl&quot;: &quot;https://idp.example.com/sso&quot;,
+     *     &quot;bindingType&quot;: &quot;HTTP-Redirect&quot;,
+     *     &quot;x509Certificates&quot;: [
+     *       &quot;&lt;Valid PEM X.509 certificate text&gt;&quot;
+     *     ],
+     *     &quot;jitProvisionEnabled&quot;: false,
+     *     &quot;jitUpdateEnabled&quot;: false
+     *   }
+     * }
+     * Toggle logon only: {&quot;loginEnabled&quot;: true}
+     * </code></pre>
+     * <h2>Response example</h2>
+     * <pre><code class="language-json">{
+     *   &quot;data&quot;: {
+     *     &quot;workspaceId&quot;: &quot;ws-example&quot;,
+     *     &quot;identityProviderType&quot;: &quot;CustomSSO&quot;,
+     *     &quot;protocol&quot;: &quot;SAML&quot;,
+     *     &quot;loginEnabled&quot;: false,
+     *     &quot;syncEnabled&quot;: false,
+     *     &quot;status&quot;: &quot;UPDATING&quot;
+     *   }
+     * }
+     * </code></pre>
+     * <h2>Errors and handling</h2>
+     * <p>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. Synchronous calls to the upstream may return 503 IdentityProviderProvisioningUnavailable if they fail. Keep the request ID for troubleshooting and do not interpret read failures as unconfigured. Actual authentication and workspace non-existence errors follow common error handling.
+     * 400 InvalidParameter: XML and manual entry are mixed, manual entry items are missing, certificates are invalid, the protocol is not supported, entityId is changed, logon is enabled without configuration, or CustomSSO submits metadata or syncEnabled. 409 IdentityProviderOperationConflict: The current binding does not allow updates. CustomSSO supports resubmitting configurations from UPDATE_FAILED.</p>
+     * 
      * @param request the request parameters of UpdateIdentityProvider  UpdateIdentityProviderRequest
      * @return UpdateIdentityProviderResponse
      */
@@ -1145,7 +1429,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Updates the long-term memory text or metadata based on the memory ID.</p>
+     * <p>Updates the text or metadata of a long-term memory based on the memory ID.</p>
      * 
      * @param request the request parameters of UpdateMemory  UpdateMemoryRequest
      * @return UpdateMemoryResponse
@@ -1248,6 +1532,25 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UploadSkillViaOssResponse
      */
     CompletableFuture<UploadSkillViaOssResponse> uploadSkillViaOss(UploadSkillViaOssRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Uses the current workspace role to check whether the customer\&quot;s OSS object exists and is readable, and checks the file name extension and compressed size. Returns the sourceUri, file name, size, and format read in this request. The bucket and object key are passed separately, and HTTPS download URLs are not accepted.
+     * The validation uses object metadata and read probing. It does not perform full downloads, transfers, or decompression, nor does it generate a SHA-256 hash. Passing the validation does not mean that the archive content is complete or can be started. When you submit a CreateCustomAgent or UpdateCustomAgent request, the system re-validates and transfers the package. You do not need to invoke this operation in advance as a prerequisite for submission.</p>
+     * 
+     * @param request the request parameters of ValidateAgentCodePackageFromOss  ValidateAgentCodePackageFromOssRequest
+     * @return ValidateAgentCodePackageFromOssResponse
+     */
+    CompletableFuture<ValidateAgentCodePackageFromOssResponse> validateAgentCodePackageFromOss(ValidateAgentCodePackageFromOssRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>检查当前 Workspace 角色是否绑定所选源 Bucket 对应的自定义 RAM 策略，复用已有挂载授权。仅返回策略绑定状态，不验证代码包存在或可读、不修改默认桶。授权状态不能替代 ValidateAgentCodePackageFromOss 的实际对象读取校验。</p>
+     * 
+     * @param request the request parameters of VerifyAgentCodePackageOssRamAuthorization  VerifyAgentCodePackageOssRamAuthorizationRequest
+     * @return VerifyAgentCodePackageOssRamAuthorizationResponse
+     */
+    CompletableFuture<VerifyAgentCodePackageOssRamAuthorizationResponse> verifyAgentCodePackageOssRamAuthorization(VerifyAgentCodePackageOssRamAuthorizationRequest request);
 
     /**
      * <b>description</b> :

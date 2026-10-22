@@ -116,7 +116,7 @@ public class GetMemoryTaskRequest extends Request {
         }
 
         /**
-         * <p>The task ID returned by the AddMemories operation.</p>
+         * <p>The task ID returned by AddMemories.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -89,7 +89,7 @@ public class DeleteIdentityProviderRequest extends Request {
         } 
 
         /**
-         * <p>The workspace ID.</p>
+         * <p>The ID of the workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,12 +102,7 @@ public class DeleteIdentityProviderRequest extends Request {
         }
 
         /**
-         * <p>The type of the external identity provider to unbind. Valid values:</p>
-         * <ul>
-         * <li>DingTalk</li>
-         * <li>Feishu</li>
-         * </ul>
-         * <p>The value must match the type that is currently bound.</p>
+         * <p>The type of the external identity provider to be disconnected. Valid values: DingTalk and Feishu. The value must be the same as the type of the current binding.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

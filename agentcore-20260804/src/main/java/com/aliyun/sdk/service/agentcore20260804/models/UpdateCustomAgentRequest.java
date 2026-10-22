@@ -116,7 +116,7 @@ public class UpdateCustomAgentRequest extends Request {
         }
 
         /**
-         * <p>The unique identifier of the custom agent. You can obtain this ID from the response of the CreateCustomAgent or ListCustomAgents operation.</p>
+         * <p>The unique identifier of the custom agent. You can obtain this identifier from the response of the CreateCustomAgent or ListCustomAgents operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,7 +129,7 @@ public class UpdateCustomAgentRequest extends Request {
         }
 
         /**
-         * <p>The update configuration for the custom agent. Specify at least one top-level field. Omitted top-level fields retain their original values. When providing a configuration object, specify its required subfields and include any optional configurations that you want to retain. Arrays are replaced as a whole.</p>
+         * <p>The update configuration for the custom agent. Provide at least one top-level field. Omitted top-level fields retain their original values. When providing a configuration object, specify its required subfields and include any optional configurations that you want to retain. Arrays are replaced as a whole.</p>
          */
         public Builder body(UpdateCustomAgentRequestBody body) {
             String bodyShrink = shrink(body, "body", "json");
@@ -258,7 +258,7 @@ public class UpdateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether the mount is read-only. A value of true indicates read-only, and false indicates read and write. If omitted, the default value is false.</p>
+             * <p>Specifies whether the mount is read-only. A value of true indicates read-only, and a value of false indicates read and write. If this field is omitted, the default value is false.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -355,11 +355,11 @@ public class UpdateCustomAgentRequest extends Request {
             } 
 
             /**
-             * <p>The startup entry point for the code package. Code package deployment is currently not supported. Omit this field.</p>
+             * <p>The startup command for the code package. This field is required in code package mode. The working directory is the extracted code root directory /code, such as python main.py. Quotes and escapes are supported. Environment variables, pipes, and logical operations are not automatically expanded. For complex commands, use scripts within the package.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>python app.py</p>
+             * <p>python main.py</p>
              */
             public Builder entrypoint(String entrypoint) {
                 this.entrypoint = entrypoint;
@@ -367,11 +367,11 @@ public class UpdateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The language runtime identifier for the code package. Code package deployment is currently not supported. Omit this field.</p>
+             * <p>The code runtime environment identifier, such as python3.12. When creating or switching environments, use the identifier returned by the ListAgentCodeRuntimes operation. The identifier is validated by the current version catalog and is not a fixed enumeration.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>python</p>
+             * <p>python3.12</p>
              */
             public Builder languageRuntime(String languageRuntime) {
                 this.languageRuntime = languageRuntime;
@@ -379,11 +379,11 @@ public class UpdateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The source URI of the code package. Code package deployment is currently not supported. Omit this field.</p>
+             * <p>The source address of the code package. This field supports oss:// addresses or HTTPS object addresses of standard OSS public domain names, including OSS signed URLs. Arbitrary external sites, custom domain names, and additional authentication request headers are not supported. After a local upload, use the sourceUri returned by the GetAgentCodePackageUploadUrl operation. The address is revalidated and transferred during creation or updates. After the transfer is saved, the platform returns a fixed oss:// address. This fixed address can be reused for regular updates.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>oss://my-agent-bucket/packages/agent.zip</p>
+             * <p>oss://my-agent-bucket/packages/main.zip</p>
              */
             public Builder sourceUri(String sourceUri) {
                 this.sourceUri = sourceUri;
@@ -507,7 +507,7 @@ public class UpdateCustomAgentRequest extends Request {
             } 
 
             /**
-             * <p>The optional executable program and startup parameters. If specified, this must be a non-empty string. When updating the artifact, omitting this field uses the default startup method of the image. To retain the original custom startup command, provide this field as well.</p>
+             * <p>The optional executable program and startup parameters. If specified, this field must be a non-empty string. When updating the artifact, omitting this field uses the default startup method of the image. To retain the original custom startup command, provide this field together.</p>
              * 
              * <strong>example:</strong>
              * <p>python app.py</p>
@@ -566,7 +566,7 @@ public class UpdateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The source type of the image. Currently, only acr is supported, which indicates Alibaba Cloud Container Registry (ACR).</p>
+             * <p>The image source type. Currently, only acr is supported, which indicates Alibaba Cloud Container Registry (ACR).</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -651,7 +651,7 @@ public class UpdateCustomAgentRequest extends Request {
             } 
 
             /**
-             * <p>The code package deployment configuration. This is currently not supported. Omit this field and use artifact.container instead.</p>
+             * <p>The code package deployment configuration. This field is mutually exclusive with the container field. Code packages use the ZIP or TAR.GZ format. Dependencies must be packaged by the user. The platform does not install dependencies or perform online builds.</p>
              */
             public Builder code(Code code) {
                 this.code = code;
@@ -740,7 +740,7 @@ public class UpdateCustomAgentRequest extends Request {
             } 
 
             /**
-             * <p>The name of the environment variable. This field cannot be empty and must be unique within the current environment variable list.</p>
+             * <p>The name of the environment variable. This field cannot be empty and must be unique in the current environment variable list.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -752,7 +752,7 @@ public class UpdateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The value of the environment variable. This must be a string. Empty strings are allowed.</p>
+             * <p>The value of the environment variable. This field must be a string. Empty strings are allowed.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -940,7 +940,7 @@ public class UpdateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The interval between two health checks, in seconds. This must be a positive integer. If omitted, the default value is 10.</p>
+             * <p>The interval between two health checks, in seconds. This field must be a positive integer. If this field is omitted, the default value is 10.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -951,7 +951,7 @@ public class UpdateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The HTTP health check path. This must start with a forward slash (/). If omitted, the default value is /healthz.</p>
+             * <p>The HTTP health check path. This field must start with a forward slash (/). If this field is omitted, the default value is /healthz.</p>
              * 
              * <strong>example:</strong>
              * <p>/healthz</p>
@@ -962,7 +962,7 @@ public class UpdateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The port accessed for health checks. This field is required when configuring a health check. Valid values: 1 to 65535.</p>
+             * <p>The port accessed by the health check. This field is required when configuring a health check. Valid values: 1 to 65535.</p>
              * 
              * <strong>example:</strong>
              * <p>8080</p>
@@ -973,7 +973,7 @@ public class UpdateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The timeout period for a single health check, in seconds. This must be a positive integer and less than intervalSeconds. If omitted, the default value is 2.</p>
+             * <p>The timeout period for a single health check, in seconds. This field must be a positive integer and less than intervalSeconds. If this field is omitted, the default value is 2.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -984,7 +984,7 @@ public class UpdateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The number of consecutive health check failures before the instance is considered unhealthy. This must be a positive integer. If omitted, the default value is 3.</p>
+             * <p>The number of consecutive health check failures before the agent is considered unhealthy. This field must be a positive integer. If this field is omitted, the default value is 3.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -1054,7 +1054,7 @@ public class UpdateCustomAgentRequest extends Request {
             } 
 
             /**
-             * <p>The name of the Simple Log Service logstore that receives agent logs.</p>
+             * <p>The name of the SLS logstore that receives agent logs.</p>
              * 
              * <strong>example:</strong>
              * <p>agent-runtime</p>
@@ -1065,7 +1065,7 @@ public class UpdateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The name of the Simple Log Service project that receives agent logs.</p>
+             * <p>The name of the SLS project that receives agent logs.</p>
              * 
              * <strong>example:</strong>
              * <p>my-agent-logs</p>
@@ -1122,7 +1122,7 @@ public class UpdateCustomAgentRequest extends Request {
             } 
 
             /**
-             * <p>The Simple Log Service log delivery destination. When updating this object, you must provide both project and logstore, and neither can be empty.</p>
+             * <p>The SLS log delivery destination. When updating this object, you must provide both the project and logstore fields, and they cannot be empty.</p>
              */
             public Builder sls(Sls sls) {
                 this.sls = sls;
@@ -1176,7 +1176,7 @@ public class UpdateCustomAgentRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to allow the agent to access the Internet. A Boolean value is required when configuring accessInternet. For this to take effect, the workspace must also allow Internet access.</p>
+             * <p>Specifies whether to allow the agent to access the Internet. When configuring accessInternet, you must provide a Boolean value. For this configuration to take effect, the workspace must also allow Internet access.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -1230,7 +1230,7 @@ public class UpdateCustomAgentRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to allow the agent to access the user VPC configured for the workspace. A Boolean value is required when configuring accessVpc. For this to take effect, the workspace must also allow VPC access.</p>
+             * <p>Specifies whether to allow the agent to access the user VPC configured in the workspace. When configuring accessVpc, you must provide a Boolean value. For this configuration to take effect, the workspace must also allow VPC access.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -1297,7 +1297,7 @@ public class UpdateCustomAgentRequest extends Request {
             } 
 
             /**
-             * <p>The Internet access configuration. If this access item is omitted, Internet access is not restricted on the agent side. However, the workspace must still allow Internet access.</p>
+             * <p>The Internet access configuration. When this access item is omitted, the agent does not restrict Internet access. However, the workspace must still allow Internet access.</p>
              */
             public Builder accessInternet(AccessInternet accessInternet) {
                 this.accessInternet = accessInternet;
@@ -1305,7 +1305,7 @@ public class UpdateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The user VPC access configuration. If this access item is omitted, VPC access is not restricted on the agent side. However, the workspace must still be configured to allow access to the user VPC.</p>
+             * <p>The user VPC access configuration. When this access item is omitted, the agent does not restrict VPC access. However, the workspace must still be configured to allow access to the user VPC.</p>
              */
             public Builder accessVpc(AccessVpc accessVpc) {
                 this.accessVpc = accessVpc;
@@ -1359,7 +1359,7 @@ public class UpdateCustomAgentRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to enable agent observability. Default value: true. If set to false, the platform Python probe is not loaded at runtime, and you must collect observability data yourself.</p>
+             * <p>Specifies whether to enable agent observability.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -1474,7 +1474,7 @@ public class UpdateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The non-empty object directory prefix in the bucket, such as datasets/train. Leading and trailing slashes are removed. The root directory is not supported. Do not use parent directory traversal.</p>
+             * <p>The non-empty object directory prefix in the bucket, such as datasets/train. Leading and trailing slashes are removed. The root directory is not supported. Do not use parent directory navigation.</p>
              * 
              * <strong>example:</strong>
              * <p>datasets/train</p>
@@ -1485,7 +1485,7 @@ public class UpdateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether the mount is read-only. A value of true indicates read-only, and false indicates read and write. If omitted, the default value is false.</p>
+             * <p>Specifies whether the mount is read-only. A value of true indicates read-only, and a value of false indicates read and write. If this field is omitted, the default value is false.</p>
              */
             public Builder readOnly(Boolean readOnly) {
                 this.readOnly = readOnly;
@@ -1849,7 +1849,7 @@ public class UpdateCustomAgentRequest extends Request {
              * <ul>
              * <li>true: Enabled.</li>
              * <li>false: Disabled.
-             * When runtime is provided, if this field is omitted, the default value is false.</li>
+             * Default value: false. This default value applies when runtime is provided and this field is omitted.</li>
              * </ul>
              * <p>This parameter is required.</p>
              */
@@ -1859,7 +1859,7 @@ public class UpdateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The maximum number of concurrent sessions for a single runtime instance. Valid values: 1 to 100. When runtime is provided, if this field is omitted, the default value is 100.</p>
+             * <p>The maximum number of concurrent sessions for a single runtime instance. Valid values: 1 to 100. When runtime is provided, omitting this field uses the default value of 100.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -1870,7 +1870,7 @@ public class UpdateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The maximum number of runtime instances. Valid values: 1 to 100. The value cannot be less than minSandboxCount. When runtime is provided, if this field is omitted, the default value is 10.</p>
+             * <p>The maximum number of runtime instances. Valid values: 1 to 100. The value cannot be less than minSandboxCount. When runtime is provided, omitting this field uses the default value of 10.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -1881,7 +1881,7 @@ public class UpdateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The minimum number of runtime instances. Valid values: 1 to 100. The value cannot be greater than maxSandboxCount. When runtime is provided, if this field is omitted, the default value is 1.</p>
+             * <p>The minimum number of runtime instances. Valid values: 1 to 100. The value cannot be greater than maxSandboxCount. When runtime is provided, omitting this field uses the default value of 1.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1892,7 +1892,7 @@ public class UpdateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The session idle timeout in seconds. Valid values: 60 to 86400. When runtime is provided, if this field is omitted, the default value is 600.</p>
+             * <p>The session idle timeout in seconds. Valid values: 60 to 86400. When runtime is provided, omitting this field uses the default value of 600.</p>
              * 
              * <strong>example:</strong>
              * <p>600</p>
@@ -1963,7 +1963,7 @@ public class UpdateCustomAgentRequest extends Request {
             } 
 
             /**
-             * <p>The name of the HTTP request header used by the session policy. This parameter is required when type is ISOLATED_HEADER_FIELD and must be a valid HTTP request header name. Omit this parameter for other policies.</p>
+             * <p>The name of the HTTP request header used by the session policy. This parameter is required when type is set to ISOLATED_HEADER_FIELD and must be a valid HTTP request header name. Omit this parameter for other policies.</p>
              * 
              * <strong>example:</strong>
              * <p>X-Session-Id</p>
@@ -1977,8 +1977,8 @@ public class UpdateCustomAgentRequest extends Request {
              * <p>The session policy type. Valid values:</p>
              * <ul>
              * <li>AFFINITY: Session affinity.</li>
-             * <li>ISOLATED_HEADER_FIELD: Associates sessions by using the request header specified in headerName.</li>
-             * <li>ISOLATED_COOKIE: Cookie-based session option. Not recommended.</li>
+             * <li>ISOLATED_HEADER_FIELD: Associates sessions by using the request header specified by headerName.</li>
+             * <li>ISOLATED_COOKIE: Cookie-based session policy. This value is not recommended.</li>
              * <li>DISABLED: Compatibility option. The response returns AFFINITY.</li>
              * </ul>
              * <p>This parameter is required.</p>
@@ -2075,7 +2075,7 @@ public class UpdateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The optional elastic policy. When runtime is provided, if hpa or its fields are omitted, default values are used: enabled is false, the minimum number of instances is 1, the maximum number of instances is 10, the maximum number of concurrent sessions per instance is 100, and the session idle timeout is 600 seconds. To retain the original policy during an update, provide the complete hpa configuration.</p>
+             * <p>The optional elastic policy. When runtime is provided, omitting hpa or its fields uses the default values: enabled is false, the minimum number of instances is 1, the maximum number of instances is 10, the maximum number of concurrent sessions per instance is 100, and the session idle timeout is 600 seconds. To retain the original policy during an update, provide the complete hpa configuration.</p>
              */
             public Builder hpa(Hpa hpa) {
                 this.hpa = hpa;
@@ -2307,7 +2307,7 @@ public class UpdateCustomAgentRequest extends Request {
             } 
 
             /**
-             * <p>The list of additional AgenticFS mounts. The total number of AgenticFS and OSS mounts cannot exceed 10. During creation, omitting this field or passing an empty array [] indicates no additional mounts. During an update, omitting this field retains the original value, and passing an empty array [] clears the list. You cannot pass null.</p>
+             * <p>The list of additional AgenticFS mounts. The total number of AgenticFS mounts and ossMounts cannot exceed 10. During creation, omitting this field or passing an empty array [] indicates no additional mounts. During an update, omitting this field retains the original value, and passing an empty array [] clears the list. You cannot pass null.</p>
              */
             public Builder agenticFsMounts(java.util.List<AgenticFsMounts> agenticFsMounts) {
                 this.agenticFsMounts = agenticFsMounts;
@@ -2315,7 +2315,7 @@ public class UpdateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The deployment artifact configuration. Currently, only ACR container images are supported. Specify the container field and the service listening port field. Omit the code field. During an update, you must specify the port field and all required fields of the container object.</p>
+             * <p>The deployment artifact configuration. You must specify the service listening port in the port field and choose either the code or container deployment method. During an update, you must provide the required fields for the selected method.</p>
              */
             public Builder artifact(Artifact artifact) {
                 this.artifact = artifact;
@@ -2323,7 +2323,7 @@ public class UpdateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The description of the agent purpose. The maximum length is 1,024 characters after leading and trailing whitespaces are removed. If omitted, the original value is retained. Pass null to clear the description.</p>
+             * <p>The description of the agent purpose. The maximum length is 1,024 characters after leading and trailing whitespaces are removed. Omitting this field retains the original value. Pass null to clear the description.</p>
              * 
              * <strong>example:</strong>
              * <p>Custom agent that provides conversation services</p>
@@ -2350,7 +2350,7 @@ public class UpdateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The log delivery configuration for the agent. You can specify the Simple Log Service project and logstore. After a successful creation or update, verify whether logs are delivered properly.</p>
+             * <p>The log delivery configuration for the agent. You can specify the Simple Log Service (SLS) project and logstore. After a successful creation or update, verify whether logs are delivered properly.</p>
              */
             public Builder logging(Logging logging) {
                 this.logging = logging;
@@ -2358,7 +2358,7 @@ public class UpdateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The name of the custom agent. The length is 1 to 128 characters after leading and trailing whitespaces are removed. The name must be unique within the same workspace. If omitted, the original value is retained. You cannot pass null or an empty name.</p>
+             * <p>The name of the custom agent. The length is 1 to 128 characters after leading and trailing whitespaces are removed. The name must be unique within the same workspace. Omitting this field retains the original value. You cannot pass null or a blank name.</p>
              * 
              * <strong>example:</strong>
              * <p>my-custom-agent</p>
@@ -2369,7 +2369,7 @@ public class UpdateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The network access configuration for the agent. When providing this object, omitted access items are treated as allowed. The actual accessible scope is still subject to the workspace network configuration. To retain the original restrictions during an update, specify both accessInternet and accessVpc.</p>
+             * <p>The network access configuration for the agent. When providing this object, omitted access items are treated as allowed. The actual accessible range is still restricted by the workspace network configuration. To retain the original restrictions during an update, specify both accessInternet and accessVpc.</p>
              */
             public Builder network(Network network) {
                 this.network = network;
@@ -2377,7 +2377,7 @@ public class UpdateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The observability configuration for high-code agents.</p>
+             * <p>The high-code agent observability configuration.</p>
              */
             public Builder observability(Observability observability) {
                 this.observability = observability;
@@ -2385,7 +2385,7 @@ public class UpdateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The OSS mount list. A maximum of 10 items in total with agenticFsMounts. Each item must include bucketName, path, and mountPath. Mount targets must not be duplicated or overlap. During an update, this list is replaced entirely. Pass an empty array to clear all mounts.</p>
+             * <p>The OSS mount list. A maximum of 10 items in total with agenticFsMounts. Each item must include bucketName, path, and mountPath. Mount targets must not be duplicated or overlap. The entire list is replaced during an update. Pass an empty array to clear the list.</p>
              */
             public Builder ossMounts(java.util.List<OssMounts> ossMounts) {
                 this.ossMounts = ossMounts;
@@ -2393,7 +2393,7 @@ public class UpdateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The list of invocation protocols supported by the agent. Each item includes the protocol type and optional paths and request headers. During an update, this list is replaced entirely.</p>
+             * <p>The list of invocation protocols supported by the agent. Each item includes the protocol type and optional paths and request headers. The entire list is replaced during an update.</p>
              */
             public Builder protocol(java.util.List<Protocol> protocol) {
                 this.protocol = protocol;
@@ -2401,7 +2401,7 @@ public class UpdateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The ARN of the RAM role used by the agent to access user cloud resources. The role must have permissions to access the cloud resources.</p>
+             * <p>The ARN of the RAM role used when the agent accesses user cloud resources. The role must have permissions to access the cloud resources.</p>
              * 
              * <strong>example:</strong>
              * <p>acs:ram::1234567890123456:role/agentcore-runtime-role</p>
@@ -2412,7 +2412,7 @@ public class UpdateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The runtime configuration. When this object is provided, compute and sessionPolicy must be provided together. To retain the original elastic policy, provide the complete hpa configuration. Omitting the top-level runtime field retains the original configuration.</p>
+             * <p>The runtime configuration. When this object is provided, compute and sessionPolicy must be present at the same time. To retain the original elastic policy, provide the complete hpa configuration. Omitting the top-level runtime field retains the original configuration.</p>
              */
             public Builder runtime(Runtime runtime) {
                 this.runtime = runtime;
@@ -2420,7 +2420,7 @@ public class UpdateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>If not specified during an update, the original value is retained. Explicitly set to true or false. The system does not automatically default to false. New API contracts reject null and invalid types. Existing compatibility endpoints are processed according to migration conventions.</p>
+             * <p>If this parameter is not passed during an update, the original value is retained. Explicitly set this parameter to true or false. The system does not automatically supplement false. The new contract rejects null and invalid types. Existing compatibility endpoints are processed according to migration agreements.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>

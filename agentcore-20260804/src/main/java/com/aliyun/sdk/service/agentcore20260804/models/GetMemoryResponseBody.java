@@ -171,7 +171,7 @@ public class GetMemoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -307,7 +307,7 @@ public class GetMemoryResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The agent ID. The length is limited to 1 to 128 UTF-8 bytes. It cannot contain / or *. This field is not returned if the memory is not associated with an agent ID.</p>
+             * <p>The agent ID. The length is limited to 1 to 128 UTF-8 bytes, and it must not contain / or *. This field is not returned if the memory is not associated with an agent ID.</p>
              * 
              * <strong>example:</strong>
              * <p>agent-001</p>
@@ -318,7 +318,7 @@ public class GetMemoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The session ID. The length is limited to 1 to 128 UTF-8 bytes. It cannot contain / or *. This field is not returned if the memory is not associated with a session ID.</p>
+             * <p>The session ID. The length is limited to 1 to 128 UTF-8 bytes, and it must not contain / or *. This field is not returned if the memory is not associated with a session ID.</p>
              * 
              * <strong>example:</strong>
              * <p>session-001</p>
@@ -329,7 +329,7 @@ public class GetMemoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user ID. The length is limited to 1 to 128 UTF-8 bytes. It cannot contain / or *. This field is not returned if the memory is not associated with a user ID.</p>
+             * <p>The user ID. The length is limited to 1 to 128 UTF-8 bytes, and it must not contain / or *. This field is not returned if the memory is not associated with a user ID.</p>
              * 
              * <strong>example:</strong>
              * <p>user-001</p>

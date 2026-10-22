@@ -158,7 +158,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The result code of the request. The value is SUCCESS if the request is successful.</p>
+         * <p>The request result code. The value is SUCCESS when the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -169,7 +169,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code of the request. The value is 200 if the request is successful.</p>
+         * <p>The HTTP status code of the current request. The value is 200 when the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -180,7 +180,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of custom agent summaries on the current page. To obtain the complete configuration and the execution results of the latest version, call GetCustomAgent.</p>
+         * <p>The list of custom agent summaries on the current page. To query the complete configuration and the execution result of the latest version, call the GetCustomAgent operation.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -188,7 +188,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of entries returned per page for this query.</p>
+         * <p>The maximum number of results returned per page for the current query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -199,7 +199,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The description of the processing result for this request. The value is success if the request is successful.</p>
+         * <p>The message that describes the processing result of the request. The value is success if the request succeeds.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -210,7 +210,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The opaque token used to query the next page. If this value is empty, no more pages are available. Pass this value as is in subsequent requests.</p>
+         * <p>The opaque token used to query the next page. An empty value indicates that no more pages exist. Pass this token as is in subsequent requests.</p>
          * 
          * <strong>example:</strong>
          * <p>djE6YWdlbnRjb3JlLmFnZW50Lmxpc3QuY3VzdG9tOjIw</p>
@@ -221,7 +221,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique identifier of the request. You can use this ID to locate and troubleshoot issues.</p>
+         * <p>The unique identifier of the request, used to locate and troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>550E8400-E29B-41D4-A716-446655440000</p>
@@ -232,7 +232,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was processed successfully. A value of true indicates that the request was processed successfully. A successful creation, update, or deletion does not indicate that the background operation is complete.</p>
+         * <p>Indicates whether the request was processed successfully. A value of true indicates success. A successful creation, update, or deletion does not mean that the background operation is complete.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -256,6 +256,558 @@ public class ListCustomAgentsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListCustomAgentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCustomAgentsResponseBody</p>
+     */
+    public static class Code extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("entrypoint")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String entrypoint;
+
+        @com.aliyun.core.annotation.NameInMap("languageRuntime")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String languageRuntime;
+
+        @com.aliyun.core.annotation.NameInMap("sourceUri")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String sourceUri;
+
+        private Code(Builder builder) {
+            this.entrypoint = builder.entrypoint;
+            this.languageRuntime = builder.languageRuntime;
+            this.sourceUri = builder.sourceUri;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Code create() {
+            return builder().build();
+        }
+
+        /**
+         * @return entrypoint
+         */
+        public String getEntrypoint() {
+            return this.entrypoint;
+        }
+
+        /**
+         * @return languageRuntime
+         */
+        public String getLanguageRuntime() {
+            return this.languageRuntime;
+        }
+
+        /**
+         * @return sourceUri
+         */
+        public String getSourceUri() {
+            return this.sourceUri;
+        }
+
+        public static final class Builder {
+            private String entrypoint; 
+            private String languageRuntime; 
+            private String sourceUri; 
+
+            private Builder() {
+            } 
+
+            private Builder(Code model) {
+                this.entrypoint = model.entrypoint;
+                this.languageRuntime = model.languageRuntime;
+                this.sourceUri = model.sourceUri;
+            } 
+
+            /**
+             * <p>The startup command for the code package. This parameter is required in code package mode. The working directory is the root directory of the extracted code, which is /code. Example: python main.py. Quotes and escape characters are supported. Environment variables, pipes, and logical operations are not automatically expanded. For complex commands, use a script within the package.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>python main.py</p>
+             */
+            public Builder entrypoint(String entrypoint) {
+                this.entrypoint = entrypoint;
+                return this;
+            }
+
+            /**
+             * <p>The identifier of the code runtime environment in the currently saved configuration. The runtime image uses a saved snapshot. Adding a new version to the directory does not automatically change the existing configuration.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>python3.12</p>
+             */
+            public Builder languageRuntime(String languageRuntime) {
+                this.languageRuntime = languageRuntime;
+                return this;
+            }
+
+            /**
+             * <p>The fixed oss:// address of the platform code package referenced by the currently saved configuration. This address does not include the signature parameters of the source HTTPS link. You can use this address to reuse an existing code package. To download the content, call the GetAgentCodePackageDownloadUrl operation.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://agentcore-platform-example/code-packages/workspaces/ws-a1b2c3d4e5f6/550e8400-e29b-41d4-a716-446655440000/package.zip</p>
+             */
+            public Builder sourceUri(String sourceUri) {
+                this.sourceUri = sourceUri;
+                return this;
+            }
+
+            public Code build() {
+                return new Code(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListCustomAgentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCustomAgentsResponseBody</p>
+     */
+    public static class Container extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("entrypoint")
+        private String entrypoint;
+
+        @com.aliyun.core.annotation.NameInMap("instanceId")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String instanceId;
+
+        @com.aliyun.core.annotation.NameInMap("namespace")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String namespace;
+
+        @com.aliyun.core.annotation.NameInMap("repo")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String repo;
+
+        @com.aliyun.core.annotation.NameInMap("tag")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String tag;
+
+        @com.aliyun.core.annotation.NameInMap("type")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String type;
+
+        private Container(Builder builder) {
+            this.entrypoint = builder.entrypoint;
+            this.instanceId = builder.instanceId;
+            this.namespace = builder.namespace;
+            this.repo = builder.repo;
+            this.tag = builder.tag;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Container create() {
+            return builder().build();
+        }
+
+        /**
+         * @return entrypoint
+         */
+        public String getEntrypoint() {
+            return this.entrypoint;
+        }
+
+        /**
+         * @return instanceId
+         */
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        /**
+         * @return namespace
+         */
+        public String getNamespace() {
+            return this.namespace;
+        }
+
+        /**
+         * @return repo
+         */
+        public String getRepo() {
+            return this.repo;
+        }
+
+        /**
+         * @return tag
+         */
+        public String getTag() {
+            return this.tag;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private String entrypoint; 
+            private String instanceId; 
+            private String namespace; 
+            private String repo; 
+            private String tag; 
+            private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Container model) {
+                this.entrypoint = model.entrypoint;
+                this.instanceId = model.instanceId;
+                this.namespace = model.namespace;
+                this.repo = model.repo;
+                this.tag = model.tag;
+                this.type = model.type;
+            } 
+
+            /**
+             * <p>The custom container startup command and parameters. If this parameter is not configured, the default startup method of the image is used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>python main.py</p>
+             */
+            public Builder entrypoint(String entrypoint) {
+                this.entrypoint = entrypoint;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the Container Registry Enterprise instance.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cri-example</p>
+             */
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * <p>The namespace of the Container Registry instance.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>team</p>
+             */
+            public Builder namespace(String namespace) {
+                this.namespace = namespace;
+                return this;
+            }
+
+            /**
+             * <p>The name of the Container Registry image repository.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app</p>
+             */
+            public Builder repo(String repo) {
+                this.repo = repo;
+                return this;
+            }
+
+            /**
+             * <p>The tag of the image.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
+             */
+            public Builder tag(String tag) {
+                this.tag = tag;
+                return this;
+            }
+
+            /**
+             * <p>The source type of the container image.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acr</p>
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public Container build() {
+                return new Container(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListCustomAgentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCustomAgentsResponseBody</p>
+     */
+    public static class Artifact extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("code")
+        private Code code;
+
+        @com.aliyun.core.annotation.NameInMap("container")
+        private Container container;
+
+        @com.aliyun.core.annotation.NameInMap("port")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private Integer port;
+
+        private Artifact(Builder builder) {
+            this.code = builder.code;
+            this.container = builder.container;
+            this.port = builder.port;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Artifact create() {
+            return builder().build();
+        }
+
+        /**
+         * @return code
+         */
+        public Code getCode() {
+            return this.code;
+        }
+
+        /**
+         * @return container
+         */
+        public Container getContainer() {
+            return this.container;
+        }
+
+        /**
+         * @return port
+         */
+        public Integer getPort() {
+            return this.port;
+        }
+
+        public static final class Builder {
+            private Code code; 
+            private Container container; 
+            private Integer port; 
+
+            private Builder() {
+            } 
+
+            private Builder(Artifact model) {
+                this.code = model.code;
+                this.container = model.container;
+                this.port = model.port;
+            } 
+
+            /**
+             * <p>The code package deployment configuration. This parameter is mutually exclusive with container. The code package uses the ZIP or TAR.GZ format. Dependencies are packaged by the user. The platform does not install dependencies or perform online builds.</p>
+             */
+            public Builder code(Code code) {
+                this.code = code;
+                return this;
+            }
+
+            /**
+             * <p>The container image deployment configuration.</p>
+             */
+            public Builder container(Container container) {
+                this.container = container;
+                return this;
+            }
+
+            /**
+             * <p>The listening port of the agent service.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8080</p>
+             */
+            public Builder port(Integer port) {
+                this.port = port;
+                return this;
+            }
+
+            public Artifact build() {
+                return new Artifact(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListCustomAgentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCustomAgentsResponseBody</p>
+     */
+    public static class CodePackageInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("crc64")
+        private String crc64;
+
+        @com.aliyun.core.annotation.NameInMap("etag")
+        private String etag;
+
+        @com.aliyun.core.annotation.NameInMap("fileName")
+        private String fileName;
+
+        @com.aliyun.core.annotation.NameInMap("fileSize")
+        private Long fileSize;
+
+        @com.aliyun.core.annotation.NameInMap("format")
+        private String format;
+
+        private CodePackageInfo(Builder builder) {
+            this.crc64 = builder.crc64;
+            this.etag = builder.etag;
+            this.fileName = builder.fileName;
+            this.fileSize = builder.fileSize;
+            this.format = builder.format;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CodePackageInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return crc64
+         */
+        public String getCrc64() {
+            return this.crc64;
+        }
+
+        /**
+         * @return etag
+         */
+        public String getEtag() {
+            return this.etag;
+        }
+
+        /**
+         * @return fileName
+         */
+        public String getFileName() {
+            return this.fileName;
+        }
+
+        /**
+         * @return fileSize
+         */
+        public Long getFileSize() {
+            return this.fileSize;
+        }
+
+        /**
+         * @return format
+         */
+        public String getFormat() {
+            return this.format;
+        }
+
+        public static final class Builder {
+            private String crc64; 
+            private String etag; 
+            private String fileName; 
+            private Long fileSize; 
+            private String format; 
+
+            private Builder() {
+            } 
+
+            private Builder(CodePackageInfo model) {
+                this.crc64 = model.crc64;
+                this.etag = model.etag;
+                this.fileName = model.fileName;
+                this.fileSize = model.fileSize;
+                this.format = model.format;
+            } 
+
+            /**
+             * <p>The CRC64 value of the code package object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>456</p>
+             */
+            public Builder crc64(String crc64) {
+                this.crc64 = crc64;
+                return this;
+            }
+
+            /**
+             * <p>The ETag of the code package object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fixed-etag</p>
+             */
+            public Builder etag(String etag) {
+                this.etag = etag;
+                return this;
+            }
+
+            /**
+             * <p>The original file name of the code package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>main.zip</p>
+             */
+            public Builder fileName(String fileName) {
+                this.fileName = fileName;
+                return this;
+            }
+
+            /**
+             * <p>The compressed size of the code package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
+             */
+            public Builder fileSize(Long fileSize) {
+                this.fileSize = fileSize;
+                return this;
+            }
+
+            /**
+             * <p>The format of the code package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zip</p>
+             */
+            public Builder format(String format) {
+                this.format = format;
+                return this;
+            }
+
+            public CodePackageInfo build() {
+                return new CodePackageInfo(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link ListCustomAgentsResponseBody} extends {@link TeaModel}
@@ -310,7 +862,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the current API path.</p>
+             * <p>The purpose description of the current API path.</p>
              * 
              * <strong>example:</strong>
              * <p>AG-UI conversation API</p>
@@ -406,7 +958,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The request header configuration of the current protocol. The key is the header name and the value is a string.</p>
+             * <p>The request header configuration for the current protocol. The key is the header name and the value is a string.</p>
              */
             public Builder headers(java.util.Map<String, String> headers) {
                 this.headers = headers;
@@ -422,12 +974,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The invocation protocol type. Valid values:</p>
-             * <ul>
-             * <li>agui: AG-UI protocol.</li>
-             * <li>openai-chat-completion: OpenAI Chat Completions compatible protocol.</li>
-             * <li>custom: Custom protocol.</li>
-             * </ul>
+             * <p>The invoke Protocol Type. Valid values: agui (AG-UI protocol), openai-chat-completion (OpenAI Chat Completions compatible protocol), and custom (custom protocol).</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -454,6 +1001,12 @@ public class ListCustomAgentsResponseBody extends TeaModel {
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("agentId")
         private String agentId;
+
+        @com.aliyun.core.annotation.NameInMap("artifact")
+        private Artifact artifact;
+
+        @com.aliyun.core.annotation.NameInMap("codePackageInfo")
+        private CodePackageInfo codePackageInfo;
 
         @com.aliyun.core.annotation.NameInMap("createMode")
         private String createMode;
@@ -490,6 +1043,8 @@ public class ListCustomAgentsResponseBody extends TeaModel {
 
         private Items(Builder builder) {
             this.agentId = builder.agentId;
+            this.artifact = builder.artifact;
+            this.codePackageInfo = builder.codePackageInfo;
             this.createMode = builder.createMode;
             this.createdAt = builder.createdAt;
             this.deployType = builder.deployType;
@@ -516,6 +1071,20 @@ public class ListCustomAgentsResponseBody extends TeaModel {
          */
         public String getAgentId() {
             return this.agentId;
+        }
+
+        /**
+         * @return artifact
+         */
+        public Artifact getArtifact() {
+            return this.artifact;
+        }
+
+        /**
+         * @return codePackageInfo
+         */
+        public CodePackageInfo getCodePackageInfo() {
+            return this.codePackageInfo;
         }
 
         /**
@@ -597,6 +1166,8 @@ public class ListCustomAgentsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String agentId; 
+            private Artifact artifact; 
+            private CodePackageInfo codePackageInfo; 
             private String createMode; 
             private String createdAt; 
             private String deployType; 
@@ -614,6 +1185,8 @@ public class ListCustomAgentsResponseBody extends TeaModel {
 
             private Builder(Items model) {
                 this.agentId = model.agentId;
+                this.artifact = model.artifact;
+                this.codePackageInfo = model.codePackageInfo;
                 this.createMode = model.createMode;
                 this.createdAt = model.createdAt;
                 this.deployType = model.deployType;
@@ -628,13 +1201,29 @@ public class ListCustomAgentsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The unique identifier of the custom agent. You can obtain this value from the response of CreateCustomAgent or ListCustomAgents.</p>
+             * <p>The unique identifier of the custom agent. You can obtain this ID from the response of the CreateCustomAgent or ListCustomAgents operation.</p>
              * 
              * <strong>example:</strong>
              * <p>agent-550e8400e29b41d4a716446655440000</p>
              */
             public Builder agentId(String agentId) {
                 this.agentId = agentId;
+                return this;
+            }
+
+            /**
+             * <p>The agent artifact.</p>
+             */
+            public Builder artifact(Artifact artifact) {
+                this.artifact = artifact;
+                return this;
+            }
+
+            /**
+             * <p>The currently saved code package information.</p>
+             */
+            public Builder codePackageInfo(CodePackageInfo codePackageInfo) {
+                this.codePackageInfo = codePackageInfo;
                 return this;
             }
 
@@ -672,10 +1261,10 @@ public class ListCustomAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the agent.</p>
+             * <p>The description of the agent\&quot;s purpose.</p>
              * 
              * <strong>example:</strong>
-             * <p>Custom agent that provides conversational services</p>
+             * <p>Custom agent that provides conversation services</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -724,16 +1313,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The overall status of the agent. Valid values:</p>
-             * <ul>
-             * <li>Creating: The agent is being created.</li>
-             * <li>Running: The agent is running.</li>
-             * <li>Failed: The agent failed.</li>
-             * <li>Updating: The agent is being updated.</li>
-             * <li>Deleting: The agent is being deleted.</li>
-             * <li>Deleted: The agent is deleted.
-             * To check the execution progress of the latest configuration, call GetCustomAgent.</li>
-             * </ul>
+             * <p>The overall status of the agent. Valid values: Creating, Running, Failed, Updating, Deleting, and Deleted. To query the execution progress of the latest configuration, call the GetCustomAgent operation.</p>
              * 
              * <strong>example:</strong>
              * <p>Running</p>

@@ -370,7 +370,7 @@ public class UpdateMemoryStoreResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The lifecycle state of the MemoryStore.</p>
+             * <p>The lifecycle status of the MemoryStore.</p>
              * 
              * <strong>example:</strong>
              * <p>Ready</p>

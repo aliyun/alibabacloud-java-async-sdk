@@ -88,7 +88,7 @@ public class DeleteMemoryStoreRequest extends Request {
         }
 
         /**
-         * <p>The MemoryStore name.</p>
+         * <p>The name of the MemoryStore.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

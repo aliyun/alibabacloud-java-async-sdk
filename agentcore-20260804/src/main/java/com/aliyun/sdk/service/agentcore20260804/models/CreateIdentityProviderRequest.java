@@ -87,7 +87,7 @@ public class CreateIdentityProviderRequest extends Request {
         }
 
         /**
-         * <p>The request body for binding an external identity provider.</p>
+         * <p>The request content for binding an external identity provider.</p>
          */
         public Builder body(CreateIdentityProviderRequestBody body) {
             String bodyShrink = shrink(body, "body", "json");
@@ -208,7 +208,7 @@ public class CreateIdentityProviderRequest extends Request {
             } 
 
             /**
-             * <p>The App ID of the Lark application. This parameter is required when the binding type is Feishu.</p>
+             * <p>The App ID of the Feishu application. This parameter is required when the binding type is Feishu.</p>
              * 
              * <strong>example:</strong>
              * <p>cli_exampleappid01</p>
@@ -230,7 +230,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>Required. The application secret of the external identity provider. This parameter is used only for write operations and is not returned by query operations.</p>
+             * <p>Required. The secret of the external identity provider application. This parameter is used only for writing and is not returned by the query API.</p>
              * 
              * <strong>example:</strong>
              * <p>example-app-secret</p>
@@ -241,7 +241,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>The CorpId of the DingTalk organization. This parameter is required when the binding type is DingTalk.</p>
+             * <p>The CorpId of the DingTalk enterprise. This parameter is required when the binding type is DingTalk.</p>
              * 
              * <strong>example:</strong>
              * <p>dingexamplecorpid01</p>
@@ -252,7 +252,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>The data encryption key for event subscriptions. The value must be the same as the one configured in the external identity provider application. This parameter is used only for write operations and is not returned by query operations.</p>
+             * <p>The data encryption key for event subscription. The value must be the same as the one configured in the external identity provider application. This parameter is used only for writing and is not returned by the query API.</p>
              * 
              * <strong>example:</strong>
              * <p>example-encrypt-key</p>
@@ -263,7 +263,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>The verification token for event subscriptions. The value must be the same as the one configured in the external identity provider application. This parameter is used only for write operations and is not returned by query operations.</p>
+             * <p>The verification token for event subscription. The value must be the same as the one configured in the external identity provider application. This parameter is used only for writing and is not returned by the query API.</p>
              * 
              * <strong>example:</strong>
              * <p>example-verification-token</p>
@@ -275,6 +275,92 @@ public class CreateIdentityProviderRequest extends Request {
 
             public Metadata build() {
                 return new Metadata(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateIdentityProviderRequest} extends {@link TeaModel}
+     *
+     * <p>CreateIdentityProviderRequest</p>
+     */
+    public static class SyncScope extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("departmentIds")
+        private java.util.List<String> departmentIds;
+
+        @com.aliyun.core.annotation.NameInMap("mode")
+        private String mode;
+
+        private SyncScope(Builder builder) {
+            this.departmentIds = builder.departmentIds;
+            this.mode = builder.mode;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SyncScope create() {
+            return builder().build();
+        }
+
+        /**
+         * @return departmentIds
+         */
+        public java.util.List<String> getDepartmentIds() {
+            return this.departmentIds;
+        }
+
+        /**
+         * @return mode
+         */
+        public String getMode() {
+            return this.mode;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> departmentIds; 
+            private String mode; 
+
+            private Builder() {
+            } 
+
+            private Builder(SyncScope model) {
+                this.departmentIds = model.departmentIds;
+                this.mode = model.mode;
+            } 
+
+            /**
+             * <p>When the mode is SelectedDepartments, this parameter must contain at least one non-empty department ID, which should be obtained from ListIdentityProviderDepartments. When the mode is AllAuthorized, pass an empty array or omit this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;10001&quot;]</p>
+             */
+            public Builder departmentIds(java.util.List<String> departmentIds) {
+                this.departmentIds = departmentIds;
+                return this;
+            }
+
+            /**
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>AllAuthorized: The full authorization scope, which is limited by the application address book authorization.</li>
+             * <li>SelectedDepartments: The selected departments and all their sub-departments.
+             * When you explicitly submit syncScope, you must provide a valid mode, which is verified by the backend.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SelectedDepartments</p>
+             */
+            public Builder mode(String mode) {
+                this.mode = mode;
+                return this;
+            }
+
+            public SyncScope build() {
+                return new SyncScope(this);
             } 
 
         } 
@@ -300,11 +386,19 @@ public class CreateIdentityProviderRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("syncEnabled")
         private Boolean syncEnabled;
 
+        @com.aliyun.core.annotation.NameInMap("syncOnBind")
+        private Boolean syncOnBind;
+
+        @com.aliyun.core.annotation.NameInMap("syncScope")
+        private SyncScope syncScope;
+
         private CreateIdentityProviderRequestBody(Builder builder) {
             this.identityProviderType = builder.identityProviderType;
             this.loginEnabled = builder.loginEnabled;
             this.metadata = builder.metadata;
             this.syncEnabled = builder.syncEnabled;
+            this.syncOnBind = builder.syncOnBind;
+            this.syncScope = builder.syncScope;
         }
 
         public static Builder builder() {
@@ -343,11 +437,27 @@ public class CreateIdentityProviderRequest extends Request {
             return this.syncEnabled;
         }
 
+        /**
+         * @return syncOnBind
+         */
+        public Boolean getSyncOnBind() {
+            return this.syncOnBind;
+        }
+
+        /**
+         * @return syncScope
+         */
+        public SyncScope getSyncScope() {
+            return this.syncScope;
+        }
+
         public static final class Builder {
             private String identityProviderType; 
             private Boolean loginEnabled; 
             private Metadata metadata; 
             private Boolean syncEnabled; 
+            private Boolean syncOnBind; 
+            private SyncScope syncScope; 
 
             private Builder() {
             } 
@@ -357,6 +467,8 @@ public class CreateIdentityProviderRequest extends Request {
                 this.loginEnabled = model.loginEnabled;
                 this.metadata = model.metadata;
                 this.syncEnabled = model.syncEnabled;
+                this.syncOnBind = model.syncOnBind;
+                this.syncScope = model.syncScope;
             } 
 
             /**
@@ -372,7 +484,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether workspace users can log on through the external identity provider.</p>
+             * <p>Specifies whether to allow workspace users to log on through the external identity provider.</p>
              */
             public Builder loginEnabled(Boolean loginEnabled) {
                 this.loginEnabled = loginEnabled;
@@ -380,7 +492,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>The application configuration for the external identity provider. When you bind DingTalk, you must provide appKey, appSecret, and corpId. When you bind Feishu, you must provide appId and appSecret.</p>
+             * <p>The application configuration of the external identity provider. When you bind DingTalk, you must provide appKey, appSecret, and corpId. When you bind Feishu, you must provide appId and appSecret.</p>
              */
             public Builder metadata(Metadata metadata) {
                 this.metadata = metadata;
@@ -388,10 +500,26 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable organization member synchronization. If enabled, organization members are synchronized to workspace users from the external identity provider.</p>
+             * <p>Specifies whether to enable organization member synchronization. After this feature is enabled, the external identity provider synchronizes organization members as workspace users.</p>
              */
             public Builder syncEnabled(Boolean syncEnabled) {
                 this.syncEnabled = syncEnabled;
+                return this;
+            }
+
+            /**
+             * <p>Controls the initial synchronization when DingTalk or Feishu is bound. If this parameter is omitted or set to null, the default value is true. If this parameter is set to false, only the configuration is saved, and synchronization is explicitly triggered later. CustomSSO does not use the vendor pull link.</p>
+             */
+            public Builder syncOnBind(Boolean syncOnBind) {
+                this.syncOnBind = syncOnBind;
+                return this;
+            }
+
+            /**
+             * <p>Retains the department-based synchronization scope definition. If this parameter is omitted during creation, the default value is AllAuthorized, and the initial vendor synchronization is determined by syncOnBind. If this parameter is omitted or set to null during an update, the original value is retained. Updating and saving the scope does not automatically perform full synchronization.</p>
+             */
+            public Builder syncScope(SyncScope syncScope) {
+                this.syncScope = syncScope;
                 return this;
             }
 
