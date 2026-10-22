@@ -209,7 +209,7 @@ public class ListLineagesRequest extends Request {
         }
 
         /**
-         * <p>The destination entity ID. You can refer to the table or column ID returned by the ListTables or ListColumns operation, or use a custom entity ID.</p>
+         * <p>The ID of the destination entity. You can refer to the table or column ID returned by the ListTables or ListColumns operation, or use a custom entity ID.</p>
          * 
          * <strong>example:</strong>
          * <p>dlf-table::catalog_id:database_name::table_name</p>
@@ -221,7 +221,7 @@ public class ListLineagesRequest extends Request {
         }
 
         /**
-         * <p>The destination entity name. Fuzzy match is supported.</p>
+         * <p>The name of the destination entity. Fuzzy matching is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>dstName1</p>
@@ -294,7 +294,7 @@ public class ListLineagesRequest extends Request {
         }
 
         /**
-         * <p>The sort field. Default value: Name. The entities are sorted by lineage entity name.</p>
+         * <p>The field used for sorting. Default value: Name. The entities are sorted by lineage entity name.</p>
          * 
          * <strong>example:</strong>
          * <p>Name</p>
@@ -306,7 +306,7 @@ public class ListLineagesRequest extends Request {
         }
 
         /**
-         * <p>The source entity ID. You can refer to the table or column ID returned by the ListTables or ListColumns operation, or use a custom entity ID.</p>
+         * <p>The ID of the source entity. You can refer to the table or column ID returned by the ListTables or ListColumns operation, or use a custom entity ID.</p>
          * 
          * <strong>example:</strong>
          * <p>maxcompute-table:::project_name:[schema_name]:table_name</p>
@@ -318,7 +318,7 @@ public class ListLineagesRequest extends Request {
         }
 
         /**
-         * <p>The source entity name. Fuzzy match is supported.</p>
+         * <p>The name of the source entity. Fuzzy matching is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>srcName1</p>

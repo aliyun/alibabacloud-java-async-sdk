@@ -80,7 +80,7 @@ public class ListColumnsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The pagination result.</p>
+         * <p>The pagination information.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -99,7 +99,7 @@ public class ListColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -194,7 +194,7 @@ public class ListColumnsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The column list.</p>
+             * <p>The list of columns.</p>
              */
             public Builder columns(java.util.List<Column> columns) {
                 this.columns = columns;
@@ -213,7 +213,7 @@ public class ListColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page size.</p>
+             * <p>The number of entries per page.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -224,7 +224,7 @@ public class ListColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of records.</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

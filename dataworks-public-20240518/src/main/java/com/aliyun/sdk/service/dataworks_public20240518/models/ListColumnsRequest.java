@@ -182,7 +182,7 @@ public class ListColumnsRequest extends Request {
         }
 
         /**
-         * <p>The comment. Fuzzy match is supported.</p>
+         * <p>The comment on the column. Fuzzy match is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>test comment</p>
@@ -194,7 +194,7 @@ public class ListColumnsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return extended properties. Set this parameter to <code>true</code> to return extended properties or <code>false</code> to not return them.</p>
+         * <p>Specifies whether to return extended properties. If you set this parameter to <code>true</code>, extended properties are returned. If you set this parameter to <code>false</code>, extended properties are not returned.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -206,7 +206,7 @@ public class ListColumnsRequest extends Request {
         }
 
         /**
-         * <p>The name. Fuzzy match is supported.</p>
+         * <p>The name of the column. Fuzzy match is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>test_table</p>
@@ -218,10 +218,10 @@ public class ListColumnsRequest extends Request {
         }
 
         /**
-         * <p>The sort direction. Default value: Asc. Valid values:</p>
+         * <p>The sort order. Default value: Asc. Valid values:</p>
          * <ul>
-         * <li>Asc: ascending order.</li>
-         * <li>Desc: descending order.</li>
+         * <li>Asc: Ascending order.</li>
+         * <li>Desc: Descending order.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -246,7 +246,7 @@ public class ListColumnsRequest extends Request {
         }
 
         /**
-         * <p>The page size. Default value: 10. Maximum value: 100.</p>
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -258,10 +258,10 @@ public class ListColumnsRequest extends Request {
         }
 
         /**
-         * <p>The sort field. Default value: Position. Valid values:</p>
+         * <p>The field used for sorting. Default value: Position. Valid values:</p>
          * <ul>
-         * <li>Name: name.</li>
-         * <li>Position: position.</li>
+         * <li>Name: Name.</li>
+         * <li>Position: Position.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -274,7 +274,7 @@ public class ListColumnsRequest extends Request {
         }
 
         /**
-         * <p>The table ID. You can obtain the ID from the response of the ListTables operation. For more information, see <a href="https://help.aliyun.com/document_detail/2880092.html">Metadata entity concepts</a>.</p>
+         * <p>The table ID. You can obtain the ID from the response of the ListTables operation. For more information, see <a href="https://help.aliyun.com/document_detail/2880092.html">Concepts related to metadata entities</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -257,7 +257,7 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <blockquote>
      * <p>Notice: This operation does not support batch operations. If you specify multiple publish entities in the parameters, all entities except the first one are ignored.
-     * This operation is part of the new data development capabilities and applies only to workspaces that use the new data development feature. If the new data development feature is not used, use the corresponding operation of the 2020-05-18 version.</p>
+     * This operation is part of the new Data Studio capabilities and applies only to workspaces that use the new Data Studio feature. If the new Data Studio feature is not used, use the corresponding operation of the 2020-05-18 version.</p>
      * </blockquote>
      * 
      * @param request the request parameters of CreateComponent  CreateComponentRequest
@@ -718,7 +718,7 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <blockquote>
      * <p>Notice: This operation does not support batch operations. If more than one workflow is defined in the FlowSpec, all workflows except the first one are ignored. In addition, nodes defined within the workflow are also directly ignored. Call the CreateNode operation to create internal nodes one by one.</notice>
-     * This operation is part of the new DataStudio capabilities and applies only to workspaces that use the new DataStudio. If you do not use the new DataStudio, use the corresponding operation of the 2020-05-18 version.</p>
+     * This operation is part of the new Data Studio capabilities and applies only to workspaces that use the new Data Studio. If you do not use the new Data Studio, use the corresponding operation of the 2020-05-18 version.</p>
      * </blockquote>
      * 
      * @param request the request parameters of CreateWorkflowDefinition  CreateWorkflowDefinitionRequest
@@ -728,7 +728,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or a later edition to use this feature.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</p>
      * 
      * @param request the request parameters of CreateWorkflowInstances  CreateWorkflowInstancesRequest
      * @return CreateWorkflowInstancesResponse
@@ -781,8 +781,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p><notice>After a UDF function is published, it cannot be deleted. You must take it offline before deleting it.</notice>
-     * This API operation belongs to the new data development capabilities and applies only to workspaces that use the new data development feature. If you do not use the new data development feature, use the corresponding API operation of the 2020-05-18 version.</p>
+     * <p><notice>After a UDF function is deployed, it cannot be deleted. You must undeploy it before deleting it.</notice>
+     * This API operation belongs to the new Data Studio capabilities and applies only to workspaces that use the new Data Studio feature. If you do not use the new Data Studio feature, use the corresponding API operation of the 2020-05-18 version.</p>
      * 
      * @param request the request parameters of DeleteComponent  DeleteComponentRequest
      * @return DeleteComponentResponse
@@ -1480,7 +1480,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</li>
+     * <li>You must purchase DataWorks Basic Edition or a later edition to use this operation.</li>
      * </ol>
      * 
      * @param request the request parameters of GetColumn  GetColumnRequest
@@ -2274,7 +2274,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</li>
+     * <li>You must purchase DataWorks Basic Edition or later to use this API.</li>
      * </ol>
      * 
      * @param request the request parameters of ListColumns  ListColumnsRequest
@@ -2722,8 +2722,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>You must purchase DataWorks Standard Edition or later to use this operation.</li>
-     * <li>This operation queries the upstream and downstream entities of the current entity and the lineage relationships between entities.</li>
+     * <li>You must purchase DataWorks Standard Edition or a more advanced edition to use this operation.</li>
+     * <li>This operation queries the upstream and downstream entities of the current entity and the lineage relationships between the entities.</li>
      * </ol>
      * 
      * @param request the request parameters of ListLineages  ListLineagesRequest
@@ -2930,7 +2930,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or later to use this operation.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
      * 
      * @param request the request parameters of ListProjectRoles  ListProjectRolesRequest
      * @return ListProjectRolesResponse
@@ -3113,7 +3113,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>You must purchase DataWorks Basic Edition or later to use this API.</li>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this API.</li>
      * </ol>
      * 
      * @param request the request parameters of ListTables  ListTablesRequest
@@ -3233,7 +3233,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation is part of the new data development capabilities and applies only to workspaces that use the new data development feature. If you do not use the new data development feature, use the corresponding operation in the 2020-05-18 version.</p>
+     * <p>This operation is part of the new Data Studio capabilities and applies only to workspaces that use the new Data Studio feature. If you do not use the new Data Studio feature, use the corresponding operation in the 2020-05-18 version.</p>
      * 
      * @param request the request parameters of MoveResource  MoveResourceRequest
      * @return MoveResourceResponse
