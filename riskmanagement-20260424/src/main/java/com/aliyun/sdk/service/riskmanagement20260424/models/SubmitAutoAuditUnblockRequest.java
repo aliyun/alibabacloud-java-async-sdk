@@ -143,7 +143,13 @@ public class SubmitAutoAuditUnblockRequest extends Request {
         } 
 
         /**
-         * AssetList.
+         * <p>The list of assets.</p>
+         * <blockquote>
+         * <p>The array supports up to 50 IP addresses.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;domain&quot;:&quot;&quot;,&quot;ip&quot;:&quot;120.26.29.16&quot;,&quot;assetType&quot;:&quot;EIP&quot;}]</p>
          */
         public Builder assetList(String assetList) {
             this.putQueryParameter("AssetList", assetList);
@@ -152,7 +158,13 @@ public class SubmitAutoAuditUnblockRequest extends Request {
         }
 
         /**
-         * Auditor.
+         * <p>The auditor.</p>
+         * <blockquote>
+         * <p>You do not need to specify this parameter. It does not take effect.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>none</p>
          */
         public Builder auditor(String auditor) {
             this.putQueryParameter("Auditor", auditor);
@@ -161,7 +173,10 @@ public class SubmitAutoAuditUnblockRequest extends Request {
         }
 
         /**
-         * CustomerUid.
+         * <p>The customer UID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1317334647812936</p>
          */
         public Builder customerUid(String customerUid) {
             this.putQueryParameter("CustomerUid", customerUid);
@@ -170,7 +185,10 @@ public class SubmitAutoAuditUnblockRequest extends Request {
         }
 
         /**
-         * EmailType.
+         * <p>The type of the email to send.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder emailType(String emailType) {
             this.putQueryParameter("EmailType", emailType);
@@ -179,7 +197,14 @@ public class SubmitAutoAuditUnblockRequest extends Request {
         }
 
         /**
-         * HasUnsubscribe.
+         * <p>Specifies whether the email includes an unsubscribe option.</p>
+         * <ul>
+         * <li><strong>true</strong>: Included.</li>
+         * <li><strong>false</strong>: Not included.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder hasUnsubscribe(Boolean hasUnsubscribe) {
             this.putQueryParameter("HasUnsubscribe", hasUnsubscribe);
@@ -188,7 +213,10 @@ public class SubmitAutoAuditUnblockRequest extends Request {
         }
 
         /**
-         * SendCount.
+         * <p>The description of the number of emails to send.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder sendCount(String sendCount) {
             this.putQueryParameter("SendCount", sendCount);
@@ -197,7 +225,10 @@ public class SubmitAutoAuditUnblockRequest extends Request {
         }
 
         /**
-         * UseDesc.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Usage instructions</p>
          */
         public Builder useDesc(String useDesc) {
             this.putQueryParameter("UseDesc", useDesc);

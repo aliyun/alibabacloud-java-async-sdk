@@ -106,7 +106,10 @@ public class QueryForOperationResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class QueryForOperationResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The query results.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class QueryForOperationResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class QueryForOperationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEE90F8C-EDC2-5394-953B-D07A121612B5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,14 @@ public class QueryForOperationResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -347,7 +363,10 @@ public class QueryForOperationResponseBody extends TeaModel {
             } 
 
             /**
-             * ApplyTime.
+             * <p>The application time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1788873796000</p>
              */
             public Builder applyTime(Long applyTime) {
                 this.applyTime = applyTime;
@@ -355,7 +374,15 @@ public class QueryForOperationResponseBody extends TeaModel {
             }
 
             /**
-             * AssetType.
+             * <p>The asset type. Valid values:</p>
+             * <ul>
+             * <li><strong>EIP</strong>: VPC public IP address.</li>
+             * <li><strong>SLB</strong>: load balancing.</li>
+             * <li><strong>ECS</strong>: Public IP address in the classic network.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>EIP</p>
              */
             public Builder assetType(String assetType) {
                 this.assetType = assetType;
@@ -363,7 +390,10 @@ public class QueryForOperationResponseBody extends TeaModel {
             }
 
             /**
-             * AuditMemo.
+             * <p>The review remarks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agree</p>
              */
             public Builder auditMemo(String auditMemo) {
                 this.auditMemo = auditMemo;
@@ -371,7 +401,10 @@ public class QueryForOperationResponseBody extends TeaModel {
             }
 
             /**
-             * AuditTime.
+             * <p>The review time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1791937132000</p>
              */
             public Builder auditTime(Long auditTime) {
                 this.auditTime = auditTime;
@@ -379,7 +412,10 @@ public class QueryForOperationResponseBody extends TeaModel {
             }
 
             /**
-             * Auditor.
+             * <p>The reviewer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>149754</p>
              */
             public Builder auditor(String auditor) {
                 this.auditor = auditor;
@@ -387,7 +423,10 @@ public class QueryForOperationResponseBody extends TeaModel {
             }
 
             /**
-             * CustomerUid.
+             * <p>The customer UID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1068723216148614</p>
              */
             public Builder customerUid(String customerUid) {
                 this.customerUid = customerUid;
@@ -395,7 +434,10 @@ public class QueryForOperationResponseBody extends TeaModel {
             }
 
             /**
-             * EmailType.
+             * <p>The type of the sent email.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder emailType(String emailType) {
                 this.emailType = emailType;
@@ -403,7 +445,14 @@ public class QueryForOperationResponseBody extends TeaModel {
             }
 
             /**
-             * HasUnsubscribe.
+             * <p>Specifies whether the email contains an unsubscribe option. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: Yes.</li>
+             * <li><strong>false</strong>: No.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasUnsubscribe(Boolean hasUnsubscribe) {
                 this.hasUnsubscribe = hasUnsubscribe;
@@ -411,7 +460,10 @@ public class QueryForOperationResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The unique ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>710864062</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -419,7 +471,10 @@ public class QueryForOperationResponseBody extends TeaModel {
             }
 
             /**
-             * Ip.
+             * <p>The IP address of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0.158.58</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -427,7 +482,10 @@ public class QueryForOperationResponseBody extends TeaModel {
             }
 
             /**
-             * SendCount.
+             * <p>The description of the number of sent emails.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder sendCount(String sendCount) {
                 this.sendCount = sendCount;
@@ -435,7 +493,17 @@ public class QueryForOperationResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The task status. Valid values:</p>
+             * <ul>
+             * <li><strong>auditing</strong>: Under review.</li>
+             * <li><strong>approved</strong>: Approved.</li>
+             * <li><strong>rejected</strong>: Rejected.</li>
+             * <li><strong>effective</strong>: Effective.</li>
+             * <li><strong>ineffective</strong>: Ineffective.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Executing</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -443,7 +511,10 @@ public class QueryForOperationResponseBody extends TeaModel {
             }
 
             /**
-             * UseDesc.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder useDesc(String useDesc) {
                 this.useDesc = useDesc;
@@ -523,7 +594,13 @@ public class QueryForOperationResponseBody extends TeaModel {
             } 
 
             /**
-             * CurrentPage.
+             * <p>The page number from which the query results are displayed.</p>
+             * <blockquote>
+             * <p>Default value: 1, which indicates that the query results are displayed from the first page.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -531,7 +608,10 @@ public class QueryForOperationResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries to return on each page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -539,7 +619,10 @@ public class QueryForOperationResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The total number of events.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder total(Integer total) {
                 this.total = total;
@@ -606,7 +689,7 @@ public class QueryForOperationResponseBody extends TeaModel {
             } 
 
             /**
-             * List.
+             * <p>The event data.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -614,7 +697,7 @@ public class QueryForOperationResponseBody extends TeaModel {
             }
 
             /**
-             * PageInfo.
+             * <p>The pagination information.</p>
              */
             public Builder pageInfo(PageInfo pageInfo) {
                 this.pageInfo = pageInfo;

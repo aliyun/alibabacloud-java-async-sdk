@@ -185,7 +185,10 @@ public class QueryForOperationRequest extends Request {
         } 
 
         /**
-         * ApplyTimeEnd.
+         * <p>The end time of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1791937232000</p>
          */
         public Builder applyTimeEnd(Long applyTimeEnd) {
             this.putQueryParameter("ApplyTimeEnd", applyTimeEnd);
@@ -194,7 +197,10 @@ public class QueryForOperationRequest extends Request {
         }
 
         /**
-         * ApplyTimeStart.
+         * <p>The start time of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1791937132000</p>
          */
         public Builder applyTimeStart(Long applyTimeStart) {
             this.putQueryParameter("ApplyTimeStart", applyTimeStart);
@@ -203,7 +209,15 @@ public class QueryForOperationRequest extends Request {
         }
 
         /**
-         * AssetType.
+         * <p>The asset type. Valid values:</p>
+         * <ul>
+         * <li><strong>EIP</strong>: VPC public IP address.</li>
+         * <li><strong>SLB</strong>: load balancing.</li>
+         * <li><strong>ECS</strong>: Public IP address in the classic network.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>EIP</p>
          */
         public Builder assetType(String assetType) {
             this.putQueryParameter("AssetType", assetType);
@@ -212,7 +226,10 @@ public class QueryForOperationRequest extends Request {
         }
 
         /**
-         * AuditTimeEnd.
+         * <p>The end time of the review.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1791937232000</p>
          */
         public Builder auditTimeEnd(Long auditTimeEnd) {
             this.putQueryParameter("AuditTimeEnd", auditTimeEnd);
@@ -221,7 +238,10 @@ public class QueryForOperationRequest extends Request {
         }
 
         /**
-         * AuditTimeStart.
+         * <p>The start time of the review.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1791937132000</p>
          */
         public Builder auditTimeStart(Long auditTimeStart) {
             this.putQueryParameter("AuditTimeStart", auditTimeStart);
@@ -230,7 +250,13 @@ public class QueryForOperationRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * <p>The current page number.</p>
+         * <blockquote>
+         * <p>Default value: 1.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -239,7 +265,10 @@ public class QueryForOperationRequest extends Request {
         }
 
         /**
-         * CustomerUid.
+         * <p>The customer UID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1647796581073291</p>
          */
         public Builder customerUid(String customerUid) {
             this.putQueryParameter("CustomerUid", customerUid);
@@ -248,7 +277,10 @@ public class QueryForOperationRequest extends Request {
         }
 
         /**
-         * Ip.
+         * <p>IP</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12.3*.22.11</p>
          */
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
@@ -257,7 +289,10 @@ public class QueryForOperationRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -266,7 +301,17 @@ public class QueryForOperationRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The task status. Valid values:</p>
+         * <ul>
+         * <li><strong>auditing</strong>: Under review.</li>
+         * <li><strong>approved</strong>: Approved.</li>
+         * <li><strong>rejected</strong>: Rejected.</li>
+         * <li><strong>effective</strong>: Effective.</li>
+         * <li><strong>ineffective</strong>: Ineffective.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>approved</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
