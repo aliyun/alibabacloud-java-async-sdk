@@ -194,6 +194,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryAccountSafetyIncidentResponse> queryAccountSafetyIncident(QueryAccountSafetyIncidentRequest request);
 
     /**
+     * @param request the request parameters of QueryForOperation  QueryForOperationRequest
+     * @return QueryForOperationResponse
+     */
+    CompletableFuture<QueryForOperationResponse> queryForOperation(QueryForOperationRequest request);
+
+    /**
      * @param request the request parameters of QueryGuideSubStatus  QueryGuideSubStatusRequest
      * @return QueryGuideSubStatusResponse
      */
@@ -240,6 +246,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SubmitApplyRecordResponse
      */
     CompletableFuture<SubmitApplyRecordResponse> submitApplyRecord(SubmitApplyRecordRequest request);
+
+    /**
+     * @param request the request parameters of SubmitAutoAuditUnblock  SubmitAutoAuditUnblockRequest
+     * @return SubmitAutoAuditUnblockResponse
+     */
+    CompletableFuture<SubmitAutoAuditUnblockResponse> submitAutoAuditUnblock(SubmitAutoAuditUnblockRequest request);
 
     /**
      * @param request the request parameters of SubmitPenetrationTest  SubmitPenetrationTestRequest

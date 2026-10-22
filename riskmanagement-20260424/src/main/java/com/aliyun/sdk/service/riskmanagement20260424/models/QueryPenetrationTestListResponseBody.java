@@ -106,7 +106,14 @@ public class QueryPenetrationTestListResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * <ul>
+         * <li><strong>200</strong>: Successful.</li>
+         * <li><strong>Other values (such as 400 and 500)</strong>: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +121,7 @@ public class QueryPenetrationTestListResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The query results.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +129,10 @@ public class QueryPenetrationTestListResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +140,10 @@ public class QueryPenetrationTestListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>99D93ED4-D462-5FC5-8518-9BC1C49C7B6C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +151,14 @@ public class QueryPenetrationTestListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.                               </li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -269,7 +289,10 @@ public class QueryPenetrationTestListResponseBody extends TeaModel {
             } 
 
             /**
-             * ApplyTime.
+             * <p>The application time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1788873796000</p>
              */
             public Builder applyTime(Long applyTime) {
                 this.applyTime = applyTime;
@@ -277,7 +300,15 @@ public class QueryPenetrationTestListResponseBody extends TeaModel {
             }
 
             /**
-             * AssetType.
+             * <p>The type of the asset. Valid values:</p>
+             * <ul>
+             * <li><strong>EIP</strong>: Public IP address of a VPC.</li>
+             * <li><strong>SLB</strong>: Server Load Balancer (SLB) instance for load balancing.</li>
+             * <li><strong>ECS</strong>: Public IP address of an ECS instance in the classic network.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>EIP</p>
              */
             public Builder assetType(String assetType) {
                 this.assetType = assetType;
@@ -285,7 +316,13 @@ public class QueryPenetrationTestListResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The unique identity ID of the alerting event record.</p>
+             * <blockquote>
+             * <p>The data type of this field is Long. Precision loss may occur during the procedure to serialize or deserialize the numeric sequence. Make sure that the value does not exceed 9007199254740991.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>710864062</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -293,7 +330,10 @@ public class QueryPenetrationTestListResponseBody extends TeaModel {
             }
 
             /**
-             * Ip.
+             * <p>The IP address of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0.158.58</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -301,7 +341,17 @@ public class QueryPenetrationTestListResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The task status. Valid values:</p>
+             * <ul>
+             * <li><strong>early_end</strong>: The user applied for early termination.</li>
+             * <li><strong>expired</strong>: The authorization expired.</li>
+             * <li><strong>auditing</strong>: Under review.</li>
+             * <li><strong>approved</strong>: Approved.</li>
+             * <li><strong>rejected</strong>: Rejected.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>early_end</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -309,7 +359,10 @@ public class QueryPenetrationTestListResponseBody extends TeaModel {
             }
 
             /**
-             * TestEndDate.
+             * <p>The end time of the test.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1788873796000</p>
              */
             public Builder testEndDate(Long testEndDate) {
                 this.testEndDate = testEndDate;
@@ -317,7 +370,10 @@ public class QueryPenetrationTestListResponseBody extends TeaModel {
             }
 
             /**
-             * TestStartDate.
+             * <p>The start date of the test.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1788873796000</p>
              */
             public Builder testStartDate(Long testStartDate) {
                 this.testStartDate = testStartDate;
@@ -397,7 +453,13 @@ public class QueryPenetrationTestListResponseBody extends TeaModel {
             } 
 
             /**
-             * CurrentPage.
+             * <p>The page number of the returned page.</p>
+             * <blockquote>
+             * <p>Default value: 1, which indicates the first page.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -405,7 +467,10 @@ public class QueryPenetrationTestListResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>24</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -413,7 +478,10 @@ public class QueryPenetrationTestListResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The total number of events.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder total(Integer total) {
                 this.total = total;
@@ -480,7 +548,7 @@ public class QueryPenetrationTestListResponseBody extends TeaModel {
             } 
 
             /**
-             * List.
+             * <p>The event data.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -488,7 +556,7 @@ public class QueryPenetrationTestListResponseBody extends TeaModel {
             }
 
             /**
-             * PageInfo.
+             * <p>The pagination information.</p>
              */
             public Builder pageInfo(PageInfo pageInfo) {
                 this.pageInfo = pageInfo;

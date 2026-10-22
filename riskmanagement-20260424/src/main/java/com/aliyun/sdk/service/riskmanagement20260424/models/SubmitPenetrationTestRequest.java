@@ -185,7 +185,7 @@ public class SubmitPenetrationTestRequest extends Request {
         } 
 
         /**
-         * <p>The list of assets.</p>
+         * <p>The asset list.</p>
          * <blockquote>
          * <p>The array supports a maximum of 50 IP addresses.</p>
          * </blockquote>
@@ -200,7 +200,7 @@ public class SubmitPenetrationTestRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether a third-party testing service provider is used. Valid values:</p>
+         * <p>Specifies whether the test is performed by a third-party testing service provider. Valid values:</p>
          * <ul>
          * <li><p>true: Yes.</p>
          * </li>
@@ -247,7 +247,7 @@ public class SubmitPenetrationTestRequest extends Request {
         /**
          * <p>The source IP addresses used for the test.</p>
          * <blockquote>
-         * <p>A maximum of 50 IP addresses are supported. Separate multiple IP addresses with line breaks or commas (,). 0.0.0.0 indicates that all IP addresses are allowed. CIDR blocks are not supported, such as 140.168.0.0/16.</p>
+         * <p>A maximum of 50 IP addresses are supported. Separate multiple IP addresses with line breaks or commas (,). 0.0.0.0 indicates that all IP addresses are allowed. CIDR blocks such as 140.168.0.0/16 are not supported.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -274,7 +274,7 @@ public class SubmitPenetrationTestRequest extends Request {
         /**
          * <p>The test steps.</p>
          * <blockquote>
-         * <p>The content must not exceed 500 characters. Provide detailed information to facilitate the approval process.</p>
+         * <p>The steps must not exceed 500 characters. Provide detailed information to facilitate the approval process.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

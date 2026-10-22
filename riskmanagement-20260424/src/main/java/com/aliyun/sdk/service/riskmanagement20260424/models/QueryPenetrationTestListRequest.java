@@ -73,7 +73,13 @@ public class QueryPenetrationTestListRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The current page number.</p>
+         * <blockquote>
+         * <p>Default value: 1</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -82,7 +88,13 @@ public class QueryPenetrationTestListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page.</p>
+         * <blockquote>
+         * <p>Valid values: 1 to 100. Default value: 10.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

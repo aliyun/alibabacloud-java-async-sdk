@@ -59,9 +59,9 @@ public class EndPenetrationTestRequest extends Request {
         } 
 
         /**
-         * <p>The unique sequence ID of the application record.</p>
+         * <p>The unique identity sequence of the application record.</p>
          * <blockquote>
-         * <p>This field is of the Long type. Precision loss may occur during serialization or deserialization. Ensure that the value does not exceed 9007199254740991.</p>
+         * <p>The field type is Long. Precision loss may occur during the procedure to serialize or deserialize. Make sure that the value does not exceed 9007199254740991.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
