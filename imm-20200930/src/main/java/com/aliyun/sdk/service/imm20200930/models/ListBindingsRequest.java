@@ -42,6 +42,10 @@ public class ListBindingsRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String projectName;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("URI")
+    private String URI;
+
     private ListBindingsRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -50,6 +54,7 @@ public class ListBindingsRequest extends Request {
         this.name = builder.name;
         this.nextToken = builder.nextToken;
         this.projectName = builder.projectName;
+        this.URI = builder.URI;
     }
 
     public static Builder builder() {
@@ -107,6 +112,13 @@ public class ListBindingsRequest extends Request {
         return this.projectName;
     }
 
+    /**
+     * @return URI
+     */
+    public String getURI() {
+        return this.URI;
+    }
+
     public static final class Builder extends Request.Builder<ListBindingsRequest, Builder> {
         private String regionId; 
         private String datasetName; 
@@ -114,6 +126,7 @@ public class ListBindingsRequest extends Request {
         private String name; 
         private String nextToken; 
         private String projectName; 
+        private String URI; 
 
         private Builder() {
             super();
@@ -127,6 +140,7 @@ public class ListBindingsRequest extends Request {
             this.name = request.name;
             this.nextToken = request.nextToken;
             this.projectName = request.projectName;
+            this.URI = request.URI;
         } 
 
         /**
@@ -139,7 +153,7 @@ public class ListBindingsRequest extends Request {
         }
 
         /**
-         * <p>The dataset name. For information about how to obtain the dataset name, see <a href="https://help.aliyun.com/document_detail/478160.html">CreateDataset</a>.</p>
+         * <p>The name of the dataset. For more information about how to obtain the dataset name, see <a href="https://help.aliyun.com/document_detail/478160.html">Create a dataset</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>test-dataset</p>
@@ -153,7 +167,7 @@ public class ListBindingsRequest extends Request {
         /**
          * <ul>
          * <li>The maximum number of bindings to return. Valid values: 0 to 200.</li>
-         * <li>If this parameter is not set or is set to 0, the default value 100 is used.</li>
+         * <li>If this parameter is not specified or is set to 0, the default value is 100.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -179,9 +193,9 @@ public class ListBindingsRequest extends Request {
 
         /**
          * <ul>
-         * <li>The pagination token that is used when the total number of bindings exceeds the MaxResults value.</li>
-         * <li>Binding information is returned in alphabetical order starting from the NextToken value.</li>
-         * <li>Leave this parameter empty for the first request.</li>
+         * <li>The pagination token that is used when the total number of bindings exceeds the value of MaxResults.</li>
+         * <li>The list of bindings is returned in lexicographical order starting from the NextToken value.</li>
+         * <li>Leave this parameter empty when you call this operation for the first time.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -194,7 +208,7 @@ public class ListBindingsRequest extends Request {
         }
 
         /**
-         * <p>The project name. For information about how to obtain the project name, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</p>
+         * <p>The name of the project. For more information about how to obtain the project name, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -203,6 +217,18 @@ public class ListBindingsRequest extends Request {
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
             this.projectName = projectName;
+            return this;
+        }
+
+        /**
+         * <p>The URI of the source OSS bucket, which is used to filter the bindings associated with the bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://example-bucket</p>
+         */
+        public Builder URI(String URI) {
+            this.putQueryParameter("URI", URI);
+            this.URI = URI;
             return this;
         }
 

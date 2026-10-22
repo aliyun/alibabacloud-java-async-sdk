@@ -80,7 +80,7 @@ public class ListBindingsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of binding information between datasets and OSS buckets.</p>
+         * <p>The list of bindings between datasets and OSS buckets.</p>
          */
         public Builder bindings(java.util.List<Binding> bindings) {
             this.bindings = bindings;
@@ -89,9 +89,9 @@ public class ListBindingsResponseBody extends TeaModel {
 
         /**
          * <ul>
-         * <li>The pagination token that is used when the total number of bindings exceeds the MaxResults value.</li>
-         * <li>Use this value as the NextToken in the next request to return the remaining results.</li>
-         * <li>This parameter has a value only when not all bindings are returned.</li>
+         * <li>The pagination token that is used when the total number of bindings exceeds the value of MaxResults.</li>
+         * <li>Use this value as NextToken in the next request to obtain the remaining bindings.</li>
+         * <li>This parameter is returned only when not all bindings are returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -103,7 +103,7 @@ public class ListBindingsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>EFDFD356-C928-4A36-951A-6EB5A592****</p>

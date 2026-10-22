@@ -158,10 +158,10 @@ public class App extends TeaModel {
         } 
 
         /**
-         * <p>AppDescription</p>
+         * <p>The application description.</p>
          * 
          * <strong>example:</strong>
-         * <p>中国最大的电商购物商城</p>
+         * <p>The largest e-commerce shopping mall in China</p>
          */
         public Builder appDescription(String appDescription) {
             this.appDescription = appDescription;
@@ -169,7 +169,7 @@ public class App extends TeaModel {
         }
 
         /**
-         * <p>AppId</p>
+         * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1234567890</p>
@@ -180,7 +180,7 @@ public class App extends TeaModel {
         }
 
         /**
-         * <p>AppKey</p>
+         * <p>The key returned when the application is created.</p>
          * 
          * <strong>example:</strong>
          * <p>ryBOBW0Z6NnQ3fV9</p>
@@ -191,10 +191,10 @@ public class App extends TeaModel {
         }
 
         /**
-         * <p>AppName</p>
+         * <p>The application name.</p>
          * 
          * <strong>example:</strong>
-         * <p>淘宝</p>
+         * <p>Taobao</p>
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -202,7 +202,7 @@ public class App extends TeaModel {
         }
 
         /**
-         * <p>AppRegion</p>
+         * <p>The region where the application is used. Valid values: 0: Chinese mainland. 1: Outside the Chinese mainland.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -213,7 +213,7 @@ public class App extends TeaModel {
         }
 
         /**
-         * <p>AppType</p>
+         * <p>The application type. Valid values: 0: Android. 1: iOS.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -224,7 +224,7 @@ public class App extends TeaModel {
         }
 
         /**
-         * <p>EnglishName</p>
+         * <p>The English name of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>Taobao</p>
@@ -235,7 +235,7 @@ public class App extends TeaModel {
         }
 
         /**
-         * <p>OwnerId</p>
+         * <p>The customer ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1023210024677934</p>

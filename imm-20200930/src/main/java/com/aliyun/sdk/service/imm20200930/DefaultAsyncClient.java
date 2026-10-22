@@ -382,16 +382,16 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/2743997.html">billing</a> of Intelligent Media Management (IMM).\<em>\</em>\<em>\</em></p>
+     * <p><em>Make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/2743997.html">pricing</a> of Intelligent Media Management (IMM) before you call this operation.</em>*</p>
      * <blockquote>
-     * <p>Asynchronous processing does not guarantee timely task completion.
-     * Before you create a binding, make sure that the project and the dataset that you want to use exist.</p>
+     * <p>Notice: Asynchronous tasks do not guarantee immediate completion.
+     * Before you create a binding relationship, make sure that you have created the corresponding project and dataset.</p>
      * </blockquote>
      * <ul>
-     * <li>For information about how to create a project, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</li>
-     * <li>For information about how to create a dataset, see <a href="https://help.aliyun.com/document_detail/478160.html">CreateDataset</a>.<blockquote>
-     * <p>The CreateBinding operation works by using the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template</a> that is specified when you created the project or dataset.
-     * After you create a binding between a dataset and an OSS bucket, IMM scans the existing objects in the bucket and extracts metadata based on the scanning result. Then, IMM creates an index from the extracted metadata. If new objects are uploaded to the OSS bucket, IMM tracks and scans the objects and updates the index. For objects whose metadata index is created by calling this operation, you can call query operations, such as <a href="https://help.aliyun.com/document_detail/478175.html">SimpleQuery</a>, to query objects, manage objects, and collect statistics on objects.</p>
+     * <li><a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/478160.html">Create a dataset</a><blockquote>
+     * <p>Data binding uses the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template</a> specified when the project or dataset is created to process files.
+     * After the binding relationship is created, IMM first performs a full scan on the existing data in the OSS bucket and extracts file metadata for indexing. After the full scan is complete, IMM continues to perform near real-time incremental tracking, extraction, and indexing for new files in the OSS bucket. After files are indexed in this way, you can use file query operations such as <a href="https://help.aliyun.com/document_detail/478175.html">SimpleQuery</a> to query, manage, and collect statistics on the files.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -1742,8 +1742,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).</strong></li>
-     * <li>Make sure that the binding relationship that you want to query exists. For information about how to create a binding relationship, see <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a>.</li>
+     * <li><strong>Ensure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management before you call this operation.</strong></li>
+     * <li>Ensure that you have created the corresponding binding relationship by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation.</li>
      * </ul>
      * 
      * @param request the request parameters of GetBinding  GetBindingRequest
@@ -2127,7 +2127,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p><em>Before you use this operation, make sure that you are familiar with the billing method and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management (IMM).</em>*</p>
+     * <p><em>Before calling this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management.</em>*</p>
      * 
      * @param request the request parameters of ListBindings  ListBindingsRequest
      * @return ListBindingsResponse

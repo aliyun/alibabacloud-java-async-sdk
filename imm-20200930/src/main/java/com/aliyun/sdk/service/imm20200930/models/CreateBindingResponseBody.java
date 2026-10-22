@@ -67,7 +67,7 @@ public class CreateBindingResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the binding.</p>
+         * <p>The binding information.</p>
          */
         public Builder binding(Binding binding) {
             this.binding = binding;

@@ -69,7 +69,7 @@ public class Runtime extends TeaModel {
         } 
 
         /**
-         * <p>The hyperparameters.</p>
+         * <p>The hyperparameter information for the model training runtime.</p>
          * <p>This parameter is required.</p>
          */
         public Builder hyperparameters(Hyperparameters hyperparameters) {
@@ -78,7 +78,7 @@ public class Runtime extends TeaModel {
         }
 
         /**
-         * <p>The resource.</p>
+         * <p>The execution resource configuration information.</p>
          * <p>This parameter is required.</p>
          */
         public Builder resource(Resource resource) {

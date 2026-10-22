@@ -112,7 +112,7 @@ public class CreateBindingRequest extends Request {
         }
 
         /**
-         * <p>The name of the dataset. You can obtain the name of the dataset from the response of the <a href="https://help.aliyun.com/document_detail/478160.html">CreateDataset</a> operation.</p>
+         * <p>The name of the dataset. For more information about how to obtain the dataset name, see <a href="https://help.aliyun.com/document_detail/478160.html">Create a dataset</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>test-dataset</p>
@@ -124,7 +124,7 @@ public class CreateBindingRequest extends Request {
         }
 
         /**
-         * <p>The name of the project. You can obtain the name of the project from the response of the <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a> operation.</p>
+         * <p>The name of the project. For more information about how to obtain the project name, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,8 +137,8 @@ public class CreateBindingRequest extends Request {
         }
 
         /**
-         * <p>The URI of the OSS bucket to which you bind the dataset.</p>
-         * <p>Specify the value in the oss\://${Bucket} format. <code>${Bucket}</code> specifies the name of the OSS bucket that resides in the same region as the current project.</p>
+         * <p>The URI of the OSS bucket bound to the dataset.</p>
+         * <p>The URI of the OSS bucket is in the format of oss://${Bucket}, where <code>${Bucket}</code> is the name of the OSS bucket that resides in the same region as the current project.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

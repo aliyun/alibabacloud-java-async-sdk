@@ -80,7 +80,10 @@ public class VideoInsight extends TeaModel {
         } 
 
         /**
-         * Caption.
+         * <p>The video synopsis.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The video shows two different scenes: one features a stationary white plate, a black bottle, and a transparent glass, and the other shows a hand holding a shampoo bottle labeled &quot;YEZOLU&quot; moving slowly upward in a bathroom</p>
          */
         public Builder caption(String caption) {
             this.caption = caption;
@@ -88,7 +91,10 @@ public class VideoInsight extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The detailed description of the video content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The scene shows a slightly chubby orange cat lying on a light gray fabric sofa with its body slightly curled up</p>
          */
         public Builder description(String description) {
             this.description = description;

@@ -80,7 +80,10 @@ public class ImageInsight extends TeaModel {
         } 
 
         /**
-         * Caption.
+         * <p>The short description of the image content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>An orange tabby cat lying on the living room sofa with sunlight streaming in through the window</p>
          */
         public Builder caption(String caption) {
             this.caption = caption;
@@ -88,7 +91,10 @@ public class ImageInsight extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The image description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The image shows a person wearing a dark suit jacket over a white shirt. The background features a gradient from light blue to gray</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -96,7 +102,7 @@ public class ImageInsight extends TeaModel {
         }
 
         /**
-         * <p>The multilingual image content.</p>
+         * <p>The multilingual image information content.</p>
          */
         public Builder multilingualContent(java.util.Map<String, MultilingualContentEntry> multilingualContent) {
             this.multilingualContent = multilingualContent;

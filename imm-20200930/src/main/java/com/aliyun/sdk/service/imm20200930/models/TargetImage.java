@@ -80,7 +80,7 @@ public class TargetImage extends TeaModel {
         } 
 
         /**
-         * <p>Animations</p>
+         * Animations.
          */
         public Builder animations(java.util.List<Animations> animations) {
             this.animations = animations;
@@ -88,7 +88,7 @@ public class TargetImage extends TeaModel {
         }
 
         /**
-         * <p>Snapshots</p>
+         * Snapshots.
          */
         public Builder snapshots(java.util.List<Snapshots> snapshots) {
             this.snapshots = snapshots;
@@ -96,7 +96,7 @@ public class TargetImage extends TeaModel {
         }
 
         /**
-         * <p>Sprites</p>
+         * Sprites.
          */
         public Builder sprites(java.util.List<Sprites> sprites) {
             this.sprites = sprites;
@@ -255,7 +255,6 @@ public class TargetImage extends TeaModel {
             } 
 
             /**
-             * <p>Format</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -267,10 +266,7 @@ public class TargetImage extends TeaModel {
             }
 
             /**
-             * <p>FrameRate</p>
-             * 
-             * <strong>example:</strong>
-             * <p>25</p>
+             * FrameRate.
              */
             public Builder frameRate(Double frameRate) {
                 this.frameRate = frameRate;
@@ -278,10 +274,7 @@ public class TargetImage extends TeaModel {
             }
 
             /**
-             * <p>Height</p>
-             * 
-             * <strong>example:</strong>
-             * <p>960</p>
+             * Height.
              */
             public Builder height(Double height) {
                 this.height = height;
@@ -289,10 +282,7 @@ public class TargetImage extends TeaModel {
             }
 
             /**
-             * <p>Interval</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0.5</p>
+             * Interval.
              */
             public Builder interval(Double interval) {
                 this.interval = interval;
@@ -300,10 +290,7 @@ public class TargetImage extends TeaModel {
             }
 
             /**
-             * <p>Number</p>
-             * 
-             * <strong>example:</strong>
-             * <p>100</p>
+             * Number.
              */
             public Builder number(Integer number) {
                 this.number = number;
@@ -311,10 +298,7 @@ public class TargetImage extends TeaModel {
             }
 
             /**
-             * <p>ScaleType</p>
-             * 
-             * <strong>example:</strong>
-             * <p>crop</p>
+             * ScaleType.
              */
             public Builder scaleType(String scaleType) {
                 this.scaleType = scaleType;
@@ -322,10 +306,7 @@ public class TargetImage extends TeaModel {
             }
 
             /**
-             * <p>StartTime</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * StartTime.
              */
             public Builder startTime(Double startTime) {
                 this.startTime = startTime;
@@ -333,7 +314,6 @@ public class TargetImage extends TeaModel {
             }
 
             /**
-             * <p>URI</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -345,10 +325,7 @@ public class TargetImage extends TeaModel {
             }
 
             /**
-             * <p>Width</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1280</p>
+             * Width.
              */
             public Builder width(Double width) {
                 this.width = width;
@@ -521,7 +498,6 @@ public class TargetImage extends TeaModel {
             } 
 
             /**
-             * <p>Format</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -533,10 +509,7 @@ public class TargetImage extends TeaModel {
             }
 
             /**
-             * <p>Height</p>
-             * 
-             * <strong>example:</strong>
-             * <p>960</p>
+             * Height.
              */
             public Builder height(Double height) {
                 this.height = height;
@@ -544,10 +517,7 @@ public class TargetImage extends TeaModel {
             }
 
             /**
-             * <p>Interval</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0.5</p>
+             * Interval.
              */
             public Builder interval(Double interval) {
                 this.interval = interval;
@@ -563,10 +533,7 @@ public class TargetImage extends TeaModel {
             }
 
             /**
-             * <p>Number</p>
-             * 
-             * <strong>example:</strong>
-             * <p>10</p>
+             * Number.
              */
             public Builder number(Integer number) {
                 this.number = number;
@@ -574,10 +541,7 @@ public class TargetImage extends TeaModel {
             }
 
             /**
-             * <p>ScaleType</p>
-             * 
-             * <strong>example:</strong>
-             * <p>crop</p>
+             * ScaleType.
              */
             public Builder scaleType(String scaleType) {
                 this.scaleType = scaleType;
@@ -585,10 +549,7 @@ public class TargetImage extends TeaModel {
             }
 
             /**
-             * <p>StartTime</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * StartTime.
              */
             public Builder startTime(Double startTime) {
                 this.startTime = startTime;
@@ -604,7 +565,6 @@ public class TargetImage extends TeaModel {
             }
 
             /**
-             * <p>URI</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -616,10 +576,7 @@ public class TargetImage extends TeaModel {
             }
 
             /**
-             * <p>Width</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1280</p>
+             * Width.
              */
             public Builder width(Double width) {
                 this.width = width;
@@ -844,7 +801,6 @@ public class TargetImage extends TeaModel {
             } 
 
             /**
-             * <p>Format</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -856,10 +812,7 @@ public class TargetImage extends TeaModel {
             }
 
             /**
-             * <p>Interval</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * Interval.
              */
             public Builder interval(Double interval) {
                 this.interval = interval;
@@ -867,10 +820,7 @@ public class TargetImage extends TeaModel {
             }
 
             /**
-             * <p>Margin</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * Margin.
              */
             public Builder margin(Integer margin) {
                 this.margin = margin;
@@ -886,10 +836,7 @@ public class TargetImage extends TeaModel {
             }
 
             /**
-             * <p>Number</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * Number.
              */
             public Builder number(Integer number) {
                 this.number = number;
@@ -897,10 +844,7 @@ public class TargetImage extends TeaModel {
             }
 
             /**
-             * <p>Pad</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * Pad.
              */
             public Builder pad(Integer pad) {
                 this.pad = pad;
@@ -908,10 +852,7 @@ public class TargetImage extends TeaModel {
             }
 
             /**
-             * <p>ScaleHeight</p>
-             * 
-             * <strong>example:</strong>
-             * <p>960</p>
+             * ScaleHeight.
              */
             public Builder scaleHeight(Float scaleHeight) {
                 this.scaleHeight = scaleHeight;
@@ -919,10 +860,7 @@ public class TargetImage extends TeaModel {
             }
 
             /**
-             * <p>ScaleType</p>
-             * 
-             * <strong>example:</strong>
-             * <p>crop</p>
+             * ScaleType.
              */
             public Builder scaleType(String scaleType) {
                 this.scaleType = scaleType;
@@ -930,10 +868,7 @@ public class TargetImage extends TeaModel {
             }
 
             /**
-             * <p>ScaleWidth</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1280</p>
+             * ScaleWidth.
              */
             public Builder scaleWidth(Float scaleWidth) {
                 this.scaleWidth = scaleWidth;
@@ -941,10 +876,7 @@ public class TargetImage extends TeaModel {
             }
 
             /**
-             * <p>StartTime</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * StartTime.
              */
             public Builder startTime(Double startTime) {
                 this.startTime = startTime;
@@ -960,10 +892,7 @@ public class TargetImage extends TeaModel {
             }
 
             /**
-             * <p>TileHeight</p>
-             * 
-             * <strong>example:</strong>
-             * <p>6</p>
+             * TileHeight.
              */
             public Builder tileHeight(Integer tileHeight) {
                 this.tileHeight = tileHeight;
@@ -971,10 +900,7 @@ public class TargetImage extends TeaModel {
             }
 
             /**
-             * <p>TileWidth</p>
-             * 
-             * <strong>example:</strong>
-             * <p>6</p>
+             * TileWidth.
              */
             public Builder tileWidth(Integer tileWidth) {
                 this.tileWidth = tileWidth;
@@ -982,7 +908,6 @@ public class TargetImage extends TeaModel {
             }
 
             /**
-             * <p>URI</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
