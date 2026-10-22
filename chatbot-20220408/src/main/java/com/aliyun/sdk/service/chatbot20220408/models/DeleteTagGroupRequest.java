@@ -88,7 +88,10 @@ public class DeleteTagGroupRequest extends Request {
         } 
 
         /**
-         * AgentKey.
+         * <p>AgentKey</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -97,7 +100,10 @@ public class DeleteTagGroupRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The idempotence parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -106,6 +112,7 @@ public class DeleteTagGroupRequest extends Request {
         }
 
         /**
+         * <p>The ID of the tag group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

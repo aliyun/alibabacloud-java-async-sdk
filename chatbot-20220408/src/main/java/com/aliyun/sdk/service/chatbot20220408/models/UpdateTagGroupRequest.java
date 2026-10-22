@@ -103,7 +103,10 @@ public class UpdateTagGroupRequest extends Request {
         } 
 
         /**
-         * AgentKey.
+         * <p>AgentKey</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -112,7 +115,10 @@ public class UpdateTagGroupRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The idempotence parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -121,10 +127,11 @@ public class UpdateTagGroupRequest extends Request {
         }
 
         /**
+         * <p>The name of the label group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>标签组1</p>
+         * <p>Label group 1</p>
          */
         public Builder groupName(String groupName) {
             this.putBodyParameter("GroupName", groupName);
@@ -133,6 +140,7 @@ public class UpdateTagGroupRequest extends Request {
         }
 
         /**
+         * <p>The ID of the label group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

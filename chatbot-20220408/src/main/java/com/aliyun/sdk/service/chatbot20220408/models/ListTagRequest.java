@@ -129,7 +129,10 @@ public class ListTagRequest extends Request {
         } 
 
         /**
-         * AgentKey.
+         * <p>AgentKey</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -138,7 +141,10 @@ public class ListTagRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -147,7 +153,10 @@ public class ListTagRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * <p>The ID of the tag group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>43445343</p>
          */
         public Builder groupId(Long groupId) {
             this.putBodyParameter("GroupId", groupId);
@@ -156,7 +165,10 @@ public class ListTagRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -165,7 +177,10 @@ public class ListTagRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -174,7 +189,10 @@ public class ListTagRequest extends Request {
         }
 
         /**
-         * TagName.
+         * <p>The tag name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
          */
         public Builder tagName(String tagName) {
             this.putBodyParameter("TagName", tagName);

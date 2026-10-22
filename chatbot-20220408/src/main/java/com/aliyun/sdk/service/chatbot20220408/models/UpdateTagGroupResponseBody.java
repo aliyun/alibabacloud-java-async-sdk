@@ -67,7 +67,10 @@ public class UpdateTagGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxXxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class UpdateTagGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the update was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

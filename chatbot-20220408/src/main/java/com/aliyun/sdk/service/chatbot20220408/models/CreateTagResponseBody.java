@@ -67,7 +67,10 @@ public class CreateTagResponseBody extends TeaModel {
         } 
 
         /**
-         * Id.
+         * <p>The ID of the label.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7391272</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -75,7 +78,10 @@ public class CreateTagResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxXxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

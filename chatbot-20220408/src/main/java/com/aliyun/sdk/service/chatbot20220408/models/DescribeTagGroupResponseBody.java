@@ -171,7 +171,10 @@ public class DescribeTagGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * CreateTime.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -179,7 +182,10 @@ public class DescribeTagGroupResponseBody extends TeaModel {
         }
 
         /**
-         * CreateUserId.
+         * <p>The ID of the creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32323</p>
          */
         public Builder createUserId(Long createUserId) {
             this.createUserId = createUserId;
@@ -187,7 +193,10 @@ public class DescribeTagGroupResponseBody extends TeaModel {
         }
 
         /**
-         * CreateUserName.
+         * <p>The name of the creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder createUserName(String createUserName) {
             this.createUserName = createUserName;
@@ -195,7 +204,10 @@ public class DescribeTagGroupResponseBody extends TeaModel {
         }
 
         /**
-         * DefaultTagId.
+         * <p>The ID of the default tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>232323</p>
          */
         public Builder defaultTagId(Long defaultTagId) {
             this.defaultTagId = defaultTagId;
@@ -203,7 +215,10 @@ public class DescribeTagGroupResponseBody extends TeaModel {
         }
 
         /**
-         * GroupName.
+         * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Tag 1</p>
          */
         public Builder groupName(String groupName) {
             this.groupName = groupName;
@@ -211,7 +226,10 @@ public class DescribeTagGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Id.
+         * <p>The ID of the tag group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7393472</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -219,7 +237,10 @@ public class DescribeTagGroupResponseBody extends TeaModel {
         }
 
         /**
-         * ModifyTime.
+         * <p>The modification time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder modifyTime(String modifyTime) {
             this.modifyTime = modifyTime;
@@ -227,7 +248,10 @@ public class DescribeTagGroupResponseBody extends TeaModel {
         }
 
         /**
-         * ModifyUserId.
+         * <p>The ID of the modifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder modifyUserId(Long modifyUserId) {
             this.modifyUserId = modifyUserId;
@@ -235,7 +259,10 @@ public class DescribeTagGroupResponseBody extends TeaModel {
         }
 
         /**
-         * ModifyUserName.
+         * <p>The name of the modifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder modifyUserName(String modifyUserName) {
             this.modifyUserName = modifyUserName;
@@ -243,7 +270,10 @@ public class DescribeTagGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxXxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

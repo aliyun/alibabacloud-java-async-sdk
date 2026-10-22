@@ -88,7 +88,10 @@ public class CreateTagGroupRequest extends Request {
         } 
 
         /**
-         * AgentKey.
+         * <p>AgentKey</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxx</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -97,7 +100,10 @@ public class CreateTagGroupRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token for idempotence.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -106,10 +112,11 @@ public class CreateTagGroupRequest extends Request {
         }
 
         /**
+         * <p>The name of the tag group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>标签组1</p>
+         * <p>TagGroup1</p>
          */
         public Builder groupName(String groupName) {
             this.putBodyParameter("GroupName", groupName);

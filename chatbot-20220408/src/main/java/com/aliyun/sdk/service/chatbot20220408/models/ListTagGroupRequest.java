@@ -115,7 +115,10 @@ public class ListTagGroupRequest extends Request {
         } 
 
         /**
-         * AgentKey.
+         * <p>AgentKey</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -124,7 +127,10 @@ public class ListTagGroupRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token for idempotency.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -133,7 +139,10 @@ public class ListTagGroupRequest extends Request {
         }
 
         /**
-         * GroupName.
+         * <p>The name of the tag group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
          */
         public Builder groupName(String groupName) {
             this.putBodyParameter("GroupName", groupName);
@@ -142,7 +151,10 @@ public class ListTagGroupRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -151,7 +163,10 @@ public class ListTagGroupRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
