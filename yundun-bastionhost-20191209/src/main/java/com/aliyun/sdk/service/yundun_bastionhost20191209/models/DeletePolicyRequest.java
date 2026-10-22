@@ -103,9 +103,9 @@ public class DeletePolicyRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the bastion host whose control policy you want to delete.</p>
+         * <p>The instance ID of the bastion host to which the control policy to be deleted belongs.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+         * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -119,9 +119,9 @@ public class DeletePolicyRequest extends Request {
         }
 
         /**
-         * <p>The ID of the control policy to be deleted.</p>
+         * <p>The ID of the control policy to delete.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2758876.html">ListPolicies</a> operation to query the control policy ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2758876.html">ListPolicies</a> operation to query this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -135,7 +135,10 @@ public class DeletePolicyRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);

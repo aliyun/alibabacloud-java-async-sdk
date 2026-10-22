@@ -200,10 +200,10 @@ public class ListOperationDatabasesRequest extends Request {
         } 
 
         /**
-         * <p>The address of the database.</p>
+         * <p>The address of the database instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>10.167.66.167</p>
+         * <p>10.167.XX.XX</p>
          */
         public Builder databaseAddress(String databaseAddress) {
             this.putQueryParameter("DatabaseAddress", databaseAddress);
@@ -212,7 +212,7 @@ public class ListOperationDatabasesRequest extends Request {
         }
 
         /**
-         * <p>The name of the database instance. The system supports exact search.</p>
+         * <p>The name of the database instance. Exact match is used.</p>
          * 
          * <strong>example:</strong>
          * <p>aaa</p>
@@ -224,7 +224,7 @@ public class ListOperationDatabasesRequest extends Request {
         }
 
         /**
-         * <p>The type of the database. Valid values:</p>
+         * <p>The database type. Valid values:</p>
          * <ul>
          * <li><strong>MySQL</strong></li>
          * <li><strong>SQLServer</strong></li>
@@ -242,14 +242,14 @@ public class ListOperationDatabasesRequest extends Request {
         }
 
         /**
-         * <p>The bastion host ID.</p>
+         * <p>The instance ID of the bastion host.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the value of this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>bastionhost-cn-tl32wloo90y</p>
+         * <p>bastionhost-cn-tl32wdd</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -258,7 +258,7 @@ public class ListOperationDatabasesRequest extends Request {
         }
 
         /**
-         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * <p>The page number of the current page for a paged query. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -270,9 +270,9 @@ public class ListOperationDatabasesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.<br>Maximum value: 100. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+         * <p>The maximum number of entries to return on each page for a paged query.<br>The maximum value of the PageSize parameter is 100. Default value: 20. If the PageSize parameter is left empty, 20 entries are returned by default.</p>
          * <blockquote>
-         * <p> We recommend that you do not leave this parameter empty.</p>
+         * <p>Do not leave the PageSize parameter empty.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -285,7 +285,10 @@ public class ListOperationDatabasesRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -296,7 +299,7 @@ public class ListOperationDatabasesRequest extends Request {
         /**
          * <p>The region ID of the bastion host.</p>
          * <blockquote>
-         * <p> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * <p>For the mappings between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -311,9 +314,9 @@ public class ListOperationDatabasesRequest extends Request {
         /**
          * <p>The source of the database instance. Valid values:</p>
          * <ul>
-         * <li><strong>Local</strong></li>
-         * <li><strong>Rds</strong></li>
-         * <li><strong>PolarDB</strong></li>
+         * <li><strong>Local</strong>: on-premises database</li>
+         * <li><strong>Rds</strong>: ApsaraDB RDS database</li>
+         * <li><strong>PolarDB</strong>: PolarDB database</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -326,7 +329,7 @@ public class ListOperationDatabasesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the ApsaraDB RDS instance. The system supports exact search.</p>
+         * <p>The instance ID of the ApsaraDB RDS instance. Exact match.</p>
          * 
          * <strong>example:</strong>
          * <p>i-bp19ienyt0yax748****</p>
@@ -338,10 +341,10 @@ public class ListOperationDatabasesRequest extends Request {
         }
 
         /**
-         * <p>The instance state.</p>
+         * <p>Filters database instances by instance status. Valid values:</p>
          * <ul>
-         * <li><strong>Normal</strong></li>
-         * <li><strong>RemoteRelease</strong></li>
+         * <li><strong>Normal</strong>: normal</li>
+         * <li><strong>RemoteRelease</strong>: released</li>
          * </ul>
          * 
          * <strong>example:</strong>

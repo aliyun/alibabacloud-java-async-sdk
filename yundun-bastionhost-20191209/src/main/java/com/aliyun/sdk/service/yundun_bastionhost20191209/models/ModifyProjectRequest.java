@@ -131,7 +131,10 @@ public class ModifyProjectRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The new description of the project. The description can be up to 500 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Bastionhost demo</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -140,6 +143,10 @@ public class ModifyProjectRequest extends Request {
         }
 
         /**
+         * <p>The instance ID of the bastion host for which you want to modify project information.</p>
+         * <blockquote>
+         * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,7 +159,13 @@ public class ModifyProjectRequest extends Request {
         }
 
         /**
-         * MemberIds.
+         * <p>The UIDs of the member accounts to associate with the project after modification.</p>
+         * <blockquote>
+         * <p>You can call the ListMembersNotForProject operation to obtain this parameter. If you do not specify this parameter, no changes are made.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>160****5312</p>
          */
         public Builder memberIds(String memberIds) {
             this.putQueryParameter("MemberIds", memberIds);
@@ -161,7 +174,10 @@ public class ModifyProjectRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The new name of the project. The name must be 1 to 128 characters in length, cannot start with a special character, and can contain only the following special characters: periods (.), underscores (_), hyphens (-), backslashes (\), and spaces.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>projectname</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -170,6 +186,10 @@ public class ModifyProjectRequest extends Request {
         }
 
         /**
+         * <p>The ID of the project that you want to modify.</p>
+         * <blockquote>
+         * <p>You can call the ListProjects operation to obtain this parameter.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -182,7 +202,13 @@ public class ModifyProjectRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the bastion host.</p>
+         * <blockquote>
+         * <p>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -118,10 +118,10 @@ public class ModifyHostsActiveAddressTypeRequest extends Request {
         } 
 
         /**
-         * <p>The new portal type of the host. Valid values:</p>
+         * <p>The new endpoint type of the host. Valid values:</p>
          * <ul>
-         * <li><strong>Public</strong>: public portal</li>
-         * <li><strong>Private</strong>: internal portal</li>
+         * <li><strong>Public</strong>: Internet</li>
+         * <li><strong>Private</strong>: private network</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -135,10 +135,8 @@ public class ModifyHostsActiveAddressTypeRequest extends Request {
         }
 
         /**
-         * <p>The ID of the host for which you want to change the portal type. The value is a JSON string. You can add up to 100 host IDs.</p>
-         * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/200665.html">ListHosts</a> operation to query the ID of the host.</p>
-         * </blockquote>
+         * <p>The IDs of the hosts whose endpoint types you want to modify. The value is a character string in JSON format. You can specify up to 100 host IDs.
+         * You can invoke the <a href="https://help.aliyun.com/document_detail/200665.html">ListHosts</a> operation to obtain the value of this parameter.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -151,9 +149,9 @@ public class ModifyHostsActiveAddressTypeRequest extends Request {
         }
 
         /**
-         * <p>The ID of the bastion host for which you want to change the portal type of the host.</p>
+         * <p>The instance ID of the Bastionhost instance to which the host whose endpoint type you want to modify belongs.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+         * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain the value of this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -167,7 +165,10 @@ public class ModifyHostsActiveAddressTypeRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -176,9 +177,9 @@ public class ModifyHostsActiveAddressTypeRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the bastion host for which you want to change the portal type of the host.</p>
+         * <p>The area ID of the Bastionhost instance to which the host whose endpoint type you want to modify belongs.</p>
          * <blockquote>
-         * <p> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * <p>For more information about the mapping between area IDs and area names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and active zones</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

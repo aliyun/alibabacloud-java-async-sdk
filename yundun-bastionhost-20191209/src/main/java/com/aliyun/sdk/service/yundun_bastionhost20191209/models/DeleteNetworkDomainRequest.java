@@ -103,9 +103,9 @@ public class DeleteNetworkDomainRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the bastion host whose network domain you want to delete.</p>
+         * <p>The instance ID of the bastion host where the network domain that you want to delete resides.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+         * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -119,7 +119,7 @@ public class DeleteNetworkDomainRequest extends Request {
         }
 
         /**
-         * <p>The ID of the network domain to be deleted.</p>
+         * <p>The ID of the network domain that you want to delete.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -132,7 +132,10 @@ public class DeleteNetworkDomainRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -141,9 +144,9 @@ public class DeleteNetworkDomainRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the bastion host whose network domain you want to delete.</p>
+         * <p>The region ID of the bastion host instance where the network domain that you want to delete resides.</p>
          * <blockquote>
-         * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * <p>For information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

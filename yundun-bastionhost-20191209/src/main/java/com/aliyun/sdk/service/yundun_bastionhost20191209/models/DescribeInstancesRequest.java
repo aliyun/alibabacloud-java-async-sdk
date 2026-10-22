@@ -144,7 +144,7 @@ public class DescribeInstancesRequest extends Request {
         } 
 
         /**
-         * <p>An array that consists of the IDs of the bastion hosts.</p>
+         * <p>The ID of the Bastionhost instance.</p>
          * 
          * <strong>example:</strong>
          * <p>bastionhost-cn-78v1ghxxxxx</p>
@@ -156,15 +156,22 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * <p>The status of the bastion host. Valid values:</p>
+         * <p>The status of the Bastionhost instance. Valid values:</p>
          * <ul>
-         * <li><strong>PENDING</strong>: The bastion host is not initialized.</li>
-         * <li><strong>CREATING</strong>: The bastion host is being created.</li>
-         * <li><strong>RUNNING</strong>: The bastion host is running.</li>
-         * <li><strong>EXPIRED</strong>: The bastion host expired.</li>
-         * <li><strong>CREATE_FAILED</strong>: The bastion host fails to be created.</li>
-         * <li><strong>UPGRADING</strong>: The configurations of the bastion host are being changed.</li>
-         * <li><strong>UPGRADE_FAILED</strong>: The configurations of the bastion host fail to be changed.</li>
+         * <li><p><strong>PENDING</strong>: Uninitialized</p>
+         * </li>
+         * <li><p><strong>CREATING</strong>: Creating </p>
+         * </li>
+         * <li><p><strong>RUNNING</strong>: Running </p>
+         * </li>
+         * <li><p><strong>EXPIRED</strong>: Expired </p>
+         * </li>
+         * <li><p><strong>CREATE_FAILED</strong>: Creation failed</p>
+         * </li>
+         * <li><p><strong>UPGRADING</strong>: Upgrading</p>
+         * </li>
+         * <li><p><strong>UPGRADE_FAILED</strong>: Upgrade failed</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -177,7 +184,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * <p>Specifies the page number of the returned results. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -189,7 +196,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
+         * <p>Settings for a paged query. Specifies the number of Bastionhost instances to display on each page during paging. Default value: <strong>10</strong>, which indicates that 10 Bastionhost instances are displayed on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -201,7 +208,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the bastion host.</p>
+         * <p>The region ID of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -213,7 +220,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the bastion host belongs.</p>
+         * <p>The ID of the resource group to which the Bastionhost instance belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfm26ougi****</p>
@@ -225,7 +232,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * <p>An array consisting of the tags that are added to the bastion hosts.</p>
+         * <p>The tags of the Bastionhost instance.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -293,7 +300,7 @@ public class DescribeInstancesRequest extends Request {
             } 
 
             /**
-             * <p>The key of the tag.</p>
+             * <p>The tag key of the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -304,7 +311,7 @@ public class DescribeInstancesRequest extends Request {
             }
 
             /**
-             * <p>The value of the tag.</p>
+             * <p>The tag value of the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>testapi</p>

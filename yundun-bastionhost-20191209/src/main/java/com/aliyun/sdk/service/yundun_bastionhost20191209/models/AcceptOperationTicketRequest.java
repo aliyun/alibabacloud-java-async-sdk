@@ -159,10 +159,10 @@ public class AcceptOperationTicketRequest extends Request {
         } 
 
         /**
-         * <p>The review description.</p>
+         * <p>The approval remarks.</p>
          * 
          * <strong>example:</strong>
-         * <p>O&amp;M allowed</p>
+         * <p>Comment</p>
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -171,17 +171,19 @@ public class AcceptOperationTicketRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of logons allowed. Valid values:</p>
+         * <p>The limit on the number of logons allowed. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: The number of logons is unlimited. The O&amp;M engineer can log on to the specified asset for unlimited times during the validity period.</li>
-         * <li><strong>1</strong>: The O&amp;M engineer can log on to the specified asset only once during the validity period.</li>
-         * </ul>
+         * <li><p><strong>0</strong>: No limit on the number of logons. The O&amp;M engineer can log on an unlimited number of times during the validity period.</p>
+         * </li>
+         * <li><p><strong>1</strong>: The O&amp;M engineer can log on only once during the validity period.</p>
          * <blockquote>
          * <ul>
-         * <li>You can set this parameter only to 0 if you review an O&amp;M application on a database.</li>
-         * <li>If you do not specify this parameter, the default value 0 is used.</li>
+         * <li>The logon limit for database asset O&amp;M approval can only be set to no limit on the number of logons in Settings.</li>
+         * <li>If an empty character string is passed, the default value is no limit on the number of logons.</li>
          * </ul>
          * </blockquote>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -193,7 +195,7 @@ public class AcceptOperationTicketRequest extends Request {
         }
 
         /**
-         * <p>The end time of the validity period. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The end time of the validity period for logon (in seconds, UNIX timestamp format).</p>
          * 
          * <strong>example:</strong>
          * <p>1679393152</p>
@@ -205,7 +207,7 @@ public class AcceptOperationTicketRequest extends Request {
         }
 
         /**
-         * <p>The start time of the validity period. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The start time of the validity period for logon (in seconds, UNIX timestamp format).</p>
          * 
          * <strong>example:</strong>
          * <p>1685600242</p>
@@ -217,9 +219,9 @@ public class AcceptOperationTicketRequest extends Request {
         }
 
         /**
-         * <p>The ID of the bastion host.</p>
+         * <p>The ID of the bastion host instance.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+         * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -233,7 +235,10 @@ public class AcceptOperationTicketRequest extends Request {
         }
 
         /**
-         * <p>The ID of the O&amp;M application that you want to approve. You can call the ListOperationTickets operation to query the IDs of all O&amp;M applications that require review.</p>
+         * <p>The ID of the O&amp;M request to approve.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2584313.html">ListOperationTickets</a> operation to query all OperationTicketId values that require approval.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -246,7 +251,10 @@ public class AcceptOperationTicketRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -257,7 +265,7 @@ public class AcceptOperationTicketRequest extends Request {
         /**
          * <p>The region ID of the bastion host.</p>
          * <blockquote>
-         * <p> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * <p>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

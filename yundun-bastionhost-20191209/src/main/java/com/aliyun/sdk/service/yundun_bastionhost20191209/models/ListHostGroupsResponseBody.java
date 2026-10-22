@@ -194,10 +194,10 @@ public class ListHostGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The remarks of the asset group.</p>
+             * <p>The description of the asset group.</p>
              * 
              * <strong>example:</strong>
-             * <p>Description</p>
+             * <p>Comment</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -205,7 +205,7 @@ public class ListHostGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The asset group ID.</p>
+             * <p>The ID of the asset group.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -219,7 +219,7 @@ public class ListHostGroupsResponseBody extends TeaModel {
              * <p>The name of the asset group.</p>
              * 
              * <strong>example:</strong>
-             * <p>Host group 1</p>
+             * <p>HostGroup1</p>
              */
             public Builder hostGroupName(String hostGroupName) {
                 this.hostGroupName = hostGroupName;

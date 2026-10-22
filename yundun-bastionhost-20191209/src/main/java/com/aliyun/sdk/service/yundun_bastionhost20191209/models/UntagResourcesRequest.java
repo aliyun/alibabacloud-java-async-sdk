@@ -118,10 +118,10 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to delete all tags that are added to the bastion host.</p>
+         * <p>Specifies whether to delete all tags from the Bastionhost instance.</p>
          * <ul>
-         * <li>If you specify TagKey.N, the value of this parameter can only be <strong>false</strong>, which indicates that only a specified tag is deleted.</li>
-         * <li>If you do not specify TagKey.N and the value of this parameter is <strong>true</strong>, all tags are deleted. If you do not specify TagKey.N and the value of this parameter is <strong>false</strong>, no tags are deleted.</li>
+         * <li>If TagKey.N is specified, the value of All can only be set to <strong>false</strong>, which deletes the specified tag.</li>
+         * <li>If TagKey.N is not specified, setting All to <strong>true</strong> deletes all tags. Setting All to <strong>false</strong> does not delete any tags.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -134,9 +134,9 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the bastion host to query.</p>
+         * <p>The region ID of the Bastionhost instance to query.</p>
          * <blockquote>
-         * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * <p>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -150,10 +150,10 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>An array that consists of IDs of bastion hosts.</p>
-         * <p>Valid values: 1 to 20.</p>
+         * <p>The instance ID.</p>
+         * <p>Valid values of N: 1 to 20.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain the Bastionhost instance ID.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          */
@@ -165,7 +165,7 @@ public class UntagResourcesRequest extends Request {
 
         /**
          * <p>The type of the resource.</p>
-         * <p>Set the value to <strong>INSTANCE</strong>, which indicates that the resource is a bastion host.</p>
+         * <p>The only valid value is <strong>INSTANCE</strong>, which indicates a Bastionhost instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -178,7 +178,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The key of tag N.</p>
+         * <p>The tag key of the instance.</p>
          * <p>Valid values of N: 1 to 20.</p>
          */
         public Builder tagKey(java.util.List<String> tagKey) {

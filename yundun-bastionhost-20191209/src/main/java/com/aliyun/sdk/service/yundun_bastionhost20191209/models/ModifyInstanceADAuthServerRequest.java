@@ -359,7 +359,7 @@ public class ModifyInstanceADAuthServerRequest extends Request {
         } 
 
         /**
-         * <p>The username of the account that is used for the AD server.</p>
+         * <p>The server account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -372,7 +372,7 @@ public class ModifyInstanceADAuthServerRequest extends Request {
         }
 
         /**
-         * <p>The Base distinguished name (DN).</p>
+         * <p>The base distinguished name (Base DN).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -398,7 +398,7 @@ public class ModifyInstanceADAuthServerRequest extends Request {
         }
 
         /**
-         * <p>The field that is used to indicate the email address of a user on the AD server.</p>
+         * <p>The server attribute name that maps to the user email address.</p>
          * 
          * <strong>example:</strong>
          * <p>emailAttr</p>
@@ -410,7 +410,7 @@ public class ModifyInstanceADAuthServerRequest extends Request {
         }
 
         /**
-         * <p>The condition that is used to filter users.</p>
+         * <p>The filter condition for users.</p>
          * 
          * <strong>example:</strong>
          * <p>(objectClass=top)</p>
@@ -422,9 +422,9 @@ public class ModifyInstanceADAuthServerRequest extends Request {
         }
 
         /**
-         * <p>The bastion host ID.</p>
+         * <p>The instance ID of the Bastionhost instance.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
+         * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -438,7 +438,10 @@ public class ModifyInstanceADAuthServerRequest extends Request {
         }
 
         /**
-         * IsDefault.
+         * <p>Specifies whether the AD authentication server is the default server. A value of true indicates that the server is the default AD authentication server. A value of false indicates that the server is not the default AD authentication server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isDefault(String isDefault) {
             this.putQueryParameter("IsDefault", isDefault);
@@ -449,8 +452,8 @@ public class ModifyInstanceADAuthServerRequest extends Request {
         /**
          * <p>Specifies whether SSL is supported. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: Supported.</li>
+         * <li><strong>false</strong>: Not supported.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -463,7 +466,10 @@ public class ModifyInstanceADAuthServerRequest extends Request {
         }
 
         /**
-         * IsSyncEmailAttr.
+         * <p>Specifies whether to synchronize the email address. A value of true indicates that the email address is synchronized. A value of false indicates that the email address is not synchronized.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSyncEmailAttr(String isSyncEmailAttr) {
             this.putQueryParameter("IsSyncEmailAttr", isSyncEmailAttr);
@@ -472,7 +478,10 @@ public class ModifyInstanceADAuthServerRequest extends Request {
         }
 
         /**
-         * IsSyncMobileAttr.
+         * <p>Specifies whether to synchronize the mobile phone number. A value of true indicates that the mobile phone number is synchronized. A value of false indicates that the mobile phone number is not synchronized.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSyncMobileAttr(String isSyncMobileAttr) {
             this.putQueryParameter("IsSyncMobileAttr", isSyncMobileAttr);
@@ -481,7 +490,10 @@ public class ModifyInstanceADAuthServerRequest extends Request {
         }
 
         /**
-         * IsSyncNameAttr.
+         * <p>Specifies whether to synchronize the display name. A value of true indicates that the display name is synchronized. A value of false indicates that the display name is not synchronized.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSyncNameAttr(String isSyncNameAttr) {
             this.putQueryParameter("IsSyncNameAttr", isSyncNameAttr);
@@ -490,7 +502,10 @@ public class ModifyInstanceADAuthServerRequest extends Request {
         }
 
         /**
-         * IsSyncOuAsUserGroup.
+         * <p>Specifies whether to synchronize the organization to which the user belongs as a user group. A value of true indicates that the organization is synchronized as a user group. A value of false indicates that the organization is not synchronized as a user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSyncOuAsUserGroup(String isSyncOuAsUserGroup) {
             this.putQueryParameter("IsSyncOuAsUserGroup", isSyncOuAsUserGroup);
@@ -499,7 +514,7 @@ public class ModifyInstanceADAuthServerRequest extends Request {
         }
 
         /**
-         * <p>The field that is used to indicate the mobile phone number of a user on the AD server.</p>
+         * <p>The server attribute name that maps to the user mobile phone number.</p>
          * 
          * <strong>example:</strong>
          * <p>mobileAttr</p>
@@ -511,7 +526,7 @@ public class ModifyInstanceADAuthServerRequest extends Request {
         }
 
         /**
-         * <p>The field that is used to indicate the name of a user on the AD server.</p>
+         * <p>The server attribute name that maps to the username.</p>
          * 
          * <strong>example:</strong>
          * <p>nameAttr</p>
@@ -523,7 +538,7 @@ public class ModifyInstanceADAuthServerRequest extends Request {
         }
 
         /**
-         * <p>The password of the account that is used for the AD server.</p>
+         * <p>The password of the server account.</p>
          * 
          * <strong>example:</strong>
          * <hr>
@@ -535,7 +550,7 @@ public class ModifyInstanceADAuthServerRequest extends Request {
         }
 
         /**
-         * <p>The port that is used to access the server.</p>
+         * <p>The port used to access the server.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -548,9 +563,9 @@ public class ModifyInstanceADAuthServerRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the bastion host.</p>
+         * <p>The region ID of the Bastionhost instance.</p>
          * <blockquote>
-         * <p> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -563,7 +578,7 @@ public class ModifyInstanceADAuthServerRequest extends Request {
         }
 
         /**
-         * <p>The address of the AD server.</p>
+         * <p>The address of the server.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -576,7 +591,10 @@ public class ModifyInstanceADAuthServerRequest extends Request {
         }
 
         /**
-         * ServerName.
+         * <p>The name of the AD authentication server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AD Server</p>
          */
         public Builder serverName(String serverName) {
             this.putQueryParameter("ServerName", serverName);
@@ -585,7 +603,7 @@ public class ModifyInstanceADAuthServerRequest extends Request {
         }
 
         /**
-         * <p>The address of the secondary AD server.</p>
+         * <p>The address of the standby server.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.XX.XX</p>
@@ -597,7 +615,10 @@ public class ModifyInstanceADAuthServerRequest extends Request {
         }
 
         /**
-         * SyncInterval.
+         * <p>The interval at which user snapshots are automatically synchronized, in hours. Valid values: 0, and 4 to 168. A value of 0 indicates that automatic synchronization is disabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder syncInterval(String syncInterval) {
             this.putQueryParameter("SyncInterval", syncInterval);

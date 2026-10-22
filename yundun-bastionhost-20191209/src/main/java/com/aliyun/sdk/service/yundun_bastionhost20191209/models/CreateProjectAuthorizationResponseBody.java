@@ -67,7 +67,10 @@ public class CreateProjectAuthorizationResponseBody extends TeaModel {
         } 
 
         /**
-         * AuthorizationId.
+         * <p>The project authorization ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder authorizationId(String authorizationId) {
             this.authorizationId = authorizationId;
@@ -75,7 +78,10 @@ public class CreateProjectAuthorizationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique identifier that Alibaba Cloud generated for the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4F6C075F-FC86-476E-943B-097BD4E12948</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

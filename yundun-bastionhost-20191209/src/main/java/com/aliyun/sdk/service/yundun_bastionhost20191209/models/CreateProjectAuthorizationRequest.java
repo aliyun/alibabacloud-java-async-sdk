@@ -118,7 +118,10 @@ public class CreateProjectAuthorizationRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The description of the authorization. The description can be up to 500 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Bastionhost demo</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -127,6 +130,10 @@ public class CreateProjectAuthorizationRequest extends Request {
         }
 
         /**
+         * <p>The instance ID of the bastion host.</p>
+         * <blockquote>
+         * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query this parameter.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,6 +146,7 @@ public class CreateProjectAuthorizationRequest extends Request {
         }
 
         /**
+         * <p>The authorization name. The name must be 1 to 128 characters in length. It cannot start with a special character and can contain only the following special characters: periods (.), underscores (_), hyphens (-), backslashes (\), and spaces.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -151,7 +159,13 @@ public class CreateProjectAuthorizationRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the bastion host. </p>
+         * <blockquote>
+         * <p>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -160,6 +174,13 @@ public class CreateProjectAuthorizationRequest extends Request {
         }
 
         /**
+         * <p>The scope of manageable assets associated with the authorization. Valid values:</p>
+         * <ul>
+         * <li><p><strong>1</strong>: All projects.</p>
+         * </li>
+         * <li><p><strong>2</strong>: Specified projects.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

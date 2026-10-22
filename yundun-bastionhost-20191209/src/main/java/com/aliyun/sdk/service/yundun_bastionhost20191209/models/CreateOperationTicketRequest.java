@@ -190,7 +190,11 @@ public class CreateOperationTicketRequest extends Request {
         } 
 
         /**
+         * <p>The remarks of the request.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Comment</p>
          */
         public Builder approveComment(String approveComment) {
             this.putQueryParameter("ApproveComment", approveComment);
@@ -199,6 +203,7 @@ public class CreateOperationTicketRequest extends Request {
         }
 
         /**
+         * <p>The logon name of the asset account for which you want to request O&amp;M access.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -211,6 +216,10 @@ public class CreateOperationTicketRequest extends Request {
         }
 
         /**
+         * <p>The ID of the asset for which you want to request O&amp;M access.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2758856.html">ListOperationDatabases</a> or <a href="https://help.aliyun.com/document_detail/2758857.html">ListOperationHosts</a> operation to obtain this parameter.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -223,7 +232,13 @@ public class CreateOperationTicketRequest extends Request {
         }
 
         /**
-         * EffectEndTime.
+         * <p>The end time of the validity period for the logon request. Unit: seconds. The value is a UNIX timestamp.</p>
+         * <blockquote>
+         * <p>The end time of the validity period must be later than the start time.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1679393152</p>
          */
         public Builder effectEndTime(Long effectEndTime) {
             this.putQueryParameter("EffectEndTime", effectEndTime);
@@ -232,7 +247,10 @@ public class CreateOperationTicketRequest extends Request {
         }
 
         /**
-         * EffectStartTime.
+         * <p>The start time of the validity period for the logon request. Unit: seconds. The value is a UNIX timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1685600242</p>
          */
         public Builder effectStartTime(Long effectStartTime) {
             this.putQueryParameter("EffectStartTime", effectStartTime);
@@ -241,6 +259,10 @@ public class CreateOperationTicketRequest extends Request {
         }
 
         /**
+         * <p>The instance ID of the bastion host.</p>
+         * <blockquote>
+         * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -253,7 +275,14 @@ public class CreateOperationTicketRequest extends Request {
         }
 
         /**
-         * IsOneTimeEffect.
+         * <p>The number of logon times allowed. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Only one logon is allowed within the validity period.</li>
+         * <li><strong>false</strong>: Unlimited logons are allowed within the validity period.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isOneTimeEffect(Boolean isOneTimeEffect) {
             this.putQueryParameter("IsOneTimeEffect", isOneTimeEffect);
@@ -262,7 +291,10 @@ public class CreateOperationTicketRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -271,6 +303,15 @@ public class CreateOperationTicketRequest extends Request {
         }
 
         /**
+         * <p>The name of the protocol for which you want to request O&amp;M access. Valid values:</p>
+         * <ul>
+         * <li>SSH</li>
+         * <li>RDP</li>
+         * <li>MySQL</li>
+         * <li>PostgreSQL</li>
+         * <li>Oracle</li>
+         * <li>SQLServer</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -283,7 +324,13 @@ public class CreateOperationTicketRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the bastion host.</p>
+         * <blockquote>
+         * <p>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

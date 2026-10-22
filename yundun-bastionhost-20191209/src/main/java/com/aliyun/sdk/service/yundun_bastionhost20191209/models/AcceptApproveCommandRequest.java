@@ -103,9 +103,9 @@ public class AcceptApproveCommandRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the command that you want to approve.</p>
+         * <p>The ID of the command to be approved for execution.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2584310.html">ListApproveCommands</a> operation to query the IDs of all commands that need to be reviewed.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2584310.html">ListApproveCommands</a> operation to query the IDs of all commands that require approval.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -119,9 +119,9 @@ public class AcceptApproveCommandRequest extends Request {
         }
 
         /**
-         * <p>The ID of the bastion host.</p>
+         * <p>The instance ID of the bastion host.</p>
          * <blockquote>
-         * <p> You can call the DescribeInstances operation to query the ID of the bastion host.</p>
+         * <p>You can call the DescribeInstances operation to query the bastion host instance ID.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -135,7 +135,10 @@ public class AcceptApproveCommandRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -146,7 +149,7 @@ public class AcceptApproveCommandRequest extends Request {
         /**
          * <p>The region ID of the bastion host.</p>
          * <blockquote>
-         * <p> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * <p>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

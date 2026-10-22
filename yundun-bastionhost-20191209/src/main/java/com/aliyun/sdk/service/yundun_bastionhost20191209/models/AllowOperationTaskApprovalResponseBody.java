@@ -67,7 +67,10 @@ public class AllowOperationTaskApprovalResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class AllowOperationTaskApprovalResponseBody extends TeaModel {
         }
 
         /**
-         * Results.
+         * <p>The results.</p>
          */
         public Builder results(java.util.List<Results> results) {
             this.results = results;
@@ -154,7 +157,10 @@ public class AllowOperationTaskApprovalResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>The error code. OK indicates success, and other values indicate errors.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OK</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -162,7 +168,10 @@ public class AllowOperationTaskApprovalResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -170,7 +179,10 @@ public class AllowOperationTaskApprovalResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The ID of the O&amp;M task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

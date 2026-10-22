@@ -118,10 +118,10 @@ public class ResetHostAccountCredentialRequest extends Request {
         } 
 
         /**
-         * <p>The type of the logon credential that you want to delete. Valid values:</p>
+         * <p>The type of the logon credential to purge. Valid values:</p>
          * <ul>
-         * <li><strong>Password</strong></li>
-         * <li><strong>PrivateKey</strong></li>
+         * <li><strong>Password</strong>: password</li>
+         * <li><strong>PrivateKey</strong>: SSH private key</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -135,9 +135,9 @@ public class ResetHostAccountCredentialRequest extends Request {
         }
 
         /**
-         * <p>The ID of the host account for which the logon credential is to be deleted.</p>
+         * <p>The ID of the host account whose logon credentials you want to purge.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/204372.html">ListHostAccounts</a> operation to query the ID of the host account.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/204372.html">ListHostAccounts</a> operation to obtain the value of this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -151,14 +151,14 @@ public class ResetHostAccountCredentialRequest extends Request {
         }
 
         /**
-         * <p>The ID of the bastion host from which you want to delete the logon credential for the host account.</p>
+         * <p>The instance ID of the Bastionhost instance to which the host account whose logon credentials you want to purge belongs.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+         * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain the value of this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>bastionhost-cn-st220aw****</p>
+         * <p>bastionhost-cn-rp640dg****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -167,7 +167,10 @@ public class ResetHostAccountCredentialRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -176,9 +179,9 @@ public class ResetHostAccountCredentialRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the bastion host from which you want to delete the logon credential for the host account.</p>
+         * <p>The region ID of the Bastionhost instance to which the host account whose logon credentials you want to purge belongs.</p>
          * <blockquote>
-         * <p> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

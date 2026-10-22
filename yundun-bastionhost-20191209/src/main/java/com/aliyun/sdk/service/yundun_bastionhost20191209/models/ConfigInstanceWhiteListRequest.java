@@ -102,9 +102,9 @@ public class ConfigInstanceWhiteListRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the bastion host for which you want to configure a whitelist of public IP addresses.</p>
+         * <p>Instance ID of the Bastionhost instance for which you want to configure the public IP address whitelist.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query instance ID of the Bastionhost instance.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -118,7 +118,7 @@ public class ConfigInstanceWhiteListRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the bastion host.</p>
+         * <p>The region ID of the Bastionhost instance.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -130,7 +130,7 @@ public class ConfigInstanceWhiteListRequest extends Request {
         }
 
         /**
-         * <p>The IP address whitelist that you want to configure.</p>
+         * <p>The IP address whitelist to be configured.</p>
          * 
          * <strong>example:</strong>
          * <p>10.162.XX.XX</p>
@@ -142,7 +142,7 @@ public class ConfigInstanceWhiteListRequest extends Request {
         }
 
         /**
-         * WhiteListPolicies.
+         * <p>The IP address whitelist to be configured.</p>
          */
         public Builder whiteListPolicies(java.util.List<WhiteListPolicies> whiteListPolicies) {
             this.putQueryParameter("WhiteListPolicies", whiteListPolicies);
@@ -210,7 +210,10 @@ public class ConfigInstanceWhiteListRequest extends Request {
             } 
 
             /**
-             * Description.
+             * <p>The remark or description for the whitelist rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -218,7 +221,10 @@ public class ConfigInstanceWhiteListRequest extends Request {
             }
 
             /**
-             * Entry.
+             * <p>The IP address whitelist to be configured. You can configure up to 50 IP addresses. To add multiple IP addresses to the whitelist, separate them with commas (,). The whitelist cannot contain 0.0.0.0/0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.162.XX.XX,192.168.XX.XX</p>
              */
             public Builder entry(String entry) {
                 this.entry = entry;

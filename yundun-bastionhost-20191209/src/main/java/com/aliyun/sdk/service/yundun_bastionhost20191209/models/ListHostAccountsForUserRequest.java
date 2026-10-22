@@ -160,7 +160,7 @@ public class ListHostAccountsForUserRequest extends Request {
         } 
 
         /**
-         * <p>The name of the host account that you want to query. Exact match is supported.</p>
+         * <p>The name of the host account. Exact match is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>root</p>
@@ -172,9 +172,9 @@ public class ListHostAccountsForUserRequest extends Request {
         }
 
         /**
-         * <p>The ID of the host to query.</p>
+         * <p>The ID of the host to which the host accounts belong.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/200665.html">ListHosts</a> operation to query the ID of the host.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/200665.html">ListHosts</a> operation to obtain this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -188,9 +188,9 @@ public class ListHostAccountsForUserRequest extends Request {
         }
 
         /**
-         * <p>The ID of the bastion host on which you want to perform the query. The host accounts that the specified user is authorized to manage on the specified host are queried.</p>
+         * <p>The instance ID of the Bastionhost instance to which the user belongs. This parameter is used to query the host account authorization list for the user.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+         * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -204,7 +204,7 @@ public class ListHostAccountsForUserRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * <p>The page number for the paged query. This parameter is used for paging. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -216,9 +216,9 @@ public class ListHostAccountsForUserRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.<br>Maximum value: 100. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+         * <p>The maximum number of entries to return on each page in a paged query. This parameter is used for paging. Maximum value: 100. Default value: 20. If this parameter is left empty, 20 entries are returned by default.</p>
          * <blockquote>
-         * <p>We recommend that you do not leave this parameter empty.</p>
+         * <p>Specify a value for this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -231,7 +231,10 @@ public class ListHostAccountsForUserRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -240,7 +243,7 @@ public class ListHostAccountsForUserRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the bastion host on which you want to perform the query. The host accounts that the specified user is authorized to manage on the specified host are queried.</p>
+         * <p>The region ID of the Bastionhost instance to which the user belongs.</p>
          * <blockquote>
          * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
          * </blockquote>
@@ -255,9 +258,9 @@ public class ListHostAccountsForUserRequest extends Request {
         }
 
         /**
-         * <p>The ID of the user for which you want to query authorized host accounts.</p>
+         * <p>The ID of the user whose host accounts you want to query.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/204522.html">ListUsers</a> operation to query the ID of the user.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/204522.html">ListUsers</a> operation to obtain this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

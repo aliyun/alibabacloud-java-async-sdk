@@ -80,7 +80,7 @@ public class ListDatabasesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The databases returned.</p>
+         * <p>The list of databases.</p>
          */
         public Builder databases(java.util.List<Databases> databases) {
             this.databases = databases;
@@ -88,7 +88,7 @@ public class ListDatabasesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
@@ -313,8 +313,8 @@ public class ListDatabasesResponseBody extends TeaModel {
             /**
              * <p>The address type of the database. Valid values:</p>
              * <ul>
-             * <li><strong>Public</strong></li>
-             * <li><strong>Private</strong></li>
+             * <li><strong>Public</strong>: public address</li>
+             * <li><strong>Private</strong>: private endpoint on the private network</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -326,7 +326,7 @@ public class ListDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The remarks of the database.</p>
+             * <p>The description of the database.</p>
              * 
              * <strong>example:</strong>
              * <p>comment</p>
@@ -337,7 +337,7 @@ public class ListDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The database ID.</p>
+             * <p>The instance ID of the database.</p>
              * 
              * <strong>example:</strong>
              * <p>9</p>
@@ -359,7 +359,7 @@ public class ListDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The port of the database.</p>
+             * <p>The port number of the database.</p>
              * 
              * <strong>example:</strong>
              * <p>3306</p>
@@ -370,7 +370,7 @@ public class ListDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The internal address of the database. The value is a domain name or an IP address.</p>
+             * <p>The private endpoint of the database on the private network, which can be a domain name or an IP address.</p>
              * 
              * <strong>example:</strong>
              * <p>rm-wz973w7******</p>
@@ -381,7 +381,7 @@ public class ListDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public address of the database. The value is a domain name or an IP address.</p>
+             * <p>The public address of the database, which can be a domain name or an IP address.</p>
              * 
              * <strong>example:</strong>
              * <p>rm-uf65n2******</p>
@@ -392,7 +392,7 @@ public class ListDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The database engine. Valid values:</p>
+             * <p>The type of the database. Valid values:</p>
              * <ul>
              * <li><strong>MySQL</strong></li>
              * <li><strong>Oracle</strong></li>
@@ -409,7 +409,7 @@ public class ListDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the network domain where the database resides.</p>
+             * <p>The ID of the network domain to which the database belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>8</p>
@@ -420,11 +420,11 @@ public class ListDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the database. Valid values:</p>
+             * <p>The source of the database. Valid values:</p>
              * <ul>
-             * <li><strong>Local</strong>: on-premises database.</li>
-             * <li><strong>Rds</strong>: ApsaraDB for RDS instance.</li>
-             * <li><strong>PolarDB</strong>: PolarDB cluster</li>
+             * <li><strong>Local</strong>: local database instance</li>
+             * <li><strong>Rds</strong>: ApsaraDB RDS instance</li>
+             * <li><strong>PolarDB</strong>: PolarDB instance</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -436,9 +436,9 @@ public class ListDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the ApsaraDB for RDS instance or PolarDB cluster.</p>
+             * <p>The instance ID of the ApsaraDB RDS instance or PolarDB instance that corresponds to the database.</p>
              * <blockquote>
-             * <p>No value is returned for this parameter if <strong>Source</strong> is set to <strong>Local</strong>.</p>
+             * <p>If <strong>Source</strong> is set to <strong>Local</strong>, this parameter is empty.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -450,7 +450,7 @@ public class ListDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the ApsaraDB for RDS instance or PolarDB cluster.</p>
+             * <p>The region ID of the ApsaraDB RDS instance or PolarDB instance that corresponds to the database.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -461,10 +461,10 @@ public class ListDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the database. Valid values:</p>
+             * <p>The instance status of the database. Valid values:</p>
              * <ul>
-             * <li><strong>Normal</strong></li>
-             * <li><strong>Release</strong></li>
+             * <li><strong>Normal</strong>: Normal</li>
+             * <li><strong>Release</strong>: released</li>
              * </ul>
              * 
              * <strong>example:</strong>

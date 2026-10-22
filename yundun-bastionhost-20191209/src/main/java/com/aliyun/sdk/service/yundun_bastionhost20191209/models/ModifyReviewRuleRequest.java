@@ -131,7 +131,10 @@ public class ModifyReviewRuleRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The new description of the audit policy. The description can be up to 500 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -140,6 +143,10 @@ public class ModifyReviewRuleRequest extends Request {
         }
 
         /**
+         * <p>The instance ID of the Bastionhost instance.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain the instance ID.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,7 +159,10 @@ public class ModifyReviewRuleRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The new name of the audit policy. The name must be 1 to 128 characters in length. It cannot start with a special character and can contain only the following special characters: periods (.), underscores (_), hyphens (-), backslashes (\), and spaces.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -161,7 +171,13 @@ public class ModifyReviewRuleRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the Bastionhost instance. </p>
+         * <blockquote>
+         * <p>For the mappings between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -170,6 +186,10 @@ public class ModifyReviewRuleRequest extends Request {
         }
 
         /**
+         * <p>The ID of the audit policy.</p>
+         * <blockquote>
+         * <p>You can invoke the ListReviewRules operation to obtain this parameter.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -182,7 +202,16 @@ public class ModifyReviewRuleRequest extends Request {
         }
 
         /**
-         * ScopeType.
+         * <p>The type of the asset scope rule for auditable assets. Valid values:</p>
+         * <ul>
+         * <li><p><strong>1</strong>: All projects.</p>
+         * </li>
+         * <li><p><strong>2</strong>: Specified projects.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder scopeType(Integer scopeType) {
             this.putQueryParameter("ScopeType", scopeType);

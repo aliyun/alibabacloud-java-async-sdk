@@ -103,9 +103,9 @@ public class DeleteHostAccountRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the host account that you want to remove.</p>
+         * <p>The ID of the host account that you want to delete.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/204372.html">ListHostAccounts</a> operation to query the ID of the host account.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/204372.html">ListHostAccounts</a> operation to query this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -119,9 +119,9 @@ public class DeleteHostAccountRequest extends Request {
         }
 
         /**
-         * <p>The ID of the bastion host from which you want to remove the host account.</p>
+         * <p>The ID of the Bastionhost instance where the host account that you want to delete resides.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -135,7 +135,10 @@ public class DeleteHostAccountRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -144,9 +147,9 @@ public class DeleteHostAccountRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the bastion host from which you want to remove the host account.</p>
+         * <p>The region ID of the Bastionhost instance where the host account resides.</p>
          * <blockquote>
-         * <p> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

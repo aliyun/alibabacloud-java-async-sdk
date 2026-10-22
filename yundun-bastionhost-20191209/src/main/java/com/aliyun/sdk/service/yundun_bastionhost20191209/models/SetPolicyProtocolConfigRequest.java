@@ -118,9 +118,9 @@ public class SetPolicyProtocolConfigRequest extends Request {
         } 
 
         /**
-         * <p>The bastion host ID.</p>
+         * <p>The instance ID of the bastion host.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
+         * <p>You can invoke <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> to obtain this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -134,9 +134,9 @@ public class SetPolicyProtocolConfigRequest extends Request {
         }
 
         /**
-         * <p>The ID of the control policy that you want to modify.</p>
+         * <p>The ID of the control policy to modify.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2758876.html">ListPolicies</a> operation to query the control policy ID.</p>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/2758876.html">ListPolicies</a> to obtain this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -150,7 +150,10 @@ public class SetPolicyProtocolConfigRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -159,7 +162,7 @@ public class SetPolicyProtocolConfigRequest extends Request {
         }
 
         /**
-         * <p>The protocol control settings.</p>
+         * <p>The protocol control configuration.</p>
          * <p>This parameter is required.</p>
          */
         public Builder protocolConfig(ProtocolConfig protocolConfig) {
@@ -172,7 +175,7 @@ public class SetPolicyProtocolConfigRequest extends Request {
         /**
          * <p>The region ID of the bastion host.</p>
          * <blockquote>
-         * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * <p>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -296,13 +299,13 @@ public class SetPolicyProtocolConfigRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to enable downloading from the clipboard. Valid values:</p>
+             * <p>The clipboard download configuration. Valid values:</p>
              * <ul>
-             * <li>Enable</li>
-             * <li>Disable</li>
+             * <li>Enable: Enabled.</li>
+             * <li>Disable: Disabled.</li>
              * </ul>
              * <blockquote>
-             * <p>If you do not specify this parameter, the default value Disable is used.</p>
+             * <p>If this parameter is not specified, the default value is Disable.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -314,14 +317,14 @@ public class SetPolicyProtocolConfigRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable uploading from the clipboard. Valid values:</p>
+             * <p>The clipboard upload configuration. Valid values:</p>
              * <ul>
-             * <li>Enable</li>
-             * <li>Disable</li>
-             * </ul>
-             * <blockquote>
-             * <p>If you do not specify this parameter, the default value Disable is used.</p>
+             * <li>Enable: Enabled.</li>
+             * <li>Disable: Disabled.<blockquote>
+             * <p>If this parameter is not specified, the default value is Disable.</p>
              * </blockquote>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Enable</p>
@@ -332,14 +335,14 @@ public class SetPolicyProtocolConfigRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable driver mapping. Valid values:</p>
+             * <p>The drive/printer mapping configuration. Valid values:</p>
              * <ul>
-             * <li>Enable</li>
-             * <li>Disable</li>
-             * </ul>
-             * <blockquote>
-             * <p>If you do not specify this parameter, the default value Disable is used.</p>
+             * <li>Enable: Enabled.</li>
+             * <li>Disable: Disabled.<blockquote>
+             * <p>If this parameter is not specified, the default value is Disable.</p>
              * </blockquote>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Enable</p>
@@ -350,7 +353,10 @@ public class SetPolicyProtocolConfigRequest extends Request {
             }
 
             /**
-             * DiskRedirectionDownload.
+             * <p>Specifies whether to allow disk download.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Enable</p>
              */
             public Builder diskRedirectionDownload(String diskRedirectionDownload) {
                 this.diskRedirectionDownload = diskRedirectionDownload;
@@ -358,7 +364,10 @@ public class SetPolicyProtocolConfigRequest extends Request {
             }
 
             /**
-             * DiskRedirectionUpload.
+             * <p>Specifies whether to allow disk upload.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Enable</p>
              */
             public Builder diskRedirectionUpload(String diskRedirectionUpload) {
                 this.diskRedirectionUpload = diskRedirectionUpload;
@@ -366,14 +375,14 @@ public class SetPolicyProtocolConfigRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable keyboard operation recording. Valid values:</p>
+             * <p>The keyboard recording configuration. Valid values:</p>
              * <ul>
-             * <li>Enable</li>
-             * <li>Disable</li>
-             * </ul>
-             * <blockquote>
-             * <p>If you do not specify this parameter, the default value Disable is used.</p>
+             * <li>Enable: Enabled.</li>
+             * <li>Disable: Disabled.<blockquote>
+             * <p>If this parameter is not specified, the default value is Disable.</p>
              * </blockquote>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Enable</p>
@@ -586,7 +595,10 @@ public class SetPolicyProtocolConfigRequest extends Request {
             } 
 
             /**
-             * AllowDirectTcp.
+             * <p>Specifies whether to allow direct TCP connection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Enable</p>
              */
             public Builder allowDirectTcp(String allowDirectTcp) {
                 this.allowDirectTcp = allowDirectTcp;
@@ -594,7 +606,10 @@ public class SetPolicyProtocolConfigRequest extends Request {
             }
 
             /**
-             * AllowTcpForwarding.
+             * <p>Specifies whether to allow TCP forwarding.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Enable</p>
              */
             public Builder allowTcpForwarding(String allowTcpForwarding) {
                 this.allowTcpForwarding = allowTcpForwarding;
@@ -602,14 +617,14 @@ public class SetPolicyProtocolConfigRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable remote command execution. Valid values:</p>
+             * <p>The remote command execution configuration. Valid values:</p>
              * <ul>
-             * <li>Enable</li>
-             * <li>Disable</li>
-             * </ul>
-             * <blockquote>
-             * <p>If you do not specify this parameter, the default value Disable is used.</p>
+             * <li>Enable: Enabled.</li>
+             * <li>Disable: Disabled.<blockquote>
+             * <p>If this parameter is not specified, the default value is Disable.</p>
              * </blockquote>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Enable</p>
@@ -620,21 +635,18 @@ public class SetPolicyProtocolConfigRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable SFTP channels. Valid values:</p>
+             * <p>The SFTP channel configuration. Valid values:</p>
              * <ul>
-             * <li>Enable</li>
-             * <li>Disable</li>
+             * <li>Enable: Enabled.</li>
+             * <li>Disable: Disabled.</li>
              * </ul>
              * <blockquote>
-             * </blockquote>
              * <ul>
-             * <li><p>If you do not specify this parameter, the default value Disable is used.</p>
-             * </li>
-             * <li><p>You must set at least one of the following parameters to Enable: SSHChannel and SFTPChannel.</p>
-             * </li>
-             * <li><p>If you select Enable Only SFTP Permission for a host account, do not set SSHChannel and SFTPChannel to Disable for the account. Otherwise, users of the bastion host cannot use the account to access the host.</p>
-             * </li>
+             * <li>If this parameter is not specified, the default value is Disable.</li>
+             * <li>At least one of the SSH channel and SFTP channel must be set to Enable.</li>
+             * <li>If you enable the SFTP-only permission for a host account, do not disable both the SSH channel and SFTP channel for that account in the control policy. Otherwise, you cannot use the host account to access the target server through the bastion host.</li>
              * </ul>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>Enable</p>
@@ -645,14 +657,14 @@ public class SetPolicyProtocolConfigRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable file downloading during SFTP-based O&amp;M. Valid values:</p>
+             * <p>The SFTP file download configuration. Valid values:</p>
              * <ul>
-             * <li>Enable</li>
-             * <li>Disable</li>
-             * </ul>
-             * <blockquote>
-             * <p>If you do not specify this parameter, the default value Disable is used.</p>
+             * <li>Enable: Enabled.</li>
+             * <li>Disable: Disabled.<blockquote>
+             * <p>If this parameter is not specified, the default value is Disable.</p>
              * </blockquote>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Enable</p>
@@ -663,14 +675,14 @@ public class SetPolicyProtocolConfigRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable folder creation during SFTP-based O&amp;M. Valid values:</p>
+             * <p>The SFTP folder creation configuration. Valid values:</p>
              * <ul>
-             * <li>Enable</li>
-             * <li>Disable</li>
-             * </ul>
-             * <blockquote>
-             * <p>If you do not specify this parameter, the default value Disable is used.</p>
+             * <li>Enable: Enabled.</li>
+             * <li>Disable: Disabled.<blockquote>
+             * <p>If this parameter is not specified, the default value is Disable.</p>
              * </blockquote>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Enable</p>
@@ -681,14 +693,14 @@ public class SetPolicyProtocolConfigRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable file deletion during SFTP-based O&amp;M. Valid values:</p>
+             * <p>The SFTP file deletion configuration. Valid values:</p>
              * <ul>
-             * <li>Enable</li>
-             * <li>Disable</li>
-             * </ul>
-             * <blockquote>
-             * <p>If you do not specify this parameter, the default value Disable is used.</p>
+             * <li>Enable: Enabled.</li>
+             * <li>Disable: Disabled.<blockquote>
+             * <p>If this parameter is not specified, the default value is Disable.</p>
              * </blockquote>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Enable</p>
@@ -699,14 +711,14 @@ public class SetPolicyProtocolConfigRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable file renaming during SFTP-based O&amp;M. Valid values:</p>
+             * <p>The SFTP file rename configuration. Valid values:</p>
              * <ul>
-             * <li>Enable</li>
-             * <li>Disable</li>
-             * </ul>
-             * <blockquote>
-             * <p>If you do not specify this parameter, the default value Disable is used.</p>
+             * <li>Enable: Enabled.</li>
+             * <li>Disable: Disabled.<blockquote>
+             * <p>If this parameter is not specified, the default value is Disable.</p>
              * </blockquote>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Enable</p>
@@ -717,14 +729,14 @@ public class SetPolicyProtocolConfigRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable folder deletion during SFTP-based O&amp;M. Valid values:</p>
+             * <p>The SFTP folder deletion configuration. Valid values:</p>
              * <ul>
-             * <li>Enable</li>
-             * <li>Disable</li>
-             * </ul>
-             * <blockquote>
-             * <p>If you do not specify this parameter, the default value Disable is used.</p>
+             * <li>Enable: Enabled.</li>
+             * <li>Disable: Disabled.<blockquote>
+             * <p>If this parameter is not specified, the default value is Disable.</p>
              * </blockquote>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Enable</p>
@@ -735,14 +747,14 @@ public class SetPolicyProtocolConfigRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable file uploading during SFTP-based O&amp;M. Valid values:</p>
+             * <p>The SFTP file upload configuration. Valid values:</p>
              * <ul>
-             * <li>Enable</li>
-             * <li>Disable</li>
-             * </ul>
-             * <blockquote>
-             * <p>If you do not specify this parameter, the default value Disable is used.</p>
+             * <li>Enable: Enabled.</li>
+             * <li>Disable: Disabled.<blockquote>
+             * <p>If this parameter is not specified, the default value is Disable.</p>
              * </blockquote>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Enable</p>
@@ -753,21 +765,18 @@ public class SetPolicyProtocolConfigRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable SSH channels. Valid values:</p>
+             * <p>The SSH channel configuration. Valid values:</p>
              * <ul>
-             * <li>Enable</li>
-             * <li>Disable</li>
+             * <li>Enable: Enabled.</li>
+             * <li>Disable: Disabled.</li>
              * </ul>
              * <blockquote>
-             * </blockquote>
              * <ul>
-             * <li><p>If you do not specify this parameter, the default value Disable is used.</p>
-             * </li>
-             * <li><p>You must set at least one of the following parameters to Enable: SSHChannel and SFTPChannel. If you set SSHChannel to Disable, SSH-based logon is disabled for the asset account. Proceed with caution.</p>
-             * </li>
-             * <li><p>If you select Enable Only SFTP Permission for a host account, do not set SSHChannel and SFTPChannel to Disable for the account. Otherwise, users of the bastion host cannot use the account to access the host.</p>
-             * </li>
+             * <li>If this parameter is not specified, the default value is Disable.</li>
+             * <li>At least one of the SSH channel and SFTP channel must be set to Enable. If the SSH channel is set to Disable, you cannot log on to asset accounts by using SSH permissions. Proceed with caution.</li>
+             * <li>If you enable the SFTP-only permission for a host account, do not disable both the SSH channel and SFTP channel for that account in the control policy. Otherwise, you cannot use the host account to access the target server through the bastion host.</li>
              * </ul>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>Enable</p>
@@ -778,7 +787,10 @@ public class SetPolicyProtocolConfigRequest extends Request {
             }
 
             /**
-             * TcpForwarding.
+             * <p>Specifies whether to allow TCP forwarding.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Enable</p>
              */
             public Builder tcpForwarding(String tcpForwarding) {
                 this.tcpForwarding = tcpForwarding;
@@ -786,14 +798,14 @@ public class SetPolicyProtocolConfigRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable X11 forwarding. Valid values:</p>
+             * <p>The X11 forwarding configuration. Valid values:</p>
              * <ul>
-             * <li>Enable</li>
-             * <li>Disable</li>
-             * </ul>
-             * <blockquote>
-             * <p>If you do not specify this parameter, the default value Disable is used.</p>
+             * <li>Enable: Enabled.</li>
+             * <li>Disable: Disabled.<blockquote>
+             * <p>If this parameter is not specified, the default value is Disable.</p>
              * </blockquote>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Enable</p>
@@ -863,7 +875,7 @@ public class SetPolicyProtocolConfigRequest extends Request {
             } 
 
             /**
-             * <p>The settings of the Remote Desktop Protocol (RDP) options.</p>
+             * <p>The RDP option configuration details.</p>
              */
             public Builder RDP(RDP RDP) {
                 this.RDP = RDP;
@@ -871,7 +883,7 @@ public class SetPolicyProtocolConfigRequest extends Request {
             }
 
             /**
-             * <p>The settings of the SSH and SSH Fine Transfer Protocol (SFTP) options.</p>
+             * <p>The SSH and SFTP option configuration details.</p>
              */
             public Builder SSH(SSH SSH) {
                 this.SSH = SSH;

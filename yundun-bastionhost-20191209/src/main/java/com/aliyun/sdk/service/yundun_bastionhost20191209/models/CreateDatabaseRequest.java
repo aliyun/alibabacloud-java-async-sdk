@@ -273,10 +273,10 @@ public class CreateDatabaseRequest extends Request {
         } 
 
         /**
-         * <p>The address type of the database to add. Valid values:</p>
+         * <p>The address type of the new database. Valid values:</p>
          * <ul>
-         * <li>Public</li>
-         * <li>Private</li>
+         * <li>Public: public endpoint.</li>
+         * <li>Private: private endpoint.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -290,7 +290,7 @@ public class CreateDatabaseRequest extends Request {
         }
 
         /**
-         * <p>The remarks of the database to add. The remarks can be up to 500 characters in length.</p>
+         * <p>The description of the new database. The value can be up to 500 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>cpp</p>
@@ -302,10 +302,10 @@ public class CreateDatabaseRequest extends Request {
         }
 
         /**
-         * <p>The name of the database to add. This parameter is required if Source is set to <strong>Local</strong>.</p>
+         * <p>The name of the new database instance. This parameter is required if Source is set to <strong>Local</strong>.</p>
          * 
          * <strong>example:</strong>
-         * <p>Oracle</p>
+         * <p>Test01</p>
          */
         public Builder databaseName(String databaseName) {
             this.putQueryParameter("DatabaseName", databaseName);
@@ -326,13 +326,13 @@ public class CreateDatabaseRequest extends Request {
         }
 
         /**
-         * <p>The internal IP address of the database. Specify an IPv4 address or a domain name.</p>
+         * <p>The private endpoint. IPv4 addresses and domain names are supported.</p>
          * <blockquote>
-         * <p> This parameter is required if ActiveAddressType is set to Private.</p>
+         * <p>This parameter is required if ActiveAddressType is set to Private.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>pgm-uf6o******</p>
+         * <p>192.168.XX.XX</p>
          */
         public Builder databasePrivateAddress(String databasePrivateAddress) {
             this.putQueryParameter("DatabasePrivateAddress", databasePrivateAddress);
@@ -341,13 +341,13 @@ public class CreateDatabaseRequest extends Request {
         }
 
         /**
-         * <p>The public IP address of the database. Specify an IPv4 address or a domain name.</p>
+         * <p>The public endpoint. IPv4 addresses and domain names are supported.</p>
          * <blockquote>
-         * <p> This parameter is required if ActiveAddressType is set to Public.</p>
+         * <p>This parameter is required if ActiveAddressType is set to Public.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>rm-uf65251k51******</p>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
          */
         public Builder databasePublicAddress(String databasePublicAddress) {
             this.putQueryParameter("DatabasePublicAddress", databasePublicAddress);
@@ -356,7 +356,7 @@ public class CreateDatabaseRequest extends Request {
         }
 
         /**
-         * <p>The type of the database engine. Valid values:</p>
+         * <p>The type of the database. Valid values:</p>
          * <ul>
          * <li><strong>MySQL</strong></li>
          * <li><strong>Oracle</strong></li>
@@ -375,9 +375,9 @@ public class CreateDatabaseRequest extends Request {
         }
 
         /**
-         * <p>The bastion host ID.</p>
+         * <p>The ID of the bastion host instance.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -391,7 +391,10 @@ public class CreateDatabaseRequest extends Request {
         }
 
         /**
-         * InstanceMemberId.
+         * <p>The ID of the Alibaba Cloud account to which the new ApsaraDB RDS or PolarDB database instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1605494xxxx</p>
          */
         public Builder instanceMemberId(Long instanceMemberId) {
             this.putQueryParameter("InstanceMemberId", instanceMemberId);
@@ -400,9 +403,9 @@ public class CreateDatabaseRequest extends Request {
         }
 
         /**
-         * <p>The ID of the network domain to which the database to add belongs.</p>
+         * <p>The ID of the network domain to which the new database belongs.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2758827.html">ListNetworkDomains</a> operation to query the network domain ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2758827.html">ListNetworkDomains</a> operation to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -415,10 +418,10 @@ public class CreateDatabaseRequest extends Request {
         }
 
         /**
-         * <p>The endpoint type of the PolarDB database. This parameter is required if Source is set to PolarDB. Valid values:</p>
+         * <p>The endpoint type of the PolarDB cluster. This parameter is required if Source is set to PolarDB. Valid values:</p>
          * <ul>
-         * <li>Cluster</li>
-         * <li>Primary</li>
+         * <li>Cluster: cluster endpoint.</li>
+         * <li>Primary: primary endpoint.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -431,7 +434,10 @@ public class CreateDatabaseRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -442,7 +448,7 @@ public class CreateDatabaseRequest extends Request {
         /**
          * <p>The region ID of the bastion host.</p>
          * <blockquote>
-         * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * <p>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -455,9 +461,9 @@ public class CreateDatabaseRequest extends Request {
         }
 
         /**
-         * <p>The type of the database to add. Valid values:</p>
+         * <p>The source of the new database. Valid values:</p>
          * <ul>
-         * <li>Local: on-premises database.</li>
+         * <li>Local: self-managed database instance.</li>
          * <li>Rds: ApsaraDB RDS instance.</li>
          * <li>PolarDB: PolarDB cluster.</li>
          * </ul>
@@ -473,7 +479,7 @@ public class CreateDatabaseRequest extends Request {
         }
 
         /**
-         * <p>The instance ID of the database to add.</p>
+         * <p>The instance ID of the new database.  </p>
          * <blockquote>
          * <p>This parameter is required if <strong>Source</strong> is set to <strong>Rds</strong> or <strong>PolarDB</strong>.</p>
          * </blockquote>
@@ -488,9 +494,9 @@ public class CreateDatabaseRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the database to add.</p>
+         * <p>The region ID of the new database instance.</p>
          * <blockquote>
-         * <p> This parameter is required if <strong>Source</strong> is set to <strong>Rds</strong> or <strong>PolarDB</strong>.</p>
+         * <p>This parameter is required if <strong>Source</strong> is set to <strong>Rds</strong> or <strong>PolarDB</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

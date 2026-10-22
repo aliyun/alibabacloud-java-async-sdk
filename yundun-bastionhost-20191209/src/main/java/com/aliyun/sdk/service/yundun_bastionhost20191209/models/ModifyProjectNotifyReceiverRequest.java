@@ -131,7 +131,10 @@ public class ModifyProjectNotifyReceiverRequest extends Request {
         } 
 
         /**
-         * Email.
+         * <p>The new email address of the notification recipient.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1824***@qq.com</p>
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);
@@ -140,7 +143,13 @@ public class ModifyProjectNotifyReceiverRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the bastion host instance.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host instance ID.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>bastionhost-cn-st220aw****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -149,6 +158,10 @@ public class ModifyProjectNotifyReceiverRequest extends Request {
         }
 
         /**
+         * <p>The new name of the notification recipient. The name must be 1 to 128 characters in length, cannot start with a special character, and can contain only the following special characters: periods (.), underscores (_), hyphens (-), backslashes (\), and spaces.</p>
+         * <blockquote>
+         * <p>If this parameter is not specified, the name remains unchanged.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -161,7 +174,10 @@ public class ModifyProjectNotifyReceiverRequest extends Request {
         }
 
         /**
-         * Phone.
+         * <p>The new phone number of the notification recipient.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>171****5421</p>
          */
         public Builder phone(String phone) {
             this.putQueryParameter("Phone", phone);
@@ -170,6 +186,10 @@ public class ModifyProjectNotifyReceiverRequest extends Request {
         }
 
         /**
+         * <p>The ID of the notification recipient.</p>
+         * <blockquote>
+         * <p>You can call the ListProjectNotifyReceivers operation to query this parameter.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -182,7 +202,13 @@ public class ModifyProjectNotifyReceiverRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the bastion host.</p>
+         * <blockquote>
+         * <p>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

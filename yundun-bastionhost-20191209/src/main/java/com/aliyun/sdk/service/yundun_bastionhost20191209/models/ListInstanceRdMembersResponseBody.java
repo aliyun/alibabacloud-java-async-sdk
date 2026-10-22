@@ -93,7 +93,10 @@ public class ListInstanceRdMembersResponseBody extends TeaModel {
         } 
 
         /**
-         * MaxResults.
+         * <p>The value of MaxResults in the request. If you did not specify MaxResults, the default value is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -101,7 +104,7 @@ public class ListInstanceRdMembersResponseBody extends TeaModel {
         }
 
         /**
-         * Members.
+         * <p>A list of member accounts.</p>
          */
         public Builder members(java.util.List<Members> members) {
             this.members = members;
@@ -109,7 +112,10 @@ public class ListInstanceRdMembersResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next page of results. If the response is truncated, this parameter is returned. Use this token in your next request to retrieve the next page. If this parameter is empty, all results have been returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4ieSWJCwxvW3dk3wF.BqkrZmP72nWu5zJ5NWydMqyEs****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -117,7 +123,10 @@ public class ListInstanceRdMembersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +179,10 @@ public class ListInstanceRdMembersResponseBody extends TeaModel {
             } 
 
             /**
-             * MemberId.
+             * <p>The UID of the member account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1197234496852779</p>
              */
             public Builder memberId(String memberId) {
                 this.memberId = memberId;

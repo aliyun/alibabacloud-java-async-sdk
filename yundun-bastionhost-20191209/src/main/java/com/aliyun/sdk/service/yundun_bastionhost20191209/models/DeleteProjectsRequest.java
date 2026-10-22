@@ -89,6 +89,10 @@ public class DeleteProjectsRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the bastion host instance.</p>
+         * <blockquote>
+         * <p>You can call the DescribeInstances operation to obtain the bastion host instance ID.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +105,10 @@ public class DeleteProjectsRequest extends Request {
         }
 
         /**
+         * <p>The IDs of the projects that you want to delete.</p>
+         * <blockquote>
+         * <p>You can call the ListProjects operation to obtain this parameter.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,7 +121,13 @@ public class DeleteProjectsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the bastion host. </p>
+         * <blockquote>
+         * <p>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

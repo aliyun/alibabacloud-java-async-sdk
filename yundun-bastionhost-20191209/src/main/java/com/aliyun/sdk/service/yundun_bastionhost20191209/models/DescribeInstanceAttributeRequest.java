@@ -74,7 +74,10 @@ public class DescribeInstanceAttributeRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the Bastionhost instance.</p>
+         * <p>The ID of the Bastionhost instance to query.</p>
+         * <blockquote>
+         * <p>You can obtain the Bastionhost instance ID by calling the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,7 +90,7 @@ public class DescribeInstanceAttributeRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID of the Bastionhost instance to query.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

@@ -117,9 +117,9 @@ public class AttachDatabaseAccountsToUserGroupRequest extends Request {
         } 
 
         /**
-         * <p>An array that consists of the database objects.</p>
+         * <p>The array of database objects.</p>
          * <blockquote>
-         * <p> You can specify up to 10 databases and 10 database accounts. The database accounts are not required. If you do not specify a database account, the user group is authorized to manage only the databases.</p>
+         * <p>A maximum of 10 databases and 10 database accounts are supported. You can leave the database accounts unspecified. If no database accounts are specified, permissions are granted at the database level.</p>
          * </blockquote>
          */
         public Builder databases(java.util.List<Databases> databases) {
@@ -129,9 +129,9 @@ public class AttachDatabaseAccountsToUserGroupRequest extends Request {
         }
 
         /**
-         * <p>The bastion host ID.</p>
+         * <p>The instance ID of the bastion host.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
+         * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -145,7 +145,10 @@ public class AttachDatabaseAccountsToUserGroupRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -156,7 +159,7 @@ public class AttachDatabaseAccountsToUserGroupRequest extends Request {
         /**
          * <p>The region ID of the bastion host.</p>
          * <blockquote>
-         * <p> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * <p>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -169,6 +172,7 @@ public class AttachDatabaseAccountsToUserGroupRequest extends Request {
         }
 
         /**
+         * <p>The ID of the user group to which you want to grant permissions.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -240,7 +244,7 @@ public class AttachDatabaseAccountsToUserGroupRequest extends Request {
             } 
 
             /**
-             * <p>An array that consists of database account IDs.</p>
+             * <p>The array of database account IDs.</p>
              */
             public Builder databaseAccountIds(java.util.List<String> databaseAccountIds) {
                 this.databaseAccountIds = databaseAccountIds;
@@ -248,7 +252,7 @@ public class AttachDatabaseAccountsToUserGroupRequest extends Request {
             }
 
             /**
-             * <p>The ID of the database that you want to authorize the user group to manage.</p>
+             * <p>The ID of the database instance to which you want to grant permissions.</p>
              * 
              * <strong>example:</strong>
              * <p>58</p>

@@ -200,10 +200,10 @@ public class ListOperationHostsRequest extends Request {
         } 
 
         /**
-         * <p>The address of the host that you want to query. You can set this parameter to a domain name or an IP address. Only exact match is supported.</p>
+         * <p>The address of the host to query. You can use a domain name or an IP address. Fuzzy match is not supported. Only exact match is supported.</p>
          * 
          * <strong>example:</strong>
-         * <p>10.162.172.132</p>
+         * <p>10.162.XX.XX</p>
          */
         public Builder hostAddress(String hostAddress) {
             this.putQueryParameter("HostAddress", hostAddress);
@@ -212,7 +212,7 @@ public class ListOperationHostsRequest extends Request {
         }
 
         /**
-         * <p>The name of the host that you want to query. Only exact match is supported.</p>
+         * <p>The name of the host to query. Fuzzy match is not supported. Only exact match is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>abc</p>
@@ -224,9 +224,9 @@ public class ListOperationHostsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the bastion host.</p>
+         * <p>The instance ID of the Bastionhost instance.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -240,7 +240,7 @@ public class ListOperationHostsRequest extends Request {
         }
 
         /**
-         * <p>The operating system of the host that you want to query. Valid values:</p>
+         * <p>The operating system of the host to query. Valid values:</p>
          * <ul>
          * <li><strong>Linux</strong></li>
          * <li><strong>Windows</strong></li>
@@ -256,7 +256,10 @@ public class ListOperationHostsRequest extends Request {
         }
 
         /**
-         * OperationProjectId.
+         * <p>The project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder operationProjectId(String operationProjectId) {
             this.putQueryParameter("OperationProjectId", operationProjectId);
@@ -265,7 +268,7 @@ public class ListOperationHostsRequest extends Request {
         }
 
         /**
-         * <p>The page number. Default value: 1.</p>
+         * <p>The page number of the current page for a paged query. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -277,9 +280,9 @@ public class ListOperationHostsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.<br>Maximum value: 100. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+         * <p>The maximum number of entries to return on each page for a paged query.<br>Maximum value of PageSize: 100. Default value: 20. If you leave PageSize empty, 20 entries are returned by default.</p>
          * <blockquote>
-         * <p> We recommend that you do not leave this parameter empty.</p>
+         * <p>Do not leave PageSize empty.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -292,9 +295,9 @@ public class ListOperationHostsRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the bastion host.</p>
+         * <p>The region ID of the Bastionhost instance.</p>
          * <blockquote>
-         * <p> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * <p>For the mappings between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -307,10 +310,10 @@ public class ListOperationHostsRequest extends Request {
         }
 
         /**
-         * <p>The source of the host that you want to query. Valid values:</p>
+         * <p>The source of the host to query. Valid values:</p>
          * <ul>
-         * <li><strong>Local</strong></li>
-         * <li><strong>Ecs</strong></li>
+         * <li><strong>Local</strong>: local host</li>
+         * <li><strong>Ecs</strong>: ECS instance</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -323,7 +326,7 @@ public class ListOperationHostsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Elastic Compute Service (ECS) instance. Exact match is supported.</p>
+         * <p>The ECS instance ID. Exact search.</p>
          * 
          * <strong>example:</strong>
          * <p>i-bp19ienyt0yax748****</p>
@@ -335,10 +338,10 @@ public class ListOperationHostsRequest extends Request {
         }
 
         /**
-         * <p>The status of the host that you want to query. Valid values:</p>
+         * <p>The status of the host to query. Valid values:</p>
          * <ul>
-         * <li><strong>Normal</strong></li>
-         * <li><strong>Release</strong></li>
+         * <li><strong>Normal</strong>: Normal</li>
+         * <li><strong>Release</strong>: Released</li>
          * </ul>
          * 
          * <strong>example:</strong>

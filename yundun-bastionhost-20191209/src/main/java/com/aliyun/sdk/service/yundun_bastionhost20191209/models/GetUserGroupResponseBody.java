@@ -67,7 +67,7 @@ public class GetUserGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
@@ -78,7 +78,7 @@ public class GetUserGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the user group returned.</p>
+         * <p>The details of the user group.</p>
          */
         public Builder userGroup(UserGroup userGroup) {
             this.userGroup = userGroup;
@@ -168,7 +168,7 @@ public class GetUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the group.</p>
+             * <p>The ID of the user group.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

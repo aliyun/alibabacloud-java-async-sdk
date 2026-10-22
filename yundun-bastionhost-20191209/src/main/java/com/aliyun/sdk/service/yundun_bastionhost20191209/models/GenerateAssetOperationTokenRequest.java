@@ -230,9 +230,9 @@ public class GenerateAssetOperationTokenRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the account whose assets the O&amp;M token takes effect.</p>
+         * <p>The ID of the asset account for which you want to apply for an O&amp;M token.</p>
          * <blockquote>
-         * <p> You must specify at least one of the following parameters: AssetAccountId and AssetAccountName. If you specify both parameters, AssetAccountId takes precedence.</p>
+         * <p>You must specify at least one of AssetAccountId and AssetAccountName. If both are specified, AssetAccountId takes precedence.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -245,9 +245,9 @@ public class GenerateAssetOperationTokenRequest extends Request {
         }
 
         /**
-         * <p>The name of the host account. If you use a custom account, enter a real account name.</p>
+         * <p>The name of the host account. If the account is a custom account, specify the actual account name.</p>
          * <blockquote>
-         * <p> When both AssetAccountId and AssetAccountName are specified, AssetAccountId takes precedence.</p>
+         * <p>If both AssetAccountId and AssetAccountName are specified, AssetAccountId takes precedence.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -260,7 +260,7 @@ public class GenerateAssetOperationTokenRequest extends Request {
         }
 
         /**
-         * <p>The Base64-encoded password. This parameter is required if you want to apply for an O&amp;M token for a custom account.</p>
+         * <p>The Base64-encoded password. This parameter is required when you apply for an O&amp;M token for a custom account.</p>
          * 
          * <strong>example:</strong>
          * <p>dGVzdHBhc3N3b3Jk</p>
@@ -274,13 +274,16 @@ public class GenerateAssetOperationTokenRequest extends Request {
         /**
          * <p>The name of the protocol. Valid values:</p>
          * <ul>
-         * <li>SSH</li>
-         * <li>RDP</li>
-         * <li>Oracle</li>
-         * <li>PostgreSQL</li>
-         * <li>MySQL</li>
-         * <li>SQLServer</li>
+         * <li><strong>SSH</strong></li>
+         * <li><strong>RDP</strong></li>
+         * <li><strong>Oracle</strong></li>
+         * <li><strong>PostgreSQL</strong></li>
+         * <li><strong>MySQL</strong></li>
+         * <li><strong>SQLServer</strong></li>
          * </ul>
+         * <blockquote>
+         * <p>This parameter is required when you apply for an O&amp;M token for a custom account.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>SSH</p>
@@ -305,10 +308,10 @@ public class GenerateAssetOperationTokenRequest extends Request {
         }
 
         /**
-         * <p>The type of the asset for which you want to apply for an O&amp;M token. Valid values:</p>
+         * <p>The Asset Type for which you want to apply for a token. Valid values:</p>
          * <ul>
-         * <li><strong>Host</strong></li>
-         * <li><strong>Database</strong></li>
+         * <li><strong>Host</strong>: host</li>
+         * <li><strong>Database</strong>: database</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -322,9 +325,9 @@ public class GenerateAssetOperationTokenRequest extends Request {
         }
 
         /**
-         * <p>The name of the database. If you set OperationMode to Sso and AssetAccountProtocolName to PostgreSQL or Oracle and you select Custom Account for the Database Account parameter, you must specify this parameter.</p>
+         * <p>The name of the database. This parameter is required when OperationMode is set to Sso, AssetAccountProtocolName is set to PostgreSQL or Oracle, and the account is a custom account.</p>
          * <blockquote>
-         * <p>This parameter is available only for bastion hosts that run V3.2.44 or later.</p>
+         * <p>This parameter is supported only in Bastionhost V3.2.44 and later.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -337,9 +340,9 @@ public class GenerateAssetOperationTokenRequest extends Request {
         }
 
         /**
-         * <p>The ID of the bastion host for which you want to apply an O&amp;M token.</p>
+         * <p>The instance ID of the Bastionhost instance for which you want to apply for an O&amp;M token.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+         * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain the value of this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -353,14 +356,14 @@ public class GenerateAssetOperationTokenRequest extends Request {
         }
 
         /**
-         * <p>The logon attribute. If you set OperationMode to Sso and AssetAccountProtocolName to Oracle, you must specify this parameter. Valid values:</p>
+         * <p>The logon attribute. This parameter is required when OperationMode is set to Sso and the account is a custom Oracle account. Valid values:</p>
          * <ul>
          * <li><strong>SERVICENAME</strong></li>
-         * <li><strong>SID</strong></li>
-         * </ul>
-         * <blockquote>
-         * <p> This parameter is available only for Bastionhost V3.2.44 and later.</p>
+         * <li><strong>SID</strong><blockquote>
+         * <p>This parameter is supported only in Bastionhost V3.2.44 and later.</p>
          * </blockquote>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>SID</p>
@@ -374,12 +377,12 @@ public class GenerateAssetOperationTokenRequest extends Request {
         /**
          * <p>The O&amp;M logon method. Valid values:</p>
          * <ul>
-         * <li><strong>WebToken</strong>: O&amp;M token-based logon.</li>
-         * <li><strong>Sso</strong>: local client-based logon.</li>
-         * </ul>
-         * <blockquote>
-         * <p> This parameter is available only for Bastionhost V3.2.44 and later. If you do not specify this parameter, the default value WebToken is used.</p>
+         * <li><strong>WebToken</strong>: obtain an O&amp;M token</li>
+         * <li><strong>Sso</strong>: log on by using a local client<blockquote>
+         * <p>This parameter is supported only in Bastionhost V3.2.44 and later. If this parameter is left empty, the default value WebToken is used.</p>
          * </blockquote>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Sso</p>
@@ -391,7 +394,7 @@ public class GenerateAssetOperationTokenRequest extends Request {
         }
 
         /**
-         * <p>The logon remarks. This parameter is required if an administrator enables the feature of logon remarks on the Control Policies page.</p>
+         * <p>The logon note. This parameter is required when the administrator enables the logon note feature in the control policy.</p>
          * 
          * <strong>example:</strong>
          * <p>comment</p>
@@ -403,9 +406,9 @@ public class GenerateAssetOperationTokenRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the bastion host.</p>
+         * <p>The region ID of the Bastionhost instance.</p>
          * <blockquote>
-         * <p> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -418,14 +421,14 @@ public class GenerateAssetOperationTokenRequest extends Request {
         }
 
         /**
-         * <p>The type of the local client that you want to perform O&amp;M operations on Linux assets. If you set OperationMode to Sso and AssetAccountProtocolName to SSH, you must specify this parameter. Valid values:</p>
+         * <p>The type of the local client to be opened for O&amp;M operations on Linux assets. This parameter is required when OperationMode is set to Sso and the asset protocol is SSH. Valid values:</p>
          * <ul>
-         * <li><strong>ssh</strong>: Perform O&amp;M operations on Linux assets by connecting to a bastion host from an SSH client.</li>
-         * <li><strong>sftp</strong>: Perform O&amp;M operations on Linux assets by connecting to a bastion host from a Secure File Transfer Protocol (SFTP) client.</li>
-         * </ul>
-         * <blockquote>
-         * <p> This parameter is available only for Bastionhost V3.2.44 and later.</p>
+         * <li><strong>ssh</strong>: open an SSH client to perform O&amp;M operations with SSH permissions</li>
+         * <li><strong>sftp</strong>: open an SFTP client to perform O&amp;M operations with SFTP permissions<blockquote>
+         * <p>This parameter is supported only in Bastionhost V3.2.44 and later.</p>
          * </blockquote>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>ssh</p>

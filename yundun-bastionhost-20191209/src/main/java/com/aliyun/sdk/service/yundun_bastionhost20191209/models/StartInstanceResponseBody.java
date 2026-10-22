@@ -67,7 +67,7 @@ public class StartInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the bastion host that you enable.</p>
+         * <p>The ID of the bastion host that is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>bastionhost-cn-78v1gh****</p>

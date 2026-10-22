@@ -67,7 +67,7 @@ public class GenerateAssetOperationTokenResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The data returned.</p>
+         * <p>The response data.</p>
          */
         public Builder assetOperationToken(AssetOperationToken assetOperationToken) {
             this.assetOperationToken = assetOperationToken;
@@ -75,7 +75,7 @@ public class GenerateAssetOperationTokenResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
@@ -222,7 +222,7 @@ public class GenerateAssetOperationTokenResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The remaining number of times that you can use the O&amp;M token.</p>
+             * <p>The remaining number of times the O&amp;M token can be used.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -233,7 +233,7 @@ public class GenerateAssetOperationTokenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the O&amp;M token expires. The value is a UNIX timestamp.</p>
+             * <p>The expiration time of the O&amp;M token. The value is a UNIX timestamp.</p>
              * 
              * <strong>example:</strong>
              * <p>1709110797</p>
@@ -244,7 +244,7 @@ public class GenerateAssetOperationTokenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the number of times that you can use the O&amp;M token is limited.</p>
+             * <p>Indicates whether the number of uses is limited.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -255,7 +255,7 @@ public class GenerateAssetOperationTokenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of renewals. A value of 0 indicates that renewal is not supported.</p>
+             * <p>The maximum number of times the token can be renewed. A value of 0 indicates that the token cannot be renewed.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -266,7 +266,7 @@ public class GenerateAssetOperationTokenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of times the O&amp;M token is renewed.</p>
+             * <p>The number of times the token has been renewed.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -277,7 +277,7 @@ public class GenerateAssetOperationTokenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The single sign-on (SSO) URL.</p>
+             * <p>The single sign-on URL.</p>
              * 
              * <strong>example:</strong>
              * <p>sso://eyJOT0RFX0NPTU1PTiI6eyJNb2R******</p>
@@ -288,7 +288,7 @@ public class GenerateAssetOperationTokenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The O&amp;M token that you apply for.</p>
+             * <p>The requested O&amp;M token.</p>
              * 
              * <strong>example:</strong>
              * <p>NmYyMmEzNmMwYzljNGY******</p>

@@ -246,10 +246,10 @@ public class CreateHostRequest extends Request {
         } 
 
         /**
-         * <p>The endpoint type of the host that you want to create. Valid values:</p>
+         * <p>The address type of the host to create. Valid values:</p>
          * <ul>
-         * <li><strong>Public</strong>: public endpoint</li>
-         * <li><strong>Private</strong>: internal endpoint</li>
+         * <li><strong>Public</strong>: public address.</li>
+         * <li><strong>Private</strong>: private network address.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -263,7 +263,7 @@ public class CreateHostRequest extends Request {
         }
 
         /**
-         * <p>The description of the host that you want to create. The value can be up to 500 characters in length.</p>
+         * <p>The description of the host. The description can be up to 500 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>Local Host</p>
@@ -275,7 +275,7 @@ public class CreateHostRequest extends Request {
         }
 
         /**
-         * <p>The name of the host that you want to create. The name can be up to 128 characters in length.</p>
+         * <p>The name of the host to create. The name can be up to 128 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -288,9 +288,9 @@ public class CreateHostRequest extends Request {
         }
 
         /**
-         * <p>The internal endpoint of the host that you want to create. You can set this parameter to a domain name or an IP address.</p>
+         * <p>The private network address of the host to create. You can set this parameter to a domain name or an IP address.</p>
          * <blockquote>
-         * <p>This parameter is required if the <strong>ActiveAddressType</strong> parameter is set to <strong>Private</strong>.</p>
+         * <p>This parameter is required if <strong>ActiveAddressType</strong> is set to <strong>Private</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -303,9 +303,9 @@ public class CreateHostRequest extends Request {
         }
 
         /**
-         * <p>The public endpoint of the host that you want to create. You can set this parameter to a domain name or an IP address.</p>
+         * <p>The public address of the host to create. You can set this parameter to a domain name or an IP address.</p>
          * <blockquote>
-         * <p>This parameter is required if the <strong>ActiveAddressType</strong> parameter is set to <strong>Public</strong>.</p>
+         * <p>This parameter is required if <strong>ActiveAddressType</strong> is set to <strong>Public</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -318,9 +318,9 @@ public class CreateHostRequest extends Request {
         }
 
         /**
-         * <p>The ID of the bastion host in which you want to create the host.</p>
+         * <p>The ID of the Bastionhost instance where you want to create the host.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> to query the instance ID.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -334,7 +334,10 @@ public class CreateHostRequest extends Request {
         }
 
         /**
-         * InstanceMemberId.
+         * <p>The ID of the Alibaba Cloud account to which the ECS instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1605494xxxx</p>
          */
         public Builder instanceMemberId(Long instanceMemberId) {
             this.putQueryParameter("InstanceMemberId", instanceMemberId);
@@ -343,9 +346,9 @@ public class CreateHostRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region to which the ECS instance or the host in an ApsaraDB MyBase dedicated cluster belongs.</p>
+         * <p>The region ID of the ECS instance or the host in the dedicated cluster.  </p>
          * <blockquote>
-         * <p>This parameter is required if the <strong>Source</strong> parameter is set to <strong>Ecs</strong> or <strong>Rds</strong>.</p>
+         * <p>This parameter is required if <strong>Source</strong> is set to <strong>Ecs</strong> or <strong>Rds</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -358,9 +361,9 @@ public class CreateHostRequest extends Request {
         }
 
         /**
-         * <p>The ID of the network domain to which the host to be imported belongs.</p>
+         * <p>The ID of the network domain to which the host to create belongs.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2758827.html">ListNetworkDomains</a> operation to query the network domain ID.</p>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/2758827.html">ListNetworkDomains</a> to query the network domain ID.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -373,7 +376,7 @@ public class CreateHostRequest extends Request {
         }
 
         /**
-         * <p>The operating system of the host that you want to create. Valid values:</p>
+         * <p>The operating system of the host to create. Valid values:</p>
          * <ul>
          * <li><strong>Linux</strong></li>
          * <li><strong>Windows</strong></li>
@@ -390,7 +393,10 @@ public class CreateHostRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -399,9 +405,9 @@ public class CreateHostRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the bastion host to which you want to import the host.</p>
+         * <p>The region ID of the Bastionhost instance where you want to create the host.</p>
          * <blockquote>
-         * <p>For information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * <p>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -414,11 +420,11 @@ public class CreateHostRequest extends Request {
         }
 
         /**
-         * <p>The source of the host that you want to create. Valid values:</p>
+         * <p>The source of the host to create. Valid values:</p>
          * <ul>
-         * <li><strong>Local</strong>: a host in a data center</li>
-         * <li><strong>Ecs</strong>: an Elastic Compute Service (ECS) instance</li>
-         * <li><strong>Rds</strong>: a host in an ApsaraDB MyBase dedicated cluster</li>
+         * <li><strong>Local</strong>: on-premises host.</li>
+         * <li><strong>Ecs</strong>: ECS instance.</li>
+         * <li><strong>Rds</strong>: host in an ApsaraDB RDS dedicated cluster.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -432,9 +438,9 @@ public class CreateHostRequest extends Request {
         }
 
         /**
-         * <p>The ID of the ECS instance or the host in an ApsaraDB MyBase dedicated cluster.</p>
+         * <p>The instance ID of the ECS instance or the host in the dedicated cluster.  </p>
          * <blockquote>
-         * <p>This parameter is required if the <strong>Source</strong> parameter is set to <strong>Ecs</strong> or <strong>Rds</strong>.</p>
+         * <p>This parameter is required if <strong>Source</strong> is set to <strong>Ecs</strong> or <strong>Rds</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

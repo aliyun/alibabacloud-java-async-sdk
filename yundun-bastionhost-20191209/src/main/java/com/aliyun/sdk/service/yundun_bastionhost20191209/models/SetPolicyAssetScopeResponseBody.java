@@ -54,7 +54,7 @@ public class SetPolicyAssetScopeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>5EAB922E-F476-5DFA-9290-313C608E724B</p>

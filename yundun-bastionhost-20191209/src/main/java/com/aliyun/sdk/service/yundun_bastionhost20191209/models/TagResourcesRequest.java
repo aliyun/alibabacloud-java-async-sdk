@@ -104,7 +104,7 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
-         * <p>The region ID of the bastion hosts to which you want to create and add tags.</p>
+         * <p>The ID of the region where the Bastionhost instance resides.</p>
          * <blockquote>
          * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
          * </blockquote>
@@ -120,10 +120,10 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * <p>An array that consists of IDs of bastion hosts.</p>
-         * <p>Valid values: 1 to 20.</p>
+         * <p>The IDs of the Bastionhost instances. You can specify up to 20 instance IDs.</p>
+         * <p>N can be from 1 to 20.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query IDs of bastion hosts.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the IDs of Bastionhost instances.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -138,7 +138,7 @@ public class TagResourcesRequest extends Request {
 
         /**
          * <p>The type of the resource.</p>
-         * <p>Set the value to <strong>INSTANCE</strong>, which indicates that the resource is a bastion host.</p>
+         * <p>Set the value to <code>INSTANCE</code>. This value indicates a Bastionhost instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -151,7 +151,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The tags.</p>
+         * <p>The tags to add to the instances. You can add up to 20 tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -219,11 +219,13 @@ public class TagResourcesRequest extends Request {
             } 
 
             /**
-             * <p>The tag key of the bastion host. You can specify up to 20 tags for the bastion host.</p>
+             * <p>The key of the tag.</p>
              * <blockquote>
              * <ul>
-             * <li>Thekey cannot be an empty string. The key can be up to 128 characters in length. </li>
-             * <li>It cannot start with <strong>aliyun</strong> or <strong>acs:</strong>, and cannot contain <strong>http://</strong> or <strong>https://</strong>.</li>
+             * <li><p>The tag key cannot be an empty string. It can be up to 128 characters in length.</p>
+             * </li>
+             * <li><p>The tag key cannot start with <strong>aliyun</strong> or <strong>acs:</strong>. It cannot contain <strong>http\://</strong> or <strong>https\://</strong>.</p>
+             * </li>
              * </ul>
              * </blockquote>
              * 
@@ -236,11 +238,13 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * <p>The tag value of the bastion host.<br>You can specify up to 20 tags for the bastion host.</p>
+             * <p>The value of the tag.</p>
              * <blockquote>
              * <ul>
-             * <li>The value can be a string of up to 128 characters or an empty string.</li>
-             * <li>It cannot start with <strong>aliyun</strong> or <strong>acs:</strong>, and cannot contain <strong>http://</strong> or <strong>https://</strong>.</li>
+             * <li><p>The tag value can be an empty string. It can be up to 128 characters in length.</p>
+             * </li>
+             * <li><p>The tag value cannot start with <strong>aliyun</strong> or <strong>acs:</strong>. It cannot contain <strong>http\://</strong> or <strong>https\://</strong>.</p>
+             * </li>
              * </ul>
              * </blockquote>
              * 

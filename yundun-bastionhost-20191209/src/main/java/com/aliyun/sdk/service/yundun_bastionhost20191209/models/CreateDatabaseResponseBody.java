@@ -67,7 +67,7 @@ public class CreateDatabaseResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The database ID.</p>
+         * <p>The instance ID of the database.</p>
          * 
          * <strong>example:</strong>
          * <p>334</p>

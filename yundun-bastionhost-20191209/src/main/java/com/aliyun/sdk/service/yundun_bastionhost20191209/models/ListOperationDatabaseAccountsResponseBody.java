@@ -80,7 +80,7 @@ public class ListOperationDatabaseAccountsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The database accounts returned.</p>
+         * <p>The list of database accounts.</p>
          */
         public Builder databaseAccounts(java.util.List<DatabaseAccounts> databaseAccounts) {
             this.databaseAccounts = databaseAccounts;
@@ -88,7 +88,7 @@ public class ListOperationDatabaseAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
@@ -99,7 +99,7 @@ public class ListOperationDatabaseAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of queried manageable database accounts.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -244,7 +244,7 @@ public class ListOperationDatabaseAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The database account ID.</p>
+             * <p>The ID of the database account.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -266,7 +266,7 @@ public class ListOperationDatabaseAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The database ID.</p>
+             * <p>The database instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -277,7 +277,7 @@ public class ListOperationDatabaseAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether a password is configured for the database host account.</p>
+             * <p>Indicates whether a password is set for the database host account.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -288,7 +288,7 @@ public class ListOperationDatabaseAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The logon attribute. One of the following values is returned if the database engine is Oracle:</p>
+             * <p>The logon attribute. This parameter has a return value only for Oracle databases. Valid values:</p>
              * <ul>
              * <li><strong>SERVICENAME</strong></li>
              * <li><strong>SID</strong></li>
@@ -303,7 +303,7 @@ public class ListOperationDatabaseAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The protocol that is used by the database account.</p>
+             * <p>The protocol name of the database account.</p>
              * 
              * <strong>example:</strong>
              * <p>MySQL</p>

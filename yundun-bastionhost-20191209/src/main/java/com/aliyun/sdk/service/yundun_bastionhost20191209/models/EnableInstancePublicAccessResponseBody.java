@@ -67,7 +67,7 @@ public class EnableInstancePublicAccessResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the bastion host whose Internet access is enabled.</p>
+         * <p>The instance ID of the Bastionhost instance for which public network access is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>bastionhost-cn-78v1gh****</p>
@@ -78,7 +78,7 @@ public class EnableInstancePublicAccessResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * <p>The request ID. The China Chinese system generates a unique ID for each request. You can use the ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>D47B5043-FDD6-4FBE-976E-5FC67A23578F</p>

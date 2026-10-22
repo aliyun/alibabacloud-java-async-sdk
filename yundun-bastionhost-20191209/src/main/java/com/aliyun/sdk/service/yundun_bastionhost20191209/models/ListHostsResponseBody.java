@@ -80,7 +80,7 @@ public class ListHostsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>An array that consists of the hosts returned.</p>
+         * <p>The list of hosts queried.</p>
          */
         public Builder hosts(java.util.List<Hosts> hosts) {
             this.hosts = hosts;
@@ -88,7 +88,7 @@ public class ListHostsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
@@ -99,7 +99,7 @@ public class ListHostsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of hosts returned.</p>
+         * <p>The total number of hosts queried.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -287,8 +287,8 @@ public class ListHostsResponseBody extends TeaModel {
             /**
              * <p>The address type of the host. Valid values:</p>
              * <ul>
-             * <li><strong>Public</strong>: a public address</li>
-             * <li><strong>Private</strong>: a private address</li>
+             * <li><strong>Public</strong>: public address</li>
+             * <li><strong>Private</strong>: private endpoint in the private network</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -322,7 +322,7 @@ public class ListHostsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the host.</p>
+             * <p>The host ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -344,7 +344,7 @@ public class ListHostsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The private address of the host. The value is a domain name or an IP address.</p>
+             * <p>The private endpoint in the private network of the host, which can be a domain name or an IP address.</p>
              * 
              * <strong>example:</strong>
              * <p>192.168.XX.XX</p>
@@ -355,7 +355,7 @@ public class ListHostsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public address of the host. The value is a domain name or an IP address.</p>
+             * <p>The public address of the host, which can be a domain name or an IP address.</p>
              * 
              * <strong>example:</strong>
              * <p>1.1.XX.XX</p>
@@ -383,9 +383,9 @@ public class ListHostsResponseBody extends TeaModel {
             /**
              * <p>The source of the host. Valid values:</p>
              * <ul>
-             * <li><strong>Local</strong>: a host in a data center</li>
-             * <li><strong>Ecs</strong>: an ECS instance</li>
-             * <li><strong>Rds</strong>: a host in an ApsaraDB MyBase dedicated cluster</li>
+             * <li><strong>Local</strong>: local host</li>
+             * <li><strong>Ecs</strong>: ECS instance</li>
+             * <li><strong>Rds</strong>: ApsaraDB RDS dedicated cluster host</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -397,9 +397,9 @@ public class ListHostsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the ECS instance or the host in an ApsaraDB MyBase dedicated cluster.</p>
+             * <p>The ECS instance ID or the dedicated cluster host ID that corresponds to the host.</p>
              * <blockquote>
-             * <p>No value is returned for this parameter if the <strong>Source</strong> parameter is set to <strong>Local</strong>.</p>
+             * <p>If <strong>Source</strong> is <strong>Local</strong>, this parameter is empty.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

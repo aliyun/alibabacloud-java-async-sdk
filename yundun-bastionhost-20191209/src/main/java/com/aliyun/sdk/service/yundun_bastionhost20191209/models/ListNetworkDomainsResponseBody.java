@@ -80,7 +80,7 @@ public class ListNetworkDomainsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The network domains that are returned.</p>
+         * <p>The network domains.</p>
          */
         public Builder networkDomains(java.util.List<NetworkDomains> networkDomains) {
             this.networkDomains = networkDomains;
@@ -88,7 +88,7 @@ public class ListNetworkDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
@@ -99,7 +99,7 @@ public class ListNetworkDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of network domains that are returned.</p>
+         * <p>The total number of network domains.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -168,10 +168,10 @@ public class ListNetworkDomainsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The node type of the proxy server. Valid values:</p>
+             * <p>The type of the proxy server node. Valid values:</p>
              * <ul>
-             * <li><strong>Master</strong>: primary proxy server.</li>
-             * <li><strong>Slave</strong>: secondary proxy server.</li>
+             * <li><strong>Master</strong>: primary proxy server</li>
+             * <li><strong>Slave</strong>: secondary proxy server</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -185,8 +185,8 @@ public class ListNetworkDomainsResponseBody extends TeaModel {
             /**
              * <p>The status of the proxy server.</p>
              * <ul>
-             * <li><strong>Available</strong></li>
-             * <li><strong>Unavailable</strong></li>
+             * <li><strong>Available</strong>: available</li>
+             * <li><strong>Unavailable</strong>: unavailable</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -309,7 +309,7 @@ public class ListNetworkDomainsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The remarks of the network domain.</p>
+             * <p>The description of the network domain.</p>
              * 
              * <strong>example:</strong>
              * <p>comment</p>
@@ -320,10 +320,10 @@ public class ListNetworkDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the network domain is built-in.</p>
+             * <p>Indicates whether the network domain is a built-in network domain.</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><strong>true</strong>: yes</li>
+             * <li><strong>false</strong>: no</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -335,7 +335,7 @@ public class ListNetworkDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network domain ID.</p>
+             * <p>The ID of the network domain.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -357,10 +357,10 @@ public class ListNetworkDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The connection mode of the network domain. Valid values:</p>
+             * <p>The type of the network domain. Valid values:</p>
              * <ul>
-             * <li><strong>Direct</strong></li>
-             * <li><strong>Proxy</strong></li>
+             * <li><strong>Direct</strong>: direct connection</li>
+             * <li><strong>Proxy</strong>: proxy</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -372,7 +372,7 @@ public class ListNetworkDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * ProxiesState.
+             * <p>The information about the proxy servers.</p>
              */
             public Builder proxiesState(java.util.List<ProxiesState> proxiesState) {
                 this.proxiesState = proxiesState;

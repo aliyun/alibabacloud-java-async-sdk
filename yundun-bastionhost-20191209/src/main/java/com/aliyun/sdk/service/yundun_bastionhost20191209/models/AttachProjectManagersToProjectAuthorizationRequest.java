@@ -103,6 +103,10 @@ public class AttachProjectManagersToProjectAuthorizationRequest extends Request 
         } 
 
         /**
+         * <p>The project authorization ID.</p>
+         * <blockquote>
+         * <p>You can call the ListProjectAuthorizations operation to query this parameter.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,6 +119,10 @@ public class AttachProjectManagersToProjectAuthorizationRequest extends Request 
         }
 
         /**
+         * <p>The instance ID of the bastion host.</p>
+         * <blockquote>
+         * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query this parameter.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -127,7 +135,7 @@ public class AttachProjectManagersToProjectAuthorizationRequest extends Request 
         }
 
         /**
-         * Principals.
+         * <p>The information about the project administrators specified in the project authorization.</p>
          */
         public Builder principals(java.util.List<Principals> principals) {
             this.putQueryParameter("Principals", principals);
@@ -136,7 +144,13 @@ public class AttachProjectManagersToProjectAuthorizationRequest extends Request 
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the bastion host.</p>
+         * <blockquote>
+         * <p>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -217,7 +231,10 @@ public class AttachProjectManagersToProjectAuthorizationRequest extends Request 
             } 
 
             /**
-             * PrincipalId.
+             * <p>When PrincipalType is set to RamUser, specify the ID of the RAM user to be designated as the project administrator. When PrincipalType is set to RamRole, specify the ARN of the RAM role to be designated as the project administrator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>160****2519</p>
              */
             public Builder principalId(String principalId) {
                 this.principalId = principalId;
@@ -225,7 +242,10 @@ public class AttachProjectManagersToProjectAuthorizationRequest extends Request 
             }
 
             /**
-             * PrincipalName.
+             * <p>The display name of the RAM user or RAM role designated as the project administrator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder principalName(String principalName) {
                 this.principalName = principalName;
@@ -233,7 +253,16 @@ public class AttachProjectManagersToProjectAuthorizationRequest extends Request 
             }
 
             /**
-             * PrincipalType.
+             * <p>The type of the project administrator. Valid values:</p>
+             * <ul>
+             * <li><p><strong>RamUser</strong>: Resource Access Management (RAM) user.</p>
+             * </li>
+             * <li><p><strong>RamRole</strong>: RAM role.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>RamUser</p>
              */
             public Builder principalType(String principalType) {
                 this.principalType = principalType;

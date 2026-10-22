@@ -93,7 +93,10 @@ public class ListImportableKMSSecretsForHostResponseBody extends TeaModel {
         } 
 
         /**
-         * MaxResults.
+         * <p>The value of the <code>MaxResults</code> parameter in the request. If the parameter was not specified, the default value of 20 is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -101,7 +104,10 @@ public class ListImportableKMSSecretsForHostResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token to retrieve the next page of results. If this field is empty, all results have been returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4ieSWJCwxvW3dk3wF.BqkrZmP72nWu5zJ5NWydMqyEs****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -109,7 +115,7 @@ public class ListImportableKMSSecretsForHostResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
@@ -120,7 +126,7 @@ public class ListImportableKMSSecretsForHostResponseBody extends TeaModel {
         }
 
         /**
-         * Secrets.
+         * <p>A list of importable secrets.</p>
          */
         public Builder secrets(java.util.List<Secrets> secrets) {
             this.secrets = secrets;
@@ -199,7 +205,10 @@ public class ListImportableKMSSecretsForHostResponseBody extends TeaModel {
             } 
 
             /**
-             * SecretName.
+             * <p>The name of the secret.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test1</p>
              */
             public Builder secretName(String secretName) {
                 this.secretName = secretName;
@@ -207,7 +216,13 @@ public class ListImportableKMSSecretsForHostResponseBody extends TeaModel {
             }
 
             /**
-             * SecretType.
+             * <p>The type of the secret. Valid value:</p>
+             * <ul>
+             * <li><code>ECS</code>: an ECS secret.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ECS</p>
              */
             public Builder secretType(String secretType) {
                 this.secretType = secretType;
@@ -215,7 +230,10 @@ public class ListImportableKMSSecretsForHostResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The tags associated with the secret.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder tags(String tags) {
                 this.tags = tags;

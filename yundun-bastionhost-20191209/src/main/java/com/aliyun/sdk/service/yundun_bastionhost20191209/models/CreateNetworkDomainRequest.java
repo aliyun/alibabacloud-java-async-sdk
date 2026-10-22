@@ -146,7 +146,7 @@ public class CreateNetworkDomainRequest extends Request {
         } 
 
         /**
-         * <p>The remarks of the network domain. The remarks can be up to 500 characters in length.</p>
+         * <p>The description of the network domain. The description can be up to 500 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>comment</p>
@@ -158,9 +158,9 @@ public class CreateNetworkDomainRequest extends Request {
         }
 
         /**
-         * <p>The ID of the bastion host for which you want to create a network domain.</p>
+         * <p>The ID of the Bastionhost instance for which you want to create a network domain.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the instance ID.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -174,8 +174,11 @@ public class CreateNetworkDomainRequest extends Request {
         }
 
         /**
-         * <p>The name of the network domain that you want to create. The name can be up to 128 characters in length.</p>
+         * <p>The name of the network domain to create. The name can be up to 128 characters in length.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SSH Proxy</p>
          */
         public Builder networkDomainName(String networkDomainName) {
             this.putQueryParameter("NetworkDomainName", networkDomainName);
@@ -184,10 +187,10 @@ public class CreateNetworkDomainRequest extends Request {
         }
 
         /**
-         * <p>The connection mode of the network domain to be created. Valid values:</p>
+         * <p>The type of the network domain to create. Valid values:</p>
          * <ul>
-         * <li>Direct</li>
-         * <li>Proxy</li>
+         * <li>Direct: The bastion host directly connects to the asset network without going through an intermediate proxy server.</li>
+         * <li>Proxy: When the asset network cannot communicate with the bastion host network, a proxy server forwards network requests to enable O&amp;M on assets in different network environments.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -201,7 +204,10 @@ public class CreateNetworkDomainRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -210,7 +216,7 @@ public class CreateNetworkDomainRequest extends Request {
         }
 
         /**
-         * <p>The information about the proxy servers.</p>
+         * <p>The proxy server information.</p>
          */
         public Builder proxies(java.util.List<Proxies> proxies) {
             this.putQueryParameter("Proxies", proxies);
@@ -219,9 +225,9 @@ public class CreateNetworkDomainRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the bastion host for which you want to create a network domain.</p>
+         * <p>The region ID of the Bastionhost instance for which you want to create a network domain.</p>
          * <blockquote>
-         * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * <p>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -345,7 +351,7 @@ public class CreateNetworkDomainRequest extends Request {
             } 
 
             /**
-             * <p>The IP address of the proxy server.</p>
+             * <p>The address of the proxy server.</p>
              * 
              * <strong>example:</strong>
              * <p><code>47.104.**.**</code></p>
@@ -358,8 +364,8 @@ public class CreateNetworkDomainRequest extends Request {
             /**
              * <p>The node type of the proxy server. Valid values:</p>
              * <ul>
-             * <li><strong>Master</strong>: primary proxy server.</li>
-             * <li><strong>Slave</strong>: secondary proxy server.</li>
+             * <li>Master: primary proxy server.</li>
+             * <li>Slave: secondary proxy server.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -371,10 +377,10 @@ public class CreateNetworkDomainRequest extends Request {
             }
 
             /**
-             * <p>The Base64-encoded password of the proxy server.</p>
+             * <p>The Base64-encoded password of the proxy server account.</p>
              * 
              * <strong>example:</strong>
-             * <hr>
+             * <p>UWdi******Ng==</p>
              */
             public Builder password(String password) {
                 this.password = password;
@@ -382,7 +388,7 @@ public class CreateNetworkDomainRequest extends Request {
             }
 
             /**
-             * <p>The port of the proxy server.</p>
+             * <p>The Server Port of the proxy server.</p>
              * 
              * <strong>example:</strong>
              * <p>22</p>
@@ -395,9 +401,9 @@ public class CreateNetworkDomainRequest extends Request {
             /**
              * <p>The proxy type. Valid values:</p>
              * <ul>
-             * <li><strong>SSHProxy</strong></li>
-             * <li><strong>HTTPProxy</strong></li>
-             * <li><strong>Socks5Proxy</strong></li>
+             * <li>SSHProxy: SSH proxy.</li>
+             * <li>HTTPProxy: HTTP proxy.</li>
+             * <li>Socks5Proxy: SOCKS proxy.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -409,7 +415,7 @@ public class CreateNetworkDomainRequest extends Request {
             }
 
             /**
-             * <p>The username of the proxy server.</p>
+             * <p>The account of the proxy server.</p>
              * 
              * <strong>example:</strong>
              * <p>root</p>

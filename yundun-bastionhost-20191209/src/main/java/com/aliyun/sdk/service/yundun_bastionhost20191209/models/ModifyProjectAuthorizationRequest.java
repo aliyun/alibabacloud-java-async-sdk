@@ -131,6 +131,10 @@ public class ModifyProjectAuthorizationRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the project authorization to be modified.</p>
+         * <blockquote>
+         * <p>You can call the ListProjectAuthorizations operation to obtain this parameter.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,7 +147,10 @@ public class ModifyProjectAuthorizationRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The new description of the project authorization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -152,6 +159,10 @@ public class ModifyProjectAuthorizationRequest extends Request {
         }
 
         /**
+         * <p>The ID of the Bastionhost instance.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -164,7 +175,10 @@ public class ModifyProjectAuthorizationRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The new name of the project authorization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -173,7 +187,13 @@ public class ModifyProjectAuthorizationRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the Bastionhost instance.</p>
+         * <blockquote>
+         * <p>For the mappings between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -182,7 +202,16 @@ public class ModifyProjectAuthorizationRequest extends Request {
         }
 
         /**
-         * ScopeType.
+         * <p>The scope of assets that can be managed by the authorization after modification. Valid values:</p>
+         * <ul>
+         * <li><p><strong>1</strong>: all projects</p>
+         * </li>
+         * <li><p><strong>2</strong>: specified projects</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder scopeType(Integer scopeType) {
             this.putQueryParameter("ScopeType", scopeType);

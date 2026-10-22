@@ -106,7 +106,7 @@ public class ListProjectNotifyReceiversResponseBody extends TeaModel {
         } 
 
         /**
-         * Items.
+         * <p>The list of recipients.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -114,7 +114,10 @@ public class ListProjectNotifyReceiversResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The value of the MaxResults request parameter passed in the request if a valid parameter value was specified. Otherwise, the default value is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -122,7 +125,10 @@ public class ListProjectNotifyReceiversResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next request. Use this value for the NextToken request parameter in the next paged query. If this field is empty in the response, no more data is available. This parameter is used for paging.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4ieSWJCwxvW3dk3wF.BqkrZmP72nWu5zJ5NWydMqyEs****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -130,7 +136,10 @@ public class ListProjectNotifyReceiversResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>81500666-d7f5-4143-8329-0223cc738105</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListProjectNotifyReceiversResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of recipients returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -230,7 +242,10 @@ public class ListProjectNotifyReceiversResponseBody extends TeaModel {
             } 
 
             /**
-             * Email.
+             * <p>The email address of the recipient.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6291****@qq.com</p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -238,7 +253,10 @@ public class ListProjectNotifyReceiversResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the recipient.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -246,7 +264,10 @@ public class ListProjectNotifyReceiversResponseBody extends TeaModel {
             }
 
             /**
-             * Phone.
+             * <p>The phone number of the recipient.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>131****6412</p>
              */
             public Builder phone(String phone) {
                 this.phone = phone;
@@ -254,7 +275,10 @@ public class ListProjectNotifyReceiversResponseBody extends TeaModel {
             }
 
             /**
-             * ReceiverId.
+             * <p>The ID of the notification recipient.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder receiverId(String receiverId) {
                 this.receiverId = receiverId;

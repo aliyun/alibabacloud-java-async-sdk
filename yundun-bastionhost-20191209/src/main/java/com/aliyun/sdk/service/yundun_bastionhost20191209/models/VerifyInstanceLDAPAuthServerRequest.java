@@ -190,6 +190,7 @@ public class VerifyInstanceLDAPAuthServerRequest extends Request {
         } 
 
         /**
+         * <p>The account of the server.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -202,6 +203,7 @@ public class VerifyInstanceLDAPAuthServerRequest extends Request {
         }
 
         /**
+         * <p>The Base DN.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -214,7 +216,10 @@ public class VerifyInstanceLDAPAuthServerRequest extends Request {
         }
 
         /**
-         * Filter.
+         * <p>The filter condition for users.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>(objectClass=top)</p>
          */
         public Builder filter(String filter) {
             this.putQueryParameter("Filter", filter);
@@ -223,6 +228,7 @@ public class VerifyInstanceLDAPAuthServerRequest extends Request {
         }
 
         /**
+         * <p>The ID of the Bastionhost instance. You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -235,7 +241,16 @@ public class VerifyInstanceLDAPAuthServerRequest extends Request {
         }
 
         /**
-         * IsSSL.
+         * <p>Specifies whether SSL is supported. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: supported</p>
+         * </li>
+         * <li><p><strong>false</strong>: not supported</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSSL(String isSSL) {
             this.putQueryParameter("IsSSL", isSSL);
@@ -244,7 +259,10 @@ public class VerifyInstanceLDAPAuthServerRequest extends Request {
         }
 
         /**
-         * Password.
+         * <p>The password of the server account.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -253,6 +271,7 @@ public class VerifyInstanceLDAPAuthServerRequest extends Request {
         }
 
         /**
+         * <p>The port used to access the server.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -265,7 +284,10 @@ public class VerifyInstanceLDAPAuthServerRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the Bastionhost instance. For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -274,6 +296,7 @@ public class VerifyInstanceLDAPAuthServerRequest extends Request {
         }
 
         /**
+         * <p>The address of the server.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -286,7 +309,10 @@ public class VerifyInstanceLDAPAuthServerRequest extends Request {
         }
 
         /**
-         * StandbyServer.
+         * <p>The address of the standby server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         public Builder standbyServer(String standbyServer) {
             this.putQueryParameter("StandbyServer", standbyServer);

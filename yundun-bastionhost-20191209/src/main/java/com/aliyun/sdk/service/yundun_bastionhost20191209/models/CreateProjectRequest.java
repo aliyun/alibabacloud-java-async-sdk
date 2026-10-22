@@ -117,7 +117,10 @@ public class CreateProjectRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The project description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>comment</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -126,6 +129,10 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
+         * <p>The ID of the bastion host instance.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query this parameter.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,7 +145,13 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
-         * MemberIds.
+         * <p>The list of member account UIDs to associate with the project.</p>
+         * <blockquote>
+         * <p>You can call the ListMembersNotForProject operation to query this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>161****6121</p>
          */
         public Builder memberIds(String memberIds) {
             this.putQueryParameter("MemberIds", memberIds);
@@ -147,6 +160,7 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
+         * <p>The project name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,7 +173,13 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the bastion host.</p>
+         * <blockquote>
+         * <p>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

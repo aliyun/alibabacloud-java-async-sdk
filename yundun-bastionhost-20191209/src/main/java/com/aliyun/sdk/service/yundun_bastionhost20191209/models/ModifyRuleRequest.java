@@ -229,7 +229,10 @@ public class ModifyRuleRequest extends Request {
         } 
 
         /**
-         * <p>The new remarks of the authorization rule. It can be up to 500 characters in length.</p>
+         * <p>The new remarks for the authorization rule. The remarks can be up to 500 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TEST</p>
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -238,7 +241,7 @@ public class ModifyRuleRequest extends Request {
         }
 
         /**
-         * <p>The databases and database accounts that a user associated with the modified rule can manage.</p>
+         * <p>The new list of database instances and database accounts associated with the authorization rule.</p>
          */
         public Builder databases(java.util.List<Databases> databases) {
             this.putQueryParameter("Databases", databases);
@@ -247,7 +250,7 @@ public class ModifyRuleRequest extends Request {
         }
 
         /**
-         * <p>The end time of the new validity period of the authorization rule. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The new end time of the validity period for the authorization rule. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1672502400</p>
@@ -259,7 +262,7 @@ public class ModifyRuleRequest extends Request {
         }
 
         /**
-         * <p>The start time of the new validity period of the authorization rule. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The new start time of the validity period for the authorization rule. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1669630029</p>
@@ -271,7 +274,7 @@ public class ModifyRuleRequest extends Request {
         }
 
         /**
-         * <p>The asset groups and asset accounts that a user associated with the modified rule can manage.</p>
+         * <p>The new list of asset groups and accounts associated with the authorization rule.</p>
          */
         public Builder hostGroups(java.util.List<HostGroups> hostGroups) {
             this.putQueryParameter("HostGroups", hostGroups);
@@ -280,7 +283,7 @@ public class ModifyRuleRequest extends Request {
         }
 
         /**
-         * <p>An array that consists of the host IDs and host account IDs with which the modified authorization rule is associated.</p>
+         * <p>The new array of host IDs and host account IDs associated with the authorization rule.</p>
          */
         public Builder hosts(java.util.List<Hosts> hosts) {
             this.putQueryParameter("Hosts", hosts);
@@ -289,10 +292,7 @@ public class ModifyRuleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the bastion host whose authorization rule you want to modify.</p>
-         * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
-         * </blockquote>
+         * <p>The ID of the Bastionhost instance to which the authorization rule to be updated belongs. &gt; You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain the value of this parameter.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -305,7 +305,10 @@ public class ModifyRuleRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -314,10 +317,7 @@ public class ModifyRuleRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the bastion host to which the authorization rule to modify belongs.</p>
-         * <blockquote>
-         * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
-         * </blockquote>
+         * <p>The region ID of the Bastionhost instance to which the authorization rule to be updated belongs. &gt; For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -329,7 +329,7 @@ public class ModifyRuleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the authorization rule to modify.</p>
+         * <p>The ID of the authorization rule to be updated.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -342,7 +342,7 @@ public class ModifyRuleRequest extends Request {
         }
 
         /**
-         * <p>The new name of the authorization rule. The name must be 1 to 128 characters in length and can contain periods (.), underscores (_), hyphens (-), single quotation marks (&quot;), and spaces. It cannot start with a special character.</p>
+         * <p>The new name of the authorization rule. The name must be 1 to 128 characters in length and cannot start with a special character. It can contain only periods (.), underscores (_), hyphens (-), single quotation marks (\&quot;), and spaces.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -354,7 +354,7 @@ public class ModifyRuleRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the user groups with which the modified authorization rule is associated.</p>
+         * <p>The new list of user group IDs associated with the authorization rule.</p>
          */
         public Builder userGroupIds(java.util.List<String> userGroupIds) {
             this.putQueryParameter("UserGroupIds", userGroupIds);
@@ -363,7 +363,7 @@ public class ModifyRuleRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the users with whom the modified authorization rule is associated.</p>
+         * <p>The new list of user IDs associated with the authorization rule.</p>
          */
         public Builder userIds(java.util.List<String> userIds) {
             this.putQueryParameter("UserIds", userIds);
@@ -431,7 +431,7 @@ public class ModifyRuleRequest extends Request {
             } 
 
             /**
-             * <p>The database account IDs.</p>
+             * <p>The list of database account IDs.</p>
              */
             public Builder databaseAccountIds(java.util.List<String> databaseAccountIds) {
                 this.databaseAccountIds = databaseAccountIds;
@@ -439,14 +439,10 @@ public class ModifyRuleRequest extends Request {
             }
 
             /**
-             * <p>The database ID.</p>
+             * <p>The database instance ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>[
-             *     {
-             *         &quot;DatabaseId&quot;: &quot;1&quot;
-             *     }
-             * ]</p>
+             * <p>2</p>
              */
             public Builder databaseId(String databaseId) {
                 this.databaseId = databaseId;
@@ -513,7 +509,7 @@ public class ModifyRuleRequest extends Request {
             } 
 
             /**
-             * <p>The names of the asset accounts.</p>
+             * <p>The list of asset account names.</p>
              */
             public Builder hostAccountNames(java.util.List<String> hostAccountNames) {
                 this.hostAccountNames = hostAccountNames;
@@ -524,7 +520,7 @@ public class ModifyRuleRequest extends Request {
              * <p>The asset group ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>[{&quot;HostGroupId&quot;:&quot;1&quot;}]</p>
+             * <p>1</p>
              */
             public Builder hostGroupId(String hostGroupId) {
                 this.hostGroupId = hostGroupId;
@@ -591,7 +587,7 @@ public class ModifyRuleRequest extends Request {
             } 
 
             /**
-             * <p>The host account IDs.</p>
+             * <p>The list of host account IDs.</p>
              */
             public Builder hostAccountIds(java.util.List<String> hostAccountIds) {
                 this.hostAccountIds = hostAccountIds;
@@ -602,7 +598,7 @@ public class ModifyRuleRequest extends Request {
              * <p>The host ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>[{&quot;HostId&quot;:&quot;1&quot;}]</p>
+             * <p>1</p>
              */
             public Builder hostId(String hostId) {
                 this.hostId = hostId;

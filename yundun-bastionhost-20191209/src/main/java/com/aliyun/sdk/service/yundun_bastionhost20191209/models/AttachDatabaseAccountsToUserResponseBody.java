@@ -319,6 +319,9 @@ public class AttachDatabaseAccountsToUserResponseBody extends TeaModel {
 
             /**
              * <p>The error message that is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder message(String message) {
                 this.message = message;

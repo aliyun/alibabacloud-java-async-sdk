@@ -102,6 +102,10 @@ public class ImportKMSSecretsForHostRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the host to import the KMS secrets to.</p>
+         * <blockquote>
+         * <p>Only ECS hosts can import KMS secrets. You can call the <a href="https://help.aliyun.com/document_detail/200665.html">ListHosts</a> operation to obtain this parameter.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +118,13 @@ public class ImportKMSSecretsForHostRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the Bastionhost instance.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>bastionhost-cn-st220aw****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -123,7 +133,13 @@ public class ImportKMSSecretsForHostRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the Bastionhost instance.</p>
+         * <blockquote>
+         * <p>For more information about region IDs and names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and availability zones</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -132,7 +148,7 @@ public class ImportKMSSecretsForHostRequest extends Request {
         }
 
         /**
-         * Secrets.
+         * <p>The KMS secrets to import.</p>
          */
         public Builder secrets(java.util.List<Secrets> secrets) {
             String secretsShrink = shrink(secrets, "Secrets", "json");
@@ -201,7 +217,10 @@ public class ImportKMSSecretsForHostRequest extends Request {
             } 
 
             /**
-             * SecretName.
+             * <p>The name of the KMS secret.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>secret</p>
              */
             public Builder secretName(String secretName) {
                 this.secretName = secretName;
@@ -209,7 +228,13 @@ public class ImportKMSSecretsForHostRequest extends Request {
             }
 
             /**
-             * SecretType.
+             * <p>The type of the KMS secret. Valid values:</p>
+             * <ul>
+             * <li><strong>ECS</strong>: an ECS credential.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ECS</p>
              */
             public Builder secretType(String secretType) {
                 this.secretType = secretType;

@@ -80,7 +80,7 @@ public class ListHostGroupsForUserResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The host groups returned.</p>
+         * <p>The list of host groups returned.</p>
          */
         public Builder hostGroups(java.util.List<HostGroups> hostGroups) {
             this.hostGroups = hostGroups;
@@ -88,7 +88,7 @@ public class ListHostGroupsForUserResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
@@ -181,7 +181,7 @@ public class ListHostGroupsForUserResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The remarks of the host group.</p>
+             * <p>The description of the host group.</p>
              * 
              * <strong>example:</strong>
              * <p>comment</p>
@@ -192,7 +192,7 @@ public class ListHostGroupsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The host group ID.</p>
+             * <p>The ID of the host group.</p>
              * 
              * <strong>example:</strong>
              * <p>１</p>

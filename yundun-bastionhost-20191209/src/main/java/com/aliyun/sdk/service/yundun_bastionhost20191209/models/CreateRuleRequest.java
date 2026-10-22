@@ -215,7 +215,7 @@ public class CreateRuleRequest extends Request {
         } 
 
         /**
-         * <p>The remarks of the authorization rule. The remarks can be up to 500 characters in length.</p>
+         * <p>The description of the authorization rule. Maximum length: 500 characters.</p>
          * 
          * <strong>example:</strong>
          * <p>comment</p>
@@ -227,7 +227,7 @@ public class CreateRuleRequest extends Request {
         }
 
         /**
-         * <p>The information about the database that runs on your server.</p>
+         * <p>The database information.</p>
          */
         public Builder databases(java.util.List<Databases> databases) {
             this.putQueryParameter("Databases", databases);
@@ -236,7 +236,7 @@ public class CreateRuleRequest extends Request {
         }
 
         /**
-         * <p>The end time of the validity period of the authorization rule. Specify a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The end time of the validity period for the authorization rule, in seconds (timestamp format).</p>
          * 
          * <strong>example:</strong>
          * <p>1672502400</p>
@@ -248,7 +248,7 @@ public class CreateRuleRequest extends Request {
         }
 
         /**
-         * <p>The start time of the validity period of the authorization rule. Specify a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The start time of the validity period for the authorization rule, in seconds (timestamp format).</p>
          * 
          * <strong>example:</strong>
          * <p>1669630029</p>
@@ -260,7 +260,7 @@ public class CreateRuleRequest extends Request {
         }
 
         /**
-         * <p>The information about the asset group that you want to authorize to manage.</p>
+         * <p>The asset group information to authorize.</p>
          */
         public Builder hostGroups(java.util.List<HostGroups> hostGroups) {
             this.putQueryParameter("HostGroups", hostGroups);
@@ -278,9 +278,9 @@ public class CreateRuleRequest extends Request {
         }
 
         /**
-         * <p>The bastion host ID.</p>
+         * <p>The instance ID of the bastion host.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -294,7 +294,10 @@ public class CreateRuleRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -305,7 +308,7 @@ public class CreateRuleRequest extends Request {
         /**
          * <p>The region ID of the bastion host.</p>
          * <blockquote>
-         * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * <p>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -318,7 +321,7 @@ public class CreateRuleRequest extends Request {
         }
 
         /**
-         * <p>The name of the authorization rule. The name can be up to 128 characters in length.</p>
+         * <p>The name of the authorization rule. Maximum length: 128 characters.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -331,7 +334,7 @@ public class CreateRuleRequest extends Request {
         }
 
         /**
-         * <p>An array that consists of user group IDs.</p>
+         * <p>The array of user group IDs.</p>
          */
         public Builder userGroupIds(java.util.List<String> userGroupIds) {
             this.putQueryParameter("UserGroupIds", userGroupIds);
@@ -340,7 +343,7 @@ public class CreateRuleRequest extends Request {
         }
 
         /**
-         * <p>An array that consists of user IDs.</p>
+         * <p>The array of user IDs.</p>
          */
         public Builder userIds(java.util.List<String> userIds) {
             this.putQueryParameter("UserIds", userIds);
@@ -408,7 +411,7 @@ public class CreateRuleRequest extends Request {
             } 
 
             /**
-             * <p>An array that consists of database account IDs.</p>
+             * <p>The array of database account IDs.</p>
              */
             public Builder databaseAccountIds(java.util.List<String> databaseAccountIds) {
                 this.databaseAccountIds = databaseAccountIds;
@@ -416,14 +419,10 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * <p>The database ID.</p>
+             * <p>The database instance ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>[
-             *     {
-             *         &quot;DatabaseId&quot;: &quot;1&quot;
-             *     }
-             * ]</p>
+             * <p>2</p>
              */
             public Builder databaseId(String databaseId) {
                 this.databaseId = databaseId;
@@ -490,7 +489,7 @@ public class CreateRuleRequest extends Request {
             } 
 
             /**
-             * <p>An array that consists of asset account names.</p>
+             * <p>The array of asset account names.</p>
              */
             public Builder hostAccountNames(java.util.List<String> hostAccountNames) {
                 this.hostAccountNames = hostAccountNames;
@@ -501,7 +500,7 @@ public class CreateRuleRequest extends Request {
              * <p>The asset group ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>[{&quot;HostGroupId&quot;:&quot;1&quot;}]</p>
+             * <p>3</p>
              */
             public Builder hostGroupId(String hostGroupId) {
                 this.hostGroupId = hostGroupId;
@@ -568,7 +567,7 @@ public class CreateRuleRequest extends Request {
             } 
 
             /**
-             * <p>An array that consists of host account IDs.</p>
+             * <p>The array of host account IDs.</p>
              */
             public Builder hostAccountIds(java.util.List<String> hostAccountIds) {
                 this.hostAccountIds = hostAccountIds;
@@ -579,7 +578,7 @@ public class CreateRuleRequest extends Request {
              * <p>The host ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>[{&quot;HostId&quot;:&quot;1&quot;}]</p>
+             * <p>1</p>
              */
             public Builder hostId(String hostId) {
                 this.hostId = hostId;

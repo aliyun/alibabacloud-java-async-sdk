@@ -191,7 +191,7 @@ public class LockUsersResponseBody extends TeaModel {
              * <p>This parameter is deprecated.</p>
              * 
              * <strong>example:</strong>
-             * <p>N/A</p>
+             * <p>None</p>
              */
             public Builder message(String message) {
                 this.message = message;

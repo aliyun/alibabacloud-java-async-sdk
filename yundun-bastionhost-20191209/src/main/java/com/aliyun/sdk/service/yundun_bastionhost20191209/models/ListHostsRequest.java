@@ -214,7 +214,7 @@ public class ListHostsRequest extends Request {
         } 
 
         /**
-         * <p>The address of the host that you want to query. You can set this parameter to a domain name or an IP address. Only exact match is supported.</p>
+         * <p>The address of the host. A domain name or an IP address is supported. Only exact match is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>1.1.XX.XX</p>
@@ -226,9 +226,9 @@ public class ListHostsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the host group to which the host to be queried belongs.</p>
+         * <p>The ID of the host group to which the host belongs.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/201307.html">ListHostGroups</a> operation to query the ID of the host group.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/201307.html">ListHostGroups</a> operation to query the host group ID.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -241,7 +241,7 @@ public class ListHostsRequest extends Request {
         }
 
         /**
-         * <p>The name of the host that you want to query. Only exact match is supported.</p>
+         * <p>The name of the host. Only exact match is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>host</p>
@@ -253,9 +253,9 @@ public class ListHostsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the bastion host on which you want to query hosts.</p>
+         * <p>The instance ID of the Bastionhost instance.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+         * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -269,7 +269,7 @@ public class ListHostsRequest extends Request {
         }
 
         /**
-         * <p>The operating system of the host that you want to query. Valid values:</p>
+         * <p>The operating system of the host. Valid values:</p>
          * <ul>
          * <li><strong>Linux</strong></li>
          * <li><strong>Windows</strong></li>
@@ -297,9 +297,9 @@ public class ListHostsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
+         * <p>Settings for paging. Specifies the number of host information entries to return per page in a paged query. Default value: <strong>10</strong>, which indicates that 10 host information entries are displayed per page.</p>
          * <blockquote>
-         * <p>We recommend that you do not leave this parameter empty.</p>
+         * <p>Do not leave PageSize empty.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -312,7 +312,10 @@ public class ListHostsRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder projectId(String projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -321,7 +324,7 @@ public class ListHostsRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the bastion host on which you want to query hosts.</p>
+         * <p>The region ID of the Bastionhost instance.</p>
          * <blockquote>
          * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
          * </blockquote>
@@ -336,11 +339,11 @@ public class ListHostsRequest extends Request {
         }
 
         /**
-         * <p>The source of the host that you want to query. Valid values:</p>
+         * <p>The source of the host. Valid values:</p>
          * <ul>
-         * <li><strong>Local</strong>: a host in a data center</li>
-         * <li><strong>Ecs</strong>: an Elastic Compute Service (ECS) instance</li>
-         * <li><strong>Rds</strong>: a host in an ApsaraDB MyBase dedicated cluster</li>
+         * <li><strong>Local</strong>: local host</li>
+         * <li><strong>Ecs</strong>: ECS instance</li>
+         * <li><strong>Rds</strong>: ApsaraDB RDS dedicated cluster host</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -353,7 +356,7 @@ public class ListHostsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the ECS instance or the host in an ApsaraDB MyBase dedicated cluster that you want to query. Only exact match is supported.</p>
+         * <p>The ECS instance ID or the dedicated cluster host ID that corresponds to the host. Only exact match is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>i-bp19ienyt0yax748****</p>
@@ -365,7 +368,7 @@ public class ListHostsRequest extends Request {
         }
 
         /**
-         * <p>The status of the host that you want to query. Valid values:</p>
+         * <p>The status of the host. Valid values:</p>
          * <ul>
          * <li><strong>Normal</strong>: normal</li>
          * <li><strong>Release</strong>: released</li>

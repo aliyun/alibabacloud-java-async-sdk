@@ -131,7 +131,7 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * <p>The token for starting the next query.</p>
+         * <p>The token for the next query.</p>
          * 
          * <strong>example:</strong>
          * <p>6EwFJmScBXFFC3nf.9Rq7HzA7APx7GWLbkZbjHrR6Pq39w</p>
@@ -156,7 +156,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2jpqvnr6yd3a</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -165,7 +168,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The IDs of instances.</p>
+         * <p>The resource ID.</p>
          * 
          * <strong>example:</strong>
          * <p>bastionhost-cn-78v1gcxxxxx</p>
@@ -177,8 +180,8 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The type of the resource.</p>
-         * <p>Set the value to INSTANCE, which indicates that the resource is a Bastionhost instance.</p>
+         * <p>The resource type definition.</p>
+         * <p>The only valid value is INSTANCE, which indicates a Bastionhost instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -259,7 +262,7 @@ public class ListTagResourcesRequest extends Request {
             } 
 
             /**
-             * <p>The key of tag N.</p>
+             * <p>The tag key.</p>
              * <p>Valid values of N: 1 to 20.</p>
              * 
              * <strong>example:</strong>
@@ -271,7 +274,7 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * <p>The value of tag N.</p>
+             * <p>The tag value.</p>
              * <p>Valid values of N: 1 to 20.</p>
              * 
              * <strong>example:</strong>

@@ -89,6 +89,10 @@ public class AddInstanceRdMemberRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the Bastionhost instance.</p>
+         * <blockquote>
+         * <p>Call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain the instance ID.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +105,7 @@ public class AddInstanceRdMemberRequest extends Request {
         }
 
         /**
+         * <p>The UID of the RD member account to add.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,7 +118,13 @@ public class AddInstanceRdMemberRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the Bastionhost instance.</p>
+         * <blockquote>
+         * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

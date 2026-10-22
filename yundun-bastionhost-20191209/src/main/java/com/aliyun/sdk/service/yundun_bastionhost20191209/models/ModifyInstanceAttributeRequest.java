@@ -88,9 +88,9 @@ public class ModifyInstanceAttributeRequest extends Request {
         } 
 
         /**
-         * <p>The description of the bastion host.</p>
+         * <p>The description of the bastion host instance.</p>
          * <blockquote>
-         * <p>The description must be up to 30 characters in length, and can contain letters, digits, underscores (_), and hyphens (-).</p>
+         * <p>The description can contain only letters, Chinese characters, digits, underscores (_), or hyphens (-), and cannot exceed 30 characters in length.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -103,9 +103,9 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * <p>The ID of the bastion host.</p>
+         * <p>The ID of the bastion host instance.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host instance ID.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -119,9 +119,9 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the bastion host.</p>
+         * <p>The region ID of the bastion host instance.</p>
          * <blockquote>
-         * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * <p>For information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

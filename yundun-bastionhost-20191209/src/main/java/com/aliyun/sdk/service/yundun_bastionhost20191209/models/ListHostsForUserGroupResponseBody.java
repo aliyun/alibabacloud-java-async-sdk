@@ -80,7 +80,7 @@ public class ListHostsForUserGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The hosts returned.</p>
+         * <p>The list of hosts returned.</p>
          */
         public Builder hosts(java.util.List<Hosts> hosts) {
             this.hosts = hosts;
@@ -88,7 +88,7 @@ public class ListHostsForUserGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
@@ -235,8 +235,8 @@ public class ListHostsForUserGroupResponseBody extends TeaModel {
             /**
              * <p>The address type of the host. Valid values:</p>
              * <ul>
-             * <li><strong>Public</strong>: public endpoint</li>
-             * <li><strong>Private</strong>: internal endpoint</li>
+             * <li><strong>Public</strong>: public address</li>
+             * <li><strong>Private</strong>: private network address</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -281,7 +281,7 @@ public class ListHostsForUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The internal endpoint of the host. The value is a domain name or an IP address.</p>
+             * <p>The private network address of the host, which can be a domain name or an IP address.</p>
              * 
              * <strong>example:</strong>
              * <p>192.168.XX.XX</p>
@@ -292,7 +292,7 @@ public class ListHostsForUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public endpoint of the host. The value is a domain name or an IP address.</p>
+             * <p>The public address of the host, which can be a domain name or an IP address.</p>
              * 
              * <strong>example:</strong>
              * <p>10.158.XX.XX</p>
@@ -303,7 +303,7 @@ public class ListHostsForUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The operating system of the host. Valid values:</p>
+             * <p>The operating system type of the host. Valid values:</p>
              * <ul>
              * <li><strong>Linux</strong></li>
              * <li><strong>Windows</strong></li>

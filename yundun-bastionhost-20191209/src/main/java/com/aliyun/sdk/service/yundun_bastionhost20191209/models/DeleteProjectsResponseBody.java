@@ -67,7 +67,10 @@ public class DeleteProjectsResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The unique identifier that Alibaba Cloud generated for the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class DeleteProjectsResponseBody extends TeaModel {
         }
 
         /**
-         * Results.
+         * <p>The call results of the operation.</p>
          */
         public Builder results(java.util.List<Results> results) {
             this.results = results;
@@ -154,7 +157,10 @@ public class DeleteProjectsResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>The error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -162,7 +168,10 @@ public class DeleteProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -170,7 +179,10 @@ public class DeleteProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The project ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder projectId(String projectId) {
                 this.projectId = projectId;

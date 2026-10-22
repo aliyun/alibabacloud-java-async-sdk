@@ -67,7 +67,7 @@ public class CreatePolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The control policy ID.</p>
+         * <p>The ID of the control policy.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

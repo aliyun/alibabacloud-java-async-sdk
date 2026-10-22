@@ -130,6 +130,10 @@ public class ListProjectsForProjectAuthorizationPrincipalRequest extends Request
         } 
 
         /**
+         * <p>The instance ID of the bastion host.</p>
+         * <blockquote>
+         * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,7 +146,10 @@ public class ListProjectsForProjectAuthorizationPrincipalRequest extends Request
         }
 
         /**
-         * Keyword.
+         * <p>The name of the project to query. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -151,7 +158,10 @@ public class ListProjectsForProjectAuthorizationPrincipalRequest extends Request
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of projects to return per request. Valid values: 1 to 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -160,7 +170,10 @@ public class ListProjectsForProjectAuthorizationPrincipalRequest extends Request
         }
 
         /**
-         * NextToken.
+         * <p>The token for the paging query. Leave this parameter empty or do not specify this character for the first request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4ieSWJCwxvW3dk3wF.BqkrZmP72nWu5zJ5NWydMqyEs****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -169,7 +182,13 @@ public class ListProjectsForProjectAuthorizationPrincipalRequest extends Request
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the bastion host.</p>
+         * <blockquote>
+         * <p>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -178,7 +197,13 @@ public class ListProjectsForProjectAuthorizationPrincipalRequest extends Request
         }
 
         /**
-         * Skip.
+         * <p>The number of entries to skip.</p>
+         * <blockquote>
+         * <p>This parameter takes effect only when NextToken is empty.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder skip(Integer skip) {
             this.putQueryParameter("Skip", skip);

@@ -74,9 +74,9 @@ public class EnableInstancePublicAccessRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the bastion host.</p>
+         * <p>The ID of the Bastionhost instance.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the Bastionhost instance ID.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -90,7 +90,7 @@ public class EnableInstancePublicAccessRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the bastion host.</p>
+         * <p>The region ID of the Bastionhost instance.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

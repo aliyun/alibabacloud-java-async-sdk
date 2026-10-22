@@ -118,9 +118,9 @@ public class RemoveHostsFromGroupRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the asset group from which you want to remove hosts.</p>
+         * <p>The ID of the host group from which you want to remove hosts.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/201307.html">ListHostGroups</a> operation to query the asset group ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/201307.html">ListHostGroups</a> operation to query the host group ID.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -134,9 +134,9 @@ public class RemoveHostsFromGroupRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the hosts that you want to remove from the host group. Specify a JSON string. You can specify up to 100 host IDs.</p>
+         * <p>The IDs of the hosts that you want to remove. The value is a JSON string. You can specify up to 100 host IDs.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/200665.html">ListHosts</a> operation to query the host IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/200665.html">ListHosts</a> operation to query the host IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -150,9 +150,9 @@ public class RemoveHostsFromGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the bastion host whose asset group you want to manage.</p>
+         * <p>The ID of the Bastionhost instance to which the host group from which you want to remove hosts belongs.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the instance ID.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -166,7 +166,10 @@ public class RemoveHostsFromGroupRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -175,9 +178,9 @@ public class RemoveHostsFromGroupRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the bastion host whose asset group you want to manage.</p>
+         * <p>The region ID of the Bastionhost instance to which the host group from which you want to remove hosts belongs.</p>
          * <blockquote>
-         * <p> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

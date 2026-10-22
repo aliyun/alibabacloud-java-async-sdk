@@ -118,9 +118,9 @@ public class AddUsersToGroupRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the bastion host for which you want to add users to the user group.</p>
+         * <p>The ID of the bastion host instance to which the user group belongs.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -134,7 +134,10 @@ public class AddUsersToGroupRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -143,9 +146,9 @@ public class AddUsersToGroupRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the bastion host for which you want to add users to the user group.</p>
+         * <p>The region ID of the bastion host instance to which the user group belongs.</p>
          * <blockquote>
-         * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * <p>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -160,7 +163,7 @@ public class AddUsersToGroupRequest extends Request {
         /**
          * <p>The ID of the user group to which you want to add users.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/204509.html">ListUserGroups</a> operation to query the ID of the user group.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/204509.html">ListUserGroups</a> operation to query this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -174,9 +177,9 @@ public class AddUsersToGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the user that you want to add to the user group. The value is a JSON string. You can add up to 100 user IDs. If you specify multiple IDs, separate the IDs with commas (,).</p>
+         * <p>The IDs of the users to add to the user group. This parameter is a JSON-formatted string that supports up to 100 user IDs. Separate multiple IDs with commas (,).</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/204522.html">ListUsers</a> operation to query the ID of the user.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/204522.html">ListUsers</a> operation to query user IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

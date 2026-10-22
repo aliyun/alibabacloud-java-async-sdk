@@ -117,7 +117,16 @@ public class GetNetworkDomainRequest extends Request {
         } 
 
         /**
-         * CheckProxyState.
+         * <p>Specifies whether to immediately re-check the proxy server status. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: Immediately re-checks the proxy server status and returns the latest ProxyState/ProxyStateErrorCode.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Default value. Does not re-check the proxy server status and directly returns the currently recorded status.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder checkProxyState(String checkProxyState) {
             this.putQueryParameter("CheckProxyState", checkProxyState);
@@ -126,9 +135,9 @@ public class GetNetworkDomainRequest extends Request {
         }
 
         /**
-         * <p>The bastion host ID.</p>
+         * <p>The instance ID of the bastion host.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances </a>operation to query the bastion host ID.</p>
+         * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -144,7 +153,7 @@ public class GetNetworkDomainRequest extends Request {
         /**
          * <p>The ID of the network domain to query.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2758827.html">ListNetworkDomains </a>operation to query the network domain ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2758827.html">ListNetworkDomains</a> operation to obtain this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -158,7 +167,10 @@ public class GetNetworkDomainRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -169,7 +181,7 @@ public class GetNetworkDomainRequest extends Request {
         /**
          * <p>The region ID of the bastion host.</p>
          * <blockquote>
-         * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * <p>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

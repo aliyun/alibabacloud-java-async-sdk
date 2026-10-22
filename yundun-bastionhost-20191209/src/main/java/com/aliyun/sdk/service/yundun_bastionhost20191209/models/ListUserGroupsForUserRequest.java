@@ -161,6 +161,10 @@ public class ListUserGroupsForUserRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the bastion host instance.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -173,7 +177,10 @@ public class ListUserGroupsForUserRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * <p>The name of the user group to query. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -182,6 +189,7 @@ public class ListUserGroupsForUserRequest extends Request {
         }
 
         /**
+         * <p>The page number for a paged query. Default value: <strong>1</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -194,6 +202,10 @@ public class ListUserGroupsForUserRequest extends Request {
         }
 
         /**
+         * <p>The maximum number of entries per page for a paged query.<br>The maximum value of PageSize is 100. The default number of entries per page is 20. If PageSize is left empty, 20 entries are returned by default.</p>
+         * <blockquote>
+         * <p>Do not leave PageSize empty.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -206,7 +218,16 @@ public class ListUserGroupsForUserRequest extends Request {
         }
 
         /**
-         * PagingOff.
+         * <p>Specifies whether to disable paging. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: Disables paging and returns all data.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Enables paging and returns the number of user groups specified by PageSize.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder pagingOff(String pagingOff) {
             this.putQueryParameter("PagingOff", pagingOff);
@@ -215,7 +236,10 @@ public class ListUserGroupsForUserRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -224,7 +248,13 @@ public class ListUserGroupsForUserRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the bastion host.</p>
+         * <blockquote>
+         * <p>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -233,6 +263,7 @@ public class ListUserGroupsForUserRequest extends Request {
         }
 
         /**
+         * <p>The user ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

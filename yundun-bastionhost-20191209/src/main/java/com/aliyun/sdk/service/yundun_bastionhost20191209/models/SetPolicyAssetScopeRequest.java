@@ -160,9 +160,9 @@ public class SetPolicyAssetScopeRequest extends Request {
         } 
 
         /**
-         * <p>The databases to which the control policy applies.</p>
+         * <p>The scope of database assets to which the control policy applies.</p>
          * <blockquote>
-         * <p> This parameter is required if ScopeType is set to Database. You can specify up to 500 databases.</p>
+         * <p>Required when ScopeType is set to Database. You can specify up to 500 databases.</p>
          * </blockquote>
          */
         public Builder databases(java.util.List<Databases> databases) {
@@ -172,9 +172,9 @@ public class SetPolicyAssetScopeRequest extends Request {
         }
 
         /**
-         * <p>The asset groups to which the control policy applies.</p>
+         * <p>The scope of asset groups to which the control policy applies.</p>
          * <blockquote>
-         * <p>This parameter is required if ScopeType is set to HostGroup. You can specify up to 100 asset groups.</p>
+         * <p>Required when ScopeType is set to HostGroup. You can specify up to 100 asset groups.</p>
          * </blockquote>
          */
         public Builder hostGroups(java.util.List<HostGroups> hostGroups) {
@@ -184,9 +184,9 @@ public class SetPolicyAssetScopeRequest extends Request {
         }
 
         /**
-         * <p>The hosts to which the control policy applies.</p>
+         * <p>The scope of hosts to which the control policy applies.</p>
          * <blockquote>
-         * <p>This parameter is required if ScopeType is set to Host. You can specify up to 500 hosts.</p>
+         * <p>Required when ScopeType is set to Host. You can specify up to 500 hosts.</p>
          * </blockquote>
          */
         public Builder hosts(java.util.List<Hosts> hosts) {
@@ -196,9 +196,9 @@ public class SetPolicyAssetScopeRequest extends Request {
         }
 
         /**
-         * <p>The bastion host ID.</p>
+         * <p>The Bastionhost instance ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
+         * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -212,9 +212,9 @@ public class SetPolicyAssetScopeRequest extends Request {
         }
 
         /**
-         * <p>The ID of the control policy that you want to modify.</p>
+         * <p>The ID of the control policy to modify.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2758876.html">ListPolicies</a> operation to query the control policy ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2758876.html">ListPolicies</a> operation to obtain this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -228,7 +228,10 @@ public class SetPolicyAssetScopeRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -237,9 +240,9 @@ public class SetPolicyAssetScopeRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the bastion host.</p>
+         * <p>The region ID of the Bastionhost instance.</p>
          * <blockquote>
-         * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * <p>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -254,10 +257,10 @@ public class SetPolicyAssetScopeRequest extends Request {
         /**
          * <p>The scope of assets to which the control policy applies. Valid values:</p>
          * <ul>
-         * <li><strong>All</strong>: The control policy applies to all assets.</li>
-         * <li><strong>Host</strong>: The control policy applies to specified hosts.</li>
-         * <li><strong>Database</strong>: The control policy applies to specified databases.</li>
-         * <li><strong>HostGroup</strong>: The control policy applies to specified asset groups.</li>
+         * <li><strong>All</strong>: all assets</li>
+         * <li><strong>Host</strong>: selected hosts</li>
+         * <li><strong>Database</strong>: selected databases</li>
+         * <li><strong>HostGroup</strong>: selected asset groups</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -345,8 +348,8 @@ public class SetPolicyAssetScopeRequest extends Request {
             /**
              * <p>The scope of database accounts to which the control policy applies. Valid values:</p>
              * <ul>
-             * <li><strong>All</strong>: The control policy applies to all database accounts of the database.</li>
-             * <li><strong>AccountId</strong>: The control policy applies to specified database accounts of the database.</li>
+             * <li><strong>All</strong>: all accounts in the database</li>
+             * <li><strong>AccountId</strong>: specified accounts in the database</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -358,9 +361,9 @@ public class SetPolicyAssetScopeRequest extends Request {
             }
 
             /**
-             * <p>The database accounts to which the control policy applies.</p>
+             * <p>The scope of database accounts to which the control policy applies.</p>
              * <blockquote>
-             * <p> This parameter is required if AccountScopeType is set to AccountId.</p>
+             * <p>Required when AccountScopeType is set to AccountId.</p>
              * </blockquote>
              */
             public Builder databaseAccountIds(java.util.List<String> databaseAccountIds) {
@@ -369,7 +372,7 @@ public class SetPolicyAssetScopeRequest extends Request {
             }
 
             /**
-             * <p>The database ID.</p>
+             * <p>The database instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -452,9 +455,9 @@ public class SetPolicyAssetScopeRequest extends Request {
             } 
 
             /**
-             * <p>The asset accounts to which the control policy applies.</p>
+             * <p>The scope of asset accounts to which the control policy applies.</p>
              * <blockquote>
-             * <p>This parameter is required if AccountScopeType is set to AccountName.</p>
+             * <p>Required when AccountScopeType is set to AccountNames.</p>
              * </blockquote>
              */
             public Builder accountNames(java.util.List<String> accountNames) {
@@ -465,8 +468,8 @@ public class SetPolicyAssetScopeRequest extends Request {
             /**
              * <p>The scope of asset accounts to which the control policy applies. Valid values:</p>
              * <ul>
-             * <li><strong>All</strong>: The control policy applies to all accounts in the asset group.</li>
-             * <li><strong>AccountName</strong>: The control policy applies to specified accounts in the asset group.</li>
+             * <li><strong>All</strong>: all accounts in the asset group</li>
+             * <li><strong>AccountName</strong>: specified accounts in the asset group</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -478,7 +481,7 @@ public class SetPolicyAssetScopeRequest extends Request {
             }
 
             /**
-             * <p>The asset group ID.</p>
+             * <p>The ID of the asset group.</p>
              * 
              * <strong>example:</strong>
              * <p>86</p>
@@ -563,8 +566,8 @@ public class SetPolicyAssetScopeRequest extends Request {
             /**
              * <p>The scope of host accounts to which the control policy applies. Valid values:</p>
              * <ul>
-             * <li><strong>All</strong>: The control policy applies to all accounts of the host.</li>
-             * <li><strong>AccountId</strong>: The control policy applies specified accounts of the host.</li>
+             * <li><strong>All</strong>: all accounts on the host</li>
+             * <li><strong>AccountId</strong>: specified accounts on the host</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -576,9 +579,9 @@ public class SetPolicyAssetScopeRequest extends Request {
             }
 
             /**
-             * <p>The host accounts to which the control policy applies.</p>
+             * <p>The scope of host accounts to which the control policy applies.</p>
              * <blockquote>
-             * <p>This parameter is required if AccountScopeType is set to AccountId.</p>
+             * <p>Required when AccountScopeType is set to AccountId.</p>
              * </blockquote>
              */
             public Builder hostAccountIds(java.util.List<String> hostAccountIds) {
@@ -587,7 +590,7 @@ public class SetPolicyAssetScopeRequest extends Request {
             }
 
             /**
-             * <p>The host ID.</p>
+             * <p>The ID of the host.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

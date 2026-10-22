@@ -80,7 +80,7 @@ public class ListHostGroupsForUserGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The host groups returned.</p>
+         * <p>The list of host groups returned.</p>
          */
         public Builder hostGroups(java.util.List<HostGroups> hostGroups) {
             this.hostGroups = hostGroups;

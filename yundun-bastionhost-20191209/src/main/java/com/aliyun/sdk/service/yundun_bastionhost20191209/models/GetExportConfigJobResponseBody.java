@@ -119,7 +119,10 @@ public class GetExportConfigJobResponseBody extends TeaModel {
         } 
 
         /**
-         * DownloadUrl.
+         * <p>The download URL of the configuration backup file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://bastionhost-cn-hangzhou-164***.oss-cn-hangzhou.aliyuncs.com/bastionhost-cn-2">https://bastionhost-cn-hangzhou-164***.oss-cn-hangzhou.aliyuncs.com/bastionhost-cn-2</a>******</p>
          */
         public Builder downloadUrl(String downloadUrl) {
             this.downloadUrl = downloadUrl;
@@ -127,7 +130,10 @@ public class GetExportConfigJobResponseBody extends TeaModel {
         }
 
         /**
-         * ExpireTime.
+         * <p>The expiration time of the configuration backup download URL. Unit: seconds. The value is a UNIX timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1679393152</p>
          */
         public Builder expireTime(Long expireTime) {
             this.expireTime = expireTime;
@@ -135,7 +141,10 @@ public class GetExportConfigJobResponseBody extends TeaModel {
         }
 
         /**
-         * JobId.
+         * <p>The ID of the configuration backup export task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -143,7 +152,10 @@ public class GetExportConfigJobResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>message</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +163,10 @@ public class GetExportConfigJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>98DBE5C2-7D7A-5393-9E5A-71074336D33B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +174,10 @@ public class GetExportConfigJobResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the configuration backup export task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder status(String status) {
             this.status = status;

@@ -132,9 +132,9 @@ public class SetPolicyCommandConfigRequest extends Request {
         }
 
         /**
-         * <p>The bastion host ID.</p>
+         * <p>The instance ID of the Bastionhost instance.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
+         * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the value of this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -150,7 +150,7 @@ public class SetPolicyCommandConfigRequest extends Request {
         /**
          * <p>The ID of the control policy that you want to modify.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2758876.html">ListPolicies</a> operation to query the control policy ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2758876.html">ListPolicies</a> operation to query the value of this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -164,7 +164,10 @@ public class SetPolicyCommandConfigRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -173,9 +176,9 @@ public class SetPolicyCommandConfigRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the bastion host.</p>
+         * <p>The region ID of the Bastionhost instance.</p>
          * <blockquote>
-         * <p> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -234,7 +237,7 @@ public class SetPolicyCommandConfigRequest extends Request {
             } 
 
             /**
-             * <p>The commands that can be run only after approval.</p>
+             * <p>The list of commands that require approval.</p>
              */
             public Builder commands(java.util.List<String> commands) {
                 this.commands = commands;
@@ -302,10 +305,10 @@ public class SetPolicyCommandConfigRequest extends Request {
             } 
 
             /**
-             * <p>The type of command control. Valid values:</p>
+             * <p>The command control type. Valid values:</p>
              * <ul>
-             * <li><strong>black</strong>: blacklist mode.</li>
-             * <li><strong>white</strong>: whitelist mode.</li>
+             * <li><strong>black</strong>: blacklist mode</li>
+             * <li><strong>white</strong>: whitelist mode</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -318,9 +321,9 @@ public class SetPolicyCommandConfigRequest extends Request {
             }
 
             /**
-             * <p>The commands to be controlled.</p>
+             * <p>The list of commands.</p>
              * <blockquote>
-             * <p>This parameter is required if AclType is set to white.</p>
+             * <p>If AclType is set to white, Commands is required.</p>
              * </blockquote>
              */
             public Builder commands(java.util.List<String> commands) {
@@ -391,7 +394,7 @@ public class SetPolicyCommandConfigRequest extends Request {
             /**
              * <p>The command approval settings.</p>
              * <blockquote>
-             * <p>A command approval policy is used to approve the commands that are excluded from a whitelist or blacklist specified in a command control policy. The command control policy takes precedence over the command approval policy in validation.</p>
+             * <p>Command approval applies to commands that are not subject to command control (whitelist or blacklist). Command control policies take precedence over command approval.</p>
              * </blockquote>
              */
             public Builder approval(Approval approval) {

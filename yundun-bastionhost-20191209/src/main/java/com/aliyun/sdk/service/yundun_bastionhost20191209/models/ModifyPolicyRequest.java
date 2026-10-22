@@ -145,7 +145,10 @@ public class ModifyPolicyRequest extends Request {
         } 
 
         /**
-         * <p>The new remarks of the control policy.</p>
+         * <p>The new description of the control policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -154,10 +157,7 @@ public class ModifyPolicyRequest extends Request {
         }
 
         /**
-         * <p>The ID of the bastion host to which the control policy to modify belongs.</p>
-         * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
-         * </blockquote>
+         * <p>The ID of the Bastionhost instance to which the control policy belongs. You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,7 +170,7 @@ public class ModifyPolicyRequest extends Request {
         }
 
         /**
-         * <p>The ID of the control policy that you want to modify.</p>
+         * <p>The ID of the control policy.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -183,7 +183,7 @@ public class ModifyPolicyRequest extends Request {
         }
 
         /**
-         * <p>The new name of the control policy.</p>
+         * <p>The new Policy Name of the control policy.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -195,7 +195,7 @@ public class ModifyPolicyRequest extends Request {
         }
 
         /**
-         * <p>The priority of the modified control policy. Valid values: 1 to 100. The smaller the value, the higher the priority. Default value: 1.</p>
+         * <p>The new priority of the control policy. Valid values: 1 to 100. A smaller value indicates a higher priority. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -207,7 +207,10 @@ public class ModifyPolicyRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -216,10 +219,7 @@ public class ModifyPolicyRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the bastion host to which the control policy to modify belongs.</p>
-         * <blockquote>
-         * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
-         * </blockquote>
+         * <p>The region ID of the Bastionhost instance to which the control policy belongs. For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

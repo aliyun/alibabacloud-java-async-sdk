@@ -130,10 +130,10 @@ public class ListHostGroupsRequest extends Request {
         } 
 
         /**
-         * <p>The name of the host group that you want to query. Only exact match is supported.</p>
+         * <p>The name of the asset group. Only exact match is supported.</p>
          * 
          * <strong>example:</strong>
-         * <p>Host group 1</p>
+         * <p>HostGroup1</p>
          */
         public Builder hostGroupName(String hostGroupName) {
             this.putQueryParameter("HostGroupName", hostGroupName);
@@ -142,9 +142,9 @@ public class ListHostGroupsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the bastion host to query.</p>
+         * <p>The instance ID of the bastion host.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/462953.html">DescribeInstances</a> operation to query the bastion host ID.</p>
+         * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/462953.html">DescribeInstances</a> operation to obtain the value of this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -158,7 +158,7 @@ public class ListHostGroupsRequest extends Request {
         }
 
         /**
-         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * <p>The page number of the current page for paging in a paged query. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -170,9 +170,9 @@ public class ListHostGroupsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+         * <p>The maximum number of entries to return on each page for paging in a paged query. Maximum value: 100. Default value: 20. If this parameter is left empty, 20 entries are returned by default.</p>
          * <blockquote>
-         * <p> We recommend that you do not leave this parameter empty.</p>
+         * <p>Specify a value for this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -185,7 +185,10 @@ public class ListHostGroupsRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -194,7 +197,7 @@ public class ListHostGroupsRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the bastion host in which you want to query the host group.</p>
+         * <p>The region ID of the bastion host.</p>
          * <blockquote>
          * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
          * </blockquote>

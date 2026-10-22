@@ -80,7 +80,10 @@ public class ListUserGroupsForUserResponseBody extends TeaModel {
         } 
 
         /**
-         * Count.
+         * <p>The total number of user groups returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -88,7 +91,10 @@ public class ListUserGroupsForUserResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +102,7 @@ public class ListUserGroupsForUserResponseBody extends TeaModel {
         }
 
         /**
-         * UserGroups.
+         * <p>The list of user groups.</p>
          */
         public Builder userGroups(java.util.List<UserGroups> userGroups) {
             this.userGroups = userGroups;
@@ -201,7 +207,10 @@ public class ListUserGroupsForUserResponseBody extends TeaModel {
             } 
 
             /**
-             * Comment.
+             * <p>The remarks of the user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>comment</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -209,7 +218,10 @@ public class ListUserGroupsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The ID of the project to which the user group belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder projectId(String projectId) {
                 this.projectId = projectId;
@@ -217,7 +229,10 @@ public class ListUserGroupsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectName.
+             * <p>The name of the project to which the user group belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -225,7 +240,10 @@ public class ListUserGroupsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * UserGroupId.
+             * <p>The ID of the user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder userGroupId(String userGroupId) {
                 this.userGroupId = userGroupId;
@@ -233,7 +251,10 @@ public class ListUserGroupsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * UserGroupName.
+             * <p>The name of the user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>group</p>
              */
             public Builder userGroupName(String userGroupName) {
                 this.userGroupName = userGroupName;

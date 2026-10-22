@@ -54,7 +54,10 @@ public class ModifyReviewRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7E68165E-1191-5CC2-B54B-5EF7390A5400</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -93,7 +93,10 @@ public class ModifyHostsProjectResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>81500666-d7f5-4143-8329-0223cc738105</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -101,7 +104,7 @@ public class ModifyHostsProjectResponseBody extends TeaModel {
         }
 
         /**
-         * Results.
+         * <p>The call results of the operation.</p>
          */
         public Builder results(java.util.List<Results> results) {
             this.results = results;
@@ -109,7 +112,10 @@ public class ModifyHostsProjectResponseBody extends TeaModel {
         }
 
         /**
-         * SuccessCount.
+         * <p>The number of hosts that were successfully moved.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder successCount(Long successCount) {
             this.successCount = successCount;
@@ -117,7 +123,10 @@ public class ModifyHostsProjectResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -196,7 +205,10 @@ public class ModifyHostsProjectResponseBody extends TeaModel {
             } 
 
             /**
-             * AssetId.
+             * <p>The host ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder assetId(String assetId) {
                 this.assetId = assetId;
@@ -204,7 +216,10 @@ public class ModifyHostsProjectResponseBody extends TeaModel {
             }
 
             /**
-             * Code.
+             * <p>The error code. A value of <strong>200</strong> indicates that the operation was successful. Other values indicate that the operation failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -212,7 +227,10 @@ public class ModifyHostsProjectResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The result message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder message(String message) {
                 this.message = message;

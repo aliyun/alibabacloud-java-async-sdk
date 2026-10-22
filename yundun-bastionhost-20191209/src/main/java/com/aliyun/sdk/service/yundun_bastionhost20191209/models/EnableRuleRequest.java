@@ -103,9 +103,9 @@ public class EnableRuleRequest extends Request {
         } 
 
         /**
-         * <p>The bastion host ID.</p>
+         * <p>The ID of the bastion host instance.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the instance ID.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -119,7 +119,10 @@ public class EnableRuleRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -130,7 +133,7 @@ public class EnableRuleRequest extends Request {
         /**
          * <p>The region ID of the bastion host.</p>
          * <blockquote>
-         * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * <p>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -143,9 +146,9 @@ public class EnableRuleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the authorization rule that you want to enable.</p>
+         * <p>The ID of the authorization rule to enable.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2758868.html">ListRules</a> operation to query the authorization rule ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2758868.html">ListRules</a> operation to query the rule ID.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

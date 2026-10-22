@@ -133,9 +133,9 @@ public class ModifyHostsPortRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the host for which you want to change the port. The value is a JSON string. You can add up to 100 host IDs. If you specify multiple IDs, separate the IDs with commas (,).</p>
+         * <p>The IDs of the hosts whose O&amp;M protocols and ports you want to modify. The value is a JSON string. You can enter up to 100 host IDs. Separate multiple host IDs with commas (,).</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/200665.html">ListHosts</a> operation to query the IDs of hosts.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/200665.html">ListHosts</a> operation to query the host IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -149,9 +149,9 @@ public class ModifyHostsPortRequest extends Request {
         }
 
         /**
-         * <p>The ID of the bastion host for which you want to change the port of the host.</p>
+         * <p>The ID of the Bastionhost instance where the hosts whose protocol ports you want to modify reside.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the instance ID.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -165,7 +165,7 @@ public class ModifyHostsPortRequest extends Request {
         }
 
         /**
-         * <p>The new port of the host. The port number must be an integer. Valid values: 22 to 65535.</p>
+         * <p>The new port number. The port number must be an integer. Valid values: 22 to 65535.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -178,7 +178,10 @@ public class ModifyHostsPortRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -187,7 +190,7 @@ public class ModifyHostsPortRequest extends Request {
         }
 
         /**
-         * <p>The protocol that is used to connect to the host. Valid values:</p>
+         * <p>The name of the protocol whose port you want to modify. Valid values:</p>
          * <ul>
          * <li><strong>SSH</strong></li>
          * <li><strong>RDP</strong></li>
@@ -204,9 +207,9 @@ public class ModifyHostsPortRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the bastion host for which you want to change the port of the host.</p>
+         * <p>The region ID of the Bastionhost instance where the hosts whose ports you want to modify reside.</p>
          * <blockquote>
-         * <p> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

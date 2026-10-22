@@ -80,7 +80,7 @@ public class ListHostAccountsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>An array that consists of the queried host accounts.</p>
+         * <p>The host accounts returned.</p>
          */
         public Builder hostAccounts(java.util.List<HostAccounts> hostAccounts) {
             this.hostAccounts = hostAccounts;
@@ -99,7 +99,7 @@ public class ListHostAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of host accounts that are queried.</p>
+         * <p>The total number of host accounts returned.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -272,11 +272,10 @@ public class ListHostAccountsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether a password is configured for the host account.</p>
-             * <p>Valid values:</p>
+             * <p>Indicates whether a password is set for the host account. <br>Valid values:</p>
              * <ul>
-             * <li>true: A password is configured for the host account.</li>
-             * <li>false: No passwords are configured for the host account.</li>
+             * <li><strong>true</strong>: A password is set.</li>
+             * <li><strong>false</strong>: No password is set.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -321,7 +320,7 @@ public class ListHostAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the shared key.</p>
+             * <p>The ID of the shared key for the host.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -332,7 +331,7 @@ public class ListHostAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the shared key.</p>
+             * <p>The name of the shared key for the host.</p>
              * 
              * <strong>example:</strong>
              * <p>name</p>
@@ -354,7 +353,17 @@ public class ListHostAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * PrivilegeType.
+             * <p>The permission type of the account. Valid values:</p>
+             * <ul>
+             * <li><strong>Privileged</strong>: Privileged account.</li>
+             * <li><strong>Normal</strong>: Regular account.<blockquote>
+             * <p>This parameter is supported only in V3.2.47 and later.</p>
+             * </blockquote>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder privilegeType(String privilegeType) {
                 this.privilegeType = privilegeType;
@@ -362,8 +371,7 @@ public class ListHostAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The protocol that is used by the host.</p>
-             * <p>Valid values:</p>
+             * <p>The protocol name of the host account. <br>Valid values:</p>
              * <ul>
              * <li>SSH</li>
              * <li>RDP</li>
@@ -378,7 +386,17 @@ public class ListHostAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * RotationMode.
+             * <p>The password rotation mode of the account. Valid values:</p>
+             * <ul>
+             * <li><strong>Privileged</strong>: Uses a privileged account to rotate the password.</li>
+             * <li><strong>Self</strong>: Does not use a privileged account to rotate the password.<blockquote>
+             * <p>This parameter is supported only in V3.2.47 and later.</p>
+             * </blockquote>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Privileged</p>
              */
             public Builder rotationMode(String rotationMode) {
                 this.rotationMode = rotationMode;

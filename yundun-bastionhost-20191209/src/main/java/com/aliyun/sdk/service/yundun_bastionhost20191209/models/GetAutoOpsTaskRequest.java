@@ -102,7 +102,13 @@ public class GetAutoOpsTaskRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>The instance ID of the bastion host.</p>
+         * <blockquote>
+         * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>bastionhost-cn-st220aw****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -111,7 +117,10 @@ public class GetAutoOpsTaskRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -120,7 +129,13 @@ public class GetAutoOpsTaskRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the bastion host.</p>
+         * <blockquote>
+         * <p>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -129,6 +144,7 @@ public class GetAutoOpsTaskRequest extends Request {
         }
 
         /**
+         * <p>The ID of the O&amp;M task to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

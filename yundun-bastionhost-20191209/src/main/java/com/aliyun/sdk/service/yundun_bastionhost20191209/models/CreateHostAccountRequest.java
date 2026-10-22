@@ -217,11 +217,11 @@ public class CreateHostAccountRequest extends Request {
         } 
 
         /**
-         * <p>The name of the host account. The name can be up to 128 characters in length.</p>
+         * <p>The name of the host account to create. The name can be up to 128 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>abc</p>
+         * <p>accountname</p>
          */
         public Builder hostAccountName(String hostAccountName) {
             this.putQueryParameter("HostAccountName", hostAccountName);
@@ -230,9 +230,9 @@ public class CreateHostAccountRequest extends Request {
         }
 
         /**
-         * <p>The ID of the host to which you want to add a host account.</p>
+         * <p>The ID of the host for which you want to create a host account.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/200665.html">ListHosts</a> operation to query the ID of the host.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/200665.html">ListHosts</a> operation to query this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -246,7 +246,7 @@ public class CreateHostAccountRequest extends Request {
         }
 
         /**
-         * <p>The ID of the shared key.</p>
+         * <p>The ID of the shared key for the host.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -258,9 +258,9 @@ public class CreateHostAccountRequest extends Request {
         }
 
         /**
-         * <p>The ID of the bastion host in which you want to add a host account to the host.</p>
+         * <p>The ID of the Bastionhost instance where the host for which you want to create a host account resides.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the Bastionhost instance ID.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -274,13 +274,13 @@ public class CreateHostAccountRequest extends Request {
         }
 
         /**
-         * <p>The passphrase for the private key of the host account.</p>
+         * <p>The passphrase of the private key for the host account to create.</p>
          * <blockquote>
-         * <p>You can configure this parameter only if ProtocolName is set to SSH. You do not need to configure this parameter if ProtocolName is set to RDP.</p>
+         * <p>You can configure this parameter when ProtocolName is set to SSH. You do not need to configure this parameter when ProtocolName is set to RDP.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>123456</p>
          */
         public Builder passPhrase(String passPhrase) {
             this.putQueryParameter("PassPhrase", passPhrase);
@@ -289,10 +289,10 @@ public class CreateHostAccountRequest extends Request {
         }
 
         /**
-         * <p>The password of the host account.</p>
+         * <p>The password of the host account to create.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>123456</p>
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -301,13 +301,13 @@ public class CreateHostAccountRequest extends Request {
         }
 
         /**
-         * <p>The private key of the host account. Specify a Base64-encoded string.</p>
+         * <p>The private key of the host account to create. The value is a Base64-encoded string.</p>
          * <blockquote>
-         * <p>This parameter is valid only if ProtocolName is set to SSH. You do not need to configure this parameter if ProtocolName is set to RDP. You can configure a password and a private key for the host account at the same time. If both a password and a private key are configured for the host account, Bastionhost preferentially uses the private key for logon.</p>
+         * <p>This parameter takes effect only when ProtocolName is set to SSH. You do not need to configure this parameter when ProtocolName is set to RDP. You can configure both a password and a private key for the host account. When connecting to an asset, Bastionhost preferentially uses the private key.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>LS0tLS1******RCBSU0tLQ==</p>
          */
         public Builder privateKey(String privateKey) {
             this.putQueryParameter("PrivateKey", privateKey);
@@ -316,7 +316,17 @@ public class CreateHostAccountRequest extends Request {
         }
 
         /**
-         * PrivilegeType.
+         * <p>The privilege type of the account. Default value: Normal.</p>
+         * <ul>
+         * <li><strong>Privileged</strong>: privileged account.</li>
+         * <li><strong>Normal</strong>: standard account.<blockquote>
+         * <p>Only supported in V3.2.47 and later.</p>
+         * </blockquote>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder privilegeType(String privilegeType) {
             this.putQueryParameter("PrivilegeType", privilegeType);
@@ -325,7 +335,10 @@ public class CreateHostAccountRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -334,8 +347,8 @@ public class CreateHostAccountRequest extends Request {
         }
 
         /**
-         * <p>The protocol of the host to which you want to add a host account.</p>
-         * <p>Valid values:</p>
+         * <p>The protocol name of the host account to create.
+         * <br>Valid values:</p>
          * <ul>
          * <li>SSH</li>
          * <li>RDP</li>
@@ -352,9 +365,9 @@ public class CreateHostAccountRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the bastion host in which you want to add a host account to the host.</p>
+         * <p>The region ID of the Bastionhost instance where the host for which you want to create a host account resides.</p>
          * <blockquote>
-         * <p> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -367,7 +380,17 @@ public class CreateHostAccountRequest extends Request {
         }
 
         /**
-         * RotationMode.
+         * <p>The password change mode of the account. Default value: Self.</p>
+         * <ul>
+         * <li><strong>Privileged</strong>: uses a privileged account to change the password.</li>
+         * <li><strong>Self</strong>: does not use a privileged account to change the password.<blockquote>
+         * <p>Only supported in V3.2.47 and later.</p>
+         * </blockquote>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Self</p>
          */
         public Builder rotationMode(String rotationMode) {
             this.putQueryParameter("RotationMode", rotationMode);

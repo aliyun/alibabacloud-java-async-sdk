@@ -80,7 +80,7 @@ public class ListHostShareKeysResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>An array that consists of the shared keys.</p>
+         * <p>The host shared keys.</p>
          */
         public Builder hostShareKeys(java.util.List<HostShareKeys> hostShareKeys) {
             this.hostShareKeys = hostShareKeys;
@@ -88,7 +88,7 @@ public class ListHostShareKeysResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
@@ -99,7 +99,7 @@ public class ListHostShareKeysResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of the shared keys.</p>
+         * <p>The total number of host shared keys returned.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -207,7 +207,7 @@ public class ListHostShareKeysResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of the associated host accounts.</p>
+             * <p>The number of associated host accounts.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -218,7 +218,7 @@ public class ListHostShareKeysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The shared key ID.</p>
+             * <p>The ID of the host shared key.</p>
              * 
              * <strong>example:</strong>
              * <p>10247</p>
@@ -229,7 +229,7 @@ public class ListHostShareKeysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the shared key.</p>
+             * <p>The name of the host shared key.</p>
              * 
              * <strong>example:</strong>
              * <p>name</p>
@@ -240,7 +240,7 @@ public class ListHostShareKeysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the shared key was last modified. The value is a UNIX timestamp. Unit: seconds.</p>
+             * <p>The time when the key was last modified. The value is a UNIX timestamp in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1644806406</p>
@@ -254,7 +254,7 @@ public class ListHostShareKeysResponseBody extends TeaModel {
              * <p>The fingerprint of the private key.</p>
              * 
              * <strong>example:</strong>
-             * <hr>
+             * <p>aa:10:f5:21:7f:8b:3e:86:b0:8b:f0:e0******</p>
              */
             public Builder privateKeyFingerPrint(String privateKeyFingerPrint) {
                 this.privateKeyFingerPrint = privateKeyFingerPrint;

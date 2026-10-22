@@ -67,7 +67,7 @@ public class CreateDatabaseAccountResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the database account.</p>
+         * <p>The database account ID.</p>
          * 
          * <strong>example:</strong>
          * <p>40</p>

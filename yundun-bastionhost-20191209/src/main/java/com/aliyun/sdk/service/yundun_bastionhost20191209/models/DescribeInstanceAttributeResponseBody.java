@@ -67,7 +67,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The attribute information about the bastion host.</p>
+         * <p>The instance attribute information.</p>
          */
         public Builder instanceAttribute(InstanceAttribute instanceAttribute) {
             this.instanceAttribute = instanceAttribute;
@@ -75,7 +75,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>082FAB35-6AB9-4FD5-8750-D36673548E76</p>
@@ -146,7 +146,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             /**
              * <p>The custom port.</p>
              * <blockquote>
-             * <p>Only the SSH and RDP ports can be changed. If no custom O&amp;M port is specified for the bastion host, the value of StandardPort is returned.</p>
+             * <p>Only SSH and RDP ports can be modified. If no custom O&amp;M port is specified for the Bastionhost instance, the standard port is returned.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -158,11 +158,11 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The standard port of the bastion host. Valid values:</p>
+             * <p>The standard port of the Bastionhost instance. Valid values:</p>
              * <ul>
-             * <li><strong>SSH</strong>: 60022.</li>
-             * <li><strong>RDP</strong>: 63389.</li>
-             * <li><strong>HTTPS</strong>: 443.</li>
+             * <li><strong>SSH</strong>: 60022</li>
+             * <li><strong>RDP</strong>: 63389</li>
+             * <li><strong>HTTPS</strong>: 443</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -233,7 +233,10 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The description of the whitelist rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -241,7 +244,10 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Entry.
+             * <p>The IP address whitelist to be configured. You can configure up to 50 IP addresses. Separate multiple IP addresses with commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>94.74.xx.xx/32</p>
              */
             public Builder entry(String entry) {
                 this.entry = entry;
@@ -264,6 +270,15 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     public static class InstanceAttribute extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AiCreditStatus")
         private String aiCreditStatus;
+
+        @com.aliyun.core.annotation.NameInMap("AiCreditsTotal")
+        private Long aiCreditsTotal;
+
+        @com.aliyun.core.annotation.NameInMap("AiCreditsUs")
+        private Long aiCreditsUs;
+
+        @com.aliyun.core.annotation.NameInMap("AiOpsAuditStatus")
+        private String aiOpsAuditStatus;
 
         @com.aliyun.core.annotation.NameInMap("AiOpsModule")
         private String aiOpsModule;
@@ -384,6 +399,9 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
 
         private InstanceAttribute(Builder builder) {
             this.aiCreditStatus = builder.aiCreditStatus;
+            this.aiCreditsTotal = builder.aiCreditsTotal;
+            this.aiCreditsUs = builder.aiCreditsUs;
+            this.aiOpsAuditStatus = builder.aiOpsAuditStatus;
             this.aiOpsModule = builder.aiOpsModule;
             this.appOperationModule = builder.appOperationModule;
             this.authorizedSecurityGroups = builder.authorizedSecurityGroups;
@@ -438,6 +456,27 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
          */
         public String getAiCreditStatus() {
             return this.aiCreditStatus;
+        }
+
+        /**
+         * @return aiCreditsTotal
+         */
+        public Long getAiCreditsTotal() {
+            return this.aiCreditsTotal;
+        }
+
+        /**
+         * @return aiCreditsUs
+         */
+        public Long getAiCreditsUs() {
+            return this.aiCreditsUs;
+        }
+
+        /**
+         * @return aiOpsAuditStatus
+         */
+        public String getAiOpsAuditStatus() {
+            return this.aiOpsAuditStatus;
         }
 
         /**
@@ -715,6 +754,9 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
 
         public static final class Builder {
             private String aiCreditStatus; 
+            private Long aiCreditsTotal; 
+            private Long aiCreditsUs; 
+            private String aiOpsAuditStatus; 
             private String aiOpsModule; 
             private String appOperationModule; 
             private java.util.List<String> authorizedSecurityGroups; 
@@ -760,6 +802,9 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
 
             private Builder(InstanceAttribute model) {
                 this.aiCreditStatus = model.aiCreditStatus;
+                this.aiCreditsTotal = model.aiCreditsTotal;
+                this.aiCreditsUs = model.aiCreditsUs;
+                this.aiOpsAuditStatus = model.aiOpsAuditStatus;
                 this.aiOpsModule = model.aiOpsModule;
                 this.appOperationModule = model.appOperationModule;
                 this.authorizedSecurityGroups = model.authorizedSecurityGroups;
@@ -802,7 +847,10 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * AiCreditStatus.
+             * <p>The AI credit status (Available/Exhausted).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder aiCreditStatus(String aiCreditStatus) {
                 this.aiCreditStatus = aiCreditStatus;
@@ -810,7 +858,43 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * AiOpsModule.
+             * <p>The total number of AI credits in the package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder aiCreditsTotal(Long aiCreditsTotal) {
+                this.aiCreditsTotal = aiCreditsTotal;
+                return this;
+            }
+
+            /**
+             * <p>The number of used AI credits in the package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder aiCreditsUs(Long aiCreditsUs) {
+                this.aiCreditsUs = aiCreditsUs;
+                return this;
+            }
+
+            /**
+             * <p>The AI O&amp;M audit status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Disabled</p>
+             */
+            public Builder aiOpsAuditStatus(String aiOpsAuditStatus) {
+                this.aiOpsAuditStatus = aiOpsAuditStatus;
+                return this;
+            }
+
+            /**
+             * <p>The switch status of the intelligent O&amp;M module (Enable/Disable).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Enable</p>
              */
             public Builder aiOpsModule(String aiOpsModule) {
                 this.aiOpsModule = aiOpsModule;
@@ -818,7 +902,10 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * AppOperationModule.
+             * <p>The application O&amp;M module. Valid values: Enable and Disable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Enable</p>
              */
             public Builder appOperationModule(String appOperationModule) {
                 this.appOperationModule = appOperationModule;
@@ -826,7 +913,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IDs of authorized security groups.</p>
+             * <p>The list of authorized security group IDs.</p>
              */
             public Builder authorizedSecurityGroups(java.util.List<String> authorizedSecurityGroups) {
                 this.authorizedSecurityGroups = authorizedSecurityGroups;
@@ -834,7 +921,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total bandwidth of the bastion host.</p>
+             * <p>The total bandwidth of the Bastionhost instance.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -845,7 +932,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The bandwidth plan ID.</p>
+             * <p>The extended bandwidth plan of the Bastionhost instance.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -856,7 +943,11 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the database O&amp;M feature.</p>
+             * <p>The database O&amp;M status. Valid values:</p>
+             * <ul>
+             * <li><strong>Enable</strong>: Database O&amp;M is supported.</li>
+             * <li><strong>Disable</strong>: Database O&amp;M is not supported.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Disable</p>
@@ -867,7 +958,10 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the instance.</p>
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test API</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -875,7 +969,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Elastic Network Interface (ENI).</p>
+             * <p>The ID of the elastic network interface controller (NIC).</p>
              * 
              * <strong>example:</strong>
              * <p>eni-bp1455jrzwm7moaxxxxx</p>
@@ -886,7 +980,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the instance expires.</p>
+             * <p>The expiration timestamp of the Bastionhost instance. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1578326400000</p>
@@ -897,7 +991,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * HSMModule.
+             * <p>The status of the HSM hardware encryption module. Indicates whether the Bastionhost instance is integrated with an HSM.</p>
              */
             public Builder HSMModule(String HSMModule) {
                 this.HSMModule = HSMModule;
@@ -905,7 +999,10 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * IDaaSModule.
+             * <p>The IDaaS integration module. Valid values: Enable and Disable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Enable</p>
              */
             public Builder iDaaSModule(String iDaaSModule) {
                 this.iDaaSModule = iDaaSModule;
@@ -913,7 +1010,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance.</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>bastionhost-cn-78v1ghxxxxx</p>
@@ -924,15 +1021,15 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the instance. Valid values:</p>
+             * <p>The instance status. Valid values:</p>
              * <ul>
-             * <li>PENDING: The instance is not initialized.</li>
-             * <li>CREATING: The instance is being created.</li>
-             * <li>RUNNING: The instance is running.</li>
-             * <li>EXPIRED: The instance expired.</li>
-             * <li>CREATE_FAILED: The instance fails to be created.</li>
-             * <li>UPGRADING: The configurations of the instance are being changed.</li>
-             * <li>UPGRADE_FAILED: The configurations of the instance fail to be changed.</li>
+             * <li><strong>PENDING</strong>: Uninitialized.</li>
+             * <li><strong>CREATING</strong>: Creating.</li>
+             * <li><strong>RUNNING</strong>: Running.</li>
+             * <li><strong>EXPIRED</strong>: Expired.</li>
+             * <li><strong>CREATE_FAILED</strong>: Creation failed.</li>
+             * <li><strong>UPGRADING</strong>: Upgrading or downgrading.</li>
+             * <li><strong>UPGRADE_FAILED</strong>: Upgrade or downgrade failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -944,10 +1041,10 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public endpoint.</p>
+             * <p>The public domain name.</p>
              * 
              * <strong>example:</strong>
-             * <p>drawvxalwb-public.bastionhost.aliyuncs.com</p>
+             * <p>******lwb-public.bastionhost.aliyuncs.com</p>
              */
             public Builder internetEndpoint(String internetEndpoint) {
                 this.internetEndpoint = internetEndpoint;
@@ -955,10 +1052,10 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The private endpoint.</p>
+             * <p>The internal domain name.</p>
              * 
              * <strong>example:</strong>
-             * <p>drawvxalwb.bastionhost.aliyuncs.com</p>
+             * <p>******xalwb.bastionhost.aliyuncs.com</p>
              */
             public Builder intranetEndpoint(String intranetEndpoint) {
                 this.intranetEndpoint = intranetEndpoint;
@@ -966,7 +1063,10 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * KmsSecretModule.
+             * <p>The KMS Secrets Manager integration module. Valid values: Enable and Disable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Enable</p>
              */
             public Builder kmsSecretModule(String kmsSecretModule) {
                 this.kmsSecretModule = kmsSecretModule;
@@ -985,10 +1085,10 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the automatic password change feature.</p>
+             * <p>The status of the password change task feature. Valid values:</p>
              * <ul>
-             * <li><strong>Enable</strong></li>
-             * <li><strong>Disable</strong></li>
+             * <li><strong>Enable</strong>: Enabled.</li>
+             * <li><strong>Disable</strong>: Disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1000,10 +1100,10 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the network domain feature.</p>
+             * <p>The network domain proxy status. Valid values:</p>
              * <ul>
-             * <li><strong>Enable</strong></li>
-             * <li><strong>Disable</strong></li>
+             * <li><strong>Enable</strong>: The network domain proxy mode is supported.</li>
+             * <li><strong>Disable</strong>: The network domain proxy mode is not supported.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1015,7 +1115,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>An array that consists of the O&amp;M ports of the bastion host.</p>
+             * <p>The O&amp;M ports of the Bastionhost instance.</p>
              */
             public Builder ports(java.util.List<Ports> ports) {
                 this.ports = ports;
@@ -1023,7 +1123,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>An array that consists of the egress private IP addresses of the bastion host.</p>
+             * <p>The list of internal outbound IP addresses of the Bastionhost instance.</p>
              */
             public Builder privateExportIps(java.util.List<String> privateExportIps) {
                 this.privateExportIps = privateExportIps;
@@ -1031,7 +1131,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The private IP addresses that are allowed to access the instance.</p>
+             * <p>The list of IP addresses in the internal network whitelist.</p>
              */
             public Builder privateWhiteList(java.util.List<String> privateWhiteList) {
                 this.privateWhiteList = privateWhiteList;
@@ -1039,7 +1139,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>An array that consists of the egress public IP addresses of the bastion host.</p>
+             * <p>The list of public outbound IP addresses of the Bastionhost instance.</p>
              */
             public Builder publicExportIps(java.util.List<String> publicExportIps) {
                 this.publicExportIps = publicExportIps;
@@ -1047,7 +1147,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public IP address.</p>
+             * <p>The list of public IP addresses of the Bastionhost instance.</p>
              */
             public Builder publicIps(java.util.List<String> publicIps) {
                 this.publicIps = publicIps;
@@ -1055,7 +1155,11 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the Bastionhost instance can be accessed over the Internet.</p>
+             * <p>Indicates whether the Bastionhost instance can be accessed over the Internet. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The Bastionhost instance can be accessed over the Internet.</li>
+             * <li><strong>false</strong>: The Bastionhost instance cannot be accessed over the Internet.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1066,7 +1170,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public IP addresses that are allowed to access the instance.</p>
+             * <p>The list of IP addresses in the public network whitelist of the Bastionhost instance.</p>
              */
             public Builder publicWhiteList(java.util.List<String> publicWhiteList) {
                 this.publicWhiteList = publicWhiteList;
@@ -1074,7 +1178,10 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * RDModule.
+             * <p>The multi-account module. Valid values: Enable and Disable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Enable</p>
              */
             public Builder RDModule(String RDModule) {
                 this.RDModule = RDModule;
@@ -1096,7 +1203,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
              * <p>The ID of the resource group to which the instance belongs.</p>
              * 
              * <strong>example:</strong>
-             * <p>rg-aekzc427dbl2shy</p>
+             * <p>rg-aekzc427db******</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1104,7 +1211,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * RouterRules.
+             * <p>The list of rules for the Bastionhost instance.</p>
              */
             public Builder routerRules(java.util.List<String> routerRules) {
                 this.routerRules = routerRules;
@@ -1112,7 +1219,10 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ScriptDeliverModule.
+             * <p>The script O&amp;M module. Valid values: Enable and Disable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Enable</p>
              */
             public Builder scriptDeliverModule(String scriptDeliverModule) {
                 this.scriptDeliverModule = scriptDeliverModule;
@@ -1120,7 +1230,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IDs of the security groups to which the instance belongs.</p>
+             * <p>The list of security group IDs to which the instance belongs.</p>
              */
             public Builder securityGroupIds(java.util.List<String> securityGroupIds) {
                 this.securityGroupIds = securityGroupIds;
@@ -1128,7 +1238,10 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * SlaveVswitchId.
+             * <p>The ID of the secondary vSwitch bound to the Bastionhost instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-uf6cmnae7hu5****</p>
              */
             public Builder slaveVswitchId(String slaveVswitchId) {
                 this.slaveVswitchId = slaveVswitchId;
@@ -1136,7 +1249,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the instance started.</p>
+             * <p>The timestamp when the Bastionhost instance was purchased or renewed. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1577681345000</p>
@@ -1147,7 +1260,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage capacity of the bastion host. Unit: bytes.</p>
+             * <p>The total purchased storage capacity of the Bastionhost instance. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>2199023255552</p>
@@ -1158,7 +1271,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the VPC to which the instance belongs.</p>
+             * <p>The ID of the VPC to which the instance is connected.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-bp1c85tzgqu1bf5bxxxxx</p>
@@ -1169,7 +1282,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the vSwitch to which the instance connects.</p>
+             * <p>The ID of the vSwitch to which the instance is connected.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-bp1xfwzzfti0kjbfxxxxx</p>
@@ -1180,10 +1293,10 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the web terminal.</p>
+             * <p>The Web Terminal status. Valid values:</p>
              * <ul>
-             * <li><strong>Enable</strong></li>
-             * <li><strong>Disable</strong></li>
+             * <li><strong>Enable</strong>: Web remote connection is supported.</li>
+             * <li><strong>Disable</strong>: Web remote connection is not supported.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1195,7 +1308,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * WhiteListPolicies.
+             * <p>The IP address whitelist to be configured.</p>
              */
             public Builder whiteListPolicies(java.util.List<WhiteListPolicies> whiteListPolicies) {
                 this.whiteListPolicies = whiteListPolicies;

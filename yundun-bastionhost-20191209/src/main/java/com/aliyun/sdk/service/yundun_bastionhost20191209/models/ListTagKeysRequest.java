@@ -117,7 +117,7 @@ public class ListTagKeysRequest extends Request {
         } 
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The page number of the current page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -129,7 +129,7 @@ public class ListTagKeysRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The maximum number of entries to return on each page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -141,7 +141,7 @@ public class ListTagKeysRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the bastion host.</p>
+         * <p>The region ID of the Bastionhost instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,7 +154,10 @@ public class ListTagKeysRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2jpqvnr6yd3a</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -163,8 +166,10 @@ public class ListTagKeysRequest extends Request {
         }
 
         /**
-         * <p>The type of the resource.</p>
-         * <p>Set the value to INSTANCE, which indicates that the resource is a bastion host.</p>
+         * <p>The resource type definition. Valid values:</p>
+         * <ul>
+         * <li>INSTANCE: Bastionhost instance.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

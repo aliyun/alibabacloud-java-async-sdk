@@ -320,8 +320,10 @@ public class GetInstanceLDAPAuthServerResponseBody extends TeaModel {
             /**
              * <p>Indicates whether passwords are required. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: required</li>
-             * <li><strong>false</strong>: not required</li>
+             * <li><p><strong>true</strong>: required</p>
+             * </li>
+             * <li><p><strong>false</strong>: not required</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -335,8 +337,10 @@ public class GetInstanceLDAPAuthServerResponseBody extends TeaModel {
             /**
              * <p>Indicates whether SSL is supported. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: supported</li>
-             * <li><strong>false</strong>: not supported</li>
+             * <li><p><strong>true</strong>: supported</p>
+             * </li>
+             * <li><p><strong>false</strong>: not supported</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

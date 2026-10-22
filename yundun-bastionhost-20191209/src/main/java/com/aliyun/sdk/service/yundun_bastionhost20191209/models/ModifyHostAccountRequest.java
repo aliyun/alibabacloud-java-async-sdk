@@ -201,9 +201,9 @@ public class ModifyHostAccountRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the host account whose information you want to modify.</p>
+         * <p>The ID of the host account to modify.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/204372.html">ListHostAccounts</a> operation to query the ID of the host account.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/204372.html">ListHostAccounts</a> operation to obtain this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -229,9 +229,9 @@ public class ModifyHostAccountRequest extends Request {
         }
 
         /**
-         * <p>The ID of the shared key that is associated with the host.</p>
+         * <p>The ID of the shared key for the host.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/462973.html">ListHostShareKeys</a> operation to query the shared key ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/462973.html">ListHostShareKeys</a> operation to obtain this ID.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -244,9 +244,9 @@ public class ModifyHostAccountRequest extends Request {
         }
 
         /**
-         * <p>The ID of the bastion host in which you want to modify the information about the host account.</p>
+         * <p>The ID of the bastion host instance where the host account to modify resides.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain the bastion host instance ID.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -260,13 +260,13 @@ public class ModifyHostAccountRequest extends Request {
         }
 
         /**
-         * <p>The passphrase for the new private key of the host account.</p>
+         * <p>The new passphrase of the private key for the host account.</p>
          * <blockquote>
-         * <p> This parameter is valid only if the protocol used by the host is SSH. You do not need to configure this parameter if the protocol used by the host is Remote Desktop Protocol (RDP).</p>
+         * <p>This parameter takes effect only when the protocol of the host account is SSH. If the protocol is RDP, you do not need to configure this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>123456</p>
          */
         public Builder passPhrase(String passPhrase) {
             this.putQueryParameter("PassPhrase", passPhrase);
@@ -278,7 +278,7 @@ public class ModifyHostAccountRequest extends Request {
          * <p>The new password of the host account.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>123456</p>
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -287,13 +287,15 @@ public class ModifyHostAccountRequest extends Request {
         }
 
         /**
-         * <p>The new private key of the host account. Specify a Base64-encoded string.</p>
+         * <p>The new private key of the host account. The private key is a Base64-encoded string.</p>
          * <blockquote>
-         * <p> This parameter takes effect only if the protocol used by the host is SSH. You do not need to configure this parameter if the protocol used by the host is Remote Desktop Protocol (RDP). You can call the <a href="https://help.aliyun.com/document_detail/204391.html">GetHostAccount</a> operation to query the protocol used by the host. You can configure a password and a private key for the host account at the same time. If both a password and a private key are configured for the host account, Bastionhost preferentially uses the private key for logon.</p>
+         * <p>This parameter takes effect only when the protocol of the host account is SSH. If the protocol is RDP, you do not need to configure this parameter. You can call the <a href="https://help.aliyun.com/document_detail/204391.html">GetHostAccount</a> operation to query the protocol used by the host account. You can configure both a password and a private key for the host account. When connecting to an asset, the bastion host preferentially uses the private key.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>-----BEGIN RSA PRIVATE KEY-----
+         * ......
+         * -----END RSA PRIVATE KEY-----</p>
          */
         public Builder privateKey(String privateKey) {
             this.putQueryParameter("PrivateKey", privateKey);
@@ -302,7 +304,17 @@ public class ModifyHostAccountRequest extends Request {
         }
 
         /**
-         * PrivilegeType.
+         * <p>The privilege type of the account. Valid values:</p>
+         * <ul>
+         * <li><strong>Privileged</strong>: privileged account.</li>
+         * <li><strong>Normal</strong>: standard account.<blockquote>
+         * <p>Only supported in V3.2.47 and later.</p>
+         * </blockquote>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder privilegeType(String privilegeType) {
             this.putQueryParameter("PrivilegeType", privilegeType);
@@ -311,7 +323,10 @@ public class ModifyHostAccountRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The ID of the project to which the host of the host account belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -320,9 +335,9 @@ public class ModifyHostAccountRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the bastion host in which you want to query the details of the host account.</p>
+         * <p>The region ID of the bastion host instance where the host account to query resides.</p>
          * <blockquote>
-         * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * <p>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -335,7 +350,17 @@ public class ModifyHostAccountRequest extends Request {
         }
 
         /**
-         * RotationMode.
+         * <p>The password rotation mode of the account. Valid values:</p>
+         * <ul>
+         * <li><strong>Privileged</strong>: uses a privileged account to rotate the password.</li>
+         * <li><strong>Self</strong>: does not use a privileged account to rotate the password.<blockquote>
+         * <p>Only supported in V3.2.47 and later.</p>
+         * </blockquote>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Self</p>
          */
         public Builder rotationMode(String rotationMode) {
             this.putQueryParameter("RotationMode", rotationMode);

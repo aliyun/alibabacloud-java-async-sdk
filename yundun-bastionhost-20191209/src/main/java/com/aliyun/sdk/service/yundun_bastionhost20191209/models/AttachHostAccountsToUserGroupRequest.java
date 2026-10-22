@@ -118,9 +118,9 @@ public class AttachHostAccountsToUserGroupRequest extends Request {
         } 
 
         /**
-         * <p>The IDs of the host and host account that you want to authorize the user group to manage. You can specify up to 10 host IDs and up to 10 host account IDs for each host. You can specify only host IDs. In this case, the user group is authorized to manage only the specified hosts. For more information about this parameter, see the &quot;Description of the Hosts parameter&quot; section of this topic.</p>
+         * <p>The host IDs and host account IDs that you want to authorize the user group to manage. You can specify up to 10 host IDs, and each host supports up to 10 host account IDs. You do not need to specify host account IDs. If you do not specify host account IDs, only the hosts are authorized for the user group. For the specific structure of this parameter, see the Hosts parameter structure description under the request parameters list.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/200665.html">ListHosts</a> operation to query the ID of the host and the <a href="https://help.aliyun.com/document_detail/204372.html">ListHostAccounts</a> operation to query the ID of the host account.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/200665.html">ListHosts</a> operation to query host IDs and call the <a href="https://help.aliyun.com/document_detail/204372.html">ListHostAccounts</a> operation to query host account IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -134,9 +134,9 @@ public class AttachHostAccountsToUserGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the bastion host in which you want to authorize the user group to manage the specified hosts and host accounts.</p>
+         * <p>The instance ID of the bastion host where the user group that you want to grant authorization resides.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -150,7 +150,10 @@ public class AttachHostAccountsToUserGroupRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -159,9 +162,9 @@ public class AttachHostAccountsToUserGroupRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the bastion host in which you want to authorize the user group to manage the specified hosts and host accounts.</p>
+         * <p>The region ID of the bastion host where the user group that you want to authorize resides.</p>
          * <blockquote>
-         * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * <p>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -174,9 +177,9 @@ public class AttachHostAccountsToUserGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the user group that you want to authorize to manage the specified hosts and host accounts.</p>
+         * <p>The ID of the user group that you want to authorize to manage hosts and host accounts.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/204509.html">ListUserGroups</a> operation to query the ID of the user group.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/204509.html">ListUserGroups</a> operation to query this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

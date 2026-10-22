@@ -118,7 +118,10 @@ public class ModifyHostsProjectRequest extends Request {
         } 
 
         /**
-         * <p>JSON编码的主机ID数组，如[&quot;1&quot;,&quot;2&quot;]，最多100条</p>
+         * <p>The IDs of the hosts that you want to move. This parameter is a JSON-formatted string. You can specify up to 100 host IDs. Separate multiple host IDs with commas (,).</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/200665.html">ListHosts</a> operation to query this parameter.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,6 +134,10 @@ public class ModifyHostsProjectRequest extends Request {
         }
 
         /**
+         * <p>The instance ID of the bastion host.</p>
+         * <blockquote>
+         * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query this parameter.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,7 +150,10 @@ public class ModifyHostsProjectRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The ID of the project to which the hosts currently belong.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -152,7 +162,13 @@ public class ModifyHostsProjectRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the bastion host.</p>
+         * <blockquote>
+         * <p>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -161,7 +177,10 @@ public class ModifyHostsProjectRequest extends Request {
         }
 
         /**
-         * <p>目标项目ID</p>
+         * <p>The ID of the target project to which you want to move the hosts.</p>
+         * <blockquote>
+         * <p>You can call the ListProjectsForProjectAuthorizationPrincipal operation to query this parameter.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -67,7 +67,7 @@ public class AttachHostAccountsToUserGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
@@ -78,7 +78,7 @@ public class AttachHostAccountsToUserGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result of the call.</p>
+         * <p>The call results of the operation.</p>
          */
         public Builder results(java.util.List<Results> results) {
             this.results = results;
@@ -157,13 +157,13 @@ public class AttachHostAccountsToUserGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The return code that indicates whether the user group was authorized to manage the specified host account. Valid values:</p>
+             * <p>The result code of the host account authorization operation. Valid values:</p>
              * <ul>
-             * <li><strong>OK</strong>: The call was successful.</li>
+             * <li><strong>OK</strong>: The operation was successful.</li>
              * <li><strong>UNEXPECTED</strong>: An unknown error occurred.</li>
-             * <li><strong>INVALID_ARGUMENT</strong>: A request parameter is invalid.</li>
-             * <li><strong>OBJECT_NOT_FOUND</strong>: The specified object on which you want to perform the operation does not exist.</li>
-             * <li><strong>OBJECT_AlREADY_EXISTS</strong>: The specified object on which you want to perform the operation already exists.</li>
+             * <li><strong>INVALID_ARGUMENT</strong>: The request parameters are invalid.</li>
+             * <li><strong>OBJECT_NOT_FOUND</strong>: The specified object does not exist.</li>
+             * <li><strong>OBJECT_AlREADY_EXISTS</strong>: The specified object already exists.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -175,7 +175,7 @@ public class AttachHostAccountsToUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the host account.</p>
+             * <p>The host account ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -186,10 +186,10 @@ public class AttachHostAccountsToUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This parameter is deprecated.</p>
+             * <p>This parameter is deprecated and can be ignored.</p>
              * 
              * <strong>example:</strong>
-             * <p>N/A</p>
+             * <p>None</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -295,13 +295,13 @@ public class AttachHostAccountsToUserGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The return code that indicates whether the call was successful. Valid values:</p>
+             * <p>The result code of the operation. Valid values:</p>
              * <ul>
-             * <li><strong>OK</strong>: The call was successful.</li>
+             * <li><strong>OK</strong>: The operation was successful.</li>
              * <li><strong>UNEXPECTED</strong>: An unknown error occurred.</li>
-             * <li><strong>INVALID_ARGUMENT</strong>: A request parameter is invalid.</li>
-             * <li><strong>OBJECT_NOT_FOUND</strong>: The specified object on which you want to perform the operation does not exist.</li>
-             * <li><strong>OBJECT_AlREADY_EXISTS</strong>: The specified object on which you want to perform the operation already exists.</li>
+             * <li><strong>INVALID_ARGUMENT</strong>: The request parameters are invalid.</li>
+             * <li><strong>OBJECT_NOT_FOUND</strong>: The specified object does not exist.</li>
+             * <li><strong>OBJECT_AlREADY_EXISTS</strong>: The specified object already exists.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -313,7 +313,7 @@ public class AttachHostAccountsToUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The result of authorizing the specified user group to manage the specified host accounts.</p>
+             * <p>The results of authorizing host accounts for the user group.</p>
              */
             public Builder hostAccounts(java.util.List<HostAccounts> hostAccounts) {
                 this.hostAccounts = hostAccounts;
@@ -321,7 +321,7 @@ public class AttachHostAccountsToUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the host.</p>
+             * <p>The host ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -332,10 +332,10 @@ public class AttachHostAccountsToUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This parameter is deprecated.</p>
+             * <p>This parameter is deprecated and can be ignored.</p>
              * 
              * <strong>example:</strong>
-             * <p>N/A</p>
+             * <p>None</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -343,7 +343,7 @@ public class AttachHostAccountsToUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the user group.</p>
+             * <p>The user group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

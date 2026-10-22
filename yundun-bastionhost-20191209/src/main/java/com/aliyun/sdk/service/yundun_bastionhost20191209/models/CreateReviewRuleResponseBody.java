@@ -67,7 +67,10 @@ public class CreateReviewRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The unique identifier that Alibaba Cloud generated for the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class CreateReviewRuleResponseBody extends TeaModel {
         }
 
         /**
-         * ReviewRuleId.
+         * <p>The ID of the audit policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder reviewRuleId(String reviewRuleId) {
             this.reviewRuleId = reviewRuleId;

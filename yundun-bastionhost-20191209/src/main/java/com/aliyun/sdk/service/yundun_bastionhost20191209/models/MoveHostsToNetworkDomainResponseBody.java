@@ -67,7 +67,7 @@ public class MoveHostsToNetworkDomainResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>F9B9E190-9C8E-5FEE-B963-7E9F1FD7FB4E</p>
@@ -78,7 +78,7 @@ public class MoveHostsToNetworkDomainResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result of the call.</p>
+         * <p>The results of the operation.</p>
          */
         public Builder results(java.util.List<Results> results) {
             this.results = results;
@@ -157,9 +157,9 @@ public class MoveHostsToNetworkDomainResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The return code that indicates whether the host is added to the network domain.</p>
+             * <p>The result of the operation.</p>
              * <blockquote>
-             * <p>The code LICENSE_OUT_OF_LIMIT indicates that the network domain feature is not supported by the current Bastionhost edition.</p>
+             * <p>LICENSE_OUT_OF_LIMIT indicates that the network domain feature is not enabled for the current edition.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -171,7 +171,7 @@ public class MoveHostsToNetworkDomainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The host ID.</p>
+             * <p>The ID of the host.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -182,7 +182,10 @@ public class MoveHostsToNetworkDomainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error message that is returned.</p>
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder message(String message) {
                 this.message = message;

@@ -103,6 +103,10 @@ public class AttachReviewersToReviewRuleRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the bastion host instance.</p>
+         * <blockquote>
+         * <p>You can call the DescribeInstances operation to obtain the bastion host instance ID.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +119,7 @@ public class AttachReviewersToReviewRuleRequest extends Request {
         }
 
         /**
-         * Principals.
+         * <p>The information about the auditors associated with the audit policy.</p>
          */
         public Builder principals(java.util.List<Principals> principals) {
             this.putQueryParameter("Principals", principals);
@@ -124,7 +128,13 @@ public class AttachReviewersToReviewRuleRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the bastion host.</p>
+         * <blockquote>
+         * <p>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -133,6 +143,10 @@ public class AttachReviewersToReviewRuleRequest extends Request {
         }
 
         /**
+         * <p>The ID of the audit policy.</p>
+         * <blockquote>
+         * <p>You can call the ListReviewRules operation to obtain this parameter.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -217,7 +231,10 @@ public class AttachReviewersToReviewRuleRequest extends Request {
             } 
 
             /**
-             * PrincipalId.
+             * <p>When PrincipalType is set to RamUser, specify the RAM user ID of the auditor to associate. When PrincipalType is set to RamRole, specify the RAM role ARN of the auditor to associate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>160****9214</p>
              */
             public Builder principalId(String principalId) {
                 this.principalId = principalId;
@@ -225,7 +242,10 @@ public class AttachReviewersToReviewRuleRequest extends Request {
             }
 
             /**
-             * PrincipalName.
+             * <p>The display name of the associated auditor\&quot;s RAM user or RAM role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder principalName(String principalName) {
                 this.principalName = principalName;
@@ -233,7 +253,16 @@ public class AttachReviewersToReviewRuleRequest extends Request {
             }
 
             /**
-             * PrincipalType.
+             * <p>The type of the auditor to associate. Valid values:</p>
+             * <ul>
+             * <li><p><strong>RamUser</strong>: Resource Access Management (RAM) user.</p>
+             * </li>
+             * <li><p><strong>RamRole</strong>: RAM role.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>RamUser</p>
              */
             public Builder principalType(String principalType) {
                 this.principalType = principalType;

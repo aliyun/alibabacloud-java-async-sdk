@@ -173,7 +173,7 @@ public class ListHostAccountsRequest extends Request {
         } 
 
         /**
-         * <p>The name of the host account that you want to query. The name can be up to 128 characters in length. Only exact match is supported.</p>
+         * <p>The name of the host account to query. The name can be up to 128 characters in length. Only exact match is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>abc</p>
@@ -185,10 +185,7 @@ public class ListHostAccountsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the specified host whose accounts you want to query.</p>
-         * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/200665.html">ListHosts</a> operation to query the ID of the host.</p>
-         * </blockquote>
+         * <p>The ID of the host whose accounts you want to query. You can call the <a href="https://help.aliyun.com/document_detail/200665.html">ListHosts</a> operation to query the host ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -201,7 +198,10 @@ public class ListHostAccountsRequest extends Request {
         }
 
         /**
-         * HostIds.
+         * <p>The array of host IDs whose accounts you want to query. &gt; If the HostId parameter is specified and its value is not 0, this parameter is ignored. This parameter takes effect only when the value of the HostId parameter is 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;2&quot;,&quot;3&quot;]</p>
          */
         public Builder hostIds(String hostIds) {
             this.putQueryParameter("HostIds", hostIds);
@@ -210,10 +210,7 @@ public class ListHostAccountsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the bastion host in which you want to query accounts of the specified host.</p>
-         * <blockquote>
-         * <p> You can call the DescribeInstances operation to query the ID of the bastion host.</p>
-         * </blockquote>
+         * <p>The ID of the Bastionhost instance to which the host belongs. You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -226,7 +223,7 @@ public class ListHostAccountsRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * <p>The page number of the current page in a paging query. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -238,11 +235,7 @@ public class ListHostAccountsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
-         * <p>Maximum value: 100. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
-         * <blockquote>
-         * <p> We recommend that you do not leave this parameter empty.</p>
-         * </blockquote>
+         * <p>The maximum number of entries to return on each page in a paging query. <br>The maximum value of the PageSize parameter is 100. Default value: 20. If you leave this parameter empty, 20 entries are returned by default. &gt; Specify a value for the PageSize parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -254,7 +247,10 @@ public class ListHostAccountsRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -263,8 +259,7 @@ public class ListHostAccountsRequest extends Request {
         }
 
         /**
-         * <p>The protocol used by the host whose accounts you want to query.</p>
-         * <p>Valid values:</p>
+         * <p>The protocol name of the host account to query. <br>Valid values:</p>
          * <ul>
          * <li>SSH</li>
          * <li>RDP</li>
@@ -280,10 +275,7 @@ public class ListHostAccountsRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the bastion host in which you want to query accounts of the specified host.</p>
-         * <blockquote>
-         * <p> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
-         * </blockquote>
+         * <p>The region ID of the Bastionhost instance to which the host belongs. For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

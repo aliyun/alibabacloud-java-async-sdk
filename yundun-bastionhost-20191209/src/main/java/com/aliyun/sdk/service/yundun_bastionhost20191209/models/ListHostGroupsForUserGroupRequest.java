@@ -159,7 +159,7 @@ public class ListHostGroupsForUserGroupRequest extends Request {
         } 
 
         /**
-         * <p>The name of the host group that you want to query. Only exact match is supported.</p>
+         * <p>The name of the host group to query. Only exact match is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>group</p>
@@ -171,9 +171,9 @@ public class ListHostGroupsForUserGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the bastion host to which the user group belongs.</p>
+         * <p>The instance ID of the Bastionhost instance to which the user group belongs.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+         * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -187,10 +187,10 @@ public class ListHostGroupsForUserGroupRequest extends Request {
         }
 
         /**
-         * <p>Specifies the category of the host group that you want to query. Valid values:</p>
+         * <p>The mode of the host group list to query. Valid values:</p>
          * <ul>
-         * <li><strong>Authorized</strong>: queries the host groups that the user group is authorized to manage. This is the default value.</li>
-         * <li><strong>Unauthorized</strong>: queries the host groups that the user group is not authorized to manage.</li>
+         * <li><strong>Authorized</strong>: Authorized host groups. This is the default value.</li>
+         * <li><strong>Unauthorized</strong>: Unauthorized host groups.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -203,7 +203,7 @@ public class ListHostGroupsForUserGroupRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * <p>The page number of the current page when paging in a paged query. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -215,9 +215,9 @@ public class ListHostGroupsForUserGroupRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.<br>Maximum value: 100. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+         * <p>The maximum number of entries to return on each page when paging in a paged query.<br>The maximum value of the PageSize parameter is 100. The default value is 20. If this parameter is left empty, 20 entries are returned by default.</p>
          * <blockquote>
-         * <p>We recommend that you do not leave this parameter empty.</p>
+         * <p>Specify a value for the PageSize parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -230,7 +230,10 @@ public class ListHostGroupsForUserGroupRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -239,7 +242,7 @@ public class ListHostGroupsForUserGroupRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the bastion host to which the user group belongs.</p>
+         * <p>The region ID of the Bastionhost instance to which the user group belongs.</p>
          * <blockquote>
          * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
          * </blockquote>
@@ -254,9 +257,9 @@ public class ListHostGroupsForUserGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the user group.</p>
+         * <p>The ID of the user group to query.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/204509.html">ListUserGroups</a> operation to query the ID of the user group.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/204509.html">ListUserGroups</a> operation to obtain this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
