@@ -54,7 +54,10 @@ public class CreateServiceLinkedRoleForSelectDBResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F203FA74-3041-589F-BE66-E570793A0C91</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

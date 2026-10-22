@@ -67,7 +67,7 @@ public class DescribeElasticRulesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -170,7 +170,7 @@ public class DescribeElasticRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The rule for computing resources of the required cluster.</p>
+             * <p>The target compute resource rule of the cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>selectdb.2xlarge</p>
@@ -181,7 +181,7 @@ public class DescribeElasticRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when you want to execute the scheduled scaling rule.</p>
+             * <p>The start time of the time-based elastic rule, in the HH:mm format.</p>
              * 
              * <strong>example:</strong>
              * <p>00:00</p>
@@ -192,11 +192,7 @@ public class DescribeElasticRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution cycle.</p>
-             * <p>Valid value:</p>
-             * <ul>
-             * <li>Day</li>
-             * </ul>
+             * <p>The execution period.</p>
              * 
              * <strong>example:</strong>
              * <p>Day</p>
@@ -312,7 +308,7 @@ public class DescribeElasticRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the rules.</p>
+             * <p>The list of rules.</p>
              */
             public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;

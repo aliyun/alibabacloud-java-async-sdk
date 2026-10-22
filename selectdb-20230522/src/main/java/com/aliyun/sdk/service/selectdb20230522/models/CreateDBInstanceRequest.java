@@ -119,6 +119,14 @@ public class CreateDBInstanceRequest extends Request {
     private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TdeEnabled")
+    private String tdeEnabled;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TdeMode")
+    private String tdeMode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UsedTime")
     private Integer usedTime;
 
@@ -163,6 +171,8 @@ public class CreateDBInstanceRequest extends Request {
         this.scaleMin = builder.scaleMin;
         this.securityIPList = builder.securityIPList;
         this.tag = builder.tag;
+        this.tdeEnabled = builder.tdeEnabled;
+        this.tdeMode = builder.tdeMode;
         this.usedTime = builder.usedTime;
         this.vSwitchId = builder.vSwitchId;
         this.vpcId = builder.vpcId;
@@ -351,6 +361,20 @@ public class CreateDBInstanceRequest extends Request {
     }
 
     /**
+     * @return tdeEnabled
+     */
+    public String getTdeEnabled() {
+        return this.tdeEnabled;
+    }
+
+    /**
+     * @return tdeMode
+     */
+    public String getTdeMode() {
+        return this.tdeMode;
+    }
+
+    /**
      * @return usedTime
      */
     public Integer getUsedTime() {
@@ -403,6 +427,8 @@ public class CreateDBInstanceRequest extends Request {
         private Double scaleMin; 
         private String securityIPList; 
         private java.util.List<Tag> tag; 
+        private String tdeEnabled; 
+        private String tdeMode; 
         private Integer usedTime; 
         private String vSwitchId; 
         private String vpcId; 
@@ -438,6 +464,8 @@ public class CreateDBInstanceRequest extends Request {
             this.scaleMin = request.scaleMin;
             this.securityIPList = request.securityIPList;
             this.tag = request.tag;
+            this.tdeEnabled = request.tdeEnabled;
+            this.tdeMode = request.tdeMode;
             this.usedTime = request.usedTime;
             this.vSwitchId = request.vSwitchId;
             this.vpcId = request.vpcId;
@@ -445,10 +473,10 @@ public class CreateDBInstanceRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to add the virtual private cloud (VPC) CIDR block to the IP address whitelist. Valid values:</p>
+         * <p>Specifies whether to add the VPC CIDR block to the whitelist. Valid values:</p>
          * <ul>
-         * <li>1: yes.</li>
-         * <li>0: no.</li>
+         * <li>1: yes</li>
+         * <li>0: no</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -465,7 +493,7 @@ public class CreateDBInstanceRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>200GB</p>
+         * <p>200</p>
          */
         public Builder cacheSize(Integer cacheSize) {
             this.putQueryParameter("CacheSize", cacheSize);
@@ -476,8 +504,10 @@ public class CreateDBInstanceRequest extends Request {
         /**
          * <p>The billing method of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>Postpaid</strong>: pay-as-you-go</li>
-         * <li><strong>Prepaid</strong>: subscription</li>
+         * <li><p><strong>Postpaid</strong>: pay-as-you-go</p>
+         * </li>
+         * <li><p><strong>Prepaid</strong>: subscription</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -491,7 +521,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <p>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can generate the value of this parameter on the client side. The value must be unique across different requests and can be up to 64 ASCII characters in length. The value cannot contain non-ASCII characters.</p>
          * 
          * <strong>example:</strong>
          * <p>AB</p>
@@ -503,7 +533,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * ClusterNodeCount.
+         * <p>The number of cluster nodes. This parameter takes effect only in Serverless mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder clusterNodeCount(Integer clusterNodeCount) {
             this.putQueryParameter("ClusterNodeCount", clusterNodeCount);
@@ -512,7 +545,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * ClusterNodeType.
+         * <p>The cluster node type. This parameter takes effect only in Serverless mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>base</p>
          */
         public Builder clusterNodeType(String clusterNodeType) {
             this.putQueryParameter("ClusterNodeType", clusterNodeType);
@@ -521,7 +557,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * ConfigPatternType.
+         * <p>The configuration template applied to the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         public Builder configPatternType(String configPatternType) {
             this.putQueryParameter("ConfigPatternType", configPatternType);
@@ -530,7 +569,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The instance endpoint.</p>
+         * <p>The database endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>selectdb-cn-7213c8y****-public.selectdbfe.pre.rds.aliyuncs.com</p>
@@ -546,7 +585,7 @@ public class CreateDBInstanceRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>selectdb.xlarge</p>
+         * <p>selectdb.g.2xlarge</p>
          */
         public Builder DBInstanceClass(String DBInstanceClass) {
             this.putQueryParameter("DBInstanceClass", DBInstanceClass);
@@ -555,10 +594,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The instance description.</p>
+         * <p>The description of the instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>The instance is created for testing.</p>
+         * <p>New instance test</p>
          */
         public Builder DBInstanceDescription(String DBInstanceDescription) {
             this.putQueryParameter("DBInstanceDescription", DBInstanceDescription);
@@ -567,7 +606,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The deployment method of the instance.</p>
+         * <p>The deployment mode of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>single_az</p>
@@ -579,7 +618,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The database engine of the instance. Default value: <strong>selectdb</strong>.</p>
+         * <p>The database engine type. Default value: <strong>selectdb</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>selectdb</p>
@@ -591,11 +630,17 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The database engine version of the instance. Default value: <strong>3.0</strong>.</p>
+         * <p>The database engine version. Default value: <strong>4.1</strong>. Valid values:</p>
+         * <ul>
+         * <li><p>4.0</p>
+         * </li>
+         * <li><p>4.1</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>2.4</p>
+         * <p>4.1</p>
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -604,7 +649,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * FEClassCode.
+         * <p>The node specifications of a single node in the frontend (FE) cluster. This parameter takes effect only when you create a pay-as-you-go or subscription instance. Default value: selectdb_fe.xlarge16.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>selectdb_fe.xlarge16</p>
          */
         public Builder FEClassCode(String FEClassCode) {
             this.putQueryParameter("FEClassCode", FEClassCode);
@@ -613,7 +661,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * FENodeCount.
+         * <p>The number of nodes in the FE cluster. This parameter takes effect only when you create a pay-as-you-go or subscription instance. Default value: 3. Valid values: 1 to 11. The value must be an odd number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder FENodeCount(String FENodeCount) {
             this.putQueryParameter("FENodeCount", FENodeCount);
@@ -622,12 +673,12 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The configurations of multi-zone deployment.</p>
+         * <p>The multi-zone configuration.</p>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li>This parameter takes effect and is required only when DeployScheme is set to multi_az.</li>
+         * <li>This parameter takes effect and is required when DeployScheme is set to multi_az.</li>
          * </ul>
+         * </blockquote>
          */
         public Builder multiZone(java.util.List<MultiZone> multiZone) {
             String multiZoneShrink = shrink(multiZone, "MultiZone", "json");
@@ -637,14 +688,14 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The unit of the subscription duration of the cluster. Valid values:</p>
+         * <p>Specifies the billing cycle of the subscription cluster. Valid values:</p>
          * <ul>
-         * <li><strong>Year</strong>: subscription on a yearly basis.</li>
-         * <li><strong>Month</strong>: subscription on a monthly basis.</li>
-         * </ul>
-         * <blockquote>
-         * <p> This parameter takes effect and is required only when <strong>ChargeType</strong> is set to <strong>Prepaid</strong>.</p>
+         * <li><strong>Year</strong>: yearly.</li>
+         * <li><strong>Month</strong>: monthly.<blockquote>
+         * <p>This parameter takes effect and is required only when <strong>ChargeType</strong> is set to <strong>Prepaid</strong>.</p>
          * </blockquote>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Month</p>
@@ -669,7 +720,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aekzt2zaluvuvqa_fake</p>
@@ -690,7 +741,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * ScaleMax.
+         * <p>The maximum value of the automatic scaling range for the RCU (RDS Capacity Unit) of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32</p>
          */
         public Builder scaleMax(Double scaleMax) {
             this.putQueryParameter("ScaleMax", scaleMax);
@@ -699,7 +753,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * ScaleMin.
+         * <p>The minimum value of the automatic scaling range for the RCU (RDS Capacity Unit) of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder scaleMin(Double scaleMin) {
             this.putQueryParameter("ScaleMin", scaleMin);
@@ -708,7 +765,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The IP addresses in the whitelist of the instance. Separate multiple IP addresses with commas (,).</p>
+         * <p>The IP address whitelist of the instance. Separate multiple IP addresses with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.1.1</p>
@@ -720,7 +777,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The instance tags.</p>
+         * <p>The tag list information of the instance.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             String tagShrink = shrink(tag, "Tag", "json");
@@ -730,14 +787,38 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The subscription duration of the instance. Valid values:</p>
+         * <p>Specifies whether to enable TDE on the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
+         */
+        public Builder tdeEnabled(String tdeEnabled) {
+            this.putQueryParameter("TdeEnabled", tdeEnabled);
+            this.tdeEnabled = tdeEnabled;
+            return this;
+        }
+
+        /**
+         * <p>The mode for enabling Transparent Data Encryption (TDE) on the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MANAGED</p>
+         */
+        public Builder tdeMode(String tdeMode) {
+            this.putQueryParameter("TdeMode", tdeMode);
+            this.tdeMode = tdeMode;
+            return this;
+        }
+
+        /**
+         * <p>The subscription duration of the instance. The unit is specified by the Period parameter. Year indicates years, and Month indicates months. Valid values:</p>
          * <ul>
-         * <li>If Period is set to Year, valid values of UsedTime are 1, 2, 3, 4, and 5.</li>
-         * <li>If Period is set to Month, valid values of UsedTime are 1 to 12.</li>
-         * </ul>
-         * <blockquote>
-         * <p> This parameter takes effect and is required only when <strong>ChargeType</strong> is set to <strong>Prepaid</strong>.</p>
+         * <li>If Period is set to Year, valid values are 1, 2, 3, 4, and 5.</li>
+         * <li>If Period is set to Month, valid values are 1 to 12.<blockquote>
+         * <p>This parameter takes effect and is required only when <strong>ChargeType</strong> is set to <strong>Prepaid</strong>.</p>
          * </blockquote>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -762,7 +843,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The virtual private cloud (VPC) ID.</p>
+         * <p>The VPC ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -847,7 +928,7 @@ public class CreateDBInstanceRequest extends Request {
             } 
 
             /**
-             * <p>The vSwitch IDs.</p>
+             * <p>The list of vSwitch IDs.</p>
              */
             public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;

@@ -67,7 +67,7 @@ public class GetCreateBEClusterInquiryResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information returned.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -183,7 +183,13 @@ public class GetCreateBEClusterInquiryResponseBody extends TeaModel {
             } 
 
             /**
-             * CanPromFee.
+             * <p>The discount amount.</p>
+             * <blockquote>
+             * <p>This parameter is not applicable to the Chinese site.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder canPromFee(String canPromFee) {
                 this.canPromFee = canPromFee;
@@ -191,7 +197,10 @@ public class GetCreateBEClusterInquiryResponseBody extends TeaModel {
             }
 
             /**
-             * OptionCode.
+             * <p>The description of the promotion rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7afs9d</p>
              */
             public Builder optionCode(String optionCode) {
                 this.optionCode = optionCode;
@@ -199,7 +208,10 @@ public class GetCreateBEClusterInquiryResponseBody extends TeaModel {
             }
 
             /**
-             * PromotionDesc.
+             * <p>The coupon description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>General coupon for a deduction of 100</p>
              */
             public Builder promotionDesc(String promotionDesc) {
                 this.promotionDesc = promotionDesc;
@@ -207,7 +219,10 @@ public class GetCreateBEClusterInquiryResponseBody extends TeaModel {
             }
 
             /**
-             * PromotionName.
+             * <p>The coupon name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>General coupon</p>
              */
             public Builder promotionName(String promotionName) {
                 this.promotionName = promotionName;
@@ -215,7 +230,10 @@ public class GetCreateBEClusterInquiryResponseBody extends TeaModel {
             }
 
             /**
-             * PromotionOptionNo.
+             * <p>The coupon code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>775735400028</p>
              */
             public Builder promotionOptionNo(String promotionOptionNo) {
                 this.promotionOptionNo = promotionOptionNo;
@@ -319,7 +337,10 @@ public class GetCreateBEClusterInquiryResponseBody extends TeaModel {
             }
 
             /**
-             * OptionalPromotions.
+             * <p>The coupon information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;OptionCode&quot;:&quot;7afs9d&quot;,&quot;PromotionDesc&quot;:&quot;General coupon for a deduction of 100&quot;,&quot;PromotionName&quot;:&quot;General coupon&quot;,&quot;CanPromFee&quot;:&quot;100&quot;,&quot;PromotionOptionNo&quot;:&quot;775735400028&quot;}]</p>
              */
             public Builder optionalPromotions(java.util.List<OptionalPromotions> optionalPromotions) {
                 this.optionalPromotions = optionalPromotions;
@@ -327,7 +348,10 @@ public class GetCreateBEClusterInquiryResponseBody extends TeaModel {
             }
 
             /**
-             * PricingRules.
+             * <p>The unit price results of billable items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;compute_size&quot;:{&quot;priceUnit&quot;:&quot;CNY/(CU<em>hour)&quot;,&quot;payFee&quot;:&quot;0.0&quot;},&quot;cache_size&quot;:{&quot;priceUnit&quot;:&quot;CNY/(GB</em>hour)&quot;,&quot;payFee&quot;:&quot;0.0&quot;},&quot;storage_size&quot;:{&quot;priceUnit&quot;:&quot;CNY/(GB*hour)&quot;,&quot;payFee&quot;:&quot;0.0&quot;}}</p>
              */
             public Builder pricingRules(java.util.Map<String, String> pricingRules) {
                 this.pricingRules = pricingRules;
@@ -335,7 +359,7 @@ public class GetCreateBEClusterInquiryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The amount of money.</p>
+             * <p>The amount.</p>
              * 
              * <strong>example:</strong>
              * <p>1.76</p>

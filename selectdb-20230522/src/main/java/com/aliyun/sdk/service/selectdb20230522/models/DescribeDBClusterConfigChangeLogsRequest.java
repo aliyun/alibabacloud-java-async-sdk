@@ -134,7 +134,7 @@ public class DescribeDBClusterConfigChangeLogsRequest extends Request {
         } 
 
         /**
-         * <p>The configuration file that you want to modify. For a compute cluster, set the value to be.conf. For a frontend (FE) cluster, set the value to fe.conf.</p>
+         * <p>The configuration file that was modified. For compute clusters, this value is fixed as be.conf. For FE clusters, this value is fixed as fe.conf.</p>
          * 
          * <strong>example:</strong>
          * <p>be.conf</p>
@@ -150,7 +150,7 @@ public class DescribeDBClusterConfigChangeLogsRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>selectdb-cn-7213c8yvv09-be</p>
+         * <p>selectdb-cn-7213c8****-be</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -163,7 +163,7 @@ public class DescribeDBClusterConfigChangeLogsRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>selectdb-cn-jia3ma3b003</p>
+         * <p>selectdb-cn-7213c8****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -172,11 +172,11 @@ public class DescribeDBClusterConfigChangeLogsRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. Format: yyyy-MM-dd HH:mm:ss.</p>
+         * <p>The end time for querying change records. Format: yyyy-MM-dd HH:mm:ss.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>2023-05-08T15:59:59Z</p>
+         * <p>2023-05-08 15:59:59</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -185,6 +185,7 @@ public class DescribeDBClusterConfigChangeLogsRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -197,11 +198,11 @@ public class DescribeDBClusterConfigChangeLogsRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Format: yyyy-MM-dd HH:mm:ss.</p>
+         * <p>The start time for querying change records. Format: yyyy-MM-dd HH:mm:ss.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>2023-04-25T09:48:23Z</p>
+         * <p>2023-04-25 09:48:23</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

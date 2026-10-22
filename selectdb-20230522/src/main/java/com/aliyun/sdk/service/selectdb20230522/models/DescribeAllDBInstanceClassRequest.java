@@ -88,7 +88,10 @@ public class DescribeAllDBInstanceClassRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * <p>The SelectDB instance ID. This parameter is required when you create a cluster or change the specifications of a cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>selectdb-cn-7213cjv****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -97,6 +100,7 @@ public class DescribeAllDBInstanceClassRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

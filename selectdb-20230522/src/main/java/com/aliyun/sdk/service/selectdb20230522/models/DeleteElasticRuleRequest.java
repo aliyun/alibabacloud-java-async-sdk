@@ -159,7 +159,7 @@ public class DeleteElasticRuleRequest extends Request {
         }
 
         /**
-         * <p>The cloud service.</p>
+         * <p>The cloud service type.</p>
          * 
          * <strong>example:</strong>
          * <p>selectdb</p>

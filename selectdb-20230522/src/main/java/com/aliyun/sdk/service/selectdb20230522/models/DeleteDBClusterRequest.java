@@ -118,6 +118,7 @@ public class DeleteDBClusterRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,7 +131,7 @@ public class DeleteDBClusterRequest extends Request {
         }
 
         /**
-         * <p>代表资源一级ID的资源属性字段</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,6 +144,7 @@ public class DeleteDBClusterRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,7 +157,7 @@ public class DeleteDBClusterRequest extends Request {
         }
 
         /**
-         * <p>代表资源组的资源属性字段</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-4690g37929****</p>

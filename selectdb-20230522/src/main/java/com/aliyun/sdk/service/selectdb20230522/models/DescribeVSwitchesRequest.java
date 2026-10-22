@@ -146,7 +146,13 @@ public class DescribeVSwitchesRequest extends Request {
         } 
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page for a paged query.</p>
+         * <blockquote>
+         * <p>Warning: This is a reserved parameter and is not supported.</warning></p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -155,7 +161,13 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next query.</p>
+         * <blockquote>
+         * <p>Warning: This is a reserved parameter and is not supported.</warning></p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>4ea98363565e4951e0b5e8707e68181f</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -164,7 +176,10 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -173,7 +188,10 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -182,6 +200,7 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -194,6 +213,7 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
+         * <p>The VPC ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -206,6 +226,7 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
+         * <p>The zone ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

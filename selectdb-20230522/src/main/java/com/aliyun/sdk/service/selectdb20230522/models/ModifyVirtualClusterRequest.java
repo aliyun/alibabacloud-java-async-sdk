@@ -118,7 +118,10 @@ public class ModifyVirtualClusterRequest extends Request {
         } 
 
         /**
-         * ActiveClusterId.
+         * <p>The primary cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>selectdb-o2yg***-be</p>
          */
         public Builder activeClusterId(String activeClusterId) {
             this.putQueryParameter("ActiveClusterId", activeClusterId);
@@ -127,6 +130,7 @@ public class ModifyVirtualClusterRequest extends Request {
         }
 
         /**
+         * <p>The virtual cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,6 +143,7 @@ public class ModifyVirtualClusterRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -151,6 +156,7 @@ public class ModifyVirtualClusterRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -163,7 +169,10 @@ public class ModifyVirtualClusterRequest extends Request {
         }
 
         /**
-         * StandbyClusterId.
+         * <p>The secondary cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>selectdb-pu6y****-be</p>
          */
         public Builder standbyClusterId(String standbyClusterId) {
             this.putQueryParameter("StandbyClusterId", standbyClusterId);

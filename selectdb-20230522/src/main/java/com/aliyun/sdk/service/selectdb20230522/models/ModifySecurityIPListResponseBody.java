@@ -146,6 +146,9 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
 
         /**
          * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance test</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.DBInstanceName = DBInstanceName;
@@ -153,7 +156,7 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the whitelist.</p>
+         * <p>The name of the whitelist group.</p>
          * 
          * <strong>example:</strong>
          * <p>group1</p>
@@ -164,7 +167,7 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The tag of the whitelist.</p>
+         * <p>The tag of the group.</p>
          * 
          * <strong>example:</strong>
          * <p>grouptag</p>
@@ -186,7 +189,7 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The IP addresses in the whitelist of the instance. Multiple IP addresses are separated by commas (,).</p>
+         * <p>The IP addresses in the whitelist of the instance. Separate multiple IP addresses with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>127.0.XX.XX,127.2.XX.XX</p>
@@ -197,7 +200,7 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The IP address type.</p>
+         * <p>The type of the IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>ipv4</p>

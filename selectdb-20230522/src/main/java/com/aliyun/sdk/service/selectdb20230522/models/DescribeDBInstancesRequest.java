@@ -173,6 +173,9 @@ public class DescribeDBInstancesRequest extends Request {
 
         /**
          * <p>The description of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>New instance test</p>
          */
         public Builder DBInstanceDescription(String DBInstanceDescription) {
             this.putQueryParameter("DBInstanceDescription", DBInstanceDescription);
@@ -181,7 +184,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. Separate multiple instance IDs with commas (,).</p>
+         * <p>The IDs of the instances. Separate multiple instance IDs with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>selectdb-cn-7213cjv****</p>
@@ -193,14 +196,20 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * <p>The state of the instance. Valid values:</p>
+         * <p>The status of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>CREATING</strong>: The instance is being created.</li>
-         * <li><strong>ACTIVATION</strong>: The instance is running.</li>
-         * <li><strong>RESOURCE_CHANGING</strong>: The resource configuration of the instance is being changed.</li>
-         * <li><strong>ORDER_PREPARING</strong>: The order is being confirmed.</li>
-         * <li><strong>READONLY_RESOURCE_CHANGING</strong>: The resource configuration of the instance is being changed and the instance is write-locked.</li>
-         * <li><strong>DELETING</strong>: The instance is being deleted.</li>
+         * <li><p><strong>CREATING</strong>: Creating.</p>
+         * </li>
+         * <li><p><strong>ACTIVATION</strong>: Running.</p>
+         * </li>
+         * <li><p><strong>RESOURCE_CHANGING</strong>: Changing specifications.</p>
+         * </li>
+         * <li><p><strong>ORDER_PREPARING</strong>: Confirming the order.</p>
+         * </li>
+         * <li><p><strong>READONLY_RESOURCE_CHANGING</strong>: Changing resources (the instance is locked for writing).</p>
+         * </li>
+         * <li><p><strong>DELETING</strong>: Deleting.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -242,7 +251,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the instance.</p>
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -255,7 +264,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-4690g37929****</p>
@@ -276,7 +285,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The instance tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             String tagShrink = shrink(tag, "Tag", "json");
@@ -345,7 +354,10 @@ public class DescribeDBInstancesRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -353,7 +365,10 @@ public class DescribeDBInstancesRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -80,7 +80,7 @@ public class ModifyDBClusterResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>代表资源一级ID的资源属性字段</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>selectdb-cn-7213cjv****</p>
@@ -91,7 +91,7 @@ public class ModifyDBClusterResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -99,7 +99,10 @@ public class ModifyDBClusterResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0BF61F90-ACED-55DF-A6FE-56714B2BFCF6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -178,7 +181,10 @@ public class ModifyDBClusterResponseBody extends TeaModel {
             } 
 
             /**
-             * DBClusterId.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>selectdb-cn-7213cjv****</p>
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -186,7 +192,7 @@ public class ModifyDBClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>代表资源一级ID的资源属性字段</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>selectdb-cn-7213cjv****</p>
@@ -197,7 +203,10 @@ public class ModifyDBClusterResponseBody extends TeaModel {
             }
 
             /**
-             * OrderId.
+             * <p>The order ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>219396937240838</p>
              */
             public Builder orderId(Long orderId) {
                 this.orderId = orderId;

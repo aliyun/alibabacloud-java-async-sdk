@@ -67,7 +67,7 @@ public class CreateDBInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned result.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;

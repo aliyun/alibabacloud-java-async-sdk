@@ -67,7 +67,7 @@ public class RestartDBClusterResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information returned.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;

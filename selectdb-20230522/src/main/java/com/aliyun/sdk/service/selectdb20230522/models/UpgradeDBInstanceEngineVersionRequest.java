@@ -145,7 +145,7 @@ public class UpgradeDBInstanceEngineVersionRequest extends Request {
         }
 
         /**
-         * <p>The database engine version of the instance.</p>
+         * <p>The database version.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,7 +158,10 @@ public class UpgradeDBInstanceEngineVersionRequest extends Request {
         }
 
         /**
-         * ParallelOperation.
+         * <p>Specifies whether to perform operations on cluster nodes in parallel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder parallelOperation(Boolean parallelOperation) {
             this.putQueryParameter("ParallelOperation", parallelOperation);
@@ -167,7 +170,7 @@ public class UpgradeDBInstanceEngineVersionRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the instance.</p>
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -189,7 +192,11 @@ public class UpgradeDBInstanceEngineVersionRequest extends Request {
         }
 
         /**
-         * <p>The update mode. If you do not specify this parameter, the system immediately updates the database engine version. If you set this parameter to 1, the system updates the database engine version during the maintenance window.</p>
+         * <p>The upgrade mode.</p>
+         * <ul>
+         * <li>If you leave this parameter empty, the upgrade is performed immediately.</li>
+         * <li>If you set this parameter to 1, the upgrade is performed during the maintenance window.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>

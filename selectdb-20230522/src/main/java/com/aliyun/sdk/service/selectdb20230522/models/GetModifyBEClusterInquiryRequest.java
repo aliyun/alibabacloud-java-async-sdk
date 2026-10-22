@@ -247,7 +247,7 @@ public class GetModifyBEClusterInquiryRequest extends Request {
         } 
 
         /**
-         * <p>The size of the elastic cache.</p>
+         * <p>The elastic cache space.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -259,12 +259,7 @@ public class GetModifyBEClusterInquiryRequest extends Request {
         }
 
         /**
-         * <p>The billing method.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>PREPAY: subscription</li>
-         * <li>POSTPAY: pay-as-you-go</li>
-         * </ul>
+         * <p>The billing type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -290,13 +285,6 @@ public class GetModifyBEClusterInquiryRequest extends Request {
 
         /**
          * <p>The commodity code.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>selectdb_pre_public_intl: subscription commodity on the international site (alibabacloud.com)</li>
-         * <li>selectdb_go_public_cn: pay-as-you-go commodity on the China site (aliyun.com)</li>
-         * <li>selectdb_go_public_intl: pay-as-you-go commodity on the international site (alibabacloud.com)</li>
-         * <li>selectdb_pre_public_cn: subscription commodity on the China site (aliyun.com)</li>
-         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -309,7 +297,7 @@ public class GetModifyBEClusterInquiryRequest extends Request {
         }
 
         /**
-         * <p>The number of elastic CPU cores.</p>
+         * <p>The elastic compute resources.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -334,7 +322,7 @@ public class GetModifyBEClusterInquiryRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to change the billing method of the cluster.</p>
+         * <p>Specifies whether to query the price for converting the cluster billing type.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -346,7 +334,7 @@ public class GetModifyBEClusterInquiryRequest extends Request {
         }
 
         /**
-         * <p>The size of the reserved cache.</p>
+         * <p>The reserved cache space.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -358,7 +346,7 @@ public class GetModifyBEClusterInquiryRequest extends Request {
         }
 
         /**
-         * <p>The number of reserved CPU cores.</p>
+         * <p>The reserved compute resources.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -371,14 +359,6 @@ public class GetModifyBEClusterInquiryRequest extends Request {
 
         /**
          * <p>The billing cycle.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>Month</li>
-         * <li>Year</li>
-         * <li>Minute</li>
-         * <li>Hour</li>
-         * <li>Day</li>
-         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -391,7 +371,10 @@ public class GetModifyBEClusterInquiryRequest extends Request {
         }
 
         /**
-         * PromotionOptionNo.
+         * <p>The coupon code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123412345</p>
          */
         public Builder promotionOptionNo(String promotionOptionNo) {
             this.putQueryParameter("PromotionOptionNo", promotionOptionNo);
@@ -400,7 +383,7 @@ public class GetModifyBEClusterInquiryRequest extends Request {
         }
 
         /**
-         * <p>The number of clusters whose specifications are to be changed.</p>
+         * <p>The quantity.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

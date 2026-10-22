@@ -93,7 +93,18 @@ public class DescribeTableSchemaResponseBody extends TeaModel {
         } 
 
         /**
-         * CreateStatement.
+         * <p>The CREATE TABLE statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CREATE TABLE test_tb
+         * (
+         *     k1 TINYINT,
+         *     k2 DECIMAL(10, 2) DEFAULT &quot;10.05&quot;,
+         *     k3 CHAR(10) COMMENT &quot;string column&quot;,
+         *     k4 INT NOT NULL DEFAULT &quot;1&quot; COMMENT &quot;int column&quot;
+         * )
+         * COMMENT &quot;my first table&quot;
+         * DISTRIBUTED BY HASH(k1) BUCKETS 16</p>
          */
         public Builder createStatement(String createStatement) {
             this.createStatement = createStatement;
@@ -101,7 +112,10 @@ public class DescribeTableSchemaResponseBody extends TeaModel {
         }
 
         /**
-         * Database.
+         * <p>The database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_db</p>
          */
         public Builder database(String database) {
             this.database = database;
@@ -109,7 +123,10 @@ public class DescribeTableSchemaResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4773E4EC-025D-509F-AEA9-D53123FDFB0F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +134,10 @@ public class DescribeTableSchemaResponseBody extends TeaModel {
         }
 
         /**
-         * Table.
+         * <p>The table name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_tb</p>
          */
         public Builder table(String table) {
             this.table = table;

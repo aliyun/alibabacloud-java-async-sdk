@@ -67,7 +67,7 @@ public class DescribeAllDBInstanceClassResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The instance specifications.</p>
+         * <p>The list of instance types.</p>
          */
         public Builder classCodeList(java.util.List<ClassCodeList> classCodeList) {
             this.classCodeList = classCodeList;
@@ -75,7 +75,10 @@ public class DescribeAllDBInstanceClassResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4773E4EC-025D-509F-AEA9-D53123FDFB0F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -206,7 +209,10 @@ public class DescribeAllDBInstanceClassResponseBody extends TeaModel {
             } 
 
             /**
-             * ClassCode.
+             * <p>The instance type code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>selectdb.xlarge</p>
              */
             public Builder classCode(String classCode) {
                 this.classCode = classCode;
@@ -214,7 +220,10 @@ public class DescribeAllDBInstanceClassResponseBody extends TeaModel {
             }
 
             /**
-             * CpuCores.
+             * <p>The number of CPU cores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder cpuCores(Long cpuCores) {
                 this.cpuCores = cpuCores;
@@ -222,7 +231,10 @@ public class DescribeAllDBInstanceClassResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultStorageInGB.
+             * <p>The default cache size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder defaultStorageInGB(Long defaultStorageInGB) {
                 this.defaultStorageInGB = defaultStorageInGB;
@@ -230,7 +242,10 @@ public class DescribeAllDBInstanceClassResponseBody extends TeaModel {
             }
 
             /**
-             * MaxStorageInGB.
+             * <p>The maximum cache size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000</p>
              */
             public Builder maxStorageInGB(Long maxStorageInGB) {
                 this.maxStorageInGB = maxStorageInGB;
@@ -241,7 +256,7 @@ public class DescribeAllDBInstanceClassResponseBody extends TeaModel {
              * <p>The memory size.</p>
              * 
              * <strong>example:</strong>
-             * <p>32</p>
+             * <p>16</p>
              */
             public Builder memoryInGB(Long memoryInGB) {
                 this.memoryInGB = memoryInGB;
@@ -249,7 +264,10 @@ public class DescribeAllDBInstanceClassResponseBody extends TeaModel {
             }
 
             /**
-             * MinStorageInGB.
+             * <p>The minimum cache size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder minStorageInGB(Long minStorageInGB) {
                 this.minStorageInGB = minStorageInGB;
@@ -257,7 +275,10 @@ public class DescribeAllDBInstanceClassResponseBody extends TeaModel {
             }
 
             /**
-             * StepStorageInGB.
+             * <p>The cache step size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder stepStorageInGB(Long stepStorageInGB) {
                 this.stepStorageInGB = stepStorageInGB;

@@ -67,7 +67,7 @@ public class CheckIpExistsInSecurityIpListResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -131,7 +131,10 @@ public class CheckIpExistsInSecurityIpListResponseBody extends TeaModel {
             } 
 
             /**
-             * IpExists.
+             * <p>Indicates whether the IP address exists.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder ipExists(Boolean ipExists) {
                 this.ipExists = ipExists;

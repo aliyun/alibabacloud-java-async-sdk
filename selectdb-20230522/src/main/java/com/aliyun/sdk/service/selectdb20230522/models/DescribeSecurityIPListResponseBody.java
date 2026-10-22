@@ -91,7 +91,7 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details about each IP address whitelist returned.</p>
+         * <p>The list of whitelist groups.</p>
          */
         public Builder groupItems(java.util.List<GroupItems> groupItems) {
             this.groupItems = groupItems;
@@ -209,8 +209,10 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
             /**
              * <p>The IP address type. Valid values:</p>
              * <ul>
-             * <li>ipv4</li>
-             * <li>ipv6 (not supported)</li>
+             * <li><p>ipv4</p>
+             * </li>
+             * <li><p>ipv6 (not supported)</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -222,7 +224,7 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the whitelist.</p>
+             * <p>The name of the whitelist group.</p>
              * 
              * <strong>example:</strong>
              * <p>group1</p>
@@ -233,7 +235,7 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag of the whitelist.</p>
+             * <p>The group tag.</p>
              * 
              * <strong>example:</strong>
              * <p>&quot;&quot;</p>
@@ -244,7 +246,7 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP addresses in the whitelist. Multiple IP addresses are separated by commas (,).</p>
+             * <p>The IP address whitelist of the instance. Multiple IP addresses are separated by commas (,).</p>
              * 
              * <strong>example:</strong>
              * <p>127.0.XX.XX</p>

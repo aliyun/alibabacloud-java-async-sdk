@@ -106,7 +106,10 @@ public class DescribeDBClusterStorageLimitationResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial. This parameter is returned only when RAM authentication fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>failed</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -114,7 +117,7 @@ public class DescribeDBClusterStorageLimitationResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class DescribeDBClusterStorageLimitationResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * <p>The dynamic code. This parameter is not in use. Ignore this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -130,7 +136,10 @@ public class DescribeDBClusterStorageLimitationResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>The dynamic message. This parameter is not in use. Ignore this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>An error occurred while processing your request.</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -138,7 +147,10 @@ public class DescribeDBClusterStorageLimitationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4773E4EC-025D-509F-AEA9-D53123FDFB0F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -269,7 +281,10 @@ public class DescribeDBClusterStorageLimitationResponseBody extends TeaModel {
             } 
 
             /**
-             * ClassCode.
+             * <p>The specification code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>selectdb.xlarge</p>
              */
             public Builder classCode(String classCode) {
                 this.classCode = classCode;
@@ -277,7 +292,10 @@ public class DescribeDBClusterStorageLimitationResponseBody extends TeaModel {
             }
 
             /**
-             * CpuCores.
+             * <p>The number of CPU cores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder cpuCores(Integer cpuCores) {
                 this.cpuCores = cpuCores;
@@ -285,7 +303,10 @@ public class DescribeDBClusterStorageLimitationResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultStorageInGB.
+             * <p>The default cache size. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder defaultStorageInGB(Integer defaultStorageInGB) {
                 this.defaultStorageInGB = defaultStorageInGB;
@@ -293,7 +314,10 @@ public class DescribeDBClusterStorageLimitationResponseBody extends TeaModel {
             }
 
             /**
-             * MaxStorageInGB.
+             * <p>The maximum cache size. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder maxStorageInGB(Integer maxStorageInGB) {
                 this.maxStorageInGB = maxStorageInGB;
@@ -301,7 +325,10 @@ public class DescribeDBClusterStorageLimitationResponseBody extends TeaModel {
             }
 
             /**
-             * MemoryInGB.
+             * <p>The memory size. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder memoryInGB(Integer memoryInGB) {
                 this.memoryInGB = memoryInGB;
@@ -309,7 +336,10 @@ public class DescribeDBClusterStorageLimitationResponseBody extends TeaModel {
             }
 
             /**
-             * MinStorageInGB.
+             * <p>The minimum cache size. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder minStorageInGB(Integer minStorageInGB) {
                 this.minStorageInGB = minStorageInGB;
@@ -317,7 +347,10 @@ public class DescribeDBClusterStorageLimitationResponseBody extends TeaModel {
             }
 
             /**
-             * StepStorageInGB.
+             * <p>The cache step size. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder stepStorageInGB(Integer stepStorageInGB) {
                 this.stepStorageInGB = stepStorageInGB;
@@ -371,7 +404,7 @@ public class DescribeDBClusterStorageLimitationResponseBody extends TeaModel {
             } 
 
             /**
-             * ClassCodeList.
+             * <p>The list of cache specifications.</p>
              */
             public Builder classCodeList(java.util.List<ClassCodeList> classCodeList) {
                 this.classCodeList = classCodeList;

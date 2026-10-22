@@ -88,7 +88,13 @@ public class DescribeZonesRequest extends Request {
         } 
 
         /**
-         * MaxResults.
+         * <ul>
+         * <li>If you do not specify the <strong>MaxResults</strong> request parameter, paged queries are not performed. The <strong>MaxResults</strong> value in the response indicates the total number of entries.</li>
+         * <li>If you specify the <strong>MaxResults</strong> request parameter, paged queries are performed. The <strong>MaxResults</strong> value in the response indicates the number of entries in the current query batch.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -97,7 +103,10 @@ public class DescribeZonesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40831b4f-d91d-4796-9589-ad306ec528d5</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -106,6 +115,7 @@ public class DescribeZonesRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

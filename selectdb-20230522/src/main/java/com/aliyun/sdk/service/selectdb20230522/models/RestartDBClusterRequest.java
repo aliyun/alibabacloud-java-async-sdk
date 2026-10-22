@@ -158,7 +158,7 @@ public class RestartDBClusterRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform parallel operations on the cluster node.</p>
+         * <p>Specifies whether to perform operations on cluster nodes in parallel.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

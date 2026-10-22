@@ -103,6 +103,7 @@ public class DescribeQueryExplainRequest extends Request {
         } 
 
         /**
+         * <p>The database instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +116,10 @@ public class DescribeQueryExplainRequest extends Request {
         }
 
         /**
-         * Mode.
+         * <p>The EXPLAIN mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BASIC</p>
          */
         public Builder mode(String mode) {
             this.putQueryParameter("Mode", mode);
@@ -124,7 +128,10 @@ public class DescribeQueryExplainRequest extends Request {
         }
 
         /**
-         * QueryId.
+         * <p>The query ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40e8a568-d2a2-4f7e-a3f8-cec554ce5143</p>
          */
         public Builder queryId(String queryId) {
             this.putQueryParameter("QueryId", queryId);
@@ -133,6 +140,7 @@ public class DescribeQueryExplainRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

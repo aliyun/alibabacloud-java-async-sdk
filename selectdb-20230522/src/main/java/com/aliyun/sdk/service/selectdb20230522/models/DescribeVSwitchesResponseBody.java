@@ -132,7 +132,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         } 
 
         /**
-         * Items.
+         * <p>The result list.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -140,7 +140,10 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page for a paged query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -148,7 +151,10 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next query. An empty value of NextToken indicates that no more results exist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>459a0909c0315bfbe0b5e8707e68181f</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -156,7 +162,10 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -164,7 +173,10 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -183,7 +195,10 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder totalRecordCount(String totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -262,7 +277,10 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             } 
 
             /**
-             * VSwitchId.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp1usf8eabhvibkkfde96</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -270,7 +288,10 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchName.
+             * <p>The vSwitch name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>subnet</p>
              */
             public Builder vSwitchName(String vSwitchName) {
                 this.vSwitchName = vSwitchName;
@@ -278,7 +299,10 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-i</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

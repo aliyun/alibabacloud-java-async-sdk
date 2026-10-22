@@ -307,6 +307,7 @@ public class CreateDBClusterRequest extends Request {
         } 
 
         /**
+         * <p>The reserved cache size.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -319,6 +320,13 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
+         * <p>The billing method of the cluster. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Postpaid</strong>: pay-as-you-go</p>
+         * </li>
+         * <li><p><strong>Prepaid</strong>: subscription</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -331,7 +339,10 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * ClusterNodeCount.
+         * <p>The number of nodes in the cluster. This parameter takes effect only in Serverless mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder clusterNodeCount(Integer clusterNodeCount) {
             this.putQueryParameter("ClusterNodeCount", clusterNodeCount);
@@ -340,7 +351,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * ClusterNodeType.
+         * <p>The node type of the cluster. This parameter takes effect only in Serverless mode.</p>
          */
         public Builder clusterNodeType(String clusterNodeType) {
             this.putQueryParameter("ClusterNodeType", clusterNodeType);
@@ -349,6 +360,16 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
+         * <p>The cluster specifications. Valid values:</p>
+         * <ul>
+         * <li><strong>selectdb.xlarge</strong>: 4 cores and 32 GB memory</li>
+         * <li><strong>selectdb.2xlarge</strong>: 8 cores and 64 GB memory</li>
+         * <li><strong>selectdb.4xlarge</strong>: 16 cores and 128 GB memory</li>
+         * <li><strong>selectdb.8xlarge</strong>: 32 cores and 256 GB memory</li>
+         * <li><strong>selectdb.16xlarge</strong>: 64 cores and 512 GB memory</li>
+         * <li><strong>selectdb.24xlarge</strong>: 96 cores and 768 GB memory</li>
+         * <li><strong>selectdb.32xlarge</strong>: 128 cores and 1024 GB memory</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -361,6 +382,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
+         * <p>The cluster description.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -373,7 +395,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * <p>代表资源一级ID的资源属性字段</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -386,7 +408,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * <p>The database engine of the instance.</p>
+         * <p>The database type.</p>
          * 
          * <strong>example:</strong>
          * <p>selectdb</p>
@@ -398,6 +420,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
+         * <p>The database version.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -410,7 +433,17 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * Period.
+         * <p>Specifies whether the subscription cluster is billed on a yearly or monthly basis. Valid values:</p>
+         * <ul>
+         * <li><strong>Year</strong>: yearly</li>
+         * <li><strong>Month</strong>: monthly<blockquote>
+         * <p>This parameter takes effect and is required only when <strong>ChargeType</strong> is set to <strong>Prepaid</strong>.</p>
+         * </blockquote>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -419,6 +452,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -440,7 +474,10 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * ScaleMax.
+         * <p>The maximum value of the auto-scaling range for the instance RCU (RDS Capacity Unit).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32</p>
          */
         public Builder scaleMax(Double scaleMax) {
             this.putQueryParameter("ScaleMax", scaleMax);
@@ -449,7 +486,10 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * ScaleMin.
+         * <p>The minimum value of the auto-scaling range for the instance RCU (RDS Capacity Unit).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder scaleMin(Double scaleMin) {
             this.putQueryParameter("ScaleMin", scaleMin);
@@ -458,7 +498,17 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * UsedTime.
+         * <p>Specifies the purchase duration of the subscription cluster. The unit is specified by Period: Year indicates years, and Month indicates months. Valid values:</p>
+         * <ul>
+         * <li>If Period is set to Year, valid values for UsedTime are 1, 2, 3, and 5.</li>
+         * <li>If Period is set to Month, valid values for UsedTime are 1 to 9.<blockquote>
+         * <p>This parameter takes effect and is required only when ChargeType is set to Prepaid.</p>
+         * </blockquote>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder usedTime(String usedTime) {
             this.putQueryParameter("UsedTime", usedTime);
@@ -467,6 +517,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
+         * <p>The vSwitch ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -479,7 +530,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * <p>VPC ID.</p>
+         * <p>The VPC ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -492,6 +543,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
+         * <p>The zone ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

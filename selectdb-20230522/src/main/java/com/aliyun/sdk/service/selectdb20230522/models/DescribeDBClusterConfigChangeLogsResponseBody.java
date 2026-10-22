@@ -106,7 +106,10 @@ public class DescribeDBClusterConfigChangeLogsResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>failed</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -114,7 +117,7 @@ public class DescribeDBClusterConfigChangeLogsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,7 @@ public class DescribeDBClusterConfigChangeLogsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic code. This parameter is not returned.</p>
+         * <p>The dynamic code. This parameter is not in use. Ignore this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -133,7 +136,7 @@ public class DescribeDBClusterConfigChangeLogsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic message. This parameter is not returned.</p>
+         * <p>The dynamic message. This parameter is not in use. Ignore this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>An error occurred while processing your request.</p>
@@ -144,7 +147,10 @@ public class DescribeDBClusterConfigChangeLogsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F8900A96-67F7-5274-A41B-7722E1ECF8C9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -275,7 +281,10 @@ public class DescribeDBClusterConfigChangeLogsResponseBody extends TeaModel {
             } 
 
             /**
-             * GmtCreated.
+             * <p>The task creation time (GMT).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-10-11T08:53:32Z</p>
              */
             public Builder gmtCreated(String gmtCreated) {
                 this.gmtCreated = gmtCreated;
@@ -283,7 +292,10 @@ public class DescribeDBClusterConfigChangeLogsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The task modification time (GMT).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-03-08T10:08Z</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -291,7 +303,7 @@ public class DescribeDBClusterConfigChangeLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the change log.</p>
+             * <p>The ID of the change record.</p>
              * 
              * <strong>example:</strong>
              * <p>617975</p>
@@ -302,7 +314,7 @@ public class DescribeDBClusterConfigChangeLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the modification has taken effect.</p>
+             * <p>Indicates whether the configuration has taken effect.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -313,7 +325,7 @@ public class DescribeDBClusterConfigChangeLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parameter name.</p>
+             * <p>The name of the configuration item.</p>
              * 
              * <strong>example:</strong>
              * <p>cumulative_compaction_rounds_for_each_base_compaction_round</p>
@@ -324,7 +336,10 @@ public class DescribeDBClusterConfigChangeLogsResponseBody extends TeaModel {
             }
 
             /**
-             * NewValue.
+             * <p>The new parameter value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder newValue(String newValue) {
                 this.newValue = newValue;
@@ -332,7 +347,10 @@ public class DescribeDBClusterConfigChangeLogsResponseBody extends TeaModel {
             }
 
             /**
-             * OldValue.
+             * <p>The old parameter value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder oldValue(String oldValue) {
                 this.oldValue = oldValue;
@@ -441,7 +459,7 @@ public class DescribeDBClusterConfigChangeLogsResponseBody extends TeaModel {
              * <p>The cluster ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>selectdb-cn-wny3li00g02-be</p>
+             * <p>selectdb-cn-7213c8****-be</p>
              */
             public Builder dbClusterId(String dbClusterId) {
                 this.dbClusterId = dbClusterId;
@@ -449,7 +467,10 @@ public class DescribeDBClusterConfigChangeLogsResponseBody extends TeaModel {
             }
 
             /**
-             * DbInstanceId.
+             * <p>The numeric ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6585</p>
              */
             public Builder dbInstanceId(String dbInstanceId) {
                 this.dbInstanceId = dbInstanceId;
@@ -460,7 +481,7 @@ public class DescribeDBClusterConfigChangeLogsResponseBody extends TeaModel {
              * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>selectdb-cn-wny3li00g02</p>
+             * <p>selectdb-cn-7213c8****</p>
              */
             public Builder dbInstanceName(String dbInstanceName) {
                 this.dbInstanceName = dbInstanceName;
@@ -468,7 +489,7 @@ public class DescribeDBClusterConfigChangeLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parameter change logs.</p>
+             * <p>The parameter change records.</p>
              */
             public Builder paramChangeLogs(java.util.List<ParamChangeLogs> paramChangeLogs) {
                 this.paramChangeLogs = paramChangeLogs;

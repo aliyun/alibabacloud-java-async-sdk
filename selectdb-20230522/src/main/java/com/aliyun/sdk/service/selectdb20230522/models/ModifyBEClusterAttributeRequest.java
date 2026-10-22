@@ -134,6 +134,7 @@ public class ModifyBEClusterAttributeRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,6 +147,7 @@ public class ModifyBEClusterAttributeRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,12 +160,7 @@ public class ModifyBEClusterAttributeRequest extends Request {
         }
 
         /**
-         * <p>The attribute type of the instance. Set this parameter to DBInstanceDescription.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>MaintainTime</li>
-         * <li>DBInstanceDescription</li>
-         * </ul>
+         * <p>The type of the attribute to modify. Set the value to DBInstanceDescription.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -176,6 +173,7 @@ public class ModifyBEClusterAttributeRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -197,7 +195,7 @@ public class ModifyBEClusterAttributeRequest extends Request {
         }
 
         /**
-         * <p>The new name of the cluster.</p>
+         * <p>The new cluster name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

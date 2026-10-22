@@ -147,6 +147,7 @@ public class ModifyDBClusterConfigRequest extends Request {
         } 
 
         /**
+         * <p>The configuration file to modify. Set this parameter to be.conf for compute clusters or fe.conf for FE clusters.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,10 +160,11 @@ public class ModifyDBClusterConfigRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>selectdb-cn-7213c8yvv09-be</p>
+         * <p>selectdb-cn-7213c8*****-be</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -171,10 +173,11 @@ public class ModifyDBClusterConfigRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>selectdb-xxxd8a5h60y</p>
+         * <p>selectdb-cn-7213c8*****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -183,7 +186,7 @@ public class ModifyDBClusterConfigRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform parallel operations on the cluster node.</p>
+         * <p>Specifies whether to perform operations on cluster nodes in parallel.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -195,10 +198,11 @@ public class ModifyDBClusterConfigRequest extends Request {
         }
 
         /**
+         * <p>The JSON string of parameters and parameter values.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;name&quot;:&quot;param1&quot;,&quot;value&quot;:&quot;1234577777&quot;},{&quot;name&quot;:&quot;param2&quot;,&quot;value&quot;:&quot;${yyyyMMdd}&quot;}]</p>
+         * <p>{&quot;param1_name&quot;:&quot;param1_value&quot;,&quot;param2_name&quot;:&quot;param2_value&quot;}</p>
          */
         public Builder parameters(String parameters) {
             this.putQueryParameter("Parameters", parameters);
@@ -207,7 +211,10 @@ public class ModifyDBClusterConfigRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -216,7 +223,10 @@ public class ModifyDBClusterConfigRequest extends Request {
         }
 
         /**
-         * SwitchTimeMode.
+         * <p>The upgrade mode. If this parameter is not specified, the upgrade takes effect immediately. Set this parameter to 1 to perform the upgrade during the maintenance window.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder switchTimeMode(String switchTimeMode) {
             this.putQueryParameter("SwitchTimeMode", switchTimeMode);

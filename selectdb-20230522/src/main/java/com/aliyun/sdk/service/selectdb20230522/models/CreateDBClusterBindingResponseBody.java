@@ -67,7 +67,7 @@ public class CreateDBClusterBindingResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -168,7 +168,7 @@ public class CreateDBClusterBindingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The numeric ID.</p>
+             * <p>The numeric ID of the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>6585</p>

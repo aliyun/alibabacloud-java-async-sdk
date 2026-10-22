@@ -54,7 +54,10 @@ public class StopBEClusterResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BC854513-E85E-54F3-9842-B9CCD3308CDD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

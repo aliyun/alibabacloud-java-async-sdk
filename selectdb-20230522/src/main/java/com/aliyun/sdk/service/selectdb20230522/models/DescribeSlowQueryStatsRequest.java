@@ -131,6 +131,7 @@ public class DescribeSlowQueryStatsRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,7 +144,10 @@ public class DescribeSlowQueryStatsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time. It must be later than the start time. Default value: the current time. Format: YYYY-MM-DD HH:mm:ss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-04-08 16:00:00</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -152,6 +156,7 @@ public class DescribeSlowQueryStatsRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -164,7 +169,10 @@ public class DescribeSlowQueryStatsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time. Default value: 24 hours ago. Format: YYYY-MM-DD HH:mm:ss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-04-07 16:00:00</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -173,7 +181,10 @@ public class DescribeSlowQueryStatsRequest extends Request {
         }
 
         /**
-         * ThresholdMs.
+         * <p>The slow query threshold in milliseconds. Default value: 5000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5000</p>
          */
         public Builder thresholdMs(Long thresholdMs) {
             this.putQueryParameter("ThresholdMs", thresholdMs);
@@ -182,7 +193,10 @@ public class DescribeSlowQueryStatsRequest extends Request {
         }
 
         /**
-         * TopN.
+         * <p>The number of top slow queries to return. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder topN(Integer topN) {
             this.putQueryParameter("TopN", topN);

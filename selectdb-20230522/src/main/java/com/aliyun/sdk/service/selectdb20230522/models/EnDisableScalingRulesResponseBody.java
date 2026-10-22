@@ -67,7 +67,7 @@ public class EnDisableScalingRulesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -179,12 +179,7 @@ public class EnDisableScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the scheduled scaling policy is enabled.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>true</li>
-             * <li>false</li>
-             * </ul>
+             * <p>Indicates whether the time-based elastic scaling rule is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>

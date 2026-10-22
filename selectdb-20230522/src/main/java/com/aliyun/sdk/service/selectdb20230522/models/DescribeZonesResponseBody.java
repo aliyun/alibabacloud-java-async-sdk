@@ -93,7 +93,7 @@ public class DescribeZonesResponseBody extends TeaModel {
         } 
 
         /**
-         * Items.
+         * <p>The result list.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -101,7 +101,10 @@ public class DescribeZonesResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page in a paged query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -109,7 +112,10 @@ public class DescribeZonesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next query. An empty value indicates that no more results exist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40831b4f-d91d-4796-9589-ad306ec528d5</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -186,7 +192,10 @@ public class DescribeZonesResponseBody extends TeaModel {
             } 
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -194,7 +203,10 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing-i</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

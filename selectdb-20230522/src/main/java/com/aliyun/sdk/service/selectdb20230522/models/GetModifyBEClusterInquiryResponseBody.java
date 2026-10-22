@@ -67,7 +67,7 @@ public class GetModifyBEClusterInquiryResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information returned.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -183,7 +183,13 @@ public class GetModifyBEClusterInquiryResponseBody extends TeaModel {
             } 
 
             /**
-             * CanPromFee.
+             * <p>The discount amount.</p>
+             * <blockquote>
+             * <p>This parameter is not applicable to the China site.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder canPromFee(String canPromFee) {
                 this.canPromFee = canPromFee;
@@ -191,7 +197,10 @@ public class GetModifyBEClusterInquiryResponseBody extends TeaModel {
             }
 
             /**
-             * OptionCode.
+             * <p>The promotion rule description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>789asdf</p>
              */
             public Builder optionCode(String optionCode) {
                 this.optionCode = optionCode;
@@ -199,7 +208,10 @@ public class GetModifyBEClusterInquiryResponseBody extends TeaModel {
             }
 
             /**
-             * PromotionDesc.
+             * <p>The coupon description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>General coupon can deduct 100</p>
              */
             public Builder promotionDesc(String promotionDesc) {
                 this.promotionDesc = promotionDesc;
@@ -207,7 +219,10 @@ public class GetModifyBEClusterInquiryResponseBody extends TeaModel {
             }
 
             /**
-             * PromotionName.
+             * <p>The coupon name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>General coupon</p>
              */
             public Builder promotionName(String promotionName) {
                 this.promotionName = promotionName;
@@ -215,7 +230,10 @@ public class GetModifyBEClusterInquiryResponseBody extends TeaModel {
             }
 
             /**
-             * PromotionOptionNo.
+             * <p>The coupon code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>732211480132</p>
              */
             public Builder promotionOptionNo(String promotionOptionNo) {
                 this.promotionOptionNo = promotionOptionNo;
@@ -332,7 +350,7 @@ public class GetModifyBEClusterInquiryResponseBody extends TeaModel {
             }
 
             /**
-             * OptionalPromotions.
+             * <p>The coupon codes.</p>
              */
             public Builder optionalPromotions(java.util.List<OptionalPromotions> optionalPromotions) {
                 this.optionalPromotions = optionalPromotions;
@@ -340,7 +358,7 @@ public class GetModifyBEClusterInquiryResponseBody extends TeaModel {
             }
 
             /**
-             * PricingRules.
+             * <p>The unit price results of billing items.</p>
              */
             public Builder pricingRules(java.util.Map<String, String> pricingRules) {
                 this.pricingRules = pricingRules;
@@ -348,7 +366,7 @@ public class GetModifyBEClusterInquiryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The estimated refund amount when the subscription cluster of a subscription instance is changed to a pay-as-you-go cluster.</p>
+             * <p>The estimated refund amount when converting a subscription cluster to a pay-as-you-go cluster under a subscription instance.</p>
              * 
              * <strong>example:</strong>
              * <p>-100</p>
@@ -359,7 +377,7 @@ public class GetModifyBEClusterInquiryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The amount of money.</p>
+             * <p>The trade amount.</p>
              * 
              * <strong>example:</strong>
              * <p>1.76</p>

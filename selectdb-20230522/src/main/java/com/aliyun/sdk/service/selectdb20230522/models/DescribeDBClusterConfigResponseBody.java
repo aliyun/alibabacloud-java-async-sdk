@@ -295,6 +295,9 @@ public class DescribeDBClusterConfigResponseBody extends TeaModel {
 
             /**
              * <p>The comments on the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>存储引擎并发扫描硬盘的线程数。采用线程池统一管理。</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -358,6 +361,9 @@ public class DescribeDBClusterConfigResponseBody extends TeaModel {
 
             /**
              * <p>The category of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Query</p>
              */
             public Builder paramCategory(String paramCategory) {
                 this.paramCategory = paramCategory;
@@ -477,7 +483,7 @@ public class DescribeDBClusterConfigResponseBody extends TeaModel {
              * <p>The cluster ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>selectdb-cn-wny3li00g02-be</p>
+             * <p>selectdb-cn-wny3li0****-be</p>
              */
             public Builder dbClusterId(String dbClusterId) {
                 this.dbClusterId = dbClusterId;
@@ -499,7 +505,7 @@ public class DescribeDBClusterConfigResponseBody extends TeaModel {
              * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>selectdb-cn-wny3li00g02</p>
+             * <p>selectdb-cn-wny3li0****</p>
              */
             public Builder dbInstanceName(String dbInstanceName) {
                 this.dbInstanceName = dbInstanceName;

@@ -143,7 +143,7 @@ public class CreateDBClusterBindingRequest extends Request {
         }
 
         /**
-         * <p>The region ID</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

@@ -54,7 +54,10 @@ public class DeleteDBInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BD0D0B17-C145-5B91-BFC2-6791927EE973</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

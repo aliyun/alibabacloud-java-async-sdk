@@ -67,7 +67,10 @@ public class CheckServiceLinkedRoleResponseBody extends TeaModel {
         } 
 
         /**
-         * HasServiceLinkedRole.
+         * <p>Indicates whether the service-linked role has been created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder hasServiceLinkedRole(Boolean hasServiceLinkedRole) {
             this.hasServiceLinkedRole = hasServiceLinkedRole;
@@ -75,7 +78,10 @@ public class CheckServiceLinkedRoleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1F455133-981E-5AD0-80EB-26EA1EF3C65F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

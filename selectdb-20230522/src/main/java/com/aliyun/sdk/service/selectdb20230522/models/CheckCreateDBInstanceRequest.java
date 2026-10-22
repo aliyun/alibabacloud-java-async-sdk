@@ -291,6 +291,7 @@ public class CheckCreateDBInstanceRequest extends Request {
         } 
 
         /**
+         * <p>The reserved cache size. Unit: GB.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -303,6 +304,13 @@ public class CheckCreateDBInstanceRequest extends Request {
         }
 
         /**
+         * <p>The billing method of the instance. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Postpaid</strong>: pay-as-you-go.</p>
+         * </li>
+         * <li><p><strong>Prepaid</strong>: subscription.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -315,7 +323,10 @@ public class CheckCreateDBInstanceRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AB</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -324,7 +335,10 @@ public class CheckCreateDBInstanceRequest extends Request {
         }
 
         /**
-         * ConnectionString.
+         * <p>The endpoint of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>selectdb-cn-7213c8y****-public.selectdbfe.pre.rds.aliyuncs.com</p>
          */
         public Builder connectionString(String connectionString) {
             this.putQueryParameter("ConnectionString", connectionString);
@@ -333,15 +347,15 @@ public class CheckCreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The specifications of the instance. Valid values:</p>
+         * <p>The instance type. Valid values:</p>
          * <ul>
-         * <li><strong>selectdb.xlarge</strong>: 4 CPU cores and 32 GB of memory.</li>
-         * <li><strong>selectdb.2xlarge</strong>: 8 CPU cores and 64 GB of memory.</li>
-         * <li><strong>selectdb.4xlarge</strong>: 16 CPU cores and 128 GB of memory.</li>
-         * <li><strong>selectdb.8xlarge</strong>: 32 CPU cores and 256 GB of memory.</li>
-         * <li><strong>selectdb.16xlarge</strong>: 64 CPU cores and 512 GB of memory.</li>
-         * <li><strong>selectdb.24xlarge</strong>: 96 CPU cores and 768 GB of memory.</li>
-         * <li><strong>selectdb.32xlarge</strong>: 128 CPU cores and 1,024 GB of memory.</li>
+         * <li><strong>selectdb.xlarge</strong>: 4 cores, 32 GB memory.</li>
+         * <li><strong>selectdb.2xlarge</strong>: 8 cores, 64 GB memory.</li>
+         * <li><strong>selectdb.4xlarge</strong>: 16 cores, 128 GB memory.</li>
+         * <li><strong>selectdb.8xlarge</strong>: 32 cores, 256 GB memory.</li>
+         * <li><strong>selectdb.16xlarge</strong>: 64 cores, 512 GB memory.</li>
+         * <li><strong>selectdb.24xlarge</strong>: 96 cores, 768 GB memory.</li>
+         * <li><strong>selectdb.32xlarge</strong>: 128 cores, 1024 GB memory.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -355,7 +369,10 @@ public class CheckCreateDBInstanceRequest extends Request {
         }
 
         /**
-         * DBInstanceDescription.
+         * <p>The description of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NewInstanceTest</p>
          */
         public Builder DBInstanceDescription(String DBInstanceDescription) {
             this.putQueryParameter("DBInstanceDescription", DBInstanceDescription);
@@ -364,7 +381,7 @@ public class CheckCreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The database engine of the instance.</p>
+         * <p>The database engine type.</p>
          * 
          * <strong>example:</strong>
          * <p>SelectDB</p>
@@ -376,11 +393,11 @@ public class CheckCreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The version of the database engine.</p>
+         * <p>The database engine version.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>2.4</p>
+         * <p>3.0</p>
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -389,7 +406,17 @@ public class CheckCreateDBInstanceRequest extends Request {
         }
 
         /**
-         * Period.
+         * <p>Specifies whether the upfront subscription cluster uses a yearly or monthly billing cycle. Valid values:</p>
+         * <ul>
+         * <li><strong>Year</strong>: yearly billing cycle.</li>
+         * <li><strong>Month</strong>: monthly billing cycle.<blockquote>
+         * <p>This parameter takes effect and is required only when <strong>ChargeType</strong> is set to <strong>Prepaid</strong>.</p>
+         * </blockquote>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -398,6 +425,7 @@ public class CheckCreateDBInstanceRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -410,7 +438,10 @@ public class CheckCreateDBInstanceRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-4690g37929****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -428,7 +459,10 @@ public class CheckCreateDBInstanceRequest extends Request {
         }
 
         /**
-         * SecurityIPList.
+         * <p>The IP address whitelist of the instance. Separate multiple IP addresses with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.16.XX.XX/12,192.168.XX.XX/22</p>
          */
         public Builder securityIPList(String securityIPList) {
             this.putQueryParameter("SecurityIPList", securityIPList);
@@ -437,14 +471,14 @@ public class CheckCreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The subscription duration of the instance. Valid values:</p>
+         * <p>The subscription duration of the instance. The unit is specified by Period. Year indicates years and Month indicates months. Valid values:</p>
          * <ul>
-         * <li>If Period is set to Year, valid values of UsedTime are 1, 2, 3, 4, and 5.</li>
-         * <li>If Period is set to Month, valid values of UsedTime are 1 to 12.</li>
-         * </ul>
-         * <blockquote>
-         * <p> This parameter takes effect and is required only if ChargeType is set to Prepaid.</p>
+         * <li>If Period is set to Year, the valid values of UsedTime are 1, 2, 3, 4, and 5 (integers).</li>
+         * <li>If Period is set to Month, the valid values of UsedTime are 1 to 12 (integers).<blockquote>
+         * <p>This parameter takes effect and is required only when ChargeType is set to Prepaid.</p>
          * </blockquote>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -456,6 +490,7 @@ public class CheckCreateDBInstanceRequest extends Request {
         }
 
         /**
+         * <p>The vSwitch ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -481,6 +516,7 @@ public class CheckCreateDBInstanceRequest extends Request {
         }
 
         /**
+         * <p>The zone ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

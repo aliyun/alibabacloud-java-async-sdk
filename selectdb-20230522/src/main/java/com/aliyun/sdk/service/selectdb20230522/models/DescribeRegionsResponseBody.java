@@ -67,7 +67,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>An array of regions.</p>
+         * <p>The list of region data.</p>
          */
         public Builder regionModelList(java.util.List<RegionModelList> regionModelList) {
             this.regionModelList = regionModelList;
@@ -223,6 +223,9 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
             /**
              * <p>The zone description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Beijing H Zone</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -230,7 +233,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the VPC is disabled.</p>
+             * <p>Indicates whether the zone is disabled.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -253,6 +256,9 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
             /**
              * <p>The zone name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Beijing H</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -282,7 +288,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the VPC is enabled.</p>
+             * <p>Indicates whether VPC is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -293,7 +299,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the virtual private cloud (VPC) is available.</p>
+             * <p>Indicates whether VPC is available.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-beijing-h</p>
@@ -374,7 +380,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>An array of zones.</p>
+             * <p>The list of zones.</p>
              */
             public Builder zones(java.util.List<Zones> zones) {
                 this.zones = zones;

@@ -159,7 +159,7 @@ public class EnDisableScalingRulesRequest extends Request {
         }
 
         /**
-         * <p>The cloud service.</p>
+         * <p>The cloud service type.</p>
          * 
          * <strong>example:</strong>
          * <p>selectdb</p>
@@ -193,12 +193,7 @@ public class EnDisableScalingRulesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the scheduled scaling policy.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false</li>
-         * </ul>
+         * <p>Specifies whether the time-based elastic policy is enabled.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

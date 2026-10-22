@@ -203,7 +203,7 @@ public class ModifyDBClusterRequest extends Request {
         } 
 
         /**
-         * <p>The size of the reserved cache.</p>
+         * <p>The reserved cache size.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -215,7 +215,10 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * ClusterNodeCount.
+         * <p>The number of cluster nodes. This parameter takes effect only in Serverless mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder clusterNodeCount(Integer clusterNodeCount) {
             this.putQueryParameter("ClusterNodeCount", clusterNodeCount);
@@ -224,7 +227,7 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * ClusterNodeType.
+         * <p>The cluster node type. This parameter takes effect only in Serverless mode.</p>
          */
         public Builder clusterNodeType(String clusterNodeType) {
             this.putQueryParameter("ClusterNodeType", clusterNodeType);
@@ -233,6 +236,16 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
+         * <p>The cluster specifications. Valid values:</p>
+         * <ul>
+         * <li><strong>selectdb.xlarge</strong>: 4 cores and 32 GB.</li>
+         * <li><strong>selectdb.2xlarge</strong>: 8 cores and 64 GB.</li>
+         * <li><strong>selectdb.4xlarge</strong>: 16 cores and 128 GB.</li>
+         * <li><strong>selectdb.8xlarge</strong>: 32 cores and 256 GB.</li>
+         * <li><strong>selectdb.16xlarge</strong>: 16 cores and 512 GB.</li>
+         * <li><strong>selectdb.24xlarge</strong>: 24 cores and 768 GB.</li>
+         * <li><strong>selectdb.32xlarge</strong>: 32 cores and 1024 GB.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -245,6 +258,7 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -257,6 +271,7 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -269,7 +284,7 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * <p>The database engine of the instance. Set the value to selectdb.</p>
+         * <p>The database engine type. Set the value to selectdb.</p>
          * 
          * <strong>example:</strong>
          * <p>selectdb</p>
@@ -281,6 +296,7 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -302,7 +318,10 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * ScaleMax.
+         * <p>The maximum value of the auto-scaling range for the instance RCU (RDS Capacity Unit).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32</p>
          */
         public Builder scaleMax(Double scaleMax) {
             this.putQueryParameter("ScaleMax", scaleMax);
@@ -311,7 +330,10 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * ScaleMin.
+         * <p>The minimum value of the auto-scaling range for the instance RCU (RDS Capacity Unit).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder scaleMin(Double scaleMin) {
             this.putQueryParameter("ScaleMin", scaleMin);

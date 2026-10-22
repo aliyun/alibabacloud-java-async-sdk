@@ -106,7 +106,10 @@ public class ModifyDBClusterConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>failed</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -114,7 +117,7 @@ public class ModifyDBClusterConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,7 @@ public class ModifyDBClusterConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic code. This parameter is not returned.</p>
+         * <p>The dynamic code. This parameter is not in use. Ignore this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -133,7 +136,7 @@ public class ModifyDBClusterConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic message. This parameter is not returned.</p>
+         * <p>The dynamic message. This parameter is not in use. Ignore this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>An error occurred while processing your request.</p>
@@ -144,7 +147,10 @@ public class ModifyDBClusterConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BC854513-E85E-54F3-9842-B9CCD3308CDD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -236,7 +242,10 @@ public class ModifyDBClusterConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * DbClusterId.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>selectdb-cn-7213c8*****</p>
              */
             public Builder dbClusterId(String dbClusterId) {
                 this.dbClusterId = dbClusterId;
@@ -244,7 +253,10 @@ public class ModifyDBClusterConfigResponseBody extends TeaModel {
             }
 
             /**
-             * DbInstanceId.
+             * <p>The numeric ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6585</p>
              */
             public Builder dbInstanceId(String dbInstanceId) {
                 this.dbInstanceId = dbInstanceId;
@@ -252,7 +264,10 @@ public class ModifyDBClusterConfigResponseBody extends TeaModel {
             }
 
             /**
-             * DbInstanceName.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>selectdb-cn-7213c8*****</p>
              */
             public Builder dbInstanceName(String dbInstanceName) {
                 this.dbInstanceName = dbInstanceName;
@@ -260,7 +275,10 @@ public class ModifyDBClusterConfigResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>107878719</p>
              */
             public Builder taskId(Integer taskId) {
                 this.taskId = taskId;

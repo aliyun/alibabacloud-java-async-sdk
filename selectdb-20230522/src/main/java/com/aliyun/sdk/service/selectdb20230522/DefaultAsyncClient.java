@@ -31,31 +31,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.version = "2023-05-22";
         this.endpointRule = "regional";
         this.endpointMap = CommonUtil.buildMap(
-            new TeaPair("ap-northeast-2", "selectdb.aliyuncs.com"),
             new TeaPair("ap-southeast-3", "selectdb.aliyuncs.com"),
             new TeaPair("ap-southeast-7", "selectdb.aliyuncs.com"),
             new TeaPair("cn-heyuan", "selectdb.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "selectdb.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu", "selectdb.cn-wulanchabu.aliyuncs.com"),
-            new TeaPair("cn-beijing", "selectdb.cn-beijing.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "selectdb.ap-northeast-1.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "selectdb.cn-chengdu.aliyuncs.com"),
-            new TeaPair("cn-qingdao", "selectdb.cn-qingdao.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "selectdb.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-guangzhou", "selectdb.cn-guangzhou.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "selectdb.cn-hongkong.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "selectdb.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("cn-huhehaote", "selectdb.cn-huhehaote.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "selectdb.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("ap-southeast-6", "selectdb.ap-southeast-6.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "selectdb.cn-zhangjiakou.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "selectdb.aliyuncs.com"),
-            new TeaPair("us-west-1", "selectdb.us-west-1.aliyuncs.com"),
-            new TeaPair("us-east-1", "selectdb.us-east-1.aliyuncs.com"),
-            new TeaPair("eu-central-1", "selectdb.eu-central-1.aliyuncs.com"),
-            new TeaPair("eu-west-1", "selectdb.eu-west-1.aliyuncs.com"),
-            new TeaPair("na-south-1", "selectdb.na-south-1.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "selectdb.cn-shanghai-finance-1.aliyuncs.com")
+            new TeaPair("ap-northeast-2", "selectdb.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "selectdb.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
@@ -158,7 +138,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>: For an instance that uses the pay-as-you-go billing method, you can create only pay-as-you-go clusters. For an instance that uses the subscription billing method, you can create pay-as-you-go or subscription clusters.</p>
+     * <p>Warning: You can only create pay-as-you-go clusters for pay-as-you-go instances. You can create clusters of either billing method for subscription instances.</p>
      * </blockquote>
      * 
      * @param request the request parameters of CreateDBCluster  CreateDBClusterRequest
@@ -180,10 +160,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation is supported only for instances that use the zone-redundant storage (ZRS) feature and meet the following requirements:</p>
+     * <p>Only instances deployed in cross-zone redundancy mode support this operation. The following conditions must also be met:</p>
      * <ul>
-     * <li>The instance clusters reside in different zones.</li>
-     * <li>The billing method of the instance clusters is consistent.</li>
+     * <li>The two clusters are in different zones.</li>
+     * <li>The billing methods of the clusters must be the same.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateDBClusterBinding  CreateDBClusterBindingRequest
@@ -204,6 +184,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Subscription instances cannot be deleted.</p>
+     * 
      * @param request the request parameters of CreateDBInstance  CreateDBInstanceRequest
      * @return CreateDBInstanceResponse
      */
@@ -258,6 +241,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Only instances with cross-zone redundancy support this operation, and the following conditions must be met:</p>
+     * <ul>
+     * <li>The minor engine version of the instance is 4.0.7 or later.</li>
+     * <li>The primary and secondary clusters are in different zones.</li>
+     * </ul>
+     * 
      * @param request the request parameters of CreateVirtualCluster  CreateVirtualClusterRequest
      * @return CreateVirtualClusterResponse
      */
@@ -312,6 +302,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Subscription instances cannot be deleted.</p>
+     * 
      * @param request the request parameters of DeleteDBInstance  DeleteDBInstanceRequest
      * @return DeleteDBInstanceResponse
      */
@@ -348,6 +341,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>Only the virtual cluster is deleted. The associated primary/secondary clusters are <strong>not</strong> deleted.</li>
+     * </ul>
+     * </blockquote>
+     * 
      * @param request the request parameters of DeleteVirtualCluster  DeleteVirtualClusterRequest
      * @return DeleteVirtualClusterResponse
      */
@@ -438,6 +438,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Subscription instances cannot be deleted.</p>
+     * 
      * @param request the request parameters of DescribeDBInstanceAttribute  DescribeDBInstanceAttributeRequest
      * @return DescribeDBInstanceAttributeResponse
      */
@@ -510,6 +513,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>We recommend using the visual interface to run a query and obtain its QueryID. For more information, see <a href="https://help.aliyun.com/zh/selectdb/audit-queries">query audit</a>.</p>
+     * <blockquote>
+     * <p>Notice: 
+     * Version limitations</p>
+     * </blockquote>
+     * <ul>
+     * <li>Version 3.0 is not supported.</li>
+     * <li>This feature is not available for instances created before 2025-08-01. To enable this feature for an older instance, please submit a ticket.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeProfile  DescribeProfileRequest
      * @return DescribeProfileResponse
      */
@@ -816,6 +830,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>You can modify the primary cluster separately.</li>
+     * <li>You can modify the secondary cluster separately.</li>
+     * <li>You can switch between the primary and secondary clusters.<blockquote>
+     * <p>Warning: Modifying both the primary and secondary clusters to other clusters at the same time is not supported.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
      * @param request the request parameters of ModifyVirtualCluster  ModifyVirtualClusterRequest
      * @return ModifyVirtualClusterResponse
      */
@@ -960,6 +984,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>After the instance is upgraded to zone-redundant architecture, the storage is upgraded to zone-redundant specifications, and the unit storage cost changes. For pricing details, see <a href="https://www.alibabacloud.com/help/en/selectdb/product-overview/billing-item-new-version">Billing items and pricing</a>.</p>
+     * <blockquote>
+     * <p>Version limits</p>
+     * <ul>
+     * <li>The minor engine version of the instance must be 4.0.4 or later.</li>
+     * </ul>
+     * </blockquote>
+     * 
      * @param request the request parameters of UpgradeDBInstanceDeployScheme  UpgradeDBInstanceDeploySchemeRequest
      * @return UpgradeDBInstanceDeploySchemeResponse
      */

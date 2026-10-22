@@ -175,7 +175,7 @@ public class ModifyElasticRuleRequest extends Request {
         } 
 
         /**
-         * <p>The rule for computing resources of the required cluster.</p>
+         * <p>The target compute resource rule for the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>selectdb.2xlarge</p>
@@ -213,7 +213,7 @@ public class ModifyElasticRuleRequest extends Request {
         }
 
         /**
-         * <p>The time when you want to execute the scheduled scaling rule.</p>
+         * <p>The start time of the time-based elastic rule. The time is in the HH:mm format.</p>
          * 
          * <strong>example:</strong>
          * <p>00:00</p>
@@ -225,11 +225,7 @@ public class ModifyElasticRuleRequest extends Request {
         }
 
         /**
-         * <p>The execution cycle.</p>
-         * <p>Valid value:</p>
-         * <ul>
-         * <li>Day</li>
-         * </ul>
+         * <p>The execution period.</p>
          * 
          * <strong>example:</strong>
          * <p>Day</p>
@@ -241,7 +237,7 @@ public class ModifyElasticRuleRequest extends Request {
         }
 
         /**
-         * <p>The cloud service.</p>
+         * <p>The cloud service type.</p>
          * 
          * <strong>example:</strong>
          * <p>selectdb</p>

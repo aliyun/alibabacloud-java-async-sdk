@@ -52,7 +52,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>: For an instance that uses the pay-as-you-go billing method, you can create only pay-as-you-go clusters. For an instance that uses the subscription billing method, you can create pay-as-you-go or subscription clusters.</p>
+     * <p>Warning: You can only create pay-as-you-go clusters for pay-as-you-go instances. You can create clusters of either billing method for subscription instances.</p>
      * </blockquote>
      * 
      * @param request the request parameters of CreateDBCluster  CreateDBClusterRequest
@@ -62,10 +62,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation is supported only for instances that use the zone-redundant storage (ZRS) feature and meet the following requirements:</p>
+     * <p>Only instances deployed in cross-zone redundancy mode support this operation. The following conditions must also be met:</p>
      * <ul>
-     * <li>The instance clusters reside in different zones.</li>
-     * <li>The billing method of the instance clusters is consistent.</li>
+     * <li>The two clusters are in different zones.</li>
+     * <li>The billing methods of the clusters must be the same.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateDBClusterBinding  CreateDBClusterBindingRequest
@@ -74,6 +74,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateDBClusterBindingResponse> createDBClusterBinding(CreateDBClusterBindingRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Subscription instances cannot be deleted.</p>
+     * 
      * @param request the request parameters of CreateDBInstance  CreateDBInstanceRequest
      * @return CreateDBInstanceResponse
      */
@@ -92,6 +95,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateServiceLinkedRoleForSelectDBResponse> createServiceLinkedRoleForSelectDB(CreateServiceLinkedRoleForSelectDBRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Only instances with cross-zone redundancy support this operation, and the following conditions must be met:</p>
+     * <ul>
+     * <li>The minor engine version of the instance is 4.0.7 or later.</li>
+     * <li>The primary and secondary clusters are in different zones.</li>
+     * </ul>
+     * 
      * @param request the request parameters of CreateVirtualCluster  CreateVirtualClusterRequest
      * @return CreateVirtualClusterResponse
      */
@@ -110,6 +120,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteDBClusterBindingResponse> deleteDBClusterBinding(DeleteDBClusterBindingRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Subscription instances cannot be deleted.</p>
+     * 
      * @param request the request parameters of DeleteDBInstance  DeleteDBInstanceRequest
      * @return DeleteDBInstanceResponse
      */
@@ -122,6 +135,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteElasticRuleResponse> deleteElasticRule(DeleteElasticRuleRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>Only the virtual cluster is deleted. The associated primary/secondary clusters are <strong>not</strong> deleted.</li>
+     * </ul>
+     * </blockquote>
+     * 
      * @param request the request parameters of DeleteVirtualCluster  DeleteVirtualClusterRequest
      * @return DeleteVirtualClusterResponse
      */
@@ -152,6 +172,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDBClusterStorageLimitationResponse> describeDBClusterStorageLimitation(DescribeDBClusterStorageLimitationRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Subscription instances cannot be deleted.</p>
+     * 
      * @param request the request parameters of DescribeDBInstanceAttribute  DescribeDBInstanceAttributeRequest
      * @return DescribeDBInstanceAttributeResponse
      */
@@ -176,6 +199,17 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeElasticRulesResponse> describeElasticRules(DescribeElasticRulesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>We recommend using the visual interface to run a query and obtain its QueryID. For more information, see <a href="https://help.aliyun.com/zh/selectdb/audit-queries">query audit</a>.</p>
+     * <blockquote>
+     * <p>Notice: 
+     * Version limitations</p>
+     * </blockquote>
+     * <ul>
+     * <li>Version 3.0 is not supported.</li>
+     * <li>This feature is not available for instances created before 2025-08-01. To enable this feature for an older instance, please submit a ticket.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeProfile  DescribeProfileRequest
      * @return DescribeProfileResponse
      */
@@ -278,6 +312,16 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifySecurityIPListResponse> modifySecurityIPList(ModifySecurityIPListRequest request);
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>You can modify the primary cluster separately.</li>
+     * <li>You can modify the secondary cluster separately.</li>
+     * <li>You can switch between the primary and secondary clusters.<blockquote>
+     * <p>Warning: Modifying both the primary and secondary clusters to other clusters at the same time is not supported.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
      * @param request the request parameters of ModifyVirtualCluster  ModifyVirtualClusterRequest
      * @return ModifyVirtualClusterResponse
      */
@@ -326,6 +370,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>After the instance is upgraded to zone-redundant architecture, the storage is upgraded to zone-redundant specifications, and the unit storage cost changes. For pricing details, see <a href="https://www.alibabacloud.com/help/en/selectdb/product-overview/billing-item-new-version">Billing items and pricing</a>.</p>
+     * <blockquote>
+     * <p>Version limits</p>
+     * <ul>
+     * <li>The minor engine version of the instance must be 4.0.4 or later.</li>
+     * </ul>
+     * </blockquote>
+     * 
      * @param request the request parameters of UpgradeDBInstanceDeployScheme  UpgradeDBInstanceDeploySchemeRequest
      * @return UpgradeDBInstanceDeploySchemeResponse
      */

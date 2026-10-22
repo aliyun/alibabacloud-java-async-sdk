@@ -67,7 +67,7 @@ public class ModifyVirtualClusterResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -144,7 +144,10 @@ public class ModifyVirtualClusterResponseBody extends TeaModel {
             } 
 
             /**
-             * DbClusterId.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>selectdb-vcg-b****-be</p>
              */
             public Builder dbClusterId(String dbClusterId) {
                 this.dbClusterId = dbClusterId;
@@ -152,7 +155,10 @@ public class ModifyVirtualClusterResponseBody extends TeaModel {
             }
 
             /**
-             * DbInstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>selectdb-cn-7213cjv****</p>
              */
             public Builder dbInstanceId(String dbInstanceId) {
                 this.dbInstanceId = dbInstanceId;

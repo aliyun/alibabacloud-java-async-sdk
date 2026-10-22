@@ -104,6 +104,7 @@ public class UpgradeDBInstanceDeploySchemeRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,6 +117,7 @@ public class UpgradeDBInstanceDeploySchemeRequest extends Request {
         }
 
         /**
+         * <p>The list of multiple zones.</p>
          * <p>This parameter is required.</p>
          */
         public Builder multiZone(java.util.List<MultiZone> multiZone) {
@@ -126,6 +128,7 @@ public class UpgradeDBInstanceDeploySchemeRequest extends Request {
         }
 
         /**
+         * <p>The ID of the region in which the instance resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -208,6 +211,7 @@ public class UpgradeDBInstanceDeploySchemeRequest extends Request {
             } 
 
             /**
+             * <p>The vSwitch ID.</p>
              * <p>This parameter is required.</p>
              */
             public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
@@ -216,6 +220,7 @@ public class UpgradeDBInstanceDeploySchemeRequest extends Request {
             }
 
             /**
+             * <p>The zone ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

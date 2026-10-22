@@ -89,6 +89,7 @@ public class DescribeProfileRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +102,10 @@ public class DescribeProfileRequest extends Request {
         }
 
         /**
-         * QueryId.
+         * <p>The query ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sq202510231018sh3b69ad10014154</p>
          */
         public Builder queryId(String queryId) {
             this.putQueryParameter("QueryId", queryId);
@@ -110,6 +114,7 @@ public class DescribeProfileRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
