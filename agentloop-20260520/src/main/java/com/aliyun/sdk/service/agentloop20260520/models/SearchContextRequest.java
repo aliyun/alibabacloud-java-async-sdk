@@ -57,6 +57,10 @@ public class SearchContextRequest extends Request {
     private Scope scope;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("strategyIds")
+    private java.util.List<String> strategyIds;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("threshold")
     private Double threshold;
 
@@ -71,6 +75,7 @@ public class SearchContextRequest extends Request {
         this.query = builder.query;
         this.retrievalOption = builder.retrievalOption;
         this.scope = builder.scope;
+        this.strategyIds = builder.strategyIds;
         this.threshold = builder.threshold;
     }
 
@@ -151,6 +156,13 @@ public class SearchContextRequest extends Request {
     }
 
     /**
+     * @return strategyIds
+     */
+    public java.util.List<String> getStrategyIds() {
+        return this.strategyIds;
+    }
+
+    /**
      * @return threshold
      */
     public Double getThreshold() {
@@ -167,6 +179,7 @@ public class SearchContextRequest extends Request {
         private String query; 
         private String retrievalOption; 
         private Scope scope; 
+        private java.util.List<String> strategyIds; 
         private Double threshold; 
 
         private Builder() {
@@ -184,6 +197,7 @@ public class SearchContextRequest extends Request {
             this.query = request.query;
             this.retrievalOption = request.retrievalOption;
             this.scope = request.scope;
+            this.strategyIds = request.strategyIds;
             this.threshold = request.threshold;
         } 
 
@@ -214,7 +228,7 @@ public class SearchContextRequest extends Request {
         }
 
         /**
-         * <p>The structured filter conditions. The key is the field name, and the value is the expected matching value.</p>
+         * <p>The structured filter conditions. The key is the field name, and the value is the expected match value.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;userId&quot;:&quot;alice&quot;}</p>
@@ -226,7 +240,7 @@ public class SearchContextRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to structurally format the returned results.</p>
+         * <p>Specifies whether to apply structured formatting to the returned results.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -238,7 +252,7 @@ public class SearchContextRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to include memories with sourceState=inactive. Default value: false.</p>
+         * <p>Specifies whether to include memories whose sourceState is inactive. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -250,7 +264,7 @@ public class SearchContextRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of returned results, which corresponds to the Top-N similarity.</p>
+         * <p>The maximum number of returned results, which corresponds to the top N results by similarity.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -296,7 +310,19 @@ public class SearchContextRequest extends Request {
         }
 
         /**
-         * <p>The similarity threshold. Results with a similarity score lower than this value are filtered out. Valid values: 0 to 1.</p>
+         * <p>Filters results by extraction strategy ID. Multiple IDs in the list are evaluated with an OR condition. If this parameter is not specified, all strategies are recalled. An empty list returns a 400 error. If the format is valid but no matching IDs are found, an empty result is returned. IDs of historically removed strategies are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;preferences&quot;,&quot;profile&quot;]</p>
+         */
+        public Builder strategyIds(java.util.List<String> strategyIds) {
+            this.putBodyParameter("strategyIds", strategyIds);
+            this.strategyIds = strategyIds;
+            return this;
+        }
+
+        /**
+         * <p>The similarity threshold. Results with a similarity score below this value are filtered out. Valid values: 0 to 1.</p>
          * 
          * <strong>example:</strong>
          * <p>0.5</p>
