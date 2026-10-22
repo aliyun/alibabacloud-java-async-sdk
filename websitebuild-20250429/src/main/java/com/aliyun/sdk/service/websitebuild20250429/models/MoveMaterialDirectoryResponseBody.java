@@ -223,7 +223,7 @@ public class MoveMaterialDirectoryResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The detailed reason why access was denied.</p>
+         * <p>The detailed reason why access is denied.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -234,7 +234,7 @@ public class MoveMaterialDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether retries are allowed.</p>
+         * <p>Indicates whether a retry is allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -245,7 +245,7 @@ public class MoveMaterialDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The application name. The application with this name is queried.</p>
+         * <p>The name of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>dewuApp</p>
@@ -278,7 +278,7 @@ public class MoveMaterialDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error parameters returned.</p>
+         * <p>The returned error parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -286,7 +286,7 @@ public class MoveMaterialDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code. The ErrorCode field is not returned if the request is successful. The ErrorCode field is returned if the request fails. For more information, see the error codes in this topic.</p>
+         * <p>The error code. If the request succeeds, the ErrorCode field is not returned. If the request fails, the ErrorCode field is returned. For more information, see the error codes in this topic.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -308,7 +308,7 @@ public class MoveMaterialDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the folder was moved successfully.</p>
+         * <p>Indicates whether the move operation succeeded.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -330,7 +330,7 @@ public class MoveMaterialDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The root error code.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>SYSTEM.ERROR</p>
@@ -341,10 +341,10 @@ public class MoveMaterialDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The root error message.</p>
+         * <p>The exception message.</p>
          * 
          * <strong>example:</strong>
-         * <p>系统异常</p>
+         * <p>System exception</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;

@@ -184,7 +184,7 @@ public class ListMarketplaceAppPluginsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The detailed reason for access denial.</p>
+         * <p>The detailed reason for the access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -195,7 +195,7 @@ public class ListMarketplaceAppPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether a retry is allowed.</p>
+         * <p>Indicates whether retries are allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -206,7 +206,7 @@ public class ListMarketplaceAppPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The application name.</p>
+         * <p>The name of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>spring-cloud-b</p>
@@ -228,7 +228,7 @@ public class ListMarketplaceAppPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic error message, which is used to replace the <code>%s</code> in the <strong>ErrMessage</strong> response parameter.</p>
+         * <p>The dynamic error message, which is used to replace the <code>%s</code> placeholder in the <strong>ErrMessage</strong> response parameter.</p>
          * <blockquote>
          * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the <strong>DtsJobId</strong> request parameter is invalid.</p>
          * </blockquote>
@@ -495,7 +495,7 @@ public class ListMarketplaceAppPluginsResponseBody extends TeaModel {
              * <li>cloud_efficiency: ultra disk.</li>
              * <li>cloud_ssd: standard SSD.</li>
              * <li>cloud_essd: ESSD.</li>
-             * <li>cloud: basic cloud disk.</li>
+             * <li>cloud: basic disk.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -899,11 +899,7 @@ public class ListMarketplaceAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether the bucket to which the uploaded file belongs is publicly accessible. Valid values:</p>
-             * <ul>
-             * <li><strong>public</strong>: The file is uploaded to a public bucket.</li>
-             * <li><strong>private</strong>: The file is uploaded to a private bucket, and authorization is required for access.</li>
-             * </ul>
+             * <p>Indicates whether the bucket to which the uploaded file belongs is publicly accessible. Valid values: <strong>public</strong> and <strong>private</strong>. A value of public indicates that the file is uploaded to a public bucket. A value of private indicates that the file is uploaded to a private bucket and requires authorization for access.</p>
              * 
              * <strong>example:</strong>
              * <p>PRIVATE</p>
@@ -1075,7 +1071,7 @@ public class ListMarketplaceAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The request result.</p>
+             * <p>The request results.</p>
              */
             public Builder data(java.util.List<Data> data) {
                 this.data = data;
@@ -1124,7 +1120,7 @@ public class ListMarketplaceAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the query result is limited. In addition to the pagination limit, the server processes a maximum of the latest 1,000 records for the current query. If the number of results exceeds 1,000, <strong>ResultLimit</strong> is <strong>true</strong>. In this case, narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
+             * <p>In addition to the pagination limit, the server processes a maximum of the latest 1,000 records for the current query. If the number of results exceeds 1,000, <strong>ResultLimit</strong> is <strong>true</strong>. In this case, narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>False</p>

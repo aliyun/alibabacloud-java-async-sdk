@@ -85,7 +85,7 @@ public class GetAppSandboxPreviewUrlRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to restart the application process. This parameter is optional. Default value: false.</p>
+         * <p>Specifies whether to restart the application process. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

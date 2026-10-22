@@ -171,7 +171,7 @@ public class AppOperationAddress extends TeaModel {
         } 
 
         /**
-         * <p>The operation button list.</p>
+         * <p>The action button list.</p>
          */
         public Builder actions(java.util.List<AppOperateAction> actions) {
             this.actions = actions;
@@ -196,6 +196,9 @@ public class AppOperationAddress extends TeaModel {
 
         /**
          * <p>The application publishing URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://abcd.scd.wanwang.xin">https://abcd.scd.wanwang.xin</a></p>
          */
         public Builder appPublishUrl(String appPublishUrl) {
             this.appPublishUrl = appPublishUrl;
@@ -203,7 +206,7 @@ public class AppOperationAddress extends TeaModel {
         }
 
         /**
-         * <p>The overview page operation button list.</p>
+         * <p>The overview page action button list.</p>
          */
         public Builder dashboardActions(java.util.List<AppOperateAction> dashboardActions) {
             this.dashboardActions = dashboardActions;
@@ -212,6 +215,9 @@ public class AppOperationAddress extends TeaModel {
 
         /**
          * <p>The professional design URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://zero.msea.aliyun.com/forward/v1/website/websiteLogin?bizId=WS20250915163734000001&callBackUrl=/Designer/index">https://zero.msea.aliyun.com/forward/v1/website/websiteLogin?bizId=WS20250915163734000001&amp;callBackUrl=/Designer/index</a></p>
          */
         public Builder designUrl(String designUrl) {
             this.designUrl = designUrl;
@@ -220,6 +226,9 @@ public class AppOperationAddress extends TeaModel {
 
         /**
          * <p>The application instance logon URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://zero.msea.aliyun.com/forward/v1/website/websiteLogin?bizId=WS20250915163734000001&callBackUrl=/Admin/SiteAdmin/Index">https://zero.msea.aliyun.com/forward/v1/website/websiteLogin?bizId=WS20250915163734000001&amp;callBackUrl=/Admin/SiteAdmin/Index</a></p>
          */
         public Builder instanceLoginUrl(String instanceLoginUrl) {
             this.instanceLoginUrl = instanceLoginUrl;
@@ -228,6 +237,9 @@ public class AppOperationAddress extends TeaModel {
 
         /**
          * <p>The renewal purchase URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://common-buy.aliyun.com/?orderType=RENEW&commodityCode=domain_website_public_cn&instanceId=12313213">https://common-buy.aliyun.com/?orderType=RENEW&amp;commodityCode=domain_website_public_cn&amp;instanceId=12313213</a></p>
          */
         public Builder renewBuyUrl(String renewBuyUrl) {
             this.renewBuyUrl = renewBuyUrl;
@@ -236,6 +248,9 @@ public class AppOperationAddress extends TeaModel {
 
         /**
          * <p>The service delivery URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://zero.msea.aliyun.com/forward/v1/website/websiteLogin?bizId=WS20250915163734000001&callBackUrl=/Admin/SiteAdmin/Index">https://zero.msea.aliyun.com/forward/v1/website/websiteLogin?bizId=WS20250915163734000001&amp;callBackUrl=/Admin/SiteAdmin/Index</a></p>
          */
         public Builder serverDeliveryUrl(String serverDeliveryUrl) {
             this.serverDeliveryUrl = serverDeliveryUrl;
@@ -244,6 +259,9 @@ public class AppOperationAddress extends TeaModel {
 
         /**
          * <p>The upgrade purchase URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://common-buy.aliyun.com/?orderType=UPGRADE&commodityCode=domain_website_public_cn&instanceId=12313213">https://common-buy.aliyun.com/?orderType=UPGRADE&amp;commodityCode=domain_website_public_cn&amp;instanceId=12313213</a></p>
          */
         public Builder upgradeBuyUrl(String upgradeBuyUrl) {
             this.upgradeBuyUrl = upgradeBuyUrl;

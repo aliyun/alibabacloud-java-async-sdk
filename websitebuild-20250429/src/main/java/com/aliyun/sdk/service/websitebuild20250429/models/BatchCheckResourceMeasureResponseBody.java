@@ -195,7 +195,7 @@ public class BatchCheckResourceMeasureResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether a retry is allowed.</p>
+         * <p>Specifies whether retries are allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -266,7 +266,7 @@ public class BatchCheckResourceMeasureResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code.</p>
+         * <p>The root error code.</p>
          * 
          * <strong>example:</strong>
          * <p>SYSTEM.ERROR</p>
@@ -357,7 +357,7 @@ public class BatchCheckResourceMeasureResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether all checks are passed.</p>
+             * <p>Indicates whether all checks passed.</p>
              */
             public Builder allPassed(Boolean allPassed) {
                 this.allPassed = allPassed;
@@ -365,7 +365,7 @@ public class BatchCheckResourceMeasureResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The check results for each resource. The key is the resourceCode.</p>
+             * <p>The check results for each resource, where the key is the resourceCode.</p>
              */
             public Builder results(java.util.Map<String, ModuleResultsValue> results) {
                 this.results = results;

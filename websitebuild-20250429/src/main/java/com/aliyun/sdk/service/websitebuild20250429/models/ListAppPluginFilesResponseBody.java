@@ -184,7 +184,7 @@ public class ListAppPluginFilesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the permission verification failure.</p>
+         * <p>The details of the access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -195,7 +195,7 @@ public class ListAppPluginFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether retry is allowed.</p>
+         * <p>Specifies whether retries are allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -239,7 +239,7 @@ public class ListAppPluginFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error parameters.</p>
+         * <p>The returned error parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -280,7 +280,7 @@ public class ListAppPluginFilesResponseBody extends TeaModel {
          * <p>The exception message.</p>
          * 
          * <strong>example:</strong>
-         * <p>System exception.</p>
+         * <p>System exception</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -383,7 +383,7 @@ public class ListAppPluginFilesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The file content, returned when POP displays SKILL.md.</p>
+             * <p>The file content returned when POP displays SKILL.md.</p>
              * 
              * <strong>example:</strong>
              * <p>domain cnamen</p>

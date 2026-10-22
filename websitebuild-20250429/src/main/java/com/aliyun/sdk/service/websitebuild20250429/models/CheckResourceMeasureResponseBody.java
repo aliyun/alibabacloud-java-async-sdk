@@ -184,7 +184,7 @@ public class CheckResourceMeasureResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The detailed reason for the access denial.</p>
+         * <p>The detailed reason for access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -195,7 +195,7 @@ public class CheckResourceMeasureResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether retries are allowed.</p>
+         * <p>Specifies whether retries are allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -228,9 +228,9 @@ public class CheckResourceMeasureResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic error message, which is used to replace <code>%s</code> in the <strong>ErrMessage</strong> error message.</p>
+         * <p>The dynamic error message, which is used to replace <code>%s</code> in the <strong>ErrMessage</strong> response parameter.</p>
          * <blockquote>
-         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the request parameter <strong>DtsJobId</strong> is invalid.</p>
+         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the <strong>DtsJobId</strong> request parameter is invalid.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -242,7 +242,7 @@ public class CheckResourceMeasureResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned error parameters.</p>
+         * <p>The error parameters returned.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -269,7 +269,7 @@ public class CheckResourceMeasureResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code.</p>
+         * <p>The root error code.</p>
          * 
          * <strong>example:</strong>
          * <p>SYSTEM.ERROR</p>
@@ -291,7 +291,7 @@ public class CheckResourceMeasureResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The reserved parameter.</p>
+         * <p>The backup parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -425,7 +425,7 @@ public class CheckResourceMeasureResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>This field is returned only for APP_WORKSPACE quantity pre-checks. It specifies the final total quantity to be saved, not the current increment. The issue quantity is the sum of common issues and word-of-mouth issues, and the competitor quantity is the total number of competitors after editing. This field is empty for APP and USER checks.</p>
+             * <p>The desired total returned only for APP_WORKSPACE. This is the target total for the current check, which is the sum of the existing usage in the saved configuration and ResourceValue. If the compatible DesiredTotal is provided, this total is used directly. The existing usage of issues is the sum of common and word-of-mouth issues in the saved configuration, and the existing usage of competitors is the number of competitors. This parameter is empty for APP and USER checks.</p>
              * 
              * <strong>example:</strong>
              * <p>21</p>
@@ -436,7 +436,7 @@ public class CheckResourceMeasureResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error code returned when the check fails. This field is null when the check passes.</p>
+             * <p>The error code returned when the check fails. This parameter is null when the check passes.</p>
              * 
              * <strong>example:</strong>
              * <p>Success</p>
@@ -447,7 +447,7 @@ public class CheckResourceMeasureResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error message returned when the check fails. This field is null when the check passes.</p>
+             * <p>The error message returned when the check fails. This parameter is null when the check passes.</p>
              * 
              * <strong>example:</strong>
              * <p>stream push failed</p>
@@ -458,7 +458,7 @@ public class CheckResourceMeasureResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This field is returned only for APP_WORKSPACE quantity pre-checks. It specifies the maximum number of issues or competitors allowed by the current commodity edition, not the remaining quota. This field is empty for APP and USER checks, or when the edition benefits cannot be determined.</p>
+             * <p>The limit returned only for APP_WORKSPACE quantity pre-checks. This is the maximum number of issues or competitors allowed by the current commodity edition, not the remaining quota. This parameter is empty for APP and USER checks or when the edition benefits cannot be determined.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -491,7 +491,7 @@ public class CheckResourceMeasureResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether a purchasable higher edition exists that can accommodate the DesiredTotal. This field is true only when the capacity of the current edition is insufficient and a higher edition meets the requirement. Otherwise, it is false. This field may be empty for APP and USER checks. This field does not indicate that an upgrade has been performed or an upgrade order has been created.</p>
+             * <p>Indicates whether a purchasable higher edition that can accommodate the DesiredTotal exists. This parameter is true only when the capacity of the current edition is insufficient and a higher edition meets the requirements. Otherwise, this parameter is false. This parameter may be empty for APP and USER checks. This field does not indicate that an upgrade has been performed or an upgrade order has been created.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>

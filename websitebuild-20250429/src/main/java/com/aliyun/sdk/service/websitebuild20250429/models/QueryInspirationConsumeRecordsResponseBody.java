@@ -184,7 +184,7 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The detailed reason why access is denied.</p>
+         * <p>The detailed cause of the access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -195,7 +195,7 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether retries are allowed.</p>
+         * <p>Indicates whether retries are allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -228,7 +228,7 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic message. This parameter is not used. Ignore this parameter.</p>
+         * <p>The dynamic message. This field is not in use and can be ignored.</p>
          * 
          * <strong>example:</strong>
          * <p>SYSTEM_ERROR</p>
@@ -247,7 +247,7 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether the deletion is successful.</p>
+         * <p>Indicates whether the deletion is successful.</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -456,6 +456,9 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
 
             /**
              * <p>The consumption type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1 round of conversation</p>
              */
             public Builder consumeType(String consumeType) {
                 this.consumeType = consumeType;
@@ -475,6 +478,9 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
 
             /**
              * <p>The unique identifier of the consumption record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RECORD_1</p>
              */
             public Builder recordKey(String recordKey) {
                 this.recordKey = recordKey;
@@ -482,7 +488,7 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the consumption scenario, such as AI application development, AI creative image generation, AI video creation, or AI content creation.</p>
+             * <p>The name of the consumption scenario, such as AI application development, AI creative image generation, AI video creation, and AI content creation.</p>
              * 
              * <strong>example:</strong>
              * <p>Home improvement</p>
@@ -638,6 +644,9 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
 
             /**
              * <p>The consumption type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1 round of conversation</p>
              */
             public Builder consumeType(String consumeType) {
                 this.consumeType = consumeType;
@@ -656,7 +665,7 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the consumption scenario, such as AI application development, AI creative image generation, AI video creation, or AI content creation.</p>
+             * <p>The name of the consumption scenario, such as AI application development, AI creative image generation, AI video creation, and AI content creation.</p>
              * 
              * <strong>example:</strong>
              * <p>Home improvement</p>
@@ -828,7 +837,7 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The request results.</p>
+             * <p>The request result.</p>
              */
             public Builder data(java.util.List<Data> data) {
                 this.data = data;
@@ -844,7 +853,7 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether a next page exists.</p>
+             * <p>Indicates whether a next page exists.</p>
              * 
              * <strong>example:</strong>
              * <p>False</p>
@@ -866,7 +875,7 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether a previous page exists.</p>
+             * <p>Indicates whether a previous page exists.</p>
              * 
              * <strong>example:</strong>
              * <p>False</p>
@@ -877,7 +886,7 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>In addition to the pagination limit, the server processes a maximum of the latest 1,000 records for the current query. If the number of results exceeds 1,000, <strong>ResultLimit</strong> is <strong>true</strong>. In this case, narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
+             * <p>In addition to the pagination limit, the server processes a maximum of the latest 1,000 records for the current query. If the number of results exceeds 1,000, <strong>ResultLimit</strong> is <strong>true</strong>. Narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
              */
             public Builder resultLimit(Boolean resultLimit) {
                 this.resultLimit = resultLimit;

@@ -275,7 +275,7 @@ public class GetMiniAppBindingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The extension information.</p>
+             * <p>The extended information.</p>
              */
             public Builder settingValues(java.util.Map<String, String> settingValues) {
                 this.settingValues = settingValues;

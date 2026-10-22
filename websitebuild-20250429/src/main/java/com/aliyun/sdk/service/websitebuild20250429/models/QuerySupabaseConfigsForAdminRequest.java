@@ -181,6 +181,9 @@ public class QuerySupabaseConfigsForAdminRequest extends Request {
 
         /**
          * <p>The environment identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>staging</p>
          */
         public Builder env(String env) {
             this.putQueryParameter("Env", env);
@@ -189,7 +192,7 @@ public class QuerySupabaseConfigsForAdminRequest extends Request {
         }
 
         /**
-         * <p>The field used for sorting.</p>
+         * <p>The sort field.</p>
          * 
          * <strong>example:</strong>
          * <p>gmtCreated</p>
@@ -201,7 +204,7 @@ public class QuerySupabaseConfigsForAdminRequest extends Request {
         }
 
         /**
-         * <p>The sort type. Valid values: ASC and DESC.</p>
+         * <p>The sort order. Valid values: ASC and DESC.</p>
          * 
          * <strong>example:</strong>
          * <p>BUY</p>

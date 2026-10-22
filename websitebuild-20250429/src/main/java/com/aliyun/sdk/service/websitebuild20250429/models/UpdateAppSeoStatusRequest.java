@@ -162,7 +162,8 @@ public class UpdateAppSeoStatusRequest extends Request {
         }
 
         /**
-         * <p>The security authentication information.</p>
+         * <p>The authentication information.</p>
+         * <p>Security authentication information.</p>
          * 
          * <strong>example:</strong>
          * <p>123123</p>
@@ -175,6 +176,9 @@ public class UpdateAppSeoStatusRequest extends Request {
 
         /**
          * <p>The index status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder seIndexStatus(Integer seIndexStatus) {
             this.putQueryParameter("SeIndexStatus", seIndexStatus);

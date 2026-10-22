@@ -118,6 +118,7 @@ public class DispatchConsoleAPIForPartnerRequest extends Request {
         } 
 
         /**
+         * <p>The access token obtained by calling GetUserAccessTokenForPartner.</p>
          * <p>This parameter is required.</p>
          */
         public Builder liveToken(String liveToken) {
@@ -127,13 +128,13 @@ public class DispatchConsoleAPIForPartnerRequest extends Request {
         }
 
         /**
-         * <p>The operation to perform on the alert. Valid values:</p>
+         * <p>Specifies the operation to perform on the alert. Valid values:</p>
          * <ul>
-         * <li><strong>deal</strong>: handles the alert (quarantine).</li>
-         * <li><strong>ignore</strong>: ignores the alert.</li>
-         * <li><strong>mark_mis_info</strong>: marks the alert as a false positive (adds it to the whitelist).</li>
-         * <li><strong>rm_mark_mis_info</strong>: unmarks the alert as a false positive (removes it from the whitelist).</li>
-         * <li><strong>offline_handled</strong>: marks the alert as handled.</li>
+         * <li><strong>deal</strong>: Handles the alert (quarantine).</li>
+         * <li><strong>ignore</strong>: Ignores the alert.</li>
+         * <li><strong>mark_mis_info</strong>: Marks the alert as a false positive (adds to the whitelist).</li>
+         * <li><strong>rm_mark_mis_info</strong>: Unmarks the alert as a false positive (removes from the whitelist).</li>
+         * <li><strong>offline_handled</strong>: Marks the alert as handled.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -172,7 +173,10 @@ public class DispatchConsoleAPIForPartnerRequest extends Request {
         }
 
         /**
-         * SiteHost.
+         * <p>The website domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abcd.scd.wanwang.xin</p>
          */
         public Builder siteHost(String siteHost) {
             this.putQueryParameter("SiteHost", siteHost);

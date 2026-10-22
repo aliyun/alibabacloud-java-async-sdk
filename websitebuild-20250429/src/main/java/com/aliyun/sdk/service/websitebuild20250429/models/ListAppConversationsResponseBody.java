@@ -210,7 +210,7 @@ public class ListAppConversationsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The detailed reason why access is denied.</p>
+         * <p>The detailed reasons for access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -221,7 +221,7 @@ public class ListAppConversationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether a retry is allowed.</p>
+         * <p>Indicates whether retries are allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -232,7 +232,7 @@ public class ListAppConversationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The application name. The application with this name is queried.</p>
+         * <p>The name of the application to query.</p>
          * 
          * <strong>example:</strong>
          * <p>dewuApp</p>
@@ -265,7 +265,7 @@ public class ListAppConversationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error parameters.</p>
+         * <p>The error arguments.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -273,8 +273,7 @@ public class ListAppConversationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per query.</p>
-         * <p>Valid values: 10 to 100. Default value: 20.</p>
+         * <p>The maximum number of results to return for a single query. Valid values: 10 to 100. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -293,7 +292,7 @@ public class ListAppConversationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token for the next query. This parameter is empty if no more results exist.</p>
+         * <p>The token that is used to start the next query. If no next query is available, this parameter is empty.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAARbaCuN6hiD08qrLdwJ9Fh3BFw8paIJ7ylB6A7Qn9JjM</p>
@@ -567,7 +566,7 @@ public class ListAppConversationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time in ISO 8601 format with a time zone offset.</p>
+             * <p>The creation time in ISO 8601 format, including the time zone offset.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
              * 
              * <strong>example:</strong>
@@ -579,7 +578,7 @@ public class ListAppConversationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The modification time in ISO 8601 format with the UTC (Z) time zone.</p>
+             * <p>The update time in ISO 8601 format. The time zone is UTC (Z).</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
              * 
              * <strong>example:</strong>
@@ -624,7 +623,7 @@ public class ListAppConversationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The current viewpoint, equivalent to the news title.</p>
+             * <p>The current viewpoint, which is equivalent to the news title.</p>
              * 
              * <strong>example:</strong>
              * <p>Sometimes When We Touch</p>
@@ -731,7 +730,7 @@ public class ListAppConversationsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The request result.</p>
+             * <p>The request results.</p>
              */
             public Builder data(java.util.List<Data> data) {
                 this.data = data;
@@ -761,7 +760,7 @@ public class ListAppConversationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource count that matches the conditional filter criteria.</p>
+             * <p>The resource count that meets the conditional filters.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>

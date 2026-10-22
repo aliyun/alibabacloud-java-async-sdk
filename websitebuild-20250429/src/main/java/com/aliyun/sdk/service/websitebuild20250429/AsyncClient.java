@@ -21,7 +21,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the Supabase instance information associated with a resource.</p>
+     * <p>Queries the information about the Supabase instance associated with a resource.</p>
      * 
      * @param request the request parameters of AllocateSupabaseForAdmin  AllocateSupabaseForAdminRequest
      * @return AllocateSupabaseForAdminResponse
@@ -69,7 +69,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the Supabase instance information corresponding to a resource.</p>
+     * <p>Queries the Supabase instance information corresponding to the resource.</p>
      * 
      * @param request the request parameters of CheckResourceMeasure  CheckResourceMeasureRequest
      * @return CheckResourceMeasureResponse
@@ -78,7 +78,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the Supabase instance information corresponding to a resource.</p>
+     * <p>Queries the Supabase instance information corresponding to the resource.</p>
      * 
      * @param request the request parameters of CheckUserResourceMeasure  CheckUserResourceMeasureRequest
      * @return CheckUserResourceMeasureResponse
@@ -132,7 +132,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the configuration information of the code generation plug-in.</p>
+     * <p>Retrieves the configuration information of the code generation plugin.</p>
      * 
      * @param request the request parameters of CreateAppAssistantAgentSsoLogin  CreateAppAssistantAgentSsoLoginRequest
      * @return CreateAppAssistantAgentSsoLoginResponse
@@ -179,7 +179,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the configuration information of a code generation plug-in.</p>
+     * <p>Retrieves the configuration information of the code generation plug-in.</p>
      * 
      * @param request the request parameters of CreateAppPlugin  CreateAppPluginRequest
      * @return CreateAppPluginResponse
@@ -395,7 +395,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the information of an application instance.</p>
+     * <p>Queries application instance information.</p>
      * 
      * @param request the request parameters of GetAppCodeWorkspaceDetail  GetAppCodeWorkspaceDetailRequest
      * @return GetAppCodeWorkspaceDetailResponse
@@ -404,7 +404,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The API operation for creating an AI conversation in Wanxiaozhi 2.0.</p>
+     * <p>The Wanxiaozhi 2.0 API operation for creating AI conversations.</p>
      * 
      * @param request the request parameters of GetAppConversation  GetAppConversationRequest
      * @return GetAppConversationResponse
@@ -413,7 +413,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Creates an AI session through the WanXiaoZhi 2.0 interface.</p>
+     * <p>The API operation for creating an AI session in Wanxiaozhi 2.0.</p>
      * 
      * @param request the request parameters of GetAppConversationLockStatus  GetAppConversationLockStatusRequest
      * @return GetAppConversationLockStatusResponse
@@ -431,7 +431,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the configuration information of the code generation plug-in.</p>
+     * <p>Retrieves the configuration information of the code generation plugin.</p>
      * 
      * @param request the request parameters of GetAppFileContent  GetAppFileContentRequest
      * @return GetAppFileContentResponse
@@ -467,7 +467,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the configuration information of the code generation plug-in.</p>
+     * <p>Retrieves the configuration information of the code generation plugin.</p>
      * 
      * @param request the request parameters of GetAppInstanceForPartner  GetAppInstanceForPartnerRequest
      * @return GetAppInstanceForPartnerResponse
@@ -485,7 +485,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the configuration information of a code generation plug-in.</p>
+     * <p>Retrieves the configuration information of a code generation plugin.</p>
      * 
      * @param request the request parameters of GetAppPlugin  GetAppPluginRequest
      * @return GetAppPluginResponse
@@ -611,7 +611,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries application instance information.</p>
+     * <p>Queries the information of an application instance.</p>
      * 
      * @param request the request parameters of GetAppWorkspaceDirectory  GetAppWorkspaceDirectoryRequest
      * @return GetAppWorkspaceDirectoryResponse
@@ -653,7 +653,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the configuration information of the QR code generation plug-in.</p>
+     * <p>Retrieves the configuration information of the code generation plugin.</p>
      * 
      * @param request the request parameters of GetMiniAppBinding  GetMiniAppBindingRequest
      * @return GetMiniAppBindingResponse
@@ -668,7 +668,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the configuration information of the code generation plugin.</p>
+     * <p>Retrieves the configuration information of the code generation plug-in.</p>
      * 
      * @param request the request parameters of GetOssUploadPolicy  GetOssUploadPolicyRequest
      * @return GetOssUploadPolicyResponse
@@ -698,7 +698,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the configuration information of the code generation plug-in.</p>
+     * <p>Retrieves the configuration information for the code generation plugin.</p>
      * 
      * @param request the request parameters of GrantPromotionOfferForPartner  GrantPromotionOfferForPartnerRequest
      * @return GrantPromotionOfferForPartnerResponse
@@ -707,7 +707,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the configuration information of a code generation plug-in.</p>
+     * <p>Retrieves the configuration information of the code generation plugin.</p>
      * 
      * @param request the request parameters of InstallAppPlugin  InstallAppPluginRequest
      * @return InstallAppPluginResponse
@@ -731,7 +731,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the AI session history for WanXiaoZhi 2.0.</p>
+     * <p>Queries the AI conversation history for Wanxiaozhi 2.0.</p>
      * 
      * @param request the request parameters of ListAIStaffChatMessages  ListAIStaffChatMessagesRequest
      * @return ListAIStaffChatMessagesResponse
@@ -785,7 +785,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Creates an AI conversation through the Wanxiaozhi 2.0 interface.</p>
+     * <p>Creates an AI conversation in Wanxiaozhi 2.0.</p>
      * 
      * @param request the request parameters of ListAppConversations  ListAppConversationsRequest
      * @return ListAppConversationsResponse
@@ -821,7 +821,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the configuration information of a code generation plug-in.</p>
+     * <p>Retrieves the configuration information of the code generation plugin.</p>
      * 
      * @param request the request parameters of ListAppPluginFiles  ListAppPluginFilesRequest
      * @return ListAppPluginFilesResponse
@@ -830,7 +830,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the configuration information of a code generation plug-in.</p>
+     * <p>Retrieves the configuration information of the code generation plug-in.</p>
      * 
      * @param request the request parameters of ListAppPluginVersions  ListAppPluginVersionsRequest
      * @return ListAppPluginVersionsResponse
@@ -893,7 +893,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the configuration information of code generation plug-ins.</p>
+     * <p>Retrieves the configuration information of code generation plugins.</p>
      * 
      * @param request the request parameters of ListMyAppPlugins  ListMyAppPluginsRequest
      * @return ListMyAppPluginsResponse
@@ -1004,7 +1004,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the application instance information.</p>
+     * <p>Queries application instance information.</p>
      * 
      * @param request the request parameters of NotifyAppNotificationForAdmin  NotifyAppNotificationForAdminRequest
      * @return NotifyAppNotificationForAdminResponse
@@ -1046,7 +1046,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Operates on the Supabase instance information corresponding to a resource.</p>
+     * <p>The Supabase instance information for the operated resource.</p>
      * 
      * @param request the request parameters of OperateSupabaseForAdmin  OperateSupabaseForAdminRequest
      * @return OperateSupabaseForAdminResponse
@@ -1055,7 +1055,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries application instance information.</p>
+     * <p>Queries the application instance information.</p>
      * 
      * @param request the request parameters of PublishAppInstance  PublishAppInstanceRequest
      * @return PublishAppInstanceResponse
@@ -1172,7 +1172,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the auth configuration of a Supabase instance associated with a resource.</p>
+     * <p>Queries the authentication configuration of the Supabase instance associated with the resource.</p>
      * 
      * @param request the request parameters of QuerySupabaseAuthConfigsForAdmin  QuerySupabaseAuthConfigsForAdminRequest
      * @return QuerySupabaseAuthConfigsForAdminResponse
@@ -1181,7 +1181,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the Supabase instance configuration information corresponding to a resource.</p>
+     * <p>Queries the configuration information of the Supabase instance associated with a resource.</p>
      * 
      * @param request the request parameters of QuerySupabaseConfigsForAdmin  QuerySupabaseConfigsForAdminRequest
      * @return QuerySupabaseConfigsForAdminResponse
@@ -1190,7 +1190,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the Supabase instance information corresponding to a resource.</p>
+     * <p>Queries the information of the Supabase instance associated with a resource.</p>
      * 
      * @param request the request parameters of QuerySupabaseInstanceInfoForAdmin  QuerySupabaseInstanceInfoForAdminRequest
      * @return QuerySupabaseInstanceInfoForAdminResponse
@@ -1282,7 +1282,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the configuration information of the code generation plugin.</p>
+     * <p>Retrieves the configuration information of the code generation plug-in.</p>
      * 
      * @param request the request parameters of RollbackAppCodeSnapshot  RollbackAppCodeSnapshotRequest
      * @return RollbackAppCodeSnapshotResponse
@@ -1291,7 +1291,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries application instance information.</p>
+     * <p>Queries the details of an application instance.</p>
      * 
      * @param request the request parameters of RollbackAppInstancePublish  RollbackAppInstancePublishRequest
      * @return RollbackAppInstancePublishResponse
@@ -1300,7 +1300,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the configuration information of a code generation plug-in.</p>
+     * <p>Retrieves the configuration information of the code generation plugin.</p>
      * 
      * @param request the request parameters of RollbackAppPluginVersion  RollbackAppPluginVersionRequest
      * @return RollbackAppPluginVersionResponse
@@ -1405,7 +1405,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the configuration information of a code generation plugin.</p>
+     * <p>Retrieves the configuration information of the code generation plug-in.</p>
      * 
      * @param request the request parameters of UninstallAppPlugin  UninstallAppPluginRequest
      * @return UninstallAppPluginResponse
@@ -1450,7 +1450,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the configuration information of a code generation plug-in.</p>
+     * <p>Retrieves the configuration information of the code generation plugin.</p>
      * 
      * @param request the request parameters of UpdateAppPlugin  UpdateAppPluginRequest
      * @return UpdateAppPluginResponse
@@ -1510,7 +1510,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the code generation plug-in configuration information.</p>
+     * <p>Retrieves the configuration information of the code generation plugin.</p>
      * 
      * @param request the request parameters of UploadAppPluginVersion  UploadAppPluginVersionRequest
      * @return UploadAppPluginVersionResponse
@@ -1528,7 +1528,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The Supabase instance information corresponding to the operation resource.</p>
+     * <p>The Supabase instance information corresponding to the resource.</p>
      * 
      * @param request the request parameters of UploadMaterialFile  UploadMaterialFileRequest
      * @return UploadMaterialFileResponse

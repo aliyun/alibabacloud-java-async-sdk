@@ -184,7 +184,7 @@ public class ListMyAppPluginsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The detailed reason why access was denied.</p>
+         * <p>The detailed reason why access is denied.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -195,7 +195,7 @@ public class ListMyAppPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether retry is allowed.</p>
+         * <p>Specifies whether retries are allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -206,7 +206,7 @@ public class ListMyAppPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The application name. The name must start with a letter and can contain digits, letters, underscores (_), and hyphens (-). The name can be up to 36 characters in length.</p>
+         * <p>The application name. The name must start with a letter and can contain digits, letters, underscores (_), and hyphens (-). It can be up to 36 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>ish-intelligence-store-platform-admin-web</p>
@@ -228,9 +228,9 @@ public class ListMyAppPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic error message, which is used to replace the <code>%s</code> in the <strong>ErrMessage</strong> return parameter.</p>
+         * <p>The dynamic error message, which is used to replace <code>%s</code> in the <strong>ErrMessage</strong> response parameter.</p>
          * <blockquote>
-         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
+         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the <strong>DtsJobId</strong> request parameter is invalid.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -242,7 +242,7 @@ public class ListMyAppPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error parameters returned.</p>
+         * <p>The returned error parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -283,7 +283,7 @@ public class ListMyAppPluginsResponseBody extends TeaModel {
          * <p>The exception message.</p>
          * 
          * <strong>example:</strong>
-         * <p>System exception.</p>
+         * <p>System exception</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -291,7 +291,7 @@ public class ListMyAppPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A reserved parameter.</p>
+         * <p>The reserved parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -477,7 +477,7 @@ public class ListMyAppPluginsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The plug-in category.</p>
+             * <p>The disk specifications.</p>
              * 
              * <strong>example:</strong>
              * <p>NormalMultimaster</p>
@@ -521,7 +521,7 @@ public class ListMyAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The popularity count.</p>
+             * <p>The popularity.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -532,7 +532,7 @@ public class ListMyAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The plug-in icon.</p>
+             * <p>The plugin description.</p>
              * 
              * <strong>example:</strong>
              * <p>-1</p>
@@ -543,7 +543,7 @@ public class ListMyAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The plug-in ID.</p>
+             * <p>The plugin ID.</p>
              * 
              * <strong>example:</strong>
              * <p>alipay-isv</p>
@@ -554,7 +554,7 @@ public class ListMyAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The plug-in name.</p>
+             * <p>The plugin name.</p>
              * 
              * <strong>example:</strong>
              * <p>transformer</p>
@@ -589,8 +589,8 @@ public class ListMyAppPluginsResponseBody extends TeaModel {
             /**
              * <p>The visibility. Valid values:</p>
              * <ul>
-             * <li><strong>PUBLIC</strong>: public.</li>
-             * <li><strong>PRIVATE</strong>: private.</li>
+             * <li><strong>PUBLIC</strong>: Public.</li>
+             * <li><strong>PRIVATE</strong>: Private.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -765,7 +765,7 @@ public class ListMyAppPluginsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Converts controlType based on the associated public category.</p>
+             * <p>The controlType converted based on the associated public category.</p>
              * 
              * <strong>example:</strong>
              * <p>CRAC</p>
@@ -809,7 +809,7 @@ public class ListMyAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The plug-in icon.</p>
+             * <p>The plugin description.</p>
              * 
              * <strong>example:</strong>
              * <p>@lADPDetfgMsFFUvNAkjNAkg</p>
@@ -820,7 +820,7 @@ public class ListMyAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The plug-in ID.</p>
+             * <p>The plugin ID.</p>
              * 
              * <strong>example:</strong>
              * <p>alipay-isv</p>
@@ -831,7 +831,7 @@ public class ListMyAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The plug-in name.</p>
+             * <p>The plugin name.</p>
              * 
              * <strong>example:</strong>
              * <p>trafficControl</p>
@@ -842,7 +842,7 @@ public class ListMyAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status. Valid values: unknown, init, testing, online.</p>
+             * <p>The status. Valid values: unknown, init, testing, and online.</p>
              * 
              * <strong>example:</strong>
              * <p>Succeeded</p>
@@ -866,8 +866,8 @@ public class ListMyAppPluginsResponseBody extends TeaModel {
             /**
              * <p>The visibility. Valid values:</p>
              * <ul>
-             * <li><strong>PUBLIC</strong>: public.</li>
-             * <li><strong>PRIVATE</strong>: private.</li>
+             * <li><strong>PUBLIC</strong>: Public.</li>
+             * <li><strong>PRIVATE</strong>: Private.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1089,7 +1089,7 @@ public class ListMyAppPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>In addition to pagination limits, the server processes a maximum of 1000 recent records for the current query. If the results exceed 1000 entries, <strong>ResultLimit</strong> is <strong>true</strong>. Narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
+             * <p>The result limit. In addition to the pagination limit, the server processes a maximum of the latest 1,000 records for the current query. If the number of results exceeds 1,000, <strong>ResultLimit</strong> is <strong>true</strong>. In this case, narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>False</p>

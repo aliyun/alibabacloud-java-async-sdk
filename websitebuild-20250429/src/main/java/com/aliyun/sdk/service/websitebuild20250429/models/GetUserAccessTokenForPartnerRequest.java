@@ -74,7 +74,10 @@ public class GetUserAccessTokenForPartnerRequest extends Request {
         } 
 
         /**
-         * SiteHost.
+         * <p>The website domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abcd.scd.wanwang.xin</p>
          */
         public Builder siteHost(String siteHost) {
             this.putQueryParameter("SiteHost", siteHost);
@@ -83,7 +86,7 @@ public class GetUserAccessTokenForPartnerRequest extends Request {
         }
 
         /**
-         * <p>The credential for connecting to the cloud application.</p>
+         * <p>The credential used to connect to the cloud application.</p>
          * <blockquote>
          * <p>This parameter is displayed for non-initial calls.</p>
          * </blockquote>

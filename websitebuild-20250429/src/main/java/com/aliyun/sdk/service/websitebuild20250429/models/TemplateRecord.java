@@ -143,7 +143,10 @@ public class TemplateRecord extends TeaModel {
         }
 
         /**
-         * <p>The replication status.</p>
+         * <p>The copy status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>copying</p>
          */
         public Builder copyStatus(String copyStatus) {
             this.copyStatus = copyStatus;
@@ -163,7 +166,7 @@ public class TemplateRecord extends TeaModel {
         }
 
         /**
-         * <p>The modification time.</p>
+         * <p>The update time.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
          * 
          * <strong>example:</strong>
@@ -198,6 +201,9 @@ public class TemplateRecord extends TeaModel {
 
         /**
          * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12343131221311</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;

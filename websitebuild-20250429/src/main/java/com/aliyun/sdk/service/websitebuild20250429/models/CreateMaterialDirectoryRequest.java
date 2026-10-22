@@ -130,7 +130,7 @@ public class CreateMaterialDirectoryRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>图片管理</p>
+         * <p>Image management</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

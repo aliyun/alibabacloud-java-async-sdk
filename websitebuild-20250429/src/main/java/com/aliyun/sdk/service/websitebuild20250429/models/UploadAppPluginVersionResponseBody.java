@@ -184,7 +184,7 @@ public class UploadAppPluginVersionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The detailed reason why access was denied.</p>
+         * <p>The detailed reasons for access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -195,10 +195,10 @@ public class UploadAppPluginVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether retry is allowed. Valid values:</p>
+         * <p>Specifies whether a retry is allowed. Valid values:</p>
          * <ul>
-         * <li>false: Retry is not allowed.</li>
-         * <li>true: Retry is allowed.</li>
+         * <li>false: A retry is not allowed.</li>
+         * <li>true: A retry is allowed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -210,7 +210,7 @@ public class UploadAppPluginVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The application name.</p>
+         * <p>The name of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>ish-intelligence-store-platform-admin-web</p>
@@ -221,7 +221,7 @@ public class UploadAppPluginVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic code. This parameter is not in use. Ignore this parameter.</p>
+         * <p>The dynamic code. This parameter is not used and can be ignored.</p>
          * 
          * <strong>example:</strong>
          * <p>ERROR-oo1</p>
@@ -232,7 +232,7 @@ public class UploadAppPluginVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic message. This parameter is not in use. Ignore this parameter.</p>
+         * <p>The dynamic message. This parameter is not used and can be ignored.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://check-result-file-sh.oss-cn-shanghai.aliyuncs.com/gl3d6l3817id8p1/gl3d6l3817id8p1.diff.zip?Expires=1750392068&OSSAccessKeyId=LTAI5tKUErVCETM4ev9SELNb&Signature=Bcj3eohy8nmlSQ7AAGdq7JZoLjM%3D">https://check-result-file-sh.oss-cn-shanghai.aliyuncs.com/gl3d6l3817id8p1/gl3d6l3817id8p1.diff.zip?Expires=1750392068&amp;OSSAccessKeyId=LTAI5tKUErVCETM4ev9SELNb&amp;Signature=Bcj3eohy8nmlSQ7AAGdq7JZoLjM%3D</a></p>
@@ -243,7 +243,7 @@ public class UploadAppPluginVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error parameters returned.</p>
+         * <p>The returned error parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -281,10 +281,10 @@ public class UploadAppPluginVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message.</p>
+         * <p>The exception message.</p>
          * 
          * <strong>example:</strong>
-         * <p>System exception.</p>
+         * <p>System exception</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -292,7 +292,7 @@ public class UploadAppPluginVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is processed synchronously.</p>
+         * <p>Specifies whether synchronous processing is used.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -398,7 +398,7 @@ public class UploadAppPluginVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The bound API gateway plug-in ID.</p>
+             * <p>The ID of the bound API gateway plugin.</p>
              * 
              * <strong>example:</strong>
              * <p>1bae9ceaceea432d91c7069fab0dfc02</p>

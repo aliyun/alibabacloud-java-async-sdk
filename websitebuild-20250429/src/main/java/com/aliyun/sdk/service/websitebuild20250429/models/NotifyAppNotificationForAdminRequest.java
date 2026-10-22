@@ -149,6 +149,9 @@ public class NotifyAppNotificationForAdminRequest extends Request {
 
         /**
          * <p>The notification content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;type&quot;:&quot;UPDATE&quot;,&quot;record&quot;:{&quot;name&quot;:&quot;new&quot;,&quot;contact&quot;:null},&quot;old_record&quot;:{&quot;name&quot;:&quot;old&quot;}}</p>
          */
         public Builder payload(String payload) {
             this.putQueryParameter("Payload", payload);
@@ -157,7 +160,7 @@ public class NotifyAppNotificationForAdminRequest extends Request {
         }
 
         /**
-         * <p>The scene ID.</p>
+         * <p>The scenario ID.</p>
          * 
          * <strong>example:</strong>
          * <p>8c909373-6c33-41a7-aa38-3650e288a63e</p>

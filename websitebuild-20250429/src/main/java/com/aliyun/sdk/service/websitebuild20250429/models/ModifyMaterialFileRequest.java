@@ -139,11 +139,11 @@ public class ModifyMaterialFileRequest extends Request {
         }
 
         /**
-         * <p>The new name of the file after modification.</p>
+         * <p>The updated file name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试文件</p>
+         * <p>Test file</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

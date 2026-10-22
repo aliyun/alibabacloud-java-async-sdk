@@ -184,7 +184,7 @@ public class CreateAppInstanceTicketResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details about the access denial.</p>
+         * <p>The detailed reasons for access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -195,7 +195,7 @@ public class CreateAppInstanceTicketResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether retry is allowed.</p>
+         * <p>Specifies whether retries are allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -228,10 +228,7 @@ public class CreateAppInstanceTicketResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic error message, which is used to replace the <code>%s</code> placeholder in the <strong>ErrMessage</strong> response parameter.</p>
-         * <blockquote>
-         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
-         * </blockquote>
+         * <p>The dynamic error message, which is used to replace <code>%s</code> in the error message of the <strong>ErrMessage</strong> response parameter. If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the <strong>DtsJobId</strong> request parameter is invalid.</p>
          * 
          * <strong>example:</strong>
          * <p>SYSTEM_ERRROR</p>
@@ -242,7 +239,7 @@ public class CreateAppInstanceTicketResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error parameters.</p>
+         * <p>The returned error parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -283,7 +280,7 @@ public class CreateAppInstanceTicketResponseBody extends TeaModel {
          * <p>The exception message.</p>
          * 
          * <strong>example:</strong>
-         * <p>系统异常</p>
+         * <p>System exception</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -291,7 +288,7 @@ public class CreateAppInstanceTicketResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A reserved parameter.</p>
+         * <p>The reserved parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -534,7 +531,7 @@ public class CreateAppInstanceTicketResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The extended properties.</p>
+             * <p>The extended attributes.</p>
              * 
              * <strong>example:</strong>
              * <p>{\&quot;resourceGroupId\&quot;:\&quot;\&quot;,\&quot;page\&quot;:1,\&quot;size\&quot;:10,\&quot;selected\&quot;:\&quot;[\\\&quot;kvstore\\\&quot;]\&quot;}</p>
@@ -545,7 +542,7 @@ public class CreateAppInstanceTicketResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The authorization grant type.</p>
+             * <p>The authorization code type.</p>
              * 
              * <strong>example:</strong>
              * <p>authorization_code</p>
@@ -611,7 +608,7 @@ public class CreateAppInstanceTicketResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The external unique ID.</p>
+             * <p>The external unique identifier.</p>
              * 
              * <strong>example:</strong>
              * <p>hdm_33be9750d595b6cd7c93a80b46734b22</p>

@@ -181,6 +181,9 @@ public class AllocateSupabaseForAdminRequest extends Request {
 
         /**
          * <p>The environment identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>staging</p>
          */
         public Builder env(String env) {
             this.putQueryParameter("Env", env);
@@ -189,7 +192,7 @@ public class AllocateSupabaseForAdminRequest extends Request {
         }
 
         /**
-         * <p>The field by which to sort the results.</p>
+         * <p>The sort column.</p>
          * 
          * <strong>example:</strong>
          * <p>gmtCreated</p>
@@ -201,7 +204,7 @@ public class AllocateSupabaseForAdminRequest extends Request {
         }
 
         /**
-         * <p>The sort order. Valid values: ASC and DESC.</p>
+         * <p>The sort order. Valid values: ASC, DESC.</p>
          * 
          * <strong>example:</strong>
          * <p>BUY</p>

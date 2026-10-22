@@ -184,7 +184,7 @@ public class UpdateAppPluginResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the permission verification failure.</p>
+         * <p>The details of the permission check failure.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -195,7 +195,7 @@ public class UpdateAppPluginResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether retry is allowed.</p>
+         * <p>Indicates whether retries are allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -206,7 +206,7 @@ public class UpdateAppPluginResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The application name must start with a letter and can contain letters, digits, underscores (_), and hyphens (-). The name can be up to 36 characters in length.</p>
+         * <p>The name of the application. It must start with a letter and can contain digits, letters, underscores (_), and hyphens (-). The name can be up to 36 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>dewuApp</p>
@@ -217,7 +217,7 @@ public class UpdateAppPluginResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic code. This parameter is not in use. Ignore it.</p>
+         * <p>The dynamic code. This parameter is not used and can be ignored.</p>
          * 
          * <strong>example:</strong>
          * <p>ERROR-oo1</p>
@@ -239,7 +239,7 @@ public class UpdateAppPluginResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error parameters returned.</p>
+         * <p>The returned error parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -247,7 +247,7 @@ public class UpdateAppPluginResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the move is successful.</p>
+         * <p>Indicates whether the move was successful.</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -280,7 +280,7 @@ public class UpdateAppPluginResponseBody extends TeaModel {
          * <p>The exception message.</p>
          * 
          * <strong>example:</strong>
-         * <p>System exception.</p>
+         * <p>System exception</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -288,7 +288,7 @@ public class UpdateAppPluginResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is synchronously processed.</p>
+         * <p>Indicates whether the request is processed synchronously.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -368,7 +368,7 @@ public class UpdateAppPluginResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the operation is successful.</p>
+             * <p>Indicates whether the operation was successful.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>

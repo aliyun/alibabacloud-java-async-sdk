@@ -223,7 +223,7 @@ public class ModifyMaterialFileResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the permission verification failure.</p>
+         * <p>The details of the permission check failure.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -234,7 +234,7 @@ public class ModifyMaterialFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether retry is allowed.</p>
+         * <p>Indicates whether retries are allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -278,7 +278,7 @@ public class ModifyMaterialFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error parameters returned.</p>
+         * <p>The returned error parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -308,7 +308,7 @@ public class ModifyMaterialFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the modification was successful.</p>
+         * <p>Indicates whether the update was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -330,7 +330,7 @@ public class ModifyMaterialFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The root error code.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>SYSTEM.ERROR</p>
@@ -341,10 +341,10 @@ public class ModifyMaterialFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The root error message.</p>
+         * <p>The exception message.</p>
          * 
          * <strong>example:</strong>
-         * <p>系统异常</p>
+         * <p>System exception</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -352,7 +352,7 @@ public class ModifyMaterialFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

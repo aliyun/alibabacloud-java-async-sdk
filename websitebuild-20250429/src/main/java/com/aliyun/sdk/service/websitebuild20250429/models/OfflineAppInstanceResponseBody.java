@@ -184,7 +184,7 @@ public class OfflineAppInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The deprecated parameter. You can ignore this parameter.</p>
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated and can be ignored.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -195,7 +195,7 @@ public class OfflineAppInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether retry is allowed.</p>
+         * <p>Indicates whether retries are allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -239,7 +239,7 @@ public class OfflineAppInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error parameters.</p>
+         * <p>The returned error parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -247,7 +247,7 @@ public class OfflineAppInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the shift was successful.</p>
+         * <p>Indicates whether the move succeeded.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;TotalPageNum\&quot;: 1, \&quot;ResultLimit\&quot;: False, \&quot;CurrentPageNum\&quot;: 0, \&quot;PageSize\&quot;: 0, \&quot;TotalItemNum\&quot;: 0}</p>
@@ -280,10 +280,10 @@ public class OfflineAppInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message.</p>
+         * <p>The exception message.</p>
          * 
          * <strong>example:</strong>
-         * <p>系统异常</p>
+         * <p>System exception</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;

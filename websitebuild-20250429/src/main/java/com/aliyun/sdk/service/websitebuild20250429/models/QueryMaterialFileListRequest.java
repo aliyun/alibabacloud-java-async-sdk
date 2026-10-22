@@ -279,7 +279,7 @@ public class QueryMaterialFileListRequest extends Request {
         }
 
         /**
-         * <p>The folder ID.</p>
+         * <p>The directory ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -304,7 +304,7 @@ public class QueryMaterialFileListRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return per query.</p>
+         * <p>The maximum number of entries to return for a single request.</p>
          * <p>Valid values: 10 to 100. Default value: 20.</p>
          * 
          * <strong>example:</strong>
@@ -332,7 +332,7 @@ public class QueryMaterialFileListRequest extends Request {
          * <p>The website name.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试</p>
+         * <p>Test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -341,7 +341,7 @@ public class QueryMaterialFileListRequest extends Request {
         }
 
         /**
-         * <p>The token for the next query. This parameter is empty if no more results exist.</p>
+         * <p>The token that is used to start the next query. If no next query is available, this parameter is left empty.</p>
          * 
          * <strong>example:</strong>
          * <p>0l45bkwM022Dt+rOvPi/oQ==</p>
@@ -353,7 +353,7 @@ public class QueryMaterialFileListRequest extends Request {
         }
 
         /**
-         * <p>The field by which to sort the results.</p>
+         * <p>The sort field.</p>
          * 
          * <strong>example:</strong>
          * <p>gmtCreated</p>
@@ -411,7 +411,7 @@ public class QueryMaterialFileListRequest extends Request {
         }
 
         /**
-         * <p>The list of file suffixes.</p>
+         * <p>The list of file extensions.</p>
          */
         public Builder suffixList(java.util.List<String> suffixList) {
             String suffixListShrink = shrink(suffixList, "SuffixList", "json");

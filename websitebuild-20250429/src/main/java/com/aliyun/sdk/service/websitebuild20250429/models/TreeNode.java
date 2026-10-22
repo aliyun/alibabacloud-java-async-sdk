@@ -220,7 +220,7 @@ public class TreeNode extends TeaModel {
          * <p>The node name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Single-channel output</p>
+         * <p>Single output</p>
          */
         public Builder nodeName(String nodeName) {
             this.nodeName = nodeName;
@@ -240,6 +240,9 @@ public class TreeNode extends TeaModel {
 
         /**
          * <p>The operator role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>System</p>
          */
         public Builder operatorRole(String operatorRole) {
             this.operatorRole = operatorRole;

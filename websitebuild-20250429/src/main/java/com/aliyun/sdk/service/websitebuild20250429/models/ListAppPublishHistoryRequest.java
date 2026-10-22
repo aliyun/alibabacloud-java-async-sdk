@@ -249,6 +249,9 @@ public class ListAppPublishHistoryRequest extends Request {
 
         /**
          * <p>The deployment channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PC</p>
          */
         public Builder deployChannel(String deployChannel) {
             this.putQueryParameter("DeployChannel", deployChannel);
@@ -318,6 +321,9 @@ public class ListAppPublishHistoryRequest extends Request {
 
         /**
          * <p>The release environment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PROD</p>
          */
         public Builder publishEnv(String publishEnv) {
             this.putQueryParameter("PublishEnv", publishEnv);
@@ -351,6 +357,9 @@ public class ListAppPublishHistoryRequest extends Request {
 
         /**
          * <p>The release subchannel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>current</p>
          */
         public Builder subchannel(String subchannel) {
             this.putQueryParameter("Subchannel", subchannel);

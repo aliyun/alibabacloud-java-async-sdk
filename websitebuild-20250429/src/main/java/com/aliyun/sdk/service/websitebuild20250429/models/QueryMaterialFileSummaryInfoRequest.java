@@ -222,10 +222,10 @@ public class QueryMaterialFileSummaryInfoRequest extends Request {
         }
 
         /**
-         * <p>The file name.</p>
+         * <p>The name of the file.</p>
          * 
          * <strong>example:</strong>
-         * <p>文件名</p>
+         * <p>File name</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -234,7 +234,7 @@ public class QueryMaterialFileSummaryInfoRequest extends Request {
         }
 
         /**
-         * <p>The field by which to sort the results.</p>
+         * <p>The field used for sorting.</p>
          * 
          * <strong>example:</strong>
          * <p>CreationTime</p>
@@ -246,7 +246,7 @@ public class QueryMaterialFileSummaryInfoRequest extends Request {
         }
 
         /**
-         * <p>The sort order. Valid values: ASC and DESC.</p>
+         * <p>The sort order. Valid values: ASC, DESC.</p>
          * 
          * <strong>example:</strong>
          * <p>BUY</p>
@@ -282,7 +282,7 @@ public class QueryMaterialFileSummaryInfoRequest extends Request {
         }
 
         /**
-         * <p>The file status.</p>
+         * <p>The file statuses.</p>
          */
         public Builder statusList(java.util.List<String> statusList) {
             String statusListShrink = shrink(statusList, "StatusList", "json");
@@ -292,7 +292,7 @@ public class QueryMaterialFileSummaryInfoRequest extends Request {
         }
 
         /**
-         * <p>The file type.</p>
+         * <p>The file types.</p>
          */
         public Builder typeList(java.util.List<String> typeList) {
             String typeListShrink = shrink(typeList, "TypeList", "json");

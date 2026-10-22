@@ -184,7 +184,7 @@ public class QueryMaterialFileSummaryInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The detailed reason why access is denied.</p>
+         * <p>The detailed reasons for access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -195,7 +195,7 @@ public class QueryMaterialFileSummaryInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether retry is allowed.</p>
+         * <p>Indicates whether retries are allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -206,7 +206,7 @@ public class QueryMaterialFileSummaryInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The application name. The name can contain digits, letters, and hyphens (-). It must start with a letter and cannot end with a hyphen (-). The name cannot exceed 36 characters in length.</p>
+         * <p>The name of the application. The name can contain digits, letters, and hyphens (-). It must start with a letter, cannot end with a hyphen (-), and can be up to 36 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>spring-cloud-b</p>
@@ -239,7 +239,7 @@ public class QueryMaterialFileSummaryInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error parameters.</p>
+         * <p>The returned error parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -280,7 +280,7 @@ public class QueryMaterialFileSummaryInfoResponseBody extends TeaModel {
          * <p>The exception message.</p>
          * 
          * <strong>example:</strong>
-         * <p>系统异常</p>
+         * <p>System exception</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -288,7 +288,7 @@ public class QueryMaterialFileSummaryInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is synchronously processed.</p>
+         * <p>Indicates whether the request is processed synchronously.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -368,7 +368,7 @@ public class QueryMaterialFileSummaryInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The occupied storage space.</p>
+             * <p>The amount of storage space used.</p>
              * 
              * <strong>example:</strong>
              * <p>23M</p>

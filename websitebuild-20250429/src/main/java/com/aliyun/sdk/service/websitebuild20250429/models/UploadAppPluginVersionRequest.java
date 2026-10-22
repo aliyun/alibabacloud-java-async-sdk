@@ -166,7 +166,7 @@ public class UploadAppPluginVersionRequest extends Request {
         }
 
         /**
-         * <p>The changelog description.</p>
+         * <p>The changelog.</p>
          * 
          * <strong>example:</strong>
          * <p>x x x</p>
@@ -178,7 +178,7 @@ public class UploadAppPluginVersionRequest extends Request {
         }
 
         /**
-         * <p>The description. This parameter is optional. If a non-empty value is specified, the description field in the main table is also updated.</p>
+         * <p>The description. This parameter is optional. If this parameter is not empty, the description field in the primary table is updated accordingly.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -190,7 +190,7 @@ public class UploadAppPluginVersionRequest extends Request {
         }
 
         /**
-         * <p>The downloadable ZIP URL. This parameter is mutually exclusive with OssKey.</p>
+         * <p>The downloadable URL of the ZIP file. This parameter and OssKey are mutually exclusive.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://sfile.chatglm.cn/chatglm4/file/a8/a87340a5ba.pdf">https://sfile.chatglm.cn/chatglm4/file/a8/a87340a5ba.pdf</a></p>
@@ -202,10 +202,10 @@ public class UploadAppPluginVersionRequest extends Request {
         }
 
         /**
-         * <p>The extended JSON. This parameter is optional and uses the same format as the sandbox-synced extend field. If a non-empty value is specified, the extend field in the main table is also updated.</p>
+         * <p>The extended JSON string. This parameter is optional and must be in the same format as the extend parameter synchronized from the sandbox. If this parameter is not empty, the extend field in the primary table is updated accordingly.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;deliveryNodeName\&quot;:\&quot;Delivery QA\&quot;,\&quot;deliveryNodeStatus\&quot;:\&quot;Finish\&quot;,\&quot;deliveryOperatorRole\&quot;:\&quot;Provider\&quot;}</p>
+         * <p>{&quot;deliveryNodeName&quot;:&quot;Delivery Quality Inspection&quot;,&quot;deliveryNodeStatus&quot;:&quot;Finish&quot;,&quot;deliveryOperatorRole&quot;:&quot;Provider&quot;}</p>
          */
         public Builder extend(String extend) {
             this.putQueryParameter("Extend", extend);
@@ -214,7 +214,7 @@ public class UploadAppPluginVersionRequest extends Request {
         }
 
         /**
-         * <p>The OSS key obtained after frontend direct upload. This parameter is mutually exclusive with DownloadUrl.</p>
+         * <p>The Object Storage Service (OSS) key after the file is directly uploaded from the frontend. This parameter and DownloadUrl are mutually exclusive.</p>
          * 
          * <strong>example:</strong>
          * <p>backend/detection/objects/r-0008ujvfksltf5j45n81/task-000hckiuwyau0gwn17vq.jpg</p>
@@ -226,7 +226,7 @@ public class UploadAppPluginVersionRequest extends Request {
         }
 
         /**
-         * <p>The gateway plug-in ID.</p>
+         * <p>The ID of the gateway plugin.</p>
          * 
          * <strong>example:</strong>
          * <p>aliplayer-react</p>
@@ -238,7 +238,7 @@ public class UploadAppPluginVersionRequest extends Request {
         }
 
         /**
-         * <p>The new version number in semver format. The version must be greater than the current version.</p>
+         * <p>The new version number. The version number must follow the Semantic Versioning (SemVer) specification and be greater than the current version.</p>
          * 
          * <strong>example:</strong>
          * <p>v2</p>

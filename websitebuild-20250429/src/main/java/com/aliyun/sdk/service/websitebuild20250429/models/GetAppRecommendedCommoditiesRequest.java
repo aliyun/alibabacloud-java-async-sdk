@@ -137,6 +137,9 @@ public class GetAppRecommendedCommoditiesRequest extends Request {
 
         /**
          * <p>The extended information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder extend(String extend) {
             this.putQueryParameter("Extend", extend);
@@ -146,6 +149,9 @@ public class GetAppRecommendedCommoditiesRequest extends Request {
 
         /**
          * <p>The resource filtering conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder resourceConditions(String resourceConditions) {
             this.putQueryParameter("ResourceConditions", resourceConditions);

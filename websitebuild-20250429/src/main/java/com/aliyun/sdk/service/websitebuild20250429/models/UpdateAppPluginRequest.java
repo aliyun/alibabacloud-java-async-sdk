@@ -260,7 +260,7 @@ public class UpdateAppPluginRequest extends Request {
         }
 
         /**
-         * <p>The application description.</p>
+         * <p>The description of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>myapp</p>
@@ -272,7 +272,7 @@ public class UpdateAppPluginRequest extends Request {
         }
 
         /**
-         * <p>Other extension information in JSON format for future parameter expansion.</p>
+         * <p>The additional extension information in JSON format for subsequent parameter extensions.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -296,7 +296,7 @@ public class UpdateAppPluginRequest extends Request {
         }
 
         /**
-         * <p>The plug-in description.</p>
+         * <p>The description of the plugin.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://img.alicdn.com/imgextra/i4/O1CN01ANcLnQ1bCX7tZPVMJ_!!6000000003429-2-tps-100-100.png">https://img.alicdn.com/imgextra/i4/O1CN01ANcLnQ1bCX7tZPVMJ_!!6000000003429-2-tps-100-100.png</a></p>
@@ -308,7 +308,7 @@ public class UpdateAppPluginRequest extends Request {
         }
 
         /**
-         * <p>The gateway plug-in ID.</p>
+         * <p>The ID of the gateway plugin.</p>
          * 
          * <strong>example:</strong>
          * <p>1bae9ceaceea432d91c7069fab0dfc02</p>
@@ -320,7 +320,7 @@ public class UpdateAppPluginRequest extends Request {
         }
 
         /**
-         * <p>The plug-in name.</p>
+         * <p>The name of the plugin.</p>
          * 
          * <strong>example:</strong>
          * <p>alisecguard</p>
@@ -332,7 +332,7 @@ public class UpdateAppPluginRequest extends Request {
         }
 
         /**
-         * <p>The plug-in version.</p>
+         * <p>The plugin version.</p>
          * 
          * <strong>example:</strong>
          * <p>v2</p>
@@ -356,7 +356,7 @@ public class UpdateAppPluginRequest extends Request {
         }
 
         /**
-         * <p>The labels.</p>
+         * <p>The tags.</p>
          * 
          * <strong>example:</strong>
          * <p>[]</p>

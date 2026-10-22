@@ -138,7 +138,7 @@ public class ListMyAppPluginsRequest extends Request {
         }
 
         /**
-         * <p>Filters by category.</p>
+         * <p>The category used to filter results.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;Status\&quot;: 0, \&quot;Name\&quot;: \&quot;JGHDDLT\&quot;, \&quot;BizCode\&quot;: \&quot;\&quot;, \&quot;CategoryId\&quot;: 30000952447, \&quot;ParentCategoryId\&quot;: 30000952446}</p>
@@ -150,7 +150,7 @@ public class ListMyAppPluginsRequest extends Request {
         }
 
         /**
-         * <p>The search keyword that matches name/description.</p>
+         * <p>The search keyword. The keyword matches the name or description.</p>
          * 
          * <strong>example:</strong>
          * <p>${\&quot;wget JiexJPWT.popscan.xaliyun.com\&quot;}</p>
@@ -186,7 +186,7 @@ public class ListMyAppPluginsRequest extends Request {
         }
 
         /**
-         * <p>Filters by status.</p>
+         * <p>The status used to filter results.</p>
          * 
          * <strong>example:</strong>
          * <p>NORMAL</p>

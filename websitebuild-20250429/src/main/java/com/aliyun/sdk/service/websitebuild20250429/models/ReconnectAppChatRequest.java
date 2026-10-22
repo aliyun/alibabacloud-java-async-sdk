@@ -148,7 +148,10 @@ public class ReconnectAppChatRequest extends Request {
         }
 
         /**
-         * <p>The last event ID.</p>
+         * <p>The ID of the last event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder lastEventId(Integer lastEventId) {
             this.putBodyParameter("LastEventId", lastEventId);
@@ -158,6 +161,9 @@ public class ReconnectAppChatRequest extends Request {
 
         /**
          * <p>The creation time of the latest message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-08-28 10:25:41</p>
          */
         public Builder latestMessageCreateTime(String latestMessageCreateTime) {
             this.putBodyParameter("LatestMessageCreateTime", latestMessageCreateTime);

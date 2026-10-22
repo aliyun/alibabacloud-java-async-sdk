@@ -105,6 +105,9 @@ public class AppOperateAction extends TeaModel {
 
         /**
          * <p>The text used to display the action name in the user interface.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Renew</p>
          */
         public Builder actionText(String actionText) {
             this.actionText = actionText;
@@ -120,7 +123,10 @@ public class AppOperateAction extends TeaModel {
         }
 
         /**
-         * <p>The URL to navigate to when the action is clicked.</p>
+         * <p>The URL to redirect to when the action is clicked.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://common-buy.aliyun.com/?orderType=RENEW&commodityCode=domain_website_public_cn&instanceId=12313213">https://common-buy.aliyun.com/?orderType=RENEW&amp;commodityCode=domain_website_public_cn&amp;instanceId=12313213</a></p>
          */
         public Builder href(String href) {
             this.href = href;

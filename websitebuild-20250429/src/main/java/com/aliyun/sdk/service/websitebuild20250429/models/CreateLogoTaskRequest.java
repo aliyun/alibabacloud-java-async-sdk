@@ -101,7 +101,7 @@ public class CreateLogoTaskRequest extends Request {
         } 
 
         /**
-         * LogoVersion.
+         * <p>The logo generation version number. Different versions use different parameter parsing methods.</p>
          */
         public Builder logoVersion(String logoVersion) {
             this.putQueryParameter("LogoVersion", logoVersion);
@@ -113,7 +113,7 @@ public class CreateLogoTaskRequest extends Request {
          * <p>The negative prompt.</p>
          * 
          * <strong>example:</strong>
-         * <p>不生成政治相关图片内容</p>
+         * <p>Do not generate politically related image content</p>
          */
         public Builder negativePrompt(String negativePrompt) {
             this.putQueryParameter("NegativePrompt", negativePrompt);
@@ -137,7 +137,7 @@ public class CreateLogoTaskRequest extends Request {
          * <p>The positive prompt.</p>
          * 
          * <strong>example:</strong>
-         * <p>请严格遵照原文提取稿件的摘要，不要随意捏造和修改文中出现的新闻数据，不要改变原文的意思和新闻事实，不要在摘要中添加自己的观点。生成的摘要不要出现语法和标点的错误。在生成摘要时请去掉里面的记者、通讯员、稿件来源等信息。</p>
+         * <p>Strictly follow the original text to extract the summary of the manuscript. Do not arbitrarily fabricate or modify the news data presented in the text. Do not change the meaning or the news facts of the original text. Do not add your own opinions to the summary. Ensure the generated summary is free of grammatical and punctuation errors. When generating the summary, remove information such as the reporter, correspondent, and article source</p>
          */
         public Builder prompt(String prompt) {
             this.putQueryParameter("Prompt", prompt);

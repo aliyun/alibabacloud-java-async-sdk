@@ -222,7 +222,7 @@ public class CreateAppPluginRequest extends Request {
         }
 
         /**
-         * <p>The category of the plug-in.</p>
+         * <p>The category of the skill.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;Depth\&quot;: 4, \&quot;ParentCategoryId\&quot;: 5281, \&quot;Name\&quot;: \&quot;1\&quot;, \&quot;CategoryId\&quot;: 5282, \&quot;CreateTime\&quot;: \&quot;2025-08-26 10:20:37\&quot;}</p>
@@ -234,7 +234,7 @@ public class CreateAppPluginRequest extends Request {
         }
 
         /**
-         * <p>The description of the plug-in. The value must be 10 to 512 characters in length.</p>
+         * <p>The description of the skill. The description must be 10 to 512 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -246,7 +246,7 @@ public class CreateAppPluginRequest extends Request {
         }
 
         /**
-         * <p>The downloadable ZIP URL. This parameter is mutually exclusive with OssKey.</p>
+         * <p>The URL of the downloadable ZIP file. Specify either this parameter or OssKey.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://geoip-sdk-user.oss-cn-zhangjiakou.aliyuncs.com/product/v1/ipv6-inner/common/v1.20230608104522.dex?Expires=1753324652&OSSAccessKeyId=x6R87i97yKeKRggz&Signature=IwS6V56TlgjcX0AgikXLvf3CVtw%3D">http://geoip-sdk-user.oss-cn-zhangjiakou.aliyuncs.com/product/v1/ipv6-inner/common/v1.20230608104522.dex?Expires=1753324652&amp;OSSAccessKeyId=x6R87i97yKeKRggz&amp;Signature=IwS6V56TlgjcX0AgikXLvf3CVtw%3D</a></p>
@@ -258,7 +258,7 @@ public class CreateAppPluginRequest extends Request {
         }
 
         /**
-         * <p>The extended JSON. This parameter is optional and uses the same format as the extend field in sandbox synchronization. If this parameter is not empty, the value is written to the database.</p>
+         * <p>The extended JSON data. The format is the same as the extend parameter synchronized with the sandbox. If this parameter is not empty, it is saved to the database. This parameter is optional.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;user_device_id\&quot;:\&quot;6bef45cb0c76de284d24de074c088b73\&quot;}\n</p>
@@ -282,7 +282,7 @@ public class CreateAppPluginRequest extends Request {
         }
 
         /**
-         * <p>The OSS key after frontend direct upload. This parameter is mutually exclusive with DownloadUrl.</p>
+         * <p>The Object Storage Service (OSS) key generated after a direct upload from the frontend. Specify either this parameter or DownloadUrl.</p>
          * 
          * <strong>example:</strong>
          * <p>backend/detection/objects/r-0008ujvfksltf5j45n81/task-000hckiuwyau0gwn17vq.jpg</p>
@@ -294,7 +294,7 @@ public class CreateAppPluginRequest extends Request {
         }
 
         /**
-         * <p>The unique identifier of the plug-in. The value can contain lowercase letters, digits, and hyphens (-), and must be 3 to 64 characters in length.</p>
+         * <p>The unique identifier of the skill. The identifier must be 3 to 64 characters in length and can contain only lowercase letters, digits, and hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>1bae9ceaceea432d91c7069fab0dfc02</p>
@@ -306,7 +306,7 @@ public class CreateAppPluginRequest extends Request {
         }
 
         /**
-         * <p>The name of the plug-in. The value must be 2 to 64 characters in length.</p>
+         * <p>The name of the skill. The name must be 2 to 64 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>alisecguard</p>
@@ -318,7 +318,7 @@ public class CreateAppPluginRequest extends Request {
         }
 
         /**
-         * <p>The version number in semver format. Default value: 0.1.0.</p>
+         * <p>The version number of the plug-in. The version number must be in the Semantic Versioning (SemVer) format. Default value: 0.1.0.</p>
          * 
          * <strong>example:</strong>
          * <p>1.1.6</p>
@@ -330,7 +330,7 @@ public class CreateAppPluginRequest extends Request {
         }
 
         /**
-         * <p>The tags, separated by commas (,).</p>
+         * <p>The tags of the skill. Separate multiple tags with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>[]</p>
@@ -342,7 +342,7 @@ public class CreateAppPluginRequest extends Request {
         }
 
         /**
-         * <p>The visibility of the plug-in. Default value: private.</p>
+         * <p>The visibility of the skill. Default value: private.</p>
          * 
          * <strong>example:</strong>
          * <p>private</p>

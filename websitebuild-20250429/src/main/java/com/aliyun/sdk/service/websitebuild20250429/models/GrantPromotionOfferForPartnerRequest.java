@@ -153,6 +153,9 @@ public class GrantPromotionOfferForPartnerRequest extends Request {
 
         /**
          * <p>The activity code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACT202606001</p>
          */
         public Builder activityCode(String activityCode) {
             this.putQueryParameter("ActivityCode", activityCode);
@@ -197,7 +200,7 @@ public class GrantPromotionOfferForPartnerRequest extends Request {
         }
 
         /**
-         * <p>The employee code.</p>
+         * <p>The employee ID.</p>
          * 
          * <strong>example:</strong>
          * <p>WB02409424</p>

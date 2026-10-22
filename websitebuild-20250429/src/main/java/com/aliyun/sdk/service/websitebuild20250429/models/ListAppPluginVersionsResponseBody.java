@@ -184,7 +184,7 @@ public class ListAppPluginVersionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The detailed reason why access was denied.</p>
+         * <p>The detailed reason for the access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -195,7 +195,7 @@ public class ListAppPluginVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether retry is allowed.</p>
+         * <p>Indicates whether retries are allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -206,7 +206,7 @@ public class ListAppPluginVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The application name. The application with this name is queried.</p>
+         * <p>The name of the application to query.</p>
          * 
          * <strong>example:</strong>
          * <p>spring-cloud-b</p>
@@ -228,7 +228,7 @@ public class ListAppPluginVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic message. Currently not in use. Ignore this parameter.</p>
+         * <p>The dynamic message. This parameter is not used and can be ignored.</p>
          * 
          * <strong>example:</strong>
          * <p>abc</p>
@@ -239,7 +239,7 @@ public class ListAppPluginVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error parameters returned.</p>
+         * <p>The returned error parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -280,7 +280,7 @@ public class ListAppPluginVersionsResponseBody extends TeaModel {
          * <p>The exception message.</p>
          * 
          * <strong>example:</strong>
-         * <p>System exception.</p>
+         * <p>System exception</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -678,7 +678,7 @@ public class ListAppPluginVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Valid values: unknown, init, testing, online.</p>
+             * <p>The status. Valid values: unknown, init, testing, and online.</p>
              * 
              * <strong>example:</strong>
              * <p>Succeeded</p>
@@ -861,7 +861,7 @@ public class ListAppPluginVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The query results.</p>
+             * <p>The request results.</p>
              */
             public Builder data(java.util.List<Data> data) {
                 this.data = data;
@@ -910,7 +910,7 @@ public class ListAppPluginVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Apart from pagination limits, the server processes a maximum of 1000 recent records for the current query. If the results exceed 1000 records, <strong>ResultLimit</strong> is <strong>true</strong>, and you need to narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
+             * <p>In addition to the pagination limit, the server processes a maximum of the latest 1,000 records for the current query. If the number of results exceeds 1,000, <strong>ResultLimit</strong> is <strong>true</strong>. In this case, narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>False</p>

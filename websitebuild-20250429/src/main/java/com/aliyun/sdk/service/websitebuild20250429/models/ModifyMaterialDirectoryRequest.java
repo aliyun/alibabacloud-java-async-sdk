@@ -126,7 +126,7 @@ public class ModifyMaterialDirectoryRequest extends Request {
         }
 
         /**
-         * <p>The folder ID.</p>
+         * <p>The ID of the folder.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,11 +139,11 @@ public class ModifyMaterialDirectoryRequest extends Request {
         }
 
         /**
-         * <p>The new name of the folder.</p>
+         * <p>The updated name of the folder.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>视频管理</p>
+         * <p>Video management</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

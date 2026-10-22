@@ -251,6 +251,9 @@ public class OperateSupabaseForAdminRequest extends Request {
 
         /**
          * <p>The environment identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>staging</p>
          */
         public Builder env(String env) {
             this.putQueryParameter("Env", env);
@@ -295,7 +298,7 @@ public class OperateSupabaseForAdminRequest extends Request {
         }
 
         /**
-         * <p>The column used for sorting.</p>
+         * <p>The sort field.</p>
          * 
          * <strong>example:</strong>
          * <p>CreationTime</p>
@@ -331,7 +334,7 @@ public class OperateSupabaseForAdminRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

@@ -164,7 +164,7 @@ public class SetAppDomainCertificateRequest extends Request {
         }
 
         /**
-         * <p>The SSL certificate name.</p>
+         * <p>The name of the SSL certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>2024</p>
@@ -176,7 +176,7 @@ public class SetAppDomainCertificateRequest extends Request {
         }
 
         /**
-         * <p>The certificate type: default free certificate or customer-owned certificate.</p>
+         * <p>The certificate type. Valid values: default free certificate and customer-owned certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>Server</p>

@@ -34,6 +34,10 @@ public class CheckUserResourceMeasureRequest extends Request {
     private String bizType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesiredTotal")
+    private Long desiredTotal;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EspBizId")
     private String espBizId;
 
@@ -55,6 +59,7 @@ public class CheckUserResourceMeasureRequest extends Request {
         this.belongId = builder.belongId;
         this.belongIdType = builder.belongIdType;
         this.bizType = builder.bizType;
+        this.desiredTotal = builder.desiredTotal;
         this.espBizId = builder.espBizId;
         this.orderComponentParams = builder.orderComponentParams;
         this.resourceCode = builder.resourceCode;
@@ -103,6 +108,13 @@ public class CheckUserResourceMeasureRequest extends Request {
     }
 
     /**
+     * @return desiredTotal
+     */
+    public Long getDesiredTotal() {
+        return this.desiredTotal;
+    }
+
+    /**
      * @return espBizId
      */
     public String getEspBizId() {
@@ -135,6 +147,7 @@ public class CheckUserResourceMeasureRequest extends Request {
         private String belongId; 
         private String belongIdType; 
         private String bizType; 
+        private Long desiredTotal; 
         private String espBizId; 
         private String orderComponentParams; 
         private String resourceCode; 
@@ -150,6 +163,7 @@ public class CheckUserResourceMeasureRequest extends Request {
             this.belongId = request.belongId;
             this.belongIdType = request.belongIdType;
             this.bizType = request.bizType;
+            this.desiredTotal = request.desiredTotal;
             this.espBizId = request.espBizId;
             this.orderComponentParams = request.orderComponentParams;
             this.resourceCode = request.resourceCode;
@@ -166,7 +180,7 @@ public class CheckUserResourceMeasureRequest extends Request {
         }
 
         /**
-         * <p>The owner ID, which can be a website ID or an Alibaba Cloud account ID.</p>
+         * <p>The belong ID, such as the website ID or Alibaba Cloud user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -178,11 +192,7 @@ public class CheckUserResourceMeasureRequest extends Request {
         }
 
         /**
-         * <p>The type of the owner ID. Valid values:</p>
-         * <ul>
-         * <li>siteId</li>
-         * <li>uid.</li>
-         * </ul>
+         * <p>The belong ID type, such as siteId or uid.</p>
          * 
          * <strong>example:</strong>
          * <p>USER</p>
@@ -206,6 +216,18 @@ public class CheckUserResourceMeasureRequest extends Request {
         }
 
         /**
+         * <p>The optional compatible total for APP_WORKSPACE. Valid values: 0 to 100000. If provided, it takes precedence over ResourceValue and does not repeatedly add the used quota. For new calls, only ResourceValue is required. This field is not used for APP/USER.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21</p>
+         */
+        public Builder desiredTotal(Long desiredTotal) {
+            this.putQueryParameter("DesiredTotal", desiredTotal);
+            this.desiredTotal = desiredTotal;
+            return this;
+        }
+
+        /**
          * <p>The ESP business ID.</p>
          * 
          * <strong>example:</strong>
@@ -218,7 +240,7 @@ public class CheckUserResourceMeasureRequest extends Request {
         }
 
         /**
-         * <p>The order module information. If this parameter is empty, espBizId and bizType cannot be empty.</p>
+         * <p>The order component information. If this field is empty, EspBizId and BizType cannot be empty.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;siteversion&quot;:&quot;test&quot;}</p>
@@ -230,7 +252,7 @@ public class CheckUserResourceMeasureRequest extends Request {
         }
 
         /**
-         * <p>The resource identifier.</p>
+         * <p>The resource code.</p>
          * 
          * <strong>example:</strong>
          * <p>InspirationTokens</p>
@@ -242,11 +264,7 @@ public class CheckUserResourceMeasureRequest extends Request {
         }
 
         /**
-         * <p>The resource value. This parameter is empty by default and is required only for feature-type resources. Valid values:</p>
-         * <ul>
-         * <li>0: Not supported.</li>
-         * <li>1: Supported.</li>
-         * </ul>
+         * <p>The resource value. Default is empty. Required only for feature resources. A value of 0 indicates not supported, and 1 indicates supported.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

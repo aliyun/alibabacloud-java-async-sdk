@@ -126,7 +126,7 @@ public class MoveMaterialFileRequest extends Request {
         }
 
         /**
-         * <p>The folder ID.</p>
+         * <p>The directory ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

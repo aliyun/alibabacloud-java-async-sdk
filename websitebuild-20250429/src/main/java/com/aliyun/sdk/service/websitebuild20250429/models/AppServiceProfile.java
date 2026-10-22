@@ -144,6 +144,9 @@ public class AppServiceProfile extends TeaModel {
 
         /**
          * <p>The design type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Language_Pack</p>
          */
         public Builder designType(String designType) {
             this.designType = designType;
@@ -152,6 +155,9 @@ public class AppServiceProfile extends TeaModel {
 
         /**
          * <p>The design type description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Language pack</p>
          */
         public Builder designTypeText(String designTypeText) {
             this.designTypeText = designTypeText;
@@ -160,6 +166,9 @@ public class AppServiceProfile extends TeaModel {
 
         /**
          * <p>The Lingxiao instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lx-1</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -190,6 +199,9 @@ public class AppServiceProfile extends TeaModel {
 
         /**
          * <p>The service specification description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Basic edition</p>
          */
         public Builder serviceSpecText(String serviceSpecText) {
             this.serviceSpecText = serviceSpecText;

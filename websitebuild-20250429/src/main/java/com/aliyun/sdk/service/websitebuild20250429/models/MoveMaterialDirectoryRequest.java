@@ -154,7 +154,7 @@ public class MoveMaterialDirectoryRequest extends Request {
         }
 
         /**
-         * <p>The parent folder ID after the move.</p>
+         * <p>The ID of the target parent folder.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,7 +167,7 @@ public class MoveMaterialDirectoryRequest extends Request {
         }
 
         /**
-         * <p>The sort number.</p>
+         * <p>The sort order.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

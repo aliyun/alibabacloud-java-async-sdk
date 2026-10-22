@@ -287,6 +287,9 @@ public class AppServiceAggregate extends TeaModel {
 
         /**
          * <p>The deletion flag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder deleted(Integer deleted) {
             this.deleted = deleted;
@@ -294,7 +297,7 @@ public class AppServiceAggregate extends TeaModel {
         }
 
         /**
-         * <p>The end time. It is in ISO 8601 format and uses the UTC (Z) time zone.</p>
+         * <p>The end time. It is in ISO 8601 format and uses the UTC time zone (Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2025-07-18T02:23:00Z</p>
@@ -306,6 +309,9 @@ public class AppServiceAggregate extends TeaModel {
 
         /**
          * <p>esp bizId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>p20202933455</p>
          */
         public Builder espBizId(String espBizId) {
             this.espBizId = espBizId;
@@ -355,6 +361,9 @@ public class AppServiceAggregate extends TeaModel {
 
         /**
          * <p>The service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Website design service</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -370,7 +379,7 @@ public class AppServiceAggregate extends TeaModel {
         }
 
         /**
-         * <p>The unique identifier for an operation.</p>
+         * <p>Uniquely identifies an operation.</p>
          */
         public Builder operationAddress(AppOperationAddress operationAddress) {
             this.operationAddress = operationAddress;
@@ -406,6 +415,9 @@ public class AppServiceAggregate extends TeaModel {
 
         /**
          * <p>The application identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>inst-001</p>
          */
         public Builder slug(String slug) {
             this.slug = slug;
@@ -436,6 +448,9 @@ public class AppServiceAggregate extends TeaModel {
 
         /**
          * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123241414</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;

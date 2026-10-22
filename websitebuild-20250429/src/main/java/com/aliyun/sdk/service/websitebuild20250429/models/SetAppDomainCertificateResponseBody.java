@@ -195,10 +195,10 @@ public class SetAppDomainCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether retry is allowed. Valid values:</p>
+         * <p>Specifies whether to allow retries. Valid values:</p>
          * <ul>
-         * <li>false: Retry is not allowed.</li>
-         * <li>true: Retry is allowed.</li>
+         * <li>false: Retries are not allowed.</li>
+         * <li>true: Retries are allowed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -210,7 +210,7 @@ public class SetAppDomainCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The application name.</p>
+         * <p>The name of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>mar</p>
@@ -243,7 +243,7 @@ public class SetAppDomainCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error parameters.</p>
+         * <p>The returned error parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -281,10 +281,10 @@ public class SetAppDomainCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message.</p>
+         * <p>The exception message.</p>
          * 
          * <strong>example:</strong>
-         * <p>系统异常</p>
+         * <p>System exception</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -292,7 +292,7 @@ public class SetAppDomainCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is synchronously processed.</p>
+         * <p>Specifies whether the request is processed synchronously.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
