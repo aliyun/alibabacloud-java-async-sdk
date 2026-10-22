@@ -242,7 +242,7 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The knowledge base attributes.</p>
+             * <p>The attributes of the knowledge base.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -253,7 +253,7 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Bailian index ID.</p>
+             * <p>The Model Studio index ID.</p>
              * 
              * <strong>example:</strong>
              * <p>index-xxxx</p>
@@ -275,7 +275,7 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Bailian workspace ID.</p>
+             * <p>The Model Studio workspace ID.</p>
              * 
              * <strong>example:</strong>
              * <p>llm-xxxx</p>
@@ -345,7 +345,7 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of Bailian knowledge bases.</p>
+             * <p>The list of Model Studio knowledge bases.</p>
              */
             public Builder bailian(java.util.List<Bailian> bailian) {
                 this.bailian = bailian;
@@ -408,6 +408,9 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("roleArn")
         private String roleArn;
 
+        @com.aliyun.core.annotation.NameInMap("status")
+        private Integer status;
+
         @com.aliyun.core.annotation.NameInMap("tags")
         private java.util.List<Tag> tags;
 
@@ -426,6 +429,7 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
             this.name = builder.name;
             this.resourceGroupId = builder.resourceGroupId;
             this.roleArn = builder.roleArn;
+            this.status = builder.status;
             this.tags = builder.tags;
             this.updateTime = builder.updateTime;
         }
@@ -516,6 +520,13 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
         }
 
         /**
+         * @return status
+         */
+        public Integer getStatus() {
+            return this.status;
+        }
+
+        /**
          * @return tags
          */
         public java.util.List<Tag> getTags() {
@@ -541,6 +552,7 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
             private String name; 
             private String resourceGroupId; 
             private String roleArn; 
+            private Integer status; 
             private java.util.List<Tag> tags; 
             private String updateTime; 
 
@@ -559,12 +571,16 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
                 this.name = model.name;
                 this.resourceGroupId = model.resourceGroupId;
                 this.roleArn = model.roleArn;
+                this.status = model.status;
                 this.tags = model.tags;
                 this.updateTime = model.updateTime;
             } 
 
             /**
-             * <p>The attributes.</p>
+             * <p>The attributes of the digital employee.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;key&quot;:&quot;value&quot;}</p>
              */
             public Builder attributes(java.util.Map<String, String> attributes) {
                 this.attributes = attributes;
@@ -572,7 +588,7 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The channel type of the digital employee.</p>
+             * <p>The channel type.</p>
              * 
              * <strong>example:</strong>
              * <p>default</p>
@@ -583,7 +599,7 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time.</p>
+             * <p>The creation time in RFC 3339 format. The time zone is UTC.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
              * 
              * <strong>example:</strong>
@@ -680,6 +696,17 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The status of the digital employee. Valid values: 0: Normal. 1: Disabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
+             */
+            public Builder status(Integer status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
              * <p>The tags.</p>
              */
             public Builder tags(java.util.List<Tag> tags) {
@@ -688,7 +715,7 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time.</p>
+             * <p>The update time in RFC 3339 format. The time zone is UTC.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
              * 
              * <strong>example:</strong>

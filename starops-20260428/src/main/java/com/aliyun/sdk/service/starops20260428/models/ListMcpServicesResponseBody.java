@@ -227,7 +227,10 @@ public class ListMcpServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The authentication type. Currently, bearer is supported.</p>
+             * <p>The authentication type. Currently, only bearer is supported. Valid values:</p>
+             * <ul>
+             * <li>bearer: Bearer token authentication.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>bearer</p>
@@ -368,7 +371,10 @@ public class ListMcpServicesResponseBody extends TeaModel {
             }
 
             /**
-             * headers.
+             * <p>The custom HTTP request headers appended when calling the MCP service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;X-Custom-Header&quot;:&quot;example-value&quot;}</p>
              */
             public Builder headers(java.util.Map<String, String> headers) {
                 this.headers = headers;
@@ -376,7 +382,11 @@ public class ListMcpServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The platform type of the MCP service. Valid values: AIGateway and Custom.</p>
+             * <p>The platform type of the MCP service. Valid values:</p>
+             * <ul>
+             * <li>AIGateway: AI gateway.</li>
+             * <li>Custom: custom MCP service.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Custom</p>
@@ -387,7 +397,7 @@ public class ListMcpServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timeout period for requests to the MCP service. Unit: milliseconds.</p>
+             * <p>The timeout period for requests to the MCP service, in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>5000</p>
@@ -398,7 +408,11 @@ public class ListMcpServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The transport protocol of the MCP service. Valid values: http and sse.</p>
+             * <p>The transport protocol of the MCP service. Valid values:</p>
+             * <ul>
+             * <li>sse: Server-Sent Events (SSE) transport protocol.</li>
+             * <li>http: HTTP transport protocol.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>http</p>
@@ -603,7 +617,11 @@ public class ListMcpServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network access mode of the MCP service. Valid values: public and vpc.</p>
+             * <p>The network access mode of the MCP service. Valid values:</p>
+             * <ul>
+             * <li>public: direct public network access mode.</li>
+             * <li>vpc: Virtual Private Cloud (VPC) mode.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>public</p>
@@ -845,7 +863,7 @@ public class ListMcpServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether user confirmation is required before calling the MCP tool.</p>
+             * <p>Specifies whether user confirmation is required before calling the MCP tool.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -859,7 +877,7 @@ public class ListMcpServicesResponseBody extends TeaModel {
              * <p>The description of the MCP tool.</p>
              * 
              * <strong>example:</strong>
-             * <p>查询指定日志库中的日志。</p>
+             * <p>Query logs in a specified Logstore</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -870,7 +888,7 @@ public class ListMcpServicesResponseBody extends TeaModel {
              * <p>The display name of the MCP tool.</p>
              * 
              * <strong>example:</strong>
-             * <p>日志查询工具</p>
+             * <p>Log Query Tool</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -947,7 +965,7 @@ public class ListMcpServicesResponseBody extends TeaModel {
              * <p>The title of the MCP tool.</p>
              * 
              * <strong>example:</strong>
-             * <p>查询日志</p>
+             * <p>Query Logs</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -1090,7 +1108,7 @@ public class ListMcpServicesResponseBody extends TeaModel {
              * <p>The description of the MCP service.</p>
              * 
              * <strong>example:</strong>
-             * <p>通过 MCP 调用日志查询工具。</p>
+             * <p>Call the log query tool through MCP</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1101,7 +1119,7 @@ public class ListMcpServicesResponseBody extends TeaModel {
              * <p>The display name of the MCP service.</p>
              * 
              * <strong>example:</strong>
-             * <p>日志查询</p>
+             * <p>Log Query</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;

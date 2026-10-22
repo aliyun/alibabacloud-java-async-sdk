@@ -106,7 +106,7 @@ public class ListDigitalEmployeeSkillsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The maximum number of entries returned.</p>
+         * <p>The maximum number of results returned.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -117,7 +117,7 @@ public class ListDigitalEmployeeSkillsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token to retrieve the next page of results. If this parameter is not returned, it indicates that no more results are available.</p>
+         * <p>The token for the next query.</p>
          * 
          * <strong>example:</strong>
          * <p>sjC5rekx93Ew7K7VcmI3wkBZBYQ-GphB2ilQu3zJCGxoZuicwyJznfo2riTjr-lq</p>
@@ -128,7 +128,7 @@ public class ListDigitalEmployeeSkillsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>0CEC5375-XXXX-XXXX-XXXX-9A629907C1F0</p>
@@ -147,7 +147,7 @@ public class ListDigitalEmployeeSkillsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries that match the query.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>15</p>
@@ -268,7 +268,7 @@ public class ListDigitalEmployeeSkillsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time at which the skill was created.</p>
+             * <p>The creation time in RFC 3339 format with the UTC time zone.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
              * 
              * <strong>example:</strong>
@@ -280,7 +280,7 @@ public class ListDigitalEmployeeSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the skill.</p>
+             * <p>The description.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -313,7 +313,7 @@ public class ListDigitalEmployeeSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the skill.</p>
+             * <p>The skill name.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -324,7 +324,7 @@ public class ListDigitalEmployeeSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time at which the skill was last updated.</p>
+             * <p>The update time in RFC 3339 format with the UTC time zone.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
              * 
              * <strong>example:</strong>

@@ -323,6 +323,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves the tool list from a remote MCP service.</p>
+     * 
      * @param request the request parameters of FetchRemoteMcpTools  FetchRemoteMcpToolsRequest
      * @return FetchRemoteMcpToolsResponse
      */
@@ -404,6 +407,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the entity data of a digital human.</p>
+     * 
      * @param request the request parameters of GetDigitalEmployeeEntityData  GetDigitalEmployeeEntityDataRequest
      * @return GetDigitalEmployeeEntityDataResponse
      */
@@ -423,7 +429,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the details of a specified skill for a digital employee.</p>
+     * <p>Retrieves the details of a skill.</p>
      * 
      * @param request the request parameters of GetDigitalEmployeeSkill  GetDigitalEmployeeSkillRequest
      * @return GetDigitalEmployeeSkillResponse
@@ -461,6 +467,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the configuration of an MCP service.</p>
+     * 
      * @param request the request parameters of GetMcpService  GetMcpServiceRequest
      * @return GetMcpServiceResponse
      */
@@ -480,7 +489,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the details of a thread.</p>
+     * <p>Retrieves a session.</p>
      * 
      * @param request the request parameters of GetThread  GetThreadRequest
      * @return GetThreadResponse
@@ -543,7 +552,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Lists the previous versions of a skill.</p>
+     * <p>Lists historical versions of a skill.</p>
      * 
      * @param request the request parameters of ListDigitalEmployeeSkillVersions  ListDigitalEmployeeSkillVersionsRequest
      * @return ListDigitalEmployeeSkillVersionsResponse
@@ -564,7 +573,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Lists the skills of a specified digital employee.</p>
+     * <p>Lists skills.</p>
      * 
      * @param request the request parameters of ListDigitalEmployeeSkills  ListDigitalEmployeeSkillsRequest
      * @return ListDigitalEmployeeSkillsResponse
@@ -605,6 +614,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the list of MCP services.</p>
+     * 
      * @param request the request parameters of ListMcpServices  ListMcpServicesRequest
      * @return ListMcpServicesResponse
      */
@@ -624,7 +636,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>List sessions</p>
+     * <p>Lists sessions.</p>
      * 
      * @param request the request parameters of ListThreads  ListThreadsRequest
      * @return ListThreadsResponse
@@ -704,6 +716,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Updates the configuration of an MCP service.</p>
+     * 
      * @param request the request parameters of UpdateMcpService  UpdateMcpServiceRequest
      * @return UpdateMcpServiceResponse
      */
@@ -723,7 +738,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Updates a thread.</p>
+     * <p>Updates a session.</p>
      * 
      * @param request the request parameters of UpdateThread  UpdateThreadRequest
      * @return UpdateThreadResponse

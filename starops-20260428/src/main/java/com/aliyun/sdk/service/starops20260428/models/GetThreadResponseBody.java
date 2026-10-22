@@ -171,7 +171,7 @@ public class GetThreadResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The thread\&quot;s attributes.</p>
+         * <p>The attributes.</p>
          */
         public Builder attributes(java.util.Map<String, String> attributes) {
             this.attributes = attributes;
@@ -179,7 +179,7 @@ public class GetThreadResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The thread\&quot;s creation time, in ISO 8601 format.</p>
+         * <p>The creation time in RFC 3339 format, including the time zone offset.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-12-19T15:19:55.040403272+08:00</p>
@@ -201,7 +201,7 @@ public class GetThreadResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>8FDE2569-626B-5176-9844-28877A*****</p>
@@ -212,7 +212,7 @@ public class GetThreadResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The thread\&quot;s status.</p>
+         * <p>The session status.</p>
          * 
          * <strong>example:</strong>
          * <p>active</p>
@@ -223,7 +223,7 @@ public class GetThreadResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The thread ID.</p>
+         * <p>The session ID.</p>
          * 
          * <strong>example:</strong>
          * <p>thread_id01</p>
@@ -234,7 +234,7 @@ public class GetThreadResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The thread\&quot;s title.</p>
+         * <p>The session title.</p>
          * 
          * <strong>example:</strong>
          * <p>testLive</p>
@@ -245,7 +245,7 @@ public class GetThreadResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The thread\&quot;s last update time, in ISO 8601 format.</p>
+         * <p>The update time in RFC 3339 format, including the time zone offset.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-12-19T15:19:55.040403272+08:00</p>
@@ -256,7 +256,7 @@ public class GetThreadResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The thread\&quot;s variables.</p>
+         * <p>The session properties.</p>
          */
         public Builder variables(Variables variables) {
             this.variables = variables;
@@ -264,7 +264,7 @@ public class GetThreadResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The thread\&quot;s version.</p>
+         * <p>The version.</p>
          * 
          * <strong>example:</strong>
          * <p>1231</p>
@@ -333,7 +333,7 @@ public class GetThreadResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the SLS project.</p>
+             * <p>The Simple Log Service (SLS) project name.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -344,7 +344,7 @@ public class GetThreadResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the workspace.</p>
+             * <p>The workspace name.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>

@@ -287,10 +287,10 @@ public class UpdateDigitalEmployeeRequest extends Request {
         }
 
         /**
-         * <p>The tool calling security policy configuration of the digital employee.</p>
+         * <p>The security policy configuration for tool calling of the digital employee.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;aliyun&quot;:{&quot;enable&quot;:true,&quot;statements&quot;:[{&quot;decision&quot;:&quot;user_ack&quot;,&quot;product&quot;:&quot;Sls&quot;,&quot;apiVersion&quot;:&quot;2020-12-30&quot;,&quot;actions&quot;:[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]}]}}</p>
+         * <p>{&quot;aliyun&quot;:{&quot;enable&quot;:true,&quot;denyPolicy&quot;:[&quot;ecs:RunCommand&quot;,&quot;ecs:Delete*&quot;],&quot;autoPassPolicy&quot;:[&quot;log:Get*&quot;,&quot;log:List*&quot;],&quot;statements&quot;:[{&quot;decision&quot;:&quot;user_ack&quot;,&quot;product&quot;:&quot;Sls&quot;,&quot;apiVersion&quot;:&quot;2020-12-30&quot;,&quot;actions&quot;:[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]}]}}</p>
          */
         public Builder toolPolicy(ToolPolicy toolPolicy) {
             this.putBodyParameter("toolPolicy", toolPolicy);
@@ -710,7 +710,12 @@ public class UpdateDigitalEmployeeRequest extends Request {
             }
 
             /**
-             * <p>The execution policy.</p>
+             * <p>The execution policy. Valid values:</p>
+             * <ul>
+             * <li>allow: Allowed.</li>
+             * <li>deny: Denied.</li>
+             * <li>user_ack: Requires user confirmation before execution.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>user_ack</p>
@@ -721,7 +726,7 @@ public class UpdateDigitalEmployeeRequest extends Request {
             }
 
             /**
-             * <p>The cloud product code.</p>
+             * <p>The cloud service code.</p>
              * 
              * <strong>example:</strong>
              * <p>Cms</p>
@@ -818,7 +823,7 @@ public class UpdateDigitalEmployeeRequest extends Request {
             } 
 
             /**
-             * <p>The automatic pass-through policy. Each entry is a RAM Action string in the format of product:ApiName, product:Prefix*, or product:<em>. Matched actions are automatically allowed without human confirmation. If this parameter is empty or not configured, built-in read-only actions (Get</em>, List*, Describe*) are automatically allowed. Unmatched actions require human-in-the-loop (HIL) confirmation.</p>
+             * <p>The list of auto-approved RAM actions in the format of <em>, product:ApiName, or product:Prefix</em>.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;log:Get*&quot;,&quot;log:List*&quot;]</p>
@@ -829,7 +834,7 @@ public class UpdateDigitalEmployeeRequest extends Request {
             }
 
             /**
-             * <p>The explicit deny policy with the highest priority. Each entry is a RAM Action string in the format of product:ApiName, product:Prefix*, or product:*. If this parameter is empty or not configured, no operations are actively denied. STAROps directly denies matched actions. Pop performs secondary enforcement.</p>
+             * <p>The list of denied RAM actions in the format of <em>, product:ApiName, or product:Prefix</em>.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;ecs:RunCommand&quot;,&quot;ecs:Delete*&quot;]</p>
@@ -908,10 +913,10 @@ public class UpdateDigitalEmployeeRequest extends Request {
             } 
 
             /**
-             * <p>The Aliyun CLI tool calling security policy configuration.</p>
+             * <p>The security policy configuration for Aliyun CLI tool calling.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;enable&quot;:true,&quot;statements&quot;:[{&quot;decision&quot;:&quot;user_ack&quot;,&quot;product&quot;:&quot;Sls&quot;,&quot;apiVersion&quot;:&quot;2020-12-30&quot;,&quot;actions&quot;:[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]}]}</p>
+             * <p>{&quot;enable&quot;:true,&quot;denyPolicy&quot;:[&quot;ecs:RunCommand&quot;,&quot;ecs:Delete*&quot;],&quot;autoPassPolicy&quot;:[&quot;log:Get*&quot;,&quot;log:List*&quot;],&quot;statements&quot;:[{&quot;decision&quot;:&quot;user_ack&quot;,&quot;product&quot;:&quot;Sls&quot;,&quot;apiVersion&quot;:&quot;2020-12-30&quot;,&quot;actions&quot;:[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]}]}</p>
              */
             public Builder aliyun(Aliyun aliyun) {
                 this.aliyun = aliyun;

@@ -80,7 +80,7 @@ public class UpdateThreadResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>264C3E89-XXXX-XXXX-XXXX-CE9C2196C7DC</p>
@@ -91,7 +91,7 @@ public class UpdateThreadResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the thread.</p>
+         * <p>The session ID.</p>
          * 
          * <strong>example:</strong>
          * <p>thread-12313</p>

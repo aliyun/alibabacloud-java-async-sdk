@@ -116,7 +116,7 @@ public class GetDigitalEmployeeSkillRequest extends Request {
         }
 
         /**
-         * <p>The name of the skill.</p>
+         * <p>The skill name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,7 +138,7 @@ public class GetDigitalEmployeeSkillRequest extends Request {
         }
 
         /**
-         * <p>The version of the skill to retrieve. If this parameter is not specified, the latest version is returned.</p>
+         * <p>The historical version number.</p>
          * 
          * <strong>example:</strong>
          * <p>1770386951147366810</p>

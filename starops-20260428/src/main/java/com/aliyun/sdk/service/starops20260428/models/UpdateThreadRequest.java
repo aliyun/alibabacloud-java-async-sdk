@@ -117,7 +117,7 @@ public class UpdateThreadRequest extends Request {
         } 
 
         /**
-         * <p>The name of the Digital Employee.</p>
+         * <p>The name of the digital employee.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,7 +130,7 @@ public class UpdateThreadRequest extends Request {
         }
 
         /**
-         * <p>The ID of the thread.</p>
+         * <p>The session ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,7 +143,7 @@ public class UpdateThreadRequest extends Request {
         }
 
         /**
-         * <p>The attributes of the thread.</p>
+         * <p>The properties.</p>
          */
         public Builder attributes(java.util.Map<String, String> attributes) {
             this.putBodyParameter("attributes", attributes);
@@ -152,7 +152,7 @@ public class UpdateThreadRequest extends Request {
         }
 
         /**
-         * <p>The status of the thread.</p>
+         * <p>The session status.</p>
          * 
          * <strong>example:</strong>
          * <p>active</p>
@@ -164,7 +164,7 @@ public class UpdateThreadRequest extends Request {
         }
 
         /**
-         * <p>The title of the thread.</p>
+         * <p>The session title.</p>
          * 
          * <strong>example:</strong>
          * <p>title</p>

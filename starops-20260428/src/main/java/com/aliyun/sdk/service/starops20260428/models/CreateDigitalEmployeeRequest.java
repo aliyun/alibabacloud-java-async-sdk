@@ -239,7 +239,7 @@ public class CreateDigitalEmployeeRequest extends Request {
         }
 
         /**
-         * <p>The attributes.</p>
+         * <p>The digital employee properties.</p>
          */
         public Builder attributes(java.util.Map<String, String> attributes) {
             this.putBodyParameter("attributes", attributes);
@@ -248,7 +248,7 @@ public class CreateDigitalEmployeeRequest extends Request {
         }
 
         /**
-         * <p>数字员工渠道类型。不填时使用默认渠道。</p>
+         * <p>The channel type.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -296,7 +296,7 @@ public class CreateDigitalEmployeeRequest extends Request {
         }
 
         /**
-         * <p>The knowledge base list.</p>
+         * <p>The list of knowledge bases.</p>
          */
         public Builder knowledges(Knowledges knowledges) {
             this.putBodyParameter("knowledges", knowledges);
@@ -330,7 +330,7 @@ public class CreateDigitalEmployeeRequest extends Request {
         }
 
         /**
-         * <p>The ARN of the RAM role.</p>
+         * <p>The RAM role ARN.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -364,7 +364,7 @@ public class CreateDigitalEmployeeRequest extends Request {
         }
 
         /**
-         * <p>The tool calling security policy configuration of the digital employee.</p>
+         * <p>The tool policy.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;aliyun&quot;:{&quot;enable&quot;:true,&quot;denyPolicy&quot;:[&quot;ecs:RunCommand&quot;,&quot;ecs:Delete*&quot;],&quot;autoPassPolicy&quot;:[&quot;log:Get*&quot;,&quot;log:List*&quot;],&quot;statements&quot;:[{&quot;decision&quot;:&quot;user_ack&quot;,&quot;product&quot;:&quot;Sls&quot;,&quot;apiVersion&quot;:&quot;2020-12-30&quot;,&quot;actions&quot;:[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]}]}}</p>
@@ -461,7 +461,7 @@ public class CreateDigitalEmployeeRequest extends Request {
             } 
 
             /**
-             * <p>The knowledge base attributes.</p>
+             * <p>The knowledge base properties.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -564,7 +564,7 @@ public class CreateDigitalEmployeeRequest extends Request {
             } 
 
             /**
-             * <p>The Bailian knowledge base list.</p>
+             * <p>The list of Bailian knowledge bases.</p>
              */
             public Builder bailian(java.util.List<Bailian> bailian) {
                 this.bailian = bailian;
@@ -572,7 +572,7 @@ public class CreateDigitalEmployeeRequest extends Request {
             }
 
             /**
-             * <p>The SOP knowledge base list.</p>
+             * <p>The list of SOP knowledge bases.</p>
              */
             public Builder sop(java.util.List<java.util.Map<String, ?>> sop) {
                 this.sop = sop;
@@ -652,7 +652,7 @@ public class CreateDigitalEmployeeRequest extends Request {
             } 
 
             /**
-             * <p>The list of allowed CIDRs or IP addresses. A maximum of 50 entries are supported.</p>
+             * <p>The list of allowed CIDRs or IP addresses.</p>
              */
             public Builder allowCidrs(java.util.List<String> allowCidrs) {
                 this.allowCidrs = allowCidrs;
@@ -660,7 +660,7 @@ public class CreateDigitalEmployeeRequest extends Request {
             }
 
             /**
-             * <p>The list of allowed FQDNs. A maximum of 50 entries are supported.</p>
+             * <p>The list of allowed FQDNs.</p>
              */
             public Builder allowFqdns(java.util.List<String> allowFqdns) {
                 this.allowFqdns = allowFqdns;
@@ -765,7 +765,7 @@ public class CreateDigitalEmployeeRequest extends Request {
             } 
 
             /**
-             * <p>The list of Aliyun OpenAPI actions in the format of product:ApiName, product:Prefix*, or product:*.</p>
+             * <p>The list of Aliyun OpenAPI actions. The format is product:ApiName, product:Prefix*, or product:*.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]</p>
@@ -787,7 +787,7 @@ public class CreateDigitalEmployeeRequest extends Request {
             }
 
             /**
-             * <p>The execution policy when this API is matched.</p>
+             * <p>The execution policy when the API is matched.</p>
              * 
              * <strong>example:</strong>
              * <p>user_ack</p>
@@ -895,7 +895,7 @@ public class CreateDigitalEmployeeRequest extends Request {
             } 
 
             /**
-             * <p>The auto-pass policy. Each entry is a RAM Action string in the format of product:ApiName, product:Prefix*, or product:<em>. Matched actions are automatically approved without human confirmation. If this parameter is empty or not configured, built-in read-only actions (Get</em>, List*, Describe*) are automatically approved. Unmatched actions require human-in-the-loop (HIL) confirmation.</p>
+             * <p>The RAM actions that are automatically allowed. The format is <em>, product:ApiName, or product:Prefix</em>.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;log:Get*&quot;,&quot;log:List*&quot;]</p>
@@ -906,7 +906,7 @@ public class CreateDigitalEmployeeRequest extends Request {
             }
 
             /**
-             * <p>The explicit deny policy with the highest priority. Each entry is a RAM Action string in the format of product:ApiName, product:Prefix*, or product:*. If this parameter is empty or not configured, no actions are actively denied. STAROps directly denies matched actions. The Pop side performs secondary fallback enforcement.</p>
+             * <p>The RAM actions that are denied. The format is <em>, product:ApiName, or product:Prefix</em>.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;ecs:RunCommand&quot;,&quot;ecs:Delete*&quot;]</p>
@@ -917,7 +917,7 @@ public class CreateDigitalEmployeeRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable the Aliyun MCP tool policy. The policy is enabled by default and is disabled only when this parameter is explicitly set to false.</p>
+             * <p>Specifies whether to enable the policy.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -928,7 +928,7 @@ public class CreateDigitalEmployeeRequest extends Request {
             }
 
             /**
-             * <p><strong>[Deprecated]</strong> Use denyPolicy and autoPassPolicy instead. This parameter is still returned during the transition period. Original description: The list of Aliyun OpenAPI tool policy statements.</p>
+             * <p><strong>[Deprecated]</strong> Use denyPolicy and autoPassPolicy instead. This field is still returned during the transition period. Original description: The list of Aliyun OpenAPI tool policy statements.</p>
              * 
              * <strong>example:</strong>
              * <p>[{&quot;decision&quot;:&quot;user_ack&quot;,&quot;product&quot;:&quot;Sls&quot;,&quot;apiVersion&quot;:&quot;2020-12-30&quot;,&quot;actions&quot;:[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]}]</p>
@@ -985,7 +985,7 @@ public class CreateDigitalEmployeeRequest extends Request {
             } 
 
             /**
-             * <p>The Aliyun MCP tool calling security policy configuration.</p>
+             * <p>The security policy configuration for Aliyun CLI tool invocation.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;enable&quot;:true,&quot;denyPolicy&quot;:[&quot;ecs:RunCommand&quot;,&quot;ecs:Delete*&quot;],&quot;autoPassPolicy&quot;:[&quot;log:Get*&quot;,&quot;log:List*&quot;],&quot;statements&quot;:[{&quot;decision&quot;:&quot;user_ack&quot;,&quot;product&quot;:&quot;Sls&quot;,&quot;apiVersion&quot;:&quot;2020-12-30&quot;,&quot;actions&quot;:[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]}]}</p>

@@ -352,7 +352,7 @@ public class CreateMcpServiceRequest extends Request {
             }
 
             /**
-             * <p>The authentication type. Currently, only bearer is supported.</p>
+             * <p>The authentication type. Currently, bearer is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>bearer</p>
@@ -497,7 +497,7 @@ public class CreateMcpServiceRequest extends Request {
             }
 
             /**
-             * <p>The custom headers.</p>
+             * <p>The custom HTTP request headers appended when calling the MCP service.</p>
              */
             public Builder headers(java.util.Map<String, String> headers) {
                 this.headers = headers;
@@ -505,7 +505,7 @@ public class CreateMcpServiceRequest extends Request {
             }
 
             /**
-             * <p>The platform type of the MCP service. Valid values: AIGateway and Custom.</p>
+             * <p>The MCP service platform type. Valid values: AIGateway and Custom.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -994,7 +994,7 @@ public class CreateMcpServiceRequest extends Request {
              * <p>The description of the MCP tool.</p>
              * 
              * <strong>example:</strong>
-             * <p>Query logs in a specified Logstore</p>
+             * <p>Queries logs in a specified Logstore</p>
              */
             public Builder description(String description) {
                 this.description = description;

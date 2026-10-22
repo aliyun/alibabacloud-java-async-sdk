@@ -171,7 +171,7 @@ public class GetDigitalEmployeeSkillResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The time when the skill was created.</p>
+         * <p>The creation time in RFC 3339 format with the UTC time zone.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -216,7 +216,7 @@ public class GetDigitalEmployeeSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The file list of the skill.</p>
+         * <p>The list of skill files.</p>
          */
         public Builder files(java.util.List<Files> files) {
             this.files = files;
@@ -224,7 +224,7 @@ public class GetDigitalEmployeeSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A user-provided remark about the skill.</p>
+         * <p>The remarks.</p>
          * 
          * <strong>example:</strong>
          * <p>remark</p>
@@ -235,7 +235,7 @@ public class GetDigitalEmployeeSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>8FDE2569-626B-5176-9844-28877A*****</p>
@@ -246,7 +246,7 @@ public class GetDigitalEmployeeSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the skill.</p>
+         * <p>The skill name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -257,7 +257,7 @@ public class GetDigitalEmployeeSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the skill was last updated.</p>
+         * <p>The update time in RFC 3339 format with the UTC time zone.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -269,7 +269,7 @@ public class GetDigitalEmployeeSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The version of the skill.</p>
+         * <p>The version number.</p>
          * 
          * <strong>example:</strong>
          * <p>1770386951147366810</p>

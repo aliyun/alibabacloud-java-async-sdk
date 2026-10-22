@@ -117,7 +117,7 @@ public class ListDigitalEmployeeSkillsRequest extends Request {
         } 
 
         /**
-         * <p>The name of the digital employee.</p>
+         * <p>The digital employee name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,7 +139,7 @@ public class ListDigitalEmployeeSkillsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return in the response.</p>
+         * <p>The maximum number of records to return in this request.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -151,7 +151,7 @@ public class ListDigitalEmployeeSkillsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in a subsequent request to retrieve the next page of results. To retrieve the first page, do not specify this parameter.</p>
+         * <p>The token for the next page. A value of null indicates that there is no next page.</p>
          * 
          * <strong>example:</strong>
          * <p>sjC5rekx93Ew7K7VcmI3wkBZBYQ-GphB2ilQu3zJCGxoZuicwyJznfo2riTjr-lq</p>
@@ -163,7 +163,7 @@ public class ListDigitalEmployeeSkillsRequest extends Request {
         }
 
         /**
-         * <p>The name of the skill.</p>
+         * <p>The skill name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

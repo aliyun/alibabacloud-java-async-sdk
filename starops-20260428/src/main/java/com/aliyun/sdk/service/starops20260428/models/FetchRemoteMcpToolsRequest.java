@@ -186,7 +186,10 @@ public class FetchRemoteMcpToolsRequest extends Request {
             }
 
             /**
-             * <p>The authentication type. Currently, only bearer is supported.</p>
+             * <p>The authentication type. Currently, only bearer is supported. Valid values:</p>
+             * <ul>
+             * <li>bearer: Bearer token authentication.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>bearer</p>
@@ -330,7 +333,7 @@ public class FetchRemoteMcpToolsRequest extends Request {
             }
 
             /**
-             * headers.
+             * <p>The custom HTTP request headers appended when calling the MCP service.</p>
              */
             public Builder headers(java.util.Map<String, String> headers) {
                 this.headers = headers;
@@ -338,7 +341,11 @@ public class FetchRemoteMcpToolsRequest extends Request {
             }
 
             /**
-             * <p>The MCP service platform type. Valid values: AIGateway and Custom.</p>
+             * <p>The MCP service platform type. Valid values:</p>
+             * <ul>
+             * <li>AIGateway: AI gateway.</li>
+             * <li>Custom: custom MCP service.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Custom</p>
@@ -360,7 +367,11 @@ public class FetchRemoteMcpToolsRequest extends Request {
             }
 
             /**
-             * <p>The transport protocol of the MCP service. Valid values: http and sse.</p>
+             * <p>The transport protocol of the MCP service. Valid values:</p>
+             * <ul>
+             * <li>sse: Server-Sent Events (SSE) transport protocol.</li>
+             * <li>http: HTTP transport protocol.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -566,7 +577,11 @@ public class FetchRemoteMcpToolsRequest extends Request {
             }
 
             /**
-             * <p>The network access mode of the MCP service. Valid values: public and vpc.</p>
+             * <p>The network access mode of the MCP service. Valid values:</p>
+             * <ul>
+             * <li>public: Direct Internet Access mode.</li>
+             * <li>vpc: VPC mode.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>public</p>

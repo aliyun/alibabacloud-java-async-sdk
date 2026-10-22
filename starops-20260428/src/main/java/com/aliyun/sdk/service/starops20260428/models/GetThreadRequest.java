@@ -88,7 +88,7 @@ public class GetThreadRequest extends Request {
         }
 
         /**
-         * <p>The thread ID.</p>
+         * <p>The session ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
