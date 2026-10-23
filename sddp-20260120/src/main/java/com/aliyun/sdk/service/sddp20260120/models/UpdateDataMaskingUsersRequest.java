@@ -166,13 +166,7 @@ public class UpdateDataMaskingUsersRequest extends Request {
         }
 
         /**
-         * <p>The column encryption access permissions. Valid values:</p>
-         * <ul>
-         * <li>fullAccess: plaintext access.</li>
-         * <li>restrictedAccess: restricted access.</li>
-         * <li>noneAccess: decryption denied.</li>
-         * </ul>
-         * <p>noneAccess applies only to ApsaraDB RDS for MySQL instances whose active key pattern is client_key.</p>
+         * <p>The column encryption access permissions. Valid values: fullAccess: plaintext access. restrictedAccess: restricted access. noneAccess: prohibits decryption. noneAccess applies only to RDS MySQL instances whose current effective key pattern is client_key.</p>
          * 
          * <strong>example:</strong>
          * <p>fullAccess</p>
@@ -184,7 +178,7 @@ public class UpdateDataMaskingUsersRequest extends Request {
         }
 
         /**
-         * <p>The expiration time of the plaintext access permissions. Specify a UNIX timestamp in milliseconds since 1970-01-01 00:00:00 UTC. This parameter is required only when ExpireTimeOperation is set to SET. The value must be later than the current time and no later than 2145953410000. The server stores the value with second-level precision. Do not specify this parameter when ExpireTimeOperation is set to PRESERVE or CLEAR.</p>
+         * <p>The expiration time of the plaintext access permissions. The value is a UNIX timestamp in milliseconds since 00:00:00 UTC on January 1, 1970. Specify this parameter only when ExpireTimeOperation is set to SET. The value must be later than the current time and no greater than 2145953410000. The server saves the value with second-level precision. Do not specify this parameter when ExpireTimeOperation is set to PRESERVE or CLEAR.</p>
          * 
          * <strong>example:</strong>
          * <p>2145953410000</p>
@@ -196,13 +190,7 @@ public class UpdateDataMaskingUsersRequest extends Request {
         }
 
         /**
-         * <p>The action to take on the permission expiration time. Valid values:</p>
-         * <ul>
-         * <li>PRESERVE: Retains the existing expiration time.</li>
-         * <li>CLEAR: Clears the expiration time.</li>
-         * <li>SET: Sets the expiration time to the value specified by ExpireTime.</li>
-         * </ul>
-         * <p>Default value: PRESERVE. Only fullAccess supports configuring a validity period.</p>
+         * <p>The processing method for the permission expiration time. Valid values: PRESERVE: retains the original expiration time. CLEAR: clears the expiration time. SET: sets the expiration time to the value of ExpireTime. Default value: PRESERVE. Only fullAccess supports setting an expiration time.</p>
          * 
          * <strong>example:</strong>
          * <p>PRESERVE</p>
@@ -214,11 +202,7 @@ public class UpdateDataMaskingUsersRequest extends Request {
         }
 
         /**
-         * <p>The language of the response description. Valid values:</p>
-         * <ul>
-         * <li>zh: Chinese.</li>
-         * <li>en: English.</li>
-         * </ul>
+         * <p>The language of the response description. Valid values: zh: Chinese. en: English.</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -230,7 +214,7 @@ public class UpdateDataMaskingUsersRequest extends Request {
         }
 
         /**
-         * <p>The cloud product code. Column encryption supports RDS, POLARDB, and PolarDBX2. If ProductId is also specified, the two parameters must correspond to each other.</p>
+         * <p>The cloud product code. Column encryption supports RDS, POLARDB, and PolarDBX2. If ProductId is also provided, the two parameters must match.</p>
          * 
          * <strong>example:</strong>
          * <p>RDS</p>
@@ -242,13 +226,7 @@ public class UpdateDataMaskingUsersRequest extends Request {
         }
 
         /**
-         * <p>The cloud product type identifier. Valid values:</p>
-         * <ul>
-         * <li>5: RDS.</li>
-         * <li>8: POLARDB.</li>
-         * <li>27: PolarDBX2.</li>
-         * </ul>
-         * <p>If both ProductId and ProductCode are specified, they must correspond to each other.</p>
+         * <p>The cloud product type identifier. Valid values: 5: RDS. 8: POLARDB. 27: PolarDBX2. If specified together with ProductCode, the values must match.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -260,7 +238,7 @@ public class UpdateDataMaskingUsersRequest extends Request {
         }
 
         /**
-         * <p>The list of database accounts for which to set permissions.</p>
+         * <p>The list of database accounts for which you want to set permissions.</p>
          */
         public Builder userList(java.util.List<UserList> userList) {
             String userListShrink = shrink(userList, "UserList", "json");
@@ -286,11 +264,15 @@ public class UpdateDataMaskingUsersRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
 
+        @com.aliyun.core.annotation.NameInMap("AuthDb")
+        private String authDb;
+
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
         private UserList(Builder builder) {
             this.accountId = builder.accountId;
+            this.authDb = builder.authDb;
             this.instanceId = builder.instanceId;
         }
 
@@ -310,6 +292,13 @@ public class UpdateDataMaskingUsersRequest extends Request {
         }
 
         /**
+         * @return authDb
+         */
+        public String getAuthDb() {
+            return this.authDb;
+        }
+
+        /**
          * @return instanceId
          */
         public String getInstanceId() {
@@ -318,6 +307,7 @@ public class UpdateDataMaskingUsersRequest extends Request {
 
         public static final class Builder {
             private String accountId; 
+            private String authDb; 
             private String instanceId; 
 
             private Builder() {
@@ -325,14 +315,15 @@ public class UpdateDataMaskingUsersRequest extends Request {
 
             private Builder(UserList model) {
                 this.accountId = model.accountId;
+                this.authDb = model.authDb;
                 this.instanceId = model.instanceId;
             } 
 
             /**
-             * <p>The database account identifier. Obtain this value from Items[].Id in the response of ListDataAssetAccounts and pass it as a string.</p>
+             * <p>The name of the database account. Obtain the value from Items[].AccountName in the records returned by ListDataAssetAccounts and pass it as a string exactly as it is. Do not pass Items[].Id. Each AccountId must correspond to the InstanceId in the same item. Accounts with the same name in different instances are considered different targets.</p>
              * 
              * <strong>example:</strong>
-             * <p>1001</p>
+             * <p>app_reader</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -340,7 +331,18 @@ public class UpdateDataMaskingUsersRequest extends Request {
             }
 
             /**
-             * <p>The database instance identity. Obtain this value from Items[].InstanceId in the response of ListDataMaskingInstances.</p>
+             * <p>The authentication database of MongoDB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>database</p>
+             */
+            public Builder authDb(String authDb) {
+                this.authDb = authDb;
+                return this;
+            }
+
+            /**
+             * <p>The database instance identity. You can obtain the value from Items[].InstanceId returned by ListDataMaskingInstances.</p>
              * 
              * <strong>example:</strong>
              * <p>rm-2ze1abcdefgh****</p>
