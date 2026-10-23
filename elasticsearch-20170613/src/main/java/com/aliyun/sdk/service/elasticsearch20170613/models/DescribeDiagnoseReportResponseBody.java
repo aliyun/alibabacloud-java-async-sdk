@@ -227,7 +227,7 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the diagnostic result. Valid values: TEXT (text description), CONSOLE_API (console-triggered), and ES_API (API-triggered).</p>
+             * <p>The type of the diagnostic result. Valid values: TEXT (text description), CONSOLE_API (triggered by the console), and ES_API (triggered by the API).</p>
              * 
              * <strong>example:</strong>
              * <p>ES_API</p>
@@ -451,10 +451,10 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the diagnostic item.</p>
+             * <p>The description of the diagnostic conclusion.</p>
              * 
              * <strong>example:</strong>
-             * <p>Check whether the number of replica shards is optimal and easy to maintain</p>
+             * <p>Everything is normal</p>
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -462,7 +462,7 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the diagnostic item.</p>
+             * <p>The diagnostic details. This parameter is empty if details are not required.</p>
              */
             public Builder detail(java.util.Map<String, ?> detail) {
                 this.detail = detail;
@@ -470,10 +470,10 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the diagnostic item.</p>
+             * <p>The code of the diagnostic item.</p>
              * 
              * <strong>example:</strong>
-             * <p>IndexAliasUseDiagnostic</p>
+             * <p>cluster.health</p>
              */
             public Builder item(String item) {
                 this.item = item;
@@ -481,10 +481,10 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The full name of the diagnostic item.</p>
+             * <p>The name of the diagnostic item.</p>
              * 
              * <strong>example:</strong>
-             * <p>Number of Replica Shards</p>
+             * <p>Cluster health</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -492,7 +492,10 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * state.
+             * <p>The health status of the diagnostic item. Valid values: GREEN, YELLOW, and RED.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GREEN</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -500,10 +503,10 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The diagnostic suggestion.</p>
+             * <p>The handling suggestion.</p>
              * 
              * <strong>example:</strong>
-             * <p>You can call the following function in the Elasticsearch API....</p>
+             * <p>Pay attention to GC</p>
              */
             public Builder suggest(String suggest) {
                 this.suggest = suggest;
@@ -661,7 +664,7 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The timestamp when the report was created. Unit: ms.</p>
+             * <p>The timestamp when the report was created. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1535745731000</p>
@@ -680,7 +683,10 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * diagnosisMode.
+             * <p>The diagnosis mode. Valid values: RULE and AGENT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RULE</p>
              */
             public Builder diagnosisMode(String diagnosisMode) {
                 this.diagnosisMode = diagnosisMode;
@@ -688,7 +694,7 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The overall health of the cluster in the report. Valid values: GREEN, YELLOW, RED, and UNKNOWN.</p>
+             * <p>The overall health status of the cluster in the report. Valid values: GREEN, YELLOW, RED, and UNKNOWN.</p>
              * 
              * <strong>example:</strong>
              * <p>YELLOW</p>
@@ -699,7 +705,7 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance ID of the diagnosed instance.</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>es-cn-abc</p>
@@ -710,7 +716,7 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * items.
+             * <p>The list of diagnostic item details. This parameter may be empty if details are not required.</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;
@@ -729,7 +735,7 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The diagnostic status. Valid values: SUCCESS, FAILED, and RUNNING.</p>
+             * <p>The diagnosis status. Valid values: SUCCESS, FAILED, and RUNNING.</p>
              * 
              * <strong>example:</strong>
              * <p>SUCCESS</p>
@@ -740,7 +746,7 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The method used to trigger the health diagnostics. Valid values: SYSTEM (automatically triggered by the system), INNER (internally triggered), and USER (manually triggered by the user).</p>
+             * <p>The trigger method of the health diagnosis. Valid values: SYSTEM (automatically triggered by the system), INNER (internally triggered), and USER (manually triggered by the user).</p>
              * 
              * <strong>example:</strong>
              * <p>SYSTEM</p>

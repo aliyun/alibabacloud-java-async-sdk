@@ -67,7 +67,10 @@ public class UpdateBlackIpsResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6F******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class UpdateBlackIpsResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The updated access blacklist information.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -128,7 +131,7 @@ public class UpdateBlackIpsResponseBody extends TeaModel {
             } 
 
             /**
-             * esIPBlacklist.
+             * <p>The list of IP addresses in the access blacklist of the Elasticsearch instance.</p>
              */
             public Builder esIPBlacklist(java.util.List<String> esIPBlacklist) {
                 this.esIPBlacklist = esIPBlacklist;

@@ -99,7 +99,7 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The index list details.</p>
+         * <p>The details of the index list.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -191,7 +191,7 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The total number of managed indexes in the cloud.</p>
+             * <p>The total number of indices in cloud-managed storage.</p>
              * 
              * <strong>example:</strong>
              * <p>15</p>
@@ -202,7 +202,7 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total size of managed indexes in the cloud. Unit: bytes.</p>
+             * <p>The total size of indices in cloud-managed storage. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>18093942932</p>
@@ -213,7 +213,7 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of OpenStore cold-phase indexes.</p>
+             * <p>The total number of OpenStore cold-phase indices.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -224,7 +224,7 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total size of OpenStore cold-phase indexes for the instance. Unit: bytes.</p>
+             * <p>The total size of OpenStore cold-phase indices for the instance. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>9093942932</p>
@@ -372,7 +372,7 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the index list was queried.</p>
+             * <p>The creation time of the index, in ISO 8601 format and UTC time.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-01-11T05:49:41.114Z</p>
@@ -385,11 +385,11 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
             /**
              * <p>The health status of the index. Valid values:</p>
              * <ul>
-             * <li><p>green: Healthy.</p>
+             * <li><p>green: healthy.</p>
              * </li>
-             * <li><p>yellow: Warning.</p>
+             * <li><p>yellow: warning.</p>
              * </li>
-             * <li><p>red: Abnormal.</p>
+             * <li><p>red: unhealthy.</p>
              * </li>
              * </ul>
              * 
@@ -413,7 +413,7 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This parameter is deprecated and can be ignored.</p>
+             * <p><strong>[Deprecated]</strong> This parameter is deprecated and can be ignored.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -424,13 +424,13 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The index management status. Valid values:</p>
+             * <p>The management status of the index. Valid values:</p>
              * <ul>
-             * <li><p>following: Managed.</p>
+             * <li><p>following: managed.</p>
              * </li>
-             * <li><p>closing: Being unmanaged.</p>
+             * <li><p>closing: unmanaging.</p>
              * </li>
-             * <li><p>closed: Not managed.</p>
+             * <li><p>closed: unmanaged.</p>
              * </li>
              * </ul>
              * 
@@ -456,18 +456,16 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
             /**
              * <p>The current storage lifecycle phase. Valid values:</p>
              * <ul>
-             * <li><p>warm: Warm phase.</p>
+             * <li><p>warm: the warm phase.</p>
              * </li>
-             * <li><p>cold: Cold phase.</p>
+             * <li><p>cold: the cold phase.</p>
              * </li>
-             * <li><p>hot: Hot phase.</p>
+             * <li><p>hot: the hot phase.</p>
              * </li>
-             * <li><p>delete: Delete phase.</p>
+             * <li><p>delete: the delete phase.</p>
              * </li>
              * </ul>
-             * <blockquote>
-             * <p>If this value is empty, the index is not managed by a lifecycle policy.</p>
-             * </blockquote>
+             * <p>An empty value indicates that the index is not managed by a lifecycle policy.</p>
              * 
              * <strong>example:</strong>
              * <p>warm</p>

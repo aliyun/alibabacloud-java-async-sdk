@@ -183,7 +183,7 @@ public class PluginAnalysisResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The plug-in description.</p>
+             * <p>The plugin description.</p>
              * 
              * <strong>example:</strong>
              * <p>plugin description</p>
@@ -194,7 +194,7 @@ public class PluginAnalysisResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The plug-in version.</p>
+             * <p>The plugin version.</p>
              * 
              * <strong>example:</strong>
              * <p>8.17.0</p>
@@ -205,7 +205,7 @@ public class PluginAnalysisResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The plug-in name.</p>
+             * <p>The plugin name.</p>
              * 
              * <strong>example:</strong>
              * <p>plugin_name</p>
@@ -216,7 +216,7 @@ public class PluginAnalysisResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The security policy of the plug-in.</p>
+             * <p>The security policy of the plugin.</p>
              * 
              * <strong>example:</strong>
              * <p>null</p>
@@ -227,7 +227,7 @@ public class PluginAnalysisResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The plug-in version.</p>
+             * <p>The plugin version.</p>
              * 
              * <strong>example:</strong>
              * <p>8.17.0</p>

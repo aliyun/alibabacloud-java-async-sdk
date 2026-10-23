@@ -59,7 +59,10 @@ public class DescribeDynamicSettingsRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>The Elasticsearch instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-n6w1qu7ei000p****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);

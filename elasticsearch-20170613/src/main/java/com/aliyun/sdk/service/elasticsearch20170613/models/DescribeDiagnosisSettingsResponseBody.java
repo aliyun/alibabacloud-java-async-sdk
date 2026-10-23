@@ -209,7 +209,7 @@ public class DescribeDiagnosisSettingsResponseBody extends TeaModel {
             } 
 
             /**
-             * authorizationStatus.
+             * <p>Indicates whether intelligent diagnostics is authorized to access the Elasticsearch API.</p>
              */
             public Builder authorizationStatus(Boolean authorizationStatus) {
                 this.authorizationStatus = authorizationStatus;
@@ -217,7 +217,10 @@ public class DescribeDiagnosisSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * dailyLimit.
+             * <p>The maximum number of diagnostic executions allowed per day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder dailyLimit(Integer dailyLimit) {
                 this.dailyLimit = dailyLimit;
@@ -225,7 +228,7 @@ public class DescribeDiagnosisSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * dailyScheduleEnabled.
+             * <p>Indicates whether daily scheduled diagnostics are enabled.</p>
              */
             public Builder dailyScheduleEnabled(Boolean dailyScheduleEnabled) {
                 this.dailyScheduleEnabled = dailyScheduleEnabled;
@@ -233,7 +236,10 @@ public class DescribeDiagnosisSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * diagnosisMode.
+             * <p>The running mode of intelligent diagnostics, such as AGENT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AGENT</p>
              */
             public Builder diagnosisMode(String diagnosisMode) {
                 this.diagnosisMode = diagnosisMode;
@@ -241,7 +247,7 @@ public class DescribeDiagnosisSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The common scenarios of intelligent diagnosis and optimization.</p>
+             * <p>The common scenarios for intelligent O&amp;M.</p>
              * 
              * <strong>example:</strong>
              * <p>Business Search</p>
@@ -252,7 +258,7 @@ public class DescribeDiagnosisSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * selectedItems.
+             * <p>The list of identifiers for the selected intelligent diagnostics items.</p>
              */
             public Builder selectedItems(java.util.List<String> selectedItems) {
                 this.selectedItems = selectedItems;
@@ -260,7 +266,7 @@ public class DescribeDiagnosisSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The UNIX timestamp when the intelligent diagnosis and optimization common scenarios were last updated.</p>
+             * <p>The UNIX timestamp when the common scenarios for intelligent O&amp;M were last updated.</p>
              * 
              * <strong>example:</strong>
              * <p>1588994035385</p>

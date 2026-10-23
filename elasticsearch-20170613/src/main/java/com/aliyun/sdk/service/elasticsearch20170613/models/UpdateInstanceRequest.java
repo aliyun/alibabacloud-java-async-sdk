@@ -31,6 +31,10 @@ public class UpdateInstanceRequest extends Request {
     private ElasticDataNodeConfiguration elasticDataNodeConfiguration;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("indexNodeConfiguration")
+    private IndexNodeConfiguration indexNodeConfiguration;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("instanceCategory")
     private String instanceCategory;
 
@@ -49,6 +53,10 @@ public class UpdateInstanceRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("nodeSpec")
     private NodeSpec nodeSpec;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("searchNodeConfiguration")
+    private SearchNodeConfiguration searchNodeConfiguration;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("updateType")
@@ -75,11 +83,13 @@ public class UpdateInstanceRequest extends Request {
         this.instanceId = builder.instanceId;
         this.clientNodeConfiguration = builder.clientNodeConfiguration;
         this.elasticDataNodeConfiguration = builder.elasticDataNodeConfiguration;
+        this.indexNodeConfiguration = builder.indexNodeConfiguration;
         this.instanceCategory = builder.instanceCategory;
         this.kibanaConfiguration = builder.kibanaConfiguration;
         this.masterConfiguration = builder.masterConfiguration;
         this.nodeAmount = builder.nodeAmount;
         this.nodeSpec = builder.nodeSpec;
+        this.searchNodeConfiguration = builder.searchNodeConfiguration;
         this.updateType = builder.updateType;
         this.warmNodeConfiguration = builder.warmNodeConfiguration;
         this.clientToken = builder.clientToken;
@@ -122,6 +132,13 @@ public class UpdateInstanceRequest extends Request {
     }
 
     /**
+     * @return indexNodeConfiguration
+     */
+    public IndexNodeConfiguration getIndexNodeConfiguration() {
+        return this.indexNodeConfiguration;
+    }
+
+    /**
      * @return instanceCategory
      */
     public String getInstanceCategory() {
@@ -154,6 +171,13 @@ public class UpdateInstanceRequest extends Request {
      */
     public NodeSpec getNodeSpec() {
         return this.nodeSpec;
+    }
+
+    /**
+     * @return searchNodeConfiguration
+     */
+    public SearchNodeConfiguration getSearchNodeConfiguration() {
+        return this.searchNodeConfiguration;
     }
 
     /**
@@ -195,11 +219,13 @@ public class UpdateInstanceRequest extends Request {
         private String instanceId; 
         private ClientNodeConfiguration clientNodeConfiguration; 
         private ElasticDataNodeConfiguration elasticDataNodeConfiguration; 
+        private IndexNodeConfiguration indexNodeConfiguration; 
         private String instanceCategory; 
         private KibanaNodeConfiguration kibanaConfiguration; 
         private MasterNodeConfiguration masterConfiguration; 
         private Integer nodeAmount; 
         private NodeSpec nodeSpec; 
+        private SearchNodeConfiguration searchNodeConfiguration; 
         private String updateType; 
         private WarmNodeConfiguration warmNodeConfiguration; 
         private String clientToken; 
@@ -215,11 +241,13 @@ public class UpdateInstanceRequest extends Request {
             this.instanceId = request.instanceId;
             this.clientNodeConfiguration = request.clientNodeConfiguration;
             this.elasticDataNodeConfiguration = request.elasticDataNodeConfiguration;
+            this.indexNodeConfiguration = request.indexNodeConfiguration;
             this.instanceCategory = request.instanceCategory;
             this.kibanaConfiguration = request.kibanaConfiguration;
             this.masterConfiguration = request.masterConfiguration;
             this.nodeAmount = request.nodeAmount;
             this.nodeSpec = request.nodeSpec;
+            this.searchNodeConfiguration = request.searchNodeConfiguration;
             this.updateType = request.updateType;
             this.warmNodeConfiguration = request.warmNodeConfiguration;
             this.clientToken = request.clientToken;
@@ -259,12 +287,21 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
+         * <p>The index node configuration. This parameter is supported only by AI engine instances.</p>
+         */
+        public Builder indexNodeConfiguration(IndexNodeConfiguration indexNodeConfiguration) {
+            this.putBodyParameter("indexNodeConfiguration", indexNodeConfiguration);
+            this.indexNodeConfiguration = indexNodeConfiguration;
+            return this;
+        }
+
+        /**
          * <p>The edition type. Valid values:</p>
          * <ul>
-         * <li>x-pack: Commercial Edition instance.</li>
-         * <li>advanced: Advanced Edition instance.</li>
-         * <li>IS: Advanced Edition instance with Indexing Service enabled.</li>
-         * <li>community: Basic Edition instance.<blockquote>
+         * <li>x-pack: Commercial Edition.</li>
+         * <li>advanced: Advanced Edition.</li>
+         * <li>IS: Advanced Edition with Indexing Service enabled.</li>
+         * <li>community: Basic Edition.<blockquote>
          * <p>To create an Advanced Edition instance with OpenStore enabled, you must also enable Indexing Service.</p>
          * </blockquote>
          * </li>
@@ -319,8 +356,23 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * <p>normal: in-place change
-         * blue_green: blue-green change</p>
+         * <p>The search node configuration. This parameter is supported only by AI engine instances.</p>
+         */
+        public Builder searchNodeConfiguration(SearchNodeConfiguration searchNodeConfiguration) {
+            this.putBodyParameter("searchNodeConfiguration", searchNodeConfiguration);
+            this.searchNodeConfiguration = searchNodeConfiguration;
+            return this;
+        }
+
+        /**
+         * <p>The update type. Valid values:</p>
+         * <ul>
+         * <li>normal: In-place update.</li>
+         * <li>blue_green: Blue-green update.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>blue_green</p>
          */
         public Builder updateType(String updateType) {
             this.putBodyParameter("updateType", updateType);
@@ -329,7 +381,7 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The warm node configuration. The warm node is different from the data node.</p>
+         * <p>The warm data node configuration.</p>
          */
         public Builder warmNodeConfiguration(WarmNodeConfiguration warmNodeConfiguration) {
             this.putBodyParameter("warmNodeConfiguration", warmNodeConfiguration);
@@ -338,7 +390,7 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * <p>A unique token generated by the client to guarantee the idempotency of the request. The maximum length is 64 ASCII characters.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can be up to 64 ASCII characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>
@@ -350,10 +402,10 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to forcibly restart the instance. Valid values:</p>
+         * <p>Specifies whether to force a restart. Valid values:</p>
          * <ul>
-         * <li>true: Forcibly restarts the instance.</li>
-         * <li>false (default): Does not forcibly restart the instance.</li>
+         * <li>true: Yes.</li>
+         * <li>false: No. This is the default value.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -366,10 +418,10 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The type of configuration change. Valid values:</p>
+         * <p>The configuration change type. Valid values:</p>
          * <ul>
-         * <li>upgrade (default): upgrade</li>
-         * <li>downgrade: downgrade</li>
+         * <li>upgrade: Upgrades the configuration. This is the default value.</li>
+         * <li>downgrade: Downgrades the configuration.</li>
          * </ul>
          * 
          * <strong>example:</strong>

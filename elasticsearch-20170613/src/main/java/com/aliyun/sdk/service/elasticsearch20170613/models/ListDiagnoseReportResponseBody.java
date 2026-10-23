@@ -99,7 +99,7 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned results.</p>
+         * <p>The returned result.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -152,7 +152,7 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The total number of records returned.</p>
+             * <p>The total number of returned records.</p>
              * 
              * <strong>example:</strong>
              * <p>15</p>
@@ -308,8 +308,8 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
              * <p>The type of the diagnostic result. Valid values:</p>
              * <ul>
              * <li>TEXT: text description</li>
-             * <li>CONSOLE_API: console-triggered</li>
-             * <li>ES_API: API-triggered</li>
+             * <li>CONSOLE_API: triggered by the console</li>
+             * <li>ES_API: triggered by the API</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -534,10 +534,10 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the diagnostic item.</p>
+             * <p>The description of the diagnostic conclusion.</p>
              * 
              * <strong>example:</strong>
-             * <p>Check whether the number of replica shards is optimal and easy to maintain</p>
+             * <p>Everything is normal</p>
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -545,7 +545,7 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the diagnostic item.</p>
+             * <p>The diagnostic details. This field is empty if details are not requested.</p>
              */
             public Builder detail(java.util.Map<String, ?> detail) {
                 this.detail = detail;
@@ -553,10 +553,10 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the diagnostic item.</p>
+             * <p>The code of the diagnostic item.</p>
              * 
              * <strong>example:</strong>
-             * <p>IndexAliasUseDiagnostic</p>
+             * <p>cluster.health</p>
              */
             public Builder item(String item) {
                 this.item = item;
@@ -564,10 +564,10 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The full name of the diagnostic item.</p>
+             * <p>The name of the diagnostic item.</p>
              * 
              * <strong>example:</strong>
-             * <p>Number of Replica Shards</p>
+             * <p>Cluster health</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -575,7 +575,10 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * state.
+             * <p>The health status of the diagnostic item. Valid values: GREEN, YELLOW, and RED.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GREEN</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -583,10 +586,10 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The diagnostic suggestion.</p>
+             * <p>The handling suggestion.</p>
              * 
              * <strong>example:</strong>
-             * <p>You can call the following function in the Elasticsearch API....</p>
+             * <p>Monitor GC</p>
              */
             public Builder suggest(String suggest) {
                 this.suggest = suggest;
@@ -755,7 +758,7 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of diagnostic items in the report.</p>
+             * <p>The list of diagnostic item information in the report.</p>
              */
             public Builder diagnoseItems(java.util.List<DiagnoseItems> diagnoseItems) {
                 this.diagnoseItems = diagnoseItems;
@@ -763,7 +766,10 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * diagnosisMode.
+             * <p>The diagnostic mode. Valid values: RULE and AGENT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RULE</p>
              */
             public Builder diagnosisMode(String diagnosisMode) {
                 this.diagnosisMode = diagnosisMode;
@@ -782,7 +788,7 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance ID of the diagnosed instance.</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>es-cn-abc</p>
@@ -793,7 +799,7 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * items.
+             * <p>The list of diagnostic item details. This list may be empty if details are not requested.</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;
@@ -823,7 +829,7 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The trigger method of the health diagnostics. Valid values:</p>
+             * <p>The trigger method for health diagnostics. Valid values:</p>
              * <ul>
              * <li>SYSTEM: automatically triggered by the system</li>
              * <li>INNER: internally triggered</li>

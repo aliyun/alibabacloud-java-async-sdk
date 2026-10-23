@@ -67,7 +67,7 @@ public class DescribeXpackMonitorConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</p>
@@ -186,7 +186,7 @@ public class DescribeXpackMonitorConfigResponseBody extends TeaModel {
              * <p>Indicates whether X-Pack monitoring is enabled. Valid values:</p>
              * <ul>
              * <li>true: Enabled.</li>
-             * <li>false: Not enabled.</li>
+             * <li>false: Disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -198,7 +198,7 @@ public class DescribeXpackMonitorConfigResponseBody extends TeaModel {
             }
 
             /**
-             * endpoints.
+             * <p>The list of access endpoints for the Elasticsearch instance associated with X-Pack monitoring.</p>
              */
             public Builder endpoints(java.util.List<String> endpoints) {
                 this.endpoints = endpoints;
@@ -206,7 +206,7 @@ public class DescribeXpackMonitorConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance ID of the Elasticsearch instance associated with X-Pack monitoring.</p>
+             * <p>The Elasticsearch instance ID associated with X-Pack monitoring.</p>
              * 
              * <strong>example:</strong>
              * <p>es-cn-n6w1o1x0w001c****</p>
@@ -217,7 +217,7 @@ public class DescribeXpackMonitorConfigResponseBody extends TeaModel {
             }
 
             /**
-             * pipelineIds.
+             * <p>The list of Kibana-managed pipelines associated with X-Pack monitoring.</p>
              */
             public Builder pipelineIds(java.util.List<String> pipelineIds) {
                 this.pipelineIds = pipelineIds;

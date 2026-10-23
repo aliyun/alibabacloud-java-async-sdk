@@ -89,7 +89,7 @@ public class PostEmonTryAlarmRuleRequest extends Request {
         } 
 
         /**
-         * <p>The monitoring alert project ID, in the format of <strong>es-<yourUID></strong>.</p>
+         * <p>The ID of the monitoring and alerting project. The format is <strong>es-<yourUID></strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class PostEmonTryAlarmRuleRequest extends Request {
         }
 
         /**
-         * <p>One of the IDs from the alert list obtained through the <a href="https://help.aliyun.com/document_detail/254890.html">GetEmonGrafanaAlerts</a> operation. Specify the ID as needed.</p>
+         * <p>The ID of an alert in the alert list obtained from the <a href="https://help.aliyun.com/document_detail/254890.html">GetEmonGrafanaAlerts</a> operation. You can specify the ID as needed.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +115,10 @@ public class PostEmonTryAlarmRuleRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The information about the test alert rule, notification method, and message recipients.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;alarmRuleName&quot;:&quot;test_rule&quot;,&quot;AlarmChannel&quot;:{&quot;phone&quot;:true,&quot;sms&quot;:true,&quot;dingWebHook&quot;:true},&quot;receivers&quot;:[{&quot;id&quot;:19,&quot;contactGroup&quot;:false}]}</p>
          */
         public Builder body(String body) {
             this.putQueryParameter("body", body);

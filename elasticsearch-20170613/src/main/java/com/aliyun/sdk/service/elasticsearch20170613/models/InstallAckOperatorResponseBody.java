@@ -67,7 +67,7 @@ public class InstallAckOperatorResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>EFA88951-7A6F-4A8E-AB8F-2BB7132BA751</p>

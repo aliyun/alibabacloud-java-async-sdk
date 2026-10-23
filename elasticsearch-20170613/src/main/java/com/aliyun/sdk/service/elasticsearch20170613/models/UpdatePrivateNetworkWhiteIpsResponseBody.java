@@ -131,7 +131,7 @@ public class UpdatePrivateNetworkWhiteIpsResponseBody extends TeaModel {
             } 
 
             /**
-             * privateNetworkIpWhiteList.
+             * <p>The VPC private network access whitelist.</p>
              */
             public Builder privateNetworkIpWhiteList(java.util.List<String> privateNetworkIpWhiteList) {
                 this.privateNetworkIpWhiteList = privateNetworkIpWhiteList;

@@ -80,7 +80,7 @@ public class UninstallLogstashPluginResponseBody extends TeaModel {
         } 
 
         /**
-         * Headers.
+         * <p>The response headers of this call.</p>
          */
         public Builder headers(java.util.Map<String, ?> headers) {
             this.headers = headers;
@@ -99,7 +99,7 @@ public class UninstallLogstashPluginResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The names of the Logstash plugins uninstalled by this request.</p>
          */
         public Builder result(java.util.List<String> result) {
             this.result = result;

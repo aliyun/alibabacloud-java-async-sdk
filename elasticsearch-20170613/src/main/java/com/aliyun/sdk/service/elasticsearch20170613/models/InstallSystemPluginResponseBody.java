@@ -78,7 +78,7 @@ public class InstallSystemPluginResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The names of the Elasticsearch plugins installed in this request.</p>
          */
         public Builder result(java.util.List<String> result) {
             this.result = result;

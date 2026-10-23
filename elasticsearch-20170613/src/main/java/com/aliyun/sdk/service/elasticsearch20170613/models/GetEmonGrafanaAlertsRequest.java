@@ -74,7 +74,7 @@ public class GetEmonGrafanaAlertsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the monitoring alert project, in the format <strong>es-<yourUID></strong>.</p>
+         * <p>The ID of the monitoring and alerting project. The format is <strong>es-<yourUID></strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,7 +87,7 @@ public class GetEmonGrafanaAlertsRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>This GET operation does not require a request body.</p>
          */
         public Builder body(String body) {
             this.putQueryParameter("body", body);

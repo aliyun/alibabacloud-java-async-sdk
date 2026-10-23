@@ -131,7 +131,7 @@ public class UpdatePublicWhiteIpsResponseBody extends TeaModel {
             } 
 
             /**
-             * publicIpWhitelist.
+             * <p>The public IP address access whitelist.</p>
              */
             public Builder publicIpWhitelist(java.util.List<String> publicIpWhitelist) {
                 this.publicIpWhitelist = publicIpWhitelist;

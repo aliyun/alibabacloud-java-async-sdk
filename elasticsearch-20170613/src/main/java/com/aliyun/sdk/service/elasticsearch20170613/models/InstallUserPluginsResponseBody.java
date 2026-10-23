@@ -78,7 +78,7 @@ public class InstallUserPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The list of custom user plugins submitted for installation.</p>
          */
         public Builder result(java.util.List<String> result) {
             this.result = result;

@@ -87,7 +87,7 @@ public class DescribeDiagnosisSettingsRequest extends Request {
         }
 
         /**
-         * <p>The language of the response. Default value: en.</p>
+         * <p>Specifies the language of the response. Default value: en.</p>
          * 
          * <strong>example:</strong>
          * <p>en</p>

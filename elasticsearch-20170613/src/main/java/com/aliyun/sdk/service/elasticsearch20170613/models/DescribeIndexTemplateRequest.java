@@ -88,7 +88,7 @@ public class DescribeIndexTemplateRequest extends Request {
         }
 
         /**
-         * <p>The index template name.</p>
+         * <p>The name of the index template.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

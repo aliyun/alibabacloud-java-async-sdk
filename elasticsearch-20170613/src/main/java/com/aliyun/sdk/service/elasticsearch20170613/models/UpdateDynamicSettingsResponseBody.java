@@ -67,7 +67,10 @@ public class UpdateDynamicSettingsResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6F******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class UpdateDynamicSettingsResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The result of updating the dynamic configurations of the cluster. A value of true indicates that the update was successful, and a value of false indicates that the update failed.</p>
          */
         public Builder result(Boolean result) {
             this.result = result;

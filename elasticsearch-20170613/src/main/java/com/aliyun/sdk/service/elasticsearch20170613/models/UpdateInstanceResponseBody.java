@@ -145,6 +145,159 @@ public class UpdateInstanceResponseBody extends TeaModel {
      *
      * <p>UpdateInstanceResponseBody</p>
      */
+    public static class IndexNodeConfiguration extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("amount")
+        private Integer amount;
+
+        @com.aliyun.core.annotation.NameInMap("disk")
+        private Integer disk;
+
+        @com.aliyun.core.annotation.NameInMap("diskType")
+        private String diskType;
+
+        @com.aliyun.core.annotation.NameInMap("performanceLevel")
+        private String performanceLevel;
+
+        @com.aliyun.core.annotation.NameInMap("spec")
+        private String spec;
+
+        private IndexNodeConfiguration(Builder builder) {
+            this.amount = builder.amount;
+            this.disk = builder.disk;
+            this.diskType = builder.diskType;
+            this.performanceLevel = builder.performanceLevel;
+            this.spec = builder.spec;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static IndexNodeConfiguration create() {
+            return builder().build();
+        }
+
+        /**
+         * @return amount
+         */
+        public Integer getAmount() {
+            return this.amount;
+        }
+
+        /**
+         * @return disk
+         */
+        public Integer getDisk() {
+            return this.disk;
+        }
+
+        /**
+         * @return diskType
+         */
+        public String getDiskType() {
+            return this.diskType;
+        }
+
+        /**
+         * @return performanceLevel
+         */
+        public String getPerformanceLevel() {
+            return this.performanceLevel;
+        }
+
+        /**
+         * @return spec
+         */
+        public String getSpec() {
+            return this.spec;
+        }
+
+        public static final class Builder {
+            private Integer amount; 
+            private Integer disk; 
+            private String diskType; 
+            private String performanceLevel; 
+            private String spec; 
+
+            private Builder() {
+            } 
+
+            private Builder(IndexNodeConfiguration model) {
+                this.amount = model.amount;
+                this.disk = model.disk;
+                this.diskType = model.diskType;
+                this.performanceLevel = model.performanceLevel;
+                this.spec = model.spec;
+            } 
+
+            /**
+             * <p>The number of nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
+             */
+            public Builder amount(Integer amount) {
+                this.amount = amount;
+                return this;
+            }
+
+            /**
+             * <p>The disk size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
+             */
+            public Builder disk(Integer disk) {
+                this.disk = disk;
+                return this;
+            }
+
+            /**
+             * <p>The disk type, such as cloud_essd.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_essd</p>
+             */
+            public Builder diskType(String diskType) {
+                this.diskType = diskType;
+                return this;
+            }
+
+            /**
+             * <p>The disk performance level (PL), such as PL0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PL0</p>
+             */
+            public Builder performanceLevel(String performanceLevel) {
+                this.performanceLevel = performanceLevel;
+                return this;
+            }
+
+            /**
+             * <p>The node specifications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>elasticsearch.turbo1.ci.xlarge</p>
+             */
+            public Builder spec(String spec) {
+                this.spec = spec;
+                return this;
+            }
+
+            public IndexNodeConfiguration build() {
+                return new IndexNodeConfiguration(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateInstanceResponseBody</p>
+     */
     public static class KibanaConfiguration extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("amount")
         private Integer amount;
@@ -229,7 +382,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage size of the node.</p>
+             * <p>The storage space size of the node.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -358,7 +511,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage size of the node. Unit: GB.</p>
+             * <p>The storage space size of the node. Unit: GB.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -463,7 +616,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The storage size of the node. Unit: GB.</p>
+             * <p>The storage space size of the node. Unit: GB.</p>
              * 
              * <strong>example:</strong>
              * <p>40</p>
@@ -512,6 +665,159 @@ public class UpdateInstanceResponseBody extends TeaModel {
      *
      * <p>UpdateInstanceResponseBody</p>
      */
+    public static class SearchNodeConfiguration extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("amount")
+        private Integer amount;
+
+        @com.aliyun.core.annotation.NameInMap("disk")
+        private Integer disk;
+
+        @com.aliyun.core.annotation.NameInMap("diskType")
+        private String diskType;
+
+        @com.aliyun.core.annotation.NameInMap("performanceLevel")
+        private String performanceLevel;
+
+        @com.aliyun.core.annotation.NameInMap("spec")
+        private String spec;
+
+        private SearchNodeConfiguration(Builder builder) {
+            this.amount = builder.amount;
+            this.disk = builder.disk;
+            this.diskType = builder.diskType;
+            this.performanceLevel = builder.performanceLevel;
+            this.spec = builder.spec;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SearchNodeConfiguration create() {
+            return builder().build();
+        }
+
+        /**
+         * @return amount
+         */
+        public Integer getAmount() {
+            return this.amount;
+        }
+
+        /**
+         * @return disk
+         */
+        public Integer getDisk() {
+            return this.disk;
+        }
+
+        /**
+         * @return diskType
+         */
+        public String getDiskType() {
+            return this.diskType;
+        }
+
+        /**
+         * @return performanceLevel
+         */
+        public String getPerformanceLevel() {
+            return this.performanceLevel;
+        }
+
+        /**
+         * @return spec
+         */
+        public String getSpec() {
+            return this.spec;
+        }
+
+        public static final class Builder {
+            private Integer amount; 
+            private Integer disk; 
+            private String diskType; 
+            private String performanceLevel; 
+            private String spec; 
+
+            private Builder() {
+            } 
+
+            private Builder(SearchNodeConfiguration model) {
+                this.amount = model.amount;
+                this.disk = model.disk;
+                this.diskType = model.diskType;
+                this.performanceLevel = model.performanceLevel;
+                this.spec = model.spec;
+            } 
+
+            /**
+             * <p>The number of nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
+             */
+            public Builder amount(Integer amount) {
+                this.amount = amount;
+                return this;
+            }
+
+            /**
+             * <p>The disk size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
+             */
+            public Builder disk(Integer disk) {
+                this.disk = disk;
+                return this;
+            }
+
+            /**
+             * <p>The disk type, such as cloud_essd.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_essd</p>
+             */
+            public Builder diskType(String diskType) {
+                this.diskType = diskType;
+                return this;
+            }
+
+            /**
+             * <p>The disk performance level (PL), such as PL0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PL0</p>
+             */
+            public Builder performanceLevel(String performanceLevel) {
+                this.performanceLevel = performanceLevel;
+                return this;
+            }
+
+            /**
+             * <p>The node specifications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>elasticsearch.turbo1.ci.xlarge</p>
+             */
+            public Builder spec(String spec) {
+                this.spec = spec;
+                return this;
+            }
+
+            public SearchNodeConfiguration build() {
+                return new SearchNodeConfiguration(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateInstanceResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("createdAt")
         private String createdAt;
@@ -524,6 +830,9 @@ public class UpdateInstanceResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("esVersion")
         private String esVersion;
+
+        @com.aliyun.core.annotation.NameInMap("indexNodeConfiguration")
+        private IndexNodeConfiguration indexNodeConfiguration;
 
         @com.aliyun.core.annotation.NameInMap("instanceId")
         private String instanceId;
@@ -543,6 +852,9 @@ public class UpdateInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("paymentType")
         private String paymentType;
 
+        @com.aliyun.core.annotation.NameInMap("searchNodeConfiguration")
+        private SearchNodeConfiguration searchNodeConfiguration;
+
         @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
@@ -551,12 +863,14 @@ public class UpdateInstanceResponseBody extends TeaModel {
             this.description = builder.description;
             this.domain = builder.domain;
             this.esVersion = builder.esVersion;
+            this.indexNodeConfiguration = builder.indexNodeConfiguration;
             this.instanceId = builder.instanceId;
             this.kibanaConfiguration = builder.kibanaConfiguration;
             this.masterConfiguration = builder.masterConfiguration;
             this.nodeAmount = builder.nodeAmount;
             this.nodeSpec = builder.nodeSpec;
             this.paymentType = builder.paymentType;
+            this.searchNodeConfiguration = builder.searchNodeConfiguration;
             this.status = builder.status;
         }
 
@@ -594,6 +908,13 @@ public class UpdateInstanceResponseBody extends TeaModel {
          */
         public String getEsVersion() {
             return this.esVersion;
+        }
+
+        /**
+         * @return indexNodeConfiguration
+         */
+        public IndexNodeConfiguration getIndexNodeConfiguration() {
+            return this.indexNodeConfiguration;
         }
 
         /**
@@ -639,6 +960,13 @@ public class UpdateInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return searchNodeConfiguration
+         */
+        public SearchNodeConfiguration getSearchNodeConfiguration() {
+            return this.searchNodeConfiguration;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -650,12 +978,14 @@ public class UpdateInstanceResponseBody extends TeaModel {
             private String description; 
             private String domain; 
             private String esVersion; 
+            private IndexNodeConfiguration indexNodeConfiguration; 
             private String instanceId; 
             private KibanaConfiguration kibanaConfiguration; 
             private MasterConfiguration masterConfiguration; 
             private Integer nodeAmount; 
             private NodeSpec nodeSpec; 
             private String paymentType; 
+            private SearchNodeConfiguration searchNodeConfiguration; 
             private String status; 
 
             private Builder() {
@@ -666,17 +996,19 @@ public class UpdateInstanceResponseBody extends TeaModel {
                 this.description = model.description;
                 this.domain = model.domain;
                 this.esVersion = model.esVersion;
+                this.indexNodeConfiguration = model.indexNodeConfiguration;
                 this.instanceId = model.instanceId;
                 this.kibanaConfiguration = model.kibanaConfiguration;
                 this.masterConfiguration = model.masterConfiguration;
                 this.nodeAmount = model.nodeAmount;
                 this.nodeSpec = model.nodeSpec;
                 this.paymentType = model.paymentType;
+                this.searchNodeConfiguration = model.searchNodeConfiguration;
                 this.status = model.status;
             } 
 
             /**
-             * <p>The time when the instance was created.</p>
+             * <p>The time when the instance was created. The time is displayed in UTC and formatted in accordance with the ISO 8601 standard.</p>
              * 
              * <strong>example:</strong>
              * <p>2018-07-13T03:58:07.253Z</p>
@@ -698,7 +1030,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The internal-facing access domain name of the instance for private network access.</p>
+             * <p>The internal-facing access domain name of the instance on the private network.</p>
              * 
              * <strong>example:</strong>
              * <p>es-cn-abc.elasticsearch.aliyuncs.com</p>
@@ -716,6 +1048,14 @@ public class UpdateInstanceResponseBody extends TeaModel {
              */
             public Builder esVersion(String esVersion) {
                 this.esVersion = esVersion;
+                return this;
+            }
+
+            /**
+             * <p>The index node configuration. This parameter is supported only by AI engine instances.</p>
+             */
+            public Builder indexNodeConfiguration(IndexNodeConfiguration indexNodeConfiguration) {
+                this.indexNodeConfiguration = indexNodeConfiguration;
                 return this;
             }
 
@@ -768,8 +1108,8 @@ public class UpdateInstanceResponseBody extends TeaModel {
             /**
              * <p>The billing method of the instance. Valid values:</p>
              * <ul>
-             * <li>prepaid: Subscription.</li>
-             * <li>postpaid: Pay-as-you-go.</li>
+             * <li>prepaid: subscription.</li>
+             * <li>postpaid: pay-as-you-go.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -781,11 +1121,19 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The search node configuration. This parameter is supported only by AI engine instances.</p>
+             */
+            public Builder searchNodeConfiguration(SearchNodeConfiguration searchNodeConfiguration) {
+                this.searchNodeConfiguration = searchNodeConfiguration;
+                return this;
+            }
+
+            /**
              * <p>The status of the instance. Valid values:</p>
              * <ul>
              * <li>active: Normal.</li>
-             * <li>activating: Taking effect.</li>
-             * <li>inactive: Frozen.</li>
+             * <li>activating: Activating.</li>
+             * <li>inactive: Inactive.</li>
              * <li>invalid: Invalid.</li>
              * </ul>
              * 

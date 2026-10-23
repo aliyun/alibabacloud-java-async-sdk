@@ -78,7 +78,7 @@ public class EstimatedLogstashRestartTimeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned result.</p>
+         * <p>The returned results.</p>
          */
         public Builder result(Result result) {
             this.result = result;

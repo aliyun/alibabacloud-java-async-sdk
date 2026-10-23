@@ -183,7 +183,7 @@ public class GetClusterDataInformationResponseBody extends TeaModel {
             } 
 
             /**
-             * fields.
+             * <p>The fields corresponding to the index mapping.</p>
              */
             public Builder fields(java.util.List<String> fields) {
                 this.fields = fields;
@@ -191,7 +191,7 @@ public class GetClusterDataInformationResponseBody extends TeaModel {
             }
 
             /**
-             * indices.
+             * <p>The list of indexes in the cluster.</p>
              */
             public Builder indices(java.util.List<String> indices) {
                 this.indices = indices;
@@ -221,7 +221,7 @@ public class GetClusterDataInformationResponseBody extends TeaModel {
             }
 
             /**
-             * typeName.
+             * <p>The type of the specified index.</p>
              */
             public Builder typeName(java.util.List<String> typeName) {
                 this.typeName = typeName;

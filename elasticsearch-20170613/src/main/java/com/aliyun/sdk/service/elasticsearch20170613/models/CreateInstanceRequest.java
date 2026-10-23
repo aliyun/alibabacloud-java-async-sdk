@@ -40,6 +40,10 @@ public class CreateInstanceRequest extends Request {
     private String esVersion;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("indexNodeConfiguration")
+    private IndexNodeConfiguration indexNodeConfiguration;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("instanceCategory")
     private String instanceCategory;
 
@@ -78,6 +82,10 @@ public class CreateInstanceRequest extends Request {
     private String resourceGroupId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("searchNodeConfiguration")
+    private SearchNodeConfiguration searchNodeConfiguration;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("tags")
     private java.util.List<Tags> tags;
 
@@ -100,6 +108,7 @@ public class CreateInstanceRequest extends Request {
         this.elasticDataNodeConfiguration = builder.elasticDataNodeConfiguration;
         this.esAdminPassword = builder.esAdminPassword;
         this.esVersion = builder.esVersion;
+        this.indexNodeConfiguration = builder.indexNodeConfiguration;
         this.instanceCategory = builder.instanceCategory;
         this.kibanaConfiguration = builder.kibanaConfiguration;
         this.masterConfiguration = builder.masterConfiguration;
@@ -109,6 +118,7 @@ public class CreateInstanceRequest extends Request {
         this.paymentInfo = builder.paymentInfo;
         this.paymentType = builder.paymentType;
         this.resourceGroupId = builder.resourceGroupId;
+        this.searchNodeConfiguration = builder.searchNodeConfiguration;
         this.tags = builder.tags;
         this.warmNodeConfiguration = builder.warmNodeConfiguration;
         this.zoneCount = builder.zoneCount;
@@ -161,6 +171,13 @@ public class CreateInstanceRequest extends Request {
      */
     public String getEsVersion() {
         return this.esVersion;
+    }
+
+    /**
+     * @return indexNodeConfiguration
+     */
+    public IndexNodeConfiguration getIndexNodeConfiguration() {
+        return this.indexNodeConfiguration;
     }
 
     /**
@@ -227,6 +244,13 @@ public class CreateInstanceRequest extends Request {
     }
 
     /**
+     * @return searchNodeConfiguration
+     */
+    public SearchNodeConfiguration getSearchNodeConfiguration() {
+        return this.searchNodeConfiguration;
+    }
+
+    /**
      * @return tags
      */
     public java.util.List<Tags> getTags() {
@@ -260,6 +284,7 @@ public class CreateInstanceRequest extends Request {
         private ElasticDataNodeConfiguration elasticDataNodeConfiguration; 
         private String esAdminPassword; 
         private String esVersion; 
+        private IndexNodeConfiguration indexNodeConfiguration; 
         private String instanceCategory; 
         private KibanaNodeConfiguration kibanaConfiguration; 
         private MasterNodeConfiguration masterConfiguration; 
@@ -269,6 +294,7 @@ public class CreateInstanceRequest extends Request {
         private PaymentInfo paymentInfo; 
         private String paymentType; 
         private String resourceGroupId; 
+        private SearchNodeConfiguration searchNodeConfiguration; 
         private java.util.List<Tags> tags; 
         private WarmNodeConfiguration warmNodeConfiguration; 
         private Integer zoneCount; 
@@ -285,6 +311,7 @@ public class CreateInstanceRequest extends Request {
             this.elasticDataNodeConfiguration = request.elasticDataNodeConfiguration;
             this.esAdminPassword = request.esAdminPassword;
             this.esVersion = request.esVersion;
+            this.indexNodeConfiguration = request.indexNodeConfiguration;
             this.instanceCategory = request.instanceCategory;
             this.kibanaConfiguration = request.kibanaConfiguration;
             this.masterConfiguration = request.masterConfiguration;
@@ -294,6 +321,7 @@ public class CreateInstanceRequest extends Request {
             this.paymentInfo = request.paymentInfo;
             this.paymentType = request.paymentType;
             this.resourceGroupId = request.resourceGroupId;
+            this.searchNodeConfiguration = request.searchNodeConfiguration;
             this.tags = request.tags;
             this.warmNodeConfiguration = request.warmNodeConfiguration;
             this.zoneCount = request.zoneCount;
@@ -331,7 +359,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The access password of the instance. The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters (!@#$%^&amp;*()_+-=). The password must be 8 to 32 characters in length.</p>
+         * <p>The access password of the instance. The password must be 8 to 32 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include !@#$%^&amp;*()_+-=.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -356,7 +384,7 @@ public class CreateInstanceRequest extends Request {
          * <li>5.5.3_with_X-Pack</li>
          * </ul>
          * <blockquote>
-         * <p>The versions listed above may not include all versions supported by Elasticsearch instances. Call the <a href="https://help.aliyun.com/document_detail/254099.html">GetRegionConfiguration</a> operation to view the actual supported versions.</p>
+         * <p>The preceding versions may not include all versions supported by Elasticsearch instances. To view the actual supported versions, call the <a href="https://help.aliyun.com/document_detail/254099.html">GetRegionConfiguration</a> operation.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -370,10 +398,19 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
+         * <p>The index node configuration. Only instances with the AI engine type support index node configuration.</p>
+         */
+        public Builder indexNodeConfiguration(IndexNodeConfiguration indexNodeConfiguration) {
+            this.putBodyParameter("indexNodeConfiguration", indexNodeConfiguration);
+            this.indexNodeConfiguration = indexNodeConfiguration;
+            return this;
+        }
+
+        /**
          * <p>The edition type. Valid values:</p>
          * <ul>
-         * <li>x-pack: Creates a commercial edition instance, or a kernel-enhanced edition instance without Indexing Service or OpenStore enabled.</li>
-         * <li>IS: Creates a kernel-enhanced edition instance with Indexing Service or OpenStore enabled.</li>
+         * <li>x-pack: Creates a Commercial Edition instance, or an Advanced Edition instance with Indexing Service and OpenStore disabled.</li>
+         * <li>IS: Creates an Advanced Edition instance with Indexing Service or OpenStore enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -388,7 +425,7 @@ public class CreateInstanceRequest extends Request {
         /**
          * <p>The Kibana node configuration.</p>
          * <blockquote>
-         * <p>We strongly recommend that you enable Kibana nodes.</p>
+         * <p>Enable the Kibana node.</p>
          * </blockquote>
          */
         public Builder kibanaConfiguration(KibanaNodeConfiguration kibanaConfiguration) {
@@ -400,7 +437,7 @@ public class CreateInstanceRequest extends Request {
         /**
          * <p>The dedicated master node configuration.</p>
          * <blockquote>
-         * <p>In the Beijing, Shanghai, Hangzhou, and Shenzhen regions, when you call createInstance to create an instance with next-generation cloud disk-based dedicated master nodes, specify the instance family followed by the <code>.new</code> suffix. For example, elasticsearch.sn1ne.large.new.</p>
+         * <p>In the Beijing, Shanghai, Hangzhou, and Shenzhen regions, when you call the createInstance operation to create an instance with a new-generation cloud disk-based dedicated master node, you must specify the instance family with the <code>.new</code> suffix, such as elasticsearch.sn1ne.large.new.</p>
          * </blockquote>
          */
         public Builder masterConfiguration(MasterNodeConfiguration masterConfiguration) {
@@ -412,7 +449,7 @@ public class CreateInstanceRequest extends Request {
         /**
          * <p>The network configuration.</p>
          * <blockquote>
-         * <p>You cannot specify an IP whitelist when creating an instance.</p>
+         * <p>You cannot specify an IP address whitelist when you create an instance.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          */
@@ -438,7 +475,7 @@ public class CreateInstanceRequest extends Request {
         /**
          * <p>The data node configuration.</p>
          * <blockquote>
-         * <p>In the Beijing, Shanghai, Hangzhou, and Shenzhen regions, when you call createInstance to create an instance with next-generation cloud disk-based data nodes, specify the instance family followed by the <code>.new</code> suffix. For example, elasticsearch.sn1ne.large.new.</p>
+         * <p>In the Beijing, Shanghai, Hangzhou, and Shenzhen regions, when you call the createInstance operation to create an instance with a new-generation cloud disk-based data node, you must specify the instance family with the <code>.new</code> suffix, such as elasticsearch.sn1ne.large.new.</p>
          * </blockquote>
          */
         public Builder nodeSpec(NodeSpec nodeSpec) {
@@ -448,7 +485,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The billing details of the subscription instance. This parameter is required when you create a subscription instance.</p>
+         * <p>The payment details of the subscription instance. This parameter is required when you create a subscription instance.</p>
          */
         public Builder paymentInfo(PaymentInfo paymentInfo) {
             this.putBodyParameter("paymentInfo", paymentInfo);
@@ -485,7 +522,16 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The instance tags.</p>
+         * <p>The query node configuration. Only instances with the AI engine type support query node configuration.</p>
+         */
+        public Builder searchNodeConfiguration(SearchNodeConfiguration searchNodeConfiguration) {
+            this.putBodyParameter("searchNodeConfiguration", searchNodeConfiguration);
+            this.searchNodeConfiguration = searchNodeConfiguration;
+            return this;
+        }
+
+        /**
+         * <p>The instance label group.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putBodyParameter("tags", tags);
@@ -494,7 +540,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The cold data node configuration.</p>
+         * <p>The warm data node configuration.</p>
          */
         public Builder warmNodeConfiguration(WarmNodeConfiguration warmNodeConfiguration) {
             this.putBodyParameter("warmNodeConfiguration", warmNodeConfiguration);
@@ -515,7 +561,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>A client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>
@@ -586,7 +632,7 @@ public class CreateInstanceRequest extends Request {
             } 
 
             /**
-             * <p>The tag key of the instance.</p>
+             * <p>The key of the tag.</p>
              * 
              * <strong>example:</strong>
              * <p>KeyTest</p>
@@ -597,7 +643,7 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * <p>The tag value of the instance.</p>
+             * <p>The value of the tag.</p>
              * 
              * <strong>example:</strong>
              * <p>KeyValue</p>

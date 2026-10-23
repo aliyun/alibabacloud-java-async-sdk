@@ -115,7 +115,10 @@ public class UpdateDynamicSettingsRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>The Elasticsearch instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-n6w1qu7ei000p****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -124,7 +127,10 @@ public class UpdateDynamicSettingsRequest extends Request {
         }
 
         /**
-         * <p>The idempotence parameter.</p>
+         * <p>The client token that is used to ensure idempotence.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -133,7 +139,10 @@ public class UpdateDynamicSettingsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the Elasticsearch instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -142,7 +151,10 @@ public class UpdateDynamicSettingsRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The dynamic configurations of the cluster to be updated. Specify a JSON object where the keys are configuration item names and the values are configuration values.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;indices.recovery.max_bytes_per_sec&quot;:&quot;100mb&quot;}</p>
          */
         public Builder body(String body) {
             this.putBodyParameter("body", body);
@@ -151,7 +163,14 @@ public class UpdateDynamicSettingsRequest extends Request {
         }
 
         /**
-         * mode.
+         * <p>The effective mode for dynamic configurations. Valid values:</p>
+         * <ul>
+         * <li>persistent: persistent configurations.</li>
+         * <li>transient: temporary configurations, which become invalid after the cluster is restarted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>persistent</p>
          */
         public Builder mode(String mode) {
             this.putQueryParameter("mode", mode);

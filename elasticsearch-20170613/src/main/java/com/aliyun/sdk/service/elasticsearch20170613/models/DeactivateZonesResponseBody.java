@@ -78,10 +78,10 @@ public class DeactivateZonesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned result. Valid values:</p>
+         * <p>The result. Valid values:</p>
          * <ul>
-         * <li>true: The zones are taken offline.</li>
-         * <li>false: The zones failed to be taken offline.</li>
+         * <li>true: The zones are taken offline successfully.</li>
+         * <li>false: The zones fail to be taken offline.</li>
          * </ul>
          * 
          * <strong>example:</strong>

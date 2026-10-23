@@ -88,7 +88,7 @@ public class ListEcsInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D***</p>
@@ -152,7 +152,7 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The total number of returned records.</p>
+             * <p>The number of returned records.</p>
              * 
              * <strong>example:</strong>
              * <p>11</p>
@@ -222,7 +222,7 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The file content.</p>
+             * <p>The content of the file.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -235,7 +235,7 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The file name.</p>
+             * <p>The name of the file.</p>
              * 
              * <strong>example:</strong>
              * <p>fields.yml</p>
@@ -307,10 +307,10 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             /**
              * <p>The status of each collector on the ECS instance. Valid values:</p>
              * <ul>
-             * <li>heartOk: normal heartbeat.</li>
-             * <li>heartLost: abnormal heartbeat.</li>
-             * <li>uninstalled: not installed.</li>
-             * <li>failed: installation failed.</li>
+             * <li>heartOk: normal heartbeat</li>
+             * <li>heartLost: abnormal heartbeat</li>
+             * <li>uninstalled: not installed</li>
+             * <li>failed: installation failed</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -322,7 +322,7 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of ECS machine IDs.</p>
+             * <p>The list of ECS instance IDs.</p>
              * 
              * <strong>example:</strong>
              * <p>i-bp13y63575oypr9d****</p>
@@ -498,9 +498,9 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             /**
              * <p>The configuration type. Valid values:</p>
              * <ul>
-             * <li>collectorTargetInstance: the collector Output.</li>
-             * <li>collectorDeployMachine: the deployment machine of the collector.</li>
-             * <li>collectorElasticsearchForKibana: the Elasticsearch instance information that supports Kibana dashboards.</li>
+             * <li>collectorTargetInstance: the collector output</li>
+             * <li>collectorDeployMachine: the machine on which the collector is deployed</li>
+             * <li>collectorElasticsearchForKibana: the information about the Elasticsearch instance that supports Kibana dashboards</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -512,10 +512,10 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether Monitoring is enabled. This parameter is displayed when configType is set to collectorTargetInstance and instanceType is set to elasticsearch. Valid values:</p>
+             * <p>Specifies whether to enable monitoring. This parameter is displayed when <strong>configType</strong> is set to <strong>collectorTargetInstance</strong> and <strong>instanceType</strong> is set to <strong>elasticsearch</strong>. Valid values:</p>
              * <ul>
-             * <li>true: Enabled.</li>
-             * <li>false: Not enabled.</li>
+             * <li>true: Enables monitoring.</li>
+             * <li>false: Disables monitoring.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -527,7 +527,7 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The machine group ID. This parameter is displayed when configType is set to collectorDeployMachine.</p>
+             * <p>The ID of the machine group. This parameter is displayed when <strong>configType</strong> is set to <strong>collectorDeployMachine</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>default_ct-cn-5i2l75bz4776****</p>
@@ -538,7 +538,7 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * hosts.
+             * <p>The list of host addresses of the collector target instance.</p>
              */
             public Builder hosts(java.util.List<String> hosts) {
                 this.hosts = hosts;
@@ -546,7 +546,7 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance associated with the collector. When configType is set to collectorTargetInstance, this is the instance ID of the collector Output. When configType is set to collectorDeployMachines and type is set to ACKCluster, this is the ACK (Container Kubernetes) cluster ID.</p>
+             * <p>Instance ID of the instance associated with the collector. When <strong>configType</strong> is set to <strong>collectorTargetInstance</strong>, this parameter indicates instance ID of the collector output instance. When <strong>configType</strong> is set to <strong>collectorDeployMachines</strong> and <strong>type</strong> is set to <strong>ACKCluster</strong>, this parameter indicates instance ID of the ACK cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>es-cn-nif1z89fz003i****</p>
@@ -557,7 +557,7 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance type specified in the collector Output. Valid values: elasticsearch and logstash. This parameter is displayed when configType is set to collectorTargetInstance.</p>
+             * <p>The type of the instance specified by the collector output. Valid values: elasticsearch and logstash. This parameter is displayed when <strong>configType</strong> is set to <strong>collectorTargetInstance</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>elasticsearch</p>
@@ -568,7 +568,7 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of ECS machines on which the collector is deployed. This parameter is displayed when configType is set to collectorDeployMachines and type is set to ECSInstanceId.</p>
+             * <p>The list of ECS instances on which the collector is deployed. This parameter is displayed when <strong>configType</strong> is set to <strong>collectorDeployMachines</strong> and <strong>type</strong> is set to <strong>ECSInstanceId</strong>.</p>
              */
             public Builder machines(java.util.List<Machines> machines) {
                 this.machines = machines;
@@ -576,7 +576,7 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The transport protocol, which must be consistent with the access protocol of the instance specified in the collector Output. Valid values: HTTP and HTTPS. This parameter is displayed when configType is set to collectorTargetInstance.</p>
+             * <p>The transmission protocol, which must be consistent with the access protocol of the instance specified by the collector output. Valid values: HTTP and HTTPS. This parameter is displayed when <strong>configType</strong> is set to <strong>collectorTargetInstance</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>HTTP</p>
@@ -587,10 +587,10 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of machine on which the collector is deployed. This parameter is displayed when configType is set to collectorDeployMachine. Valid values:</p>
+             * <p>The type of the machine on which the collector is deployed. This parameter is displayed when <strong>configType</strong> is set to <strong>collectorDeployMachine</strong>. Valid values:</p>
              * <ul>
-             * <li>ECSInstanceId: ECS.</li>
-             * <li>ACKCluster: Container Kubernetes.</li>
+             * <li>ECSInstanceId: ECS instance</li>
+             * <li>ACKCluster: ACK cluster</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -602,7 +602,7 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The username used to access the instance specified in the collector Output. Default value: elastic. This parameter is displayed when configType is set to collectorTargetInstance or collectorElasticsearchForKibana.</p>
+             * <p>The username used to access the instance specified by the collector output. Default value: elastic. This parameter is displayed when <strong>configType</strong> is set to <strong>collectorTargetInstance</strong> or <strong>collectorElasticsearchForKibana</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>elastic</p>
@@ -815,7 +815,7 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * collectorPaths.
+             * <p>The list of Filebeat collection paths.</p>
              */
             public Builder collectorPaths(java.util.List<String> collectorPaths) {
                 this.collectorPaths = collectorPaths;
@@ -831,10 +831,10 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether to only validate without creating the collector. Valid values:</p>
+             * <p>Specifies whether to verify and create the collector. Valid values:</p>
              * <ul>
-             * <li>true: Only validates without creating.</li>
-             * <li>false: Validates and creates.</li>
+             * <li>true: Verifies the collector but does not create it.</li>
+             * <li>false: Verifies and creates the collector.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -846,7 +846,7 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The extended configuration information.</p>
+             * <p>The extended parameter information.</p>
              */
             public Builder extendConfigs(java.util.List<ExtendConfigs> extendConfigs) {
                 this.extendConfigs = extendConfigs;
@@ -865,7 +865,7 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the collector was last updated.</p>
+             * <p>The time when the collector was updated.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-06-20T07:26:47.000+0000</p>
@@ -876,7 +876,7 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The collector name.</p>
+             * <p>The name of the collector.</p>
              * 
              * <strong>example:</strong>
              * <p>ct-testAbc</p>
@@ -887,7 +887,7 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The account ID.</p>
+             * <p>The ID of the account.</p>
              * 
              * <strong>example:</strong>
              * <p>16852<em><strong>488</strong></em>**</p>
@@ -909,7 +909,7 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The collector type. Valid values: fileBeat, metricBeat, heartBeat, and auditBeat.</p>
+             * <p>The type of the collector. Valid values: fileBeat, metricBeat, heartBeat, and auditBeat.</p>
              * 
              * <strong>example:</strong>
              * <p>fileBeat</p>
@@ -920,7 +920,7 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The collector version. When the deployment machine type is ECS, only <strong>6.8.5_with_community</strong> is supported.</p>
+             * <p>The version of the collector. When the machine type is ECS, only <strong>6.8.5_with_community</strong> is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>6.8.5_with_community</p>
@@ -931,10 +931,10 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The collector status. Valid values:</p>
+             * <p>The status of the collector. Valid values:</p>
              * <ul>
-             * <li>activing: taking effect.</li>
-             * <li>active: active.</li>
+             * <li>activing: taking effect</li>
+             * <li>active: effective</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -946,7 +946,7 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The VPC ID of the collector.</p>
+             * <p>The ID of the VPC where the collector resides.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-bp16k1dvzxtm******</p>
@@ -1027,10 +1027,10 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address type. Valid values:</p>
+             * <p>The type of the IP address. Valid values:</p>
              * <ul>
-             * <li>public: public IP address.</li>
-             * <li>private: private network address.</li>
+             * <li>public: public IP address</li>
+             * <li>private: private network IP address</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1179,10 +1179,10 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The Cloud Assistant installation status. Valid values:</p>
+             * <p>The installation status of Cloud Assistant. Valid values:</p>
              * <ul>
-             * <li>true: Installed.</li>
-             * <li>false: Not installed.</li>
+             * <li>true: installed</li>
+             * <li>false: not installed</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1194,7 +1194,7 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of collectors deployed on the ECS instance.</p>
+             * <p>The list of collectors on the ECS instance.</p>
              */
             public Builder collectors(java.util.List<Collectors> collectors) {
                 this.collectors = collectors;
@@ -1213,7 +1213,7 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ECS instance name.</p>
+             * <p>The name of the ECS instance.</p>
              * 
              * <strong>example:</strong>
              * <p>ecsTestName</p>
@@ -1234,8 +1234,8 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             /**
              * <p>The operating system type of the ECS instance. Valid values:</p>
              * <ul>
-             * <li>windows: Windows operating system.</li>
-             * <li>linux: Linux operating system.</li>
+             * <li>windows: Windows operating system</li>
+             * <li>linux: Linux operating system</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1249,10 +1249,10 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             /**
              * <p>The status of the ECS instance. Valid values:</p>
              * <ul>
-             * <li>running: running.</li>
-             * <li>starting: starting.</li>
-             * <li>stopping: stopping.</li>
-             * <li>stopped: stopped.</li>
+             * <li>running: running</li>
+             * <li>starting: starting</li>
+             * <li>stopping: stopping</li>
+             * <li>stopped: stopped</li>
              * </ul>
              * 
              * <strong>example:</strong>

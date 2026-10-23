@@ -101,7 +101,10 @@ public class EstimatedLogstashRestartTimeRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The restart parameters, including the restart type, target nodes, blue-green deployment options, and concurrency settings.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;restartType&quot;:&quot;nodeIp&quot;,&quot;nodes&quot;:[&quot;172.16.xx.xx&quot;],&quot;blueGreenDep&quot;:true}</p>
          */
         public Builder body(String body) {
             this.putBodyParameter("body", body);

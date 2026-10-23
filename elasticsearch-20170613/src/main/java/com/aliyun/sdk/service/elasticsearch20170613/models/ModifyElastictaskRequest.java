@@ -87,7 +87,7 @@ public class ModifyElastictaskRequest extends Request {
         }
 
         /**
-         * <p>The scaling information.</p>
+         * <p>Specifies the scaling information.</p>
          * 
          * <strong>example:</strong>
          * <p>{     &quot;elasticExpansionTask&quot;:     {         &quot;triggerType&quot;:&quot;crontab&quot;,         &quot;cronExpression&quot;:&quot;0 0 0 ? * MON&quot;,         &quot;elasticNodeCount&quot;:&quot;2&quot;,         &quot;targetIndices&quot;:[&quot;*&quot;],         &quot;replicaCount&quot;:&quot;2&quot;     } }</p>

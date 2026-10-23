@@ -172,6 +172,9 @@ public class ListActionRecordsRequest extends Request {
 
         /**
          * <p>A short description of struct</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-nif24adwc0082****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -180,7 +183,10 @@ public class ListActionRecordsRequest extends Request {
         }
 
         /**
-         * actionNames.
+         * <p>Filters records by the name of the change operation. Separate multiple names with commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RestartInstance</p>
          */
         public Builder actionNames(String actionNames) {
             this.putQueryParameter("actionNames", actionNames);
@@ -189,7 +195,7 @@ public class ListActionRecordsRequest extends Request {
         }
 
         /**
-         * endTime.
+         * <p>The upper bound of the query range for the change start time. The value is a UNIX timestamp in milliseconds. If you do not specify this parameter, the current time is used.</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("endTime", endTime);
@@ -198,7 +204,10 @@ public class ListActionRecordsRequest extends Request {
         }
 
         /**
-         * filter.
+         * <p>The display type of change records. Default value: ACTION_RECORD.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACTION_RECORD</p>
          */
         public Builder filter(String filter) {
             this.putQueryParameter("filter", filter);
@@ -207,7 +216,10 @@ public class ListActionRecordsRequest extends Request {
         }
 
         /**
-         * page.
+         * <p>The page number of the returned results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Integer page) {
             this.putQueryParameter("page", page);
@@ -216,7 +228,10 @@ public class ListActionRecordsRequest extends Request {
         }
 
         /**
-         * requestId.
+         * <p>Filters records by the ID of the request that triggered the change.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>request-123</p>
          */
         public Builder requestId(String requestId) {
             this.putQueryParameter("requestId", requestId);
@@ -225,7 +240,10 @@ public class ListActionRecordsRequest extends Request {
         }
 
         /**
-         * size.
+         * <p>The number of records returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder size(Integer size) {
             this.putQueryParameter("size", size);
@@ -234,7 +252,7 @@ public class ListActionRecordsRequest extends Request {
         }
 
         /**
-         * startTime.
+         * <p>The lower bound of the query range for the change start time. The value is a UNIX timestamp in milliseconds.</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("startTime", startTime);
@@ -243,7 +261,10 @@ public class ListActionRecordsRequest extends Request {
         }
 
         /**
-         * userId.
+         * <p>Filters records by the ID of the user that triggered the change.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user-123</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("userId", userId);

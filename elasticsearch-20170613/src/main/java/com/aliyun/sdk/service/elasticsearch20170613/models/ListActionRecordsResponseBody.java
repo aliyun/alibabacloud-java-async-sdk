@@ -67,7 +67,10 @@ public class ListActionRecordsResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6F******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class ListActionRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The list of instance change records.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -232,7 +235,10 @@ public class ListActionRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * completeNodeCount.
+             * <p>The number of completed nodes in the sub-phase.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder completeNodeCount(Integer completeNodeCount) {
                 this.completeNodeCount = completeNodeCount;
@@ -240,7 +246,7 @@ public class ListActionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * endTime.
+             * <p>The end time of the sub-phase. The value is a UNIX timestamp in milliseconds.</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -248,7 +254,7 @@ public class ListActionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * exception.
+             * <p>The exception information for the sub-phase.</p>
              */
             public Builder exception(String exception) {
                 this.exception = exception;
@@ -256,7 +262,10 @@ public class ListActionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * latencyMills.
+             * <p>The time elapsed for the sub-phase, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder latencyMills(Long latencyMills) {
                 this.latencyMills = latencyMills;
@@ -264,7 +273,10 @@ public class ListActionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * nodeCount.
+             * <p>The total number of nodes involved in the sub-phase.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder nodeCount(Integer nodeCount) {
                 this.nodeCount = nodeCount;
@@ -272,7 +284,10 @@ public class ListActionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * process.
+             * <p>The completion progress of the sub-phase, represented as a percentage string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100%</p>
              */
             public Builder process(String process) {
                 this.process = process;
@@ -280,7 +295,7 @@ public class ListActionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * startTime.
+             * <p>The start time of the sub-phase. The value is a UNIX timestamp in milliseconds.</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -288,7 +303,10 @@ public class ListActionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * stateType.
+             * <p>The current state of the sub-phase.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FINISHED</p>
              */
             public Builder stateType(String stateType) {
                 this.stateType = stateType;
@@ -296,7 +314,10 @@ public class ListActionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * subState.
+             * <p>The name of the sub-phase.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>clusterStateWait</p>
              */
             public Builder subState(String subState) {
                 this.subState = subState;
@@ -467,7 +488,10 @@ public class ListActionRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * completeNodeCount.
+             * <p>The number of completed nodes in the phase.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder completeNodeCount(Integer completeNodeCount) {
                 this.completeNodeCount = completeNodeCount;
@@ -475,7 +499,7 @@ public class ListActionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * endTime.
+             * <p>The end time of the phase. The value is a UNIX timestamp in milliseconds.</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -483,7 +507,7 @@ public class ListActionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * exception.
+             * <p>The exception information for the phase.</p>
              */
             public Builder exception(String exception) {
                 this.exception = exception;
@@ -491,7 +515,10 @@ public class ListActionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * latencyMills.
+             * <p>The time elapsed for the phase, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder latencyMills(Long latencyMills) {
                 this.latencyMills = latencyMills;
@@ -499,7 +526,10 @@ public class ListActionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * nodeCount.
+             * <p>The total number of nodes involved in the phase.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder nodeCount(Integer nodeCount) {
                 this.nodeCount = nodeCount;
@@ -507,7 +537,10 @@ public class ListActionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * process.
+             * <p>The completion progress of the phase, represented as a percentage string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100%</p>
              */
             public Builder process(String process) {
                 this.process = process;
@@ -515,7 +548,7 @@ public class ListActionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * startTime.
+             * <p>The start time of the phase. The value is a UNIX timestamp in milliseconds.</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -523,7 +556,10 @@ public class ListActionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * stateType.
+             * <p>The current state of the phase.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FINISHED</p>
              */
             public Builder stateType(String stateType) {
                 this.stateType = stateType;
@@ -531,7 +567,10 @@ public class ListActionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * subState.
+             * <p>The name of the phase.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rolling</p>
              */
             public Builder subState(String subState) {
                 this.subState = subState;
@@ -539,7 +578,7 @@ public class ListActionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * subStatusInfo.
+             * <p>The list of status details for the sub-phases included in the current phase.</p>
              */
             public Builder subStatusInfo(java.util.List<SubStatusInfo> subStatusInfo) {
                 this.subStatusInfo = subStatusInfo;
@@ -814,7 +853,10 @@ public class ListActionRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * actionName.
+             * <p>The name of the operation that triggered the change.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RestartInstance</p>
              */
             public Builder actionName(String actionName) {
                 this.actionName = actionName;
@@ -822,7 +864,7 @@ public class ListActionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * actionParams.
+             * <p>The parameters used for the change.</p>
              */
             public Builder actionParams(java.util.Map<String, ?> actionParams) {
                 this.actionParams = actionParams;
@@ -838,7 +880,7 @@ public class ListActionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * endTime.
+             * <p>The end time of the change. The value is a UNIX timestamp in milliseconds.</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -846,7 +888,10 @@ public class ListActionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * instanceId.
+             * <p>The ID of the Elasticsearch instance that was changed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>es-cn-nif24adwc0082****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -854,7 +899,7 @@ public class ListActionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * metaNow.
+             * <p>The instance information after the change, represented as a JSON string.</p>
              */
             public Builder metaNow(String metaNow) {
                 this.metaNow = metaNow;
@@ -862,7 +907,7 @@ public class ListActionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * metaOld.
+             * <p>The instance information before the change, represented as a JSON string.</p>
              */
             public Builder metaOld(String metaOld) {
                 this.metaOld = metaOld;
@@ -870,7 +915,7 @@ public class ListActionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ownerId.
+             * <p>The ID of the Alibaba Cloud account to which the account that triggered the change belongs.</p>
              */
             public Builder ownerId(String ownerId) {
                 this.ownerId = ownerId;
@@ -878,7 +923,10 @@ public class ListActionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * process.
+             * <p>The progress of the change, represented as a percentage string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100%</p>
              */
             public Builder process(String process) {
                 this.process = process;
@@ -886,7 +934,7 @@ public class ListActionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * recordDiff.
+             * <p>The field differences before and after the change.</p>
              */
             public Builder recordDiff(java.util.Map<String, ?> recordDiff) {
                 this.recordDiff = recordDiff;
@@ -902,7 +950,10 @@ public class ListActionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * requestId.
+             * <p>The ID of the request that triggered the change.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>request-123</p>
              */
             public Builder requestId(String requestId) {
                 this.requestId = requestId;
@@ -910,7 +961,7 @@ public class ListActionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * startTime.
+             * <p>The start time of the change. The value is a UNIX timestamp in milliseconds.</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -918,7 +969,10 @@ public class ListActionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * stateType.
+             * <p>The current state of the change.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FINISHED</p>
              */
             public Builder stateType(String stateType) {
                 this.stateType = stateType;
@@ -926,7 +980,7 @@ public class ListActionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * statusInfo.
+             * <p>The list of status details for each phase of the change.</p>
              */
             public Builder statusInfo(java.util.List<StatusInfo> statusInfo) {
                 this.statusInfo = statusInfo;
@@ -934,7 +988,10 @@ public class ListActionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * userId.
+             * <p>The ID of the user that triggered the change.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user-123</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -950,7 +1007,10 @@ public class ListActionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * userType.
+             * <p>The type of the account that triggered the change.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>customer</p>
              */
             public Builder userType(String userType) {
                 this.userType = userType;

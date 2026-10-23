@@ -131,7 +131,7 @@ public class CreateDataStreamResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The data stream name.</p>
+             * <p>The name of the data stream.</p>
              * 
              * <strong>example:</strong>
              * <p>ds-</p>

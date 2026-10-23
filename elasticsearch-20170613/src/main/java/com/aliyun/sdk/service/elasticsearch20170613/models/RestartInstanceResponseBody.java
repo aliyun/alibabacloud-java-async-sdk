@@ -170,7 +170,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The size of the dictionary file, in bytes.</p>
+             * <p>The size of the dictionary file. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>2782602</p>
@@ -194,9 +194,9 @@ public class RestartInstanceResponseBody extends TeaModel {
             /**
              * <p>The source type. Valid values:</p>
              * <ul>
-             * <li>OSS: OSS open storage (the OSS bucket must be publicly readable)</li>
-             * <li>ORIGIN: open-source Elasticsearch</li>
-             * <li>UPLOAD: uploaded file</li>
+             * <li>OSS: Object Storage Service (OSS). Make sure that the OSS bucket is publicly readable.</li>
+             * <li>ORIGIN: Open-source Elasticsearch.</li>
+             * <li>UPLOAD: Uploaded file.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -210,10 +210,10 @@ public class RestartInstanceResponseBody extends TeaModel {
             /**
              * <p>The dictionary type. Valid values:</p>
              * <ul>
-             * <li>STOP: stopword</li>
-             * <li>MAIN: main dictionary</li>
-             * <li>SYNONYMS: synonym dictionary</li>
-             * <li>ALI_WS: Alibaba dictionary</li>
+             * <li>STOP: Stopwords.</li>
+             * <li>MAIN: Main dictionary.</li>
+             * <li>SYNONYMS: Synonym dictionary.</li>
+             * <li>ALI_WS: Alibaba Cloud dictionary.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -321,7 +321,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage size of the node, in GB.</p>
+             * <p>The storage space of the node. Unit: GB.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -450,7 +450,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage size of the node, in GB.</p>
+             * <p>The storage space of the node. Unit: GB.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -568,7 +568,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The network type. Only Virtual Private Cloud (VPC) is supported.</p>
+             * <p>The network type. Only VPC is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc</p>
@@ -590,7 +590,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The zone where the instance is deployed.</p>
+             * <p>The zone where the instance resides.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou-i</p>
@@ -684,7 +684,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The storage size of the node, in GB.</p>
+             * <p>The storage space of the node. Unit: GB.</p>
              * 
              * <strong>example:</strong>
              * <p>50</p>
@@ -802,7 +802,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The size of the dictionary file, in bytes.</p>
+             * <p>The size of the dictionary file. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>2782602</p>
@@ -826,9 +826,9 @@ public class RestartInstanceResponseBody extends TeaModel {
             /**
              * <p>The source type. Valid values:</p>
              * <ul>
-             * <li>OSS: OSS open storage (the OSS bucket must be publicly readable)</li>
-             * <li>ORIGIN: open-source Elasticsearch</li>
-             * <li>UPLOAD: uploaded file</li>
+             * <li>OSS: Object Storage Service (OSS). Make sure that the OSS bucket is publicly readable.</li>
+             * <li>ORIGIN: Open-source Elasticsearch.</li>
+             * <li>UPLOAD: Uploaded file.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -842,10 +842,10 @@ public class RestartInstanceResponseBody extends TeaModel {
             /**
              * <p>The dictionary type. Valid values:</p>
              * <ul>
-             * <li>STOP: stopword</li>
-             * <li>MAIN: main dictionary</li>
-             * <li>SYNONYMS: synonym dictionary</li>
-             * <li>ALI_WS: Alibaba dictionary</li>
+             * <li>STOP: Stopwords.</li>
+             * <li>MAIN: Main dictionary.</li>
+             * <li>SYNONYMS: Synonym dictionary.</li>
+             * <li>ALI_WS: Alibaba Cloud dictionary.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1137,7 +1137,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the instance was created.</p>
+             * <p>The time when the instance was created. The time is displayed in UTC and formatted in accordance with ISO 8601.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-07-06T10:18:48.662Z</p>
@@ -1159,7 +1159,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IK dictionary configuration.</p>
+             * <p>The IK dictionary configurations.</p>
              */
             public Builder dictList(java.util.List<DictList> dictList) {
                 this.dictList = dictList;
@@ -1167,7 +1167,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The internal network access address of the instance.</p>
+             * <p>The internal endpoint of the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>es-cn-nif1q8auz0003****.elasticsearch.aliyuncs.com</p>
@@ -1178,7 +1178,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance version.</p>
+             * <p>The Elasticsearch version of the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>6.7.0_with_X-Pack</p>
@@ -1200,7 +1200,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Kibana node configuration.</p>
+             * <p>The Kibana node configurations.</p>
              */
             public Builder kibanaConfiguration(KibanaConfiguration kibanaConfiguration) {
                 this.kibanaConfiguration = kibanaConfiguration;
@@ -1208,7 +1208,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public network access address of Kibana.</p>
+             * <p>The Kibana public network access address.</p>
              * 
              * <strong>example:</strong>
              * <p>es-cn-nif1q8auz0003****.kibana.elasticsearch.aliyuncs.com</p>
@@ -1230,7 +1230,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The master node configuration.</p>
+             * <p>The dedicated master node configurations.</p>
              */
             public Builder masterConfiguration(MasterConfiguration masterConfiguration) {
                 this.masterConfiguration = masterConfiguration;
@@ -1238,7 +1238,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network configuration.</p>
+             * <p>The network configurations.</p>
              */
             public Builder networkConfig(NetworkConfig networkConfig) {
                 this.networkConfig = networkConfig;
@@ -1257,7 +1257,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data node configuration.</p>
+             * <p>The data node configurations.</p>
              */
             public Builder nodeSpec(NodeSpec nodeSpec) {
                 this.nodeSpec = nodeSpec;
@@ -1265,8 +1265,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing method of the instance.</p>
-             * <p>Valid values: prepaid (subscription) and postpaid (pay-as-you-go).</p>
+             * <p>The billing method of the instance. Valid values: prepaid (subscription) and postpaid (pay-as-you-go).</p>
              * 
              * <strong>example:</strong>
              * <p>postpaid</p>
@@ -1288,7 +1287,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public network port.</p>
+             * <p>The public port.</p>
              * 
              * <strong>example:</strong>
              * <p>9200</p>
@@ -1299,10 +1298,10 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the instance. Valid values:</p>
+             * <p>The state of the instance. Valid values:</p>
              * <ul>
              * <li><strong>active</strong>: Normal.</li>
-             * <li><strong>activating</strong>: Taking effect.</li>
+             * <li><strong>activating</strong>: Activating.</li>
              * <li><strong>inactive</strong>: Frozen.</li>
              * <li><strong>invalid</strong>: Invalid.</li>
              * </ul>
@@ -1316,7 +1315,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The synonym dictionary configuration.</p>
+             * <p>The synonym dictionary configurations.</p>
              */
             public Builder synonymsDicts(java.util.List<SynonymsDicts> synonymsDicts) {
                 this.synonymsDicts = synonymsDicts;
@@ -1324,7 +1323,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the instance was last updated.</p>
+             * <p>The time when the instance was last updated. The time is displayed in UTC and formatted in accordance with ISO 8601.</p>
              * 
              * <strong>example:</strong>
              * <p>2018-07-18T10:10:04.484Z</p>

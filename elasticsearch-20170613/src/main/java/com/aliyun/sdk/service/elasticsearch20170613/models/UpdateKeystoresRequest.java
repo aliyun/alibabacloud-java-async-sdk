@@ -113,7 +113,7 @@ public class UpdateKeystoresRequest extends Request {
         }
 
         /**
-         * <p>Removes keystore configurations.</p>
+         * <p>Removes the keystore configuration.</p>
          */
         public Builder remove(java.util.List<String> remove) {
             this.putBodyParameter("remove", remove);
@@ -131,10 +131,10 @@ public class UpdateKeystoresRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to forcibly apply the change. Valid values:</p>
+         * <p>Specifies whether to force the update. Valid values:</p>
          * <ul>
-         * <li>false: The change is not forcibly applied.</li>
-         * <li>true: The change is forcibly applied.</li>
+         * <li>true: Forced.</li>
+         * <li>false: Not forced.</li>
          * </ul>
          * 
          * <strong>example:</strong>

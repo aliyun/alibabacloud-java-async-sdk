@@ -74,7 +74,11 @@ public class UpdateBlackIpsRequest extends Request {
         } 
 
         /**
+         * <p>The Elasticsearch instance ID.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-n6w1qu7ei000p****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -83,7 +87,10 @@ public class UpdateBlackIpsRequest extends Request {
         }
 
         /**
-         * clientToken.
+         * <p>The client token that is used to ensure the idempotence of the request. Use different values for different requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF***</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);

@@ -316,7 +316,7 @@ public class ListKibanaPvlNetworkResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the Kibana private network connection was created.</p>
+             * <p>The time when the Kibana private network connection was created. The time follows the ISO 8601 standard and is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-03-07T06:26:28Z</p>
@@ -351,8 +351,8 @@ public class ListKibanaPvlNetworkResponseBody extends TeaModel {
             /**
              * <p>The endpoint status. Valid values:</p>
              * <ul>
-             * <li>Disconnected: disconnected</li>
-             * <li>Connected: connected</li>
+             * <li>Disconnected: Not connected.</li>
+             * <li>Connected: Connected.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -364,7 +364,7 @@ public class ListKibanaPvlNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * managedSecurityGroup.
+             * <p>Indicates whether the security group is a managed security group.</p>
              */
             public Builder managedSecurityGroup(Boolean managedSecurityGroup) {
                 this.managedSecurityGroup = managedSecurityGroup;
@@ -372,7 +372,7 @@ public class ListKibanaPvlNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Kibana private network connection ID.</p>
+             * <p>The ID of the Kibana private network connection.</p>
              * 
              * <strong>example:</strong>
              * <p>es-cn-27a3mul6l***-kibana-internal</p>
@@ -383,7 +383,7 @@ public class ListKibanaPvlNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of security groups.</p>
+             * <p>The security groups.</p>
              */
             public Builder securityGroups(java.util.List<String> securityGroups) {
                 this.securityGroups = securityGroups;

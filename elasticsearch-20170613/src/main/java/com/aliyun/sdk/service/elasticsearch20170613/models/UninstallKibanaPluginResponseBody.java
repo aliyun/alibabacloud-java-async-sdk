@@ -78,7 +78,7 @@ public class UninstallKibanaPluginResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The names of the Kibana plug-ins uninstalled in the current request.</p>
          */
         public Builder result(java.util.List<String> result) {
             this.result = result;

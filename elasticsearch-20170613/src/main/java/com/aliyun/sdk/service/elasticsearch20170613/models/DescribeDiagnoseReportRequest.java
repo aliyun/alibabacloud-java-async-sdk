@@ -102,7 +102,7 @@ public class DescribeDiagnoseReportRequest extends Request {
         }
 
         /**
-         * <p>The report ID. You can obtain the report ID by calling the <a href="https://help.aliyun.com/document_detail/183774.html">ListDiagnoseReportIds</a> operation.</p>
+         * <p>The report ID. You can call the <a href="https://help.aliyun.com/document_detail/183774.html">ListDiagnoseReportIds</a> operation to obtain the report ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +115,7 @@ public class DescribeDiagnoseReportRequest extends Request {
         }
 
         /**
-         * <p>The language in which the intelligent diagnostic report is generated. Default value: browser language. Valid values:</p>
+         * <p>The language used to generate the intelligent diagnostic report. Default value: the browser language. Valid values:</p>
          * <ul>
          * <li>en: English</li>
          * <li>zh: Simplified Chinese</li>

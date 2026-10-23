@@ -196,7 +196,10 @@ public class DiagnoseInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * desc.
+             * <p>The description of the diagnostic conclusion.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Everything is normal</p>
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -204,7 +207,7 @@ public class DiagnoseInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * detail.
+             * <p>The diagnostic details. This parameter is empty if details are not required.</p>
              */
             public Builder detail(java.util.Map<String, ?> detail) {
                 this.detail = detail;
@@ -212,7 +215,10 @@ public class DiagnoseInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * item.
+             * <p>The code of the diagnostic item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cluster.health</p>
              */
             public Builder item(String item) {
                 this.item = item;
@@ -220,7 +226,10 @@ public class DiagnoseInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The name of the diagnostic item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Cluster health</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -228,7 +237,10 @@ public class DiagnoseInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * state.
+             * <p>The health status of the diagnostic item. Valid values: GREEN, YELLOW, and RED.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GREEN</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -236,7 +248,10 @@ public class DiagnoseInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * suggest.
+             * <p>The handling suggestion.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Monitor GC</p>
              */
             public Builder suggest(String suggest) {
                 this.suggest = suggest;
@@ -366,7 +381,10 @@ public class DiagnoseInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * diagnosisMode.
+             * <p>The diagnostic mode. Valid values: RULE and AGENT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RULE</p>
              */
             public Builder diagnosisMode(String diagnosisMode) {
                 this.diagnosisMode = diagnosisMode;
@@ -385,7 +403,7 @@ public class DiagnoseInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * items.
+             * <p>The list of diagnostic item details. This parameter may be empty if details are not required.</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;

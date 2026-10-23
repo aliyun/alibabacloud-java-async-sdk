@@ -115,7 +115,10 @@ public class ListStatsEventRecordsRequest extends Request {
         } 
 
         /**
-         * endTime.
+         * <p>The end time of the statistical window. The value is a UNIX timestamp in seconds. This parameter must be specified together with startTime and must be later than the start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4600</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("endTime", endTime);
@@ -148,7 +151,10 @@ public class ListStatsEventRecordsRequest extends Request {
         }
 
         /**
-         * startTime.
+         * <p>The start time of the statistical window. The value is a UNIX timestamp in seconds. This parameter must be specified together with endTime.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("startTime", startTime);

@@ -116,7 +116,7 @@ public class UpdateIndexTemplateRequest extends Request {
         }
 
         /**
-         * <p>The index template name.</p>
+         * <p>The name of the index template.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,7 +129,7 @@ public class UpdateIndexTemplateRequest extends Request {
         }
 
         /**
-         * <p>A unique token used to ensure the idempotence of the request. The client generates this value. It must be unique among different requests and cannot exceed 64 ASCII characters in length.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must ensure that it is unique among different requests. The token can be up to 64 ASCII characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>
@@ -141,7 +141,10 @@ public class UpdateIndexTemplateRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The name, index patterns, and configuration of the index template to be updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;indexTemplate&quot;:&quot;my-template&quot;,&quot;indexPatterns&quot;:[&quot;schema1*&quot;,&quot;schema2*&quot;],&quot;dataStream&quot;:true}</p>
          */
         public Builder body(String body) {
             this.putBodyParameter("body", body);

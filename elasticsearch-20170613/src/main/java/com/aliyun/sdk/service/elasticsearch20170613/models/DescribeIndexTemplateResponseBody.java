@@ -78,7 +78,7 @@ public class DescribeIndexTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The index template details.</p>
+         * <p>The details of the index template.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -157,7 +157,7 @@ public class DescribeIndexTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The aliases configuration.</p>
+             * <p>The aliases.</p>
              * 
              * <strong>example:</strong>
              * <p>{\&quot;mydata\&quot;:{}}</p>
@@ -168,7 +168,7 @@ public class DescribeIndexTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The mappings configuration.</p>
+             * <p>The mappings.</p>
              * 
              * <strong>example:</strong>
              * <p>{\&quot;properties\&quot;:{\&quot;created_at\&quot;:{\&quot;format\&quot;:\&quot;EEE MMM dd HH:mm:ss Z yyyy\&quot;,\&quot;type\&quot;:\&quot;date\&quot;},\&quot;host_name\&quot;:{\&quot;type\&quot;:\&quot;keyword\&quot;}}}</p>
@@ -179,7 +179,7 @@ public class DescribeIndexTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The settings configuration.</p>
+             * <p>The settings.</p>
              * 
              * <strong>example:</strong>
              * <p>{\&quot;index.refresh_interval\&quot;:\&quot;1s\&quot;}</p>
@@ -319,7 +319,7 @@ public class DescribeIndexTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The lifecycle policy name.</p>
+             * <p>The life epoch Policy Name.</p>
              * 
              * <strong>example:</strong>
              * <p>cube_default_ilm_policy</p>
@@ -330,7 +330,7 @@ public class DescribeIndexTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * indexPatterns.
+             * <p>The list of index name patterns that match this index template.</p>
              */
             public Builder indexPatterns(java.util.List<String> indexPatterns) {
                 this.indexPatterns = indexPatterns;
@@ -338,7 +338,7 @@ public class DescribeIndexTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The index template name.</p>
+             * <p>The name of the index template.</p>
              * 
              * <strong>example:</strong>
              * <p>data-stream-default</p>

@@ -262,7 +262,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>The data stream name you create must correspond one-to-one with the index pattern in the index template, and the index template must have data stream enabled. For example, if the index pattern in the index template is ds-*, the corresponding data stream name should be ds-.</p>
+     * <p>The name of the data stream that you create must exactly match the index pattern in the index template, and the data stream feature must be enabled for the index template. For example, if the index pattern in the index template is ds-*, the corresponding data stream name must be ds-.</p>
      * </blockquote>
      * 
      * @param request the request parameters of CreateDataStream  CreateDataStreamRequest
@@ -1413,7 +1413,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Before using a collector to collect logs from different data sources or performing cluster elastic scaling tasks (applicable to the China site), you must create a service-linked role.</p>
+     * <p>To collect logs from different data sources by using a collector, or to perform cluster elastic scaling tasks (applicable to the China site), you must first authorize the creation of a service-linked role.</p>
      * </blockquote>
      * 
      * @param request the request parameters of InitializeOperationRole  InitializeOperationRoleRequest
@@ -1436,7 +1436,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Before installing a collector on an ACK cluster, call this operation to install Elasticsearch Operator on the target cluster.</p>
+     * <p>Before installing a collector on an ACK cluster, you must call this operation to install the Elasticsearch Operator on the destination cluster.</p>
      * </blockquote>
      * 
      * @param request the request parameters of InstallAckOperator  InstallAckOperatorRequest
@@ -1477,7 +1477,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <p>Before calling this operation, note the following:
-     * The plugins to be installed must be included in the Alibaba Cloud Logstash <a href="https://help.aliyun.com/document_detail/139626.html">default system plugin list</a>. External open source plugins are not supported.</p>
+     * The plugins to be installed must be included in the <a href="https://help.aliyun.com/document_detail/139626.html">default system plugin list</a> of Alibaba Cloud Logstash. External open-source plugins are not supported.</p>
      * 
      * @param request the request parameters of InstallLogstashSystemPlugin  InstallLogstashSystemPluginRequest
      * @return InstallLogstashSystemPluginResponse
@@ -1517,8 +1517,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>The custom plugin installation feature is undergoing an internal upgrade and is temporarily unavailable. If you urgently need this feature, submit a ticket to contact us.</p>
+     * <p>For instances with the basic management and control (v2) architecture, the custom plugin installation feature is suspended. Instances with the V3 architecture are not affected. If you urgently need to use this feature, submit a ticket.
+     * To install custom plugins, follow these steps:</p>
      * </blockquote>
+     * <ul>
+     * <li>Step 1: Call the PluginAnalysis operation to upload the plugin stored in OSS to the custom plugin repository. The plugin is then in the pending installation state.</li>
+     * <li>Step 2: Call the ListUserPlugin operation to view the information about the plugins pending installation.</li>
+     * <li>Step 3: Call the InstallUserPlugins operation to install the custom plugins. For the required input parameters of this operation, refer to the response of the ListUserPlugin operation.</li>
+     * </ul>
      * 
      * @param request the request parameters of InstallUserPlugins  InstallUserPluginsRequest
      * @return InstallUserPluginsResponse
@@ -2007,7 +2013,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Notice:  Before calling this operation, create the AliyunElasticsearchAccessingOOSRole and AliyunOOSAccessingECS4ESRole service-linked roles. These roles allow the Elasticsearch service account to obtain ECS access permissions of the Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/146446.html">Collect ECS service logs</a>.</p>
+     * <p>Notice:  Before you call this API operation, you must create the AliyunElasticsearchAccessingOOSRole and AliyunOOSAccessingECS4ESRole system service roles. These roles allow the Elasticsearch service account to obtain ECS access permissions of the Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/146446.html">Collect ECS service logs</a>.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ListEcsInstances  ListEcsInstancesRequest
@@ -2137,7 +2143,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The ListInstanceIndices operation is applicable only to Elasticsearch instances that have indexing service enabled. We recommend that you use the Elasticsearch API to query index information. For more information, see <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/cat-indices.html">cat indices API</a>.</p>
+     * <p>The ListInstanceIndices operation applies only to Elasticsearch instances with the indexing service enabled. Query index information by using the Elasticsearch API. For more information, see <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/cat-indices.html">cat indices API</a>.</p>
      * 
      * @param request the request parameters of ListInstanceIndices  ListInstanceIndicesRequest
      * @return ListInstanceIndicesResponse
@@ -2477,10 +2483,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>When you upgrade an instance and encounter insufficient inventory for the instance type in the current zone, you can resolve this issue by migrating zone nodes. Before calling this operation, ensure the following:</p>
+     * <p>When you upgrade an instance and encounter insufficient inventory for the instance type in the current zone, you can migrate nodes to another zone to resolve the issue. Before you call this operation, make sure that the following requirements are met:</p>
      * <ul>
-     * <li>Your account has a zone with sufficient resources.
-     *  After migrating nodes of the current specifications to another zone, you need to manually <a href="https://help.aliyun.com/document_detail/96650.html">upgrade the cluster</a>. The cluster is not upgraded during the migration process. Therefore, select a zone with sufficient resources to avoid cluster upgrade failures. Select a zone with a later alphabetical order (for example, between cn-hangzhou-e and cn-hangzhou-h, select cn-hangzhou-h).</li>
+     * <li>Your account has zones with sufficient resources.
+     *  After you migrate nodes of the current instance type to another zone, you must manually <a href="https://help.aliyun.com/document_detail/96650.html">upgrade the cluster</a>. The cluster is not upgraded during the migration process. Therefore, select a zone with sufficient resources to prevent cluster upgrade failures. Select a new zone whose letter suffix is later in alphabetical order. For example, if you choose between the cn-hangzhou-e and cn-hangzhou-h zones, select cn-hangzhou-h.</li>
      * <li>The cluster is in a healthy state.
      *  You can run the <code>GET _cat/health?v</code> command to check the cluster health status.</li>
      * </ul>
@@ -2828,7 +2834,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>After the restart, the instance enters the activating state. After the restart is complete, the instance status changes to active. Alibaba Cloud Elasticsearch supports single-node restart. Node restart is classified into normal restart and blue-green restart.</p>
+     * <p>After a restart, the instance enters the activating state. After the restart succeeds, the instance status changes to active. Alibaba Cloud Elasticsearch supports single-node restarts. Node restarts are classified into normal restarts and blue-green restarts.</p>
      * </blockquote>
      * 
      * @param request the request parameters of RestartInstance  RestartInstanceRequest
@@ -3236,11 +3242,11 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>When calling this operation, note the following:</p>
+     * <p>When you call this operation, note the following items:</p>
      * <ul>
-     * <li>Instances of version 5.x do not support the AliNLP tokenizer plugin.</li>
-     * <li>If the dictionary file is sourced from OSS, ensure that the OSS bucket has public-read permission.</li>
-     * <li>If a previously uploaded dictionary does not have the ORIGIN configuration, calling this operation will delete the dictionary file.</li>
+     * <li>Instances of version 5.x do not support the AliNLP word segmentation plug-in.</li>
+     * <li>If the dictionary file is stored in OSS, make sure that the OSS bucket is publicly readable.</li>
+     * <li>If you do not specify ORIGIN for an uploaded dictionary, the dictionary file is deleted after you call this operation.</li>
      * </ul>
      * 
      * @param request the request parameters of UpdateAliwsDict  UpdateAliwsDictRequest
@@ -3374,10 +3380,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>When calling this operation, note the following:</p>
+     * <p>When you call this operation, take note of the following items:</p>
      * <ul>
-     * <li>If the dictionary file is sourced from OSS, ensure that the OSS bucket has public-read permission.</li>
-     * <li>If a previously uploaded dictionary is not configured with ORIGIN, the dictionary file will be deleted after this operation is called.</li>
+     * <li>If the dictionary file is sourced from OSS, ensure that the OSS bucket is publicly readable.</li>
+     * <li>If you do not specify the ORIGIN configuration for an already uploaded dictionary, the dictionary file is deleted after this operation is called.</li>
      * </ul>
      * 
      * @param request the request parameters of UpdateDict  UpdateDictRequest
@@ -3435,7 +3441,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>When calling this operation, note the following: Currently, this operation only supports deleting extension files that have been uploaded through the console. To add or modify extension files, perform the operations in the console.</p>
+     * <p>When you call this operation, note the following:
+     * Currently, this operation only supports deleting Logstash extension files uploaded in the console. To add or modify extension files, use the console.</p>
      * 
      * @param request the request parameters of UpdateExtendfiles  UpdateExtendfilesRequest
      * @return UpdateExtendfilesResponse
@@ -3537,13 +3544,13 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <p>When you call this operation, take note of the following items:</p>
      * <ul>
-     * <li>You cannot change the configuration when the instance status is activating, invalid, or inactive (freeze).</li>
-     * <li>If the cluster has a high load and indexes have no replicas, and a large number of write or query requests exist during the upgrade or decrease the quota procedure, occasional access timeout may occur. Configure a retry mechanism on the client before you change the cluster configuration to reduce the impact on your business.</li>
-     * <li>You can change the configuration of only one type of node at a time (data node, dedicated master node, warm node, client node, Kibana node, or elastic node).</li>
-     * <li>For the health and stability of your cluster, since May 2021, Alibaba Cloud Elasticsearch no longer supports the purchase of 1-vCPU 2 GiB instances, 2-vCPU 2 GiB dedicated master nodes, or version 7.4 instances. If you have confirmed that the purchased specifications are no longer available for sale, perform the following operations first:<ul>
-     * <li>For 1-vCPU 2 GiB and 2-vCPU 2 GiB specifications, upgrade to a stable specification available on the buy page in advance. For available specifications on the buy page, see &lt;props=&quot;china&quot;&gt;<ph><a href="https://help.aliyun.com/document_detail/97672.html">Buy page parameters (commercial edition)</a> or <a href="https://help.aliyun.com/document_detail/143091.html">Buy page parameters (Advanced Edition)</a></ph>&lt;props=&quot;intl&quot;&gt;<a href="https://help.aliyun.com/document_detail/163243.html">Buy page parameters</a>.</li>
-     * <li>For version 7.4, purchase a version 7.10 instance and then migrate data. &lt;props=&quot;china&quot;&gt;<ph>For data migration, see <a href="https://help.aliyun.com/document_detail/96650.html">Migration solution selection guide</a>.</ph>
-     * For more precautions, see <a href="https://help.aliyun.com/document_detail/96650.html">Upgrade cluster configuration</a> and <a href="https://help.aliyun.com/document_detail/198887.html">Downgrade cluster configuration</a>.</li>
+     * <li>You cannot change the configuration when the instance status is activating, invalid, or freeze (inactive).</li>
+     * <li>If the cluster load is excessively high, indexes do not have replicas, and a large number of write or query operations are performed during the procedure of an upgrade or when you decrease the quota, intermittent access timeouts may occur. Configure a retry mechanism in the client access logic before you change the cluster configuration to minimize the impact on your business.</li>
+     * <li>You can change the configuration of only one type of node at a time. The node types include data nodes, dedicated master nodes, warm nodes, client nodes, Kibana nodes, and elastic nodes.</li>
+     * <li>To ensure the health and stability of your cluster, Alibaba Cloud Elasticsearch no longer supports the purchase of 1-core 2 GB specifications, 2-core 2 GB specifications for dedicated master nodes, and version 7.4 instances since May 2021. If you confirm that your purchased specifications are no longer available for sale, you must complete the following operations first:<ul>
+     * <li>For 1-core 2 GB and 2-core 2 GB specifications, upgrade to the stable specifications available on the buy page in advance. For the specifications available on the buy page, see &lt;props=&quot;china&quot;&gt;<ph><a href="https://help.aliyun.com/document_detail/97672.html">Parameters on the buy page (Commercial Edition)</a> or <a href="https://help.aliyun.com/document_detail/143091.html">Parameters on the buy page (Advanced Edition)</a></ph>&lt;props=&quot;intl&quot;&gt;<a href="https://help.aliyun.com/document_detail/163243.html">Parameters on the buy page</a>.</li>
+     * <li>For version 7.4, purchase a version 7.10 instance and then migrate data. &lt;props=&quot;china&quot;&gt;<ph>For more information about data migration, see <a href="https://help.aliyun.com/document_detail/96650.html">Migration solution selection guide</a>.</ph>
+     * For more precautions, see <a href="https://help.aliyun.com/document_detail/96650.html">Upgrade a cluster</a> and <a href="https://help.aliyun.com/document_detail/198887.html">Downgrade a cluster</a>.</li>
      * </ul>
      * </li>
      * </ul>
@@ -3755,7 +3762,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>When you invoke this operation, note the following: The instance name cannot be modified when the instance status is activating, invalid, or freeze (inactive).</p>
+     * <p>When you invoke this operation, note the following:
+     * You cannot modify the instance name when the instance status is activating, invalid, or freeze (inactive).</p>
      * 
      * @param request the request parameters of UpdateLogstashDescription  UpdateLogstashDescriptionRequest
      * @return UpdateLogstashDescriptionResponse
@@ -3776,7 +3784,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>When you invoke this operation, note the following: The instance configuration cannot be updated when the instance status is activating, invalid, or freeze (inactive).</p>
+     * <p>When you invoke this operation, note the following:
+     * You cannot update the information when the instance status is activating, invalid, or freeze (inactive).</p>
      * 
      * @param request the request parameters of UpdateLogstashSettings  UpdateLogstashSettingsRequest
      * @return UpdateLogstashSettingsResponse
@@ -3798,7 +3807,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Pipeline management methods include configuration file management and Kibana pipeline management. The console no longer supports Kibana pipeline management. You can use this feature only through the API.</p>
+     * <p>Pipeline management modes include configuration file management and Kibana pipeline management. The console no longer supports Kibana pipeline management. This feature is available only through the API.</p>
      * </blockquote>
      * 
      * @param request the request parameters of UpdatePipelineManagementConfig  UpdatePipelineManagementConfigRequest
@@ -3838,15 +3847,15 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Before you begin</h2>
+     * <h2>Precautions</h2>
      * <ul>
-     * <li>You cannot update the VPC private network access whitelist of an instance when the instance status is Activating (activating), Invalid (invalid), or Freeze (inactive).</li>
-     * <li>You can update the whitelist in two ways: IP whitelist list and IP whitelist group. The two methods cannot be used at the same time, and they support different parameters (except for InstanceId and clientToken):<ul>
-     * <li>IP whitelist list: privateNetworkIpWhiteList</li>
-     * <li>IP whitelist group: modifyMode, whiteIpGroup</li>
+     * <li>When the instance status is activating, invalid, or inactive, you cannot update the VPC private network access whitelist of the instance.</li>
+     * <li>You can update the whitelist by using an IP address whitelist or an IP address whitelist group. You cannot use both methods at the same time. Except for InstanceId and clientToken, the parameters supported by the two methods are different. Details:<ul>
+     * <li>IP address whitelist: privateNetworkIpWhiteList</li>
+     * <li>IP address whitelist group: modifyMode and whiteIpGroup</li>
      * </ul>
      * </li>
-     * <li>The public network access whitelist does not support private IP addresses, and the private network access whitelist does not support public IP addresses.</li>
+     * <li>You cannot configure private IP addresses in a public access whitelist, and you cannot configure public IP addresses in a private network access whitelist.</li>
      * </ul>
      * 
      * @param request the request parameters of UpdatePrivateNetworkWhiteIps  UpdatePrivateNetworkWhiteIpsRequest
@@ -3868,8 +3877,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>When you invoke this operation, note the following:
-     * You cannot update information when the instance status is activating, invalid, or freeze (inactive).</p>
+     * <p>Note the following when you invoke this operation:
+     * You cannot update the information when the instance status is activating, invalid, or freeze (inactive).</p>
      * 
      * @param request the request parameters of UpdatePublicNetwork  UpdatePublicNetworkRequest
      * @return UpdatePublicNetworkResponse
@@ -3890,15 +3899,15 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Before you begin</h2>
+     * <h2>Precautions</h2>
      * <ul>
-     * <li>You cannot update the public access whitelist of an instance when the instance status is activating, invalid, or inactive (freeze).</li>
-     * <li>You can update the whitelist in two ways: IP whitelist list and IP whitelist group. The two methods cannot be used at the same time, and they support different parameters (except for InstanceId and clientToken). The details are as follows:   <ul>
-     * <li>IP whitelist list: publicIpWhitelist</li>
-     * <li>IP whitelist group: modifyMode, whiteIpGroup</li>
+     * <li>You cannot update the public IP address access whitelist of an instance when the instance status is activating, invalid, or inactive.</li>
+     * <li>You can update the whitelist by using an IP address whitelist or an IP address whitelist group. You cannot use both methods at the same time. Except for InstanceId and clientToken, the parameters supported by the two methods are different. The details are as follows:   <ul>
+     * <li>IP address whitelist: publicIpWhitelist</li>
+     * <li>IP address whitelist group: modifyMode and whiteIpGroup</li>
      * </ul>
      * </li>
-     * <li>The public access whitelist does not support private IP addresses, and the internal-facing access whitelist does not support public IP addresses.</li>
+     * <li>You cannot configure private IP addresses in a public network access whitelist, and you cannot configure public IP addresses in a private network access whitelist.</li>
      * </ul>
      * 
      * @param request the request parameters of UpdatePublicWhiteIps  UpdatePublicWhiteIpsRequest
@@ -3956,10 +3965,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>When calling this operation, note the following:</p>
+     * <p>When you call this operation, take note of the following items:</p>
      * <ul>
-     * <li>If the dictionary file is sourced from OSS, ensure that the OSS bucket has public-read permission.</li>
-     * <li>If a previously uploaded dictionary is not configured with ORIGIN, the dictionary file will be deleted after this operation is called.</li>
+     * <li>If the dictionary file is sourced from OSS, ensure that the OSS bucket is publicly readable.</li>
+     * <li>If an uploaded dictionary is not configured with ORIGIN, the dictionary file is deleted after you call this operation.</li>
      * </ul>
      * 
      * @param request the request parameters of UpdateSynonymsDicts  UpdateSynonymsDictsRequest
@@ -4048,7 +4057,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>The instance version upgrade feature currently supports only upgrading from version 5.5.3 to 5.6.16, from version 5.6.16 to 6.3.2, and from version 6.3.2 to 6.7.0. Upgrades between other versions are not supported. For more information, see <a href="https://help.aliyun.com/document_detail/148786.html">Upgrade version</a>.</p>
+     * <p>The instance version upgrade feature currently only supports upgrades from version 5.5.3 to 5.6.16, from 5.6.16 to 6.3.2, and from 6.3.2 to 6.7.0. Upgrades between other versions are not supported. For more information, see <a href="https://help.aliyun.com/document_detail/148786.html">Upgrade versions</a>.</p>
      * </blockquote>
      * 
      * @param request the request parameters of UpgradeEngineVersion  UpgradeEngineVersionRequest
@@ -4172,9 +4181,9 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h3>Precautions</h3>
      * <ul>
-     * <li>Before using this operation, make sure that you fully understand the billing methods and pricing of Elasticsearch. For more information, see <a href="https://help.aliyun.com/document_detail/260947.html">Alibaba Cloud Elasticsearch billing rules</a>.</li>
-     * <li>You must complete real-name verification before creating an instance.&lt;props=&quot;china&quot;&gt;<ph> For more information, see <a href="https://help.aliyun.com/document_detail/37175.html">Real-name verification</a>.</ph></li>
-     * <li>You do not need to specify a zone when creating an instance. The instance is created in the same zone as the selected VPC by default.</li>
+     * <li>Before you call this operation, make sure that you fully understand the billing methods and pricing of Elasticsearch. For more information, see <a href="https://help.aliyun.com/document_detail/260947.html">Billing rules of Alibaba Cloud Elasticsearch</a>.</li>
+     * <li>You must pass real-name verification before you create an instance. &lt;props=&quot;china&quot;&gt;<ph>For more information, see <a href="https://help.aliyun.com/document_detail/37175.html">Real-name verification</a>.</ph></li>
+     * <li>You do not need to specify a zone when you create an instance. By default, the instance is deployed in the same zone as the selected VPC.</li>
      * </ul>
      * 
      * @param request the request parameters of createInstance  CreateInstanceRequest
