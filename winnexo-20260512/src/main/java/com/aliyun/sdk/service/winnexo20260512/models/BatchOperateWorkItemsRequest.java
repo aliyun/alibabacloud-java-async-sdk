@@ -119,7 +119,7 @@ public class BatchOperateWorkItemsRequest extends Request {
         } 
 
         /**
-         * <p>批量动作</p>
+         * <p>The batch action.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -132,7 +132,7 @@ public class BatchOperateWorkItemsRequest extends Request {
         }
 
         /**
-         * <p>协作空间 ID</p>
+         * <p>The ID of the collaboration workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -145,7 +145,7 @@ public class BatchOperateWorkItemsRequest extends Request {
         }
 
         /**
-         * <p>幂等键</p>
+         * <p>The idempotency key.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,7 +158,7 @@ public class BatchOperateWorkItemsRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数；缺省时使用调用方默认租户</p>
+         * <p>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -170,7 +170,7 @@ public class BatchOperateWorkItemsRequest extends Request {
         }
 
         /**
-         * <p>目标工作项 ID 列表（1~100 个）</p>
+         * <p>The IDs of the target work items. You can specify 1 to 100 IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

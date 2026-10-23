@@ -93,7 +93,7 @@ public class RegisterAppResourcePermissionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码；成功为 200</p>
+         * <p>The business status code. A value of 200 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,10 +104,10 @@ public class RegisterAppResourcePermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述；成功时为空</p>
+         * <p>The error message. This parameter is empty if the request is successful.</p>
          * 
          * <strong>example:</strong>
-         * <p>请求的资源不存在</p>
+         * <p>The requested resource does not exist</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -115,7 +115,7 @@ public class RegisterAppResourcePermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>新建或幂等命中的权限记录</p>
+         * <p>The newly created or idempotently matched permission records.</p>
          */
         public Builder records(java.util.List<Records> records) {
             this.records = records;
@@ -123,7 +123,7 @@ public class RegisterAppResourcePermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪 ID</p>
+         * <p>The request tracking ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -322,7 +322,7 @@ public class RegisterAppResourcePermissionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>创建时间</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-10-16T10:30:00+08:00</p>
@@ -333,7 +333,7 @@ public class RegisterAppResourcePermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>到期时间</p>
+             * <p>The expiration time.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-12-31T23:59:59+08:00</p>
@@ -344,7 +344,7 @@ public class RegisterAppResourcePermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>授权人平台用户 ID</p>
+             * <p>The platform user ID of the grantor.</p>
              * 
              * <strong>example:</strong>
              * <p>10086</p>
@@ -355,7 +355,7 @@ public class RegisterAppResourcePermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>主体 ID</p>
+             * <p>The principal ID.</p>
              * 
              * <strong>example:</strong>
              * <p>10086</p>
@@ -366,10 +366,10 @@ public class RegisterAppResourcePermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>主体名称</p>
+             * <p>The principal name.</p>
              * 
              * <strong>example:</strong>
-             * <p>张三</p>
+             * <p>Zhang San</p>
              */
             public Builder granteeName(String granteeName) {
                 this.granteeName = granteeName;
@@ -377,7 +377,7 @@ public class RegisterAppResourcePermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>跨租户 USER 所属租户</p>
+             * <p>The tenant to which the cross-tenant USER belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>10000</p>
@@ -388,7 +388,7 @@ public class RegisterAppResourcePermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>主体类型</p>
+             * <p>The principal type.</p>
              * 
              * <strong>example:</strong>
              * <p>USER</p>
@@ -399,7 +399,7 @@ public class RegisterAppResourcePermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>权限点</p>
+             * <p>The permission.</p>
              * 
              * <strong>example:</strong>
              * <p>APP/VIEW</p>
@@ -410,7 +410,7 @@ public class RegisterAppResourcePermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>权限记录 ID</p>
+             * <p>The permission record ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1001</p>
@@ -421,7 +421,7 @@ public class RegisterAppResourcePermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>资源键</p>
+             * <p>The resource key.</p>
              * 
              * <strong>example:</strong>
              * <p>app.demo.resource_1</p>
@@ -432,7 +432,7 @@ public class RegisterAppResourcePermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>资源类型</p>
+             * <p>The resource type.</p>
              * 
              * <strong>example:</strong>
              * <p>APP_RESOURCE</p>
@@ -443,7 +443,7 @@ public class RegisterAppResourcePermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>更新时间</p>
+             * <p>The update time.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-10-16T10:30:00+08:00</p>

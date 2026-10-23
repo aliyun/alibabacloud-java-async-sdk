@@ -74,7 +74,7 @@ public class GetWorkflowInstanceRequest extends Request {
         } 
 
         /**
-         * <p>稳定逻辑实例 ID</p>
+         * <p>The stable logical instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,7 +87,7 @@ public class GetWorkflowInstanceRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</p>
+         * <p>The tenant ID. This is a common parameter. If you use winnexo-cli, pass this parameter explicitly by using --tenant-id.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>

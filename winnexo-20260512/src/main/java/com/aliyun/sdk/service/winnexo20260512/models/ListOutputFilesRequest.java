@@ -199,7 +199,7 @@ public class ListOutputFilesRequest extends Request {
         } 
 
         /**
-         * <p>精确业务编号，来自文件登记或工作流实例关联</p>
+         * <p>The business ID used for exact filtering. The length is 1 to 128 characters. This value is derived from the businessId of the file registration or associated workflow instance.</p>
          * 
          * <strong>example:</strong>
          * <p>REQ-20261012-001</p>
@@ -211,7 +211,7 @@ public class ListOutputFilesRequest extends Request {
         }
 
         /**
-         * <p>可选协作空间 ID；未传保持当前用户个人产出范围</p>
+         * <p>The ID of the collaboration workspace. The length is 1 to 64 characters. This parameter is optional. If not specified, the personal outputs of the current user are queried. If specified, the real-time permissions of the workspace members and source resources are verified.</p>
          * 
          * <strong>example:</strong>
          * <p>cg_123e4567-e89b-42d3-a456-426614174001</p>
@@ -223,10 +223,10 @@ public class ListOutputFilesRequest extends Request {
         }
 
         /**
-         * <p>The type of the output item. Valid values: ppt, html, document, picture, slides, video, audio, email, and others.</p>
+         * <p>The output item type. Valid values: ppt, html, document, picture, slides, video, audio, email, and others.</p>
          * 
          * <strong>example:</strong>
-         * <p>ppt</p>
+         * <p>document</p>
          */
         public Builder itemType(String itemType) {
             this.putBodyParameter("itemType", itemType);
@@ -235,10 +235,10 @@ public class ListOutputFilesRequest extends Request {
         }
 
         /**
-         * <p>The keyword for searching. Matches the output title or item name.</p>
+         * <p>The keyword used to match the output title or detail name.</p>
          * 
          * <strong>example:</strong>
-         * <p>string_value</p>
+         * <p>Quarterly operations</p>
          */
         public Builder keyword(String keyword) {
             this.putBodyParameter("keyword", keyword);
@@ -247,10 +247,10 @@ public class ListOutputFilesRequest extends Request {
         }
 
         /**
-         * <p>The name of the digital employee (operating object). Used to filter results by name.</p>
+         * <p>The name of the digital employee (operating object). Filters outputs by name.</p>
          * 
          * <strong>example:</strong>
-         * <p>string_value</p>
+         * <p>Business Analysis Assistant</p>
          */
         public Builder operatingObjectName(String operatingObjectName) {
             this.putBodyParameter("operatingObjectName", operatingObjectName);
@@ -259,7 +259,7 @@ public class ListOutputFilesRequest extends Request {
         }
 
         /**
-         * <p>The page number, starting from 1.</p>
+         * <p>The page number. Pages start from 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -271,7 +271,7 @@ public class ListOutputFilesRequest extends Request {
         }
 
         /**
-         * <p>The number of items per page. Valid values: 1 to 100.</p>
+         * <p>The number of items per page. Valid values: 1 to 100. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -283,7 +283,7 @@ public class ListOutputFilesRequest extends Request {
         }
 
         /**
-         * <p>精确会话 ID，覆盖普通会话、技能会话与任务 executionId</p>
+         * <p>The session ID used for exact filtering. The length is 1 to 128 characters. This parameter applies to regular sessions, skill sessions, and the executionId of task executions.</p>
          * 
          * <strong>example:</strong>
          * <p>session_123e4567-e89b-42d3-a456-426614174008</p>
@@ -295,7 +295,7 @@ public class ListOutputFilesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to display only outputs and output items with sharing enabled.</p>
+         * <p>Specifies whether to display only shared outputs and output details.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -307,7 +307,7 @@ public class ListOutputFilesRequest extends Request {
         }
 
         /**
-         * <p>全部匹配的标签列表，来自文件登记或实例 variables.tags</p>
+         * <p>The tags used for exact filtering. All specified tags must be matched simultaneously. You can specify up to 20 tags. Each tag must be a non-empty string of 1 to 128 characters. Tags are derived from file registrations or the variables.tags of associated instances.</p>
          */
         public Builder tags(java.util.List<String> tags) {
             String tagsShrink = shrink(tags, "tags", "json");
@@ -317,7 +317,7 @@ public class ListOutputFilesRequest extends Request {
         }
 
         /**
-         * <p>The tenant ID. This is a common parameter. In winnexo-cli, pass it explicitly by using --tenant-id.</p>
+         * <p>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used. The identity and tenant permissions are determined by the gateway and backend authentication.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>

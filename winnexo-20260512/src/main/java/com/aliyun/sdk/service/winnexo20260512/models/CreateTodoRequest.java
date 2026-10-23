@@ -162,7 +162,7 @@ public class CreateTodoRequest extends Request {
         } 
 
         /**
-         * <p>处理人平台用户ID列表（1~100，去重后生效）</p>
+         * <p>The list of platform user IDs of the assignees. You can specify 1 to 100 IDs. Duplicate IDs are automatically removed.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -176,7 +176,7 @@ public class CreateTodoRequest extends Request {
         }
 
         /**
-         * <p>协作空间 ID（可选）</p>
+         * <p>The ID of the collaboration workspace. This parameter is optional.</p>
          * 
          * <strong>example:</strong>
          * <p>cg_123</p>
@@ -188,7 +188,7 @@ public class CreateTodoRequest extends Request {
         }
 
         /**
-         * <p>优先级</p>
+         * <p>The priority.</p>
          * 
          * <strong>example:</strong>
          * <p>MEDIUM</p>
@@ -200,7 +200,7 @@ public class CreateTodoRequest extends Request {
         }
 
         /**
-         * <p>问题清单（1~N）</p>
+         * <p>The list of questions.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -214,7 +214,7 @@ public class CreateTodoRequest extends Request {
         }
 
         /**
-         * <p>来源上下文（原样透传落库，不校验）</p>
+         * <p>The source context. The value is passed through and stored in the database as-is without validation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -228,7 +228,7 @@ public class CreateTodoRequest extends Request {
         }
 
         /**
-         * <p>待办来源（仅 OPEN_API）</p>
+         * <p>The source of the to-do item. Only OPEN_API is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -241,7 +241,7 @@ public class CreateTodoRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数；缺省时使用调用方默认租户</p>
+         * <p>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -253,11 +253,11 @@ public class CreateTodoRequest extends Request {
         }
 
         /**
-         * <p>待办标题（≤200 字）</p>
+         * <p>The title of the to-do item. The maximum length is 200 characters.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>治理审批</p>
+         * <p>Governance approval</p>
          */
         public Builder title(String title) {
             this.putBodyParameter("title", title);
@@ -339,10 +339,10 @@ public class CreateTodoRequest extends Request {
             } 
 
             /**
-             * <p>选项补充说明</p>
+             * <p>The supplementary description of the option.</p>
              * 
              * <strong>example:</strong>
-             * <p>选项补充说明</p>
+             * <p>Supplementary description of the option</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -350,11 +350,11 @@ public class CreateTodoRequest extends Request {
             }
 
             /**
-             * <p>选项文案（引用键）</p>
+             * <p>The option text. This is a reference key.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>通过</p>
+             * <p>Approve</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -362,7 +362,7 @@ public class CreateTodoRequest extends Request {
             }
 
             /**
-             * <p>是否推荐</p>
+             * <p>Specifies whether the option is recommended.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -538,7 +538,7 @@ public class CreateTodoRequest extends Request {
             } 
 
             /**
-             * <p>是否允许自定义输入</p>
+             * <p>Specifies whether custom input is allowed.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -549,10 +549,10 @@ public class CreateTodoRequest extends Request {
             }
 
             /**
-             * <p>自定义输入项文案</p>
+             * <p>The text for the custom input item.</p>
              * 
              * <strong>example:</strong>
-             * <p>其他</p>
+             * <p>Other</p>
              */
             public Builder customLabel(String customLabel) {
                 this.customLabel = customLabel;
@@ -560,7 +560,7 @@ public class CreateTodoRequest extends Request {
             }
 
             /**
-             * <p>自定义输入长度上限</p>
+             * <p>The maximum length of the custom input.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -571,10 +571,10 @@ public class CreateTodoRequest extends Request {
             }
 
             /**
-             * <p>自定义输入占位符</p>
+             * <p>The placeholder for the custom input.</p>
              * 
              * <strong>example:</strong>
-             * <p>请说明</p>
+             * <p>Please specify</p>
              */
             public Builder customPlaceholder(String customPlaceholder) {
                 this.customPlaceholder = customPlaceholder;
@@ -582,7 +582,7 @@ public class CreateTodoRequest extends Request {
             }
 
             /**
-             * <p>TEXT 题长度上限</p>
+             * <p>The maximum length for text questions.</p>
              * 
              * <strong>example:</strong>
              * <p>500</p>
@@ -593,7 +593,7 @@ public class CreateTodoRequest extends Request {
             }
 
             /**
-             * <p>作答形态：SINGLE_CHOICE/MULTI_CHOICE/TEXT</p>
+             * <p>The response mode. Valid values: SINGLE_CHOICE, MULTI_CHOICE, and TEXT.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -605,7 +605,7 @@ public class CreateTodoRequest extends Request {
             }
 
             /**
-             * <p>问题的选项列表；选择题必填，每项含选项文案（label）、补充说明（description）与是否推荐（recommended）</p>
+             * <p>The list of options for the question. This parameter is required for choice questions. Each option includes the option text (label), supplementary description (description), and whether it is recommended (recommended).</p>
              */
             public Builder options(java.util.List<Options> options) {
                 this.options = options;
@@ -613,10 +613,10 @@ public class CreateTodoRequest extends Request {
             }
 
             /**
-             * <p>TEXT 题占位符</p>
+             * <p>The placeholder for text questions.</p>
              * 
              * <strong>example:</strong>
-             * <p>请输入</p>
+             * <p>Please enter</p>
              */
             public Builder placeholder(String placeholder) {
                 this.placeholder = placeholder;
@@ -624,11 +624,11 @@ public class CreateTodoRequest extends Request {
             }
 
             /**
-             * <p>问题正文（引用键，清单内唯一）</p>
+             * <p>The question text. This is a reference key and must be unique within the list.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>是否通过审批</p>
+             * <p>Whether to approve the request</p>
              */
             public Builder question(String question) {
                 this.question = question;
@@ -636,7 +636,7 @@ public class CreateTodoRequest extends Request {
             }
 
             /**
-             * <p>是否必答</p>
+             * <p>Specifies whether the question is required.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>

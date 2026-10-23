@@ -132,7 +132,7 @@ public class TerminateInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码；成功为200</p>
+         * <p>The business status code. A value of 200 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -143,7 +143,7 @@ public class TerminateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>物理实例ID</p>
+         * <p>The physical instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>plan_example</p>
@@ -154,7 +154,7 @@ public class TerminateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>终止后状态</p>
+         * <p>The status after termination.</p>
          * 
          * <strong>example:</strong>
          * <p>Terminated</p>
@@ -165,10 +165,10 @@ public class TerminateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>请求的资源不存在</p>
+         * <p>The requested resource does not exist</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -176,7 +176,7 @@ public class TerminateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪ID</p>
+         * <p>The request tracking ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -187,7 +187,7 @@ public class TerminateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>状态版本</p>
+         * <p>The state version.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -198,7 +198,7 @@ public class TerminateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>终止成功为 true；失败通过 Code 和 Message 返回</p>
+         * <p>Indicates whether the termination was successful. A value of true indicates success. If the termination fails, the error code and message are returned.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

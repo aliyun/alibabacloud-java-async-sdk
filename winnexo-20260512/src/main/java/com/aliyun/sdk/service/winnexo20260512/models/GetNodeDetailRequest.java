@@ -104,7 +104,7 @@ public class GetNodeDetailRequest extends Request {
         } 
 
         /**
-         * <p>协作空间ID</p>
+         * <p>The ID of the collaboration workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,7 +117,7 @@ public class GetNodeDetailRequest extends Request {
         }
 
         /**
-         * <p>物理工作流实例ID（planId）</p>
+         * <p>The physical workflow instance ID (planId).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,7 +130,7 @@ public class GetNodeDetailRequest extends Request {
         }
 
         /**
-         * <p>节点ID（nodeKey）</p>
+         * <p>The ID of the node (nodeKey).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,7 +143,7 @@ public class GetNodeDetailRequest extends Request {
         }
 
         /**
-         * <p>租户ID，缺省使用调用方默认租户</p>
+         * <p>The tenant ID. If not specified, the default tenant of the caller is used.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>

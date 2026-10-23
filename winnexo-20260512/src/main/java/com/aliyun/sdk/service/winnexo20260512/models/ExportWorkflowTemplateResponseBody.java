@@ -93,7 +93,7 @@ public class ExportWorkflowTemplateResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码；成功为200</p>
+         * <p>The business status code. A value of 200 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,10 +104,10 @@ public class ExportWorkflowTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述</p>
+         * <p>The error description.</p>
          * 
          * <strong>example:</strong>
-         * <p>请求的资源不存在</p>
+         * <p>The requested resource does not exist</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -115,7 +115,7 @@ public class ExportWorkflowTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪ID</p>
+         * <p>The request tracking ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -126,7 +126,7 @@ public class ExportWorkflowTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>可回流导入的精简模板定义</p>
+         * <p>The simplified template definition that can be re-imported.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -173,6 +173,9 @@ public class ExportWorkflowTemplateResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("specification")
         private String specification;
 
+        @com.aliyun.core.annotation.NameInMap("specificationJson")
+        private java.util.List<java.util.Map<String, ?>> specificationJson;
+
         @com.aliyun.core.annotation.NameInMap("stepId")
         private String stepId;
 
@@ -185,6 +188,7 @@ public class ExportWorkflowTemplateResponseBody extends TeaModel {
             this.reviewerUserIds = builder.reviewerUserIds;
             this.sortOrder = builder.sortOrder;
             this.specification = builder.specification;
+            this.specificationJson = builder.specificationJson;
             this.stepId = builder.stepId;
         }
 
@@ -253,6 +257,13 @@ public class ExportWorkflowTemplateResponseBody extends TeaModel {
         }
 
         /**
+         * @return specificationJson
+         */
+        public java.util.List<java.util.Map<String, ?>> getSpecificationJson() {
+            return this.specificationJson;
+        }
+
+        /**
          * @return stepId
          */
         public String getStepId() {
@@ -268,6 +279,7 @@ public class ExportWorkflowTemplateResponseBody extends TeaModel {
             private java.util.List<Long> reviewerUserIds; 
             private Long sortOrder; 
             private String specification; 
+            private java.util.List<java.util.Map<String, ?>> specificationJson; 
             private String stepId; 
 
             private Builder() {
@@ -282,11 +294,12 @@ public class ExportWorkflowTemplateResponseBody extends TeaModel {
                 this.reviewerUserIds = model.reviewerUserIds;
                 this.sortOrder = model.sortOrder;
                 this.specification = model.specification;
+                this.specificationJson = model.specificationJson;
                 this.stepId = model.stepId;
             } 
 
             /**
-             * <p>模型档位</p>
+             * <p>The model tier.</p>
              * 
              * <strong>example:</strong>
              * <p>standard</p>
@@ -297,7 +310,7 @@ public class ExportWorkflowTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>步骤名称</p>
+             * <p>The step name.</p>
              * 
              * <strong>example:</strong>
              * <p>example</p>
@@ -308,7 +321,7 @@ public class ExportWorkflowTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>智能体负责人名称</p>
+             * <p>The name of the responsible agent.</p>
              * 
              * <strong>example:</strong>
              * <p>example</p>
@@ -319,7 +332,11 @@ public class ExportWorkflowTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>负责人类型：MEMBER 人工 / AGENT 智能体</p>
+             * <p>The owner type. Valid values:</p>
+             * <ul>
+             * <li>MEMBER: Human.</li>
+             * <li>AGENT: Agent.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>MEMBER</p>
@@ -330,7 +347,7 @@ public class ExportWorkflowTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>人工负责人用户ID</p>
+             * <p>The user ID of the human owner.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -341,7 +358,7 @@ public class ExportWorkflowTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>审核人用户ID列表</p>
+             * <p>The list of user IDs of the reviewers.</p>
              * 
              * <strong>example:</strong>
              * <p>example</p>
@@ -352,7 +369,7 @@ public class ExportWorkflowTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>步骤顺序</p>
+             * <p>The step order.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -363,7 +380,7 @@ public class ExportWorkflowTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>步骤处理说明</p>
+             * <p>The step processing instructions.</p>
              * 
              * <strong>example:</strong>
              * <p>example</p>
@@ -374,7 +391,18 @@ public class ExportWorkflowTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>步骤ID</p>
+             * <p>The array of structured segments for the step instructions. Supported types include text, mention, skill, app, files, and web_search. All segment fields and nested attachments are preserved exactly as returned by the backend.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;type&quot;:&quot;text&quot;,&quot;content&quot;:&quot;Organize input materials&quot;}]</p>
+             */
+            public Builder specificationJson(java.util.List<java.util.Map<String, ?>> specificationJson) {
+                this.specificationJson = specificationJson;
+                return this;
+            }
+
+            /**
+             * <p>The step ID.</p>
              * 
              * <strong>example:</strong>
              * <p>collect</p>
@@ -457,7 +485,7 @@ public class ExportWorkflowTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>模板描述</p>
+             * <p>The template description.</p>
              * 
              * <strong>example:</strong>
              * <p>example</p>
@@ -468,7 +496,7 @@ public class ExportWorkflowTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>模板名称</p>
+             * <p>The template name.</p>
              * 
              * <strong>example:</strong>
              * <p>example</p>
@@ -479,7 +507,7 @@ public class ExportWorkflowTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>规范化步骤</p>
+             * <p>The normalization steps.</p>
              * 
              * <strong>example:</strong>
              * <p>example</p>

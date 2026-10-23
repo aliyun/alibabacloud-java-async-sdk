@@ -88,7 +88,7 @@ public class RegisterAppResourcePermissionsRequest extends Request {
         } 
 
         /**
-         * <p>批量授权项</p>
+         * <p>The batch authorization items.</p>
          * <p>This parameter is required.</p>
          */
         public Builder items(java.util.List<Items> items) {
@@ -99,7 +99,7 @@ public class RegisterAppResourcePermissionsRequest extends Request {
         }
 
         /**
-         * <p>资源所属租户 ID；省略为调用人当前租户</p>
+         * <p>The ID of the tenant to which the resource belongs. If not specified, the current tenant of the caller is used.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -111,7 +111,7 @@ public class RegisterAppResourcePermissionsRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数，缺省时使用调用方默认租户</p>
+         * <p>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -196,7 +196,7 @@ public class RegisterAppResourcePermissionsRequest extends Request {
             } 
 
             /**
-             * <p>主体 ID；ALL_USERS 省略</p>
+             * <p>The principal ID. Omit this parameter for ALL_USERS.</p>
              * 
              * <strong>example:</strong>
              * <p>10086</p>
@@ -207,7 +207,7 @@ public class RegisterAppResourcePermissionsRequest extends Request {
             }
 
             /**
-             * <p>跨租户 USER 所属租户</p>
+             * <p>The tenant to which the cross-tenant USER belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>10000</p>
@@ -218,7 +218,7 @@ public class RegisterAppResourcePermissionsRequest extends Request {
             }
 
             /**
-             * <p>主体类型</p>
+             * <p>The principal type.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -332,7 +332,7 @@ public class RegisterAppResourcePermissionsRequest extends Request {
             } 
 
             /**
-             * <p>带时区的到期时间；省略表示永久</p>
+             * <p>The expiration time with the time zone. If not specified, the permissions never expire.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-12-31T23:59:59+08:00</p>
@@ -343,7 +343,7 @@ public class RegisterAppResourcePermissionsRequest extends Request {
             }
 
             /**
-             * <p>被授权主体</p>
+             * <p>The authorized principals.</p>
              * <p>This parameter is required.</p>
              */
             public Builder grantees(java.util.List<Grantees> grantees) {
@@ -352,7 +352,7 @@ public class RegisterAppResourcePermissionsRequest extends Request {
             }
 
             /**
-             * <p>授权权限点</p>
+             * <p>The granted permissions.</p>
              * <p>This parameter is required.</p>
              */
             public Builder permissions(java.util.List<String> permissions) {
@@ -361,7 +361,7 @@ public class RegisterAppResourcePermissionsRequest extends Request {
             }
 
             /**
-             * <p>首段为 APP 应用键的点分资源键</p>
+             * <p>The dot-separated resource key, where the first segment is the APP application key.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -373,7 +373,7 @@ public class RegisterAppResourcePermissionsRequest extends Request {
             }
 
             /**
-             * <p>固定为 APP_RESOURCE</p>
+             * <p>The resource type. Set the value to APP_RESOURCE.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

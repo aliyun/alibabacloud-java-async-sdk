@@ -106,7 +106,7 @@ public class GetMemoryDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码；成功为 200，失败时为对应错误码</p>
+         * <p>The business status code. A value of 200 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,10 +117,10 @@ public class GetMemoryDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>自动拾取记忆的分组列表；无自动记忆时为空数组</p>
+         * <p>The list of groups for automatically collected memories. If no automatic memories exist, an empty array is returned.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;type&quot;:&quot;user&quot;,&quot;items&quot;:[{&quot;id&quot;:&quot;user/example.md&quot;,&quot;title&quot;:&quot;示例偏好&quot;,&quot;content&quot;:&quot;喜欢简洁的回答&quot;,&quot;description&quot;:&quot;来自近期会话的偏好总结&quot;}],&quot;gmtModified&quot;:1720000000}]</p>
+         * <p>[{&quot;type&quot;:&quot;user&quot;,&quot;items&quot;:[{&quot;id&quot;:&quot;user/example.md&quot;,&quot;title&quot;:&quot;Sample preference&quot;,&quot;content&quot;:&quot;Prefers concise answers&quot;,&quot;description&quot;:&quot;Preference summary from recent conversations&quot;}],&quot;gmtModified&quot;:1720000000}]</p>
          */
         public Builder groups(java.util.List<Groups> groups) {
             this.groups = groups;
@@ -128,10 +128,10 @@ public class GetMemoryDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述；成功时为空字符串，失败时返回具体原因</p>
+         * <p>The error description.</p>
          * 
          * <strong>example:</strong>
-         * <p>当前用户不是群组 cg_12345 的活跃成员</p>
+         * <p>The current user is not an active member of the group cg_12345</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -139,10 +139,10 @@ public class GetMemoryDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>手动添加的记忆，来自 profile.md；包含完整内容、存在状态和修改时间</p>
+         * <p>The manually added memory from profile.md. It includes the full content, existence status, and modification time.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;content&quot;:&quot;示例手动记忆&quot;,&quot;exists&quot;:true,&quot;gmtModified&quot;:1720000000}</p>
+         * <p>{&quot;content&quot;:&quot;Sample manual memory&quot;,&quot;exists&quot;:true,&quot;gmtModified&quot;:1720000000}</p>
          */
         public Builder profile(Profile profile) {
             this.profile = profile;
@@ -150,7 +150,7 @@ public class GetMemoryDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪 ID，用于定位本次调用</p>
+         * <p>The request tracking ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -245,10 +245,10 @@ public class GetMemoryDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>自动记忆正文，不包含 YAML frontmatter</p>
+             * <p>The body of the automatic memory, excluding the YAML frontmatter.</p>
              * 
              * <strong>example:</strong>
-             * <p>喜欢简洁的回答</p>
+             * <p>Prefers concise answers</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -256,10 +256,10 @@ public class GetMemoryDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>自动记忆的附加描述；没有时为空字符串</p>
+             * <p>The additional description of the automatic memory. If no description is available, an empty string is returned.</p>
              * 
              * <strong>example:</strong>
-             * <p>来自近期会话的偏好总结</p>
+             * <p>Preference summary from recent conversations</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -267,7 +267,7 @@ public class GetMemoryDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>自动记忆条目的唯一标识，为相对 OSS 路径</p>
+             * <p>The unique identifier of the automatic memory entry, which is a relative OSS path.</p>
              * 
              * <strong>example:</strong>
              * <p>user/example.md</p>
@@ -278,10 +278,10 @@ public class GetMemoryDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>自动记忆标题，来自文件元数据或文件名</p>
+             * <p>The title of the automatic memory, which is derived from the file metadata or file name.</p>
              * 
              * <strong>example:</strong>
-             * <p>示例偏好</p>
+             * <p>Sample preference</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -361,7 +361,7 @@ public class GetMemoryDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>该分组最近修改时间，Unix 秒级时间戳；无文件时为 null</p>
+             * <p>The last modification time of the group. The value is a UNIX timestamp in seconds. If no files exist, null is returned.</p>
              * 
              * <strong>example:</strong>
              * <p>1720000000</p>
@@ -372,10 +372,10 @@ public class GetMemoryDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>该类型下的自动记忆条目列表；没有条目时为空数组</p>
+             * <p>The list of automatic memory entries under this type. If no entries exist, an empty array is returned.</p>
              * 
              * <strong>example:</strong>
-             * <p>[{&quot;id&quot;:&quot;user/example.md&quot;,&quot;title&quot;:&quot;示例偏好&quot;,&quot;content&quot;:&quot;喜欢简洁的回答&quot;,&quot;description&quot;:&quot;来自近期会话的偏好总结&quot;}]</p>
+             * <p>[{&quot;id&quot;:&quot;user/example.md&quot;,&quot;title&quot;:&quot;Sample preference&quot;,&quot;content&quot;:&quot;Prefers concise answers&quot;,&quot;description&quot;:&quot;Preference summary from recent conversations&quot;}]</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;
@@ -383,7 +383,7 @@ public class GetMemoryDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>自动记忆类型：user、feedback、reference 或 project</p>
+             * <p>The type of the automatic memory. Valid values: user, feedback, reference, and project.</p>
              * 
              * <strong>example:</strong>
              * <p>user</p>
@@ -466,10 +466,10 @@ public class GetMemoryDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>手动记忆的完整正文；未保存过时为空字符串</p>
+             * <p>The full body of the manual memory. If the memory has never been saved, an empty string is returned.</p>
              * 
              * <strong>example:</strong>
-             * <p>示例手动记忆</p>
+             * <p>Sample manual memory</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -477,7 +477,7 @@ public class GetMemoryDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>profile.md 是否存在；未保存过时为 false</p>
+             * <p>Indicates whether profile.md exists. If the memory has never been saved, false is returned.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -488,7 +488,7 @@ public class GetMemoryDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>profile.md 最近修改时间，Unix 秒级时间戳；文件不存在或无法取得元数据时为 null</p>
+             * <p>The last modification time of profile.md. The value is a UNIX timestamp in seconds. If the file does not exist or its metadata cannot be obtained, null is returned.</p>
              * 
              * <strong>example:</strong>
              * <p>1720000000</p>

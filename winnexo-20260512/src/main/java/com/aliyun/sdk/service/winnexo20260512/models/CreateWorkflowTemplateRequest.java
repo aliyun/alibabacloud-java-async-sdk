@@ -18,8 +18,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateWorkflowTemplateRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("action")
+    private String action;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("collaborationGroupId")
-    @com.aliyun.core.annotation.Validation(required = true)
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64, minLength = 1)
     private String collaborationGroupId;
 
     @com.aliyun.core.annotation.Body
@@ -33,6 +37,7 @@ public class CreateWorkflowTemplateRequest extends Request {
 
     private CreateWorkflowTemplateRequest(Builder builder) {
         super(builder);
+        this.action = builder.action;
         this.collaborationGroupId = builder.collaborationGroupId;
         this.definition = builder.definition;
         this.tenantId = builder.tenantId;
@@ -49,6 +54,13 @@ public class CreateWorkflowTemplateRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return action
+     */
+    public String getAction() {
+        return this.action;
     }
 
     /**
@@ -73,6 +85,7 @@ public class CreateWorkflowTemplateRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateWorkflowTemplateRequest, Builder> {
+        private String action; 
         private String collaborationGroupId; 
         private java.util.Map<String, ?> definition; 
         private String tenantId; 
@@ -83,13 +96,26 @@ public class CreateWorkflowTemplateRequest extends Request {
 
         private Builder(CreateWorkflowTemplateRequest request) {
             super(request);
+            this.action = request.action;
             this.collaborationGroupId = request.collaborationGroupId;
             this.definition = request.definition;
             this.tenantId = request.tenantId;
         } 
 
         /**
-         * <p>协作空间 ID</p>
+         * <p>The write action. Valid values: SAVE: Saves the template as a draft without taking effect. SUBMIT: Saves and submits the template and sets it as the only effective version. Default value: SUBMIT.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUBMIT</p>
+         */
+        public Builder action(String action) {
+            this.putBodyParameter("action", action);
+            this.action = action;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the collaboration workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,7 +128,7 @@ public class CreateWorkflowTemplateRequest extends Request {
         }
 
         /**
-         * <p>完整模板定义 JSON（name/description/steps）</p>
+         * <p>The complete JSON definition of the template, including name, description, and steps.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +142,7 @@ public class CreateWorkflowTemplateRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数；缺省时使用调用方默认租户</p>
+         * <p>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>

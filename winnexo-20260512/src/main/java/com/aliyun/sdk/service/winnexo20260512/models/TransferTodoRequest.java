@@ -103,10 +103,10 @@ public class TransferTodoRequest extends Request {
         } 
 
         /**
-         * <p>交接说明</p>
+         * <p>The handover description.</p>
          * 
          * <strong>example:</strong>
-         * <p>请继续处理</p>
+         * <p>Please continue processing</p>
          */
         public Builder comment(String comment) {
             this.putBodyParameter("comment", comment);
@@ -115,7 +115,7 @@ public class TransferTodoRequest extends Request {
         }
 
         /**
-         * <p>转办目标用户ID列表（1~100）</p>
+         * <p>The list of target user IDs to whom the task is reassigned. You can specify 1 to 100 user IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,7 +129,7 @@ public class TransferTodoRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数；缺省时使用调用方默认租户</p>
+         * <p>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -141,7 +141,7 @@ public class TransferTodoRequest extends Request {
         }
 
         /**
-         * <p>待办ID</p>
+         * <p>The ID of the to-do task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

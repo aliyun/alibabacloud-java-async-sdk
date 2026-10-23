@@ -19,12 +19,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DeleteWorkflowTemplateRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("collaborationGroupId")
-    @com.aliyun.core.annotation.Validation(required = true)
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64, minLength = 1)
     private String collaborationGroupId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("templateId")
-    @com.aliyun.core.annotation.Validation(required = true)
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64, minLength = 1)
     private String templateId;
 
     @com.aliyun.core.annotation.Query
@@ -89,7 +89,7 @@ public class DeleteWorkflowTemplateRequest extends Request {
         } 
 
         /**
-         * <p>协作空间 ID</p>
+         * <p>The ID of the collaboration workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class DeleteWorkflowTemplateRequest extends Request {
         }
 
         /**
-         * <p>模板 ID</p>
+         * <p>The ID of the template.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +115,7 @@ public class DeleteWorkflowTemplateRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数；缺省时使用调用方默认租户</p>
+         * <p>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>

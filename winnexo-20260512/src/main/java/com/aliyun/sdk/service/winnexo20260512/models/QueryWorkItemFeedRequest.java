@@ -200,7 +200,7 @@ public class QueryWorkItemFeedRequest extends Request {
         } 
 
         /**
-         * <p>业务状态筛选（七态）</p>
+         * <p>The business status filter (seven states).</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -213,7 +213,7 @@ public class QueryWorkItemFeedRequest extends Request {
         }
 
         /**
-         * <p>协作空间 ID</p>
+         * <p>The ID of the collaboration workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -226,7 +226,7 @@ public class QueryWorkItemFeedRequest extends Request {
         }
 
         /**
-         * <p>翻页游标，取上次响应的 nextCursor</p>
+         * <p>The pagination cursor. Use the nextCursor value from the previous response.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -238,7 +238,7 @@ public class QueryWorkItemFeedRequest extends Request {
         }
 
         /**
-         * <p>工作项类型筛选</p>
+         * <p>The work item type filter.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -251,7 +251,7 @@ public class QueryWorkItemFeedRequest extends Request {
         }
 
         /**
-         * <p>标题/描述模糊搜索关键词</p>
+         * <p>The keyword for fuzzy search in the title or description.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -263,7 +263,7 @@ public class QueryWorkItemFeedRequest extends Request {
         }
 
         /**
-         * <p>单页条数（1~100）</p>
+         * <p>The number of entries per page. Valid values: 1 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -275,7 +275,7 @@ public class QueryWorkItemFeedRequest extends Request {
         }
 
         /**
-         * <p>优先级筛选</p>
+         * <p>The priority filter.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -288,7 +288,7 @@ public class QueryWorkItemFeedRequest extends Request {
         }
 
         /**
-         * <p>个人范围筛选</p>
+         * <p>The personal scope filter.</p>
          * 
          * <strong>example:</strong>
          * <p>ASSIGNED_TO_ME</p>
@@ -300,7 +300,7 @@ public class QueryWorkItemFeedRequest extends Request {
         }
 
         /**
-         * <p>来源任务ID；指定时返回该任务平铺子项</p>
+         * <p>The ID of the source task. If specified, the flat sub-items of the task are returned.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -312,7 +312,7 @@ public class QueryWorkItemFeedRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数；缺省时使用调用方默认租户</p>
+         * <p>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -324,7 +324,7 @@ public class QueryWorkItemFeedRequest extends Request {
         }
 
         /**
-         * <p>视图：FLAT 平铺 / TREE 任务分组</p>
+         * <p>The view type. Valid values: FLAT (flat view) and TREE (task grouping).</p>
          * 
          * <strong>example:</strong>
          * <p>FLAT</p>

@@ -171,7 +171,7 @@ public class ListWorkflowTemplatesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码；成功为200</p>
+         * <p>The business status code. A value of 200 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -182,7 +182,7 @@ public class ListWorkflowTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>是否还有更多数据</p>
+         * <p>Indicates whether more data is available.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -193,7 +193,7 @@ public class ListWorkflowTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>当前页模板摘要列表</p>
+         * <p>The list of template summaries on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -204,7 +204,7 @@ public class ListWorkflowTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>本次生效的单页最大返回数量</p>
+         * <p>The maximum number of entries returned per page in the current request.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -215,10 +215,10 @@ public class ListWorkflowTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>请求的资源不存在</p>
+         * <p>The requested resource does not exist</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -226,7 +226,7 @@ public class ListWorkflowTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>下一页翻页令牌；无更多数据时为空字符串</p>
+         * <p>The pagination token for the next page. An empty string indicates that no more data is available.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -237,7 +237,7 @@ public class ListWorkflowTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>当前页码</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -248,7 +248,7 @@ public class ListWorkflowTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>生效单页条数</p>
+         * <p>The number of entries per page in the current request.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -259,7 +259,7 @@ public class ListWorkflowTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -270,7 +270,7 @@ public class ListWorkflowTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>筛选条件下可见总数</p>
+         * <p>The total number of visible entries that match the filter conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -296,8 +296,17 @@ public class ListWorkflowTemplatesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("effectiveVersion")
+        private String effectiveVersion;
+
         @com.aliyun.core.annotation.NameInMap("gmtModified")
         private String gmtModified;
+
+        @com.aliyun.core.annotation.NameInMap("latestVersion")
+        private String latestVersion;
+
+        @com.aliyun.core.annotation.NameInMap("latestVersionStatus")
+        private String latestVersionStatus;
 
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
@@ -316,7 +325,10 @@ public class ListWorkflowTemplatesResponseBody extends TeaModel {
 
         private Items(Builder builder) {
             this.description = builder.description;
+            this.effectiveVersion = builder.effectiveVersion;
             this.gmtModified = builder.gmtModified;
+            this.latestVersion = builder.latestVersion;
+            this.latestVersionStatus = builder.latestVersionStatus;
             this.name = builder.name;
             this.ownerCount = builder.ownerCount;
             this.reviewStepCount = builder.reviewStepCount;
@@ -340,10 +352,31 @@ public class ListWorkflowTemplatesResponseBody extends TeaModel {
         }
 
         /**
+         * @return effectiveVersion
+         */
+        public String getEffectiveVersion() {
+            return this.effectiveVersion;
+        }
+
+        /**
          * @return gmtModified
          */
         public String getGmtModified() {
             return this.gmtModified;
+        }
+
+        /**
+         * @return latestVersion
+         */
+        public String getLatestVersion() {
+            return this.latestVersion;
+        }
+
+        /**
+         * @return latestVersionStatus
+         */
+        public String getLatestVersionStatus() {
+            return this.latestVersionStatus;
         }
 
         /**
@@ -383,7 +416,10 @@ public class ListWorkflowTemplatesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String description; 
+            private String effectiveVersion; 
             private String gmtModified; 
+            private String latestVersion; 
+            private String latestVersionStatus; 
             private String name; 
             private Long ownerCount; 
             private Long reviewStepCount; 
@@ -395,7 +431,10 @@ public class ListWorkflowTemplatesResponseBody extends TeaModel {
 
             private Builder(Items model) {
                 this.description = model.description;
+                this.effectiveVersion = model.effectiveVersion;
                 this.gmtModified = model.gmtModified;
+                this.latestVersion = model.latestVersion;
+                this.latestVersionStatus = model.latestVersionStatus;
                 this.name = model.name;
                 this.ownerCount = model.ownerCount;
                 this.reviewStepCount = model.reviewStepCount;
@@ -404,7 +443,7 @@ public class ListWorkflowTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>模板描述</p>
+             * <p>The description of the template.</p>
              * 
              * <strong>example:</strong>
              * <p>example</p>
@@ -415,7 +454,18 @@ public class ListWorkflowTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>最近修改时间(ISO8601)</p>
+             * <p>The current effective version number. An empty value indicates that only a draft exists and the template cannot be used for work items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
+             */
+            public Builder effectiveVersion(String effectiveVersion) {
+                this.effectiveVersion = effectiveVersion;
+                return this;
+            }
+
+            /**
+             * <p>The time when the template was last modified. The time is in the ISO 8601 standard.</p>
              * 
              * <strong>example:</strong>
              * <p>example</p>
@@ -426,7 +476,33 @@ public class ListWorkflowTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>模板名称</p>
+             * <p>The latest version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v2</p>
+             */
+            public Builder latestVersion(String latestVersion) {
+                this.latestVersion = latestVersion;
+                return this;
+            }
+
+            /**
+             * <p>The status of the latest version. Valid values:</p>
+             * <ul>
+             * <li>DRAFT: Draft. The version contains uncommitted edits.</li>
+             * <li>SUBMITTED: Submitted.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>DRAFT</p>
+             */
+            public Builder latestVersionStatus(String latestVersionStatus) {
+                this.latestVersionStatus = latestVersionStatus;
+                return this;
+            }
+
+            /**
+             * <p>The name of the template.</p>
              * 
              * <strong>example:</strong>
              * <p>example</p>
@@ -437,7 +513,7 @@ public class ListWorkflowTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>去重后的负责人数量</p>
+             * <p>The number of unique owners.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -448,7 +524,7 @@ public class ListWorkflowTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>配置了审核人的步骤数</p>
+             * <p>The number of steps configured with reviewers.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -459,7 +535,7 @@ public class ListWorkflowTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>步骤数</p>
+             * <p>The number of steps.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -470,7 +546,7 @@ public class ListWorkflowTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>模板ID</p>
+             * <p>The ID of the template.</p>
              * 
              * <strong>example:</strong>
              * <p>example</p>

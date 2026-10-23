@@ -151,7 +151,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The prompt message.</p>
+         * <p>The message.</p>
          * 
          * <strong>example:</strong>
          * <p>ok</p>
@@ -173,7 +173,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of items per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -184,10 +184,10 @@ public class ListOutputFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request trace ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
+         * <p>123e4567-e89b-42d3-a456-426614174007</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -195,7 +195,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of outputs that meet the specified conditions.</p>
+         * <p>The total number of matching outputs.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -290,10 +290,10 @@ public class ListOutputFilesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The email body.</p>
+             * <p>The email content.</p>
              * 
              * <strong>example:</strong>
-             * <p>string_value</p>
+             * <p>The quarterly business report has been generated. Please review</p>
              */
             public Builder body(String body) {
                 this.body = body;
@@ -304,7 +304,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
              * <p>The content type, such as MARKDOWN, JSONML, or HTML.</p>
              * 
              * <strong>example:</strong>
-             * <p>string_value</p>
+             * <p>MARKDOWN</p>
              */
             public Builder contentType(String contentType) {
                 this.contentType = contentType;
@@ -315,7 +315,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
              * <p>The recipient list.</p>
              * 
              * <strong>example:</strong>
-             * <p>string_value</p>
+             * <p>[&quot;<a href="mailto:reader@example.com">reader@example.com</a>&quot;]</p>
              */
             public Builder recipients(java.util.List<String> recipients) {
                 this.recipients = recipients;
@@ -326,7 +326,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
              * <p>The email subject.</p>
              * 
              * <strong>example:</strong>
-             * <p>string_value</p>
+             * <p>Quarterly business analysis report</p>
              */
             public Builder subject(String subject) {
                 this.subject = subject;
@@ -422,7 +422,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
              * <p>The file description.</p>
              * 
              * <strong>example:</strong>
-             * <p>Sample description</p>
+             * <p>Quarterly revenue, cost, and trend analysis report</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -433,7 +433,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
              * <p>The file name.</p>
              * 
              * <strong>example:</strong>
-             * <p>SampleName.pdf</p>
+             * <p>Quarterly business analysis report.pdf</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -441,10 +441,10 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The file path (OSS object key).</p>
+             * <p>The file location. It is compatible with file URLs and legacy OSS object keys. The specific value is derived from the output registration information.</p>
              * 
              * <strong>example:</strong>
-             * <p><a href="https://example.com/oss/file.pdf">https://example.com/oss/file.pdf</a></p>
+             * <p>reports/2026/quarterly-report.pdf</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -455,7 +455,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
              * <p>The file type, such as .pdf or .md.</p>
              * 
              * <strong>example:</strong>
-             * <p>text</p>
+             * <p>.pdf</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -551,7 +551,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
              * <p>The number of completed slides.</p>
              * 
              * <strong>example:</strong>
-             * <p>1</p>
+             * <p>8</p>
              */
             public Builder completedSlides(Long completedSlides) {
                 this.completedSlides = completedSlides;
@@ -562,7 +562,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
              * <p>The PPT file ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>examplePptId</p>
+             * <p>ppt_123e4567-e89b-42d3-a456-426614174015</p>
              */
             public Builder pptId(String pptId) {
                 this.pptId = pptId;
@@ -573,7 +573,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
              * <p>The PPT name.</p>
              * 
              * <strong>example:</strong>
-             * <p>string_value</p>
+             * <p>Quarterly Business Analysis Report</p>
              */
             public Builder pptName(String pptName) {
                 this.pptName = pptName;
@@ -584,7 +584,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
              * <p>The total number of slides.</p>
              * 
              * <strong>example:</strong>
-             * <p>1</p>
+             * <p>10</p>
              */
             public Builder totalSlides(Long totalSlides) {
                 this.totalSlides = totalSlides;
@@ -820,10 +820,10 @@ public class ListOutputFilesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation time in ISO 8601 format.</p>
+             * <p>The creation time of the output detail, serialized from a backend datetime value into an ISO 8601 string, with time zone information returned along with the original value.</p>
              * 
              * <strong>example:</strong>
-             * <p>2023-10-01T12:00:00Z</p>
+             * <p>2026-10-12T03:10:00+00:00</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -831,7 +831,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The email information. This field is present only when the output type is email.</p>
+             * <p>The email information, present when the type is email.</p>
              */
             public Builder emailInfo(EmailInfo emailInfo) {
                 this.emailInfo = emailInfo;
@@ -839,7 +839,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The file information. This field is present only when the output type is file.</p>
+             * <p>The file information, present when the type is file.</p>
              */
             public Builder fileInfo(FileInfo fileInfo) {
                 this.fileInfo = fileInfo;
@@ -847,10 +847,10 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The database creation time in ISO 8601 format.</p>
+             * <p>The creation time of the output or detail, serialized from a backend datetime value into an ISO 8601 string, with time zone information returned along with the original value.</p>
              * 
              * <strong>example:</strong>
-             * <p>2023-10-01T12:00:00Z</p>
+             * <p>2026-10-12T03:10:00+00:00</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -858,10 +858,10 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The database update time in ISO 8601 format.</p>
+             * <p>The update time of the output or detail, serialized from a backend datetime value into an ISO 8601 string, with time zone information returned along with the original value.</p>
              * 
              * <strong>example:</strong>
-             * <p>2023-10-01T12:00:00Z</p>
+             * <p>2026-10-12T03:12:00+00:00</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -872,7 +872,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
              * <p>The output name.</p>
              * 
              * <strong>example:</strong>
-             * <p>exampleItemName</p>
+             * <p>Quarterly business analysis report.pdf</p>
              */
             public Builder itemName(String itemName) {
                 this.itemName = itemName;
@@ -880,10 +880,10 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the output item. Valid values: ppt, html, document, picture, slides, video, audio, email, and others.</p>
+             * <p>The output item type. Valid values: ppt, html, document, picture, slides, video, audio, email, and others.</p>
              * 
              * <strong>example:</strong>
-             * <p>ppt</p>
+             * <p>document</p>
              */
             public Builder itemType(String itemType) {
                 this.itemType = itemType;
@@ -894,7 +894,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
              * <p>The internationalized display name of the output detail type.</p>
              * 
              * <strong>example:</strong>
-             * <p>string_value</p>
+             * <p>Document</p>
              */
             public Builder itemTypeDisplayName(String itemTypeDisplayName) {
                 this.itemTypeDisplayName = itemTypeDisplayName;
@@ -905,7 +905,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
              * <p>The message ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>exampleMessageId</p>
+             * <p>msg_123e4567-e89b-42d3-a456-426614174012</p>
              */
             public Builder messageId(String messageId) {
                 this.messageId = messageId;
@@ -916,7 +916,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
              * <p>The output detail ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>string_example_value</p>
+             * <p>item_123e4567-e89b-42d3-a456-426614174010</p>
              */
             public Builder outputItemId(String outputItemId) {
                 this.outputItemId = outputItemId;
@@ -935,10 +935,10 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The share token. This field is present only when sharing is enabled. You can use this token to access the public share preview endpoint.</p>
+             * <p>The share token, present when sharing is enabled. You can use this token to access the public share preview API.</p>
              * 
              * <strong>example:</strong>
-             * <p>example_share_token</p>
+             * <p>demo_public_preview_token</p>
              */
             public Builder shareToken(String shareToken) {
                 this.shareToken = shareToken;
@@ -949,7 +949,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
              * <p>The skill output ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>exampleSkillOutputId</p>
+             * <p>skillout_123e4567-e89b-42d3-a456-426614174011</p>
              */
             public Builder skillOutputId(String skillOutputId) {
                 this.skillOutputId = skillOutputId;
@@ -957,7 +957,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The slides information. This field is present only when the output type is slides.</p>
+             * <p>The slide deck information, present when the type is slide deck.</p>
              */
             public Builder slidesInfo(SlidesInfo slidesInfo) {
                 this.slidesInfo = slidesInfo;
@@ -968,7 +968,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
              * <p>The task execution ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>exampleTaskExecutionId</p>
+             * <p>execution_123e4567-e89b-42d3-a456-426614174013</p>
              */
             public Builder taskExecutionId(String taskExecutionId) {
                 this.taskExecutionId = taskExecutionId;
@@ -1152,10 +1152,10 @@ public class ListOutputFilesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The session ID.</p>
+             * <p>The conversation ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>exampleConversationId</p>
+             * <p>session_123e4567-e89b-42d3-a456-426614174008</p>
              */
             public Builder conversationId(String conversationId) {
                 this.conversationId = conversationId;
@@ -1163,10 +1163,10 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time in ISO 8601 format.</p>
+             * <p>The creation time of the output or detail, serialized from a backend datetime value into an ISO 8601 string, with time zone information returned along with the original value.</p>
              * 
              * <strong>example:</strong>
-             * <p>string_value</p>
+             * <p>2026-10-12T03:10:00+00:00</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -1174,10 +1174,10 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time in ISO 8601 format.</p>
+             * <p>The update time of the output or detail, serialized from a backend datetime value into an ISO 8601 string, with time zone information returned along with the original value.</p>
              * 
              * <strong>example:</strong>
-             * <p>string_value</p>
+             * <p>2026-10-12T03:12:00+00:00</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -1188,7 +1188,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
              * <p>The output name.</p>
              * 
              * <strong>example:</strong>
-             * <p>SampleName.pdf</p>
+             * <p>Quarterly business analysis report.pdf</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1196,10 +1196,10 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the digital employee (operating object).</p>
+             * <p>The name of the digital worker (operating object).</p>
              * 
              * <strong>example:</strong>
-             * <p>string_value</p>
+             * <p>Business Analysis Assistant</p>
              */
             public Builder operatingObjectName(String operatingObjectName) {
                 this.operatingObjectName = operatingObjectName;
@@ -1210,7 +1210,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
              * <p>The output ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>exampleOutputId</p>
+             * <p>output_123e4567-e89b-42d3-a456-426614174009</p>
              */
             public Builder outputId(String outputId) {
                 this.outputId = outputId;
@@ -1226,7 +1226,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The output type. Valid values: <code>conversation/skill/task</code>.</p>
+             * <p>The output type: <code>conversation/skill/task</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>conversation</p>
@@ -1237,10 +1237,10 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The internationalized display name of the output type.</p>
+             * <p>The localized display name of the output type.</p>
              * 
              * <strong>example:</strong>
-             * <p>string_value</p>
+             * <p>Conversation output</p>
              */
             public Builder outputTypeDisplayName(String outputTypeDisplayName) {
                 this.outputTypeDisplayName = outputTypeDisplayName;
@@ -1251,7 +1251,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
              * <p>The skill output ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>exampleSkillOutputId</p>
+             * <p>skillout_123e4567-e89b-42d3-a456-426614174011</p>
              */
             public Builder skillOutputId(String skillOutputId) {
                 this.skillOutputId = skillOutputId;
@@ -1259,10 +1259,10 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node ID.</p>
+             * <p>The task ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>string_example_value</p>
+             * <p>task_123e4567-e89b-42d3-a456-426614174014</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

@@ -19,23 +19,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class GetWorkflowTemplateRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("collaborationGroupId")
-    @com.aliyun.core.annotation.Validation(required = true)
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64, minLength = 1)
     private String collaborationGroupId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("templateId")
-    @com.aliyun.core.annotation.Validation(required = true)
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64, minLength = 1)
     private String templateId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("tenantId")
     private String tenantId;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("version")
+    private String version;
+
     private GetWorkflowTemplateRequest(Builder builder) {
         super(builder);
         this.collaborationGroupId = builder.collaborationGroupId;
         this.templateId = builder.templateId;
         this.tenantId = builder.tenantId;
+        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -72,10 +77,18 @@ public class GetWorkflowTemplateRequest extends Request {
         return this.tenantId;
     }
 
+    /**
+     * @return version
+     */
+    public String getVersion() {
+        return this.version;
+    }
+
     public static final class Builder extends Request.Builder<GetWorkflowTemplateRequest, Builder> {
         private String collaborationGroupId; 
         private String templateId; 
         private String tenantId; 
+        private String version; 
 
         private Builder() {
             super();
@@ -86,10 +99,11 @@ public class GetWorkflowTemplateRequest extends Request {
             this.collaborationGroupId = request.collaborationGroupId;
             this.templateId = request.templateId;
             this.tenantId = request.tenantId;
+            this.version = request.version;
         } 
 
         /**
-         * <p>协作空间 ID</p>
+         * <p>The ID of the collaboration workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,7 +116,7 @@ public class GetWorkflowTemplateRequest extends Request {
         }
 
         /**
-         * <p>模板 ID</p>
+         * <p>The ID of the template.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +129,7 @@ public class GetWorkflowTemplateRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数；缺省时使用调用方默认租户</p>
+         * <p>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -123,6 +137,18 @@ public class GetWorkflowTemplateRequest extends Request {
         public Builder tenantId(String tenantId) {
             this.putQueryParameter("tenantId", tenantId);
             this.tenantId = tenantId;
+            return this;
+        }
+
+        /**
+         * <p>The version number of the template to read. The format is a lowercase v followed by a positive integer, such as v1. If not specified, the effective version is used. If no effective version exists, the latest version is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
+         */
+        public Builder version(String version) {
+            this.putBodyParameter("version", version);
+            this.version = version;
             return this;
         }
 

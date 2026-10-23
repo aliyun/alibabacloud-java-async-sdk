@@ -177,11 +177,11 @@ public class CreateWorkflowInstanceRequest extends Request {
         } 
 
         /**
-         * <p>Workflow 必填验收标准</p>
+         * <p>The required acceptance criteria for the workflow.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>完成全部审批节点并产出报告</p>
+         * <p>Complete all approval nodes and generate the report</p>
          */
         public Builder acceptanceCriteria(String acceptanceCriteria) {
             this.putBodyParameter("acceptanceCriteria", acceptanceCriteria);
@@ -190,7 +190,7 @@ public class CreateWorkflowInstanceRequest extends Request {
         }
 
         /**
-         * <p>空间内唯一需求编号，重复请求幂等</p>
+         * <p>The unique requirement ID in the workspace. Repeated requests are idempotent.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -203,7 +203,7 @@ public class CreateWorkflowInstanceRequest extends Request {
         }
 
         /**
-         * <p>协作空间 ID</p>
+         * <p>The collaboration workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -216,10 +216,10 @@ public class CreateWorkflowInstanceRequest extends Request {
         }
 
         /**
-         * <p>外部发起人展示标签</p>
+         * <p>The display label of the external initiator.</p>
          * 
          * <strong>example:</strong>
-         * <p>外部发起人张三</p>
+         * <p>External Initiator Zhang San</p>
          */
         public Builder initiator(String initiator) {
             this.putBodyParameter("initiator", initiator);
@@ -228,7 +228,7 @@ public class CreateWorkflowInstanceRequest extends Request {
         }
 
         /**
-         * <p>工作项优先级</p>
+         * <p>The work item priority.</p>
          * 
          * <strong>example:</strong>
          * <p>HIGH</p>
@@ -240,7 +240,7 @@ public class CreateWorkflowInstanceRequest extends Request {
         }
 
         /**
-         * <p>工作流模板 ID，最多 64 字符</p>
+         * <p>The workflow template ID. Maximum length: 64 characters.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -253,7 +253,7 @@ public class CreateWorkflowInstanceRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</p>
+         * <p>The tenant ID. This is a common parameter explicitly passed by using --tenant-id in winnexo-cli.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -265,11 +265,11 @@ public class CreateWorkflowInstanceRequest extends Request {
         }
 
         /**
-         * <p>需求标题</p>
+         * <p>The requirement title.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>季度经营分析报告</p>
+         * <p>Quarterly Business Analysis Report</p>
          */
         public Builder title(String title) {
             this.putBodyParameter("title", title);
@@ -278,10 +278,10 @@ public class CreateWorkflowInstanceRequest extends Request {
         }
 
         /**
-         * <p>业务变量对象，tags 可为字符串标签列表</p>
+         * <p>The business variable object. The tags field can be a list of string tags.</p>
          * 
          * <strong>example:</strong>
-         * <p>tags=季度报告</p>
+         * <p>tags=Quarterly Report</p>
          */
         public Builder variables(java.util.Map<String, ?> variables) {
             String variablesShrink = shrink(variables, "variables", "json");

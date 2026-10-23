@@ -80,7 +80,7 @@ public class DeleteWorkflowTemplateResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码；成功为200</p>
+         * <p>The business status code. A value of 200 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -91,10 +91,10 @@ public class DeleteWorkflowTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述</p>
+         * <p>The error description.</p>
          * 
          * <strong>example:</strong>
-         * <p>请求的资源不存在</p>
+         * <p>The requested resource does not exist</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -102,7 +102,7 @@ public class DeleteWorkflowTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪ID</p>
+         * <p>The request tracking ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>

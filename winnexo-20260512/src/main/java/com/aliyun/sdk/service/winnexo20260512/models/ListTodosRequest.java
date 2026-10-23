@@ -213,7 +213,7 @@ public class ListTodosRequest extends Request {
         } 
 
         /**
-         * <p>协作空间 ID（可选过滤；不传 = 全部空间）</p>
+         * <p>The collaboration workspace ID. This is an optional filter. If not specified, items from all workspaces are returned.</p>
          * 
          * <strong>example:</strong>
          * <p>cg_123</p>
@@ -225,10 +225,10 @@ public class ListTodosRequest extends Request {
         }
 
         /**
-         * <p>标题/摘要模糊搜索关键词</p>
+         * <p>The keyword for fuzzy search in the title or summary.</p>
          * 
          * <strong>example:</strong>
-         * <p>审批</p>
+         * <p>Approval</p>
          */
         public Builder keyword(String keyword) {
             this.putBodyParameter("keyword", keyword);
@@ -237,7 +237,7 @@ public class ListTodosRequest extends Request {
         }
 
         /**
-         * <p>单页最大返回数量（1~100）；传入时优先于 pageSize</p>
+         * <p>The maximum number of entries to return per page. Valid values: 1 to 100. This parameter takes precedence over pageSize if both are specified.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -249,7 +249,7 @@ public class ListTodosRequest extends Request {
         }
 
         /**
-         * <p>翻页令牌，取上次响应返回的 nextToken；传入时优先于 page</p>
+         * <p>The pagination token. Use the nextToken value returned in the previous response. This parameter takes precedence over page if both are specified.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -261,7 +261,7 @@ public class ListTodosRequest extends Request {
         }
 
         /**
-         * <p>页码；传入 nextToken 时忽略</p>
+         * <p>The page number. This parameter is ignored if nextToken is specified.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -273,7 +273,7 @@ public class ListTodosRequest extends Request {
         }
 
         /**
-         * <p>每页条数（1~100）</p>
+         * <p>The number of entries per page. Valid values: 1 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -285,7 +285,7 @@ public class ListTodosRequest extends Request {
         }
 
         /**
-         * <p>优先级筛选（HIGH/MEDIUM/LOW）</p>
+         * <p>The priority filter. Valid values: HIGH, MEDIUM, and LOW.</p>
          * 
          * <strong>example:</strong>
          * <p>HIGH</p>
@@ -298,7 +298,7 @@ public class ListTodosRequest extends Request {
         }
 
         /**
-         * <p>读取状态筛选（UNREAD/READ，按处理人 readAt 判定）</p>
+         * <p>The read status filter. Valid values: UNREAD and READ. The status is determined by the readAt field of the assignee.</p>
          * 
          * <strong>example:</strong>
          * <p>UNREAD</p>
@@ -311,7 +311,7 @@ public class ListTodosRequest extends Request {
         }
 
         /**
-         * <p>排序方式</p>
+         * <p>The sorting method.</p>
          * 
          * <strong>example:</strong>
          * <p>DEFAULT</p>
@@ -323,7 +323,7 @@ public class ListTodosRequest extends Request {
         }
 
         /**
-         * <p>待办类型筛选（WORKFLOW/OPEN_API）</p>
+         * <p>The to-do type filter. Valid values: WORKFLOW and OPEN_API.</p>
          * 
          * <strong>example:</strong>
          * <p>WORKFLOW</p>
@@ -336,7 +336,7 @@ public class ListTodosRequest extends Request {
         }
 
         /**
-         * <p>待办状态筛选（PENDING/COMPLETED/CANCELLED）</p>
+         * <p>The to-do status filter. Valid values: PENDING, COMPLETED, and CANCELLED.</p>
          * 
          * <strong>example:</strong>
          * <p>PENDING</p>
@@ -349,7 +349,7 @@ public class ListTodosRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数；缺省时使用调用方默认租户</p>
+         * <p>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>

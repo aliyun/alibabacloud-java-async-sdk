@@ -106,7 +106,7 @@ public class MarkTodosReadResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码；成功为200</p>
+         * <p>The business status code. A value of 200 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,10 +117,10 @@ public class MarkTodosReadResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>请求的资源不存在</p>
+         * <p>The requested resource does not exist</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -128,7 +128,7 @@ public class MarkTodosReadResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -139,7 +139,7 @@ public class MarkTodosReadResponseBody extends TeaModel {
         }
 
         /**
-         * <p>标记后剩余未读数</p>
+         * <p>The number of unread to-do items remaining after the operation.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -150,7 +150,7 @@ public class MarkTodosReadResponseBody extends TeaModel {
         }
 
         /**
-         * <p>本次标记条数</p>
+         * <p>The number of to-do items marked as read in this request.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>

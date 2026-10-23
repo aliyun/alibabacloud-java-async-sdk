@@ -69,7 +69,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>按待办ID集合批量作废；已完结/不存在不报错（幂等）</p>
+     * <p>Cancels to-do items in batches based on a set of to-do IDs. No error is reported for completed or non-existent items, ensuring idempotence.</p>
      * 
      * @param request the request parameters of BatchCancelTodos  BatchCancelTodosRequest
      * @return BatchCancelTodosResponse
@@ -90,7 +90,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>有效成员批量排产、暂停、恢复或删除工作项；单项失败不回滚其他项</p>
+     * <p>Performs batch operations to schedule, pause, resume, or delete work items for valid members. A failure in a single item does not roll back other items.</p>
      * 
      * @param request the request parameters of BatchOperateWorkItems  BatchOperateWorkItemsRequest
      * @return BatchOperateWorkItemsResponse
@@ -132,7 +132,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>作废待办；todoId 定位不存在返回 404，按 workItemId 批量尽力而为</p>
+     * <p>Cancels a to-do item. If the to-do item specified by todoId is not found, a 404 error is returned. If workItemId is used, the system makes a best-effort attempt to cancel to-do items in batches.</p>
      * 
      * @param request the request parameters of CancelTodo  CancelTodoRequest
      * @return CancelTodoResponse
@@ -153,7 +153,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>本人需 APP/VIEW，代查他人需 APP/MANAGE。</p>
+     * <p>Requires the APP/VIEW permission to check your own permissions and the APP/MANAGE permission to check permissions on behalf of others.</p>
      * 
      * @param request the request parameters of CheckAppResourcePermission  CheckAppResourcePermissionRequest
      * @return CheckAppResourcePermissionResponse
@@ -174,7 +174,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>整批逐应用鉴权后，复用 service 的常数级查询。</p>
+     * <p>After authenticating each application in the batch, reuses the constant-time query of the service.</p>
      * 
      * @param request the request parameters of CheckAppResourcePermissionsBatch  CheckAppResourcePermissionsBatchRequest
      * @return CheckAppResourcePermissionsBatchResponse
@@ -213,7 +213,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>基于鉴权用户管理个人或指定写作协作空间记忆；空间模式沿用活跃成员权限。</p>
+     * <p>Manages personal or specified writing workspace memory based on the authenticated user. The workspace mode inherits the permissions of active members.</p>
      * 
      * @param request the request parameters of ClearAutoMemory  ClearAutoMemoryRequest
      * @return ClearAutoMemoryResponse
@@ -255,7 +255,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>按工作流批量关闭待办；命中该空间该工作流 run 的全部 PENDING 待办（幂等）</p>
+     * <p>Closes to-do items in batches by workflow. This operation matches all PENDING to-do items for the specified workflow run in the workspace and is idempotent.</p>
      * 
      * @param request the request parameters of CloseWorkflowTodos  CloseWorkflowTodosRequest
      * @return CloseWorkflowTodosResponse
@@ -276,7 +276,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>统计当前用户的待办角标（待处理数与未读数）</p>
+     * <p>Retrieves the to-do badge statistics for the current user, including the number of pending and unread items.</p>
      * 
      * @param request the request parameters of CountTodos  CountTodosRequest
      * @return CountTodosResponse
@@ -369,18 +369,21 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>OpenAPI 创建语义图谱（同步快建占位记录 0.0.0）并在创建时绑定数据源。
-     *     内容编辑走个人草稿接口，正式发布走产品控制台。
-     *     业务编排：
-     *     1. 权限校验（个人 Token 校验语义管理权限；部署/系统级 Token 放行）
-     *     2. 同步落库 active 占位记录（schemaVersion 固定 0.0.0）并绑定数据源；
-     *        不写 history、不触发 runtime 重建
-     *     3. 图谱内容后续经个人草稿编辑，在控制台正式发布
-     *     错误码：
-     *     - ERR.GraphSchema.GraphNameInvalid: 图谱名称不合法
-     *     - ERR.GraphSchema.GraphNameDuplicated: 图谱名称已存在
-     *     - ERR.GraphSchema.DisplayNameInvalid: 展示名不合法或重复
-     *     - ERR.GraphDataSource.*: 数据源不存在 / 非 RDB 类不可绑定</p>
+     * <p>Creates a semantic graph through OpenAPI by synchronously creating a placeholder record with version 0.0.0 and associates a data source during creation.
+     * You can edit content through the personal draft API and officially publish it through the product console.
+     * Workflow:</p>
+     * <ol>
+     * <li>Verifies permissions. Personal tokens verify semantic management permissions. Deployment or system-level tokens are also allowed.</li>
+     * <li>Synchronously writes an active placeholder record to the database with schemaVersion fixed to 0.0.0 and associates the data source. History is not recorded, and runtime reconstruction is not triggered.</li>
+     * <li>You can subsequently edit the graph content through personal drafts and officially publish it in the console.
+     * Error codes:</li>
+     * </ol>
+     * <ul>
+     * <li>ERR.GraphSchema.GraphNameInvalid: The graph name is invalid.</li>
+     * <li>ERR.GraphSchema.GraphNameDuplicated: The graph name already exists.</li>
+     * <li>ERR.GraphSchema.DisplayNameInvalid: The display name is invalid or duplicated.</li>
+     * <li>ERR.GraphDataSource.*: The data source does not exist or is not an RDB type and cannot be associated.</li>
+     * </ul>
      * 
      * @param request the request parameters of CreateGraph  CreateGraphRequest
      * @return CreateGraphResponse
@@ -1242,7 +1245,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>创建待办（sourceType 仅接受 OPEN_API）；处理人不校验存在性，由调用方保证映射正确</p>
+     * <p>Creates a to-do item. The sourceType parameter only accepts OPEN_API. The existence of assignees is not verified, and the caller must ensure the correct mapping.</p>
      * 
      * @param request the request parameters of CreateTodo  CreateTodoRequest
      * @return CreateTodoResponse
@@ -1345,7 +1348,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>有效成员创建 Workflow 工作项并复制模板执行快照；仅接受 WORKFLOW 类型</p>
+     * <p>Creates a workflow work item for a valid member and copies the template execution snapshot. Only the WORKFLOW type is supported.</p>
      * 
      * @param request the request parameters of CreateWorkItem  CreateWorkItemRequest
      * @return CreateWorkItemResponse
@@ -1366,7 +1369,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>组合既有创建与排产，不旁路工作项权限或运行准入。</p>
+     * <p>Combines creation and scheduling without bypassing work item permissions or run admission.</p>
      * 
      * @param request the request parameters of CreateWorkflowInstance  CreateWorkflowInstanceRequest
      * @return CreateWorkflowInstanceResponse
@@ -1387,7 +1390,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>有效成员保存全新工作流模板；同名模板不会覆盖</p>
+     * <p>Creates a new workflow template. Templates with the same name are not overwritten.</p>
      * 
      * @param request the request parameters of CreateWorkflowTemplate  CreateWorkflowTemplateRequest
      * @return CreateWorkflowTemplateResponse
@@ -1408,7 +1411,28 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>逐应用通过 MANAGE 校验后，调用原有原子删除能力。</p>
+     * <p>Generates a draft version of a workflow template for editing by a storage management administrator. If the selected version is a draft, it is returned as-is (idempotent, no new version is created). If the selected version is committed, replication of its content is performed for content generation of a v(maximum version number + 1) draft. The effective version remains unchanged. You can subsequently use UpdateWorkflowTemplate and pass the returned version to save or commit the draft.</p>
+     * 
+     * @param request the request parameters of CreateWorkflowTemplateDraftVersion  CreateWorkflowTemplateDraftVersionRequest
+     * @return CreateWorkflowTemplateDraftVersionResponse
+     */
+    @Override
+    public CompletableFuture<CreateWorkflowTemplateDraftVersionResponse> createWorkflowTemplateDraftVersion(CreateWorkflowTemplateDraftVersionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateWorkflowTemplateDraftVersion").setMethod(HttpMethod.POST).setPathRegex("/openapi/createWorkflowTemplateDraftVersion").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateWorkflowTemplateDraftVersionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateWorkflowTemplateDraftVersionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Verifies MANAGE permissions for each application and then calls the original atomic deletion capability.</p>
      * 
      * @param request the request parameters of DeleteAppResourcePermissions  DeleteAppResourcePermissionsRequest
      * @return DeleteAppResourcePermissionsResponse
@@ -1511,7 +1535,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>有效成员删除非处理中工作项；级联清理待办、节点话题与运行时</p>
+     * <p>Deletes a non-processing work item by a valid member and cascades the cleanup of to-do items, node topics, and runtimes.</p>
      * 
      * @param request the request parameters of DeleteWorkItem  DeleteWorkItemRequest
      * @return DeleteWorkItemResponse
@@ -1532,7 +1556,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>有效成员物理删除工作流模板及其步骤；不执行工作项依赖校验</p>
+     * <p>Physically deletes a workflow template and its steps for valid members without performing work item dependency checks.</p>
      * 
      * @param request the request parameters of DeleteWorkflowTemplate  DeleteWorkflowTemplateRequest
      * @return DeleteWorkflowTemplateResponse
@@ -1546,6 +1570,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteWorkflowTemplateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Deletes a specified version of a workflow template as a workspace administrator. Only inactive versions can be deleted. The system denies requests to delete the active version or the last version of the template with a 409 error. After deletion, the list of remaining versions is returned.</p>
+     * 
+     * @param request the request parameters of DeleteWorkflowTemplateVersion  DeleteWorkflowTemplateVersionRequest
+     * @return DeleteWorkflowTemplateVersionResponse
+     */
+    @Override
+    public CompletableFuture<DeleteWorkflowTemplateVersionResponse> deleteWorkflowTemplateVersion(DeleteWorkflowTemplateVersionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteWorkflowTemplateVersion").setMethod(HttpMethod.POST).setPathRegex("/openapi/deleteWorkflowTemplateVersion").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteWorkflowTemplateVersionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteWorkflowTemplateVersionResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1609,7 +1654,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>有效成员导出可回流导入的精简模板定义</p>
+     * <p>Exports a simplified template definition that can be re-imported by valid members.</p>
      * 
      * @param request the request parameters of ExportWorkflowTemplate  ExportWorkflowTemplateRequest
      * @return ExportWorkflowTemplateResponse
@@ -1630,7 +1675,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>有效成员调用 LLM 生成非持久化模板草稿；消耗租户 LLM 配额</p>
+     * <p>Generates a non-persistent template draft by calling a large language model (LLM) and consumes the LLM quota of the tenant.</p>
      * 
      * @param request the request parameters of GenerateWorkflowTemplateDraft  GenerateWorkflowTemplateDraftRequest
      * @return GenerateWorkflowTemplateDraftResponse
@@ -1651,7 +1696,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>查询工作流 Agent 工作日志</p>
+     * <p>Queries the operation logs of a workflow agent.</p>
      * 
      * @param request the request parameters of GetAgentWorkLog  GetAgentWorkLogRequest
      * @return GetAgentWorkLogResponse
@@ -1882,7 +1927,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>基于鉴权用户管理个人或指定写作协作空间记忆；空间模式沿用活跃成员权限。</p>
+     * <p>Manages personal or specified collaborative writing workspace memories based on the authenticated user. The workspace mode follows the permissions of active members.</p>
      * 
      * @param request the request parameters of GetMemoryAutoExtractionSwitch  GetMemoryAutoExtractionSwitchRequest
      * @return GetMemoryAutoExtractionSwitchResponse
@@ -1903,7 +1948,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>基于鉴权用户管理个人或指定写作协作空间记忆；空间模式沿用活跃成员权限。</p>
+     * <p>Manages personal memories or memories of a specified writing workspace based on the authenticated user. The workspace mode inherits the permissions of active members.</p>
      * 
      * @param request the request parameters of GetMemoryDetail  GetMemoryDetailRequest
      * @return GetMemoryDetailResponse
@@ -1924,7 +1969,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>查询实例节点完整详情</p>
+     * <p>Queries the complete details of an instance node.</p>
      * 
      * @param request the request parameters of GetNodeDetail  GetNodeDetailRequest
      * @return GetNodeDetailResponse
@@ -2165,7 +2210,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>查询待办（无已读副作用）；todoId/workItemId/messageId 三选一，优先级 todoId &gt; workItemId &gt; messageId</p>
+     * <p>Queries to-do items without triggering the read status side effect. You must specify one of the following parameters: todoId, workItemId, or messageId. The priority order is todoId &gt; workItemId &gt; messageId.</p>
      * 
      * @param request the request parameters of GetTodo  GetTodoRequest
      * @return GetTodoResponse
@@ -2186,7 +2231,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>查询待办详情；当前调用者为 PENDING 处理人时自动填充 readAt（已读副作用）</p>
+     * <p>Queries the details of a to-do item. If the current caller is a PENDING assignee, the readAt field is automatically populated to mark the item as read.</p>
      * 
      * @param request the request parameters of GetTodoDetail  GetTodoDetailRequest
      * @return GetTodoDetailResponse
@@ -2378,7 +2423,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>有效成员读取当前空间可见工作项详情</p>
+     * <p>Retrieves the details of a work item visible to valid members in the current collaboration space.</p>
      * 
      * @param request the request parameters of GetWorkItem  GetWorkItemRequest
      * @return GetWorkItemResponse
@@ -2399,7 +2444,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>校验调用者工作项权限后 302 跳转到产物短期签名下载地址</p>
+     * <p>Redirects to the short-term signed download URL of the artifact with an HTTP 302 status code after validating the caller\&quot;s permissions for the work item.</p>
      * 
      * @param request the request parameters of GetWorkItemArtifactAccess  GetWorkItemArtifactAccessRequest
      * @return GetWorkItemArtifactAccessResponse
@@ -2420,7 +2465,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>校验调用者工作项权限后 302 跳转到输入附件短期预览地址</p>
+     * <p>Redirects to the short-term preview URL of the specified attachment with a 302 status code after validating the caller\&quot;s work item permissions.</p>
      * 
      * @param request the request parameters of GetWorkItemAttachmentAccess  GetWorkItemAttachmentAccessRequest
      * @return GetWorkItemAttachmentAccessResponse
@@ -2441,7 +2486,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>以当前成员和工作项可见性读取实例。</p>
+     * <p>Retrieves the instance based on the current member and work item visibility.</p>
      * 
      * @param request the request parameters of GetWorkflowInstance  GetWorkflowInstanceRequest
      * @return GetWorkflowInstanceResponse
@@ -2462,7 +2507,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>有效成员读取协作空间工作流模板当前配置</p>
+     * <p>Retrieves the current configuration of a workflow template in a collaboration workspace.</p>
      * 
      * @param request the request parameters of GetWorkflowTemplate  GetWorkflowTemplateRequest
      * @return GetWorkflowTemplateResponse
@@ -2510,7 +2555,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>有效成员导入可移植模板 JSON 并创建新模板；无论名称是否相同都新建</p>
+     * <p>Imports a portable template JSON and creates a new template. A new template is created regardless of whether the name is identical.</p>
      * 
      * @param request the request parameters of ImportWorkflowTemplate  ImportWorkflowTemplateRequest
      * @return ImportWorkflowTemplateResponse
@@ -2661,7 +2706,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>APP/MANAGE 授权后按安全应用前缀分页。</p>
+     * <p>Pages results by secure application prefix after APP/MANAGE authorization.</p>
      * 
      * @param request the request parameters of ListAppResourcePermissionRecords  ListAppResourcePermissionRecordsRequest
      * @return ListAppResourcePermissionRecordsResponse
@@ -2682,7 +2727,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>强制应用前缀，本人需 VIEW，代查他人需 MANAGE。</p>
+     * <p>An application prefix is required. The VIEW permission is required to query your own permissions, and the MANAGE permission is required to query permissions on behalf of others.</p>
      * 
      * @param request the request parameters of ListAppResourceUserPermissions  ListAppResourceUserPermissionsRequest
      * @return ListAppResourceUserPermissionsResponse
@@ -2957,7 +3002,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>查询实例节点列表</p>
+     * <p>Queries the node list of an instance.</p>
      * 
      * @param request the request parameters of ListInstanceNodes  ListInstanceNodesRequest
      * @return ListInstanceNodesResponse
@@ -3026,16 +3071,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <ul>
-     * <li>This API operation queries the output list of the current logged-in user.</li>
-     * <li><code>tenantId</code> is a common parameter. If not specified, the default tenant of the caller is used.</li>
-     * <li>Filtering is supported through parameters such as <code>operatingObjectName</code>, <code>itemType</code>, and <code>keyword</code>.</li>
-     * <li>Set <code>sharedOnly</code> to <code>true</code> to display only outputs with sharing enabled.</li>
-     * <li>Pagination is controlled by <code>page</code> (page number) and <code>pageSize</code> (number of items per page). By default, the first page is returned with 20 records per page.</li>
-     * <li>Results are sorted by update time in descending order by default.</li>
-     * <li>The <code>tenant_id</code> or <code>user_id</code> values passed in the request body by the caller are ignored. This information is derived only from the authenticated identity.</li>
-     * </ul>
+     * <p>If collaborationGroupId is not provided, queries the personal outputs of the current invoker. If provided, queries the outputs of the specified collaboration workspace and verifies the real-time access permissions of the current workspace members and source resources. The invoker identity and tenant permissions are determined by the authentication context.
+     * sessionId requires an exact match for a regular session, skill session, or node execution session. tags requires all labels to match simultaneously. bizId requires an exact match for the business ID of the file registration or associated workflow instance. The new conditions are combined with the existing operatingObjectName, itemType, keyword, and sharedOnly conditions using AND, and are executed before counting and paging.
+     * Labels and business IDs are derived from file registrations or workflow instance associations. Unregistered labels or business IDs are not inferred from titles. Paging defaults to page 1 with 20 items per page, up to a maximum of 100 items, sorted in descending order by update time. The response structure remains compatible with the original API.</p>
      * 
      * @param request the request parameters of ListOutputFiles  ListOutputFilesRequest
      * @return ListOutputFilesResponse
@@ -3205,7 +3243,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>分页查询当前用户的待办列表；筛选组内并集、组间交集，全不传 = 全部</p>
+     * <p>Performs a paging query on the to-do list for the current user. For paging, filters within a group use a union, and filters across groups use an intersection. If no filters are specified, all items are returned.</p>
      * 
      * @param request the request parameters of ListTodos  ListTodosRequest
      * @return ListTodosResponse
@@ -3385,7 +3423,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>有效成员列出有权访问工作项的全部历史产物</p>
+     * <p>Lists all historical artifacts of a work item accessible to authorized members.</p>
      * 
      * @param request the request parameters of ListWorkItemArtifacts  ListWorkItemArtifactsRequest
      * @return ListWorkItemArtifactsResponse
@@ -3406,7 +3444,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>有效成员分页筛选当前空间可见工作项；page/pageSize 与 nextToken/maxResults 并存，令牌优先</p>
+     * <p>Lists visible work items in the current workspace for valid members with pagination. The nextToken and maxResults parameters take precedence over the page and pageSize parameters.</p>
      * 
      * @param request the request parameters of ListWorkItems  ListWorkItemsRequest
      * @return ListWorkItemsResponse
@@ -3427,7 +3465,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>复用详情投影，避免工作项列表与实例状态混用。</p>
+     * <p>Reuses detail projections to avoid mixing work item lists with instance statuses.</p>
      * 
      * @param request the request parameters of ListWorkflowInstances  ListWorkflowInstancesRequest
      * @return ListWorkflowInstancesResponse
@@ -3448,7 +3486,28 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>有效成员分页搜索当前协作空间的有效模板；page/pageSize 与 nextToken/maxResults 并存，令牌优先</p>
+     * <p>Queries all versions of a workflow template for active members. Returns draft and submitted versions in descending order by version number, and marks the unique effective version.</p>
+     * 
+     * @param request the request parameters of ListWorkflowTemplateVersions  ListWorkflowTemplateVersionsRequest
+     * @return ListWorkflowTemplateVersionsResponse
+     */
+    @Override
+    public CompletableFuture<ListWorkflowTemplateVersionsResponse> listWorkflowTemplateVersions(ListWorkflowTemplateVersionsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListWorkflowTemplateVersions").setMethod(HttpMethod.POST).setPathRegex("/openapi/listWorkflowTemplateVersions").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListWorkflowTemplateVersionsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListWorkflowTemplateVersionsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Searches for valid templates in the current collaboration space with pagination. Supports both page/pageSize and nextToken/maxResults parameters, with token-based pagination taking precedence.</p>
      * 
      * @param request the request parameters of ListWorkflowTemplates  ListWorkflowTemplatesRequest
      * @return ListWorkflowTemplatesResponse
@@ -3469,7 +3528,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>标记当前用户的待办已读；markAllRead 优先于 todoIds，两者皆空不报错</p>
+     * <p>Marks the to-do items of the current user as read. The markAllRead parameter takes precedence over the todoIds parameter. If both parameters are empty, no error is returned.</p>
      * 
      * @param request the request parameters of MarkTodosRead  MarkTodosReadRequest
      * @return MarkTodosReadResponse
@@ -3604,7 +3663,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>有效成员暂停工作项绑定的整个 Workflow</p>
+     * <p>Pauses the entire workflow bound to a work item for active members.</p>
      * 
      * @param request the request parameters of PauseWorkItem  PauseWorkItemRequest
      * @return PauseWorkItemResponse
@@ -3778,7 +3837,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>有效成员查询工作项 feed 分组视图；服务端游标分页（cursor/pageSize）</p>
+     * <p>Queries the grouped view of the work item feed for active members with server-side cursor pagination.</p>
      * 
      * @param request the request parameters of QueryWorkItemFeed  QueryWorkItemFeedRequest
      * @return QueryWorkItemFeedResponse
@@ -3828,7 +3887,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>先检查全部应用的 MANAGE 权限，再执行一次原子批量注册。</p>
+     * <p>Checks the MANAGE permission for all applications first, and then performs an atomic batch registration.</p>
      * 
      * @param request the request parameters of RegisterAppResourcePermissions  RegisterAppResourcePermissionsRequest
      * @return RegisterAppResourcePermissionsResponse
@@ -4060,7 +4119,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>基于鉴权用户管理个人或指定写作协作空间记忆；空间模式沿用活跃成员权限。</p>
+     * <p>Manages personal memory or the memory of a specified writing workspace based on the authenticated user. Workspace mode inherits the permissions of active members.</p>
      * 
      * @param request the request parameters of ReplaceManualMemory  ReplaceManualMemoryRequest
      * @return ReplaceManualMemoryResponse
@@ -4135,7 +4194,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>重跑失败的工作流节点</p>
+     * <p>Reruns a failed workflow node.</p>
      * 
      * @param request the request parameters of RerunNodeAI  RerunNodeAIRequest
      * @return RerunNodeAIResponse
@@ -4214,7 +4273,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>有效成员解析工作项产物短期签名下载地址</p>
+     * <p>Retrieves the short-term signed download URL for a work item artifact.</p>
      * 
      * @param request the request parameters of ResolveWorkItemArtifactAccess  ResolveWorkItemArtifactAccessRequest
      * @return ResolveWorkItemArtifactAccessResponse
@@ -4235,7 +4294,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>有效成员解析工作项输入附件短期预览地址</p>
+     * <p>Retrieves the short-term preview URL for an input attachment of a valid member parsing work item.</p>
      * 
      * @param request the request parameters of ResolveWorkItemAttachmentAccess  ResolveWorkItemAttachmentAccessRequest
      * @return ResolveWorkItemAttachmentAccessResponse
@@ -4256,7 +4315,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>有效成员从当前 Plan 暂停点恢复工作项</p>
+     * <p>Resumes work items from the current plan pause point as an effective member.</p>
      * 
      * @param request the request parameters of ResumeWorkItem  ResumeWorkItemRequest
      * @return ResumeWorkItemResponse
@@ -4581,7 +4640,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>有效成员幂等排产工作项并物化固定 Plan</p>
+     * <p>Idempotently schedules work items for valid members and materializes a fixed plan.</p>
      * 
      * @param request the request parameters of ScheduleWorkItem  ScheduleWorkItemRequest
      * @return ScheduleWorkItemResponse
@@ -4602,11 +4661,11 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>仅供 Winnexo 轻量工作台使用。</li>
-     * <li>按关键词分页搜索当前平台用户可见的阿里钉群聊。</li>
-     * <li>响应不包含 DWS 原始对象。</li>
+     * <li>Available only for the Winnexo lightweight workspace.</li>
+     * <li>Searches for DingTalk group chats visible to the current platform user by keyword in a paginated manner.</li>
+     * <li>The response does not include DWS raw objects.</li>
      * </ul>
      * 
      * @param request the request parameters of SearchAliDingGroupChats  SearchAliDingGroupChatsRequest
@@ -4703,7 +4762,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>有效成员设置工作项个人置顶</p>
+     * <p>Sets the personal pin status of a work item for a valid member.</p>
      * 
      * @param request the request parameters of SetWorkItemPinned  SetWorkItemPinnedRequest
      * @return SetWorkItemPinnedResponse
@@ -4717,6 +4776,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<SetWorkItemPinnedResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The workspace administrator configures the Settings for the effective version of a workflow template. Only versions with a commit are allowed, and each template can have only one effective version. Before taking effect, the version is re-verified based on the current workspace members, digital workers, capabilities, and storage management. Existing work items use their own execute snapshots and are not affected.</p>
+     * 
+     * @param request the request parameters of SetWorkflowTemplateEffectiveVersion  SetWorkflowTemplateEffectiveVersionRequest
+     * @return SetWorkflowTemplateEffectiveVersionResponse
+     */
+    @Override
+    public CompletableFuture<SetWorkflowTemplateEffectiveVersionResponse> setWorkflowTemplateEffectiveVersion(SetWorkflowTemplateEffectiveVersionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("SetWorkflowTemplateEffectiveVersion").setMethod(HttpMethod.POST).setPathRegex("/openapi/setWorkflowTemplateEffectiveVersion").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SetWorkflowTemplateEffectiveVersionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SetWorkflowTemplateEffectiveVersionResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -4788,7 +4868,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>提交待办作答结果；本人重复提交幂等返回首次结果，他人抢先返回 409 AlreadyCompleted</p>
+     * <p>Submits the answers for a to-do item. Repeated submissions by the same user are idempotent and return the initial result. If another user completes the item first, a 409 AlreadyCompleted error is returned.</p>
      * 
      * @param request the request parameters of SubmitTodo  SubmitTodoRequest
      * @return SubmitTodoResponse
@@ -4838,7 +4918,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>终止当前工作流实例</p>
+     * <p>Terminates the current workflow instance.</p>
      * 
      * @param request the request parameters of TerminateInstance  TerminateInstanceRequest
      * @return TerminateInstanceResponse
@@ -4893,7 +4973,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>转办待办给指定用户；目标剔除操作人本人，整单原子校验</p>
+     * <p>Reassigns a to-do task to specified users. The operator is excluded from the target list, and atomic validation is performed for the entire task.</p>
      * 
      * @param request the request parameters of TransferTodo  TransferTodoRequest
      * @return TransferTodoResponse
@@ -5150,7 +5230,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>基于鉴权用户管理个人或指定写作协作空间记忆；空间模式沿用活跃成员权限。</p>
+     * <p>Manages personal memories or memories of a specified collaborative writing workspace based on the authenticated user. In workspace mode, the permissions of active members are applied.</p>
      * 
      * @param request the request parameters of UpdateMemoryAutoExtractionSwitch  UpdateMemoryAutoExtractionSwitchRequest
      * @return UpdateMemoryAutoExtractionSwitchResponse
@@ -5321,7 +5401,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>有效成员按乐观版本编辑工作项；workflowTemplateIds 未传保持绑定</p>
+     * <p>Updates a work item using optimistic locking. If workflowTemplateIds is not specified, the existing bindings are retained.</p>
      * 
      * @param request the request parameters of UpdateWorkItem  UpdateWorkItemRequest
      * @return UpdateWorkItemResponse
@@ -5342,7 +5422,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>有效成员整体覆盖更新工作流模板；最后一次保存生效</p>
+     * <p>Overwrites and updates a workflow template. The last save takes effect.</p>
      * 
      * @param request the request parameters of UpdateWorkflowTemplate  UpdateWorkflowTemplateRequest
      * @return UpdateWorkflowTemplateResponse

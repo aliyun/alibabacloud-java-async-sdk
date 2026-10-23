@@ -89,7 +89,7 @@ public class DeleteWorkItemRequest extends Request {
         } 
 
         /**
-         * <p>协作空间 ID</p>
+         * <p>The ID of the collaboration workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class DeleteWorkItemRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数；缺省时使用调用方默认租户</p>
+         * <p>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -114,7 +114,7 @@ public class DeleteWorkItemRequest extends Request {
         }
 
         /**
-         * <p>工作项 ID</p>
+         * <p>The ID of the work item.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

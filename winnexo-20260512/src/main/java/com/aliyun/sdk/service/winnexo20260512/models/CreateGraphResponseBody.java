@@ -132,7 +132,7 @@ public class CreateGraphResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -143,7 +143,7 @@ public class CreateGraphResponseBody extends TeaModel {
         }
 
         /**
-         * <p>创建时绑定的数据源 ID</p>
+         * <p>The data source ID.</p>
          * 
          * <strong>example:</strong>
          * <p>198001</p>
@@ -154,7 +154,7 @@ public class CreateGraphResponseBody extends TeaModel {
         }
 
         /**
-         * <p>图谱名称</p>
+         * <p>The graph name.</p>
          * 
          * <strong>example:</strong>
          * <p>crm_graph</p>
@@ -165,7 +165,7 @@ public class CreateGraphResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The status code description.</p>
          * 
          * <strong>example:</strong>
          * <p>ok</p>
@@ -176,7 +176,7 @@ public class CreateGraphResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪 ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -187,7 +187,7 @@ public class CreateGraphResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Schema 版本；快建路径固定 0.0.0，正式版本经控制台发布产生</p>
+         * <p>The version.</p>
          * 
          * <strong>example:</strong>
          * <p>0.0.0</p>
@@ -198,7 +198,12 @@ public class CreateGraphResponseBody extends TeaModel {
         }
 
         /**
-         * <p>同步状态，快建成功为 SUCCESS</p>
+         * <p>The OSS synchronization and extraction status. Valid values:</p>
+         * <ul>
+         * <li>-1: Not set (default).</li>
+         * <li>0: Disabled.</li>
+         * <li>1: Enabled.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>

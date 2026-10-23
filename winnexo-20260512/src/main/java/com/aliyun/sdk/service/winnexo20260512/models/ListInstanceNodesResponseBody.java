@@ -119,7 +119,7 @@ public class ListInstanceNodesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码；成功为200</p>
+         * <p>The business status code. A value of 200 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -130,7 +130,7 @@ public class ListInstanceNodesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>物理实例ID</p>
+         * <p>The physical instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>plan_example</p>
@@ -141,10 +141,10 @@ public class ListInstanceNodesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述</p>
+         * <p>The error description.</p>
          * 
          * <strong>example:</strong>
-         * <p>请求的资源不存在</p>
+         * <p>The requested resource does not exist</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -152,7 +152,7 @@ public class ListInstanceNodesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>按拓扑顺序排列的可见节点，数量由实际动态图决定</p>
+         * <p>The visible nodes arranged in topological order. The number of nodes is determined by the actual dynamic graph.</p>
          * 
          * <strong>example:</strong>
          * <p>[]</p>
@@ -163,7 +163,7 @@ public class ListInstanceNodesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪ID</p>
+         * <p>The request tracking ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -174,7 +174,7 @@ public class ListInstanceNodesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>状态版本</p>
+         * <p>The state version.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -386,10 +386,10 @@ public class ListInstanceNodesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>节点结果结论，无结论时为空</p>
+             * <p>The conclusion of the node result. This field is empty if there is no conclusion.</p>
              * 
              * <strong>example:</strong>
-             * <p>分析完成</p>
+             * <p>Analysis completed</p>
              */
             public Builder conclusion(String conclusion) {
                 this.conclusion = conclusion;
@@ -397,7 +397,7 @@ public class ListInstanceNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>从首次运行到终态的整秒数，缺时间时为空</p>
+             * <p>The total number of seconds from the first run to the desired state. This field is empty if the time is missing.</p>
              * 
              * <strong>example:</strong>
              * <p>123</p>
@@ -408,7 +408,7 @@ public class ListInstanceNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>节点首次运行时间，历史或未运行节点为空</p>
+             * <p>The time when the node was first run. This field is empty for historical or unrun nodes.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-10-14T08:00:00Z</p>
@@ -419,7 +419,7 @@ public class ListInstanceNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>节点实际进入终态的时间，未结束时为空</p>
+             * <p>The time when the node actually entered the desired state. This field is empty if the node has not finished.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-10-14T08:02:03Z</p>
@@ -430,10 +430,10 @@ public class ListInstanceNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>节点负责人展示名称，未知时为空</p>
+             * <p>The display name of the node assignee. This field is empty if the assignee is unknown.</p>
              * 
              * <strong>example:</strong>
-             * <p>客户成功经理助理</p>
+             * <p>Assistant Customer Success Manager (CSM)</p>
              */
             public Builder handler(String handler) {
                 this.handler = handler;
@@ -441,7 +441,7 @@ public class ListInstanceNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>节点在工作流图中的泳道位置</p>
+             * <p>The lane position of the node in the workflow graph.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -452,7 +452,7 @@ public class ListInstanceNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>所属节点key（nodeKey），不是会话ID</p>
+             * <p>The key of the node (nodeKey). This is not the session ID.</p>
              * 
              * <strong>example:</strong>
              * <p>query.amount</p>
@@ -463,10 +463,10 @@ public class ListInstanceNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>节点展示名称</p>
+             * <p>The display name of the node.</p>
              * 
              * <strong>example:</strong>
-             * <p>查询签单金额</p>
+             * <p>Query signed contract amount</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -474,7 +474,7 @@ public class ListInstanceNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>节点在返回拓扑列表中的展示序号，从1开始</p>
+             * <p>The display sequence number of the node in the returned topology list, starting from 1.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -485,7 +485,7 @@ public class ListInstanceNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>实际节点类型，例如AGENT或HUMAN</p>
+             * <p>The actual node type, such as AGENT or HUMAN.</p>
              * 
              * <strong>example:</strong>
              * <p>AGENT</p>
@@ -496,7 +496,7 @@ public class ListInstanceNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>节点在工作流图中的层级，从0开始</p>
+             * <p>The level of the node in the workflow graph, starting from 0.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -507,7 +507,7 @@ public class ListInstanceNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>原始节点运行状态，例如READY、RUNNING、WAITING、SUCCEEDED或FAILED</p>
+             * <p>The original running status of the node, such as READY, RUNNING, WAITING, SUCCEEDED, or FAILED.</p>
              * 
              * <strong>example:</strong>
              * <p>RUNNING</p>
@@ -518,7 +518,7 @@ public class ListInstanceNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>等待原因：HUMAN_INPUT、HUMAN_STEP、REVIEW、MANUAL_PAUSE或UNBLOCK；未等待时为空</p>
+             * <p>The reason for waiting, such as HUMAN_INPUT, HUMAN_STEP, REVIEW, MANUAL_PAUSE, or UNBLOCK. This field is empty if the node is not waiting.</p>
              * 
              * <strong>example:</strong>
              * <p>REVIEW</p>

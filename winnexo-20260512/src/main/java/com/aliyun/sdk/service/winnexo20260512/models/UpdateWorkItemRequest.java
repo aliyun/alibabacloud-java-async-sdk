@@ -231,7 +231,7 @@ public class UpdateWorkItemRequest extends Request {
         } 
 
         /**
-         * <p>验收标准</p>
+         * <p>The acceptance criteria.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -243,7 +243,7 @@ public class UpdateWorkItemRequest extends Request {
         }
 
         /**
-         * <p>输入附件稳定引用</p>
+         * <p>The stable references for the attachments.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -256,7 +256,7 @@ public class UpdateWorkItemRequest extends Request {
         }
 
         /**
-         * <p>协作空间 ID</p>
+         * <p>The ID of the collaboration space.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -269,7 +269,7 @@ public class UpdateWorkItemRequest extends Request {
         }
 
         /**
-         * <p>协作人用户ID列表</p>
+         * <p>The list of user IDs of the collaborators.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -282,7 +282,7 @@ public class UpdateWorkItemRequest extends Request {
         }
 
         /**
-         * <p>关联会话ID</p>
+         * <p>The ID of the associated conversation.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -294,7 +294,7 @@ public class UpdateWorkItemRequest extends Request {
         }
 
         /**
-         * <p>工作项描述</p>
+         * <p>The description of the work item.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -306,7 +306,7 @@ public class UpdateWorkItemRequest extends Request {
         }
 
         /**
-         * <p>乐观版本号，取上次响应的 version</p>
+         * <p>The optimistic version number. Obtain this value from the version field in the previous response.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -319,7 +319,7 @@ public class UpdateWorkItemRequest extends Request {
         }
 
         /**
-         * <p>负责人用户ID；缺省为调用者本人</p>
+         * <p>The user ID of the owner. If not specified, the user ID of the caller is used.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -331,7 +331,7 @@ public class UpdateWorkItemRequest extends Request {
         }
 
         /**
-         * <p>排产优先级</p>
+         * <p>The scheduling priority.</p>
          * 
          * <strong>example:</strong>
          * <p>HIGH</p>
@@ -343,7 +343,7 @@ public class UpdateWorkItemRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数；缺省时使用调用方默认租户</p>
+         * <p>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -355,7 +355,7 @@ public class UpdateWorkItemRequest extends Request {
         }
 
         /**
-         * <p>工作项标题</p>
+         * <p>The title of the work item.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -368,7 +368,7 @@ public class UpdateWorkItemRequest extends Request {
         }
 
         /**
-         * <p>工作项 ID</p>
+         * <p>The ID of the work item.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -381,7 +381,7 @@ public class UpdateWorkItemRequest extends Request {
         }
 
         /**
-         * <p>绑定的工作流模板ID列表；未传保持既有绑定，空数组清空</p>
+         * <p>The list of bound workflow template IDs. If not specified, the existing bindings are retained. If an empty array is provided, the bindings are cleared.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -507,7 +507,7 @@ public class UpdateWorkItemRequest extends Request {
             } 
 
             /**
-             * <p>内容类型</p>
+             * <p>The content type.</p>
              * 
              * <strong>example:</strong>
              * <p>application/pdf</p>
@@ -518,7 +518,7 @@ public class UpdateWorkItemRequest extends Request {
             }
 
             /**
-             * <p>附件引用地址</p>
+             * <p>The reference URL of the attachment.</p>
              * 
              * <strong>example:</strong>
              * <p>example</p>
@@ -529,7 +529,7 @@ public class UpdateWorkItemRequest extends Request {
             }
 
             /**
-             * <p>附件资源ID</p>
+             * <p>The resource ID of the attachment.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -541,7 +541,7 @@ public class UpdateWorkItemRequest extends Request {
             }
 
             /**
-             * <p>附件资源类型</p>
+             * <p>The resource type of the attachment.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -553,7 +553,7 @@ public class UpdateWorkItemRequest extends Request {
             }
 
             /**
-             * <p>附件大小(字节)，上限 20MB</p>
+             * <p>The size of the attachment in bytes. The maximum size is 20 MB.</p>
              * 
              * <strong>example:</strong>
              * <p>1024</p>
@@ -564,7 +564,7 @@ public class UpdateWorkItemRequest extends Request {
             }
 
             /**
-             * <p>附件标题</p>
+             * <p>The title of the attachment.</p>
              * 
              * <strong>example:</strong>
              * <p>example</p>

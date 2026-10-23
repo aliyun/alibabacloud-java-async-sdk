@@ -132,7 +132,7 @@ public class CreateTodoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>处理人列表</p>
+         * <p>The list of assignees.</p>
          */
         public Builder assignees(java.util.List<Assignees> assignees) {
             this.assignees = assignees;
@@ -140,7 +140,7 @@ public class CreateTodoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>业务状态码；成功为200</p>
+         * <p>The business status code. A value of 200 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -151,7 +151,7 @@ public class CreateTodoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>创建时间（ISO8601 带时区；与列表/详情的北京时间格式串不同）</p>
+         * <p>The creation time in ISO 8601 format with a time zone. This format differs from the UTC+8 format string used in the list and details.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-12T15:00:00+08:00</p>
@@ -162,10 +162,10 @@ public class CreateTodoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述</p>
+         * <p>The error description.</p>
          * 
          * <strong>example:</strong>
-         * <p>请求的资源不存在</p>
+         * <p>The requested resource does not exist</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -173,7 +173,7 @@ public class CreateTodoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪ID</p>
+         * <p>The request tracking ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -184,7 +184,7 @@ public class CreateTodoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>待办状态</p>
+         * <p>The status of the to-do item.</p>
          * 
          * <strong>example:</strong>
          * <p>PENDING</p>
@@ -195,7 +195,7 @@ public class CreateTodoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>新建待办ID</p>
+         * <p>The ID of the created to-do item.</p>
          * 
          * <strong>example:</strong>
          * <p>todo_abc123</p>
@@ -264,7 +264,7 @@ public class CreateTodoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>处理人用户ID</p>
+             * <p>The user ID of the assignee.</p>
              * 
              * <strong>example:</strong>
              * <p>43</p>
@@ -275,7 +275,7 @@ public class CreateTodoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>处理人行状态</p>
+             * <p>The processing status of the assignee.</p>
              * 
              * <strong>example:</strong>
              * <p>PENDING</p>
