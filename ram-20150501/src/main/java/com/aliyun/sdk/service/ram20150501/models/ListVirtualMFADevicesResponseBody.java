@@ -78,7 +78,7 @@ public class ListVirtualMFADevicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the MFA devices.</p>
+         * VirtualMFADevices.
          */
         public Builder virtualMFADevices(VirtualMFADevices virtualMFADevices) {
             this.virtualMFADevices = virtualMFADevices;
@@ -157,10 +157,7 @@ public class ListVirtualMFADevicesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The display name of the RAM user.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>zhangq****</p>
+             * DisplayName.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -168,10 +165,7 @@ public class ListVirtualMFADevicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique ID of the RAM user.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>122748924538****</p>
+             * UserId.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -179,10 +173,7 @@ public class ListVirtualMFADevicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the RAM user.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>zhangq****</p>
+             * UserName.
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -262,10 +253,7 @@ public class ListVirtualMFADevicesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the MFA device was enabled.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2015-02-18T17:22:08Z</p>
+             * ActivateDate.
              */
             public Builder activateDate(String activateDate) {
                 this.activateDate = activateDate;
@@ -273,10 +261,7 @@ public class ListVirtualMFADevicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The serial number of the MFA device.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>acs:ram::123456789012****:mfa/device002</p>
+             * SerialNumber.
              */
             public Builder serialNumber(String serialNumber) {
                 this.serialNumber = serialNumber;
@@ -284,7 +269,7 @@ public class ListVirtualMFADevicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The basic information about the Resource Access Management (RAM) user to which the MFA device is bound.</p>
+             * User.
              */
             public Builder user(User user) {
                 this.user = user;

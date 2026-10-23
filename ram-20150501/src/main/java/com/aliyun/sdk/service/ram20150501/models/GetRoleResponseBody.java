@@ -78,7 +78,7 @@ public class GetRoleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the RAM role.</p>
+         * <p>The role information.</p>
          */
         public Builder role(Role role) {
             this.role = role;
@@ -144,7 +144,10 @@ public class GetRoleResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateDate.
+             * <p>The time when the deletion task was created. The time is in UTC in the <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-10-23T12:33:18Z</p>
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -152,7 +155,10 @@ public class GetRoleResponseBody extends TeaModel {
             }
 
             /**
-             * DeletionTaskId.
+             * <p>The ID of the deletion task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>task/acs-service-role/sas.aliyuncs.com/AliyunServiceRoleForSas/20843430-bb43-44fe-a7ff-02ab09183436</p>
              */
             public Builder deletionTaskId(String deletionTaskId) {
                 this.deletionTaskId = deletionTaskId;
@@ -349,7 +355,10 @@ public class GetRoleResponseBody extends TeaModel {
             } 
 
             /**
-             * AllowConsoleLogin.
+             * <p>Indicates whether console logon is allowed for the RAM role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder allowConsoleLogin(Boolean allowConsoleLogin) {
                 this.allowConsoleLogin = allowConsoleLogin;
@@ -357,7 +366,7 @@ public class GetRoleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role.</p>
+             * <p>The resource descriptor of the role.</p>
              * 
              * <strong>example:</strong>
              * <p>acs:ram::123456789012****:role/ECSAdmin</p>
@@ -368,7 +377,7 @@ public class GetRoleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The policy that specifies the trusted entity to assume the RAM role.</p>
+             * <p>The access policy that specifies the permission to assume the role.</p>
              * 
              * <strong>example:</strong>
              * <p>{ &quot;Statement&quot;: [ { &quot;Action&quot;: &quot;sts:AssumeRole&quot;, &quot;Effect&quot;: &quot;Allow&quot;, &quot;Principal&quot;: { &quot;RAM&quot;: &quot;acs:ram::123456789012****:root&quot; } } ], &quot;Version&quot;: &quot;1&quot; }</p>
@@ -379,7 +388,7 @@ public class GetRoleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the RAM role was created.</p>
+             * <p>The time when the role was created. The time is in UTC in the <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
              * 
              * <strong>example:</strong>
              * <p>2015-01-23T12:33:18Z</p>
@@ -390,10 +399,10 @@ public class GetRoleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the RAM role.</p>
+             * <p>The description of the role.</p>
              * 
              * <strong>example:</strong>
-             * <p>ECS administrator</p>
+             * <p>ECS management role</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -401,7 +410,10 @@ public class GetRoleResponseBody extends TeaModel {
             }
 
             /**
-             * IsServiceLinkedRole.
+             * <p>Indicates whether the role is a service-linked role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isServiceLinkedRole(Boolean isServiceLinkedRole) {
                 this.isServiceLinkedRole = isServiceLinkedRole;
@@ -409,7 +421,7 @@ public class GetRoleResponseBody extends TeaModel {
             }
 
             /**
-             * LatestDeletionTask.
+             * <p>The information about the most recent deletion task.</p>
              */
             public Builder latestDeletionTask(LatestDeletionTask latestDeletionTask) {
                 this.latestDeletionTask = latestDeletionTask;
@@ -417,7 +429,7 @@ public class GetRoleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum session duration of the RAM role.</p>
+             * <p>The maximum session duration of the role.</p>
              * 
              * <strong>example:</strong>
              * <p>3600</p>
@@ -428,7 +440,7 @@ public class GetRoleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the RAM role.</p>
+             * <p>The ID of the role.</p>
              * 
              * <strong>example:</strong>
              * <p>901234567890****</p>
@@ -439,7 +451,7 @@ public class GetRoleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the RAM role.</p>
+             * <p>The name of the role.</p>
              * 
              * <strong>example:</strong>
              * <p>ECSAdmin</p>
@@ -450,7 +462,10 @@ public class GetRoleResponseBody extends TeaModel {
             }
 
             /**
-             * RolePrincipalName.
+             * <p>The name of the role with the domain name suffix.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:ECSAdmin@role.123456.onaliyunservice.com">ECSAdmin@role.123456.onaliyunservice.com</a></p>
              */
             public Builder rolePrincipalName(String rolePrincipalName) {
                 this.rolePrincipalName = rolePrincipalName;
@@ -458,7 +473,7 @@ public class GetRoleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the RAM role was modified.</p>
+             * <p>The time when the role was last updated. The time is in UTC in the <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
              * 
              * <strong>example:</strong>
              * <p>2015-01-23T12:33:18Z</p>

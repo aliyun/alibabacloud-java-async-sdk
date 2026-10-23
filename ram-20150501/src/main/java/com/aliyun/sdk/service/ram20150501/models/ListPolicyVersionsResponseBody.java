@@ -67,7 +67,7 @@ public class ListPolicyVersionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the policy versions.</p>
+         * PolicyVersions.
          */
         public Builder policyVersions(PolicyVersions policyVersions) {
             this.policyVersions = policyVersions;
@@ -170,10 +170,7 @@ public class ListPolicyVersionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the version was created.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2015-02-26T01:25:52Z</p>
+             * CreateDate.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -181,10 +178,7 @@ public class ListPolicyVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the policy version is the default version.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * IsDefaultVersion.
              */
             public Builder isDefaultVersion(Boolean isDefaultVersion) {
                 this.isDefaultVersion = isDefaultVersion;
@@ -192,10 +186,7 @@ public class ListPolicyVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The document of the policy.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>{ &quot;Statement&quot;: [{ &quot;Action&quot;: [&quot;oss:<em>&quot;], &quot;Effect&quot;: &quot;Allow&quot;, &quot;Resource&quot;: [&quot;acs:oss:</em>:<em>:</em>&quot;]}], &quot;Version&quot;: &quot;1&quot;}</p>
+             * PolicyDocument.
              */
             public Builder policyDocument(String policyDocument) {
                 this.policyDocument = policyDocument;
@@ -203,10 +194,7 @@ public class ListPolicyVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the policy version.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>v3</p>
+             * VersionId.
              */
             public Builder versionId(String versionId) {
                 this.versionId = versionId;

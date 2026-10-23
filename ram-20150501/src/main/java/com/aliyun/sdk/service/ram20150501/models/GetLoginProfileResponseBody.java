@@ -67,7 +67,7 @@ public class GetLoginProfileResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The logon configurations of the RAM user.</p>
+         * <p>The logon configuration information.</p>
          */
         public Builder loginProfile(LoginProfile loginProfile) {
             this.loginProfile = loginProfile;
@@ -170,7 +170,7 @@ public class GetLoginProfileResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation time.</p>
+             * <p>The creation time in UTC. Format: <code>YYYY-MM-DDThh:mm:ssZ</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>2015-01-23T12:33:18Z</p>
@@ -181,7 +181,7 @@ public class GetLoginProfileResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether a multi-factor authentication (MFA) device must be bound to the RAM user.</p>
+             * <p>Indicates whether the user must bind a multi-factor authentication device.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -192,7 +192,7 @@ public class GetLoginProfileResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the RAM user must change the password upon logon.</p>
+             * <p>Indicates whether the user must reset the password at the next logon.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -203,7 +203,7 @@ public class GetLoginProfileResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the RAM user.</p>
+             * <p>The username.</p>
              * 
              * <strong>example:</strong>
              * <p>zhangq****</p>

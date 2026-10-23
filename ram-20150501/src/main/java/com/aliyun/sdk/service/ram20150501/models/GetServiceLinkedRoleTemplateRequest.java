@@ -59,7 +59,11 @@ public class GetServiceLinkedRoleTemplateRequest extends Request {
         } 
 
         /**
-         * ServiceName.
+         * <p>The cloud service name.</p>
+         * <p>For more information, see the <strong>Cloud service identity</strong> column in <a href="https://help.aliyun.com/document_detail/461722.html">Cloud services that support service-linked roles</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>polardb.aliyuncs.com</p>
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);

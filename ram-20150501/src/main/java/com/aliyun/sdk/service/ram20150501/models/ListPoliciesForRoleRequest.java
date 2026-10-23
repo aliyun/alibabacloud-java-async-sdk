@@ -59,7 +59,7 @@ public class ListPoliciesForRoleRequest extends Request {
         } 
 
         /**
-         * <p>The name of the RAM role.</p>
+         * <p>The name of the role.</p>
          * 
          * <strong>example:</strong>
          * <p>AdminRole</p>

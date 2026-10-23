@@ -101,7 +101,7 @@ public class DetachPolicyFromUserRequest extends Request {
         } 
 
         /**
-         * <p>The name of the policy.</p>
+         * <p>The name of the access policy.</p>
          * 
          * <strong>example:</strong>
          * <p>OSS-Administrator</p>
@@ -113,7 +113,7 @@ public class DetachPolicyFromUserRequest extends Request {
         }
 
         /**
-         * <p>The type of the policy. Valid values: <code>System</code> and <code>Custom</code>.</p>
+         * <p>The type of the access policy. Valid values: <code>System</code> or <code>Custom</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>Custom</p>
@@ -125,7 +125,10 @@ public class DetachPolicyFromUserRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-9gLOoK****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -134,7 +137,7 @@ public class DetachPolicyFromUserRequest extends Request {
         }
 
         /**
-         * <p>The name of the RAM user.</p>
+         * <p>The username.</p>
          * 
          * <strong>example:</strong>
          * <p>zhangq****</p>

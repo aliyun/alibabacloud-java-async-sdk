@@ -103,7 +103,7 @@ public class UpdateGroupRequest extends Request {
          * <p>The new description must be 1 to 128 characters in length.</p>
          * 
          * <strong>example:</strong>
-         * <p>NewDev-Team</p>
+         * <p>Development team</p>
          */
         public Builder newComments(String newComments) {
             this.putQueryParameter("NewComments", newComments);

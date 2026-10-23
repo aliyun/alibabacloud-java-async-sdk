@@ -73,7 +73,10 @@ public class GetAccessKeyLastUsedRequest extends Request {
         } 
 
         /**
-         * UserAccessKeyId.
+         * <p>The ID of the AccessKey pair.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LTAI4GFTgcR8m8cZQDTH****</p>
          */
         public Builder userAccessKeyId(String userAccessKeyId) {
             this.putQueryParameter("UserAccessKeyId", userAccessKeyId);
@@ -82,7 +85,10 @@ public class GetAccessKeyLastUsedRequest extends Request {
         }
 
         /**
-         * UserName.
+         * <p>The name of the RAM user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);

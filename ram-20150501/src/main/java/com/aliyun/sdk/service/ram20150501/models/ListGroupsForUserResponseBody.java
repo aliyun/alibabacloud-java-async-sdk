@@ -67,7 +67,7 @@ public class ListGroupsForUserResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the RAM user groups.</p>
+         * Groups.
          */
         public Builder groups(Groups groups) {
             this.groups = groups;
@@ -75,7 +75,7 @@ public class ListGroupsForUserResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>DA772B52-BF9F-54CA-AC77-AA7A2DA89D46</p>
@@ -170,10 +170,7 @@ public class ListGroupsForUserResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Dev-Team</p>
+             * Comments.
              */
             public Builder comments(String comments) {
                 this.comments = comments;
@@ -181,10 +178,7 @@ public class ListGroupsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the RAM user group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>g-zYtroLrgbZR1****</p>
+             * GroupId.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -192,10 +186,7 @@ public class ListGroupsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the RAM user group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Dev-Team</p>
+             * GroupName.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -203,10 +194,7 @@ public class ListGroupsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the RAM user was added to the RAM user group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2015-01-23T12:33:18Z</p>
+             * JoinDate.
              */
             public Builder joinDate(String joinDate) {
                 this.joinDate = joinDate;

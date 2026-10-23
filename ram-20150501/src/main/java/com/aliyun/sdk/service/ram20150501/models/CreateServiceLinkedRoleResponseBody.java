@@ -67,7 +67,10 @@ public class CreateServiceLinkedRoleResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FE58D7CF-03BC-432A-B42D-BC3390C8C2E1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class CreateServiceLinkedRoleResponseBody extends TeaModel {
         }
 
         /**
-         * Role.
+         * <p>The role information.</p>
          */
         public Builder role(Role role) {
             this.role = role;
@@ -206,7 +209,10 @@ public class CreateServiceLinkedRoleResponseBody extends TeaModel {
             } 
 
             /**
-             * Arn.
+             * <p>The resource descriptor of the role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ram::177242285274****:role/aliyunserviceroleforpolardb</p>
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -214,7 +220,10 @@ public class CreateServiceLinkedRoleResponseBody extends TeaModel {
             }
 
             /**
-             * AssumeRolePolicyDocument.
+             * <p>The trust policy document of the role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;Statement\&quot;:[{\&quot;Action\&quot;:\&quot;sts:AssumeRole\&quot;,\&quot;Effect\&quot;:\&quot;Allow\&quot;,\&quot;Principal\&quot;:{\&quot;Service\&quot;:[\&quot;polardb.aliyuncs.com\&quot;]}}],\&quot;Version\&quot;:\&quot;1\&quot;}</p>
              */
             public Builder assumeRolePolicyDocument(String assumeRolePolicyDocument) {
                 this.assumeRolePolicyDocument = assumeRolePolicyDocument;
@@ -222,7 +231,10 @@ public class CreateServiceLinkedRoleResponseBody extends TeaModel {
             }
 
             /**
-             * CreateDate.
+             * <p>The time when the role was created (UTC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-06-30T08:14:16Z</p>
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -230,7 +242,10 @@ public class CreateServiceLinkedRoleResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Service Linked Role for PolarDB. PolarDB will use this role to access your resources in other services.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -238,7 +253,14 @@ public class CreateServiceLinkedRoleResponseBody extends TeaModel {
             }
 
             /**
-             * IsServiceLinkedRole.
+             * <p>Indicates whether the role is a service-linked role. Valid values:</p>
+             * <ul>
+             * <li>true: The role is a service-linked role.</li>
+             * <li>false: The role is not a service-linked role.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isServiceLinkedRole(Boolean isServiceLinkedRole) {
                 this.isServiceLinkedRole = isServiceLinkedRole;
@@ -246,7 +268,10 @@ public class CreateServiceLinkedRoleResponseBody extends TeaModel {
             }
 
             /**
-             * RoleId.
+             * <p>The role ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32833240981067****</p>
              */
             public Builder roleId(String roleId) {
                 this.roleId = roleId;
@@ -254,7 +279,10 @@ public class CreateServiceLinkedRoleResponseBody extends TeaModel {
             }
 
             /**
-             * RoleName.
+             * <p>The role name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AliyunServiceRoleForPolarDB</p>
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;

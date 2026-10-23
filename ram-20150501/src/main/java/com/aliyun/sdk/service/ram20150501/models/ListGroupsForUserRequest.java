@@ -59,7 +59,7 @@ public class ListGroupsForUserRequest extends Request {
         } 
 
         /**
-         * <p>The name of the RAM user.</p>
+         * <p>The username of the Resource Access Management (RAM) user.</p>
          * 
          * <strong>example:</strong>
          * <p>Alice</p>

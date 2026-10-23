@@ -80,7 +80,7 @@ public class GetPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the default policy version.</p>
+         * <p>The default version of the access policy.</p>
          */
         public Builder defaultPolicyVersion(DefaultPolicyVersion defaultPolicyVersion) {
             this.defaultPolicyVersion = defaultPolicyVersion;
@@ -88,7 +88,7 @@ public class GetPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The basic information about the policy.</p>
+         * <p>The basic information of the access policy.</p>
          */
         public Builder policy(Policy policy) {
             this.policy = policy;
@@ -191,7 +191,7 @@ public class GetPolicyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the default policy version was created.</p>
+             * <p>The time when the policy was created. The time is in UTC. Format: <code>YYYY-MM-DDThh:mm:ssZ</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>2015-01-23T12:33:18Z</p>
@@ -202,7 +202,7 @@ public class GetPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>An attribute in the <code>DefaultPolicyVersion</code> parameter. The value of the <code>IsDefaultVersion</code> parameter is <code>true</code>.</p>
+             * <p>The data structure returned by <code>DefaultPolicyVersion</code> is always the default version. Therefore, the value of <code>IsDefaultVersion</code> is always <code>true</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -213,7 +213,7 @@ public class GetPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The document of the policy.</p>
+             * <p>The policy document of the access policy.</p>
              * 
              * <strong>example:</strong>
              * <p>{ &quot;Statement&quot;: [{ &quot;Action&quot;: [&quot;oss:<em>&quot;], &quot;Effect&quot;: &quot;Allow&quot;, &quot;Resource&quot;: [&quot;acs:oss:</em>:<em>:</em>&quot;]}], &quot;Version&quot;: &quot;1&quot;}</p>
@@ -224,7 +224,7 @@ public class GetPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the default policy version.</p>
+             * <p>The version of the access policy.</p>
              * 
              * <strong>example:</strong>
              * <p>v1</p>
@@ -372,7 +372,7 @@ public class GetPolicyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of references to the policy.</p>
+             * <p>The number of references.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -383,7 +383,7 @@ public class GetPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the policy was created.</p>
+             * <p>The time when the policy was created. The time is in UTC. Format: <code>YYYY-MM-DDThh:mm:ssZ</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>2015-01-23T12:33:18Z</p>
@@ -394,7 +394,7 @@ public class GetPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The default version of the policy.</p>
+             * <p>The default version.</p>
              * 
              * <strong>example:</strong>
              * <p>v1</p>
@@ -405,10 +405,10 @@ public class GetPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the policy.</p>
+             * <p>The description of the access policy.</p>
              * 
              * <strong>example:</strong>
-             * <p>OSS administrator</p>
+             * <p>OSS administrator permissions</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -416,7 +416,7 @@ public class GetPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This parameter is deprecated.</p>
+             * <p>Deprecated.</p>
              * 
              * <strong>example:</strong>
              * <p>N/A</p>
@@ -427,7 +427,7 @@ public class GetPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the policy.</p>
+             * <p>The name of the access policy.</p>
              * 
              * <strong>example:</strong>
              * <p>OSS-Administrator</p>
@@ -438,7 +438,7 @@ public class GetPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the policy.</p>
+             * <p>The type of the access policy.</p>
              * 
              * <strong>example:</strong>
              * <p>Custom</p>
@@ -449,7 +449,7 @@ public class GetPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the policy was modified.</p>
+             * <p>The time when the policy was last modified. The time is in UTC. Format: <code>YYYY-MM-DDThh:mm:ssZ</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>2015-01-23T12:33:18Z</p>

@@ -104,7 +104,7 @@ public class ListPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The marker. This parameter is returned only if the value of <code>IsTruncated</code> is <code>true</code>. If the parameter is returned, you can call this operation again and set <code>Marker</code> to obtain the truncated part.``</p>
+         * <p>This parameter is returned only when <code>IsTruncated</code> is <code>true</code>. If <code>true</code> is returned, call this operation again and use <code>Marker</code> to obtain the truncated content.</p>
          * 
          * <strong>example:</strong>
          * <p>EXAMPLE</p>
@@ -115,7 +115,7 @@ public class ListPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the policies.</p>
+         * Policies.
          */
         public Builder policies(Policies policies) {
             this.policies = policies;
@@ -192,10 +192,7 @@ public class ListPoliciesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The key of the tag.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>owner</p>
+             * TagKey.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -203,10 +200,7 @@ public class ListPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the tag.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>alice</p>
+             * TagValue.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -405,10 +399,7 @@ public class ListPoliciesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of references to the policy.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3</p>
+             * AttachmentCount.
              */
             public Builder attachmentCount(Integer attachmentCount) {
                 this.attachmentCount = attachmentCount;
@@ -416,10 +407,7 @@ public class ListPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the policy was created.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2015-01-23T12:33:18Z</p>
+             * CreateDate.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -427,10 +415,7 @@ public class ListPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The default version of the policy.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>v1</p>
+             * DefaultVersion.
              */
             public Builder defaultVersion(String defaultVersion) {
                 this.defaultVersion = defaultVersion;
@@ -438,10 +423,7 @@ public class ListPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the policy.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>OSS administrator</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -449,10 +431,7 @@ public class ListPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the policy.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>OSS-Administrator</p>
+             * PolicyName.
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -460,10 +439,7 @@ public class ListPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the policy.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>System</p>
+             * PolicyType.
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -471,7 +447,7 @@ public class ListPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags.</p>
+             * Tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -479,10 +455,7 @@ public class ListPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the policy was modified.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2015-01-23T12:33:18Z</p>
+             * UpdateDate.
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;

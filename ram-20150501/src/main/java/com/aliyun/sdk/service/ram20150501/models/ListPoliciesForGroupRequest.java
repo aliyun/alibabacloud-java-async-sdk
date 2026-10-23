@@ -59,7 +59,7 @@ public class ListPoliciesForGroupRequest extends Request {
         } 
 
         /**
-         * <p>The name of the RAM user group.</p>
+         * <p>The name of the user group.</p>
          * 
          * <strong>example:</strong>
          * <p>dev</p>

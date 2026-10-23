@@ -52,7 +52,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> This operation is available only for RAM users. Before you call this operation, make sure that <code>AllowUserToChangePassword</code> in <a href="https://help.aliyun.com/document_detail/43765.html">SetSecurityPreference</a> is set to <code>True</code>. The value True indicates that RAM users can manage their passwords.</p>
+     * <p>This API operation can be invoked only by Resource Access Management (RAM) users. Before invoking this operation, make sure that <code>AllowUserToChangePassword</code> in <a href="https://help.aliyun.com/document_detail/43765.html">SetSecurityPreference</a> is set to <code>True</code> in Settings, which allows RAM users to manage their own passwords.
+     * This operation is used only by the current RAM user to change their own console logon password. The <code>OldPassword</code> parameter must be provided when invoking this operation. If an administrator needs to set or reset the password for another RAM user, invoke <code>UpdateLoginProfile</code>.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ChangePassword  ChangePasswordRequest
@@ -67,6 +68,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ClearAccountAliasResponse> clearAccountAlias(ClearAccountAliasRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Each RAM user can have a maximum of two AccessKey pairs.</p>
+     * 
      * @param request the request parameters of CreateAccessKey  CreateAccessKeyRequest
      * @return CreateAccessKeyResponse
      */
@@ -102,8 +106,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Operation description</h3>
-     * <p>For more information about RAM roles, see <a href="https://help.aliyun.com/document_detail/93689.html">Overview of RAM roles</a>.</p>
+     * <h3>Usage notes</h3>
+     * <p>For more information about RAM roles, see <a href="https://help.aliyun.com/document_detail/93689.html">RAM role overview</a>.</p>
      * 
      * @param request the request parameters of CreateRole  CreateRoleRequest
      * @return CreateRoleResponse
@@ -118,7 +122,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to create a RAM user named <code>alice</code>.</p>
+     * <p>This topic provides an example on how to create a RAM user named <code>alice</code>.</p>
      * 
      * @param request the request parameters of CreateUser  CreateUserRequest
      * @return CreateUserResponse
@@ -220,6 +224,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DetachPolicyFromUserResponse> detachPolicyFromUser(DetachPolicyFromUserRequest request);
 
     /**
+     * @param request the request parameters of GenerateServiceLastAccessedDetails  GenerateServiceLastAccessedDetailsRequest
+     * @return GenerateServiceLastAccessedDetailsResponse
+     */
+    CompletableFuture<GenerateServiceLastAccessedDetailsResponse> generateServiceLastAccessedDetails(GenerateServiceLastAccessedDetailsRequest request);
+
+    /**
      * @param request the request parameters of GetAccessKeyLastUsed  GetAccessKeyLastUsedRequest
      * @return GetAccessKeyLastUsedResponse
      */
@@ -274,6 +284,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetSecurityPreferenceResponse> getSecurityPreference(GetSecurityPreferenceRequest request);
 
     /**
+     * @param request the request parameters of GetServiceLastAccessedDetails  GetServiceLastAccessedDetailsRequest
+     * @return GetServiceLastAccessedDetailsResponse
+     */
+    CompletableFuture<GetServiceLastAccessedDetailsResponse> getServiceLastAccessedDetails(GetServiceLastAccessedDetailsRequest request);
+
+    /**
      * @param request the request parameters of GetServiceLinkedRoleTemplate  GetServiceLinkedRoleTemplateRequest
      * @return GetServiceLinkedRoleTemplateResponse
      */
@@ -281,7 +297,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to query information about the RAM user <code>alice</code>.</p>
+     * <p>This topic provides an example of how to query the details of the RAM user <code>alice</code>.</p>
      * 
      * @param request the request parameters of GetUser  GetUserRequest
      * @return GetUserResponse
@@ -314,8 +330,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a></h3>
-     * <p>This topic provides an example on how to query the RAM user groups to which the RAM user <code>Alice</code> belongs. The response shows that <code>Alice</code> belongs to the RAM user group named <code>Dev-Team</code>.</p>
+     * <h3>Usage notes</h3>
+     * <p>This topic provides an example on how to query the information about the groups to which the Resource Access Management (RAM) user <code>Alice</code> is added. The response shows that <code>Alice</code> is added to the group named <code>Dev-Team</code>.</p>
      * 
      * @param request the request parameters of ListGroupsForUser  ListGroupsForUserRequest
      * @return ListGroupsForUserResponse
@@ -465,7 +481,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to change the description of <code>ECSAdmin</code> to <code>ECS administrator</code>.</p>
+     * <p>This topic provides an example of updating the description of the RAM role <code>ECSAdmin</code> to <code>ECS administrator</code>.</p>
      * 
      * @param request the request parameters of UpdateRole  UpdateRoleRequest
      * @return UpdateRoleResponse

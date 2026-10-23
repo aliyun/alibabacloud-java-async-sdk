@@ -93,7 +93,7 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the Resource Access Management (RAM) user groups.</p>
+         * Groups.
          */
         public Builder groups(Groups groups) {
             this.groups = groups;
@@ -112,7 +112,7 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the RAM roles.</p>
+         * Roles.
          */
         public Builder roles(Roles roles) {
             this.roles = roles;
@@ -120,7 +120,7 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the RAM users.</p>
+         * Users.
          */
         public Builder users(Users users) {
             this.users = users;
@@ -199,10 +199,7 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the policy was attached to the RAM user group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2015-02-18T17:22:08Z</p>
+             * AttachDate.
              */
             public Builder attachDate(String attachDate) {
                 this.attachDate = attachDate;
@@ -210,10 +207,7 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the RAM user group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Test team</p>
+             * Comments.
              */
             public Builder comments(String comments) {
                 this.comments = comments;
@@ -221,10 +215,7 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the RAM user group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>QA-Team</p>
+             * GroupName.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -384,10 +375,7 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>acs:ram::123456789012****:role/ECSAdmin</p>
+             * Arn.
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -395,10 +383,7 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the policy was attached to the RAM role.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2015-01-23T12:33:18Z</p>
+             * AttachDate.
              */
             public Builder attachDate(String attachDate) {
                 this.attachDate = attachDate;
@@ -406,10 +391,7 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the RAM role.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ECS administrator</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -417,10 +399,7 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the RAM role.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>122748924538****</p>
+             * RoleId.
              */
             public Builder roleId(String roleId) {
                 this.roleId = roleId;
@@ -428,10 +407,7 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the RAM role.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ECSAdmin</p>
+             * RoleName.
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;
@@ -578,10 +554,7 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the policy was attached to the RAM user.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2015-01-23T12:33:18Z</p>
+             * AttachDate.
              */
             public Builder attachDate(String attachDate) {
                 this.attachDate = attachDate;
@@ -589,10 +562,7 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the RAM user.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Zhang*</p>
+             * DisplayName.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -600,10 +570,7 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique ID of the RAM user.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>122748924538****</p>
+             * UserId.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -611,10 +578,7 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the RAM user.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>zhangq****</p>
+             * UserName.
              */
             public Builder userName(String userName) {
                 this.userName = userName;

@@ -60,6 +60,7 @@ public class DeleteServiceLinkedRoleRequest extends Request {
         } 
 
         /**
+         * <p>The role name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

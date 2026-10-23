@@ -88,7 +88,12 @@ public class CreateServiceLinkedRoleRequest extends Request {
         } 
 
         /**
-         * CustomSuffix.
+         * <p>The suffix of the role name.</p>
+         * <p>The total length of the role name (including the suffix) is 1 to 64 characters and can contain letters, digits, periods (.), and hyphens (-).</p>
+         * <p>Example: If the suffix is Example, the role name is ServiceLinkedRoleName_Example, and the maximum length cannot exceed 64 characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Example</p>
          */
         public Builder customSuffix(String customSuffix) {
             this.putQueryParameter("CustomSuffix", customSuffix);
@@ -97,7 +102,12 @@ public class CreateServiceLinkedRoleRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the service-linked role.</p>
+         * <p>You can specify a role description only for service-linked roles that allow custom suffixes. Otherwise, the role description uses a preset value and cannot be modified.</p>
+         * <p>The description must be 1 to 1,024 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Service Linked Role for PolarDB. PolarDB will use this role to access your resources in other services.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -106,6 +116,8 @@ public class CreateServiceLinkedRoleRequest extends Request {
         }
 
         /**
+         * <p>The cloud service name associated with the service-linked role.</p>
+         * <p>For more information, see the <strong>Cloud service identity</strong> column in <a href="https://help.aliyun.com/document_detail/461722.html">Cloud services that support service-linked roles</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

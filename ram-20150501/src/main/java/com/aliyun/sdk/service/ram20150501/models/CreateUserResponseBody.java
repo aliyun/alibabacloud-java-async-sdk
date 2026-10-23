@@ -220,7 +220,7 @@ public class CreateUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The point in time when the RAM user was created. The time is displayed in UTC.</p>
+             * <p>The point in time when the RAM user was created. It is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2015-01-23T12:33:18Z</p>
@@ -244,7 +244,7 @@ public class CreateUserResponseBody extends TeaModel {
             /**
              * <p>The email address of the RAM user.</p>
              * <blockquote>
-             * <p> This parameter applies only to the China site (aliyun.com).</p>
+             * <p>This parameter applies only to the China site (aliyun.com).</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -258,7 +258,7 @@ public class CreateUserResponseBody extends TeaModel {
             /**
              * <p>The mobile phone number of the RAM user.</p>
              * <blockquote>
-             * <p> This parameter applies only to the China site (aliyun.com).</p>
+             * <p>This parameter applies only to the China site (aliyun.com).</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

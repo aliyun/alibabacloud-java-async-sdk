@@ -67,7 +67,7 @@ public class ListAccessKeysResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The AccessKey pairs that belong to the RAM user.</p>
+         * AccessKeys.
          */
         public Builder accessKeys(AccessKeys accessKeys) {
             this.accessKeys = accessKeys;
@@ -157,10 +157,7 @@ public class ListAccessKeysResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The AccessKey ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0wNEpMMlzy7s****</p>
+             * AccessKeyId.
              */
             public Builder accessKeyId(String accessKeyId) {
                 this.accessKeyId = accessKeyId;
@@ -168,10 +165,7 @@ public class ListAccessKeysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the AccessKey pair was created.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2015-01-23T12:33:18Z</p>
+             * CreateDate.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -179,10 +173,7 @@ public class ListAccessKeysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the AccessKey pair. Valid values: Active and Inactive.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Active</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;

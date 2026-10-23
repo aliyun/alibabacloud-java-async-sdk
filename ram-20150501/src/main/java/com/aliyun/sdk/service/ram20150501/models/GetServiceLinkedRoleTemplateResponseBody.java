@@ -67,7 +67,10 @@ public class GetServiceLinkedRoleTemplateResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class GetServiceLinkedRoleTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceLinkedRoleTemplate.
+         * <p>The service-linked role template.</p>
          */
         public Builder serviceLinkedRoleTemplate(ServiceLinkedRoleTemplate serviceLinkedRoleTemplate) {
             this.serviceLinkedRoleTemplate = serviceLinkedRoleTemplate;
@@ -309,7 +312,14 @@ public class GetServiceLinkedRoleTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * MultipleRolesAllowed.
+             * <p>Indicates whether multiple roles are supported. Valid values:</p>
+             * <ul>
+             * <li>true: Multiple roles are supported.</li>
+             * <li>false: Multiple roles are not supported.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder multipleRolesAllowed(Boolean multipleRolesAllowed) {
                 this.multipleRolesAllowed = multipleRolesAllowed;
@@ -325,7 +335,10 @@ public class GetServiceLinkedRoleTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * RoleNamePrefix.
+             * <p>The prefix of the role name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AliyunServiceRoleForPolarDB</p>
              */
             public Builder roleNamePrefix(String roleNamePrefix) {
                 this.roleNamePrefix = roleNamePrefix;
@@ -333,7 +346,10 @@ public class GetServiceLinkedRoleTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceName.
+             * <p>The cloud service name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>polardb.aliyuncs.com</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -341,7 +357,10 @@ public class GetServiceLinkedRoleTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * SystemPolicyName.
+             * <p>The name of the system policy attached to the role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AliyunServiceRolePolicyForPolarDB</p>
              */
             public Builder systemPolicyName(String systemPolicyName) {
                 this.systemPolicyName = systemPolicyName;

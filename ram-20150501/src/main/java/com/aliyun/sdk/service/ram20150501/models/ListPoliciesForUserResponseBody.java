@@ -67,7 +67,7 @@ public class ListPoliciesForUserResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the policy.</p>
+         * Policies.
          */
         public Builder policies(Policies policies) {
             this.policies = policies;
@@ -183,10 +183,7 @@ public class ListPoliciesForUserResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time at which the policy is attached to the RAM user. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2015-01-23T12:33:18Z</p>
+             * AttachDate.
              */
             public Builder attachDate(String attachDate) {
                 this.attachDate = attachDate;
@@ -194,10 +191,7 @@ public class ListPoliciesForUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The current version.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>v1</p>
+             * DefaultVersion.
              */
             public Builder defaultVersion(String defaultVersion) {
                 this.defaultVersion = defaultVersion;
@@ -205,10 +199,7 @@ public class ListPoliciesForUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the policy.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>OSS administrator</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -216,10 +207,7 @@ public class ListPoliciesForUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the policy.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>OSS-Administrator</p>
+             * PolicyName.
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -227,14 +215,7 @@ public class ListPoliciesForUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the policy. Valid values:</p>
-             * <ul>
-             * <li>System: system policy</li>
-             * <li>Custom: custom policy</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Custom</p>
+             * PolicyType.
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;

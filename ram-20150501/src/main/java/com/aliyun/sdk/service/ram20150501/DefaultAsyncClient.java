@@ -29,31 +29,8 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler = new TeaAsyncHandler(configuration);
         this.product = "Ram";
         this.version = "2015-05-01";
-        this.endpointRule = "regional";
-        this.endpointMap = CommonUtil.buildMap(
-            new TeaPair("cn-beijing", "ram.aliyuncs.com"),
-            new TeaPair("cn-qingdao", "ram.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "ram.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "ram.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "ram.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "ram.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "ram.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "ram.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "ram.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "ram.aliyuncs.com"),
-            new TeaPair("cn-huhehaote", "ram.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "ram.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "ram.aliyuncs.com"),
-            new TeaPair("us-east-1", "ram.aliyuncs.com"),
-            new TeaPair("eu-west-1", "ram.aliyuncs.com"),
-            new TeaPair("us-west-1", "ram.aliyuncs.com"),
-            new TeaPair("eu-central-1", "ram.aliyuncs.com"),
-            new TeaPair("me-east-1", "ram.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-finance-1", "ram.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "ram.aliyuncs.com"),
-            new TeaPair("cn-beijing-finance-1", "ram.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-finance", "ram.aliyuncs.com")
-        );
+        this.endpointRule = "central";
+        this.endpointMap = new java.util.HashMap<>();
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 
@@ -155,7 +132,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> This operation is available only for RAM users. Before you call this operation, make sure that <code>AllowUserToChangePassword</code> in <a href="https://help.aliyun.com/document_detail/43765.html">SetSecurityPreference</a> is set to <code>True</code>. The value True indicates that RAM users can manage their passwords.</p>
+     * <p>This API operation can be invoked only by Resource Access Management (RAM) users. Before invoking this operation, make sure that <code>AllowUserToChangePassword</code> in <a href="https://help.aliyun.com/document_detail/43765.html">SetSecurityPreference</a> is set to <code>True</code> in Settings, which allows RAM users to manage their own passwords.
+     * This operation is used only by the current RAM user to change their own console logon password. The <code>OldPassword</code> parameter must be provided when invoking this operation. If an administrator needs to set or reset the password for another RAM user, invoke <code>UpdateLoginProfile</code>.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ChangePassword  ChangePasswordRequest
@@ -194,6 +172,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Each RAM user can have a maximum of two AccessKey pairs.</p>
+     * 
      * @param request the request parameters of CreateAccessKey  CreateAccessKeyRequest
      * @return CreateAccessKeyResponse
      */
@@ -289,8 +270,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Operation description</h3>
-     * <p>For more information about RAM roles, see <a href="https://help.aliyun.com/document_detail/93689.html">Overview of RAM roles</a>.</p>
+     * <h3>Usage notes</h3>
+     * <p>For more information about RAM roles, see <a href="https://help.aliyun.com/document_detail/93689.html">RAM role overview</a>.</p>
      * 
      * @param request the request parameters of CreateRole  CreateRoleRequest
      * @return CreateRoleResponse
@@ -329,7 +310,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to create a RAM user named <code>alice</code>.</p>
+     * <p>This topic provides an example on how to create a RAM user named <code>alice</code>.</p>
      * 
      * @param request the request parameters of CreateUser  CreateUserRequest
      * @return CreateUserResponse
@@ -611,6 +592,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GenerateServiceLastAccessedDetails  GenerateServiceLastAccessedDetailsRequest
+     * @return GenerateServiceLastAccessedDetailsResponse
+     */
+    @Override
+    public CompletableFuture<GenerateServiceLastAccessedDetailsResponse> generateServiceLastAccessedDetails(GenerateServiceLastAccessedDetailsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GenerateServiceLastAccessedDetails").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GenerateServiceLastAccessedDetailsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GenerateServiceLastAccessedDetailsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetAccessKeyLastUsed  GetAccessKeyLastUsedRequest
      * @return GetAccessKeyLastUsedResponse
      */
@@ -773,6 +772,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetServiceLastAccessedDetails  GetServiceLastAccessedDetailsRequest
+     * @return GetServiceLastAccessedDetailsResponse
+     */
+    @Override
+    public CompletableFuture<GetServiceLastAccessedDetailsResponse> getServiceLastAccessedDetails(GetServiceLastAccessedDetailsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetServiceLastAccessedDetails").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetServiceLastAccessedDetailsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetServiceLastAccessedDetailsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetServiceLinkedRoleTemplate  GetServiceLinkedRoleTemplateRequest
      * @return GetServiceLinkedRoleTemplateResponse
      */
@@ -792,7 +809,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to query information about the RAM user <code>alice</code>.</p>
+     * <p>This topic provides an example of how to query the details of the RAM user <code>alice</code>.</p>
      * 
      * @param request the request parameters of GetUser  GetUserRequest
      * @return GetUserResponse
@@ -885,8 +902,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a></h3>
-     * <p>This topic provides an example on how to query the RAM user groups to which the RAM user <code>Alice</code> belongs. The response shows that <code>Alice</code> belongs to the RAM user group named <code>Dev-Team</code>.</p>
+     * <h3>Usage notes</h3>
+     * <p>This topic provides an example on how to query the information about the groups to which the Resource Access Management (RAM) user <code>Alice</code> is added. The response shows that <code>Alice</code> is added to the group named <code>Dev-Team</code>.</p>
      * 
      * @param request the request parameters of ListGroupsForUser  ListGroupsForUserRequest
      * @return ListGroupsForUserResponse
@@ -1312,7 +1329,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to change the description of <code>ECSAdmin</code> to <code>ECS administrator</code>.</p>
+     * <p>This topic provides an example of updating the description of the RAM role <code>ECSAdmin</code> to <code>ECS administrator</code>.</p>
      * 
      * @param request the request parameters of UpdateRole  UpdateRoleRequest
      * @return UpdateRoleResponse

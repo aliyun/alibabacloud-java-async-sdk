@@ -104,8 +104,10 @@ public class UntagResourcesRequest extends Request {
          * <p>Specifies whether to remove all tags from the resources.</p>
          * <p>Enumerated values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -131,8 +133,10 @@ public class UntagResourcesRequest extends Request {
          * <p>The resource type.</p>
          * <p>Enumerated values:</p>
          * <ul>
-         * <li>role: RAM roles.</li>
-         * <li>policy: policies.</li>
+         * <li><p>role: RAM roles.</p>
+         * </li>
+         * <li><p>policy: policies.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

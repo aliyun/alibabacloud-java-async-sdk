@@ -67,7 +67,7 @@ public class GetGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the RAM user group.</p>
+         * <p>The user group information.</p>
          */
         public Builder group(Group group) {
             this.group = group;
@@ -183,10 +183,10 @@ public class GetGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the RAM user group.</p>
+             * <p>The remarks.</p>
              * 
              * <strong>example:</strong>
-             * <p>Dev-Team</p>
+             * <p>Development team</p>
              */
             public Builder comments(String comments) {
                 this.comments = comments;
@@ -194,7 +194,7 @@ public class GetGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the RAM user group was created.</p>
+             * <p>The creation time in UTC. The time is displayed in the <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
              * 
              * <strong>example:</strong>
              * <p>2015-01-23T12:33:18Z</p>
@@ -205,7 +205,7 @@ public class GetGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the RAM user group.</p>
+             * <p>The ID of the user group.</p>
              * 
              * <strong>example:</strong>
              * <p>g-FpMEHiMysofp****</p>
@@ -216,7 +216,7 @@ public class GetGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the RAM user group.</p>
+             * <p>The name of the user group.</p>
              * 
              * <strong>example:</strong>
              * <p>Dev-Team</p>
@@ -227,7 +227,7 @@ public class GetGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The modification time.</p>
+             * <p>The update time in UTC. The time is displayed in the <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
              * 
              * <strong>example:</strong>
              * <p>2015-02-11T03:15:21Z</p>

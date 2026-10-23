@@ -104,7 +104,7 @@ public class ListRolesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The marker. This parameter is returned only if the value of <code>IsTruncated</code> is <code>true</code>. If the parameter is returned, you can call this operation again and set this parameter to obtain the truncated part.````</p>
+         * <p>This parameter is returned only when <code>IsTruncated</code> is <code>true</code>. If the value of <code>IsTruncated</code> is <code>true</code>, call this operation again and use <code>Marker</code> to retrieve the truncated content.</p>
          * 
          * <strong>example:</strong>
          * <p>EXAMPLE</p>
@@ -126,7 +126,7 @@ public class ListRolesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the RAM roles.</p>
+         * Roles.
          */
         public Builder roles(Roles roles) {
             this.roles = roles;
@@ -192,10 +192,7 @@ public class ListRolesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The key of the tag.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>owner</p>
+             * TagKey.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -203,10 +200,7 @@ public class ListRolesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the tag.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>alice</p>
+             * TagValue.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -426,10 +420,7 @@ public class ListRolesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>acs:ram::123456789012****:role/ECSAdmin</p>
+             * Arn.
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -437,10 +428,7 @@ public class ListRolesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2015-01-23T12:33:18Z</p>
+             * CreateDate.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -448,10 +436,7 @@ public class ListRolesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the RAM role.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ECS administrator</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -459,10 +444,7 @@ public class ListRolesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum session duration of the RAM role.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3600</p>
+             * MaxSessionDuration.
              */
             public Builder maxSessionDuration(Long maxSessionDuration) {
                 this.maxSessionDuration = maxSessionDuration;
@@ -470,10 +452,7 @@ public class ListRolesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the RAM role.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>901234567890****</p>
+             * RoleId.
              */
             public Builder roleId(String roleId) {
                 this.roleId = roleId;
@@ -481,10 +460,7 @@ public class ListRolesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the RAM role.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ECSAdmin</p>
+             * RoleName.
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;
@@ -492,7 +468,7 @@ public class ListRolesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags.</p>
+             * Tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -500,10 +476,7 @@ public class ListRolesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2015-01-23T12:33:18Z</p>
+             * UpdateDate.
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;

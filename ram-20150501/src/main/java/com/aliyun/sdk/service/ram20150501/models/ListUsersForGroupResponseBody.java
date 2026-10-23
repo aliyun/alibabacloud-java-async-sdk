@@ -104,7 +104,7 @@ public class ListUsersForGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The marker. This parameter is returned only if the value of <code>IsTruncated</code> is <code>true</code>. If the parameter is returned, you can call this operation again and set this parameter to obtain the truncated part.````</p>
+         * <p>This parameter is returned only when <code>IsTruncated</code> is <code>true</code>. If <code>true</code> is returned, call this operation again and use <code>Marker</code> to obtain the truncated content.</p>
          * 
          * <strong>example:</strong>
          * <p>EXAMPLE</p>
@@ -126,7 +126,7 @@ public class ListUsersForGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the RAM users.</p>
+         * Users.
          */
         public Builder users(Users users) {
             this.users = users;
@@ -205,10 +205,7 @@ public class ListUsersForGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The display name of the RAM user.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Alice</p>
+             * DisplayName.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -216,10 +213,7 @@ public class ListUsersForGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the RAM user joined the RAM user group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2015-01-23T12:33:18Z</p>
+             * JoinDate.
              */
             public Builder joinDate(String joinDate) {
                 this.joinDate = joinDate;
@@ -227,10 +221,7 @@ public class ListUsersForGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the RAM user.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>zhangqiang</p>
+             * UserName.
              */
             public Builder userName(String userName) {
                 this.userName = userName;

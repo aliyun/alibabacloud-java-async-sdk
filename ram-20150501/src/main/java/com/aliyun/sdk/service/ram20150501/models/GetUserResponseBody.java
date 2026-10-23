@@ -67,7 +67,7 @@ public class GetUserResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>2D69A58F-345C-4FDE-88E4-BF5189484043</p>
@@ -235,10 +235,10 @@ public class GetUserResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the RAM user.</p>
+             * <p>The description.</p>
              * 
              * <strong>example:</strong>
-             * <p>Cloud computing engineer</p>
+             * <p>This is a cloud computing engineer.</p>
              */
             public Builder comments(String comments) {
                 this.comments = comments;
@@ -246,7 +246,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The point in time when the RAM user was created. The time is displayed in UTC.</p>
+             * <p>The time when the RAM user was created. The time is in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2015-01-23T12:33:18Z</p>
@@ -257,7 +257,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the RAM user.</p>
+             * <p>The display name.</p>
              * 
              * <strong>example:</strong>
              * <p>alice</p>
@@ -270,7 +270,7 @@ public class GetUserResponseBody extends TeaModel {
             /**
              * <p>The email address of the RAM user.</p>
              * <blockquote>
-             * <p> This parameter can be returned only on the China site (aliyun.com).</p>
+             * <p>This parameter is available only on the China site (aliyun.com).</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -282,7 +282,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The point in time when the RAM user last logged on to the Alibaba Cloud Management Console by using the password. The time is displayed in UTC.</p>
+             * <p>The last time the user logged on with a password. The time is in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2015-01-23T12:33:18Z</p>
@@ -295,7 +295,7 @@ public class GetUserResponseBody extends TeaModel {
             /**
              * <p>The mobile phone number of the RAM user.</p>
              * <blockquote>
-             * <p> This parameter can be returned only on the China site (aliyun.com).</p>
+             * <p>This parameter is available only on the China site (aliyun.com).</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -307,7 +307,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The point in time when the information about the RAM user was last modified. The time is displayed in UTC.</p>
+             * <p>The time when the RAM user was last updated. The time is in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2015-02-11T03:15:21Z</p>
@@ -318,7 +318,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the RAM user.</p>
+             * <p>The unique ID of the RAM user.</p>
              * 
              * <strong>example:</strong>
              * <p>222748924538****</p>
@@ -329,7 +329,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The username of the RAM user.</p>
+             * <p>The name of the RAM user.</p>
              * 
              * <strong>example:</strong>
              * <p>alice</p>

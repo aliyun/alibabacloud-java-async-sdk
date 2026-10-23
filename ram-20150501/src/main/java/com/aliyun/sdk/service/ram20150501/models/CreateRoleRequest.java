@@ -129,7 +129,14 @@ public class CreateRoleRequest extends Request {
         } 
 
         /**
-         * AllowConsoleLogin.
+         * <p>Specifies whether the RAM role is allowed to log on to the console. Valid values:</p>
+         * <ul>
+         * <li>true: allowed</li>
+         * <li>false: not allowed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder allowConsoleLogin(Boolean allowConsoleLogin) {
             this.putQueryParameter("AllowConsoleLogin", allowConsoleLogin);
@@ -138,9 +145,9 @@ public class CreateRoleRequest extends Request {
         }
 
         /**
-         * <p>The trust policy that specifies one or more trusted entities to assume the RAM role. The trusted entities can be Alibaba Cloud accounts, Alibaba Cloud services, or identity providers (IdPs).</p>
+         * <p>The trust policy. Specifies one or more principals that are allowed to assume the RAM role. The principals can be Alibaba Cloud accounts, Alibaba Cloud services, or identity providers.</p>
          * <blockquote>
-         * <p> RAM users cannot assume the RAM roles of trusted Alibaba Cloud services.</p>
+         * <p>Resource Access Management (RAM) users cannot assume RAM roles whose trusted entity is an Alibaba Cloud service.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -157,7 +164,7 @@ public class CreateRoleRequest extends Request {
          * <p>The description must be 1 to 1,024 characters in length.</p>
          * 
          * <strong>example:</strong>
-         * <p>ECS administrator</p>
+         * <p>ECS management role</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -166,9 +173,9 @@ public class CreateRoleRequest extends Request {
         }
 
         /**
-         * <p>The maximum session time of the RAM role.</p>
+         * <p>The maximum session duration of the RAM role.</p>
          * <p>Valid values: 3600 to 43200. Unit: seconds. Default value: 3600.</p>
-         * <p>If you do not specify this parameter, the default value is used.</p>
+         * <p>If this parameter is left empty, the default value is used.</p>
          * 
          * <strong>example:</strong>
          * <p>3600</p>
@@ -181,7 +188,7 @@ public class CreateRoleRequest extends Request {
 
         /**
          * <p>The name of the RAM role.</p>
-         * <p>The name must be 1 to 64 characters in length, and can contain letters, digits, periods (.), and hyphens (-).</p>
+         * <p>The name must be 1 to 64 characters in length and can contain letters, digits, periods (.), and hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>ECSAdmin</p>
@@ -262,7 +269,7 @@ public class CreateRoleRequest extends Request {
             } 
 
             /**
-             * <p>The key of the tag.</p>
+             * <p>The tag key.</p>
              * 
              * <strong>example:</strong>
              * <p>k1</p>
@@ -273,7 +280,7 @@ public class CreateRoleRequest extends Request {
             }
 
             /**
-             * <p>The value of the tag.</p>
+             * <p>The tag value.</p>
              * 
              * <strong>example:</strong>
              * <p>v1</p>

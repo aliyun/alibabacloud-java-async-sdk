@@ -186,7 +186,7 @@ public class UpdateGroupResponseBody extends TeaModel {
              * <p>The description.</p>
              * 
              * <strong>example:</strong>
-             * <p>NewDev-Team</p>
+             * <p>Development team</p>
              */
             public Builder comments(String comments) {
                 this.comments = comments;

@@ -77,7 +77,7 @@ public class CreateGroupRequest extends Request {
          * <p>The value can be up to 128 characters in length.</p>
          * 
          * <strong>example:</strong>
-         * <p>Dev-Team</p>
+         * <p>Development team</p>
          */
         public Builder comments(String comments) {
             this.putQueryParameter("Comments", comments);

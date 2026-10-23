@@ -144,7 +144,7 @@ public class DecodeDiagnosticMessageResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The key of the condition.</p>
+             * <p>The condition key.</p>
              * 
              * <strong>example:</strong>
              * <p>acs:SourceIp</p>
@@ -155,7 +155,7 @@ public class DecodeDiagnosticMessageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The values that correspond to the key.</p>
+             * <p>The list of values corresponding to the condition key.</p>
              */
             public Builder conditionValues(java.util.List<String> conditionValues) {
                 this.conditionValues = conditionValues;
@@ -235,11 +235,11 @@ public class DecodeDiagnosticMessageResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The identity.</p>
+             * <p>The identity identifier used for authentication in the user request. The value varies based on the identity type:</p>
              * <ul>
-             * <li>If the operator is a RAM user, the ID of the user is displayed.</li>
-             * <li>If the operator is a RAM role, the name and session name of the role are displayed. Example: RoleName:RoleSessionName.</li>
-             * <li>If the operator is an SSO federated identity, the type and name of the identity provider (IdP) are displayed. Example: saml-provider/AzureAD.</li>
+             * <li>Resource Access Management (RAM) user: the UID of the RAM user.</li>
+             * <li>RAM role: the role name and role session name (example: RoleName:RoleSessionName).</li>
+             * <li>SSO federated identity: the identity provider type and identity provider name (example: saml-provider/AzureAD).</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -251,7 +251,7 @@ public class DecodeDiagnosticMessageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud account to which the identity belongs.</p>
+             * <p>The UID of the Alibaba Cloud account to which the identity used for authentication in the user request belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>196813200012****</p>
@@ -262,13 +262,7 @@ public class DecodeDiagnosticMessageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The identity type that is used for authentication in the request.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>SubUser: RAM user</li>
-             * <li>AssumedRoleUser: RAM role</li>
-             * <li>Federated: SSO federated identity</li>
-             * </ul>
+             * <p>The identity type used for authentication in the user request.</p>
              * 
              * <strong>example:</strong>
              * <p>SubUser</p>
@@ -391,13 +385,6 @@ public class DecodeDiagnosticMessageResponseBody extends TeaModel {
 
             /**
              * <p>The type of the entity to which the policy is attached.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>RamUser: RAM user</li>
-             * <li>RamRole: RAM role</li>
-             * <li>ResourceDirectoryTarget: entity in a resource directory</li>
-             * <li>RamGroup: RAM user group</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>RamUser</p>
@@ -408,13 +395,7 @@ public class DecodeDiagnosticMessageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The authorization scope of the policy.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>Account: Alibaba Cloud account</li>
-             * <li>Folder: folder in the resource directory</li>
-             * <li>ResourceGroup: resource group</li>
-             * </ul>
+             * <p>The scope to which the policy is attached.</p>
              * 
              * <strong>example:</strong>
              * <p>Account</p>
@@ -425,23 +406,7 @@ public class DecodeDiagnosticMessageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The effect of the policy.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li><p>Deny</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>Allow</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- --></li>
-             * </ul>
+             * <p>The policy effect.</p>
              * 
              * <strong>example:</strong>
              * <p>Deny</p>
@@ -452,10 +417,10 @@ public class DecodeDiagnosticMessageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The identifier of the policy.</p>
+             * <p>The policy name information. The value varies based on the policy type:</p>
              * <ul>
-             * <li>Control policy: the ID of the control policy</li>
-             * <li>RAM policy: the name of the policy</li>
+             * <li>Control policy: the ID of the control policy.</li>
+             * <li>RAM access policy: the name of the access policy.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -467,12 +432,7 @@ public class DecodeDiagnosticMessageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the policy.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>Custom: custom policy</li>
-             * <li>System: system policy</li>
-             * </ul>
+             * <p>The policy type.</p>
              * 
              * <strong>example:</strong>
              * <p>Custom</p>
@@ -483,9 +443,9 @@ public class DecodeDiagnosticMessageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version number of the policy.</p>
+             * <p>The policy version number.</p>
              * <blockquote>
-             * <p>Only custom policies have version numbers.</p>
+             * <p>Only a custom policy has a version number.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -621,7 +581,7 @@ public class DecodeDiagnosticMessageResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The operation that is used for authentication in the request.</p>
+             * <p>The action used for authentication in the user request.</p>
              * 
              * <strong>example:</strong>
              * <p>ram:DecodeDiagnosticMessage</p>
@@ -632,7 +592,7 @@ public class DecodeDiagnosticMessageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The conditions that are used for authentication in the request.</p>
+             * <p>The list of conditions used for authentication in the user request.</p>
              */
             public Builder authConditions(java.util.List<AuthConditions> authConditions) {
                 this.authConditions = authConditions;
@@ -640,7 +600,7 @@ public class DecodeDiagnosticMessageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The operator that is used for authentication in the request.</p>
+             * <p>The principal used for authentication in the user request.</p>
              */
             public Builder authPrincipal(AuthPrincipal authPrincipal) {
                 this.authPrincipal = authPrincipal;
@@ -648,7 +608,7 @@ public class DecodeDiagnosticMessageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource that is used for authentication in the request.</p>
+             * <p>The resource used for authentication in the user request.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -661,12 +621,7 @@ public class DecodeDiagnosticMessageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the access denied error is caused by an explicit deny.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>true</li>
-             * <li>false</li>
-             * </ul>
+             * <p>Indicates whether the request is explicitly denied.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -677,7 +632,7 @@ public class DecodeDiagnosticMessageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The policies that are matched.</p>
+             * <p>The list of policies matched during authentication.</p>
              */
             public Builder matchedPolicies(java.util.List<MatchedPolicies> matchedPolicies) {
                 this.matchedPolicies = matchedPolicies;
@@ -685,15 +640,7 @@ public class DecodeDiagnosticMessageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the policy that causes the access denied error.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>AssumeRolePolicy: role-specific trust policy</li>
-             * <li>ControlPolicy: control policy</li>
-             * <li>AccountLevelIdentityBasedPolicy: identity-based policy at the account level</li>
-             * <li>ResourceGroupLevelIdentityBasedPolicy: identity-based policy at the resource group level</li>
-             * <li>SessionPolicy: session policy</li>
-             * </ul>
+             * <p>The type of the policy that results in the access denied error.</p>
              * 
              * <strong>example:</strong>
              * <p>AccountLevelIdentityBasedPolicy</p>
