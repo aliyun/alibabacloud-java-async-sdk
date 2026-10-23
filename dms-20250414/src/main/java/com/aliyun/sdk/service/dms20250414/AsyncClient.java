@@ -842,7 +842,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Only the parameters passed in the current request are modified. Unpassed parameters remain unchanged. The data source type cannot be modified.</p>
+     * <p>Only the parameters passed in the current request are modified. Unspecified parameters remain unchanged. The data source type cannot be modified.</p>
      * 
      * @param request the request parameters of UpdateAgenticDataSource  UpdateAgenticDataSourceRequest
      * @return UpdateAgenticDataSourceResponse
