@@ -80,7 +80,7 @@ public class ModifyInstanceChargeTypeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The instance group IDs.</p>
+         * <p>The list of instance group IDs.</p>
          */
         public Builder instanceGroupIds(java.util.List<String> instanceGroupIds) {
             this.instanceGroupIds = instanceGroupIds;
@@ -88,7 +88,7 @@ public class ModifyInstanceChargeTypeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The order ID.</p>
+         * <p>The ID of the generated order.</p>
          * 
          * <strong>example:</strong>
          * <p>22326560487****</p>

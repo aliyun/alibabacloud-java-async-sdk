@@ -117,7 +117,7 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned by the API operation.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>Success.</p>
@@ -425,7 +425,7 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of node instance IDs.</p>
+             * <p>The node instance IDs.</p>
              */
             public Builder instanceIds(java.util.List<String> instanceIds) {
                 this.instanceIds = instanceIds;
@@ -433,7 +433,7 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The credit quota of the package.</p>
+             * <p>The package credit quota.</p>
              * 
              * <strong>example:</strong>
              * <p>8000</p>
@@ -455,7 +455,7 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The package specifications.</p>
+             * <p>The package specification.</p>
              * 
              * <strong>example:</strong>
              * <p>advanced</p>
@@ -466,7 +466,7 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
             }
 
             /**
-             * PackageSpecName.
+             * <p>The name of the package specification.</p>
              */
             public Builder packageSpecName(String packageSpecName) {
                 this.packageSpecName = packageSpecName;
@@ -485,7 +485,7 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
             }
 
             /**
-             * PeriodEndTime.
+             * <p>The end time of the package period.</p>
              */
             public Builder periodEndTime(String periodEndTime) {
                 this.periodEndTime = periodEndTime;
@@ -493,7 +493,7 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
             }
 
             /**
-             * PeriodStartTime.
+             * <p>The start time of the package period.</p>
              */
             public Builder periodStartTime(String periodStartTime) {
                 this.periodStartTime = periodStartTime;
@@ -509,7 +509,7 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of used credits.</p>
+             * <p>The number of credits used.</p>
              * 
              * <strong>example:</strong>
              * <p>1000</p>

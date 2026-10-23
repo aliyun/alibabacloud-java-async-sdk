@@ -167,7 +167,7 @@ public class ExpandDataVolumeRequest extends Request {
         }
 
         /**
-         * <p>The list of cloud phone matrix IDs.</p>
+         * <p>The IDs of the cloud phone matrices.</p>
          */
         public Builder nodeIds(java.util.List<String> nodeIds) {
             this.putQueryParameter("NodeIds", nodeIds);
@@ -177,6 +177,9 @@ public class ExpandDataVolumeRequest extends Request {
 
         /**
          * <p>The redirect URL for the payment success page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wya.wuying.aliyun.com/instanceGroup</p>
          */
         public Builder paidCallBackUrl(String paidCallBackUrl) {
             this.putQueryParameter("PaidCallBackUrl", paidCallBackUrl);
@@ -197,7 +200,7 @@ public class ExpandDataVolumeRequest extends Request {
         }
 
         /**
-         * <p>The promotion ID.</p>
+         * <p>The ID of the promotion.</p>
          * 
          * <strong>example:</strong>
          * <p>50003308011****</p>

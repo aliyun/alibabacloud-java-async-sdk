@@ -106,7 +106,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of returned result objects.</p>
+         * <p>The list of returned results.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of entries returned in this query.</p>
+         * <p>The maximum number of entries returned in the current call.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -125,7 +125,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token that specifies the position from which the next query starts. An empty value indicates that all data has been read.</p>
+         * <p>The token that indicates the position to which the current call has read. An empty value indicates that all data has been read.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uON****</p>
@@ -136,7 +136,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique ID of the request. If you encounter any issues, provide this request ID to the technical support team for troubleshooting.</p>
+         * <p>The unique ID of the request. If you encounter any issues, provide this request ID for troubleshooting.</p>
          * 
          * <strong>example:</strong>
          * <p>425F351C-3F8E-5218-A520-B6311D0D****</p>
@@ -485,7 +485,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether the backup is a full-device backup.</p>
+             * <p>Specifies whether the backup is a full device backup.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -518,7 +518,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The directory where the backup file is saved.</p>
+             * <p>The directory where the backup file is stored.</p>
              * 
              * <strong>example:</strong>
              * <p>oss://cloudphone-saved-bucket-cn-shanghai/backup/aic-58ftsoo90p0qa****.ab</p>
@@ -529,7 +529,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The order source. A value of CLOUDPHONE indicates AI cloud phone.</p>
+             * <p>The order source. CLOUDPHONE indicates AI cloud phone.</p>
              * 
              * <strong>example:</strong>
              * <p>CLOUDPHONE</p>
@@ -625,7 +625,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of directories of the source backup files.</p>
+             * <p>The list of directories for the source backup files.</p>
              */
             public Builder sourceFilePathList(java.util.List<String> sourceFilePathList) {
                 this.sourceFilePathList = sourceFilePathList;

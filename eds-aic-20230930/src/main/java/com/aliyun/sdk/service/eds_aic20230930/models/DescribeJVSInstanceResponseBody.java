@@ -138,7 +138,7 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token that specifies the starting position for the next query. An empty value indicates that the query starts from the beginning.</p>
+         * <p>The token that indicates the starting position of the current query. If this parameter is empty, the query starts from the beginning.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kU+SQXzm0H9mu/FiSc****</p>
@@ -149,7 +149,10 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * PendingUpgradeCount.
+         * <p>The number of pending upgrades.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder pendingUpgradeCount(Integer pendingUpgradeCount) {
             this.pendingUpgradeCount = pendingUpgradeCount;
@@ -237,7 +240,7 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * UpgradeStatus.
+             * <p>The AI Engine version upgrade status.</p>
              */
             public Builder upgradeStatus(String upgradeStatus) {
                 this.upgradeStatus = upgradeStatus;
@@ -245,7 +248,10 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The AI Engine version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2607W1</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -312,7 +318,7 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The limit value.</p>
+             * <p>The credit limit.</p>
              * 
              * <strong>example:</strong>
              * <p>-1</p>
@@ -445,7 +451,10 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The skill description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Current weather and forecasts with wttr.in via curl for locations, rain, temperature, travel planning.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -453,7 +462,10 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * IconUrl.
+             * <p>The skill icon URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://www.example.com/icon.png">https://www.example.com/icon.png</a></p>
              */
             public Builder iconUrl(String iconUrl) {
                 this.iconUrl = iconUrl;
@@ -461,7 +473,7 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * InstalledAt.
+             * <p>The skill installation time.</p>
              */
             public Builder installedAt(String installedAt) {
                 this.installedAt = installedAt;
@@ -469,7 +481,10 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * SkillId.
+             * <p>The skill ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>s-04zzrgosj6xd1****</p>
              */
             public Builder skillId(String skillId) {
                 this.skillId = skillId;
@@ -477,7 +492,10 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * SkillName.
+             * <p>The skill name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>weather</p>
              */
             public Builder skillName(String skillName) {
                 this.skillName = skillName;
@@ -485,7 +503,10 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * SkillType.
+             * <p>The skill type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>System</p>
              */
             public Builder skillType(String skillType) {
                 this.skillType = skillType;
@@ -737,7 +758,7 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * AgentVersion.
+             * <p>The AI Engine version and upgrade status.</p>
              */
             public Builder agentVersion(AgentVersion agentVersion) {
                 this.agentVersion = agentVersion;
@@ -756,7 +777,7 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The credit limit configuration. Subsequent quota configurations overwrite previous configurations.</p>
+             * <p>The credit limit configuration. If multiple configurations are delivered, the subsequent configurations overwrite the previous ones.</p>
              */
             public Builder creditConfig(java.util.List<CreditConfig> creditConfig) {
                 this.creditConfig = creditConfig;
@@ -775,7 +796,7 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * InstalledSkills.
+             * <p>The list of skills installed on the instance.</p>
              */
             public Builder installedSkills(java.util.List<InstalledSkills> installedSkills) {
                 this.installedSkills = installedSkills;
@@ -827,7 +848,7 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The used credit.</p>
+             * <p>The used credits.</p>
              */
             public Builder usedCredit(java.util.List<UsedCredit> usedCredit) {
                 this.usedCredit = usedCredit;

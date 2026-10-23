@@ -117,7 +117,7 @@ public class ModifyScheduledTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message.</p>
+         * <p>The message returned by the API.</p>
          * 
          * <strong>example:</strong>
          * <p>Success.</p>
@@ -139,7 +139,7 @@ public class ModifyScheduledTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of modification results.</p>
+         * <p>The list of update results.</p>
          */
         public Builder tasks(java.util.List<Tasks> tasks) {
             this.tasks = tasks;
@@ -334,7 +334,7 @@ public class ModifyScheduledTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of batch delivery results for instance scheduled tasks.</p>
+             * <p>The list of results for batch delivery of scheduled tasks to instances.</p>
              */
             public Builder instanceResults(java.util.List<InstanceResults> instanceResults) {
                 this.instanceResults = instanceResults;
@@ -353,7 +353,7 @@ public class ModifyScheduledTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scheduled task ID.</p>
+             * <p>The ID of the scheduled task.</p>
              * 
              * <strong>example:</strong>
              * <p>sch-260705-agbx*****</p>

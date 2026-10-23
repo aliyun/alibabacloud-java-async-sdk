@@ -187,7 +187,7 @@ public class BackupFileRequest extends Request {
         } 
 
         /**
-         * <p>A list of instance IDs.</p>
+         * <p>The list of instance IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder androidInstanceIdList(java.util.List<String> androidInstanceIdList) {
@@ -221,9 +221,9 @@ public class BackupFileRequest extends Request {
         }
 
         /**
-         * <p>The upload URL for the backup file.</p>
+         * <p>The upload path of the backup file.</p>
          * <blockquote>
-         * <p>If you upload the file to an OSS bucket, call the DescribeBuckets operation to get the bucketName. Then, select a key from ossObjectList. The key represents the folder path in the OSS bucket. Combine these values into the format <code>oss://${bucketName}/${key}</code>.</p>
+         * <p>If you upload the backup file to an OSS bucket, call the describeBuckets operation to obtain the bucketName, and select ossObjectList to obtain the key. The key is the folder path in the OSS bucket. Concatenate them into <code>oss://${bucketName}/${key}</code>.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          */
@@ -237,7 +237,7 @@ public class BackupFileRequest extends Request {
          * <p>The description of the backup file.</p>
          * 
          * <strong>example:</strong>
-         * <p>This is a backup/data request.</p>
+         * <p>This is a request to back up /data</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -246,7 +246,7 @@ public class BackupFileRequest extends Request {
         }
 
         /**
-         * ExcludeSourceFilePathList.
+         * <p>The list of file paths in the Android container to exclude from the backup.</p>
          */
         public Builder excludeSourceFilePathList(java.util.List<String> excludeSourceFilePathList) {
             this.putQueryParameter("ExcludeSourceFilePathList", excludeSourceFilePathList);
@@ -255,7 +255,7 @@ public class BackupFileRequest extends Request {
         }
 
         /**
-         * <p>A list of application package names to back up.</p>
+         * <p>The list of application package names to back up.</p>
          */
         public Builder sourceAppList(java.util.List<String> sourceAppList) {
             this.putQueryParameter("SourceAppList", sourceAppList);
@@ -264,7 +264,7 @@ public class BackupFileRequest extends Request {
         }
 
         /**
-         * <p>A list of file paths to back up.</p>
+         * <p>The list of file paths to back up.</p>
          */
         public Builder sourceFilePathList(java.util.List<String> sourceFilePathList) {
             this.putQueryParameter("SourceFilePathList", sourceFilePathList);
@@ -273,9 +273,9 @@ public class BackupFileRequest extends Request {
         }
 
         /**
-         * <p>The domain name of the upload URL.</p>
+         * <p>The domain name of the backup endpoint.</p>
          * <blockquote>
-         * <p>If you upload the file to an OSS bucket, call the DescribeBuckets operation to obtain the bucket information. If the cloud phone and the bucket are in the same region, use the value of the intranetEndpoint field. If they are in different regions, use the value of the extranetEndpoint field.</p>
+         * <p>If you upload the backup file to an OSS bucket, call the describeBuckets operation to obtain the bucket. If the cloud phone and the bucket are in the same region, obtain the intranetEndpoint field. If they are in different regions, obtain the extranetEndpoint field.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

@@ -132,7 +132,7 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code of the operation.</p>
+         * <p>The API status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -154,7 +154,7 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message.</p>
+         * <p>The message returned by the API.</p>
          * 
          * <strong>example:</strong>
          * <p>Success.</p>
@@ -165,7 +165,7 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token that indicates the position from which to start reading. Leave this parameter empty to read from the beginning.</p>
+         * <p>The token that specifies the starting position for the current read operation. An empty value indicates that the read operation starts from the beginning.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kU+SQXzm0H9mu/FiSc****</p>
@@ -290,7 +290,7 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The extra parameters.</p>
+             * <p>The extended parameters.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;batchSize&quot;:&quot;1000&quot;}</p>
@@ -584,7 +584,7 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The modification time.</p>
+             * <p>The update time.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-06-12T10:00:00</p>
@@ -669,7 +669,7 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
              * <p>The task name.</p>
              * 
              * <strong>example:</strong>
-             * <p>DailyDataSyncTask</p>
+             * <p>Daily data synchronization task</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -702,7 +702,7 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
              * <p>The user prompt or task description.</p>
              * 
              * <strong>example:</strong>
-             * <p>Execute daily data sync task</p>
+             * <p>Execute the daily data synchronization task</p>
              */
             public Builder userPrompt(String userPrompt) {
                 this.userPrompt = userPrompt;

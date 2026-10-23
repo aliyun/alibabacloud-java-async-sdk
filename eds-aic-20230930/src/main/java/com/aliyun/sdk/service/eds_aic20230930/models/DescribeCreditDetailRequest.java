@@ -53,6 +53,10 @@ public class DescribeCreditDetailRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("StartTime")
     private Long startTime;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskIds")
+    private java.util.List<String> taskIds;
+
     private DescribeCreditDetailRequest(Builder builder) {
         super(builder);
         this.agentTypes = builder.agentTypes;
@@ -64,6 +68,7 @@ public class DescribeCreditDetailRequest extends Request {
         this.pageNum = builder.pageNum;
         this.pageSize = builder.pageSize;
         this.startTime = builder.startTime;
+        this.taskIds = builder.taskIds;
     }
 
     public static Builder builder() {
@@ -142,6 +147,13 @@ public class DescribeCreditDetailRequest extends Request {
         return this.startTime;
     }
 
+    /**
+     * @return taskIds
+     */
+    public java.util.List<String> getTaskIds() {
+        return this.taskIds;
+    }
+
     public static final class Builder extends Request.Builder<DescribeCreditDetailRequest, Builder> {
         private java.util.List<String> agentTypes; 
         private Long endTime; 
@@ -152,6 +164,7 @@ public class DescribeCreditDetailRequest extends Request {
         private String pageNum; 
         private String pageSize; 
         private Long startTime; 
+        private java.util.List<String> taskIds; 
 
         private Builder() {
             super();
@@ -168,10 +181,11 @@ public class DescribeCreditDetailRequest extends Request {
             this.pageNum = request.pageNum;
             this.pageSize = request.pageSize;
             this.startTime = request.startTime;
+            this.taskIds = request.taskIds;
         } 
 
         /**
-         * <p>The agent types. This parameter is used to filter credit change details by agent type.</p>
+         * <p>The list of agent types. This parameter is used to filter credit change details by agent type.</p>
          */
         public Builder agentTypes(java.util.List<String> agentTypes) {
             this.putQueryParameter("AgentTypes", agentTypes);
@@ -180,7 +194,7 @@ public class DescribeCreditDetailRequest extends Request {
         }
 
         /**
-         * <p>The end time. The value is a UNIX timestamp in milliseconds.</p>
+         * <p>The end time. The time is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1782906240000</p>
@@ -192,7 +206,7 @@ public class DescribeCreditDetailRequest extends Request {
         }
 
         /**
-         * <p>The instance IDs.</p>
+         * <p>The list of instance IDs.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -201,7 +215,7 @@ public class DescribeCreditDetailRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return for this query.</p>
+         * <p>The maximum number of entries to return for this request.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -225,7 +239,7 @@ public class DescribeCreditDetailRequest extends Request {
         }
 
         /**
-         * <p>The package IDs.</p>
+         * <p>The list of package IDs.</p>
          */
         public Builder packageIds(java.util.List<String> packageIds) {
             this.putQueryParameter("PackageIds", packageIds);
@@ -258,7 +272,7 @@ public class DescribeCreditDetailRequest extends Request {
         }
 
         /**
-         * <p>The start time. The value is a UNIX timestamp in milliseconds.</p>
+         * <p>The start time. The time is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1782819840000</p>
@@ -266,6 +280,15 @@ public class DescribeCreditDetailRequest extends Request {
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
             this.startTime = startTime;
+            return this;
+        }
+
+        /**
+         * <p>The list of task IDs. This parameter is used to filter credit details by task.</p>
+         */
+        public Builder taskIds(java.util.List<String> taskIds) {
+            this.putQueryParameter("TaskIds", taskIds);
+            this.taskIds = taskIds;
             return this;
         }
 

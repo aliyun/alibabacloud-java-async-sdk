@@ -106,7 +106,7 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The maximum number of entries per page for a paged query.</p>
+         * <p>The maximum number of entries per page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -117,10 +117,10 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether a next query token exists. Valid values:</p>
+         * <p>Indicates whether a token for the next query is available. Valid values:</p>
          * <ul>
-         * <li>If <strong>NextToken</strong> is empty, no next query exists.</li>
-         * <li>If <strong>NextToken</strong> has a return value, the value is the token for the next query.</li>
+         * <li>If <strong>NextToken</strong> is empty, no next query is available.</li>
+         * <li>If <strong>NextToken</strong> returns a value, the value is the token used to start the next query.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -384,7 +384,7 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The vSwitch ID in the VPC.</p>
+             * <p>The ID of the vSwitch in the virtual private cloud (VPC).</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-j6cjgev6fv3ftw4f0****</p>
@@ -454,7 +454,7 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the independent device storage.</p>
+             * <p>The ID of the dedicated internal storage.</p>
              * 
              * <strong>example:</strong>
              * <p>pd-dhusabisshj****</p>
@@ -465,7 +465,7 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage capacity of the independent device storage. Unit: GiB.</p>
+             * <p>The storage capacity of the dedicated internal storage. Unit: GiB.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -538,7 +538,7 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
              * <p>The tag key.</p>
              * 
              * <strong>example:</strong>
-             * <p>keyname</p>
+             * <p>phone</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -549,7 +549,7 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
              * <p>The tag value.</p>
              * 
              * <strong>example:</strong>
-             * <p>valuename</p>
+             * <p>2025</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -978,7 +978,12 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the bandwidth plan. Valid values: 0: initializing. 1: normal. 2: deleted.</p>
+             * <p>The status of the bandwidth plan. Valid values:</p>
+             * <ul>
+             * <li>0: Initialized.</li>
+             * <li>1: Normal.</li>
+             * <li>2: Deleted.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1008,7 +1013,10 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Channel.
+             * <p>The order source. A value of CLOUDPHONE indicates an AI cloud phone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CLOUDPHONE</p>
              */
             public Builder channel(String channel) {
                 this.channel = channel;
@@ -1060,7 +1068,7 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The most recent modification time.</p>
+             * <p>The last modification time.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-02-13 02:03:14</p>
@@ -1123,7 +1131,7 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cloud phone matrix ID.</p>
+             * <p>The ID of the cloud phone matrix.</p>
              * 
              * <strong>example:</strong>
              * <p>cpn-ehs0yoedq8ntm****</p>
@@ -1145,7 +1153,10 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
             }
 
             /**
-             * PackageId.
+             * <p>The ID of the package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cmag-bp19i1yxu60r7twy****</p>
              */
             public Builder packageId(String packageId) {
                 this.packageId = packageId;
@@ -1153,7 +1164,7 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of instances under the cloud phone matrix.</p>
+             * <p>The number of instances provisioned under the cloud phone matrix.</p>
              * 
              * <strong>example:</strong>
              * <p>25</p>
@@ -1164,7 +1175,7 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The independent device storage information.</p>
+             * <p>The dedicated internal storage information.</p>
              */
             public Builder phoneDataInfo(PhoneDataInfo phoneDataInfo) {
                 this.phoneDataInfo = phoneDataInfo;
@@ -1216,7 +1227,7 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the shared device storage. Unit: GiB.</p>
+             * <p>The size of the shared internal storage. Unit: GiB.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -1238,7 +1249,10 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
             }
 
             /**
-             * SwapSize.
+             * <p>The size of the swap space.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder swapSize(Integer swapSize) {
                 this.swapSize = swapSize;
@@ -1246,7 +1260,7 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The list of tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;

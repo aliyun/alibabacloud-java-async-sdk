@@ -141,7 +141,7 @@ public class RenewAndroidInstanceGroupsRequest extends Request {
         }
 
         /**
-         * <p>The instance group IDs.</p>
+         * <p>The list of instance group IDs.</p>
          */
         public Builder instanceGroupIds(java.util.List<String> instanceGroupIds) {
             this.putQueryParameter("InstanceGroupIds", instanceGroupIds);
@@ -150,7 +150,10 @@ public class RenewAndroidInstanceGroupsRequest extends Request {
         }
 
         /**
-         * PaidCallBackUrl.
+         * <p>The redirect URL to the payment success page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wya.wuying.aliyun.com/instanceGroup</p>
          */
         public Builder paidCallBackUrl(String paidCallBackUrl) {
             this.putQueryParameter("PaidCallBackUrl", paidCallBackUrl);
@@ -159,7 +162,7 @@ public class RenewAndroidInstanceGroupsRequest extends Request {
         }
 
         /**
-         * <p>The renewal duration.</p>
+         * <p>Specifies the renewal duration. The unit is specified by the PeriodUnit parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>
@@ -171,7 +174,7 @@ public class RenewAndroidInstanceGroupsRequest extends Request {
         }
 
         /**
-         * <p>The unit of the renewal duration specified by <code>Period</code>. Default value: Month.</p>
+         * <p>The unit of the renewal duration, which is the unit of the Period parameter. Default value: Month.</p>
          * 
          * <strong>example:</strong>
          * <p>Month</p>
@@ -183,7 +186,10 @@ public class RenewAndroidInstanceGroupsRequest extends Request {
         }
 
         /**
-         * PromotionId.
+         * <p>The promotion ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50003308011****</p>
          */
         public Builder promotionId(String promotionId) {
             this.putQueryParameter("PromotionId", promotionId);

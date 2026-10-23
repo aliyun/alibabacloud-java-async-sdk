@@ -93,7 +93,7 @@ public class BackupFileResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of instances that are backed up.</p>
+         * <p>The number of backed-up instances.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -104,7 +104,7 @@ public class BackupFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result object.</p>
+         * <p>The returned result object.</p>
          * 
          * <strong>example:</strong>
          * <p>6C8439B9-7DBF-57F4-92AE-55A9B9D3****</p>
@@ -126,7 +126,7 @@ public class BackupFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The batch task ID.</p>
+         * <p>The ID of the batch task.</p>
          * 
          * <strong>example:</strong>
          * <p>t-14xwibw7pyrjd****</p>
@@ -221,7 +221,7 @@ public class BackupFileResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the cloud phone instance.</p>
+             * <p>The instance ID of the cloud phone.</p>
              * 
              * <strong>example:</strong>
              * <p>acp-34pqe4r0kd9kn****</p>

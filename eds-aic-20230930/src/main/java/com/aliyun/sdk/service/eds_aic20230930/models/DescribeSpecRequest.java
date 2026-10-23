@@ -185,6 +185,9 @@ public class DescribeSpecRequest extends Request {
 
         /**
          * <p>The billing method. A value of PrePaid indicates subscription. A value of PostPaid indicates pay-as-you-go.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -217,7 +220,7 @@ public class DescribeSpecRequest extends Request {
         }
 
         /**
-         * <p>The token that specifies the position from which the query starts. If you leave this parameter empty, the query starts from the beginning.</p>
+         * <p>The token that specifies the position from which to start reading. An empty value indicates that the reading starts from the beginning.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uONHqPtDLM2U8s****</p>
@@ -229,7 +232,7 @@ public class DescribeSpecRequest extends Request {
         }
 
         /**
-         * <p>The purchase mode for cloud phones.</p>
+         * <p>The purchasing mode of the cloud phone.</p>
          * 
          * <strong>example:</strong>
          * <p>Instance</p>

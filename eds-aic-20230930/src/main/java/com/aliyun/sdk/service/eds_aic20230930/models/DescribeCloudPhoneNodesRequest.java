@@ -251,7 +251,7 @@ public class DescribeCloudPhoneNodesRequest extends Request {
         }
 
         /**
-         * <p>The billing method. Only subscription is supported.</p>
+         * <p>The billing method. Only the subscription billing method is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>PrePaid</p>
@@ -263,7 +263,7 @@ public class DescribeCloudPhoneNodesRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries per page for a paged query. Maximum value: 100. Default value: 20.</p>
+         * <p>The maximum number of entries to return per page in a paging query. Maximum value: 100. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -275,7 +275,7 @@ public class DescribeCloudPhoneNodesRequest extends Request {
         }
 
         /**
-         * <p>The pagination token for the next query. If the results of a query are not completely returned, the returned NextToken is not empty. You can include the returned NextToken in the next request to continue the query.</p>
+         * <p>The pagination token for the next query. If a query does not return all results, the returned NextToken is not empty. You can use the returned NextToken in a subsequent query to obtain more results.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uONHqPtDLM2U8s****</p>
@@ -287,7 +287,7 @@ public class DescribeCloudPhoneNodesRequest extends Request {
         }
 
         /**
-         * <p>The list of cloud phone matrix IDs.</p>
+         * <p>The IDs of the cloud phone matrices.</p>
          */
         public Builder nodeIds(java.util.List<String> nodeIds) {
             this.putQueryParameter("NodeIds", nodeIds);
@@ -308,7 +308,7 @@ public class DescribeCloudPhoneNodesRequest extends Request {
         }
 
         /**
-         * NodeNameList.
+         * <p>The list of names used to filter cloud phone matrices.</p>
          */
         public Builder nodeNameList(java.util.List<String> nodeNameList) {
             this.putQueryParameter("NodeNameList", nodeNameList);
@@ -329,7 +329,10 @@ public class DescribeCloudPhoneNodesRequest extends Request {
         }
 
         /**
-         * SortKey.
+         * <p>The field used for sorting. A value of CreationTime indicates the creation time, and a value of ExpiredTime indicates the expiration time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CreationTime</p>
          */
         public Builder sortKey(String sortKey) {
             this.putQueryParameter("SortKey", sortKey);
@@ -338,7 +341,10 @@ public class DescribeCloudPhoneNodesRequest extends Request {
         }
 
         /**
-         * SortType.
+         * <p>The sort order. A value of ASC indicates ascending order, and a value of DESC indicates descending order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ASC</p>
          */
         public Builder sortType(String sortType) {
             this.putQueryParameter("SortType", sortType);
@@ -359,7 +365,7 @@ public class DescribeCloudPhoneNodesRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>The tags of the node.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -427,7 +433,10 @@ public class DescribeCloudPhoneNodesRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>phone</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -435,7 +444,10 @@ public class DescribeCloudPhoneNodesRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025</p>
              */
             public Builder value(String value) {
                 this.value = value;

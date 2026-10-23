@@ -196,7 +196,7 @@ public class ModifyScheduledTaskRequest extends Request {
         }
 
         /**
-         * <p>The scheduled task ID.</p>
+         * <p>The ID of the scheduled task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -209,7 +209,7 @@ public class ModifyScheduledTaskRequest extends Request {
         }
 
         /**
-         * <p>Switches the status. Valid values: ACTIVE and DISABLED.</p>
+         * <p>The status toggle. Valid values: ACTIVE and DISABLED.</p>
          * 
          * <strong>example:</strong>
          * <p>ACTIVE</p>
@@ -221,10 +221,10 @@ public class ModifyScheduledTaskRequest extends Request {
         }
 
         /**
-         * <p>The task name.</p>
+         * <p>The name of the task.</p>
          * 
          * <strong>example:</strong>
-         * <p>NewTaskName</p>
+         * <p>New task name</p>
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);
@@ -343,7 +343,7 @@ public class ModifyScheduledTaskRequest extends Request {
             } 
 
             /**
-             * <p>The extended parameter JSON string.</p>
+             * <p>The JSON string of extended parameters.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;batchSize&quot;:&quot;1000&quot;}</p>
@@ -365,7 +365,7 @@ public class ModifyScheduledTaskRequest extends Request {
             }
 
             /**
-             * <p>The list of skill IDs. A maximum of 1 skill ID is supported. The value overwrites aim_task_config.run_config after modification.</p>
+             * <p>The list of skill IDs. You can specify up to one skill ID. The value overwrites aim_task_config.run_config after the modification.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;sk-abc&quot;]</p>
@@ -376,7 +376,7 @@ public class ModifyScheduledTaskRequest extends Request {
             }
 
             /**
-             * <p>The timeout period, in seconds.</p>
+             * <p>The timeout period in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>3600</p>

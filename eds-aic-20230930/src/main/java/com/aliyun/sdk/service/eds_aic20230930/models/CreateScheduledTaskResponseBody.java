@@ -106,7 +106,7 @@ public class CreateScheduledTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The API status code.</p>
+         * <p>The status code of the API operation.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class CreateScheduledTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message.</p>
+         * <p>The message returned by the API operation.</p>
          * 
          * <strong>example:</strong>
          * <p>Success.</p>
@@ -334,7 +334,7 @@ public class CreateScheduledTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of batch delivery results for instance scheduled tasks.</p>
+             * <p>The list of batch delivery results for the scheduled tasks of instances.</p>
              */
             public Builder instanceResults(java.util.List<InstanceResults> instanceResults) {
                 this.instanceResults = instanceResults;
@@ -342,7 +342,7 @@ public class CreateScheduledTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scheduled task ID.</p>
+             * <p>The ID of the scheduled task.</p>
              * 
              * <strong>example:</strong>
              * <p>sch-260705-agb*****</p>
@@ -353,7 +353,7 @@ public class CreateScheduledTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task configuration ID.</p>
+             * <p>The ID of the task configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>tsk-260705-0jj*****</p>

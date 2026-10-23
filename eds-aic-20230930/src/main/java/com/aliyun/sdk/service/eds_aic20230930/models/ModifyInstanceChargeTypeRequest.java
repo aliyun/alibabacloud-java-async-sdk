@@ -145,7 +145,7 @@ public class ModifyInstanceChargeTypeRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to enable auto-payment. The default value is <code>false</code>.</p>
+         * <p>Specifies whether to enable automatic payment. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -157,7 +157,7 @@ public class ModifyInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable auto-renewal. The default value is <code>false</code>.</p>
+         * <p>Specifies whether to enable auto-renewal. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -169,10 +169,7 @@ public class ModifyInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * <p>The new billing method for the instance groups.</p>
-         * <blockquote>
-         * <p>You can only change the billing method from pay-as-you-go to subscription.</p>
-         * </blockquote>
+         * <p>The billing method of the instance. Currently, only switching from <strong>pay-as-you-go to subscription</strong> is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -185,7 +182,7 @@ public class ModifyInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * <p>The instance group IDs.</p>
+         * <p>The list of instance group IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder instanceGroupIds(java.util.List<String> instanceGroupIds) {
@@ -195,7 +192,7 @@ public class ModifyInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * <p>The subscription duration. The PeriodUnit parameter specifies the unit. Valid subscription durations are 1, 2, 3, and 6 months, and 1 year.</p>
+         * <p>The purchase duration of the resource. The unit is specified by PeriodUnit. Valid values: 1 month, 2 months, 3 months, 6 months, and 1 year.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -207,12 +204,10 @@ public class ModifyInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * <p>The unit for the subscription duration. Valid values:</p>
+         * <p>The unit of the purchase duration. Valid values:</p>
          * <ul>
-         * <li><p><strong>Month</strong></p>
-         * </li>
-         * <li><p><strong>Year</strong></p>
-         * </li>
+         * <li><strong>Month</strong>: month.</li>
+         * <li><strong>Year</strong>: year.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -225,7 +220,10 @@ public class ModifyInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * <p>The promotion or coupon ID.</p>
+         * <p>The promotion ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50003308011****</p>
          */
         public Builder promotionId(String promotionId) {
             this.putQueryParameter("PromotionId", promotionId);

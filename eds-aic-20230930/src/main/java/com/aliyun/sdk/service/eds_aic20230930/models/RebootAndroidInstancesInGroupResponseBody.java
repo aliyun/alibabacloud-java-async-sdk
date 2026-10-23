@@ -78,7 +78,7 @@ public class RebootAndroidInstancesInGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Tasks.
+         * <p>The task information.</p>
          */
         public Builder tasks(Tasks tasks) {
             this.tasks = tasks;
@@ -144,7 +144,10 @@ public class RebootAndroidInstancesInGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acp-xxxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -152,7 +155,10 @@ public class RebootAndroidInstancesInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The child task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t-xxxx</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -219,7 +225,7 @@ public class RebootAndroidInstancesInGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * ChildTasks.
+             * <p>The child tasks.</p>
              */
             public Builder childTasks(java.util.List<ChildTasks> childTasks) {
                 this.childTasks = childTasks;
@@ -227,7 +233,10 @@ public class RebootAndroidInstancesInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ParentTaskId.
+             * <p>The parent task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t-xxxx</p>
              */
             public Builder parentTaskId(String parentTaskId) {
                 this.parentTaskId = parentTaskId;

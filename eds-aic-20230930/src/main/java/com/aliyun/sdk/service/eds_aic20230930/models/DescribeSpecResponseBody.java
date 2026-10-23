@@ -93,7 +93,7 @@ public class DescribeSpecResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The token that indicates the position up to which the data is retrieved. An empty value indicates that all data has been retrieved.</p>
+         * <p>The token that specifies the position to which the current call has read. An empty value indicates that all data has been read.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kw9dGL5jves2FS9RLq****</p>
@@ -395,7 +395,7 @@ public class DescribeSpecResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The system cloud disk size. Unit: GB.</p>
+             * <p>The size of the system cloud disk. Unit: GB.</p>
              * 
              * <strong>example:</strong>
              * <p>32</p>

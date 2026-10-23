@@ -87,7 +87,7 @@ public class UninstallAppRequest extends Request {
         } 
 
         /**
-         * <p>A list of application IDs.</p>
+         * <p>The list of application IDs.</p>
          */
         public Builder appIdList(java.util.List<String> appIdList) {
             this.putQueryParameter("AppIdList", appIdList);
@@ -96,7 +96,7 @@ public class UninstallAppRequest extends Request {
         }
 
         /**
-         * <p>A list of instance group IDs. You must specify either this parameter or <code>InstanceIdList</code>. If you specify both, only <code>InstanceGroupIdList</code> takes precedence.</p>
+         * <p>The list of instance group IDs. You must specify either this parameter or the InstanceIdList parameter. If both parameters are specified, only the InstanceGroupIdList parameter takes effect.</p>
          */
         public Builder instanceGroupIdList(java.util.List<String> instanceGroupIdList) {
             this.putQueryParameter("InstanceGroupIdList", instanceGroupIdList);
@@ -105,7 +105,7 @@ public class UninstallAppRequest extends Request {
         }
 
         /**
-         * <p>A list of instance IDs. You must specify either this parameter or <code>InstanceGroupIdList</code>. If you specify both, only <code>InstanceGroupIdList</code> takes precedence.</p>
+         * <p>The list of instance IDs. You must specify either this parameter or the InstanceGroupIdList parameter. If both parameters are specified, only the InstanceGroupIdList parameter takes effect.</p>
          */
         public Builder instanceIdList(java.util.List<String> instanceIdList) {
             this.putQueryParameter("InstanceIdList", instanceIdList);

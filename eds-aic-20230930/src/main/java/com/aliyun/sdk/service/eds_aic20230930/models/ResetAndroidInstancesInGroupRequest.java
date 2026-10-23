@@ -164,7 +164,7 @@ public class ResetAndroidInstancesInGroupRequest extends Request {
         }
 
         /**
-         * IgnoreParamValidation.
+         * <p>Specifies whether to skip parameter validation. A value of true indicates that parameter validation is skipped. A value of false or no value indicates that parameter validation is performed.</p>
          */
         public Builder ignoreParamValidation(Boolean ignoreParamValidation) {
             this.putQueryParameter("IgnoreParamValidation", ignoreParamValidation);
@@ -185,7 +185,7 @@ public class ResetAndroidInstancesInGroupRequest extends Request {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> The sales mode. This parameter is deprecated.</p>
+         * <p><strong>[Deprecated]</strong> The sale mode.</p>
          * 
          * <strong>example:</strong>
          * <p>Instance</p>
@@ -197,7 +197,7 @@ public class ResetAndroidInstancesInGroupRequest extends Request {
         }
 
         /**
-         * <p>&lt;props=&quot;china&quot;&gt;Specifies whether to retain attribute settings during the reset. If this parameter is not specified, attribute configurations are not retained by default. This parameter takes effect only for cloud phone matrix instances. Run the wya dump config command to view the details of retained attributes.
+         * <p>&lt;props=&quot;china&quot;&gt;Specifies whether to retain property settings during the reset. If this parameter is not specified, property configurations are not retained by default. This parameter takes effect only for cloud phone matrix instances. You can run the wya dump config command to view the details of the retained properties.
          * &lt;props=&quot;intl&quot;&gt;This parameter is not supported on the international site.</p>
          * 
          * <strong>example:</strong>
@@ -210,7 +210,7 @@ public class ResetAndroidInstancesInGroupRequest extends Request {
         }
 
         /**
-         * <p>Specify this parameter when you need to reduce storage while resetting instances in a cloud phone matrix. This feature is currently available through a whitelist. This parameter applies only to instances in a cloud phone matrix.</p>
+         * <p>For instances in a cloud phone matrix, specify this parameter if you need to reduce the storage capacity during the reset. This feature is currently available only to whitelisted users.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

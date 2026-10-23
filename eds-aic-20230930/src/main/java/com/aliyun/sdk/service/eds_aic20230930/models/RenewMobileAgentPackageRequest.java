@@ -160,10 +160,10 @@ public class RenewMobileAgentPackageRequest extends Request {
          * <p>Specifies whether to enable automatic payment. Valid values:</p>
          * <ul>
          * <li><strong>true</strong>: Automatic payment is enabled. Make sure that your account balance is sufficient.</li>
-         * <li><strong>false</strong> (default): Only an order is generated. No payment is made.</li>
+         * <li><strong>false</strong> (default): Only an order is generated and no payment is deducted.</li>
          * </ul>
          * <blockquote>
-         * <p>If your payment method has an insufficient balance, set this parameter to false. An unpaid order is generated, and you can log on to the Elastic Cloud Phone console to complete the payment.</p>
+         * <p>If the balance of your payment method is insufficient, set this parameter to false to generate an unpaid order. You can log on to the Wuying Cloud Phone console to complete the payment.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -188,7 +188,10 @@ public class RenewMobileAgentPackageRequest extends Request {
         }
 
         /**
-         * <p>The idempotence key.</p>
+         * <p>The idempotency key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>425F351C-3F8E-5218-A520-B6311D0D****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -206,7 +209,7 @@ public class RenewMobileAgentPackageRequest extends Request {
         }
 
         /**
-         * <p>The redirect URL after a successful payment.</p>
+         * <p>The redirect URL for the payment success page.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://aim.wuying.aliyun.com/nodes">https://aim.wuying.aliyun.com/nodes</a></p>
@@ -218,7 +221,7 @@ public class RenewMobileAgentPackageRequest extends Request {
         }
 
         /**
-         * <p>The duration for which you want to purchase the resource. The unit is specified by <code>PeriodUnit</code>.</p>
+         * <p>The subscription duration of the resource. The unit is specified by PeriodUnit.</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>
@@ -230,11 +233,10 @@ public class RenewMobileAgentPackageRequest extends Request {
         }
 
         /**
-         * <p>The unit of the duration for which you want to purchase the resource.</p>
-         * <p>Valid values:</p>
+         * <p>The unit of the subscription duration of the resource. Valid values:</p>
          * <ul>
-         * <li><strong>Month</strong>: month.</li>
-         * <li><strong>Year</strong>: year.</li>
+         * <li><strong>Month</strong>: Month.</li>
+         * <li><strong>Year</strong>: Year.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -247,7 +249,7 @@ public class RenewMobileAgentPackageRequest extends Request {
         }
 
         /**
-         * <p>The ID of the promotional campaign.</p>
+         * <p>The ID of the promotion.</p>
          * 
          * <strong>example:</strong>
          * <p>50003308011****</p>

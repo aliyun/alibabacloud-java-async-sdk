@@ -153,7 +153,7 @@ public class ModifyJVSInstanceRequest extends Request {
         }
 
         /**
-         * <p>The credit limit configuration. Subsequent quota configurations overwrite previous ones.</p>
+         * <p>The credit limit configuration. Subsequent configurations overwrite previous ones.</p>
          */
         public Builder creditConfig(java.util.List<CreditConfig> creditConfig) {
             this.putQueryParameter("CreditConfig", creditConfig);
@@ -163,6 +163,9 @@ public class ModifyJVSInstanceRequest extends Request {
 
         /**
          * <p>The image ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>imgc-075cllfeuazh0****</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -251,7 +254,7 @@ public class ModifyJVSInstanceRequest extends Request {
             } 
 
             /**
-             * <p>The quota limit.</p>
+             * <p>The credit limit.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -262,7 +265,7 @@ public class ModifyJVSInstanceRequest extends Request {
             }
 
             /**
-             * <p>The period of the current credit.</p>
+             * <p>The time dimension for the current credit.</p>
              * 
              * <strong>example:</strong>
              * <p>day</p>

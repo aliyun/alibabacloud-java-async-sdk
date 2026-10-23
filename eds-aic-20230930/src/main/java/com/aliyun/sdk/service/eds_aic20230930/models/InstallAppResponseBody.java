@@ -80,7 +80,7 @@ public class InstallAppResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The child task objects.</p>
+         * <p>The child task information.</p>
          */
         public Builder childTaskInfo(java.util.List<ChildTaskInfo> childTaskInfo) {
             this.childTaskInfo = childTaskInfo;
@@ -182,6 +182,9 @@ public class InstallAppResponseBody extends TeaModel {
 
             /**
              * <p>The application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;

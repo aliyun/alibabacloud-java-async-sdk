@@ -115,7 +115,7 @@ public class RunCommandRequest extends Request {
         } 
 
         /**
-         * <p>The channel type for running the command.</p>
+         * <p>The channel type used to execute the command.</p>
          * 
          * <strong>example:</strong>
          * <p>EdsAgent</p>
@@ -127,7 +127,7 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * <p>The content of the command.</p>
+         * <p>The command content.</p>
          * 
          * <strong>example:</strong>
          * <p>ls</p>
@@ -139,9 +139,9 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * <p>The encoding method for the command content (<code>CommandContent</code>). This value is not case-sensitive.</p>
+         * <p>The encoding method of the command content (<code>CommandContent</code>). This parameter is case-insensitive.</p>
          * <blockquote>
-         * <p>An invalid value defaults to <code>PlainText</code>.</p>
+         * <p>If the specified value is not within the valid values, it is processed as <code>PlainText</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -154,7 +154,7 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * <p>A list of instance IDs. You can specify up to 50 instances per request.</p>
+         * <p>The list of instance IDs. A single request supports up to 50 instances.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -163,7 +163,7 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * <p>The execution timeout in seconds. The command times out if it does not complete within this period. Defaults to 60 seconds.</p>
+         * <p>The timeout period. Unit: seconds. If the command is not completed within this period, the command execution status is set to timeout. If this parameter is not specified, the default value is 60 seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>

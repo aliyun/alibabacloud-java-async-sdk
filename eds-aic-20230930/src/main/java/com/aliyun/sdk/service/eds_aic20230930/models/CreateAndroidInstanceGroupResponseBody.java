@@ -122,7 +122,7 @@ public class CreateAndroidInstanceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * NetworkPackageOrderModel.
+         * <p>The bandwidth plan order information.</p>
          */
         public Builder networkPackageOrderModel(NetworkPackageOrderModel networkPackageOrderModel) {
             this.networkPackageOrderModel = networkPackageOrderModel;
@@ -288,7 +288,10 @@ public class CreateAndroidInstanceGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * BandwidthPackageId.
+             * <p>The ID of the Internet Shared Bandwidth.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cbwp-uf63gsv8j0ir53*****</p>
              */
             public Builder bandwidthPackageId(String bandwidthPackageId) {
                 this.bandwidthPackageId = bandwidthPackageId;
@@ -296,7 +299,10 @@ public class CreateAndroidInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * BandwidthPackageOrderId.
+             * <p>The bandwidth plan order ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>25954415983*****</p>
              */
             public Builder bandwidthPackageOrderId(String bandwidthPackageOrderId) {
                 this.bandwidthPackageOrderId = bandwidthPackageOrderId;

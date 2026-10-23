@@ -102,7 +102,7 @@ public class UpdateInstanceImageResponseBody extends TeaModel {
         }
 
         /**
-         * Tasks.
+         * <p>The task information.</p>
          */
         public Builder tasks(Tasks tasks) {
             this.tasks = tasks;
@@ -168,7 +168,10 @@ public class UpdateInstanceImageResponseBody extends TeaModel {
             } 
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acp-xxxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -176,10 +179,10 @@ public class UpdateInstanceImageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task ID.</p>
+             * <p>The child task ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>t-1ljew7on6ay0j****</p>
+             * <p>t-xxxx</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -246,7 +249,7 @@ public class UpdateInstanceImageResponseBody extends TeaModel {
             } 
 
             /**
-             * ChildTasks.
+             * <p>The child tasks.</p>
              */
             public Builder childTasks(java.util.List<ChildTasks> childTasks) {
                 this.childTasks = childTasks;
@@ -254,7 +257,10 @@ public class UpdateInstanceImageResponseBody extends TeaModel {
             }
 
             /**
-             * ParentTaskId.
+             * <p>The parent task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t-xxxx</p>
              */
             public Builder parentTaskId(String parentTaskId) {
                 this.parentTaskId = parentTaskId;

@@ -266,7 +266,7 @@ public class DescribeBackupFilesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the backup is a full-device backup.</p>
+         * <p>Specifies whether the backup is a full device backup.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -350,7 +350,7 @@ public class DescribeBackupFilesRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries per page for a paging query. Valid values: 1 to 100. Default value: 10.</p>
+         * <p>The maximum number of entries to return per page in a paging query. Valid values: 1 to 100. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -362,7 +362,7 @@ public class DescribeBackupFilesRequest extends Request {
         }
 
         /**
-         * <p>The token that specifies the position from which the query starts. If this parameter is left empty, the query starts from the beginning.</p>
+         * <p>The token that specifies the starting position of the query. An empty value indicates that the query starts from the beginning.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uON****</p>
@@ -374,7 +374,10 @@ public class DescribeBackupFilesRequest extends Request {
         }
 
         /**
-         * <p>The sales mode. Valid values: Instance (cloud phone instance mode) and Node (cloud phone matrix mode).</p>
+         * <p>The sales mode. Instance indicates the cloud phone instance mode, and Node indicates the cloud phone matrix mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance</p>
          */
         public Builder saleMode(String saleMode) {
             this.putQueryParameter("SaleMode", saleMode);

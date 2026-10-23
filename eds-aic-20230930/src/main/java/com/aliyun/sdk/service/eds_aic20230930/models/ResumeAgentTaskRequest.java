@@ -102,10 +102,10 @@ public class ResumeAgentTaskRequest extends Request {
         } 
 
         /**
-         * <p>The additional prompt to append. This parameter takes effect only when the task is passively paused, such as when the task is paused and waiting for user confirmation.</p>
+         * <p>The additional prompt. This parameter takes effect only when the task is passively paused, such as pausing to wait for user confirmation.</p>
          * 
          * <strong>example:</strong>
-         * <p>验证码为***。</p>
+         * <p>The verification code is ***</p>
          */
         public Builder additionalPrompt(String additionalPrompt) {
             this.putQueryParameter("AdditionalPrompt", additionalPrompt);
@@ -114,7 +114,7 @@ public class ResumeAgentTaskRequest extends Request {
         }
 
         /**
-         * ClarificationAnswers.
+         * <p>The list of clarification answers submitted when resuming the task.</p>
          */
         public Builder clarificationAnswers(java.util.List<ClarificationAnswers> clarificationAnswers) {
             this.putQueryParameter("ClarificationAnswers", clarificationAnswers);
@@ -133,7 +133,10 @@ public class ResumeAgentTaskRequest extends Request {
         }
 
         /**
-         * ToolCallId.
+         * <p>The ID of the tool invoke to resume.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ca*****01</p>
          */
         public Builder toolCallId(String toolCallId) {
             this.putQueryParameter("ToolCallId", toolCallId);
@@ -214,7 +217,10 @@ public class ResumeAgentTaskRequest extends Request {
             } 
 
             /**
-             * CustomValue.
+             * <p>The custom input content in the clarification answer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Simply ****</p>
              */
             public Builder customValue(String customValue) {
                 this.customValue = customValue;
@@ -222,7 +228,10 @@ public class ResumeAgentTaskRequest extends Request {
             }
 
             /**
-             * Id.
+             * <p>The ID of the clarification item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cl*****-1</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -230,7 +239,7 @@ public class ResumeAgentTaskRequest extends Request {
             }
 
             /**
-             * SelectedIds.
+             * <p>The list of selected option IDs in the clarification answer.</p>
              */
             public Builder selectedIds(java.util.List<String> selectedIds) {
                 this.selectedIds = selectedIds;

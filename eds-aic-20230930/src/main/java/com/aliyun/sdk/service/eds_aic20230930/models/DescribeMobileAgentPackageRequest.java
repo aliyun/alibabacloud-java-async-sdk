@@ -129,7 +129,7 @@ public class DescribeMobileAgentPackageRequest extends Request {
         } 
 
         /**
-         * <p>The list of node instance IDs.</p>
+         * <p>The node instance IDs.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -138,7 +138,7 @@ public class DescribeMobileAgentPackageRequest extends Request {
         }
 
         /**
-         * <p>The list of packages.</p>
+         * <p>The package IDs.</p>
          */
         public Builder packageIds(java.util.List<String> packageIds) {
             this.putQueryParameter("PackageIds", packageIds);
@@ -147,7 +147,7 @@ public class DescribeMobileAgentPackageRequest extends Request {
         }
 
         /**
-         * <p>The package specifications.</p>
+         * <p>The package specification.</p>
          * 
          * <strong>example:</strong>
          * <p>advanced</p>

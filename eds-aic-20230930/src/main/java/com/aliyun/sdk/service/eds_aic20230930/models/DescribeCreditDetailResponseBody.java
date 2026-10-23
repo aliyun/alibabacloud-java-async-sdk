@@ -67,7 +67,7 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned data object.</p>
+         * <p>The response object.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -350,7 +350,7 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The API key name.</p>
+             * <p>The name of the API key.</p>
              * 
              * <strong>example:</strong>
              * <p>default</p>
@@ -383,7 +383,7 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The credit change amount.</p>
+             * <p>The amount of credit change.</p>
              * 
              * <strong>example:</strong>
              * <p>0.7637</p>
@@ -678,7 +678,7 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of records.</p>
+             * <p>The total number of detail records.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -689,7 +689,7 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total credit change.</p>
+             * <p>The total amount of credit change.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>

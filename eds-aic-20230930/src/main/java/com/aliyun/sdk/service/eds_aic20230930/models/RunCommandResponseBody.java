@@ -93,7 +93,7 @@ public class RunCommandResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The command execution ID. Use this ID to query the execution result.</p>
+         * <p>The command execution ID. You can use this ID to query the command execution result.</p>
          * 
          * <strong>example:</strong>
          * <p>t-gov2ujrk32v4****</p>
@@ -115,7 +115,7 @@ public class RunCommandResponseBody extends TeaModel {
         }
 
         /**
-         * RunCommandInfos.
+         * <p>The list of command execution information for each cloud phone instance.</p>
          */
         public Builder runCommandInfos(java.util.List<RunCommandInfos> runCommandInfos) {
             this.runCommandInfos = runCommandInfos;
@@ -123,7 +123,10 @@ public class RunCommandResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The batch task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-bp67acfmxazb4p****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -202,7 +205,10 @@ public class RunCommandResponseBody extends TeaModel {
             } 
 
             /**
-             * ChildTaskId.
+             * <p>The instance-level child task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t-bp67acfmxazb4p****</p>
              */
             public Builder childTaskId(String childTaskId) {
                 this.childTaskId = childTaskId;
@@ -210,7 +216,10 @@ public class RunCommandResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The cloud phone instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acp-uto81vfd8t8z****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -218,10 +227,10 @@ public class RunCommandResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The command execution ID. Use this ID to query the execution result.</p>
+             * <p>The command execution ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>t-gov2ujrk32v4****</p>
+             * <p>B8ED2BA9-0C6A-5643-818F-B5D60A64****</p>
              */
             public Builder invokeId(String invokeId) {
                 this.invokeId = invokeId;

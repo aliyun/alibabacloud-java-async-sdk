@@ -506,7 +506,10 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * BandwidthPackageId.
+         * <p>The bandwidth plan ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>np-791ncq8qcuoop9hta</p>
          */
         public Builder bandwidthPackageId(String bandwidthPackageId) {
             this.putQueryParameter("BandwidthPackageId", bandwidthPackageId);
@@ -515,7 +518,10 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * BandwidthPackageType.
+         * <p>The bandwidth type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cbwp_ecd</p>
          */
         public Builder bandwidthPackageType(String bandwidthPackageType) {
             this.putQueryParameter("BandwidthPackageType", bandwidthPackageType);
@@ -524,7 +530,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the list of regions where cloud phone instances can be purchased.</p>
+         * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions where cloud phones are available.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -537,7 +543,10 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * ChannelCookie.
+         * <p>The channel cookie, which is passed through to the sales system when an order is placed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>channel-cookie-ig</p>
          */
         public Builder channelCookie(String channelCookie) {
             this.putQueryParameter("ChannelCookie", channelCookie);
@@ -546,7 +555,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The billing type.</p>
+         * <p>The billing method.</p>
          * 
          * <strong>example:</strong>
          * <p>PostPaid</p>
@@ -558,7 +567,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request and prevent repeated submissions. The value cannot exceed 100 characters in length.</p>
+         * <p>The client token that is used to ensure the idempotence of the request and prevent duplicate requests. The token can be up to 100 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>asadbuvwiabdbvchj****</p>
@@ -571,7 +580,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
 
         /**
          * <blockquote>
-         * <p>This parameter is not publicly available.</p>
+         * <p>This parameter is not available to the public.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -596,7 +605,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The image ID. You can call <a href="~~DescribeImageList~~">DescribeImageList</a> to query the list of cloud phone images.</p>
+         * <p>The image ID. You can call the <a href="~~DescribeImageList~~">DescribeImageList</a> operation to query the image list for cloud phones.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -609,13 +618,13 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The instance group name.</p>
+         * <p>The name of the instance group.</p>
          * <blockquote>
-         * <p>The instance group name cannot exceed 30 characters in length. It must start with an uppercase letter, lowercase letter, or Chinese character. It cannot start with <code>http://</code> or <code>https://</code>. It can contain Chinese characters, letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
+         * <p>The name can be up to 30 characters in length. It must start with a letter or a Chinese character, and cannot start with <code>http://</code> or <code>https://</code>. It can contain only Chinese characters, letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>Cloud phoneA</p>
+         * <p>Cloud Phone A</p>
          */
         public Builder instanceGroupName(String instanceGroupName) {
             this.putQueryParameter("InstanceGroupName", instanceGroupName);
@@ -624,7 +633,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The instance group specification. You can call <a href="~~DescribeSpec~~">DescribeSpec</a> to query the specifications available for cloud phone instances.</p>
+         * <p>The specifications of the instance group. You can call the <a href="~~DescribeSpec~~">DescribeSpec</a> operation to query the available specifications for cloud phones.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -637,7 +646,10 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * InstanceVersion.
+         * <p>The instance version. A value of basic indicates a Wuying cloud phone instance, and a value of EnterpriseAi indicates a JVS Mobile instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EnterpriseAi</p>
          */
         public Builder instanceVersion(String instanceVersion) {
             this.putQueryParameter("InstanceVersion", instanceVersion);
@@ -647,7 +659,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
 
         /**
          * <blockquote>
-         * <p>This parameter is not publicly available.</p>
+         * <p>This parameter is not available to the public.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -660,9 +672,9 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The key pair ID. If you specify a valid key pair ID when creating an instance group, the key pair is bound to all instances that are successfully created, without the need to call the bindng operation again.</p>
+         * <p>The key pair ID. When creating an instance group, if you specify a valid key pair ID, the key pair is bound to all successfully created instances, and you do not need to call the binding API operation again.</p>
          * <blockquote>
-         * <p>Binding a key pair during scale-out is not supported.</p>
+         * <p>Binding key pairs during scale-out is not supported.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -675,7 +687,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * NetworkInfo.
+         * <p>The network and bandwidth plan configurations of the instance group.</p>
          */
         public Builder networkInfo(NetworkInfo networkInfo) {
             String networkInfoShrink = shrink(networkInfo, "NetworkInfo", "json");
@@ -685,7 +697,10 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * NetworkType.
+         * <p>The network type of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>network_pro_ecd</p>
          */
         public Builder networkType(String networkType) {
             this.putQueryParameter("NetworkType", networkType);
@@ -708,9 +723,9 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         /**
          * <p>The network ID.</p>
          * <ul>
-         * <li><p>To create a shared network instance: the network ID is optional. Specify the network ID of the <strong>Shared Network</strong> type on the <a href="https://wya.wuying.aliyun.com/network">Cloud Phone console &gt; Network</a> page. If no shared network exists in the console, you can leave this parameter empty. A shared network is automatically created when the instance group is created.</p>
+         * <li><p>To create a shared network instance: The network ID is optional. Enter the network ID of the <strong>Shared Network</strong> type on the <a href="https://wya.wuying.aliyun.com/network">Cloud Phone Console &gt; Network</a> page. If no shared network is available in the console, you can leave this parameter empty, and automatic creation of a shared network is triggered when the instance group is created.</p>
          * </li>
-         * <li><p>To create a VPC network instance: the network ID is required. Specify the network ID of the <strong>VPC Network</strong> type on the <a href="https://wya.wuying.aliyun.com/network">Cloud Phone console &gt; Network</a> page. If no VPC network exists in the console, create a network first.</p>
+         * <li><p>To create a VPC network instance: The network ID is required. Enter the network ID of the <strong>VPC Network</strong> type on the <a href="https://wya.wuying.aliyun.com/network">Cloud Phone Console &gt; Network</a> page. If no VPC network is available in the console, you must create a network first.</p>
          * </li>
          * </ul>
          * 
@@ -724,7 +739,10 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * PaidCallBackUrl.
+         * <p>The redirect URL for the payment success page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wya.wuying.aliyun.com/instanceGroup</p>
          */
         public Builder paidCallBackUrl(String paidCallBackUrl) {
             this.putQueryParameter("PaidCallBackUrl", paidCallBackUrl);
@@ -757,7 +775,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The policy ID. You can call <a href="~~ListPolicyGroups~~">ListPolicyGroups</a> to query the list of policies.</p>
+         * <p>The policy ID. You can call the <a href="~~ListPolicyGroups~~">ListPolicyGroups</a> operation to query the policy list.</p>
          * 
          * <strong>example:</strong>
          * <p>pg-b7bxrrwxkijjh****</p>
@@ -769,7 +787,10 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * PromotionId.
+         * <p>The promotion activity ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50003308011****</p>
          */
         public Builder promotionId(String promotionId) {
             this.putQueryParameter("PromotionId", promotionId);
@@ -778,7 +799,10 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * SaleMode.
+         * <p>The sales mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance</p>
          */
         public Builder saleMode(String saleMode) {
             this.putQueryParameter("SaleMode", saleMode);
@@ -787,7 +811,10 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * StreamMode.
+         * <p>The streaming mode of the instances in the instance group. If this parameter is not specified, the default mode is preemptive mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder streamMode(Integer streamMode) {
             this.putQueryParameter("StreamMode", streamMode);
@@ -805,11 +832,11 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The vSwitch ID. You can call <a href="https://help.aliyun.com/document_detail/448774.html">DescribeVSwitches</a> to query the list of vSwitches.</p>
+         * <p>The vSwitch ID. You can call the <a href="https://help.aliyun.com/document_detail/448774.html">DescribeVSwitches</a> operation to query the vSwitch list.</p>
          * <ul>
-         * <li><p>To create a shared network instance: leave this parameter empty.</p>
+         * <li><p>To create a shared network instance: Leave this parameter empty.</p>
          * </li>
-         * <li><p>To create a VPC network instance: the vSwitch ID is required. The specified vSwitch is used to create the instance.</p>
+         * <li><p>To create a VPC network instance: The vSwitch ID is required. This vSwitch is used to create the instance.</p>
          * </li>
          * </ul>
          * 
@@ -1039,9 +1066,6 @@ public class CreateAndroidInstanceGroupRequest extends Request {
 
             /**
              * <p>Specifies whether to enable automatic payment. Default value: false.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
              */
             public Builder autoPay(Boolean autoPay) {
                 this.autoPay = autoPay;
@@ -1050,9 +1074,6 @@ public class CreateAndroidInstanceGroupRequest extends Request {
 
             /**
              * <p>Specifies whether to enable auto-renewal. Default value: false.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
              */
             public Builder autoRenew(Boolean autoRenew) {
                 this.autoRenew = autoRenew;
@@ -1060,7 +1081,10 @@ public class CreateAndroidInstanceGroupRequest extends Request {
             }
 
             /**
-             * BandwidthPackageName.
+             * <p>The name of the bandwidth plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>inst-bandwidth-pkg-1</p>
              */
             public Builder bandwidthPackageName(String bandwidthPackageName) {
                 this.bandwidthPackageName = bandwidthPackageName;
@@ -1068,7 +1092,10 @@ public class CreateAndroidInstanceGroupRequest extends Request {
             }
 
             /**
-             * CidrBlock.
+             * <p>The private CIDR block.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.10.13.0/24</p>
              */
             public Builder cidrBlock(String cidrBlock) {
                 this.cidrBlock = cidrBlock;
@@ -1076,7 +1103,19 @@ public class CreateAndroidInstanceGroupRequest extends Request {
             }
 
             /**
-             * InternetChargeType.
+             * <p>The Billable methods of the bandwidth plan. Valid values:</p>
+             * <p>&lt;props=&quot;china&quot;&gt;</p>
+             * <ul>
+             * <li><strong>PayByBandwidth</strong> (default): pay-by-bandwidth.</li>
+             * <li><strong>PayBy95</strong>: pay-by-traditional-95th-percentile. By default, IPv6 Internet bandwidth does not support the pay-by-traditional-95th-percentile billing method. To use this billing method, contact your account manager.</li>
+             * </ul>
+             * <p>&lt;props=&quot;intl&quot;&gt;</p>
+             * <ul>
+             * <li><strong>PayByBandwidth</strong> (default): pay-by-bandwidth.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PayByBandwidth</p>
              */
             public Builder internetChargeType(String internetChargeType) {
                 this.internetChargeType = internetChargeType;
@@ -1084,7 +1123,10 @@ public class CreateAndroidInstanceGroupRequest extends Request {
             }
 
             /**
-             * IpRatio.
+             * <p>The ratio of IP addresses to instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>128</p>
              */
             public Builder ipRatio(Integer ipRatio) {
                 this.ipRatio = ipRatio;
@@ -1092,7 +1134,10 @@ public class CreateAndroidInstanceGroupRequest extends Request {
             }
 
             /**
-             * Isp.
+             * <p>The line type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ChinaTelecom</p>
              */
             public Builder isp(String isp) {
                 this.isp = isp;
@@ -1100,7 +1145,10 @@ public class CreateAndroidInstanceGroupRequest extends Request {
             }
 
             /**
-             * LimitedBandwidth.
+             * <p>The peak bandwidth limit of the bandwidth plan, in Mbit/s. The total bandwidth of all instances using this bandwidth plan is subject to this limit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder limitedBandwidth(Integer limitedBandwidth) {
                 this.limitedBandwidth = limitedBandwidth;
@@ -1108,7 +1156,10 @@ public class CreateAndroidInstanceGroupRequest extends Request {
             }
 
             /**
-             * PaidCallbackUrl.
+             * <p>The redirect URL for the payment success page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://aim.wuying.aliyun.com/nodes">https://aim.wuying.aliyun.com/nodes</a></p>
              */
             public Builder paidCallbackUrl(String paidCallbackUrl) {
                 this.paidCallbackUrl = paidCallbackUrl;
@@ -1116,7 +1167,10 @@ public class CreateAndroidInstanceGroupRequest extends Request {
             }
 
             /**
-             * PayType.
+             * <p>The billing method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PostPaid</p>
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -1146,7 +1200,10 @@ public class CreateAndroidInstanceGroupRequest extends Request {
             }
 
             /**
-             * PromotionId.
+             * <p>The promotion activity ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50003308011****</p>
              */
             public Builder promotionId(String promotionId) {
                 this.promotionId = promotionId;
@@ -1154,7 +1211,10 @@ public class CreateAndroidInstanceGroupRequest extends Request {
             }
 
             /**
-             * VisibleType.
+             * <p>The visibility scope.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CPS</p>
              */
             public Builder visibleType(String visibleType) {
                 this.visibleType = visibleType;
