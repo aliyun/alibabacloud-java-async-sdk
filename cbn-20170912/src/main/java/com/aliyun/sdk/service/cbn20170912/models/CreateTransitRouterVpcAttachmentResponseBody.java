@@ -78,7 +78,7 @@ public class CreateTransitRouterVpcAttachmentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the VPC connection.</p>
+         * <p>The ID of the VPC attachment.</p>
          * 
          * <strong>example:</strong>
          * <p>tr-attach-ia340z7xis7t5s****</p>

@@ -106,7 +106,7 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries returned on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -117,9 +117,9 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token that determines the start point of the next query. Valid values:</p>
+         * <p>The token that is used for the next query. Valid values:</p>
          * <ul>
-         * <li>If <strong>NextToken</strong> is empty, no next query exists.</li>
+         * <li>If <strong>NextToken</strong> is empty, no next query is to be sent.</li>
          * <li>If <strong>NextToken</strong> is returned, the value indicates the token that is used for the next query.</li>
          * </ul>
          * 
@@ -143,7 +143,7 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -220,7 +220,7 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether IGMP is enabled for the multicast domain.</p>
+             * <p>Specifies whether the Internet Group Management Protocol (IGMP) feature is enabled for the multicast domain.</p>
              * 
              * <strong>example:</strong>
              * <p>enable</p>
@@ -231,7 +231,7 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether strict multicast source control is enabled for the multicast domain.</p>
+             * <p>Specifies whether the strict multicast source control feature is enabled for the multicast domain.</p>
              * 
              * <strong>example:</strong>
              * <p>enable</p>
@@ -528,7 +528,7 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The transit router instance ID.</p>
+             * <p>The ID of the transit router instance, which is used to forward traffic and manage routing.</p>
              * 
              * <strong>example:</strong>
              * <p>tr-bp1c23ijrl6d6c226h***</p>

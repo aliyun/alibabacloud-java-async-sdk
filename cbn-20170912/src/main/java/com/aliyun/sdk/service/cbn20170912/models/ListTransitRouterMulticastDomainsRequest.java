@@ -213,7 +213,7 @@ public class ListTransitRouterMulticastDomainsRequest extends Request {
         } 
 
         /**
-         * <p>The Cloud Enterprise Network (CEN) instance ID.</p>
+         * <p>The Cloud Enterprise Network (CEN) instance ID. You must also specify RegionId when you use this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>cen-a7syd349kne38g****</p>
@@ -226,7 +226,7 @@ public class ListTransitRouterMulticastDomainsRequest extends Request {
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <p>You can generate a parameter value from your client to ensure that the value is unique among different requests. The ClientToken parameter supports only ASCII characters.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -238,7 +238,7 @@ public class ListTransitRouterMulticastDomainsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page for a paged query. Default value: <strong>20</strong>.</p>
+         * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -250,10 +250,10 @@ public class ListTransitRouterMulticastDomainsRequest extends Request {
         }
 
         /**
-         * <p>The token that determines the start point of the query. Valid values:</p>
+         * <p>The token that is used for the next query. Valid values:</p>
          * <ul>
-         * <li>If this is your first query or no subsequent queries are to be sent, ignore this parameter.</li>
-         * <li>If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</li>
+         * <li>If this is the first query or no next query is to be sent, ignore this parameter.</li>
+         * <li>If a next query is to be sent, set the value to the NextToken value that is returned from the last API call.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -325,7 +325,7 @@ public class ListTransitRouterMulticastDomainsRequest extends Request {
         }
 
         /**
-         * <p>The transit router instance ID.</p>
+         * <p>The ID of the transit router instance, which is used to forward traffic and manage routing.</p>
          * 
          * <strong>example:</strong>
          * <p>tr-p0wr9p28r92d598y6****</p>
@@ -408,8 +408,8 @@ public class ListTransitRouterMulticastDomainsRequest extends Request {
             } 
 
             /**
-             * <p>The tag key.</p>
-             * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag key of the resource.</p>
+             * <p>If you specify this parameter, the value cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
              * <p>You can specify up to 20 tag keys at a time.</p>
              * 
              * <strong>example:</strong>
@@ -421,9 +421,9 @@ public class ListTransitRouterMulticastDomainsRequest extends Request {
             }
 
             /**
-             * <p>The tag value.</p>
-             * <p>The tag value can be an empty string and can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
-             * <p>Each tag key corresponds to one tag value. You can specify up to 20 tag values at a time.</p>
+             * <p>The tag value of the resource.</p>
+             * <p>The tag value can be empty or a string of up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>Each tag key corresponds to a tag value. You can specify up to 20 tag values at a time.</p>
              * 
              * <strong>example:</strong>
              * <p>TagValue</p>
