@@ -127,7 +127,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token returned in this call.</p>
+         * <p>The pagination token returned by the current call.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAdDWBF2</p>
@@ -149,7 +149,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page as specified in the request.</p>
+         * <p>The number of entries returned per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -172,6 +172,9 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
 
         /**
          * <p>The total number of managed instances queried.</p>
+         * <blockquote>
+         * <p>When you use the MaxResults and NextToken parameters for paging, the returned TotalCount value is meaningless.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -241,8 +244,8 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
 
             /**
              * <p>The tag key of the managed instance. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
-             * <p>If you use a single tag to filter resources, the resource count with the specified tag cannot exceed 1,000. If you use multiple tags to filter resources, the resource count of resources that have all specified tags attached cannot exceed 1,000. If the resource count exceeds 1,000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query the resources.</p>
-             * <p>The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>If you use a single tag to filter resources, the resource count for that tag cannot exceed 1,000. If you use multiple tags to filter resources, the resource count for resources attached to multiple tags cannot exceed 1,000. If the resource count exceeds 1,000, you must call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query the resources.</p>
+             * <p>The tag key can be up to 64 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>TestKey</p>
@@ -506,7 +509,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The activation code ID.</p>
+             * <p>The ID of the activation code.</p>
              * 
              * <strong>example:</strong>
              * <p>3704F543-F768-43FA-9864-897F75B3****</p>
@@ -517,7 +520,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version number of Cloud Assistant Agent.</p>
+             * <p>The version number of the Cloud Assistant Agent.</p>
              * 
              * <strong>example:</strong>
              * <p>2.2.0.102</p>
@@ -528,11 +531,11 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the managed instance is connected.</p>
+             * <p>Indicates whether the managed instance is connected. Valid values:</p>
              * <ul>
-             * <li><p>true: The managed instance is connected. You can manage the managed instance by using Cloud Assistant.</p>
+             * <li><p>true: The managed instance is connected. You can use Cloud Assistant to manage the managed instance.</p>
              * </li>
-             * <li><p>false: The managed instance is not connected. The server may be shut down or Cloud Assistant Agent may not be properly installed.</p>
+             * <li><p>false: The managed instance is not connected. The server may be stopped or the Cloud Assistant Agent is not properly installed.</p>
              * </li>
              * </ul>
              * 
@@ -556,7 +559,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The managed instance ID.</p>
+             * <p>The instance ID of the managed instance.</p>
              * 
              * <strong>example:</strong>
              * <p>mi-hz018jrc1o0****</p>
@@ -600,7 +603,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of times that Cloud Assistant tasks have been executed on the managed instance.</p>
+             * <p>The number of Cloud Assistant tasks executed on the managed instance.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -611,7 +614,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the last Cloud Assistant task was executed. The time is displayed in ISO 8601 format in UTC.</p>
+             * <p>The time when the last Cloud Assistant task was executed. The time follows the ISO 8601 standard in the UTC time zone.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-01-20T09:00:40Z</p>
@@ -622,7 +625,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The machine code of the managed instance.</p>
+             * <p>The machine ID of the managed instance.</p>
              * 
              * <strong>example:</strong>
              * <p>e03231b37ab14e53b5795ad625fc****</p>
@@ -655,7 +658,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the managed instance was registered. The time is displayed in ISO 8601 format in UTC.</p>
+             * <p>The time when the managed instance was registered. The time follows the ISO 8601 standard in the UTC time zone.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-01-20T08:57:56Z</p>
@@ -677,7 +680,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags.</p>
+             * <p>The list of tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;

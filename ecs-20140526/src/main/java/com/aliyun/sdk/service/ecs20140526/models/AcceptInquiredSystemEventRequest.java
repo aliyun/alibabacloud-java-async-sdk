@@ -169,7 +169,7 @@ public class AcceptInquiredSystemEventRequest extends Request {
 
         /**
          * <blockquote>
-         * <p>This parameter is in invitational preview and is not publicly available.</p>
+         * <p>This parameter is in invitational preview and is not supported.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -182,7 +182,7 @@ public class AcceptInquiredSystemEventRequest extends Request {
         }
 
         /**
-         * <p>The system event ID.</p>
+         * <p>The ID of the system event.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -213,7 +213,7 @@ public class AcceptInquiredSystemEventRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the system event. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+         * <p>The region ID of the system event. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the latest Alibaba Cloud region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

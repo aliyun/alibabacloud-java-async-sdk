@@ -127,7 +127,7 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token returned in this call.</p>
+         * <p>The pagination token returned by this call.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAdDWBF2</p>
@@ -172,6 +172,9 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
 
         /**
          * <p>The total number of instances.</p>
+         * <blockquote>
+         * <p>When you use the MaxResults and NextToken parameters for paged queries, the returned TotalCount value is meaningless.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>1</p>

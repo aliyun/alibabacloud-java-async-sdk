@@ -159,7 +159,7 @@ public class ModifyDiagnosticMetricSetRequest extends Request {
          * <p>The description of the diagnostic metric set.</p>
          * 
          * <strong>example:</strong>
-         * <p>远程连接诊断</p>
+         * <p>Remote connection diagnostics</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);

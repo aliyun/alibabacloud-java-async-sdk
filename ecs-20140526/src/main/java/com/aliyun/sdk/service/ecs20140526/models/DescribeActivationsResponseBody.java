@@ -127,7 +127,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token returned in this response.</p>
+         * <p>The query token returned in the current response.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAdDWBF2****</p>
@@ -138,7 +138,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -149,7 +149,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The Settings for the number of entries returned per page during paging in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -171,7 +171,10 @@ public class DescribeActivationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of records that meet the conditional query criteria.</p>
+         * <blockquote>
+         * <p>When you perform paging in a paged query by using the MaxResults and NextToken parameters, the returned TotalCount value is meaningless.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -462,7 +465,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time.</p>
+             * <p>The creation time. The time follows the ISO 8601 standard and is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-01-20T06:00:00Z</p>
@@ -506,7 +509,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of times that the activation code can be used to register managed instances.</p>
+             * <p>The maximum number of times the activation code can be used to register managed instances.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -528,7 +531,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP addresses of hosts that are allowed to use the activation code.</p>
+             * <p>The IP addresses of the hosts that are allowed to use the activation code.</p>
              * 
              * <strong>example:</strong>
              * <p>0.0.0.0/0</p>
@@ -561,7 +564,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags of the managed instance activation code.</p>
+             * <p>The tag information of the managed instance activation code.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;

@@ -211,7 +211,11 @@ public class ExportImageRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * <p>Specifies whether to only precheck the request. Valid values:</p>
+         * <ul>
+         * <li>true: The request is checked, but the image is not exported.</li>
+         * <li>false: The image is exported.</li>
+         * </ul>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -220,7 +224,7 @@ public class ExportImageRequest extends Request {
         }
 
         /**
-         * <p>The format in which to export the image. Valid values:</p>
+         * <p>The export format of the image file. Valid values:</p>
          * <ul>
          * <li>raw</li>
          * <li>vhd</li>
@@ -253,7 +257,7 @@ public class ExportImageRequest extends Request {
         }
 
         /**
-         * <p>The OSS bucket in which to store the exported image.</p>
+         * <p>The OSS bucket used to store the exported image.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -266,7 +270,7 @@ public class ExportImageRequest extends Request {
         }
 
         /**
-         * <p>The prefix for the OSS object. The prefix can contain digits and letters and must be 1 to 30 characters in length.</p>
+         * <p>The prefix of the OSS object. The prefix must be 1 to 30 characters in length and can contain digits and letters.</p>
          * 
          * <strong>example:</strong>
          * <p>EcsExport</p>
@@ -287,7 +291,7 @@ public class ExportImageRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the custom image. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+         * <p>The region ID of the custom image. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

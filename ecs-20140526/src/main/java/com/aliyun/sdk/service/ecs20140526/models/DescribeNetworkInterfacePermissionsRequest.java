@@ -195,7 +195,7 @@ public class DescribeNetworkInterfacePermissionsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the network interface controller (NIC). You must specify <code>NetworkInterfaceId</code> or <code>NetworkInterfacePermissionId.N</code> to determine the query scope.</p>
+         * <p>The ID of the network interface controller (NIC). You must specify NetworkInterfaceId or NetworkInterfacePermissionId.N to determine the query scope.</p>
          * 
          * <strong>example:</strong>
          * <p>eni-bp17pdijfczax****</p>
@@ -207,7 +207,7 @@ public class DescribeNetworkInterfacePermissionsRequest extends Request {
         }
 
         /**
-         * <p>The list of network interface controller (NIC) permission IDs. Number of elements in the list: 1 to 100.</p>
+         * <p>The list of network interface controller (NIC) permission IDs. Number of elements: 1 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>eni-perm-bp1cs4lwn56lfb****</p>
@@ -238,7 +238,7 @@ public class DescribeNetworkInterfacePermissionsRequest extends Request {
 
         /**
          * <p>The page number of the network interface controller (NIC) permission list.</p>
-         * <p>Minimum value: 1</p>
+         * <p>Starting value: 1</p>
          * <p>Default value: 1</p>
          * 
          * <strong>example:</strong>
@@ -251,7 +251,7 @@ public class DescribeNetworkInterfacePermissionsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page for the paged query.</p>
+         * <p>The number of entries per page in a paged query.</p>
          * <p>Maximum value: 100</p>
          * <p>Default value: 10</p>
          * 
@@ -265,7 +265,7 @@ public class DescribeNetworkInterfacePermissionsRequest extends Request {
         }
 
         /**
-         * <p>The region of the network interface controller (NIC) permissions. You can invoke <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+         * <p>The region ID of the network interface controller (NIC) permission. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

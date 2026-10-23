@@ -291,8 +291,8 @@ public class CreateDeploymentSetRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests.</p>
-         * <p>ClientToken supports only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must ensure that it is unique among different requests.</p>
+         * <p>The <strong>ClientToken</strong> parameter supports only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -304,7 +304,7 @@ public class CreateDeploymentSetRequest extends Request {
         }
 
         /**
-         * <p>The name of the deployment set. The name must be 2 to 128 characters in length and must start with a letter. It cannot start with <code>http://</code> or <code>https://</code>. The name can contain digits, colons (:), underscores (_), and hyphens (-).</p>
+         * <p>The name of the deployment set. The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character and cannot start with <code>http://</code> or <code>https://</code>. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>testDeploymentSetName</p>
@@ -329,7 +329,7 @@ public class CreateDeploymentSetRequest extends Request {
 
         /**
          * <blockquote>
-         * <p>This parameter is deprecated.</p>
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -343,7 +343,7 @@ public class CreateDeploymentSetRequest extends Request {
 
         /**
          * <blockquote>
-         * <p>This parameter is deprecated.</p>
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -356,10 +356,10 @@ public class CreateDeploymentSetRequest extends Request {
         }
 
         /**
-         * <p>The number of groups for the high availability group strategy. Valid values: 1 to 7.</p>
+         * <p>The number of groups for the high availability strategy of deployment set groups. Valid values: 1 to 7.</p>
          * <p>Default value: 3.</p>
          * <blockquote>
-         * <p>This parameter takes effect only when <code>Strategy=AvailabilityGroup</code>.</p>
+         * <p>This parameter takes effect only when <code>Strategy</code> is set to <code>AvailabilityGroup</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -372,10 +372,10 @@ public class CreateDeploymentSetRequest extends Request {
         }
 
         /**
-         * <p>The emergency solution to use when an instance in the deployment set cannot be evenly distributed to available inventory after a failover. Valid values: </p>
+         * <p>The emergency plan used when an instance in the deployment set is migrated due to a host failure and there is insufficient instance inventory for dispersion. Valid values: </p>
          * <ul>
-         * <li>CancelMembershipAndStart: Removes the instance from the deployment set and starts the instance immediately after the failover.</li>
-         * <li>KeepStopped: Keeps the deployment set attributes of the instance and leaves the instance in the Stopped state.</li>
+         * <li>CancelMembershipAndStart: Removes the instance from the deployment set and starts the instance immediately after the migration.</li>
+         * <li>KeepStopped: Retains the deployment set attributes of the instance and keeps the instance in the stopped state.</li>
          * </ul>
          * <p>Default value: CancelMembershipAndStart.</p>
          * 
@@ -407,7 +407,7 @@ public class CreateDeploymentSetRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the deployment set. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+         * <p>The region ID of the deployment set. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -440,9 +440,9 @@ public class CreateDeploymentSetRequest extends Request {
         /**
          * <p>The deployment strategy. Valid values:</p>
          * <ul>
-         * <li>Availability: High availability strategy.</li>
-         * <li>AvailabilityGroup: High availability group strategy.</li>
-         * <li>LowLatency: Low network latency strategy.</li>
+         * <li>Availability: high availability strategy</li>
+         * <li>AvailabilityGroup: high availability strategy for deployment set groups</li>
+         * <li>LowLatency: low network latency strategy</li>
          * </ul>
          * <p>Default value: Availability.</p>
          * 
@@ -458,7 +458,7 @@ public class CreateDeploymentSetRequest extends Request {
         /**
          * <p>The deployment type. Valid values:</p>
          * <ul>
-         * <li>host: physical server</li>
+         * <li>host: physical machine</li>
          * <li>sw: vSwitch</li>
          * <li>rack: rack</li>
          * </ul>

@@ -127,9 +127,9 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The query token returned in this invocation.</p>
+         * <p>The query token returned by this call.</p>
          * <blockquote>
-         * <p>When you use MaxResults and NextToken parameters for paging queries and no NextToken is returned, no more data is available.</p>
+         * <p>If the NextToken value is not returned when you use the MaxResults and NextToken parameters for paging, no more data is to be returned.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -144,8 +144,8 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
          * <p>The page number of the instance event list.</p>
          * <blockquote>
          * <ul>
-         * <li>When you use MaxResults and NextToken for paging queries, the returned PageNumber parameter value is meaningless.</li>
-         * <li>This parameter will be deprecated. Use NextToken and MaxResults for paging queries instead.</li>
+         * <li>If you use the MaxResults and NextToken parameters for paging, the returned PageNumber value is meaningless.</li>
+         * <li>This parameter will be deprecated soon. Use the NextToken and MaxResults parameters for paging.</li>
          * </ul>
          * </blockquote>
          * 
@@ -158,11 +158,11 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page as settings in the request.</p>
+         * <p>The number of entries per page specified in the request.</p>
          * <blockquote>
          * <ul>
-         * <li>When you use MaxResults and NextToken for paging queries, the returned PageSize parameter value is meaningless.</li>
-         * <li>This parameter will be deprecated. Use NextToken and MaxResults for paging queries instead.</li>
+         * <li>If you use the MaxResults and NextToken parameters for paging, the returned PageSize value is meaningless.</li>
+         * <li>This parameter will be deprecated soon. Use the NextToken and MaxResults parameters for paging.</li>
          * </ul>
          * </blockquote>
          * 
@@ -188,7 +188,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         /**
          * <p>The total number of instance events.</p>
          * <blockquote>
-         * <p>When you use MaxResults and NextToken parameters for paging queries, the returned TotalCount parameter value is meaningless.</p>
+         * <p>If you use the MaxResults and NextToken parameters for paging, the returned TotalCount value is meaningless.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

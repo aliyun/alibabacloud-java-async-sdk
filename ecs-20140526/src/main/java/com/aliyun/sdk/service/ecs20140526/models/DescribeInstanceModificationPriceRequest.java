@@ -298,7 +298,7 @@ public class DescribeInstanceModificationPriceRequest extends Request {
         }
 
         /**
-         * <p>The end time of the temporary bandwidth upgrade.</p>
+         * <p>The end time of the temporary bandwidth change in the ISO 8601 format in UTC. This parameter takes effect only when InternetMaxBandwidthOut is specified.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-12-06T22Z</p>
@@ -347,7 +347,10 @@ public class DescribeInstanceModificationPriceRequest extends Request {
         }
 
         /**
-         * <p>The target instance type for the upgrade. We recommend that you call <a href="https://help.aliyun.com/document_detail/66187.html">DescribeResourcesModification</a> to query the instance types available for upgrade in a specified zone.</p>
+         * <p>The target instance type for the upgrade. Call <a href="https://help.aliyun.com/document_detail/66187.html">DescribeResourcesModification</a> to query the instance types available for upgrade in a specified zone.</p>
+         * <blockquote>
+         * <p>The instance type parameter (InstanceType) and data disk parameters (DataDisk.N.\*) cannot both be empty. You must specify at least one of them.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>ecs.g6e.large</p>
@@ -359,7 +362,11 @@ public class DescribeInstanceModificationPriceRequest extends Request {
         }
 
         /**
-         * <p>The network billing method to convert to.</p>
+         * <p>The network billing method. Valid values:</p>
+         * <ul>
+         * <li>PayByBandwidth: pay-by-bandwidth.</li>
+         * <li>PayByTraffic: pay-by-traffic.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>PayByTraffic</p>
@@ -432,7 +439,7 @@ public class DescribeInstanceModificationPriceRequest extends Request {
         }
 
         /**
-         * <p>The start time of the temporary bandwidth upgrade.</p>
+         * <p>The start time of the temporary bandwidth change in the ISO 8601 format in UTC. This parameter takes effect only when InternetMaxBandwidthOut is specified.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-12-05T22:40Z</p>
@@ -631,7 +638,7 @@ public class DescribeInstanceModificationPriceRequest extends Request {
             } 
 
             /**
-             * <p>The type of the data disk. Specify this parameter to query the price of a new subscription data disk attached to an ECS instance. Valid values of N: 1 to 16. Valid values:</p>
+             * <p>The category of the data disk. Specify this parameter when you want to query the price of new subscription data disks to be attached to the ECS instance. Valid values of N: 1 to 16. Valid values:</p>
              * <ul>
              * <li>cloud_efficiency: ultra disk.</li>
              * <li>cloud_ssd: standard SSD.</li>
@@ -640,7 +647,7 @@ public class DescribeInstanceModificationPriceRequest extends Request {
              * </ul>
              * <p>Default value: null.</p>
              * <blockquote>
-             * <p>When you call this operation, the instance type parameter (<code>InstanceType</code>) and the data disk parameters (<code>DataDisk.N.*</code>) cannot both be empty. Specify at least one of them.</p>
+             * <p>The instance type parameter (InstanceType) and data disk parameters (DataDisk.N.\*) cannot both be empty. You must specify at least one of them.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -652,7 +659,7 @@ public class DescribeInstanceModificationPriceRequest extends Request {
             }
 
             /**
-             * <p>The ID of the data disk.</p>
+             * <p>The ID of the data disk. If DiskId is empty, a new data disk is added. If DiskId is not empty, an existing data disk is modified.</p>
              * 
              * <strong>example:</strong>
              * <p>d-bf4rupt9****</p>
@@ -663,7 +670,7 @@ public class DescribeInstanceModificationPriceRequest extends Request {
             }
 
             /**
-             * <p>The performance level of the data disk when the disk type is enterprise SSD. The value of N must be the same as that in <code>DataDisk.N.Category=cloud_essd</code>. Valid values:</p>
+             * <p>The performance level of the data disk when the data disk type is enterprise SSD (ESSD). The value of N must be the same as that in DataDisk.N.Category=cloud_essd. Valid values:</p>
              * <ul>
              * <li>PL0: A single disk can deliver up to 10,000 random read/write IOPS.</li>
              * <li>PL1: A single disk can deliver up to 50,000 random read/write IOPS.</li>
@@ -671,7 +678,7 @@ public class DescribeInstanceModificationPriceRequest extends Request {
              * <li>PL3: A single disk can deliver up to 1,000,000 random read/write IOPS.</li>
              * </ul>
              * <p>Default value: PL1.</p>
-             * <p>For information about how to select an ESSD performance level, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSD</a>.</p>
+             * <p>For more information about how to select an ESSD performance level, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSD</a>. You can go to Settings to configure the standard SSD or ESSD performance level.</p>
              * 
              * <strong>example:</strong>
              * <p>PL1</p>
@@ -686,7 +693,7 @@ public class DescribeInstanceModificationPriceRequest extends Request {
              * <ul>
              * <li>cloud_efficiency: 20 to 32768.</li>
              * <li>cloud_ssd: 20 to 32768.</li>
-             * <li>cloud_essd: The valid value range depends on the value of <code>DataDisk.N.PerformanceLevel</code>.    <ul>
+             * <li>cloud_essd: The valid value range depends on the value of DataDisk.N.PerformanceLevel.    <ul>
              * <li>PL0: 1 to 32768.</li>
              * <li>PL1: 20 to 32768.</li>
              * <li>PL2: 461 to 32768.</li>

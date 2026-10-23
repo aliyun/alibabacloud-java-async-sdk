@@ -131,6 +131,7 @@ public class DeleteBandwidthPackageRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the bandwidth package to delete.</p>
          * <p>This parameter is required.</p>
          */
         public Builder bandwidthPackageId(String bandwidthPackageId) {
@@ -158,6 +159,7 @@ public class DeleteBandwidthPackageRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the bandwidth package. You can call the DescribeRegions operation to query the latest region list.</p>
          * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {

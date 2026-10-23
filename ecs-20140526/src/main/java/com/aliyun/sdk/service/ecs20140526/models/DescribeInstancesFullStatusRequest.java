@@ -309,7 +309,7 @@ public class DescribeInstancesFullStatusRequest extends Request {
         }
 
         /**
-         * <p>The type of a system event. The EventType parameter takes effect only when InstanceEventType.N is not specified. Valid values: </p>
+         * <p>The type of the event. The EventType parameter is valid only when the InstanceEventType.N parameter is not specified. Valid values: </p>
          * <ul>
          * <li>SystemMaintenance.Reboot: The instance is restarted due to system maintenance. </li>
          * <li>SystemFailure.Reboot: The instance is restarted due to a system failure.</li>
@@ -332,11 +332,11 @@ public class DescribeInstancesFullStatusRequest extends Request {
         /**
          * <p>The health status of the instance. Valid values: </p>
          * <ul>
-         * <li>Impaired: The service is impaired. </li>
-         * <li>Warning: The instance performance may be degraded due to maintenance.</li>
-         * <li>Maintaining: The instance is under maintenance.</li>
+         * <li>Impaired: The service is damaged. </li>
+         * <li>Warning: A warning is issued. Instance performance may be degraded due to maintenance.</li>
+         * <li>Maintaining: The instance is being maintained.</li>
          * <li>Initializing: The instance is being initialized. </li>
-         * <li>InsufficientData: The data is insufficient. </li>
+         * <li>InsufficientData: Data is insufficient. </li>
          * <li>NotApplicable: Not applicable.</li>
          * </ul>
          * <p>The values are case-sensitive.</p>
@@ -351,7 +351,7 @@ public class DescribeInstancesFullStatusRequest extends Request {
         }
 
         /**
-         * <p>The list of instance system event types. You can specify up to 30 instance event types.</p>
+         * <p>The list of instance event types. You can specify up to 30 instance event types.</p>
          * 
          * <strong>example:</strong>
          * <p>InstanceExpiration.Stop</p>
@@ -393,7 +393,7 @@ public class DescribeInstancesFullStatusRequest extends Request {
         }
 
         /**
-         * <p>The page number of the results. Valid values: positive integers.</p>
+         * <p>The page number of the query result. Valid values: positive integers.</p>
          * <p>Default value: 1.</p>
          * 
          * <strong>example:</strong>
@@ -419,7 +419,7 @@ public class DescribeInstancesFullStatusRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the instance. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -526,7 +526,8 @@ public class DescribeInstancesFullStatusRequest extends Request {
             } 
 
             /**
-             * <p>The end of the time range during which the events are published. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+             * <p>The end time of the event publication time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+             * <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a></p>
              * 
              * <strong>example:</strong>
              * <p>2017-12-07T00:00:00Z</p>
@@ -537,7 +538,8 @@ public class DescribeInstancesFullStatusRequest extends Request {
             }
 
             /**
-             * <p>The start of the time range during which the events are published. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+             * <p>The start time of the event publication time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+             * <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a></p>
              * 
              * <strong>example:</strong>
              * <p>2017-11-30T00:00:00Z</p>
@@ -607,7 +609,8 @@ public class DescribeInstancesFullStatusRequest extends Request {
             } 
 
             /**
-             * <p>The end of the time range during which the events are scheduled to execute. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+             * <p>The end time of the scheduled execution time of the event. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+             * <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a></p>
              * 
              * <strong>example:</strong>
              * <p>2017-11-30T00:00:00Z</p>
@@ -618,7 +621,8 @@ public class DescribeInstancesFullStatusRequest extends Request {
             }
 
             /**
-             * <p>The start of the time range during which the events are scheduled to execute. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+             * <p>The start time of the scheduled execution time of the event. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+             * <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a></p>
              * 
              * <strong>example:</strong>
              * <p>2017-12-07T00:00:00Z</p>

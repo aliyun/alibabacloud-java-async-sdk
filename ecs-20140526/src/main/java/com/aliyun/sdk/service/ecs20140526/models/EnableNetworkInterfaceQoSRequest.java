@@ -168,7 +168,7 @@ public class EnableNetworkInterfaceQoSRequest extends Request {
         }
 
         /**
-         * <p>The ID of the network interface controller (NIC).</p>
+         * <p>The ID of the Elastic Network Interface (ENI).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -199,7 +199,7 @@ public class EnableNetworkInterfaceQoSRequest extends Request {
         }
 
         /**
-         * <p>The QoS rate limiting settings.</p>
+         * <p>The QoS bandwidth throttling settings.</p>
          */
         public Builder qoS(QoS qoS) {
             this.putQueryParameter("QoS", qoS);
@@ -208,7 +208,7 @@ public class EnableNetworkInterfaceQoSRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call DescribeRegions to query the most recent region list.</p>
+         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -338,7 +338,7 @@ public class EnableNetworkInterfaceQoSRequest extends Request {
 
             /**
              * <p>The maximum inbound internal bandwidth limit.</p>
-             * <p>Unit: kbit/s. Increment: 1000 (1 Mbit/s). Value range: [50000, +∞).</p>
+             * <p>Unit: Kbit/s. Step size: 1000 (1 Mbit/s). Valid values: [50000, +∞).</p>
              * 
              * <strong>example:</strong>
              * <p>50000</p>
@@ -350,7 +350,7 @@ public class EnableNetworkInterfaceQoSRequest extends Request {
 
             /**
              * <p>The maximum outbound internal bandwidth limit.</p>
-             * <p>Unit: kbit/s. Increment: 1000 (1 Mbit/s). Value range: [50000, +∞).</p>
+             * <p>Unit: Kbit/s. Step size: 1000 (1 Mbit/s). Valid values: [50000, +∞).</p>
              * 
              * <strong>example:</strong>
              * <p>50000</p>
@@ -362,7 +362,7 @@ public class EnableNetworkInterfaceQoSRequest extends Request {
 
             /**
              * <p>The maximum number of sessions.</p>
-             * <p>Increment: 10000. Value range: [10000, +∞).</p>
+             * <p>Step size: 10000. Valid values: [10000, +∞).</p>
              * 
              * <strong>example:</strong>
              * <p>50000</p>
@@ -374,7 +374,7 @@ public class EnableNetworkInterfaceQoSRequest extends Request {
 
             /**
              * <p>The inbound internal packet forwarding rate.</p>
-             * <p>Unit: pps. Increment: 10000. Value range: [10000, +∞).</p>
+             * <p>Unit: PPS. Step size: 10000. Valid values: [10000, +∞).</p>
              * 
              * <strong>example:</strong>
              * <p>50000</p>
@@ -386,7 +386,7 @@ public class EnableNetworkInterfaceQoSRequest extends Request {
 
             /**
              * <p>The outbound internal packet forwarding rate.</p>
-             * <p>Unit: pps. Increment: 10000. Value range: [10000, +∞).</p>
+             * <p>Unit: PPS. Step size: 10000. Valid values: [10000, +∞).</p>
              * 
              * <strong>example:</strong>
              * <p>50000</p>

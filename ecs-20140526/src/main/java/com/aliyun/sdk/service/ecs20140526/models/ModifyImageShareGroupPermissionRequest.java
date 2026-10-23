@@ -200,6 +200,7 @@ public class ModifyImageShareGroupPermissionRequest extends Request {
         }
 
         /**
+         * <p>The image ID.</p>
          * <p>This parameter is required.</p>
          */
         public Builder imageId(String imageId) {
@@ -227,6 +228,7 @@ public class ModifyImageShareGroupPermissionRequest extends Request {
         }
 
         /**
+         * <p>The region ID. You can call DescribeRegions to query available regions.</p>
          * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {

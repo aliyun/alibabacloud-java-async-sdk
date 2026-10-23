@@ -114,7 +114,7 @@ public class DescribeElasticityAssuranceInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of entries per page for a paging query.</p>
+         * <p>The number of entries returned per page for paging.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -125,7 +125,7 @@ public class DescribeElasticityAssuranceInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token for the next query of the elasticity assurance.</p>
+         * <p>The pagination token for the next query.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -147,7 +147,7 @@ public class DescribeElasticityAssuranceInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries that match the query conditions.</p>
+         * <p>The total number of entries that meet the query conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>

@@ -125,7 +125,7 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries returned per page.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>

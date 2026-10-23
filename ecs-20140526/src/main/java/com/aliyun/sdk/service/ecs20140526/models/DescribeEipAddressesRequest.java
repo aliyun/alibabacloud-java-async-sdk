@@ -280,7 +280,10 @@ public class DescribeEipAddressesRequest extends Request {
         }
 
         /**
-         * AllocationId.
+         * <p>The ID of the EIP to query. You can enter up to 50 IDs. Separate multiple IDs with commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eip-2zeerraiwb7ujxscd****</p>
          */
         public Builder allocationId(String allocationId) {
             this.putQueryParameter("AllocationId", allocationId);
@@ -289,7 +292,10 @@ public class DescribeEipAddressesRequest extends Request {
         }
 
         /**
-         * AssociatedInstanceId.
+         * <p>The ID of the associated cloud service instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-2zebb08phyccdvf****</p>
          */
         public Builder associatedInstanceId(String associatedInstanceId) {
             this.putQueryParameter("AssociatedInstanceId", associatedInstanceId);
@@ -298,7 +304,10 @@ public class DescribeEipAddressesRequest extends Request {
         }
 
         /**
-         * AssociatedInstanceType.
+         * <p>The type of the associated cloud service instance. Valid values: EcsInstance, SlbInstance, Nat, HaVip, NetworkInterface, and IpAddress.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EcsInstance</p>
          */
         public Builder associatedInstanceType(String associatedInstanceType) {
             this.putQueryParameter("AssociatedInstanceType", associatedInstanceType);
@@ -307,7 +316,10 @@ public class DescribeEipAddressesRequest extends Request {
         }
 
         /**
-         * ChargeType.
+         * <p>The billing method of the EIP. Valid values: PostPaid (pay-as-you-go) and PrePaid (subscription).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -316,7 +328,10 @@ public class DescribeEipAddressesRequest extends Request {
         }
 
         /**
-         * EipAddress.
+         * <p>The EIP address to query. You can enter up to 50 addresses. Separate multiple addresses with commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.75.XX.XX</p>
          */
         public Builder eipAddress(String eipAddress) {
             this.putQueryParameter("EipAddress", eipAddress);
@@ -325,7 +340,10 @@ public class DescribeEipAddressesRequest extends Request {
         }
 
         /**
-         * ISP.
+         * <p>The line type. Valid values include BGP and BGP_PRO.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BGP</p>
          */
         public Builder ISP(String ISP) {
             this.putQueryParameter("ISP", ISP);
@@ -334,7 +352,10 @@ public class DescribeEipAddressesRequest extends Request {
         }
 
         /**
-         * LockReason.
+         * <p>The lock type. Valid values: financial (locked due to overdue payment) and security (locked due to security reasons).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>financial</p>
          */
         public Builder lockReason(String lockReason) {
             this.putQueryParameter("LockReason", lockReason);
@@ -361,7 +382,7 @@ public class DescribeEipAddressesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: 1.</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -370,7 +391,7 @@ public class DescribeEipAddressesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Maximum value: 100. Default value: 10.</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -379,7 +400,11 @@ public class DescribeEipAddressesRequest extends Request {
         }
 
         /**
+         * <p>The ID of the region where the EIP resides. You can call the DescribeRegions operation to query region IDs.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -406,7 +431,10 @@ public class DescribeEipAddressesRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status of the EIP. Valid values: Associating, Unassociating, InUse, Available, and Releasing.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -474,7 +502,10 @@ public class DescribeEipAddressesRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The first filter key. Set the value to CreationStartTime, which specifies the start time of resource creation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CreationStartTime</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -482,7 +513,10 @@ public class DescribeEipAddressesRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The first filter value. Specify the time in UTC in the YYYY-MM-DDThh:mmZ format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-01-01T01:00Z</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -67,7 +67,7 @@ public class CreateCapacityReservationResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The capacity reservation ID.</p>
+         * <p>The ID of the capacity reservation.</p>
          * 
          * <strong>example:</strong>
          * <p>crp-bp67acfmxazb4****</p>

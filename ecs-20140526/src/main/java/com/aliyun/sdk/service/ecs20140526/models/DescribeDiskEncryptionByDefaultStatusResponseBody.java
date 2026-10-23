@@ -67,12 +67,11 @@ public class DescribeDiskEncryptionByDefaultStatusResponseBody extends TeaModel 
         } 
 
         /**
-         * <p>Indicates whether account-level default encryption is enabled for block storage.</p>
-         * <p>Valid values:</p>
+         * <p>Indicates whether account-level default encryption for block storage is enabled. Valid values:</p>
          * <ul>
          * <li><p>true: Enabled.</p>
          * </li>
-         * <li><p>false: Not enabled.</p>
+         * <li><p>false: Disabled.</p>
          * </li>
          * </ul>
          * <p>Default value: false.</p>

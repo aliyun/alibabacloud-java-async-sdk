@@ -124,6 +124,10 @@ public class DescribeDisksRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PerformanceLevel")
+    private String performanceLevel;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Portable")
     private Boolean portable;
 
@@ -188,6 +192,7 @@ public class DescribeDisksRequest extends Request {
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.performanceLevel = builder.performanceLevel;
         this.portable = builder.portable;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
@@ -395,6 +400,13 @@ public class DescribeDisksRequest extends Request {
     }
 
     /**
+     * @return performanceLevel
+     */
+    public String getPerformanceLevel() {
+        return this.performanceLevel;
+    }
+
+    /**
      * @return portable
      */
     public Boolean getPortable() {
@@ -484,6 +496,7 @@ public class DescribeDisksRequest extends Request {
         private Long ownerId; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String performanceLevel; 
         private Boolean portable; 
         private String regionId; 
         private String resourceGroupId; 
@@ -526,6 +539,7 @@ public class DescribeDisksRequest extends Request {
             this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.performanceLevel = request.performanceLevel;
             this.portable = request.portable;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
@@ -556,9 +570,9 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * <p>The list of additional attribute values. The only valid value is <code>Placement</code>, which queries the data storage location of the disk.</p>
+         * <p>The list of additional attributes. Currently, only <code>Placement</code> is supported, which indicates the data storage location of the disk.</p>
          * <blockquote>
-         * <p>Only regional disks have a data storage location.</p>
+         * <p>Currently, only regional disks have a data storage location.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -571,7 +585,7 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * <p>The ID of the automatic snapshot policy used to query disks.</p>
+         * <p>The ID of the automatic snapshot policy.</p>
          * 
          * <strong>example:</strong>
          * <p>sp-m5e2w2jutw8bv31****</p>
@@ -583,18 +597,18 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * <p>The category of the disk. Valid values: </p>
+         * <p>The disk category. Valid values:</p>
          * <ul>
-         * <li>all: all disks, local disks, and elastic ephemeral disks.</li>
+         * <li>all: all cloud disks, local disks, and elastic ephemeral disks.</li>
          * <li>cloud: basic disk.</li>
          * <li>cloud_efficiency: ultra disk.</li>
          * <li>cloud_ssd: standard SSD.</li>
-         * <li>cloud_essd: enterprise SSD (ESSD).</li>
+         * <li>cloud_essd: enterprise SSD.</li>
          * <li>cloud_auto: ESSD AutoPL disk.</li>
          * <li>cloud_regional_disk_auto: regional ESSD.</li>
          * <li>cloud_essd_entry: ESSD Entry disk.</li>
-         * <li>elastic_ephemeral_disk_standard: elastic ephemeral disk - Standard.</li>
-         * <li>elastic_ephemeral_disk_premium: elastic ephemeral disk - Premium.</li>
+         * <li>elastic_ephemeral_disk_standard: standard elastic ephemeral disk.</li>
+         * <li>elastic_ephemeral_disk_premium: premium elastic ephemeral disk.</li>
          * <li>local_ssd_pro: I/O-intensive local disk.</li>
          * <li>local_hdd_pro: throughput-intensive local disk.</li>
          * <li>ephemeral: (retired) local disk.</li>
@@ -612,12 +626,10 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether automatic snapshots are released when the disk is released.</p>
+         * <p>Specifies whether automatic snapshots are released when the cloud disk is released. Valid values:</p>
          * <ul>
-         * <li><p>true: Yes.</p>
-         * </li>
-         * <li><p>false: No.</p>
-         * </li>
+         * <li>true: Automatic snapshots are released.</li>
+         * <li>false: Automatic snapshots are not released.</li>
          * </ul>
          * <p>Default value: false.</p>
          * 
@@ -631,10 +643,10 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the disk is set to be released together with the instance. Valid values:</p>
+         * <p>Specifies whether the disk is released together with the instance. Valid values:</p>
          * <ul>
          * <li>true: The disk is released together with the instance.</li>
-         * <li>false: The disk is retained and converted to a pay-as-you-go data disk when the instance is released.</li>
+         * <li>false: The disk is retained and not released. It is converted to a pay-as-you-go data disk.</li>
          * </ul>
          * <p>Default value: false.</p>
          * 
@@ -664,7 +676,7 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * <p>The IDs of disks, local disks, or elastic ephemeral disks. The value is a JSON array that can contain up to 100 IDs. Separate the IDs with commas (,).</p>
+         * <p>The IDs of the cloud disks, local disks, or elastic ephemeral disks. The value is a JSON array that contains up to 100 IDs separated by commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;d-bp67acfmxazb4p****&quot;, &quot;d-bp67acfmxazb4g****&quot;, … &quot;d-bp67acfmxazb4d****&quot;]</p>
@@ -676,7 +688,7 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * <p>The name of the disk. The name must be 2 to 128 characters in length and can contain Unicode characters under the letter category (including letters from various languages, digits, and other characters). The name can contain colons (:), underscores (_), periods (.), or hyphens (-).</p>
+         * <p>The name of the disk. The name must be 2 to 128 characters in length and can contain Unicode letters, including English letters, Chinese characters, and digits. It can also contain colons (:), underscores (_), periods (.), and hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>testDiskName</p>
@@ -688,7 +700,7 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * <p>The type of the disk, local disk, or elastic ephemeral disk to query. Valid values: </p>
+         * <p>The type of the cloud disk, local disk, or elastic ephemeral disk to query. Valid values:</p>
          * <ul>
          * <li>all: queries both system disks and data disks.</li>
          * <li>system: queries only system disks.</li>
@@ -709,10 +721,10 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <p>Specifies whether to only perform a dry run for this request. Valid values:</p>
          * <ul>
-         * <li>true: performs only a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized Resource Access Management (RAM) users, and missing parameter values. If the request fails the dry run, the corresponding error is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-         * <li>false: performs a dry run and sends the request. If the request passes the dry run, a 2XX HTTP status code is returned and the resources are queried.</li>
+         * <li>true: send a check request and do not query resources. The check items include whether the AccessKey pair is valid, the authorization of the Resource Access Management (RAM) user, and whether the required parameters are specified. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li>false: send a Normal request. If the request passes the check, a 2xx HTTP status code is returned and resources are queried.</li>
          * </ul>
          * <p>Default value: false.</p>
          * 
@@ -726,13 +738,13 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the automatic snapshot policy feature is enabled for the disk.</p>
+         * <p>Specifies whether the automatic snapshot policy feature is enabled for the cloud disk. Valid values:</p>
          * <ul>
-         * <li>true: Enabled.</li>
-         * <li>false: Not enabled.</li>
+         * <li>true: The feature is enabled.</li>
+         * <li>false: The feature is not enabled.</li>
          * </ul>
          * <blockquote>
-         * <p>This parameter is deprecated. The automatic snapshot policy feature is enabled by default for disks after creation. You only need to associate an automatic snapshot policy with the disk.</p>
+         * <p>This parameter is deprecated. The automatic snapshot policy feature is enabled by default for newly created cloud disks. You only need to apply an automatic snapshot policy to the cloud disk to use the feature.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -745,10 +757,10 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether an automatic snapshot policy is configured for the disk.</p>
+         * <p>Specifies whether an automatic snapshot policy is applied to the cloud disk. Valid values:</p>
          * <ul>
-         * <li>true: Configured.</li>
-         * <li>false: Not configured.</li>
+         * <li>true: An automatic snapshot policy is applied.</li>
+         * <li>false: No automatic snapshot policy is applied.</li>
          * </ul>
          * <p>Default value: false.</p>
          * 
@@ -762,7 +774,7 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the disk is a Shared Block Storage device.</p>
+         * <p>Specifies whether the block storage device is Shared Block Storage.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -774,12 +786,10 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to query only encrypted disks.</p>
+         * <p>Specifies whether to query only encrypted cloud disks. Valid values:</p>
          * <ul>
-         * <li><p>true: queries only encrypted disks.</p>
-         * </li>
-         * <li><p>false: does not filter disks by encryption status.</p>
-         * </li>
+         * <li>true: Yes.</li>
+         * <li>false: No.</li>
          * </ul>
          * <p>Default value: false.</p>
          * 
@@ -793,7 +803,7 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * <p>The instance ID of the instance to which the disk, local disk, or elastic ephemeral disk is attached.</p>
+         * <p>The instance ID to which the disk, local disk, or elastic ephemeral disk is attached.</p>
          * 
          * <strong>example:</strong>
          * <p>i-bp67acfmxazb4q****</p>
@@ -805,7 +815,7 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Key Management Service (KMS) key used by the disk.</p>
+         * <p>The ID of the Key Management Service (KMS) key used by the cloud disk.</p>
          * 
          * <strong>example:</strong>
          * <p>0e478b7a-4262-4802-b8cb-00d3fb40****</p>
@@ -819,7 +829,7 @@ public class DescribeDisksRequest extends Request {
         /**
          * <p>The reason why the disk is locked. Valid values:</p>
          * <ul>
-         * <li>financial: The disk is locked because of overdue payments.</li>
+         * <li>financial: The disk is locked due to overdue payments.</li>
          * <li>security: The disk is locked for security reasons.</li>
          * </ul>
          * 
@@ -836,8 +846,8 @@ public class DescribeDisksRequest extends Request {
          * <p>The maximum number of entries to return. Valid values: 10 to 500.</p>
          * <p>Default value:</p>
          * <ul>
-         * <li>If this parameter is not specified or is set to a value less than 10, the default value is 10.</li>
-         * <li>If the value is greater than 500, the default value is 500.</li>
+         * <li>If this parameter is not specified or the specified value is less than 10, the default value is 10.</li>
+         * <li>If the specified value is greater than 500, the default value is 500.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -852,9 +862,9 @@ public class DescribeDisksRequest extends Request {
         /**
          * <p>Specifies whether the multi-attach feature is enabled. Valid values:</p>
          * <ul>
-         * <li>Disabled: not enabled.</li>
-         * <li>Enabled: enabled.</li>
-         * <li>LegacyShared: queries Shared Block Storage devices.</li>
+         * <li>Disabled: The feature is disabled.</li>
+         * <li>Enabled: The feature is enabled.</li>
+         * <li>LegacyShared: Used to query shared block storage devices.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -867,8 +877,8 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * <p>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</p>
-         * <p>For information about how to view the returned data, see the operation description section above.</p>
+         * <p>The query token. The value is the <code>NextToken</code> value returned from the previous API call.</p>
+         * <p>For more information about how to configure the returned data for this operation, see the operation description section above.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAdDWBF2****</p>
@@ -899,7 +909,7 @@ public class DescribeDisksRequest extends Request {
 
         /**
          * <blockquote>
-         * <p>This parameter is about to be deprecated. Use NextToken and MaxResults to complete paging operations.</p>
+         * <p>This parameter is about to go offline. We recommend that you use the <code>NextToken</code> and <code>MaxResults</code> parameters to perform paging and complete the paged query.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -913,7 +923,7 @@ public class DescribeDisksRequest extends Request {
 
         /**
          * <blockquote>
-         * <p>This parameter is about to be deprecated. Use NextToken and MaxResults to complete paging operations.</p>
+         * <p>This parameter is about to go offline. We recommend that you use the <code>NextToken</code> and <code>MaxResults</code> parameters to perform paging and complete the paged query.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -926,14 +936,24 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the disk is removable. Valid values:</p>
+         * <p>The performance level (PL) of the ESSD disk. Valid values: PL0, PL1, PL2, and PL3.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PL0</p>
+         */
+        public Builder performanceLevel(String performanceLevel) {
+            this.putQueryParameter("PerformanceLevel", performanceLevel);
+            this.performanceLevel = performanceLevel;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether the disk can be detached. Valid values:</p>
          * <ul>
-         * <li><p>true: The disk is removable. The disk can exist independently and can be attached to or detached from instances within the same zone.</p>
-         * </li>
-         * <li><p>false: The disk is not removable. The disk cannot exist independently and cannot be attached to or detached from instances within the same zone.</p>
-         * </li>
+         * <li>true: The disk can be detached. It can exist independently and can be freely attached and detached within a zone.</li>
+         * <li>false: The disk cannot be detached. It cannot exist independently and cannot be freely attached or detached within a zone.</li>
          * </ul>
-         * <p>The Portable attribute of the following types of block storage devices is false, and their lifecycle is the same as that of the associated instance:</p>
+         * <p>The <code>Portable</code> attribute is <code>false</code> for the following types of block storage devices, and their lifecycles are the same as those of the instances:</p>
          * <ul>
          * <li>Local disks.</li>
          * <li>Local SSDs.</li>
@@ -950,7 +970,7 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the block storage device. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+         * <p>The region ID of the block storage device. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -963,7 +983,7 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the disk belongs. When you use this parameter to filter resources, the resource count cannot exceed 1,000.</p>
+         * <p>The ID of the enterprise resource group to which the disk belongs. When you use this parameter to filter resources, the resource count cannot exceed 1,000.</p>
          * <blockquote>
          * <p>Filtering by the default resource group is not supported.</p>
          * </blockquote>
@@ -996,7 +1016,7 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * <p>The ID of the snapshot used to create the disk.</p>
+         * <p>The ID of the snapshot used to create the cloud disk.</p>
          * 
          * <strong>example:</strong>
          * <p>s-bp67acfmxazb4p****</p>
@@ -1008,14 +1028,14 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * <p>The status of the disk. For more information, see <a href="https://help.aliyun.com/document_detail/25689.html">Disk status</a>. Valid values:</p>
+         * <p>The disk status. For more information, see <a href="https://help.aliyun.com/document_detail/25689.html">Disk status</a>. Valid values:</p>
          * <ul>
-         * <li>In_use: in use.</li>
-         * <li>Available: to be attached.</li>
-         * <li>Attaching: being attached.</li>
-         * <li>Detaching: being detached.</li>
-         * <li>Creating: being created.</li>
-         * <li>ReIniting: being initialized.</li>
+         * <li>In_use: The disk is in use.</li>
+         * <li>Available: The disk is available for attachment.</li>
+         * <li>Attaching: The disk is being attached.</li>
+         * <li>Detaching: The disk is being detached.</li>
+         * <li>Creating: The disk is being created.</li>
+         * <li>ReIniting: The disk is being initialized.</li>
          * <li>All: all statuses.</li>
          * </ul>
          * <p>Default value: All.</p>
@@ -1110,7 +1130,7 @@ public class DescribeDisksRequest extends Request {
             } 
 
             /**
-             * <p>The filter key used to query resources. Set the value to <code>CreationStartTime</code>. You can specify both Filter.1.Key and Filter.1.Value to query resources that were created after the specified point in time.</p>
+             * <p>The filter key used to query resources. Set the value to <code>CreationStartTime</code>. If you specify both <code>Filter.1.Key</code> and <code>Filter.1.Value</code>, you can query resources created after the specified time.</p>
              * 
              * <strong>example:</strong>
              * <p>CreationStartTime</p>
@@ -1121,7 +1141,7 @@ public class DescribeDisksRequest extends Request {
             }
 
             /**
-             * <p>The filter value used to query resources. When you specify this parameter, you must also specify the Filter.1.Key parameter. Specify the time in the <code>yyyy-MM-ddTHH:mmZ</code> format in UTC.</p>
+             * <p>The filter value used to query resources. If you specify this parameter, you must also specify the <code>Filter.1.Key</code> parameter. Specify the time in the <code>yyyy-MM-ddTHH:mmZ</code> format. The time must be in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2017-12-05T22:40Z</p>
@@ -1192,7 +1212,7 @@ public class DescribeDisksRequest extends Request {
 
             /**
              * <p>The tag key of the disk. Valid values of N: 1 to 20.</p>
-             * <p>If you use a single tag to filter resources, the resource count with the specified tag cannot exceed 1,000. If you use multiple tags to filter resources, the resource count of resources that are attached to all specified tags cannot exceed 1,000. If the resource count exceeds 1,000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</p>
+             * <p>If you use a single tag to filter resources, the resource count returned cannot exceed 1,000. If you use multiple tags to filter resources, the resource count of resources that attach multiple tags cannot exceed 1,000. If the resource count exceeds 1,000, use the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query the resources.</p>
              * 
              * <strong>example:</strong>
              * <p>TestKey</p>

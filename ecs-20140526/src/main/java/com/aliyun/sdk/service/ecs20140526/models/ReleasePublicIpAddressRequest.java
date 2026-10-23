@@ -125,12 +125,7 @@ public class ReleasePublicIpAddressRequest extends Request {
         }
 
         /**
-         * <blockquote>
-         * <p>This parameter is not yet available.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>hide</p>
+         * DryRun.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -139,10 +134,7 @@ public class ReleasePublicIpAddressRequest extends Request {
         }
 
         /**
-         * <p>The instance ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>i-bp67acfmxazb4p****</p>
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -151,11 +143,7 @@ public class ReleasePublicIpAddressRequest extends Request {
         }
 
         /**
-         * <p>The public IP address of the instance.</p>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><code>121.40.**.**</code></p>
          */
         public Builder publicIpAddress(String publicIpAddress) {
             this.putQueryParameter("PublicIpAddress", publicIpAddress);
@@ -164,10 +152,7 @@ public class ReleasePublicIpAddressRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the instance is located.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

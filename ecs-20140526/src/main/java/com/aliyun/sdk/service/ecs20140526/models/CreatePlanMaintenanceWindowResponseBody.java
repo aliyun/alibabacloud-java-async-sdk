@@ -78,7 +78,7 @@ public class CreatePlanMaintenanceWindowResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>7D5B1188-3F08-56D1-A6B2-91B267452633</p>

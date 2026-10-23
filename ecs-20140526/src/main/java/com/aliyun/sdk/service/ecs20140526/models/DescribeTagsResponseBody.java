@@ -106,10 +106,7 @@ public class DescribeTagsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The page number of the tag list.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -117,10 +114,7 @@ public class DescribeTagsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page settings for the paged query. This is the paging size.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>50</p>
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -128,10 +122,7 @@ public class DescribeTagsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>B04B8CF3-4489-432D-83BA-6F128E4F2295</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -147,10 +138,7 @@ public class DescribeTagsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of tags.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
+         * TotalCount.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

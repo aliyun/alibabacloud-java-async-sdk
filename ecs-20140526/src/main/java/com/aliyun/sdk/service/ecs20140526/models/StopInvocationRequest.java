@@ -168,7 +168,7 @@ public class StopInvocationRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the instances on which you want to stop the command. You can specify up to 50 instance IDs. Valid values of N: 1 to 50.</p>
+         * <p>The IDs of the instances on which to stop the command execution. You can specify up to 50 instance IDs. Valid values of N: 1 to 50.</p>
          * 
          * <strong>example:</strong>
          * <p>i-bp67acfmxazb4p****</p>
@@ -180,7 +180,7 @@ public class StopInvocationRequest extends Request {
         }
 
         /**
-         * <p>The command execution ID. You can call <a href="https://help.aliyun.com/document_detail/64840.html">DescribeInvocations</a> to query all InvokeId values.</p>
+         * <p>The command execution ID. You can call the <a href="https://help.aliyun.com/document_detail/64840.html">DescribeInvocations</a> operation to query all execution IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -211,7 +211,7 @@ public class StopInvocationRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

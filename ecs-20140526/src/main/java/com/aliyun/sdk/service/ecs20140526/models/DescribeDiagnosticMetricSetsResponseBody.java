@@ -88,7 +88,7 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token returned in this call.</p>
+         * <p>The pagination token returned by the current call.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -223,7 +223,7 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
              * <p>The description of the diagnostic metric set.</p>
              * 
              * <strong>example:</strong>
-             * <p>Remote connection diagnostics</p>
+             * <p>Remote connection issue diagnosis</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -253,7 +253,7 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
              * <p>The name of the diagnostic metric set.</p>
              * 
              * <strong>example:</strong>
-             * <p>Remote connection diagnostics</p>
+             * <p>Remote connection issue diagnosis</p>
              */
             public Builder metricSetName(String metricSetName) {
                 this.metricSetName = metricSetName;
@@ -274,8 +274,8 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
             /**
              * <p>The type of the diagnostic metric set. Valid values:</p>
              * <ul>
-             * <li>User: user.</li>
-             * <li>Common: common.</li>
+             * <li>User: user-created.</li>
+             * <li>Common: public.</li>
              * </ul>
              * 
              * <strong>example:</strong>

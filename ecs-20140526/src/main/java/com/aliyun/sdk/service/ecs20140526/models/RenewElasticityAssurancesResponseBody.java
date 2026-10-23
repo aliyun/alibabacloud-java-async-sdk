@@ -80,7 +80,7 @@ public class RenewElasticityAssurancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the renewal order.</p>
+         * <p>The renewal order ID.</p>
          * 
          * <strong>example:</strong>
          * <p>182372800****</p>

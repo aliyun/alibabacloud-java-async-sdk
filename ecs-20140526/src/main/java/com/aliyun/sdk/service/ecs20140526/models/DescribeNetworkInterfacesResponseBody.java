@@ -127,7 +127,7 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token returned in this call.</p>
+         * <p>The pagination token returned by the current call.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAdDWBF2****</p>
@@ -138,9 +138,9 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The paging parameter.</p>
+         * <p>The paging query parameter.</p>
          * <blockquote>
-         * <p>This parameter is being deprecated. Use NextToken and MaxResults for paging.</p>
+         * <p>This parameter will soon be deprecated. We recommend that you use the <code>NextToken</code> and <code>MaxResults</code> parameters for paging.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -152,9 +152,9 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The paging parameter.</p>
+         * <p>The paging query parameter.</p>
          * <blockquote>
-         * <p>This parameter is being deprecated. Use NextToken and MaxResults for paging.</p>
+         * <p>This parameter will soon be deprecated. We recommend that you use the <code>NextToken</code> and <code>MaxResults</code> parameters for paging.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -177,9 +177,9 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of Elastic Network Interfaces (ENIs) returned.</p>
+         * <p>The total number of Elastic Network Interface (ENI) resources returned.</p>
          * <blockquote>
-         * <p>When you use the <code>MaxResults</code> and <code>NextToken</code> parameters for paging, the returned <code>TotalCount</code> value is meaningless.</p>
+         * <p>When you use the <code>MaxResults</code> and <code>NextToken</code> parameters for a paging query, the returned <code>TotalCount</code> value is meaningless.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

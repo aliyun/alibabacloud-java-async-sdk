@@ -67,7 +67,7 @@ public class CreatePortRangeListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the port list that was created.</p>
+         * <p>The ID of the created port list.</p>
          * 
          * <strong>example:</strong>
          * <p>prl-2ze9743****</p>

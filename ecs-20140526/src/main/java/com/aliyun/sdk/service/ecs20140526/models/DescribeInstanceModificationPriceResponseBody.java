@@ -67,7 +67,7 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The price information, including the price and discount rule details.</p>
+         * <p>The price information, including the price and discount rule information.</p>
          */
         public Builder priceInfo(PriceInfo priceInfo) {
             this.priceInfo = priceInfo;
@@ -505,6 +505,12 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
 
             /**
              * <p>The currency unit. Valid values:</p>
+             * <ul>
+             * <li><p>China site: CNY.</p>
+             * </li>
+             * <li><p>International site: USD.</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>CNY</p>
@@ -642,6 +648,8 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
 
             /**
              * <p>The currency unit.</p>
+             * <p>China site: CNY.</p>
+             * <p>International site: USD.</p>
              * 
              * <strong>example:</strong>
              * <p>CNY</p>

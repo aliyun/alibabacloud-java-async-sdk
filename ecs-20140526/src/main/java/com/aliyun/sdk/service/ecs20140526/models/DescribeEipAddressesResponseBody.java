@@ -114,7 +114,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The current page number.</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +122,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +130,10 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4EC47282-1B74-4534-BD0E-403F3EE64CAF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +141,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

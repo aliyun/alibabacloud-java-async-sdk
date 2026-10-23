@@ -184,7 +184,7 @@ public class CreateNetworkInterfacePermissionRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Alibaba Cloud partner (certified ISV) account or individual user account.</p>
+         * <p>The account ID of the Alibaba Cloud partner (certified ISV) or the individual user.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -197,7 +197,7 @@ public class CreateNetworkInterfacePermissionRequest extends Request {
         }
 
         /**
-         * <p>The ID of the network interface controller (NIC).</p>
+         * <p>The ID of the Elastic network interface controller (NIC).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -228,8 +228,8 @@ public class CreateNetworkInterfacePermissionRequest extends Request {
         }
 
         /**
-         * <p>The network interface controller (NIC) permission action. Only InstanceAttach is supported.</p>
-         * <p>InstanceAttach: allows the authorized user to attach your NIC to their ECS instance. The ECS instance must be in the same zone as the NIC.</p>
+         * <p>The Elastic network interface controller (NIC) permission action. Only InstanceAttach is supported.</p>
+         * <p>InstanceAttach: allows the authorized user to attach your Elastic network interface controller (NIC) to their ECS instance. The ECS instance and the Elastic network interface controller (NIC) must reside in the same active zone.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -242,7 +242,7 @@ public class CreateNetworkInterfacePermissionRequest extends Request {
         }
 
         /**
-         * <p>The region of the network interface controller (NIC) permission. You can invoke <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+         * <p>The region of the Elastic network interface controller (NIC) permission. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to view the latest list of Alibaba Cloud regions.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

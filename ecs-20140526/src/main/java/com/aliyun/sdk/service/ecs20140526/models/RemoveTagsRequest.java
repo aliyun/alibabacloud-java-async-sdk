@@ -178,11 +178,7 @@ public class RemoveTagsRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the resource. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-shenzhen</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -191,11 +187,7 @@ public class RemoveTagsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource from which you want to unbind tags. For example, when ResourceType is set to instance, ResourceId refers to the instance ID.</p>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>s-946ntx4****</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -222,26 +214,7 @@ public class RemoveTagsRequest extends Request {
         }
 
         /**
-         * <p>The type of the resource. Valid values:</p>
-         * <ul>
-         * <li>instance: ECS instance.</li>
-         * <li>disk: cloud disk.</li>
-         * <li>snapshot: snapshot.</li>
-         * <li>image: image.</li>
-         * <li>securitygroup: security group.</li>
-         * <li>volume: storage volume.</li>
-         * <li>eni: Elastic Network Interface (ENI).</li>
-         * <li>ddh: dedicated host.</li>
-         * <li>keypair: SSH key pair.</li>
-         * <li>launchtemplate: launch template.</li>
-         * <li>reservedinstance: reserved instance.</li>
-         * <li>snapshotpolicy: automatic snapshot policy.</li>
-         * </ul>
-         * <p>All valid values are in lowercase.</p>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>snapshot</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -250,7 +223,7 @@ public class RemoveTagsRequest extends Request {
         }
 
         /**
-         * <p>The tags.</p>
+         * Tag.
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -318,10 +291,7 @@ public class RemoveTagsRequest extends Request {
             } 
 
             /**
-             * <p>The tag key of the resource. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with aliyun or acs:. The tag key cannot contain http:// or https://.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TestKey</p>
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -329,10 +299,7 @@ public class RemoveTagsRequest extends Request {
             }
 
             /**
-             * <p>The tag value of the resource. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with aliyun or acs:. The tag value cannot contain http:// or https://.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TestValue</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

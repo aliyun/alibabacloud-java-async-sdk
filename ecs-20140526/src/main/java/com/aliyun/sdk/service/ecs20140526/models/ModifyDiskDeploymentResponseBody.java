@@ -78,7 +78,7 @@ public class ModifyDiskDeploymentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The task ID of the disk migration.</p>
+         * <p>The ID of the disk migration task.</p>
          * 
          * <strong>example:</strong>
          * <p>t-bp67acfmxazb4p****</p>

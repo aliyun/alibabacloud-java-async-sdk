@@ -183,7 +183,7 @@ public class DescribePrefixListAssociationsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page for paging.</p>
+         * <p>The number of entries per page in a paged query.</p>
          * <p>Maximum value: 100.</p>
          * <p>Default value: 10.</p>
          * 
@@ -197,7 +197,7 @@ public class DescribePrefixListAssociationsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token. Set this parameter to the value of <code>NextToken</code> returned in the previous call. You do not need to set this parameter for the first request.</p>
+         * <p>The query token. Set the value to the <code>NextToken</code> value returned from the previous call to this operation. You do not need to specify this parameter for the first call.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAdDWBF2****</p>
@@ -240,7 +240,7 @@ public class DescribePrefixListAssociationsRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the latest Alibaba Cloud region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

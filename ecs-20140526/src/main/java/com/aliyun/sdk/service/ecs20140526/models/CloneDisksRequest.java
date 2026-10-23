@@ -326,7 +326,7 @@ public class CloneDisksRequest extends Request {
 
         /**
          * <blockquote>
-         * <p>This parameter is not publicly available.</p>
+         * <p>This parameter is not available.</p>
          * </blockquote>
          */
         public Builder arn(java.util.List<Arn> arn) {
@@ -336,11 +336,11 @@ public class CloneDisksRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the performance burst feature for the new disk. Valid values:</p>
+         * <p>Specifies whether to enable performance bursting for the new cloud disk. Valid values:</p>
          * <ul>
-         * <li>true: enables the performance burst feature.</li>
-         * <li>false: does not enable the performance burst feature.<blockquote>
-         * <p>This parameter is supported only when DiskCategory is set to cloud_auto. For more information, see <a href="https://www.alibabacloud.com/help/en/ecs/user-guide/essd-autopl-disks">ESSD AutoPL disks</a>.</p>
+         * <li>true: enables performance bursting.</li>
+         * <li>false: disables performance bursting.<blockquote>
+         * <p>This parameter is supported only when DiskCategory is set to cloud_auto. For more information, see <a href="https://www.alibabacloud.com/help/en/ecs/user-guide/essd-autopl-disks">ESSD AutoPLs</a>.</p>
          * </blockquote>
          * </li>
          * </ul>
@@ -355,7 +355,7 @@ public class CloneDisksRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * <p>Ensures the idempotence of the request. You can generate a parameter value from your client to ensure that the value is unique across different requests. The ClientToken parameter only supports ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -367,18 +367,18 @@ public class CloneDisksRequest extends Request {
         }
 
         /**
-         * <p>The category of the new disk. Valid values:</p>
+         * <p>The category of the new cloud disk. Valid values:</p>
          * <ul>
-         * <li>cloud_essd: enterprise SSD (ESSD).</li>
-         * <li>cloud_auto: ESSD AutoPL disk.</li>
-         * <li>cloud_essd_entry: ESSD Entry disk.</li>
-         * <li>cloud_regional_disk_auto: regional ESSD.</li>
+         * <li>cloud_essd: ESSD.</li>
+         * <li>cloud_auto: ESSD AutoPL.</li>
+         * <li>cloud_essd_entry: ESSD Entry.</li>
+         * <li>cloud_regional_disk_auto: zone-redundant ESSD.</li>
          * </ul>
          * <blockquote>
-         * <p>Disk category restrictions for disk cloning:</p>
+         * <p>Limits on cloud disk categories for cloning</p>
          * <ul>
-         * <li>Non-regional disks can only be cloned to non-regional disk types.</li>
-         * <li>Regional disks can only be cloned to regional disk types.</li>
+         * <li>Non-zone-redundant cloud disks can only be cloned to non-zone-redundant types.</li>
+         * <li>Zone-redundant cloud disks can only be cloned to zone-redundant types.</li>
          * </ul>
          * </blockquote>
          * <p>This parameter is required.</p>
@@ -393,7 +393,7 @@ public class CloneDisksRequest extends Request {
         }
 
         /**
-         * <p>The name of the disk. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-). The name must start with a letter.</p>
+         * <p>The name of the cloud disk. The name must be 2 to 128 characters in length and can contain letters in the Unicode letter category (including English and Chinese characters) and ASCII digits (0-9). It can contain colons (:), underscores (_), periods (.), and hyphens (-). It must start with a letter in the Unicode letter category.</p>
          * <p>Default value: empty.</p>
          * 
          * <strong>example:</strong>
@@ -406,10 +406,10 @@ public class CloneDisksRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <p>Specifies whether to only perform a dry run for this request. Valid values:</p>
          * <ul>
-         * <li>true: sends a check request without querying the filing status. The check items include whether the AccessKey pair is valid, whether the Resource Access Management (RAM) user is granted the required authorization, and whether the required parameters are specified. If the check fails, the corresponding error message is returned. If the check succeeds, the DryRunOperation error code is returned.</li>
-         * <li>false (default): sends a Normal request. After the check succeeds, a 2XX HTTP status code is returned and the filing status is directly queried.</li>
+         * <li>true: sends a check request and does not perform the actual operation. The check items include whether the AccessKey pair is valid, the authorization of the Resource Access Management (RAM) user, and whether the required parameters are specified. If the check fails, the corresponding error is returned. If the check succeeds, the DryRunOperation error code is returned.</li>
+         * <li>false (default): sends a Normal request. If the check succeeds, a 2XX HTTP status code is returned and the actual operation is performed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -422,10 +422,10 @@ public class CloneDisksRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the new disk is encrypted. Valid values:</p>
+         * <p>Specifies whether the new cloud disk is encrypted. Valid values:</p>
          * <ul>
-         * <li>true: The new disk is encrypted.</li>
-         * <li>false: The new disk is not encrypted.</li>
+         * <li>true: The cloud disk is encrypted.</li>
+         * <li>false: The cloud disk is not encrypted.</li>
          * </ul>
          * <p>Default value: false.</p>
          * 
@@ -439,7 +439,7 @@ public class CloneDisksRequest extends Request {
         }
 
         /**
-         * <p>The key ID of the KMS key used by the new disk.</p>
+         * <p>The KMS key ID used by the new cloud disk.</p>
          * 
          * <strong>example:</strong>
          * <p>key-szz67b2f696f4wh9yeg5d</p>
@@ -451,10 +451,10 @@ public class CloneDisksRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the multi-attach attribute for the new disk. Valid values:</p>
+         * <p>Specifies whether to enable the multi-attach feature for the new cloud disk. Valid values:</p>
          * <ul>
-         * <li>Disabled: disables the multi-attach attribute.</li>
-         * <li>Enabled: enables the multi-attach attribute. Only enterprise SSDs (ESSDs) support this parameter set to <code>Enabled</code>.</li>
+         * <li>Disabled: disables the feature.</li>
+         * <li>Enabled: enables the feature. Only ESSDs support this value.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -477,17 +477,17 @@ public class CloneDisksRequest extends Request {
         }
 
         /**
-         * <p>The performance level (PL) of the new standard SSD. Valid values:</p>
+         * <p>The performance level settings of the cloud disk when you create an ESSD. Valid values:</p>
          * <ul>
-         * <li>PL0: A single disk can deliver up to 10,000 random read/write IOPS.</li>
-         * <li>PL1: A single disk can deliver up to 50,000 random read/write IOPS.</li>
-         * <li>PL2: A single disk can deliver up to 100,000 random read/write IOPS.</li>
-         * <li>PL3: A single disk can deliver up to 1,000,000 random read/write IOPS.</li>
+         * <li>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</li>
+         * <li>PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.</li>
+         * <li>PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</li>
+         * <li>PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</li>
          * </ul>
          * <blockquote>
-         * <p>If DiskCategory is set to cloud_essd, PerformanceLevel is required.</p>
+         * <p>If DiskCategory is set to cloud_essd, the PerformanceLevel parameter is required.</p>
          * </blockquote>
-         * <p>For more information about how to select an ESSD performance level, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
+         * <p>For more information about how to select the performance level of an ESSD, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSD standard SSDs</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>PL1</p>
@@ -499,14 +499,14 @@ public class CloneDisksRequest extends Request {
         }
 
         /**
-         * <p>The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values:</p>
+         * <p>The provisioned read and write IOPS for a single ESSD AutoPL. Valid values:</p>
          * <ul>
-         * <li>Capacity (GiB) &lt;= 3: Provisioned performance is not supported.</li>
-         * <li>Capacity (GiB) &gt;= 4: [0, min{(1,000 IOPS/GiB × Capacity - Baseline IOPS), 50,000}]</li>
+         * <li>If the capacity is less than or equal to 3 GiB, provisioned performance is not supported.</li>
+         * <li>If the capacity is greater than or equal to 4 GiB, the valid values are 0 to the minimum of (1,000 IOPS/GiB × Capacity - Baseline IOPS) and 50,000.</li>
          * </ul>
-         * <p>Baseline performance = max{min{1,800 + 50 × Capacity, 50,000}, 3,000}.</p>
+         * <p>Baseline performance = the maximum of the minimum of (1,800 + 50 × Capacity) and 50,000, and 3,000.</p>
          * <blockquote>
-         * <p>This parameter is supported only when DiskCategory is set to cloud_auto. For more information, see <a href="https://www.alibabacloud.com/help/en/ecs/user-guide/essd-autopl-disks">ESSD AutoPL disks</a>.</p>
+         * <p>This parameter is supported only when DiskCategory is set to cloud_auto. For more information, see <a href="https://www.alibabacloud.com/help/en/ecs/user-guide/essd-autopl-disks">ESSD AutoPLs</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -519,7 +519,7 @@ public class CloneDisksRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call <a href="https://www.alibabacloud.com/help/en/ecs/api-regions-describeregions">DescribeRegions</a> to query the most recent region list.</p>
+         * <p>The region ID. You can call the <a href="https://www.alibabacloud.com/help/en/ecs/api-regions-describeregions">DescribeRegions</a> operation to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -532,7 +532,7 @@ public class CloneDisksRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the disk belongs.</p>
+         * <p>The ID of the resource group to which the cloud disk belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-bp199lyny9b3****</p>
@@ -553,7 +553,7 @@ public class CloneDisksRequest extends Request {
         }
 
         /**
-         * <p>The capacity of the new disk. Unit: GiB. You must specify a value for this parameter. Valid values:</p>
+         * <p>The capacity of the new cloud disk. Unit: GiB. You must specify a value for this parameter. Valid values:</p>
          * <ul>
          * <li>cloud_essd: The valid values vary based on the performance level.<ul>
          * <li>PL0: 1 to 65,536.</li>
@@ -578,7 +578,7 @@ public class CloneDisksRequest extends Request {
         }
 
         /**
-         * <p>The ID of the source disk.</p>
+         * <p>The ID of the source cloud disk.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -591,7 +591,7 @@ public class CloneDisksRequest extends Request {
         }
 
         /**
-         * <p>The list of tags for the disk.</p>
+         * <p>The list of tag information for the cloud disk.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -673,7 +673,7 @@ public class CloneDisksRequest extends Request {
 
             /**
              * <blockquote>
-             * <p>This parameter is not publicly available.</p>
+             * <p>This parameter is not available.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -686,7 +686,7 @@ public class CloneDisksRequest extends Request {
 
             /**
              * <blockquote>
-             * <p>This parameter is not publicly available.</p>
+             * <p>This parameter is not available.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -699,7 +699,7 @@ public class CloneDisksRequest extends Request {
 
             /**
              * <blockquote>
-             * <p>This parameter is not publicly available.</p>
+             * <p>This parameter is not available.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -770,7 +770,7 @@ public class CloneDisksRequest extends Request {
             } 
 
             /**
-             * <p>The tag key of the disk. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. The tag key cannot contain http:// or https://.</p>
+             * <p>The tag key of the cloud disk. Valid values of N: 1 to 20. If you specify Tag.N.Key, it cannot be an empty string. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</p>
              * 
              * <strong>example:</strong>
              * <p>TestKey</p>
@@ -781,7 +781,7 @@ public class CloneDisksRequest extends Request {
             }
 
             /**
-             * <p>The tag value of the disk. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://.</p>
+             * <p>The tag value of the cloud disk. Valid values of N: 1 to 20. If you specify Tag.N.Value, it can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://.</p>
              * 
              * <strong>example:</strong>
              * <p>TestValue</p>

@@ -191,11 +191,7 @@ public class DescribeResourceByTagsRequest extends Request {
         }
 
         /**
-         * <p>The page number of the results. Minimum value: 1.</p>
-         * <p>Default value: 1.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -204,11 +200,7 @@ public class DescribeResourceByTagsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Maximum value: 100.</p>
-         * <p>Default value: 50.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>50</p>
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -217,11 +209,7 @@ public class DescribeResourceByTagsRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the resource. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -248,23 +236,7 @@ public class DescribeResourceByTagsRequest extends Request {
         }
 
         /**
-         * <p>The resource type. Valid values:</p>
-         * <ul>
-         * <li>instance: ECS instance.</li>
-         * <li>disk: cloud disk.</li>
-         * <li>snapshot: snapshot.</li>
-         * <li>image: image.</li>
-         * <li>securitygroup: security group.</li>
-         * <li>volume: storage volume.</li>
-         * <li>eni: Elastic Network Interface (ENI).</li>
-         * <li>ddh: dedicated host.</li>
-         * <li>keypair: SSH key pair.</li>
-         * <li>launchtemplate: launch template.</li>
-         * </ul>
-         * <p>All valid values are in lowercase.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>instance</p>
+         * ResourceType.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -273,7 +245,7 @@ public class DescribeResourceByTagsRequest extends Request {
         }
 
         /**
-         * <p>The list of tags.</p>
+         * Tag.
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -341,10 +313,7 @@ public class DescribeResourceByTagsRequest extends Request {
             } 
 
             /**
-             * <p>The tag key of the resource. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TestKey</p>
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -352,10 +321,7 @@ public class DescribeResourceByTagsRequest extends Request {
             }
 
             /**
-             * <p>The tag value of the resource. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TestValue</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -75,7 +75,7 @@ public class DeleteDiagnosticMetricSetsRequest extends Request {
         } 
 
         /**
-         * <p>The list of diagnostic metric set IDs. You can specify up to 10 IDs.</p>
+         * <p>The IDs of the diagnostic metric sets. You can specify up to 10 IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder metricSetIds(java.util.List<String> metricSetIds) {
@@ -85,7 +85,7 @@ public class DeleteDiagnosticMetricSetsRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the latest list of Alibaba Cloud regions.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

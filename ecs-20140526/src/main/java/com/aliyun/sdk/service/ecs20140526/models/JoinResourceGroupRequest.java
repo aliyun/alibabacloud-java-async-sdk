@@ -198,7 +198,7 @@ public class JoinResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the resource. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+         * <p>The region ID of the resource. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -222,7 +222,7 @@ public class JoinResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource. For example, when ResourceType is set to instance, ResourceId is the instance ID.</p>
+         * <p>The ID of the resource. For example, if ResourceType is set to instance, ResourceId specifies the instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>sg-bp67acfmxazb4p****</p>
@@ -254,21 +254,21 @@ public class JoinResourceGroupRequest extends Request {
         /**
          * <p>The type of the ECS resource. Valid values:</p>
          * <ul>
-         * <li>instance: instance.</li>
-         * <li>disk: block storage.</li>
-         * <li>snapshot: snapshot.</li>
-         * <li>image: image.</li>
-         * <li>securitygroup: security group.</li>
-         * <li>ddh: dedicated host.</li>
-         * <li>ddhcluster: dedicated host cluster.</li>
-         * <li>eni: network interface controller (NIC).</li>
-         * <li>keypair: key pair.</li>
-         * <li>launchtemplate: launch template.</li>
-         * <li>command: Cloud Assistant command.</li>
-         * <li>activation: Cloud Assistant managed instance activation code.</li>
-         * <li>managedinstance: Cloud Assistant managed instance.</li>
+         * <li>instance: instance</li>
+         * <li>disk: block storage</li>
+         * <li>snapshot: snapshot</li>
+         * <li>image: image</li>
+         * <li>securitygroup: security group</li>
+         * <li>ddh: dedicated host</li>
+         * <li>ddhcluster: dedicated host cluster</li>
+         * <li>eni: Elastic Network Interface (ENI)</li>
+         * <li>keypair: key pair</li>
+         * <li>launchtemplate: launch template</li>
+         * <li>command: Cloud Assistant command</li>
+         * <li>activation: activation code for managed instances</li>
+         * <li>managedinstance: managed instance</li>
          * </ul>
-         * <p>The preceding parameter values are case-sensitive.</p>
+         * <p>The values are case-sensitive.</p>
          * 
          * <strong>example:</strong>
          * <p>securitygroup</p>

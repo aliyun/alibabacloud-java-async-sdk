@@ -54,7 +54,7 @@ public class DeleteBandwidthPackageResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

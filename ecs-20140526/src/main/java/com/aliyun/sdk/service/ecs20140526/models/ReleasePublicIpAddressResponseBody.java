@@ -67,12 +67,7 @@ public class ReleasePublicIpAddressResponseBody extends TeaModel {
         } 
 
         /**
-         * <blockquote>
-         * <p>This parameter is not yet available.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>hide</p>
+         * RemainTimes.
          */
         public Builder remainTimes(String remainTimes) {
             this.remainTimes = remainTimes;
@@ -80,10 +75,7 @@ public class ReleasePublicIpAddressResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

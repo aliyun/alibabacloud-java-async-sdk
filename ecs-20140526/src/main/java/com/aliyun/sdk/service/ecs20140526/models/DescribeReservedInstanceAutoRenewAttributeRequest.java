@@ -171,8 +171,8 @@ public class DescribeReservedInstanceAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the reserved instances.</p>
-         * <p>You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+         * <p>The region ID of the reserved instance.</p>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to obtain the latest list of Alibaba Cloud regions.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -185,7 +185,7 @@ public class DescribeReservedInstanceAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the reserved instances.</p>
+         * <p>The IDs of the reserved instances. This parameter is required. If you do not specify this parameter, the MissingParamter.InstanceId error is returned.</p>
          */
         public Builder reservedInstanceId(java.util.List<String> reservedInstanceId) {
             this.putQueryParameter("ReservedInstanceId", reservedInstanceId);

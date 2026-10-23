@@ -80,7 +80,7 @@ public class DescribeVscsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The query token. The value is the NextToken parameter value returned by the previous API call.</p>
+         * <p>The query token. The value is the NextToken value returned by the previous API call.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAdDWBF2</p>
@@ -349,7 +349,7 @@ public class DescribeVscsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource group ID. When you use this parameter to filter resources, the resource count cannot exceed 1000.</p>
+             * <p>The resource group ID. When you use this parameter to filter resources, the resource count cannot exceed 1,000.</p>
              * <blockquote>
              * <p>Filtering by the default resource group is not supported.</p>
              * </blockquote>
@@ -365,11 +365,11 @@ public class DescribeVscsResponseBody extends TeaModel {
             /**
              * <p>The status of the VSC. Valid values:</p>
              * <ul>
-             * <li>In_use: in use.</li>
-             * <li>Attaching: being attached.</li>
-             * <li>Detaching: being detached.</li>
-             * <li>AttachFailed: failed to attach.</li>
-             * <li>DetachFailed: failed to detach.</li>
+             * <li>In_use: In use.</li>
+             * <li>Attaching: Attaching.</li>
+             * <li>Detaching: Detaching.</li>
+             * <li>AttachFailed: Attachment failed.</li>
+             * <li>DetachFailed: Detachment failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -381,7 +381,7 @@ public class DescribeVscsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag keys of snapshots in the snapshot-consistent group. The default values of Key and Value provide the snapshot source information.</p>
+             * <p>The tag keys of the snapshots in the snapshot consistency group. The default values of Key and Value provide the snapshot source information.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -389,7 +389,7 @@ public class DescribeVscsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>VSC ID。</p>
+             * <p>The VSC ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vsc-hp34ue**g0wmycb27bwal</p>
@@ -411,7 +411,7 @@ public class DescribeVscsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the VSC. Valid values: Primary or Secondary.</p>
+             * <p>The type of the VSC. Valid values: Primary and Secondary.</p>
              * 
              * <strong>example:</strong>
              * <p>Primary</p>

@@ -224,7 +224,7 @@ public class DescribeImagePipelinesRequest extends Request {
         }
 
         /**
-         * <p>The image template ID. Valid values of N: 1 to 20.</p>
+         * <p>The ID of the image template. Valid values of N: 1 to 20.</p>
          * 
          * <strong>example:</strong>
          * <p>ip-2ze5tsl5bp6nf2b3****</p>
@@ -236,7 +236,7 @@ public class DescribeImagePipelinesRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries per page in a paging query. Valid values: 1 to 500.</p>
+         * <p>The number of entries per page in a paging query. Valid values: 1 to 500.</p>
          * <p>Default value: 50.</p>
          * 
          * <strong>example:</strong>
@@ -249,7 +249,7 @@ public class DescribeImagePipelinesRequest extends Request {
         }
 
         /**
-         * <p>The template name.</p>
+         * <p>The name of the template.</p>
          * 
          * <strong>example:</strong>
          * <p>testImagePipeline</p>
@@ -261,7 +261,7 @@ public class DescribeImagePipelinesRequest extends Request {
         }
 
         /**
-         * <p>The pagination token. Set the value to the <code>NextToken</code> value returned in the previous call to this operation. You do not need to set this parameter for the first request.</p>
+         * <p>The query token. Set the value to the NextToken value returned from the previous call. You do not need to specify this parameter for the first call.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAdDWBF2****</p>
@@ -291,7 +291,7 @@ public class DescribeImagePipelinesRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the latest list of Alibaba Cloud regions.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -337,7 +337,7 @@ public class DescribeImagePipelinesRequest extends Request {
         }
 
         /**
-         * <p>The tags.</p>
+         * <p>The list of tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
