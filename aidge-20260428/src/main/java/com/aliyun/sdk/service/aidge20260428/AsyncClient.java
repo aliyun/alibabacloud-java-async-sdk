@@ -612,6 +612,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GeneralRephotographyDetectionResponse> generalRephotographyDetection(GeneralRephotographyDetectionRequest request);
 
     /**
+     * @param request the request parameters of GenerateProductContent  GenerateProductContentRequest
+     * @return GenerateProductContentResponse
+     */
+    CompletableFuture<GenerateProductContentResponse> generateProductContent(GenerateProductContentRequest request);
+
+    /**
      * <b>description</b> :
      * <h2>Product Introduction</h2>
      * <p>The image cropping service resizes input images to specified dimensions. It automatically identifies the main subject area and precisely crops to various sizes to meet design requirements across different scenarios. (Synchronous)</p>
