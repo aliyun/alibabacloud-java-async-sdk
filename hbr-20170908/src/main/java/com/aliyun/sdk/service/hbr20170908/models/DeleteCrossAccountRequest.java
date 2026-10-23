@@ -89,6 +89,7 @@ public class DeleteCrossAccountRequest extends Request {
         } 
 
         /**
+         * <p>The name of the RAM role of the account to back up. This parameter is required when you configure cross-account backup by assuming a RAM role.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +102,16 @@ public class DeleteCrossAccountRequest extends Request {
         }
 
         /**
-         * CrossAccountType.
+         * <p>The type of cross-account backup. Valid values:</p>
+         * <ul>
+         * <li><p><strong>CROSS_ACCOUNT</strong>: Cross-account backup is configured by assuming a RAM role.</p>
+         * </li>
+         * <li><p><strong>CROSS_ACCOUNT_BY_RD</strong>: Cross-account backup is configured based on a resource directory.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CROSS_ACCOUNT</p>
          */
         public Builder crossAccountType(String crossAccountType) {
             this.putQueryParameter("CrossAccountType", crossAccountType);
@@ -110,6 +120,7 @@ public class DeleteCrossAccountRequest extends Request {
         }
 
         /**
+         * <p>The UID of the account to back up.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

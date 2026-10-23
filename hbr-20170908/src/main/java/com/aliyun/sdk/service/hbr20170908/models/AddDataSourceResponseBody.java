@@ -106,7 +106,10 @@ public class AddDataSourceResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class AddDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * DataSourceId.
+         * <p>The data source ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ds-000*******xzj</p>
          */
         public Builder dataSourceId(String dataSourceId) {
             this.dataSourceId = dataSourceId;
@@ -122,7 +128,10 @@ public class AddDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +139,10 @@ public class AddDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>53167AD3-<strong><strong>-</strong></strong>-92C7-CF69A000BA45</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,10 @@ public class AddDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

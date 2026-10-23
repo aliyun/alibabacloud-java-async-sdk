@@ -101,7 +101,10 @@ public class AddCrossAccountRequest extends Request {
         } 
 
         /**
-         * Alias.
+         * <p>The alias. The maximum length is 32 characters. This parameter is not required for cross-account backups that are configured based on a resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Source account 1</p>
          */
         public Builder alias(String alias) {
             this.putQueryParameter("Alias", alias);
@@ -110,7 +113,10 @@ public class AddCrossAccountRequest extends Request {
         }
 
         /**
-         * CrossAccountRoleName.
+         * <p>The name of the RAM role for the account to back up. This parameter is used when you configure a cross-account backup by assuming a RAM role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hbrcrossrole</p>
          */
         public Builder crossAccountRoleName(String crossAccountRoleName) {
             this.putQueryParameter("CrossAccountRoleName", crossAccountRoleName);
@@ -119,7 +125,16 @@ public class AddCrossAccountRequest extends Request {
         }
 
         /**
-         * CrossAccountType.
+         * <p>The type of cross-account backup. Valid values:</p>
+         * <ul>
+         * <li><p><strong>CROSS_ACCOUNT</strong>: Configures a cross-account backup by assuming a RAM role.</p>
+         * </li>
+         * <li><p><strong>CROSS_ACCOUNT_BY_RD</strong>: Configures a cross-account backup based on a resource directory.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CROSS_ACCOUNT</p>
          */
         public Builder crossAccountType(String crossAccountType) {
             this.putQueryParameter("CrossAccountType", crossAccountType);
@@ -128,7 +143,10 @@ public class AddCrossAccountRequest extends Request {
         }
 
         /**
-         * CrossAccountUserId.
+         * <p>The UID of the account to back up.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1589753xxxxxx625</p>
          */
         public Builder crossAccountUserId(Long crossAccountUserId) {
             this.putQueryParameter("CrossAccountUserId", crossAccountUserId);

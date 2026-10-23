@@ -93,7 +93,7 @@ public class UpdatePolicyV2ResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code. The status code 200 indicates that the call is successful.</p>
+         * <p>The return code. A value of 200 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,7 +104,7 @@ public class UpdatePolicyV2ResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message that is returned. If the call is successful, &quot;successful&quot; is returned. If the call fails, an error message is returned.</p>
+         * <p>The returned message. The value &quot;successful&quot; is returned for a successful request. An error message is returned for a failed request.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -115,7 +115,7 @@ public class UpdatePolicyV2ResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -126,10 +126,10 @@ public class UpdatePolicyV2ResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call is successful. Valid values:</p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li>true: The call is successful.</li>
-         * <li>false: The call fails.</li>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

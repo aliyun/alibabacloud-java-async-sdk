@@ -128,7 +128,7 @@ public class DescribeVaultReplicationRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The regions that support cross-region replication.</p>
+         * Regions.
          */
         public Builder regions(Regions regions) {
             this.regions = regions;

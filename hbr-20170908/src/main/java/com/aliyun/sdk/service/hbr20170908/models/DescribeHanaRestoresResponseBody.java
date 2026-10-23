@@ -156,7 +156,7 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about restore jobs.</p>
+         * HanaRestore.
          */
         public Builder hanaRestore(HanaRestore hanaRestore) {
             this.hanaRestore = hanaRestore;
@@ -643,10 +643,7 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The backup ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1635315505</p>
+             * BackupID.
              */
             public Builder backupID(Long backupID) {
                 this.backupID = backupID;
@@ -654,10 +651,7 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The backup prefix.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>INC_DATA_BACKUP</p>
+             * BackupPrefix.
              */
             public Builder backupPrefix(String backupPrefix) {
                 this.backupPrefix = backupPrefix;
@@ -665,14 +659,7 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the differential backup and log backup are validated. Valid values:</p>
-             * <ul>
-             * <li>true: Cloud Backup checks whether the required differential backup and log backup are available before the restore job starts. If the differential backup or log backup is unavailable, Cloud Backup does not start the restore job.</li>
-             * <li>false: Cloud Backup does not check whether the required differential backup and log backup are available before the restore job starts.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * CheckAccess.
              */
             public Builder checkAccess(Boolean checkAccess) {
                 this.checkAccess = checkAccess;
@@ -680,10 +667,7 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether all log entries are deleted from the log area after the log entries are restored. Valid values: true and false. If the return value is false, all log entries are deleted from the log area after the log entries are restored.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * ClearLog.
              */
             public Builder clearLog(Boolean clearLog) {
                 this.clearLog = clearLog;
@@ -691,10 +675,7 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the SAP HANA instance that is restored.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cl-000923yu******p00j4</p>
+             * ClusterId.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -702,10 +683,7 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The current recovery phase. This value is obtained from SAP HANA.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * CurrentPhase.
              */
             public Builder currentPhase(Integer currentPhase) {
                 this.currentPhase = currentPhase;
@@ -713,10 +691,7 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The current progress. This value is obtained from SAP HANA.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * CurrentProgress.
              */
             public Builder currentProgress(Long currentProgress) {
                 this.currentProgress = currentProgress;
@@ -724,10 +699,7 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The database name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>BWD</p>
+             * DatabaseName.
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -735,10 +707,7 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the database recovery.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1644038961030</p>
+             * DatabaseRestoreId.
              */
             public Builder databaseRestoreId(Long databaseRestoreId) {
                 this.databaseRestoreId = databaseRestoreId;
@@ -746,10 +715,7 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the restore job ends. This value is a UNIX timestamp. Unit: seconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1634356382</p>
+             * EndTime.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -757,10 +723,7 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The log position to which the database is restored. This parameter is returned only if the value of the Mode parameter is <strong>RECOVERY_TO_LOG_POSITION</strong>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * LogPosition.
              */
             public Builder logPosition(Long logPosition) {
                 this.logPosition = logPosition;
@@ -768,10 +731,7 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum recovery phase. This value is obtained from SAP HANA.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>4</p>
+             * MaxPhase.
              */
             public Builder maxPhase(Integer maxPhase) {
                 this.maxPhase = maxPhase;
@@ -779,10 +739,7 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum progress. This value is obtained from SAP HANA.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * MaxProgress.
              */
             public Builder maxProgress(Long maxProgress) {
                 this.maxProgress = maxProgress;
@@ -790,10 +747,10 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the recovery phase.</p>
+             * <p>The returned message. If the request was successful, &quot;successful&quot; is returned. If the request failed, an error message is returned.</p>
              * 
              * <strong>example:</strong>
-             * <p>SQL Error 448 - recovery could not be completed:</p>
+             * <p>successful</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -801,16 +758,7 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The recovery mode. Valid values:</p>
-             * <ul>
-             * <li><strong>RECOVERY_TO_MOST_RECENT</strong>: The database is restored to the recently available state to which the database has been backed up.</li>
-             * <li><strong>RECOVERY_TO_POINT_IN_TIME</strong>: The database is restored to a specified point in time.</li>
-             * <li><strong>RECOVERY_TO_SPECIFIC_BACKUP</strong>: The database is restored to a specified backup.</li>
-             * <li><strong>RECOVERY_TO_LOG_POSITION</strong>: The database is restored to a specified log position.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>RECOVERY_TO_SPECIFIC_BACKUP</p>
+             * Mode.
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -818,10 +766,7 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The recovery phase.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>restart</p>
+             * Phase.
              */
             public Builder phase(String phase) {
                 this.phase = phase;
@@ -829,10 +774,7 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The point in time at which the database is restored.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1635315505</p>
+             * ReachedTime.
              */
             public Builder reachedTime(Long reachedTime) {
                 this.reachedTime = reachedTime;
@@ -840,10 +782,7 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The point in time to which the database is restored. This parameter is returned only if the value of the Mode parameter is <strong>RECOVERY_TO_POINT_IN_TIME</strong>. Cloud Backup restores the database to a state closest to the specified point in time.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1649851200</p>
+             * RecoveryPointInTime.
              */
             public Builder recoveryPointInTime(Long recoveryPointInTime) {
                 this.recoveryPointInTime = recoveryPointInTime;
@@ -851,10 +790,7 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the restore job.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>r-000c1en183ayn9sesgqh</p>
+             * RestoreId.
              */
             public Builder restoreId(String restoreId) {
                 this.restoreId = restoreId;
@@ -862,10 +798,7 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the source system. This parameter indicates the name of the source database that is restored. Format: <code>&lt;Source database name&gt;@SID</code>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>PRD@H4P</p>
+             * Source.
              */
             public Builder source(String source) {
                 this.source = source;
@@ -873,10 +806,7 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the source SAP HANA instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cl-0000g3mvy******5cj</p>
+             * SourceClusterId.
              */
             public Builder sourceClusterId(String sourceClusterId) {
                 this.sourceClusterId = sourceClusterId;
@@ -884,10 +814,7 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the restore job starts. This value is a UNIX timestamp. Unit: seconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1636970413</p>
+             * StartTime.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -895,10 +822,7 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The recovery status. This value is obtained from SAP HANA.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>successful</p>
+             * State.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -906,18 +830,7 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the restore job. Valid values:</p>
-             * <ul>
-             * <li><strong>RUNNING</strong>: The job is running.</li>
-             * <li><strong>COMPLETE</strong>: The job is completed.</li>
-             * <li><strong>PARTIAL_COMPLETE</strong>: The job is partially completed.</li>
-             * <li><strong>FAILED</strong>: The job failed.</li>
-             * <li><strong>CANCELED</strong>: The job is canceled.</li>
-             * <li><strong>EXPIRED</strong>: The job timed out.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>COMPLETE</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -925,14 +838,7 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the database is restored to a different instance. Valid values:</p>
-             * <ul>
-             * <li>true: The database is restored to a different instance.</li>
-             * <li>false: The database is restored within the same instance.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * SystemCopy.
              */
             public Builder systemCopy(Boolean systemCopy) {
                 this.systemCopy = systemCopy;
@@ -940,10 +846,7 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether a catalog backup is used to restore the database. This parameter is returned only if the value of the Mode parameter is <strong>RECOVERY_TO_SPECIFIC_BACKUP</strong>. If the return value is false, Cloud Backup finds the backup file based on the specified prefix and then restores the backup file.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * UseCatalog.
              */
             public Builder useCatalog(Boolean useCatalog) {
                 this.useCatalog = useCatalog;
@@ -951,10 +854,7 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether a differential backup or an incremental backup is used to restore the database. Valid values: true and false. If the return value is true, Cloud Backup uses a differential backup or an incremental backup to restore the database. If the return value is false, Cloud Backup uses a log backup to restore the database.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * UseDelta.
              */
             public Builder useDelta(Boolean useDelta) {
                 this.useDelta = useDelta;
@@ -962,10 +862,7 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the backup vault.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>v-000g9acf******gta</p>
+             * VaultId.
              */
             public Builder vaultId(String vaultId) {
                 this.vaultId = vaultId;
@@ -973,10 +870,7 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the volume that is restored. This parameter is returned only if the value of the Mode parameter is <strong>RECOVERY_TO_LOG_POSITION</strong>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * VolumeId.
              */
             public Builder volumeId(Integer volumeId) {
                 this.volumeId = volumeId;

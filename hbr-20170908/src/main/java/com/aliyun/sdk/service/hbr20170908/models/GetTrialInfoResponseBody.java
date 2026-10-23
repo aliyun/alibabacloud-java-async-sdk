@@ -106,7 +106,10 @@ public class GetTrialInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The return code. A value of 200 indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class GetTrialInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message. The value &quot;successful&quot; is returned on success. An error message is returned on failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,7 +128,10 @@ public class GetTrialInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,11 @@ public class GetTrialInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,7 +151,7 @@ public class GetTrialInfoResponseBody extends TeaModel {
         }
 
         /**
-         * TrialInfo.
+         * <p>The free trial properties. This parameter is returned only when a free trial record exists for the data source.</p>
          */
         public Builder trialInfo(TrialInfo trialInfo) {
             this.trialInfo = trialInfo;
@@ -256,7 +269,7 @@ public class GetTrialInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * KeepAfterTrialExpiration.
+             * <p>Indicates whether the service is converted to pay-as-you-go after the free trial expires.</p>
              */
             public Builder keepAfterTrialExpiration(Boolean keepAfterTrialExpiration) {
                 this.keepAfterTrialExpiration = keepAfterTrialExpiration;
@@ -264,7 +277,10 @@ public class GetTrialInfoResponseBody extends TeaModel {
             }
 
             /**
-             * TrialBackupPlanQuota.
+             * <p>The remaining number of free trial backup plans that can be created. The value 1 is returned if the free trial has not expired and no free trial backup plan has been created. Otherwise, the value 0 is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder trialBackupPlanQuota(Long trialBackupPlanQuota) {
                 this.trialBackupPlanQuota = trialBackupPlanQuota;
@@ -272,7 +288,10 @@ public class GetTrialInfoResponseBody extends TeaModel {
             }
 
             /**
-             * TrialExpireTime.
+             * <p>The expiration time of the free trial. UNIX timestamp, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1584597600</p>
              */
             public Builder trialExpireTime(Long trialExpireTime) {
                 this.trialExpireTime = trialExpireTime;
@@ -280,7 +299,10 @@ public class GetTrialInfoResponseBody extends TeaModel {
             }
 
             /**
-             * TrialStartTime.
+             * <p>The start time of the free trial. UNIX timestamp, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1579413159</p>
              */
             public Builder trialStartTime(Long trialStartTime) {
                 this.trialStartTime = trialStartTime;
@@ -288,7 +310,10 @@ public class GetTrialInfoResponseBody extends TeaModel {
             }
 
             /**
-             * TrialVaultQuota.
+             * <p>The remaining number of free trial backup vaults that can be created. The value 1 is returned if the free trial has not expired and no free trial backup vault has been created. Otherwise, the value 0 is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder trialVaultQuota(Long trialVaultQuota) {
                 this.trialVaultQuota = trialVaultQuota;
@@ -296,7 +321,10 @@ public class GetTrialInfoResponseBody extends TeaModel {
             }
 
             /**
-             * TrialVaultReleaseTime.
+             * <p>The release time of the free trial backup vault. UNIX timestamp, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1594965600</p>
              */
             public Builder trialVaultReleaseTime(Long trialVaultReleaseTime) {
                 this.trialVaultReleaseTime = trialVaultReleaseTime;

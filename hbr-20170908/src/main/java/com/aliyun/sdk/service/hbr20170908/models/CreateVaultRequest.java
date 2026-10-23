@@ -173,7 +173,7 @@ public class CreateVaultRequest extends Request {
         } 
 
         /**
-         * <p>The description of the backup vault. The description must be 0 to 255 characters in length.</p>
+         * <p>The description of the backup vault. The description can be 0 to 255 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>description</p>
@@ -185,10 +185,12 @@ public class CreateVaultRequest extends Request {
         }
 
         /**
-         * <p>The method that is used to encrypt the source data. This parameter is valid only if you set the VaultType parameter to STANDARD or OTS_BACKUP. Valid values:</p>
+         * <p>The encryption type of the source data. This parameter is valid only if you set VaultType to STANDARD or OTS_BACKUP. Valid values:</p>
          * <ul>
-         * <li><strong>HBR_PRIVATE</strong>: The source data is encrypted by using the built-in encryption method of Hybrid Backup Recovery (HBR).</li>
-         * <li><strong>KMS</strong>: The source data is encrypted by using Key Management Service (KMS).</li>
+         * <li><p><strong>HBR_PRIVATE</strong>: The backup vault is encrypted using the built-in encryption method of Cloud Backup.</p>
+         * </li>
+         * <li><p><strong>KMS</strong>: The backup vault is encrypted using a customer master key (CMK) from Key Management Service (KMS).</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -201,7 +203,7 @@ public class CreateVaultRequest extends Request {
         }
 
         /**
-         * <p>The customer master key (CMK) created in KMS or the alias of the key. This parameter is required only if you set the EncryptType parameter to KMS.</p>
+         * <p>The ID or alias of the KMS key. This parameter is required only if you set EncryptType to KMS.</p>
          * 
          * <strong>example:</strong>
          * <p>alias/yzs-hhht</p>
@@ -213,7 +215,10 @@ public class CreateVaultRequest extends Request {
         }
 
         /**
-         * Replication.
+         * <p>Specifies whether to create a replication vault.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder replication(Boolean replication) {
             this.putQueryParameter("Replication", replication);
@@ -235,7 +240,7 @@ public class CreateVaultRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the backup vault resides.</p>
+         * <p>The region ID of the backup vault.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -248,12 +253,16 @@ public class CreateVaultRequest extends Request {
         }
 
         /**
-         * <p>The storage type of the backup vault.</p>
+         * <p>The storage class of the backup vault.</p>
          * <ul>
-         * <li><strong>STANDARD</strong>: standard storage.</li>
-         * <li><strong>ARCHIVE</strong>: This parameter is deprecated.</li>
-         * <li><strong>COLD_ARCHIVE</strong>: This parameter is deprecated.</li>
-         * <li><strong>IA</strong>: This parameter is deprecated.</li>
+         * <li><p><strong>STANDARD</strong>: Standard.</p>
+         * </li>
+         * <li><p><strong>ARCHIVE</strong>: This value is deprecated.</p>
+         * </li>
+         * <li><p><strong>COLD_ARCHIVE</strong>: This value is deprecated.</p>
+         * </li>
+         * <li><p><strong>IA</strong>: This value is deprecated.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -268,8 +277,10 @@ public class CreateVaultRequest extends Request {
         /**
          * <p>The type of the backup vault. Valid values:</p>
          * <ul>
-         * <li><strong>STANDARD</strong>: standard backup vault</li>
-         * <li><strong>OTS_BACKUP</strong>: backup vault for Tablestore</li>
+         * <li><p><strong>STANDARD</strong>: a standard backup vault.</p>
+         * </li>
+         * <li><p><strong>OTS_BACKUP</strong>: a Tablestore backup vault.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -282,7 +293,7 @@ public class CreateVaultRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the immutable backup feature.</p>
+         * <p>Specifies whether to enable backup locking.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

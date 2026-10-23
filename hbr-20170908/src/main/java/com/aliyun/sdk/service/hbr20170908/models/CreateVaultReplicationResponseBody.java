@@ -106,7 +106,10 @@ public class CreateVaultReplicationResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The return code. A value of 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class CreateVaultReplicationResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message. If the request is successful, <code>successful</code> is returned. If the request fails, an error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,7 +128,10 @@ public class CreateVaultReplicationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>280DD872-EE25-52E8-9CB4-491067173DD0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,16 @@ public class CreateVaultReplicationResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * <ul>
+         * <li><p>true: The request was successful.</p>
+         * </li>
+         * <li><p>false: The request failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,7 +156,10 @@ public class CreateVaultReplicationResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The ID of the backup vault initialization task. Use DescribeTask to query the task status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-*********************</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

@@ -439,7 +439,7 @@ public class CreateRestoreJobRequest extends Request {
         } 
 
         /**
-         * <p>The name of the role created in the RAM of the original account for cross-account backup managed by the current account.</p>
+         * <p>The name of the RAM role created in the source account for cross-account backup managed by the current account.</p>
          * 
          * <strong>example:</strong>
          * <p>BackupRole</p>
@@ -451,10 +451,10 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * <p>Cross-account backup type. Supported values:</p>
+         * <p>The cross-account backup type. Valid values: </p>
          * <ul>
-         * <li>SELF_ACCOUNT: Backup within the same account</li>
-         * <li>CROSS_ACCOUNT: Cross-account backup</li>
+         * <li>SELF_ACCOUNT: backup within the current account.</li>
+         * <li>CROSS_ACCOUNT: cross-account backup.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -467,7 +467,7 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * <p>The original account ID managed by the current account for cross-account backup.</p>
+         * <p>The ID of the source account for cross-account backup managed by the current account.</p>
          * 
          * <strong>example:</strong>
          * <p>158975xxxxx4625</p>
@@ -479,7 +479,14 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * Edition.
+         * <p>The Cloud Backup feature edition. Valid values:</p>
+         * <ul>
+         * <li><strong>STANDARD</strong>: Standard Edition. This is the default value.</li>
+         * <li><strong>BASIC</strong>: Essential Edition. Currently, only ECS File Backup Essential Edition is supported.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>STANDARD</p>
          */
         public Builder edition(String edition) {
             this.putQueryParameter("Edition", edition);
@@ -488,7 +495,7 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * <p>The path not to be restored. All documents under this path will not be restored. Maximum length is 255 characters.</p>
+         * <p>The path to exclude from restoration. All files under this path are not restored. Maximum length: 255 characters.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;/var&quot;, &quot;/proc&quot;]</p>
@@ -500,7 +507,7 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * <p>Details of restoring to the local environment.</p>
+         * <p>The details of the restoration to the local host.</p>
          */
         public Builder failbackDetail(java.util.Map<String, ?> failbackDetail) {
             String failbackDetailShrink = shrink(failbackDetail, "FailbackDetail", "json");
@@ -510,7 +517,7 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * <p>The path to be restored. All documents under this path will be restored. Maximum length is 255 characters.</p>
+         * <p>The path to restore. All files under this path are restored. Maximum length: 255 characters.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;/home/alice/<em>.pdf&quot;, &quot;/home/bob/</em>.txt&quot;]</p>
@@ -522,7 +529,7 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * <p>Indicates whether it is called by the container service. Default is false.</p>
+         * <p>Specifies whether the operation is invoked by Container Service. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -534,10 +541,10 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * <p>Parameters for the restore job.</p>
+         * <p>The restore job parameters.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;includes&quot;:[],&quot;excludes&quot;:[],&quot;conflictPolicy&quot;:&quot;OVERWRITE_EXISTING&quot;}</p>
+         * <p>{\&quot;includes\&quot;:[],\&quot;excludes\&quot;:[],\&quot;conflictPolicy\&quot;:\&quot;OVERWRITE_EXISTING\&quot;}</p>
          */
         public Builder options(String options) {
             this.putQueryParameter("Options", options);
@@ -546,7 +553,7 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * <p>Details of the Table Store instance.</p>
+         * <p>The details of the Tablestore instance.</p>
          */
         public Builder otsDetail(OtsTableRestoreDetail otsDetail) {
             String otsDetailShrink = shrink(otsDetail, "OtsDetail", "json");
@@ -556,13 +563,14 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * <p>The type of the restore destination data source. Possible values:</p>
+         * <p>The data source type of the restore destination. Valid values:</p>
          * <ul>
-         * <li><strong>ECS_FILE</strong>: Restore to ECS file.</li>
-         * <li><strong>OSS</strong>: Restore to Alibaba Cloud OSS.</li>
-         * <li><strong>NAS</strong>: Restore to Alibaba Cloud NAS.</li>
-         * <li><strong>OTS_TABLE</strong>: Restore to Alibaba Cloud OTS.</li>
-         * <li><strong>UDM_ECS_ROLLBACK</strong>: Restore to Alibaba Cloud ECS whole machine.</li>
+         * <li><strong>ECS_FILE</strong>: restores to an ECS file.</li>
+         * <li><strong>OSS</strong>: restores to Alibaba Cloud OSS.</li>
+         * <li><strong>NAS</strong>: restores to Alibaba Cloud NAS.</li>
+         * <li><strong>COMMON_FILE_SYSTEM</strong>: restores to CPFS.</li>
+         * <li><strong>OTS_TABLE</strong>: restores to Alibaba Cloud OTS.</li>
+         * <li><strong>UDM_ECS_ROLLBACK</strong>: restores to an Alibaba Cloud ECS instance (full-copy migration).</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -576,7 +584,7 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * <p>The HASH value of the backup snapshot.</p>
+         * <p>The hash value of the backup snapshot.</p>
          * 
          * <strong>example:</strong>
          * <p>f2fe...</p>
@@ -600,13 +608,14 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * <p>The type of the data source. Possible values:</p>
+         * <p>The data source type. Valid values:</p>
          * <ul>
-         * <li><strong>ECS_FILE</strong>: Restore ECS file.</li>
-         * <li><strong>OSS</strong>: Restore Alibaba Cloud OSS.</li>
-         * <li><strong>NAS</strong>: Restore Alibaba Cloud NAS.</li>
-         * <li><strong>OTS_TABLE</strong>: Restore to Alibaba Cloud OTS.</li>
-         * <li><strong>UDM_ECS</strong>: Restore to Alibaba Cloud ECS whole machine.</li>
+         * <li><strong>ECS_FILE</strong>: restores ECS files.</li>
+         * <li><strong>OSS</strong>: restores Alibaba Cloud OSS.</li>
+         * <li><strong>NAS</strong>: restores Alibaba Cloud NAS.</li>
+         * <li><strong>COMMON_FILE_SYSTEM</strong>: restores to CPFS.</li>
+         * <li><strong>OTS_TABLE</strong>: restores to Alibaba Cloud OTS.</li>
+         * <li><strong>UDM_ECS</strong>: restores to an Alibaba Cloud ECS instance (full-copy migration).</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -620,7 +629,7 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * <p>Valid only when <strong>RestoreType</strong> is <strong>OSS</strong>. Indicates the name of the OSS bucket at the restore destination.</p>
+         * <p>This parameter is valid only when <strong>RestoreType</strong> is set to <strong>OSS</strong>. The name of the destination OSS bucket.</p>
          * 
          * <strong>example:</strong>
          * <p>hbr-backup-oss</p>
@@ -632,10 +641,10 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * <p>Details of the target container.</p>
+         * <p>The details of the target container for restoration.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;host&quot;:&quot;k8s-node1&quot;,&quot;hostPrefix&quot;:&quot;/var/lib/kubelet/pods/4acb31fe-8577-40ff-bc8c-eccabd835f73/volumes/kubernetes.io~csi/pvc-b050b00e-ef17-4792-aab1-1642355cf1f4/mount&quot;,&quot;pvPath&quot;:&quot;/&quot;}</p>
+         * <p>{\&quot;host\&quot;:\&quot;k8s-node1\&quot;,\&quot;hostPrefix\&quot;:\&quot;/var/lib/kubelet/pods/4acb31fe-8577-40ff-bc8c-eccabd835f73/volumes/kubernetes.io~csi/pvc-b050b00e-ef17-4792-aab1-1642355cf1f4/mount\&quot;,\&quot;pvPath\&quot;:\&quot;/\&quot;}</p>
          */
         public Builder targetContainer(String targetContainer) {
             this.putQueryParameter("TargetContainer", targetContainer);
@@ -644,7 +653,7 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * <p>The ID of the target container cluster.</p>
+         * <p>The ID of the target container cluster for restoration.</p>
          * 
          * <strong>example:</strong>
          * <p>cc-000amjsc7o1h9506oob7</p>
@@ -656,7 +665,7 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * <p>Valid only when <strong>RestoreType</strong> is <strong>NAS</strong>. Indicates the creation time of the file system at the restore destination.</p>
+         * <p>This parameter is valid only when <strong>RestoreType</strong> is set to <strong>NAS</strong>. The creation time of the destination file system. This value is a UNIX timestamp. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1554347313</p>
@@ -668,7 +677,7 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * <p>Valid only when <strong>RestoreType</strong> is <strong>NAS</strong>. Indicates the ID of the file system at the restore destination.</p>
+         * <p>This parameter is valid only when <strong>RestoreType</strong> is set to <strong>NAS</strong>. The file system ID of the restore destination.</p>
          * 
          * <strong>example:</strong>
          * <p>005494</p>
@@ -680,7 +689,7 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * <p>Valid only when <strong>RestoreType</strong> is <strong>ECS_FILE</strong>. Indicates the ECS instance ID at the restore destination.</p>
+         * <p>This parameter is valid only when <strong>RestoreType</strong> is set to <strong>ECS_FILE</strong>. The ECS instance ID of the restore destination.</p>
          * 
          * <strong>example:</strong>
          * <p>i-*********************</p>
@@ -692,7 +701,7 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * <p>The name of the target Table Store instance.</p>
+         * <p>The name of the target Tablestore instance for restoration.</p>
          * 
          * <strong>example:</strong>
          * <p>instancename</p>
@@ -704,7 +713,7 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * <p>Valid only when <strong>RestoreType</strong> is <strong>ECS_FILE</strong>. Indicates the file path at the restore destination.</p>
+         * <p>This parameter is valid only when <strong>RestoreType</strong> is set to <strong>ECS_FILE</strong>. The file path of the restore destination.</p>
          * 
          * <strong>example:</strong>
          * <p>C:\</p>
@@ -716,7 +725,7 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * <p>Valid only when <strong>RestoreType</strong> is <strong>OSS</strong>. Indicates the object prefix at the restore destination.</p>
+         * <p>This parameter is valid only when <strong>RestoreType</strong> is set to <strong>OSS</strong>. The object prefix of the restore destination.</p>
          * 
          * <strong>example:</strong>
          * <p>hbr</p>
@@ -728,7 +737,7 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * <p>The name of the data table in the target Table Store.</p>
+         * <p>The name of the target data table in Tablestore for restoration.</p>
          * 
          * <strong>example:</strong>
          * <p>tablename</p>
@@ -740,7 +749,7 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * <p>The time of the Table Store to be restored. UNIX timestamp, in seconds.</p>
+         * <p>The point in time to which the Tablestore data is restored. This value is a UNIX timestamp. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1642496881</p>
@@ -752,43 +761,43 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * <p>The parameter is valid only when the SourceType is set to UDM_ECS. It represents the details of the entire machine backup and is a JSON string. Depending on the value of RestoreType, different details must be passed as follows:</p>
+         * <p>This parameter is valid only when SourceType is set to UDM_ECS. The details of the full-copy migration backup. This parameter is a JSON string. The details vary depending on the value of RestoreType:</p>
          * <ul>
-         * <li><strong>UDM_ECS_DISK</strong>: ECS disk cloning.<ul>
-         * <li><strong>targetInstanceId</strong>: string (required). Specifies the target ECS instance ID to which the cloned disk will be attached.</li>
-         * <li><strong>diskCategory</strong>: string (required). Specifies the type of the target disk.</li>
-         * <li><strong>diskPerformanceLevel</strong>: string. When diskCategory is &quot;essd&quot;, this indicates the disk performance level, supporting PL0, PL1, PL2, and PL3, with PL1 as the default.</li>
+         * <li><strong>UDM_ECS_DISK</strong>: ECS cloud disk clone.<ul>
+         * <li><strong>targetInstanceId</strong>: string type, required. Instance ID of the target ECS instance to which the cloned cloud disk is attached.</li>
+         * <li><strong>diskCategory</strong>: string type, required. The type of the target cloud disk.</li>
+         * <li><strong>diskPerformanceLevel</strong>: string type. If diskCategory is set to essd, this parameter specifies the performance level (PL) of the cloud disk. Valid values: PL0, PL1, PL2, and PL3. Default value: PL1.</li>
          * </ul>
          * </li>
-         * <li><strong>UDM_ECS_DISK_ROLLBACK</strong>: ECS disk rollback.<ul>
-         * <li><strong>sourceInstanceId</strong>: string (required). Specifies the source ECS instance ID.</li>
-         * <li><strong>forceRestore</strong>: bool (default: false). Indicates whether to force restore. NOTE: If forceRestore is set to true, the disk restoration will proceed even if the backup disk has been unmounted from the original ECS instance or mounted to another instance. Exercise caution when using this option.</li>
-         * <li><strong>bootAfterRestore</strong>: bool (default: false). Indicates whether to start the ECS instance after restoration.</li>
+         * <li><strong>UDM_ECS_DISK_ROLLBACK</strong>: ECS cloud disk restoration.<ul>
+         * <li><strong>sourceInstanceId</strong>: string type, required. Instance ID of the source ECS instance.</li>
+         * <li><strong>foreceRestore</strong>: bool type. Default value: false. Specifies whether to forcibly restore. If foreceRestore is set to true, the restore job still restores the cloud disk even if the backed-up cloud disk has been unmounted from the original ECS instance or attached to a new ECS instance. Proceed with caution.</li>
+         * <li><strong>bootAfterRestore</strong>: bool type. Default value: false. Specifies whether to start the ECS instance after restoration.</li>
          * </ul>
          * </li>
-         * <li><strong>UDM_ECS</strong>: Full ECS cloning.<ul>
-         * <li><strong>bootAfterRestore</strong>: bool (default: false). Indicates whether to start the ECS instance after restoration.</li>
-         * <li><strong>diskCategory</strong>: string (required). Specifies the type of the target disk.</li>
-         * <li><strong>diskPerformanceLevel</strong>: string. When diskCategory is &quot;essd&quot;, this indicates the disk performance level (PL0/PL1/PL2/PL3), defaulting to PL1.</li>
-         * <li><strong>instanceType</strong>: string (required). Specifies the specification of the target ECS instance.</li>
-         * <li><strong>restoredNetwork</strong>: string (required). Specifies the vSwitch ID for the target ECS instance.</li>
-         * <li><strong>securityGroup</strong>: string (required). Specifies the security group ID for the target ECS instance.</li>
-         * <li><strong>restoredName:</strong> string (required). Specifies the instance name of the target ECS instance.</li>
-         * <li><strong>restoredHostName</strong>: string (required). Specifies the host name of the target ECS instance.</li>
-         * <li><strong>allocatePublicIp</strong>: bool (default: false). Indicates whether to assign a public IP to the target ECS instance.</li>
-         * <li><strong>privateIpAddress</strong>: string. Specifies the internal IP address of the target ECS instance. If not specified, an IP will be assigned via DHCP.</li>
+         * <li><strong>UDM_ECS</strong>: ECS full-copy clone.<ul>
+         * <li><strong>bootAfterRestore</strong>: bool type. Default value: false. Specifies whether to start the ECS instance after restoration.</li>
+         * <li><strong>diskCategory</strong>: string type, required. The type of the target cloud disk.</li>
+         * <li><strong>diskPerformanceLevel</strong>: string type. If diskCategory is set to essd, this parameter specifies the performance level (PL) of the cloud disk. Valid values: PL0, PL1, PL2, and PL3. Default value: PL1.</li>
+         * <li><strong>instanceType</strong>: string type, required. The instance type of the target ECS instance.</li>
+         * <li><strong>restoredNetwork</strong>: string type, required. The vSwitch ID of the target ECS instance.</li>
+         * <li><strong>securityGroup</strong>: string type, required. The security group ID of the target ECS instance.</li>
+         * <li><strong>restoredName</strong>: string type, required. The instance name of the target ECS instance.</li>
+         * <li><strong>restoredHostName</strong>: string type, required. The hostname of the target ECS instance.</li>
+         * <li><strong>allocatePublicIp</strong>: bool type. Default value: false. Specifies whether to assign a public IP address to the target ECS instance.</li>
+         * <li><strong>privateIpAddress</strong>: string type. The internal IP address of the target ECS instance. If this parameter is not specified, DHCP is used to randomly assign an IP address.</li>
          * </ul>
          * </li>
-         * <li><strong>UDM_ECS_ROLLBACK</strong>: Full ECS rollback.<ul>
-         * <li><strong>sourceInstanceId</strong>: string (required). Specifies the source ECS instance ID.</li>
-         * <li><strong>forceRestore</strong>: bool (default: false). Indicates whether to force restore. NOTE: If forceRestore is set to true, the disk restoration will proceed even if the backup disk has been unmounted from the original ECS instance or mounted to another instance. Exercise caution when using this option.</li>
-         * <li><strong>bootAfterRestore</strong>: bool (default: false). Indicates whether to start the ECS instance after restoration.</li>
+         * <li><strong>UDM_ECS_ROLLBACK</strong>: ECS full-copy restoration.<ul>
+         * <li><strong>sourceInstanceId</strong>: string type, required. Instance ID of the source ECS instance.</li>
+         * <li><strong>forceRestore</strong>: bool type. Default value: false. Specifies whether to forcibly restore. If foreceRestore is set to true, the restore job still restores the cloud disk even if the backed-up cloud disk has been unmounted from the original ECS instance or attached to a new ECS instance. Proceed with caution.</li>
+         * <li><strong>bootAfterRestore</strong>: bool type. Default value: false. Specifies whether to start the ECS instance after restoration.</li>
          * </ul>
          * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;sourceInstanceId&quot;:&quot;i-uf62te6pm3iwsyxyz66q&quot;,&quot;bootAfterRestore&quot;:false}</p>
+         * <p>{\&quot;sourceInstanceId\&quot;:\&quot;i-uf62te6pm3iwsyxyz66q\&quot;,\&quot;bootAfterRestore\&quot;:false}</p>
          */
         public Builder udmDetail(java.util.Map<String, ?> udmDetail) {
             String udmDetailShrink = shrink(udmDetail, "UdmDetail", "json");
@@ -798,7 +807,7 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * <p>Valid only when <strong>SourceType</strong> is <strong>UDM_ECS</strong>. Indicates the target region for the restore.</p>
+         * <p>This parameter is valid only when <strong>SourceType</strong> is set to <strong>UDM_ECS</strong>. The destination region for restoration.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -810,7 +819,7 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * <p>The ID of the backup vault that the snapshot belongs to.</p>
+         * <p>The ID of the backup vault to which the backup snapshot belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>v-*********************</p>

@@ -93,7 +93,10 @@ public class DeleteCrossAccountResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The return code. A value of 200 indicates that the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class DeleteCrossAccountResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message returned. If the request is successful, \<code>successful\\</code> is returned. If the request fails, an error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +115,10 @@ public class DeleteCrossAccountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>921E9989-735C-5254-A29F-6B8A5DDC1ED1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,16 @@ public class DeleteCrossAccountResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * <ul>
+         * <li><p>true: The request is successful.</p>
+         * </li>
+         * <li><p>false: The request fails.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

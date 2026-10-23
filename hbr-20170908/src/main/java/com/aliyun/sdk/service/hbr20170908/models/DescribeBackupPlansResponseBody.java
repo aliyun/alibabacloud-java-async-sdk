@@ -145,7 +145,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The queried backup plans.</p>
+         * BackupPlans.
          */
         public Builder backupPlans(BackupPlans backupPlans) {
             this.backupPlans = backupPlans;
@@ -153,7 +153,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code. The status code 200 indicates that the call is successful.</p>
+         * <p>The return code. A value of 200 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -164,7 +164,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message that is returned. If the call is successful, &quot;successful&quot; is returned. If the call fails, an error message is returned.</p>
+         * <p>The returned message. If the request was successful, &quot;successful&quot; is returned. If the request failed, the corresponding error message is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -175,7 +175,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page. Pages start from page 1. Default value: 1.</p>
+         * <p>The page number. Pages start from 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -186,7 +186,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned on each page. Valid values: 1 to 99. Default value: 10.</p>
+         * <p>The number of entries per page. Minimum value: 1. Maximum value: 99. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -197,7 +197,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -208,11 +208,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call is successful. Valid values:</p>
-         * <ul>
-         * <li>true: The call is successful.</li>
-         * <li>false: The call fails.</li>
-         * </ul>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -223,7 +219,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of returned backup plans that meet the specified conditions.</p>
+         * <p>The total number of backup plans that meet the specified conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -305,10 +301,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The tag key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>type</p>
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -316,14 +309,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag-based matching rule. Valid values:</p>
-             * <ul>
-             * <li><strong>EQUAL</strong>: Both the tag key and tag value are matched.</li>
-             * <li><strong>NOT</strong>: The tag key is matched and the tag value is not matched.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>EQUAL</p>
+             * Operator.
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -331,10 +317,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -496,7 +479,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The names of the tables in the Tablestore instance.</p>
+             * TableNames.
              */
             public Builder tableNames(TableNames tableNames) {
                 this.tableNames = tableNames;
@@ -630,10 +613,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Additional information about the data source.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>{&quot;doBackup&quot;:false,&quot;diskName&quot;:&quot;data_disk&quot;,&quot;size&quot;:100,&quot;type&quot;:&quot;data&quot;,&quot;category&quot;:&quot;cloud_essd&quot;,&quot;imageId&quot;:&quot;&quot;,&quot;device&quot;:&quot;/dev/xvdb&quot;,&quot;encrypted&quot;:false}</p>
+             * Extra.
              */
             public Builder extra(String extra) {
                 this.extra = extra;
@@ -641,10 +621,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the data source.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>d-j6cgioir6m******lu4</p>
+             * ResourceId.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -652,10 +629,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the data source. Valid value: <strong>UDM_DISK</strong>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>UDMDISK</p>
+             * SourceType.
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -867,10 +841,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The backup type. Valid value: <strong>COMPLETE</strong>, which indicates full backup.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>COMPLETE</p>
+             * BackupType.
              */
             public Builder backupType(String backupType) {
                 this.backupType = backupType;
@@ -878,10 +849,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region in which the remote backup vault resides.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-shanghai</p>
+             * DestinationRegionId.
              */
             public Builder destinationRegionId(String destinationRegionId) {
                 this.destinationRegionId = destinationRegionId;
@@ -889,10 +857,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The retention period of the backup data in remote backup mode. Unit: days.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>90</p>
+             * DestinationRetention.
              */
             public Builder destinationRetention(Long destinationRetention) {
                 this.destinationRetention = destinationRetention;
@@ -900,10 +865,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the policy is disabled.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * Disabled.
              */
             public Builder disabled(Boolean disabled) {
                 this.disabled = disabled;
@@ -911,10 +873,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the snapshot data is backed up to the backup vault.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * DoCopy.
              */
             public Builder doCopy(Boolean doCopy) {
                 this.doCopy = doCopy;
@@ -922,10 +881,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The retention period of the backup data. Unit: days.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>90</p>
+             * Retention.
              */
             public Builder retention(Long retention) {
                 this.retention = retention;
@@ -933,10 +889,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The policy ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rule-0008i52rf0ulpni6kn6m</p>
+             * RuleId.
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -944,10 +897,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The policy name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Disk Golden Rule</p>
+             * RuleName.
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -955,14 +905,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The backup policy. Format: <code>I|{startTime}|{interval}</code>. The system runs the first backup job at a point in time that is specified by <code>{startTime}</code> and the subsequent backup jobs at an interval that is specified by <code>{interval}</code>. The system does not run a backup job before the specified point in time. Each backup job, except the first one, starts only after the previous backup job is completed. For example, <code>I|1631685600|P1D</code> indicates that the system runs the first backup job at 14:00:00 on September 15, 2021 and the subsequent backup jobs once a day.</p>
-             * <ul>
-             * <li><code>startTime</code>: the time at which the system starts to run a backup job. The time follows the UNIX time format. Unit: seconds.</li>
-             * <li><code>interval</code>: the interval at which the system runs a backup job. The interval follows the ISO 8601 standard. For example, PT1H indicates an interval of 1 hour. P1D indicates an interval of one day.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>I|1631685600|P1D</p>
+             * Schedule.
              */
             public Builder schedule(String schedule) {
                 this.schedule = schedule;
@@ -1109,10 +1052,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether you are billed based on the pay-as-you-go method after the free trial ends.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * KeepAfterTrialExpiration.
              */
             public Builder keepAfterTrialExpiration(Boolean keepAfterTrialExpiration) {
                 this.keepAfterTrialExpiration = keepAfterTrialExpiration;
@@ -1120,10 +1060,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration time of the free trial.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1584597600</p>
+             * TrialExpireTime.
              */
             public Builder trialExpireTime(Long trialExpireTime) {
                 this.trialExpireTime = trialExpireTime;
@@ -1131,10 +1068,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the free trial.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1579413159</p>
+             * TrialStartTime.
              */
             public Builder trialStartTime(Long trialStartTime) {
                 this.trialStartTime = trialStartTime;
@@ -1142,10 +1076,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the free-trial backup vault is released.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1594965600</p>
+             * TrialVaultReleaseTime.
              */
             public Builder trialVaultReleaseTime(Long trialVaultReleaseTime) {
                 this.trialVaultReleaseTime = trialVaultReleaseTime;
@@ -1758,10 +1689,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the data source group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>System-Database</p>
+             * BackupSourceGroupId.
              */
             public Builder backupSourceGroupId(String backupSourceGroupId) {
                 this.backupSourceGroupId = backupSourceGroupId;
@@ -1769,10 +1697,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The backup type. Valid value: <strong>COMPLETE</strong>, which indicates full backup.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>COMPLETE</p>
+             * BackupType.
              */
             public Builder backupType(String backupType) {
                 this.backupType = backupType;
@@ -1780,10 +1705,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This parameter is valid only when <strong>SourceType</strong> is set to <strong>OSS</strong>. This parameter indicates the name of the OSS bucket.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>hbr-backup-oss</p>
+             * Bucket.
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -1799,10 +1721,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configurations of the incremental file synchronization. This parameter is returned only for data synchronization.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>{&quot;dataSourceId&quot;: &quot;ds-123456789&quot;, &quot;path&quot;: &quot;/changelist&quot;}</p>
+             * ChangeListPath.
              */
             public Builder changeListPath(String changeListPath) {
                 this.changeListPath = changeListPath;
@@ -1810,10 +1729,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the backup client.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>c-000ge4w*****1qb</p>
+             * ClientId.
              */
             public Builder clientId(String clientId) {
                 this.clientId = clientId;
@@ -1821,10 +1737,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the client group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cl-000ht6o9******h</p>
+             * ClusterId.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -1832,10 +1745,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This parameter is valid only when <strong>SourceType</strong> is set to <strong>NAS</strong>. This parameter indicates the time when the file system was created. This value is a UNIX timestamp. Unit: seconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1554347313</p>
+             * CreateTime.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -1843,10 +1753,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether a backup plan is automatically created based on tags.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * CreatedByTag.
              */
             public Builder createdByTag(Boolean createdByTag) {
                 this.createdByTag = createdByTag;
@@ -1854,10 +1761,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the backup plan was created. This value is a UNIX timestamp. Unit: seconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1554347313</p>
+             * CreatedTime.
              */
             public Builder createdTime(Long createdTime) {
                 this.createdTime = createdTime;
@@ -1865,10 +1769,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the Resource Access Management (RAM) role that is created within the source Alibaba Cloud account and assigned to the current Alibaba Cloud account to authorize the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>BackupRole</p>
+             * CrossAccountRoleName.
              */
             public Builder crossAccountRoleName(String crossAccountRoleName) {
                 this.crossAccountRoleName = crossAccountRoleName;
@@ -1876,14 +1777,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether data is backed up within the same Alibaba Cloud account or across Alibaba Cloud accounts. Valid values:</p>
-             * <ul>
-             * <li>SELF_ACCOUNT</li>
-             * <li>CROSS_ACCOUNT</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>CROSS_ACCOUNT</p>
+             * CrossAccountType.
              */
             public Builder crossAccountType(String crossAccountType) {
                 this.crossAccountType = crossAccountType;
@@ -1891,10 +1785,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the source Alibaba Cloud account that authorizes the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1841642xxxxx9795</p>
+             * CrossAccountUserId.
              */
             public Builder crossAccountUserId(Long crossAccountUserId) {
                 this.crossAccountUserId = crossAccountUserId;
@@ -1902,10 +1793,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the data source.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ds-000ht6o9*****w61</p>
+             * DataSourceId.
              */
             public Builder dataSourceId(String dataSourceId) {
                 this.dataSourceId = dataSourceId;
@@ -1913,10 +1801,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data source details at the destination. This parameter is returned only for data synchronization.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>{&quot;prefix&quot;:&quot;/&quot;}</p>
+             * DestDataSourceDetail.
              */
             public Builder destDataSourceDetail(String destDataSourceDetail) {
                 this.destDataSourceDetail = destDataSourceDetail;
@@ -1924,10 +1809,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data source ID at the destination. This parameter is returned only for data synchronization.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ds-*********************</p>
+             * DestDataSourceId.
              */
             public Builder destDataSourceId(String destDataSourceId) {
                 this.destDataSourceId = destDataSourceId;
@@ -1935,10 +1817,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data source type at the destination. This parameter is returned only for data synchronization.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>OSS</p>
+             * DestSourceType.
              */
             public Builder destSourceType(String destSourceType) {
                 this.destSourceType = destSourceType;
@@ -1946,10 +1825,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details about ECS instance backup.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>{&quot;doCopy&quot;:true,&quot;doBackup&quot;:false,&quot;instanceName&quot;:&quot;instance example&quot;,&quot;appConsistent&quot;:false,&quot;destinationRegionId&quot;:&quot;cn-shanghai&quot;,&quot;enableFsFreeze&quot;:true,&quot;osNameEn&quot;:&quot;Windows Server  2019 Data Center Edition 64bit Chinese Edition&quot;,&quot;osName&quot;:&quot;Windows Server  2019 Data Center Edition 64bit Chinese Edition&quot;,&quot;diskIdList&quot;:[],&quot;backupVaultId&quot;:&quot;&quot;,&quot;snapshotGroup&quot;:true,&quot;destinationRetention&quot;:35,&quot;platform&quot;:&quot;Windows Server 2012&quot;,&quot;timeoutInSeconds&quot;:60,&quot;backupRetention&quot;:1,&quot;osType&quot;:&quot;windows&quot;,&quot;preScriptPath&quot;:&quot;&quot;,&quot;postScriptPath&quot;:&quot;&quot;,&quot;enableWriters&quot;:true,&quot;ecsDeleted&quot;:false}</p>
+             * Detail.
              */
             public Builder detail(String detail) {
                 this.detail = detail;
@@ -1957,14 +1833,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the backup plan is disabled. Valid values:</p>
-             * <ul>
-             * <li>true: The backup plan is disabled.</li>
-             * <li>false: The backup plan is enabled.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * Disabled.
              */
             public Builder disabled(Boolean disabled) {
                 this.disabled = disabled;
@@ -1972,10 +1841,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This parameter is valid only when <strong>SourceType</strong> is set to <strong>ECS_FILE</strong>. This parameter indicates the paths to the files that are excluded from the backup job.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>[&quot;/var&quot;, &quot;/proc&quot;]</p>
+             * Exclude.
              */
             public Builder exclude(String exclude) {
                 this.exclude = exclude;
@@ -1983,10 +1849,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This parameter is valid only when <strong>SourceType</strong> is set to <strong>NAS</strong>. This parameter indicates the ID of the NAS file system.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>00594</p>
+             * FileSystemId.
              */
             public Builder fileSystemId(String fileSystemId) {
                 this.fileSystemId = fileSystemId;
@@ -1994,7 +1857,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The matched tag rules.</p>
+             * HitTags.
              */
             public Builder hitTags(HitTags hitTags) {
                 this.hitTags = hitTags;
@@ -2002,10 +1865,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This parameter is valid only when <strong>SourceType</strong> is set to <strong>ECS_FILE</strong>. This parameter indicates the paths to the files that are backed up.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>[&quot;/home/alice/<em>.pdf&quot;, &quot;/home/bob/</em>.txt&quot;]</p>
+             * Include.
              */
             public Builder include(String include) {
                 this.include = include;
@@ -2013,10 +1873,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>i-**</p>
+             * InstanceGroupId.
              */
             public Builder instanceGroupId(String instanceGroupId) {
                 this.instanceGroupId = instanceGroupId;
@@ -2024,10 +1881,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This parameter is valid only when <strong>SourceType</strong> is set to <strong>ECS_FILE</strong>. This parameter indicates the ID of the ECS instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>i-*********************</p>
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -2035,10 +1889,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the Tablestore instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>instancename</p>
+             * InstanceName.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -2046,14 +1897,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the feature of keeping at least one backup version is enabled. Valid values:</p>
-             * <ul>
-             * <li>0: The feature is disabled.</li>
-             * <li>1: The feature is enabled.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * KeepLatestSnapshots.
              */
             public Builder keepLatestSnapshots(Long keepLatestSnapshots) {
                 this.keepLatestSnapshots = keepLatestSnapshots;
@@ -2061,10 +1905,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The latest execution job id of plan.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>job-12345678</p>
+             * LatestExecuteJobId.
              */
             public Builder latestExecuteJobId(String latestExecuteJobId) {
                 this.latestExecuteJobId = latestExecuteJobId;
@@ -2080,10 +1921,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This parameter is valid only when <strong>SourceType</strong> is set to <strong>ECS_FILE</strong>. This parameter indicates whether Windows Volume Shadow Copy Service (VSS) is used to define a source path.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>{&quot;UseVSS&quot;:false}</p>
+             * Options.
              */
             public Builder options(String options) {
                 this.options = options;
@@ -2091,7 +1929,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details about the Tablestore instance.</p>
+             * OtsDetail.
              */
             public Builder otsDetail(OtsDetail otsDetail) {
                 this.otsDetail = otsDetail;
@@ -2099,7 +1937,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source paths. This parameter is valid only when <strong>SourceType</strong> is set to <strong>ECS_FILE</strong>.</p>
+             * Paths.
              */
             public Builder paths(Paths paths) {
                 this.paths = paths;
@@ -2107,10 +1945,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the backup plan.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>plan-*********************</p>
+             * PlanId.
              */
             public Builder planId(String planId) {
                 this.planId = planId;
@@ -2118,10 +1953,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the backup plan.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>planname</p>
+             * PlanName.
              */
             public Builder planName(String planName) {
                 this.planName = planName;
@@ -2129,10 +1961,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This parameter is valid only when <strong>SourceType</strong> is set to <strong>OSS</strong>. This parameter indicates the prefix of the objects that are backed up.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>oss-prefix</p>
+             * Prefix.
              */
             public Builder prefix(String prefix) {
                 this.prefix = prefix;
@@ -2140,7 +1969,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The backup resources. This parameter is valid only for disk backup.</p>
+             * Resources.
              */
             public Builder resources(Resources resources) {
                 this.resources = resources;
@@ -2148,10 +1977,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The retention period of the backup data. Unit: days.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>7</p>
+             * Retention.
              */
             public Builder retention(Long retention) {
                 this.retention = retention;
@@ -2159,7 +1985,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The backup policies. This parameter is valid only for disk backup.</p>
+             * Rules.
              */
             public Builder rules(Rules rules) {
                 this.rules = rules;
@@ -2167,14 +1993,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The backup policy. Format: <code>I|{startTime}|{interval}</code>. The system runs the first backup job at a point in time that is specified by <code>{startTime}</code> and the subsequent backup jobs at an interval that is specified by <code>{interval}</code>. The system does not run a backup job before the specified point in time. Each backup job, except the first one, starts only after the previous backup job is completed. For example, <code>I|1631685600|P1D</code> indicates that the system runs the first backup job at 14:00:00 on September 15, 2021 and the subsequent backup jobs once a day.</p>
-             * <ul>
-             * <li><strong>startTime</strong>: the time at which the system starts to run a backup job. The time follows the UNIX time format. Unit: seconds.</li>
-             * <li><strong>interval</strong>: the interval at which the system runs a backup job. The interval follows the ISO 8601 standard. For example, PT1H indicates an interval of 1 hour. P1D indicates an interval of one day.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>I|1602673264|P1D</p>
+             * Schedule.
              */
             public Builder schedule(String schedule) {
                 this.schedule = schedule;
@@ -2182,18 +2001,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the data source. Valid values:</p>
-             * <ul>
-             * <li><strong>ECS_FILE</strong>: ECS files</li>
-             * <li><strong>OSS</strong>: OSS buckets</li>
-             * <li><strong>NAS</strong>: NAS file systems</li>
-             * <li><strong>OTS</strong>: Tablestore instances</li>
-             * <li><strong>UDM_ECS</strong>: ECS instances</li>
-             * <li><strong>SYNC</strong>: data synchronization</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>ECS_FILE</p>
+             * SourceType.
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -2201,15 +2009,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This parameter is valid only when <strong>SourceType</strong> is set to <strong>ECS_FILE</strong>. This parameter indicates the throttling rules. Format: <code>{start}|{end}|{bandwidth}</code>. Multiple throttling rules are separated with vertical bars (<code>|</code>). A time range cannot overlap with another one.</p>
-             * <ul>
-             * <li>start: the start hour.</li>
-             * <li>end: the end hour.</li>
-             * <li>bandwidth: the bandwidth. Unit: KB.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>0:24:5120</p>
+             * SpeedLimit.
              */
             public Builder speedLimit(String speedLimit) {
                 this.speedLimit = speedLimit;
@@ -2217,7 +2017,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The free trial information.</p>
+             * TrialInfo.
              */
             public Builder trialInfo(TrialInfo trialInfo) {
                 this.trialInfo = trialInfo;
@@ -2225,10 +2025,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the backup plan was updated. This value is a UNIX timestamp. Unit: seconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1554347313</p>
+             * UpdatedTime.
              */
             public Builder updatedTime(Long updatedTime) {
                 this.updatedTime = updatedTime;
@@ -2236,10 +2033,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the backup vault.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>v-*********************</p>
+             * VaultId.
              */
             public Builder vaultId(String vaultId) {
                 this.vaultId = vaultId;

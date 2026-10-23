@@ -145,7 +145,10 @@ public class DescribeDataSourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The HTTP status code. A value of 200 indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -153,7 +156,7 @@ public class DescribeDataSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * DataSources.
+         * <p>The data sources.</p>
          */
         public Builder dataSources(java.util.List<DataSources> dataSources) {
             this.dataSources = dataSources;
@@ -161,7 +164,10 @@ public class DescribeDataSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message. The value is &quot;successful&quot; if the request was successful, or an error message if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -169,7 +175,10 @@ public class DescribeDataSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -177,7 +186,10 @@ public class DescribeDataSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The page size. Valid values: 1 to 99. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -185,7 +197,10 @@ public class DescribeDataSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>36A5CD24-<strong><strong>-</strong></strong>-****-5F30C3F1753F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +208,16 @@ public class DescribeDataSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><p>true: The request was successful.</p>
+         * </li>
+         * <li><p>false: The request failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -201,7 +225,10 @@ public class DescribeDataSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of returned data sources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -475,7 +502,10 @@ public class DescribeDataSourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * ClusterId.
+             * <p>The client group ID used to access the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cl-0003jyv******fsku5m</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -483,7 +513,20 @@ public class DescribeDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectionInfo.
+             * <p>The connection information of the data source, which describes how to access the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *     &quot;dataServerAddresses&quot;: [
+             *         {
+             *             &quot;host&quot;: &quot;123.123.123.123&quot;,
+             *             &quot;port&quot;: &quot;8080&quot;
+             *         }
+             *     ],
+             *     &quot;sharePath&quot;: &quot;/share&quot;,
+             *     &quot;mountOptions&quot;: &quot;vers=3&quot;,
+             *     &quot;fileSystemType&quot;: &quot;nfs&quot;
+             * }</p>
              */
             public Builder connectionInfo(String connectionInfo) {
                 this.connectionInfo = connectionInfo;
@@ -491,7 +534,10 @@ public class DescribeDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedTime.
+             * <p>The time when the data source was created. UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1770257653</p>
              */
             public Builder createdTime(Long createdTime) {
                 this.createdTime = createdTime;
@@ -499,7 +545,10 @@ public class DescribeDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceId.
+             * <p>The data source ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ds-000******2nqeo</p>
              */
             public Builder dataSourceId(String dataSourceId) {
                 this.dataSourceId = dataSourceId;
@@ -507,7 +556,10 @@ public class DescribeDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceName.
+             * <p>The data source name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>COMMON_NAS</p>
              */
             public Builder dataSourceName(String dataSourceName) {
                 this.dataSourceName = dataSourceName;
@@ -515,7 +567,10 @@ public class DescribeDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceType.
+             * <p>The data source type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>COMMON_NAS</p>
              */
             public Builder dataSourceType(String dataSourceType) {
                 this.dataSourceType = dataSourceType;
@@ -523,7 +578,12 @@ public class DescribeDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Exclude.
+             * <p>The paths excluded from analysis. Archiving feature only.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[
+             *       &quot;/home/alice/log&quot;
+             * ]</p>
              */
             public Builder exclude(String exclude) {
                 this.exclude = exclude;
@@ -531,7 +591,13 @@ public class DescribeDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Include.
+             * <p>The paths included in the analysis. Archiving feature only.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[
+             *       &quot;/home/alice&quot;,
+             *       &quot;/home/bob&quot;
+             * ]</p>
              */
             public Builder include(String include) {
                 this.include = include;
@@ -539,7 +605,10 @@ public class DescribeDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * IndexAvailable.
+             * <p>Whether the index is available. Archiving feature only.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder indexAvailable(Boolean indexAvailable) {
                 this.indexAvailable = indexAvailable;
@@ -547,7 +616,18 @@ public class DescribeDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * IndexLevel.
+             * <p>The index level. Valid values:</p>
+             * <ul>
+             * <li><p>OFF: No index is created.</p>
+             * </li>
+             * <li><p>META: A metadata index is created.</p>
+             * </li>
+             * <li><p>ALL: A full-text index is created. This value is deprecated.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>META</p>
              */
             public Builder indexLevel(String indexLevel) {
                 this.indexLevel = indexLevel;
@@ -555,7 +635,10 @@ public class DescribeDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * IndexUpdateTime.
+             * <p>The time when the index was last updated. UNIX timestamp in seconds. Archiving feature only.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1745454604</p>
              */
             public Builder indexUpdateTime(Boolean indexUpdateTime) {
                 this.indexUpdateTime = indexUpdateTime;
@@ -563,7 +646,10 @@ public class DescribeDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Indexing.
+             * <p>Whether an index is being built. Archiving feature only.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder indexing(Boolean indexing) {
                 this.indexing = indexing;
@@ -571,7 +657,10 @@ public class DescribeDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Options.
+             * <p>The analysis options. Archiving feature only.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder options(String options) {
                 this.options = options;
@@ -579,7 +668,7 @@ public class DescribeDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Paths.
+             * <p>The analysis paths. Archiving feature only.</p>
              */
             public Builder paths(java.util.List<String> paths) {
                 this.paths = paths;
@@ -587,7 +676,10 @@ public class DescribeDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * PlanId.
+             * <p>The analysis plan ID. Archiving feature only.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>plan-123***7890</p>
              */
             public Builder planId(String planId) {
                 this.planId = planId;
@@ -595,7 +687,10 @@ public class DescribeDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Schedule.
+             * <p>The analysis schedule. Archiving feature only. Format: <code>I|{startTime}|{interval}</code>. <code>{startTime}</code> is the start time as a UNIX timestamp in seconds. <code>{interval}</code> is the execution interval in ISO 8601 format. Example: PT1H for one hour, P1D for one day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>I|1729493847|P1D</p>
              */
             public Builder schedule(String schedule) {
                 this.schedule = schedule;
@@ -603,7 +698,10 @@ public class DescribeDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * SpeedLimit.
+             * <p>The rate limit configuration. Archiving feature only.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6:21:10240</p>
              */
             public Builder speedLimit(String speedLimit) {
                 this.speedLimit = speedLimit;
@@ -611,7 +709,10 @@ public class DescribeDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedTime.
+             * <p>The time when the data source was last updated. UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1745454604</p>
              */
             public Builder updatedTime(Long updatedTime) {
                 this.updatedTime = updatedTime;

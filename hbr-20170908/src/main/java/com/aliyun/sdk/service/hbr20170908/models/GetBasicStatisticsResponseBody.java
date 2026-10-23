@@ -132,7 +132,10 @@ public class GetBasicStatisticsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The HTTP status code. A value of 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -140,7 +143,7 @@ public class GetBasicStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * GlobalStatistics.
+         * <p>The Backup statistics for all regions.</p>
          */
         public Builder globalStatistics(GlobalStatistics globalStatistics) {
             this.globalStatistics = globalStatistics;
@@ -148,7 +151,10 @@ public class GetBasicStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message. If the request is successful, <code>successful</code> is returned. If the request fails, an error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -156,7 +162,7 @@ public class GetBasicStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * RegionStatistics.
+         * <p>The Backup statistics for each region.</p>
          */
         public Builder regionStatistics(java.util.List<RegionStatistics> regionStatistics) {
             this.regionStatistics = regionStatistics;
@@ -164,7 +170,10 @@ public class GetBasicStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EB526A5D-1FE2-51C1-B790-1732C1DBA969</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -172,7 +181,13 @@ public class GetBasicStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * SourceType.
+         * <p>The data source type. The valid value is:</p>
+         * <ul>
+         * <li><strong>ECS_FILE</strong>: ECS File Backup.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS_FILE</p>
          */
         public Builder sourceType(String sourceType) {
             this.sourceType = sourceType;
@@ -180,7 +195,16 @@ public class GetBasicStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * <ul>
+         * <li><p>true: The request was successful.</p>
+         * </li>
+         * <li><p>false: The request failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -246,7 +270,13 @@ public class GetBasicStatisticsResponseBody extends TeaModel {
             } 
 
             /**
-             * ProtectedDataSize.
+             * <p>The backed-up data size, in bytes.</p>
+             * <ul>
+             * <li>When <code>SourceType</code> is set to <code>ECS_FILE</code>, this parameter represents the total capacity of backed-up Cloud Disks.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>42949672960</p>
              */
             public Builder protectedDataSize(Long protectedDataSize) {
                 this.protectedDataSize = protectedDataSize;
@@ -254,7 +284,13 @@ public class GetBasicStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * ProtectedResourceCount.
+             * <p>The number of backed-up resources.</p>
+             * <ul>
+             * <li>When <code>SourceType</code> is set to <code>ECS_FILE</code>, this parameter represents the number of backed-up ECS instances.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder protectedResourceCount(Integer protectedResourceCount) {
                 this.protectedResourceCount = protectedResourceCount;
@@ -334,7 +370,13 @@ public class GetBasicStatisticsResponseBody extends TeaModel {
             } 
 
             /**
-             * ProtectedDataSize.
+             * <p>The backed-up data size, in bytes.</p>
+             * <ul>
+             * <li>When <code>SourceType</code> is set to <code>ECS_FILE</code>, this parameter represents the total capacity of backed-up Cloud Disks.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>42949672960</p>
              */
             public Builder protectedDataSize(Long protectedDataSize) {
                 this.protectedDataSize = protectedDataSize;
@@ -342,7 +384,13 @@ public class GetBasicStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * ProtectedResourceCount.
+             * <p>The number of backed-up resources.</p>
+             * <ul>
+             * <li>When <code>SourceType</code> is set to <code>ECS_FILE</code>, this parameter represents the number of backed-up ECS instances.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder protectedResourceCount(Integer protectedResourceCount) {
                 this.protectedResourceCount = protectedResourceCount;
@@ -350,7 +398,10 @@ public class GetBasicStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The Region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shenzhen</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

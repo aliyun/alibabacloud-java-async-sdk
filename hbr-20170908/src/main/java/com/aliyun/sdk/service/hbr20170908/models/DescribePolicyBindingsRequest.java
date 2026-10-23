@@ -129,7 +129,7 @@ public class DescribePolicyBindingsRequest extends Request {
         } 
 
         /**
-         * <p>List of data source IDs.</p>
+         * <p>The list of data source IDs.</p>
          */
         public Builder dataSourceIds(java.util.List<String> dataSourceIds) {
             String dataSourceIdsShrink = shrink(dataSourceIds, "DataSourceIds", "json");
@@ -139,7 +139,7 @@ public class DescribePolicyBindingsRequest extends Request {
         }
 
         /**
-         * <p>Query filters.</p>
+         * <p>The query filters.</p>
          */
         public Builder filters(java.util.List<Filters> filters) {
             this.putQueryParameter("Filters", filters);
@@ -148,8 +148,8 @@ public class DescribePolicyBindingsRequest extends Request {
         }
 
         /**
-         * <p>Number of results per query.</p>
-         * <p>Range: 10~100. Default: 10.</p>
+         * <p>The number of results for each query.</p>
+         * <p>Valid values: 10 to 100. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -161,7 +161,7 @@ public class DescribePolicyBindingsRequest extends Request {
         }
 
         /**
-         * <p>Token required to fetch the next page of policy and data source associations.</p>
+         * <p>The token required to obtain the next page of policy-data source associations.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a</p>
@@ -173,7 +173,7 @@ public class DescribePolicyBindingsRequest extends Request {
         }
 
         /**
-         * <p>Policy ID.</p>
+         * <p>The policy ID.</p>
          * 
          * <strong>example:</strong>
          * <p>po-000************hky</p>
@@ -185,9 +185,16 @@ public class DescribePolicyBindingsRequest extends Request {
         }
 
         /**
-         * <p>Data source type. Possible values:</p>
+         * <p>The data source type. Valid values:</p>
          * <ul>
-         * <li><strong>UDM_ECS</strong>: Indicates ECS full machine backup.</li>
+         * <li><strong>UDM_ECS</strong>: ECS instance backup.</li>
+         * <li><strong>OSS</strong>: OSS backup.</li>
+         * <li><strong>NAS</strong>: Alibaba Cloud NAS backup.</li>
+         * <li><strong>COMMON_NAS</strong>: On-premises NAS backup.</li>
+         * <li><strong>ECS_FILE</strong>: ECS File Backup Essential Edition.</li>
+         * <li><strong>File</strong>: On-premises file backup.</li>
+         * <li><strong>COMMON_FILE_SYSTEM</strong>: CPFS backup.</li>
+         * <li><strong>OTS</strong>: Tablestore backup.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -272,11 +279,11 @@ public class DescribePolicyBindingsRequest extends Request {
             } 
 
             /**
-             * <p>Key in the query filter. Possible values include:</p>
+             * <p>The key in the query filter. Valid values:</p>
              * <ul>
-             * <li><strong>PolicyId</strong>: Backup policy ID</li>
+             * <li><strong>PolicyId</strong>: backup policy ID</li>
              * <li><strong>DataSourceId</strong>: ECS instance ID</li>
-             * <li><strong>DataSourceType</strong>: Data source type</li>
+             * <li><strong>DataSourceType</strong>: data source type</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -288,16 +295,16 @@ public class DescribePolicyBindingsRequest extends Request {
             }
 
             /**
-             * <p>Matching method. Default is IN. This refers to the matching operation (Operator) supported by the Key and Value in the filter. Possible values include:</p>
+             * <p>The matching method. Default value: IN. The matching operation (Operator) supported by the Key and Value in the filter. Valid values:</p>
              * <ul>
-             * <li><strong>EQUAL</strong>: Equal to</li>
-             * <li><strong>NOT_EQUAL</strong>: Not equal to</li>
-             * <li><strong>GREATER_THAN</strong>: Greater than</li>
-             * <li><strong>GREATER_THAN_OR_EQUAL</strong>: Greater than or equal to</li>
-             * <li><strong>LESS_THAN</strong>: Less than</li>
-             * <li><strong>LESS_THAN_OR_EQUAL</strong>: Less than or equal to</li>
-             * <li><strong>BETWEEN</strong>: Range, where value is a JSON array <code>[lower_bound, upper_bound]</code>.</li>
-             * <li><strong>IN</strong>: In the set, where value is an array.</li>
+             * <li><strong>EQUAL</strong>: equal to</li>
+             * <li><strong>NOT_EQUAL</strong>: not equal to</li>
+             * <li><strong>GREATER_THAN</strong>: greater than</li>
+             * <li><strong>GREATER_THAN_OR_EQUAL</strong>: greater than or equal to</li>
+             * <li><strong>LESS_THAN</strong>: less than</li>
+             * <li><strong>LESS_THAN_OR_EQUAL</strong>: less than or equal to</li>
+             * <li><strong>BETWEEN</strong>: range. The value is a JSON array <code>[lower bound, upper bound]</code>.</li>
+             * <li><strong>IN</strong>: in a set. The value is an array.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -309,7 +316,7 @@ public class DescribePolicyBindingsRequest extends Request {
             }
 
             /**
-             * <p>Values to be matched in the query filter.</p>
+             * <p>The values to match in the query filter.</p>
              */
             public Builder values(java.util.List<String> values) {
                 this.values = values;

@@ -88,7 +88,7 @@ public class DeletePolicyBindingRequest extends Request {
         } 
 
         /**
-         * <p>The IDs of the data sources that you want to disassociate from the backup policy.</p>
+         * <p>The list of data source IDs to dissociate from the policy.</p>
          */
         public Builder dataSourceIds(java.util.List<String> dataSourceIds) {
             String dataSourceIdsShrink = shrink(dataSourceIds, "DataSourceIds", "json");
@@ -98,7 +98,7 @@ public class DeletePolicyBindingRequest extends Request {
         }
 
         /**
-         * <p>The ID of the backup policy.</p>
+         * <p>The policy ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,9 +111,16 @@ public class DeletePolicyBindingRequest extends Request {
         }
 
         /**
-         * <p>The type of the data source. Valid values:</p>
+         * <p>The data source type. Valid values:</p>
          * <ul>
-         * <li><strong>UDM_ECS</strong>: ECS instance backup</li>
+         * <li><strong>UDM_ECS</strong>: ECS instance backup.</li>
+         * <li><strong>OSS</strong>: OSS backup.</li>
+         * <li><strong>NAS</strong>: Alibaba Cloud NAS backup.</li>
+         * <li><strong>COMMON_NAS</strong>: On-premises NAS backup.</li>
+         * <li><strong>ECS_FILE</strong>: ECS File Backup Essential Edition.</li>
+         * <li><strong>File</strong>: On-premises file backup.</li>
+         * <li><strong>COMMON_FILE_SYSTEM</strong>: CPFS backup.</li>
+         * <li><strong>OTS</strong>: Tablestore backup.</li>
          * </ul>
          * 
          * <strong>example:</strong>

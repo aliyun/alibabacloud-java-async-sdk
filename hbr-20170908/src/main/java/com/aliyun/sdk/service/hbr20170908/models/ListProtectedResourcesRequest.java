@@ -143,7 +143,14 @@ public class ListProtectedResourcesRequest extends Request {
         } 
 
         /**
-         * CreatedByProduct.
+         * <p>The product capability to which the resource belongs. Valid values:</p>
+         * <ul>
+         * <li><strong>HBR</strong>: Cloud Backup standard capabilities.</li>
+         * <li><strong>BASIC</strong>: ECS File Backup Essential Edition.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>BASIC</p>
          */
         public Builder createdByProduct(String createdByProduct) {
             this.putQueryParameter("CreatedByProduct", createdByProduct);
@@ -152,7 +159,10 @@ public class ListProtectedResourcesRequest extends Request {
         }
 
         /**
-         * HasSnapshot.
+         * <p>Specifies whether backup points exist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder hasSnapshot(Boolean hasSnapshot) {
             this.putQueryParameter("HasSnapshot", hasSnapshot);
@@ -161,7 +171,11 @@ public class ListProtectedResourcesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of results to return per query.</p>
+         * <p>Valid values: 10 to 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -170,7 +184,10 @@ public class ListProtectedResourcesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token for the next page. If NextToken is empty, no next page exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aWQj********MCMy</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -179,7 +196,18 @@ public class ListProtectedResourcesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * <p>The resource ID. The meaning of this parameter varies based on the value of SourceType:</p>
+         * <ul>
+         * <li><strong>SourceType=ECS_FILE</strong>: the ECS instance ID.</li>
+         * <li><strong>SourceType=COMMON_FILE_SYSTEM</strong>: the CPFS data source ID.</li>
+         * <li><strong>SourceType=COMMON_NAS</strong>: the on-premises NAS data source ID.</li>
+         * <li><strong>SourceType=File</strong>: the on-premises server client ID.</li>
+         * <li><strong>SourceType=NAS</strong>: the Alibaba Cloud NAS file system ID.</li>
+         * <li><strong>SourceType=OSS</strong>: the OSS bucket.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>i-wz95************7zrd</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -188,7 +216,11 @@ public class ListProtectedResourcesRequest extends Request {
         }
 
         /**
-         * Skip.
+         * <p>The number of entries to skip for a paged query.
+         * If the number of skipped entries exceeds the total number of matched entries, an empty list is returned. The number of skipped entries must be a multiple of MaxResults.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder skip(Integer skip) {
             this.putQueryParameter("Skip", skip);
@@ -197,7 +229,18 @@ public class ListProtectedResourcesRequest extends Request {
         }
 
         /**
-         * SourceType.
+         * <p>The type of backup feature. Valid values:</p>
+         * <ul>
+         * <li><strong>ECS_FILE</strong>: ECS file backup.</li>
+         * <li><strong>COMMON_FILE_SYSTEM</strong>: CPFS backup.</li>
+         * <li><strong>COMMON_NAS</strong>: On-premises NAS backup.</li>
+         * <li><strong>File</strong>: On-premises file backup.</li>
+         * <li><strong>NAS</strong>: Alibaba Cloud NAS backup.</li>
+         * <li><strong>OSS</strong>: OSS backup.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS_FILE</p>
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);

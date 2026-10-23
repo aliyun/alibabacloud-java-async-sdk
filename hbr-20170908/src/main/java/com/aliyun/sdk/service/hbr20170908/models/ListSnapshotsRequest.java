@@ -173,7 +173,10 @@ public class ListSnapshotsRequest extends Request {
         } 
 
         /**
-         * CompleteTimeEnd.
+         * <p>The end completion time. The value is a UNIX timestamp in seconds. Only backup points whose completion time is less than this value are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1776059382</p>
          */
         public Builder completeTimeEnd(Long completeTimeEnd) {
             this.putQueryParameter("CompleteTimeEnd", completeTimeEnd);
@@ -182,7 +185,10 @@ public class ListSnapshotsRequest extends Request {
         }
 
         /**
-         * CompleteTimeStart.
+         * <p>The start completion time. The value is a UNIX timestamp in seconds. Only backup points whose completion time is greater than or equal to this value are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1776059082</p>
          */
         public Builder completeTimeStart(Long completeTimeStart) {
             this.putQueryParameter("CompleteTimeStart", completeTimeStart);
@@ -191,7 +197,10 @@ public class ListSnapshotsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of results to return for a paged query. Default value: 10. The value must be greater than 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -200,7 +209,10 @@ public class ListSnapshotsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token. You do not need to specify this parameter for the first query. When you query the next page, set this parameter to the <strong>NextToken</strong> value returned from the previous page. If <strong>NextToken</strong> is empty, no more pages exist. This parameter cannot be used together with <strong>Skip</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJJbmRleCI6NjUwMX0=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -209,7 +221,10 @@ public class ListSnapshotsRequest extends Request {
         }
 
         /**
-         * PlanId.
+         * <p>The ID of the backup plan. This is an optional filter. If you specify this parameter, only the backup points under the specified backup plan are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>po-0000****123</p>
          */
         public Builder planId(String planId) {
             this.putQueryParameter("PlanId", planId);
@@ -218,6 +233,7 @@ public class ListSnapshotsRequest extends Request {
         }
 
         /**
+         * <p>The ID of the protected resource. The protected resource must exist, and its data source type must be the same as the value of the <strong>SourceType</strong> parameter.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -230,7 +246,10 @@ public class ListSnapshotsRequest extends Request {
         }
 
         /**
-         * Skip.
+         * <p>The number of entries to skip. The value must be a non-negative integer and a multiple of <strong>MaxResults</strong>. This parameter cannot be used together with <strong>NextToken</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder skip(Integer skip) {
             this.putQueryParameter("Skip", skip);
@@ -239,6 +258,7 @@ public class ListSnapshotsRequest extends Request {
         }
 
         /**
+         * <p>The data source type. It must be the same as the data source type of the protected resource specified by ProtectedResourceId. Valid values:</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -251,7 +271,10 @@ public class ListSnapshotsRequest extends Request {
         }
 
         /**
-         * VaultId.
+         * <p>The ID of the vault. This is an optional filter. If you specify this parameter, only the backup points in the specified vault are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v-00030j3c******sn</p>
          */
         public Builder vaultId(String vaultId) {
             this.putQueryParameter("VaultId", vaultId);

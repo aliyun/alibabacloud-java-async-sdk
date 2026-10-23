@@ -145,7 +145,10 @@ public class DescribeContainerResourceResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The return code. A value of 200 indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -153,7 +156,10 @@ public class DescribeContainerResourceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message. Returns &quot;successful&quot; on success or an error message on failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -161,7 +167,10 @@ public class DescribeContainerResourceResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -169,7 +178,10 @@ public class DescribeContainerResourceResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page in a paged query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -177,7 +189,10 @@ public class DescribeContainerResourceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D98A2895-745B-5530-A8C1-9A86F0A82354</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -185,7 +200,7 @@ public class DescribeContainerResourceResponseBody extends TeaModel {
         }
 
         /**
-         * Resources.
+         * <p>The list of resources.</p>
          */
         public Builder resources(java.util.List<Resources> resources) {
             this.resources = resources;
@@ -193,7 +208,16 @@ public class DescribeContainerResourceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request succeeded.</p>
+         * <ul>
+         * <li><p>true: succeeded</p>
+         * </li>
+         * <li><p>false: failed</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -201,7 +225,10 @@ public class DescribeContainerResourceResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -306,7 +333,10 @@ public class DescribeContainerResourceResponseBody extends TeaModel {
             } 
 
             /**
-             * ClusterId.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cc-0005**********hhjw</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -314,7 +344,10 @@ public class DescribeContainerResourceResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterIdentifier.
+             * <p>The cluster identifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c21b653f********695e892e718c419a4</p>
              */
             public Builder clusterIdentifier(String clusterIdentifier) {
                 this.clusterIdentifier = clusterIdentifier;
@@ -322,7 +355,10 @@ public class DescribeContainerResourceResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a9ab843d-<strong><strong>-</strong></strong>-8e46-1d67a82128a7</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -330,7 +366,10 @@ public class DescribeContainerResourceResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceInfo.
+             * <p>Resource details.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;pv_name&quot;:&quot;nas-a9ab843d-<strong><strong>-</strong></strong>-8e46-1d67a82128a7&quot;,&quot;pv_size&quot;:&quot;1000Gi&quot;,&quot;storage_class&quot;:&quot;opk8s-nas&quot;,&quot;pvc_name&quot;:&quot;**-pvc&quot;,&quot;namespace&quot;:&quot;default&quot;}</p>
              */
             public Builder resourceInfo(String resourceInfo) {
                 this.resourceInfo = resourceInfo;
@@ -338,7 +377,10 @@ public class DescribeContainerResourceResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * <p>The resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PV</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;

@@ -156,7 +156,7 @@ public class DescribeHanaDatabasesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about SAP HANA databases.</p>
+         * HanaDatabases.
          */
         public Builder hanaDatabases(HanaDatabases hanaDatabases) {
             this.hanaDatabases = hanaDatabases;
@@ -344,14 +344,7 @@ public class DescribeHanaDatabasesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the database is started. Valid values:</p>
-             * <ul>
-             * <li><strong>YES</strong>: The database is started.</li>
-             * <li><strong>NO</strong>: The database is not started.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>YES</p>
+             * ActiveStatus.
              */
             public Builder activeStatus(String activeStatus) {
                 this.activeStatus = activeStatus;
@@ -359,10 +352,7 @@ public class DescribeHanaDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The database name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>SYSTEMDB</p>
+             * DatabaseName.
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -370,10 +360,7 @@ public class DescribeHanaDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The detailed information.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>master</p>
+             * Detail.
              */
             public Builder detail(String detail) {
                 this.detail = detail;
@@ -381,10 +368,7 @@ public class DescribeHanaDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The hostname.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>izbp1jbf3zy******antqmz</p>
+             * Host.
              */
             public Builder host(String host) {
                 this.host = host;
@@ -392,10 +376,7 @@ public class DescribeHanaDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>indexserver</p>
+             * ServiceName.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -403,10 +384,7 @@ public class DescribeHanaDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The port number.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>30013</p>
+             * SqlPort.
              */
             public Builder sqlPort(Integer sqlPort) {
                 this.sqlPort = sqlPort;

@@ -101,10 +101,10 @@ public class UpdatePolicyV2Request extends Request {
         } 
 
         /**
-         * <p>The description of the backup policy.</p>
+         * <p>The policy description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Data is backed up at 10:00:00 every day and replicated to the China (Shanghai) region for geo-redundancy.</p>
+         * <p>Back up once every day at 10:00 AM, with cross-region backup to Shanghai.</p>
          */
         public Builder policyDescription(String policyDescription) {
             this.putBodyParameter("PolicyDescription", policyDescription);
@@ -113,7 +113,7 @@ public class UpdatePolicyV2Request extends Request {
         }
 
         /**
-         * <p>The ID of the backup policy.</p>
+         * <p>The policy ID.</p>
          * 
          * <strong>example:</strong>
          * <p>po-000************viy</p>
@@ -125,10 +125,10 @@ public class UpdatePolicyV2Request extends Request {
         }
 
         /**
-         * <p>The name of the backup policy.</p>
+         * <p>The policy name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Daily Local Backup + Remote Backup</p>
+         * <p>Daily backup + geo-redundancy</p>
          */
         public Builder policyName(String policyName) {
             this.putBodyParameter("PolicyName", policyName);
@@ -137,7 +137,7 @@ public class UpdatePolicyV2Request extends Request {
         }
 
         /**
-         * <p>The rules in the backup policy.</p>
+         * <p>The list of policy rules.</p>
          */
         public Builder rules(java.util.List<Rules> rules) {
             String rulesShrink = shrink(rules, "Rules", "json");
@@ -345,7 +345,7 @@ public class UpdatePolicyV2Request extends Request {
             }
 
             /**
-             * <p>This parameter is deprecated.</p>
+             * <p>Deprecated.</p>
              */
             public Builder dataSourceIds(java.util.List<String> dataSourceIds) {
                 this.dataSourceIds = dataSourceIds;
@@ -353,13 +353,13 @@ public class UpdatePolicyV2Request extends Request {
             }
 
             /**
-             * <p>The type of the data source. Valid values:</p>
+             * <p>The data source type. Valid values:</p>
              * <ul>
-             * <li><strong>UDM_ECS</strong>: Elastic Compute Service (ECS) instance This type of data source is supported only if the <strong>RuleType</strong> parameter is set to <strong>UDM_ECS_ONLY</strong>.</li>
-             * <li><strong>OSS</strong>: Object Storage Service (OSS) bucket This type of data source is supported only if the <strong>RuleType</strong> parameter is set to <strong>STANDARD</strong>.</li>
-             * <li><strong>NAS</strong>: File Storage NAS (NAS) file system This type of data source is supported only if the <strong>RuleType</strong> parameter is set to <strong>STANDARD</strong>.</li>
-             * <li><strong>ECS_FILE</strong>: ECS file This type of data source is supported only if the <strong>RuleType</strong> parameter is set to <strong>STANDARD</strong>.</li>
-             * <li><strong>OTS</strong>: Tablestore instance This type of data source is supported only if the <strong>RuleType</strong> parameter is set to <strong>STANDARD</strong>.</li>
+             * <li><strong>UDM_ECS</strong>: ECS instance backup. This data source type is supported only when <strong>RuleType</strong> is set to <strong>UDM_ECS_ONLY</strong>.</li>
+             * <li><strong>OSS</strong>: OSS backup. This data source type is supported only when <strong>RuleType</strong> is set to <strong>STANDARD</strong>.</li>
+             * <li><strong>NAS</strong>: Alibaba Cloud NAS backup. This data source type is supported only when <strong>RuleType</strong> is set to <strong>STANDARD</strong>.</li>
+             * <li><strong>ECS_FILE</strong>: ECS File Backup Essential Edition. This data source type is supported only when <strong>RuleType</strong> is set to <strong>STANDARD</strong>.</li>
+             * <li><strong>OTS</strong>: Tablestore backup. This data source type is supported only when <strong>RuleType</strong> is set to <strong>STANDARD</strong>.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -445,9 +445,9 @@ public class UpdatePolicyV2Request extends Request {
             /**
              * <p>The type of the special retention rule. Valid values:</p>
              * <ul>
-             * <li><strong>WEEKLY</strong>: retains weekly backups</li>
-             * <li><strong>MONTHLY</strong>: retains monthly backups</li>
-             * <li><strong>YEARLY</strong>: retains yearly backups</li>
+             * <li><strong>WEEKLY</strong>: weekly backup.</li>
+             * <li><strong>MONTHLY</strong>: monthly backup.</li>
+             * <li><strong>YEARLY</strong>: yearly backup.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -459,7 +459,7 @@ public class UpdatePolicyV2Request extends Request {
             }
 
             /**
-             * <p>The special retention period of backups. Minimum value: 1. Unit: days.</p>
+             * <p>The special retention period of the backup. Minimum value: 1. Unit: days.</p>
              * 
              * <strong>example:</strong>
              * <p>365</p>
@@ -470,7 +470,7 @@ public class UpdatePolicyV2Request extends Request {
             }
 
             /**
-             * <p>Specifies which backup is retained based on the special retention rule. Only the first backup can be retained.</p>
+             * <p>The backup to which the rule applies. Currently, only the first backup is supported. Set the value to 1.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -564,10 +564,10 @@ public class UpdatePolicyV2Request extends Request {
             }
 
             /**
-             * <p>The tag-based matching rule. Valid values:</p>
+             * <p>The tag matching rule. Valid values:</p>
              * <ul>
-             * <li><strong>EQUAL</strong>: Both the tag key and tag value are matched.</li>
-             * <li><strong>NOT</strong>: The tag key is matched and the tag value is not matched.</li>
+             * <li><strong>EQUAL</strong>: matches both the tag key and tag value.</li>
+             * <li><strong>NOT</strong>: matches the tag key but not the tag value.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -579,7 +579,7 @@ public class UpdatePolicyV2Request extends Request {
             }
 
             /**
-             * <p>The tag value. If you leave this parameter empty, the value is any value.</p>
+             * <p>The tag value. An empty value indicates any value.</p>
              * 
              * <strong>example:</strong>
              * <p>prod</p>
@@ -805,7 +805,7 @@ public class UpdatePolicyV2Request extends Request {
             } 
 
             /**
-             * <p>This parameter is required only if the <strong>RuleType</strong> parameter is set to <strong>TRANSITION</strong>. This parameter specifies the time when data is dumped from a backup vault to an archive vault. Unit: days.</p>
+             * <p>This parameter is required only when <strong>RuleType</strong> is set to <strong>TRANSITION</strong>. The number of days after which the backup is converted to archive storage. Unit: days.</p>
              * 
              * <strong>example:</strong>
              * <p>90</p>
@@ -816,7 +816,7 @@ public class UpdatePolicyV2Request extends Request {
             }
 
             /**
-             * <p>This parameter is required only if the <strong>RuleType</strong> parameter is set to <strong>BACKUP</strong>. This parameter specifies the backup type. Valid value: <strong>COMPLETE</strong>, which indicates full backup.</p>
+             * <p>This parameter is required only when <strong>RuleType</strong> is set to <strong>BACKUP</strong>. The backup type. Set the value to <strong>COMPLETE</strong>, which indicates full backup.</p>
              * 
              * <strong>example:</strong>
              * <p>COMPLETE</p>
@@ -827,7 +827,7 @@ public class UpdatePolicyV2Request extends Request {
             }
 
             /**
-             * <p>This parameter is required only if the <strong>RuleType</strong> parameter is set to <strong>TRANSITION</strong>. This parameter specifies the time when data is dumped from a backup vault to a cold archive vault. Unit: days.</p>
+             * <p>This parameter is required only when <strong>RuleType</strong> is set to <strong>TRANSITION</strong>. The number of days after which the backup is converted to cold archive storage. Unit: days.</p>
              * 
              * <strong>example:</strong>
              * <p>365</p>
@@ -838,7 +838,7 @@ public class UpdatePolicyV2Request extends Request {
             }
 
             /**
-             * <p>This parameter is required only if the <strong>RuleType</strong> parameter is set to <strong>TAG</strong>. This parameter specifies the data source filter rule.</p>
+             * <p>This parameter is required only when <strong>RuleType</strong> is set to <strong>TAG</strong>. The data source filter rules.</p>
              */
             public Builder dataSourceFilters(java.util.List<DataSourceFilters> dataSourceFilters) {
                 this.dataSourceFilters = dataSourceFilters;
@@ -846,7 +846,7 @@ public class UpdatePolicyV2Request extends Request {
             }
 
             /**
-             * <p>This parameter is required only if the <strong>PolicyType</strong> parameter is set to <strong>UDM_ECS_ONLY</strong>. This parameter specifies whether to enable the immutable backup feature.</p>
+             * <p>This parameter is required only when <strong>PolicyType</strong> is set to <strong>UDM_ECS_ONLY</strong> and <strong>RuleType</strong> is set to <strong>SECURITY</strong>. Specifies whether to enable backup locking.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -857,10 +857,10 @@ public class UpdatePolicyV2Request extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable the feature of keeping at least one backup version. Valid values:</p>
+             * <p>Specifies whether to retain at least one backup version. Valid values:</p>
              * <ul>
-             * <li>0: The feature is disabled.</li>
-             * <li>1: The feature is enabled.</li>
+             * <li>0: do not retain.</li>
+             * <li>1: retain.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -872,7 +872,7 @@ public class UpdatePolicyV2Request extends Request {
             }
 
             /**
-             * <p>This parameter is required only if the <strong>RuleType</strong> parameter is set to <strong>REPLICATION</strong>. This parameter specifies the ID of the destination region.</p>
+             * <p>This parameter is required only when <strong>RuleType</strong> is set to <strong>REPLICATION</strong>. The ID of the destination region for replication.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-shanghai</p>
@@ -883,10 +883,10 @@ public class UpdatePolicyV2Request extends Request {
             }
 
             /**
-             * <p>This parameter is required only if the <strong>RuleType</strong> parameter is set to <strong>TRANSITION</strong> or <strong>REPLICATION</strong>.</p>
+             * <p>This parameter is required only when <strong>RuleType</strong> is set to <strong>TRANSITION</strong> or <strong>REPLICATION</strong>.</p>
              * <ul>
-             * <li>If the <strong>RuleType</strong> parameter is set to <strong>TRANSITION</strong>, this parameter specifies the retention period of the backup data. Minimum value: 1. Unit: days.</li>
-             * <li>If the <strong>RuleType</strong> parameter is set to <strong>REPLICATION</strong>, this parameter specifies the retention period of remote backups. Minimum value: 1. Unit: days.</li>
+             * <li>If <strong>RuleType</strong> is set to <strong>TRANSITION</strong>: the retention period of the backup. Minimum value: 1. Unit: days.</li>
+             * <li>If <strong>RuleType</strong> is set to <strong>REPLICATION</strong>: the retention period of the cross-region backup. Minimum value: 1. Unit: days.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -898,7 +898,7 @@ public class UpdatePolicyV2Request extends Request {
             }
 
             /**
-             * <p>This parameter is required only if the <strong>RuleType</strong> parameter is set to <strong>TRANSITION</strong>. This parameter specifies the special retention rules.</p>
+             * <p>This parameter is required only when <strong>RuleType</strong> is set to <strong>TRANSITION</strong>. The special retention rules.</p>
              */
             public Builder retentionRules(java.util.List<RetentionRules> retentionRules) {
                 this.retentionRules = retentionRules;
@@ -917,11 +917,11 @@ public class UpdatePolicyV2Request extends Request {
             }
 
             /**
-             * <p>The type of the rule. Each backup policy must have at least one rule of the <strong>BACKUP</strong> type and only one rule of the <strong>TRANSITION</strong> type. Valid values:</p>
+             * <p>The rule type. Each policy must have at least one <strong>BACKUP</strong> rule and exactly one <strong>TRANSITION</strong> rule. Valid values:</p>
              * <ul>
-             * <li><strong>BACKUP</strong>: backup rule</li>
-             * <li><strong>TRANSITION</strong>: lifecycle rule</li>
-             * <li><strong>REPLICATION</strong>: replication rule</li>
+             * <li><strong>BACKUP</strong>: backup rule.</li>
+             * <li><strong>TRANSITION</strong>: lifecycle rule.</li>
+             * <li><strong>REPLICATION</strong>: replication rule.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -933,22 +933,22 @@ public class UpdatePolicyV2Request extends Request {
             }
 
             /**
-             * <p>This parameter is required only if the <strong>RuleType</strong> parameter is set to <strong>BACKUP</strong>. This parameter specifies the backup schedule settings. Formats:</p>
+             * <p>This parameter is required only when <strong>RuleType</strong> is set to <strong>BACKUP</strong>. The backup schedule settings. Supported formats:</p>
              * <ul>
-             * <li><p><code>I|{startTime}|{interval}</code>: The system runs the first backup job at a point in time that is specified in the {startTime} parameter and the subsequent backup jobs at an interval that is specified in the {interval} parameter. For example, <code>I|1631685600|P1D</code> indicates that the system runs the first backup job at 14:00:00 on September 15, 2021 and the subsequent backup jobs once a day.</p>
+             * <li><p><code>I|{startTime}|{interval}</code>: specifies that a backup job is run at the {interval} from the {startTime}. Example: <code>I|1631685600|P1D</code> specifies that a backup job is run once a day starting from 2021-09-15 14:00:00.</p>
              * <ul>
-             * <li>startTime: the time at which the system starts to run a backup job. The time must follow the UNIX time format. Unit: seconds.</li>
-             * <li>interval: the interval at which the system runs a backup job. The interval must follow the ISO 8601 standard. For example, <code>PT1H</code> specifies an interval of 1 hour. <code>P1D</code> specifies an interval of one day.</li>
+             * <li>startTime: the start time of the backup. This value is a UNIX timestamp. Unit: seconds.</li>
+             * <li>interval: the ISO 8601 time interval. Example: <code>PT1H</code> specifies an interval of one hour. <code>P1D</code> specifies an interval of one day.</li>
              * </ul>
              * </li>
-             * <li><p><code>C|{startTime}|{crontab}</code>: The system runs backup jobs at a point in time that is specified in the {startTime} parameter based on the {crontab} expression. For example, C|1631685600|0 0 2 ?* 3,5,7 indicates that the system runs backup jobs at 02:00:00 every Tuesday, Thursday, and Saturday from14:00:00 on September 15, 2021.``</p>
+             * <li><p><code>C|{startTime}|{crontab}</code>: specifies that a backup job is run based on the {crontab} expression from the {startTime}. Example: <code>C|1631685600|0 0 2 ? * 3,5,7</code> specifies that a backup job is run at 02:00:00 every Tuesday, Thursday, and Saturday starting from 2021-09-15 14:00:00.</p>
              * <ul>
-             * <li>startTime: the time at which the system starts to run a backup job. The time must follow the UNIX time format. Unit: seconds.</li>
-             * <li>crontab: the crontab expression. For example, 0 0 2 ?* 3,5,7 indicates 02:00:00 every Tuesday, Thursday, and Saturday.``</li>
+             * <li>startTime: the start time of the backup. This value is a UNIX timestamp. Unit: seconds.</li>
+             * <li>crontab: the crontab expression. Example: <code>0 0 2 ? * 3,5,7</code> specifies every Tuesday, Thursday, and Saturday at 02:00:00.</li>
              * </ul>
              * </li>
              * </ul>
-             * <p>The system does not run a backup job before the specified point in time. Each backup job, except the first one, starts only after the previous backup job is completed.</p>
+             * <p>Backup jobs for elapsed time periods are not compensated. If the previous backup job is not completed, the next backup job is not triggered.</p>
              * 
              * <strong>example:</strong>
              * <p>I|1648647166|P1D</p>
@@ -959,7 +959,7 @@ public class UpdatePolicyV2Request extends Request {
             }
 
             /**
-             * <p>This parameter is required only if the <strong>RuleType</strong> parameter is set to <strong>TAG</strong>. This parameter specifies the resource tag filter rule.</p>
+             * <p>This parameter is required only when <strong>RuleType</strong> is set to <strong>TAG</strong>. The resource tag filter rules.</p>
              */
             public Builder tagFilters(java.util.List<TagFilters> tagFilters) {
                 this.tagFilters = tagFilters;
@@ -967,7 +967,7 @@ public class UpdatePolicyV2Request extends Request {
             }
 
             /**
-             * <p>This parameter is required only if the RuleType parameter is set to BACKUP. The ID of the backup vault.</p>
+             * <p>This parameter is required only when RuleType is set to BACKUP. The backup vault ID.</p>
              * 
              * <strong>example:</strong>
              * <p>v-0001************aseg</p>

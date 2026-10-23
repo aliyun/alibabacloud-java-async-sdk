@@ -93,7 +93,7 @@ public class CancelRestoreJobResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code. The status code 200 indicates that the request was successful.</p>
+         * <p>The return code. A value of 200 indicates that the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,7 +104,7 @@ public class CancelRestoreJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message. If the request was successful, &quot;successful&quot; is returned. If the request failed, an error message is returned.</p>
+         * <p>The message returned. If the request is successful, successful is returned. If the request fails, an error message is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -126,10 +126,12 @@ public class CancelRestoreJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the request was successful.</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: The request was successful.</p>
+         * </li>
+         * <li><p>false: The request failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

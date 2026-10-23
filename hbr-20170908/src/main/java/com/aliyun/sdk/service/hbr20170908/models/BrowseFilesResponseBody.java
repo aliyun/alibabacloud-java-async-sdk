@@ -171,7 +171,10 @@ public class BrowseFilesResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The HTTP status code. A value of 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -179,7 +182,10 @@ public class BrowseFilesResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -187,7 +193,10 @@ public class BrowseFilesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message. The value <code>successful</code> is returned if the request was successful. An error message is returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -195,7 +204,10 @@ public class BrowseFilesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token for the next page of results. An empty value indicates that no more pages are available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJ***Q==</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -211,7 +223,10 @@ public class BrowseFilesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -219,7 +234,10 @@ public class BrowseFilesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values: 1 to 99. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -227,7 +245,10 @@ public class BrowseFilesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>843F7A45-8B***35-ECECBE5E5F78</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -235,7 +256,16 @@ public class BrowseFilesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * <ul>
+         * <li><p>true: The request was successful.</p>
+         * </li>
+         * <li><p>false: The request failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -243,7 +273,10 @@ public class BrowseFilesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

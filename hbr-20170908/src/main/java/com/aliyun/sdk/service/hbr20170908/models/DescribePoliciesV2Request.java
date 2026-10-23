@@ -148,7 +148,7 @@ public class DescribePoliciesV2Request extends Request {
         }
 
         /**
-         * <p>The number of results for each query.</p>
+         * <p>The number of results per query.</p>
          * <p>Valid values: 10 to 100. Default value: 10.</p>
          * 
          * <strong>example:</strong>
@@ -161,7 +161,7 @@ public class DescribePoliciesV2Request extends Request {
         }
 
         /**
-         * <p>The token that is used to obtain the next page of backup policies.</p>
+         * <p>The token required to retrieve the next page of policies.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a</p>
@@ -173,7 +173,7 @@ public class DescribePoliciesV2Request extends Request {
         }
 
         /**
-         * <p>The ID of the backup policy.</p>
+         * <p>The policy ID.</p>
          * 
          * <strong>example:</strong>
          * <p>po-000************2l6</p>

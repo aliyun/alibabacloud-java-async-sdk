@@ -108,6 +108,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>The local NAS backup feature supports the local NAS (<code>COMMON_NAS</code>) data source type.</li>
+     * <li>The CPFS backup feature supports the following data source types: CPFS (<code>CPFS</code>), CPFS AI-Computing Edition (<code>BMCPFS</code>), and other large-scale file system (<code>COMMON_FILE_SYSTEM</code>).</li>
+     * <li>The archive feature supports the following data source types: local NAS (<code>COMMON_NAS</code>), HDFS (<code>HDFS</code>), and S3 (<code>S3</code>).</li>
+     * </ul>
+     * 
      * @param request the request parameters of AddDataSource  AddDataSourceRequest
      * @return AddDataSourceResponse
      */
@@ -242,11 +249,17 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <blockquote>
+     * <p>Notice: </p>
+     * </blockquote>
      * <ul>
-     * <li>A backup plan associates data sources with backup policies and other necessary information for backups. After the execution of a backup plan, it generates a backup task that records the progress and results of the backup. If the backup task is successful, a backup snapshot is created. You can use the backup snapshot to create a recovery task.</li>
-     * <li>A backup plan supports only one type of data source.</li>
-     * <li>A backup plan supports only a single fixed interval backup cycle strategy.</li>
-     * <li>A backup plan can back up to only one backup vault.</li>
+     * <li>To use features such as ECS File Backup Essential Edition, cloud disk backup, container backup, Tablestore backup free trial, archiving, or data synchronization, call this operation.</li>
+     * <li>To use the 30-day free trial of NAS backup or OSS backup, call the CreateTrialBackupPlan operation.</li>
+     * <li>To use standard capabilities of ECS File Backup Standard Edition, local file backup, ECS full-copy backup, NAS backup, OSS backup, or CPFS backup, call the CreatePolicyV2 and CreatePolicyBindings operations.</li>
+     * <li>A backup plan associates a data source with a backup policy and other information required for backup. After a backup plan is executed, a backup job is generated to record the backup progress and result. If the backup job succeeds, a backup snapshot is generated. You can use the backup snapshot to create a restore job.</li>
+     * <li>A backup plan supports only one data source.</li>
+     * <li>A backup plan supports only a single backup cycle policy with a fixed interval.</li>
+     * <li>A backup plan can back up data to only one vault.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateBackupPlan  CreateBackupPlanRequest
@@ -357,9 +370,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  You can bind data sources to only one policy in each request.</p>
      * <ul>
-     * <li>Elastic Compute Service (ECS) instances can be bound to only one policy.</li>
+     * <li>Each call supports binding only data sources of the same type to a single policy.</li>
+     * <li>ECS instances (full server backup) can be bound to only one policy.</li>
      * </ul>
      * 
      * @param request the request parameters of CreatePolicyBindings  CreatePolicyBindingsRequest
@@ -381,11 +394,11 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>A backup policy records the information required for backup. After you execute a backup policy, a backup job is generated to record the backup progress and the backup result. If a backup job is completed, a backup snapshot is generated. You can use a backup snapshot to create a restore job.</p>
+     * <p>A backup policy records the information required for backup. After a backup policy is executed, a backup job is generated to record the backup progress and result. If the backup job succeeds, a backup snapshot is generated. You can use the backup snapshot to create a restore job.</p>
      * <ul>
-     * <li>A backup policy supports multiple data sources. The data sources can be only Elastic Compute Service (ECS) instances.</li>
-     * <li>You can specify only one interval as a backup cycle in a backup policy.</li>
-     * <li>Each backup policy allows you to back up data to only one backup vault.</li>
+     * <li>A backup policy supports multiple data source types, including NAS backup, OSS backup, ECS instance backup, ECS File Backup Essential Edition, local file backup, Tablestore backup, and CPFS backup.</li>
+     * <li>A backup policy supports only a single backup cycle policy with a fixed interval.</li>
+     * <li>A backup policy can back up data to only one backup vault.</li>
      * </ul>
      * 
      * @param request the request parameters of CreatePolicyV2  CreatePolicyV2Request
@@ -407,7 +420,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>After a backup vault is created, the backup vault is in the INITIALIZING state, and the system automatically runs an initialization task to initialize the backup vault. After the initialization task is completed, the backup vault is in the CREATED state.Call this operation in the region where the mirror vault resides, which is specified by the VaultRegionId parameter.</p>
+     * <p>After the backup vault is created, its status is INITIALIZING, and an initialization task is automatically initiated. After the task succeeds, the vault status changes to CREATED.
+     * Call this operation in the region where the replication target vault resides (VaultRegionId).</p>
      * 
      * @param request the request parameters of CreateReplicationVault  CreateReplicationVaultRequest
      * @return CreateReplicationVaultResponse
@@ -429,8 +443,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Create a restore job based on the selected snapshot and the restore destination.</li>
-     * <li>Currently, the data source type must match the restore destination data source type.</li>
+     * <li>Creates a restore job based on the selected snapshot and restore destination.</li>
+     * <li>The data source type and the restore destination data source type must be the same.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateRestoreJob  CreateRestoreJobRequest
@@ -477,11 +491,13 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  Each Alibaba Cloud account can create up to 100 backup vaults.</p>
      * <ul>
-     * <li>After a backup vault is created, the backup vault is in the INITIALIZING state, and the system automatically runs an initialization task to initialize the backup vault. After the initialization task is completed, the backup vault is in the CREATED state. A backup job can use a backup vault to store backup data only if the backup vault is in the CREATED state.
-     * **
-     * <strong>Note</strong> Before you call this operation, make sure that you fully understand the billing of Cloud Backup.</li>
+     * <li>Each Alibaba Cloud account can create a maximum of 100 backup vaults.</li>
+     * <li>After a backup vault is created, its status is INITIALIZING and an initialization task automatically starts. After the task is successfully completed, the status changes to CREATED. The backup vault can be used for backup jobs only when its status is CREATED.<blockquote>
+     * <p>Notice: 
+     * Before you call this operation, make sure that you understand the billing methods and <a href="https://www.aliyun.com/price/detail/hbr?">pricing</a> of Cloud Backup.</p>
+     * </blockquote>
+     * </li>
      * </ul>
      * 
      * @param request the request parameters of CreateVault  CreateVaultRequest
@@ -502,6 +518,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Call this method in the region where the destination backup vault is located. Before you use this API, review the billing methods and pricing of Cloud Backup.</p>
+     * 
      * @param request the request parameters of CreateVaultReplication  CreateVaultReplicationRequest
      * @return CreateVaultReplicationResponse
      */
@@ -540,8 +559,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  You cannot delete the active Cloud Backup clients that receive heartbeat packets within 1 hour. You can call the UninstallBackupClients operation to uninstall a Cloud Backup client. Then, the client becomes inactive.</p>
      * <ul>
+     * <li>You cannot delete the active Cloud Backup clients that receive heartbeat packets within 1 hour. You can call the UninstallBackupClients operation to uninstall a Cloud Backup client. Then, the client becomes inactive.</li>
      * <li>When you perform this operation, resources that are associated with the client are also deleted, including:<ul>
      * <li>Backup plans</li>
      * <li>Backup jobs</li>
@@ -569,7 +588,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation deletes only the resources that are related to HBR clients. The resources include backup plans, backup jobs, and backup snapshots. The operation does not delete HBR clients.</p>
+     * <p>This operation does not delete the backup client. It only deletes the resources of the backup client, such as backup plans, backup jobs, and snapshots.</p>
      * 
      * @param request the request parameters of DeleteBackupClientResource  DeleteBackupClientResourceRequest
      * @return DeleteBackupClientResourceResponse
@@ -590,9 +609,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  If you delete a backup plan, the backup jobs are also deleted.</p>
      * <ul>
-     * <li>If you delete a backup plan, the created snapshot files are not deleted.</li>
+     * <li>Deleting a backup plan also deletes the associated backup jobs.</li>
+     * <li>Deleting a backup plan does not delete existing snapshots.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteBackupPlan  DeleteBackupPlanRequest
@@ -725,7 +744,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>If you delete a backup policy, the backup policy is disassociated with all data sources. Proceed with caution.</p>
+     * <p>When you delete a policy, it is detached from all associated data sources. Proceed with caution.</p>
      * 
      * @param request the request parameters of DeletePolicyV2  DeletePolicyV2Request
      * @return DeletePolicyV2Response
@@ -823,6 +842,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this method in the region of the destination backup vault.</p>
+     * 
      * @param request the request parameters of DeleteVaultReplication  DeleteVaultReplicationRequest
      * @return DeleteVaultReplicationResponse
      */
@@ -917,7 +939,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query only Container Service for Kubernetes (ACK) clusters.</p>
+     * <p>Supported only for Container Service for Kubernetes (ACK) integration.</p>
      * 
      * @param request the request parameters of DescribeContainerCluster  DescribeContainerClusterRequest
      * @return DescribeContainerClusterResponse
@@ -1331,9 +1353,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  If the request is successful, the mount target is deleted.</p>
      * <ul>
-     * <li>After you create a backup plan for an Apsara File Storage NAS file system, HBR automatically creates a mount target for the file system. You can call this operation to delete the mount target. In the <strong>Status</strong> column of the mount target of the NAS file system, the following information is displayed: <strong>This mount target is created by an Alibaba Cloud internal service and cannot be operated. Service name: HBR</strong>.</li>
+     * <li>If the request is successful, the mount target is deleted.</li>
+     * <li>After you create a backup plan for an Apsara File Storage NAS file system, HBR automatically creates a mount target for the file system. Call this operation to delete the mount target. In the <strong>Status</strong> column of the mount target of the NAS file system, the following information is displayed: <strong>This mount target is created by an Alibaba Cloud internal service and cannot be operated. Service name: HBR</strong>.</li>
      * </ul>
      * 
      * @param request the request parameters of DetachNasFileSystem  DetachNasFileSystemRequest
@@ -1355,7 +1377,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>After you call this operation, the backup plan is suspended. In the DescribeBackupPlans operation, the Disabled parameter is set to true.</p>
+     * <p>If the call is successful, the backup plan is disabled. The value of the Disabled parameter is then returned as true in the response of the DescribeBackupPlans operation.</p>
      * 
      * @param request the request parameters of DisableBackupPlan  DisableBackupPlanRequest
      * @return DisableBackupPlanResponse
@@ -1397,7 +1419,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>After you call this operation, the backup plan is restarted (Disabled is set to false in the DescribeBackupPlans operation). Cloud Backup continues to perform backups based on the policy specified in the backup plan.</p>
+     * <p>If the call is successful, the backup plan is enabled. The plan then executes backups according to its policy. In the response of the DescribeBackupPlans operation, the value of the Disabled parameter is false.</p>
      * 
      * @param request the request parameters of EnableBackupPlan  EnableBackupPlanRequest
      * @return EnableBackupPlanResponse
@@ -1547,10 +1569,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  This operation creates an asynchronous job at the backend and calls Cloud Assistant to install an HBR client on an ECS instance.</p>
      * <ul>
-     * <li>You can call the <a href="https://help.aliyun.com/document_detail/431265.html">DescribeTask</a> operation to query the execution result of an asynchronous job.</li>
-     * <li>The timeout period of an asynchronous job is 15 minutes. We recommend that you call the DescribeTask operation to run the first query 60 seconds after you call the InstallBackupClients operation to install HBR clients. Then, run the next queries at an interval of 30 seconds.</li>
+     * <li>This operation creates a background asynchronous task. The task uses Cloud Assistant to install backup clients on ECS instances.</li>
+     * <li>Call the <a href="https://help.aliyun.com/document_detail/431265.html">DescribeTask</a> operation to get the task result.</li>
+     * <li>The task timeout is 15 minutes. After the task is created, wait 60 seconds before making the first query. Then, query the result every 30 seconds.</li>
      * </ul>
      * 
      * @param request the request parameters of InstallBackupClients  InstallBackupClientsRequest
@@ -1625,6 +1647,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Warning: 
+     * Deleting a data source can cause data loss or render related data unqueryable. Before you delete the data source, ensure that you have removed all associated backup data and backup plans.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of RemoveDataSource  RemoveDataSourceRequest
      * @return RemoveDataSourceResponse
      */
@@ -1768,7 +1796,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to update the configurations of both the old and new HBR clients.</p>
+     * <p>Applies to updating both legacy and new clients.</p>
      * 
      * @param request the request parameters of UpdateClientSettings  UpdateClientSettingsRequest
      * @return UpdateClientSettingsResponse
@@ -1932,7 +1960,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>If you modify a backup policy, the modification takes effect on all data sources that are bound to the backup policy. Proceed with caution.</p>
+     * <p>Modifications to a policy take effect on all associated data sources. Proceed with caution.</p>
      * 
      * @param request the request parameters of UpdatePolicyV2  UpdatePolicyV2Request
      * @return UpdatePolicyV2Response
@@ -1996,7 +2024,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to upgrade a Cloud Backup client to the latest version. After the Cloud Backup client is upgraded, the version of the client cannot be rolled back.</p>
+     * <p>Upgrades a Cloud Backup client to the latest version. After the upgrade succeeds, the client version cannot be rolled back.</p>
      * 
      * @param request the request parameters of UpgradeClient  UpgradeClientRequest
      * @return UpgradeClientResponse

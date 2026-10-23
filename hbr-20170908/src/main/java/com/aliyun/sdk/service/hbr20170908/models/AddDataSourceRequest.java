@@ -215,7 +215,10 @@ public class AddDataSourceRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * <p>The ID of the client group used to access the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cl-0004i0nlngorvgjpl7ck</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -224,7 +227,41 @@ public class AddDataSourceRequest extends Request {
         }
 
         /**
-         * ConnectionInfo.
+         * <p>The connection information for the data source. Examples:</p>
+         * <ul>
+         * <li><p>Local NAS data source:
+         * {
+         * &quot;dataServerAddresses&quot;: [
+         * {
+         * &quot;host&quot;: &quot;123.123.123.123&quot;,
+         * &quot;port&quot;: &quot;8080&quot;
+         * }
+         * ],
+         * &quot;sharePath&quot;: &quot;/share&quot;,
+         * &quot;mountOptions&quot;: &quot;vers=3&quot;,
+         * &quot;fileSystemType&quot;: &quot;nfs&quot;
+         * }</p>
+         * </li>
+         * <li><p>CPFS AI-Computing Edition data source:
+         * {&quot;vpcMountTarget&quot;:&quot;cpfs-010wn\<em>\</em>\<em>wy-vpc-ta\</em>\*\*8.cn-shanghai.cpfs.aliyuncs.com&quot;,&quot;sharePath&quot;:&quot;/&quot;}</p>
+         * </li>
+         * <li><p>Other large-scale file system data source:
+         * {&quot;path&quot;:&quot;/mnt&quot;}</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;dataServerAddresses&quot;: [
+         *         {
+         *             &quot;host&quot;: &quot;123.123.123.123&quot;,
+         *             &quot;port&quot;: &quot;8080&quot;
+         *         }
+         *     ],
+         *     &quot;sharePath&quot;: &quot;/share&quot;,
+         *     &quot;mountOptions&quot;: &quot;vers=3&quot;,
+         *     &quot;fileSystemType&quot;: &quot;nfs&quot;
+         * }</p>
          */
         public Builder connectionInfo(String connectionInfo) {
             this.putQueryParameter("ConnectionInfo", connectionInfo);
@@ -233,7 +270,27 @@ public class AddDataSourceRequest extends Request {
         }
 
         /**
-         * Credential.
+         * <p>The access credential for the data source. This parameter is required for local NAS (SMB) data sources and for OSS- or S3-compatible data sources. Examples:</p>
+         * <ul>
+         * <li><p>Local NAS data source (SMB protocol):
+         * {
+         * &quot;mountUsername&quot;: &quot;\<em>\</em>\<em>\</em>\<em>&quot;,
+         * &quot;mountPassword&quot;: &quot;\</em>\<em>\</em>\<em>\</em>&quot;
+         * }</p>
+         * </li>
+         * <li><p>OSS-compatible or S3-compatible data source:
+         * {
+         * &quot;accessKeyId&quot;: &quot;\<em>\</em>\<em>\</em>\<em>&quot;,
+         * &quot;accessKeySecret&quot;: &quot;\</em>\<em>\</em>\<em>\</em>&quot;
+         * }</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;mountUsername&quot;: &quot;<em><strong><strong>&quot;,
+         *     &quot;mountPassword&quot;: &quot;</strong></strong></em>&quot;
+         * }</p>
          */
         public Builder credential(String credential) {
             this.putQueryParameter("Credential", credential);
@@ -242,10 +299,11 @@ public class AddDataSourceRequest extends Request {
         }
 
         /**
+         * <p>The name of the data source.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>hbr_detection_source-nas-20250710101315</p>
+         * <p>MyLocalNas</p>
          */
         public Builder dataSourceName(String dataSourceName) {
             this.putQueryParameter("DataSourceName", dataSourceName);
@@ -254,6 +312,7 @@ public class AddDataSourceRequest extends Request {
         }
 
         /**
+         * <p>The type of the data source.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -266,7 +325,10 @@ public class AddDataSourceRequest extends Request {
         }
 
         /**
-         * Exclude.
+         * <p>A filter that specifies the files to exclude. This parameter applies only to data source analysis with the archive feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;/home/alice/log&quot;]</p>
          */
         public Builder exclude(String exclude) {
             this.putQueryParameter("Exclude", exclude);
@@ -275,7 +337,10 @@ public class AddDataSourceRequest extends Request {
         }
 
         /**
-         * Include.
+         * <p>A filter that specifies the files to include. This parameter applies only to data source analysis with the archive feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;/home/alice&quot;, &quot;/home/bob&quot;]</p>
          */
         public Builder include(String include) {
             this.putQueryParameter("Include", include);
@@ -284,7 +349,18 @@ public class AddDataSourceRequest extends Request {
         }
 
         /**
-         * IndexLevel.
+         * <p>The index level. This parameter applies only to data source analysis with the archive feature.</p>
+         * <ul>
+         * <li><p><code>OFF</code>: No index is created.</p>
+         * </li>
+         * <li><p><code>META</code>: A metadata index is created.</p>
+         * </li>
+         * <li><p><code>ALL</code>: A full-text index is created. (Deprecated)</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>META</p>
          */
         public Builder indexLevel(String indexLevel) {
             this.putQueryParameter("IndexLevel", indexLevel);
@@ -293,7 +369,10 @@ public class AddDataSourceRequest extends Request {
         }
 
         /**
-         * Options.
+         * <p>The options for data source analysis. This parameter applies only to data source analysis with the archive feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder options(String options) {
             this.putQueryParameter("Options", options);
@@ -302,7 +381,7 @@ public class AddDataSourceRequest extends Request {
         }
 
         /**
-         * Path.
+         * <p>A list of paths for data source analysis. This parameter applies only to data source analysis with the archive feature.</p>
          */
         public Builder path(java.util.List<String> path) {
             this.putQueryParameter("Path", path);
@@ -311,7 +390,10 @@ public class AddDataSourceRequest extends Request {
         }
 
         /**
-         * Schedule.
+         * <p>The execution schedule. This parameter applies only to data source analysis with the archive feature. The format <code>I|{startTime}|{interval}</code> specifies a task that runs at a defined interval starting from <code>{startTime}</code>. <code>{interval}</code> is an ISO 8601 duration. For example, <code>PT1H</code> specifies a one-hour interval, and <code>P1D</code> specifies a one-day interval.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>I|1729493847|P1D</p>
          */
         public Builder schedule(String schedule) {
             this.putQueryParameter("Schedule", schedule);
@@ -320,7 +402,10 @@ public class AddDataSourceRequest extends Request {
         }
 
         /**
-         * SpeedLimit.
+         * <p>The rate limiting settings. This parameter applies only to data source analysis with the archive feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6:21:10240</p>
          */
         public Builder speedLimit(String speedLimit) {
             this.putQueryParameter("SpeedLimit", speedLimit);

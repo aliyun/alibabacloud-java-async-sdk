@@ -212,7 +212,7 @@ public class DescribeVaultsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Valid values: 1 to 99. Default value: 10.</p>
+         * <p>The number of entries per page. Minimum value: 1. Maximum value: 99. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -224,7 +224,10 @@ public class DescribeVaultsRequest extends Request {
         }
 
         /**
-         * Replication.
+         * <p>Specifies whether to query replication target vaults.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder replication(Boolean replication) {
             this.putQueryParameter("Replication", replication);
@@ -233,7 +236,7 @@ public class DescribeVaultsRequest extends Request {
         }
 
         /**
-         * <p>Resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-*********************</p>
@@ -247,10 +250,10 @@ public class DescribeVaultsRequest extends Request {
         /**
          * <p>The status of the backup vault. Valid values:</p>
          * <ul>
-         * <li><strong>UNKNOWN</strong>: The backup vault is in an unknown state.</li>
-         * <li><strong>INITIALIZING</strong>: The backup vault is being initialized.</li>
-         * <li><strong>CREATED</strong>: The backup vault is created.</li>
-         * <li><strong>ERROR</strong>: An error occurs on the backup vault.</li>
+         * <li><strong>UNKNOWN</strong>: unknown</li>
+         * <li><strong>INITIALIZING</strong>: initializing</li>
+         * <li><strong>CREATED</strong>: created</li>
+         * <li><strong>ERROR</strong>: error</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -263,7 +266,7 @@ public class DescribeVaultsRequest extends Request {
         }
 
         /**
-         * <p>Tag information. Supports up to 20 tags.</p>
+         * <p>The tag information. A maximum of 20 tags are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>6a745bceffb042959b3b5206d6f12ad1</p>
@@ -275,7 +278,7 @@ public class DescribeVaultsRequest extends Request {
         }
 
         /**
-         * <p>Backup vault ID.</p>
+         * <p>The ID of the backup vault.</p>
          * 
          * <strong>example:</strong>
          * <p>v-*********************</p>
@@ -299,7 +302,10 @@ public class DescribeVaultsRequest extends Request {
         }
 
         /**
-         * VaultOwnerId.
+         * <p>The ID of the account to which the backup vault belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>144******732</p>
          */
         public Builder vaultOwnerId(Long vaultOwnerId) {
             this.putQueryParameter("VaultOwnerId", vaultOwnerId);
@@ -308,7 +314,7 @@ public class DescribeVaultsRequest extends Request {
         }
 
         /**
-         * <p>The region ID to which the backup vault belongs.</p>
+         * <p>The ID of the region to which the backup vault belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -320,10 +326,10 @@ public class DescribeVaultsRequest extends Request {
         }
 
         /**
-         * <p>Backup repository type. The values are as follows: </p>
+         * <p>The type of the backup vault. Valid values:</p>
          * <ul>
-         * <li><strong>STANDARD</strong>: Represents a standard repository, which can be used for ECS file backups, OSS backups, NAS backups, etc. </li>
-         * <li><strong>OTS_BACKUP</strong>: Represents a TableStore repository, which is only used for TableStore backups, and TableStore must use this type of repository.</li>
+         * <li><strong>STANDARD</strong>: A standard vault. It can be used for ECS File Backup Standard Edition, OSS backup, and NAS backup.</li>
+         * <li><strong>OTS_BACKUP</strong>: A Tablestore vault. It can only be used for Tablestore backup. Tablestore requires this type of vault.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -406,7 +412,7 @@ public class DescribeVaultsRequest extends Request {
             }
 
             /**
-             * <p>The Value of the tag.</p>
+             * <p>The value of the tag.</p>
              * 
              * <strong>example:</strong>
              * <p>value1</p>

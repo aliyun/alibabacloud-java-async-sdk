@@ -106,7 +106,7 @@ public class DeleteAirEcsInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code. The status code 200 indicates that the request was successful.</p>
+         * <p>The return code. A value of 200 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class DeleteAirEcsInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message. If the request was successful, &quot;successful&quot; is returned. If the request failed, an error message is returned.</p>
+         * <p>The returned message. The value &quot;successful&quot; is returned for a successful request. An error message is returned for a failed request.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -141,8 +141,8 @@ public class DeleteAirEcsInstanceResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -154,7 +154,7 @@ public class DeleteAirEcsInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the asynchronous job. You can call the DescribeTask operation to query the execution result of an asynchronous job.</p>
+         * <p>The asynchronous task ID. You can call DescribeTask to obtain the task result.</p>
          * 
          * <strong>example:</strong>
          * <p>t-*********************</p>

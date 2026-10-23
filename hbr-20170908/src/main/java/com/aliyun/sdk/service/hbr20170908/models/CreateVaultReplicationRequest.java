@@ -89,7 +89,10 @@ public class CreateVaultReplicationRequest extends Request {
         } 
 
         /**
-         * ReplicationSourceRegionId.
+         * <p>The ID of the source region. If you do not specify this parameter, the region where the API is called is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder replicationSourceRegionId(String replicationSourceRegionId) {
             this.putQueryParameter("ReplicationSourceRegionId", replicationSourceRegionId);
@@ -98,6 +101,7 @@ public class CreateVaultReplicationRequest extends Request {
         }
 
         /**
+         * <p>The ID of the source backup vault.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +114,7 @@ public class CreateVaultReplicationRequest extends Request {
         }
 
         /**
+         * <p>The ID of the destination backup vault.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

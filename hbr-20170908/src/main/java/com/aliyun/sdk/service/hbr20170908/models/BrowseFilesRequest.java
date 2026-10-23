@@ -242,7 +242,10 @@ public class BrowseFilesRequest extends Request {
         } 
 
         /**
-         * AbsolutePath.
+         * <p>The absolute path of the directory. Specify <code>/</code> to browse the root directory of the backup.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/data/</p>
          */
         public Builder absolutePath(String absolutePath) {
             this.putQueryParameter("AbsolutePath", absolutePath);
@@ -251,7 +254,10 @@ public class BrowseFilesRequest extends Request {
         }
 
         /**
-         * ClientId.
+         * <p>The backup client ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-000***o48</p>
          */
         public Builder clientId(String clientId) {
             this.putQueryParameter("ClientId", clientId);
@@ -260,7 +266,16 @@ public class BrowseFilesRequest extends Request {
         }
 
         /**
-         * Edition.
+         * <p>The Cloud Backup edition. Valid values:</p>
+         * <ul>
+         * <li><p><strong>STANDARD</strong>: Standard Edition. This is the default value.</p>
+         * </li>
+         * <li><p><strong>BASIC</strong>: Basic Edition. Only ECS file backup is supported in Basic Edition.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>STANDARD</p>
          */
         public Builder edition(String edition) {
             this.putQueryParameter("Edition", edition);
@@ -269,7 +284,11 @@ public class BrowseFilesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of results to return per request.</p>
+         * <p>Valid values: 10 to 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -278,7 +297,10 @@ public class BrowseFilesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token that is required to retrieve the next page of results. If this parameter is not specified, the first page of results is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJ***Q==</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -287,7 +309,10 @@ public class BrowseFilesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>Deprecated. Use MaxResults and NextToken for pagination instead.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -296,7 +321,10 @@ public class BrowseFilesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Deprecated. Use MaxResults and NextToken for pagination instead.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -305,7 +333,10 @@ public class BrowseFilesRequest extends Request {
         }
 
         /**
-         * Path.
+         * <p>The hash value of the directory. If this parameter is not specified, the root directory of the backup is browsed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ef6***46a</p>
          */
         public Builder path(String path) {
             this.putQueryParameter("Path", path);
@@ -314,7 +345,10 @@ public class BrowseFilesRequest extends Request {
         }
 
         /**
-         * RestoreId.
+         * <p>Deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-000***oy9</p>
          */
         public Builder restoreId(String restoreId) {
             this.putQueryParameter("RestoreId", restoreId);
@@ -332,7 +366,10 @@ public class BrowseFilesRequest extends Request {
         }
 
         /**
-         * SnapshotHash.
+         * <p>The hash value of the backup snapshot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>971***e9d</p>
          */
         public Builder snapshotHash(String snapshotHash) {
             this.putQueryParameter("SnapshotHash", snapshotHash);
@@ -341,7 +378,16 @@ public class BrowseFilesRequest extends Request {
         }
 
         /**
-         * StorageClass.
+         * <p>The storage class of the backup data. Valid values:</p>
+         * <ul>
+         * <li><p><strong>STANDARD</strong>: Standard.</p>
+         * </li>
+         * <li><p><strong>ARCHIVE</strong>: Archive.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>STANDARD</p>
          */
         public Builder storageClass(String storageClass) {
             this.putQueryParameter("StorageClass", storageClass);
@@ -350,7 +396,10 @@ public class BrowseFilesRequest extends Request {
         }
 
         /**
-         * Token.
+         * <p>Deprecated. Do not use.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder token(String token) {
             this.putQueryParameter("Token", token);
@@ -359,7 +408,10 @@ public class BrowseFilesRequest extends Request {
         }
 
         /**
-         * VaultId.
+         * <p>The backup vault ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v-000***jtz</p>
          */
         public Builder vaultId(String vaultId) {
             this.putQueryParameter("VaultId", vaultId);

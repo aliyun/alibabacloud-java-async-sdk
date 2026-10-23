@@ -88,7 +88,10 @@ public class CancelBackupJobRequest extends Request {
         } 
 
         /**
-         * Edition.
+         * <p>The edition type. Valid values are BASIC and STANDARD. The default value is STANDARD.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STANDARD</p>
          */
         public Builder edition(String edition) {
             this.putQueryParameter("Edition", edition);
@@ -110,7 +113,7 @@ public class CancelBackupJobRequest extends Request {
         }
 
         /**
-         * <p>The ID of the backup vault.</p>
+         * <p>The ID of the backup repository.</p>
          * 
          * <strong>example:</strong>
          * <p>v-*****************************</p>

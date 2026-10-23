@@ -145,7 +145,7 @@ public class DescribeClientsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The Cloud Backup clients.</p>
+         * Clients.
          */
         public Builder clients(Clients clients) {
             this.clients = clients;
@@ -487,10 +487,7 @@ public class DescribeClientsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The alert settings. Valid value: INHERITED, which indicates that the Cloud Backup client sends alert notifications by using the same method configured for the backup vault.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>INHERITED</p>
+             * AlertSetting.
              */
             public Builder alertSetting(String alertSetting) {
                 this.alertSetting = alertSetting;
@@ -498,10 +495,7 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Cloud Backup client.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>c-00062uu******2fgj</p>
+             * ClientId.
              */
             public Builder clientId(String clientId) {
                 this.clientId = clientId;
@@ -509,10 +503,7 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The client name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>client-20211224-101226</p>
+             * ClientName.
              */
             public Builder clientName(String clientName) {
                 this.clientName = clientName;
@@ -520,10 +511,7 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the Cloud Backup client. Valid value: <strong>ECS_AGENT</strong>, which indicates an SAP HANA backup client.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ECS_AGENT</p>
+             * ClientType.
              */
             public Builder clientType(String clientType) {
                 this.clientType = clientType;
@@ -531,10 +519,7 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version number of the Cloud Backup client.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1.11.16</p>
+             * ClientVersion.
              */
             public Builder clientVersion(String clientVersion) {
                 this.clientVersion = clientVersion;
@@ -542,10 +527,7 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the SAP HANA instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cl-0008c48frr******ncpk</p>
+             * ClusterId.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -553,10 +535,7 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the Cloud Backup client was created.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1554347313</p>
+             * CreatedTime.
              */
             public Builder createdTime(Long createdTime) {
                 this.createdTime = createdTime;
@@ -564,10 +543,7 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The latest heartbeat time of the Cloud Backup client. This value is a UNIX timestamp. Unit: seconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1554347313</p>
+             * HeartBeatTime.
              */
             public Builder heartBeatTime(Long heartBeatTime) {
                 this.heartBeatTime = heartBeatTime;
@@ -575,10 +551,7 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>i-wz9b6wya******n8yo</p>
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -586,10 +559,7 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the ECS instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>swh-hbr</p>
+             * InstanceName.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -597,10 +567,7 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum version number of the Cloud Backup client.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1.11.23</p>
+             * MaxVersion.
              */
             public Builder maxVersion(String maxVersion) {
                 this.maxVersion = maxVersion;
@@ -608,14 +575,7 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network type. Valid values:</p>
-             * <ul>
-             * <li><strong>CLASSIC</strong>: the classic network</li>
-             * <li><strong>VPC</strong>: the virtual private cloud (VPC)</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>VPC</p>
+             * NetworkType.
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -623,24 +583,7 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the Cloud Backup client. Valid values:</p>
-             * <ul>
-             * <li><strong>REGISTERED</strong>: The backup client is registered.</li>
-             * <li><strong>ACTIVATED</strong>: The backup client is activated.</li>
-             * <li><strong>DEACTIVATED</strong>: The backup client fails to be activated.</li>
-             * <li><strong>INSTALLING</strong>: The backup client is being installed.</li>
-             * <li><strong>INSTALL_FAILED</strong>: The backup client fails to be installed.</li>
-             * <li><strong>NOT_INSTALLED</strong>: The backup client is not installed.</li>
-             * <li><strong>UPGRADING</strong>: The backup client is being upgraded.</li>
-             * <li><strong>UPGRADE_FAILED</strong>: The backup client fails to be upgraded.</li>
-             * <li><strong>UNINSTALLING</strong>: The backup client is being uninstalled.</li>
-             * <li><strong>UNINSTALL_FAILED</strong>: The backup client fails to be uninstalled.</li>
-             * <li><strong>STOPPED</strong>: The backup client is out of service.</li>
-             * <li><strong>UNKNOWN</strong>: The backup client is disconnected.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>ACTIVATED</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -648,10 +591,7 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status information.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>HANA_NOT_SUPPORT</p>
+             * StatusMessage.
              */
             public Builder statusMessage(String statusMessage) {
                 this.statusMessage = statusMessage;
@@ -659,10 +599,7 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the Cloud Backup client was updated. This value is a UNIX timestamp. Unit: seconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1554347313</p>
+             * UpdatedTime.
              */
             public Builder updatedTime(Long updatedTime) {
                 this.updatedTime = updatedTime;
@@ -670,14 +607,7 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether data is transmitted over HTTPS. Valid values:</p>
-             * <ul>
-             * <li>true: Data is transmitted over HTTPS.</li>
-             * <li>false: Data is transmitted over HTTP.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * UseHttps.
              */
             public Builder useHttps(Boolean useHttps) {
                 this.useHttps = useHttps;
@@ -685,10 +615,7 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the backup vault.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>v-00029mx6o******n85lg</p>
+             * VaultId.
              */
             public Builder vaultId(String vaultId) {
                 this.vaultId = vaultId;

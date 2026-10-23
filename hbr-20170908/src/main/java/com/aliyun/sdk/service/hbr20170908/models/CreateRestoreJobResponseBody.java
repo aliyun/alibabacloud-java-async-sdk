@@ -106,7 +106,7 @@ public class CreateRestoreJobResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Return code, 200 indicates success.</p>
+         * <p>The response code. The value 200 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class CreateRestoreJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Description of the return message, usually &quot;successful&quot; when successful, and corresponding error messages when there is an error.</p>
+         * <p>The response message. The value &quot;successful&quot; is returned for a success. An error message is returned for a failure.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -128,7 +128,7 @@ public class CreateRestoreJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -139,7 +139,7 @@ public class CreateRestoreJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Restore job ID.</p>
+         * <p>The ID of the restore job.</p>
          * 
          * <strong>example:</strong>
          * <p>r-*********************</p>
@@ -150,10 +150,10 @@ public class CreateRestoreJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether the request was successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          * <ul>
-         * <li>true: Success</li>
-         * <li>false: Failure</li>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

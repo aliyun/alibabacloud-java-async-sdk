@@ -102,7 +102,10 @@ public class GetTrialInfoRequest extends Request {
         } 
 
         /**
-         * Bucket.
+         * <p>This parameter is required only when <strong>SourceType</strong> is set to <strong>OSS</strong>. The name of the OSS bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hbr-backup-oss</p>
          */
         public Builder bucket(String bucket) {
             this.putQueryParameter("Bucket", bucket);
@@ -111,7 +114,10 @@ public class GetTrialInfoRequest extends Request {
         }
 
         /**
-         * CreateTime.
+         * <p>This parameter is required only when <strong>SourceType</strong> is set to <strong>NAS</strong>. The time when the file system was created. UNIX timestamp, in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1607436917</p>
          */
         public Builder createTime(Long createTime) {
             this.putQueryParameter("CreateTime", createTime);
@@ -120,7 +126,10 @@ public class GetTrialInfoRequest extends Request {
         }
 
         /**
-         * FileSystemId.
+         * <p>This parameter is required only when <strong>SourceType</strong> is set to <strong>NAS</strong>. The ID of the file system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>005494</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -129,6 +138,7 @@ public class GetTrialInfoRequest extends Request {
         }
 
         /**
+         * <p>The data source type. Only free trial information of OSS backup and NAS backup can be queried.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

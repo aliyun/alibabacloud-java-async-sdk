@@ -60,6 +60,7 @@ public class DescribeFeatureTrialInfoRequest extends Request {
         } 
 
         /**
+         * <p>The feature type. Currently, only the free trial information of Tablestore backup can be queried.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

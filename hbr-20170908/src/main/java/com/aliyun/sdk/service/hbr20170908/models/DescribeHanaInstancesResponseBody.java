@@ -156,7 +156,7 @@ public class DescribeHanaInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the SAP HANA instances.</p>
+         * Hanas.
          */
         public Builder hanas(Hanas hanas) {
             this.hanas = hanas;
@@ -292,10 +292,7 @@ public class DescribeHanaInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The tag key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ace:rm:rgld</p>
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -303,10 +300,7 @@ public class DescribeHanaInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rg-acfmwutpyat2kwy</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -609,10 +603,7 @@ public class DescribeHanaInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The alert settings. Valid value: INHERITED, which indicates that the Cloud Backup client sends alert notifications by using the same method configured for the backup vault.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>INHERITED</p>
+             * AlertSetting.
              */
             public Builder alertSetting(String alertSetting) {
                 this.alertSetting = alertSetting;
@@ -620,10 +611,7 @@ public class DescribeHanaInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the SAP HANA instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cl-0004cf6g6******0yd7y</p>
+             * ClusterId.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -631,10 +619,7 @@ public class DescribeHanaInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the Resource Access Management (RAM) role that is created within the source Alibaba Cloud account and assigned to the current Alibaba Cloud account to authorize the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>hbrcrossrole</p>
+             * CrossAccountRoleName.
              */
             public Builder crossAccountRoleName(String crossAccountRoleName) {
                 this.crossAccountRoleName = crossAccountRoleName;
@@ -642,14 +627,7 @@ public class DescribeHanaInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether data is backed up within the same Alibaba Cloud account or across Alibaba Cloud accounts. Valid values:</p>
-             * <ul>
-             * <li><strong>SELF_ACCOUNT</strong>: Data is backed up within the same Alibaba Cloud account.</li>
-             * <li><strong>CROSS_ACCOUNT</strong>: Data is backed up across Alibaba Cloud accounts.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>CROSS_ACCOUNT</p>
+             * CrossAccountType.
              */
             public Builder crossAccountType(String crossAccountType) {
                 this.crossAccountType = crossAccountType;
@@ -657,10 +635,7 @@ public class DescribeHanaInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the source Alibaba Cloud account that authorizes the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>158975xxxxx4625</p>
+             * CrossAccountUserId.
              */
             public Builder crossAccountUserId(Long crossAccountUserId) {
                 this.crossAccountUserId = crossAccountUserId;
@@ -668,10 +643,7 @@ public class DescribeHanaInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the SAP HANA instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>HANA-DEV</p>
+             * HanaName.
              */
             public Builder hanaName(String hanaName) {
                 this.hanaName = hanaName;
@@ -679,10 +651,7 @@ public class DescribeHanaInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The private or internal IP address of the host where the primary node of the SAP HANA instance resides.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>47.100.XX.XX</p>
+             * Host.
              */
             public Builder host(String host) {
                 this.host = host;
@@ -690,10 +659,7 @@ public class DescribeHanaInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance number of the SAP HANA system.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>00</p>
+             * InstanceNumber.
              */
             public Builder instanceNumber(Integer instanceNumber) {
                 this.instanceNumber = instanceNumber;
@@ -701,10 +667,7 @@ public class DescribeHanaInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource group ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rg-acfmvnf22m7itha</p>
+             * ResourceGroupId.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -712,16 +675,7 @@ public class DescribeHanaInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the SAP HANA instance. Valid values:</p>
-             * <ul>
-             * <li>INITIALIZING: The instance is being initialized.</li>
-             * <li>INITIALIZED: The instance is registered.</li>
-             * <li>INVALID_HANA_NODE: The instance is invalid.</li>
-             * <li>INITIALIZE_FAILED: The client fails to be installed on the instance.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>INITIALIZED</p>
+             * Status.
              */
             public Builder status(Long status) {
                 this.status = status;
@@ -729,10 +683,7 @@ public class DescribeHanaInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status information.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>INSTALL_CLIENT_FAILED</p>
+             * StatusMessage.
              */
             public Builder statusMessage(String statusMessage) {
                 this.statusMessage = statusMessage;
@@ -740,7 +691,7 @@ public class DescribeHanaInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags of the SAP HANA instance.</p>
+             * Tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -748,14 +699,7 @@ public class DescribeHanaInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the SAP HANA instance is connected over Secure Sockets Layer (SSL). Valid values:</p>
-             * <ul>
-             * <li>true: The SAP HANA instance is connected over SSL.</li>
-             * <li>false: The SAP HANA instance is not connected over SSL.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * UseSsl.
              */
             public Builder useSsl(Boolean useSsl) {
                 this.useSsl = useSsl;
@@ -763,10 +707,7 @@ public class DescribeHanaInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The username of the SYSTEMDB database.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>admin</p>
+             * UserName.
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -774,10 +715,7 @@ public class DescribeHanaInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the SSL certificate of the SAP HANA instance is verified.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * ValidateCertificate.
              */
             public Builder validateCertificate(Boolean validateCertificate) {
                 this.validateCertificate = validateCertificate;
@@ -785,10 +723,7 @@ public class DescribeHanaInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the backup vault.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>v-0000s974******1hl</p>
+             * VaultId.
              */
             public Builder vaultId(String vaultId) {
                 this.vaultId = vaultId;

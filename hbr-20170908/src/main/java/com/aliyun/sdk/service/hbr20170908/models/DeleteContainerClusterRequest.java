@@ -74,6 +74,7 @@ public class DeleteContainerClusterRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,10 @@ public class DeleteContainerClusterRequest extends Request {
         }
 
         /**
-         * Force.
+         * <p>Specifies whether to forcibly delete active container backup clients.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder force(Boolean force) {
             this.putQueryParameter("Force", force);

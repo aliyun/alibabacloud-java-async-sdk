@@ -128,7 +128,7 @@ public class ExecutePolicyV2ResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Description of the return message, usually returns &quot;successful&quot; on success, and corresponding error messages on failure.</p>
+         * <p>Description of the return message, usually returns \&quot;successful\&quot; on success, and corresponding error messages on failure.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>

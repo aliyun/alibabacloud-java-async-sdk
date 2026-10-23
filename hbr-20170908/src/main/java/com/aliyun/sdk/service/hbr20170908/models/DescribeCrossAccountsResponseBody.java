@@ -145,7 +145,7 @@ public class DescribeCrossAccountsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
+         * <p>The return code. A value of 200 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -156,7 +156,7 @@ public class DescribeCrossAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the accounts used in cross-account backup.</p>
+         * CrossAccounts.
          */
         public Builder crossAccounts(CrossAccounts crossAccounts) {
             this.crossAccounts = crossAccounts;
@@ -164,7 +164,7 @@ public class DescribeCrossAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message. If the request was successful, &quot;successful&quot; is returned. If the request failed, an error message is returned.</p>
+         * <p>A description of the response. Successful requests return &quot;successful&quot;. Failed requests return an error message.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -175,7 +175,7 @@ public class DescribeCrossAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * <p>The page number for paging. Pages start from 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -186,7 +186,7 @@ public class DescribeCrossAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page. Valid values: 1 to 99. Default value: 10.</p>
+         * <p>The number of entries per page. Minimum value: 1. Maximum value: 99. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -208,10 +208,12 @@ public class DescribeCrossAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the request succeeded.</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: succeeded</p>
+         * </li>
+         * <li><p>false: failed</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -223,7 +225,7 @@ public class DescribeCrossAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>22</p>
@@ -370,10 +372,7 @@ public class DescribeCrossAccountsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The account alias. The value can be up to 32 bits in length.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>content</p>
+             * Alias.
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -381,10 +380,7 @@ public class DescribeCrossAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the account was created. This value is a UNIX timestamp. Unit: seconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1654570439</p>
+             * CreatedTime.
              */
             public Builder createdTime(Long createdTime) {
                 this.createdTime = createdTime;
@@ -392,10 +388,7 @@ public class DescribeCrossAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the RAM role that is created within the source Alibaba Cloud account and assigned to the current Alibaba Cloud account to authorize the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>BackupRole</p>
+             * CrossAccountRoleName.
              */
             public Builder crossAccountRoleName(String crossAccountRoleName) {
                 this.crossAccountRoleName = crossAccountRoleName;
@@ -411,10 +404,7 @@ public class DescribeCrossAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the source Alibaba Cloud account that authorizes the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>15897534xxxxx625</p>
+             * CrossAccountUserId.
              */
             public Builder crossAccountUserId(Long crossAccountUserId) {
                 this.crossAccountUserId = crossAccountUserId;
@@ -422,10 +412,7 @@ public class DescribeCrossAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the backup type.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * Id.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -433,10 +420,7 @@ public class DescribeCrossAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the current account.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>184164xxxxx49795</p>
+             * OwnerId.
              */
             public Builder ownerId(Long ownerId) {
                 this.ownerId = ownerId;
@@ -444,10 +428,7 @@ public class DescribeCrossAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the account information was updated. The value is a UNIX timestamp. Unit: seconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1640157098</p>
+             * UpdatedTime.
              */
             public Builder updatedTime(Long updatedTime) {
                 this.updatedTime = updatedTime;

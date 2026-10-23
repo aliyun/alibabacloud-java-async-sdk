@@ -145,7 +145,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The return code. A value of 200 indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -153,7 +156,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of returned results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -161,7 +167,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message. A value of successful indicates success. If an error occurs, the corresponding error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -169,7 +178,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next page. If NextToken is empty, no more pages exist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aWQj********MCMy</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -177,7 +189,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17189276-<strong><strong>-</strong></strong>-****-0FF51B5A41A0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -185,7 +200,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * Snapshots.
+         * <p>The list of backup points.</p>
          */
         public Builder snapshots(java.util.List<Snapshots> snapshots) {
             this.snapshots = snapshots;
@@ -193,7 +208,14 @@ public class ListSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request is successful.</li>
+         * <li>false: The request fails.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -201,7 +223,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -670,7 +695,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
             } 
 
             /**
-             * ActualBytes.
+             * <p>The actual amount of data written, in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>600</p>
              */
             public Builder actualBytes(Long actualBytes) {
                 this.actualBytes = actualBytes;
@@ -678,7 +706,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * ActualItems.
+             * <p>The actual number of items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder actualItems(Long actualItems) {
                 this.actualItems = actualItems;
@@ -686,7 +717,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * ArchiveTime.
+             * <p>The archive time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1640334062</p>
              */
             public Builder archiveTime(Long archiveTime) {
                 this.archiveTime = archiveTime;
@@ -694,7 +728,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupType.
+             * <p>The backup type. A value of <strong>COMPLETE</strong> indicates a full backup.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>COMPLETE</p>
              */
             public Builder backupType(String backupType) {
                 this.backupType = backupType;
@@ -702,7 +739,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * BytesDone.
+             * <p>The amount of backed up data, in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>800</p>
              */
             public Builder bytesDone(Long bytesDone) {
                 this.bytesDone = bytesDone;
@@ -710,7 +750,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * BytesTotal.
+             * <p>The total amount of data to back up, in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder bytesTotal(Long bytesTotal) {
                 this.bytesTotal = bytesTotal;
@@ -718,7 +761,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * ClientId.
+             * <p>The ID of the backup client when the value of <strong>SourceType</strong> is <strong>ECS_FILE</strong> or <strong>File</strong>. In other cases, this parameter indicates the ID of the backup data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c-*********************</p>
              */
             public Builder clientId(String clientId) {
                 this.clientId = clientId;
@@ -726,7 +772,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * CompleteTime.
+             * <p>The backup completion time. The value is a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1642496679</p>
              */
             public Builder completeTime(Long completeTime) {
                 this.completeTime = completeTime;
@@ -734,7 +783,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time of the backup point, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1607436917</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -742,7 +794,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedTime.
+             * <p>The backup creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1642496679</p>
              */
             public Builder createdTime(Long createdTime) {
                 this.createdTime = createdTime;
@@ -750,7 +805,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorFile.
+             * <p>The file that records backup failure information, including information about partially completed backups.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>temp/report/123456789/job-xxxxxxxxx_failed.zip</p>
              */
             public Builder errorFile(String errorFile) {
                 this.errorFile = errorFile;
@@ -758,7 +816,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * Exclude.
+             * <p>The source paths excluded from the backup job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[\&quot;/test/example_cn-hangzhou_7.txt\&quot;, \&quot;/test/example_cn-hangzhou_1.txt\&quot;, \&quot;/test/example_cn-hangzhou_3.txt\&quot;, \&quot;/test/example_cn-hangzhou_9.txt\&quot;, \&quot;/test/example_cn-hangzhou_6.txt\&quot;]</p>
              */
             public Builder exclude(String exclude) {
                 this.exclude = exclude;
@@ -766,7 +827,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * <p>The expiration time of the backup.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1771901707</p>
              */
             public Builder expireTime(Long expireTime) {
                 this.expireTime = expireTime;
@@ -774,7 +838,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * Include.
+             * <p>The source paths included in the backup job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[\&quot;/test/example_cn-huhehaote_3.txt\&quot;, \&quot;/test/example_cn-huhehaote_9.txt\&quot;, \&quot;/test/example_cn-huhehaote_5.txt\&quot;, \&quot;/test/example_cn-huhehaote_1.txt\&quot;, \&quot;/test/example_cn-huhehaote_7.txt\&quot;]</p>
              */
             public Builder include(String include) {
                 this.include = include;
@@ -782,7 +849,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID of the backup data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-*********************</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -790,7 +860,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * <p>The name of the Tablestore instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>instancename</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -798,7 +871,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * ItemsDone.
+             * <p>The number of backed up items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder itemsDone(Long itemsDone) {
                 this.itemsDone = itemsDone;
@@ -806,7 +882,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * ItemsTotal.
+             * <p>The total number of items to back up.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder itemsTotal(Long itemsTotal) {
                 this.itemsTotal = itemsTotal;
@@ -814,7 +893,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The ID of the backup job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job-00030j3chkt******2</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -822,7 +904,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * Path.
+             * <p>The backup path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/home</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -830,7 +915,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * Paths.
+             * <p>The list of backup paths.</p>
              */
             public Builder paths(java.util.List<String> paths) {
                 this.paths = paths;
@@ -838,7 +923,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * PlanId.
+             * <p>The ID of the backup plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>po-123***7890</p>
              */
             public Builder planId(String planId) {
                 this.planId = planId;
@@ -846,7 +934,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * ProtectedDataSize.
+             * <p>The size of the protected source data, in bytes. When the value of SourceType is ECS_FILE, this parameter indicates the capacity of the protected cloud disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>42949672960</p>
              */
             public Builder protectedDataSize(Long protectedDataSize) {
                 this.protectedDataSize = protectedDataSize;
@@ -854,7 +945,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * RangeEnd.
+             * <p>The end time of the Tablestore backup job. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1642521709966</p>
              */
             public Builder rangeEnd(Long rangeEnd) {
                 this.rangeEnd = rangeEnd;
@@ -862,7 +956,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * RangeStart.
+             * <p>The start time of the Tablestore backup job. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1642492553038</p>
              */
             public Builder rangeStart(Long rangeStart) {
                 this.rangeStart = rangeStart;
@@ -870,7 +967,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * Retention.
+             * <p>The retention period of the backup, in days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder retention(Long retention) {
                 this.retention = retention;
@@ -878,7 +978,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * SnapshotHash.
+             * <p>The hash value of the backup point.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f2ac5fd243**********************bc4451777be019</p>
              */
             public Builder snapshotHash(String snapshotHash) {
                 this.snapshotHash = snapshotHash;
@@ -886,7 +989,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * SnapshotId.
+             * <p>The ID of the backup point.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>s-00047mxg17p26*****b</p>
              */
             public Builder snapshotId(String snapshotId) {
                 this.snapshotId = snapshotId;
@@ -894,7 +1000,20 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceType.
+             * <p>The data source type. Valid values:</p>
+             * <ul>
+             * <li><strong>ECS_FILE</strong>: ECS file backup</li>
+             * <li><strong>File</strong>: on-premises file backup</li>
+             * <li><strong>OSS</strong>: OSS backup</li>
+             * <li><strong>NAS</strong>: Alibaba Cloud NAS backup</li>
+             * <li><strong>COMMON_NAS</strong>: on-premises NAS backup</li>
+             * <li><strong>CONTAINER</strong>: container backup</li>
+             * <li><strong>OTS_TABLE</strong>: Tablestore backup</li>
+             * <li><strong>COMMON_FILE_SYSTEM</strong>: CPFS backup</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ECS_FILE</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -902,7 +1021,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the backup point. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>COMPLETE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -910,7 +1032,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * StorageClass.
+             * <p>The storage class. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STANDARD</p>
              */
             public Builder storageClass(String storageClass) {
                 this.storageClass = storageClass;
@@ -918,7 +1043,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * <p>The name of the data table in the Tablestore instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>table2</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -926,7 +1054,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * VaultId.
+             * <p>The ID of the vault that stores the backup data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v-00030j*******sn</p>
              */
             public Builder vaultId(String vaultId) {
                 this.vaultId = vaultId;

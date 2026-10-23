@@ -54,7 +54,7 @@ public class OtsDetail extends TeaModel {
         } 
 
         /**
-         * TableNames.
+         * <p>public</p>
          */
         public Builder tableNames(java.util.List<String> tableNames) {
             this.tableNames = tableNames;

@@ -119,7 +119,7 @@ public class CreateReplicationVaultResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code. The status code 200 indicates that the request was successful.</p>
+         * <p>The return code. A value of 200 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -130,7 +130,7 @@ public class CreateReplicationVaultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message. If the request was successful, &quot;successful&quot; is returned. If the request failed, an error message is returned.</p>
+         * <p>The returned message. The value &quot;successful&quot; is returned for successful requests. An error message is returned for failed requests.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -152,10 +152,10 @@ public class CreateReplicationVaultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the request was successful.</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -167,7 +167,7 @@ public class CreateReplicationVaultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the job that is used to initialize the backup vault. You can call the DescribeTask operation to query the job status.</p>
+         * <p>The initialization task ID of the backup vault. You can call DescribeTask to query the task status.</p>
          * 
          * <strong>example:</strong>
          * <p>t-*********************</p>

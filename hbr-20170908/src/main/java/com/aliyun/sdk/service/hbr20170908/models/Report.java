@@ -93,7 +93,10 @@ public class Report extends TeaModel {
         } 
 
         /**
-         * FailedFiles.
+         * <p>The report path of failed files.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>temp/report/r-0000dnz7p4pk31u6madf_failed.csv</p>
          */
         public Builder failedFiles(String failedFiles) {
             this.failedFiles = failedFiles;
@@ -101,7 +104,10 @@ public class Report extends TeaModel {
         }
 
         /**
-         * SkippedFiles.
+         * <p>The report path of skipped files.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>temp/report/r-0000dnz7p4pk31u6madf_skipped.csv</p>
          */
         public Builder skippedFiles(String skippedFiles) {
             this.skippedFiles = skippedFiles;
@@ -109,7 +115,10 @@ public class Report extends TeaModel {
         }
 
         /**
-         * SuccessFiles.
+         * <p>The report path of success files.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>temp/report/r-0000dnz7p4pk31u6madf_success.csv</p>
          */
         public Builder successFiles(String successFiles) {
             this.successFiles = successFiles;
@@ -117,7 +126,10 @@ public class Report extends TeaModel {
         }
 
         /**
-         * TotalFiles.
+         * <p>The report path of total files.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>temp/report/r-0000dnz7p4pk31u6madf_total.csv</p>
          */
         public Builder totalFiles(String totalFiles) {
             this.totalFiles = totalFiles;

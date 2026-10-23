@@ -73,7 +73,7 @@ public class DeleteAirEcsInstanceRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the Elastic Compute Service (ECS) instance.</p>
+         * <p>The instance ID of the ECS instance.</p>
          * 
          * <strong>example:</strong>
          * <p>i-uf6ir9y******hvisj</p>
@@ -85,7 +85,7 @@ public class DeleteAirEcsInstanceRequest extends Request {
         }
 
         /**
-         * <p>The data sources for which the client needs to be uninstalled.</p>
+         * <p>The list of data sources for which the client needs to be uninstalled.</p>
          */
         public Builder uninstallClientSourceTypes(java.util.List<String> uninstallClientSourceTypes) {
             String uninstallClientSourceTypesShrink = shrink(uninstallClientSourceTypes, "UninstallClientSourceTypes", "json");

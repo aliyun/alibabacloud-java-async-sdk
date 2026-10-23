@@ -132,7 +132,10 @@ public class DescribeFeatureTrialInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The return code. The value 200 indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -140,7 +143,7 @@ public class DescribeFeatureTrialInfoResponseBody extends TeaModel {
         }
 
         /**
-         * FeatureEnabled.
+         * <p>Indicates whether the feature is activated. The value false is returned if the feature is not activated. In this case, InTrialPeriod is false and TrialExpireTime is 0.</p>
          */
         public Builder featureEnabled(Boolean featureEnabled) {
             this.featureEnabled = featureEnabled;
@@ -148,7 +151,7 @@ public class DescribeFeatureTrialInfoResponseBody extends TeaModel {
         }
 
         /**
-         * InTrialPeriod.
+         * <p>Indicates whether the feature is within the free trial period. The value false is returned if the feature is not activated or the free trial has expired.</p>
          */
         public Builder inTrialPeriod(Boolean inTrialPeriod) {
             this.inTrialPeriod = inTrialPeriod;
@@ -156,7 +159,10 @@ public class DescribeFeatureTrialInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message. The value &quot;successful&quot; is returned upon success. An error message is returned upon failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -164,7 +170,10 @@ public class DescribeFeatureTrialInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -172,7 +181,11 @@ public class DescribeFeatureTrialInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -180,7 +193,10 @@ public class DescribeFeatureTrialInfoResponseBody extends TeaModel {
         }
 
         /**
-         * TrialExpireTime.
+         * <p>The expiration time of the free trial. The value is a UNIX timestamp, in seconds. The value 0 is returned if the feature is not activated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1584597600</p>
          */
         public Builder trialExpireTime(Long trialExpireTime) {
             this.trialExpireTime = trialExpireTime;

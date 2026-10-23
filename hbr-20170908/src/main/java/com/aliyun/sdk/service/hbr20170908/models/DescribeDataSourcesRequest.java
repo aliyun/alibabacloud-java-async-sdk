@@ -130,7 +130,10 @@ public class DescribeDataSourcesRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * <p>The client group ID used to access the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cl-0003jyv******fsku5m</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -139,7 +142,10 @@ public class DescribeDataSourcesRequest extends Request {
         }
 
         /**
-         * DataSourceId.
+         * <p>The data source ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ds-000******2nqeo</p>
          */
         public Builder dataSourceId(String dataSourceId) {
             this.putQueryParameter("DataSourceId", dataSourceId);
@@ -148,7 +154,10 @@ public class DescribeDataSourcesRequest extends Request {
         }
 
         /**
-         * DataSourceName.
+         * <p>The data source name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyLocalNas</p>
          */
         public Builder dataSourceName(String dataSourceName) {
             this.putQueryParameter("DataSourceName", dataSourceName);
@@ -157,7 +166,10 @@ public class DescribeDataSourcesRequest extends Request {
         }
 
         /**
-         * DataSourceType.
+         * <p>The data source type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>COMMON_NAS</p>
          */
         public Builder dataSourceType(String dataSourceType) {
             this.putQueryParameter("DataSourceType", dataSourceType);
@@ -166,7 +178,10 @@ public class DescribeDataSourcesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -175,7 +190,10 @@ public class DescribeDataSourcesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of data sources to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

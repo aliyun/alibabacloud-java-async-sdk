@@ -132,7 +132,10 @@ public class OtsTableRestoreDetail extends TeaModel {
         } 
 
         /**
-         * BatchChannelCount.
+         * <p>The number of concurrent processes for each restore job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder batchChannelCount(Integer batchChannelCount) {
             this.batchChannelCount = batchChannelCount;
@@ -140,7 +143,10 @@ public class OtsTableRestoreDetail extends TeaModel {
         }
 
         /**
-         * IndexNameSuffix.
+         * <p>The name prefixes of the indexes that you want to restore.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022xxxx143933</p>
          */
         public Builder indexNameSuffix(String indexNameSuffix) {
             this.indexNameSuffix = indexNameSuffix;
@@ -148,7 +154,10 @@ public class OtsTableRestoreDetail extends TeaModel {
         }
 
         /**
-         * OverwriteExisting.
+         * <p>Specifies whether to overwrite existing tables.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder overwriteExisting(Boolean overwriteExisting) {
             this.overwriteExisting = overwriteExisting;
@@ -156,7 +165,10 @@ public class OtsTableRestoreDetail extends TeaModel {
         }
 
         /**
-         * ReGenerateAutoIncrementPK.
+         * <p>Specifies whether to regenerate auto-increment primary keys.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder reGenerateAutoIncrementPK(Boolean reGenerateAutoIncrementPK) {
             this.reGenerateAutoIncrementPK = reGenerateAutoIncrementPK;
@@ -164,7 +176,10 @@ public class OtsTableRestoreDetail extends TeaModel {
         }
 
         /**
-         * RestoreIndex.
+         * <p>Specifies whether to restore indexes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder restoreIndex(Boolean restoreIndex) {
             this.restoreIndex = restoreIndex;
@@ -172,7 +187,10 @@ public class OtsTableRestoreDetail extends TeaModel {
         }
 
         /**
-         * RestoreSearchIndex.
+         * <p>Specifies whether to restore search indexes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder restoreSearchIndex(Boolean restoreSearchIndex) {
             this.restoreSearchIndex = restoreSearchIndex;
@@ -180,7 +198,10 @@ public class OtsTableRestoreDetail extends TeaModel {
         }
 
         /**
-         * SearchIndexNameSuffix.
+         * <p>The name prefixes of the search indexes that you want to restore.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022xxxx143933</p>
          */
         public Builder searchIndexNameSuffix(String searchIndexNameSuffix) {
             this.searchIndexNameSuffix = searchIndexNameSuffix;

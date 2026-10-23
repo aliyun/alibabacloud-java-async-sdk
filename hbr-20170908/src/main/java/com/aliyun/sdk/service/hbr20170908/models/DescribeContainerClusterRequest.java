@@ -104,7 +104,7 @@ public class DescribeContainerClusterRequest extends Request {
          * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>cc-000*************hg9</p>
+         * <p>cc-000**************hg9</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -116,7 +116,7 @@ public class DescribeContainerClusterRequest extends Request {
          * <p>The identifier of the container cluster. For a Container Service for Kubernetes (ACK) cluster, specify the cluster ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>cca*******************************87a</p>
+         * <p>cca***************************87a</p>
          */
         public Builder identifier(String identifier) {
             this.putQueryParameter("Identifier", identifier);

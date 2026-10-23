@@ -246,7 +246,7 @@ public class UpdateClientSettingsRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to generate alert for partially completed jobs. This parameter is valid only for on-premises file backup and ECS file backup.</p>
+         * <p>Specifies whether to trigger an alert for partially completed jobs. This parameter takes effect only for local File Backup and ECS File Backup Essential Edition.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -258,7 +258,7 @@ public class UpdateClientSettingsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the HBR client.</p>
+         * <p>The backup client ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -271,10 +271,10 @@ public class UpdateClientSettingsRequest extends Request {
         }
 
         /**
-         * <p>The type of the endpoint on the data plane. Valid values:</p>
+         * <p>The data plane access point type. Valid values:</p>
          * <ul>
-         * <li><strong>PUBLIC</strong>: Internet</li>
-         * <li><strong>VPC</strong>: virtual private cloud (VPC)</li>
+         * <li><strong>PUBLIC</strong>: public network</li>
+         * <li><strong>VPC</strong>: VPC network</li>
          * <li><strong>CLASSIC</strong>: classic network</li>
          * </ul>
          * 
@@ -288,11 +288,11 @@ public class UpdateClientSettingsRequest extends Request {
         }
 
         /**
-         * <p>The proxy configuration on the data plane. Valid values:</p>
+         * <p>The data plane proxy setting. Valid values:</p>
          * <ul>
-         * <li><strong>DISABLE</strong>: The proxy is not used.</li>
-         * <li><strong>USE_CONTROL_PROXY</strong> (default): The configuration is the same as that on the control plane.</li>
-         * <li><strong>CUSTOM</strong>: The configuration is customized (HTTP).</li>
+         * <li><strong>DISABLE</strong>: does not use a proxy.</li>
+         * <li><strong>USE_CONTROL_PROXY</strong> (default): uses the same configuration as the control plane.</li>
+         * <li><strong>CUSTOM</strong>: uses a custom configuration (HTTP protocol).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -305,7 +305,7 @@ public class UpdateClientSettingsRequest extends Request {
         }
 
         /**
-         * <p>The number of CPU cores used by a single backup job. The value 0 indicates that the number is unlimited.</p>
+         * <p>The number of CPU cores used by a single backup job. A value of 0 indicates no limit.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -317,7 +317,7 @@ public class UpdateClientSettingsRequest extends Request {
         }
 
         /**
-         * <p>The maximum memory that can be used by the client. Unit: bytes. Only V2.13.0 and later are supported.</p>
+         * <p>The maximum memory that the client can use, in bytes. Only version 2.13.0 and later are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>4096</p>
@@ -329,7 +329,7 @@ public class UpdateClientSettingsRequest extends Request {
         }
 
         /**
-         * <p>The number of concurrent backup jobs. The value 0 indicates that the number is unlimited.</p>
+         * <p>The number of concurrent workers for a single backup job. A value of 0 indicates no limit.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -341,7 +341,7 @@ public class UpdateClientSettingsRequest extends Request {
         }
 
         /**
-         * <p>The custom host IP address of the proxy server on the data plane.</p>
+         * <p>The IP address of the custom data plane proxy server host.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.11.100</p>
@@ -353,7 +353,7 @@ public class UpdateClientSettingsRequest extends Request {
         }
 
         /**
-         * <p>The custom password of the proxy server on the data plane.</p>
+         * <p>The password of the custom data plane proxy server.</p>
          * 
          * <strong>example:</strong>
          * <hr>
@@ -365,7 +365,7 @@ public class UpdateClientSettingsRequest extends Request {
         }
 
         /**
-         * <p>The custom host port of the proxy server on the data plane.</p>
+         * <p>The port of the custom data plane proxy server host.</p>
          * 
          * <strong>example:</strong>
          * <p>3128</p>
@@ -377,7 +377,7 @@ public class UpdateClientSettingsRequest extends Request {
         }
 
         /**
-         * <p>The custom username of the proxy server on the data plane.</p>
+         * <p>The username of the custom data plane proxy server.</p>
          * 
          * <strong>example:</strong>
          * <p>user</p>
@@ -389,7 +389,7 @@ public class UpdateClientSettingsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-*********************</p>
@@ -401,10 +401,10 @@ public class UpdateClientSettingsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to transmit the data on the data plane over HTTPS. Valid values:</p>
+         * <p>Specifies whether to use HTTPS to transmit data plane data.</p>
          * <ul>
-         * <li>true: Data is transmitted over HTTPS.</li>
-         * <li>false: Data is transmitted over HTTP.</li>
+         * <li>true: Uses HTTPS for transmission.</li>
+         * <li>false: Uses HTTP for transmission.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -417,7 +417,7 @@ public class UpdateClientSettingsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the backup vault. This parameter is required for the old HBR client.</p>
+         * <p>The backup vault ID. This parameter is required for legacy clients.</p>
          * 
          * <strong>example:</strong>
          * <p>v-*********************</p>

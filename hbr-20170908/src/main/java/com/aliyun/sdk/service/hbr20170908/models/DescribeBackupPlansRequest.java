@@ -116,7 +116,10 @@ public class DescribeBackupPlansRequest extends Request {
         } 
 
         /**
-         * Edition.
+         * <p>The edition type. Valid values: BASIC and STANDARD. Default value: STANDARD.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STANDARD</p>
          */
         public Builder edition(String edition) {
             this.putQueryParameter("Edition", edition);
@@ -125,7 +128,7 @@ public class DescribeBackupPlansRequest extends Request {
         }
 
         /**
-         * <p>The filters.</p>
+         * <p>The query filters.</p>
          */
         public Builder filters(java.util.List<Filters> filters) {
             this.putQueryParameter("Filters", filters);
@@ -134,7 +137,7 @@ public class DescribeBackupPlansRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * <p>The page number. Pages start from 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -146,7 +149,7 @@ public class DescribeBackupPlansRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Valid values: 1 to 99. Default value: 10.</p>
+         * <p>The number of entries per page. Minimum value: 1. Maximum value: 99. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -159,14 +162,6 @@ public class DescribeBackupPlansRequest extends Request {
 
         /**
          * <p>The type of the data source. Valid values:</p>
-         * <ul>
-         * <li><strong>ECS_FILE</strong>: Elastic Compute Service (ECS) files</li>
-         * <li><strong>OSS</strong>: Object Storage Service (OSS) buckets</li>
-         * <li><strong>NAS</strong>: File Storage NAS (NAS) file systems</li>
-         * <li><strong>OTS</strong>: Tablestore instances</li>
-         * <li><strong>UDM_ECS</strong>: ECS instances</li>
-         * <li><strong>SYNC</strong>: data synchronization</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>ECS_FILE</p>
@@ -237,16 +232,7 @@ public class DescribeBackupPlansRequest extends Request {
             } 
 
             /**
-             * <p>The keys in the filter. Valid values:</p>
-             * <ul>
-             * <li><strong>regionId</strong>: the ID of a region</li>
-             * <li><strong>planId</strong>: the ID of a backup plan</li>
-             * <li><strong>sourceType</strong>: the type of a data source</li>
-             * <li><strong>vaultId</strong>: the ID of a backup vault</li>
-             * <li><strong>instanceName</strong>: the name of an instance</li>
-             * <li><strong>instanceId</strong>: the ID of an instance</li>
-             * <li><strong>planName</strong>: the name of a backup plan</li>
-             * </ul>
+             * <p>The key of the query filter. Valid values:</p>
              * 
              * <strong>example:</strong>
              * <p>vaultId</p>
@@ -257,7 +243,7 @@ public class DescribeBackupPlansRequest extends Request {
             }
 
             /**
-             * <p>The values that you want to match in the filter.</p>
+             * <p>The values to match in the query filter.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;v-*********************&quot;]</p>

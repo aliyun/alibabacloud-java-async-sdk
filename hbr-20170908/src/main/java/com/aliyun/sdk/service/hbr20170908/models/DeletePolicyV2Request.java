@@ -59,7 +59,7 @@ public class DeletePolicyV2Request extends Request {
         } 
 
         /**
-         * <p>The ID of the backup policy.</p>
+         * <p>The policy ID.</p>
          * 
          * <strong>example:</strong>
          * <p>po-000************2l6</p>

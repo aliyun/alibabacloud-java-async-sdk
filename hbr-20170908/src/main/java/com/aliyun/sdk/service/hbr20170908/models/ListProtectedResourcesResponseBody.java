@@ -145,7 +145,10 @@ public class ListProtectedResourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The return code. A value of 200 indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -153,7 +156,11 @@ public class ListProtectedResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of results to return per query.</p>
+         * <p>Valid values: 10 to 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -161,7 +168,10 @@ public class ListProtectedResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The return message. A value of successful indicates success. If an error occurs, the corresponding error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -169,7 +179,10 @@ public class ListProtectedResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token for the next page. If NextToken is empty, no next page exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJJ************MX0=</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -177,7 +190,7 @@ public class ListProtectedResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * ProtectedResources.
+         * <p>The list of protected resources.</p>
          */
         public Builder protectedResources(java.util.List<ProtectedResources> protectedResources) {
             this.protectedResources = protectedResources;
@@ -185,7 +198,10 @@ public class ListProtectedResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EB09****-<strong><strong>-</strong></strong>-****-********6C38</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +209,14 @@ public class ListProtectedResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * <ul>
+         * <li>true: The request is successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -201,7 +224,10 @@ public class ListProtectedResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of protected resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -358,7 +384,10 @@ public class ListProtectedResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * BackupPlanCount.
+             * <p>The number of backup plans.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder backupPlanCount(Long backupPlanCount) {
                 this.backupPlanCount = backupPlanCount;
@@ -366,7 +395,14 @@ public class ListProtectedResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedByProduct.
+             * <p>The product capability to which the resource belongs. Valid values:</p>
+             * <ul>
+             * <li><strong>HBR</strong>: Cloud Backup standard capabilities.</li>
+             * <li><strong>BASIC</strong>: ECS File Backup Essential Edition.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>BASIC</p>
              */
             public Builder createdByProduct(String createdByProduct) {
                 this.createdByProduct = createdByProduct;
@@ -374,7 +410,13 @@ public class ListProtectedResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ProtectedDataSize.
+             * <p>The protected data volume, in bytes. This parameter is supported only for ECS File Backup Essential Edition.</p>
+             * <ul>
+             * <li><strong>SourceType=ECS_FILE</strong>: the storage capacity of the backed-up block storage.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>107374182400</p>
              */
             public Builder protectedDataSize(Long protectedDataSize) {
                 this.protectedDataSize = protectedDataSize;
@@ -382,7 +424,10 @@ public class ListProtectedResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ProtectedResourceId.
+             * <p>The ID of the protected resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pr-0004************gs61</p>
              */
             public Builder protectedResourceId(String protectedResourceId) {
                 this.protectedResourceId = protectedResourceId;
@@ -390,7 +435,18 @@ public class ListProtectedResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * <p>The resource ID. The meaning of this parameter varies based on the value of SourceType:</p>
+             * <ul>
+             * <li><strong>SourceType=ECS_FILE</strong>: the ECS instance ID.</li>
+             * <li><strong>SourceType=COMMON_FILE_SYSTEM</strong>: the CPFS data source ID.</li>
+             * <li><strong>SourceType=COMMON_NAS</strong>: the on-premises NAS data source ID.</li>
+             * <li><strong>SourceType=File</strong>: the on-premises server client ID.</li>
+             * <li><strong>SourceType=NAS</strong>: the Alibaba Cloud NAS file system ID.</li>
+             * <li><strong>SourceType=OSS</strong>: the OSS bucket.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>i-wz95************7zrd</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -398,7 +454,10 @@ public class ListProtectedResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceOwnerId.
+             * <p>The UID of the user to whom the resource belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024********0703</p>
              */
             public Builder resourceOwnerId(Long resourceOwnerId) {
                 this.resourceOwnerId = resourceOwnerId;
@@ -406,7 +465,10 @@ public class ListProtectedResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceRegionId.
+             * <p>The ID of the region to which the resource belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder resourceRegionId(String resourceRegionId) {
                 this.resourceRegionId = resourceRegionId;
@@ -414,7 +476,10 @@ public class ListProtectedResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * SnapshotCount.
+             * <p>The number of backup snapshots.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder snapshotCount(Long snapshotCount) {
                 this.snapshotCount = snapshotCount;
@@ -422,7 +487,18 @@ public class ListProtectedResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * SourceType.
+             * <p>The type of backup feature. Valid values:</p>
+             * <ul>
+             * <li><strong>ECS_FILE</strong>: ECS file backup.</li>
+             * <li><strong>COMMON_FILE_SYSTEM</strong>: CPFS backup.</li>
+             * <li><strong>COMMON_NAS</strong>: On-premises NAS backup.</li>
+             * <li><strong>File</strong>: On-premises file backup.</li>
+             * <li><strong>NAS</strong>: Alibaba Cloud NAS backup.</li>
+             * <li><strong>OSS</strong>: OSS backup.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ECS_FILE</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;

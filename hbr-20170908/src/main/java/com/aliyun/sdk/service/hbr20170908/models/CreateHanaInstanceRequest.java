@@ -311,7 +311,7 @@ public class CreateHanaInstanceRequest extends Request {
          * <p>The IDs of the ECS instances that host the SAP HANA instance to be registered. Cloud Backup installs backup clients on the specified ECS instances.</p>
          * 
          * <strong>example:</strong>
-         * <p>[&quot;i-uf6ir9y******hvisj&quot;]</p>
+         * <p>[\&quot;i-uf6ir9y******hvisj\&quot;]</p>
          */
         public Builder ecsInstanceId(String ecsInstanceId) {
             this.putQueryParameter("EcsInstanceId", ecsInstanceId);

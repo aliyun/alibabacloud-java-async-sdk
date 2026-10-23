@@ -115,7 +115,10 @@ public class DescribeContainerResourceRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-0005**********hhjw</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -124,7 +127,10 @@ public class DescribeContainerResourceRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number for paged queries. Pages start from 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -133,7 +139,10 @@ public class DescribeContainerResourceRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Minimum value: 1. Maximum value: 99. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -142,7 +151,13 @@ public class DescribeContainerResourceRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * <p>The resource ID.</p>
+         * <ul>
+         * <li><strong>ResourceType=PV</strong>: The persistent volume ID.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>a9ab843d-<strong><strong>-</strong></strong>-8e46-1d67a82128a7</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -151,7 +166,13 @@ public class DescribeContainerResourceRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>The resource type. Valid value:</p>
+         * <ul>
+         * <li><strong>PV</strong>: persistent volume (PV).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PV</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

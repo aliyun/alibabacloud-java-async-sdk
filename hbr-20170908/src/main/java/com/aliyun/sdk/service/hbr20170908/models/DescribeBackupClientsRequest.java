@@ -201,7 +201,7 @@ public class DescribeBackupClientsRequest extends Request {
         } 
 
         /**
-         * <p>The IDs of HBR clients.</p>
+         * <p>The list of backup client IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;c-*********************&quot;]</p>
@@ -214,10 +214,11 @@ public class DescribeBackupClientsRequest extends Request {
         }
 
         /**
-         * <p>The type of the HBR client. Valid values:</p>
+         * <p>The type of the backup client. Valid values:</p>
          * <ul>
-         * <li><strong>ECS_CLIENT</strong>: HBR client for Elastic Compute Service (ECS) file backup</li>
-         * <li><strong>CONTAINER_CLIENT</strong>: HBR client for container backup</li>
+         * <li><strong>ECS_CLIENT</strong>: ECS File Backup client.</li>
+         * <li><strong>CONTAINER_CLIENT</strong>: container backup client.</li>
+         * <li><strong>LOCAL_CLIENT</strong>: local NAS backup, CPFS backup, archive, or data synchronization client.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -231,7 +232,7 @@ public class DescribeBackupClientsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the cluster for the backup.</p>
+         * <p>The ID of the backup cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>cl-000ge4wa61b4d337xblq</p>
@@ -243,7 +244,7 @@ public class DescribeBackupClientsRequest extends Request {
         }
 
         /**
-         * <p>The name of the RAM role that is created within the source Alibaba Cloud account and assigned to the current Alibaba Cloud account to authorize the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</p>
+         * <p>The name of the RAM role created in the source account for cross-account backup.</p>
          * 
          * <strong>example:</strong>
          * <p>hbrcrossrole</p>
@@ -255,10 +256,10 @@ public class DescribeBackupClientsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether data is backed up within the same Alibaba Cloud account or across Alibaba Cloud accounts. Valid values:</p>
+         * <p>The type of cross-account backup. Valid values: </p>
          * <ul>
-         * <li>SELF_ACCOUNT: Data is backed up within the same Alibaba Cloud account.</li>
-         * <li>CROSS_ACCOUNT: Data is backed up across Alibaba Cloud accounts.</li>
+         * <li>SELF_ACCOUNT: backup within the current account. </li>
+         * <li>CROSS_ACCOUNT: cross-account backup.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -271,7 +272,7 @@ public class DescribeBackupClientsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the source Alibaba Cloud account that authorizes the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</p>
+         * <p>The ID of the source account used for cross-account backup.</p>
          * 
          * <strong>example:</strong>
          * <p>129374672382xxxx</p>
@@ -283,7 +284,7 @@ public class DescribeBackupClientsRequest extends Request {
         }
 
         /**
-         * Filters.
+         * <p>The query filters.</p>
          */
         public Builder filters(java.util.List<Filters> filters) {
             this.putQueryParameter("Filters", filters);
@@ -292,7 +293,7 @@ public class DescribeBackupClientsRequest extends Request {
         }
 
         /**
-         * <p>The IDs of ECS instances.</p>
+         * <p>The list of ECS instance IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;i-*********************&quot;]</p>
@@ -305,7 +306,7 @@ public class DescribeBackupClientsRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * <p>The page number. Pages start from 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -317,7 +318,7 @@ public class DescribeBackupClientsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Valid values: 1 to 99. Default value: 10.</p>
+         * <p>The number of entries per page. Minimum value: 1. Maximum value: 99. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -329,7 +330,7 @@ public class DescribeBackupClientsRequest extends Request {
         }
 
         /**
-         * <p>The tags.</p>
+         * <p>The tag information to return.</p>
          * 
          * <strong>example:</strong>
          * <p>33738719#</p>
@@ -400,7 +401,10 @@ public class DescribeBackupClientsRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The key of the query filter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>InstanceId</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -408,7 +412,7 @@ public class DescribeBackupClientsRequest extends Request {
             }
 
             /**
-             * Values.
+             * <p>The values to match in the query filter.</p>
              */
             public Builder values(java.util.List<String> values) {
                 this.values = values;
@@ -477,7 +481,7 @@ public class DescribeBackupClientsRequest extends Request {
             /**
              * <p>The tag key of the backup vault. Valid values of N: 1 to 20.</p>
              * <ul>
-             * <li>The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</li>
+             * <li>The tag key cannot start with <code>aliyun</code> or <code>acs:</code>. </li>
              * <li>The tag key cannot contain <code>http://</code> or <code>https://</code>.</li>
              * <li>The tag key cannot be an empty string.</li>
              * </ul>
@@ -493,7 +497,7 @@ public class DescribeBackupClientsRequest extends Request {
             /**
              * <p>The tag value of the backup vault. Valid values of N: 1 to 20.</p>
              * <ul>
-             * <li>The tag value cannot start with <code>aliyun</code> or <code>acs:</code>.</li>
+             * <li>The tag value cannot start with <code>aliyun</code> or <code>acs:</code>. </li>
              * <li>The tag value cannot contain <code>http://</code> or <code>https://</code>.</li>
              * <li>The tag value cannot be an empty string.</li>
              * </ul>
