@@ -120,6 +120,7 @@ public class DescribeAgenticDBBranchRestoreWindowRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the source branch.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -132,6 +133,7 @@ public class DescribeAgenticDBBranchRestoreWindowRequest extends Request {
         }
 
         /**
+         * <p>The ID of the AgenticDB cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,6 +146,7 @@ public class DescribeAgenticDBBranchRestoreWindowRequest extends Request {
         }
 
         /**
+         * <p>The ID of the target project.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,6 +159,7 @@ public class DescribeAgenticDBBranchRestoreWindowRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -168,6 +172,7 @@ public class DescribeAgenticDBBranchRestoreWindowRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

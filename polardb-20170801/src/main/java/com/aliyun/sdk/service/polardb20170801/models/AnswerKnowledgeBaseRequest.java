@@ -202,7 +202,7 @@ public class AnswerKnowledgeBaseRequest extends Request {
         } 
 
         /**
-         * <p>The unique ID of the knowledge base.</p>
+         * <p>The unique identifier of the knowledge base. To obtain the ID, first call CreateKnowledgeSpace to create a knowledge space, use the returned KnowledgeSpaceId to call CreateKnowledgeBase, and then use the KnowledgeBaseId returned by CreateKnowledgeBase. Separate multiple knowledge base IDs with commas.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -215,7 +215,7 @@ public class AnswerKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of context characters. Valid values: 1000 to 32000.</p>
+         * <p>The maximum number of characters in the context. Valid values: 1000 to 32000.</p>
          * 
          * <strong>example:</strong>
          * <p>16000</p>
@@ -253,7 +253,7 @@ public class AnswerKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable reranking. Disabled by default.</p>
+         * <p>Specifies whether to enable reranking. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -265,7 +265,7 @@ public class AnswerKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return citation sources. Enabled by default.</p>
+         * <p>Specifies whether to return reference sources. Default value: true.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -313,7 +313,7 @@ public class AnswerKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * <p>The number of recall results to retrieve.</p>
+         * <p>The number of results to recall.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -325,7 +325,7 @@ public class AnswerKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * <p>The user supplementary instructions.</p>
+         * <p>The additional user instructions.</p>
          * 
          * <strong>example:</strong>
          * <p>Return a short summary and test result.</p>

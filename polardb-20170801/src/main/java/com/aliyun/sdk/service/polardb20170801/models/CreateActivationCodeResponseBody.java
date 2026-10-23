@@ -184,7 +184,7 @@ public class CreateActivationCodeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The time when the activation code takes effect.</p>
+         * <p>The effective period.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-10-16 16:46:20</p>
@@ -195,7 +195,7 @@ public class CreateActivationCodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The content of the activation code. Decode this Base64-encoded content and save it to the \<code>license.lic\\</code> file. PolarDB reads this file on startup.</p>
+         * <p>The content of the activation code. Decode the Base64-encoded content and save it to the license.lic file for PolarDB to read during startup.</p>
          * 
          * <strong>example:</strong>
          * <p>AAEAA******AAA=</p>
@@ -217,7 +217,7 @@ public class CreateActivationCodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The expiration time.</p>
+         * <p>The time when the activation code expires.</p>
          * 
          * <strong>example:</strong>
          * <p>2054-10-09 16:46:20</p>
@@ -228,7 +228,7 @@ public class CreateActivationCodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The creation time.</p>
+         * <p>The time when the activation code was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-10-16 16:46:20</p>
@@ -239,7 +239,7 @@ public class CreateActivationCodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The update time.</p>
+         * <p>The time when the activation code was updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-10-16 16:46:20</p>
@@ -294,7 +294,7 @@ public class CreateActivationCodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique system identifier of the database.</p>
+         * <p>The unique identifier of the database, also known as the system identifier.</p>
          * 
          * <strong>example:</strong>
          * <p>1234567890123456</p>

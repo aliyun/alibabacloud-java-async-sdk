@@ -253,7 +253,7 @@ public class RetrievalKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reference to the image element in the structure of the Docling source document.</p>
+             * <p>The element reference of the image in the source document structure.</p>
              * 
              * <strong>example:</strong>
              * <p>#/pictures/1</p>
@@ -475,7 +475,7 @@ public class RetrievalKnowledgeBaseResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of captions for figures or tables associated with the chunk.</p>
+             * <p>The list of captions for the figures or tables associated with the chunk.</p>
              */
             public Builder captions(java.util.List<String> captions) {
                 this.captions = captions;
@@ -483,7 +483,7 @@ public class RetrievalKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of references to structured elements in the Docling source document associated with the chunk. You can use these references to precisely locate the original elements.</p>
+             * <p>The list of structured element references in the source document associated with the chunk. You can use these references to precisely locate the original elements.</p>
              */
             public Builder docItems(java.util.List<String> docItems) {
                 this.docItems = docItems;
@@ -505,7 +505,7 @@ public class RetrievalKnowledgeBaseResponseBody extends TeaModel {
              * <p>The name of the file.</p>
              * 
              * <strong>example:</strong>
-             * <p>2024 Financial Report.pdf</p>
+             * <p>2024_Financial_Report.pdf</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -513,7 +513,7 @@ public class RetrievalKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The heading hierarchy of the section to which the chunk belongs.</p>
+             * <p>The chain of section headings to which the chunk belongs.</p>
              */
             public Builder headings(java.util.List<String> headings) {
                 this.headings = headings;

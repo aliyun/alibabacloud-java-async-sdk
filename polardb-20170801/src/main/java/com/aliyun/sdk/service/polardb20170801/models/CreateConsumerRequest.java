@@ -131,7 +131,7 @@ public class CreateConsumerRequest extends Request {
         } 
 
         /**
-         * <p>The consumer group name.</p>
+         * <p>The consumer group ID. You can obtain the ID from the ConsumerGroupId parameter returned by the CreateConsumerGroup operation.</p>
          * 
          * <strong>example:</strong>
          * <p>cg-p3gk2oh55c**</p>
@@ -143,7 +143,7 @@ public class CreateConsumerRequest extends Request {
         }
 
         /**
-         * <p>The gateway instance ID.</p>
+         * <p>The gateway instance ID. You can obtain the ID from the GwClusterId parameter returned by the CreateGateway operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,7 +156,7 @@ public class CreateConsumerRequest extends Request {
         }
 
         /**
-         * <p>The key type. The only supported value is ApiKey.</p>
+         * <p>The key type. Default value: ApiKey. Valid values: ApiKey.</p>
          * 
          * <strong>example:</strong>
          * <p>ApiKey</p>
@@ -168,7 +168,7 @@ public class CreateConsumerRequest extends Request {
         }
 
         /**
-         * <p>The user name.</p>
+         * <p>The username.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -181,7 +181,7 @@ public class CreateConsumerRequest extends Request {
         }
 
         /**
-         * <p>The user nickname.</p>
+         * <p>The nickname.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

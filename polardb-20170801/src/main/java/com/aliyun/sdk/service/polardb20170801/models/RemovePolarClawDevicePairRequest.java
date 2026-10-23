@@ -88,7 +88,7 @@ public class RemovePolarClawDevicePairRequest extends Request {
         }
 
         /**
-         * <p>The device ID.</p>
+         * <p>The ID of the paired device to remove. You can call ListPolarClawDevicePairs and obtain the DeviceId from the returned Paired list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

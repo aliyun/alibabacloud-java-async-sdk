@@ -115,6 +115,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ApplyApplicationPromptsResponse> applyApplicationPrompts(ApplyApplicationPromptsRequest request);
 
     /**
+     * @param request the request parameters of ApplyLakebaseMountParameterGroup  ApplyLakebaseMountParameterGroupRequest
+     * @return ApplyLakebaseMountParameterGroupResponse
+     */
+    CompletableFuture<ApplyLakebaseMountParameterGroupResponse> applyLakebaseMountParameterGroup(ApplyLakebaseMountParameterGroupRequest request);
+
+    /**
      * @param request the request parameters of ApprovePolarClawDevicePair  ApprovePolarClawDevicePairRequest
      * @return ApprovePolarClawDevicePairResponse
      */
@@ -128,8 +134,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
-     * <p>This API associates an agent from a PolarClaw application with a communication channel. You specify the application with <code>ApplicationId</code>, the agent with <code>AgentId</code>, and the channel with <code>Channel</code>. You can optionally specify an account ID for the channel with <code>ChannelAccountId</code>.</p>
+     * <h2>Request description</h2>
+     * <p>This API operation associates a PolarClaw agent (specified by AgentId) of a PolarClaw application (identified by ApplicationId) with a given communication channel (Channel). If necessary, you can also specify the account ID (ChannelAccountId) within the channel.</p>
      * 
      * @param request the request parameters of BindPolarClawAgent  BindPolarClawAgentRequest
      * @return BindPolarClawAgentResponse
@@ -1066,10 +1072,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Usage notes</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>A successful operation returns the ID of the deleted agent and the number of removed bindings.</li>
-     * <li>Ensure you provide the correct target <code>AgentId</code>. An incorrect ID can cause the operation to fail or affect an unintended agent.</li>
+     * <li>After this API is executed, it returns the ID of the successfully removed agent and the number of removed bindings.</li>
+     * <li>Ensure that you know the target <code>AgentId</code> before calling this API. Otherwise, the operation may fail or affect unexpected agents.</li>
      * </ul>
      * 
      * @param request the request parameters of DeletePolarClawAgent  DeletePolarClawAgentRequest
@@ -1440,6 +1446,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeAvailableModelsResponse
      */
     CompletableFuture<DescribeAvailableModelsResponse> describeAvailableModels(DescribeAvailableModelsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeBackupLogDownloadLinks  DescribeBackupLogDownloadLinksRequest
+     * @return DescribeBackupLogDownloadLinksResponse
+     */
+    CompletableFuture<DescribeBackupLogDownloadLinksResponse> describeBackupLogDownloadLinks(DescribeBackupLogDownloadLinksRequest request);
 
     /**
      * @param request the request parameters of DescribeBackupLogs  DescribeBackupLogsRequest
@@ -3335,7 +3347,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves memory data from a specified application.</p>
+     * <p>Retrieves memory data in a specified application.</p>
      * 
      * @param request the request parameters of SearchMemories  SearchMemoriesRequest
      * @return SearchMemoriesResponse
@@ -3403,6 +3415,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<TriggerKnowledgeBaseSyncResponse> triggerKnowledgeBaseSync(TriggerKnowledgeBaseSyncRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <p>调用前，先通过 BindPolarClawAgent 为指定应用、Agent 和通道建立绑定。本接口使用同一组 ApplicationId、AgentId 和 Channel 解除绑定。</p>
+     * 
      * @param request the request parameters of UnbindPolarClawAgent  UnbindPolarClawAgentRequest
      * @return UnbindPolarClawAgentResponse
      */

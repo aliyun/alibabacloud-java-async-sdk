@@ -119,7 +119,10 @@ public class DescribeAgenticDBProjectHistoryRetentionResponseBody extends TeaMod
         } 
 
         /**
-         * DBClusterId.
+         * <p>DBClusterId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pagc-bp1abcdef1234567</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -127,7 +130,7 @@ public class DescribeAgenticDBProjectHistoryRetentionResponseBody extends TeaMod
         }
 
         /**
-         * <p>项目当前生效的历史数据保留时长。实际可恢复范围请查询分支恢复窗口。</p>
+         * <p>The effective history data retention period for the project. For the actual recoverable range, query the branch recovery window.</p>
          * 
          * <strong>example:</strong>
          * <p>604800</p>
@@ -138,7 +141,10 @@ public class DescribeAgenticDBProjectHistoryRetentionResponseBody extends TeaMod
         }
 
         /**
-         * ProjectId.
+         * <p>ProjectId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>proj-a1b2c3d4e5f6</p>
          */
         public Builder projectId(String projectId) {
             this.projectId = projectId;
@@ -146,7 +152,7 @@ public class DescribeAgenticDBProjectHistoryRetentionResponseBody extends TeaMod
         }
 
         /**
-         * <p>完成本次查询的时间，采用 UTC RFC3339 格式，不代表最晚可恢复时间。</p>
+         * <p>The time when the query was completed, in UTC RFC3339 format. This does not represent the latest recoverable time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-16T07:32:00Z</p>
@@ -157,7 +163,10 @@ public class DescribeAgenticDBProjectHistoryRetentionResponseBody extends TeaMod
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>req-123</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -165,7 +174,10 @@ public class DescribeAgenticDBProjectHistoryRetentionResponseBody extends TeaMod
         }
 
         /**
-         * TenantId.
+         * <p>TenantId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-4b83e0da66674951</p>
          */
         public Builder tenantId(String tenantId) {
             this.tenantId = tenantId;

@@ -90,7 +90,7 @@ public class DeleteKBSyncLinkRequest extends Request {
         } 
 
         /**
-         * <p>The unique ID of the knowledge base.</p>
+         * <p>The unique identifier of the knowledge base. You can obtain the ID from the response of the CreateKnowledgeBase operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -103,7 +103,7 @@ public class DeleteKBSyncLinkRequest extends Request {
         }
 
         /**
-         * <p>The synchronization link ID.</p>
+         * <p>The ID of the synchronization link to delete. You can obtain the ID from the response of the CreateKBSyncLink operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

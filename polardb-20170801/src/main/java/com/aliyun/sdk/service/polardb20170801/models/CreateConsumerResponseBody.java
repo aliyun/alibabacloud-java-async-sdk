@@ -93,7 +93,7 @@ public class CreateConsumerResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The full APIKey, returned only in this response.</p>
+         * <p>The complete API key. This parameter is returned only in the current response.</p>
          * 
          * <strong>example:</strong>
          * <p>6c4b1f0317cd4fd7a5b446d3503d**</p>
@@ -104,7 +104,7 @@ public class CreateConsumerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The consumer ID.</p>
+         * <p>The user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>c-mqveroemc***</p>
@@ -115,7 +115,7 @@ public class CreateConsumerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The key type. The value is always ApiKey.</p>
+         * <p>The key type. Default value: ApiKey. Valid values: ApiKey.</p>
          * 
          * <strong>example:</strong>
          * <p>ApiKey</p>
@@ -126,7 +126,7 @@ public class CreateConsumerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>CD3FA5F3-FAF3-44CA-AFFF-BAF869******</p>

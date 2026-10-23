@@ -188,7 +188,7 @@ public class CreateAgenticDBBranchRequest extends Request {
         }
 
         /**
-         * <p>The description of the branch.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>Feature branch for analytics</p>
@@ -200,7 +200,7 @@ public class CreateAgenticDBBranchRequest extends Request {
         }
 
         /**
-         * <p>The ID of the parent branch. If this parameter is not specified, the branch is derived from the main branch by default.</p>
+         * <p>The ID of the parent branch. By default, the branch is derived from the main branch.</p>
          * 
          * <strong>example:</strong>
          * <p>br-1a2b3c4d5e6f</p>
@@ -212,7 +212,7 @@ public class CreateAgenticDBBranchRequest extends Request {
         }
 
         /**
-         * <p>基于父分支在指定时间点的数据创建分支；不传则使用最新数据。采用带时区的 RFC3339 格式，最多支持 9 位小数秒；不支持空字符串或未来时间。</p>
+         * <p>Creates the branch based on the data of the parent branch at the specified point in time. If you do not specify this parameter, the latest data is used. The value must be in RFC 3339 format with a time zone and support up to nine fractional digits for seconds. Empty strings and future times are not supported.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-15T07:32:00.123456Z</p>
@@ -224,7 +224,7 @@ public class CreateAgenticDBBranchRequest extends Request {
         }
 
         /**
-         * <p>The ID of the project to which the branch belongs.</p>
+         * <p>The project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -250,7 +250,7 @@ public class CreateAgenticDBBranchRequest extends Request {
         }
 
         /**
-         * <p>The ID of the tenant to which the branch belongs.</p>
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

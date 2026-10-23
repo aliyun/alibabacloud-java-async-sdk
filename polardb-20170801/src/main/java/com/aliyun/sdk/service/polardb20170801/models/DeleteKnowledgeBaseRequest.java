@@ -75,7 +75,7 @@ public class DeleteKnowledgeBaseRequest extends Request {
         } 
 
         /**
-         * <p>The unique ID of the knowledge base.</p>
+         * <p>The ID of the knowledge base to delete. You can obtain the ID from the response of the CreateKnowledgeBase operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

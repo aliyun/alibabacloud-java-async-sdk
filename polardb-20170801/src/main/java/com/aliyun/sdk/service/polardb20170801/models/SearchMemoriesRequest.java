@@ -173,7 +173,7 @@ public class SearchMemoriesRequest extends Request {
         } 
 
         /**
-         * <p>The application ID. Example: pa-**************.</p>
+         * <p>The ID of the application. Example value: pa-**************.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -210,7 +210,7 @@ public class SearchMemoriesRequest extends Request {
         }
 
         /**
-         * <p>The memory agent ID.</p>
+         * <p>The ID of the memory agent.</p>
          * 
          * <strong>example:</strong>
          * <p>agent1</p>
@@ -222,7 +222,7 @@ public class SearchMemoriesRequest extends Request {
         }
 
         /**
-         * <p>The memory user ID.</p>
+         * <p>The ID of the memory user.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -247,7 +247,7 @@ public class SearchMemoriesRequest extends Request {
         }
 
         /**
-         * <p>The number of records per page.</p>
+         * <p>The number of records to display on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

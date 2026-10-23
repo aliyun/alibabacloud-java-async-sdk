@@ -119,7 +119,10 @@ public class SearchMemoriesResponseBody extends TeaModel {
         } 
 
         /**
-         * Page.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(String page) {
             this.page = page;
@@ -127,7 +130,10 @@ public class SearchMemoriesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of records per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -154,7 +160,10 @@ public class SearchMemoriesResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of matching records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder total(String total) {
             this.total = total;
@@ -162,7 +171,10 @@ public class SearchMemoriesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPages.
+         * <p>The total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalPages(String totalPages) {
             this.totalPages = totalPages;
@@ -307,7 +319,7 @@ public class SearchMemoriesResponseBody extends TeaModel {
 
             /**
              * <p>The creation time.</p>
-             * <p>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+             * <p>The time follows the ISO 8601 standard in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
              * 
              * <strong>example:</strong>
              * <p>2025-09-26T08:25:44Z</p>
@@ -365,7 +377,7 @@ public class SearchMemoriesResponseBody extends TeaModel {
              * <p>The metadata.</p>
              * 
              * <strong>example:</strong>
-             * <p>{\&quot;tags\&quot;:\&quot;Issue_date_2023-11-30,VD_现行有效\&quot;}</p>
+             * <p>{&quot;tags&quot;:&quot;Issue_date_2023-11-30,VD_Valid&quot;}</p>
              */
             public Builder metadata(String metadata) {
                 this.metadata = metadata;
@@ -385,7 +397,7 @@ public class SearchMemoriesResponseBody extends TeaModel {
 
             /**
              * <p>The update time.</p>
-             * <p>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+             * <p>The time follows the ISO 8601 standard in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
              * 
              * <strong>example:</strong>
              * <p>2025-10-16T02:27:33Z</p>

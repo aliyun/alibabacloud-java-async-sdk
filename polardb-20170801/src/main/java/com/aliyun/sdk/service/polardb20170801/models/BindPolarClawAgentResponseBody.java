@@ -132,7 +132,7 @@ public class BindPolarClawAgentResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The agent ID.</p>
+         * <p>Agent ID</p>
          * 
          * <strong>example:</strong>
          * <p>work</p>
@@ -154,7 +154,7 @@ public class BindPolarClawAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Details of the newly created binding.</p>
+         * <p>The details of the newly created association.</p>
          */
         public Builder binding(Binding binding) {
             this.binding = binding;
@@ -162,7 +162,7 @@ public class BindPolarClawAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>200</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -173,7 +173,7 @@ public class BindPolarClawAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A message that indicates the request result.</p>
+         * <p>successful</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -195,7 +195,7 @@ public class BindPolarClawAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of global bindings after the operation.</p>
+         * <p>The total number of global associations after the operation.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -288,7 +288,7 @@ public class BindPolarClawAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The agent ID.</p>
+             * <p>Agent ID</p>
              * 
              * <strong>example:</strong>
              * <p>work</p>

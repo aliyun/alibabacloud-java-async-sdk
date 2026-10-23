@@ -143,7 +143,7 @@ public class UninstallPolarClawPluginResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response status code.</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -165,7 +165,7 @@ public class UninstallPolarClawPluginResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the operation was successful.</p>
+         * <p>Indicates whether the operation is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -176,7 +176,7 @@ public class UninstallPolarClawPluginResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The plugin ID.</p>
+         * <p>The ID of the uninstalled plugin.</p>
          * 
          * <strong>example:</strong>
          * <p>openclaw-lark</p>
@@ -187,7 +187,7 @@ public class UninstallPolarClawPluginResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>3E5CD764-FCCA-5C9C-838E-20E0DE84B2AF</p>
@@ -198,7 +198,7 @@ public class UninstallPolarClawPluginResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the gateway has been restarted.</p>
+         * <p>Indicates whether the gateway was restarted.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
