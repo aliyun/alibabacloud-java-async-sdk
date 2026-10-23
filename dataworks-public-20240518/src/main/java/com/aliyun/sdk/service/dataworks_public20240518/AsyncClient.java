@@ -1480,7 +1480,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>You must purchase DataWorks Basic Edition or a later edition to use this operation.</li>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</li>
      * </ol>
      * 
      * @param request the request parameters of GetColumn  GetColumnRequest
@@ -2274,7 +2274,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>You must purchase DataWorks Basic Edition or later to use this API.</li>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</li>
      * </ol>
      * 
      * @param request the request parameters of ListColumns  ListColumnsRequest

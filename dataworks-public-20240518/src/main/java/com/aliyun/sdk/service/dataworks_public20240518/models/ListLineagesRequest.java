@@ -209,7 +209,7 @@ public class ListLineagesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the destination entity. You can refer to the table or column ID returned by the ListTables or ListColumns operation, or use a custom entity ID.</p>
+         * <p>The destination entity ID. You can refer to the table or column ID returned by the ListTables or ListColumns operation, or use a custom entity ID.</p>
          * 
          * <strong>example:</strong>
          * <p>dlf-table::catalog_id:database_name::table_name</p>
@@ -221,7 +221,7 @@ public class ListLineagesRequest extends Request {
         }
 
         /**
-         * <p>The name of the destination entity. Fuzzy matching is supported.</p>
+         * <p>The destination entity name. Fuzzy matching is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>dstName1</p>
@@ -247,8 +247,8 @@ public class ListLineagesRequest extends Request {
         /**
          * <p>The sort order. Default value: Asc. Valid values:</p>
          * <ul>
-         * <li>Asc: ascending order</li>
-         * <li>Desc: descending order</li>
+         * <li>Asc: Ascending order.</li>
+         * <li>Desc: Descending order.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -285,7 +285,10 @@ public class ListLineagesRequest extends Request {
         }
 
         /**
-         * RecentDays.
+         * <p>Queries the lineage relationships that take effect within the specified number of recent calendar days. Valid values: 1 to 30. For example, 1 indicates starting from midnight of the current day, and 7 indicates starting from midnight 6 days ago. If this parameter is not specified, the system filters the data based on the configured lineage validity period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder recentDays(Integer recentDays) {
             this.putQueryParameter("RecentDays", recentDays);
@@ -294,7 +297,7 @@ public class ListLineagesRequest extends Request {
         }
 
         /**
-         * <p>The field used for sorting. Default value: Name. The entities are sorted by lineage entity name.</p>
+         * <p>The sort field. Default value: Name. The entities are sorted by lineage entity name.</p>
          * 
          * <strong>example:</strong>
          * <p>Name</p>
@@ -306,7 +309,7 @@ public class ListLineagesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the source entity. You can refer to the table or column ID returned by the ListTables or ListColumns operation, or use a custom entity ID.</p>
+         * <p>The source entity ID. You can refer to the table or column ID returned by the ListTables or ListColumns operation, or use a custom entity ID.</p>
          * 
          * <strong>example:</strong>
          * <p>maxcompute-table:::project_name:[schema_name]:table_name</p>
@@ -318,7 +321,7 @@ public class ListLineagesRequest extends Request {
         }
 
         /**
-         * <p>The name of the source entity. Fuzzy matching is supported.</p>
+         * <p>The source entity name. Fuzzy matching is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>srcName1</p>

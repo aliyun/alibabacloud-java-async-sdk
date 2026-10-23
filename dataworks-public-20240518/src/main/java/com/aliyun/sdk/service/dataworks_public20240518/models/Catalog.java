@@ -135,7 +135,7 @@ public class Catalog extends TeaModel {
          * <p>The comment.</p>
          * 
          * <strong>example:</strong>
-         * <p>this is a comment</p>
+         * <p>Default catalog</p>
          */
         public Builder comment(String comment) {
             this.comment = comment;
@@ -143,10 +143,10 @@ public class Catalog extends TeaModel {
         }
 
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The value is a millisecond-level timestamp.</p>
          * 
          * <strong>example:</strong>
-         * <p>1722073854000</p>
+         * <p>1725330777000</p>
          */
         public Builder createTime(Long createTime) {
             this.createTime = createTime;
@@ -154,11 +154,19 @@ public class Catalog extends TeaModel {
         }
 
         /**
-         * <p>ID</p>
+         * <p>The ID of the data catalog entity. Currently, the DLF and StarRocks types are supported. For more information, see <a href="https://help.aliyun.com/document_detail/2880092.html">Concepts of metadata entities</a>.</p>
+         * <ul>
+         * <li><p>For the DLF type, the format is <code>dlf-catalog::catalog_id</code>.</p>
+         * </li>
+         * <li><p>For the StarRocks type, the format is <code>starrocks-catalog:(instance_id|encoded_jdbc_url):catalog_name</code>.</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>Where:<br><code>catalog_id</code>: The DLF catalog ID.<br><code>instance_id</code>: The instance ID, which is required when the data source is registered in instance mode.<br><code>encoded_jdbc_url</code>: the URL-encoded JDBC connection string, which is required when the data source is registered by using a connection string.<br><code>catalog_name</code>: the name of the StarRocks catalog.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>dlf-catalog:123456XXX:test_catalog
-         * starrocks-catalog:c-abc123xxx:default_catalog</p>
+         * <p>dlf-catalog::catalog1</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -166,10 +174,10 @@ public class Catalog extends TeaModel {
         }
 
         /**
-         * <p>The modification time.</p>
+         * <p>The modification time. The value is a millisecond-level timestamp.</p>
          * 
          * <strong>example:</strong>
-         * <p>1722073854000</p>
+         * <p>1725330777000</p>
          */
         public Builder modifyTime(Long modifyTime) {
             this.modifyTime = modifyTime;
@@ -180,7 +188,7 @@ public class Catalog extends TeaModel {
          * <p>The name.</p>
          * 
          * <strong>example:</strong>
-         * <p>default_catalog</p>
+         * <p>catalog1</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -189,10 +197,18 @@ public class Catalog extends TeaModel {
 
         /**
          * <p>The ID of the parent entity.</p>
+         * <ul>
+         * <li><p>For the DLF type, the format of <code>ParentMetaEntityId</code> is <code>dlf</code>.</p>
+         * </li>
+         * <li><p>For the StarRocks type, the format of <code>ParentMetaEntityId</code> is <code>starrocks:(instance_id|encoded_jdbc_url)</code>.</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>Where:<br><code>instance_id</code>: The instance ID, which is required when the data source is registered in instance mode.<br><code>encoded_jdbc_url</code>: the URL-encoded JDBC connection string, which is required when the data source is registered by using a connection string.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>dlf
-         * starrocks:c-abc123xxx</p>
+         * <p>dlf</p>
          */
         public Builder parentMetaEntityId(String parentMetaEntityId) {
             this.parentMetaEntityId = parentMetaEntityId;
@@ -200,10 +216,10 @@ public class Catalog extends TeaModel {
         }
 
         /**
-         * <p>The type.</p>
+         * <p>The catalog type. The valid values depend on the metadata collector type.</p>
          * 
          * <strong>example:</strong>
-         * <p>Internal</p>
+         * <p>HIVE</p>
          */
         public Builder type(String type) {
             this.type = type;

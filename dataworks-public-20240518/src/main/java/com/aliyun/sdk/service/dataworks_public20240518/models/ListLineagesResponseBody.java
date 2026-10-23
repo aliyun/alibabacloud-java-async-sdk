@@ -80,7 +80,7 @@ public class ListLineagesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The pagination result.</p>
+         * <p>The pagination information.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -290,7 +290,7 @@ public class ListLineagesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of lineage information.</p>
+             * <p>The lineage information list.</p>
              */
             public Builder lineages(java.util.List<Lineages> lineages) {
                 this.lineages = lineages;
@@ -298,7 +298,7 @@ public class ListLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page number of the returned data, which is used for pagination.</p>
+             * <p>The requested page number, which is used for pagination.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
