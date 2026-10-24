@@ -1,3 +1,6 @@
+2026-10-24 Version: 1.0.1
+- Generated java-async 2024-11-22 for CsasEdr.
+
 2026-10-23 Version: 1.0.0
 - Generated java-async 2024-11-22 for CsasEdr.
 

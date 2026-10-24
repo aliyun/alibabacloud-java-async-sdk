@@ -1,0 +1,199 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.csasedr20241122.models;
+
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * 
+ * {@link CreateSelectionConfigResponseBody} extends {@link TeaModel}
+ *
+ * <p>CreateSelectionConfigResponseBody</p>
+ */
+public class CreateSelectionConfigResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private Data data;
+
+    @com.aliyun.core.annotation.NameInMap("RequestId")
+    private String requestId;
+
+    private CreateSelectionConfigResponseBody(Builder builder) {
+        this.data = builder.data;
+        this.requestId = builder.requestId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static CreateSelectionConfigResponseBody create() {
+        return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return data
+     */
+    public Data getData() {
+        return this.data;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public static final class Builder {
+        private Data data; 
+        private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateSelectionConfigResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
+
+        /**
+         * <p>The newly generated asset selection configuration, which includes the associated account and the asset selection identifier.</p>
+         */
+        public Builder data(Data data) {
+            this.data = data;
+            return this;
+        }
+
+        /**
+         * <p>The unique identifier of the request, which is used to troubleshoot and locate issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CF6AE46A-E1EB-53D7-AE1A-93474B83FFF4</p>
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        public CreateSelectionConfigResponseBody build() {
+            return new CreateSelectionConfigResponseBody(this);
+        } 
+
+    } 
+
+    /**
+     * 
+     * {@link CreateSelectionConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateSelectionConfigResponseBody</p>
+     */
+    public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AliUid")
+        private Long aliUid;
+
+        @com.aliyun.core.annotation.NameInMap("Id")
+        private Long id;
+
+        @com.aliyun.core.annotation.NameInMap("SelectionKey")
+        private String selectionKey;
+
+        private Data(Builder builder) {
+            this.aliUid = builder.aliUid;
+            this.id = builder.id;
+            this.selectionKey = builder.selectionKey;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Data create() {
+            return builder().build();
+        }
+
+        /**
+         * @return aliUid
+         */
+        public Long getAliUid() {
+            return this.aliUid;
+        }
+
+        /**
+         * @return id
+         */
+        public Long getId() {
+            return this.id;
+        }
+
+        /**
+         * @return selectionKey
+         */
+        public String getSelectionKey() {
+            return this.selectionKey;
+        }
+
+        public static final class Builder {
+            private Long aliUid; 
+            private Long id; 
+            private String selectionKey; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.aliUid = model.aliUid;
+                this.id = model.id;
+                this.selectionKey = model.selectionKey;
+            } 
+
+            /**
+             * <p>The ID of the Alibaba Cloud account to which the asset selection configuration belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>163983725227****</p>
+             */
+            public Builder aliUid(Long aliUid) {
+                this.aliUid = aliUid;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the asset selection configuration. The current implementation does not assign a value to this field. The example is only used to illustrate the field format and does not represent the actual return value of this operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1932</p>
+             */
+            public Builder id(Long id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * <p>The asset selection identity. It is generated by the server in UUID format and is used to associate the same asset selection configuration in What to do next.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18197b2f-9e84-43a8-b160-0d27b001fc5c</p>
+             */
+            public Builder selectionKey(String selectionKey) {
+                this.selectionKey = selectionKey;
+                return this;
+            }
+
+            public Data build() {
+                return new Data(this);
+            } 
+
+        } 
+
+    }
+}
