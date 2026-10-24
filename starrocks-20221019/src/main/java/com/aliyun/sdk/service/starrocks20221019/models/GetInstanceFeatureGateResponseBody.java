@@ -145,7 +145,7 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the access denial.</p>
+         * <p>AccessDeniedDetail</p>
          * 
          * <strong>example:</strong>
          * <p>{     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,     &quot;AuthPrincipalOwnerId&quot;: &quot;xxx&quot;,     &quot;EncodedDiagnosticMessage&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalType&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalDisplayName&quot;: &quot;xxx&quot;,     &quot;NoPermissionType&quot;: &quot;ImplicitDeny&quot;,     &quot;AuthAction&quot;: &quot;sr:xxx&quot;   }</p>
@@ -208,7 +208,7 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -305,6 +305,9 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("supportCompactionServiceWhiteList")
         private Boolean supportCompactionServiceWhiteList;
 
+        @com.aliyun.core.annotation.NameInMap("supportLoadBasedAutoScaling")
+        private Boolean supportLoadBasedAutoScaling;
+
         private Data(Builder builder) {
             this.consoleControlRestart = builder.consoleControlRestart;
             this.enableManageMv = builder.enableManageMv;
@@ -327,6 +330,7 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
             this.useComputeNode = builder.useComputeNode;
             this.supportCompactionService = builder.supportCompactionService;
             this.supportCompactionServiceWhiteList = builder.supportCompactionServiceWhiteList;
+            this.supportLoadBasedAutoScaling = builder.supportLoadBasedAutoScaling;
         }
 
         public static Builder builder() {
@@ -484,6 +488,13 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
             return this.supportCompactionServiceWhiteList;
         }
 
+        /**
+         * @return supportLoadBasedAutoScaling
+         */
+        public Boolean getSupportLoadBasedAutoScaling() {
+            return this.supportLoadBasedAutoScaling;
+        }
+
         public static final class Builder {
             private Boolean consoleControlRestart; 
             private Boolean enableManageMv; 
@@ -506,6 +517,7 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
             private Boolean useComputeNode; 
             private Boolean supportCompactionService; 
             private Boolean supportCompactionServiceWhiteList; 
+            private Boolean supportLoadBasedAutoScaling; 
 
             private Builder() {
             } 
@@ -532,10 +544,11 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
                 this.useComputeNode = model.useComputeNode;
                 this.supportCompactionService = model.supportCompactionService;
                 this.supportCompactionServiceWhiteList = model.supportCompactionServiceWhiteList;
+                this.supportLoadBasedAutoScaling = model.supportLoadBasedAutoScaling;
             } 
 
             /**
-             * <p>Whether the restart process can be controlled from the console.</p>
+             * <p>Indicates whether the restart process can be controlled from the console.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -546,7 +559,7 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether materialized views can be managed.</p>
+             * <p>Indicates whether materialized view management is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -557,7 +570,7 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether managed security groups are supported.</p>
+             * <p>Indicates whether fully managed security groups are supported.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -568,7 +581,7 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether DLF meta tokens can be mounted.</p>
+             * <p>Indicates whether mounting DLF meta tokens is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -579,7 +592,7 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A list of new configuration types.</p>
+             * <p>The list of added configuration types.</p>
              */
             public Builder supportAddConfigTypes(java.util.List<String> supportAddConfigTypes) {
                 this.supportAddConfigTypes = supportAddConfigTypes;
@@ -587,12 +600,10 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether data backup is supported.</p>
+             * <p>Specifies whether data backup is supported. Valid values:</p>
              * <ul>
-             * <li><p><strong>1</strong>: Supports data backup.</p>
-             * </li>
-             * <li><p><strong>2</strong>: Does not support data backup.</p>
-             * </li>
+             * <li><strong>1</strong>: Data backup is supported.</li>
+             * <li><strong>2</strong>: Data backup is not supported.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -604,7 +615,7 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether agents can be created.</p>
+             * <p>Indicates whether agent creation is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -615,7 +626,7 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether compute groups with specifications other than <code>standard</code> can be created.</p>
+             * <p>Indicates whether compute groups of non-standard specifications can be created.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -626,7 +637,7 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether elastic ephemeral disks are supported.</p>
+             * <p>Indicates whether elastic ephemeral disks are supported.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -637,7 +648,7 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether the AI function is supported.</p>
+             * <p>Indicates whether AI functions are supported.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -648,7 +659,7 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether SSL can be enabled.</p>
+             * <p>Indicates whether SSL can be enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -659,7 +670,7 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether fast restart is supported for configuration changes.</p>
+             * <p>Indicates whether fast restart is supported during configuration changes.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -670,7 +681,7 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether resources can be modified by using fast restart.</p>
+             * <p>Indicates whether resources can be modified by using fast restart.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -681,7 +692,7 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether fast restart is supported.</p>
+             * <p>Indicates whether fast restart is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -692,7 +703,7 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether the FE gateway is supported.</p>
+             * <p>Indicates whether FE gateways are supported.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -703,7 +714,7 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether custom domain names are supported.</p>
+             * <p>Indicates whether custom domain names are supported.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -714,7 +725,7 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether the time zone can be modified.</p>
+             * <p>Indicates whether the time zone can be modified.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -725,7 +736,7 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether observers can be deployed across multiple availability zones (AZs).</p>
+             * <p>Indicates whether multi-zone deployment of Observers is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -736,7 +747,7 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether the instance uses compute nodes (CNs).</p>
+             * <p>Indicates whether compute nodes are used.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -747,7 +758,7 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
             }
 
             /**
-             * supportCompactionService.
+             * <p>Specifies whether the compaction service is supported.</p>
              */
             public Builder supportCompactionService(Boolean supportCompactionService) {
                 this.supportCompactionService = supportCompactionService;
@@ -755,13 +766,21 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether the Compaction Service allowlist feature is supported.</p>
+             * <p>Specifies whether the compaction service whitelist feature is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
              */
             public Builder supportCompactionServiceWhiteList(Boolean supportCompactionServiceWhiteList) {
                 this.supportCompactionServiceWhiteList = supportCompactionServiceWhiteList;
+                return this;
+            }
+
+            /**
+             * <p>Specifies whether load-based auto scaling rules can be created. This is determined based on the featureEnabled field, the canary release status of the resource owner UID, and the mode, version, architecture, and plan. It does not indicate whether existing rules continue to be executed.</p>
+             */
+            public Builder supportLoadBasedAutoScaling(Boolean supportLoadBasedAutoScaling) {
+                this.supportLoadBasedAutoScaling = supportLoadBasedAutoScaling;
                 return this;
             }
 

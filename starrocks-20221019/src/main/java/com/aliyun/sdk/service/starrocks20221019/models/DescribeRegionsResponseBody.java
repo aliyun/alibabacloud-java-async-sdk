@@ -293,7 +293,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
              * <p>The description of the region.</p>
              * 
              * <strong>example:</strong>
-             * <p>Hangzhou</p>
+             * <p>杭州</p>
              */
             public Builder description(String description) {
                 this.description = description;

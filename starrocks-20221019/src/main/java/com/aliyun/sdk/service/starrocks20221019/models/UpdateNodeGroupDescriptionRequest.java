@@ -114,7 +114,7 @@ public class UpdateNodeGroupDescriptionRequest extends Request {
          * <p>The RAM authorization information.</p>
          * 
          * <strong>example:</strong>
-         * <p>Optional</p>
+         * <p>可以不填</p>
          */
         public Builder xAcsRamAuthContext(String xAcsRamAuthContext) {
             this.putQueryParameter("X-Acs-Ram-Auth-Context", xAcsRamAuthContext);

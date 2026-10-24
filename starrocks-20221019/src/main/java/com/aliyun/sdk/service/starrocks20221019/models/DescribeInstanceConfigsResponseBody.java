@@ -545,7 +545,7 @@ public class DescribeInstanceConfigsResponseBody extends TeaModel {
              * <p>The description of the configuration item\&quot;s feature.</p>
              * 
              * <strong>example:</strong>
-             * <p>Whether to enable UDF.</p>
+             * <p>是否开启 UDF。</p>
              */
             public Builder description(String description) {
                 this.description = description;

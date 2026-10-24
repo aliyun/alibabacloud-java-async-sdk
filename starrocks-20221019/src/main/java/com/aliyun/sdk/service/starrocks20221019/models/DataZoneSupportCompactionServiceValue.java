@@ -80,7 +80,10 @@ public class DataZoneSupportCompactionServiceValue extends TeaModel {
         } 
 
         /**
-         * <p>The availability zone ID.</p>
+         * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-*******n-f</p>
          */
         public Builder zoneId(String zoneId) {
             this.zoneId = zoneId;
@@ -89,6 +92,9 @@ public class DataZoneSupportCompactionServiceValue extends TeaModel {
 
         /**
          * <p>The resource level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MEDIUM</p>
          */
         public Builder resourceLevel(String resourceLevel) {
             this.resourceLevel = resourceLevel;
@@ -96,7 +102,7 @@ public class DataZoneSupportCompactionServiceValue extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether this is the recommended option.</p>
+         * <p>Indicates whether the configuration is recommended.</p>
          */
         public Builder recommended(Boolean recommended) {
             this.recommended = recommended;

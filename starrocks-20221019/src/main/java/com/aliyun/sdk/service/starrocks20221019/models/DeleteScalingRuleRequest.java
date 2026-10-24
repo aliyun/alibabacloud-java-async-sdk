@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DeleteScalingRuleRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    private String instanceId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NodeGroupId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String nodeGroupId;
@@ -34,6 +38,7 @@ public class DeleteScalingRuleRequest extends Request {
 
     private DeleteScalingRuleRequest(Builder builder) {
         super(builder);
+        this.instanceId = builder.instanceId;
         this.nodeGroupId = builder.nodeGroupId;
         this.scalingRuleId = builder.scalingRuleId;
         this.triggerType = builder.triggerType;
@@ -50,6 +55,13 @@ public class DeleteScalingRuleRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     /**
@@ -74,6 +86,7 @@ public class DeleteScalingRuleRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteScalingRuleRequest, Builder> {
+        private String instanceId; 
         private String nodeGroupId; 
         private String scalingRuleId; 
         private String triggerType; 
@@ -84,13 +97,26 @@ public class DeleteScalingRuleRequest extends Request {
 
         private Builder(DeleteScalingRuleRequest request) {
             super(request);
+            this.instanceId = request.instanceId;
             this.nodeGroupId = request.nodeGroupId;
             this.scalingRuleId = request.scalingRuleId;
             this.triggerType = request.triggerType;
         } 
 
         /**
-         * <p>Compute group ID.</p>
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-b25e21e24388****</p>
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * <p>The node group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -103,7 +129,7 @@ public class DeleteScalingRuleRequest extends Request {
         }
 
         /**
-         * <p>ID of the scaling rule to delete.</p>
+         * <p>The ID of the scaling rule to be deleted.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +142,7 @@ public class DeleteScalingRuleRequest extends Request {
         }
 
         /**
-         * <p>Trigger type.</p>
+         * <p>The trigger type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -195,7 +195,7 @@ public class QueryModifyCuPriceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -419,7 +419,7 @@ public class QueryModifyCuPriceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The price reduction information.</p>
+             * <p>The price reduction ratio.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -430,7 +430,7 @@ public class QueryModifyCuPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total list price after the price reduction.</p>
+             * <p>The total official website price after the price reduction.</p>
              * 
              * <strong>example:</strong>
              * <p>7986</p>
@@ -441,7 +441,7 @@ public class QueryModifyCuPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether to display the price reduction.</p>
+             * <p>Indicates whether the price reduction margin is displayed.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -452,7 +452,7 @@ public class QueryModifyCuPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The original total list price.</p>
+             * <p>The original total official website price.</p>
              * 
              * <strong>example:</strong>
              * <p>7986</p>
@@ -640,7 +640,7 @@ public class QueryModifyCuPriceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The price for purchasing Elastic Computing Service (ECS) servers of a specific configuration in bulk. Valid values: 1 to 1000.</p>
+             * <p>Queries the price for bulk purchasing Elastic Computing Service servers with a specific configuration. Valid values: 1 to 1000.</p>
              * <p>Default value: 1.</p>
              * 
              * <strong>example:</strong>
@@ -856,7 +856,7 @@ public class QueryModifyCuPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The price reduction information.</p>
+             * <p>The price reduction ratio.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -867,7 +867,7 @@ public class QueryModifyCuPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The discount amount, which is the original amount minus the payable amount (including coupon deductions).</p>
+             * <p>The discount amount, which is calculated by subtracting the payable amount on the bill (including the coupon deduction amount) from the original amount.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -886,7 +886,7 @@ public class QueryModifyCuPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The original amount, which is the catalog price multiplied by the billable usage.</p>
+             * <p>The original price, which is calculated by multiplying the list price by the billable usage.</p>
              * 
              * <strong>example:</strong>
              * <p>7986</p>
@@ -905,7 +905,7 @@ public class QueryModifyCuPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The discounted price based on the list price discount.</p>
+             * <p>The discount price based on the official website discount.</p>
              * 
              * <strong>example:</strong>
              * <p>7986</p>
@@ -916,7 +916,7 @@ public class QueryModifyCuPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list discount price.</p>
+             * <p>The official website discount price.</p>
              * 
              * <strong>example:</strong>
              * <p>7986</p>

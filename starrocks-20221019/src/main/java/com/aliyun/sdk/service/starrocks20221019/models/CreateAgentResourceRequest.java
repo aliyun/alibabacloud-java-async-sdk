@@ -184,7 +184,7 @@ public class CreateAgentResourceRequest extends Request {
         }
 
         /**
-         * <p>Enable auto-renewal. This parameter is valid only when payType is set to PrePaid. Auto-renewal is disabled by default.</p>
+         * <p>Specifies whether to enable auto-renewal. This parameter is valid only when PayType is set to prePaid. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -196,7 +196,7 @@ public class CreateAgentResourceRequest extends Request {
         }
 
         /**
-         * <p>Number of CUs. A CU (Compute Unit) is the basic unit of service measurement. 1 CU = 1 CPU core + 4 GiB memory. For memory-enhanced instance family, 1 CU = 1 CPU core + 8 GiB memory.</p>
+         * <p>The number of compute units (CUs). A CU is the basic metering unit of the service. One CU equals one vCPU and 4 GiB of memory. If SpecType is set to the memory-enhanced instance family, one CU equals one vCPU and 8 GiB of memory.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -209,7 +209,7 @@ public class CreateAgentResourceRequest extends Request {
         }
 
         /**
-         * <p>Duration. This parameter is valid only when payType is set to PrePaid.</p>
+         * <p>The subscription duration. This parameter is valid only when PayType is set to prePaid.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -221,7 +221,7 @@ public class CreateAgentResourceRequest extends Request {
         }
 
         /**
-         * <p>Instance ID.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -234,13 +234,7 @@ public class CreateAgentResourceRequest extends Request {
         }
 
         /**
-         * <p>Payment type:</p>
-         * <ol>
-         * <li><p>Subscription (prePaid).</p>
-         * </li>
-         * <li><p>Pay-as-you-go (postPaid).</p>
-         * </li>
-         * </ol>
+         * <p>The billing method. Valid values:<ol><li>prePaid: subscription.</li><li>postPaid: pay-as-you-go.</li></ol></p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -253,14 +247,7 @@ public class CreateAgentResourceRequest extends Request {
         }
 
         /**
-         * <p>Unit of subscription duration:</p>
-         * <ul>
-         * <li><p>Month</p>
-         * </li>
-         * <li><p>Year</p>
-         * </li>
-         * </ul>
-         * <p>This parameter is valid only when payType is set to PrePaid.</p>
+         * <p>The unit of the subscription duration. Valid values:<ul><li>Month</li><li>Year</li></ul>This parameter is valid only when PayType is set to prePaid.</p>
          * 
          * <strong>example:</strong>
          * <p>Month</p>
@@ -272,7 +259,7 @@ public class CreateAgentResourceRequest extends Request {
         }
 
         /**
-         * <p>Coupon ID.</p>
+         * <p>The coupon ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2345</p>
@@ -284,7 +271,7 @@ public class CreateAgentResourceRequest extends Request {
         }
 
         /**
-         * <p>Compute group specification type.</p>
+         * <p>The specification type of the compute group.</p>
          * 
          * <strong>example:</strong>
          * <p>standard</p>

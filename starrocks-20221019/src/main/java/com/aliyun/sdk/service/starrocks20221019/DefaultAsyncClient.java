@@ -134,7 +134,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you fully understand the billing method and &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.</p>
+     * <p>Before you call this operation, make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.</p>
      * 
      * @param request the request parameters of CreateInstanceV1  CreateInstanceV1Request
      * @return CreateInstanceV1Response
@@ -154,6 +154,18 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.
+     * Take note of the following items when you call this operation:</p>
+     * <ul>
+     * <li>Only Standard Standard instances support modifying the number of compute units (CUs) in a compute group. Starter Standard instances do not support this operation.</li>
+     * <li>Only instances whose compute group specification type is standard support increasing the number of disks.</li>
+     * <li>The instance must be in the Running state.
+     * After you modify the number of CUs, the billing changes are as follows:</li>
+     * <li>Pay-as-you-go: You are billed based on the new number of CUs.</li>
+     * <li>Subscription: Within the billing cycle, the supplementary fee is calculated based on the price difference between the new and old configurations and the remaining days (from 00:00 the next day to the end of the validity period).</li>
+     * </ul>
+     * 
      * @param request the request parameters of CreateScalingRule  CreateScalingRuleRequest
      * @return CreateScalingRuleResponse
      */
@@ -271,6 +283,18 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of EMR Serverless StarRocks before you call this operation.
+     * Note the following when you call this operation:</p>
+     * <ul>
+     * <li>Only Standard Standard instances support modifying the number of CUs for a node group. Starter Standard instances do not support this feature.</li>
+     * <li>Only instances whose node group specification type is Standard Edition (standard) support adding disks.</li>
+     * <li>The instance must be in the Running state.
+     * After you modify the number of CUs, the billing changes are as follows:</li>
+     * <li>Pay-as-you-go: You are billed based on the new number of CUs.</li>
+     * <li>Subscription: Within the billing cycle, the supplementary fee is calculated based on the price difference between the new and old configurations and the remaining days (from 00:00 the next day to the end of the validity period).</li>
+     * </ul>
+     * 
      * @param request the request parameters of DeleteScalingRule  DeleteScalingRuleRequest
      * @return DeleteScalingRuleResponse
      */
@@ -308,7 +332,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Retrieve details of backup policies.</p>
+     * <p>Retrieves the details of a backup policy.</p>
      * 
      * @param request the request parameters of DescribeBackupPolicies  DescribeBackupPoliciesRequest
      * @return DescribeBackupPoliciesResponse
@@ -329,7 +353,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This is an asynchronous interface. Instance restarts are not immediate. After a successful call, the instance first enters the restarting state. The instance is successfully restarted when its status returns to running.</p>
+     * <p>This API operation is asynchronous. The instance restart is not completed immediately. After a successful call, the instance first enters the restarting state. When the returned state is running, the restart is successful.</p>
      * 
      * @param request the request parameters of DescribeBackups  DescribeBackupsRequest
      * @return DescribeBackupsResponse
@@ -350,7 +374,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This is an asynchronous API, meaning the instance restart is not immediate. After a successful call, the instance enters the <code>restarting</code> state, and the process completes when its state changes to <code>running</code>.</p>
+     * <p>This operation is asynchronous. The instance restart is not completed immediately. After a successful call, the instance first enters the restarting state. When the returned state is running, the restart is successful.</p>
      * 
      * @param request the request parameters of DescribeConfigHistory  DescribeConfigHistoryRequest
      * @return DescribeConfigHistoryResponse
@@ -460,6 +484,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Danger: After an instance is released, the physical resources used by the instance are reclaimed. All related data is lost and cannot be recovered.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of DescribeInstances  DescribeInstancesRequest
      * @return DescribeInstancesResponse
      */
@@ -650,7 +679,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c4g.11186623.help-menu-28066.d_0_1_1.4db82b05p3Gg0G">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.</p>
+     * <p>Before you call this operation, make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.</p>
      * 
      * @param request the request parameters of GetInstanceFeatureGate  GetInstanceFeatureGateRequest
      * @return GetInstanceFeatureGateResponse
@@ -818,15 +847,15 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Before you use this operation, make sure that you fully understand the billing method and &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.
+     * <p>Before you call this operation, make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.
      * When you call this operation, take note of the following items:</p>
      * <ul>
-     * <li>Only standard instances support modifying the number of CUs for a compute group. Starter instances do not support this operation.</li>
-     * <li>Only instances whose compute group specification type is Standard (standard) support increasing the number of cloud disks.</li>
+     * <li>Only Standard Standard instances support modifying the number of CUs for compute groups. Starter Standard instances do not support this operation.</li>
+     * <li>Only instances whose compute group specification type is Standard (standard) support increasing the number of disks.</li>
      * <li>The instance must be in the Running state.
-     * After you modify the number of CUs, billing changes are as follows:</li>
-     * <li>Pay-as-you-go: You are charged based on the new number of CUs.</li>
-     * <li>Subscription: Within the billing cycle, the supplemental fee is calculated based on the price difference between the old and new configurations and the remaining days (from 00:00 of the next day to the end of the validity period).</li>
+     * After you modify the number of CUs, the billing changes are as follows:</li>
+     * <li>Pay-as-you-go: You are billed based on the new number of CUs.</li>
+     * <li>Subscription: Within the billing cycle, the supplementary fee is calculated based on the price difference between the new and old configurations and the remaining days (from 00:00 the next day to the end of the validity period).</li>
      * </ul>
      * 
      * @param request the request parameters of ModifyCu  ModifyCuRequest
@@ -896,17 +925,16 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Before you use this operation, make sure that you fully understand the billing and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product?spm=openapi-amp.newDocPublishment.0.0.1837281f3hbi2d#/ecs/detail/vm">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/ecs?_p_lc=1#pricing">pricing</a> of Serverless StarRocks.
-     * When you call this operation, take note of the following items:</p>
+     * <p>Before you call this operation, make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product?spm=openapi-amp.newDocPublishment.0.0.1837281f3hbi2d#/ecs/detail/vm">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/ecs?_p_lc=1#pricing">pricing</a> of Serverless StarRocks. Take note of the following items when you call this operation:</p>
      * <ul>
-     * <li>Only standard instances support disk specification changes. Entry-level instances are not supported.</li>
+     * <li>Only Standard Standard instances support disk specification changes. Starter Standard instances do not support this feature.</li>
      * <li>Only instances whose compute group specification type is Standard (standard) support disk specification changes.</li>
      * <li>The instance must be in the Running state.</li>
-     * <li>Downgrading the disk to PL0 is not supported.</li>
-     * <li>Because the performance level (PL) of an ESSD is limited by its capacity, if you cannot upgrade the performance level (PL), expand the cloud disk capacity and try again. For more information, see &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/ecs/user-guide/essds">ESSDs</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/ecs/user-guide/essds">ESSDs</a>.
-     * After the disk specification is changed, billing changes are as follows:</li>
-     * <li>Pay-as-you-go: Billed based on the new disk type.</li>
-     * <li>Subscription: Within the billing cycle, the additional fee is calculated based on the price difference between the old and new configurations and the remaining days (from 00:00 of the next day to the end of the validity period).</li>
+     * <li>Downgrading a disk to PL0 is not supported.</li>
+     * <li>The performance level (PL) of a standard SSD is limited by its capacity. If you cannot upgrade the performance level (PL), expand the capacity and try again. For more information, see &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/ecs/user-guide/essds">ESSD cloud disks</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/ecs/user-guide/essds">ESSD cloud disks</a>.
+     * After the disk specification is changed, the billing changes are as follows:</li>
+     * <li>Pay-as-you-go: The disk is billed based on the new disk type.</li>
+     * <li>Subscription: Within the billing cycle, the supplementary fee is calculated based on the price difference between the new and old specifications and the remaining days (from 00:00 the next day to the end of the validity period).</li>
      * </ul>
      * 
      * @param request the request parameters of ModifyDiskPerformanceLevel  ModifyDiskPerformanceLevelRequest
@@ -958,15 +986,14 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you fully understand the billing method and &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.
-     * When you call this operation, take note of the following items:</p>
+     * <p>Make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks before you call this operation. Take note of the following items when you call this operation:</p>
      * <ul>
      * <li>Only Standard Standard instances support disk expansion. Starter Standard instances do not support disk expansion.</li>
      * <li>Only instances whose compute group specification type is Standard (standard) support disk expansion.</li>
      * <li>The instance must be in the Running state.
-     * After disk expansion, billing changes are as follows:</li>
+     * After the disk is expanded, the billing changes are as follows:</li>
      * <li>Pay-as-you-go: You are billed based on the new disk size.</li>
-     * <li>Subscription: Within the billing cycle, the supplemental fee is calculated based on the price difference between the old and new configurations and the remaining days (from 00:00 of the next day to the end of the validity period).</li>
+     * <li>Subscription: Within the billing cycle, the supplementary fee is calculated based on the price difference between the new and old configurations and the remaining days (from 00:00 the next day to the end of the validity period).</li>
      * </ul>
      * 
      * @param request the request parameters of ModifyDiskType  ModifyDiskTypeRequest
@@ -1107,6 +1134,18 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.
+     * When you call this operation, take note of the following items:</p>
+     * <ul>
+     * <li>Only Standard Standard instances support modifying the number of CUs in a compute group. Starter Standard instances do not support this feature.</li>
+     * <li>Only instances with a compute group specification type of Standard (standard) support increasing the number of disks.</li>
+     * <li>The instance must be in the Running state.
+     * After you modify the number of CUs, the billing changes are as follows:</li>
+     * <li>Pay-as-you-go: You are billed based on the new number of CUs.</li>
+     * <li>Subscription: Within the billing cycle, the supplementary fee is calculated based on the price difference between the new and old configurations and the remaining days (from 00:00 the next day to the end of the validity period).</li>
+     * </ul>
+     * 
      * @param request the request parameters of ModifyScalingRule  ModifyScalingRuleRequest
      * @return ModifyScalingRuleResponse
      */
@@ -1246,15 +1285,15 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you fully understand the billing method and &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.
-     * When you call this operation, take note of the following items:</p>
+     * <p>Before you call this operation, make sure that you understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of EMR Serverless StarRocks.
+     * When you call this operation, note the following:</p>
      * <ul>
-     * <li>Only standard instances support modifying the CU count of a compute group. Starter instances do not support this operation.</li>
-     * <li>Only instances whose compute group specification type is Standard (standard) support increasing the number of disks.</li>
+     * <li>Only Standard Standard instances support modifying the CU count of a compute group. Starter Standard instances do not support this operation.</li>
+     * <li>Only instances with the standard compute group specification type support adding disks.</li>
      * <li>The instance must be in the Running state.
-     * After you modify the CU count, billing changes are as follows:</li>
+     * After you modify the CU count, the billing changes are as follows:</li>
      * <li>Pay-as-you-go: You are billed based on the new CU count.</li>
-     * <li>Subscription: Within the billing cycle, the supplemental fee is calculated based on the price difference between the old and new configurations and the remaining days (from 00:00 of the next day to the end of the validity period).</li>
+     * <li>Subscription: Within the billing cycle, the supplementary fee is calculated based on the price difference between the new and old configurations and the remaining days (from 00:00 the next day to the end of the validity period).</li>
      * </ul>
      * 
      * @param request the request parameters of QueryModifyCuPrice  QueryModifyCuPriceRequest

@@ -167,7 +167,7 @@ public class DescribeConfigHistoryRequest extends Request {
         }
 
         /**
-         * <p>Filters the results by the effective status of the configuration.</p>
+         * <p>The effective status.</p>
          * 
          * <strong>example:</strong>
          * <p>effective</p>
@@ -179,7 +179,7 @@ public class DescribeConfigHistoryRequest extends Request {
         }
 
         /**
-         * <p>The end time for the query, specified as a Unix timestamp in milliseconds.</p>
+         * <p>The end time of the modification history. The time is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1742178604000</p>
@@ -204,7 +204,7 @@ public class DescribeConfigHistoryRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return the total number of configuration history records.</p>
+         * <p>Specifies whether to return all configurations.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -216,7 +216,7 @@ public class DescribeConfigHistoryRequest extends Request {
         }
 
         /**
-         * <p>The page number. The default value is 1.</p>
+         * <p>The page number. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -228,7 +228,7 @@ public class DescribeConfigHistoryRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. The default value is 10.</p>
+         * <p>The number of entries per page in a paging query. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -240,7 +240,7 @@ public class DescribeConfigHistoryRequest extends Request {
         }
 
         /**
-         * <p>The start time for the query, specified as a Unix timestamp in milliseconds.</p>
+         * <p>The start time of the modification history. The time is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1742178604000</p>

@@ -155,7 +155,7 @@ public class ModifySpecTypeRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to automatically purchase (pay for) all products specified in the Products parameter.</p>
+         * <p>Specifies whether to automatically pay for all products specified in the Products parameter.</p>
          * <ul>
          * <li>true: Automatic payment.</li>
          * <li>false: No automatic payment.</li>
@@ -171,9 +171,9 @@ public class ModifySpecTypeRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to use the fast restart mode. Default value: false.</p>
+         * <p>Specifies whether to restart in fast restart mode. Default value: false.</p>
          * <ul>
-         * <li>true: Restarts compute nodes in fast restart mode. Compute nodes are restarted in multiple batches. Nodes within a batch are restarted in parallel, and batches execute sequentially.</li>
+         * <li>true: Restarts compute nodes in fast restart mode. Compute nodes are restarted in multiple batches. Nodes within a batch are restarted in parallel, and batches execute serially.</li>
          * <li>false: Restarts compute nodes in rolling restart mode.</li>
          * </ul>
          * 

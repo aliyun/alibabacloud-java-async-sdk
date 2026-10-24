@@ -162,7 +162,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP request status code.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -184,7 +184,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -342,18 +342,13 @@ public class DescribeBackupsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The compute group type. Includes the following values:</p>
+             * <p>The compute group type. Valid values:</p>
              * <ul>
-             * <li><p>FE</p>
-             * </li>
-             * <li><p>BE</p>
-             * </li>
-             * <li><p>CN</p>
-             * </li>
-             * <li><p>OBSERVER</p>
-             * </li>
-             * <li><p>AGENT</p>
-             * </li>
+             * <li>FE</li>
+             * <li>BE</li>
+             * <li>CN</li>
+             * <li>OBSERVER</li>
+             * <li>AGENT</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -365,7 +360,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of CUs. A CU (Compute Unit) is the basic unit of measurement for the service. 1 CU equals 1 CPU core + 4 GiB memory. If SpecType is memory-enhanced instance family, 1 CU equals 1 CPU core + 8 GiB memory.</p>
+             * <p>The number of CUs. A CU (compute unit) is the basic billing unit of the service. 1 CU = 1 vCPU + 4 GiB of memory. Only when SpecType is set to the memory-enhanced instance family, 1 CU = 1 vCPU + 8 GiB of memory.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
@@ -387,7 +382,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node group\&quot;s local SSD instance type. This value is only meaningful for ECS instances where SpecType is local SSD or large-capacity storage.</p>
+             * <p>The local SSD instance specification of the node group. This value is valid only when the instance is based on ECS and SpecType is set to local SSD or large-capacity storage.</p>
              * 
              * <strong>example:</strong>
              * <p>null</p>
@@ -409,18 +404,13 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The compute group specification type. Includes the following types:</p>
+             * <p>The specification type of the compute group. Valid values:</p>
              * <ul>
-             * <li><p>standard: Standard Edition.</p>
-             * </li>
-             * <li><p>localSSD: Local SSD.</p>
-             * </li>
-             * <li><p>bigData: Large-capacity storage.</p>
-             * </li>
-             * <li><p>ramEnhanced: Memory-enhanced instance family.</p>
-             * </li>
-             * <li><p>networkEnhanced: Network-enhanced.</p>
-             * </li>
+             * <li>standard: standard edition</li>
+             * <li>localSSD: local SSD</li>
+             * <li>bigData: large-capacity storage</li>
+             * <li>ramEnhanced: memory-enhanced instance family</li>
+             * <li>networkEnhanced: network-enhanced</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -432,16 +422,12 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The performance level (PL) of the cloud disk. Includes the following values:</p>
+             * <p>The performance level (PL) of the cloud disk. Valid values:</p>
              * <ul>
-             * <li><p>pl0: Maximum random read/write IOPS of 10,000 per disk.</p>
-             * </li>
-             * <li><p>pl1: Maximum random read/write IOPS of 50,000 per disk.</p>
-             * </li>
-             * <li><p>pl2: Maximum random read/write IOPS of 100,000 per disk.</p>
-             * </li>
-             * <li><p>pl3: Maximum random read/write IOPS of 1,000,000 per disk.</p>
-             * </li>
+             * <li>pl0: A single disk delivers up to 10,000 random read/write IOPS.</li>
+             * <li>pl1: A single disk delivers up to 50,000 random read/write IOPS.</li>
+             * <li>pl2: A single disk delivers up to 100,000 random read/write IOPS.</li>
+             * <li>pl3: A single disk delivers up to 1,000,000 random read/write IOPS.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -453,7 +439,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage size in GiB.</p>
+             * <p>The storage size. Unit: GiB.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -760,12 +746,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cluster\&quot;s running mode:</p>
+             * <p>The running mode of the cluster. Valid values:</p>
              * <ul>
-             * <li><p>Shared-nothing.</p>
-             * </li>
-             * <li><p>Shared-data.</p>
-             * </li>
+             * <li>shared_nothing: integrated storage and computing</li>
+             * <li>shared_data: disaggregated storage and computing</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -777,18 +761,13 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The compute group specification type. Includes the following types:</p>
+             * <p>The specification type of the compute group. Valid values:</p>
              * <ul>
-             * <li><p>standard: Standard Edition.</p>
-             * </li>
-             * <li><p>localSSD: Local SSD.</p>
-             * </li>
-             * <li><p>bigData: Large-capacity storage.</p>
-             * </li>
-             * <li><p>ramEnhanced: Memory-enhanced instance family.</p>
-             * </li>
-             * <li><p>networkEnhanced: Network-enhanced.</p>
-             * </li>
+             * <li>standard: standard edition</li>
+             * <li>localSSD: local SSD</li>
+             * <li>bigData: large-capacity storage</li>
+             * <li>ramEnhanced: memory-enhanced instance family</li>
+             * <li>networkEnhanced: network-enhanced</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -989,7 +968,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task end time.</p>
+             * <p>The task end time. The time is a UNIX timestamp in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1747718190</p>
@@ -1000,7 +979,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data size in GiB.</p>
+             * <p>The data size. Unit: GiB.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1022,7 +1001,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task start date.</p>
+             * <p>The task start time. The time is a UNIX timestamp in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1747708190</p>
@@ -1033,7 +1012,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The backup job status.</p>
+             * <p>The backup task status.</p>
              * 
              * <strong>example:</strong>
              * <p>success</p>
@@ -1044,7 +1023,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data table name.</p>
+             * <p>The table name.</p>
              * 
              * <strong>example:</strong>
              * <p>cdc_ods_t2030_lcpf_api_topic_msg</p>
@@ -1244,7 +1223,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The end time of this backup.</p>
+             * <p>The end time of the current backup. The time is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1742179028000</p>
@@ -1255,7 +1234,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of this backup.</p>
+             * <p>The start time of the current backup. The time is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1742179018000</p>
@@ -1277,12 +1256,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The backup type:</p>
+             * <p>The backup type. Valid values:</p>
              * <ul>
-             * <li><p><strong>0</strong>: Fast backup.</p>
-             * </li>
-             * <li><p><strong>1</strong>: Consistent backup.</p>
-             * </li>
+             * <li><strong>0</strong>: quick backup</li>
+             * <li><strong>1</strong>: consistent backup</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1297,7 +1274,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
              * <p>The task description.</p>
              * 
              * <strong>example:</strong>
-             * <p>任务描述</p>
+             * <p>Task description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1305,7 +1282,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration time of the backup data.</p>
+             * <p>The expiration time of the backup data. The time is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1742189008000</p>
@@ -1346,7 +1323,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cloud disk size in GiB.</p>
+             * <p>The cloud disk size. Unit: GiB.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -1357,7 +1334,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The backup job status.</p>
+             * <p>The backup task status.</p>
              * 
              * <strong>example:</strong>
              * <p>RUNNING</p>

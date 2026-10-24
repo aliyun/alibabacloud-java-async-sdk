@@ -156,7 +156,7 @@ public class DescribeInstanceDiagnosisResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Returned data.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -164,7 +164,7 @@ public class DescribeInstanceDiagnosisResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error code.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>InvalidParams</p>
@@ -175,7 +175,7 @@ public class DescribeInstanceDiagnosisResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error message.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>Invalid params: [instance not exists].</p>
@@ -186,7 +186,7 @@ public class DescribeInstanceDiagnosisResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>HTTP request status code.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -197,7 +197,7 @@ public class DescribeInstanceDiagnosisResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>32A44F0D-BFF6-5664-999A-218BBDE74XXX</p>
@@ -208,7 +208,7 @@ public class DescribeInstanceDiagnosisResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -219,7 +219,7 @@ public class DescribeInstanceDiagnosisResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Total number of query results.</p>
+         * <p>The total number of query results.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -431,10 +431,10 @@ public class DescribeInstanceDiagnosisResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Best Practices.</p>
+             * <p>The best practices.</p>
              * 
              * <strong>example:</strong>
-             * <p>无</p>
+             * <p>None</p>
              */
             public Builder bestPractice(String bestPractice) {
                 this.bestPractice = bestPractice;
@@ -442,10 +442,10 @@ public class DescribeInstanceDiagnosisResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Diagnosis item description.</p>
+             * <p>The diagnosis item description.</p>
              * 
              * <strong>example:</strong>
-             * <p>Evaluate unreasonable partition and bucket configuration</p>
+             * <p>Unreasonable partitioning and bucketing</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -453,7 +453,7 @@ public class DescribeInstanceDiagnosisResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Evaluation dimension.</p>
+             * <p>The evaluation dimension.</p>
              * 
              * <strong>example:</strong>
              * <p>table_analysis</p>
@@ -464,7 +464,7 @@ public class DescribeInstanceDiagnosisResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Evaluation time.</p>
+             * <p>The evaluation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-03-08T02:12:32Z</p>
@@ -475,7 +475,7 @@ public class DescribeInstanceDiagnosisResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Full score for the evaluation item.</p>
+             * <p>The full score of the evaluation item.</p>
              * 
              * <strong>example:</strong>
              * <p>10.0</p>
@@ -486,7 +486,7 @@ public class DescribeInstanceDiagnosisResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Instance ID.</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>c-b25e21e243889XXX</p>
@@ -497,7 +497,7 @@ public class DescribeInstanceDiagnosisResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Evaluation item introduction.</p>
+             * <p>The evaluation item introduction.</p>
              * 
              * <strong>example:</strong>
              * <p>for autotest</p>
@@ -508,7 +508,7 @@ public class DescribeInstanceDiagnosisResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Evaluation item ID.</p>
+             * <p>The evaluation item ID.</p>
              * 
              * <strong>example:</strong>
              * <p>02cf887a</p>
@@ -519,10 +519,10 @@ public class DescribeInstanceDiagnosisResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Evaluation item name.</p>
+             * <p>The evaluation item name.</p>
              * 
              * <strong>example:</strong>
-             * <p>Evaluate unreasonable partition and bucket configuration</p>
+             * <p>Unreasonable partitioning and bucketing</p>
              */
             public Builder itemName(String itemName) {
                 this.itemName = itemName;
@@ -530,7 +530,7 @@ public class DescribeInstanceDiagnosisResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Report date.</p>
+             * <p>The report date in the YYYY-MM-DD format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-03-08</p>
@@ -541,7 +541,7 @@ public class DescribeInstanceDiagnosisResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Diagnosis score.</p>
+             * <p>The diagnosis score.</p>
              * 
              * <strong>example:</strong>
              * <p>10.0</p>
@@ -552,7 +552,7 @@ public class DescribeInstanceDiagnosisResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Status list.</p>
+             * <p>The status list. Valid values:</p>
              * <ul>
              * <li><p>healthy</p>
              * </li>
@@ -573,10 +573,10 @@ public class DescribeInstanceDiagnosisResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Diagnosis suggestion.</p>
+             * <p>The diagnosis suggestion.</p>
              * 
              * <strong>example:</strong>
-             * <p>未出现分桶大小超过5GB的情况，评估结果为健康。</p>
+             * <p>No bucket exceeds 5 GB in size. The evaluation result is healthy</p>
              */
             public Builder suggestion(String suggestion) {
                 this.suggestion = suggestion;

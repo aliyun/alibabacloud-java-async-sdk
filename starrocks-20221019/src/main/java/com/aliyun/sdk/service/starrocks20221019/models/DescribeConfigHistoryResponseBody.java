@@ -145,7 +145,7 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The access denied details.</p>
+         * <p>The details of the permission check failure.</p>
          * 
          * <strong>example:</strong>
          * <p>{     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,     &quot;AuthPrincipalOwnerId&quot;: &quot;xxx&quot;,     &quot;EncodedDiagnosticMessage&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalType&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalDisplayName&quot;: &quot;xxx&quot;,     &quot;NoPermissionType&quot;: &quot;ImplicitDeny&quot;,     &quot;AuthAction&quot;: &quot;sr:xxx&quot;   }</p>
@@ -208,7 +208,7 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -301,7 +301,7 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The effective status on the node.</p>
+             * <p>The effective status.</p>
              * 
              * <strong>example:</strong>
              * <p>effective</p>
@@ -432,13 +432,13 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The action performed. Valid values:</p>
+             * <p>The modification type. Valid values:</p>
              * <ul>
-             * <li><p><code>MODIFY</code></p>
+             * <li><p>MODIFY</p>
              * </li>
-             * <li><p><code>ADD</code></p>
+             * <li><p>ADD</p>
              * </li>
-             * <li><p><code>DELETE</code></p>
+             * <li><p>DELETE</p>
              * </li>
              * </ul>
              * 
@@ -451,7 +451,7 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The new value.</p>
+             * <p>The value after the modification.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
@@ -462,7 +462,7 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The previous value.</p>
+             * <p>The value before the modification.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -486,23 +486,23 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
             /**
              * <p>The configuration type. Valid values:</p>
              * <ul>
-             * <li><p><code>FE</code></p>
+             * <li><p>FE</p>
              * </li>
-             * <li><p><code>BE</code></p>
+             * <li><p>BE</p>
              * </li>
-             * <li><p><code>core-site.xml</code></p>
+             * <li><p>core-site.xml</p>
              * </li>
-             * <li><p><code>hdfs-site.xml</code></p>
+             * <li><p>hdfs-site.xml</p>
              * </li>
-             * <li><p><code>kerberos.keytab</code></p>
+             * <li><p>kerberos.keytab</p>
              * </li>
-             * <li><p><code>krb5.conf</code></p>
+             * <li><p>krb5.conf</p>
              * </li>
-             * <li><p><code>jindosdk.cfg</code></p>
+             * <li><p>jindosdk.cfg</p>
              * </li>
-             * <li><p><code>hadoop-env.sh</code></p>
+             * <li><p>hadoop-env.sh</p>
              * </li>
-             * <li><p><code>hive-site.xml</code></p>
+             * <li><p>hive-site.xml</p>
              * </li>
              * </ul>
              * 
@@ -665,7 +665,7 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Details about the effect of the configuration change.</p>
+             * <p>The details of the configuration history.</p>
              */
             public Builder configHistoryEffectDetails(java.util.List<ConfigHistoryEffectDetails> configHistoryEffectDetails) {
                 this.configHistoryEffectDetails = configHistoryEffectDetails;
@@ -684,7 +684,7 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A list of configuration mementos.</p>
+             * <p>The records of configuration values before and after the modification.</p>
              */
             public Builder configMementos(java.util.List<ConfigMementos> configMementos) {
                 this.configMementos = configMementos;
@@ -714,7 +714,7 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The modification time.</p>
+             * <p>The time when the configuration was modified.</p>
              * 
              * <strong>example:</strong>
              * <p>1742178604000</p>
@@ -736,7 +736,7 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reason for the configuration modification.</p>
+             * <p>The reason for modifying the configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>Test.</p>
@@ -747,7 +747,7 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the change was a rollback.</p>
+             * <p>Indicates whether the operation is a configuration rollback.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>

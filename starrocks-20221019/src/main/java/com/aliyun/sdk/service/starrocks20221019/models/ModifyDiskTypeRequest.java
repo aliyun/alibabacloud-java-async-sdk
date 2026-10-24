@@ -156,10 +156,10 @@ public class ModifyDiskTypeRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to automatically purchase (pay for) all products specified in the Products parameter. Valid values:</p>
+         * <p>Specifies whether to automatically pay for all products specified in the Products parameter. Valid values:</p>
          * <ul>
-         * <li>true: Automatic payment is enabled.</li>
-         * <li>false: Automatic payment is disabled.</li>
+         * <li>true: Automatic payment.</li>
+         * <li>false: Manual payment.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -223,7 +223,7 @@ public class ModifyDiskTypeRequest extends Request {
         }
 
         /**
-         * <p>The target disk performance level.</p>
+         * <p>The target disk performance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

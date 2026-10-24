@@ -154,7 +154,7 @@ public class DescribeInstanceDiagnosisResultRequest extends Request {
         }
 
         /**
-         * <p>Evaluation dimension.</p>
+         * <p>The evaluation dimension.</p>
          * 
          * <strong>example:</strong>
          * <p>table_analysis</p>
@@ -166,7 +166,7 @@ public class DescribeInstanceDiagnosisResultRequest extends Request {
         }
 
         /**
-         * <p>Instance ID.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>c-b25e21e24388****</p>
@@ -178,7 +178,7 @@ public class DescribeInstanceDiagnosisResultRequest extends Request {
         }
 
         /**
-         * <p>The page number for paged queries. The default value is 1.</p>
+         * <p>The page number for paging. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -190,7 +190,7 @@ public class DescribeInstanceDiagnosisResultRequest extends Request {
         }
 
         /**
-         * <p>The number of authorized entries displayed per page for paged queries. The default value is 10, and the maximum value is 50.</p>
+         * <p>The number of authorization entries returned per page when paging. Default value: 10. Maximum value: 50.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -202,7 +202,7 @@ public class DescribeInstanceDiagnosisResultRequest extends Request {
         }
 
         /**
-         * <p>Report time.</p>
+         * <p>The report date in the YYYY-MM-DD format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-03-08</p>
@@ -214,7 +214,7 @@ public class DescribeInstanceDiagnosisResultRequest extends Request {
         }
 
         /**
-         * <p>Status collection.</p>
+         * <p>The status collection.</p>
          * 
          * <strong>example:</strong>
          * <p>healthy</p>

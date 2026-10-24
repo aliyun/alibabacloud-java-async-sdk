@@ -125,7 +125,7 @@ public class UpdatePublicNetworkStatusRequest extends Request {
         }
 
         /**
-         * <p>Data returned by the operation.</p>
+         * <p>The returned data.</p>
          * 
          * <strong>example:</strong>
          * <p>BE</p>
@@ -137,7 +137,7 @@ public class UpdatePublicNetworkStatusRequest extends Request {
         }
 
         /**
-         * <p>Data returned by the operation.</p>
+         * <p>The returned data.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -150,7 +150,7 @@ public class UpdatePublicNetworkStatusRequest extends Request {
         }
 
         /**
-         * <p>The compute group ID.</p>
+         * <p>The ID of the compute group.</p>
          * 
          * <strong>example:</strong>
          * <p>ng-3d5ce6454354****</p>
@@ -162,7 +162,7 @@ public class UpdatePublicNetworkStatusRequest extends Request {
         }
 
         /**
-         * <p>Enable or disable the public network.</p>
+         * <p>Specifies whether to enable or disable Internet access.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

@@ -22,6 +22,10 @@ public class ModifyScalingRuleRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    private String instanceId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NewTriggerType")
     @com.aliyun.core.annotation.Validation(required = true)
     private String newTriggerType;
@@ -49,6 +53,7 @@ public class ModifyScalingRuleRequest extends Request {
     private ModifyScalingRuleRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.instanceId = builder.instanceId;
         this.newTriggerType = builder.newTriggerType;
         this.nodeGroupId = builder.nodeGroupId;
         this.oldTriggerType = builder.oldTriggerType;
@@ -74,6 +79,13 @@ public class ModifyScalingRuleRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     /**
@@ -113,6 +125,7 @@ public class ModifyScalingRuleRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyScalingRuleRequest, Builder> {
         private String regionId; 
+        private String instanceId; 
         private String newTriggerType; 
         private String nodeGroupId; 
         private String oldTriggerType; 
@@ -126,6 +139,7 @@ public class ModifyScalingRuleRequest extends Request {
         private Builder(ModifyScalingRuleRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.instanceId = request.instanceId;
             this.newTriggerType = request.newTriggerType;
             this.nodeGroupId = request.nodeGroupId;
             this.oldTriggerType = request.oldTriggerType;
@@ -143,7 +157,19 @@ public class ModifyScalingRuleRequest extends Request {
         }
 
         /**
-         * <p>New trigger type.</p>
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-b25e21e24388****</p>
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * <p>The new trigger type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,7 +182,7 @@ public class ModifyScalingRuleRequest extends Request {
         }
 
         /**
-         * <p>Compute group ID.</p>
+         * <p>The ID of the compute group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -169,7 +195,7 @@ public class ModifyScalingRuleRequest extends Request {
         }
 
         /**
-         * <p>Old trigger type.</p>
+         * <p>The original trigger type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -182,7 +208,7 @@ public class ModifyScalingRuleRequest extends Request {
         }
 
         /**
-         * <p>Rule content.</p>
+         * <p>The content of the rule.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -220,7 +246,7 @@ public class ModifyScalingRuleRequest extends Request {
         }
 
         /**
-         * <p>ID of the scaling rule to modify.</p>
+         * <p>The ID of the scaling rule to be modified.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

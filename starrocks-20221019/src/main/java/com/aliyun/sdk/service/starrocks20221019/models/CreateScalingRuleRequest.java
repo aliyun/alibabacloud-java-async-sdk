@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateScalingRuleRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    private String instanceId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NodeGroupId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String nodeGroupId;
@@ -34,6 +38,7 @@ public class CreateScalingRuleRequest extends Request {
 
     private CreateScalingRuleRequest(Builder builder) {
         super(builder);
+        this.instanceId = builder.instanceId;
         this.nodeGroupId = builder.nodeGroupId;
         this.rule = builder.rule;
         this.triggerType = builder.triggerType;
@@ -50,6 +55,13 @@ public class CreateScalingRuleRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     /**
@@ -74,6 +86,7 @@ public class CreateScalingRuleRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateScalingRuleRequest, Builder> {
+        private String instanceId; 
         private String nodeGroupId; 
         private String rule; 
         private String triggerType; 
@@ -84,10 +97,23 @@ public class CreateScalingRuleRequest extends Request {
 
         private Builder(CreateScalingRuleRequest request) {
             super(request);
+            this.instanceId = request.instanceId;
             this.nodeGroupId = request.nodeGroupId;
             this.rule = request.rule;
             this.triggerType = request.triggerType;
         } 
+
+        /**
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-b25e21e24388****</p>
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
 
         /**
          * <p>The compute group ID.</p>

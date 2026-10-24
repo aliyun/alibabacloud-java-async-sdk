@@ -173,7 +173,7 @@ public class ModifySpecTypePreCheckResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code of the request.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -195,7 +195,7 @@ public class ModifySpecTypePreCheckResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

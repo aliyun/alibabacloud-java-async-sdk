@@ -143,7 +143,7 @@ public class ModifyScalingRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Order ID.</p>
+         * <p>The order ID.</p>
          * 
          * <strong>example:</strong>
          * <p>24151320976****</p>
@@ -154,7 +154,7 @@ public class ModifyScalingRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error code.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>InvalidParams</p>
@@ -165,7 +165,7 @@ public class ModifyScalingRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error message.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>Invalid params: [Region id should be select from set [cn-beijing, cn-hangzhou]]</p>
@@ -176,7 +176,7 @@ public class ModifyScalingRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>HTTP request status code.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -187,7 +187,7 @@ public class ModifyScalingRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>32A44F0D-BFF6-5664-999A-218BBDE7****</p>
@@ -198,7 +198,7 @@ public class ModifyScalingRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>

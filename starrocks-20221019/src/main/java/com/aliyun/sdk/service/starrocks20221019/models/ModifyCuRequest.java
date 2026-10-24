@@ -155,10 +155,10 @@ public class ModifyCuRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to automatically purchase (pay for) all products specified in the Products parameter.</p>
+         * <p>Specifies whether to automatically pay for all products specified in the Products parameter. Valid values:</p>
          * <ul>
-         * <li>true: Automatic payment.</li>
-         * <li>false: No automatic payment.</li>
+         * <li>true: Enables automatic payment.</li>
+         * <li>false: Disables automatic payment.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -171,10 +171,11 @@ public class ModifyCuRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to use the fast restart mode. Default value: false.</p>
+         * <p>Specifies whether to restart in fast restart mode. Default value: false.</p>
+         * <p>Valid values:</p>
          * <ul>
-         * <li>true: Restarts compute nodes in the fast restart mode. Compute nodes are restarted in multiple batches. Nodes within a batch are restarted in parallel, and batches execute sequentially.</li>
-         * <li>false: Restarts compute nodes in the rolling restart mode.</li>
+         * <li>true: Restarts the compute nodes in fast restart mode. The compute nodes are restarted in multiple batches. Nodes within the same batch are restarted in parallel, and batches execute sequentially.</li>
+         * <li>false: Restarts the compute nodes in rolling restart mode.</li>
          * </ul>
          * 
          * <strong>example:</strong>

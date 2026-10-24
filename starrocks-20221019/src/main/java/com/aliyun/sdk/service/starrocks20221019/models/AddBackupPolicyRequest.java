@@ -168,7 +168,7 @@ public class AddBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>The number of days to retain the backup data.</p>
+         * <p>The number of days that the backup data remains valid.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>
@@ -216,14 +216,11 @@ public class AddBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>The recurrence type for the policy. Valid values:</p>
+         * <p>Specifies the execution type of the time rule. Valid values:</p>
          * <ul>
-         * <li><p>DAILY: Daily.</p>
-         * </li>
-         * <li><p>WEEKLY: Weekly.</p>
-         * </li>
-         * <li><p>MONTHLY: Monthly.</p>
-         * </li>
+         * <li>DAILY: Repeats daily.</li>
+         * <li>WEEKLY: Repeats weekly.</li>
+         * <li>MONTHLY: Repeats monthly.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -236,7 +233,7 @@ public class AddBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>The values for the recurrence.</p>
+         * <p>The values for the policy execution cycle.</p>
          */
         public Builder recurrenceValues(java.util.List<Integer> recurrenceValues) {
             this.putBodyParameter("RecurrenceValues", recurrenceValues);
@@ -245,7 +242,7 @@ public class AddBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>The timeout period for the backup job in seconds.</p>
+         * <p>The timeout period for the backup task, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>3600</p>
