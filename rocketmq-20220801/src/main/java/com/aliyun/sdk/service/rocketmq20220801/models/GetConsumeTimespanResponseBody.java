@@ -145,7 +145,10 @@ public class GetConsumeTimespanResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MissingInstanceId</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -153,7 +156,7 @@ public class GetConsumeTimespanResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -161,7 +164,10 @@ public class GetConsumeTimespanResponseBody extends TeaModel {
         }
 
         /**
-         * dynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -169,7 +175,10 @@ public class GetConsumeTimespanResponseBody extends TeaModel {
         }
 
         /**
-         * dynamicMessage.
+         * <p>The dynamic error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -177,7 +186,10 @@ public class GetConsumeTimespanResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -185,7 +197,10 @@ public class GetConsumeTimespanResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Parameter instanceId is mandatory for this action .</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -193,7 +208,10 @@ public class GetConsumeTimespanResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The unique ID of the request. Use this ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C115601B-8736-5BBF-AC99-7FEAE1245A80</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -201,7 +219,10 @@ public class GetConsumeTimespanResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -319,7 +340,10 @@ public class GetConsumeTimespanResponseBody extends TeaModel {
             } 
 
             /**
-             * consumeTimestamp.
+             * <p>The last time the consumer group consumed a message from this topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1570761026400</p>
              */
             public Builder consumeTimestamp(Long consumeTimestamp) {
                 this.consumeTimestamp = consumeTimestamp;
@@ -327,7 +351,10 @@ public class GetConsumeTimespanResponseBody extends TeaModel {
             }
 
             /**
-             * consumerGroupId.
+             * <p>The ID of the consumer group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CID-TEST</p>
              */
             public Builder consumerGroupId(String consumerGroupId) {
                 this.consumerGroupId = consumerGroupId;
@@ -335,7 +362,10 @@ public class GetConsumeTimespanResponseBody extends TeaModel {
             }
 
             /**
-             * instanceId.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rmq-cn-7e22ody****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -343,7 +373,10 @@ public class GetConsumeTimespanResponseBody extends TeaModel {
             }
 
             /**
-             * maxTimestamp.
+             * <p>The production time of the latest message in the topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1570761026833</p>
              */
             public Builder maxTimestamp(Long maxTimestamp) {
                 this.maxTimestamp = maxTimestamp;
@@ -351,7 +384,10 @@ public class GetConsumeTimespanResponseBody extends TeaModel {
             }
 
             /**
-             * minTimestamp.
+             * <p>The production time of the earliest message in the topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1570761026222</p>
              */
             public Builder minTimestamp(Long minTimestamp) {
                 this.minTimestamp = minTimestamp;
@@ -359,7 +395,10 @@ public class GetConsumeTimespanResponseBody extends TeaModel {
             }
 
             /**
-             * topicName.
+             * <p>The topic to which the consumer group subscribes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>topic_test</p>
              */
             public Builder topicName(String topicName) {
                 this.topicName = topicName;

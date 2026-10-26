@@ -158,7 +158,7 @@ public class ListInstanceAccountResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details about the access denial. This parameter is returned only if the access is denied because the Resource Access Management (RAM) user does not have the required permissions.</p>
+         * <p>The details of the access denial. This parameter is returned only if the request is denied due to insufficient RAM permissions.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -232,7 +232,7 @@ public class ListInstanceAccountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>C115601B-8736-5BBF-AC99-7FEAE1245A80</p>
@@ -243,7 +243,7 @@ public class ListInstanceAccountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -364,12 +364,7 @@ public class ListInstanceAccountResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The status of the account.
-             * Valid values:</p>
-             * <ul>
-             * <li>DISABLE</li>
-             * <li>ENABLE</li>
-             * </ul>
+             * <p>The account status.</p>
              * 
              * <strong>example:</strong>
              * <p>ENABLE</p>
@@ -381,10 +376,6 @@ public class ListInstanceAccountResponseBody extends TeaModel {
 
             /**
              * <p>The account type.</p>
-             * <ul>
-             * <li>CUSTOMER</li>
-             * <li>DEFAULT</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>CUSTOMER</p>
@@ -417,7 +408,10 @@ public class ListInstanceAccountResponseBody extends TeaModel {
             }
 
             /**
-             * remark.
+             * <p>The remark.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -425,7 +419,7 @@ public class ListInstanceAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The username of the account.</p>
+             * <p>The username.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -521,7 +515,7 @@ public class ListInstanceAccountResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The pagination information.</p>
+             * <p>A list of entries on the current page.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -529,7 +523,7 @@ public class ListInstanceAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page number.</p>
+             * <p>The current page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -540,7 +534,7 @@ public class ListInstanceAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of items per page.</p>
+             * <p>The page size.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -551,7 +545,7 @@ public class ListInstanceAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of returned entries.</p>
+             * <p>The total count of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>24</p>

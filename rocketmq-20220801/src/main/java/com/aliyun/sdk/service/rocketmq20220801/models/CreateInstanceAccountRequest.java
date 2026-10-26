@@ -117,7 +117,7 @@ public class CreateInstanceAccountRequest extends Request {
         }
 
         /**
-         * <p>The password of the account.</p>
+         * <p>The account password.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,7 +130,10 @@ public class CreateInstanceAccountRequest extends Request {
         }
 
         /**
-         * remark.
+         * <p>The remark.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is the remark for test.</p>
          */
         public Builder remark(String remark) {
             this.putBodyParameter("remark", remark);
@@ -139,7 +142,7 @@ public class CreateInstanceAccountRequest extends Request {
         }
 
         /**
-         * <p>The username of the account.</p>
+         * <p>The account name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

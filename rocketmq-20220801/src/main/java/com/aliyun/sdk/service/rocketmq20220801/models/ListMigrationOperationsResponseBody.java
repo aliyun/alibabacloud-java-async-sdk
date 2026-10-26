@@ -145,7 +145,10 @@ public class ListMigrationOperationsResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance.NotFound</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -153,7 +156,7 @@ public class ListMigrationOperationsResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -161,7 +164,10 @@ public class ListMigrationOperationsResponseBody extends TeaModel {
         }
 
         /**
-         * dynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InstanceId</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -169,7 +175,10 @@ public class ListMigrationOperationsResponseBody extends TeaModel {
         }
 
         /**
-         * dynamicMessage.
+         * <p>The dynamic error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>consumerGroupId</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -177,7 +186,10 @@ public class ListMigrationOperationsResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -185,7 +197,10 @@ public class ListMigrationOperationsResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The topic already exists.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -193,7 +208,10 @@ public class ListMigrationOperationsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C7E8AE3A-219B-52EE-BE32-4036F5F88833</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -201,7 +219,10 @@ public class ListMigrationOperationsResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -254,7 +275,13 @@ public class ListMigrationOperationsResponseBody extends TeaModel {
             } 
 
             /**
-             * paramData.
+             * <p>The parameter information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *       &quot;action&quot;: &quot;MIGRATE_FORWARD&quot;,
+             *       &quot;targetStage&quot;: &quot;MIGRATE_FINISH&quot;
+             * }</p>
              */
             public Builder paramData(Object paramData) {
                 this.paramData = paramData;
@@ -308,7 +335,16 @@ public class ListMigrationOperationsResponseBody extends TeaModel {
             } 
 
             /**
-             * resultData.
+             * <p>The operation result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *       &quot;checkStatus&quot;: &quot;WAIT_CHECK&quot;,
+             *       &quot;sourceTopicStatus&quot;: &quot;PERM_6&quot;,
+             *       &quot;targetTopicStatus&quot;: &quot;PERM_4&quot;,
+             *       &quot;checkResult&quot;: {},
+             *       &quot;migrateStage&quot;: &quot;DOUBLE_READ&quot;
+             * }</p>
              */
             public Builder resultData(Object resultData) {
                 this.resultData = resultData;
@@ -492,7 +528,10 @@ public class ListMigrationOperationsResponseBody extends TeaModel {
             } 
 
             /**
-             * businessStatus.
+             * <p>The operation business status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DOUBLE_READ</p>
              */
             public Builder businessStatus(String businessStatus) {
                 this.businessStatus = businessStatus;
@@ -500,7 +539,10 @@ public class ListMigrationOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * createTime.
+             * <p>The creation time, in the format of YYYY-MM-DD HH:mm:ss.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-08-01 00:00:00</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -508,7 +550,10 @@ public class ListMigrationOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * migrationId.
+             * <p>The migration ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder migrationId(Long migrationId) {
                 this.migrationId = migrationId;
@@ -516,7 +561,10 @@ public class ListMigrationOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * operationId.
+             * <p>The migration operation ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>183</p>
              */
             public Builder operationId(Long operationId) {
                 this.operationId = operationId;
@@ -524,7 +572,15 @@ public class ListMigrationOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * operationKey.
+             * <p>The primary key of the operation object.</p>
+             * <blockquote>
+             * <ul>
+             * <li>During the message migration stage, the operation object is the topic name.</li>
+             * </ul>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>normal-topic-1</p>
              */
             public Builder operationKey(String operationKey) {
                 this.operationKey = operationKey;
@@ -532,7 +588,7 @@ public class ListMigrationOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * operationParam.
+             * <p>The operation parameter.</p>
              */
             public Builder operationParam(OperationParam operationParam) {
                 this.operationParam = operationParam;
@@ -540,7 +596,7 @@ public class ListMigrationOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * operationResult.
+             * <p>The operation result.</p>
              */
             public Builder operationResult(OperationResult operationResult) {
                 this.operationResult = operationResult;
@@ -548,7 +604,10 @@ public class ListMigrationOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * operationStatus.
+             * <p>The operation status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DOING</p>
              */
             public Builder operationStatus(String operationStatus) {
                 this.operationStatus = operationStatus;
@@ -556,7 +615,10 @@ public class ListMigrationOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * operationType.
+             * <p>The operation type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MIGRATE_MESSAGE</p>
              */
             public Builder operationType(String operationType) {
                 this.operationType = operationType;
@@ -564,7 +626,10 @@ public class ListMigrationOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * stageType.
+             * <p>The migration stage type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MIGRATE_MESSAGE</p>
              */
             public Builder stageType(String stageType) {
                 this.stageType = stageType;
@@ -572,7 +637,10 @@ public class ListMigrationOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * updateTime.
+             * <p>The update time, in the format of YYYY-MM-DD HH:mm:ss.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-08-01 20:05:50</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -665,7 +733,7 @@ public class ListMigrationOperationsResponseBody extends TeaModel {
             } 
 
             /**
-             * list.
+             * <p>The paginated data.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -673,7 +741,10 @@ public class ListMigrationOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * pageNumber.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -681,7 +752,10 @@ public class ListMigrationOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * pageSize.
+             * <p>The page size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -689,7 +763,10 @@ public class ListMigrationOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * totalCount.
+             * <p>The total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

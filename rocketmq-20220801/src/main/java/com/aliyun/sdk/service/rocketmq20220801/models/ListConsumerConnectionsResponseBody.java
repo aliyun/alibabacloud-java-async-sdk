@@ -145,7 +145,7 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned error code.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>MissingPageNumber</p>
@@ -208,7 +208,7 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>A3620115-6F1F-5CFB-AA3F-BBD4853B2EC4</p>
@@ -219,7 +219,7 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -340,7 +340,7 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the client.</p>
+             * <p>The client ID.</p>
              * 
              * <strong>example:</strong>
              * <p>172.17.135.197@17392#1936705963#551717232#9873695589062458</p>
@@ -351,7 +351,7 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Host IP/Public IP</p>
+             * <p>The host IP address or Internet egress IP address.</p>
              * 
              * <strong>example:</strong>
              * <p>xx.xx.xx.xx</p>
@@ -362,7 +362,7 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The <code>hostname</code> of the cloud-native box.</p>
+             * <p>The client hostname.</p>
              * 
              * <strong>example:</strong>
              * <p>vos</p>
@@ -373,7 +373,7 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The language of the client.</p>
+             * <p>The client language.</p>
              * 
              * <strong>example:</strong>
              * <p>java</p>
@@ -384,10 +384,14 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Consumption Mode</p>
+             * <p>The consumption mode of the consumer:</p>
              * <ul>
-             * <li>BROADCASTING</li>
-             * <li>CLUSTERING</li>
+             * <li><p>CLUSTERING</p>
+             * </li>
+             * <li><p>LITE_SELECTIVE</p>
+             * </li>
+             * <li><p>BROADCASTING</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -399,7 +403,7 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the client.</p>
+             * <p>The client version.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0</p>
@@ -495,7 +499,7 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The client connection list</p>
+             * <p>The list of client connections.</p>
              */
             public Builder connections(java.util.List<Connections> connections) {
                 this.connections = connections;
@@ -525,7 +529,7 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region in which the instance resides.</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>

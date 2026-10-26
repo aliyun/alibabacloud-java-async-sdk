@@ -118,7 +118,7 @@ public class DeleteInstanceAclRequest extends Request {
         }
 
         /**
-         * <p>The username of the account.</p>
+         * <p>The username.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,7 +131,7 @@ public class DeleteInstanceAclRequest extends Request {
         }
 
         /**
-         * <p>The name of the resource on which the permissions are granted.</p>
+         * <p>The name of the authorized resource.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,12 +144,7 @@ public class DeleteInstanceAclRequest extends Request {
         }
 
         /**
-         * <p>The type of the resource on which the permissions are granted.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>Group</li>
-         * <li>Topic</li>
-         * </ul>
+         * <p>The type of the authorized resource.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

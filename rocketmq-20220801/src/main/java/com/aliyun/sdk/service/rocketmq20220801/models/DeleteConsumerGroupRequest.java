@@ -75,7 +75,7 @@ public class DeleteConsumerGroupRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the instance from which you want to delete the consumer group.</p>
+         * <p>The ID of the instance to which the consumer group to be deleted belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class DeleteConsumerGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the consumer group.</p>
+         * <p>The ID of the consumer group to be deleted.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

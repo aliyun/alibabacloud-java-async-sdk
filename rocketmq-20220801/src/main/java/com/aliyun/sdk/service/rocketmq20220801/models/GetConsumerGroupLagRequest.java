@@ -116,7 +116,7 @@ public class GetConsumerGroupLagRequest extends Request {
         }
 
         /**
-         * <p>The consumer Group ID.</p>
+         * <p>The consumer group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,7 +129,10 @@ public class GetConsumerGroupLagRequest extends Request {
         }
 
         /**
-         * liteTopicName.
+         * <p>The name of the lite topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder liteTopicName(String liteTopicName) {
             this.putQueryParameter("liteTopicName", liteTopicName);
@@ -138,7 +141,7 @@ public class GetConsumerGroupLagRequest extends Request {
         }
 
         /**
-         * <p>The topic name.</p>
+         * <p>The name of the topic to which the consumer group subscribes.</p>
          * 
          * <strong>example:</strong>
          * <p>normal-topic-1</p>

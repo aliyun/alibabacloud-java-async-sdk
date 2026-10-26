@@ -118,6 +118,7 @@ public class ExecuteMigrationOperationRequest extends Request {
         } 
 
         /**
+         * <p>The migration ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,10 +131,11 @@ public class ExecuteMigrationOperationRequest extends Request {
         }
 
         /**
+         * <p>The migration stage type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>MIGRATE_METADATA</p>
+         * <p>MIGRATE_MESSAGE</p>
          */
         public Builder stageType(String stageType) {
             this.putPathParameter("stageType", stageType);
@@ -142,6 +144,7 @@ public class ExecuteMigrationOperationRequest extends Request {
         }
 
         /**
+         * <p>The migration operation ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,7 +157,7 @@ public class ExecuteMigrationOperationRequest extends Request {
         }
 
         /**
-         * operationParam.
+         * <p>The operation parameter.</p>
          */
         public Builder operationParam(OperationParam operationParam) {
             this.putBodyParameter("operationParam", operationParam);
@@ -163,7 +166,10 @@ public class ExecuteMigrationOperationRequest extends Request {
         }
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rmq-cn-x0r37kel***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("instanceId", instanceId);
@@ -218,7 +224,29 @@ public class ExecuteMigrationOperationRequest extends Request {
             } 
 
             /**
-             * paramData.
+             * <p>The parameter information. The parameter type is a JSON string. See the examples below.</p>
+             * <p>The valid values for the action field are as follows:</p>
+             * <ul>
+             * <li>MIGRATE_FORWARD (migrate forward)</li>
+             * <li>MIGRATE_BACKWARD (migrate backward)</li>
+             * </ul>
+             * <p>The valid values for the targetStage field are as follows:</p>
+             * <ul>
+             * <li>MIGRATE_WAIT (read from and write to the source cluster)</li>
+             * <li>DOUBLE_READ (write to the source cluster with redundant reads)</li>
+             * <li>SWITCH_WRITE (write to the destination cluster with redundant reads)</li>
+             * <li>MIGRATE_FINISH (read from and write to the destination cluster)</li>
+             * </ul>
+             * <blockquote>
+             * <ul>
+             * <li>For migration forward, you can only advance one stage at a time in order.</li>
+             * <li>For migration rollback, you can roll back to any previous stage.</li>
+             * </ul>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>Migrate forward: {&quot;action&quot;:&quot;MIGRATE_FORWARD&quot;,&quot;targetStage&quot;:&quot;MIGRATE_FINISH&quot;}</p>
+             * <p>Migrate backward: {&quot;action&quot;:&quot;MIGRATE_BACKWARD&quot;,&quot;targetStage&quot;:&quot;MIGRATE_WAIT&quot;}</p>
              */
             public Builder paramData(Object paramData) {
                 this.paramData = paramData;

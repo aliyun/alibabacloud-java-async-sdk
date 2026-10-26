@@ -90,6 +90,7 @@ public class GetConsumeTimespanRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class GetConsumeTimespanRequest extends Request {
         }
 
         /**
+         * <p>The ID of the consumer group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,7 @@ public class GetConsumeTimespanRequest extends Request {
         }
 
         /**
+         * <p>The name of the topic to which the consumer group subscribes.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

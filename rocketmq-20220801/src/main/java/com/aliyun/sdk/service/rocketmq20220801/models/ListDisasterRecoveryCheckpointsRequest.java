@@ -132,7 +132,7 @@ public class ListDisasterRecoveryCheckpointsRequest extends Request {
         } 
 
         /**
-         * <p>Backup Plan ID</p>
+         * <p>The ID of the backup plan.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -145,7 +145,7 @@ public class ListDisasterRecoveryCheckpointsRequest extends Request {
         }
 
         /**
-         * <p>Backup Mapping ID</p>
+         * <p>The ID of the backup mapping.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,7 +158,7 @@ public class ListDisasterRecoveryCheckpointsRequest extends Request {
         }
 
         /**
-         * <p>Filter Condition</p>
+         * <p>The filter condition.</p>
          * 
          * <strong>example:</strong>
          * <p>topic_test</p>
@@ -170,7 +170,7 @@ public class ListDisasterRecoveryCheckpointsRequest extends Request {
         }
 
         /**
-         * <p>Source Instance ID</p>
+         * <p>The instance ID of the source instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -183,7 +183,7 @@ public class ListDisasterRecoveryCheckpointsRequest extends Request {
         }
 
         /**
-         * <p>Current page number, starting from 1.</p>
+         * <p>The current page number, starting from 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -195,7 +195,7 @@ public class ListDisasterRecoveryCheckpointsRequest extends Request {
         }
 
         /**
-         * <p>Page size, the maximum number of results returned per page.</p>
+         * <p>The page size. The maximum number of results to return per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

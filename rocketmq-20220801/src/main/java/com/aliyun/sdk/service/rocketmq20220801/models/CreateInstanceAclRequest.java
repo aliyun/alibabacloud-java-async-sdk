@@ -162,7 +162,7 @@ public class CreateInstanceAclRequest extends Request {
         }
 
         /**
-         * <p>The username of the account.</p>
+         * <p>The username.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -175,17 +175,11 @@ public class CreateInstanceAclRequest extends Request {
         }
 
         /**
-         * <p>The type of operations that can be performed on the resource.</p>
-         * <p>The following types of operations are supported based on the resource type:</p>
+         * <p>The type of the authorized operation.</p>
+         * <p>Valid operations vary by resource type:</p>
          * <ul>
          * <li>Topic: Pub, Sub, and Pub|Sub</li>
-         * <li>Group: Sub</li>
-         * </ul>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>Sub: subscribe</li>
-         * <li>Pub|Sub: publish and subscribe</li>
-         * <li>Pub: publish</li>
+         * <li>Consumer group: Sub</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -199,12 +193,7 @@ public class CreateInstanceAclRequest extends Request {
         }
 
         /**
-         * <p>The decision result of the authorization.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>Deny</li>
-         * <li>Allow</li>
-         * </ul>
+         * <p>The authorization decision.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -217,7 +206,7 @@ public class CreateInstanceAclRequest extends Request {
         }
 
         /**
-         * <p>The IP addresses in the whitelist.</p>
+         * <p>The IP address whitelist.</p>
          */
         public Builder ipWhitelists(java.util.List<String> ipWhitelists) {
             this.putBodyParameter("ipWhitelists", ipWhitelists);
@@ -226,7 +215,7 @@ public class CreateInstanceAclRequest extends Request {
         }
 
         /**
-         * <p>The name of the resource on which you want to grant permissions.</p>
+         * <p>The name of the authorized resource.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -239,12 +228,7 @@ public class CreateInstanceAclRequest extends Request {
         }
 
         /**
-         * <p>The type of the resource on which you want to grant permissions.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>Group</li>
-         * <li>Topic</li>
-         * </ul>
+         * <p>The type of the authorized resource.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

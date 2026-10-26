@@ -145,7 +145,10 @@ public class ListMigrationsResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MissingInstanceId</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -153,7 +156,7 @@ public class ListMigrationsResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -161,7 +164,10 @@ public class ListMigrationsResponseBody extends TeaModel {
         }
 
         /**
-         * dynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InstanceId</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -169,7 +175,10 @@ public class ListMigrationsResponseBody extends TeaModel {
         }
 
         /**
-         * dynamicMessage.
+         * <p>The dynamic error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instanceId</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -177,7 +186,10 @@ public class ListMigrationsResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -185,7 +197,10 @@ public class ListMigrationsResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The instance cannot be found.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -193,7 +208,10 @@ public class ListMigrationsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E5897B2E-C3AC-56DC-A482-F0E9E53F48D5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -201,7 +219,10 @@ public class ListMigrationsResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -280,7 +301,10 @@ public class ListMigrationsResponseBody extends TeaModel {
             } 
 
             /**
-             * stageData.
+             * <p>The stage data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[]</p>
              */
             public Builder stageData(Object stageData) {
                 this.stageData = stageData;
@@ -288,7 +312,15 @@ public class ListMigrationsResponseBody extends TeaModel {
             }
 
             /**
-             * stageStatus.
+             * <p>The stage status. Valid values:</p>
+             * <ul>
+             * <li>INIT: Not started.</li>
+             * <li>DOING: In progress.</li>
+             * <li>DONE: Completed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>DOING</p>
              */
             public Builder stageStatus(String stageStatus) {
                 this.stageStatus = stageStatus;
@@ -296,7 +328,16 @@ public class ListMigrationsResponseBody extends TeaModel {
             }
 
             /**
-             * stageType.
+             * <p>The stage type. Valid values:</p>
+             * <ul>
+             * <li>CONNECT_NETWORK: Network connection.</li>
+             * <li>MIGRATE_METADATA: Metadata migration.</li>
+             * <li>REPLACE_ENDPOINT: Endpoint replacement.</li>
+             * <li>MIGRATE_MESSAGE: Message migration.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>MIGRATE_METADATA</p>
              */
             public Builder stageType(String stageType) {
                 this.stageType = stageType;
@@ -363,7 +404,16 @@ public class ListMigrationsResponseBody extends TeaModel {
             } 
 
             /**
-             * sourceData.
+             * <p>The migration source data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             * &quot;clusterType&quot;:&quot;INTERNET_NETWORK&quot;,
+             * &quot;aclType&quot;:&quot;NONE&quot;,
+             * &quot;clusterName&quot;:&quot;test&quot;,
+             * &quot;namesrvAddrList&quot;:&quot;47.110.248.xxx:9876&quot;],
+             * &quot;brokerObtainMethod&quot;:&quot;AUTO_OBTAIN&quot;
+             * }</p>
              */
             public Builder sourceData(Object sourceData) {
                 this.sourceData = sourceData;
@@ -371,7 +421,14 @@ public class ListMigrationsResponseBody extends TeaModel {
             }
 
             /**
-             * sourceType.
+             * <p>The migration source type. Valid values:</p>
+             * <ul>
+             * <li>EXTERNAL_INSTANCE: External instance.</li>
+             * <li>INTERNAL_INSTANCE: Alibaba Cloud 5.0 instance.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>EXTERNAL_INSTANCE</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -438,7 +495,14 @@ public class ListMigrationsResponseBody extends TeaModel {
             } 
 
             /**
-             * targetData.
+             * <p>The migration target data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             * &quot;clusterType&quot;:&quot;ROCKETMQ_V5&quot;,
+             * &quot;instanceId&quot;:&quot;rmq-cn-778429mp301&quot;,
+             * &quot;regionId&quot;:&quot;cn-hangzhou&quot;
+             * }</p>
              */
             public Builder targetData(Object targetData) {
                 this.targetData = targetData;
@@ -446,7 +510,13 @@ public class ListMigrationsResponseBody extends TeaModel {
             }
 
             /**
-             * targetType.
+             * <p>The migration target type. Valid values:</p>
+             * <ul>
+             * <li>INTERNAL_INSTANCE: Alibaba Cloud 5.0 instance.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>INTERNAL_INSTANCE</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -617,7 +687,10 @@ public class ListMigrationsResponseBody extends TeaModel {
             } 
 
             /**
-             * createTime.
+             * <p>The creation time, in YYYY-MM-DD HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-08-01 00:00:00</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -625,7 +698,7 @@ public class ListMigrationsResponseBody extends TeaModel {
             }
 
             /**
-             * currentStage.
+             * <p>The current migration stage.</p>
              */
             public Builder currentStage(CurrentStage currentStage) {
                 this.currentStage = currentStage;
@@ -633,7 +706,10 @@ public class ListMigrationsResponseBody extends TeaModel {
             }
 
             /**
-             * migrationId.
+             * <p>The migration ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>21</p>
              */
             public Builder migrationId(Long migrationId) {
                 this.migrationId = migrationId;
@@ -641,7 +717,10 @@ public class ListMigrationsResponseBody extends TeaModel {
             }
 
             /**
-             * migrationName.
+             * <p>The migration name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder migrationName(String migrationName) {
                 this.migrationName = migrationName;
@@ -649,7 +728,7 @@ public class ListMigrationsResponseBody extends TeaModel {
             }
 
             /**
-             * migrationSource.
+             * <p>The migration source.</p>
              */
             public Builder migrationSource(MigrationSource migrationSource) {
                 this.migrationSource = migrationSource;
@@ -657,7 +736,16 @@ public class ListMigrationsResponseBody extends TeaModel {
             }
 
             /**
-             * migrationStatus.
+             * <p>The migration status. Valid values:</p>
+             * <ul>
+             * <li>CREATED: Created.</li>
+             * <li>MIGRATING: Migrating.</li>
+             * <li>COMPLETED: Completed.</li>
+             * <li>CANCELLED: Cancelled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>MIGRATING</p>
              */
             public Builder migrationStatus(String migrationStatus) {
                 this.migrationStatus = migrationStatus;
@@ -665,7 +753,7 @@ public class ListMigrationsResponseBody extends TeaModel {
             }
 
             /**
-             * migrationTarget.
+             * <p>The migration target.</p>
              */
             public Builder migrationTarget(MigrationTarget migrationTarget) {
                 this.migrationTarget = migrationTarget;
@@ -673,7 +761,13 @@ public class ListMigrationsResponseBody extends TeaModel {
             }
 
             /**
-             * migrationType.
+             * <p>The migration type. Valid values:</p>
+             * <ul>
+             * <li>INSTANCE_MIGRATION: instance migration</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>INSTANCE_MIGRATION</p>
              */
             public Builder migrationType(String migrationType) {
                 this.migrationType = migrationType;
@@ -681,7 +775,10 @@ public class ListMigrationsResponseBody extends TeaModel {
             }
 
             /**
-             * updateTime.
+             * <p>The modification time, in YYYY-MM-DD HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-08-01 20:05:50</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -689,7 +786,10 @@ public class ListMigrationsResponseBody extends TeaModel {
             }
 
             /**
-             * userId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -782,7 +882,7 @@ public class ListMigrationsResponseBody extends TeaModel {
             } 
 
             /**
-             * list.
+             * <p>The paged data.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -790,7 +890,10 @@ public class ListMigrationsResponseBody extends TeaModel {
             }
 
             /**
-             * pageNumber.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -798,7 +901,10 @@ public class ListMigrationsResponseBody extends TeaModel {
             }
 
             /**
-             * pageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -806,7 +912,10 @@ public class ListMigrationsResponseBody extends TeaModel {
             }
 
             /**
-             * totalCount.
+             * <p>The total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

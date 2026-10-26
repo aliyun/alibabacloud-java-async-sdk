@@ -75,7 +75,7 @@ public class DeleteTopicRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the instance to which the topic belongs.</p>
+         * <p>The ID of the instance to which the topic to be deleted belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class DeleteTopicRequest extends Request {
         }
 
         /**
-         * <p>The name of the topic.</p>
+         * <p>The name of the topic to be deleted.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

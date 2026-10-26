@@ -88,7 +88,7 @@ public class DeleteInstanceAccountRequest extends Request {
         }
 
         /**
-         * <p>Account name</p>
+         * <p>The username.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

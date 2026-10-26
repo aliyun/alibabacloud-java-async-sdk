@@ -156,7 +156,7 @@ public class ListTracesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned result.</p>
+         * <p>The returned results.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -353,7 +353,7 @@ public class ListTracesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Message born time.</p>
+             * <p>The time when the message was generated, in YYYY-MM-DD HH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-03-22 12:17:08</p>
@@ -375,7 +375,7 @@ public class ListTracesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Message id.</p>
+             * <p>The message ID.</p>
              * 
              * <strong>example:</strong>
              * <p>7F00000100207A4F0F294A938F7807AE</p>
@@ -386,7 +386,7 @@ public class ListTracesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Message keys.</p>
+             * <p>The message key.</p>
              */
             public Builder messageKeys(java.util.List<String> messageKeys) {
                 this.messageKeys = messageKeys;
@@ -394,7 +394,7 @@ public class ListTracesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Message tag.</p>
+             * <p>The list of tags.</p>
              * 
              * <strong>example:</strong>
              * <p>xx</p>
@@ -416,7 +416,7 @@ public class ListTracesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the topic.</p>
+             * <p>The topic name.</p>
              * 
              * <strong>example:</strong>
              * <p>topic_test</p>
@@ -512,7 +512,7 @@ public class ListTracesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Trace list.</p>
+             * <p>The paginated data.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -520,7 +520,7 @@ public class ListTracesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page number of the returned page.</p>
+             * <p>The current page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -531,7 +531,7 @@ public class ListTracesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries per page.</p>
+             * <p>The page size.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -542,7 +542,7 @@ public class ListTracesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of returned entries.</p>
+             * <p>The total number of returned results.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

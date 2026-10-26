@@ -88,7 +88,7 @@ public class CreateInstanceIpWhitelistRequest extends Request {
         }
 
         /**
-         * <p>The IP address whitelists.</p>
+         * <p>The list of IP address whitelists.</p>
          * <p>This parameter is required.</p>
          */
         public Builder ipWhitelists(java.util.List<String> ipWhitelists) {

@@ -67,7 +67,10 @@ public class DataLiteTopicLagMapValue extends TeaModel {
         } 
 
         /**
-         * readyCount.
+         * <p>The number of accumulated messages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder readyCount(Long readyCount) {
             this.readyCount = readyCount;
@@ -75,7 +78,10 @@ public class DataLiteTopicLagMapValue extends TeaModel {
         }
 
         /**
-         * deliveryDuration.
+         * <p>The delivery latency. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder deliveryDuration(Long deliveryDuration) {
             this.deliveryDuration = deliveryDuration;

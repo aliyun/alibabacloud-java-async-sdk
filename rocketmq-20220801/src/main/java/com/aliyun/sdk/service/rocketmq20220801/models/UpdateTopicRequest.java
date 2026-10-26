@@ -117,7 +117,7 @@ public class UpdateTopicRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the instance to which the topic to be updated belongs.</p>
+         * <p>The ID of the instance that contains the topic.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,7 +130,7 @@ public class UpdateTopicRequest extends Request {
         }
 
         /**
-         * <p>The name of the topic to be updated.</p>
+         * <p>The name of the topic.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,7 +143,10 @@ public class UpdateTopicRequest extends Request {
         }
 
         /**
-         * liteTopicExpiration.
+         * <p>The expiration time of a lite topic, in minutes. Valid values: 15 to 720. The default value is -1, which indicates that the topic never expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder liteTopicExpiration(Long liteTopicExpiration) {
             this.putBodyParameter("liteTopicExpiration", liteTopicExpiration);
@@ -152,10 +155,10 @@ public class UpdateTopicRequest extends Request {
         }
 
         /**
-         * <p>Maximum send message tps</p>
+         * <p>The maximum number of transactions per second (TPS) for sending messages.</p>
          * 
          * <strong>example:</strong>
-         * <p>500</p>
+         * <p>1000</p>
          */
         public Builder maxSendTps(Long maxSendTps) {
             this.putBodyParameter("maxSendTps", maxSendTps);
@@ -164,7 +167,7 @@ public class UpdateTopicRequest extends Request {
         }
 
         /**
-         * <p>Updated remarks for the topic.</p>
+         * <p>The updated remarks for the topic.</p>
          * 
          * <strong>example:</strong>
          * <p>This is the remark for test.</p>

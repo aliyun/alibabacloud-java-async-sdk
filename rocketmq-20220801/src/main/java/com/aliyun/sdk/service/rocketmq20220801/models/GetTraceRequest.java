@@ -118,7 +118,7 @@ public class GetTraceRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The ID of the instance to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,7 +131,7 @@ public class GetTraceRequest extends Request {
         }
 
         /**
-         * <p>The topic name.</p>
+         * <p>The name of the topic to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,7 +157,10 @@ public class GetTraceRequest extends Request {
         }
 
         /**
-         * endTime.
+         * <p>The end time, in YYYY-MM-DD HH:mm:ss format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-09-09 09:00:00</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("endTime", endTime);
@@ -166,7 +169,10 @@ public class GetTraceRequest extends Request {
         }
 
         /**
-         * startTime.
+         * <p>The start time, in YYYY-MM-DD HH:mm:ss format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-05-10 10:42:11</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("startTime", startTime);

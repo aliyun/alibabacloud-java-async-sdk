@@ -75,7 +75,7 @@ public class GetConsumerGroupRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the instance to which the consumer group belongs.</p>
+         * <p>The ID of the instance to which the consumer group to query belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class GetConsumerGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the consumer group.</p>
+         * <p>The ID of the consumer group to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -145,7 +145,7 @@ public class ListInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code returned if the call failed.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>MissingPageNumber</p>
@@ -156,7 +156,7 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The response result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -186,7 +186,7 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>400</p>
@@ -208,7 +208,7 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
+         * <p>The request ID. Each request has a unique ID that you can use to troubleshoot and locate issues.</p>
          * 
          * <strong>example:</strong>
          * <p>84445A20-2B50-5306-A3C0-AF99FC1833C6</p>
@@ -219,7 +219,7 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful.</p>
+         * <p>Indicates whether the operation was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -288,7 +288,14 @@ public class ListInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * capacityType.
+             * <p>The capacity mode. Valid values:</p>
+             * <ul>
+             * <li>provisioned: reserved capacity with elastic scaling.</li>
+             * <li>ondemand: pay-as-you-go.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>provisioned</p>
              */
             public Builder capacityType(String capacityType) {
                 this.capacityType = capacityType;
@@ -296,12 +303,14 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the message trace feature is enabled. Valid values:</p>
+             * <p>Specifies whether the message trace feature is enabled.</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li>true: The message trace feature is enabled.</li>
+             * <li>false: The message trace feature is disabled.</li>
              * </ul>
-             * <p>This parameter is not in use. By default, the message trace feature is enabled for ApsaraMQ for RocketMQ instances, regardless of whether this parameter is configured.</p>
+             * <p>&lt;props=&quot;intl&quot;&gt;This parameter does not take effect. Regardless of whether this parameter is enabled, the instance supports the message trace feature by default.
+             * &lt;props=&quot;china&quot;&gt;This parameter takes effect only for Serverless instances. If the message trace feature is enabled, message trace fees are incurred. For more information about billing, see <a href="https://help.aliyun.com/document_detail/2586280.html">Serverless billing description</a>.</p>
+             * <p>&lt;props=&quot;china&quot;&gt;For pay-as-you-go and subscription instances, this parameter does not take effect. Regardless of whether this parameter is enabled, the message trace feature is supported by default.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -371,7 +380,7 @@ public class ListInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The tag key of the resource.</p>
+             * <p>The key of the resource tag.</p>
              * 
              * <strong>example:</strong>
              * <p>key</p>
@@ -382,7 +391,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value of the resource.</p>
+             * <p>The value of the resource tag.</p>
              * 
              * <strong>example:</strong>
              * <p>value</p>
@@ -699,7 +708,7 @@ public class ListInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The commodity code of the instance. The commodity code of ApsaraMQ for RocketMQ 5.0 instances has a similar format to ons_rmqsub_public_cn.</p>
+             * <p>The commodity code of the ApsaraMQ for RocketMQ 5.x series instance, such as ons_rmqsub_public_cn.</p>
              * 
              * <strong>example:</strong>
              * <p>ons_rmqsub_public_cn</p>
@@ -710,7 +719,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the version of the instance was updated.</p>
+             * <p>The time when the instance version was last updated, in YYYY-MM-DD HH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-08-01 00:00:00</p>
@@ -721,7 +730,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the instance expires.</p>
+             * <p>The time when the instance expires, in YYYY-MM-DD HH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-09-01 00:00:00</p>
@@ -732,7 +741,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of consumer groups that are created on the instance.</p>
+             * <p>The number of consumer groups created in the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -765,11 +774,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing method of the instance.</p>
-             * <p>Valid values:</p>
+             * <p>The billing method of the instance. Valid values:</p>
              * <ul>
-             * <li>PayAsYouGo</li>
-             * <li>Subscription</li>
+             * <li>PayAsYouGo: pay-as-you-go (postpaid).</li>
+             * <li>Subscription: subscription (prepaid).</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -789,7 +797,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region in which the instance resides.</p>
+             * <p>The ID of the region to which the instance belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -800,7 +808,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the instance was released.</p>
+             * <p>The time when the instance was released, in YYYY-MM-DD HH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-09-07 00:00:00</p>
@@ -811,7 +819,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance description.</p>
+             * <p>The remarks for the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>This is remark for instance.</p>
@@ -833,12 +841,13 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The primary edition of the instance.</p>
-             * <p>Valid values:</p>
+             * <p>The primary series code of the instance. Valid values:</p>
              * <ul>
-             * <li>standard: Standard Edition</li>
-             * <li>ultimate: Enterprise Platinum Edition</li>
-             * <li>professional: Professional Edition</li>
+             * <li>standard: Standard Edition.</li>
+             * <li>ultimate: Platinum Edition.</li>
+             * <li>professional: Professional Edition.</li>
+             * <li>shared: Shared Edition.</li>
+             * <li>dedicated: Dedicated Edition.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -850,7 +859,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The code of the service to which the instance belongs. The service code of ApsaraMQ for RocketMQ is rmq.</p>
+             * <p>The service code of the instance. The service code for ApsaraMQ for RocketMQ is rmq.</p>
              * 
              * <strong>example:</strong>
              * <p>rmq</p>
@@ -861,7 +870,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the instance was created.</p>
+             * <p>The time when the instance was created, in YYYY-MM-DD HH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-08-01 00:00:00</p>
@@ -872,14 +881,13 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the instance.</p>
-             * <p>Valid values:</p>
+             * <p>The instance status. Valid values:</p>
              * <ul>
-             * <li>RELEASED</li>
-             * <li>RUNNING</li>
-             * <li>STOPPED</li>
-             * <li>CHANGING</li>
-             * <li>CREATING</li>
+             * <li>RELEASED: Released.</li>
+             * <li>RUNNING: Running.</li>
+             * <li>STOPPED: Stopped.</li>
+             * <li>CHANGING: Changing.</li>
+             * <li>CREATING: Creating.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -891,11 +899,11 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sub-category edition of the instance.</p>
-             * <p>Valid values:</p>
+             * <p>The sub-series code of the instance. Valid values:</p>
              * <ul>
-             * <li>cluster_ha: Cluster High-availability Edition</li>
-             * <li>single_node: Standalone Edition</li>
+             * <li>cluster_ha: cluster high-availability edition.</li>
+             * <li>single_node: single-node edition.</li>
+             * <li>serverless: serverless edition.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -907,7 +915,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource tags.</p>
+             * <p>The resource tag list.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -915,7 +923,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of topics that are created on the instance.</p>
+             * <p>The number of topics created in the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -926,7 +934,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the instance was last modified.</p>
+             * <p>The time when the instance was last modified, in YYYY-MM-DD HH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-08-02 00:00:00</p>
@@ -937,7 +945,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the user who owns the instance.</p>
+             * <p>The ID of the user to whom the instance belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>6W0xz2uPfiwp****</p>
@@ -1033,7 +1041,7 @@ public class ListInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The pagination information.</p>
+             * <p>The paged data.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -1041,7 +1049,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page number of the returned page.</p>
+             * <p>The current page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1052,7 +1060,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries returned on each page.</p>
+             * <p>The page size.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -1063,7 +1071,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of returned entries.</p>
+             * <p>The total number of returned results.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>

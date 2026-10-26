@@ -158,7 +158,7 @@ public class DeleteDisasterRecoveryItemResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Access denied details, only in the scenario where the user is denied access due to RAM not having permission</p>
+         * <p>The details of the access denial. This field is returned only when the request is denied due to insufficient RAM permissions.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -169,7 +169,7 @@ public class DeleteDisasterRecoveryItemResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error code</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>DisasterRecoveryItemStatus.Error</p>
@@ -180,7 +180,7 @@ public class DeleteDisasterRecoveryItemResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The return data</p>
+         * <p>The returned data.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -191,7 +191,7 @@ public class DeleteDisasterRecoveryItemResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Dynamic error code</p>
+         * <p>The dynamic error code.</p>
          * 
          * <strong>example:</strong>
          * <p>InstanceId</p>
@@ -202,7 +202,7 @@ public class DeleteDisasterRecoveryItemResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Dynamic error message</p>
+         * <p>The dynamic error message.</p>
          * 
          * <strong>example:</strong>
          * <p>instanceId</p>
@@ -213,7 +213,7 @@ public class DeleteDisasterRecoveryItemResponseBody extends TeaModel {
         }
 
         /**
-         * <p>HTTP status code</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -224,7 +224,7 @@ public class DeleteDisasterRecoveryItemResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error message</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>The current status of the disaster recovery item does not support this operation.</p>
@@ -235,7 +235,7 @@ public class DeleteDisasterRecoveryItemResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0B962390-D84B-5D44-8C11-79DFxxxx</p>
@@ -246,7 +246,7 @@ public class DeleteDisasterRecoveryItemResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether the operation was successful</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

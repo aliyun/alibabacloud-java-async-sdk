@@ -176,6 +176,7 @@ public class ListMigrationOperationsRequest extends Request {
         } 
 
         /**
+         * <p>The migration ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -188,6 +189,7 @@ public class ListMigrationOperationsRequest extends Request {
         }
 
         /**
+         * <p>The migration stage type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -200,7 +202,7 @@ public class ListMigrationOperationsRequest extends Request {
         }
 
         /**
-         * businessStatus.
+         * <p>The operation business status.</p>
          */
         public Builder businessStatus(java.util.List<String> businessStatus) {
             String businessStatusShrink = shrink(businessStatus, "businessStatus", "simple");
@@ -210,7 +212,15 @@ public class ListMigrationOperationsRequest extends Request {
         }
 
         /**
-         * filter.
+         * <p>The filter condition for the query.</p>
+         * <blockquote>
+         * <ul>
+         * <li>Supports filtering by operationKey, which is the topic name.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
          */
         public Builder filter(String filter) {
             this.putQueryParameter("filter", filter);
@@ -219,7 +229,10 @@ public class ListMigrationOperationsRequest extends Request {
         }
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rmq-cn-zxu37eiqq0x</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("instanceId", instanceId);
@@ -228,7 +241,7 @@ public class ListMigrationOperationsRequest extends Request {
         }
 
         /**
-         * operationStatus.
+         * <p>The operation status.</p>
          */
         public Builder operationStatus(java.util.List<String> operationStatus) {
             String operationStatusShrink = shrink(operationStatus, "operationStatus", "simple");
@@ -238,10 +251,11 @@ public class ListMigrationOperationsRequest extends Request {
         }
 
         /**
+         * <p>The operation type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>IMPORT_CONSUMER_GROUP</p>
+         * <p>MIGRATE_MESSAGE</p>
          */
         public Builder operationType(String operationType) {
             this.putQueryParameter("operationType", operationType);
@@ -250,6 +264,7 @@ public class ListMigrationOperationsRequest extends Request {
         }
 
         /**
+         * <p>The page number of the results to return.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -262,6 +277,7 @@ public class ListMigrationOperationsRequest extends Request {
         }
 
         /**
+         * <p>The page size, which specifies the maximum number of results to return per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

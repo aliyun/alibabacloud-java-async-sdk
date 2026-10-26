@@ -74,7 +74,7 @@ public class AddDisasterRecoveryItemRequest extends Request {
         } 
 
         /**
-         * <p>Backup plan ID</p>
+         * <p>The ID of the backup plan.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,7 +87,7 @@ public class AddDisasterRecoveryItemRequest extends Request {
         }
 
         /**
-         * <p>Topics included in the backup mapping. Required.</p>
+         * <p>The topics included in the backup mapping. Required.</p>
          */
         public Builder topics(java.util.List<Topics> topics) {
             this.putBodyParameter("topics", topics);
@@ -208,7 +208,7 @@ public class AddDisasterRecoveryItemRequest extends Request {
             } 
 
             /**
-             * <p>Consumer group ID, required for ACTIVE_ACTIVE bidirectional backup</p>
+             * <p>The ID of the consumer group. Required for ACTIVE_ACTIVE bidirectional backup.</p>
              * 
              * <strong>example:</strong>
              * <p>GID_xxx</p>
@@ -219,10 +219,10 @@ public class AddDisasterRecoveryItemRequest extends Request {
             }
 
             /**
-             * <p>The order in which messages are delivered to the target instance. The parameter values ​​are as follows:</p>
+             * <p>The delivery order of messages to the target instance. Valid values for the parameter:</p>
              * <ul>
              * <li>Concurrently: concurrent delivery</li>
-             * <li>Orderly: sequential delivery</li>
+             * <li>Orderly: ordered delivery</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -234,7 +234,7 @@ public class AddDisasterRecoveryItemRequest extends Request {
             }
 
             /**
-             * <p>Instance ID, an instance ID will be automatically generated when <code>instanceType</code> is <code>EXTERNAL_ROCKETMQ</code>, and it can be obtained by querying the backup plan.</p>
+             * <p>The instance ID. If instanceType is set to EXTERNAL_ROCKETMQ, an instance ID is automatically generated. You can obtain this ID by querying the backup plan.</p>
              * 
              * <strong>example:</strong>
              * <p>rmq-cn-em93y94xxx</p>
@@ -245,10 +245,10 @@ public class AddDisasterRecoveryItemRequest extends Request {
             }
 
             /**
-             * <p>Instance type</p>
+             * <p>The instance type. Valid values:</p>
              * <ul>
              * <li>ALIYUN_ROCKETMQ: Alibaba Cloud instance</li>
-             * <li>EXTERNAL_ROCKETMQ: External instance, open-source instance, open-source cluster</li>
+             * <li>EXTERNAL_ROCKETMQ: external instance, open-source instance, or open-source cluster</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -260,7 +260,7 @@ public class AddDisasterRecoveryItemRequest extends Request {
             }
 
             /**
-             * <p>Region ID</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -271,7 +271,7 @@ public class AddDisasterRecoveryItemRequest extends Request {
             }
 
             /**
-             * <p>Disaster recovery topic name, required</p>
+             * <p>The name of the disaster recovery topic. Required.</p>
              * 
              * <strong>example:</strong>
              * <p>Topic_xxx</p>

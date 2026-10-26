@@ -102,8 +102,7 @@ public class ListConsumerGroupSubscriptionsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the consumer group whose subscriptions you want to query.</p>
-         * <p>If you do not configure this parameter, the subscriptions of all consumer groups on the specified instance are queried.</p>
+         * <p>The ID of the consumer group whose subscription relationships you want to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +115,7 @@ public class ListConsumerGroupSubscriptionsRequest extends Request {
         }
 
         /**
-         * <p>The topic name. If you do not specify this parameter, all subscriptions of the consumer group are queried.</p>
+         * <p>The name of the topic. If you do not specify this parameter, all subscription relationships are queried.</p>
          * 
          * <strong>example:</strong>
          * <p>topic_test</p>

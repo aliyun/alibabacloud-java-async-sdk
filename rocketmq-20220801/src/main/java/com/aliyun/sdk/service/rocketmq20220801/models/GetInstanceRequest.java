@@ -60,7 +60,7 @@ public class GetInstanceRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the instance that you want to query.</p>
+         * <p>The ID of the instance to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

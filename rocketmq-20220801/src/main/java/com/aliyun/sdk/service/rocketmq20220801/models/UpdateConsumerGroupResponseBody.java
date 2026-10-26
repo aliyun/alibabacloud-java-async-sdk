@@ -145,7 +145,7 @@ public class UpdateConsumerGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Error code.</p>
+         * <p>The fault code.</p>
          * 
          * <strong>example:</strong>
          * <p>InvalidDeliveryOrderType</p>
@@ -156,7 +156,7 @@ public class UpdateConsumerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result returned.</p>
+         * <p>The returned result.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -167,10 +167,10 @@ public class UpdateConsumerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Dynamic error code.</p>
+         * <p>The dynamic fault code.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>DeliveryOrderType</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -178,10 +178,10 @@ public class UpdateConsumerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Dynamic error message.</p>
+         * <p>The dynamic fault message.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>deliveryOrderType</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -189,7 +189,7 @@ public class UpdateConsumerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>HTTP status code.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>400</p>
@@ -200,7 +200,7 @@ public class UpdateConsumerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error message.</p>
+         * <p>The fault message.</p>
          * 
          * <strong>example:</strong>
          * <p>Parameter deliveryOrderType is invalid.</p>
@@ -211,7 +211,7 @@ public class UpdateConsumerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID, which is unique for each request and can be used for troubleshooting and problem localization.</p>
+         * <p>The request ID. Each request has a unique ID that you can use to troubleshoot and locate issues.</p>
          * 
          * <strong>example:</strong>
          * <p>C7F94090-3358-506A-97DC-34BC803C****</p>
@@ -222,7 +222,7 @@ public class UpdateConsumerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the execution was successful.</p>
+         * <p>Indicates whether the execution succeeded.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

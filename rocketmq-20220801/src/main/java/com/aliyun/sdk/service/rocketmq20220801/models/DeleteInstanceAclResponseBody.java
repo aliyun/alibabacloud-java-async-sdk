@@ -158,7 +158,7 @@ public class DeleteInstanceAclResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details about the access denial. This parameter is returned only if the access is denied due to the reason that the Resource Access Management (RAM) user does not have the required permissions.</p>
+         * <p>The access denial details. This field is returned only when user access is denied due to insufficient RAM permissions.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -180,7 +180,7 @@ public class DeleteInstanceAclResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>The returned result.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -238,7 +238,7 @@ public class DeleteInstanceAclResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>7358418D-83BD-507A-8079-*****</p>
+         * <p>7358418D-83BD-507A-8079-611C63E05674</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -246,7 +246,7 @@ public class DeleteInstanceAclResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

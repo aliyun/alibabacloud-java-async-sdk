@@ -145,7 +145,7 @@ public class UpdateTopicResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Error code.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>Topic.NotFound</p>
@@ -156,7 +156,7 @@ public class UpdateTopicResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Return result.</p>
+         * <p>The returned result.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -167,7 +167,7 @@ public class UpdateTopicResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Dynamic error code</p>
+         * <p>The dynamic error code.</p>
          * 
          * <strong>example:</strong>
          * <p>TopicName</p>
@@ -178,7 +178,7 @@ public class UpdateTopicResponseBody extends TeaModel {
         }
 
         /**
-         * <p>动态错误信息</p>
+         * <p>The dynamic error message.</p>
          * 
          * <strong>example:</strong>
          * <p>topicName</p>
@@ -189,7 +189,7 @@ public class UpdateTopicResponseBody extends TeaModel {
         }
 
         /**
-         * <p>HTTP status code.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>400</p>
@@ -200,7 +200,7 @@ public class UpdateTopicResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error message.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>The topic cannot be found.</p>
@@ -211,7 +211,7 @@ public class UpdateTopicResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID, each request has a unique ID that can be used for troubleshooting and problem localization.</p>
+         * <p>The ID of the request. This ID is unique to each request and can be used to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>AF9A8B10-C426-530F-A0DD-96320B39****</p>
@@ -222,7 +222,7 @@ public class UpdateTopicResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether the execution result is successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

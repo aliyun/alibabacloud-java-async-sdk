@@ -173,7 +173,7 @@ public class VerifySendMessageRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,7 +186,7 @@ public class VerifySendMessageRequest extends Request {
         }
 
         /**
-         * <p>The topic name.</p>
+         * <p>The name of the topic.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -199,7 +199,10 @@ public class VerifySendMessageRequest extends Request {
         }
 
         /**
-         * deliveryTimeStamp.
+         * <p>The delivery time for a delayed message, specified as a UNIX timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1773718320000</p>
          */
         public Builder deliveryTimeStamp(Long deliveryTimeStamp) {
             this.putBodyParameter("deliveryTimeStamp", deliveryTimeStamp);
@@ -208,7 +211,10 @@ public class VerifySendMessageRequest extends Request {
         }
 
         /**
-         * liteTopicName.
+         * <p>The name of the Lite Message Queue topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder liteTopicName(String liteTopicName) {
             this.putBodyParameter("liteTopicName", liteTopicName);
@@ -217,7 +223,7 @@ public class VerifySendMessageRequest extends Request {
         }
 
         /**
-         * <p>The message body.</p>
+         * <p>The message content.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -229,7 +235,10 @@ public class VerifySendMessageRequest extends Request {
         }
 
         /**
-         * messageGroup.
+         * <p>The ID of the message group. This parameter applies only to ordered messages. Messages with the same group ID are consumed in the order they are sent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testMessageGroup</p>
          */
         public Builder messageGroup(String messageGroup) {
             this.putBodyParameter("messageGroup", messageGroup);
@@ -238,7 +247,7 @@ public class VerifySendMessageRequest extends Request {
         }
 
         /**
-         * <p>The message key.</p>
+         * <p>The business key.</p>
          * 
          * <strong>example:</strong>
          * <p>xx</p>
@@ -262,7 +271,10 @@ public class VerifySendMessageRequest extends Request {
         }
 
         /**
-         * userProperties.
+         * <p>The user-defined properties of the message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;test&quot;:&quot;test&quot;}</p>
          */
         public Builder userProperties(java.util.Map<String, ?> userProperties) {
             this.putBodyParameter("userProperties", userProperties);

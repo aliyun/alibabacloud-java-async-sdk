@@ -130,7 +130,7 @@ public class UpdateInstanceAccountRequest extends Request {
         }
 
         /**
-         * <p>The username of the account.</p>
+         * <p>The username.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,12 +143,7 @@ public class UpdateInstanceAccountRequest extends Request {
         }
 
         /**
-         * <p>The status of the account.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>DISABLE</li>
-         * <li>ENABLE</li>
-         * </ul>
+         * <p>The account status.</p>
          * 
          * <strong>example:</strong>
          * <p>ENABLE</p>
@@ -160,7 +155,7 @@ public class UpdateInstanceAccountRequest extends Request {
         }
 
         /**
-         * <p>The password of the account.</p>
+         * <p>The account password.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -172,7 +167,10 @@ public class UpdateInstanceAccountRequest extends Request {
         }
 
         /**
-         * remark.
+         * <p>The remark.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("remark", remark);

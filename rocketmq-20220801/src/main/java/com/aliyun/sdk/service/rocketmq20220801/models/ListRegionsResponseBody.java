@@ -219,7 +219,7 @@ public class ListRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -434,7 +434,7 @@ public class ListRegionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the ApsaraMQ for RocketMQ instance was created.</p>
+             * <p>The creation time, in the format of YYYY-MM-DD HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-08-01 20:05:50</p>
@@ -445,7 +445,7 @@ public class ListRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID.</p>
+             * <p>The region ID, such as cn-hangzhou.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -456,10 +456,10 @@ public class ListRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region name.</p>
+             * <p>The Chinese name of the region, such as Hangzhou.</p>
              * 
              * <strong>example:</strong>
-             * <p>hangzhou</p>
+             * <p>杭州</p>
              */
             public Builder regionName(String regionName) {
                 this.regionName = regionName;
@@ -467,7 +467,7 @@ public class ListRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether ApsaraMQ for RocketMQ V4 is activated.</p>
+             * <p>Indicates whether RocketMQ V4 is activated.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -478,7 +478,7 @@ public class ListRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether ApsaraMQ for RocketMQ V5 is activated.</p>
+             * <p>Indicates whether RocketMQ V5 is activated.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -497,7 +497,7 @@ public class ListRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the ApsaraMQ for RocketMQ instance was last modified.</p>
+             * <p>The update time, in the format of YYYY-MM-DD HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-08-01 20:05:50</p>

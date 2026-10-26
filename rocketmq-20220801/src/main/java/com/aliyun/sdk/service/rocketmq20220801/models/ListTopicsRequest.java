@@ -118,7 +118,7 @@ public class ListTopicsRequest extends Request {
         } 
 
         /**
-         * <p>Specifies which instance&quot;s topic list to retrieve.</p>
+         * <p>The instance whose topic list you want to retrieve.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,7 +131,7 @@ public class ListTopicsRequest extends Request {
         }
 
         /**
-         * <p>The filter condition for the query. If not provided, all topics under the instance will be queried.</p>
+         * <p>The filter condition for the query. If not specified, all topics in the instance are returned.</p>
          * 
          * <strong>example:</strong>
          * <p>topic_test</p>
@@ -153,7 +153,7 @@ public class ListTopicsRequest extends Request {
         }
 
         /**
-         * <p>Page number, indicating which page of results to return.</p>
+         * <p>The page number of the results to return.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -165,7 +165,7 @@ public class ListTopicsRequest extends Request {
         }
 
         /**
-         * <p>Page size, the maximum number of results to display per page.</p>
+         * <p>The maximum number of results to display per page.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>

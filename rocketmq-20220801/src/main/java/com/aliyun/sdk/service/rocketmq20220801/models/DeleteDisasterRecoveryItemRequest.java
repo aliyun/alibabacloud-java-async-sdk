@@ -75,7 +75,7 @@ public class DeleteDisasterRecoveryItemRequest extends Request {
         } 
 
         /**
-         * <p>Backup plan ID</p>
+         * <p>The ID of the backup plan.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class DeleteDisasterRecoveryItemRequest extends Request {
         }
 
         /**
-         * <p>Backup mapping task ID</p>
+         * <p>The ID of the mapping task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

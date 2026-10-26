@@ -32,14 +32,16 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ChangeResourceGroupResponse> changeResourceGroup(ChangeResourceGroupRequest request);
 
     /**
+     * @param request the request parameters of CreateAgentConversation  CreateAgentConversationRequest
+     * @return CreateAgentConversationResponse
+     */
+    CompletableFuture<CreateAgentConversationResponse> createAgentConversation(CreateAgentConversationRequest request);
+
+    /**
      * <b>description</b> :
-     * <p>The ID of the consumer group. The ID is globally unique and is used to identify a consumer group.
-     * The following limits are imposed on the ID:</p>
-     * <ul>
-     * <li>Character limit: The ID can contain letters, digits, underscores (_), hyphens (-), and percent signs (%).</li>
-     * <li>Length limit: The ID must be 1 to 60 characters in length.
-     * For more information about strings that are reserved for the system, see <a href="https://help.aliyun.com/document_detail/440347.html">Limits on parameters</a>.</li>
-     * </ul>
+     * <blockquote>
+     * <p>Notice: The OpenAPI operations provided by Alibaba Cloud are management APIs used to manage and query Alibaba Cloud service resources. Use these operations only in the management link. Do not use them in the core data link for sending and receiving messages, as this may introduce risks to the link.</p>
+     * </blockquote>
      * 
      * @param request the request parameters of CreateConsumerGroup  CreateConsumerGroupRequest
      * @return CreateConsumerGroupResponse
@@ -55,7 +57,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</p>
+     * <p>Notice: The OpenAPI provided by Alibaba Cloud is a management and control API used to manage and query resources of Alibaba Cloud services. Integrate it only into the management and control link. Do not rely on OpenAPI in the core data link for message sending and receiving. Otherwise, risks may occur on the link.</p>
      * </blockquote>
      * 
      * @param request the request parameters of CreateInstance  CreateInstanceRequest
@@ -76,6 +78,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateInstanceAclResponse> createInstanceAcl(CreateInstanceAclRequest request);
 
     /**
+     * @param request the request parameters of CreateInstanceInspection  CreateInstanceInspectionRequest
+     * @return CreateInstanceInspectionResponse
+     */
+    CompletableFuture<CreateInstanceInspectionResponse> createInstanceInspection(CreateInstanceInspectionRequest request);
+
+    /**
      * @param request the request parameters of CreateInstanceIpWhitelist  CreateInstanceIpWhitelistRequest
      * @return CreateInstanceIpWhitelistResponse
      */
@@ -88,10 +96,16 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateTopicResponse> createTopic(CreateTopicRequest request);
 
     /**
+     * @param request the request parameters of DeleteAgentConversation  DeleteAgentConversationRequest
+     * @return DeleteAgentConversationResponse
+     */
+    CompletableFuture<DeleteAgentConversationResponse> deleteAgentConversation(DeleteAgentConversationRequest request);
+
+    /**
      * <b>description</b> :
      * <blockquote>
-     * <p>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-     * After you delete a consumer group, the consumer client associated with the consumer group cannot consume messages. Exercise caution when you call this operation.</p>
+     * <p>Notice: OpenAPI operations provided by Alibaba Cloud are management API operations used to manage and query resources of Alibaba Cloud services. Integrate these operations only into management workflows. Do not rely on OpenAPI operations in the core data link for message sending and receiving. Otherwise, risks may occur in the workflows.
+     * After you delete a specified consumer group, consumer clients with the identity of the consumer group cannot consume messages. Invoke this operation with caution.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DeleteConsumerGroup  DeleteConsumerGroupRequest
@@ -145,6 +159,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteInstanceAclResponse> deleteInstanceAcl(DeleteInstanceAclRequest request);
 
     /**
+     * @param request the request parameters of DeleteInstanceInspection  DeleteInstanceInspectionRequest
+     * @return DeleteInstanceInspectionResponse
+     */
+    CompletableFuture<DeleteInstanceInspectionResponse> deleteInstanceInspection(DeleteInstanceInspectionRequest request);
+
+    /**
      * @param request the request parameters of DeleteInstanceIpWhitelist  DeleteInstanceIpWhitelistRequest
      * @return DeleteInstanceIpWhitelistResponse
      */
@@ -152,7 +172,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>If you delete the topic, the publishing and subscription relationships that are established based on the topic are cleared. Exercise caution when you call this operation.</p>
+     * <p>Deleting a topic clears all publish-subscribe relationships under the topic. Call this operation with caution.</p>
      * 
      * @param request the request parameters of DeleteTopic  DeleteTopicRequest
      * @return DeleteTopicResponse
@@ -172,6 +192,28 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<FinishMigrationStageResponse> finishMigrationStage(FinishMigrationStageRequest request);
 
     /**
+     * @param request the request parameters of GetAgentConversation  GetAgentConversationRequest
+     * @return GetAgentConversationResponse
+     */
+    CompletableFuture<GetAgentConversationResponse> getAgentConversation(GetAgentConversationRequest request);
+
+    /**
+     * @param request the request parameters of GetAgentConversationEvents  GetAgentConversationEventsRequest
+     * @return GetAgentConversationEventsResponse
+     */
+    CompletableFuture<GetAgentConversationEventsResponse> getAgentConversationEvents(GetAgentConversationEventsRequest request);
+
+<ReturnT> CompletableFuture<ReturnT> getAgentConversationEventsWithAsyncResponseHandler(GetAgentConversationEventsRequest request, AsyncResponseHandler<GetAgentConversationEventsResponse, ReturnT> responseHandler);
+
+    ResponseIterable<String> getAgentConversationEventsWithResponseIterable(GetAgentConversationEventsRequest request);
+
+    /**
+     * @param request the request parameters of GetAgentConversationTimeline  GetAgentConversationTimelineRequest
+     * @return GetAgentConversationTimelineResponse
+     */
+    CompletableFuture<GetAgentConversationTimelineResponse> getAgentConversationTimeline(GetAgentConversationTimelineRequest request);
+
+    /**
      * @param request the request parameters of GetConsumeTimespan  GetConsumeTimespanRequest
      * @return GetConsumeTimespanResponse
      */
@@ -180,7 +222,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</p>
+     * <p>Notice: The OpenAPI provided by Alibaba Cloud is a management and control API used to manage and query related resources of Alibaba Cloud services. It is recommended only for integration in management and control data links. Using OpenAPI in the core data link for message sending and receiving is strictly prohibited. Otherwise, risks may occur in the data link.</p>
      * </blockquote>
      * 
      * @param request the request parameters of GetConsumerGroup  GetConsumerGroupRequest
@@ -213,6 +255,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetDisasterRecoveryItemResponse> getDisasterRecoveryItem(GetDisasterRecoveryItemRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before querying, make sure you have created a Global Replicator backup plan. Before using Global Replicator, your account must have the AliyunServiceRoleForRMQDisasterRecovery service-linked role. This role is used to grant authorization for ApsaraMQ for RocketMQ to access the EventBridge event bus. The system typically creates this role automatically the first time you use the associated feature. If automatic creation failed, create the role manually.</p>
+     * 
      * @param request the request parameters of GetDisasterRecoveryPlan  GetDisasterRecoveryPlanRequest
      * @return GetDisasterRecoveryPlanResponse
      */
@@ -221,7 +266,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</p>
+     * <p>Notice: The OpenAPI operations provided by Alibaba Cloud are management APIs used to manage and query Alibaba Cloud service resources. Use them only in management and control workflows. Do not rely on OpenAPI in core data link workflows for message sending and receiving, as this may introduce risks to the data link.</notice></p>
      * </blockquote>
      * 
      * @param request the request parameters of GetInstance  GetInstanceRequest
@@ -240,6 +285,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetInstanceAclResponse
      */
     CompletableFuture<GetInstanceAclResponse> getInstanceAcl(GetInstanceAclRequest request);
+
+    /**
+     * @param request the request parameters of GetInstanceInspection  GetInstanceInspectionRequest
+     * @return GetInstanceInspectionResponse
+     */
+    CompletableFuture<GetInstanceInspectionResponse> getInstanceInspection(GetInstanceInspectionRequest request);
+
+    /**
+     * @param request the request parameters of GetInstanceInspectionReport  GetInstanceInspectionReportRequest
+     * @return GetInstanceInspectionReportResponse
+     */
+    CompletableFuture<GetInstanceInspectionReportResponse> getInstanceInspectionReport(GetInstanceInspectionReportRequest request);
+
+    /**
+     * @param request the request parameters of GetInstanceInspectionRun  GetInstanceInspectionRunRequest
+     * @return GetInstanceInspectionRunResponse
+     */
+    CompletableFuture<GetInstanceInspectionRunResponse> getInstanceInspectionRun(GetInstanceInspectionRunRequest request);
 
     /**
      * @param request the request parameters of GetInstanceIpWhitelist  GetInstanceIpWhitelistRequest
@@ -266,6 +329,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetTraceResponse> getTrace(GetTraceRequest request);
 
     /**
+     * @param request the request parameters of ListAgentConversations  ListAgentConversationsRequest
+     * @return ListAgentConversationsResponse
+     */
+    CompletableFuture<ListAgentConversationsResponse> listAgentConversations(ListAgentConversationsRequest request);
+
+    /**
      * @param request the request parameters of ListAvailableZones  ListAvailableZonesRequest
      * @return ListAvailableZonesResponse
      */
@@ -286,7 +355,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Notice: The OpenAPI provided by Alibaba Cloud is a management API used for managing and querying related resources of Alibaba Cloud services. It is recommended to integrate it only in the management chain. Do not rely on OpenAPI implementation in the core data chain for message sending and receiving, as this may lead to risks in the chain.</p>
+     * <p>Notice: The OpenAPI provided by Alibaba Cloud is a management and control API used to manage and query related resources of Alibaba Cloud services. It is recommended only for integration in management and control links. Using OpenAPI in the core data link for message sending and receiving is strictly prohibited. Otherwise, risks may occur in the link.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ListConsumerGroups  ListConsumerGroupsRequest
@@ -295,6 +364,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListConsumerGroupsResponse> listConsumerGroups(ListConsumerGroupsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, create a Global Replicator backup plan and add topic mapping items to the plan. Then use the corresponding planId, itemId, and source instance ID to query consumer offset synchronization checkpoints. To use Global Replicator, make sure that your account has the AliyunServiceRoleForRMQDisasterRecovery service-linked role. The system typically performs automatic creation of this role when you first use the associated feature.</p>
+     * 
      * @param request the request parameters of ListDisasterRecoveryCheckpoints  ListDisasterRecoveryCheckpointsRequest
      * @return ListDisasterRecoveryCheckpointsResponse
      */
@@ -313,6 +385,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListDisasterRecoveryPlansResponse> listDisasterRecoveryPlans(ListDisasterRecoveryPlansRequest request);
 
     /**
+     * @param request the request parameters of ListInspectionTemplates  ListInspectionTemplatesRequest
+     * @return ListInspectionTemplatesResponse
+     */
+    CompletableFuture<ListInspectionTemplatesResponse> listInspectionTemplates(ListInspectionTemplatesRequest request);
+
+    /**
      * @param request the request parameters of ListInstanceAccount  ListInstanceAccountRequest
      * @return ListInstanceAccountResponse
      */
@@ -325,6 +403,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListInstanceAclResponse> listInstanceAcl(ListInstanceAclRequest request);
 
     /**
+     * @param request the request parameters of ListInstanceInspectionResources  ListInstanceInspectionResourcesRequest
+     * @return ListInstanceInspectionResourcesResponse
+     */
+    CompletableFuture<ListInstanceInspectionResourcesResponse> listInstanceInspectionResources(ListInstanceInspectionResourcesRequest request);
+
+    /**
+     * @param request the request parameters of ListInstanceInspectionRuns  ListInstanceInspectionRunsRequest
+     * @return ListInstanceInspectionRunsResponse
+     */
+    CompletableFuture<ListInstanceInspectionRunsResponse> listInstanceInspectionRuns(ListInstanceInspectionRunsRequest request);
+
+    /**
+     * @param request the request parameters of ListInstanceInspections  ListInstanceInspectionsRequest
+     * @return ListInstanceInspectionsResponse
+     */
+    CompletableFuture<ListInstanceInspectionsResponse> listInstanceInspections(ListInstanceInspectionsRequest request);
+
+    /**
      * @param request the request parameters of ListInstanceIpWhitelist  ListInstanceIpWhitelistRequest
      * @return ListInstanceIpWhitelistResponse
      */
@@ -333,7 +429,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</p>
+     * <p>Notice: The OpenAPI operations provided by Alibaba Cloud are management API operations that are used to manage and query resources of Alibaba Cloud services. Integrate OpenAPI operations only into the management data link. Do not use OpenAPI operations in the core data link for sending and receiving messages. Otherwise, risks may occur on the data link.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ListInstances  ListInstancesRequest
@@ -402,10 +498,44 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ResetConsumeOffsetResponse> resetConsumeOffset(ResetConsumeOffsetRequest request);
 
     /**
+     * @param request the request parameters of RespondAgentConversationAction  RespondAgentConversationActionRequest
+     * @return RespondAgentConversationActionResponse
+     */
+    CompletableFuture<RespondAgentConversationActionResponse> respondAgentConversationAction(RespondAgentConversationActionRequest request);
+
+    /**
+     * @param request the request parameters of RunInstanceInspection  RunInstanceInspectionRequest
+     * @return RunInstanceInspectionResponse
+     */
+    CompletableFuture<RunInstanceInspectionResponse> runInstanceInspection(RunInstanceInspectionRequest request);
+
+    /**
+     * @param request the request parameters of SendAgentConversationMessage  SendAgentConversationMessageRequest
+     * @return SendAgentConversationMessageResponse
+     */
+    CompletableFuture<SendAgentConversationMessageResponse> sendAgentConversationMessage(SendAgentConversationMessageRequest request);
+
+<ReturnT> CompletableFuture<ReturnT> sendAgentConversationMessageWithAsyncResponseHandler(SendAgentConversationMessageRequest request, AsyncResponseHandler<SendAgentConversationMessageResponse, ReturnT> responseHandler);
+
+    ResponseIterable<String> sendAgentConversationMessageWithResponseIterable(SendAgentConversationMessageRequest request);
+
+    /**
      * @param request the request parameters of StartDisasterRecoveryItem  StartDisasterRecoveryItemRequest
      * @return StartDisasterRecoveryItemResponse
      */
     CompletableFuture<StartDisasterRecoveryItemResponse> startDisasterRecoveryItem(StartDisasterRecoveryItemRequest request);
+
+    /**
+     * @param request the request parameters of SteerAgentConversation  SteerAgentConversationRequest
+     * @return SteerAgentConversationResponse
+     */
+    CompletableFuture<SteerAgentConversationResponse> steerAgentConversation(SteerAgentConversationRequest request);
+
+    /**
+     * @param request the request parameters of StopAgentConversation  StopAgentConversationRequest
+     * @return StopAgentConversationResponse
+     */
+    CompletableFuture<StopAgentConversationResponse> stopAgentConversation(StopAgentConversationRequest request);
 
     /**
      * @param request the request parameters of StopDisasterRecoveryItem  StopDisasterRecoveryItemRequest
@@ -432,9 +562,21 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
 
     /**
+     * @param request the request parameters of UpdateAgentConversation  UpdateAgentConversationRequest
+     * @return UpdateAgentConversationResponse
+     */
+    CompletableFuture<UpdateAgentConversationResponse> updateAgentConversation(UpdateAgentConversationRequest request);
+
+    /**
+     * @param request the request parameters of UpdateAgentConversationShareScope  UpdateAgentConversationShareScopeRequest
+     * @return UpdateAgentConversationShareScopeResponse
+     */
+    CompletableFuture<UpdateAgentConversationShareScopeResponse> updateAgentConversationShareScope(UpdateAgentConversationShareScopeRequest request);
+
+    /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Notice: The OpenAPI provided by Alibaba Cloud is a management API used for managing and querying related resources of Alibaba Cloud services. It is recommended to integrate it only in the management chain. It is strictly prohibited to rely on OpenAPI implementation in the core data chain of message sending and receiving, otherwise it may lead to risks in the chain.</p>
+     * <p>Notice: The OpenAPI provided by Alibaba Cloud is a management and control API used to manage and query resources of Alibaba Cloud services. It is recommended only for integration in management and control links. Do not use OpenAPI in the core data link for sending and receiving messages. Otherwise, risks may occur on the data link.</p>
      * </blockquote>
      * 
      * @param request the request parameters of UpdateConsumerGroup  UpdateConsumerGroupRequest
@@ -457,7 +599,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</p>
+     * <p>Notice: The OpenAPI provided by Alibaba Cloud is a management and control API used to manage and query resources of Alibaba Cloud services. It is recommended only for integration in management and control paths. Do not use OpenAPI in the core data link for sending and receiving messages. Otherwise, risks may occur on the link.</p>
      * </blockquote>
      * 
      * @param request the request parameters of UpdateInstance  UpdateInstanceRequest
@@ -478,10 +620,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateInstanceAclResponse> updateInstanceAcl(UpdateInstanceAclRequest request);
 
     /**
+     * @param request the request parameters of UpdateInstanceInspection  UpdateInstanceInspectionRequest
+     * @return UpdateInstanceInspectionResponse
+     */
+    CompletableFuture<UpdateInstanceInspectionResponse> updateInstanceInspection(UpdateInstanceInspectionRequest request);
+
+    /**
      * @param request the request parameters of UpdateTopic  UpdateTopicRequest
      * @return UpdateTopicResponse
      */
     CompletableFuture<UpdateTopicResponse> updateTopic(UpdateTopicRequest request);
+
+    /**
+     * @param request the request parameters of UploadAgentConversationLog  UploadAgentConversationLogRequest
+     * @return UploadAgentConversationLogResponse
+     */
+    CompletableFuture<UploadAgentConversationLogResponse> uploadAgentConversationLog(UploadAgentConversationLogRequest request);
 
     /**
      * @param request the request parameters of VerifyConsumeMessage  VerifyConsumeMessageRequest

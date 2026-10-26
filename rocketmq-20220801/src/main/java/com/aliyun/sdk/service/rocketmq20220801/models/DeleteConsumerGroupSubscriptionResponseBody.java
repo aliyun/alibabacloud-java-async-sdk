@@ -158,7 +158,7 @@ public class DeleteConsumerGroupSubscriptionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details about the access denial. This parameter is returned only if the access is denied because the Resource Access Management (RAM) user does not have the required permissions.</p>
+         * <p>The access denial details. This parameter is returned only when the request is denied because the RAM user does not have the required permissions.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -180,7 +180,7 @@ public class DeleteConsumerGroupSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>The returned result.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -238,7 +238,7 @@ public class DeleteConsumerGroupSubscriptionResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>723CDA5C-E25C-5EAF-9601-******</p>
+         * <p>723CDA5C-E25C-5EAF-9601-08C286DF8A4D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -246,7 +246,7 @@ public class DeleteConsumerGroupSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

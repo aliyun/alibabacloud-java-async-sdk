@@ -104,7 +104,7 @@ public class ListConsumerGroupsRequest extends Request {
         } 
 
         /**
-         * <p>Specifies which instance&quot;s consumer group list to retrieve.</p>
+         * <p>The ID of the instance for which you want to query the consumer group list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,7 +117,7 @@ public class ListConsumerGroupsRequest extends Request {
         }
 
         /**
-         * <p>The filter condition for the query. If not provided, all consumer groups under the specified instance will be queried.</p>
+         * <p>The filter condition for the query. If you do not specify this parameter, all consumer groups under the specified instance are queried.</p>
          * 
          * <strong>example:</strong>
          * <p>CID-TEST</p>
@@ -129,7 +129,7 @@ public class ListConsumerGroupsRequest extends Request {
         }
 
         /**
-         * <p>Page number, indicating which page of results to return.</p>
+         * <p>The paging page number. Specifies which page of results to return.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -141,8 +141,8 @@ public class ListConsumerGroupsRequest extends Request {
         }
 
         /**
-         * <p>Page size, the maximum number of results to display per page.</p>
-         * <p>Value range: [10, 100].</p>
+         * <p>The paging size. The maximum number of results to return per page.</p>
+         * <p>Valid values: [10,100].</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

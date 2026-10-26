@@ -118,7 +118,10 @@ public class ListMigrationsRequest extends Request {
         } 
 
         /**
-         * filter.
+         * <p>The filter conditions for the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
          */
         public Builder filter(String filter) {
             this.putQueryParameter("filter", filter);
@@ -127,10 +130,14 @@ public class ListMigrationsRequest extends Request {
         }
 
         /**
+         * <p>The migration type. Valid values:</p>
+         * <ul>
+         * <li>INSTANCE_MIGRATION: instance migration</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>RESOURCE_IMPORT</p>
+         * <p>INSTANCE_MIGRATION</p>
          */
         public Builder migrationType(String migrationType) {
             this.putQueryParameter("migrationType", migrationType);
@@ -139,6 +146,7 @@ public class ListMigrationsRequest extends Request {
         }
 
         /**
+         * <p>The page number of the page to return.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -151,6 +159,7 @@ public class ListMigrationsRequest extends Request {
         }
 
         /**
+         * <p>The number of entries to return on each page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -163,7 +172,10 @@ public class ListMigrationsRequest extends Request {
         }
 
         /**
-         * resourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm4goe2ckfiva</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("resourceGroupId", resourceGroupId);

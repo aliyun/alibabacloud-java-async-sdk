@@ -156,7 +156,7 @@ public class GetMessageDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -275,6 +275,9 @@ public class GetMessageDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("messageType")
         private String messageType;
 
+        @com.aliyun.core.annotation.NameInMap("priority")
+        private Integer priority;
+
         @com.aliyun.core.annotation.NameInMap("regionId")
         private String regionId;
 
@@ -305,6 +308,7 @@ public class GetMessageDetailResponseBody extends TeaModel {
             this.messageKeys = builder.messageKeys;
             this.messageTag = builder.messageTag;
             this.messageType = builder.messageType;
+            this.priority = builder.priority;
             this.regionId = builder.regionId;
             this.storeHost = builder.storeHost;
             this.storeTime = builder.storeTime;
@@ -399,6 +403,13 @@ public class GetMessageDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return priority
+         */
+        public Integer getPriority() {
+            return this.priority;
+        }
+
+        /**
          * @return regionId
          */
         public String getRegionId() {
@@ -452,6 +463,7 @@ public class GetMessageDetailResponseBody extends TeaModel {
             private java.util.List<String> messageKeys; 
             private String messageTag; 
             private String messageType; 
+            private Integer priority; 
             private String regionId; 
             private String storeHost; 
             private String storeTime; 
@@ -474,6 +486,7 @@ public class GetMessageDetailResponseBody extends TeaModel {
                 this.messageKeys = model.messageKeys;
                 this.messageTag = model.messageTag;
                 this.messageType = model.messageType;
+                this.priority = model.priority;
                 this.regionId = model.regionId;
                 this.storeHost = model.storeHost;
                 this.storeTime = model.storeTime;
@@ -505,7 +518,7 @@ public class GetMessageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The client on which the message was produced.</p>
+             * <p>The host from which the message originated.</p>
              * 
              * <strong>example:</strong>
              * <p>xxx.xx.xxx.xx</p>
@@ -516,7 +529,7 @@ public class GetMessageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the message was generated.</p>
+             * <p>The time when the message was generated, in YYYY-MM-DD HH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-03-22 12:17:08</p>
@@ -538,7 +551,10 @@ public class GetMessageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * liteTopicName.
+             * <p>The lite topic name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder liteTopicName(String liteTopicName) {
                 this.liteTopicName = liteTopicName;
@@ -546,7 +562,7 @@ public class GetMessageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sharding key. This parameter is returned only for ordered messages.</p>
+             * <p>The former sharding key. This field applies only to ordered messages.</p>
              * 
              * <strong>example:</strong>
              * <p>xx</p>
@@ -568,7 +584,7 @@ public class GetMessageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The message keys.</p>
+             * <p>The message key.</p>
              */
             public Builder messageKeys(java.util.List<String> messageKeys) {
                 this.messageKeys = messageKeys;
@@ -576,7 +592,7 @@ public class GetMessageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags.</p>
+             * <p>The tag list.</p>
              * 
              * <strong>example:</strong>
              * <p>xx</p>
@@ -598,6 +614,17 @@ public class GetMessageDetailResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
+             */
+            public Builder priority(Integer priority) {
+                this.priority = priority;
+                return this;
+            }
+
+            /**
              * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
@@ -609,7 +636,7 @@ public class GetMessageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The broker on which the message was stored.</p>
+             * <p>The log broker host where the message is stored.</p>
              * 
              * <strong>example:</strong>
              * <p>xxx.xx.xxx.xx</p>
@@ -620,7 +647,7 @@ public class GetMessageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the message was stored.</p>
+             * <p>The time when the message was stored in the log broker, in YYYY-MM-DD HH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-03-22 12:17:08</p>
@@ -631,7 +658,7 @@ public class GetMessageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The default system attributes.</p>
+             * <p>The default system properties.</p>
              */
             public Builder systemProperties(java.util.Map<String, String> systemProperties) {
                 this.systemProperties = systemProperties;
@@ -650,7 +677,7 @@ public class GetMessageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user attributes.</p>
+             * <p>The user properties.</p>
              */
             public Builder userProperties(java.util.Map<String, String> userProperties) {
                 this.userProperties = userProperties;

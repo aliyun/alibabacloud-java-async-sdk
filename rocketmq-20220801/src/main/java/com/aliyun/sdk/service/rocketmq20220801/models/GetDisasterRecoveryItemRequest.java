@@ -75,7 +75,7 @@ public class GetDisasterRecoveryItemRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the global message backup plan.</p>
+         * <p>The ID of the backup plan.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class GetDisasterRecoveryItemRequest extends Request {
         }
 
         /**
-         * <p>The ID of the topic mapping.</p>
+         * <p>The ID of the mapping task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

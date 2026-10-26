@@ -156,7 +156,7 @@ public class GetInstanceAccountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -208,7 +208,7 @@ public class GetInstanceAccountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID, each request&quot;s ID is unique and can be used for troubleshooting and problem localization.</p>
+         * <p>The unique ID of the request. Use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>B5C59E80-FCFC-5796-ABE4-D39EAAE578E4</p>
@@ -314,12 +314,7 @@ public class GetInstanceAccountResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The status of the account.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>DISABLE</li>
-             * <li>ENABLE</li>
-             * </ul>
+             * <p>The account status.</p>
              * 
              * <strong>example:</strong>
              * <p>ENABLE</p>
@@ -330,7 +325,7 @@ public class GetInstanceAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The password of the account.</p>
+             * <p>The account password.</p>
              * 
              * <strong>example:</strong>
              * <hr>
@@ -341,7 +336,10 @@ public class GetInstanceAccountResponseBody extends TeaModel {
             }
 
             /**
-             * remark.
+             * <p>The remark.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -349,7 +347,7 @@ public class GetInstanceAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The username of the account.</p>
+             * <p>The username.</p>
              * 
              * <strong>example:</strong>
              * <p>xxx</p>

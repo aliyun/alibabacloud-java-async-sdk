@@ -89,6 +89,7 @@ public class FinishMigrationStageRequest extends Request {
         } 
 
         /**
+         * <p>The migration ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,10 +102,11 @@ public class FinishMigrationStageRequest extends Request {
         }
 
         /**
+         * <p>The migration stage type. Valid values: MIGRATE_MESSAGE: message migration.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>CONNECT_NETWORK</p>
+         * <p>MIGRATE_MESSAGE</p>
          */
         public Builder stageType(String stageType) {
             this.putPathParameter("stageType", stageType);
@@ -113,7 +115,10 @@ public class FinishMigrationStageRequest extends Request {
         }
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rmq-cn-pe334f1nx04</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("instanceId", instanceId);

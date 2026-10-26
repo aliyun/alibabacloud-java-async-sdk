@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.rocketmq20220801;
 
 import com.aliyun.core.http.*;
 import com.aliyun.sdk.service.rocketmq20220801.models.*;
+import darabonba.core.sse.SSEHttpResponseHandler;
 import darabonba.core.utils.*;
 import com.aliyun.sdk.gateway.pop.*;
 import darabonba.core.*;
@@ -29,8 +30,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler = new TeaAsyncHandler(configuration);
         this.product = "RocketMQ";
         this.version = "2022-08-01";
-        this.endpointRule = "";
-        this.endpointMap = new java.util.HashMap<>();
+        this.endpointRule = "regional";
+        this.endpointMap = CommonUtil.buildMap(
+            new TeaPair("cn-guangzhou", "rocketmq.cn-guangzhou.aliyuncs.com	")
+        );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 
@@ -76,14 +79,28 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateAgentConversation  CreateAgentConversationRequest
+     * @return CreateAgentConversationResponse
+     */
+    @Override
+    public CompletableFuture<CreateAgentConversationResponse> createAgentConversation(CreateAgentConversationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateAgentConversation").setMethod(HttpMethod.POST).setPathRegex("/api/v1/conversations").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateAgentConversationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateAgentConversationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
-     * <p>The ID of the consumer group. The ID is globally unique and is used to identify a consumer group.
-     * The following limits are imposed on the ID:</p>
-     * <ul>
-     * <li>Character limit: The ID can contain letters, digits, underscores (_), hyphens (-), and percent signs (%).</li>
-     * <li>Length limit: The ID must be 1 to 60 characters in length.
-     * For more information about strings that are reserved for the system, see <a href="https://help.aliyun.com/document_detail/440347.html">Limits on parameters</a>.</li>
-     * </ul>
+     * <blockquote>
+     * <p>Notice: The OpenAPI operations provided by Alibaba Cloud are management APIs used to manage and query Alibaba Cloud service resources. Use these operations only in the management link. Do not use them in the core data link for sending and receiving messages, as this may introduce risks to the link.</p>
+     * </blockquote>
      * 
      * @param request the request parameters of CreateConsumerGroup  CreateConsumerGroupRequest
      * @return CreateConsumerGroupResponse
@@ -123,7 +140,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</p>
+     * <p>Notice: The OpenAPI provided by Alibaba Cloud is a management and control API used to manage and query resources of Alibaba Cloud services. Integrate it only into the management and control link. Do not rely on OpenAPI in the core data link for message sending and receiving. Otherwise, risks may occur on the link.</p>
      * </blockquote>
      * 
      * @param request the request parameters of CreateInstance  CreateInstanceRequest
@@ -180,6 +197,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateInstanceInspection  CreateInstanceInspectionRequest
+     * @return CreateInstanceInspectionResponse
+     */
+    @Override
+    public CompletableFuture<CreateInstanceInspectionResponse> createInstanceInspection(CreateInstanceInspectionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateInstanceInspection").setMethod(HttpMethod.POST).setPathRegex("/api/v1/monitoring/instance-inspections/{instanceId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateInstanceInspectionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateInstanceInspectionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateInstanceIpWhitelist  CreateInstanceIpWhitelistRequest
      * @return CreateInstanceIpWhitelistResponse
      */
@@ -216,10 +251,28 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeleteAgentConversation  DeleteAgentConversationRequest
+     * @return DeleteAgentConversationResponse
+     */
+    @Override
+    public CompletableFuture<DeleteAgentConversationResponse> deleteAgentConversation(DeleteAgentConversationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteAgentConversation").setMethod(HttpMethod.DELETE).setPathRegex("/api/v1/conversations/{conversationId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteAgentConversationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteAgentConversationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <blockquote>
-     * <p>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-     * After you delete a consumer group, the consumer client associated with the consumer group cannot consume messages. Exercise caution when you call this operation.</p>
+     * <p>Notice: OpenAPI operations provided by Alibaba Cloud are management API operations used to manage and query resources of Alibaba Cloud services. Integrate these operations only into management workflows. Do not rely on OpenAPI operations in the core data link for message sending and receiving. Otherwise, risks may occur in the workflows.
+     * After you delete a specified consumer group, consumer clients with the identity of the consumer group cannot consume messages. Invoke this operation with caution.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DeleteConsumerGroup  DeleteConsumerGroupRequest
@@ -357,6 +410,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeleteInstanceInspection  DeleteInstanceInspectionRequest
+     * @return DeleteInstanceInspectionResponse
+     */
+    @Override
+    public CompletableFuture<DeleteInstanceInspectionResponse> deleteInstanceInspection(DeleteInstanceInspectionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteInstanceInspection").setMethod(HttpMethod.DELETE).setPathRegex("/api/v1/monitoring/instance-inspections/{instanceId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteInstanceInspectionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteInstanceInspectionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DeleteInstanceIpWhitelist  DeleteInstanceIpWhitelistRequest
      * @return DeleteInstanceIpWhitelistResponse
      */
@@ -376,7 +447,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>If you delete the topic, the publishing and subscription relationships that are established based on the topic are cleared. Exercise caution when you call this operation.</p>
+     * <p>Deleting a topic clears all publish-subscribe relationships under the topic. Call this operation with caution.</p>
      * 
      * @param request the request parameters of DeleteTopic  DeleteTopicRequest
      * @return DeleteTopicResponse
@@ -432,6 +503,85 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetAgentConversation  GetAgentConversationRequest
+     * @return GetAgentConversationResponse
+     */
+    @Override
+    public CompletableFuture<GetAgentConversationResponse> getAgentConversation(GetAgentConversationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetAgentConversation").setMethod(HttpMethod.GET).setPathRegex("/api/v1/conversations/{conversationId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAgentConversationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetAgentConversationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetAgentConversationEvents  GetAgentConversationEventsRequest
+     * @return GetAgentConversationEventsResponse
+     */
+    @Override
+    public CompletableFuture<GetAgentConversationEventsResponse> getAgentConversationEvents(GetAgentConversationEventsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetAgentConversationEvents").setMethod(HttpMethod.GET).setPathRegex("/api/v1/conversations/{conversationId}/events").setBodyType(BodyType.STRING).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAgentConversationEventsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetAgentConversationEventsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public <ReturnT> CompletableFuture<ReturnT> getAgentConversationEventsWithAsyncResponseHandler(GetAgentConversationEventsRequest request, AsyncResponseHandler<GetAgentConversationEventsResponse, ReturnT> responseHandler) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetAgentConversationEvents").setMethod(HttpMethod.GET).setPathRegex("/api/v1/conversations/{conversationId}/events").setBodyType(BodyType.STRING).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withResponseHandler(responseHandler).withOutput(GetAgentConversationEventsResponse.create());
+            return this.handler.execute(params)
+                    .thenCompose((output) -> CompletableFuture.completedFuture(responseHandler.transform((GetAgentConversationEventsResponse)output)));
+        } catch (Exception e) {
+            CompletableFuture<ReturnT> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public ResponseIterable<String> getAgentConversationEventsWithResponseIterable(GetAgentConversationEventsRequest request) {
+        this.handler.validateRequestModel(request);
+        TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("GetAgentConversationEvents").setMethod(HttpMethod.GET).setPathRegex("/api/v1/conversations/{conversationId}/events").setBodyType(BodyType.STRING).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+        GetAgentConversationEventsResponseBodyIterator iterator = GetAgentConversationEventsResponseBodyIterator.create();
+        ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
+        this.handler.execute(params);
+        return new ResponseIterable<>(iterator);
+    }
+
+    /**
+     * @param request the request parameters of GetAgentConversationTimeline  GetAgentConversationTimelineRequest
+     * @return GetAgentConversationTimelineResponse
+     */
+    @Override
+    public CompletableFuture<GetAgentConversationTimelineResponse> getAgentConversationTimeline(GetAgentConversationTimelineRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetAgentConversationTimeline").setMethod(HttpMethod.GET).setPathRegex("/api/v1/conversations/{conversationId}/timeline").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAgentConversationTimelineResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetAgentConversationTimelineResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetConsumeTimespan  GetConsumeTimespanRequest
      * @return GetConsumeTimespanResponse
      */
@@ -452,7 +602,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</p>
+     * <p>Notice: The OpenAPI provided by Alibaba Cloud is a management and control API used to manage and query related resources of Alibaba Cloud services. It is recommended only for integration in management and control data links. Using OpenAPI in the core data link for message sending and receiving is strictly prohibited. Otherwise, risks may occur in the data link.</p>
      * </blockquote>
      * 
      * @param request the request parameters of GetConsumerGroup  GetConsumerGroupRequest
@@ -545,6 +695,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before querying, make sure you have created a Global Replicator backup plan. Before using Global Replicator, your account must have the AliyunServiceRoleForRMQDisasterRecovery service-linked role. This role is used to grant authorization for ApsaraMQ for RocketMQ to access the EventBridge event bus. The system typically creates this role automatically the first time you use the associated feature. If automatic creation failed, create the role manually.</p>
+     * 
      * @param request the request parameters of GetDisasterRecoveryPlan  GetDisasterRecoveryPlanRequest
      * @return GetDisasterRecoveryPlanResponse
      */
@@ -565,7 +718,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</p>
+     * <p>Notice: The OpenAPI operations provided by Alibaba Cloud are management APIs used to manage and query Alibaba Cloud service resources. Use them only in management and control workflows. Do not rely on OpenAPI in core data link workflows for message sending and receiving, as this may introduce risks to the data link.</notice></p>
      * </blockquote>
      * 
      * @param request the request parameters of GetInstance  GetInstanceRequest
@@ -616,6 +769,60 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetInstanceAclResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetInstanceInspection  GetInstanceInspectionRequest
+     * @return GetInstanceInspectionResponse
+     */
+    @Override
+    public CompletableFuture<GetInstanceInspectionResponse> getInstanceInspection(GetInstanceInspectionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetInstanceInspection").setMethod(HttpMethod.GET).setPathRegex("/api/v1/monitoring/instance-inspections/{instanceId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetInstanceInspectionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetInstanceInspectionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetInstanceInspectionReport  GetInstanceInspectionReportRequest
+     * @return GetInstanceInspectionReportResponse
+     */
+    @Override
+    public CompletableFuture<GetInstanceInspectionReportResponse> getInstanceInspectionReport(GetInstanceInspectionReportRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetInstanceInspectionReport").setMethod(HttpMethod.GET).setPathRegex("/api/v1/monitoring/instance-inspections/reports/{reportId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetInstanceInspectionReportResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetInstanceInspectionReportResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetInstanceInspectionRun  GetInstanceInspectionRunRequest
+     * @return GetInstanceInspectionRunResponse
+     */
+    @Override
+    public CompletableFuture<GetInstanceInspectionRunResponse> getInstanceInspectionRun(GetInstanceInspectionRunRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetInstanceInspectionRun").setMethod(HttpMethod.GET).setPathRegex("/api/v1/monitoring/instance-inspections/{instanceId}/runs/{runId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetInstanceInspectionRunResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetInstanceInspectionRunResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -694,6 +901,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListAgentConversations  ListAgentConversationsRequest
+     * @return ListAgentConversationsResponse
+     */
+    @Override
+    public CompletableFuture<ListAgentConversationsResponse> listAgentConversations(ListAgentConversationsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListAgentConversations").setMethod(HttpMethod.GET).setPathRegex("/api/v1/conversations").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListAgentConversationsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListAgentConversationsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListAvailableZones  ListAvailableZonesRequest
      * @return ListAvailableZonesResponse
      */
@@ -750,7 +975,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Notice: The OpenAPI provided by Alibaba Cloud is a management API used for managing and querying related resources of Alibaba Cloud services. It is recommended to integrate it only in the management chain. Do not rely on OpenAPI implementation in the core data chain for message sending and receiving, as this may lead to risks in the chain.</p>
+     * <p>Notice: The OpenAPI provided by Alibaba Cloud is a management and control API used to manage and query related resources of Alibaba Cloud services. It is recommended only for integration in management and control links. Using OpenAPI in the core data link for message sending and receiving is strictly prohibited. Otherwise, risks may occur in the link.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ListConsumerGroups  ListConsumerGroupsRequest
@@ -771,6 +996,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, create a Global Replicator backup plan and add topic mapping items to the plan. Then use the corresponding planId, itemId, and source instance ID to query consumer offset synchronization checkpoints. To use Global Replicator, make sure that your account has the AliyunServiceRoleForRMQDisasterRecovery service-linked role. The system typically performs automatic creation of this role when you first use the associated feature.</p>
+     * 
      * @param request the request parameters of ListDisasterRecoveryCheckpoints  ListDisasterRecoveryCheckpointsRequest
      * @return ListDisasterRecoveryCheckpointsResponse
      */
@@ -825,6 +1053,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListInspectionTemplates  ListInspectionTemplatesRequest
+     * @return ListInspectionTemplatesResponse
+     */
+    @Override
+    public CompletableFuture<ListInspectionTemplatesResponse> listInspectionTemplates(ListInspectionTemplatesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListInspectionTemplates").setMethod(HttpMethod.GET).setPathRegex("/api/v1/monitoring/templates").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListInspectionTemplatesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListInspectionTemplatesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListInstanceAccount  ListInstanceAccountRequest
      * @return ListInstanceAccountResponse
      */
@@ -861,6 +1107,60 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListInstanceInspectionResources  ListInstanceInspectionResourcesRequest
+     * @return ListInstanceInspectionResourcesResponse
+     */
+    @Override
+    public CompletableFuture<ListInstanceInspectionResourcesResponse> listInstanceInspectionResources(ListInstanceInspectionResourcesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListInstanceInspectionResources").setMethod(HttpMethod.GET).setPathRegex("/api/v1/monitoring/instance-inspections/{instanceId}/resources").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListInstanceInspectionResourcesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListInstanceInspectionResourcesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListInstanceInspectionRuns  ListInstanceInspectionRunsRequest
+     * @return ListInstanceInspectionRunsResponse
+     */
+    @Override
+    public CompletableFuture<ListInstanceInspectionRunsResponse> listInstanceInspectionRuns(ListInstanceInspectionRunsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListInstanceInspectionRuns").setMethod(HttpMethod.GET).setPathRegex("/api/v1/monitoring/instance-inspections/{instanceId}/runs").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListInstanceInspectionRunsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListInstanceInspectionRunsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListInstanceInspections  ListInstanceInspectionsRequest
+     * @return ListInstanceInspectionsResponse
+     */
+    @Override
+    public CompletableFuture<ListInstanceInspectionsResponse> listInstanceInspections(ListInstanceInspectionsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListInstanceInspections").setMethod(HttpMethod.GET).setPathRegex("/api/v1/monitoring/instance-inspections").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListInstanceInspectionsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListInstanceInspectionsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListInstanceIpWhitelist  ListInstanceIpWhitelistRequest
      * @return ListInstanceIpWhitelistResponse
      */
@@ -881,7 +1181,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</p>
+     * <p>Notice: The OpenAPI operations provided by Alibaba Cloud are management API operations that are used to manage and query resources of Alibaba Cloud services. Integrate OpenAPI operations only into the management data link. Do not use OpenAPI operations in the core data link for sending and receiving messages. Otherwise, risks may occur on the data link.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ListInstances  ListInstancesRequest
@@ -1082,6 +1382,85 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of RespondAgentConversationAction  RespondAgentConversationActionRequest
+     * @return RespondAgentConversationActionResponse
+     */
+    @Override
+    public CompletableFuture<RespondAgentConversationActionResponse> respondAgentConversationAction(RespondAgentConversationActionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RespondAgentConversationAction").setMethod(HttpMethod.POST).setPathRegex("/api/v1/conversations/{conversationId}/actions/{actionId}/respond").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RespondAgentConversationActionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RespondAgentConversationActionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of RunInstanceInspection  RunInstanceInspectionRequest
+     * @return RunInstanceInspectionResponse
+     */
+    @Override
+    public CompletableFuture<RunInstanceInspectionResponse> runInstanceInspection(RunInstanceInspectionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RunInstanceInspection").setMethod(HttpMethod.POST).setPathRegex("/api/v1/monitoring/instance-inspections/{instanceId}/runs").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RunInstanceInspectionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RunInstanceInspectionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SendAgentConversationMessage  SendAgentConversationMessageRequest
+     * @return SendAgentConversationMessageResponse
+     */
+    @Override
+    public CompletableFuture<SendAgentConversationMessageResponse> sendAgentConversationMessage(SendAgentConversationMessageRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("SendAgentConversationMessage").setMethod(HttpMethod.POST).setPathRegex("/api/v1/conversations/{conversationId}/messages").setBodyType(BodyType.STRING).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SendAgentConversationMessageResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SendAgentConversationMessageResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public <ReturnT> CompletableFuture<ReturnT> sendAgentConversationMessageWithAsyncResponseHandler(SendAgentConversationMessageRequest request, AsyncResponseHandler<SendAgentConversationMessageResponse, ReturnT> responseHandler) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("SendAgentConversationMessage").setMethod(HttpMethod.POST).setPathRegex("/api/v1/conversations/{conversationId}/messages").setBodyType(BodyType.STRING).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withResponseHandler(responseHandler).withOutput(SendAgentConversationMessageResponse.create());
+            return this.handler.execute(params)
+                    .thenCompose((output) -> CompletableFuture.completedFuture(responseHandler.transform((SendAgentConversationMessageResponse)output)));
+        } catch (Exception e) {
+            CompletableFuture<ReturnT> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public ResponseIterable<String> sendAgentConversationMessageWithResponseIterable(SendAgentConversationMessageRequest request) {
+        this.handler.validateRequestModel(request);
+        TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("SendAgentConversationMessage").setMethod(HttpMethod.POST).setPathRegex("/api/v1/conversations/{conversationId}/messages").setBodyType(BodyType.STRING).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+        SendAgentConversationMessageResponseBodyIterator iterator = SendAgentConversationMessageResponseBodyIterator.create();
+        ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
+        this.handler.execute(params);
+        return new ResponseIterable<>(iterator);
+    }
+
+    /**
      * @param request the request parameters of StartDisasterRecoveryItem  StartDisasterRecoveryItemRequest
      * @return StartDisasterRecoveryItemResponse
      */
@@ -1094,6 +1473,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<StartDisasterRecoveryItemResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SteerAgentConversation  SteerAgentConversationRequest
+     * @return SteerAgentConversationResponse
+     */
+    @Override
+    public CompletableFuture<SteerAgentConversationResponse> steerAgentConversation(SteerAgentConversationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("SteerAgentConversation").setMethod(HttpMethod.POST).setPathRegex("/api/v1/conversations/{conversationId}/actions/steer").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SteerAgentConversationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SteerAgentConversationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of StopAgentConversation  StopAgentConversationRequest
+     * @return StopAgentConversationResponse
+     */
+    @Override
+    public CompletableFuture<StopAgentConversationResponse> stopAgentConversation(StopAgentConversationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("StopAgentConversation").setMethod(HttpMethod.POST).setPathRegex("/api/v1/conversations/{conversationId}/actions/stop").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(StopAgentConversationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<StopAgentConversationResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1172,9 +1587,45 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of UpdateAgentConversation  UpdateAgentConversationRequest
+     * @return UpdateAgentConversationResponse
+     */
+    @Override
+    public CompletableFuture<UpdateAgentConversationResponse> updateAgentConversation(UpdateAgentConversationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateAgentConversation").setMethod(HttpMethod.PATCH).setPathRegex("/api/v1/conversations/{conversationId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateAgentConversationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateAgentConversationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateAgentConversationShareScope  UpdateAgentConversationShareScopeRequest
+     * @return UpdateAgentConversationShareScopeResponse
+     */
+    @Override
+    public CompletableFuture<UpdateAgentConversationShareScopeResponse> updateAgentConversationShareScope(UpdateAgentConversationShareScopeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateAgentConversationShareScope").setMethod(HttpMethod.PUT).setPathRegex("/api/v1/conversations/{conversationId}/share-scope").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateAgentConversationShareScopeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateAgentConversationShareScopeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Notice: The OpenAPI provided by Alibaba Cloud is a management API used for managing and querying related resources of Alibaba Cloud services. It is recommended to integrate it only in the management chain. It is strictly prohibited to rely on OpenAPI implementation in the core data chain of message sending and receiving, otherwise it may lead to risks in the chain.</p>
+     * <p>Notice: The OpenAPI provided by Alibaba Cloud is a management and control API used to manage and query resources of Alibaba Cloud services. It is recommended only for integration in management and control links. Do not use OpenAPI in the core data link for sending and receiving messages. Otherwise, risks may occur on the data link.</p>
      * </blockquote>
      * 
      * @param request the request parameters of UpdateConsumerGroup  UpdateConsumerGroupRequest
@@ -1233,7 +1684,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</p>
+     * <p>Notice: The OpenAPI provided by Alibaba Cloud is a management and control API used to manage and query resources of Alibaba Cloud services. It is recommended only for integration in management and control paths. Do not use OpenAPI in the core data link for sending and receiving messages. Otherwise, risks may occur on the link.</p>
      * </blockquote>
      * 
      * @param request the request parameters of UpdateInstance  UpdateInstanceRequest
@@ -1290,6 +1741,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of UpdateInstanceInspection  UpdateInstanceInspectionRequest
+     * @return UpdateInstanceInspectionResponse
+     */
+    @Override
+    public CompletableFuture<UpdateInstanceInspectionResponse> updateInstanceInspection(UpdateInstanceInspectionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateInstanceInspection").setMethod(HttpMethod.PUT).setPathRegex("/api/v1/monitoring/instance-inspections/{instanceId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateInstanceInspectionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateInstanceInspectionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of UpdateTopic  UpdateTopicRequest
      * @return UpdateTopicResponse
      */
@@ -1302,6 +1771,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateTopicResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UploadAgentConversationLog  UploadAgentConversationLogRequest
+     * @return UploadAgentConversationLogResponse
+     */
+    @Override
+    public CompletableFuture<UploadAgentConversationLogResponse> uploadAgentConversationLog(UploadAgentConversationLogRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UploadAgentConversationLog").setMethod(HttpMethod.POST).setPathRegex("/api/v1/conversations/{conversationId}/logs").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UploadAgentConversationLogResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UploadAgentConversationLogResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

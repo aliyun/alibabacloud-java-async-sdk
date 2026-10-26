@@ -158,7 +158,7 @@ public class CreateInstanceAccountResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>No permission details</p>
+         * <p>The access denial details. This field is returned only when access is denied due to insufficient RAM permissions.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -169,7 +169,7 @@ public class CreateInstanceAccountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned if the call failed.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>MissingInstanceId</p>
@@ -180,7 +180,7 @@ public class CreateInstanceAccountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned result.</p>
+         * <p>The response data.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -235,7 +235,7 @@ public class CreateInstanceAccountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request. The system generates a unique ID for each request. You can troubleshoot issues based on the request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3AE0999C-8DBA-5CEE-8D9A-BE8D4A90DF8D</p>
@@ -246,7 +246,7 @@ public class CreateInstanceAccountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

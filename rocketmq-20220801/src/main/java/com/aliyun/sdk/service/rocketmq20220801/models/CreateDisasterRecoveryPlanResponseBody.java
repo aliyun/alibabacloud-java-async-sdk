@@ -158,7 +158,7 @@ public class CreateDisasterRecoveryPlanResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Access denied details, provided only in scenarios where access is denied due to lack of RAM permissions</p>
+         * <p>The details of the access denial. This parameter is returned only when the user is denied access due to lack of RAM permissions.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -169,7 +169,7 @@ public class CreateDisasterRecoveryPlanResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error code</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -180,7 +180,7 @@ public class CreateDisasterRecoveryPlanResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result, which is the backup plan ID</p>
+         * <p>The returned result, which is the ID of the backup plan.</p>
          * 
          * <strong>example:</strong>
          * <p>1234</p>
@@ -191,7 +191,7 @@ public class CreateDisasterRecoveryPlanResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Dynamic error code</p>
+         * <p>The dynamic error code.</p>
          * 
          * <strong>example:</strong>
          * <p>InstanceId</p>
@@ -202,7 +202,7 @@ public class CreateDisasterRecoveryPlanResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Dynamic error message</p>
+         * <p>The dynamic error message.</p>
          * 
          * <strong>example:</strong>
          * <p>instanceId</p>
@@ -213,7 +213,7 @@ public class CreateDisasterRecoveryPlanResponseBody extends TeaModel {
         }
 
         /**
-         * <p>HTTP status code</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -224,7 +224,7 @@ public class CreateDisasterRecoveryPlanResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error message</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -235,7 +235,7 @@ public class CreateDisasterRecoveryPlanResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>C7E8AE3A-219B-52EE-BE32-4036F5xxxx</p>
@@ -246,7 +246,7 @@ public class CreateDisasterRecoveryPlanResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the operation was successful</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

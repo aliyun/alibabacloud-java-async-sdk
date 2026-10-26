@@ -145,13 +145,13 @@ public class CreateTopicRequest extends Request {
         }
 
         /**
-         * <p>The name of the topic to be created, used for identifying the topic, and it must be globally unique.</p>
-         * <p>Value specifications are as follows:</p>
+         * <p>The name of the topic to be created. The name is used to identify the topic and is globally unique.</p>
+         * <p>Naming conventions:</p>
          * <ul>
-         * <li>Character restrictions: Supports letters a~z or A~Z, numbers 0~9, and underscores (_), hyphens (-).</li>
-         * <li>Length restrictions: 1 to 60 characters.</li>
+         * <li>Character limit: letters a-z or A-Z, digits 0-9, underscores (_), and hyphens (-).</li>
+         * <li>Length limit: 1 to 60 characters.</li>
          * </ul>
-         * <p>For reserved character restrictions, please refer to <a href="https://help.aliyun.com/document_detail/440347.html">Parameter Restrictions</a>.</p>
+         * <p>For reserved character restrictions, see <a href="https://help.aliyun.com/document_detail/440347.html">Parameter limits</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -164,7 +164,12 @@ public class CreateTopicRequest extends Request {
         }
 
         /**
-         * liteTopicExpiration.
+         * <p>The expiration time of the lite topic, in minutes.
+         * Valid values: 30 to 720.
+         * Default value: -1, which indicates the topic never expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder liteTopicExpiration(Long liteTopicExpiration) {
             this.putBodyParameter("liteTopicExpiration", liteTopicExpiration);
@@ -173,7 +178,7 @@ public class CreateTopicRequest extends Request {
         }
 
         /**
-         * <p>The maximum TPS for message sending.</p>
+         * <p>The maximum transactions per second (TPS) for sending messages.</p>
          * 
          * <strong>example:</strong>
          * <p>1500</p>
@@ -185,16 +190,9 @@ public class CreateTopicRequest extends Request {
         }
 
         /**
-         * <p>The type of messages in the topic that you want to create.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>TRANSACTION: transactional messages</li>
-         * <li>FIFO: ordered messages</li>
-         * <li>DELAY: scheduled or delayed messages</li>
-         * <li>NORMAL: normal messages</li>
-         * </ul>
+         * <p>The message type of the topic to be created.</p>
          * <blockquote>
-         * <p> The type of messages in the topic must be the same as the type of messages that you want to send. For example, if you create a topic whose message type is ordered messages, you can use the topic to send and receive only ordered messages.</p>
+         * <p>Notice: The type of the topic must be the same as the type of messages sent to the topic. For example, if you create a topic of the ordered message type, the topic can be used only to send and receive ordered messages, not other types of messages.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -208,7 +206,7 @@ public class CreateTopicRequest extends Request {
         }
 
         /**
-         * <p>The description of the topic that you want to create.</p>
+         * <p>The remarks of the topic to be created.</p>
          * 
          * <strong>example:</strong>
          * <p>This is the remark for test.</p>

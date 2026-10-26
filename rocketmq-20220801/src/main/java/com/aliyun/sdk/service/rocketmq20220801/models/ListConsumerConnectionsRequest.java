@@ -129,7 +129,10 @@ public class ListConsumerConnectionsRequest extends Request {
         }
 
         /**
-         * liteTopicName.
+         * <p>The name of the Lite MSMQ topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder liteTopicName(String liteTopicName) {
             this.putQueryParameter("liteTopicName", liteTopicName);
@@ -138,7 +141,10 @@ public class ListConsumerConnectionsRequest extends Request {
         }
 
         /**
-         * topicName.
+         * <p>The name of the lite topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
         public Builder topicName(String topicName) {
             this.putQueryParameter("topicName", topicName);

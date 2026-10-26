@@ -145,7 +145,7 @@ public class CreateInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code returned if the call failed.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -189,7 +189,7 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -211,7 +211,7 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
+         * <p>The request ID. Each request ID is unique and can be used to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>AF9A8B10-C426-530F-A0DD-96320B39****</p>
@@ -222,7 +222,7 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful.</p>
+         * <p>Indicates whether the operation is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

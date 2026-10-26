@@ -145,7 +145,7 @@ public class ListDisasterRecoveryCheckpointsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Error code</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -156,7 +156,7 @@ public class ListDisasterRecoveryCheckpointsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Response Data</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -164,7 +164,7 @@ public class ListDisasterRecoveryCheckpointsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Dynamic error code</p>
+         * <p>The dynamic error code.</p>
          * 
          * <strong>example:</strong>
          * <p>InstanceId</p>
@@ -186,7 +186,7 @@ public class ListDisasterRecoveryCheckpointsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>HTTP status code</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -197,7 +197,7 @@ public class ListDisasterRecoveryCheckpointsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error message</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>The instance cannot be found.</p>
@@ -208,7 +208,7 @@ public class ListDisasterRecoveryCheckpointsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>AF9A8B10-C426-530F-A0DD-96320B39****</p>
@@ -219,7 +219,7 @@ public class ListDisasterRecoveryCheckpointsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether the operation was successful</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -275,7 +275,7 @@ public class ListDisasterRecoveryCheckpointsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Latest consumption time</p>
+             * <p>The latest consumption time.</p>
              * 
              * <strong>example:</strong>
              * <p>1740724080343</p>
@@ -410,7 +410,7 @@ public class ListDisasterRecoveryCheckpointsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Consumer Group ID</p>
+             * <p>The consumer group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>GID_TEST</p>
@@ -421,7 +421,7 @@ public class ListDisasterRecoveryCheckpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Instance ID</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>rmq-cn-3mp3vblzxxx</p>
@@ -432,10 +432,10 @@ public class ListDisasterRecoveryCheckpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Instance type</p>
+             * <p>The instance type. Valid values:</p>
              * <ul>
-             * <li>ALIYUN_ROCKETMQ: Alibaba Cloud instance</li>
-             * <li>EXTERNAL_ROCKETMQ: External instance, open-source instance, open-source cluster</li>
+             * <li>ALIYUN_ROCKETMQ: Alibaba Cloud instance.</li>
+             * <li>EXTERNAL_ROCKETMQ: external instance, open source instance, or open source cluster.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -447,7 +447,7 @@ public class ListDisasterRecoveryCheckpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Last fetch time</p>
+             * <p>The most recent fetch time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1740724080343</p>
@@ -458,7 +458,7 @@ public class ListDisasterRecoveryCheckpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Consumption progress data</p>
+             * <p>The consumer offset data.</p>
              */
             public Builder progressData(ProgressData progressData) {
                 this.progressData = progressData;
@@ -466,7 +466,7 @@ public class ListDisasterRecoveryCheckpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Region ID</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -534,7 +534,7 @@ public class ListDisasterRecoveryCheckpointsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Latest consumption time</p>
+             * <p>The latest consumption time.</p>
              * 
              * <strong>example:</strong>
              * <p>1740724080343</p>
@@ -669,7 +669,7 @@ public class ListDisasterRecoveryCheckpointsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Consumer group ID</p>
+             * <p>The consumer group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>GID_TEST</p>
@@ -680,7 +680,7 @@ public class ListDisasterRecoveryCheckpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Instance ID</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>rmq-cn-nwy3i065xxx</p>
@@ -691,10 +691,10 @@ public class ListDisasterRecoveryCheckpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Instance type</p>
+             * <p>The instance type. Valid values:</p>
              * <ul>
-             * <li>ALIYUN_ROCKETMQ: Alibaba Cloud instance</li>
-             * <li>EXTERNAL_ROCKETMQ: External instance, open-source instance, open-source cluster</li>
+             * <li>ALIYUN_ROCKETMQ: Alibaba Cloud instance.</li>
+             * <li>EXTERNAL_ROCKETMQ: external instance, open source instance, or open source cluster.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -706,7 +706,7 @@ public class ListDisasterRecoveryCheckpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Latest fetch time</p>
+             * <p>The latest fetch time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1740724080343</p>
@@ -717,7 +717,7 @@ public class ListDisasterRecoveryCheckpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Consumption progress data</p>
+             * <p>The consumer offset data.</p>
              */
             public Builder progressData(TargetProgressProgressData progressData) {
                 this.progressData = progressData;
@@ -725,7 +725,7 @@ public class ListDisasterRecoveryCheckpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Region ID</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -736,7 +736,7 @@ public class ListDisasterRecoveryCheckpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Topic name</p>
+             * <p>The topic name.</p>
              * 
              * <strong>example:</strong>
              * <p>TOPIC_TEST</p>
@@ -858,7 +858,7 @@ public class ListDisasterRecoveryCheckpointsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Consumption Progress ID</p>
+             * <p>The consumer offset checkpoint ID.</p>
              * 
              * <strong>example:</strong>
              * <p>10000000xx</p>
@@ -869,7 +869,7 @@ public class ListDisasterRecoveryCheckpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Backup Mapping ID</p>
+             * <p>The ID of the backup mapping.</p>
              * 
              * <strong>example:</strong>
              * <p>10000000xx</p>
@@ -880,7 +880,7 @@ public class ListDisasterRecoveryCheckpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Last synchronization time</p>
+             * <p>The most recent synchronization time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1740724080343</p>
@@ -891,7 +891,7 @@ public class ListDisasterRecoveryCheckpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Backup Plan ID</p>
+             * <p>The ID of the backup plan.</p>
              * 
              * <strong>example:</strong>
              * <p>13000000xx</p>
@@ -902,7 +902,7 @@ public class ListDisasterRecoveryCheckpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Source consumption progress</p>
+             * <p>The source consumer offset.</p>
              */
             public Builder sourceProgress(SourceProgress sourceProgress) {
                 this.sourceProgress = sourceProgress;
@@ -910,7 +910,7 @@ public class ListDisasterRecoveryCheckpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Target consumption progress</p>
+             * <p>The target consumer offset.</p>
              */
             public Builder targetProgress(TargetProgress targetProgress) {
                 this.targetProgress = targetProgress;
@@ -1003,7 +1003,7 @@ public class ListDisasterRecoveryCheckpointsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Paged data</p>
+             * <p>The paginated data.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -1011,7 +1011,7 @@ public class ListDisasterRecoveryCheckpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Current page number</p>
+             * <p>The current page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1022,7 +1022,7 @@ public class ListDisasterRecoveryCheckpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Page size</p>
+             * <p>The page size.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -1033,7 +1033,7 @@ public class ListDisasterRecoveryCheckpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Total number of records</p>
+             * <p>The total number of records.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

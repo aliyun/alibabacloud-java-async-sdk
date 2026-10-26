@@ -75,7 +75,7 @@ public class GetTopicRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the instance to which the topic to be queried belongs.</p>
+         * <p>The ID of the instance to which the topic to query belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class GetTopicRequest extends Request {
         }
 
         /**
-         * <p>The name of the topic to be queried.</p>
+         * <p>The name of the topic to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
