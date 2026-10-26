@@ -145,7 +145,7 @@ public class ListPrometheusVirtualInstancesRequest extends Request {
         }
 
         /**
-         * <p>The next paging token for the paged query.</p>
+         * <p>The next token for the paging query.</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);

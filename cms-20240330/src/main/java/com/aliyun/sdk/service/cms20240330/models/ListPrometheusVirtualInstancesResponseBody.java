@@ -125,7 +125,7 @@ public class ListPrometheusVirtualInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The next token for the next page. It is empty when all results are returned.</p>
+         * <p>The next token for the next page. This parameter is empty when all results are returned.</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -144,7 +144,7 @@ public class ListPrometheusVirtualInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of instances returned.</p>
+         * <p>The total number of returned instances.</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -273,7 +273,7 @@ public class ListPrometheusVirtualInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The HTTP API URL.</p>
+             * <p>The HTTP API endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://xxxxxxxx">http://xxxxxxxx</a></p>

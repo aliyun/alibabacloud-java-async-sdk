@@ -217,6 +217,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateServiceTaskResponse> createServiceTask(CreateServiceTaskRequest request);
 
     /**
+     * @param request the request parameters of CreateSubscription  CreateSubscriptionRequest
+     * @return CreateSubscriptionResponse
+     */
+    CompletableFuture<CreateSubscriptionResponse> createSubscription(CreateSubscriptionRequest request);
+
+    /**
      * @param request the request parameters of CreateTicket  CreateTicketRequest
      * @return CreateTicketResponse
      */
@@ -417,6 +423,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteServiceTaskResponse> deleteServiceTask(DeleteServiceTaskRequest request);
 
     /**
+     * @param request the request parameters of DeleteSubscription  DeleteSubscriptionRequest
+     * @return DeleteSubscriptionResponse
+     */
+    CompletableFuture<DeleteSubscriptionResponse> deleteSubscription(DeleteSubscriptionRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Deletes a Umodel from a specified workspace.</p>
      * 
@@ -480,6 +492,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DisableNotifyPolicyResponse> disableNotifyPolicy(DisableNotifyPolicyRequest request);
 
     /**
+     * @param request the request parameters of DisableSubscription  DisableSubscriptionRequest
+     * @return DisableSubscriptionResponse
+     */
+    CompletableFuture<DisableSubscriptionResponse> disableSubscription(DisableSubscriptionRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Enables a specified silence policy. After the policy is enabled, the service refreshes the runtime cache through asynchronous messages. After the refresh is complete, events that match the filter conditions of the policy and fall within the effective period do not trigger notifications. Events may still be processed based on the pre-enablement state for a short period. If the specified silence policy does not exist, a ResourceNotFound error is returned.</p>
      * 
@@ -496,6 +514,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return EnableNotifyPolicyResponse
      */
     CompletableFuture<EnableNotifyPolicyResponse> enableNotifyPolicy(EnableNotifyPolicyRequest request);
+
+    /**
+     * @param request the request parameters of EnableSubscription  EnableSubscriptionRequest
+     * @return EnableSubscriptionResponse
+     */
+    CompletableFuture<EnableSubscriptionResponse> enableSubscription(EnableSubscriptionRequest request);
 
     /**
      * @param request the request parameters of ExecuteQuery  ExecuteQueryRequest
@@ -751,6 +775,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetServiceTaskResponse> getServiceTask(GetServiceTaskRequest request);
 
     /**
+     * @param request the request parameters of GetSubscription  GetSubscriptionRequest
+     * @return GetSubscriptionResponse
+     */
+    CompletableFuture<GetSubscriptionResponse> getSubscription(GetSubscriptionRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Retrieves Umodel configuration information.</p>
      * 
@@ -782,7 +812,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of integration configurations.</p>
+     * <p>Queries the list of add-on configurations.</p>
      * 
      * @param request the request parameters of ListAddonReleases  ListAddonReleasesRequest
      * @return ListAddonReleasesResponse
@@ -1041,10 +1071,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListServicesResponse> listServices(ListServicesRequest request);
 
     /**
+     * @param request the request parameters of ListSubscriptions  ListSubscriptionsRequest
+     * @return ListSubscriptionsResponse
+     */
+    CompletableFuture<ListSubscriptionsResponse> listSubscriptions(ListSubscriptionsRequest request);
+
+    /**
      * @param request the request parameters of ListTagResources  ListTagResourcesRequest
      * @return ListTagResourcesResponse
      */
     CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
+
+    /**
+     * @param request the request parameters of ListUserNotifyHistories  ListUserNotifyHistoriesRequest
+     * @return ListUserNotifyHistoriesResponse
+     */
+    CompletableFuture<ListUserNotifyHistoriesResponse> listUserNotifyHistories(ListUserNotifyHistoriesRequest request);
 
     /**
      * @param request the request parameters of ListWorkspaces  ListWorkspacesRequest
