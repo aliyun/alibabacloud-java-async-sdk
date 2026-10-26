@@ -992,6 +992,9 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
 
             /**
              * <p>The status of the HSM hardware encryption module. Indicates whether the Bastionhost instance is integrated with an HSM.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Disable</p>
              */
             public Builder HSMModule(String HSMModule) {
                 this.HSMModule = HSMModule;

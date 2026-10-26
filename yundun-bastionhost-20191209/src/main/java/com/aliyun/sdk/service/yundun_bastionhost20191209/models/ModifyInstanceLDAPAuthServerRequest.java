@@ -246,7 +246,7 @@ public class ModifyInstanceLDAPAuthServerRequest extends Request {
         } 
 
         /**
-         * <p>The username of the account that is used for the LDAP server.</p>
+         * <p>The account of the server.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -259,7 +259,7 @@ public class ModifyInstanceLDAPAuthServerRequest extends Request {
         }
 
         /**
-         * <p>The Base distinguished name (DN).</p>
+         * <p>The base distinguished name (Base DN).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -272,7 +272,7 @@ public class ModifyInstanceLDAPAuthServerRequest extends Request {
         }
 
         /**
-         * <p>The field that is used to indicate the email address of a user on the LDAP server.</p>
+         * <p>The server attribute name that corresponds to the user email address.</p>
          * 
          * <strong>example:</strong>
          * <p>emailAttr</p>
@@ -284,7 +284,7 @@ public class ModifyInstanceLDAPAuthServerRequest extends Request {
         }
 
         /**
-         * <p>The condition that is used to filter users.</p>
+         * <p>The filter condition for users.</p>
          * 
          * <strong>example:</strong>
          * <p>(objectClass=top)</p>
@@ -296,9 +296,9 @@ public class ModifyInstanceLDAPAuthServerRequest extends Request {
         }
 
         /**
-         * <p>The bastion host ID.</p>
+         * <p>The instance ID of the Bastionhost instance.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the parameter value.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -312,12 +312,10 @@ public class ModifyInstanceLDAPAuthServerRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to support SSL. Valid values:</p>
+         * <p>Specifies whether SSL is supported. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong></p>
-         * </li>
-         * <li><p><strong>false</strong></p>
-         * </li>
+         * <li><strong>true</strong>: Supported.</li>
+         * <li><strong>false</strong>: Not supported.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -330,7 +328,7 @@ public class ModifyInstanceLDAPAuthServerRequest extends Request {
         }
 
         /**
-         * <p>The field that is used to indicate the logon name of a user on the LDAP server.</p>
+         * <p>The server attribute name that corresponds to the user logon name.</p>
          * 
          * <strong>example:</strong>
          * <p>userNameAttr</p>
@@ -342,7 +340,7 @@ public class ModifyInstanceLDAPAuthServerRequest extends Request {
         }
 
         /**
-         * <p>The field that is used to indicate the mobile phone number of a user on the LDAP server.</p>
+         * <p>The server attribute name that corresponds to the user mobile phone number.</p>
          * 
          * <strong>example:</strong>
          * <p>mobileAttr</p>
@@ -354,7 +352,7 @@ public class ModifyInstanceLDAPAuthServerRequest extends Request {
         }
 
         /**
-         * <p>The field that is used to indicate the name of a user on the LDAP server.</p>
+         * <p>The server attribute name that corresponds to the username.</p>
          * 
          * <strong>example:</strong>
          * <p>nameAttr</p>
@@ -366,7 +364,7 @@ public class ModifyInstanceLDAPAuthServerRequest extends Request {
         }
 
         /**
-         * <p>The password of the account that is used for the LDAP server. You must configure a password when you configure LDAP authentication. If you leave this parameter empty when you modify the settings of LDAP authentication, the current password is used.</p>
+         * <p>The password of the server account. This parameter is required when you add an LDAP authentication server. When you modify the information of an LDAP authentication server, if you do not specify this parameter, the current password is retained.</p>
          * 
          * <strong>example:</strong>
          * <hr>
@@ -378,7 +376,7 @@ public class ModifyInstanceLDAPAuthServerRequest extends Request {
         }
 
         /**
-         * <p>The port that is used to access the LDAP server.</p>
+         * <p>The port used to access the server.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -391,7 +389,7 @@ public class ModifyInstanceLDAPAuthServerRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the bastion host.</p>
+         * <p>The region ID of the Bastionhost instance.</p>
          * <blockquote>
          * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
          * </blockquote>
@@ -406,7 +404,7 @@ public class ModifyInstanceLDAPAuthServerRequest extends Request {
         }
 
         /**
-         * <p>The address of the LDAP server.</p>
+         * <p>The address of the server.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -419,7 +417,7 @@ public class ModifyInstanceLDAPAuthServerRequest extends Request {
         }
 
         /**
-         * <p>The address of the secondary LDAP server.</p>
+         * <p>The address of the standby server.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.XX.XX</p>

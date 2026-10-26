@@ -93,7 +93,7 @@ public class ModifyDatabasesProjectResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
@@ -104,7 +104,7 @@ public class ModifyDatabasesProjectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The call results.</p>
+         * <p>The results of the operation.</p>
          */
         public Builder results(java.util.List<Results> results) {
             this.results = results;
@@ -112,7 +112,7 @@ public class ModifyDatabasesProjectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of database instances that are moved.</p>
+         * <p>The number of successful operations.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -205,7 +205,7 @@ public class ModifyDatabasesProjectResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The instance ID of the database.</p>
+             * <p>The database instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>53</p>
@@ -216,7 +216,7 @@ public class ModifyDatabasesProjectResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error code. A value of <strong>200</strong> indicates that the operation is successful. Other values indicate that the operation failed.</p>
+             * <p>The error code. An error code of <strong>200</strong> indicates that the operation is successful. Other error codes indicate that the operation failed.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>

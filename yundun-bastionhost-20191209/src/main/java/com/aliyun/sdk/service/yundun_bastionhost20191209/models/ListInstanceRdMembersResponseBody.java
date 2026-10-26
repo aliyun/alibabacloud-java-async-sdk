@@ -93,7 +93,7 @@ public class ListInstanceRdMembersResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The value of MaxResults in the request. If you did not specify MaxResults, the default value is returned.</p>
+         * <p>The maximum number of entries returned per request. If a valid MaxResults value is specified in the request parameter, the specified value is returned. Otherwise, the default value is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -104,7 +104,7 @@ public class ListInstanceRdMembersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A list of member accounts.</p>
+         * <p>The list of member accounts.</p>
          */
         public Builder members(java.util.List<Members> members) {
             this.members = members;
@@ -112,7 +112,7 @@ public class ListInstanceRdMembersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token for the next page of results. If the response is truncated, this parameter is returned. Use this token in your next request to retrieve the next page. If this parameter is empty, all results have been returned.</p>
+         * <p>The token for the next request, which is used for paging. Specify this value in the NextToken request parameter for the next paged query. If this field is empty in the response, no more data is available.</p>
          * 
          * <strong>example:</strong>
          * <p>4ieSWJCwxvW3dk3wF.BqkrZmP72nWu5zJ5NWydMqyEs****</p>
@@ -179,7 +179,7 @@ public class ListInstanceRdMembersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The UID of the member account.</p>
+             * <p>The UID of the member accounts.</p>
              * 
              * <strong>example:</strong>
              * <p>1197234496852779</p>

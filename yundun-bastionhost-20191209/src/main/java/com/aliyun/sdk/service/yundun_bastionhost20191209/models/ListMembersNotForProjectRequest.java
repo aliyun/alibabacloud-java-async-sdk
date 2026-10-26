@@ -144,7 +144,7 @@ public class ListMembersNotForProjectRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID of the bastion host.</p>
+         * <p>The instance ID of the Bastionhost instance.</p>
          * <blockquote>
          * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
          * </blockquote>
@@ -160,7 +160,7 @@ public class ListMembersNotForProjectRequest extends Request {
         }
 
         /**
-         * <p>The UID of the member accounts to query. Fuzzy match is supported.</p>
+         * <p>The UIDs of the member accounts to query. Fuzzy match is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>162****5213</p>
@@ -172,7 +172,7 @@ public class ListMembersNotForProjectRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to query. Default value: 20. Maximum value: 100.</p>
+         * <p>The maximum number of entries to return. If you do not specify this parameter, the default value 20 is used. You can query up to 100 entries at a time.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -184,7 +184,7 @@ public class ListMembersNotForProjectRequest extends Request {
         }
 
         /**
-         * <p>The request token. Leave this parameter empty or set it to an empty string for the first request.</p>
+         * <p>The pagination token. For the first request, leave this parameter empty or pass an empty string.</p>
          * 
          * <strong>example:</strong>
          * <p>4ieSWJCwxvW3dk3wF.BqkrZmP72nWu5zJ5NWydMqyEs****</p>
@@ -211,9 +211,9 @@ public class ListMembersNotForProjectRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the bastion host.</p>
+         * <p>The region ID of the Bastionhost instance.</p>
          * <blockquote>
-         * <p>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * <p>For the mappings between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

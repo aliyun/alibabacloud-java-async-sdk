@@ -130,9 +130,9 @@ public class ListProjectsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the bastion host instance.</p>
+         * <p>The ID of the Bastionhost instance.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to retrieve this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -146,7 +146,7 @@ public class ListProjectsRequest extends Request {
         }
 
         /**
-         * <p>The project name to query. Fuzzy match is supported.</p>
+         * <p>The name of the project to query. Fuzzy match is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -158,7 +158,7 @@ public class ListProjectsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return. Default value: 20. Maximum value: 100.</p>
+         * <p>The number of entries to query. If you do not specify this parameter, 20 entries are queried by default. A maximum of 100 entries can be queried in a single request.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -170,9 +170,9 @@ public class ListProjectsRequest extends Request {
         }
 
         /**
-         * <p>The token required for the next query in cursor-based pagination.</p>
+         * <p>The token required for the next cursor-based query.</p>
          * <blockquote>
-         * <p>Leave this parameter empty for the first query. For subsequent requests, set this parameter to the value of NextToken returned in the previous response.</p>
+         * <p>Leave this parameter empty for the first query. For subsequent requests, specify the value of the NextToken field returned in the previous response.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -185,9 +185,9 @@ public class ListProjectsRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the bastion host.</p>
+         * <p>The region ID of the Bastionhost instance.</p>
          * <blockquote>
-         * <p>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * <p>For the mappings between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -202,7 +202,7 @@ public class ListProjectsRequest extends Request {
         /**
          * <p>The number of entries to skip.</p>
          * <blockquote>
-         * <p>This parameter takes effect only when NextToken is empty.</p>
+         * <p>This parameter takes effect only when the NextToken parameter is left empty.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

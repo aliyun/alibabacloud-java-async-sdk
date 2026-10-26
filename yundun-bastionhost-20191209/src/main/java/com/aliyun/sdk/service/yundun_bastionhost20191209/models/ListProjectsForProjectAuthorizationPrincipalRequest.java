@@ -130,9 +130,9 @@ public class ListProjectsForProjectAuthorizationPrincipalRequest extends Request
         } 
 
         /**
-         * <p>The instance ID of the bastion host.</p>
+         * <p>The instance ID of the Bastionhost instance.</p>
          * <blockquote>
-         * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
+         * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain the parameter value.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -170,7 +170,7 @@ public class ListProjectsForProjectAuthorizationPrincipalRequest extends Request
         }
 
         /**
-         * <p>The token for the paging query. Leave this parameter empty or do not specify this character for the first request.</p>
+         * <p>The paging token used to start a paged query. For the first request, do not pass this parameter or pass an empty string of characters.</p>
          * 
          * <strong>example:</strong>
          * <p>4ieSWJCwxvW3dk3wF.BqkrZmP72nWu5zJ5NWydMqyEs****</p>
@@ -182,9 +182,9 @@ public class ListProjectsForProjectAuthorizationPrincipalRequest extends Request
         }
 
         /**
-         * <p>The region ID of the bastion host.</p>
+         * <p>The region ID of the Bastionhost instance.</p>
          * <blockquote>
-         * <p>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * <p>For the mappings between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -197,9 +197,9 @@ public class ListProjectsForProjectAuthorizationPrincipalRequest extends Request
         }
 
         /**
-         * <p>The number of entries to skip.</p>
+         * <p>The number of items to skip.</p>
          * <blockquote>
-         * <p>This parameter takes effect only when NextToken is empty.</p>
+         * <p>This parameter takes effect only when NextToken is left empty.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

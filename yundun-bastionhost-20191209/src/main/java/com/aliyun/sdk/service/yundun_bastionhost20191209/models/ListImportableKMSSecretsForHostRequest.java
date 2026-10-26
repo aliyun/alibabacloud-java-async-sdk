@@ -130,9 +130,9 @@ public class ListImportableKMSSecretsForHostRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the host.</p>
+         * <p>The ID of the host to query.</p>
          * <blockquote>
-         * <p>Call the <a href="https://help.aliyun.com/document_detail/200665.html">ListHosts</a> operation to get this ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/200665.html">ListHosts</a> operation to obtain this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -146,9 +146,9 @@ public class ListImportableKMSSecretsForHostRequest extends Request {
         }
 
         /**
-         * <p>The ID of the bastion host instance.</p>
+         * <p>The instance ID of the Bastionhost instance.</p>
          * <blockquote>
-         * <p>Call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to get this ID.</p>
+         * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -161,7 +161,7 @@ public class ListImportableKMSSecretsForHostRequest extends Request {
         }
 
         /**
-         * <p>The name of the secret to search for. Fuzzy matching is supported.</p>
+         * <p>The name of the credential to query. Fuzzy match is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -173,7 +173,7 @@ public class ListImportableKMSSecretsForHostRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Default value: 20.</p>
+         * <p>The number of entries to return. If you do not specify this parameter, the default value is 20.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -185,9 +185,9 @@ public class ListImportableKMSSecretsForHostRequest extends Request {
         }
 
         /**
-         * <p>The token to retrieve the next page of results.</p>
+         * <p>The token required for the next cursor-based query.</p>
          * <blockquote>
-         * <p>You do not need to specify this parameter for the first request. For subsequent requests, use the <code>NextToken</code> value from the previous response.</p>
+         * <p>Leave this parameter empty for the initial query. For subsequent requests, specify the value of the NextToken field returned in the previous response.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -200,9 +200,9 @@ public class ListImportableKMSSecretsForHostRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the bastion host.</p>
+         * <p>The region ID of the Bastionhost instance.</p>
          * <blockquote>
-         * <p>For details about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and availability zones</a>.</p>
+         * <p>For the mappings between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

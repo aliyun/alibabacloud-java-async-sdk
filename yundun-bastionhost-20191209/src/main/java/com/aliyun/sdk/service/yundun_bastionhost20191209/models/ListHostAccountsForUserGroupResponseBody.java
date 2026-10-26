@@ -80,7 +80,7 @@ public class ListHostAccountsForUserGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The host accounts returned.</p>
+         * <p>The host accounts.</p>
          */
         public Builder hostAccounts(java.util.List<HostAccounts> hostAccounts) {
             this.hostAccounts = hostAccounts;
@@ -128,6 +128,9 @@ public class ListHostAccountsForUserGroupResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HostAccountName")
         private String hostAccountName;
 
+        @com.aliyun.core.annotation.NameInMap("HostAccountType")
+        private String hostAccountType;
+
         @com.aliyun.core.annotation.NameInMap("HostId")
         private String hostId;
 
@@ -140,6 +143,7 @@ public class ListHostAccountsForUserGroupResponseBody extends TeaModel {
         private HostAccounts(Builder builder) {
             this.hostAccountId = builder.hostAccountId;
             this.hostAccountName = builder.hostAccountName;
+            this.hostAccountType = builder.hostAccountType;
             this.hostId = builder.hostId;
             this.isAuthorized = builder.isAuthorized;
             this.protocolName = builder.protocolName;
@@ -168,6 +172,13 @@ public class ListHostAccountsForUserGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return hostAccountType
+         */
+        public String getHostAccountType() {
+            return this.hostAccountType;
+        }
+
+        /**
          * @return hostId
          */
         public String getHostId() {
@@ -191,6 +202,7 @@ public class ListHostAccountsForUserGroupResponseBody extends TeaModel {
         public static final class Builder {
             private String hostAccountId; 
             private String hostAccountName; 
+            private String hostAccountType; 
             private String hostId; 
             private Boolean isAuthorized; 
             private String protocolName; 
@@ -201,6 +213,7 @@ public class ListHostAccountsForUserGroupResponseBody extends TeaModel {
             private Builder(HostAccounts model) {
                 this.hostAccountId = model.hostAccountId;
                 this.hostAccountName = model.hostAccountName;
+                this.hostAccountType = model.hostAccountType;
                 this.hostId = model.hostId;
                 this.isAuthorized = model.isAuthorized;
                 this.protocolName = model.protocolName;
@@ -229,6 +242,17 @@ public class ListHostAccountsForUserGroupResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The type of the host account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;Normal&quot;</p>
+             */
+            public Builder hostAccountType(String hostAccountType) {
+                this.hostAccountType = hostAccountType;
+                return this;
+            }
+
+            /**
              * <p>The ID of the host to which the host account belongs.</p>
              * 
              * <strong>example:</strong>
@@ -243,7 +267,7 @@ public class ListHostAccountsForUserGroupResponseBody extends TeaModel {
              * <p>Indicates whether the host account is authorized for the current user group. Valid values:</p>
              * <ul>
              * <li><strong>true</strong>: Authorized.</li>
-             * <li><strong>false</strong>: Not authorized.</li>
+             * <li><strong>false</strong>: Unauthorized.</li>
              * </ul>
              * 
              * <strong>example:</strong>
