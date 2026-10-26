@@ -3617,6 +3617,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UnTagDataAssetsResponse> unTagDataAssets(UnTagDataAssetsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>修改当前身份可访问的 Agent 会话标题，不改变任务执行状态。</p>
+     * 
+     * @param request the request parameters of UpdateAgentSessionTitle  UpdateAgentSessionTitleRequest
+     * @return UpdateAgentSessionTitleResponse
+     */
+    CompletableFuture<UpdateAgentSessionTitleResponse> updateAgentSessionTitle(UpdateAgentSessionTitleRequest request);
+
+    /**
      * @param request the request parameters of UpdateAlertRule  UpdateAlertRuleRequest
      * @return UpdateAlertRuleResponse
      */

@@ -97,6 +97,123 @@ public class ListAgentSessionsResponseBody extends TeaModel {
      *
      * <p>ListAgentSessionsResponseBody</p>
      */
+    public static class Error extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Code")
+        private Integer code;
+
+        @com.aliyun.core.annotation.NameInMap("Data")
+        private Object data;
+
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
+        private String errorCode;
+
+        @com.aliyun.core.annotation.NameInMap("Message")
+        private String message;
+
+        private Error(Builder builder) {
+            this.code = builder.code;
+            this.data = builder.data;
+            this.errorCode = builder.errorCode;
+            this.message = builder.message;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Error create() {
+            return builder().build();
+        }
+
+        /**
+         * @return code
+         */
+        public Integer getCode() {
+            return this.code;
+        }
+
+        /**
+         * @return data
+         */
+        public Object getData() {
+            return this.data;
+        }
+
+        /**
+         * @return errorCode
+         */
+        public String getErrorCode() {
+            return this.errorCode;
+        }
+
+        /**
+         * @return message
+         */
+        public String getMessage() {
+            return this.message;
+        }
+
+        public static final class Builder {
+            private Integer code; 
+            private Object data; 
+            private String errorCode; 
+            private String message; 
+
+            private Builder() {
+            } 
+
+            private Builder(Error model) {
+                this.code = model.code;
+                this.data = model.data;
+                this.errorCode = model.errorCode;
+                this.message = model.message;
+            } 
+
+            /**
+             * Code.
+             */
+            public Builder code(Integer code) {
+                this.code = code;
+                return this;
+            }
+
+            /**
+             * Data.
+             */
+            public Builder data(Object data) {
+                this.data = data;
+                return this;
+            }
+
+            /**
+             * ErrorCode.
+             */
+            public Builder errorCode(String errorCode) {
+                this.errorCode = errorCode;
+                return this;
+            }
+
+            /**
+             * Message.
+             */
+            public Builder message(String message) {
+                this.message = message;
+                return this;
+            }
+
+            public Error build() {
+                return new Error(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListAgentSessionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAgentSessionsResponseBody</p>
+     */
     public static class SessionTagList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SessionTagCode")
         private String sessionTagCode;
@@ -155,6 +272,9 @@ public class ListAgentSessionsResponseBody extends TeaModel {
      * <p>ListAgentSessionsResponseBody</p>
      */
     public static class Meta extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Archived")
+        private Boolean archived;
+
         @com.aliyun.core.annotation.NameInMap("SessionSource")
         private String sessionSource;
 
@@ -165,6 +285,7 @@ public class ListAgentSessionsResponseBody extends TeaModel {
         private java.util.List<SessionTagList> sessionTagList;
 
         private Meta(Builder builder) {
+            this.archived = builder.archived;
             this.sessionSource = builder.sessionSource;
             this.sessionStatus = builder.sessionStatus;
             this.sessionTagList = builder.sessionTagList;
@@ -176,6 +297,13 @@ public class ListAgentSessionsResponseBody extends TeaModel {
 
         public static Meta create() {
             return builder().build();
+        }
+
+        /**
+         * @return archived
+         */
+        public Boolean getArchived() {
+            return this.archived;
         }
 
         /**
@@ -200,6 +328,7 @@ public class ListAgentSessionsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean archived; 
             private String sessionSource; 
             private String sessionStatus; 
             private java.util.List<SessionTagList> sessionTagList; 
@@ -208,10 +337,19 @@ public class ListAgentSessionsResponseBody extends TeaModel {
             } 
 
             private Builder(Meta model) {
+                this.archived = model.archived;
                 this.sessionSource = model.sessionSource;
                 this.sessionStatus = model.sessionStatus;
                 this.sessionTagList = model.sessionTagList;
             } 
+
+            /**
+             * Archived.
+             */
+            public Builder archived(Boolean archived) {
+                this.archived = archived;
+                return this;
+            }
 
             /**
              * <p>The session source.</p>
@@ -562,6 +700,9 @@ public class ListAgentSessionsResponseBody extends TeaModel {
      * <p>ListAgentSessionsResponseBody</p>
      */
     public static class JsonRpcResponse extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Error")
+        private Error error;
+
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
@@ -572,6 +713,7 @@ public class ListAgentSessionsResponseBody extends TeaModel {
         private Result result;
 
         private JsonRpcResponse(Builder builder) {
+            this.error = builder.error;
             this.id = builder.id;
             this.jsonrpc = builder.jsonrpc;
             this.result = builder.result;
@@ -583,6 +725,13 @@ public class ListAgentSessionsResponseBody extends TeaModel {
 
         public static JsonRpcResponse create() {
             return builder().build();
+        }
+
+        /**
+         * @return error
+         */
+        public Error getError() {
+            return this.error;
         }
 
         /**
@@ -607,6 +756,7 @@ public class ListAgentSessionsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Error error; 
             private String id; 
             private String jsonrpc; 
             private Result result; 
@@ -615,10 +765,19 @@ public class ListAgentSessionsResponseBody extends TeaModel {
             } 
 
             private Builder(JsonRpcResponse model) {
+                this.error = model.error;
                 this.id = model.id;
                 this.jsonrpc = model.jsonrpc;
                 this.result = model.result;
             } 
+
+            /**
+             * Error.
+             */
+            public Builder error(Error error) {
+                this.error = error;
+                return this;
+            }
 
             /**
              * <p>The ID passed in by the requester. The value is returned as-is.</p>

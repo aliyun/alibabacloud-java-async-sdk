@@ -97,6 +97,123 @@ public class CreateAgentSessionResponseBody extends TeaModel {
      *
      * <p>CreateAgentSessionResponseBody</p>
      */
+    public static class Error extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Code")
+        private Integer code;
+
+        @com.aliyun.core.annotation.NameInMap("Data")
+        private Object data;
+
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
+        private String errorCode;
+
+        @com.aliyun.core.annotation.NameInMap("Message")
+        private String message;
+
+        private Error(Builder builder) {
+            this.code = builder.code;
+            this.data = builder.data;
+            this.errorCode = builder.errorCode;
+            this.message = builder.message;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Error create() {
+            return builder().build();
+        }
+
+        /**
+         * @return code
+         */
+        public Integer getCode() {
+            return this.code;
+        }
+
+        /**
+         * @return data
+         */
+        public Object getData() {
+            return this.data;
+        }
+
+        /**
+         * @return errorCode
+         */
+        public String getErrorCode() {
+            return this.errorCode;
+        }
+
+        /**
+         * @return message
+         */
+        public String getMessage() {
+            return this.message;
+        }
+
+        public static final class Builder {
+            private Integer code; 
+            private Object data; 
+            private String errorCode; 
+            private String message; 
+
+            private Builder() {
+            } 
+
+            private Builder(Error model) {
+                this.code = model.code;
+                this.data = model.data;
+                this.errorCode = model.errorCode;
+                this.message = model.message;
+            } 
+
+            /**
+             * Code.
+             */
+            public Builder code(Integer code) {
+                this.code = code;
+                return this;
+            }
+
+            /**
+             * Data.
+             */
+            public Builder data(Object data) {
+                this.data = data;
+                return this;
+            }
+
+            /**
+             * ErrorCode.
+             */
+            public Builder errorCode(String errorCode) {
+                this.errorCode = errorCode;
+                return this;
+            }
+
+            /**
+             * Message.
+             */
+            public Builder message(String message) {
+                this.message = message;
+                return this;
+            }
+
+            public Error build() {
+                return new Error(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateAgentSessionResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateAgentSessionResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SessionId")
         private String sessionId;
@@ -155,6 +272,9 @@ public class CreateAgentSessionResponseBody extends TeaModel {
      * <p>CreateAgentSessionResponseBody</p>
      */
     public static class JsonRpcResponse extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Error")
+        private Error error;
+
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
@@ -164,10 +284,15 @@ public class CreateAgentSessionResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Result")
         private Result result;
 
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
+        private Long timestamp;
+
         private JsonRpcResponse(Builder builder) {
+            this.error = builder.error;
             this.id = builder.id;
             this.jsonrpc = builder.jsonrpc;
             this.result = builder.result;
+            this.timestamp = builder.timestamp;
         }
 
         public static Builder builder() {
@@ -176,6 +301,13 @@ public class CreateAgentSessionResponseBody extends TeaModel {
 
         public static JsonRpcResponse create() {
             return builder().build();
+        }
+
+        /**
+         * @return error
+         */
+        public Error getError() {
+            return this.error;
         }
 
         /**
@@ -199,19 +331,38 @@ public class CreateAgentSessionResponseBody extends TeaModel {
             return this.result;
         }
 
+        /**
+         * @return timestamp
+         */
+        public Long getTimestamp() {
+            return this.timestamp;
+        }
+
         public static final class Builder {
+            private Error error; 
             private String id; 
             private String jsonrpc; 
             private Result result; 
+            private Long timestamp; 
 
             private Builder() {
             } 
 
             private Builder(JsonRpcResponse model) {
+                this.error = model.error;
                 this.id = model.id;
                 this.jsonrpc = model.jsonrpc;
                 this.result = model.result;
+                this.timestamp = model.timestamp;
             } 
+
+            /**
+             * Error.
+             */
+            public Builder error(Error error) {
+                this.error = error;
+                return this;
+            }
 
             /**
              * <p>The request ID passed by the caller. The value is returned as-is.</p>
@@ -240,6 +391,14 @@ public class CreateAgentSessionResponseBody extends TeaModel {
              */
             public Builder result(Result result) {
                 this.result = result;
+                return this;
+            }
+
+            /**
+             * Timestamp.
+             */
+            public Builder timestamp(Long timestamp) {
+                this.timestamp = timestamp;
                 return this;
             }
 

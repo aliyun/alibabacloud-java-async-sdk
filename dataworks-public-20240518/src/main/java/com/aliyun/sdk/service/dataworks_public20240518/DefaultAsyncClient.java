@@ -7890,6 +7890,27 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>修改当前身份可访问的 Agent 会话标题，不改变任务执行状态。</p>
+     * 
+     * @param request the request parameters of UpdateAgentSessionTitle  UpdateAgentSessionTitleRequest
+     * @return UpdateAgentSessionTitleResponse
+     */
+    @Override
+    public CompletableFuture<UpdateAgentSessionTitleResponse> updateAgentSessionTitle(UpdateAgentSessionTitleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateAgentSessionTitle").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateAgentSessionTitleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateAgentSessionTitleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of UpdateAlertRule  UpdateAlertRuleRequest
      * @return UpdateAlertRuleResponse
      */

@@ -22,6 +22,10 @@ public class GetAgentRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AgentVersion")
+    private Integer agentVersion;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Name")
     @com.aliyun.core.annotation.Validation(required = true)
     private String name;
@@ -29,6 +33,7 @@ public class GetAgentRequest extends Request {
     private GetAgentRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.agentVersion = builder.agentVersion;
         this.name = builder.name;
     }
 
@@ -53,6 +58,13 @@ public class GetAgentRequest extends Request {
     }
 
     /**
+     * @return agentVersion
+     */
+    public Integer getAgentVersion() {
+        return this.agentVersion;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
@@ -61,6 +73,7 @@ public class GetAgentRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetAgentRequest, Builder> {
         private String regionId; 
+        private Integer agentVersion; 
         private String name; 
 
         private Builder() {
@@ -70,6 +83,7 @@ public class GetAgentRequest extends Request {
         private Builder(GetAgentRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.agentVersion = request.agentVersion;
             this.name = request.name;
         } 
 
@@ -79,6 +93,18 @@ public class GetAgentRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>省略时读取当前定义；指定已发布版本时读取对应快照及固定的官方 Skill、套件制品版本；指定当前未发布版本时仍返回草稿，不返回固定制品版本。不是 POP 系统参数 Version。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
+        public Builder agentVersion(Integer agentVersion) {
+            this.putBodyParameter("AgentVersion", agentVersion);
+            this.agentVersion = agentVersion;
             return this;
         }
 

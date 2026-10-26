@@ -337,8 +337,14 @@ public class CreateAgentSessionRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Mode")
         private String mode;
 
+        @com.aliyun.core.annotation.NameInMap("Model")
+        private String model;
+
         @com.aliyun.core.annotation.NameInMap("ProjectId")
         private String projectId;
+
+        @com.aliyun.core.annotation.NameInMap("ReasoningEffort")
+        private String reasoningEffort;
 
         @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
@@ -349,7 +355,9 @@ public class CreateAgentSessionRequest extends Request {
         private InitialConfigOptions(Builder builder) {
             this.executionLane = builder.executionLane;
             this.mode = builder.mode;
+            this.model = builder.model;
             this.projectId = builder.projectId;
+            this.reasoningEffort = builder.reasoningEffort;
             this.resourceGroupId = builder.resourceGroupId;
             this.skills = builder.skills;
         }
@@ -377,10 +385,24 @@ public class CreateAgentSessionRequest extends Request {
         }
 
         /**
+         * @return model
+         */
+        public String getModel() {
+            return this.model;
+        }
+
+        /**
          * @return projectId
          */
         public String getProjectId() {
             return this.projectId;
+        }
+
+        /**
+         * @return reasoningEffort
+         */
+        public String getReasoningEffort() {
+            return this.reasoningEffort;
         }
 
         /**
@@ -400,7 +422,9 @@ public class CreateAgentSessionRequest extends Request {
         public static final class Builder {
             private String executionLane; 
             private String mode; 
+            private String model; 
             private String projectId; 
+            private String reasoningEffort; 
             private String resourceGroupId; 
             private String skills; 
 
@@ -410,7 +434,9 @@ public class CreateAgentSessionRequest extends Request {
             private Builder(InitialConfigOptions model) {
                 this.executionLane = model.executionLane;
                 this.mode = model.mode;
+                this.model = model.model;
                 this.projectId = model.projectId;
+                this.reasoningEffort = model.reasoningEffort;
                 this.resourceGroupId = model.resourceGroupId;
                 this.skills = model.skills;
             } 
@@ -445,6 +471,14 @@ public class CreateAgentSessionRequest extends Request {
             }
 
             /**
+             * Model.
+             */
+            public Builder model(String model) {
+                this.model = model;
+                return this;
+            }
+
+            /**
              * <p>The DataWorks workspace ID. Used to initialize the session project context. If omitted, the session is treated as having no project context. You can later correct or switch the project context by using PromptAgentSession.</p>
              * 
              * <strong>example:</strong>
@@ -452,6 +486,14 @@ public class CreateAgentSessionRequest extends Request {
              */
             public Builder projectId(String projectId) {
                 this.projectId = projectId;
+                return this;
+            }
+
+            /**
+             * ReasoningEffort.
+             */
+            public Builder reasoningEffort(String reasoningEffort) {
+                this.reasoningEffort = reasoningEffort;
                 return this;
             }
 

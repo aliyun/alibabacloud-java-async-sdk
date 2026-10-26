@@ -228,6 +228,228 @@ public class GetAgentResponseBody extends TeaModel {
      *
      * <p>GetAgentResponseBody</p>
      */
+    public static class ExpertSuites extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
+        private String displayName;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("PackageVersion")
+        private String packageVersion;
+
+        @com.aliyun.core.annotation.NameInMap("SemanticVersion")
+        private String semanticVersion;
+
+        @com.aliyun.core.annotation.NameInMap("Source")
+        private String source;
+
+        @com.aliyun.core.annotation.NameInMap("SuiteId")
+        private String suiteId;
+
+        @com.aliyun.core.annotation.NameInMap("Version")
+        private Integer version;
+
+        private ExpertSuites(Builder builder) {
+            this.description = builder.description;
+            this.displayName = builder.displayName;
+            this.name = builder.name;
+            this.packageVersion = builder.packageVersion;
+            this.semanticVersion = builder.semanticVersion;
+            this.source = builder.source;
+            this.suiteId = builder.suiteId;
+            this.version = builder.version;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ExpertSuites create() {
+            return builder().build();
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return displayName
+         */
+        public String getDisplayName() {
+            return this.displayName;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return packageVersion
+         */
+        public String getPackageVersion() {
+            return this.packageVersion;
+        }
+
+        /**
+         * @return semanticVersion
+         */
+        public String getSemanticVersion() {
+            return this.semanticVersion;
+        }
+
+        /**
+         * @return source
+         */
+        public String getSource() {
+            return this.source;
+        }
+
+        /**
+         * @return suiteId
+         */
+        public String getSuiteId() {
+            return this.suiteId;
+        }
+
+        /**
+         * @return version
+         */
+        public Integer getVersion() {
+            return this.version;
+        }
+
+        public static final class Builder {
+            private String description; 
+            private String displayName; 
+            private String name; 
+            private String packageVersion; 
+            private String semanticVersion; 
+            private String source; 
+            private String suiteId; 
+            private Integer version; 
+
+            private Builder() {
+            } 
+
+            private Builder(ExpertSuites model) {
+                this.description = model.description;
+                this.displayName = model.displayName;
+                this.name = model.name;
+                this.packageVersion = model.packageVersion;
+                this.semanticVersion = model.semanticVersion;
+                this.source = model.source;
+                this.suiteId = model.suiteId;
+                this.version = model.version;
+            } 
+
+            /**
+             * <p>套件已删除、发布快照缺失或调用者无权查看时，不返回套件摘要，仅保留 ID 和版本号。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>数据分析专家能力集合</p>
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * <p>The sub-agent display name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Sub-assistant</p>
+             */
+            public Builder displayName(String displayName) {
+                this.displayName = displayName;
+                return this;
+            }
+
+            /**
+             * <p>The sub-agent name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sub-agent</p>
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * <p>显式查询 Agent 已发布版本时返回固定的官方制品版本；查询草稿或自定义套件时不返回。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.1.0.202610211408</p>
+             */
+            public Builder packageVersion(String packageVersion) {
+                this.packageVersion = packageVersion;
+                return this;
+            }
+
+            /**
+             * <p>可选套件摘要字段，当前新 DataAgent 应用不返回；缺省不表示版本 0。不可作为 UpdateAgent 的 Version，回写引用时必须省略。官方制品的固定版本请读取 PackageVersion。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.2.0</p>
+             */
+            public Builder semanticVersion(String semanticVersion) {
+                this.semanticVersion = semanticVersion;
+                return this;
+            }
+
+            /**
+             * <p>OFFICIAL 表示官方目录资源；省略或 DB 表示个人或企业资源。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OFFICIAL</p>
+             */
+            public Builder source(String source) {
+                this.source = source;
+                return this;
+            }
+
+            /**
+             * SuiteId.
+             */
+            public Builder suiteId(String suiteId) {
+                this.suiteId = suiteId;
+                return this;
+            }
+
+            /**
+             * <p>仅个人或企业套件在引用明确指定版本或读取发布快照时返回；官方套件不返回。未返回不是 0；SDK 若将缺省整数初始化为 0，回写时必须省略。官方项只回写 Source 和 SuiteId，不传 Version、SemanticVersion 或 PackageVersion。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
+             */
+            public Builder version(Integer version) {
+                this.version = version;
+                return this;
+            }
+
+            public ExpertSuites build() {
+                return new ExpertSuites(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetAgentResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAgentResponseBody</p>
+     */
     public static class Model extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Config")
         private java.util.Map<String, ?> config;
@@ -409,11 +631,23 @@ public class GetAgentResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("PackageVersion")
+        private String packageVersion;
+
+        @com.aliyun.core.annotation.NameInMap("SkillId")
+        private String skillId;
+
+        @com.aliyun.core.annotation.NameInMap("Source")
+        private String source;
+
         @com.aliyun.core.annotation.NameInMap("Version")
         private Integer version;
 
         private Skills(Builder builder) {
             this.name = builder.name;
+            this.packageVersion = builder.packageVersion;
+            this.skillId = builder.skillId;
+            this.source = builder.source;
             this.version = builder.version;
         }
 
@@ -433,6 +667,27 @@ public class GetAgentResponseBody extends TeaModel {
         }
 
         /**
+         * @return packageVersion
+         */
+        public String getPackageVersion() {
+            return this.packageVersion;
+        }
+
+        /**
+         * @return skillId
+         */
+        public String getSkillId() {
+            return this.skillId;
+        }
+
+        /**
+         * @return source
+         */
+        public String getSource() {
+            return this.source;
+        }
+
+        /**
          * @return version
          */
         public Integer getVersion() {
@@ -441,6 +696,9 @@ public class GetAgentResponseBody extends TeaModel {
 
         public static final class Builder {
             private String name; 
+            private String packageVersion; 
+            private String skillId; 
+            private String source; 
             private Integer version; 
 
             private Builder() {
@@ -448,6 +706,9 @@ public class GetAgentResponseBody extends TeaModel {
 
             private Builder(Skills model) {
                 this.name = model.name;
+                this.packageVersion = model.packageVersion;
+                this.skillId = model.skillId;
+                this.source = model.source;
                 this.version = model.version;
             } 
 
@@ -459,6 +720,36 @@ public class GetAgentResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * <p>指定 AgentVersion 查询已发布快照时返回固定的官方制品版本；查询草稿或自定义 Skill 时不返回。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.6.0.202608201110</p>
+             */
+            public Builder packageVersion(String packageVersion) {
+                this.packageVersion = packageVersion;
+                return this;
+            }
+
+            /**
+             * SkillId.
+             */
+            public Builder skillId(String skillId) {
+                this.skillId = skillId;
+                return this;
+            }
+
+            /**
+             * <p>OFFICIAL 表示官方目录资源；省略或 DB 表示原有个人或企业资源。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OFFICIAL</p>
+             */
+            public Builder source(String source) {
+                this.source = source;
                 return this;
             }
 
@@ -690,6 +981,9 @@ public class GetAgentResponseBody extends TeaModel {
      * <p>GetAgentResponseBody</p>
      */
     public static class Agent extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AgentVersion")
+        private Integer agentVersion;
+
         @com.aliyun.core.annotation.NameInMap("CallableAgents")
         private java.util.List<CallableAgents> callableAgents;
 
@@ -701,6 +995,9 @@ public class GetAgentResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
+
+        @com.aliyun.core.annotation.NameInMap("ExpertSuites")
+        private java.util.List<ExpertSuites> expertSuites;
 
         @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
         private String gmtCreateTime;
@@ -739,10 +1036,12 @@ public class GetAgentResponseBody extends TeaModel {
         private VisibilityScope visibilityScope;
 
         private Agent(Builder builder) {
+            this.agentVersion = builder.agentVersion;
             this.callableAgents = builder.callableAgents;
             this.creatorId = builder.creatorId;
             this.description = builder.description;
             this.displayName = builder.displayName;
+            this.expertSuites = builder.expertSuites;
             this.gmtCreateTime = builder.gmtCreateTime;
             this.gmtModifiedTime = builder.gmtModifiedTime;
             this.metadata = builder.metadata;
@@ -763,6 +1062,13 @@ public class GetAgentResponseBody extends TeaModel {
 
         public static Agent create() {
             return builder().build();
+        }
+
+        /**
+         * @return agentVersion
+         */
+        public Integer getAgentVersion() {
+            return this.agentVersion;
         }
 
         /**
@@ -791,6 +1097,13 @@ public class GetAgentResponseBody extends TeaModel {
          */
         public String getDisplayName() {
             return this.displayName;
+        }
+
+        /**
+         * @return expertSuites
+         */
+        public java.util.List<ExpertSuites> getExpertSuites() {
+            return this.expertSuites;
         }
 
         /**
@@ -878,10 +1191,12 @@ public class GetAgentResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer agentVersion; 
             private java.util.List<CallableAgents> callableAgents; 
             private String creatorId; 
             private String description; 
             private String displayName; 
+            private java.util.List<ExpertSuites> expertSuites; 
             private String gmtCreateTime; 
             private String gmtModifiedTime; 
             private java.util.Map<String, ?> metadata; 
@@ -899,10 +1214,12 @@ public class GetAgentResponseBody extends TeaModel {
             } 
 
             private Builder(Agent model) {
+                this.agentVersion = model.agentVersion;
                 this.callableAgents = model.callableAgents;
                 this.creatorId = model.creatorId;
                 this.description = model.description;
                 this.displayName = model.displayName;
+                this.expertSuites = model.expertSuites;
                 this.gmtCreateTime = model.gmtCreateTime;
                 this.gmtModifiedTime = model.gmtModifiedTime;
                 this.metadata = model.metadata;
@@ -916,6 +1233,17 @@ public class GetAgentResponseBody extends TeaModel {
                 this.visibility = model.visibility;
                 this.visibilityScope = model.visibilityScope;
             } 
+
+            /**
+             * <p>本次读取的定义版本。更新当前定义时，将该值作为 UpdateAgent 的 ExpectedVersion，可拒绝覆盖其他调用者已提交的新版本。读取历史快照的版本不代表当前版本。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
+             */
+            public Builder agentVersion(Integer agentVersion) {
+                this.agentVersion = agentVersion;
+                return this;
+            }
 
             /**
              * <p>A list of callable sub-agents.</p>
@@ -955,6 +1283,14 @@ public class GetAgentResponseBody extends TeaModel {
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
+                return this;
+            }
+
+            /**
+             * <p>Agent 定义绑定的专家套件及固定发布版本。</p>
+             */
+            public Builder expertSuites(java.util.List<ExpertSuites> expertSuites) {
+                this.expertSuites = expertSuites;
                 return this;
             }
 

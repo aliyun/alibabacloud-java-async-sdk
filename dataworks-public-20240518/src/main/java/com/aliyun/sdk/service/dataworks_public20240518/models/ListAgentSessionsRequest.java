@@ -137,6 +137,9 @@ public class ListAgentSessionsRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("AgentName")
         private String agentName;
 
+        @com.aliyun.core.annotation.NameInMap("Archived")
+        private Boolean archived;
+
         @com.aliyun.core.annotation.NameInMap("MaxResults")
         private Integer maxResults;
 
@@ -157,6 +160,7 @@ public class ListAgentSessionsRequest extends Request {
 
         private Params(Builder builder) {
             this.agentName = builder.agentName;
+            this.archived = builder.archived;
             this.maxResults = builder.maxResults;
             this.nextToken = builder.nextToken;
             this.sessionId = builder.sessionId;
@@ -178,6 +182,13 @@ public class ListAgentSessionsRequest extends Request {
          */
         public String getAgentName() {
             return this.agentName;
+        }
+
+        /**
+         * @return archived
+         */
+        public Boolean getArchived() {
+            return this.archived;
         }
 
         /**
@@ -224,6 +235,7 @@ public class ListAgentSessionsRequest extends Request {
 
         public static final class Builder {
             private String agentName; 
+            private Boolean archived; 
             private Integer maxResults; 
             private String nextToken; 
             private String sessionId; 
@@ -236,6 +248,7 @@ public class ListAgentSessionsRequest extends Request {
 
             private Builder(Params model) {
                 this.agentName = model.agentName;
+                this.archived = model.archived;
                 this.maxResults = model.maxResults;
                 this.nextToken = model.nextToken;
                 this.sessionId = model.sessionId;
@@ -252,6 +265,14 @@ public class ListAgentSessionsRequest extends Request {
              */
             public Builder agentName(String agentName) {
                 this.agentName = agentName;
+                return this;
+            }
+
+            /**
+             * <p>true仅返回归档会话；false或省略仅返回未归档会话。</p>
+             */
+            public Builder archived(Boolean archived) {
+                this.archived = archived;
                 return this;
             }
 
