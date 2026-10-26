@@ -67,7 +67,7 @@ public class GetDataMaskingAccountCountResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The permission statistics of column encryption accounts.</p>
+         * <p>The statistics on the number of account permissions for column encryption.</p>
          */
         public Builder accountCount(AccountCount accountCount) {
             this.accountCount = accountCount;
@@ -75,7 +75,7 @@ public class GetDataMaskingAccountCountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID, which can be used to locate this API call.</p>
+         * <p>The request ID, which can be used to locate the API call.</p>
          * 
          * <strong>example:</strong>
          * <p>7C6D8E9F-1234-5678-ABCD-0123456789AB</p>
@@ -170,7 +170,7 @@ public class GetDataMaskingAccountCountResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of fullAccess accounts that have plaintext access.</p>
+             * <p>The number of accounts with plaintext access (fullAccess).</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -181,7 +181,7 @@ public class GetDataMaskingAccountCountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of noneAccess accounts that are prohibited from decryption.</p>
+             * <p>The number of accounts prohibited from decryption (noneAccess).</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -192,7 +192,7 @@ public class GetDataMaskingAccountCountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of restrictedAccess accounts that have restricted access.</p>
+             * <p>The number of accounts with restricted access (restrictedAccess).</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>

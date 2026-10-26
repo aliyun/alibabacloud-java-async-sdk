@@ -26,6 +26,10 @@ public class ListDataAssetAccountsRequest extends Request {
     private String accountName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthDb")
+    private String authDb;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AuthRole")
     private String authRole;
 
@@ -61,6 +65,7 @@ public class ListDataAssetAccountsRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.accountName = builder.accountName;
+        this.authDb = builder.authDb;
         this.authRole = builder.authRole;
         this.bizType = builder.bizType;
         this.currentPage = builder.currentPage;
@@ -96,6 +101,13 @@ public class ListDataAssetAccountsRequest extends Request {
      */
     public String getAccountName() {
         return this.accountName;
+    }
+
+    /**
+     * @return authDb
+     */
+    public String getAuthDb() {
+        return this.authDb;
     }
 
     /**
@@ -157,6 +169,7 @@ public class ListDataAssetAccountsRequest extends Request {
     public static final class Builder extends Request.Builder<ListDataAssetAccountsRequest, Builder> {
         private String regionId; 
         private String accountName; 
+        private String authDb; 
         private String authRole; 
         private String bizType; 
         private Integer currentPage; 
@@ -174,6 +187,7 @@ public class ListDataAssetAccountsRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.accountName = request.accountName;
+            this.authDb = request.authDb;
             this.authRole = request.authRole;
             this.bizType = request.bizType;
             this.currentPage = request.currentPage;
@@ -194,7 +208,7 @@ public class ListDataAssetAccountsRequest extends Request {
         }
 
         /**
-         * <p>The database account name. Filters by exact account name.</p>
+         * <p>The database account name. The system filters accounts by the exact account name.</p>
          * 
          * <strong>example:</strong>
          * <p>app_reader</p>
@@ -206,11 +220,23 @@ public class ListDataAssetAccountsRequest extends Request {
         }
 
         /**
+         * <p>The authentication database of the MongoDB account. This parameter is used to distinguish accounts with the same name in different authentication databases.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>admin</p>
+         */
+        public Builder authDb(String authDb) {
+            this.putQueryParameter("AuthDb", authDb);
+            this.authDb = authDb;
+            return this;
+        }
+
+        /**
          * <p>The column encryption access permissions. Valid values:</p>
          * <ul>
-         * <li>fullAccess: plaintext access.</li>
-         * <li>restrictedAccess: restricted access.</li>
-         * <li>noneAccess: decryption prohibited. noneAccess applies only to ApsaraDB RDS for MySQL instances whose current effective key pattern is client_key.</li>
+         * <li>fullAccess: plaintext access</li>
+         * <li>restrictedAccess: restricted access</li>
+         * <li>noneAccess: decryption prohibited. This value applies only to ApsaraDB RDS for MySQL instances whose current effective key mode is client_key.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -223,7 +249,7 @@ public class ListDataAssetAccountsRequest extends Request {
         }
 
         /**
-         * <p>The query business scenario. Use DataMasking for the column encryption scenario. This value is case-sensitive.</p>
+         * <p>The business scenario for the query. Set this parameter to DataMasking for the column encryption scenario. Note that the value is case-sensitive.</p>
          * 
          * <strong>example:</strong>
          * <p>DataMasking</p>
@@ -235,7 +261,7 @@ public class ListDataAssetAccountsRequest extends Request {
         }
 
         /**
-         * <p>The page number of the current query. Pages start from 1.</p>
+         * <p>The page number of the current page. Pages start from 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -247,7 +273,7 @@ public class ListDataAssetAccountsRequest extends Request {
         }
 
         /**
-         * <p>The database instance identity. You can obtain this value from Items[].InstanceId returned by ListDataMaskingInstances.</p>
+         * <p>The database instance ID. You can obtain this value from the Items[].InstanceId parameter in the response of the ListDataMaskingInstances operation.</p>
          * 
          * <strong>example:</strong>
          * <p>rm-2ze1abcdefgh****</p>
@@ -259,10 +285,10 @@ public class ListDataAssetAccountsRequest extends Request {
         }
 
         /**
-         * <p>The language of the response description. Valid values:</p>
+         * <p>The language of the response message. Valid values:</p>
          * <ul>
-         * <li>zh: Chinese.</li>
-         * <li>en: English.</li>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -275,7 +301,7 @@ public class ListDataAssetAccountsRequest extends Request {
         }
 
         /**
-         * <p>The number of records per page. Keep other filter conditions consistent when querying the next page.</p>
+         * <p>The number of entries to return on each page. Keep other filter conditions consistent when querying the next page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -287,7 +313,7 @@ public class ListDataAssetAccountsRequest extends Request {
         }
 
         /**
-         * <p>The cloud product code. Column encryption supports RDS, POLARDB, and PolarDBX2. If ProductId is also specified, the two values must correspond to each other.</p>
+         * <p>The cloud service code. Column encryption supports RDS, POLARDB, and PolarDBX2. If ProductId is also specified, the two parameters must match.</p>
          * 
          * <strong>example:</strong>
          * <p>RDS</p>
@@ -299,7 +325,7 @@ public class ListDataAssetAccountsRequest extends Request {
         }
 
         /**
-         * <p>The list of cloud product type identifiers. Separate multiple values with commas (,). Valid values for the column encryption scenario: 5 (RDS), 8 (POLARDB), and 27 (PolarDBX2).</p>
+         * <p>The list of cloud service type IDs. Separate multiple values with commas (,). For the column encryption scenario, the valid values are 5 (RDS), 8 (POLARDB), and 27 (PolarDBX2).</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>

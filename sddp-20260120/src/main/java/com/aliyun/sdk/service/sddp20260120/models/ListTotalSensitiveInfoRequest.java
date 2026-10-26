@@ -117,9 +117,9 @@ public class ListTotalSensitiveInfoRequest extends Request {
         /**
          * <p>The statistics scenario. Valid values:</p>
          * <ul>
-         * <li>41: overview.</li>
-         * <li>42: data catalog statistics by product.</li>
-         * <li>43: region and template summary by product.</li>
+         * <li>41: Overview.</li>
+         * <li>42: Query data catalog statistics by product.</li>
+         * <li>43: Query region and template summaries by product.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -148,7 +148,7 @@ public class ListTotalSensitiveInfoRequest extends Request {
         }
 
         /**
-         * <p>The code of the cloud service. Column encryption supports RDS, POLARDB, and PolarDBX2. If you also specify ProductId, the two values must correspond to each other.</p>
+         * <p>The code of the cloud service. Column encryption supports RDS, POLARDB, and PolarDBX2. If ProductId is also specified, the two parameters must match.</p>
          * 
          * <strong>example:</strong>
          * <p>RDS</p>
@@ -160,7 +160,7 @@ public class ListTotalSensitiveInfoRequest extends Request {
         }
 
         /**
-         * <p>Multiple product codes separated by commas (,). This parameter is used when CountType is set to 43 and ProductCode is not specified. The results are merged by region and template.</p>
+         * <p>The codes of multiple cloud services, separated by commas (,). This parameter is used when CountType is set to 43 and ProductCode is not specified. The results are aggregated by region and template.</p>
          * 
          * <strong>example:</strong>
          * <p>RDS,POLARDB,PolarDBX2</p>
@@ -172,7 +172,7 @@ public class ListTotalSensitiveInfoRequest extends Request {
         }
 
         /**
-         * <p>The ID of the data classification template. You can obtain this value from Items[].Id in the response of the ListTemplates operation. The value must be consistent with the selected sensitivity level and detection model.</p>
+         * <p>The ID of the data classification template. You can obtain the ID from the Items[].Id parameter in the response of the ListTemplates operation. The template must be consistent with the selected sensitivity level and detection model.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

@@ -67,7 +67,7 @@ public class ListIdentifyModelsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID, which can be used to locate this API call.</p>
+         * <p>The request ID, which is active for locating this API invoke.</p>
          * 
          * <strong>example:</strong>
          * <p>7C6D8E9F-1234-5678-ABCD-0123456789AB</p>
@@ -78,7 +78,7 @@ public class ListIdentifyModelsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of detection models or rules.</p>
+         * <p>The list of recognition models or rules.</p>
          */
         public Builder ruleList(java.util.List<RuleList> ruleList) {
             this.ruleList = ruleList;
@@ -144,7 +144,7 @@ public class ListIdentifyModelsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the detection model.</p>
+             * <p>The ID of the recognition model.</p>
              * 
              * <strong>example:</strong>
              * <p>1001</p>
@@ -155,10 +155,10 @@ public class ListIdentifyModelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the detection model or rule.</p>
+             * <p>The name of the recognition model or rule.</p>
              * 
              * <strong>example:</strong>
-             * <p>Phone Number</p>
+             * <p>Mobile phone number</p>
              */
             public Builder name(String name) {
                 this.name = name;

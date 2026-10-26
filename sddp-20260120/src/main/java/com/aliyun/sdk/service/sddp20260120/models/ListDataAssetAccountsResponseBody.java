@@ -117,7 +117,7 @@ public class ListDataAssetAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of records returned by the current query.</p>
+         * <p>The list of records returned in the current query.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -125,7 +125,7 @@ public class ListDataAssetAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of records per page for the current query.</p>
+         * <p>The number of entries returned per page in the current query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -136,7 +136,7 @@ public class ListDataAssetAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID. You can use this ID to locate the API call.</p>
+         * <p>The request ID, which can be used to trace the current API call.</p>
          * 
          * <strong>example:</strong>
          * <p>7C6D8E9F-1234-5678-ABCD-0123456789AB</p>
@@ -147,7 +147,7 @@ public class ListDataAssetAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of records that match the current query or statistical scope.</p>
+         * <p>The total number of entries that meet the current statistics or query conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -175,6 +175,9 @@ public class ListDataAssetAccountsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("AliUid")
         private Long aliUid;
+
+        @com.aliyun.core.annotation.NameInMap("AuthDb")
+        private String authDb;
 
         @com.aliyun.core.annotation.NameInMap("AuthRole")
         private String authRole;
@@ -209,6 +212,7 @@ public class ListDataAssetAccountsResponseBody extends TeaModel {
         private Items(Builder builder) {
             this.accountName = builder.accountName;
             this.aliUid = builder.aliUid;
+            this.authDb = builder.authDb;
             this.authRole = builder.authRole;
             this.encryptionKeyMode = builder.encryptionKeyMode;
             this.engineType = builder.engineType;
@@ -241,6 +245,13 @@ public class ListDataAssetAccountsResponseBody extends TeaModel {
          */
         public Long getAliUid() {
             return this.aliUid;
+        }
+
+        /**
+         * @return authDb
+         */
+        public String getAuthDb() {
+            return this.authDb;
         }
 
         /**
@@ -316,6 +327,7 @@ public class ListDataAssetAccountsResponseBody extends TeaModel {
         public static final class Builder {
             private String accountName; 
             private Long aliUid; 
+            private String authDb; 
             private String authRole; 
             private String encryptionKeyMode; 
             private String engineType; 
@@ -333,6 +345,7 @@ public class ListDataAssetAccountsResponseBody extends TeaModel {
             private Builder(Items model) {
                 this.accountName = model.accountName;
                 this.aliUid = model.aliUid;
+                this.authDb = model.authDb;
                 this.authRole = model.authRole;
                 this.encryptionKeyMode = model.encryptionKeyMode;
                 this.engineType = model.engineType;
@@ -357,7 +370,7 @@ public class ListDataAssetAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Alibaba Cloud account ID to which the asset belongs.</p>
+             * <p>The ID of the Alibaba Cloud account to which the asset belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>123456789012****</p>
@@ -368,11 +381,22 @@ public class ListDataAssetAccountsResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The authentication database of the MongoDB account. This parameter must be passed together with AccountName when modifying permissions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>admin</p>
+             */
+            public Builder authDb(String authDb) {
+                this.authDb = authDb;
+                return this;
+            }
+
+            /**
              * <p>The column encryption access permissions. Valid values:</p>
              * <ul>
-             * <li>fullAccess: plaintext access.</li>
-             * <li>restrictedAccess: restricted access.</li>
-             * <li>noneAccess: decryption prohibited. noneAccess applies only to ApsaraDB RDS for MySQL instances whose current effective key pattern is client_key.</li>
+             * <li>fullAccess: plaintext access</li>
+             * <li>restrictedAccess: restricted access</li>
+             * <li>noneAccess: decryption prohibited. This value applies only to ApsaraDB RDS for MySQL instances whose current effective key mode is client_key.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -386,10 +410,10 @@ public class ListDataAssetAccountsResponseBody extends TeaModel {
             /**
              * <p>The current effective column encryption key mode. Valid values:</p>
              * <ul>
-             * <li>client_key: local master key.</li>
-             * <li>kms_key: KMS key.</li>
+             * <li>client_key: local key</li>
+             * <li>kms_key: KMS key
+             * This parameter is not returned if no effective configuration exists.</li>
              * </ul>
-             * <p>This field is not returned if no column encryption configuration is in effect.</p>
              * 
              * <strong>example:</strong>
              * <p>client_key</p>
@@ -411,7 +435,7 @@ public class ListDataAssetAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration time of the plaintext access permissions. The value is a UNIX timestamp in milliseconds since 1970-01-01 00:00:00 UTC. This field is not returned if no expiration time is set.</p>
+             * <p>The expiration time of the plaintext access permissions. The value is a UNIX timestamp that represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. This parameter is not returned if no validity period is set.</p>
              * 
              * <strong>example:</strong>
              * <p>2145953410000</p>
@@ -422,7 +446,7 @@ public class ListDataAssetAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The database account identifier. This value is used as AccountId when configuring permissions.</p>
+             * <p>The database account ID. This ID is used as AccountId when configuring permissions.</p>
              * 
              * <strong>example:</strong>
              * <p>1001</p>
@@ -433,7 +457,7 @@ public class ListDataAssetAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The database instance identity.</p>
+             * <p>The database instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>rm-2ze1abcdefgh****</p>
@@ -444,7 +468,7 @@ public class ListDataAssetAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cloud product code.</p>
+             * <p>The cloud service code.</p>
              * 
              * <strong>example:</strong>
              * <p>RDS</p>
@@ -455,12 +479,7 @@ public class ListDataAssetAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cloud product type identifier. Valid values:</p>
-             * <ul>
-             * <li>5: RDS.</li>
-             * <li>8: POLARDB.</li>
-             * <li>27: PolarDBX2.</li>
-             * </ul>
+             * <p>The cloud service type ID. Valid values: 5 (RDS), 8 (POLARDB), and 27 (PolarDBX2).</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -485,7 +504,7 @@ public class ListDataAssetAccountsResponseBody extends TeaModel {
              * <p>The region name of the asset.</p>
              * 
              * <strong>example:</strong>
-             * <p>China North 3 (Zhangjiakou)</p>
+             * <p>China (Zhangjiakou)</p>
              */
             public Builder regionName(String regionName) {
                 this.regionName = regionName;

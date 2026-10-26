@@ -87,7 +87,7 @@ public class ListRiskLevelsRequest extends Request {
         } 
 
         /**
-         * <p>A reserved feature type parameter. This parameter does not filter results in the current query. You do not need to specify this parameter for column encryption calls.</p>
+         * <p>The reserved feature type parameter. This parameter is not used to filter results in the current query. You do not need to specify this parameter for column encryption calls.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -99,11 +99,7 @@ public class ListRiskLevelsRequest extends Request {
         }
 
         /**
-         * <p>The language of the response description. Valid values:</p>
-         * <ul>
-         * <li>zh: Chinese.</li>
-         * <li>en: English.</li>
-         * </ul>
+         * <p>The language of the response description. Valid values: zh: Chinese. en: English.</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -115,7 +111,7 @@ public class ListRiskLevelsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the data classification template. You can obtain this value from Items[].Id returned by ListTemplates. Ensure that the template is consistent with the selected sensitivity level and detection model.</p>
+         * <p>The ID of the data classification template. You can obtain the ID from the Items[].Id parameter in the response of the ListTemplates operation. The template must be consistent with the selected sensitivity level and detection model.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

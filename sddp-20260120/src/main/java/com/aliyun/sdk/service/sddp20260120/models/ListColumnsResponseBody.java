@@ -117,7 +117,7 @@ public class ListColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of records returned by this query.</p>
+         * <p>The list of records returned by the current query.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -125,7 +125,7 @@ public class ListColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of records per page for this query.</p>
+         * <p>The number of entries returned per page in the current query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -136,7 +136,7 @@ public class ListColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID, which can be used to locate this API call.</p>
+         * <p>The request ID, which can be used to locate the current API call.</p>
          * 
          * <strong>example:</strong>
          * <p>7C6D8E9F-1234-5678-ABCD-0123456789AB</p>
@@ -147,7 +147,7 @@ public class ListColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of records that match the current query scope.</p>
+         * <p>The total number of entries that meet the current statistics or query scope.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -437,7 +437,7 @@ public class ListColumnsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation time of the data object. This value is a UNIX timestamp in milliseconds since 1970-01-01 00:00:00 UTC.</p>
+             * <p>The creation time of the data object. The value is a UNIX timestamp in milliseconds since 1970-01-01 00:00:00 UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>1788566400000</p>
@@ -459,7 +459,7 @@ public class ListColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The database name.</p>
+             * <p>The name of the database.</p>
              * 
              * <strong>example:</strong>
              * <p>business_db</p>
@@ -481,7 +481,7 @@ public class ListColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The database engine type.</p>
+             * <p>The type of the database engine.</p>
              * 
              * <strong>example:</strong>
              * <p>MySQL</p>
@@ -492,7 +492,7 @@ public class ListColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cloud instance identity to which the column belongs. This is a compatible field.</p>
+             * <p>The instance identity of the cloud instance to which the column belongs. This is a compatible field.</p>
              * 
              * <strong>example:</strong>
              * <p>rm-2ze1abcdefgh****</p>
@@ -503,7 +503,7 @@ public class ListColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The compatible field for column encryption status. To query column encryption results, call ListDataMaskingColumns.</p>
+             * <p>The compatibility field for the column encryption status. To query column encryption results, call ListDataMaskingColumns.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -525,7 +525,7 @@ public class ListColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cloud product code.</p>
+             * <p>The code of the cloud service.</p>
              * 
              * <strong>example:</strong>
              * <p>RDS</p>
@@ -536,7 +536,7 @@ public class ListColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the asset.</p>
+             * <p>The ID of the region where the asset is located.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-zhangjiakou</p>
@@ -547,7 +547,7 @@ public class ListColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the detection result revision record.</p>
+             * <p>The identifier of the detection result correction record.</p>
              * 
              * <strong>example:</strong>
              * <p>1001</p>
@@ -558,11 +558,7 @@ public class ListColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The revision status of the detection result. Valid values:</p>
-             * <ul>
-             * <li>0: not revised.</li>
-             * <li>1: revised.</li>
-             * </ul>
+             * <p>The correction status of the detection result. Valid values: 0: Not corrected. 1: Corrected.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -573,7 +569,7 @@ public class ListColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sensitivity level ID.</p>
+             * <p>The identifier of the sensitivity level.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -584,7 +580,7 @@ public class ListColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sensitivity level name.</p>
+             * <p>The name of the sensitivity level.</p>
              * 
              * <strong>example:</strong>
              * <p>S2</p>
@@ -595,7 +591,7 @@ public class ListColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the matched detection rule.</p>
+             * <p>The identifier of the matched detection rule.</p>
              * 
              * <strong>example:</strong>
              * <p>1001</p>
@@ -617,7 +613,7 @@ public class ListColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The database schema name.</p>
+             * <p>The name of the database schema.</p>
              * 
              * <strong>example:</strong>
              * <p>public</p>
@@ -636,7 +632,7 @@ public class ListColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data table name.</p>
+             * <p>The name of the data table.</p>
              * 
              * <strong>example:</strong>
              * <p>customer</p>

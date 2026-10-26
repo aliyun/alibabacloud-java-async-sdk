@@ -67,7 +67,7 @@ public class GetDataMaskingColumnCountResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The column encryption statistics.</p>
+         * <p>The statistics on the number of encrypted columns.</p>
          */
         public Builder columnCount(ColumnCount columnCount) {
             this.columnCount = columnCount;
@@ -75,7 +75,7 @@ public class GetDataMaskingColumnCountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID, which can be used to locate this API call.</p>
+         * <p>The request ID, which can be used to locate the API call.</p>
          * 
          * <strong>example:</strong>
          * <p>7C6D8E9F-1234-5678-ABCD-0123456789AB</p>
@@ -170,7 +170,7 @@ public class GetDataMaskingColumnCountResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of encrypted columns within the current scope.</p>
+             * <p>The number of encrypted columns in the current scope.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -181,7 +181,7 @@ public class GetDataMaskingColumnCountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of columns that failed to be encrypted within the current scope.</p>
+             * <p>The number of columns that failed to be encrypted in the current scope.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -192,7 +192,7 @@ public class GetDataMaskingColumnCountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of sensitive columns within the current scope.</p>
+             * <p>The number of sensitive columns in the current scope.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -203,7 +203,7 @@ public class GetDataMaskingColumnCountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of columns within the current scope.</p>
+             * <p>The total number of columns in the current scope.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>

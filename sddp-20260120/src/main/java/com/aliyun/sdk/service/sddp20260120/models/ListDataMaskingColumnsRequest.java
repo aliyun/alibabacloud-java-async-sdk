@@ -292,7 +292,7 @@ public class ListDataMaskingColumnsRequest extends Request {
         }
 
         /**
-         * <p>The column name filter.</p>
+         * <p>The filter condition for the column name.</p>
          * 
          * <strong>example:</strong>
          * <p>phone</p>
@@ -304,7 +304,7 @@ public class ListDataMaskingColumnsRequest extends Request {
         }
 
         /**
-         * <p>The page number of the current query. Pages start from 1.</p>
+         * <p>The current page number for the query. Pages start from 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -316,7 +316,7 @@ public class ListDataMaskingColumnsRequest extends Request {
         }
 
         /**
-         * <p>The database name.</p>
+         * <p>The name of the database.</p>
          * 
          * <strong>example:</strong>
          * <p>business_db</p>
@@ -328,7 +328,7 @@ public class ListDataMaskingColumnsRequest extends Request {
         }
 
         /**
-         * <p>The database engine type. This value must match the EngineType of the target instance, for example, MySQL or PostgreSQL.</p>
+         * <p>The type of the database engine. It must be consistent with the EngineType of the target instance, such as MySQL or PostgreSQL.</p>
          * 
          * <strong>example:</strong>
          * <p>MySQL</p>
@@ -340,7 +340,7 @@ public class ListDataMaskingColumnsRequest extends Request {
         }
 
         /**
-         * <p>The instance identity of the database. You can obtain this value from Items[].InstanceId in the response of the ListDataMaskingInstances operation.</p>
+         * <p>The instance identity of the database. You can obtain it from Items[].InstanceId in the response of ListDataMaskingInstances.</p>
          * 
          * <strong>example:</strong>
          * <p>rm-2ze1abcdefgh****</p>
@@ -352,11 +352,7 @@ public class ListDataMaskingColumnsRequest extends Request {
         }
 
         /**
-         * <p>The language of the response description. Valid values:</p>
-         * <ul>
-         * <li>zh: Chinese.</li>
-         * <li>en: English.</li>
-         * </ul>
+         * <p>The language of the response description. Valid values: zh: Chinese; en: English.</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -368,12 +364,7 @@ public class ListDataMaskingColumnsRequest extends Request {
         }
 
         /**
-         * <p>The column encryption status filter. Valid values:</p>
-         * <ul>
-         * <li>NotEncrypted: Not encrypted.</li>
-         * <li>Success: Encryption succeeded.</li>
-         * <li>Failed: Encryption failed.</li>
-         * </ul>
+         * <p>The filter for the column encryption status. Valid values: NotEncrypted: not encrypted; Success: encrypted successfully; Failed: encryption failed.</p>
          * 
          * <strong>example:</strong>
          * <p>NotEncrypted</p>
@@ -385,7 +376,7 @@ public class ListDataMaskingColumnsRequest extends Request {
         }
 
         /**
-         * <p>The number of records per page. Keep other filter conditions consistent when querying the next page.</p>
+         * <p>The number of records to return per page. Keep other filter conditions consistent when querying the next page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -397,7 +388,7 @@ public class ListDataMaskingColumnsRequest extends Request {
         }
 
         /**
-         * <p>The cloud product code. Column encryption supports RDS, POLARDB, and PolarDBX2. If ProductId is also specified, the two values must correspond.</p>
+         * <p>The code of the cloud service. Column encryption supports RDS, POLARDB, and PolarDBX2. If ProductId is also provided, the two must correspond to each other.</p>
          * 
          * <strong>example:</strong>
          * <p>RDS</p>
@@ -409,13 +400,7 @@ public class ListDataMaskingColumnsRequest extends Request {
         }
 
         /**
-         * <p>The cloud product type ID. Valid values:</p>
-         * <ul>
-         * <li>5: RDS.</li>
-         * <li>8: POLARDB.</li>
-         * <li>27: PolarDBX2.</li>
-         * </ul>
-         * <p>This value must correspond to ProductCode if both are specified.</p>
+         * <p>The ID of the cloud service type. Valid values: 5: RDS; 8: POLARDB; 27: PolarDBX2. It must correspond to ProductCode if both are specified.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -427,7 +412,7 @@ public class ListDataMaskingColumnsRequest extends Request {
         }
 
         /**
-         * <p>The compatible product ID list parameter. For column queries, use a single ProductId or ProductCode. Call the operation separately for each product when querying multiple products.</p>
+         * <p>The compatible parameter for the list of product IDs. For the current column query, use a single ProductId or ProductCode. Call the operation separately to query multiple products.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -439,7 +424,7 @@ public class ListDataMaskingColumnsRequest extends Request {
         }
 
         /**
-         * <p>The ID of a sensitivity level. You can obtain this value from the ListRiskLevels operation. The uppercase L in the parameter name must be preserved.</p>
+         * <p>The ID of a single sensitivity level. You can obtain it from ListRiskLevels. The uppercase L in the parameter name must be preserved.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -451,7 +436,7 @@ public class ListDataMaskingColumnsRequest extends Request {
         }
 
         /**
-         * <p>The list of sensitivity level IDs, separated by commas. Select values from the ListRiskLevels response that corresponds to the same TemplateId.</p>
+         * <p>The list of sensitivity level IDs. Separate multiple values with commas. Select the values from the response of ListRiskLevels corresponding to the same TemplateId.</p>
          * 
          * <strong>example:</strong>
          * <p>1,2</p>
@@ -463,7 +448,7 @@ public class ListDataMaskingColumnsRequest extends Request {
         }
 
         /**
-         * <p>The table name. For PostgreSQL or Oracle scenarios, preserve the schema.table format obtained from the table list.</p>
+         * <p>The name of the table. In PostgreSQL or Oracle scenarios, retain the schema.table format obtained from the table list.</p>
          * 
          * <strong>example:</strong>
          * <p>customer</p>
@@ -475,7 +460,7 @@ public class ListDataMaskingColumnsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the data classification template. You can obtain this value from Items[].Id in the response of the ListTemplates operation. This value must be consistent with the selected sensitivity level and detection model.</p>
+         * <p>The ID of the data classification template. You can obtain it from Items[].Id in the response of ListTemplates. It must be consistent with the selected sensitivity level and detection model.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -487,7 +472,7 @@ public class ListDataMaskingColumnsRequest extends Request {
         }
 
         /**
-         * <p>The list of detection model IDs, separated by commas. Select values from the ListIdentifyModels response that corresponds to the same TemplateId.</p>
+         * <p>The list of detection model IDs. Separate multiple values with commas. Select the values from the response of ListIdentifyModels corresponding to the same TemplateId.</p>
          * 
          * <strong>example:</strong>
          * <p>1001,1002</p>

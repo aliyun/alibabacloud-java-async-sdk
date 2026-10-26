@@ -353,7 +353,7 @@ public class ListTotalSensitiveInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of statistics grouped by region, template, data type, or date.</p>
+         * <p>The list of statistics categorized by region, template, data type, or date.</p>
          */
         public Builder dataCountDOList(java.util.List<DataCountDOList> dataCountDOList) {
             this.dataCountDOList = dataCountDOList;
@@ -383,7 +383,7 @@ public class ListTotalSensitiveInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID, which can be used to locate this API call.</p>
+         * <p>The request identity, which is active for locating the current API call when you invoke the API.</p>
          * 
          * <strong>example:</strong>
          * <p>7C6D8E9F-1234-5678-ABCD-0123456789AB</p>
@@ -394,7 +394,7 @@ public class ListTotalSensitiveInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of counts aggregated by detection rule.</p>
+         * <p>The list of quantities aggregated by detection rule.</p>
          */
         public Builder ruleInfoList(java.util.List<RuleInfoList> ruleInfoList) {
             this.ruleInfoList = ruleInfoList;
@@ -567,7 +567,7 @@ public class ListTotalSensitiveInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of child-level sensitive data objects. In structured data scenarios, this value is used for sensitive column statistics.</p>
+         * <p>The number of child sensitive data objects, which is used for sensitive column statistics in structured data scenarios.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -578,7 +578,7 @@ public class ListTotalSensitiveInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of child-level data objects. In structured data scenarios, this value is used for column-level statistics.</p>
+         * <p>The total number of child data objects, which is used for column-level statistics in structured data scenarios.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -589,7 +589,7 @@ public class ListTotalSensitiveInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of data objects that match the current statistics or query scope.</p>
+         * <p>The total number of data objects that meet the current statistics or query scope.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -682,7 +682,7 @@ public class ListTotalSensitiveInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The statistics date, represented as a UNIX timestamp in nanoseconds. The time corresponds to midnight of the day in the server time zone.</p>
+             * <p>The statistics date, represented by a UNIX timestamp in nanoseconds. The time corresponds to 00:00:00 of the day in the server time zone.</p>
              * 
              * <strong>example:</strong>
              * <p>1788537600000000000</p>
@@ -704,7 +704,7 @@ public class ListTotalSensitiveInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of data objects that match the current statistics or query scope.</p>
+             * <p>The total number of data objects that meet the current statistics or query scope.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -787,7 +787,7 @@ public class ListTotalSensitiveInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of data objects that match the detection rule.</p>
+             * <p>The number of data objects that hit the detection rule.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -798,7 +798,7 @@ public class ListTotalSensitiveInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the matched detection rule.</p>
+             * <p>The ID of the hit detection rule.</p>
              * 
              * <strong>example:</strong>
              * <p>1001</p>
@@ -809,7 +809,7 @@ public class ListTotalSensitiveInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the matched detection rule.</p>
+             * <p>The name of the hit detection rule.</p>
              * 
              * <strong>example:</strong>
              * <p>Phone number</p>
@@ -1113,7 +1113,7 @@ public class ListTotalSensitiveInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of statistics grouped by region, template, data type, or date.</p>
+             * <p>The list of statistics categorized by region, template, data type, or date.</p>
              */
             public Builder dataCountDOList(java.util.List<DataCountDOListDataCountDOList> dataCountDOList) {
                 this.dataCountDOList = dataCountDOList;
@@ -1121,7 +1121,7 @@ public class ListTotalSensitiveInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The statistics date, represented as a UNIX timestamp in nanoseconds. The time corresponds to midnight of the day in the server time zone.</p>
+             * <p>The statistics date, represented by a UNIX timestamp in nanoseconds. The time corresponds to 00:00:00 of the day in the server time zone.</p>
              * 
              * <strong>example:</strong>
              * <p>1788537600000000000</p>
@@ -1132,7 +1132,7 @@ public class ListTotalSensitiveInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the asset.</p>
+             * <p>The ID of the region where the asset resides.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-zhangjiakou</p>
@@ -1143,7 +1143,7 @@ public class ListTotalSensitiveInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of counts aggregated by detection rule.</p>
+             * <p>The list of quantities aggregated by detection rule.</p>
              */
             public Builder ruleInfoList(java.util.List<DataCountDOListRuleInfoList> ruleInfoList) {
                 this.ruleInfoList = ruleInfoList;
@@ -1283,10 +1283,10 @@ public class ListTotalSensitiveInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data type of the statistics. Valid values:</p>
+             * <p>The type of the statistics data. Valid values:</p>
              * <ul>
-             * <li>1: structured data.</li>
-             * <li>0: unstructured data.</li>
+             * <li>1: Structured data.</li>
+             * <li>0: Unstructured data.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1312,7 +1312,7 @@ public class ListTotalSensitiveInfoResponseBody extends TeaModel {
              * <p>The name of the data classification template.</p>
              * 
              * <strong>example:</strong>
-             * <p>General classification template</p>
+             * <p>General data classification template</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -1320,7 +1320,7 @@ public class ListTotalSensitiveInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of data objects that match the current statistics or query scope.</p>
+             * <p>The total number of data objects that meet the current statistics or query scope.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -1403,7 +1403,7 @@ public class ListTotalSensitiveInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of data objects that match the detection rule.</p>
+             * <p>The number of data objects that hit the detection rule.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -1414,7 +1414,7 @@ public class ListTotalSensitiveInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the matched detection rule.</p>
+             * <p>The ID of the hit detection rule.</p>
              * 
              * <strong>example:</strong>
              * <p>1001</p>
@@ -1425,7 +1425,7 @@ public class ListTotalSensitiveInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the matched detection rule.</p>
+             * <p>The name of the hit detection rule.</p>
              * 
              * <strong>example:</strong>
              * <p>Phone number</p>
