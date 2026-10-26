@@ -87,7 +87,7 @@ public class DescribeRCInstanceDdosCountRequest extends Request {
         } 
 
         /**
-         * <p>The region ID of the assets that are assigned public IP addresses to query.</p>
+         * <p>The region ID of the public IP address asset to query.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
@@ -99,7 +99,7 @@ public class DescribeRCInstanceDdosCountRequest extends Request {
         }
 
         /**
-         * <p>The instance type of the assets that are assigned public IP addresses to query. Set the value to <strong>ecs</strong>.</p>
+         * <p>The instance type of the public IP address asset to query. Set the value to <strong>ecs</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs</p>

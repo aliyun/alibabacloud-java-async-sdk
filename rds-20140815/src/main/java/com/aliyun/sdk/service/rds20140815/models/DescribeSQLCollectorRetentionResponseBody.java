@@ -88,7 +88,7 @@ public class DescribeSQLCollectorRetentionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>D5CEDCC2-CA75-43F7-9508-92F418CE6391</p>

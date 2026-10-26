@@ -173,7 +173,7 @@ public class ModifyDBProxyEndpointAddressRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,10 +186,10 @@ public class ModifyDBProxyEndpointAddressRequest extends Request {
         }
 
         /**
-         * <p>The network type of the database proxy endpoint to be modified. Valid values:</p>
+         * <p>The network type of the database proxy endpoint that you want to modify. Valid values:</p>
          * <ul>
          * <li><strong>Public</strong>: Internet</li>
-         * <li><strong>VPC</strong> (default): virtual private cloud (VPC)</li>
+         * <li><strong>VPC</strong> (default): VPC</li>
          * </ul>
          * <blockquote>
          * <p>This parameter is required when the database engine is RDS MySQL.</p>
@@ -205,7 +205,7 @@ public class ModifyDBProxyEndpointAddressRequest extends Request {
         }
 
         /**
-         * <p>The ID of the database proxy endpoint. You can call DescribeDBProxyEndpoint to query the ID.</p>
+         * <p>The ID of the database proxy endpoint. You can call the DescribeDBProxyEndpoint operation to query the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -218,7 +218,7 @@ public class ModifyDBProxyEndpointAddressRequest extends Request {
         }
 
         /**
-         * <p>A deprecated parameter. You do not need to configure this parameter.</p>
+         * <p><strong>[Deprecated]</strong> You do not need to configure this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>normal</p>
@@ -230,7 +230,7 @@ public class ModifyDBProxyEndpointAddressRequest extends Request {
         }
 
         /**
-         * <p>The prefix of the new database proxy endpoint. You can customize this value.</p>
+         * <p>The prefix of the new database proxy endpoint. You can customize the prefix.</p>
          * <blockquote>
          * <p>You must specify at least one of the <strong>DBProxyNewConnectString</strong> and <strong>DBProxyNewConnectStringPort</strong> parameters.</p>
          * </blockquote>
@@ -245,7 +245,7 @@ public class ModifyDBProxyEndpointAddressRequest extends Request {
         }
 
         /**
-         * <p>The port number of the new database proxy endpoint. You can customize this value.</p>
+         * <p>The port of the new database proxy endpoint. You can customize the port.</p>
          * <blockquote>
          * <p>You must specify at least one of the <strong>DBProxyNewConnectString</strong> and <strong>DBProxyNewConnectStringPort</strong> parameters.</p>
          * </blockquote>

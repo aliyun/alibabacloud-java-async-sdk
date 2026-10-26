@@ -88,7 +88,7 @@ public class PreCheckCreateOrderForDeleteDBNodesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The precheck result.</p>
+         * <p>The pre-check result.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>

@@ -250,7 +250,7 @@ public class ModifyMaskingRulesRequest extends Request {
         }
 
         /**
-         * <p>The rule algorithms. You can specify multiple algorithms. Masking algorithms can include additional parameters. Format: {name: algorithm1}, {name: algorithm2, params: {encryption position, encryption length}}.</p>
+         * <p>The rule algorithms. You can specify multiple algorithms and add extra parameters for masking algorithms. Format: {name: Algorithm 1}, {name: Algorithm 2, params: {encryption position, number of encrypted digits}}.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;name&quot;: &quot;sha256&quot;},
@@ -312,7 +312,7 @@ public class ModifyMaskingRulesRequest extends Request {
         }
 
         /**
-         * <p>The name of the rule to modify.</p>
+         * <p>The name of the rule to be modified.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

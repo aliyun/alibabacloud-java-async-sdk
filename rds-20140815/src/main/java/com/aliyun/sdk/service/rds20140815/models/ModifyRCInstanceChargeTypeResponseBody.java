@@ -121,8 +121,8 @@ public class ModifyRCInstanceChargeTypeResponseBody extends TeaModel {
         /**
          * <p>The billing method. Valid values:</p>
          * <ul>
-         * <li><strong>POSTPAY</strong>: pay-as-you-go.</li>
-         * <li><strong>PREPAY</strong>: subscription.</li>
+         * <li><strong>POSTPAY</strong>: pay-as-you-go</li>
+         * <li><strong>PREPAY</strong>: subscription</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -145,7 +145,7 @@ public class ModifyRCInstanceChargeTypeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Reserved parameter. Not supported.</p>
+         * <p>The reserved parameter. This parameter is not supported.</p>
          */
         public Builder feeOfInstances(java.util.List<FeeOfInstances> feeOfInstances) {
             this.feeOfInstances = feeOfInstances;
@@ -254,7 +254,7 @@ public class ModifyRCInstanceChargeTypeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Reserved parameter. Not supported.</p>
+             * <p>The reserved parameter. This parameter is not supported.</p>
              * 
              * <strong>example:</strong>
              * <p>None</p>
@@ -265,7 +265,7 @@ public class ModifyRCInstanceChargeTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Reserved parameter. Not supported.</p>
+             * <p>The reserved parameter. This parameter is not supported.</p>
              * 
              * <strong>example:</strong>
              * <p>None</p>
@@ -276,7 +276,7 @@ public class ModifyRCInstanceChargeTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Reserved parameter. Not supported.</p>
+             * <p>The reserved parameter. This parameter is not supported.</p>
              * 
              * <strong>example:</strong>
              * <p>None</p>

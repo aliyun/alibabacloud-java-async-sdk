@@ -202,7 +202,7 @@ public class DescribeDetachedBackupsRequest extends Request {
         } 
 
         /**
-         * <p>The backup set ID.</p>
+         * <p>The ID of the backup set.</p>
          * 
          * <strong>example:</strong>
          * <p>327****</p>
@@ -216,8 +216,8 @@ public class DescribeDetachedBackupsRequest extends Request {
         /**
          * <p>The backup mode. Valid values:</p>
          * <ul>
-         * <li><strong>Automated</strong>: automatic backup.</li>
-         * <li><strong>Manual</strong>: manual backup.</li>
+         * <li><strong>Automated</strong>: automatic backup</li>
+         * <li><strong>Manual</strong>: manual backup</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -230,9 +230,9 @@ public class DescribeDetachedBackupsRequest extends Request {
         }
 
         /**
-         * <p>The backup set status. Valid values:</p>
+         * <p>The status of the backup set. Valid values:</p>
          * <ul>
-         * <li><strong>Success</strong>: The backup is complete.</li>
+         * <li><strong>Success</strong>: The backup is completed.</li>
          * <li><strong>Failed</strong>: The backup failed.</li>
          * </ul>
          * 
@@ -246,7 +246,7 @@ public class DescribeDetachedBackupsRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
+         * <p>Instance ID of the instance. You can call the DescribeDBInstances operation to query instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rm-uf6wjk5****</p>
@@ -259,7 +259,7 @@ public class DescribeDetachedBackupsRequest extends Request {
 
         /**
          * <p>The end time of the query. The end time must be later than the start time.</p>
-         * <p>Format: <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z (UTC).</p>
+         * <p>Format: <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z (UTC time).</p>
          * 
          * <strong>example:</strong>
          * <p>2021-03-15T16:00Z</p>
@@ -271,7 +271,7 @@ public class DescribeDetachedBackupsRequest extends Request {
         }
 
         /**
-         * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type.</p>
+         * <p>The page number. Valid values: any integer greater than 0 and less than or equal to the maximum integer value.</p>
          * <blockquote>
          * <p>Default value: 1.</p>
          * </blockquote>
@@ -306,7 +306,7 @@ public class DescribeDetachedBackupsRequest extends Request {
         }
 
         /**
-         * <p>The region in which the instance resides.</p>
+         * <p>The region where the instance resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -319,7 +319,7 @@ public class DescribeDetachedBackupsRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmy****</p>
@@ -341,7 +341,7 @@ public class DescribeDetachedBackupsRequest extends Request {
 
         /**
          * <p>The start time of the query.</p>
-         * <p>Format: <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z (UTC).</p>
+         * <p>Format: <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z (UTC time).</p>
          * 
          * <strong>example:</strong>
          * <p>2021-03-01T16:00Z</p>

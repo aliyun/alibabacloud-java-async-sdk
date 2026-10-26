@@ -104,7 +104,7 @@ public class DeleteDBInstanceReplicationRequest extends Request {
         } 
 
         /**
-         * <p>The name of the replication channel, which identifies the replication task.</p>
+         * <p>The name of the replication channel, which is used to identify the replication task.</p>
          * 
          * <strong>example:</strong>
          * <p>replication-channel-001</p>
@@ -116,7 +116,7 @@ public class DeleteDBInstanceReplicationRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
+         * <p>The instance ID. You can call the DescribeDBInstances operation to obtain the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,7 +141,7 @@ public class DeleteDBInstanceReplicationRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call DescribeRegions to query the most recent region list.</p>
+         * <p>The region ID. You can call the DescribeRegions operation to obtain the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

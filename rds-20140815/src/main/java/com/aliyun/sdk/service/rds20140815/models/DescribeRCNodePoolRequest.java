@@ -99,7 +99,7 @@ public class DescribeRCNodePoolRequest extends Request {
         }
 
         /**
-         * <p>The node pool ID.</p>
+         * <p>The ID of the node pool.</p>
          * 
          * <strong>example:</strong>
          * <p>np31da1b38983f4511b490fc62108a****</p>

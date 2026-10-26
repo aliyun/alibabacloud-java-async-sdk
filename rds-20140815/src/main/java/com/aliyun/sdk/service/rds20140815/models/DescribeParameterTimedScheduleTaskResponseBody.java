@@ -233,7 +233,7 @@ public class DescribeParameterTimedScheduleTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the scheduled task for parameter modification.</p>
+             * <p>The ID of the scheduled parameter modification task.</p>
              * 
              * <strong>example:</strong>
              * <p>27056921</p>

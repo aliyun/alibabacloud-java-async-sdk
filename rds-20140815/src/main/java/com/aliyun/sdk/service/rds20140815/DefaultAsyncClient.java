@@ -105,13 +105,13 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported database engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for PostgreSQL</li>
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the documentation to fully understand the prerequisites and impacts of this operation.
+     * <p>Notice: Before you call this operation, read the feature documentation carefully to ensure that you fully understand the prerequisites and the impacts of the operation.</notice>
      * <a href="https://help.aliyun.com/document_detail/365562.html">One-click cloud migration</a></p>
      * </blockquote>
      * 
@@ -134,8 +134,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Instances with local disks are not allowed to join a deployment set by default, and the error UNSUPPORTED_DBINSTANCE_OPERATEION is returned. To add such instances, contact technical support. Ask the administrator to add the UID to the whitelist. Cloud disk instances do not have this restriction.
-     * Forcibly adding instances to a deployment set may cause instance restarts. Use this feature with caution.</p>
+     * <p>By default, instances with local disks are not allowed to be added to a deployment set, and the UNSUPPORTED_DBINSTANCE_OPERATEION error is returned. To add such an instance, contact the administrator to add your UID to the whitelist. This restriction does not apply to cloud disk instances. Forcibly adding an instance to a deployment set may cause the instance to restart. Proceed with caution.</p>
      * 
      * @param request the request parameters of AddRCInstancesToDeploymentSet  AddRCInstancesToDeploymentSetRequest
      * @return AddRCInstancesToDeploymentSetResponse
@@ -156,20 +155,20 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Applicable engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
      * <li>ApsaraDB RDS for SQL Server</li>
      * <li>ApsaraDB RDS for MariaDB</li>
      * </ul>
-     * <h3>Precautions</h3>
+     * <h3>Usage notes</h3>
      * <ul>
      * <li>Each tag consists of a tag key (TagKey) and a tag value (TagValue). TagKey cannot be empty, but TagValue can be empty.</li>
      * <li>The values of TagKey and TagValue cannot start with aliyun.</li>
      * <li>TagKey and TagValue are case-insensitive.</li>
-     * <li>TagKey can be up to 64 characters in length. TagValue can be up to 128 characters in length.</li>
-     * <li>Each instance can have up to 10 tags. The TagKey of each tag bound to an instance must be unique. If you bind a tag that has the same TagKey as an existing tag, the new tag overwrites the existing tag.</li>
+     * <li>TagKey can be up to 64 characters in length, and TagValue can be up to 128 characters in length.</li>
+     * <li>You can bind up to 10 tags to each instance, and the TagKeys bound to an instance must be unique. If you bind a tag with a duplicate TagKey, the newly bound tag overwrites the previously bound tag.</li>
      * </ul>
      * 
      * @param request the request parameters of AddTagsToResource  AddTagsToResourceRequest
@@ -272,7 +271,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for SQL Server</li>
@@ -283,7 +282,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <li><a href="https://help.aliyun.com/document_detail/2864363.html">Introduction to RDS Custom for SQL Server</a></li>
      * </ul>
      * <h3>Precautions</h3>
-     * <p>If the RDS Custom instance has a public IP address enabled, the existing public IP address undergoes automatic release after you associate an EIP with the instance.</p>
+     * <p>If an RDS Custom instance has a public IP address enabled, the public IP address is automatically released after you attach an EIP.</p>
      * 
      * @param request the request parameters of AssociateEipAddressWithRCInstance  AssociateEipAddressWithRCInstanceRequest
      * @return AssociateEipAddressWithRCInstanceResponse
@@ -304,21 +303,21 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>When you invoke this operation, take note of the following items:</p>
+     * <p>When you call this operation, take note of the following items:</p>
      * <ul>
      * <li>The cloud disk must be in the Available state.</li>
-     * <li>When you mount a data cloud disk:<ul>
+     * <li>When you attach a data cloud disk:<ul>
      * <li>The destination RDS Custom instance must be in the Running or Stopped state.</li>
-     * <li>If the cloud disk is purchased separately, the billable methods must be pay-as-you-go.</li>
-     * <li>If a system cloud disk detached from an RDS Custom instance is mounted as a data cloud disk, no billing method restriction applies.</li>
-     * <li>An elastic ephemeral disk can be remounted only to its original instance after it is uninstalled.</li>
+     * <li>If the cloud disk was purchased separately, its billing method must be pay-as-you-go.</li>
+     * <li>If a system cloud disk detached from an RDS Custom instance is attached as a data cloud disk, its billing method is not limited.</li>
+     * <li>Once an elastic ephemeral disk is detached, it can only be reattached to its original instance.</li>
      * </ul>
      * </li>
-     * <li>When you mount a system cloud disk:<ul>
+     * <li>When you attach a system cloud disk:<ul>
      * <li>The destination RDS Custom instance must be the source instance from which the system cloud disk was detached.</li>
      * <li>The destination RDS Custom instance must be in the Stopped state.</li>
-     * <li>You must configure the logon credentials for the instance under Settings.</li>
-     * <li>Elastic ephemeral disks cannot be mounted as system cloud disks.</li>
+     * <li>You must configure the instance logon credentials.</li>
+     * <li>Elastic ephemeral disks cannot be attached as system cloud disks.</li>
      * </ul>
      * </li>
      * </ul>
@@ -360,11 +359,11 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Applicable engines</h3>
      * <ul>
-     * <li>ApsaraDB RDS for MySQL</li>
-     * <li>ApsaraDB RDS for PostgreSQL</li>
-     * <li>ApsaraDB RDS for SQL Server</li>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
      * </ul>
      * 
      * @param request the request parameters of AttachWhitelistTemplateToInstance  AttachWhitelistTemplateToInstanceRequest
@@ -422,18 +421,18 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for SQL Server</li>
      * </ul>
-     * <h3>Feature description</h3>
-     * <p>When <a href="https://help.aliyun.com/document_detail/51073.html">read/write splitting</a> is enabled, this operation calculates the system-assigned weights. To query custom read weights, see <a href="https://help.aliyun.com/document_detail/610423.html">DescribeDBInstanceNetInfo</a>.</p>
-     * <h3>Before you begin</h3>
-     * <p>When you invoke this operation, the instance must meet the following conditions. Otherwise, the operation fails:</p>
+     * <h3>Description</h3>
+     * <p>When <a href="https://help.aliyun.com/document_detail/51073.html">read/write splitting</a> is enabled, this operation calculates the system-assigned weights. For custom read weights, refer to <a href="https://help.aliyun.com/document_detail/610423.html">DescribeDBInstanceNetInfo</a>.</p>
+     * <h3>Prerequisites</h3>
+     * <p>When you call this operation, the instance must meet the following requirements. Otherwise, the operation fails:</p>
      * <ul>
-     * <li>The MySQL instance uses a shared database proxy.</li>
-     * <li>The instance runs one of the following editions:<ul>
+     * <li>The MySQL instance uses the shared database proxy.</li>
+     * <li>The instance runs one of the following engine versions:<ul>
      * <li>MySQL 5.7 High-availability Edition (local SSDs)</li>
      * <li>MySQL 5.6</li>
      * <li>SQL Server Cluster Edition</li>
@@ -460,7 +459,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
@@ -469,20 +468,20 @@ public final class DefaultAsyncClient implements AsyncClient {
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, read the feature documentation carefully to ensure that you fully understand the prerequisites and the impacts of this operation.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/104183.html">Scheduled events of ApsaraDB RDS for MySQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/104452.html">Scheduled events of ApsaraDB RDS for PostgreSQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/104451.html">Scheduled events of ApsaraDB RDS for SQL Server</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/104454.html">Scheduled events of ApsaraDB RDS for MariaDB</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/104183.html">Scheduled events for ApsaraDB RDS for MySQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/104452.html">Scheduled events for ApsaraDB RDS for PostgreSQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/104451.html">Scheduled events for ApsaraDB RDS for SQL Server</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/104454.html">Scheduled events for ApsaraDB RDS for MariaDB</a></li>
      * </ul>
      * <h3>Limits</h3>
-     * <p>A task cannot be canceled in the following cases:</p>
+     * <p>You cannot cancel a task in the following scenarios:</p>
      * <ul>
-     * <li>The value of allowCancel is 0.</li>
+     * <li>The allowCancel parameter is set to 0.</li>
      * <li>The current time is later than the task start time.</li>
-     * <li>The task status is not 3 (waiting for execution).</li>
+     * <li>The task status is not 3 (Pending Execution).</li>
      * </ul>
      * 
      * @param request the request parameters of CancelActiveOperationTasks  CancelActiveOperationTasksRequest
@@ -582,14 +581,14 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <li>ApsaraDB RDS for PostgreSQL</li>
      * <li>ApsaraDB RDS for SQL Server</li>
      * </ul>
-     * <h3>Related documentation</h3>
+     * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, read the feature documentation carefully to ensure that you fully understand the prerequisites and the impacts of this operation.</notice></p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/120824.html">MySQL cross-region backup</a> and <a href="https://help.aliyun.com/document_detail/120875.html">MySQL cross-region restoration</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/206671.html">PostgreSQL cross-region backup</a> and <a href="https://help.aliyun.com/document_detail/206662.html">PostgreSQL cross-region restoration</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/187923.html">SQL Server cross-region backup</a> and <a href="https://help.aliyun.com/document_detail/187924.html">SQL Server cross-region restoration</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/120824.html">Cross-region backup for ApsaraDB RDS for MySQL</a>, <a href="https://help.aliyun.com/document_detail/120875.html">Cross-region restoration for ApsaraDB RDS for MySQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/206671.html">Cross-region backup for ApsaraDB RDS for PostgreSQL</a>, <a href="https://help.aliyun.com/document_detail/206662.html">Cross-region restoration for ApsaraDB RDS for PostgreSQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/187923.html">Cross-region backup for ApsaraDB RDS for SQL Server</a>, <a href="https://help.aliyun.com/document_detail/187924.html">Cross-region restoration for ApsaraDB RDS for SQL Server</a></li>
      * </ul>
      * 
      * @param request the request parameters of CheckCreateDdrDBInstance  CheckCreateDdrDBInstanceRequest
@@ -725,22 +724,22 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Supported database engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
      * <li>ApsaraDB RDS for SQL Server</li>
      * <li>ApsaraDB RDS for MariaDB</li>
      * </ul>
-     * <h3>Related documentation</h3>
+     * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the documentation carefully to fully understand the prerequisites and impacts.</p>
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of the operation.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/96147.html">Restore data for ApsaraDB RDS for MySQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/96776.html">Restore data for ApsaraDB RDS for PostgreSQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/95722.html">Restore data for ApsaraDB RDS for SQL Server</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/97151.html">Restore data for ApsaraDB RDS for MariaDB</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96147.html">Restore data for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96776.html">Restore data for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95722.html">Restore data for an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97151.html">Restore data for an ApsaraDB RDS for MariaDB instance</a></li>
      * </ul>
      * 
      * @param request the request parameters of CloneDBInstance  CloneDBInstanceRequest
@@ -803,7 +802,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <li>ApsaraDB RDS for MariaDB</li>
      * </ul>
      * <h3>Description</h3>
-     * <p>Call <a href="https://help.aliyun.com/document_detail/610443.html">QueryNotify</a> to query notifications, and then call this operation to mark a notification as confirmed, which indicates that you have acknowledged the notification content.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/610443.html">QueryNotify</a> to query notifications, and then call this operation to mark a notification as confirmed, which indicates that you have acknowledged the content of the notification.</p>
      * 
      * @param request the request parameters of ConfirmNotify  ConfirmNotifyRequest
      * @return ConfirmNotifyResponse
@@ -842,21 +841,21 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
-     * <p>RDS SQL Server.</p>
+     * <h3>Supported engine</h3>
+     * <p>ApsaraDB RDS for SQL Server.</p>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * <a href="https://help.aliyun.com/document_detail/95702.html">Copy a database between ApsaraDB RDS for SQL Server instances</a></p>
+     * <p>Notice: Before you call this operation, read the related documentation to understand the prerequisites and impacts.
+     * <a href="https://help.aliyun.com/document_detail/95702.html">Copy databases between ApsaraDB RDS for SQL Server instances</a></p>
      * </blockquote>
      * <h3>Limits</h3>
      * <ul>
      * <li>The source and target instances must belong to the same Alibaba Cloud account.</li>
-     * <li>The target instance <strong>must not contain</strong> a database that has the same name as the database to be copied from the source instance.</li>
-     * <li>The available storage of the target instance <strong>must be greater than</strong> the storage used by the database to be copied from the source instance. If the storage is insufficient, <a href="https://help.aliyun.com/document_detail/95665.html">expand the storage</a> in a timely manner.</li>
-     * <li>The source and target instances must be in the same region (zones can be different) and must use the same network type.</li>
-     * <li>The source and target instances do not support <a href="https://help.aliyun.com/document_detail/603466.html">serverless instances</a>. To migrate a serverless instance, <a href="https://help.aliyun.com/document_detail/210947.html">use DTS</a>.</li>
-     * <li>You <strong>must specify</strong> either BackupId or RestoreTime. An error is returned if neither parameter is specified.</li>
+     * <li>The target instance <strong>must not contain</strong> a database that has the same name as the source database to be copied.</li>
+     * <li>The available storage space of the target instance <strong>must be greater than</strong> the space occupied by the source database to be copied. If the storage space is insufficient, <a href="https://help.aliyun.com/document_detail/95665.html">scale up the storage capacity</a>.</li>
+     * <li>The source and target instances must be deployed in the same region. They can be deployed in different zones but must have the same network type.</li>
+     * <li>The source and target instances do not support the <a href="https://help.aliyun.com/document_detail/603466.html">serverless instance</a> type. To migrate a serverless instance, <a href="https://help.aliyun.com/document_detail/210947.html">use DTS</a>.</li>
+     * <li>When you call this operation, you <strong>must specify</strong> either the BackupId or RestoreTime parameter. If neither is specified, an error is returned.</li>
      * </ul>
      * 
      * @param request the request parameters of CopyDatabaseBetweenInstances  CopyDatabaseBetweenInstancesRequest
@@ -917,26 +916,26 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL</li>
-     * <li>RDS SQL Server</li>
-     * <li>RDS MariaDB</li>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
+     * <li>ApsaraDB RDS for MariaDB</li>
      * </ul>
-     * <h3>Description</h3>
-     * <p>This operation calls the built-in backup feature of ApsaraDB RDS. You can also use Database Backup Service (DBS). For more information, &lt;props=&quot;china&quot;&gt;refer to <a href="https://help.aliyun.com/document_detail/2841997.html">DBS API overview</a>&lt;props=&quot;intl&quot;&gt;refer to <a href="https://help.aliyun.com/document_detail/2402073.html">DBS API overview</a>.</p>
+     * <h3>Feature description</h3>
+     * <p>This operation calls the built-in backup feature of ApsaraDB RDS. You can also use Database Backup (DBS). For more information, &lt;props=&quot;china&quot;&gt;see <a href="https://help.aliyun.com/document_detail/2841997.html">DBS API overview</a>&lt;props=&quot;intl&quot;&gt;see <a href="https://help.aliyun.com/document_detail/2402073.html">DBS API overview</a>.</p>
      * <h3>Precautions</h3>
-     * <p>When you invoke this operation, the instance must meet the following conditions. Otherwise, the operation is failed:</p>
+     * <p>When you invoke this operation, the instance must meet the following conditions. Otherwise, the operation will be failed:</p>
      * <ul>
      * <li>The instance status is Running.</li>
-     * <li>No backup node is being executed.</li>
-     * <li>A maximum of 20 backup sets can be created for a single instance per day.</li>
+     * <li>No backup nodes are being executed.</li>
+     * <li>The number of backup sets that can be created for a single instance within a day does not exceed 20. For MySQL DPI engine instances, there is no limit on the number of backup sets that can be created within a day.</li>
      * </ul>
      * <h3>Related documentation</h3>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/378074.html">Back up an RDS MySQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/96772.html">Back up an RDS PostgreSQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/95717.html">Back up an RDS SQL Server instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/97147.html">Back up an RDS MariaDB instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/378074.html">Back up data for ApsaraDB RDS for MySQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96772.html">Back up data for ApsaraDB RDS for PostgreSQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95717.html">Back up data for ApsaraDB RDS for SQL Server</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97147.html">Back up data for ApsaraDB RDS for MariaDB</a></li>
      * </ul>
      * 
      * @param request the request parameters of CreateBackup  CreateBackupRequest
@@ -958,14 +957,14 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Applicable engines</h3>
      * <ul>
-     * <li>RDS PostgreSQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
      * </ul>
-     * <h3>Related documentation</h3>
+     * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the following documentation to fully understand the prerequisites and impacts of this operation.
-     * <a href="https://help.aliyun.com/document_detail/365562.html">One-click migration to RDS</a></p>
+     * <p>Notice: Before you call this operation, read the feature documentation carefully to fully understand the prerequisites and impacts of this operation.
+     * <a href="https://help.aliyun.com/document_detail/365562.html">One-click cloud migration</a></p>
      * </blockquote>
      * 
      * @param request the request parameters of CreateCloudMigrationPrecheckTask  CreateCloudMigrationPrecheckTaskRequest
@@ -987,14 +986,14 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS PostgreSQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
      * </ul>
-     * <h3>Related documentation</h3>
+     * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts of this operation.
-     * <a href="https://help.aliyun.com/document_detail/365562.html">Migrate to the cloud</a></p>
+     * <p>Notice: Before you call this operation, read the feature documentation to understand the prerequisites and impacts.
+     * <a href="https://help.aliyun.com/document_detail/365562.html">One-click cloud migration</a></p>
      * </blockquote>
      * 
      * @param request the request parameters of CreateCloudMigrationTask  CreateCloudMigrationTaskRequest
@@ -1026,7 +1025,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <h3>Related documentation</h3>
      * <blockquote>
      * <p>Warning: This API operation incurs fees. Read the related documentation carefully before you proceed.
-     * If an error occurs when you call the API operation, you can search for the error message to identify the cause.</p>
+     * If an error occurs when you call the API operation, you can search for the error message to view the cause.</p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/148036.html">Create an ApsaraDB RDS for MySQL instance</a></li>
@@ -1061,18 +1060,18 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <h3>Supported engines</h3>
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL
-     * &lt;props=&quot;intl&quot;&gt;RDS MySQL</li>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL
+     * &lt;props=&quot;intl&quot;&gt;ApsaraDB RDS for MySQL</li>
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts of this operation.
+     * <p>Notice: Before you call this operation, carefully read the documentation to fully understand the prerequisites and the impacts of the operation.</notice>
      * &lt;props=&quot;china&quot;&gt;</p>
      * </blockquote>
      * <ul>
-     * <li>RDS MySQL: <a href="https://help.aliyun.com/document_detail/464132.html">Add a cluster read-only endpoint</a></li>
-     * <li>RDS PostgreSQL: <a href="https://help.aliyun.com/document_detail/96788.html">Add a cluster read-only endpoint</a>
+     * <li>ApsaraDB RDS for MySQL: <a href="https://help.aliyun.com/document_detail/464132.html">Add a cluster read-only endpoint</a></li>
+     * <li>ApsaraDB RDS for PostgreSQL: <a href="https://help.aliyun.com/document_detail/96788.html">Add a cluster read-only endpoint</a>
      * &lt;props=&quot;intl&quot;&gt;
      * <a href="https://help.aliyun.com/document_detail/464132.html">Add a cluster read-only endpoint</a></li>
      * </ul>
@@ -1103,10 +1102,10 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <li>RDS PostgreSQL
      * &lt;props=&quot;intl&quot;&gt;RDS MySQL</li>
      * </ul>
-     * <h3>Before you begin</h3>
+     * <h3>Precautions</h3>
      * <ul>
-     * <li>You can create a public endpoint for an endpoint only when the endpoint does not have a public endpoint.</li>
-     * <li>The configurations such as traffic distribution weights are the same as those of the internal endpoint of the endpoint. Each endpoint can have only one public endpoint and one internal endpoint.</li>
+     * <li>You can create a public endpoint for an endpoint only if the endpoint does not already have a public endpoint.</li>
+     * <li>Configurations such as the traffic distribution weight are the same as those of the internal endpoint. Each endpoint can have only one public endpoint and one internal endpoint.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateDBInstanceEndpointAddress  CreateDBInstanceEndpointAddressRequest
@@ -1128,22 +1127,22 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Supported database engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL</li>
-     * <li>RDS SQL Server</li>
-     * <li>RDS MariaDB</li>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
+     * <li>ApsaraDB RDS for MariaDB</li>
      * </ul>
      * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Warning: This API operation involves fees. Read the related feature documentation carefully before you perform this operation.</p>
+     * <p>Warning: This API operation incurs fees. Read the related feature documentation carefully before you call this operation.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/96065.html">Rebuild an RDS MySQL instance from the recycle bin</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/96752.html">Rebuild an RDS PostgreSQL instance from the recycle bin</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/95669.html">Rebuild an RDS SQL Server instance from the recycle bin</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/97131.html">Rebuild an RDS MariaDB instance from the recycle bin</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96065.html">Rebuild an ApsaraDB RDS for MySQL instance from the recycle bin</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96752.html">Rebuild an ApsaraDB RDS for PostgreSQL instance from the recycle bin</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95669.html">Rebuild an ApsaraDB RDS for SQL Server instance from the recycle bin</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97131.html">Rebuild an ApsaraDB RDS for MariaDB instance from the recycle bin</a></li>
      * </ul>
      * 
      * @param request the request parameters of CreateDBInstanceForRebuild  CreateDBInstanceForRebuildRequest
@@ -1183,10 +1182,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engine</h3>
+     * <h3>Supported engines</h3>
      * <p>ApsaraDB RDS for SQL Server</p>
      * <h3>Related documentation</h3>
-     * <p><a href="https://help.aliyun.com/document_detail/2392322.html">Configure security group rules for an ApsaraDB RDS for SQL Server instance</a></p>
+     * <p><a href="https://help.aliyun.com/document_detail/2392322.html">Configure security group rules for ApsaraDB RDS for SQL Server</a></p>
      * 
      * @param request the request parameters of CreateDBInstanceSecurityGroupRule  CreateDBInstanceSecurityGroupRuleRequest
      * @return CreateDBInstanceSecurityGroupRuleResponse
@@ -1210,20 +1209,20 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <h3>Supported engines</h3>
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL
-     * &lt;props=&quot;intl&quot;&gt;RDS MySQL</li>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL
+     * &lt;props=&quot;intl&quot;&gt;ApsaraDB RDS for MySQL</li>
      * </ul>
-     * <h3>Related feature documentation</h3>
+     * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following feature documentation carefully to fully understand the prerequisites and impacts of this operation.
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and impacts.
      * &lt;props=&quot;china&quot;&gt;</p>
      * </blockquote>
      * <ul>
-     * <li>RDS MySQL: <a href="https://help.aliyun.com/document_detail/464129.html">Add nodes to an ApsaraDB RDS for MySQL instance that runs the Cluster Edition</a></li>
-     * <li>RDS PostgreSQL: <a href="https://help.aliyun.com/document_detail/2778876.html">Add nodes to an ApsaraDB RDS for PostgreSQL instance that runs the Cluster Edition</a>
+     * <li>ApsaraDB RDS for MySQL: <a href="https://help.aliyun.com/document_detail/464129.html">Add nodes to an ApsaraDB RDS for MySQL Cluster Edition instance</a></li>
+     * <li>ApsaraDB RDS for PostgreSQL: <a href="https://help.aliyun.com/document_detail/2778876.html">Add nodes to an ApsaraDB RDS for PostgreSQL Cluster Edition instance</a>
      * &lt;props=&quot;intl&quot;&gt;
-     * <a href="https://help.aliyun.com/document_detail/464129.html">Add nodes to an ApsaraDB RDS for MySQL instance that runs the Cluster Edition</a></li>
+     * <a href="https://help.aliyun.com/document_detail/464129.html">Add nodes to an ApsaraDB RDS for MySQL Cluster Edition instance</a></li>
      * </ul>
      * 
      * @param request the request parameters of CreateDBNodes  CreateDBNodesRequest
@@ -1247,16 +1246,16 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h3>Supported database engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL</li>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
      * </ul>
      * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you invoke this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, read the feature documentation to fully understand the prerequisites and impacts.</notice></p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/184921.html">Create an internal or public database proxy endpoint for an RDS MySQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/418274.html">Create an internal or public database proxy endpoint for an RDS PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/184921.html">Create internal and public database proxy endpoints for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/418274.html">Create internal and public database proxy endpoints for an ApsaraDB RDS for PostgreSQL instance</a></li>
      * </ul>
      * 
      * @param request the request parameters of CreateDBProxyEndpointAddress  CreateDBProxyEndpointAddressRequest
@@ -1315,8 +1314,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Suggestions</h3>
-     * <p>Before you perform a restoration, call the CheckCreateDdrDBInstance operation to check whether the cross-region backup set of the destination ApsaraDB RDS instance can be used for cross-region restoration.</p>
+     * <h3>Recommendations</h3>
+     * <p>Before restoration, call the CheckCreateDdrDBInstance operation to check whether the cross-region backup set of the destination ApsaraDB RDS instance can be used for cross-region restoration.</p>
      * <h3>Supported engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
@@ -1325,7 +1324,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you use this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of using this operation.</p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/120824.html">Cross-region backup for ApsaraDB RDS for MySQL</a></li>
@@ -1352,15 +1351,15 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS MySQL
+     * <li>ApsaraDB RDS for MySQL
      * &lt;props=&quot;china&quot;&gt;</li>
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the following documentation to fully understand the prerequisites and impacts of this operation.
-     * <a href="https://help.aliyun.com/document_detail/328592.html">Create and release a GAD cluster</a></p>
+     * <p>Notice: Before you call this operation, read the documentation to fully understand the prerequisites and impacts.
+     * <a href="https://help.aliyun.com/document_detail/328592.html">Create and release a global active database cluster</a></p>
      * </blockquote>
      * 
      * @param request the request parameters of CreateGADInstance  CreateGADInstanceRequest
@@ -1382,13 +1381,13 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engine</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
+     * <li>ApsaraDB RDS for MySQL</li>
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before calling this operation, carefully read the documentation to fully understand the prerequisites and potential impacts, and then proceed.
+     * <p>Notice: Before you call this operation, read the documentation to fully understand the prerequisites and impacts.</notice>
      * &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/document_detail/331851.html">Add or remove unit nodes</a></p>
      * </blockquote>
      * 
@@ -1411,7 +1410,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Creates a data import task for importing data to an ApsaraDB RDS for MySQL instance with native replication.</p>
+     * <p>Creates a data import task to import data into an ApsaraDB RDS for MySQL instance that uses native replication.</p>
      * 
      * @param request the request parameters of CreateImportTask  CreateImportTaskRequest
      * @return CreateImportTaskResponse
@@ -1434,8 +1433,8 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>Before invoking this operation, make sure that the column encryption service is activated in DAS Security Center.</li>
-     * <li>If you receive the fault message ColumnEncryptionErrorCode.NOT_PURCHASED when you invoke this operation, go to Database Autonomy Service (DAS) Security Center to purchase and activate the column encryption service through Cloud Hardware Security Module (CloudHSM) before trying again.</li>
+     * <li>Before you invoke this operation, make sure that column encryption is activated in the DAS Security Center.</li>
+     * <li>If you receive the ColumnEncryptionErrorCode.NOT_PURCHASED error message when invoking this operation, go to the Database Autonomy Service (DAS) Security Center to purchase and activate column encryption.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateMaskingRules  CreateMaskingRulesRequest
@@ -1525,11 +1524,11 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engine</h3>
      * <p>ApsaraDB RDS for MySQL</p>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts of this operation.
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of this operation.
      * <a href="https://help.aliyun.com/document_detail/464130.html">Delete nodes from an ApsaraDB RDS for MySQL Cluster Edition instance</a></p>
      * </blockquote>
      * 
@@ -1585,19 +1584,19 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>&lt;props=&quot;china&quot;&gt;You can join the RDS PostgreSQL extension exchange DingTalk group (103525002795) to consult, communicate, provide feedback, and obtain more information about extensions.</p>
-     * <h3>Applicable engine</h3>
-     * <p>RDS PostgreSQL</p>
+     * <p>&lt;props=&quot;china&quot;&gt;You can join the RDS PostgreSQL plug-in communication DingTalk group (103525002795) for consultation, communication, and feedback to obtain more information about plug-ins.</p>
+     * <h3>Supported engines</h3>
+     * <p>ApsaraDB RDS for PostgreSQL</p>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the following documentation to fully understand the prerequisites and potential impacts. Proceed only after you understand the information.
-     * <a href="https://help.aliyun.com/document_detail/2402409.html">Manage extensions</a></p>
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impact of this operation.
+     * <a href="https://help.aliyun.com/document_detail/2402409.html">Manage plug-ins</a></p>
      * </blockquote>
      * <h3>Precautions</h3>
-     * <p>You can install only extensions that are supported by the major engine version of the instance. Otherwise, the installation fails.</p>
+     * <p>You can only install plug-ins that are supported by the major engine version of the instance. Otherwise, the installation fails.</p>
      * <ul>
-     * <li>For information about supported extensions, see <a href="https://help.aliyun.com/document_detail/142340.html">Supported extensions</a>.</li>
-     * <li>You can call <a href="https://help.aliyun.com/document_detail/610394.html">DescribeDBInstanceAttribute</a> to query the major engine version of the instance.</li>
+     * <li>For information about supported plug-ins, see <a href="https://help.aliyun.com/document_detail/142340.html">Supported plug-ins</a>.</li>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/610394.html">DescribeDBInstanceAttribute</a> operation to query the major engine version of the instance.</li>
      * </ul>
      * 
      * @param request the request parameters of CreatePostgresExtensions  CreatePostgresExtensionsRequest
@@ -1638,10 +1637,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Supported cloud disk types: ultra cloud disk, standard SSD, ESSD, and premium performance disk (default).</li>
-     * <li>If the billing method of the cloud disk is subscription (<strong>Prepaid</strong>), you must specify the instance ID of a subscription instance (<strong>InstanceId</strong>) to which the cloud disk is mounted. The expiration time of the cloud disk is the same as that of the instance.</li>
-     * <li>You can create a pay-as-you-go (<strong>Postpaid</strong>) cloud disk separately without mounting it to an instance. You can also mount it to an instance of any billing method during creation as needed.</li>
-     * <li>The cloud disk types and the number of cloud disks that can be mounted vary based on instance specifications.</li>
+     * <li>Supported cloud disk types: ultra disk, standard SSD, ESSD, and premium performance disk (default).</li>
+     * <li>When the billing method of the cloud disk is subscription (<strong>Prepaid</strong>), you must specify the instance ID of a subscription instance (<strong>InstanceId</strong>) to which the cloud disk is mounted. The expiration time of the cloud disk is the same as that of the mounted instance.</li>
+     * <li>You can create a pay-as-you-go (<strong>Postpaid</strong>) cloud disk separately without mounting it to an instance. You can also mount it to an instance of any billing method when you create it as needed.</li>
+     * <li>The types and number of cloud disks that can be mounted vary based on the instance type.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateRCDisk  CreateRCDiskRequest
@@ -1665,18 +1664,18 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h3>Supported engines</h3>
      * <ul>
-     * <li>ApsaraDB RDS for MySQL</li>
-     * <li>ApsaraDB RDS for SQL Server</li>
+     * <li>RDS MySQL</li>
+     * <li>RDS SQL Server</li>
      * </ul>
      * <h3>Related documentation</h3>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/2844223.html">Introduction to RDS Custom for MySQL</a></li>
      * <li><a href="https://help.aliyun.com/document_detail/2864363.html">Introduction to RDS Custom for SQL Server</a></li>
      * </ul>
-     * <h3>Usage notes</h3>
+     * <h3>Usage</h3>
      * <ul>
-     * <li>Method 1: Create a custom image from a snapshot of the <strong>system cloud disk</strong>. Specify SnapshotId and ImageName together.</li>
-     * <li>Method 2: Create a custom image from an RDS Custom instance. Specify InstanceId and ImageName together.</li>
+     * <li>Method 1: Create a custom image from a snapshot generated from a <strong>system cloud disk</strong>. When passing values, use SnapshotId and ImageName together.</li>
+     * <li>Method 2: Create a custom image from an RDS Custom instance. When passing values, use InstanceId and ImageName together.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateRCImage  CreateRCImageRequest
@@ -1716,16 +1715,16 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You cannot create a snapshot for a cloud disk in the following scenarios:</p>
+     * <p>You cannot create a snapshot for a specified cloud disk in the following scenarios:</p>
      * <ul>
-     * <li>The number of manual snapshots retained for the cloud disk has reached 256.</li>
-     * <li>The previous snapshot has not been created yet.</li>
-     * <li>The instance to which the cloud disk is mounted has never been started.</li>
-     * <li>The instance to which the cloud disk is mounted is not in the <strong>Stopped</strong> or <strong>Running</strong> instance status.
-     * When you create a snapshot, take note of the following items:</li>
-     * <li>If the snapshot has not been created, the snapshot cannot be used to create a custom image (CreateImage).</li>
-     * <li>If the cloud disk is mounted to an RDS Custom instance, do not change the instance status while the snapshot is being created.</li>
-     * <li>You can create snapshots for cloud disks in the <strong>Expired</strong> state. If the cloud disk reaches its expiration release time while the snapshot is being created, the cloud disk is released and the snapshot in the Creating state is also deleted.</li>
+     * <li>The cloud disk has reached the limit of 256 manual snapshots.</li>
+     * <li>The previous snapshot is still being created.</li>
+     * <li>The instance on which the cloud disk is mounted has never been started.</li>
+     * <li>The instance on which the cloud disk is mounted is not in the <strong>Stopped</strong> or <strong>Running</strong> state.
+     * Note the following when you create a snapshot:</li>
+     * <li>If the snapshot is still being created, you cannot use it to create a custom image by calling the CreateImage operation.</li>
+     * <li>If the cloud disk is mounted on an RDS Custom instance, do not change the instance status during snapshot creation.</li>
+     * <li>You can create snapshots for cloud disks in the <strong>Expired</strong> state. If a cloud disk reaches its expiration and release time exactly when a snapshot is being created, the snapshot in the <strong>Creating</strong> state is deleted along with the cloud disk.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateRCSnapshot  CreateRCSnapshotRequest
@@ -1812,9 +1811,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
+     * <li>ApsaraDB RDS for MySQL</li>
      * </ul>
      * 
      * @param request the request parameters of CreateSecret  CreateSecretRequest
@@ -1911,9 +1910,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS SQL Server</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteADSetting  DeleteADSettingRequest
@@ -2080,14 +2079,14 @@ public final class DefaultAsyncClient implements AsyncClient {
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of this operation.</notice>
      * &lt;props=&quot;china&quot;&gt;</p>
      * </blockquote>
      * <ul>
-     * <li>ApsaraDB RDS for MySQL: <a href="https://help.aliyun.com/document_detail/464133.html">Delete a cluster read-only endpoint</a></li>
-     * <li>ApsaraDB RDS for PostgreSQL: <a href="https://help.aliyun.com/document_detail/96788.html">Delete a cluster read-only endpoint</a>
+     * <li>ApsaraDB RDS for MySQL: <a href="https://help.aliyun.com/document_detail/464133.html">Delete the read-only routing endpoint of a cluster</a></li>
+     * <li>ApsaraDB RDS for PostgreSQL: <a href="https://help.aliyun.com/document_detail/96788.html">Delete the read-only routing endpoint of a cluster</a>
      * &lt;props=&quot;intl&quot;&gt;
-     * ApsaraDB RDS for MySQL: <a href="https://help.aliyun.com/document_detail/464133.html">Delete a cluster read-only endpoint</a></li>
+     * ApsaraDB RDS for MySQL: <a href="https://help.aliyun.com/document_detail/464133.html">Delete the read-only routing endpoint of a cluster</a></li>
      * </ul>
      * 
      * @param request the request parameters of DeleteDBInstanceEndpoint  DeleteDBInstanceEndpointRequest
@@ -2109,15 +2108,15 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Applicable engines</h3>
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL
-     * &lt;props=&quot;intl&quot;&gt;RDS MySQL</li>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL
+     * &lt;props=&quot;intl&quot;&gt;ApsaraDB RDS for MySQL</li>
      * </ul>
      * <h3>Precautions</h3>
-     * <p>You can delete only the public endpoint from an endpoint. To delete the internal endpoint, delete the endpoint directly.</p>
+     * <p>Currently, you can only release the public address of an endpoint. To release the internal address, delete the endpoint directly.</p>
      * 
      * @param request the request parameters of DeleteDBInstanceEndpointAddress  DeleteDBInstanceEndpointAddressRequest
      * @return DeleteDBInstanceEndpointAddressResponse
@@ -2183,20 +2182,20 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <h3>Supported engines</h3>
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL
-     * &lt;props=&quot;intl&quot;&gt;RDS MySQL</li>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL
+     * &lt;props=&quot;intl&quot;&gt;ApsaraDB RDS for MySQL</li>
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of this operation.
      * &lt;props=&quot;china&quot;&gt;</p>
      * </blockquote>
      * <ul>
-     * <li>RDS MySQL: <a href="https://help.aliyun.com/document_detail/464130.html">Delete nodes from an ApsaraDB RDS for MySQL instance that runs Cluster Edition</a></li>
-     * <li>RDS PostgreSQL: <a href="https://help.aliyun.com/document_detail/2778876.html">Delete nodes from an ApsaraDB RDS for PostgreSQL instance that runs Cluster Edition</a>
+     * <li>ApsaraDB RDS for MySQL: <a href="https://help.aliyun.com/document_detail/464130.html">Delete nodes from an ApsaraDB RDS for MySQL Cluster Edition instance</a></li>
+     * <li>ApsaraDB RDS for PostgreSQL: <a href="https://help.aliyun.com/document_detail/2778876.html">Delete nodes from an ApsaraDB RDS for PostgreSQL Cluster Edition instance</a>
      * &lt;props=&quot;intl&quot;&gt;
-     * <a href="https://help.aliyun.com/document_detail/464130.html">Delete nodes from an ApsaraDB RDS for MySQL instance that runs Cluster Edition</a></li>
+     * <a href="https://help.aliyun.com/document_detail/464130.html">Delete nodes from an ApsaraDB RDS for MySQL Cluster Edition instance</a></li>
      * </ul>
      * 
      * @param request the request parameters of DeleteDBNodes  DeleteDBNodesRequest
@@ -2225,11 +2224,11 @@ public final class DefaultAsyncClient implements AsyncClient {
      * </ul>
      * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, read the feature documentation carefully to fully understand the prerequisites and impacts.</notice></p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/184921.html">Settings for database proxy endpoints for ApsaraDB RDS for MySQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/418274.html">Settings for database proxy endpoints for ApsaraDB RDS for PostgreSQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/184921.html">Configure the database proxy endpoint for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/418274.html">Configure the database proxy endpoint for an ApsaraDB RDS for PostgreSQL instance</a></li>
      * </ul>
      * 
      * @param request the request parameters of DeleteDBProxyEndpointAddress  DeleteDBProxyEndpointAddressRequest
@@ -2317,10 +2316,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>Before invoking this operation, make sure that you have activated the column encryption feature in DAS Security Center.</li>
-     * <li>If you receive the fault message ColumnEncryptionErrorCode.NOT_PURCHASED when invoking this operation, go to Database Autonomy Service (DAS) Security Center to purchase and activate the column encryption feature in Cloud Hardware Security Module (CloudHSM).</li>
+     * <li>Before you invoke this operation, make sure that the column encryption service is enabled in the DAS Security Center.</li>
+     * <li>If you receive the ColumnEncryptionErrorCode.NOT_PURCHASED error message when you invoke this operation, go to the Database Autonomy Service (DAS) Security Center to purchase and enable the column encryption service.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteMaskingRules  DeleteMaskingRulesRequest
@@ -2380,13 +2379,11 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
      * </ul>
-     * <h3>Related documentation</h3>
-     * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
-     * </blockquote>
+     * <h3>Related feature documentation</h3>
+     * <p><notice>Before you use this operation, read the feature documentation to fully understand the prerequisites and the impacts of using this operation.</notice></p>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/96063.html">Set instance parameters for ApsaraDB RDS for MySQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/96751.html">Set instance parameters for ApsaraDB RDS for PostgreSQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96063.html">Set the parameters of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96751.html">Set the parameters of an ApsaraDB RDS for PostgreSQL instance</a></li>
      * </ul>
      * 
      * @param request the request parameters of DeleteParameterTimedScheduleTask  DeleteParameterTimedScheduleTaskRequest
@@ -2408,12 +2405,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>&lt;props=&quot;china&quot;&gt;You can join the RDS PostgreSQL extension exchange DingTalk group (103525002795) to consult, communicate, provide feedback, and obtain more information about extensions.</p>
-     * <h3>Applicable engine</h3>
-     * <p>RDS PostgreSQL</p>
+     * <p>&lt;props=&quot;china&quot;&gt;You can join the RDS PostgreSQL extension communication DingTalk group (103525002795) for consultation, communication, and feedback to obtain more information about extensions.</p>
+     * <h3>Supported engines</h3>
+     * <p>ApsaraDB RDS for PostgreSQL</p>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the following documentation to fully understand the prerequisites and impacts of this operation.
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of the operation.
      * <a href="https://help.aliyun.com/document_detail/2402409.html">Manage extensions</a></p>
      * </blockquote>
      * 
@@ -2472,11 +2469,11 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>When you call this operation, take note of the following items:</p>
+     * <p>When you call this operation, note the following items:</p>
      * <ul>
-     * <li>Manual snapshots of the cloud disk are retained.</li>
-     * <li>When you release a cloud disk, the cloud disk must be in the <strong>Unattached</strong> (Available) state.</li>
-     * <li>If the cloud disk with the specified ID does not exist, the request is ignored.</li>
+     * <li>Manual snapshots of the disk are retained.</li>
+     * <li>The disk must be in the Available state when it is released.</li>
+     * <li>If the disk with the specified ID does not exist, the request is ignored.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteRCDisk  DeleteRCDiskRequest
@@ -2516,7 +2513,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>After an instance is released, all physical resources used by the instance are reclaimed, and all related data is permanently lost and cannot be recovered.</p>
+     * <p>After the instances are released, the physical resources used by the instances are reclaimed, and all related data is lost and cannot be recovered.</p>
      * 
      * @param request the request parameters of DeleteRCInstances  DeleteRCInstancesRequest
      * @return DeleteRCInstancesResponse
@@ -2599,7 +2596,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for PostgreSQL</li>
      * <li>ApsaraDB RDS for SQL Server</li>
@@ -2642,12 +2639,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Applicable engines</h3>
      * <ul>
-     * <li>RDS PostgreSQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
      * </ul>
      * <h3>Precautions</h3>
-     * <p>A replication slot can be deleted only when its status (SlotStatus) is <strong>INACTIVE</strong>. You can call the DescribeSlots operation to query the replication slot status.</p>
+     * <p>A replication slot can be deleted only when its status (SlotStatus) is <strong>INACTIVE</strong>. You can call the DescribeSlots operation to query the status of the replication slot.</p>
      * 
      * @param request the request parameters of DeleteSlot  DeleteSlotRequest
      * @return DeleteSlotResponse
@@ -2668,14 +2665,14 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported database engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
+     * <li>ApsaraDB RDS for MySQL</li>
      * </ul>
-     * <h3>Description</h3>
+     * <h3>Features</h3>
      * <ul>
-     * <li>A user backup is a full backup of a self-managed MySQL database. You can restore a user backup to the cloud. For more information, see <a href="https://help.aliyun.com/document_detail/251779.html">Migrate the full data of a self-managed MySQL 5.7 database to the cloud</a>.</li>
-     * <li>This operation only deletes the specified user backup from the ApsaraDB RDS console and does not affect the original backup file in Object Storage Service (OSS). After the deletion, you can call the ImportUserBackupFile operation to re-import the user backup.</li>
+     * <li>A user backup is a full backup of a self-managed MySQL database. You can restore the user backup to the cloud. For more information, see <a href="https://help.aliyun.com/document_detail/251779.html">Migrate full data from a self-managed MySQL 5.7 database to the cloud</a>.</li>
+     * <li>This operation only deletes the specified user backup from the ApsaraDB RDS console and does not affect the original backup file in OSS. After the deletion, you can call the ImportUserBackupFile operation to re-import the user backup.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteUserBackupFile  DeleteUserBackupFileRequest
@@ -2721,9 +2718,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engine</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS SQL Server</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeADInfo  DescribeADInfoRequest
@@ -2747,8 +2744,8 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>Before you invoke this operation, make sure that you have activated the column encryption feature in DAS Security Center.</li>
-     * <li>If you receive the error message ColumnEncryptionErrorCode.NOT_PURCHASED when you invoke this operation, go to Database Autonomy Service (DAS) Security Center to purchase and activate the column encryption feature before using it.</li>
+     * <li>Before you call this operation, make sure that you have activated the column encryption service in the DAS Security Center.</li>
+     * <li>If you receive the error message ColumnEncryptionErrorCode.NOT_PURCHASED when calling this operation, go to the Database Autonomy Service (DAS) Security Center to purchase and activate the column encryption service before you proceed.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeAccountMaskingPrivilege  DescribeAccountMaskingPrivilegeRequest
@@ -2849,9 +2846,9 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <li>ApsaraDB RDS for SQL Server</li>
      * <li>ApsaraDB RDS for MariaDB</li>
      * </ul>
-     * <h3>Related documentation</h3>
+     * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to fully understand the prerequisites and impacts.</p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/104183.html">Scheduled events for ApsaraDB RDS for MySQL</a></li>
@@ -2879,11 +2876,11 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>ApsaraDB RDS for MySQL</li>
-     * <li>ApsaraDB RDS for PostgreSQL</li>
-     * <li>ApsaraDB RDS for SQL Server</li>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeAllWhitelistTemplate  DescribeAllWhitelistTemplateRequest
@@ -2929,7 +2926,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
@@ -2991,13 +2988,13 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Applicable engines</h3>
      * <ul>
-     * <li>RDS PostgreSQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
      * </ul>
-     * <h3>Related documentation</h3>
+     * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before calling this operation, carefully read the following documentation to fully understand the prerequisites and potential impacts.
+     * <p>Notice: Before you call this operation, read the feature documentation carefully to fully understand the prerequisites and impacts of this operation.</notice>
      * <a href="https://help.aliyun.com/document_detail/299200.html">View enhanced monitoring</a>.</p>
      * </blockquote>
      * 
@@ -3021,13 +3018,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>To query the restorable time range of a regular backup file, see DescribeBackups.</p>
+     * <p>To view the time range to which data can be restored from a regular backup file, see DescribeBackups.</p>
      * </blockquote>
-     * <h3>Applicable engine</h3>
-     * <p>ApsaraDB RDS for MySQL (with Premium Local SSDs)</p>
-     * <h3>Related documentation</h3>
+     * <h3>Supported engines</h3>
+     * <p>ApsaraDB RDS for MySQL (instances with Premium Local SSDs)</p>
+     * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the following documentation to fully understand the prerequisites and impacts of this operation.
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of this operation.
      * <a href="https://help.aliyun.com/document_detail/120824.html">Cross-region backup for ApsaraDB RDS for MySQL</a></p>
      * </blockquote>
      * 
@@ -3052,13 +3049,13 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL<blockquote>
-     * <p>This operation is used only to query available zone resources and is not used for the sales of ApsaraDB RDS for PostgreSQL on the console. Due to differences in actual sales policies, some parameter values on the buy page may slightly differ. When making a purchase, refer to the <a href="https://rdsbuy.console.aliyun.com/create/rds/PostgreSQL">buy page</a>.</p>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL<blockquote>
+     * <p>This operation is only used to query available zone resources and is not used for the sales of ApsaraDB RDS for PostgreSQL in the console. The purchase page may have slightly different parameter values based on actual sales strategies. When you make a purchase, refer to the <a href="https://rdsbuy.console.aliyun.com/create/rds/PostgreSQL">purchase page</a>.</p>
      * </blockquote>
      * </li>
-     * <li>RDS SQL Server</li>
-     * <li>RDS MariaDB</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
+     * <li>ApsaraDB RDS for MariaDB</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeAvailableZones  DescribeAvailableZonesRequest
@@ -3152,12 +3149,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Applicable engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL</li>
-     * <li>RDS SQL Server</li>
-     * <li>RDS MariaDB</li>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
+     * <li>ApsaraDB RDS for MariaDB</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeBackups  DescribeBackupsRequest
@@ -3239,7 +3236,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
      * <li>RDS MySQL</li>
      * <li>RDS PostgreSQL</li>
@@ -3266,7 +3263,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Applicable engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for PostgreSQL</li>
      * </ul>
@@ -3290,9 +3287,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS PostgreSQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeCloudMigrationResult  DescribeCloudMigrationResultRequest
@@ -3336,10 +3333,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
-     * <p>RDS PostgreSQL</p>
-     * <h3>Related documentation</h3>
-     * <p><a href="https://help.aliyun.com/document_detail/2928780.html">Committed serverless</a></p>
+     * <h3>Supported engines</h3>
+     * <p>ApsaraDB RDS for PostgreSQL</p>
+     * <h3>Related feature documentation</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2928780.html">Committed Serverless</a></p>
      * 
      * @param request the request parameters of DescribeComputeBurstConfig  DescribeComputeBurstConfigRequest
      * @return DescribeComputeBurstConfigResponse
@@ -3360,7 +3357,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
@@ -3368,12 +3365,12 @@ public final class DefaultAsyncClient implements AsyncClient {
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, read the documentation to fully understand the prerequisites and impacts of the operation.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/120824.html">Cross-region backup for ApsaraDB RDS for MySQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/206671.html">Cross-region backup for ApsaraDB RDS for PostgreSQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/187923.html">Cross-region backup for ApsaraDB RDS for SQL Server</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/120824.html">Cross-region backups for ApsaraDB RDS for MySQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/206671.html">Cross-region backups for ApsaraDB RDS for PostgreSQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/187923.html">Cross-region backups for ApsaraDB RDS for SQL Server</a></li>
      * </ul>
      * 
      * @param request the request parameters of DescribeCrossBackupMetaList  DescribeCrossBackupMetaListRequest
@@ -3403,7 +3400,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, read the documentation carefully to fully understand the prerequisites and impacts.</notice></p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/120824.html">Cross-region backup for ApsaraDB RDS for MySQL</a></li>
@@ -3432,19 +3429,19 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h3>Supported engines</h3>
      * <ul>
-     * <li>ApsaraDB RDS for MySQL (<a href="https://help.aliyun.com/document_detail/69795.html">storage type</a> must be <strong>Premium Local SSDs</strong>. Cloud disks are not supported.)</li>
+     * <li>ApsaraDB RDS for MySQL (The <a href="https://help.aliyun.com/document_detail/69795.html">storage type</a> must be <strong>Premium Local SSDs</strong>. Cloud disks are not supported.)</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
      * <li>ApsaraDB RDS for SQL Server</li>
      * </ul>
-     * <h3>Related documentation</h3>
+     * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of the operation.</p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/120824.html">Cross-region backup for ApsaraDB RDS for MySQL</a></li>
      * <li><a href="https://help.aliyun.com/document_detail/187923.html">Cross-region backup for ApsaraDB RDS for SQL Server</a></li>
      * <li><a href="https://help.aliyun.com/document_detail/206671.html">Cross-region backup for ApsaraDB RDS for PostgreSQL</a><blockquote>
-     * <p>To query cross-region log backup files, refer to DescribeCrossRegionLogBackupFiles.</p>
+     * <p>To query cross-region log backup files, see DescribeCrossRegionLogBackupFiles.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -3569,12 +3566,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>ApsaraDB RDS for MySQL</li>
-     * <li>ApsaraDB RDS for PostgreSQL</li>
-     * <li>ApsaraDB RDS for SQL Server</li>
-     * <li>ApsaraDB RDS for MariaDB</li>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * <li>RDS MariaDB</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeDBInstanceByTags  DescribeDBInstanceByTagsRequest
@@ -3598,8 +3595,8 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>Before you invoke this operation, make sure that you have activated the column encryption feature in DAS Security Center.</li>
-     * <li>If you receive the fault message ColumnEncryptionErrorCode.NOT_PURCHASED when invoking this operation, go to Database Autonomy Service (DAS) Security Center to purchase and activate the column encryption feature.</li>
+     * <li>Before you use this operation, make sure that the column encryption service is enabled in the DAS Security Center.</li>
+     * <li>If you receive the error message ColumnEncryptionErrorCode.NOT_PURCHASED when you call this operation, go to the Database Autonomy Service (DAS) Security Center to purchase and enable the column encryption service.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeDBInstanceCLS  DescribeDBInstanceCLSRequest
@@ -3639,8 +3636,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engine</h3>
-     * <p>RDS SQL Server.</p>
+     * <h3>Applicable engine</h3>
+     * <p>ApsaraDB RDS for SQL Server.</p>
      * 
      * @param request the request parameters of DescribeDBInstanceDetail  DescribeDBInstanceDetailRequest
      * @return DescribeDBInstanceDetailResponse
@@ -3661,7 +3658,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
@@ -3716,13 +3713,13 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h3>Supported engines</h3>
      * <ul>
-     * <li>ApsaraDB RDS for MySQL</li>
-     * <li>ApsaraDB RDS for PostgreSQL</li>
-     * <li>ApsaraDB RDS for SQL Server</li>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before calling this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts of this operation before you proceed.</p>
+     * <p>Notice: Before you call this operation, read the feature documentation to understand the prerequisites and impacts.</notice></p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/96055.html">Query the data replication mode of an ApsaraDB RDS for MySQL instance</a></li>
@@ -3812,13 +3809,13 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS PostgreSQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before calling this operation, carefully read the following documentation to fully understand the prerequisites and potential impacts.
+     * <p>Notice: Before you use this operation, read the feature documentation carefully to ensure that you fully understand the prerequisites and the impacts of using this operation.</notice>
      * <a href="https://help.aliyun.com/document_detail/299200.html">View enhanced monitoring</a>.</p>
      * </blockquote>
      * 
@@ -3921,12 +3918,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>ApsaraDB RDS for MySQL</li>
-     * <li>ApsaraDB RDS for PostgreSQL</li>
-     * <li>ApsaraDB RDS for SQL Server</li>
-     * <li>ApsaraDB RDS for MariaDB</li>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * <li>RDS MariaDB</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeDBInstancePerformance  DescribeDBInstancePerformanceRequest
@@ -3947,7 +3944,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI DescribeDBInstancePromoteActivity is deprecated  * @description This operation is no longer maintained. **You can still call this operation, but Alibaba Cloud no longer maintains it**.
+     * @deprecated OpenAPI DescribeDBInstancePromoteActivity is deprecated  * @description This operation is deprecated: **you can still call this operation, but Alibaba Cloud no longer maintains it**.
      * 
      * @param request the request parameters of DescribeDBInstancePromoteActivity  DescribeDBInstancePromoteActivityRequest
      * @return DescribeDBInstancePromoteActivityResponse
@@ -3995,12 +3992,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <p>ApsaraDB RDS for MySQL</p>
-     * <h3>Related documentation</h3>
+     * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts of this operation before you proceed.
-     * <a href="https://help.aliyun.com/document_detail/2856487.html">RDS MySQL native replication instance</a></p>
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of the operation.
+     * <a href="https://help.aliyun.com/document_detail/2856487.html">Native replication instances of ApsaraDB RDS for MySQL</a></p>
      * </blockquote>
      * 
      * @param request the request parameters of DescribeDBInstanceReplication  DescribeDBInstanceReplicationRequest
@@ -4055,9 +4052,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <h3>Applicable engine</h3>
-     * <p>RDS SQL Server</p>
+     * <p>ApsaraDB RDS for SQL Server</p>
      * <h3>Related documentation</h3>
-     * <p><a href="https://help.aliyun.com/document_detail/2392322.html">Configure security group rules for ApsaraDB RDS for SQL Server</a></p>
+     * <p><a href="https://help.aliyun.com/document_detail/2392322.html">Configure security group rules for an ApsaraDB RDS for SQL Server instance</a></p>
      * 
      * @param request the request parameters of DescribeDBInstanceSecurityGroupRule  DescribeDBInstanceSecurityGroupRuleRequest
      * @return DescribeDBInstanceSecurityGroupRuleResponse
@@ -4099,7 +4096,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
@@ -4151,7 +4148,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI DescribeDBInstancesAsCsv is deprecated, please use Rds::2014-08-15::DescribeDBInstances instead.  * @description This operation is no longer maintained: **the operation can still be called, but Alibaba Cloud no longer maintains it**. Use the **DescribeDBInstances** operation instead.
+     * @deprecated OpenAPI DescribeDBInstancesAsCsv is deprecated, please use Rds::2014-08-15::DescribeDBInstances instead.  * @description This operation is deprecated: **You can still call this operation, but Alibaba Cloud no longer maintains it**. Use the **DescribeDBInstances** operation instead.
      * 
      * @param request the request parameters of DescribeDBInstancesAsCsv  DescribeDBInstancesAsCsvRequest
      * @return DescribeDBInstancesAsCsvResponse
@@ -4173,7 +4170,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
@@ -4268,8 +4265,8 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h3>Supported engines</h3>
      * <ul>
-     * <li>ApsaraDB RDS for MySQL</li>
-     * <li>ApsaraDB RDS for PostgreSQL</li>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeDBProxy  DescribeDBProxyRequest
@@ -4318,19 +4315,19 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL<blockquote>
-     * <p>Starting from October 17, 2023, ApsaraDB RDS for MySQL Cluster Edition instances are progressively provided with a complimentary dedicated proxy service with one proxy node across regions. For more information, see <a href="https://help.aliyun.com/document_detail/2555466.html">ApsaraDB RDS for MySQL Cluster Edition complimentary dedicated proxy service with one proxy node</a>.</p>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL<blockquote>
+     * <p>Starting from October 17, 2023, ApsaraDB RDS for MySQL Cluster Edition gradually provides a free dedicated dedicated proxy with one proxy node in each unit. For more information, see <a href="https://help.aliyun.com/document_detail/2555466.html">Free dedicated dedicated proxy with one proxy node for ApsaraDB RDS for MySQL Cluster Edition</a>.</p>
      * </blockquote>
      * </li>
      * </ul>
-     * <h3>Related feature documentation</h3>
+     * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following feature documentation to fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, read the documentation carefully to fully understand the prerequisites and the impacts of this operation.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/194241.html">View monitoring data for RDS MySQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/418275.html">View monitoring data for RDS PostgreSQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/194241.html">View monitoring data for ApsaraDB RDS for MySQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/418275.html">View monitoring data for ApsaraDB RDS for PostgreSQL</a></li>
      * </ul>
      * 
      * @param request the request parameters of DescribeDBProxyPerformance  DescribeDBProxyPerformanceRequest
@@ -4352,11 +4349,11 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
-     * <p>RDS SQL Server</p>
+     * <h3>Supported engine</h3>
+     * <p>ApsaraDB RDS for SQL Server</p>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of this operation.
      * <a href="https://help.aliyun.com/document_detail/124321.html">Configure a distributed transaction whitelist for SQL Server</a></p>
      * </blockquote>
      * 
@@ -4406,7 +4403,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The dedicated cluster feature allows you to manage instances in batches by cluster. You can create multiple dedicated clusters in a region. A dedicated cluster contains multiple hosts, and a host contains multiple instances. For more information, see <a href="https://help.aliyun.com/document_detail/141455.html">Overview of dedicated clusters</a>.</p>
+     * <p>The dedicated cluster feature allows you to manage instances in batches as clusters. You can create multiple dedicated clusters in a region. Each dedicated cluster contains multiple hosts, and each host contains multiple instances. For more information, see <a href="https://help.aliyun.com/document_detail/141455.html">Overview of dedicated clusters</a>.</p>
      * 
      * @param request the request parameters of DescribeDedicatedHostGroups  DescribeDedicatedHostGroupsRequest
      * @return DescribeDedicatedHostGroupsResponse
@@ -4427,7 +4424,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The dedicated cluster feature allows you to manage instances in batches by cluster. You can create multiple dedicated clusters in a region. A dedicated cluster contains multiple hosts, and a host contains multiple instances. For more information, see <a href="https://help.aliyun.com/document_detail/141455.html">Overview of dedicated clusters</a>.</p>
+     * <p>The dedicated cluster feature manages instances in batches in the form of clusters. You can create multiple dedicated clusters in a region. A dedicated cluster contains multiple hosts, and a host contains multiple instances. For more information, see <a href="https://help.aliyun.com/document_detail/141455.html">Overview of dedicated clusters</a>.</p>
      * 
      * @param request the request parameters of DescribeDedicatedHosts  DescribeDedicatedHostsRequest
      * @return DescribeDedicatedHostsResponse
@@ -4448,12 +4445,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
-     * <p>RDS MySQL</p>
+     * <h3>Supported database engine</h3>
+     * <p>ApsaraDB RDS for MySQL</p>
      * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * <a href="https://help.aliyun.com/document_detail/2836955.html">Set the backup retention policy after an instance is released</a></p>
+     * <p>Notice: Before you call this operation, read the feature documentation carefully to fully understand the prerequisites and impacts of this operation.
+     * <a href="https://help.aliyun.com/document_detail/2836955.html">Configure the backup retention policy for a released instance</a></p>
      * </blockquote>
      * 
      * @param request the request parameters of DescribeDetachedBackups  DescribeDetachedBackupsRequest
@@ -4475,12 +4472,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>ApsaraDB RDS for MySQL</li>
-     * <li>ApsaraDB RDS for PostgreSQL</li>
-     * <li>ApsaraDB RDS for SQL Server</li>
-     * <li>ApsaraDB RDS for MariaDB</li>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * <li>RDS MariaDB</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeErrorLogs  DescribeErrorLogsRequest
@@ -4504,20 +4501,20 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL</li>
-     * <li>RDS SQL Server</li>
-     * <li>RDS MariaDB</li>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
+     * <li>ApsaraDB RDS for MariaDB</li>
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before calling this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts of this operation before proceeding.</p>
+     * <p>Notice: Before you call this operation, read the documentation carefully to fully understand the prerequisites and the impact of this operation.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/468953.html">RDS MySQL historical events</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/2569306.html">RDS PostgreSQL historical events</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/2571444.html">RDS SQL Server historical events</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/2571339.html">RDS MariaDB historical events</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/468953.html">Historical events for ApsaraDB RDS for MySQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/2569306.html">Historical events for ApsaraDB RDS for PostgreSQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/2571444.html">Historical events for ApsaraDB RDS for SQL Server</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/2571339.html">Historical events for ApsaraDB RDS for MariaDB</a></li>
      * </ul>
      * 
      * @param request the request parameters of DescribeEvents  DescribeEventsRequest
@@ -4539,9 +4536,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engine</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
+     * <li>ApsaraDB RDS for MySQL</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeGadInstances  DescribeGadInstancesRequest
@@ -4563,7 +4560,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
@@ -4571,7 +4568,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <li>ApsaraDB RDS for MariaDB</li>
      * </ul>
      * <h3>Related documentation</h3>
-     * <p><a href="https://help.aliyun.com/document_detail/207467.html">What is an availability check method</a></p>
+     * <p><a href="https://help.aliyun.com/document_detail/207467.html">What is the availability detection method?</a></p>
      * 
      * @param request the request parameters of DescribeHADiagnoseConfig  DescribeHADiagnoseConfigRequest
      * @return DescribeHADiagnoseConfigResponse
@@ -4661,14 +4658,14 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <li>ApsaraDB RDS for PostgreSQL</li>
      * <li>ApsaraDB RDS for SQL Server</li>
      * </ul>
-     * <h3>Related documentation</h3>
+     * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before calling this operation, carefully read the following documentation to fully understand the prerequisites and potential impacts.</p>
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and impacts.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/474275.html">Task list of ApsaraDB RDS for MySQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/474537.html">Task list of ApsaraDB RDS for PostgreSQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/614826.html">Task list of ApsaraDB RDS for SQL Server</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/474275.html">ApsaraDB RDS for MySQL task list</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/474537.html">ApsaraDB RDS for PostgreSQL task list</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/614826.html">ApsaraDB RDS for SQL Server task list</a></li>
      * </ul>
      * 
      * @param request the request parameters of DescribeHistoryTasks  DescribeHistoryTasksRequest
@@ -4726,25 +4723,25 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engine</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS SQL Server</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
      * </ul>
      * <h3>Before you begin</h3>
      * <ul>
-     * <li>The RDS instance must meet the following conditions:<ul>
-     * <li>Region: All regions except China (Zhangjiakou) support this feature.</li>
-     * <li>Instance edition: Basic Edition, high-availability series (SQL Server 2012 or later), or Cluster Edition.</li>
-     * <li>Instance type: general-purpose or dedicated. Shared instance types are not supported.</li>
+     * <li>The ApsaraDB RDS instance must meet the following requirements:<ul>
+     * <li>Region: This feature is supported in all regions except China (Zhangjiakou).</li>
+     * <li>Instance edition: Basic Edition, High Availability Edition (SQL Server 2012 or later), and Cluster Edition.</li>
+     * <li>Instance type: General-purpose and dedicated instance types. Shared instance types are not supported.</li>
      * <li>Network type: VPC. To change the network type, see <a href="https://help.aliyun.com/document_detail/95707.html">Change the network type</a>.</li>
-     * <li>Instance creation time: High-availability series and Cluster Edition instances must be created on or after January 1, 2021. Basic Edition instances must be created on or after September 2, 2022. You can view the <strong>creation time</strong> in the <strong>Running Status</strong> section on the <strong>Basic Information</strong> page.</li>
+     * <li>Creation time: High Availability Edition and Cluster Edition instances must be created on or after January 1, 2021. Basic Edition instances must be created on or after September 2, 2022. You can view the <strong>creation time</strong> of an instance in the <strong>Running Status</strong> section of the <strong>Basic Information</strong> page.</li>
      * </ul>
      * </li>
-     * <li>You must log on with an <strong>Alibaba Cloud account</strong>.</li>
+     * <li>The logon account must be an <strong>Alibaba Cloud account</strong>.</li>
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+     * <p>Notice: Before you call this operation, read the documentation to fully understand the prerequisites and impacts.
      * <a href="https://help.aliyun.com/document_detail/354862.html">Create a host account and log on</a></p>
      * </blockquote>
      * 
@@ -4767,7 +4764,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of a data import task.</p>
+     * <p>Queries the details of an import task.</p>
      * 
      * @param request the request parameters of DescribeImportTask  DescribeImportTaskRequest
      * @return DescribeImportTaskResponse
@@ -4788,7 +4785,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of an import task dry run.</p>
+     * <p>Queries the precheck details of an import task.</p>
      * 
      * @param request the request parameters of DescribeImportTaskValidation  DescribeImportTaskValidationRequest
      * @return DescribeImportTaskValidationResponse
@@ -4898,11 +4895,11 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Applicable engines</h3>
      * <ul>
-     * <li>ApsaraDB RDS for MySQL</li>
-     * <li>ApsaraDB RDS for PostgreSQL</li>
-     * <li>ApsaraDB RDS for SQL Server</li>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeInstanceLinkedWhitelistTemplate  DescribeInstanceLinkedWhitelistTemplateRequest
@@ -4924,7 +4921,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
@@ -5019,10 +5016,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
+     * <h2>Request notes</h2>
      * <ul>
-     * <li>Before invoking this operation, make sure that you have activated the column encryption feature in DAS Security Center.</li>
-     * <li>If you receive the fault message ColumnEncryptionErrorCode.NOT_PURCHASED when you invoke this operation, go to Database Autonomy Service (DAS) Security Center to purchase and activate the column Cloud Hardware Security Module (CloudHSM) feature.</li>
+     * <li>Before you invoke this operation, make sure that column encryption is enabled in the DAS Security Center.</li>
+     * <li>If you receive the ColumnEncryptionErrorCode.NOT_PURCHASED error message when invoking this operation, go to the Database Autonomy Service (DAS) Security Center to purchase and enable column encryption.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeMaskingRules  DescribeMaskingRulesRequest
@@ -5044,13 +5041,13 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Applicable engines</h3>
      * <p>ApsaraDB RDS for MySQL</p>
      * <blockquote>
      * <p>Only MySQL 8.0, 5.7, and 5.6 High-availability Edition instances with local SSDs are supported.</p>
      * </blockquote>
      * <h3>Feature description</h3>
-     * <p>Before you call the <a href="https://help.aliyun.com/document_detail/131510.html">RestoreTable</a> operation to <a href="https://help.aliyun.com/document_detail/103175.html">restore individual databases and tables in ApsaraDB RDS for MySQL</a>, you can call this operation to query the information about the databases and tables that can be restored.</p>
+     * <p>Before you call the <a href="https://help.aliyun.com/document_detail/131510.html">RestoreTable</a> operation to <a href="https://help.aliyun.com/document_detail/103175.html">restore an individual database and table of an ApsaraDB RDS for MySQL instance</a>, you can call this operation to query the information about databases and tables that can be restored.</p>
      * 
      * @param request the request parameters of DescribeMetaList  DescribeMetaListRequest
      * @return DescribeMetaListResponse
@@ -5071,9 +5068,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engine</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS SQL Server</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeMigrateTaskById  DescribeMigrateTaskByIdRequest
@@ -5095,15 +5092,15 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Applicable engines</h3>
      * <ul>
-     * <li>RDS SQL Server</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
      * </ul>
      * <h3>Description</h3>
-     * <p>This operation queries backup data migration task records for an instance within the last week.</p>
+     * <p>This operation queries the backup data migration tasks of an instance within the last week.</p>
      * <h3>Precautions</h3>
      * <ul>
-     * <li>The source backup file for backup data migration must be a full backup (FULL) file.</li>
+     * <li>The source backup file for a backup data migration task must be a full backup file.</li>
      * <li>ApsaraDB RDS for SQL Server 2017 Cluster Edition instances are not supported.</li>
      * </ul>
      * 
@@ -5171,12 +5168,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS SQL Server</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
      * </ul>
-     * <h3>Before you begin</h3>
-     * <p>This operation does not support SQL Server 2017 Enterprise Edition or SQL Server 2019 Enterprise Edition Enterprise instances.</p>
+     * <h3>Precautions</h3>
+     * <p>This operation does not support ApsaraDB RDS for SQL Server 2017 Enterprise Edition and 2019 Enterprise Edition instances.</p>
      * 
      * @param request the request parameters of DescribeOssDownloads  DescribeOssDownloadsRequest
      * @return DescribeOssDownloadsResponse
@@ -5283,10 +5280,10 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h3>Applicable engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL</li>
-     * <li>RDS SQL Server</li>
-     * <li>RDS MariaDB</li>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
+     * <li>ApsaraDB RDS for MariaDB</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeParameterTemplates  DescribeParameterTemplatesRequest
@@ -5310,16 +5307,16 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h3>Applicable engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL</li>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
      * </ul>
-     * <h3>Related documentation</h3>
+     * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, read the feature documentation to ensure that you fully understand the prerequisites and impacts.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/96063.html">Set instance parameters for an ApsaraDB RDS for MySQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/96751.html">Set instance parameters for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96063.html">Set the parameters of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96751.html">Set the parameters of an ApsaraDB RDS for PostgreSQL instance</a></li>
      * </ul>
      * 
      * @param request the request parameters of DescribeParameterTimedScheduleTask  DescribeParameterTimedScheduleTaskRequest
@@ -5341,7 +5338,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported database engines</h3>
      * <ul>
      * <li>RDS MySQL</li>
      * <li>RDS PostgreSQL</li>
@@ -5368,12 +5365,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>&lt;props=&quot;china&quot;&gt;You can join the RDS PostgreSQL extension exchange DingTalk group (103525002795) to consult, communicate, provide feedback, and obtain more information about extensions.</p>
-     * <h3>Applicable engine</h3>
-     * <p>RDS PostgreSQL</p>
+     * <p>&lt;props=&quot;china&quot;&gt;You can join the RDS PostgreSQL extension communication DingTalk group (103525002795) for consultation, communication, and feedback to obtain more information about extensions.</p>
+     * <h3>Supported engines</h3>
+     * <p>ApsaraDB RDS for PostgreSQL</p>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts of this operation.
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of the operation.
      * <a href="https://help.aliyun.com/document_detail/2402409.html">Manage extensions</a></p>
      * </blockquote>
      * 
@@ -5398,10 +5395,10 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL</li>
-     * <li>RDS SQL Server</li>
-     * <li>RDS MariaDB</li>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
+     * <li>ApsaraDB RDS for MariaDB</li>
      * </ul>
      * 
      * @param request the request parameters of DescribePrice  DescribePriceRequest
@@ -5477,7 +5474,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>KubeConfig is used to configure access credentials for an ACK cluster on the client. It contains identity and authentication data for accessing the target cluster. When you use kubectl for cluster management, you need to connect through KubeConfig. Properly manage the KubeConfig credentials of the cluster and revoke them promptly when they are no longer needed to avoid security risks such as data leaks caused by KubeConfig exposure.</p>
+     * <p>KubeConfig is used to configure access credentials for an ACK cluster on the client side. It contains information such as the identity and authentication data for accessing the target cluster. When you use kubectl for cluster management, you must connect to the cluster by using KubeConfig. Properly manage the KubeConfig credentials of the cluster and revoke them promptly when they are no longer needed to prevent security risks such as data leaks caused by KubeConfig leaks.</p>
      * 
      * @param request the request parameters of DescribeRCClusterConfig  DescribeRCClusterConfigRequest
      * @return DescribeRCClusterConfigResponse
@@ -5624,13 +5621,13 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
-     * <p>RDS SQL Server</p>
+     * <h3>Supported engine</h3>
+     * <p>ApsaraDB RDS for SQL Server</p>
      * <h3>Related feature documentation</h3>
-     * <p><a href="https://help.aliyun.com/document_detail/2864363.html">Introduction to RDS Custom</a>
+     * <p><a href="https://help.aliyun.com/document_detail/2864363.html">RDS Custom overview</a>
      * &lt;props=&quot;china&quot;&gt;</p>
      * <blockquote>
-     * <p>A DDoS attack, short for Distributed Denial of Service attack, is a common Network Security attack method. This type of attack primarily consumes the resources of networks or network devices through malicious traffic, causing websites to malfunction or online services to become unavailable. For information about the causes of DDoS attacks, common Attack Type, and methods to identify and mitigate DDoS attacks, see <a href="https://www.aliyun.com/getting-started/what-is/what-is-ddos">DDoS attacks</a>.</p>
+     * <p>A distributed denial-of-service (DDoS) attack is a common network security attack method. This type of attack primarily consumes network or network device resources with malicious traffic, causing websites or online services to become unavailable. For more information about the causes, common DDoS attack types, and methods to identify and mitigate DDoS attacks, see <a href="https://www.aliyun.com/getting-started/what-is/what-is-ddos">DDoS attacks</a>.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DescribeRCInstanceDdosCount  DescribeRCInstanceDdosCountRequest
@@ -5670,12 +5667,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable DPI engine</h3>
-     * <p>RDS SQL Server</p>
+     * <h3>Supported engine</h3>
+     * <p>ApsaraDB RDS for SQL Server</p>
      * <h3>Related feature documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2864363.html">Introduction to RDS Custom</a></p>
      * <blockquote>
-     * <p>When an <a href="https://help.aliyun.com/document_detail/63643.html">Anti-DDoS Origin</a> instance contains one or more assets that are assigned public IP addresses, you can invoke this operation to query the DDoS mitigation information of RDS Custom for SQL Server instances under the current Alibaba Cloud account and the details of the associated Anti-DDoS Origin instance, such as the basic DDoS Mitigation Threshold, traffic scrubbing threshold, DDoS mitigation status of assets that are assigned public IP addresses, instance ID, and instance mitigation status.</p>
+     * <p>If an <a href="https://help.aliyun.com/document_detail/63643.html">Anti-DDoS Origin</a> instance protects one or more assets that are assigned public IP addresses, you can call this operation to query the DDoS mitigation information of ApsaraDB RDS Custom for SQL Server instances and the details of the associated Anti-DDoS Origin instances within the current Alibaba Cloud account. The information includes the basic Mitigation Threshold, traffic scrubbing threshold, DDoS mitigation status of the assets that are assigned public IP addresses, instance IDs, and instance mitigation status.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DescribeRCInstanceIpAddress  DescribeRCInstanceIpAddressRequest
@@ -5733,7 +5730,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The VNC logon URL is time-sensitive and valid for 15 seconds. If you do not use the URL within 15 seconds after the call succeeds, the URL automatically expires. In this case, call the operation again to obtain a new URL.</p>
+     * <p>The VNC logon URL is time-sensitive and valid for 15 seconds. If the URL is not used within 15 seconds after a successful API call, it automatically expires. You must call the API operation again to obtain a new URL.</p>
      * 
      * @param request the request parameters of DescribeRCInstanceVncUrl  DescribeRCInstanceVncUrlRequest
      * @return DescribeRCInstanceVncUrlResponse
@@ -5933,7 +5930,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI DescribeRdsResourceSettings is deprecated  * @description This operation is no longer maintained. You can still call this operation, but Alibaba Cloud no longer maintains it.
+     * @deprecated OpenAPI DescribeRdsResourceSettings is deprecated  * @description This API operation is deprecated: it can still be called normally, but Alibaba Cloud no longer maintains it.
      * 
      * @param request the request parameters of DescribeRdsResourceSettings  DescribeRdsResourceSettingsRequest
      * @return DescribeRdsResourceSettingsResponse
@@ -6034,7 +6031,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Applicable engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
@@ -6061,7 +6058,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <ul>
      * <li>RDS PostgreSQL</li>
      * </ul>
@@ -6103,7 +6100,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Applicable engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
@@ -6130,7 +6127,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation is no longer maintained. You can still call this operation, but Alibaba Cloud no longer maintains it. Use the <a href="https://help.aliyun.com/document_detail/2778837.html">DescribeSqlLogConfig</a> operation instead.</p>
+     * <p>This operation is deprecated. You can still call this operation, but Alibaba Cloud no longer maintains it. Use the <a href="https://help.aliyun.com/document_detail/2778837.html">DescribeSqlLogConfig</a> operation instead.</p>
      * 
      * @param request the request parameters of DescribeSQLCollectorPolicy  DescribeSQLCollectorPolicyRequest
      * @return DescribeSQLCollectorPolicyResponse
@@ -6151,7 +6148,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation is no longer maintained. You can still call this operation, but Alibaba Cloud no longer maintains it. Use the <a href="https://help.aliyun.com/document_detail/2778837.html">DescribeSqlLogConfig</a> operation instead.</p>
+     * <p>This operation is deprecated. It can still be called normally, but Alibaba Cloud no longer maintains it. Use the <a href="https://help.aliyun.com/document_detail/2778837.html">DescribeSqlLogConfig</a> operation instead.</p>
      * 
      * @param request the request parameters of DescribeSQLCollectorRetention  DescribeSQLCollectorRetentionRequest
      * @return DescribeSQLCollectorRetentionResponse
@@ -6172,7 +6169,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Applicable engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
@@ -6183,10 +6180,10 @@ public final class DefaultAsyncClient implements AsyncClient {
      * </ul>
      * <h3>Precautions</h3>
      * <ul>
-     * <li>This operation does not support querying the SQL Explorer list for the trial edition of SQL Explorer on ApsaraDB RDS for MySQL instances.</li>
-     * <li>This operation does not support querying SQL Explorer log files that are manually exported from the console. This operation supports querying only the list of SQL Explorer files that are generated by calling the <a href="https://help.aliyun.com/document_detail/610533.html">DescribeSQLLogRecords</a> operation with the <strong>Form</strong> request parameter set to <strong>File</strong>.</li>
-     * <li>The exported files are retained for only 2 days.<blockquote>
-     * <p>If DAS Enterprise Edition V2 or Enterprise Edition V3 is enabled and you use the SQL Explorer and Audit feature provided by DAS Enterprise Edition, the exported files are retained for 7 days. You can call <a href="https://help.aliyun.com/document_detail/2778837.html">DescribeSqlLogConfig</a> to query the enabled DAS Enterprise Edition information.</p>
+     * <li>This operation does not support querying the SQL Explorer list for the SQL Explorer Trial Edition of MySQL instances.</li>
+     * <li>This operation does not support querying SQL Explorer log files that are manually exported from the console. It only supports querying SQL Explorer files generated by calling the <a href="https://help.aliyun.com/document_detail/610533.html">DescribeSQLLogRecords</a> operation with the <strong>Form</strong> request parameter set to <strong>File</strong>.</li>
+     * <li>Files exported by using this operation are retained for only 2 days.<blockquote>
+     * <p>If DAS Enterprise Edition V2 or V3 is activated and its SQL Explorer and Audit feature is used, the exported files are retained for 7 days. You can call the <a href="https://help.aliyun.com/document_detail/2778837.html">DescribeSqlLogConfig</a> operation to query the activated Enterprise Edition information.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -6210,12 +6207,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation has been discontinued: The operation can still be invoked normally, but Alibaba Cloud no longer maintains it. Use the <a href="https://help.aliyun.com/document_detail/2360999.html">GetDasSQLLogHotData</a> operation instead.</p>
+     * <p>This API operation is deprecated. It can still be invoked normally, but Alibaba Cloud no longer provides maintenance for it. Use the <a href="https://help.aliyun.com/document_detail/2360999.html">GetDasSQLLogHotData</a> operation instead.</p>
      * <h3>Precautions</h3>
      * <ul>
-     * <li>Regardless of whether this operation is invoked successfully or failed, a single user (including the Alibaba Cloud account and Resource Access Management (RAM) users) can invoke this operation up to 1,000 times per minute.</li>
-     * <li>This operation does not support querying SQL Explorer logs for the trial edition of SQL Explorer for MySQL instances.</li>
-     * <li>When this operation generates an audit file (the <strong>Form</strong> request parameter is set to <strong>File</strong>), a maximum of 1,000,000 log entries are recorded, and keyword-based log filtering is not supported.</li>
+     * <li>Each user (including the Alibaba Cloud account and Resource Access Management (RAM) users) can invoke this API operation up to 1,000 times per minute, regardless of whether the invocation succeeded or failed.</li>
+     * <li>This API operation does not support querying SQL Explorer logs for the SQL Explorer trial edition of ApsaraDB RDS for MySQL instances.</li>
+     * <li>When this API operation generates an audit file (the <strong>Form</strong> request parameter is set to <strong>File</strong>), it records up to 1 million log entries and does not support filtering logs by keyword.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeSQLLogRecords  DescribeSQLLogRecordsRequest
@@ -6264,9 +6261,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Applicable engine:</p>
+     * <p>Supported engine:</p>
      * <ul>
-     * <li>SQL Server (only versions 2016 and earlier are supported)</li>
+     * <li>SQL Server (only SQL Server 2016 and earlier versions are supported)</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeSQLServerUpgradeVersions  DescribeSQLServerUpgradeVersionsRequest
@@ -6288,7 +6285,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
      * <li>RDS MySQL</li>
      * </ul>
@@ -6347,9 +6344,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS PostgreSQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeSlots  DescribeSlotsRequest
@@ -6373,16 +6370,16 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL</li>
-     * <li>RDS SQL Server</li>
-     * <li>RDS MariaDB</li>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
+     * <li>ApsaraDB RDS for MariaDB</li>
      * </ul>
      * <h3>Precautions</h3>
      * <ul>
-     * <li>The response parameters of this operation are updated every minute.</li>
-     * <li>A certain delay may occur when you call this operation to retrieve data. Wait for the response to be returned.</li>
-     * <li>Starting from September 1, 2024, due to the optimization of the SQL template algorithm, the value of the SQLHash field will change when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/2845725.html">Notice: Optimization of the SQL template algorithm for slow SQL statements</a>.</li>
+     * <li>The response parameters of this API operation are updated every minute.</li>
+     * <li>There may be a delay when you call this API operation to retrieve data. Wait for the response.</li>
+     * <li>Starting September 1, 2024, due to the optimization of the SQL template algorithm, the value of the SQLHash field will change when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/2845725.html">Notice: Optimization of the SQL template algorithm for slow SQL queries</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeSlowLogRecords  DescribeSlowLogRecordsRequest
@@ -6404,7 +6401,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL<blockquote>
      * <p>MySQL 5.7 Basic Edition is not supported.</p>
@@ -6416,11 +6413,11 @@ public final class DefaultAsyncClient implements AsyncClient {
      * </li>
      * <li>ApsaraDB RDS for MariaDB</li>
      * </ul>
-     * <h3>Before you begin</h3>
+     * <h3>Precautions</h3>
      * <ul>
-     * <li>Slow query log statistics are not collected in real time. A latency of 6 to 8 hours may occur.</li>
-     * <li>If the response is empty, check whether the values of StartTime and EndTime are in the required UTC format. If the values are valid, no slow query logs exist within the specified time range.</li>
-     * <li>Starting from September 1, 2024, the value of the <strong>SQLHash</strong> field will change when you call this operation due to the optimization of the SQL template algorithm. For more information, see <a href="https://help.aliyun.com/document_detail/2845725.html">Notice: SQL template algorithm optimization</a>.</li>
+     * <li>Slow query log statistics are not collected in real time. A delay of 6 to 8 hours may occur.</li>
+     * <li>If the response is empty, check whether the StartTime and EndTime parameters meet the UTC format requirements. If they do, no slow query logs exist within the specified time range.</li>
+     * <li>Starting September 1, 2024, the value of the <strong>SQLHash</strong> field will change when you call this operation due to the optimization of the SQL template algorithm. For more information, see <a href="https://help.aliyun.com/document_detail/2845725.html">Notice: Optimization of the SQL template algorithm</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeSlowLogs  DescribeSlowLogsRequest
@@ -6442,8 +6439,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
-     * <p>RDS SQL Server.</p>
+     * <h3>Supported engines</h3>
+     * <p>ApsaraDB RDS for SQL Server.</p>
      * 
      * @param request the request parameters of DescribeSupportOnlineResizeDisk  DescribeSupportOnlineResizeDiskRequest
      * @return DescribeSupportOnlineResizeDiskResponse
@@ -6473,8 +6470,8 @@ public final class DefaultAsyncClient implements AsyncClient {
      * </ul>
      * <h3>Precautions</h3>
      * <ul>
-     * <li>If you specify an instance ID, all tags of the instance are returned and other filter conditions are ignored.</li>
-     * <li>If you specify only a tag key (TagKey) without a tag value (TagValue), all results that match the tag key are returned. If you specify both a tag key and a tag value, only results that match both conditions are returned.</li>
+     * <li>If a specific instance ID is specified, all tags of the instance are queried, and other filter conditions become invalid.</li>
+     * <li>If only a tag key (TagKey) is specified without a tag value (TagValue) when querying tags, all results that match the tag key are returned. If both a tag key and a tag value are specified, only results that match both conditions are returned.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeTags  DescribeTagsRequest
@@ -6496,10 +6493,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported database engines</h3>
      * <p>ApsaraDB RDS for SQL Server</p>
      * <blockquote>
-     * <p>For ApsaraDB RDS for MySQL and ApsaraDB RDS for PostgreSQL instances, use <a href="https://help.aliyun.com/document_detail/2627863.html">DescribeHistoryTasks</a> to query tasks.</p>
+     * <p>For ApsaraDB RDS for MySQL and ApsaraDB RDS for PostgreSQL instances, use <a href="https://help.aliyun.com/document_detail/2627863.html">DescribeHistoryTasks</a>.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DescribeTasks  DescribeTasksRequest
@@ -6521,17 +6518,17 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable DPI engines</h3>
+     * <h3>Applicable engines</h3>
      * <p>ApsaraDB RDS for MySQL
      * ApsaraDB RDS for PostgreSQL</p>
-     * <h3>Related feature documentation</h3>
+     * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts of this operation before you proceed.</p>
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of the operation.</notice></p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/2794383.html">Major engine version upgrade check report for ApsaraDB RDS for MySQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/203309.html">Upgrade the major engine version of an ApsaraDB RDS for PostgreSQL database</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/218391.html">Understand the major engine version upgrade check report for ApsaraDB RDS for PostgreSQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/2794383.html">Check reports major engine version upgrades of ApsaraDB RDS for MySQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/203309.html">Upgrade the major engine version of an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/218391.html">Interpret check reports major engine version upgrades of ApsaraDB RDS for PostgreSQL</a></li>
      * </ul>
      * 
      * @param request the request parameters of DescribeUpgradeMajorVersionPrecheckTask  DescribeUpgradeMajorVersionPrecheckTaskRequest
@@ -6553,7 +6550,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engine</h3>
+     * <h3>Applicable engine</h3>
      * <p>ApsaraDB RDS for PostgreSQL.</p>
      * 
      * @param request the request parameters of DescribeUpgradeMajorVersionTasks  DescribeUpgradeMajorVersionTasksRequest
@@ -6638,11 +6635,11 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL</li>
-     * <li>RDS SQL Server</li>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeWhitelistTemplate  DescribeWhitelistTemplateRequest
@@ -6666,9 +6663,9 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h3>Supported engines</h3>
      * <ul>
-     * <li>ApsaraDB RDS for MySQL</li>
-     * <li>ApsaraDB RDS for PostgreSQL</li>
-     * <li>ApsaraDB RDS for SQL Server</li>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeWhitelistTemplateLinkedInstance  DescribeWhitelistTemplateLinkedInstanceRequest
@@ -6754,9 +6751,9 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h3>Supported engines</h3>
      * <ul>
-     * <li>ApsaraDB RDS for MySQL</li>
-     * <li>ApsaraDB RDS for PostgreSQL</li>
-     * <li>ApsaraDB RDS for SQL Server</li>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
      * </ul>
      * 
      * @param request the request parameters of DetachWhitelistTemplateToInstance  DetachWhitelistTemplateToInstanceRequest
@@ -6814,8 +6811,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
-     * <p>RDS MySQL.</p>
+     * <h3>Supported engines</h3>
+     * <p>ApsaraDB RDS for MySQL.</p>
      * 
      * @param request the request parameters of GetDBInstanceTopology  GetDBInstanceTopologyRequest
      * @return GetDBInstanceTopologyResponse
@@ -6897,16 +6894,16 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h3>Applicable engines</h3>
      * <ul>
-     * <li>ApsaraDB RDS for MySQL</li>
-     * <li>ApsaraDB RDS for SQL Server</li>
+     * <li>RDS MySQL</li>
+     * <li>RDS SQL Server</li>
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, read the documentation to understand the prerequisites and impacts.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/96102.html">Grant permissions to a service account for MySQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/95693.html">Grant permissions to a service account for SQL Server</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96102.html">Grant permissions to a service account for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95693.html">Grant permissions to a service account for an ApsaraDB RDS for SQL Server instance</a></li>
      * </ul>
      * 
      * @param request the request parameters of GrantOperatorPermission  GrantOperatorPermissionRequest
@@ -6928,17 +6925,17 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * </ul>
-     * <h3>Description</h3>
-     * <p>A user backup is a full backup of a self-managed MySQL database. You can restore a user backup to the cloud.</p>
-     * <h3>Before you begin</h3>
-     * <p><strong>To call this operation, the following conditions must be met:</strong></p>
+     * <h3>Feature description</h3>
+     * <p>A user backup is a full backup of a self-managed MySQL database. You can restore user backups to the cloud.</p>
+     * <h3>Precautions</h3>
+     * <p><strong>Before you call this operation, make sure that the following conditions are met:</strong></p>
      * <ul>
-     * <li>You have backed up a self-managed MySQL 5.7 or 8.0 database by using XtraBackup, and the backup file name ends with <code>_qp.xb</code>. For more information, see <a href="https://help.aliyun.com/document_detail/251779.html">Full migration of self-managed MySQL 5.7 or 8.0 databases to the cloud</a>.</li>
-     * <li>You have uploaded the backup file of the self-managed MySQL 5.7 or 8.0 database to an OSS bucket in the corresponding region. For more information, see <a href="https://help.aliyun.com/document_detail/251779.html">Full migration of self-managed MySQL 5.7 or 8.0 databases to the cloud</a>.</li>
+     * <li>You have used XtraBackup to back up the self-managed MySQL 5.7 or 8.0 database, and the backup file name ends with <code>_qp.xb</code>. For more information, see <a href="https://help.aliyun.com/document_detail/251779.html">Migrate full data from a self-managed MySQL 5.7 or 8.0 database to the cloud</a>.</li>
+     * <li>You have uploaded the backup file of the self-managed MySQL 5.7 or 8.0 database to an OSS bucket in the corresponding region. For more information, see <a href="https://help.aliyun.com/document_detail/251779.html">Migrate full data from a self-managed MySQL 5.7 or 8.0 database to the cloud</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of ImportUserBackupFile  ImportUserBackupFileRequest
@@ -6980,10 +6977,10 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL</li>
-     * <li>RDS SQL Server</li>
-     * <li>RDS MariaDB</li>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
+     * <li>ApsaraDB RDS for MariaDB</li>
      * </ul>
      * 
      * @param request the request parameters of ListClasses  ListClassesRequest
@@ -7005,7 +7002,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries a list of data import tasks for native replication instances.</p>
+     * <p>Lists data import tasks for native replication instances.</p>
      * 
      * @param request the request parameters of ListImportTasks  ListImportTasksRequest
      * @return ListImportTasksResponse
@@ -7071,15 +7068,15 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * </ul>
-     * <h3>Description</h3>
+     * <h3>Features</h3>
      * <ul>
-     * <li>A user backup is a full backup of a self-managed MySQL database. You can restore a user backup to the cloud. For more information, see <a href="https://help.aliyun.com/document_detail/251779.html">Migrate the full data of a self-managed MySQL 5.7 database to the cloud</a>.</li>
-     * <li>When you call the <a href="https://help.aliyun.com/document_detail/26228.html">CreateDBInstance</a> operation to create an ApsaraDB RDS for MySQL instance from a backup, you can call this operation to query the user backup ID.</li>
-     * <li>You can call the <a href="https://help.aliyun.com/document_detail/260266.html">ImportUserBackupFile</a> operation to import a user backup to ApsaraDB RDS.</li>
+     * <li>A user backup is a full backup of a self-managed MySQL database. You can restore user backups to the cloud. For more information, see <a href="https://help.aliyun.com/document_detail/251779.html">Migrate full data from a self-managed MySQL 5.7 database to the cloud</a>.</li>
+     * <li>When you call the <a href="https://help.aliyun.com/document_detail/26228.html">CreateDBInstance</a> operation to create an ApsaraDB RDS for MySQL instance for backup migration to the cloud, you can call this operation to query the user backup ID.</li>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/260266.html">ImportUserBackupFile</a> operation to import user backups to ApsaraDB RDS.</li>
      * </ul>
      * 
      * @param request the request parameters of ListUserBackupFiles  ListUserBackupFilesRequest
@@ -7128,15 +7125,15 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Applicable engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
      * <li>ApsaraDB RDS for SQL Server</li>
      * </ul>
-     * <h3>Related documentation</h3>
+     * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of the operation.</p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/96746.html">Migrate an ApsaraDB RDS for MySQL instance across zones</a></li>
@@ -7163,7 +7160,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The dedicated cluster feature allows you to manage instances in batches in the form of clusters. You can create multiple dedicated clusters in a region. A dedicated cluster contains multiple hosts, and a host contains multiple instances. For more information, see <a href="https://help.aliyun.com/document_detail/141455.html">Overview of dedicated clusters</a>.</p>
+     * <p>The dedicated cluster feature allows you to manage instances in batches as clusters. You can create multiple dedicated clusters in a region. A dedicated cluster contains multiple hosts, and a host contains multiple instances. For more information, see <a href="https://help.aliyun.com/document_detail/141455.html">Overview of dedicated clusters</a>.</p>
      * 
      * @param request the request parameters of MigrateDBInstance  MigrateDBInstanceRequest
      * @return MigrateDBInstanceResponse
@@ -7243,7 +7240,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, read the documentation carefully to fully understand the prerequisites and impacts.</notice></p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/96053.html">Migrate an ApsaraDB RDS for MySQL instance across zones</a></li>
@@ -7270,13 +7267,13 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS SQL Server</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
      * </ul>
-     * <h3>Related documentation</h3>
+     * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before calling this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of this operation.</p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/170734.html">Connect an ApsaraDB RDS for SQL Server instance to a self-managed domain</a></li>
@@ -7301,10 +7298,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engine</h3>
-     * <p>ApsaraDB RDS for SQL Server (shared instance types and 2008 R2 instances are not supported)</p>
+     * <h3>Supported engines</h3>
+     * <p>ApsaraDB RDS for SQL Server (Shared instances and instances running SQL Server 2008 R2 are not supported)</p>
      * <blockquote>
-     * <p>Before calling this operation, set the SQL Server account password policy. For more information, see <a href="https://help.aliyun.com/document_detail/2848321.html">ModifyAccountSecurityPolicy</a>.</p>
+     * <p>Before calling this operation, you must configure the account password policy for SQL Server. For more information, see <a href="https://help.aliyun.com/document_detail/2848321.html">ModifyAccountSecurityPolicy</a>.</p>
      * </blockquote>
      * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2845728.html">Custom account password policies for ApsaraDB RDS for SQL Server</a></p>
@@ -7357,8 +7354,8 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>Before you invoke this operation, make sure that you have activated the column encryption feature in DAS Security Center.</li>
-     * <li>If you receive the fault message ColumnEncryptionErrorCode.NOT_PURCHASED when you invoke this operation, go to Database Autonomy Service (DAS) Security Center to purchase and activate the column encryption feature before trying again.</li>
+     * <li>Before you invoke this API operation, make sure that the column encryption service is enabled in the DAS Security Center.</li>
+     * <li>If you receive the ColumnEncryptionErrorCode.NOT_PURCHASED error message when you invoke this API operation, go to the Database Autonomy Service (DAS) Security Center to purchase and enable the column encryption service.</li>
      * </ul>
      * 
      * @param request the request parameters of ModifyAccountMaskingPrivilege  ModifyAccountMaskingPrivilegeRequest
@@ -7380,12 +7377,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
-     * <p>ApsaraDB RDS for SQL Server (shared instance types and the 2008 R2 edition are not supported)</p>
+     * <h3>Supported engines</h3>
+     * <p>ApsaraDB RDS for SQL Server (Shared instances and SQL Server 2008 R2 are not supported)</p>
      * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following feature documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * <a href="https://help.aliyun.com/document_detail/95640.html">Custom password policies for ApsaraDB RDS for SQL Server accounts</a></p>
+     * <p>Notice: Before you call this operation, read the feature documentation to understand the prerequisites and impacts.
+     * <a href="https://help.aliyun.com/document_detail/95640.html">Custom password policy for ApsaraDB RDS for SQL Server</a></p>
      * </blockquote>
      * 
      * @param request the request parameters of ModifyAccountSecurityPolicy  ModifyAccountSecurityPolicyRequest
@@ -7483,14 +7480,14 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL</li>
-     * <li>RDS SQL Server</li>
-     * <li>RDS MariaDB</li>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
+     * <li>ApsaraDB RDS for MariaDB</li>
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, read the documentation to understand the prerequisites and impacts.</notice></p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/98818.html">Configure an automatic backup policy for an ApsaraDB RDS for MySQL instance</a></li>
@@ -7518,12 +7515,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
-     * <p>RDS SQL Server</p>
+     * <h3>Supported engines</h3>
+     * <p>ApsaraDB RDS for SQL Server</p>
      * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you invoke this operation, carefully read the feature documentation to fully understand the prerequisites and impacts. Then proceed with the operation.
-     * <a href="https://help.aliyun.com/document_detail/95717.html">Manual backup of SQL Server data</a></p>
+     * <p>Notice: Before you call this operation, read the feature documentation carefully to fully understand the prerequisites and impacts.
+     * <a href="https://help.aliyun.com/document_detail/95717.html">Manually back up ApsaraDB RDS for SQL Server data</a></p>
      * </blockquote>
      * 
      * @param request the request parameters of ModifyBackupSetExpireTime  ModifyBackupSetExpireTimeRequest
@@ -7573,9 +7570,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <h3>Applicable engine</h3>
-     * <p>RDS PostgreSQL</p>
-     * <h3>Related documentation</h3>
-     * <p><a href="https://help.aliyun.com/document_detail/2928780.html">Committed Serverless</a></p>
+     * <p>ApsaraDB RDS for PostgreSQL</p>
+     * <h3>Related feature documentation</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2928780.html">Provisioned Serverless</a></p>
      * 
      * @param request the request parameters of ModifyComputeBurstConfig  ModifyComputeBurstConfigRequest
      * @return ModifyComputeBurstConfigResponse
@@ -7614,12 +7611,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Applicable engines</h3>
      * <ul>
-     * <li>ApsaraDB RDS for MySQL</li>
-     * <li>ApsaraDB RDS for PostgreSQL</li>
-     * <li>ApsaraDB RDS for SQL Server</li>
-     * <li>ApsaraDB RDS for MariaDB</li>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * <li>RDS MariaDB</li>
      * </ul>
      * 
      * @param request the request parameters of ModifyDBDescription  ModifyDBDescriptionRequest
@@ -7694,8 +7691,8 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>Before invoking this operation, make sure that you have activated the column encryption feature in DAS Security Center.</li>
-     * <li>If you receive a fault message when invoking this operation, go to Database Autonomy Service (DAS) Security Center to purchase and activate the column encryption feature before trying again.</li>
+     * <li>Before you use this operation, make sure that you have activated the Cloud Hardware Security Module (CloudHSM) for column encryption in the DAS Security Center.</li>
+     * <li>If you receive an error message when you invoke this operation, go to the DAS (Database Autonomy Service) Security Center to purchase and activate the Cloud Hardware Security Module (CloudHSM) for column encryption before use.</li>
      * </ul>
      * 
      * @param request the request parameters of ModifyDBInstanceCLS  ModifyDBInstanceCLSRequest
@@ -7822,13 +7819,13 @@ public final class DefaultAsyncClient implements AsyncClient {
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, read the documentation carefully to fully understand the prerequisites and impacts.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/414512.html">Enable and disable instance release protection for ApsaraDB RDS for MySQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/471512.html">Enable and disable instance release protection for ApsaraDB RDS for PostgreSQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/416209.html">Enable and disable instance release protection for ApsaraDB RDS for SQL Server</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/414512.html">Enable and disable instance release protection for ApsaraDB RDS for MariaDB</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/414512.html">Enable and disable release protection for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/471512.html">Enable and disable release protection for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/416209.html">Enable and disable release protection for an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/414512.html">Enable and disable release protection for an ApsaraDB RDS for MariaDB instance</a></li>
      * </ul>
      * 
      * @param request the request parameters of ModifyDBInstanceDeletionProtection  ModifyDBInstanceDeletionProtectionRequest
@@ -7877,12 +7874,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL
-     * &lt;props=&quot;intl&quot;&gt;RDS MySQL</li>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL
+     * &lt;props=&quot;intl&quot;&gt;ApsaraDB RDS for MySQL</li>
      * </ul>
      * 
      * @param request the request parameters of ModifyDBInstanceEndpoint  ModifyDBInstanceEndpointRequest
@@ -7907,14 +7904,14 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <h3>Supported DPI engines</h3>
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL
-     * &lt;props=&quot;intl&quot;&gt;RDS MySQL</li>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL
+     * &lt;props=&quot;intl&quot;&gt;ApsaraDB RDS for MySQL</li>
      * </ul>
      * <h3>Precautions</h3>
      * <ul>
-     * <li>You can modify endpoint connection information, including the connection string and port for public and internal network endpoints, and the VPC, vSwitch, and IP address for internal network connections.</li>
-     * <li>When modifying, VpcId and VSwitchId are treated as a group. The internal network connection parameters (VpcId, VSwitchId, and PrivateIpAddress) and the connection parameters (ConnectionStringPrefix and Port) cannot be specified at the same time. However, you must specify at least one of them.</li>
+     * <li>You can modify the endpoint connection address, including the connection strings and ports for both public and internal networks, as well as the VPC, vSwitch, and IP address for the internal network connection.</li>
+     * <li>When you modify the endpoint, VpcId and VSwitchId are treated as a group. For an internal endpoint, you cannot specify VpcId, VSwitchId, or PrivateIpAddress together with ConnectionStringPrefix or Port. However, you must specify at least one of these parameters.</li>
      * </ul>
      * 
      * @param request the request parameters of ModifyDBInstanceEndpointAddress  ModifyDBInstanceEndpointAddressRequest
@@ -8006,14 +8003,14 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS PostgreSQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the following documentation to fully understand the prerequisites and impacts of this operation.
-     * <a href="https://help.aliyun.com/document_detail/299200.html">View enhanced monitoring</a>.</p>
+     * <p>Notice: Before you call this operation, read the documentation to understand the prerequisites and impacts.
+     * <a href="https://help.aliyun.com/document_detail/299200.html">Enhanced monitoring</a>.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ModifyDBInstanceMetrics  ModifyDBInstanceMetricsRequest
@@ -8035,20 +8032,20 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for SQL Server</li>
      * </ul>
      * <h3>Precautions</h3>
-     * <p>Second-level monitoring for ApsaraDB RDS for MySQL incurs additional fees. Before using this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/45020.html">billing methods and pricing</a> of ApsaraDB RDS.</p>
+     * <p>Second-level monitoring for ApsaraDB RDS for MySQL incurs additional fees. Make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/45020.html">billing methods and pricing</a> of ApsaraDB RDS before you call this operation.</p>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before using this operation, carefully read the following documentation to fully understand the prerequisites and potential impacts, and then proceed.</p>
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of the operation.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/96112.html">Set the monitoring frequency for ApsaraDB RDS for MySQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/95710.html">Set the monitoring frequency for ApsaraDB RDS for SQL Server</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96112.html">Set the monitoring frequency for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95710.html">Set the monitoring frequency for an ApsaraDB RDS for SQL Server instance</a></li>
      * </ul>
      * 
      * @param request the request parameters of ModifyDBInstanceMonitor  ModifyDBInstanceMonitorRequest
@@ -8100,7 +8097,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Supported database engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
@@ -8108,7 +8105,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, read the documentation carefully to fully understand the prerequisites and impacts.</p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/96109.html">Change the network type of an ApsaraDB RDS for MySQL instance</a></li>
@@ -8208,12 +8205,12 @@ public final class DefaultAsyncClient implements AsyncClient {
      * </ul>
      * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, read the feature documentation to fully understand the prerequisites and impacts.</notice></p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/96120.html">Settings for Secure Sockets Layer (SSL) encryption for an ApsaraDB RDS for MySQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/229517.html">Settings for Secure Sockets Layer (SSL) encryption for an ApsaraDB RDS for PostgreSQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/95715.html">Settings for Secure Sockets Layer (SSL) encryption for an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96120.html">Secure Sockets Layer (SSL) encryption settings for ApsaraDB RDS for MySQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/229517.html">Secure Sockets Layer (SSL) encryption settings for ApsaraDB RDS for PostgreSQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95715.html">Secure Sockets Layer (SSL) encryption settings for ApsaraDB RDS for SQL Server</a></li>
      * </ul>
      * 
      * @param request the request parameters of ModifyDBInstanceSSL  ModifyDBInstanceSSLRequest
@@ -8235,10 +8232,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <p>ApsaraDB RDS for SQL Server</p>
      * <h3>Related documentation</h3>
-     * <p><a href="https://help.aliyun.com/document_detail/2392322.html">Configure security group rules for ApsaraDB RDS for SQL Server</a></p>
+     * <p><a href="https://help.aliyun.com/document_detail/2392322.html">Configure security group rules for an ApsaraDB RDS for SQL Server instance</a></p>
      * 
      * @param request the request parameters of ModifyDBInstanceSecurityGroupRule  ModifyDBInstanceSecurityGroupRuleRequest
      * @return ModifyDBInstanceSecurityGroupRuleResponse
@@ -8267,7 +8264,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <li>ApsaraDB RDS for MariaDB</li>
      * </ul>
      * <h3>Billing</h3>
-     * <p>This API operation incurs <a href="https://help.aliyun.com/document_detail/57178.html">specification change fees</a>. Read the relevant feature documentation before you proceed.</p>
+     * <p>This API operation involves <a href="https://help.aliyun.com/document_detail/57178.html">specification change fees</a>. Read the relevant feature documentation before you proceed.</p>
      * <h3>Relevant feature documentation</h3>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/96061.html">Change the specifications of an ApsaraDB RDS for MySQL instance</a></li>
@@ -8295,20 +8292,20 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable DPI engine</h3>
+     * <h3>Applicable DPI engines</h3>
      * <ul>
-     * <li>ApsaraDB RDS for MySQL</li>
-     * <li>ApsaraDB RDS for PostgreSQL</li>
-     * <li>ApsaraDB RDS for SQL Server</li>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
      * </ul>
      * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the feature documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, read the feature documentation to fully understand the prerequisites and impacts of the encrypt operation.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/96121.html">Settings for transparent data encryption TDE on ApsaraDB RDS for MySQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/465652.html">Settings for transparent data encryption TDE on ApsaraDB RDS for PostgreSQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/95716.html">Settings for transparent data encryption TDE on ApsaraDB RDS for SQL Server</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96121.html">Settings for transparent data encryption (TDE) for ApsaraDB RDS for MySQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/465652.html">Settings for transparent data encryption (TDE) for ApsaraDB RDS for PostgreSQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95716.html">Settings for transparent data encryption (TDE) for ApsaraDB RDS for SQL Server</a></li>
      * </ul>
      * 
      * @param request the request parameters of ModifyDBInstanceTDE  ModifyDBInstanceTDERequest
@@ -8361,14 +8358,14 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
+     * <li>ApsaraDB RDS for MySQL</li>
      * </ul>
      * <h3>Related documentation</h3>
      * <p> <a href="https://help.aliyun.com/document_detail/2627998.html">Modify node configurations</a></p>
      * <blockquote>
-     * <p>Warning: This API operation involves fees. Read the related documentation carefully before you perform this operation.</p>
+     * <p>Warning: This API operation incurs fees. Read the related documentation carefully before you call this operation.</warning></p>
      * </blockquote>
      * 
      * @param request the request parameters of ModifyDBNode  ModifyDBNodeRequest
@@ -8390,21 +8387,21 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL<blockquote>
-     * <p>Starting from October 17, 2023, ApsaraDB RDS for MySQL Cluster Edition instances are progressively granted a complimentary dedicated proxy service with one proxy node across regions. For details, see <a href="https://help.aliyun.com/document_detail/2555466.html">ApsaraDB RDS for MySQL Cluster Edition complimentary dedicated proxy service with one proxy node</a>.</p>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL<blockquote>
+     * <p>Starting from October 17, 2023, ApsaraDB RDS for MySQL Cluster Edition gradually provides a free dedicated proxy service with one proxy instance across all units. For details, see <a href="https://help.aliyun.com/document_detail/2555466.html">Promotion: ApsaraDB RDS for MySQL Cluster Edition provides a free dedicated proxy service with one proxy instance</a>.</p>
      * </blockquote>
      * </li>
      * </ul>
      * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you invoke this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you use this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of the operation.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/197456.html">Enable database proxy for RDS MySQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/418272.html">Enable database proxy for RDS PostgreSQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/197456.html">Enable the database proxy for ApsaraDB RDS for MySQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/418272.html">Enable the database proxy for ApsaraDB RDS for PostgreSQL</a></li>
      * </ul>
      * 
      * @param request the request parameters of ModifyDBProxy  ModifyDBProxyRequest
@@ -8433,7 +8430,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * </ul>
      * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, read the feature documentation carefully to fully understand the prerequisites and the impacts of this operation.</p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/2621331.html">Configure the access policy for a database proxy endpoint of an ApsaraDB RDS for MySQL instance</a></li>
@@ -8464,9 +8461,9 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <li>RDS MySQL</li>
      * <li>RDS PostgreSQL</li>
      * </ul>
-     * <h3>Related feature documentation</h3>
+     * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before calling this operation, carefully read the following documentation, make sure that you fully understand the prerequisites and impacts of this operation, and then proceed.</p>
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of the operation.</notice></p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/184921.html">Configure the database proxy endpoint for RDS MySQL</a></li>
@@ -8494,9 +8491,9 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h3>Supported engines</h3>
      * <ul>
-     * <li>ApsaraDB RDS for MySQL</li>
-     * <li>ApsaraDB RDS for PostgreSQL<blockquote>
-     * <p>Starting from October 17, 2023, ApsaraDB RDS for MySQL Cluster Edition progressively provides a complimentary dedicated proxy service with one proxy node across regions. For more information, see <a href="https://help.aliyun.com/document_detail/2555466.html">ApsaraDB RDS for MySQL Cluster Edition complimentary dedicated proxy service with one proxy node</a>.</p>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL<blockquote>
+     * <p>Starting from October 17, 2023, ApsaraDB RDS for MySQL Cluster Edition gradually provides a free dedicated dedicated proxy with one proxy instance across units. For more information, see <a href="https://help.aliyun.com/document_detail/2555466.html">Promotion: Free dedicated dedicated proxy with one proxy instance for ApsaraDB RDS for MySQL Cluster Edition</a>.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -8590,14 +8587,14 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS SQL Server</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
      * </ul>
      * <h3>Related feature documentation</h3>
-     * <p>This operation supports the following features: <a href="https://help.aliyun.com/document_detail/2401398.html">Modify SQL Server database attributes</a> and <a href="https://help.aliyun.com/document_detail/2767189.html">Archive cloud disk data to OSS</a>. Before using the data archiving to OSS feature through the API, enable the data archiving feature in the console first.</p>
+     * <p>The features supported by this operation include <a href="https://help.aliyun.com/document_detail/2401398.html">Modifying the attributes of an SQL Server database</a> and <a href="https://help.aliyun.com/document_detail/2767189.html">Archiving cloud disk data to OSS</a>. Before you use the data archiving to OSS feature by calling this API operation, you must enable the data archiving feature in the console.</p>
      * <blockquote>
-     * <p>Notice: Before calling this operation, carefully read the feature documentation to fully understand the prerequisites and potential impacts, and then proceed.</p>
+     * <p>Notice: Before you call this API operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of the operation.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ModifyDatabaseConfig  ModifyDatabaseConfigRequest
@@ -8619,12 +8616,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <p>ApsaraDB RDS for MySQL</p>
-     * <h3>Related feature documentation</h3>
+     * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * <a href="https://help.aliyun.com/document_detail/188164.html">Settings for database proxy SSL encryption of an ApsaraDB RDS for MySQL database</a></p>
+     * <p>Notice: Before you call this operation, read the feature documentation to ensure that you fully understand the prerequisites and impacts.</notice>
+     * <a href="https://help.aliyun.com/document_detail/188164.html">Configure Secure Sockets Layer (SSL) encryption for the database proxy of ApsaraDB RDS for MySQL</a></p>
      * </blockquote>
      * 
      * @param request the request parameters of ModifyDbProxyInstanceSsl  ModifyDbProxyInstanceSslRequest
@@ -8664,7 +8661,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
@@ -8673,8 +8670,8 @@ public final class DefaultAsyncClient implements AsyncClient {
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * <a href="https://help.aliyun.com/document_detail/207467.html">What is the availability detection method</a>.</p>
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and impacts.
+     * <a href="https://help.aliyun.com/document_detail/207467.html">What is the availability check method?</a>.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ModifyHADiagnoseConfig  ModifyHADiagnoseConfigRequest
@@ -8754,22 +8751,22 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Applicable engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
      * <li>ApsaraDB RDS for SQL Server</li>
      * <li>ApsaraDB RDS for MariaDB</li>
      * </ul>
-     * <h3>Related documentation</h3>
+     * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Warning: This API operation involves fees. Read the related documentation carefully before you perform this operation.</p>
+     * <p>Warning: This API operation involves fees. Read the related feature documentation carefully before you perform this operation.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/96049.html">Auto-renewal of an ApsaraDB RDS for MySQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/96740.html">Auto-renewal of an ApsaraDB RDS for PostgreSQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/95635.html">Auto-renewal of an ApsaraDB RDS for SQL Server instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/97121.html">Auto-renewal of an ApsaraDB RDS for MariaDB instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96049.html">Auto-renewal for ApsaraDB RDS for MySQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96740.html">Auto-renewal for ApsaraDB RDS for PostgreSQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95635.html">Auto-renewal for ApsaraDB RDS for SQL Server</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97121.html">Auto-renewal for ApsaraDB RDS for MariaDB</a></li>
      * </ul>
      * 
      * @param request the request parameters of ModifyInstanceAutoRenewalAttribute  ModifyInstanceAutoRenewalAttributeRequest
@@ -8791,7 +8788,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Supported database engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
@@ -8799,7 +8796,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and impacts of this operation.</notice></p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/120824.html">Cross-region backup for ApsaraDB RDS for MySQL</a></li>
@@ -8828,8 +8825,8 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>Before invoking this operation, make sure that the column encryption service is activated in DAS Security Center.</li>
-     * <li>If you receive the fault message ColumnEncryptionErrorCode.NOT_PURCHASED when you invoke this operation, go to Database Autonomy Service (DAS) Security Center to purchase and activate the column encryption service before trying again.</li>
+     * <li>Before you invoke this operation, make sure that the Cloud Hardware Security Module (CloudHSM) column encryption feature is enabled in the DAS Security Center.</li>
+     * <li>If you receive the error message ColumnEncryptionErrorCode.NOT_PURCHASED when invoking this operation, go to the Database Autonomy Service (DAS) Security Center to purchase and enable the Cloud Hardware Security Module (CloudHSM) column encryption feature.</li>
      * </ul>
      * 
      * @param request the request parameters of ModifyMaskingRules  ModifyMaskingRulesRequest
@@ -8939,18 +8936,18 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Applicable engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
      * </ul>
-     * <h3>Related feature documentation</h3>
+     * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the feature documentation to fully understand the prerequisites and impacts of calling this operation.</p>
+     * <p>Notice: Before you call this operation, read the feature documentation to fully understand the prerequisites and impacts.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/96063.html">Set instance parameters for ApsaraDB RDS for MySQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/96751.html">Set instance parameters for ApsaraDB RDS for PostgreSQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96063.html">Set the parameters of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96751.html">Set the parameters of an ApsaraDB RDS for PostgreSQL instance</a></li>
      * </ul>
      * 
      * @param request the request parameters of ModifyParameterTimedScheduleTask  ModifyParameterTimedScheduleTaskRequest
@@ -8990,7 +8987,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation with the DiskId parameter to modify the name, description, release behavior, and other attributes of a block storage device.</p>
+     * <p>You can specify the DiskId parameter to modify the attributes of a block storage device, such as the name, description, and release behavior with the instance.</p>
      * 
      * @param request the request parameters of ModifyRCDiskAttribute  ModifyRCDiskAttributeRequest
      * @return ModifyRCDiskAttributeResponse
@@ -9030,14 +9027,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Notice: To minimize the impact of Upgrade/Downgrade operations on your business, perform this operation during off-peak hours.
+     * <p>Notice: To minimize the impact on your business, perform Upgrade/Downgrade operations during off-peak hours.
      * When you invoke this operation, take note of the following items:</p>
      * </blockquote>
      * <ul>
-     * <li>ESSD cloud disks support upgrading and lowering performance levels (PLs), but you cannot decrease the quota to PL0.</li>
+     * <li>ESSD cloud disks support upgrading and downgrading performance levels, but do not support downgrading to PL0.</li>
      * <li>The ESSD cloud disk must be in the In_Use or Available state.</li>
-     * <li>If the ESSD cloud disk is mounted to an instance, the instance must be in the Running or Stopped state and cannot have an overdue payment or be expired.</li>
-     * <li>Because the performance level (PL) of an ESSD cloud disk is limited by its capacity, if you cannot upgrade the performance level (PL), expand the disk capacity and try again.</li>
+     * <li>If the ESSD cloud disk is mounted to an instance, the instance must be in the Running or Stopped state. The instance cannot be expired or have an overdue payment.</li>
+     * <li>The performance level of an ESSD cloud disk is limited by its capacity. If you cannot upgrade the performance level, expand the capacity and try again.</li>
      * </ul>
      * 
      * @param request the request parameters of ModifyRCDiskSpec  ModifyRCDiskSpecRequest
@@ -9129,10 +9126,10 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h3>Precautions</h3>
      * <ul>
-     * <li>Before you call this operation, make sure that you fully understand the subscription and pay-as-you-go billing methods and pricing of RDS Custom.</li>
-     * <li>Make sure that the target instance is in the <strong>Running</strong> or <strong>Stopped</strong> state and that your account does not have an overdue payment.</li>
-     * <li>Make sure that the cloud disk is in the <strong>In_use</strong> state and that the billing method of the cloud disk has not been successfully changed within the last 15 minutes.</li>
-     * <li>After the billing method is changed, fees are automatically deducted by default. Make sure that your account balance is sufficient. Otherwise, an abnormal order is generated, and you can only void the order.</li>
+     * <li>Before you call this operation, make sure that you fully understand the billing methods and pricing of RDS Custom, including subscription and pay-as-you-go.</li>
+     * <li>Make sure that the target instance is in the <strong>Running</strong> or <strong>Stopped</strong> state and your account has no overdue payments.</li>
+     * <li>Make sure that the cloud disk is in the <strong>In_use</strong> state and its billing method has not been modified in the last 15 minutes.</li>
+     * <li>After you change the billing method, fees are automatically deducted by default. Make sure that your account balance is sufficient. Otherwise, an abnormal order is generated and can only be canceled.</li>
      * </ul>
      * <h3>Before you begin</h3>
      * <p>Refer to the corresponding feature documentation:</p>
@@ -9268,20 +9265,20 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS SQL Server</li>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
      * </ul>
      * <h3>Before you begin</h3>
-     * <p>The instance must meet the following conditions when you invoke this operation. Otherwise, the operation fails:</p>
+     * <p>When you call this operation, the instance must meet the following conditions. Otherwise, the operation fails:</p>
      * <ul>
      * <li>The MySQL instance uses a shared database proxy.</li>
      * <li>Read/write splitting is enabled for the MySQL instance.</li>
-     * <li>The instance runs one of the following versions:<ul>
-     * <li>MySQL 5.7 high-availability series (local SSDs)</li>
+     * <li>The instance runs one of the following editions:<ul>
+     * <li>MySQL 5.7 high availability series (with local SSDs)</li>
      * <li>MySQL 5.6</li>
-     * <li>SQL Server on RDS Cluster Edition</li>
+     * <li>SQL Server Cluster Edition</li>
      * </ul>
      * </li>
      * </ul>
@@ -9364,7 +9361,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation is no longer maintained. You can still call this operation, but Alibaba Cloud no longer maintains it. Use the <a href="https://help.aliyun.com/document_detail/2778835.html">ModifySqlLogConfig</a> operation instead.</p>
+     * <p>This operation is deprecated. You can still call this operation, but Alibaba Cloud no longer maintains it. Use the <a href="https://help.aliyun.com/document_detail/2778835.html">ModifySqlLogConfig</a> operation instead.</p>
      * 
      * @param request the request parameters of ModifySQLCollectorPolicy  ModifySQLCollectorPolicyRequest
      * @return ModifySQLCollectorPolicyResponse
@@ -9385,7 +9382,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation is no longer maintained: the operation can still be called normally, but Alibaba Cloud no longer maintains it. Use the <a href="https://help.aliyun.com/document_detail/2778835.html">ModifySqlLogConfig</a> operation instead.</p>
+     * <p>This operation is deprecated and no longer maintained by Alibaba Cloud, but remains available for use. Use the <a href="https://help.aliyun.com/document_detail/2778835.html">ModifySqlLogConfig</a> operation instead.</p>
      * 
      * @param request the request parameters of ModifySQLCollectorRetention  ModifySQLCollectorRetentionRequest
      * @return ModifySQLCollectorRetentionResponse
@@ -9448,15 +9445,15 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <li>ApsaraDB RDS for SQL Server</li>
      * <li>ApsaraDB RDS for MariaDB</li>
      * </ul>
-     * <h3>Related documentation</h3>
+     * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of this operation.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/96118.html">Configure an IP whitelist for an ApsaraDB RDS for MySQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/43187.html">Configure an IP whitelist for an ApsaraDB RDS for PostgreSQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/43186.html">Configure an IP whitelist for an ApsaraDB RDS for SQL Server instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/90336.html">Configure an IP whitelist for an ApsaraDB RDS for MariaDB instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96118.html">Configure an IP address whitelist for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/43187.html">Configure an IP address whitelist for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/43186.html">Configure an IP address whitelist for an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/90336.html">Configure an IP address whitelist for an ApsaraDB RDS for MariaDB instance</a></li>
      * </ul>
      * 
      * @param request the request parameters of ModifySecurityIps  ModifySecurityIpsRequest
@@ -9496,11 +9493,11 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>ApsaraDB RDS for MySQL</li>
-     * <li>ApsaraDB RDS for PostgreSQL</li>
-     * <li>ApsaraDB RDS for SQL Server</li>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
      * </ul>
      * 
      * @param request the request parameters of ModifyWhitelistTemplate  ModifyWhitelistTemplateRequest
@@ -9542,7 +9539,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h3>Applicable engine</h3>
      * <p>ApsaraDB RDS for PostgreSQL</p>
-     * <h3>Related documentation</h3>
+     * <h3>Related feature documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2977241.html">DuckDB-based analytical instance</a></p>
      * 
      * @param request the request parameters of PrecheckDuckDBDependency  PrecheckDuckDBDependencyRequest
@@ -9600,14 +9597,14 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL</li>
-     * <li>RDS SQL Server</li>
-     * <li>RDS MariaDB</li>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
+     * <li>ApsaraDB RDS for MariaDB</li>
      * </ul>
-     * <h3>Description</h3>
-     * <p>ApsaraDB RDS notifications are displayed in a highlighted banner at the top of the ApsaraDB RDS console. Notifications include renewal reminders and instance creation failure alerts.
-     * After you query notifications by calling this operation, you can call <a href="https://help.aliyun.com/document_detail/610444.html">ConfirmNotify</a> to mark a notification as confirmed, which indicates that you have acknowledged the notification.</p>
+     * <h3>Feature description</h3>
+     * <p>ApsaraDB RDS notifications are highlighted at the top of the ApsaraDB RDS console. These notifications include renewal reminders and instance creation failure reminders.
+     * After you query notifications by calling this operation, you can call the <a href="https://help.aliyun.com/document_detail/610444.html">ConfirmNotify</a> operation to mark a notification as confirmed. This indicates that you have acknowledged the content of the notification.</p>
      * 
      * @param request the request parameters of QueryNotify  QueryNotifyRequest
      * @return QueryNotifyResponse
@@ -9721,9 +9718,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Applicable engines</h3>
      * <ul>
-     * <li>RDS PostgreSQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
      * </ul>
      * 
      * @param request the request parameters of RebuildReplicationLink  RebuildReplicationLinkRequest
@@ -9767,11 +9764,11 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
-     * <p>RDS SQL Server (instances running SQL Server 2012 or later) </p>
+     * <h3>Supported engines</h3>
+     * <p>ApsaraDB RDS for SQL Server (instances of SQL Server 2012 and later) </p>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+     * <p>Notice: Before you call this operation, carefully read the documentation to ensure that you fully understand the prerequisites and impacts.
      * <a href="https://help.aliyun.com/document_detail/95722.html">Restore SQL Server data</a></p>
      * </blockquote>
      * 
@@ -9883,18 +9880,18 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for SQL Server</li>
      * </ul>
-     * <h3>Before you begin</h3>
-     * <p>Before you call this operation, make sure that the instance meets the following requirements. Otherwise, the operation fails:</p>
+     * <h3>Prerequisites</h3>
+     * <p>When you call this operation, the instance must meet the following requirements. Otherwise, the operation fails:</p>
      * <ul>
-     * <li>The MySQL instance uses a shared database proxy.</li>
+     * <li>The MySQL instance uses the shared database proxy.</li>
      * <li>Read/write splitting is enabled for the instance.</li>
-     * <li>The instance runs one of the following versions:<ul>
-     * <li>MySQL 5.7 on RDS High-availability Edition with local SSDs</li>
+     * <li>The instance runs one of the following editions:<ul>
+     * <li>MySQL 5.7 High-availability Edition (with local SSDs)</li>
      * <li>MySQL 5.6</li>
      * <li>SQL Server Cluster Edition</li>
      * </ul>
@@ -9920,7 +9917,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Removing instances from a deployment set is a non-disruptive operation and does not cause instance restarts.</p>
+     * <p>Removing an RDS custom instance from a deployment set is a non-disruptive operation and does not cause the instance to restart.</p>
      * 
      * @param request the request parameters of RemoveRCInstancesFromDeploymentSet  RemoveRCInstancesFromDeploymentSetRequest
      * @return RemoveRCInstancesFromDeploymentSetResponse
@@ -10032,7 +10029,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <ul>
      * <li>The instance must be in the Stopped state.</li>
-     * <li>Reinstalling the operating system deletes all data on the original system cloud disk. Proceed with caution.</li>
+     * <li>Reinstalling the operating system causes data loss on the original system cloud disk. Proceed with caution.</li>
      * </ul>
      * 
      * @param request the request parameters of ReplaceRCInstanceSystemDisk  ReplaceRCInstanceSystemDiskRequest
@@ -10122,7 +10119,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Instances with local disks do not support storage space changes.</p>
+     * <p>Storage space changes are not supported for instances with local disks.</p>
      * 
      * @param request the request parameters of ResizeRCInstanceDisk  ResizeRCInstanceDiskRequest
      * @return ResizeRCInstanceDiskResponse
@@ -10183,11 +10180,11 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <blockquote>
      * <p>Before the restoration, you can call the CheckCreateDdrDBInstance operation to check whether an ApsaraDB RDS instance can be restored across regions by using a cross-region backup set.</p>
      * </blockquote>
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <p>ApsaraDB RDS for MySQL</p>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, read the documentation to understand the prerequisites and impacts.</notice></p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/120824.html">Cross-region backup for ApsaraDB RDS for MySQL</a></li>
@@ -10404,7 +10401,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+     * <p>Notice: Before you call this operation, read the documentation to understand the prerequisites and impacts.
      * &lt;props=&quot;china&quot;&gt;</p>
      * </blockquote>
      * <ul>
@@ -10615,7 +10612,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Applicable engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
@@ -10623,12 +10620,12 @@ public final class DefaultAsyncClient implements AsyncClient {
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, read the feature documentation to ensure that you fully understand the prerequisites and impacts.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/137567.html">Switch the VPC and vSwitch of an ApsaraDB RDS for MySQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/146885.html">Switch the vSwitch of an ApsaraDB RDS for PostgreSQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/347675.html">Switch the VPC and vSwitch of an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/137567.html">Change the VPC and vSwitch of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/146885.html">Change the vSwitch of an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/347675.html">Change the VPC and vSwitch of an ApsaraDB RDS for SQL Server instance</a></li>
      * </ul>
      * 
      * @param request the request parameters of SwitchDBInstanceVpc  SwitchDBInstanceVpcRequest
@@ -10650,9 +10647,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Applicable engine:</p>
+     * <p>Applicable engines:</p>
      * <ul>
-     * <li>RDS PostgreSQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
      * </ul>
      * 
      * @param request the request parameters of SwitchOverMajorVersionUpgrade  SwitchOverMajorVersionUpgradeRequest
@@ -10674,8 +10671,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engine</h3>
-     * <p>RDS SQL Server.</p>
+     * <h3>Applicable engine</h3>
+     * <p>ApsaraDB RDS for SQL Server.</p>
      * 
      * @param request the request parameters of SwitchReplicationLink  SwitchReplicationLinkRequest
      * @return SwitchReplicationLinkResponse
@@ -10732,7 +10729,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Supported database engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
@@ -10741,7 +10738,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts of this operation before you proceed.</p>
+     * <p>Notice: Before you call this operation, read the related documentation to fully understand the prerequisites and impacts.</p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/96149.html">Create tags for an ApsaraDB RDS for MySQL instance</a></li>
@@ -10769,9 +10766,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engine</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS SQL Server</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
      * </ul>
      * 
      * @param request the request parameters of TerminateMigrateTask  TerminateMigrateTaskRequest
@@ -10802,7 +10799,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Warning: This API operation involves fees. Read the related documentation carefully before you perform this operation.</p>
+     * <p>Warning: This API operation involves fees. Read the related documentation carefully before you call this operation.</warning></p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/96048.html">Change the billing method of an ApsaraDB RDS for MySQL instance from pay-as-you-go to subscription</a> and <a href="https://help.aliyun.com/document_detail/161875.html">Change the billing method of an ApsaraDB RDS for MySQL instance from subscription to pay-as-you-go</a></li>
@@ -10875,7 +10872,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Supported database engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
@@ -10884,8 +10881,8 @@ public final class DefaultAsyncClient implements AsyncClient {
      * </ul>
      * <h3>Precautions</h3>
      * <ul>
-     * <li>You can unbind up to 20 tags at a time.</li>
-     * <li>If a tag is unbound from an instance and is not bound to any other instances, the tag is automatically deleted.</li>
+     * <li>You can remove up to 20 tags at a time.</li>
+     * <li>If a tag is removed from an instance and is not attached to any other instances, the tag is automatically deleted.</li>
      * </ul>
      * 
      * @param request the request parameters of UntagResources  UntagResourcesRequest
@@ -10907,12 +10904,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
-     * <p>ApsaraDB RDS for MySQL</p>
-     * <h3>Related documentation</h3>
+     * <h3>Applicable engines</h3>
+     * <p>RDS MySQL</p>
+     * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * <a href="https://help.aliyun.com/document_detail/2856487.html">RDS MySQL native replication instance</a></p>
+     * <p>Notice: Before you use this API operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of the operation.</notice>
+     * <a href="https://help.aliyun.com/document_detail/2856487.html">Native replication instances of ApsaraDB RDS for MySQL</a></p>
      * </blockquote>
      * 
      * @param request the request parameters of UpdateDBInstanceReplication  UpdateDBInstanceReplicationRequest
@@ -10934,13 +10931,13 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>&lt;props=&quot;china&quot;&gt;You can join the RDS PostgreSQL extension exchange DingTalk group (103525002795) to consult, communicate, provide feedback, and obtain more information about extensions.</p>
-     * <h3>Applicable engine</h3>
+     * <p>&lt;props=&quot;china&quot;&gt;You can join the RDS PostgreSQL plug-in DingTalk group (103525002795) for consultation, discussion, and feedback to get more information about plug-ins.</p>
+     * <h3>Supported engine</h3>
      * <p>RDS PostgreSQL</p>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the following documentation to fully understand the prerequisites and impacts of this operation.
-     * <a href="https://help.aliyun.com/document_detail/2402409.html">Manage extensions</a></p>
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of the operation.
+     * <a href="https://help.aliyun.com/document_detail/2402409.html">Manage plug-ins</a></p>
      * </blockquote>
      * 
      * @param request the request parameters of UpdatePostgresExtensions  UpdatePostgresExtensionsRequest
@@ -10962,12 +10959,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <p>ApsaraDB RDS for MySQL</p>
-     * <h3>Related feature documentation</h3>
-     * <p>A user backup is a full backup of a self-managed MySQL database. You can restore a user backup to the cloud. For more information, see <a href="https://help.aliyun.com/document_detail/251779.html">Migrate the full data of a self-managed MySQL 5.7 or 8.0 database to the cloud</a>.</p>
+     * <h3>Related documentation</h3>
+     * <p>A user backup is a full backup of a self-managed MySQL database. You can restore the user backup to Alibaba Cloud. For more information, see <a href="https://help.aliyun.com/document_detail/251779.html">Migrate full data from self-managed MySQL 5.7 and 8.0 databases to the cloud</a>.</p>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the feature documentation to fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, read the related documentation to ensure that you fully understand the prerequisites and impacts of this operation.</notice></p>
      * </blockquote>
      * 
      * @param request the request parameters of UpdateUserBackupFile  UpdateUserBackupFileRequest
@@ -11016,15 +11013,15 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Supported database engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL</li>
-     * <li>RDS SQL Server</li>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, carefully read the documentation to ensure that you fully understand the prerequisites and impacts.</p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/96059.html">Upgrade the minor engine version of an ApsaraDB RDS for MySQL instance</a></li>
@@ -11051,10 +11048,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engine</h3>
      * <p>ApsaraDB RDS for PostgreSQL</p>
      * <h3>Related documentation</h3>
-     * <p>This API operation involves fees. Carefully read the related documentation to fully understand the fees, prerequisites, and impacts before you proceed.
+     * <p>This API operation incurs fees. Carefully read the related documentation to fully understand the fees, prerequisites, and impacts before you proceed.
      * <a href="https://help.aliyun.com/document_detail/203309.html">Upgrade the major engine version of an ApsaraDB RDS for PostgreSQL instance</a></p>
      * 
      * @param request the request parameters of UpgradeDBInstanceMajorVersion  UpgradeDBInstanceMajorVersionRequest
@@ -11114,7 +11111,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * </ul>
      * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, read the feature documentation to understand the prerequisites and impacts.</p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/197465.html">Upgrade the minor engine version of the database proxy for an ApsaraDB RDS for MySQL instance</a></li>
@@ -11140,7 +11137,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Performs a precheck for a data import task of an ApsaraDB RDS for MySQL native replication instance.</p>
+     * <p>Pre-checks the data import task for an ApsaraDB RDS for MySQL native replication instance.</p>
      * 
      * @param request the request parameters of ValidateImportTask  ValidateImportTaskRequest
      * @return ValidateImportTaskResponse

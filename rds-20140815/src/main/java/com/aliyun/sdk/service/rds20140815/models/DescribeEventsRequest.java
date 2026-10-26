@@ -158,7 +158,7 @@ public class DescribeEventsRequest extends Request {
         } 
 
         /**
-         * <p>The end time of the query. The end time must be later than the start time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
+         * <p>The end time of the query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-06-12T15:00:00Z</p>
@@ -179,7 +179,7 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * <p>The page number. Valid values: any integer greater than 0 that does not exceed the maximum value of Integer.</p>
+         * <p>The page number. Valid values: any integer greater than 0 and less than or equal to the maximum integer value.</p>
          * <p>Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
@@ -210,7 +210,7 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call DescribeRegions to query the available regions.</p>
+         * <p>The region ID. You can call the DescribeRegions operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -241,7 +241,7 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * <p>The start time of the query. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
+         * <p>The start time of the query. Specify the time in the ISO 8601 standard in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-06-11T15:00:00Z</p>

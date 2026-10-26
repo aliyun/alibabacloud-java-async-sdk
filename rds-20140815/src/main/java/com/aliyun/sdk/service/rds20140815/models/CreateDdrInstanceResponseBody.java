@@ -108,7 +108,7 @@ public class CreateDdrInstanceResponseBody extends TeaModel {
         /**
          * <p>The endpoint of the new instance.</p>
          * <blockquote>
-         * <p>The <strong>DBInstanceNetType</strong> parameter determines whether this endpoint is an internal endpoint or a public endpoint.</p>
+         * <p>The <strong>DBInstanceNetType</strong> parameter determines whether the endpoint is an internal endpoint or a public endpoint.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -120,7 +120,7 @@ public class CreateDdrInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The instance ID of the new instance.</p>
+         * <p>The ID of the new instance.</p>
          * 
          * <strong>example:</strong>
          * <p>rm-****</p>
@@ -142,9 +142,9 @@ public class CreateDdrInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The port of the new instance.</p>
+         * <p>The port used to connect to the new instance.</p>
          * <blockquote>
-         * <p>The <strong>DBInstanceNetType</strong> parameter determines whether this port is an internal port or a public port.</p>
+         * <p>The <strong>DBInstanceNetType</strong> parameter determines whether the port is an internal port or a public port.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

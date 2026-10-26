@@ -233,7 +233,7 @@ public class CreateImportTaskRequest extends Request {
         }
 
         /**
-         * <p>The estimated data space. Unit: GB.</p>
+         * <p>The estimated data size. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -245,7 +245,7 @@ public class CreateImportTaskRequest extends Request {
         }
 
         /**
-         * <p>The host IP address of the source MySQL instance. ApsaraDB RDS accesses this IP address to obtain the backup.</p>
+         * <p>The IP address of the source MySQL host. ApsaraDB RDS accesses this IP address to retrieve backups.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -280,7 +280,7 @@ public class CreateImportTaskRequest extends Request {
         }
 
         /**
-         * <p>The port of the source MySQL instance.</p>
+         * <p>The port of the source MySQL database.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -293,7 +293,7 @@ public class CreateImportTaskRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/610399.html">DescribeRegions</a> to query available regions.</p>
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/610399.html">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -330,7 +330,7 @@ public class CreateImportTaskRequest extends Request {
         }
 
         /**
-         * <p>The streaming port used to transfer the backup.</p>
+         * <p>The streaming port used to transfer backups.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -343,7 +343,7 @@ public class CreateImportTaskRequest extends Request {
         }
 
         /**
-         * <p>The account of the source MySQL instance. The account must have permissions to create backups and set up replication. Refer to the following SQL statements for granting permissions:</p>
+         * <p>The source MySQL account. The account must have the permissions to create backups and configure replication. Refer to the following SQL statements for granting permissions:</p>
          * <pre><code>-- MySQL 5.7
          * mysql&gt; CREATE USER \\&quot;myadmin\\&quot;@\\&quot;%\\&quot; IDENTIFIED BY \\&quot;s3cret\\&quot;;
          * mysql&gt; GRANT RELOAD, LOCK TABLES, PROCESS, REPLICATION CLIENT, REPLICATION SLAVE ON *.* TO
@@ -356,9 +356,8 @@ public class CreateImportTaskRequest extends Request {
          * mysql&gt; GRANT SELECT ON performance_schema.keyring_component_status TO myadmin@\\&quot;%\\&quot;;
          * mysql&gt; GRANT SELECT ON performance_schema.replication_group_members TO myadmin@\\&quot;%\\&quot;;
          * mysql&gt; FLUSH PRIVILEGES;
-         * 
-         * This parameter is required.
          * </code></pre>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>myadmin</p>
@@ -370,7 +369,7 @@ public class CreateImportTaskRequest extends Request {
         }
 
         /**
-         * <p>The installation path of xtrabackup on the source instance.</p>
+         * <p>The installation path of XtraBackup on the source instance.</p>
          * 
          * <strong>example:</strong>
          * <p>/usr/bin/xtrabackup</p>

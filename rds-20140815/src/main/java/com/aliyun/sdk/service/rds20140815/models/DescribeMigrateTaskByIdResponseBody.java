@@ -171,10 +171,10 @@ public class DescribeMigrateTaskByIdResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The type of the backup migration task. Valid values:</p>
+         * <p>The type of the OSS backup migration task. Valid values:</p>
          * <ul>
-         * <li><strong>FULL</strong>: The restore operation is performed by using a full backup file.</li>
-         * <li><strong>UPDF</strong>: The incremental data is restored by using an incremental backup file or log file.</li>
+         * <li><strong>FULL</strong>: restores data by using a full log file.</li>
+         * <li><strong>UPDF</strong>: restores incremental data by using differential or log log files.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -186,7 +186,7 @@ public class DescribeMigrateTaskByIdResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the backup migration task was created. The time follows the ISO 8601 standard in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</p>
+         * <p>The time when the OSS backup migration task was created. The time follows the ISO 8601 standard in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-05-30T12:11:04Z</p>
@@ -208,7 +208,7 @@ public class DescribeMigrateTaskByIdResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The database name.</p>
+         * <p>The name of the database.</p>
          * 
          * <strong>example:</strong>
          * <p>mytestdb</p>
@@ -219,7 +219,7 @@ public class DescribeMigrateTaskByIdResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The description of the backup migration task.</p>
+         * <p>The description of the OSS backup migration task.</p>
          * 
          * <strong>example:</strong>
          * <p>Success to DBCC checkdb asynchronously</p>
@@ -230,7 +230,7 @@ public class DescribeMigrateTaskByIdResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the backup migration task ended. The time follows the ISO 8601 standard in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</p>
+         * <p>The time when the OSS backup migration task ended. The time follows the ISO 8601 standard in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-05-30T15:15:05Z</p>
@@ -241,10 +241,10 @@ public class DescribeMigrateTaskByIdResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the import is an overwrite import. Valid values: </p>
+         * <p>Specifies whether the import overwrites the existing database. Valid values: </p>
          * <ul>
-         * <li><strong>False</strong>: No.</li>
-         * <li><strong>True</strong>: Yes.</li>
+         * <li><strong>False</strong>: no</li>
+         * <li><strong>True</strong>: yes</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -267,7 +267,7 @@ public class DescribeMigrateTaskByIdResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>6ED3635A-01F9-47BD-B9C8-CB3FD70A336E</p>
@@ -278,13 +278,13 @@ public class DescribeMigrateTaskByIdResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the backup migration task. Valid values:</p>
+         * <p>The status of the OSS backup migration task. Valid values:</p>
          * <ul>
-         * <li><strong>NoStart</strong>: Not started.</li>
-         * <li><strong>Running</strong>: Running.</li>
-         * <li><strong>Success</strong>: Succeeded.</li>
-         * <li><strong>Failed</strong>: Failed.</li>
-         * <li><strong>Waiting</strong>: Waiting for incremental backup file import.</li>
+         * <li><strong>NoStart</strong>: The task is not started.</li>
+         * <li><strong>Running</strong>: The task is running.</li>
+         * <li><strong>Success</strong>: The task is successful.</li>
+         * <li><strong>Failed</strong>: The task failed.</li>
+         * <li><strong>Waiting</strong>: The task is waiting for the import of incremental backup files.</li>
          * </ul>
          * 
          * <strong>example:</strong>

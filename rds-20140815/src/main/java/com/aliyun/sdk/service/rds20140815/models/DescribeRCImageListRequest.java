@@ -161,8 +161,8 @@ public class DescribeRCImageListRequest extends Request {
         /**
          * <p>The system architecture of the image. Valid values:</p>
          * <ul>
-         * <li>x86_64.</li>
-         * <li>arm64.</li>
+         * <li>x86_64</li>
+         * <li>arm64</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -199,7 +199,7 @@ public class DescribeRCImageListRequest extends Request {
         }
 
         /**
-         * <p>Queries available images for the specified instance type.</p>
+         * <p>The instance type for which to query available images.</p>
          * 
          * <strong>example:</strong>
          * <p>mysql.x2.xlarge.6cm</p>

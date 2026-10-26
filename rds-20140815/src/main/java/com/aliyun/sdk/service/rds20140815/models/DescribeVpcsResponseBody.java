@@ -349,7 +349,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The vSwitch status.</p>
+             * <p>The status of the vSwitch.</p>
              * 
              * <strong>example:</strong>
              * <p>Available</p>
@@ -635,7 +635,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The VPC status.</p>
+             * <p>The status of the VPC.</p>
              * 
              * <strong>example:</strong>
              * <p>Available</p>

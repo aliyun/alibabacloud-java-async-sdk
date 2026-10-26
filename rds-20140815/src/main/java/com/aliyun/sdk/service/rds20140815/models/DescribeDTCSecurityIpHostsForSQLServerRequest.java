@@ -159,7 +159,7 @@ public class DescribeDTCSecurityIpHostsForSQLServerRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</p>
+         * <p>The ID of the instance. You can call the DescribeDBInstances operation to obtain the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -190,7 +190,7 @@ public class DescribeDTCSecurityIpHostsForSQLServerRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call DescribeDBInstanceAttribute to obtain the region ID.</p>
+         * <p>The region ID. You can call the DescribeDBInstanceAttribute operation to obtain the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -203,7 +203,7 @@ public class DescribeDTCSecurityIpHostsForSQLServerRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID. You can call DescribeDBInstanceAttribute to obtain the resource group ID.</p>
+         * <p>The resource group ID. You can call the DescribeDBInstanceAttribute operation to obtain the resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmy****</p>

@@ -115,7 +115,7 @@ public class CreateCloudMigrationPrecheckTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The task ID.</p>
+         * <p>The ID of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>439946016</p>
@@ -126,7 +126,7 @@ public class CreateCloudMigrationPrecheckTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The task name.</p>
+         * <p>The name of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>slf7w7wj3g</p>

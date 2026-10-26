@@ -67,7 +67,7 @@ public class ModifyRCDiskSpecResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The order ID.</p>
+         * <p>The ID of the order.</p>
          * 
          * <strong>example:</strong>
          * <p>24505392472****</p>
@@ -78,7 +78,7 @@ public class ModifyRCDiskSpecResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>

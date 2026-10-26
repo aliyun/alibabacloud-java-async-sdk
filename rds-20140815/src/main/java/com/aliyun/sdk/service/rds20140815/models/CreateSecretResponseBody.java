@@ -104,7 +104,7 @@ public class CreateSecretResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The user credential of the created Data API account.</p>
+         * <p>The ARN of the created Data API user credential.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:rds:cn-hangzhou:1335786****:dbInstance/rm-bp1m7l3j63****</p>
@@ -126,10 +126,10 @@ public class CreateSecretResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The request was successful.</li>
-         * <li><strong>false</strong>: The request failed.</li>
+         * <li><strong>true</strong>: The request is successful.</li>
+         * <li><strong>false</strong>: The request fails.</li>
          * </ul>
          * 
          * <strong>example:</strong>

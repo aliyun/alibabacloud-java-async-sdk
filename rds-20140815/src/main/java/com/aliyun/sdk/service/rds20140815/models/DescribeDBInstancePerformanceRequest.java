@@ -133,7 +133,7 @@ public class DescribeDBInstancePerformanceRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</p>
+         * <p>Instance ID of the instance. You can call the DescribeDBInstances operation to query instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,9 +146,9 @@ public class DescribeDBInstancePerformanceRequest extends Request {
         }
 
         /**
-         * <p>The end time of the query. Format: <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z (UTC).</p>
+         * <p>The end time of the query. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format. The time must be in UTC.</p>
          * <blockquote>
-         * <p>The interval between the start time and end time must be greater than the monitoring frequency of your instance. Otherwise, an empty list may be returned.</p>
+         * <p>The interval between the start time and the end time must be greater than the monitoring frequency of the instance. Otherwise, an empty list may be returned.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -162,9 +162,9 @@ public class DescribeDBInstancePerformanceRequest extends Request {
         }
 
         /**
-         * <p>The performance metrics that you want to query. Separate multiple values with commas (,). You can specify up to 30 metrics. For more information, see <a href="https://help.aliyun.com/document_detail/26316.html">Performance parameters</a>.</p>
+         * <p>The performance metrics that you want to query. Separate multiple values with commas (,). You can specify up to 30 metrics. For more information, see <a href="https://help.aliyun.com/document_detail/26316.html">Performance metrics</a>.</p>
          * <blockquote>
-         * <p>If <strong>Key</strong> is set to <strong>MySQL_SpaceUsage</strong> or <strong>SQLServer_SpaceUsage</strong>, only monitoring data within the last day can be queried.</p>
+         * <p>If <strong>Key</strong> is set to <strong>MySQL_SpaceUsage</strong> or <strong>SQLServer_SpaceUsage</strong>, you can query only the monitoring data collected within the last 24 hours.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -199,9 +199,9 @@ public class DescribeDBInstancePerformanceRequest extends Request {
         }
 
         /**
-         * <p>The start time of the query. Format: <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z (UTC).</p>
+         * <p>The start time of the query. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format. The time must be in UTC.</p>
          * <blockquote>
-         * <p>The interval between the start time and end time must be greater than the monitoring frequency of your instance. Otherwise, an empty list may be returned.</p>
+         * <p>The interval between the start time and the end time must be greater than the monitoring frequency of the instance. Otherwise, an empty list may be returned.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

@@ -152,7 +152,7 @@ public class DescribeLocalAvailableRecoveryTimeRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call DescribeRegions to obtain the region ID.</p>
+         * <p>The region ID. You can call the DescribeRegions operation to query the region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

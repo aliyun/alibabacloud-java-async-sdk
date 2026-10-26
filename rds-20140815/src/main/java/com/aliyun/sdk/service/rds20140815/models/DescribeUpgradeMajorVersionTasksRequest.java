@@ -174,7 +174,7 @@ public class DescribeUpgradeMajorVersionTasksRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</p>
+         * <p>Instance ID of the instance. You can call the DescribeDBInstances operation to query instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -206,7 +206,7 @@ public class DescribeUpgradeMajorVersionTasksRequest extends Request {
 
         /**
          * <p>The page number.</p>
-         * <p>Valid values: a value greater than 0 that does not exceed the maximum value of Integer.</p>
+         * <p>Valid values: an integer greater than 0 and up to the maximum value of the Integer data type.</p>
          * <p>Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
@@ -271,7 +271,7 @@ public class DescribeUpgradeMajorVersionTasksRequest extends Request {
         }
 
         /**
-         * <p>A reserved parameter. You do not need to configure this parameter.</p>
+         * <p>A reserved parameter. No configuration is required.</p>
          * 
          * <strong>example:</strong>
          * <p>417450000</p>

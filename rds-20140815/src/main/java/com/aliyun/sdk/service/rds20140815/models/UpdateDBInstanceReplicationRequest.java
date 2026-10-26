@@ -204,7 +204,7 @@ public class UpdateDBInstanceReplicationRequest extends Request {
         }
 
         /**
-         * <p>The host address of the primary database. IP addresses and domain names are supported.</p>
+         * <p>The host address of the primary database, which supports an IP address or a domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.1.100</p>
@@ -228,7 +228,7 @@ public class UpdateDBInstanceReplicationRequest extends Request {
         }
 
         /**
-         * <p>The port number of the primary database. The default port is 3306 for MySQL.</p>
+         * <p>The port number of the primary database, which is typically 3306 for MySQL.</p>
          * 
          * <strong>example:</strong>
          * <p>3306</p>
@@ -252,7 +252,7 @@ public class UpdateDBInstanceReplicationRequest extends Request {
         }
 
         /**
-         * <p>The operation type. Specifies the operation to perform on the replication channel.</p>
+         * <p>The operation type, which specifies the operation to be performed on the replication channel.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -275,7 +275,7 @@ public class DescribeRCImageListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the cloud disk.</p>
+             * <p>The attribute of the cloud disk. Valid values:</p>
              * <ul>
              * <li><strong>system</strong>: System cloud disk.</li>
              * <li><strong>data</strong>: Data cloud disk.</li>
@@ -533,8 +533,8 @@ public class DescribeRCImageListResponseBody extends TeaModel {
             /**
              * <p>The system architecture of the image. Valid values:</p>
              * <ul>
-             * <li>x86_64.</li>
-             * <li>arm64.</li>
+             * <li>x86_64</li>
+             * <li>arm64</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -546,7 +546,7 @@ public class DescribeRCImageListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the image was created.</p>
+             * <p>The creation time of the image.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-04-25T02:17:40Z</p>
@@ -568,7 +568,7 @@ public class DescribeRCImageListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The mapping between cloud disks and snapshots in the image.</p>
+             * <p>The mappings between cloud disks and snapshots included in the image.</p>
              */
             public Builder diskDeviceMappings(java.util.List<DiskDeviceMappings> diskDeviceMappings) {
                 this.diskDeviceMappings = diskDeviceMappings;
@@ -609,10 +609,10 @@ public class DescribeRCImageListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the image is a public image. Public images include Alibaba Cloud-provided public images and custom images that you have published as community images.</p>
+             * <p>Indicates whether the image is public. Public images include public images provided by Alibaba Cloud and custom images that you have published as community images. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: The image is a public image.</li>
-             * <li><strong>false</strong>: The image is not a public image.</li>
+             * <li><strong>true</strong>: The image is public.</li>
+             * <li><strong>false</strong>: The image is not public.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -626,8 +626,8 @@ public class DescribeRCImageListResponseBody extends TeaModel {
             /**
              * <p>Indicates whether the image supports RDS Custom instances. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: Supported.</li>
-             * <li><strong>false</strong>: Not supported.</li>
+             * <li><strong>true</strong>: Yes.</li>
+             * <li><strong>false</strong>: No.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -661,10 +661,10 @@ public class DescribeRCImageListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the operating system. Valid values:</p>
+             * <p>The operating system type. Valid values:</p>
              * <ul>
-             * <li><strong>windows</strong>.</li>
-             * <li><strong>linux</strong>.</li>
+             * <li><strong>windows</strong></li>
+             * <li><strong>linux</strong></li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -700,10 +700,10 @@ public class DescribeRCImageListResponseBody extends TeaModel {
             /**
              * <p>The status of the image. Valid values:</p>
              * <ul>
-             * <li><strong>UnAvailable</strong>: Unavailable.</li>
-             * <li><strong>Available</strong>: Available.</li>
-             * <li><strong>Creating</strong>: Being created.</li>
-             * <li><strong>CreateFailed</strong>: Creation failed.</li>
+             * <li><strong>UnAvailable</strong>: The image is unavailable.</li>
+             * <li><strong>Available</strong>: The image is available.</li>
+             * <li><strong>Creating</strong>: The image is being created.</li>
+             * <li><strong>CreateFailed</strong>: The image failed to be created.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -717,8 +717,8 @@ public class DescribeRCImageListResponseBody extends TeaModel {
             /**
              * <p>Indicates whether the image is used by RDS Custom instances. Valid values:</p>
              * <ul>
-             * <li><strong>instance</strong>: One or more RDS Custom instances have been created.</li>
-             * <li><strong>none</strong>: No RDS Custom instances have been created.</li>
+             * <li><strong>instance</strong>: One or more RDS Custom instances are created.</li>
+             * <li><strong>none</strong>: No RDS Custom instances are created.</li>
              * </ul>
              * 
              * <strong>example:</strong>

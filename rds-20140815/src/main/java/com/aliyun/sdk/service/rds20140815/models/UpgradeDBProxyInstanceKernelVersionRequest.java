@@ -158,7 +158,7 @@ public class UpgradeDBProxyInstanceKernelVersionRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
+         * <p>Instance ID of the instance. You can call the DescribeDBInstances operation to query instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -171,7 +171,7 @@ public class UpgradeDBProxyInstanceKernelVersionRequest extends Request {
         }
 
         /**
-         * <p>A reserved parameter. You do not need to configure this parameter.</p>
+         * <p>A reserved parameter. You do not need to specify this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>normal</p>
@@ -210,9 +210,9 @@ public class UpgradeDBProxyInstanceKernelVersionRequest extends Request {
         }
 
         /**
-         * <p>The specified time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
+         * <p>The specified time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</p>
          * <blockquote>
-         * <p>This parameter is required if <strong>UpgradeTime</strong> is set to <strong>SpecifyTime</strong>.</p>
+         * <p>If you set <strong>UpgradeTime</strong> to <strong>SpecifyTime</strong>, you must specify this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -225,7 +225,10 @@ public class UpgradeDBProxyInstanceKernelVersionRequest extends Request {
         }
 
         /**
-         * TargetMinorVersion.
+         * <p>The target minor engine version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.25.9_20251028</p>
          */
         public Builder targetMinorVersion(String targetMinorVersion) {
             this.putQueryParameter("TargetMinorVersion", targetMinorVersion);
@@ -234,9 +237,9 @@ public class UpgradeDBProxyInstanceKernelVersionRequest extends Request {
         }
 
         /**
-         * <p>The upgrade time. Valid values:</p>
+         * <p>The time when you want to perform the upgrade. Valid values:</p>
          * <ul>
-         * <li><strong>MaintainTime</strong> (default): The upgrade is performed during the <a href="https://help.aliyun.com/document_detail/610402.html">maintenance window</a>.</li>
+         * <li><strong>MaintainTime</strong> (default): The upgrade is performed within the <a href="https://help.aliyun.com/document_detail/610402.html">maintenance window</a>.</li>
          * <li><strong>Immediate</strong>: The upgrade is performed immediately.</li>
          * <li><strong>SpecifyTime</strong>: The upgrade is performed at a specified time.</li>
          * </ul>

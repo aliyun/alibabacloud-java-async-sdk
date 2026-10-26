@@ -132,7 +132,7 @@ public class CreateYouhuiForOrderRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the ticket that was created.</p>
+         * <p>The ID of the created ticket.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,7 +154,7 @@ public class CreateYouhuiForOrderRequest extends Request {
         }
 
         /**
-         * <p>The promotion ID. You can call the GetResourcePrice operation to obtain this value.</p>
+         * <p>The promotion ID. You can call the GetResourcePrice operation to obtain the promotion ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,7 +167,7 @@ public class CreateYouhuiForOrderRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the DescribeRegions operation to query available region IDs.</p>
+         * <p>The region ID. You can call the DescribeRegions operation to query region IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

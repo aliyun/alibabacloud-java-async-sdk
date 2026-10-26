@@ -117,7 +117,7 @@ public class ListImportTasksRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</p>
+         * <p>The instance ID. You can call the DescribeDBInstances operation to obtain the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,7 +133,7 @@ public class ListImportTasksRequest extends Request {
          * <p>The number of entries per page. Valid values: <strong>1 to 100</strong>.</p>
          * <p>Default value: <strong>30</strong>.</p>
          * <blockquote>
-         * <p>If you specify this parameter, the <strong>PageSize</strong> and <strong>PageNumber</strong> parameters are not available.</p>
+         * <p>If you specify this parameter, the <strong>PageSize</strong> and <strong>PageNumber</strong> parameters are unavailable.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

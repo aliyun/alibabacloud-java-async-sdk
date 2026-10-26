@@ -144,7 +144,7 @@ public class DescribeDBInstancePromoteActivityResponseBody extends TeaModel {
 
         /**
          * <ul>
-         * <li>Chinese site: 26842</li>
+         * <li>China site: 26842</li>
          * <li>International site: 26888</li>
          * </ul>
          * 
@@ -157,7 +157,7 @@ public class DescribeDBInstancePromoteActivityResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The instance ID. You can call <a href="https://help.aliyun.com/document_detail/610396.html">DescribeDBInstances</a> to query the instance ID.</p>
+         * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/610396.html">DescribeDBInstances</a> operation to query the ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rm-uf6wjk5******</p>
@@ -195,10 +195,10 @@ public class DescribeDBInstancePromoteActivityResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic property of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/2391834.html">Instance dynamics</a>.</p>
+         * <p>The dynamic attributes of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/2391834.html">Instance dynamics</a>.</p>
          * 
          * <strong>example:</strong>
-         * <p>1 (indicates that the target instance is not participating in any promotions)</p>
+         * <p>1 (indicating that the target instance does not participate in any promotional activities)</p>
          */
         public Builder isActivity(String isActivity) {
             this.isActivity = isActivity;

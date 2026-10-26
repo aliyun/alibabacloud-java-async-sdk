@@ -253,10 +253,10 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource type.</p>
+             * <p>The resource type. Valid values:</p>
              * <ul>
-             * <li><code>ALIYUN::RDS::INSTANCE</code>: ApsaraDB RDS instance.</li>
-             * <li><code>ALIYUN::RDS::CUSTOM</code>: RDS Custom instance.</li>
+             * <li><code>ALIYUN::RDS::INSTANCE</code>: ApsaraDB RDS instance</li>
+             * <li><code>ALIYUN::RDS::CUSTOM</code>: RDS Custom instance</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -386,10 +386,10 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource type.</p>
+             * <p>The resource type. Valid values:</p>
              * <ul>
-             * <li><code>ALIYUN::RDS::INSTANCE</code>: ApsaraDB RDS instance.</li>
-             * <li><code>ALIYUN::RDS::CUSTOM</code>: RDS Custom instance.</li>
+             * <li><code>ALIYUN::RDS::INSTANCE</code>: ApsaraDB RDS instance</li>
+             * <li><code>ALIYUN::RDS::CUSTOM</code>: RDS Custom instance</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1037,7 +1037,7 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * AutoRenew.
+             * <p>Specifies whether auto-renewal is enabled for the instance.</p>
              */
             public Builder autoRenew(Boolean autoRenew) {
                 this.autoRenew = autoRenew;
@@ -1045,7 +1045,10 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterId.
+             * <p>The ID of the RDS Custom container cluster to which the instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c463aaa89e2b84cacacfbf23c4867****</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -1053,7 +1056,7 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cluster name.</p>
+             * <p>The name of the cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>testrdscustom</p>
@@ -1075,10 +1078,10 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the instance can be added to an ACK cluster. If the parameter settings for this field is <strong>1</strong>, the created instance can be added to an ACK cluster by calling the <strong>AttachRCInstances</strong> API operation, which enables efficient management of container applications.</p>
+             * <p>Specifies whether the instance is allowed to join an ACK cluster. If the parameter settings are <strong>1</strong>, the created instance can be added to an ACK cluster by calling the <strong>AttachRCInstances</strong> API operation to efficiently manage containerized applications. Valid values:</p>
              * <ul>
-             * <li><strong>1</strong>: Yes.</li>
-             * <li><strong>0</strong> (default): No.</li>
+             * <li><strong>1</strong>: yes</li>
+             * <li><strong>0</strong> (default): no</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1123,7 +1126,10 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * EcsHostName.
+             * <p>The hostname of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testHostName</p>
              */
             public Builder ecsHostName(String ecsHostName) {
                 this.ecsHostName = ecsHostName;
@@ -1131,9 +1137,9 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the instance expires. The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC+0.</p>
+             * <p>The time when the instance expires. The time follows the ISO 8601 standard and uses the UTC+0 time zone in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format.</p>
              * <blockquote>
-             * <p>The expiration time displayed on the console is UTC+8.</p>
+             * <p>The expiration time displayed in the console is 8 hours ahead of this time.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1145,7 +1151,7 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task creation time (GMT).</p>
+             * <p>The time when the task was created in GMT.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-03-22 07:56:53.0</p>
@@ -1156,7 +1162,7 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The host IP address.</p>
+             * <p>The IP address of the host.</p>
              * 
              * <strong>example:</strong>
              * <p>172.16.XX.XX</p>
@@ -1167,7 +1173,7 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The host name.</p>
+             * <p>The hostname of the host.</p>
              * 
              * <strong>example:</strong>
              * <p>i-2zeaiz4g9u23f40m****</p>
@@ -1191,8 +1197,8 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             /**
              * <p>The billing method. Valid values:</p>
              * <ul>
-             * <li><strong>PrePaid</strong>: subscription.</li>
-             * <li><strong>PostPaid</strong>: pay-as-you-go.</li>
+             * <li><strong>PrePaid</strong>: subscription</li>
+             * <li><strong>PostPaid</strong>: pay-as-you-go</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1227,7 +1233,7 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
 
             /**
              * <p>The instance type.</p>
-             * <p>For more information, see <a href="https://help.aliyun.com/document_detail/2844823.html">RDS Custom instance type list</a>.</p>
+             * <p>For more information, see <a href="https://help.aliyun.com/document_detail/2844823.html">RDS Custom instance types</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>mysql.x2.xlarge.6cm</p>
@@ -1239,7 +1245,7 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
 
             /**
              * <p>The instance family.</p>
-             * <p>For more information, see <a href="https://help.aliyun.com/document_detail/2844823.html">RDS Custom instance type list</a>.</p>
+             * <p>For more information, see <a href="https://help.aliyun.com/document_detail/2844823.html">RDS Custom instance types</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>x.6cm</p>
@@ -1261,7 +1267,7 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node type. If the value <strong>rds_vnode</strong> is returned, the node is a container node.</p>
+             * <p>The node type. A value of <strong>rds_vnode</strong> indicates that the node is a container node.</p>
              * 
              * <strong>example:</strong>
              * <p>rds_vnode</p>
@@ -1272,7 +1278,10 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * OSName.
+             * <p>The name of the operating system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CentOS 7.4 64-bit</p>
              */
             public Builder OSName(String OSName) {
                 this.OSName = OSName;
@@ -1280,7 +1289,14 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * OSType.
+             * <p>The type of the operating system. The operating system can be Windows Server or Linux. Valid values:</p>
+             * <ul>
+             * <li>windows</li>
+             * <li>linux</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>linux</p>
              */
             public Builder OSType(String OSType) {
                 this.OSType = OSType;
@@ -1321,10 +1337,10 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The bidding strategy for pay-as-you-go instances. Valid values:</p>
+             * <p>The bidding strategy for the pay-as-you-go instance. Valid values:</p>
              * <ul>
-             * <li><strong>NoSpot</strong>: A regular pay-as-you-go instance.</li>
-             * <li><strong>SpotAsPriceGo</strong>: The system automatically bids, following the current market price.</li>
+             * <li><strong>NoSpot</strong>: The instance is a regular pay-as-you-go instance.</li>
+             * <li><strong>SpotAsPriceGo</strong>: The system automatically places bids based on the current market price.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1336,7 +1352,10 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The last start time of the instance. The time is displayed in UTC and follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mmZ</code> format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-12-10T04:04Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -1346,14 +1365,14 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             /**
              * <p>The instance status. Valid values:</p>
              * <ul>
-             * <li><strong>Pending</strong>: Being created.</li>
-             * <li><strong>Running</strong>: Running.</li>
-             * <li><strong>Starting</strong>: Being started.</li>
-             * <li><strong>Stopping</strong>: Being stopped.</li>
-             * <li><strong>Stopped</strong>: Stopped.</li>
+             * <li><strong>Pending</strong>: The instance is being created.</li>
+             * <li><strong>Running</strong>: The instance is running.</li>
+             * <li><strong>Starting</strong>: The instance is starting.</li>
+             * <li><strong>Stopping</strong>: The instance is being stopped.</li>
+             * <li><strong>Stopped</strong>: The instance is stopped.</li>
              * </ul>
              * <blockquote>
-             * <p>The instance status returned by this operation may be delayed. If the value differs from the value returned by the <strong>DescribeRCInstanceAttribute</strong> operation, the value returned by <strong>DescribeRCInstanceAttribute</strong> prevails.</p>
+             * <p>The instance status returned by this operation may be delayed. If the status differs from the value returned by the <strong>DescribeRCInstanceAttribute</strong> operation, the value returned by the <strong>DescribeRCInstanceAttribute</strong> operation prevails.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1365,7 +1384,10 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * StoppedMode.
+             * <p>The stop mode of the instance. KeepCharging indicates the standard mode. StopCharging indicates the economical mode. Not-applicable indicates that the instance does not support the economical mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>KeepCharging</p>
              */
             public Builder stoppedMode(String stoppedMode) {
                 this.stoppedMode = stoppedMode;
@@ -1373,7 +1395,7 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the instances and tags.</p>
+             * <p>The queried instance and tag details.</p>
              */
             public Builder tagResources(java.util.List<TagResources> tagResources) {
                 this.tagResources = tagResources;
@@ -1397,7 +1419,7 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the virtual private cloud (VPC).</p>
+             * <p>The ID of the VPC.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-uf6f7l4fg90****</p>

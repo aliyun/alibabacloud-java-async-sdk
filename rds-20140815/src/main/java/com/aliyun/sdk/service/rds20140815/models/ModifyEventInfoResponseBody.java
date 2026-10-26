@@ -150,7 +150,7 @@ public class ModifyEventInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The successful event ID.</p>
+         * <p>The success event ID.</p>
          * 
          * <strong>example:</strong>
          * <p>234221</p>

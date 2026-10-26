@@ -67,7 +67,7 @@ public class ModifyDBInstanceEndpointAddressResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned fields.</p>
+         * <p>The list of returned fields.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,7 @@ public class ModifyDBInstanceEndpointAddressResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>90496720-2319-42A8-87CD-FCE4DF95EBED</p>

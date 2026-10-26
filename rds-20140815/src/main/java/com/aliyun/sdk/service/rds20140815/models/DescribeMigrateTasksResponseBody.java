@@ -138,7 +138,7 @@ public class DescribeMigrateTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The number of the returned page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -149,7 +149,7 @@ public class DescribeMigrateTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries returned per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -160,7 +160,7 @@ public class DescribeMigrateTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>4E356DDF-6B83-45DB-99D5-4B1E8A0D286B</p>
@@ -171,7 +171,7 @@ public class DescribeMigrateTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries that meet the specified conditions.</p>
+         * <p>The total number of entries that meet the query conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>

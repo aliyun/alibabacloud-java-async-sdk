@@ -287,7 +287,7 @@ public class DescribeHistoryTasksRequest extends Request {
         } 
 
         /**
-         * <p>The minimum execution duration used to filter tasks. Only tasks whose execution duration is greater than this value are returned. Unit: seconds. Default value: 0, which indicates no restriction.</p>
+         * <p>The minimum execution duration of the task. This parameter is used to filter tasks whose execution duration is greater than the specified value. Unit: seconds. Default value: 0, which indicates no limit.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -299,7 +299,7 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query based on task start time. Only tasks that started after this time are returned. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0. The earliest supported time is 30 days before the current time. If a time earlier than 30 days is specified, it is automatically converted to 30 days before the current time.</p>
+         * <p>The start time of the time range to query the task start time. This parameter specifies that the start time of the task is later than the specified time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. The earliest supported time is 30 days ago. If the specified time is more than 30 days ago, it is automatically converted to 30 days ago.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -312,7 +312,7 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. Separate multiple instance IDs with commas (,). A maximum of 30 instance IDs are supported. Default value: empty, which indicates no restriction.</p>
+         * <p>The instance ID, which is used to query the tasks of the corresponding instance. Separate multiple instance IDs with commas (,). You can specify up to 30 instance IDs. If this parameter is left empty, no limit is applied.</p>
          * 
          * <strong>example:</strong>
          * <p>rm-uf62br2491p5l****</p>
@@ -324,7 +324,7 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * <p>Currently, only Instance is supported.</p>
+         * <p>The instance type. Only Instance is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>Instance</p>
@@ -345,7 +345,7 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * <p>The page number. Valid values: positive integers.
+         * <p>The page number of the query result. Valid values: positive integers.
          * Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
@@ -370,7 +370,7 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the pending event. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>The region ID of the pending event. You can call the DescribeRegions operation to obtain the region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
@@ -423,15 +423,15 @@ public class DescribeHistoryTasksRequest extends Request {
         /**
          * <p>The task status. Valid values:</p>
          * <ul>
-         * <li><strong>Scheduled</strong>: Waiting to be executed.</li>
+         * <li><strong>Scheduled</strong>: Pending execution.</li>
          * <li><strong>Running</strong>: Running.</li>
          * <li><strong>Succeed</strong>: Succeeded.</li>
          * <li><strong>Failed</strong>: Failed.</li>
-         * <li><strong>Cancelling</strong>: Being terminated.</li>
-         * <li><strong>Canceled</strong>: Terminated.</li>
+         * <li><strong>Cancelling</strong>: Cancelling.</li>
+         * <li><strong>Canceled</strong>: Canceled.</li>
          * <li><strong>Waiting</strong>: Waiting for the scheduled time.</li>
          * </ul>
-         * <p>To query multiple statuses, separate them with commas (,). Default value: empty, which indicates all statuses.</p>
+         * <p>Separate multiple values with commas (,). If this parameter is left empty, all statuses are queried.</p>
          * 
          * <strong>example:</strong>
          * <p>Scheduled</p>
@@ -443,7 +443,7 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * <p>The task ID. You can call the DescribeTasks operation to obtain the task ID. Separate multiple task IDs with commas (,). A maximum of 30 task IDs are supported. Default value: empty, which indicates no restriction.</p>
+         * <p>The task ID. You can call the DescribeTasks operation to query the task ID. Separate multiple task IDs with commas (,). You can specify up to 30 task IDs. If this parameter is left empty, no limit is applied.</p>
          * 
          * <strong>example:</strong>
          * <p>t-83br18hloy3faf****</p>
@@ -455,7 +455,7 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * <p>The task type. Separate multiple task types with commas (,). A maximum of 30 task types are supported. Default value: empty, which indicates no restriction.</p>
+         * <p>The task type, which is used to query tasks of a specific type. Separate multiple task types with commas (,). You can specify up to 30 task types. If this parameter is left empty, no limit is applied.</p>
          * 
          * <strong>example:</strong>
          * <p>autotest_dispatch_cases</p>
@@ -467,7 +467,7 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * <p>The maximum execution duration used to filter tasks. Only tasks whose execution duration is not less than this value are returned. Unit: seconds. Default value: 0, which indicates no restriction.</p>
+         * <p>The maximum execution duration of the task. This parameter is used to filter tasks whose execution duration is greater than or equal to the specified value. Unit: seconds. Default value: 0, which indicates no limit.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -479,7 +479,7 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query based on task start time. Only tasks that started before this time are returned. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p>
+         * <p>The end time of the time range to query the task start time. This parameter specifies that the start time of the task is earlier than the specified time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

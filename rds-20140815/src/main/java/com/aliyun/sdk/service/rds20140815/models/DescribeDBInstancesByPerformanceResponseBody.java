@@ -136,7 +136,7 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>23907437-79B9-411A-9EE6-75A8F0F1C619</p>
@@ -147,7 +147,7 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of instances returned by the query.</p>
+         * <p>The total number of queried instances.</p>
          * 
          * <strong>example:</strong>
          * <p>28</p>

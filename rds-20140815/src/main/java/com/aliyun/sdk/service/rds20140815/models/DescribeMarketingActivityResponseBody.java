@@ -119,7 +119,7 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
 
         /**
          * <ul>
-         * <li>Chinese site: 26842</li>
+         * <li>China site: 26842</li>
          * <li>International site: 26888</li>
          * </ul>
          * 
@@ -548,10 +548,10 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             /**
              * <p>The instance edition. Valid values:</p>
              * <ul>
-             * <li><strong>Basic</strong>: Basic Edition.</li>
-             * <li><strong>HighAvailability</strong>: High-availability Edition.</li>
-             * <li><strong>AlwaysOn</strong>: Cluster Edition.</li>
-             * <li><strong>Finance</strong>: RDS Enterprise Edition.</li>
+             * <li><strong>Basic</strong>: Basic Edition</li>
+             * <li><strong>HighAvailability</strong>: High-availability Edition</li>
+             * <li><strong>AlwaysOn</strong>: Cluster Edition</li>
+             * <li><strong>Finance</strong>: Enterprise Edition</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -565,8 +565,8 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             /**
              * <p>The billing method. Valid values:</p>
              * <ul>
-             * <li>POSTPAY: pay-as-you-go.</li>
-             * <li>PREPAY: subscription.</li>
+             * <li>POSTPAY: pay-as-you-go</li>
+             * <li>PREPAY: subscription</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -578,7 +578,7 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance type. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary instance types</a> and <a href="https://help.aliyun.com/document_detail/145759.html">Read-only instance types</a>.</p>
+             * <p>The instance type code. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary instance types</a> and <a href="https://help.aliyun.com/document_detail/145759.html">Read-only instance types</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>rds.mysql.s3.large</p>
@@ -600,7 +600,7 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of CPU cores for the instance type. Unit: cores.</p>
+             * <p>The number of CPU cores for the instance type.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -611,7 +611,7 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The disk storage size per node. Unit: GB.</p>
+             * <p>The storage capacity per node. Unit: GB.</p>
              * 
              * <strong>example:</strong>
              * <p>900</p>
@@ -684,7 +684,7 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum I/O bandwidth. Unit: Mbit/s.</p>
+             * <p>The maximum I/O throughput.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -719,11 +719,11 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             /**
              * <p>The instance storage type. Valid values:</p>
              * <ul>
-             * <li><strong>local_ssd</strong>: local SSD.</li>
-             * <li><strong>cloud_ssd</strong>: standard SSD cloud disk.</li>
-             * <li><strong>cloud_essd</strong>: PL1 ESSD cloud disk.</li>
-             * <li><strong>cloud_essd2</strong>: PL2 ESSD cloud disk.</li>
-             * <li><strong>cloud_essd3</strong>: PL3 ESSD cloud disk.</li>
+             * <li><strong>local_ssd</strong>: local SSD</li>
+             * <li><strong>cloud_ssd</strong>: standard SSD cloud disk</li>
+             * <li><strong>cloud_essd</strong>: PL1 ESSD cloud disk</li>
+             * <li><strong>cloud_essd2</strong>: PL2 ESSD cloud disk</li>
+             * <li><strong>cloud_essd3</strong>: PL3 ESSD cloud disk</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -735,7 +735,7 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The upgrade instance edition.</p>
+             * <p>The instance edition after the upgrade.</p>
              * 
              * <strong>example:</strong>
              * <p>HighAvailability</p>
@@ -746,7 +746,7 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The upgrade instance type.</p>
+             * <p>The instance type code after the upgrade.</p>
              * 
              * <strong>example:</strong>
              * <p>rds.mysql.s3.large</p>
@@ -757,7 +757,7 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The upgrade instance family.</p>
+             * <p>The instance family after the upgrade.</p>
              * 
              * <strong>example:</strong>
              * <p>d</p>
@@ -790,7 +790,7 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The disk size after the upgrade.</p>
+             * <p>The storage capacity after the upgrade.</p>
              * 
              * <strong>example:</strong>
              * <p>1024</p>
@@ -812,7 +812,7 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum I/O bandwidth after the upgrade. Unit: Mbit/s.</p>
+             * <p>The maximum I/O throughput after the upgrade.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>

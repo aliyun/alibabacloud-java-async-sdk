@@ -158,7 +158,7 @@ public class DescribeDBInstancesAsCsvRequest extends Request {
         } 
 
         /**
-         * <p>A deprecated parameter. You do not need to configure this parameter.</p>
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated. You do not need to configure it.</p>
          * 
          * <strong>example:</strong>
          * <p>API</p>
@@ -170,7 +170,7 @@ public class DescribeDBInstancesAsCsvRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. You can call DescribeDBInstances to query instance IDs.</p>
+         * <p>The instance ID. You can call the DescribeDBInstances operation to obtain the instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rm-uf6wjk5****</p>
@@ -182,7 +182,7 @@ public class DescribeDBInstancesAsCsvRequest extends Request {
         }
 
         /**
-         * <p>A deprecated parameter. You do not need to configure this parameter.</p>
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated. You do not need to configure it.</p>
          * 
          * <strong>example:</strong>
          * <p>API</p>
@@ -203,7 +203,7 @@ public class DescribeDBInstancesAsCsvRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call DescribeRegions to query available region IDs.</p>
+         * <p>The region ID. You can call the DescribeRegions operation to obtain the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

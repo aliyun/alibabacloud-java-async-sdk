@@ -117,7 +117,7 @@ public class DescribeAvailableRecoveryTimeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The start time of the restorable time range for the cross-region backup file. The time follows the format: yyyy-MM-ddTHH:mm:ssZ (UTC).</p>
+         * <p>The start time of the time range to which data can be restored from the cross-region backup file. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2024-03-04T21:00:47Z</p>
@@ -128,7 +128,7 @@ public class DescribeAvailableRecoveryTimeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The end time of the restorable time range for the cross-region backup file. The time follows the format: yyyy-MM-ddTHH:mm:ssZ (UTC).</p>
+         * <p>The end time of the time range to which data can be restored from the cross-region backup file. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2024-03-07T02:23:26Z</p>
@@ -139,7 +139,7 @@ public class DescribeAvailableRecoveryTimeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The region where the source instance resides.</p>
+         * <p>The region of the source instance.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-chengdu</p>

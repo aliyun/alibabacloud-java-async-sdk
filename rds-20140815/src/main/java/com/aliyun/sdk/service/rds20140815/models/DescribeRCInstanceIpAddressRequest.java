@@ -185,7 +185,7 @@ public class DescribeRCInstanceIpAddressRequest extends Request {
         } 
 
         /**
-         * <p>The page number of the page to return. Default value: 1, which indicates that the first page is returned.</p>
+         * <p>The number of the page to return. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -211,8 +211,8 @@ public class DescribeRCInstanceIpAddressRequest extends Request {
         /**
          * <p>The DDoS mitigation status of the assets that are assigned public IP addresses to query. Valid values:</p>
          * <ul>
-         * <li><strong>defense</strong>: Cleaning. Assets that are assigned public IP addresses for which Anti-DDoS Origin scrubs traffic are queried.</li>
-         * <li><strong>blackhole</strong>: Black Hole Activated. Assets that are assigned public IP addresses that are in the blackhole filtering status are queried.</li>
+         * <li><strong>defense</strong>: Cleaning. Queries assets that are assigned public IP addresses and for which the system scrubs traffic.</li>
+         * <li><strong>blackhole</strong>: Black Hole Activated. Queries assets that are assigned public IP addresses and are under the blackhole filtering status.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -225,7 +225,7 @@ public class DescribeRCInstanceIpAddressRequest extends Request {
         }
 
         /**
-         * <p>The instance ID of the Custom instance to which the assets that are assigned public IP addresses belong.</p>
+         * <p>The instance ID of the RDS Custom instance to which the assets that are assigned public IP addresses belong.</p>
          * 
          * <strong>example:</strong>
          * <p>rc-y6dn4pyuub1r89******</p>
@@ -249,7 +249,7 @@ public class DescribeRCInstanceIpAddressRequest extends Request {
         }
 
         /**
-         * <p>The name of the Custom instance to which the assets that are assigned public IP addresses belong.</p>
+         * <p>The name of the RDS Custom instance to which the assets that are assigned public IP addresses belong.</p>
          * 
          * <strong>example:</strong>
          * <p>rc-y6dn4pyuub1r89******</p>
@@ -273,7 +273,7 @@ public class DescribeRCInstanceIpAddressRequest extends Request {
         }
 
         /**
-         * <p>Settings for paged query. The number of instances to return on each page for paging.</p>
+         * <p>The number of instances per page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -285,7 +285,7 @@ public class DescribeRCInstanceIpAddressRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the Custom instance.</p>
+         * <p>The region ID of the RDS Custom instance.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>

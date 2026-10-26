@@ -157,7 +157,7 @@ public class DescribeAccountMaskingPrivilegeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The permission expiration time in UTC format.</p>
+             * <p>The expiration time of the permission, in UTC format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-01-22T02:01:20Z</p>
@@ -168,7 +168,7 @@ public class DescribeAccountMaskingPrivilegeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The permission type. The value restrictedAccess indicates restricted access (data masking required).</p>
+             * <p>The permission type. A value of restrictedAccess indicates restricted access, which requires data masking.</p>
              * 
              * <strong>example:</strong>
              * <p>restrictedAccess</p>
@@ -236,7 +236,7 @@ public class DescribeAccountMaskingPrivilegeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of user encryption or data masking permissions.</p>
+             * <p>The list of user encryption or masking permissions.</p>
              */
             public Builder userPrivilege(java.util.List<UserPrivilege> userPrivilege) {
                 this.userPrivilege = userPrivilege;

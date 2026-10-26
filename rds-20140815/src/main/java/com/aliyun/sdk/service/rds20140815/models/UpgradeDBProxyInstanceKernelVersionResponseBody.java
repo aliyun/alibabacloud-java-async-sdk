@@ -80,7 +80,7 @@ public class UpgradeDBProxyInstanceKernelVersionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The proxy ID.</p>
+         * <p>The ID of the database proxy.</p>
          * 
          * <strong>example:</strong>
          * <p>bu9****</p>
@@ -91,7 +91,7 @@ public class UpgradeDBProxyInstanceKernelVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>44537EC8-DFA2-4745-B579-E733FF2C5B9A</p>
@@ -102,7 +102,7 @@ public class UpgradeDBProxyInstanceKernelVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The task ID.</p>
+         * <p>The ID of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>334362871</p>

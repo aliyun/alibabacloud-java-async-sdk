@@ -249,7 +249,7 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The storage consumed by archived backups. Unit: bytes.</p>
+         * <p>The storage space occupied by archive backups. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -260,9 +260,9 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total storage consumed by data backups, excluding archived backups. Unit: bytes.</p>
+         * <p>The total storage space occupied by data backups, excluding archive backups. Unit: bytes.</p>
          * <blockquote>
-         * <p>For <strong>SQL Server</strong> instances, this value indicates the total size of physical backups and snapshot backups.</p>
+         * <p>For <strong>SQL Server</strong> instances, this parameter indicates the total size of physical backups and snapshot backups.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -274,7 +274,7 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The storage consumed by snapshot backups for <strong>SQL Server instances</strong>. Unit: bytes. A value of 0 indicates no data.</p>
+         * <p>The storage space occupied by snapshot backups of <strong>SQL Server</strong> instances. Unit: bytes. A value of 0 indicates that no data is available.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -285,7 +285,7 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total storage consumed by log backups, excluding archived backups. Unit: bytes.</p>
+         * <p>The total storage space occupied by log backups, excluding archive backups. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>45145563</p>
@@ -296,9 +296,9 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The size of data files in backup sets stored in OSS. Unit: bytes. A value of 0 indicates no data.</p>
+         * <p>The size of data files in backup sets stored in OSS. Unit: bytes. A value of 0 indicates that no data is available.</p>
          * <blockquote>
-         * <p>For <strong>SQL Server</strong> instances, this value indicates the storage consumed by physical backups.</p>
+         * <p>For <strong>SQL Server</strong> instances, this parameter indicates the storage space occupied by physical backups.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -310,7 +310,7 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The size of log files in backup sets stored in OSS. Unit: bytes. A value of 0 indicates no data.</p>
+         * <p>The size of log files in backup sets stored in OSS. Unit: bytes. A value of 0 indicates that no data is available.</p>
          * 
          * <strong>example:</strong>
          * <p>44180999</p>
@@ -321,7 +321,7 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The storage consumed by backups (data backups + log backups). Unit: bytes. A value of -1 indicates no data.</p>
+         * <p>The storage space occupied by backups, including data backups and log backups. Unit: bytes. A value of -1 indicates that no data is available.</p>
          * 
          * <strong>example:</strong>
          * <p>53002759</p>
@@ -332,7 +332,7 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The storage consumed by cold backups. Unit: bytes. A value of -1 indicates no data.</p>
+         * <p>The storage space occupied by cold backups. Unit: bytes. A value of -1 indicates that no data is available.</p>
          * 
          * <strong>example:</strong>
          * <p>2337275904</p>
@@ -354,7 +354,7 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The storage consumed by data files. Unit: bytes. A value of -1 indicates no data.</p>
+         * <p>The storage space occupied by data files. Unit: bytes. A value of -1 indicates that no data is available.</p>
          * 
          * <strong>example:</strong>
          * <p>1292094741</p>
@@ -365,7 +365,7 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The used storage (DataSize + LogSize). Unit: bytes. A value of -1 indicates no data.</p>
+         * <p>The used storage space, which is the sum of DataSize and LogSize. Unit: bytes. A value of -1 indicates that no data is available.</p>
          * 
          * <strong>example:</strong>
          * <p>2337275904</p>
@@ -376,7 +376,7 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The database engine type.</p>
+         * <p>The database engine.</p>
          * 
          * <strong>example:</strong>
          * <p>MySQL</p>
@@ -387,7 +387,7 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The storage consumed by log files. Unit: bytes. A value of -1 indicates no data.</p>
+         * <p>The storage space occupied by logs. Unit: bytes. A value of -1 indicates that no data is available.</p>
          * 
          * <strong>example:</strong>
          * <p>1045181163</p>
@@ -398,7 +398,7 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The billable storage consumed by backups after the free quota is deducted. Unit: bytes.</p>
+         * <p>The storage space occupied by backups that you are billed for after the free quota is deducted. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -409,7 +409,7 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>F937E173-559C-4498-8D90-38D32342B9E4</p>
@@ -420,7 +420,7 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The storage consumed by SQL data. Unit: bytes. A value of -1 indicates no data.</p>
+         * <p>The storage space occupied by SQL data. Unit: bytes. A value of -1 indicates that no data is available.</p>
          * 
          * <strong>example:</strong>
          * <p>315052751</p>

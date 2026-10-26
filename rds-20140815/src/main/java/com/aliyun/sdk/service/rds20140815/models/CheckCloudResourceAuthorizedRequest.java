@@ -171,7 +171,7 @@ public class CheckCloudResourceAuthorizedRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rm-t4n****</p>
@@ -201,7 +201,7 @@ public class CheckCloudResourceAuthorizedRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call DescribeRegions to query the available regions.</p>
+         * <p>The region ID. You can call the DescribeRegions operation to query the region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -213,7 +213,7 @@ public class CheckCloudResourceAuthorizedRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmy****</p>
@@ -252,7 +252,7 @@ public class CheckCloudResourceAuthorizedRequest extends Request {
         }
 
         /**
-         * <p>The ID of the target region. You can call DescribeRegions to query the available regions.</p>
+         * <p>The ID of the destination region. You can call the DescribeRegions operation to query the region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>us-east-1</p>

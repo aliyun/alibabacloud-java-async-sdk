@@ -131,7 +131,7 @@ public class DeleteUserBackupFileRequest extends Request {
         } 
 
         /**
-         * <p>The user backup ID. You can call ListUserBackupFiles to obtain the ID.</p>
+         * <p>The ID of the user backup. You can call the ListUserBackupFiles operation to query the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -153,7 +153,7 @@ public class DeleteUserBackupFileRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call DescribeRegions to obtain the region ID.</p>
+         * <p>The region ID. You can call the DescribeRegions operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -166,7 +166,7 @@ public class DeleteUserBackupFileRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID. You can call DescribeDBInstanceAttribute to obtain the ID.</p>
+         * <p>The ID of the resource group. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmy****</p>

@@ -88,7 +88,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>DC9F4EF6-D038-4405-B497-1F48E722C9F2</p>
@@ -178,7 +178,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The error description.</p>
+             * <p>The error message.</p>
              * 
              * <strong>example:</strong>
              * <p>Error description</p>
@@ -560,7 +560,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The promotion information.</p>
+             * <p>The pricing information.</p>
              */
             public Builder activityInfo(ActivityInfo activityInfo) {
                 this.activityInfo = activityInfo;
@@ -576,7 +576,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The currency unit.</p>
+             * <p>The currency.</p>
              * 
              * <strong>example:</strong>
              * <p>CNY</p>
@@ -587,7 +587,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The discount amount.</p>
+             * <p>The discount.</p>
              * 
              * <strong>example:</strong>
              * <p>27</p>
@@ -617,7 +617,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The final price, which is the original price minus the discount amount.</p>
+             * <p>The final price, which is the original price minus the discount.</p>
              * 
              * <strong>example:</strong>
              * <p>111</p>

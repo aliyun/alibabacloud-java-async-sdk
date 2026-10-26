@@ -130,7 +130,7 @@ public class ReleaseReadWriteSplittingConnectionRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the primary instance. You can call DescribeDBInstances to query the instance ID.</p>
+         * <p>Instance ID of the primary instance. You can call the DescribeDBInstances operation to query instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -161,7 +161,10 @@ public class ReleaseReadWriteSplittingConnectionRequest extends Request {
         }
 
         /**
-         * RWAddressType.
+         * <p>The type of the read/write splitting endpoint to be released. Valid values: ReadOnlyAddress (unified read-only endpoint) and BackupAddress (read-only endpoint of the secondary instance).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ReadOnlyAddress</p>
          */
         public Builder RWAddressType(String RWAddressType) {
             this.putQueryParameter("RWAddressType", RWAddressType);

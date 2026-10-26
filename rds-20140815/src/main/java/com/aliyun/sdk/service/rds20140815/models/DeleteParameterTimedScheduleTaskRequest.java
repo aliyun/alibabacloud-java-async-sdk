@@ -73,7 +73,7 @@ public class DeleteParameterTimedScheduleTaskRequest extends Request {
         } 
 
         /**
-         * <p>The instance name.</p>
+         * <p>The name of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>rm-uf6wjk5****</p>

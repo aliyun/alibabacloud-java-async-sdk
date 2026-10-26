@@ -241,11 +241,11 @@ public class MigrateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The migration time. Valid values:</p>
+         * <p>The time when the migration takes effect. Valid values:</p>
          * <ul>
-         * <li><strong>Immediately</strong>: migrates the instance immediately. This is the default value.</li>
-         * <li><strong>MaintainTime</strong>: migrates the instance during the maintenance window.</li>
-         * <li><strong>Specified</strong>: migrates the instance at a specified time.</li>
+         * <li><strong>Immediately</strong>: The migration takes effect immediately. This is the default value.</li>
+         * <li><strong>MaintainTime</strong>: The migration takes effect within the maintenance window.</li>
+         * <li><strong>Specified</strong>: The migration takes effect at a specified time.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -297,7 +297,7 @@ public class MigrateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The specified switchover time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
+         * <p>The specified time for the migration. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
          * <blockquote>
          * <p>This parameter is required when <strong>EffectiveTime</strong> is set to <strong>Specified</strong>.</p>
          * </blockquote>
@@ -312,7 +312,7 @@ public class MigrateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the destination host to which the primary instance is migrated. You can call the DescribeDedicatedHosts operation to query the host ID.</p>
+         * <p>The ID of the destination host to which the primary instance is to be migrated. You can call the DescribeDedicatedHosts operation to query the host ID.</p>
          * 
          * <strong>example:</strong>
          * <p>i-bpxxxxxxx1</p>
@@ -324,7 +324,7 @@ public class MigrateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the destination host to which the secondary instance is migrated. You can call the DescribeDedicatedHosts operation to query the host ID.</p>
+         * <p>The ID of the destination host to which the secondary instance is to be migrated. You can call the DescribeDedicatedHosts operation to query the host ID.</p>
          * 
          * <strong>example:</strong>
          * <p>i-bpxxxxxxx2</p>
@@ -348,7 +348,7 @@ public class MigrateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The zone ID of the log node.</p>
+         * <p>The zone ID of the logger node.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-k</p>

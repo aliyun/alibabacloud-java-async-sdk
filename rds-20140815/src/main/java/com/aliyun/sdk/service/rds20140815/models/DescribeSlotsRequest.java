@@ -144,8 +144,7 @@ public class DescribeSlotsRequest extends Request {
         } 
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can generate the token on your client. Make sure that the token is unique among different requests. The ClientToken parameter supports only ASCII characters.</p>
          * 
          * <strong>example:</strong>
          * <p>ETnLKlblzczshOTUbOC****</p>
@@ -157,7 +156,7 @@ public class DescribeSlotsRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

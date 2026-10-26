@@ -67,7 +67,7 @@ public class CreateBackupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The backup task ID.</p>
+         * <p>The ID of the backup task.</p>
          * 
          * <strong>example:</strong>
          * <p>507****</p>

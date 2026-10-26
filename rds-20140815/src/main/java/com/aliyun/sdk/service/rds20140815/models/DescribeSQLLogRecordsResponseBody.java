@@ -125,7 +125,7 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of SQL Audit log entries on the current page.</p>
+         * <p>The number of SQL audit logs on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -147,7 +147,7 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

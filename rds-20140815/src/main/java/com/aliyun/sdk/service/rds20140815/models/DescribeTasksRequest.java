@@ -215,7 +215,7 @@ public class DescribeTasksRequest extends Request {
         }
 
         /**
-         * <p>The end time of the query. The end time must be later than the start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format (UTC).</p>
+         * <p>The end time of the query. The end time must be later than the start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format. The time must be in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-11-20T02:00Z</p>
@@ -245,7 +245,7 @@ public class DescribeTasksRequest extends Request {
         }
 
         /**
-         * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
+         * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the INTEGER data type. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -257,7 +257,7 @@ public class DescribeTasksRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Valid values: <strong>30 to 100</strong>. Default value: <strong>30</strong>.</p>
+         * <p>The number of entries to return on each page. Valid values: <strong>30</strong> to <strong>100</strong>. Default value: <strong>30</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -287,7 +287,7 @@ public class DescribeTasksRequest extends Request {
         }
 
         /**
-         * <p>The start time of the query. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format (UTC).</p>
+         * <p>The start time of the query. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format. The time must be in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-11-20T01:00Z</p>

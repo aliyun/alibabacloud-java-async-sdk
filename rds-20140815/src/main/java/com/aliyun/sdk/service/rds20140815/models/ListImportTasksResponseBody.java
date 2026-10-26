@@ -104,7 +104,7 @@ public class ListImportTasksResponseBody extends TeaModel {
          * <p>The number of entries per page. Valid values: <strong>1 to 100</strong>.</p>
          * <p>Default value: <strong>30</strong>.</p>
          * <blockquote>
-         * <p>If you specify this parameter, the <strong>PageSize</strong> and <strong>PageNumber</strong> parameters are not available.</p>
+         * <p>If you specify this parameter, the <strong>PageSize</strong> and <strong>PageNumber</strong> parameters are unavailable.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -261,7 +261,7 @@ public class ListImportTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation time in UTC. The time follows the format of YYYY-MM-DDTHH:mm:ssZ.</p>
+             * <p>The creation time. The time is displayed in UTC in the YYYY-MM-DDTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2018-05-30T14:30:00Z</p>
@@ -294,7 +294,7 @@ public class ListImportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance ID of the target instance.</p>
+             * <p>The ID of the target instance.</p>
              * 
              * <strong>example:</strong>
              * <p>rm-bp*****</p>

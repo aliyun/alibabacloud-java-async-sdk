@@ -123,7 +123,7 @@ public class DescribeDTCSecurityIpHostsForSQLServerResponseBody extends TeaModel
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>2CA62A70-2203-45C6-8E90-8971D5ACC0C2</p>

@@ -265,7 +265,7 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The replication source of native replication.</p>
+         * <p>The replication source for native replication.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.XX.XX</p>
@@ -276,7 +276,7 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The current replication status. Valid values:</p>
+         * <p>The current replication state. Valid values:</p>
          * <ul>
          * <li><strong>Running</strong>: Running.</li>
          * <li><strong>Connecting</strong>: Connecting.</li>
@@ -304,7 +304,10 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
         }
 
         /**
-         * SlaveStatusList.
+         * <p>The replication status information returned by the SHOW SLAVE STATUS statement for the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;SlaveIoRunning&quot;: &quot;Yes&quot;, &quot;SlaveSqlRunning&quot;: &quot;Yes&quot;, &quot;SecondsBehindMaster&quot;: 0, &quot;SlaveIoState&quot;: &quot;Waiting for master to send event&quot;, &quot;SlaveSqlRunningState&quot;: &quot;Slave has read all relay log; waiting for more updates&quot;, &quot;ExecutedGtidSet&quot;: &quot;bd2a34b9-8b8d-11ef-8917-00163e1298b9:1-20567&quot;, &quot;MasterHost&quot;: &quot;192.168.10.100&quot;, &quot;MasterUser&quot;: &quot;repl_user&quot;, &quot;MasterUuid&quot;: &quot;bd2a34b9-8b8d-11ef-8917-00163e1298b9&quot;, &quot;LastErrno&quot;: 0, &quot;LastSqlErrno&quot;: 0, &quot;LastIoErrno&quot;: 0, &quot;LastSqlError&quot;: &quot;&quot;, &quot;LastIoError&quot;: &quot;&quot;, &quot;ChannelName&quot;: &quot;my_test_channel&quot;, &quot;ReplicateDoDb&quot;: &quot;test_db,test_db_1&quot;, &quot;ReplicateIgnoreDb&quot;: &quot;information_schema,performance_schema&quot;, &quot;ReplicateDoTable&quot;: &quot;test_table,test_table_1&quot;, &quot;ReplicateIgnoreTable&quot;: &quot;temp_table,temp_table_1&quot;, &quot;ReplicateWildDoTable&quot;: &quot;test_table.%&quot;, &quot;ReplicateWildIgnoreTable&quot;: &quot;temp_table.%&quot;}]</p>
          */
         public Builder slaveStatusList(java.util.List<SlaveStatusList> slaveStatusList) {
             this.slaveStatusList = slaveStatusList;
@@ -617,7 +620,10 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
             } 
 
             /**
-             * ChannelName.
+             * <p>The name of the replication channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my_test_channel</p>
              */
             public Builder channelName(String channelName) {
                 this.channelName = channelName;
@@ -625,7 +631,10 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
             }
 
             /**
-             * ExecutedGtidSet.
+             * <p>The executed GTID set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bd2a34b9-8b8d-11ef-8917-00163e1298b9:1-20567</p>
              */
             public Builder executedGtidSet(String executedGtidSet) {
                 this.executedGtidSet = executedGtidSet;
@@ -633,7 +642,7 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A value of 0 indicates no error. Other values indicate specific error codes.</p>
+             * <p>The last error code.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -644,7 +653,7 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A value of 0 indicates no error. Other values indicate error codes of the I/O thread.</p>
+             * <p>The last error code of the I/O thread.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -655,7 +664,10 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error message description of the I/O thread.</p>
+             * <p>The last error message of the I/O thread.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>error connecting to master \&quot;<a href="mailto:user@192.0.2.1">user@192.0.2.1</a>:3306\&quot; - retry-time: 60  retries: 5</p>
              */
             public Builder lastIoError(String lastIoError) {
                 this.lastIoError = lastIoError;
@@ -663,7 +675,7 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A value of 0 indicates no error. Other values indicate error codes of the SQL thread.</p>
+             * <p>The last error code of the SQL thread.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -674,7 +686,10 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error message description of the SQL thread.</p>
+             * <p>The last error message of the SQL thread.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Coordinator stopped because there were error(s) in the worker(s). The most recent failure being: Worker 1 failed executing transaction \&quot;00000000-0000-0000-0000-000000000000:1\&quot; at source log mysql-bin.000001, end_log_pos 12345. See error log and/or performance_schema.replication_applier_status_by_worker table for more details about this failure or others, if any.</p>
              */
             public Builder lastSqlError(String lastSqlError) {
                 this.lastSqlError = lastSqlError;
@@ -682,7 +697,10 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
             }
 
             /**
-             * MasterHost.
+             * <p>The address of the primary database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.10.100</p>
              */
             public Builder masterHost(String masterHost) {
                 this.masterHost = masterHost;
@@ -690,7 +708,10 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
             }
 
             /**
-             * MasterUser.
+             * <p>The account of the primary database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>repl_user</p>
              */
             public Builder masterUser(String masterUser) {
                 this.masterUser = masterUser;
@@ -698,7 +719,10 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
             }
 
             /**
-             * MasterUuid.
+             * <p>The UUID of the primary database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bd2a34b9-8b8d-11ef-8917-00163e1298b9</p>
              */
             public Builder masterUuid(String masterUuid) {
                 this.masterUuid = masterUuid;
@@ -706,7 +730,10 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
             }
 
             /**
-             * ReplicateDoDb.
+             * <p>The databases included in replication.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_db,test_db_1</p>
              */
             public Builder replicateDoDb(String replicateDoDb) {
                 this.replicateDoDb = replicateDoDb;
@@ -714,7 +741,10 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
             }
 
             /**
-             * ReplicateDoTable.
+             * <p>The tables included in replication.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_table,test_table_1</p>
              */
             public Builder replicateDoTable(String replicateDoTable) {
                 this.replicateDoTable = replicateDoTable;
@@ -722,7 +752,10 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
             }
 
             /**
-             * ReplicateIgnoreDb.
+             * <p>The databases ignored in replication.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>information_schema,performance_schema</p>
              */
             public Builder replicateIgnoreDb(String replicateIgnoreDb) {
                 this.replicateIgnoreDb = replicateIgnoreDb;
@@ -730,7 +763,10 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
             }
 
             /**
-             * ReplicateIgnoreTable.
+             * <p>The tables ignored in replication.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>temp_table,temp_table_1</p>
              */
             public Builder replicateIgnoreTable(String replicateIgnoreTable) {
                 this.replicateIgnoreTable = replicateIgnoreTable;
@@ -738,7 +774,10 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
             }
 
             /**
-             * ReplicateWildDoTable.
+             * <p>The tables included in replication. Wildcards are supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_table.%</p>
              */
             public Builder replicateWildDoTable(String replicateWildDoTable) {
                 this.replicateWildDoTable = replicateWildDoTable;
@@ -746,7 +785,10 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
             }
 
             /**
-             * ReplicateWildIgnoreTable.
+             * <p>The tables ignored in replication. Wildcards are supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>temp_table.%</p>
              */
             public Builder replicateWildIgnoreTable(String replicateWildIgnoreTable) {
                 this.replicateWildIgnoreTable = replicateWildIgnoreTable;
@@ -754,7 +796,10 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
             }
 
             /**
-             * SecondsBehindMaster.
+             * <p>The data delay, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder secondsBehindMaster(Integer secondsBehindMaster) {
                 this.secondsBehindMaster = secondsBehindMaster;
@@ -762,7 +807,7 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Valid values: Yes (running) and No (stopped).</p>
+             * <p>The running status of the replication I/O thread.</p>
              * 
              * <strong>example:</strong>
              * <p>Yes</p>
@@ -773,7 +818,10 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
             }
 
             /**
-             * SlaveIoState.
+             * <p>The state of the replication I/O thread.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Waiting for master to send event</p>
              */
             public Builder slaveIoState(String slaveIoState) {
                 this.slaveIoState = slaveIoState;
@@ -781,7 +829,7 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Valid values: Yes (running) and No (stopped).</p>
+             * <p>The running status of the replication SQL thread.</p>
              * 
              * <strong>example:</strong>
              * <p>Yes</p>
@@ -792,7 +840,10 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
             }
 
             /**
-             * SlaveSqlRunningState.
+             * <p>The running status of the replication SQL thread.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Slave has read all relay log; waiting for more updates</p>
              */
             public Builder slaveSqlRunningState(String slaveSqlRunningState) {
                 this.slaveSqlRunningState = slaveSqlRunningState;

@@ -91,7 +91,7 @@ public class MigrateConnectionToOtherZoneResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error details.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>Invalid Parameter.</p>

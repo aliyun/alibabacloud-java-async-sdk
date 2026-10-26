@@ -117,7 +117,7 @@ public class DescribeSupportOnlineResizeDiskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response data.</p>
+         * <p>The response dataset.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -132,7 +132,7 @@ public class DescribeSupportOnlineResizeDiskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned for the response code.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -154,7 +154,7 @@ public class DescribeSupportOnlineResizeDiskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

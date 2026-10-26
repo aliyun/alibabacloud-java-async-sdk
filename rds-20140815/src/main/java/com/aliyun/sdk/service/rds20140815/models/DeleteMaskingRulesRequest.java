@@ -158,7 +158,7 @@ public class DeleteMaskingRulesRequest extends Request {
         }
 
         /**
-         * <p>The database name.</p>
+         * <p>The name of the database.</p>
          * 
          * <strong>example:</strong>
          * <p>myDB</p>

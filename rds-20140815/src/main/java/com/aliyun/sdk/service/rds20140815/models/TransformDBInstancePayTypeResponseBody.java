@@ -108,8 +108,8 @@ public class TransformDBInstancePayTypeResponseBody extends TeaModel {
         /**
          * <p>The billing method. Valid values:</p>
          * <ul>
-         * <li>POSTPAY: pay-as-you-go</li>
-         * <li>PREPAY: subscription</li>
+         * <li>POSTPAY: Pay-as-you-go.</li>
+         * <li>PREPAY: Subscription.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -146,7 +146,7 @@ public class TransformDBInstancePayTypeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The order ID.</p>
+         * <p>The ID of the order.</p>
          * 
          * <strong>example:</strong>
          * <p>20515760028****</p>
@@ -157,7 +157,7 @@ public class TransformDBInstancePayTypeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>5E6E09DE-5B12-4BFF-A55E-1C86EDE06D9A</p>

@@ -149,7 +149,7 @@ public class DescribeParametersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The parameter template information.</p>
+         * <p>The information about the parameter template.</p>
          */
         public Builder paramGroupInfo(ParamGroupInfo paramGroupInfo) {
             this.paramGroupInfo = paramGroupInfo;
@@ -157,7 +157,7 @@ public class DescribeParametersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
@@ -410,7 +410,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The parameter template ID.</p>
+             * <p>The ID of the parameter template.</p>
              * 
              * <strong>example:</strong>
              * <p>rpg-sys-01040401010200</p>
@@ -421,7 +421,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parameter template description.</p>
+             * <p>The description of the parameter template.</p>
              * 
              * <strong>example:</strong>
              * <p>sync_binlog=1000, innodb_flush_log_at_trx_commit=2, async</p>
@@ -432,7 +432,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parameter template name.</p>
+             * <p>The name of the parameter template.</p>
              * 
              * <strong>example:</strong>
              * <p>mysql_innodb_8.0_basic_normal_high</p>
@@ -443,7 +443,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parameter templatetype.</p>
+             * <p>The templatetype of the parameter template.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>

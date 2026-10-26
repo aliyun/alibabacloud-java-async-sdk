@@ -527,11 +527,11 @@ public class CloneDBInstanceRequest extends Request {
          * <ol>
          * <li><p><strong>true</strong>: enables automatic payment. Make sure that your account balance is sufficient.</p>
          * </li>
-         * <li><p><strong>false</strong>: generates an unpaid order without deducting fees.</p>
+         * <li><p><strong>false</strong>: generates an order but does not deduct fees.</p>
          * </li>
          * </ol>
          * <blockquote>
-         * <p>Default value: true. If your payment method has an insufficient balance, you can set the AutoPay parameter to false. In this case, an unpaid order is generated, and you can log on to the ApsaraDB RDS console to pay the order.</p>
+         * <p>Default value: true. If your payment method has an insufficient balance, you can set the AutoPay parameter to false. In this case, an unpaid order is generated, and you can log on to the ApsaraDB RDS console to complete the payment.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -545,7 +545,7 @@ public class CloneDBInstanceRequest extends Request {
 
         /**
          * <p>The ID of the backup set.</p>
-         * <p>You can call the DescribeBackups operation to query backup sets.</p>
+         * <p>You can call the DescribeBackups operation to query the backup sets.</p>
          * <blockquote>
          * <p>You must specify at least one of the <strong>BackupId</strong> and <strong>RestoreTime</strong> parameters.</p>
          * </blockquote>
@@ -562,8 +562,8 @@ public class CloneDBInstanceRequest extends Request {
         /**
          * <p>The backup type. Valid values:</p>
          * <ul>
-         * <li><strong>FullBackup</strong>: full backup</li>
-         * <li><strong>IncrementalBackup</strong>: incremental backup</li>
+         * <li><strong>FullBackup</strong>: full backup.</li>
+         * <li><strong>IncrementalBackup</strong>: incremental backup.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -585,11 +585,11 @@ public class CloneDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the I/O performance burst feature for cloud disks. Valid values:</p>
+         * <p>Specifies whether to enable the I/O performance burst feature for Premium ESSD cloud disks. Valid values:</p>
          * <ul>
          * <li><strong>true</strong>: enables the feature.</li>
-         * <li><strong>false</strong>: disables the feature.<blockquote>
-         * <p>For more information about the I/O performance burst feature, see <a href="https://help.aliyun.com/document_detail/2340501.html">What is Premium ESSD?</a>.</p>
+         * <li><strong>false</strong>: shutdown.<blockquote>
+         * <p>For more information about the I/O performance burst feature, see <a href="https://help.aliyun.com/document_detail/2340501.html">What is a premium performance disk</a>.</p>
          * </blockquote>
          * </li>
          * </ul>
@@ -606,17 +606,17 @@ public class CloneDBInstanceRequest extends Request {
         /**
          * <p>The instance edition. Valid values:</p>
          * <ul>
-         * <li><strong>Basic</strong>: Basic Edition</li>
-         * <li><strong>HighAvailability</strong>: High-availability Edition</li>
-         * <li><strong>AlwaysOn</strong>: Cluster Edition (SQL Server)</li>
-         * <li><strong>cluster</strong>: Cluster Edition (MySQL)</li>
-         * <li><strong>Finance</strong>: Finance Edition (supported only on the China site)</li>
+         * <li><strong>Basic</strong>: Basic Edition.</li>
+         * <li><strong>HighAvailability</strong>: high availability Edition (active).</li>
+         * <li><strong>AlwaysOn</strong>: Cluster Edition (SQL Server).</li>
+         * <li><strong>cluster</strong>: Cluster Edition (MySQL).</li>
+         * <li><strong>Finance</strong>: Finance Edition (supported only on the China site).</li>
          * </ul>
          * <p><strong>Serverless instances</strong></p>
          * <ul>
-         * <li><strong>serverless_basic</strong>: Serverless Basic Edition (supported only for MySQL and PostgreSQL)</li>
-         * <li><strong>serverless_standard</strong>: MySQL Serverless High-availability Edition</li>
-         * <li><strong>serverless_ha</strong>: SQL Server Serverless High-availability Edition<blockquote>
+         * <li><strong>serverless_basic</strong>: Serverless Basic Edition (applicable only to MySQL and PostgreSQL).</li>
+         * <li><strong>serverless_standard</strong>: MySQL Serverless high availability Edition (active).</li>
+         * <li><strong>serverless_ha</strong>: SQL Server Serverless high availability Edition (active).<blockquote>
          * <p>You do not need to specify this parameter. The cloned instance inherits the edition of the source instance.</p>
          * </blockquote>
          * </li>
@@ -632,7 +632,7 @@ public class CloneDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>Ensures the idempotence of the request and prevents duplicate submissions. The value is generated by the client and must be unique across different requests. The value can be up to 64 ASCII characters in length and cannot contain non-ASCII characters.</p>
+         * <p>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can use the client to generate the value, but you must ensure that the value is unique among different requests. The value can be up to 64 ASCII characters in length and cannot contain non-ASCII characters.</p>
          * 
          * <strong>example:</strong>
          * <p>0c593ea1-3bea-11e9-b96b-88**********</p>
@@ -644,7 +644,10 @@ public class CloneDBInstanceRequest extends Request {
         }
 
         /**
-         * CustomExtraInfo.
+         * <p>The internal reserved field. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Internal reserved field. You do not need to specify this parameter</p>
          */
         public Builder customExtraInfo(String customExtraInfo) {
             this.putQueryParameter("CustomExtraInfo", customExtraInfo);
@@ -655,7 +658,7 @@ public class CloneDBInstanceRequest extends Request {
         /**
          * <p>The instance type. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Instance types</a>.</p>
          * <blockquote>
-         * <p>Default value: the instance type of the source instance.</p>
+         * <p>Default value: the instance type of the primary instance.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -668,9 +671,9 @@ public class CloneDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The description of the instance. The description must be 2 to 255 characters in length. It must start with a Chinese character or a letter and can contain digits, Chinese characters, letters, underscores (_), and hyphens (-).</p>
+         * <p>The instance name. It must be 2 to 255 characters in length. It must start with a letter or a Chinese character and can contain letters, digits, Chinese characters, underscores (_), and hyphens (-).</p>
          * <blockquote>
-         * <p>The description cannot start with http:// or https://.</p>
+         * <p>It cannot start with http:// or https://.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -698,7 +701,7 @@ public class CloneDBInstanceRequest extends Request {
         /**
          * <p>Instance storage capacity of the instance. Unit: GB. Instance storage capacity increases in increments of 5 GB. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Instance types</a>.</p>
          * <blockquote>
-         * <p>Default value: instance storage capacity of the source instance.</p>
+         * <p>Default value: instance storage capacity of the primary instance.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -713,12 +716,12 @@ public class CloneDBInstanceRequest extends Request {
         /**
          * <p>The instance storage type. Valid values:</p>
          * <ul>
-         * <li><strong>general_essd</strong>: Premium ESSD (recommended)</li>
-         * <li><strong>local_ssd</strong>: local SSD</li>
-         * <li><strong>cloud_ssd</strong>: standard SSD</li>
-         * <li><strong>cloud_essd</strong>: PL1 ESSD</li>
-         * <li><strong>cloud_essd2</strong>: PL2 ESSD</li>
-         * <li><strong>cloud_essd3</strong>: PL3 ESSD</li>
+         * <li><strong>general_essd</strong>: Premium ESSD (recommended).</li>
+         * <li><strong>local_ssd</strong>: premium local disk.</li>
+         * <li><strong>cloud_ssd</strong>: standard SSD.</li>
+         * <li><strong>cloud_essd</strong>: PL1 ESSD.</li>
+         * <li><strong>cloud_essd2</strong>: PL2 ESSD.</li>
+         * <li><strong>cloud_essd3</strong>: PL3 ESSD.</li>
          * </ul>
          * <blockquote>
          * <p>Serverless instances support only PL1 ESSD and Premium ESSD.</p>
@@ -734,7 +737,7 @@ public class CloneDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The names of the databases to restore. Format: <code>OriginalDatabaseName1,OriginalDatabaseName2</code>.</p>
+         * <p>The names of the databases. Format: <code>Original database name 1,Original database name 2</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>test1,test2</p>
@@ -758,10 +761,10 @@ public class CloneDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable release protection. Valid values:</p>
+         * <p>Specifies whether to enable the release protection feature. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: enables release protection.</li>
-         * <li><strong>false</strong> (default): disables release protection.</li>
+         * <li><strong>true</strong>: enables the feature.</li>
+         * <li><strong>false</strong> (default): disables the feature.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -776,11 +779,11 @@ public class CloneDBInstanceRequest extends Request {
         /**
          * <p>The network type of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>VPC</strong>: Virtual Private Cloud (VPC)</li>
-         * <li><strong>Classic</strong>: classic network</li>
+         * <li><strong>VPC</strong>: Virtual Private Cloud (VPC).</li>
+         * <li><strong>Classic</strong>: classic network.</li>
          * </ul>
          * <blockquote>
-         * <p>Default value: the network type of the source instance.</p>
+         * <p>Default value: the network type of the primary instance.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -793,7 +796,7 @@ public class CloneDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the Buffer Pool Extension (BPE) feature for cloud disks. Valid values:</p>
+         * <p>Specifies whether to enable the Buffer Pool Extension (BPE) feature for Premium ESSD cloud disks. Valid values:</p>
          * <ul>
          * <li><strong>1</strong>: enables the feature.</li>
          * <li><strong>0</strong>: disables the feature.</li>
@@ -812,11 +815,11 @@ public class CloneDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The billing method. Valid values:</p>
+         * <p>The billing method of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>Postpaid</strong>: pay-as-you-go</li>
-         * <li><strong>Prepaid</strong>: subscription</li>
-         * <li><strong>Serverless</strong>: serverless. This billing method is not supported for ApsaraDB RDS for MariaDB instances. For more information, see <a href="https://help.aliyun.com/document_detail/411291.html">Overview of serverless ApsaraDB RDS for MySQL instances</a>, <a href="https://help.aliyun.com/document_detail/604344.html">Overview of serverless ApsaraDB RDS for SQL Server instances</a>, and <a href="https://help.aliyun.com/document_detail/607742.html">Overview of serverless ApsaraDB RDS for PostgreSQL instances</a>.</li>
+         * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
+         * <li><strong>Prepaid</strong>: subscription.</li>
+         * <li><strong>Serverless</strong>: serverless. This value is not supported for ApsaraDB RDS for MariaDB instances. For more information, see <a href="https://help.aliyun.com/document_detail/411291.html">Overview of serverless ApsaraDB RDS for MySQL instances</a>, <a href="https://help.aliyun.com/document_detail/604344.html">Overview of serverless ApsaraDB RDS for SQL Server instances</a>, and <a href="https://help.aliyun.com/document_detail/607742.html">Overview of serverless ApsaraDB RDS for PostgreSQL instances</a>.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -832,11 +835,11 @@ public class CloneDBInstanceRequest extends Request {
         /**
          * <p>The subscription period of the subscription instance. Valid values:</p>
          * <ul>
-         * <li><strong>Year</strong>: yearly</li>
-         * <li><strong>Month</strong>: monthly</li>
+         * <li><strong>Year</strong>: yearly subscription.</li>
+         * <li><strong>Month</strong>: monthly subscription.</li>
          * </ul>
          * <blockquote>
-         * <p>This parameter is required if the <strong>PayType</strong> parameter is set to <strong>Prepaid</strong>.</p>
+         * <p>This parameter is required when the billing method is set to <strong>Prepaid</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -849,7 +852,7 @@ public class CloneDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The internal IP address of the new instance. The IP address must be within the IP address range of the specified vSwitch. By default, the system automatically allocates an IP address based on the <strong>VPCId</strong> and <strong>VSwitchId</strong> parameters.</p>
+         * <p>The internal network IP address of the new instance. The IP address must be within the IP address range of the specified vSwitch. By default, the system automatically allocates an IP address based on the <strong>VPCId</strong> and <strong>VSwitchId</strong> parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>172.XX.XX.69</p>
@@ -861,7 +864,7 @@ public class CloneDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the DescribeRegions operation to query region IDs.</p>
+         * <p>The region ID. You can call the DescribeRegions operation to view the region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -882,7 +885,7 @@ public class CloneDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to restore individual databases and tables. Set the value to <strong>true</strong> to restore individual databases and tables. Otherwise, leave this parameter empty.</p>
+         * <p>Specifies whether to restore individual databases and tables. A value of <strong>true</strong> specifies that individual databases and tables are restored. If you do not want to restore individual databases and tables, leave this parameter empty.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -894,7 +897,7 @@ public class CloneDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The point in time to which you want to restore data. The point in time must be within the backup retention period. Specify the time in the ISO 8601 standard in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</p>
+         * <p>The point in time to which you want to restore the instance. The point in time must be within the backup retention period. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</p>
          * <blockquote>
          * <p>You must specify at least one of the <strong>BackupId</strong> and <strong>RestoreTime</strong> parameters.</p>
          * </blockquote>
@@ -919,8 +922,8 @@ public class CloneDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The information about the databases and tables to restore. This parameter is required when you restore individual databases and tables. Format:
-         * <code>[{&quot;type&quot;:&quot;db&quot;,&quot;name&quot;:&quot;Original database 1 name&quot;,&quot;newname&quot;:&quot;New database 1 name&quot;,&quot;tables&quot;:[{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;Table 1 name in database 1&quot;,&quot;newname&quot;:&quot;New table 1 name&quot;},{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;Table 2 name in database 1&quot;,&quot;newname&quot;:&quot;New table 2 name&quot;}]},{&quot;type&quot;:&quot;db&quot;,&quot;name&quot;:&quot;Original database 2 name&quot;,&quot;newname&quot;:&quot;New database 2 name&quot;,&quot;tables&quot;:[{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;Table 1 name in database 2&quot;,&quot;newname&quot;:&quot;New table 1 name&quot;},{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;Table 2 name in database 2&quot;,&quot;newname&quot;:&quot;New table 2 name&quot;}]}]</code></p>
+         * <p>The information about the databases and tables that you want to restore. This parameter is required when you restore individual databases and tables. Format:
+         * <code>[{&quot;type&quot;:&quot;db&quot;,&quot;name&quot;:&quot;Name of database 1&quot;,&quot;newname&quot;:&quot;New name of database 1&quot;,&quot;tables&quot;:[{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;Name of table 1 in database 1&quot;,&quot;newname&quot;:&quot;New name of table 1&quot;},{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;Name of table 2 in database 1&quot;,&quot;newname&quot;:&quot;New name of table 2&quot;}]},{&quot;type&quot;:&quot;db&quot;,&quot;name&quot;:&quot;Name of database 2&quot;,&quot;newname&quot;:&quot;New name of database 2&quot;,&quot;tables&quot;:[{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;Name of table 1 in database 2&quot;,&quot;newname&quot;:&quot;New name of table 1&quot;},{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;Name of table 2 in database 2&quot;,&quot;newname&quot;:&quot;New name of table 2&quot;}]}]</code></p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;type&quot;:&quot;db&quot;,&quot;name&quot;:&quot;testdb1&quot;,&quot;newname&quot;:&quot;testdb1_new&quot;,&quot;tables&quot;:[{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;testdb1table1&quot;,&quot;newname&quot;:&quot;testdb1table1_new&quot;}]}]</p>
@@ -943,11 +946,11 @@ public class CloneDBInstanceRequest extends Request {
         /**
          * <p>The subscription duration. Valid values:</p>
          * <ul>
-         * <li>If the <strong>Period</strong> parameter is set to <strong>Year</strong>, the value of the UsedTime parameter ranges from <strong>1</strong> to <strong>3</strong>.</li>
-         * <li>If the <strong>Period</strong> parameter is set to <strong>Month</strong>, the value of the UsedTime parameter ranges from <strong>1</strong> to <strong>9</strong>.</li>
+         * <li>Valid values when the <strong>Period</strong> parameter is set to <strong>Year</strong>: <strong>1</strong>, <strong>2</strong>, and <strong>3</strong>.</li>
+         * <li>Valid values when the <strong>Period</strong> parameter is set to <strong>Month</strong>: <strong>1</strong> to <strong>9</strong>.</li>
          * </ul>
          * <blockquote>
-         * <p>This parameter is required if the <strong>PayType</strong> parameter is set to <strong>Prepaid</strong>.</p>
+         * <p>This parameter is required when the billing method is set to <strong>Prepaid</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -960,9 +963,9 @@ public class CloneDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the VPC.</p>
+         * <p>The VPC ID.</p>
          * <blockquote>
-         * <p>Make sure that the VPC belongs to the specified region.</p>
+         * <p>Make sure that the VPC belongs to the region where the instance is deployed.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -975,10 +978,10 @@ public class CloneDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The vSwitch ID. The zone where the vSwitch resides must correspond to the zone ID specified in <strong>ZoneId</strong>.</p>
+         * <p>The vSwitch ID. The zone (active zone) where the vSwitch is located must match the zone (active zone) ID specified in <strong>ZoneId</strong>.</p>
          * <ul>
          * <li>The network type <strong>InstanceNetworkType</strong> must be set to <strong>VPC</strong>.</li>
-         * <li>If you specify <strong>ZoneSlaveId1</strong> (secondary zone ID), you must specify two vSwitch IDs and separate them with a comma (,).</li>
+         * <li>If you specify <strong>ZoneSlaveId1</strong> (the secondary active zone ID), you must specify two vSwitch IDs and separate them with commas (,).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -991,7 +994,7 @@ public class CloneDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The primary zone ID. You can call the DescribeRegions operation to query zone IDs.</p>
+         * <p>The primary zone ID. You can call the DescribeRegions operation to view the zone ID.</p>
          * <blockquote>
          * <p>Default value: the zone ID of the source instance.</p>
          * </blockquote>
@@ -1006,7 +1009,7 @@ public class CloneDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The zone ID of the secondary node. If this parameter is set to the same value as the <strong>ZoneId</strong> parameter, it is a single-zone deployment. If this parameter is set to a different value from the <strong>ZoneId</strong> parameter, it is a multi-zone deployment.</p>
+         * <p>The secondary zone (active zone) ID. If this parameter is set to the same value as the <strong>ZoneId</strong> parameter, the instance uses a single-zone (active zone) deployment. If this parameter is set to a different value from the <strong>ZoneId</strong> parameter, the instance uses a multi-zone (active zone) deployment.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-c</p>
@@ -1018,8 +1021,8 @@ public class CloneDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>&lt;props=&quot;intl&quot;&gt;The zone ID of the logger node. If this parameter is set to the same value as the <strong>ZoneId</strong> parameter, it is a single-zone deployment. If this parameter is set to a different value from the <strong>ZoneId</strong> parameter, it is a multi-zone deployment.</p>
-         * <p>&lt;props=&quot;china&quot;&gt;The zone ID of the secondary node or logger node. If this parameter is set to the same value as the <strong>ZoneId</strong> parameter, it is a single-zone deployment. If this parameter is set to a different value from the <strong>ZoneId</strong> parameter, it is a multi-zone deployment.</p>
+         * <p>&lt;props=&quot;intl&quot;&gt;The logger zone (active zone) ID. If this parameter is set to the same value as the <strong>ZoneId</strong> parameter, the instance uses a single-zone (active zone) deployment. If this parameter is set to a different value from the <strong>ZoneId</strong> parameter, the instance uses a multi-zone (active zone) deployment.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;The secondary zone (active zone) ID or logger zone (active zone) ID. If this parameter is set to the same value as the <strong>ZoneId</strong> parameter, the instance uses a single-zone (active zone) deployment. If this parameter is set to a different value from the <strong>ZoneId</strong> parameter, the instance uses a multi-zone (active zone) deployment.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-d</p>
@@ -1209,10 +1212,10 @@ public class CloneDBInstanceRequest extends Request {
             /**
              * <p>The tag key. You can specify this parameter to bind a tag to the instance.</p>
              * <ul>
-             * <li>If the specified tag key already exists, the tag key is directly bound to the instance. You can call the ListTagResources operation to query created tags.</li>
+             * <li>If the specified tag key already exists, the tag key is directly bound to the instance. You can call the ListTagResources operation to query the created tags.</li>
              * <li>If the specified tag key does not exist, the tag key is created and then bound to the instance.</li>
-             * <li>The tag key cannot be an empty string.</li>
-             * <li>This parameter must be used together with the <strong>Tag.Value</strong> parameter.</li>
+             * <li>Empty strings are not allowed.</li>
+             * <li>This parameter must be used together with the <strong>Tag.Value</strong> parameter and cannot be used alone.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1226,9 +1229,9 @@ public class CloneDBInstanceRequest extends Request {
             /**
              * <p>The tag value that corresponds to the tag key. You can specify this parameter to bind a tag to the instance.</p>
              * <ul>
-             * <li>If the specified tag value already exists for the corresponding tag key, the tag value is directly bound to the instance. You can call the ListTagResources operation to query created tags.</li>
+             * <li>If the specified tag value already exists for the corresponding tag key, the tag value is directly bound to the instance. You can call the ListTagResources operation to query the created tags.</li>
              * <li>If the specified tag value does not exist for the corresponding tag key, the tag value is created and then bound to the instance.</li>
-             * <li>This parameter must be used together with the <strong>Tag.Key</strong> parameter.</li>
+             * <li>This parameter must be used together with the <strong>Tag.Key</strong> parameter and cannot be used alone.</li>
              * </ul>
              * 
              * <strong>example:</strong>

@@ -150,7 +150,7 @@ public class CreateGadInstanceMemberRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the central node. You can call DescribeGadInstances to query the central node ID.</p>
+         * <p>The ID of the central node. You can call the DescribeGadInstances operation to query the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -163,7 +163,7 @@ public class CreateGadInstanceMemberRequest extends Request {
         }
 
         /**
-         * <p>The privileged account of the central node. You can call DescribeAccounts to query the account.</p>
+         * <p>The privileged account of the central node. You can call the DescribeAccounts operation to query the account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -176,7 +176,7 @@ public class CreateGadInstanceMemberRequest extends Request {
         }
 
         /**
-         * <p>The password of the privileged account for the central node.</p>
+         * <p>The password of the privileged account of the central node.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -189,7 +189,7 @@ public class CreateGadInstanceMemberRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the central node (primary node). You can call DescribeRegions to query the region ID.</p>
+         * <p>The region ID of the central node (primary node). You can call the DescribeRegions operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -202,15 +202,15 @@ public class CreateGadInstanceMemberRequest extends Request {
         }
 
         /**
-         * <p>A JSON array of database information from the central node. All databases in the array are synchronized to the current unit node. Metric description:</p>
+         * <p>The JSON array of database information in the central node. All database information in the array is synchronized to the current unit node. Parameter description:</p>
          * <ul>
-         * <li><strong>name</strong>: the database name.</li>
-         * <li><strong>all</strong>: specifies whether to synchronize all data in the current database or table. Valid values: <strong>true</strong> | <strong>false</strong>.</li>
-         * <li><strong>Table</strong>: the table name. If the <strong>all</strong> parameter is set to <strong>false</strong>, you must also specify the table names to be synchronized in the JSON array.</li>
+         * <li><strong>name</strong>: the name of the database.</li>
+         * <li><strong>all</strong>: specifies whether to synchronize all data in the current database or table. Valid values: <strong>true</strong> and <strong>false</strong>.</li>
+         * <li><strong>Table</strong>: the name of the table. If the <strong>all</strong> parameter is set to <strong>false</strong>, you must also include the names of the tables to be synchronized in the JSON array.</li>
          * </ul>
          * <p>Example: <code>{    &quot;testdb&quot;: {     &quot;name&quot;: &quot;testdb&quot;,     &quot;all&quot;: false,     &quot;Table&quot;: {       &quot;order&quot;: {         &quot;name&quot;: &quot;order&quot;,         &quot;all&quot;: true       },       &quot;ordernew&quot;: {         &quot;name&quot;: &quot;ordernew&quot;,         &quot;all&quot;: true       }     }   } }</code></p>
          * <blockquote>
-         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/209545.html">Objects for migration, synchronization, or subscribe</a>.</p>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/209545.html">Objects for migration, synchronization, or subscription</a>.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -224,7 +224,7 @@ public class CreateGadInstanceMemberRequest extends Request {
         }
 
         /**
-         * <p>The ID of the ApsaraDB RDS global active database cluster. You can call DescribeGadInstances to query the cluster ID.</p>
+         * <p>The ID of the ApsaraDB RDS global active database cluster. You can call the DescribeGadInstances operation to query the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -480,10 +480,10 @@ public class CreateGadInstanceMemberRequest extends Request {
             } 
 
             /**
-             * <p>The name of the new unit node. The name must meet the following requirements:</p>
+             * <p>The name of the new unit node. The naming rules are as follows:</p>
              * <ul>
-             * <li>The name must be <strong>2 to 255</strong> characters in length.</li>
-             * <li>The name must start with a Chinese character or a letter. It can contain digits, Chinese characters, letters, underscores (_), and hyphens (-).</li>
+             * <li>The name must be <strong>2</strong> to <strong>255</strong> characters in length.</li>
+             * <li>The name must start with a letter or a Chinese character and can contain letters, digits, Chinese characters, underscores (_), and hyphens (-).</li>
              * <li>The name cannot start with <code>http://</code> or <code>https://</code>.</li>
              * </ul>
              * 
@@ -496,7 +496,7 @@ public class CreateGadInstanceMemberRequest extends Request {
             }
 
             /**
-             * <p>The storage capacity of the new unit node. Unit: GB. The value is incremented in steps of 5 GB. For the value range, see <a href="https://help.aliyun.com/document_detail/26312.html">Instance types</a>. You can also call the DescribeAvailableResource operation to query the available storage capacity range for the target instance type.</p>
+             * <p>The storage capacity of the new unit node. Unit: GB. The storage capacity increases in increments of 5 GB. For more information about the valid values, see <a href="https://help.aliyun.com/document_detail/26312.html">Instance types</a>. You can also call the DescribeAvailableResource operation to query the available storage capacity range for the target instance type.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -510,10 +510,10 @@ public class CreateGadInstanceMemberRequest extends Request {
              * <p>The instance storage type. Valid values:</p>
              * <ul>
              * <li><strong>local_ssd</strong>: local SSD</li>
-             * <li><strong>cloud_ssd</strong>: standard SSD cloud disk</li>
-             * <li><strong>cloud_essd</strong>: PL1 ESSD cloud disk</li>
-             * <li><strong>cloud_essd2</strong>: PL2 ESSD cloud disk</li>
-             * <li><strong>cloud_essd3</strong>: PL3 ESSD cloud disk</li>
+             * <li><strong>cloud_ssd</strong>: standard SSD</li>
+             * <li><strong>cloud_essd</strong>: PL1 ESSD</li>
+             * <li><strong>cloud_essd2</strong>: PL2 ESSD</li>
+             * <li><strong>cloud_essd3</strong>: PL3 ESSD</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -525,7 +525,7 @@ public class CreateGadInstanceMemberRequest extends Request {
             }
 
             /**
-             * <p>The instance type of the new unit node. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary instance types</a>. You can also call the DescribeAvailableResource operation to query the available instance types in the target region.</p>
+             * <p>The instance type of the new unit node. For more information about the valid values, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary instance types</a>. You can also call the DescribeAvailableResource operation to query the available instance types in the target region.</p>
              * 
              * <strong>example:</strong>
              * <p>rds.mysql.t1.small</p>
@@ -536,11 +536,11 @@ public class CreateGadInstanceMemberRequest extends Request {
             }
 
             /**
-             * <p>The conflict resolution policy used when a primary key conflict occurs during data synchronization for the new unit node. Valid values:</p>
+             * <p>The resolution policy for primary key conflicts that occur during synchronization on the new unit node. Valid values:</p>
              * <ul>
-             * <li><strong>overwrite</strong>: Overwrites the conflicting primary key on the destination node.</li>
-             * <li><strong>interrupt</strong>: Stops the synchronization task and reports an error.</li>
-             * <li><strong>ignore</strong>: Overwrites the conflicting primary key on the current node.</li>
+             * <li><strong>overwrite</strong>: Overwrites the conflicting primary keys in the destination node.</li>
+             * <li><strong>interrupt</strong>: Interrupts the synchronization task, reports an error, and exits.</li>
+             * <li><strong>ignore</strong>: Overwrites the conflicting primary keys in the current node.</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -602,7 +602,7 @@ public class CreateGadInstanceMemberRequest extends Request {
             }
 
             /**
-             * <p>The region ID of the new unit node (secondary node). You can call DescribeRegions to query the region ID.</p>
+             * <p>The region ID of the new unit node (secondary node). You can call the DescribeRegions operation to query the region ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -614,10 +614,10 @@ public class CreateGadInstanceMemberRequest extends Request {
             }
 
             /**
-             * <p>The <a href="https://help.aliyun.com/document_detail/43185.html">IP whitelist</a> of the new unit node. Separate multiple entries with commas (,). Entries cannot be duplicated. A maximum of 1,000 entries are allowed. The following two formats are supported:</p>
+             * <p>The <a href="https://help.aliyun.com/document_detail/43185.html">IP address whitelist</a> of the new unit node. Separate multiple entries with commas (,). Duplicate entries are not allowed. A maximum of 1,000 entries can be added. The following two formats are supported:</p>
              * <ul>
              * <li>IP address format, such as <code>10.10.XX.XX</code>.</li>
-             * <li>CIDR format, such as <code>10.10.XX.XX/24</code> (Classless Inter-Domain Routing, where <strong>24</strong> indicates the prefix length, ranging from <strong>1 to 32</strong>).</li>
+             * <li>CIDR format, such as <code>10.10.XX.XX/24</code>. <strong>24</strong> indicates the length of the prefix in the IP address, and the valid values are <strong>1</strong> to <strong>32</strong>.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -641,7 +641,7 @@ public class CreateGadInstanceMemberRequest extends Request {
             }
 
             /**
-             * <p>The virtual private cloud (VPC) ID of the new unit node.</p>
+             * <p>The VPC ID of the new unit node.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -653,7 +653,7 @@ public class CreateGadInstanceMemberRequest extends Request {
             }
 
             /**
-             * <p>The zone ID of the new unit node. You can call DescribeRegions to query the zone ID.</p>
+             * <p>The zone ID of the new unit node. You can call the DescribeRegions operation to query the zone ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou-j</p>
@@ -664,10 +664,10 @@ public class CreateGadInstanceMemberRequest extends Request {
             }
 
             /**
-             * <p>The zone ID of the secondary node for the new unit node. You can call DescribeRegions to query the zone ID.</p>
+             * <p>The zone ID of the secondary node for the new unit node. You can call the DescribeRegions operation to query the zone ID where the node is active.</p>
              * <ul>
-             * <li>If this value is the same as the <strong>ZoneId</strong> of the current unit node, the single-zone deployment is used.</li>
-             * <li>If this value is different from the <strong>ZoneId</strong> of the current unit node, the multi-zone deployment is used.</li>
+             * <li>If the value is the same as the <strong>ZoneId</strong> of the current unit node, it is a single-zone deployment.</li>
+             * <li>If the value is different from the <strong>ZoneId</strong> of the current unit node, it is a multi-zone deployment.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -679,10 +679,10 @@ public class CreateGadInstanceMemberRequest extends Request {
             }
 
             /**
-             * <p>The zone ID of the logger node for the new unit node. You can call DescribeRegions to query the zone ID.</p>
+             * <p>The zone ID of the logger node for the new unit node. You can call the DescribeRegions operation to query the zone ID where the node is active.</p>
              * <ul>
-             * <li>If this value is the same as the <strong>ZoneId</strong> of the current unit node, the single-zone deployment is used.</li>
-             * <li>If this value is different from the <strong>ZoneId</strong> of the current unit node, the multi-zone deployment is used.</li>
+             * <li>If the value is the same as the <strong>ZoneId</strong> of the current unit node, it is a single-zone deployment.</li>
+             * <li>If the value is different from the <strong>ZoneId</strong> of the current unit node, it is a multi-zone deployment.</li>
              * </ul>
              * 
              * <strong>example:</strong>

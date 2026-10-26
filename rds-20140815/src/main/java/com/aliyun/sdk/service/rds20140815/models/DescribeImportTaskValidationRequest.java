@@ -89,7 +89,7 @@ public class DescribeImportTaskValidationRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</p>
+         * <p>The instance ID. You can call the DescribeDBInstances operation to obtain this ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,7 +111,7 @@ public class DescribeImportTaskValidationRequest extends Request {
         }
 
         /**
-         * <p>The task ID. The task ID returned when you call the <strong>ValidateImportTask</strong> operation to create an import task dry run.</p>
+         * <p>The task ID. This ID is returned when you call the <strong>ValidateImportTask</strong> operation to create a precheck for the import task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -118,7 +118,7 @@ public class MigrateConnectionToOtherZoneRequest extends Request {
         } 
 
         /**
-         * <p>The endpoint of the instance. This parameter is specified when the instance is created and is used to generate the connection string.</p>
+         * <p>The endpoint of the instance. This endpoint is specified during creation and is used to generate a connection string.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,7 +131,7 @@ public class MigrateConnectionToOtherZoneRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>Instance ID of the instance. You can call the DescribeDBInstances operation to query instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

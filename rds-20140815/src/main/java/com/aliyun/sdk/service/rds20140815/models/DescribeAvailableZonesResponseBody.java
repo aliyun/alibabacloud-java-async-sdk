@@ -212,7 +212,7 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of supported storage types available for sale.</p>
+             * <p>The list of available storage types.</p>
              */
             public Builder supportedStorageTypes(java.util.List<SupportedStorageTypes> supportedStorageTypes) {
                 this.supportedStorageTypes = supportedStorageTypes;
@@ -279,7 +279,7 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of supported instance editions available for sale.</p>
+             * <p>The list of available instance editions.</p>
              */
             public Builder supportedCategorys(java.util.List<SupportedCategorys> supportedCategorys) {
                 this.supportedCategorys = supportedCategorys;
@@ -368,7 +368,7 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of supported database engine versions available for sale.</p>
+             * <p>The list of available database engine versions.</p>
              */
             public Builder supportedEngineVersions(java.util.List<SupportedEngineVersions> supportedEngineVersions) {
                 this.supportedEngineVersions = supportedEngineVersions;
@@ -459,7 +459,7 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of supported database engines available for sale.</p>
+             * <p>The list of available database engines.</p>
              */
             public Builder supportedEngines(java.util.List<SupportedEngines> supportedEngines) {
                 this.supportedEngines = supportedEngines;

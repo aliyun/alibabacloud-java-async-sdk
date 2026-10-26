@@ -90,7 +90,7 @@ public class RemoveRCInstancesFromDeploymentSetRequest extends Request {
         } 
 
         /**
-         * <p>The deployment set ID.</p>
+         * <p>The ID of the deployment set.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -103,7 +103,7 @@ public class RemoveRCInstancesFromDeploymentSetRequest extends Request {
         }
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The instance IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +116,7 @@ public class RemoveRCInstancesFromDeploymentSetRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call DescribeRegions to query the most recent region list.</p>
+         * <p>The region ID. You can call the DescribeRegions operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

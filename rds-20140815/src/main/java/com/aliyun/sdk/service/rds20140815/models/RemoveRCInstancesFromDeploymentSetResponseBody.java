@@ -67,7 +67,7 @@ public class RemoveRCInstancesFromDeploymentSetResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>C816A4BF-A6EC-4722-95F9-2055859CCFD2</p>
@@ -78,7 +78,7 @@ public class RemoveRCInstancesFromDeploymentSetResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The call results of the operation.</p>
+         * <p>The results of the API call.</p>
          */
         public Builder results(java.util.List<Results> results) {
             this.results = results;
@@ -157,8 +157,8 @@ public class RemoveRCInstancesFromDeploymentSetResponseBody extends TeaModel {
             /**
              * <p>The node status. Valid values:</p>
              * <ul>
-             * <li><strong>Success</strong>: Succeeded.</li>
-             * <li><strong>Failed</strong>: Failed.</li>
+             * <li><strong>Success</strong>: successful</li>
+             * <li><strong>Failed</strong>: failed</li>
              * </ul>
              * 
              * <strong>example:</strong>

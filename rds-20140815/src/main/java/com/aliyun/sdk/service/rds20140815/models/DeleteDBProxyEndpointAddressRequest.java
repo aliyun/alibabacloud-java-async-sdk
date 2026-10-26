@@ -118,7 +118,7 @@ public class DeleteDBProxyEndpointAddressRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,16 +131,16 @@ public class DeleteDBProxyEndpointAddressRequest extends Request {
         }
 
         /**
-         * <p>The network type of the database proxy endpoint to delete. Valid values:</p>
+         * <p>The network type of the database proxy endpoint that you want to delete. Valid values:</p>
          * <ul>
-         * <li><strong>Public</strong>: Internet</li>
+         * <li><strong>Public</strong>: public network</li>
          * <li><strong>VPC</strong>: internal network (VPC)</li>
          * <li><strong>Classic</strong>: internal network (classic network)</li>
          * </ul>
          * <p>Default value: <strong>Classic</strong>.</p>
          * <blockquote>
          * <ul>
-         * <li>You cannot delete the internal endpoint that is created by default.</li>
+         * <li>You cannot delete the default internal network endpoint.</li>
          * <li>ApsaraDB RDS for PostgreSQL supports only <strong>Public</strong> and <strong>VPC</strong>.</li>
          * </ul>
          * </blockquote>
@@ -156,7 +156,7 @@ public class DeleteDBProxyEndpointAddressRequest extends Request {
         }
 
         /**
-         * <p>The ID of the database proxy endpoint. You can call DescribeDBProxyEndpoint to query the ID.</p>
+         * <p>The ID of the database proxy endpoint. You can call the DescribeDBProxyEndpoint operation to query the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -169,7 +169,7 @@ public class DeleteDBProxyEndpointAddressRequest extends Request {
         }
 
         /**
-         * <p>A deprecated parameter. You do not need to configure this parameter.</p>
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated. You do not need to configure it.</p>
          * 
          * <strong>example:</strong>
          * <p>normal</p>
@@ -181,7 +181,7 @@ public class DeleteDBProxyEndpointAddressRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call DescribeRegions to query the available regions.</p>
+         * <p>The region ID. You can call the DescribeRegions operation to query the region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

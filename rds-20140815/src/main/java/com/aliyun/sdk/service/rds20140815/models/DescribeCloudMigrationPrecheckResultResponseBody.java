@@ -147,7 +147,7 @@ public class DescribeCloudMigrationPrecheckResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of queried entries.</p>
+         * <p>The total number of entries returned.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

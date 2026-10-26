@@ -75,7 +75,7 @@ public class DeleteRCDeploymentSetRequest extends Request {
         } 
 
         /**
-         * <p>The deployment set ID.</p>
+         * <p>The ID of the deployment set.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

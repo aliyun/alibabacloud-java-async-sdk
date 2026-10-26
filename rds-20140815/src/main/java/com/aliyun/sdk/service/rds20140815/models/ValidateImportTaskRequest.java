@@ -220,7 +220,7 @@ public class ValidateImportTaskRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID. You can call the DescribeDBInstances operation to obtain this parameter.</p>
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -233,7 +233,7 @@ public class ValidateImportTaskRequest extends Request {
         }
 
         /**
-         * <p>The estimated instance size. Unit: GB.</p>
+         * <p>The estimated size of the instance. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -245,7 +245,7 @@ public class ValidateImportTaskRequest extends Request {
         }
 
         /**
-         * <p>The address of the source MySQL instance.</p>
+         * <p>The address of the source MySQL database.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -267,7 +267,7 @@ public class ValidateImportTaskRequest extends Request {
         }
 
         /**
-         * <p>The password of the source MySQL user, encoded in Base64.</p>
+         * <p>The Base64-encoded password of the source MySQL database user.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -280,7 +280,7 @@ public class ValidateImportTaskRequest extends Request {
         }
 
         /**
-         * <p>The port number of the source MySQL instance.</p>
+         * <p>The port number of the source MySQL database.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -293,7 +293,7 @@ public class ValidateImportTaskRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call DescribeRegions to obtain this parameter.</p>
+         * <p>The region ID. You can call the DescribeRegions operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -318,7 +318,7 @@ public class ValidateImportTaskRequest extends Request {
         }
 
         /**
-         * <p>The type of the source instance. Valid values:</p>
+         * <p>The type of the source platform. Valid values:</p>
          * <ul>
          * <li>ECS</li>
          * </ul>
@@ -346,7 +346,7 @@ public class ValidateImportTaskRequest extends Request {
         }
 
         /**
-         * <p>The username of the source MySQL instance.</p>
+         * <p>The username of the source MySQL database.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -359,7 +359,7 @@ public class ValidateImportTaskRequest extends Request {
         }
 
         /**
-         * <p>The path of the Xtrabackup tool on the source instance.</p>
+         * <p>The path to the XtraBackup tool on the source instance.</p>
          * 
          * <strong>example:</strong>
          * <p>/usr/local/bin/xtrabackup</p>

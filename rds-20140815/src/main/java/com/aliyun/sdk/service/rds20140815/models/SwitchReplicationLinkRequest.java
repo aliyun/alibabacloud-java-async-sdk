@@ -104,7 +104,7 @@ public class SwitchReplicationLinkRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the source instance, which is the primary instance ID.</p>
+         * <p>The source instance ID, which is the primary instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -126,7 +126,7 @@ public class SwitchReplicationLinkRequest extends Request {
         }
 
         /**
-         * <p>The name of the target disaster recovery instance to which you want to switch.</p>
+         * <p>The name of the target disaster recovery instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,7 +139,7 @@ public class SwitchReplicationLinkRequest extends Request {
         }
 
         /**
-         * <p>The region of the target disaster recovery instance to which you want to switch.</p>
+         * <p>The region ID of the target disaster recovery instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

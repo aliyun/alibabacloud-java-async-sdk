@@ -291,7 +291,7 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>An internal parameter. You can ignore this parameter.</p>
+         * <p>This is an internal parameter and can be ignored.</p>
          * 
          * <strong>example:</strong>
          * <p>normal</p>
@@ -354,7 +354,7 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>This parameter is supported only for ApsaraDB RDS for PostgreSQL. The actual specification size of the proxy instance.</p>
+         * <p>This parameter is supported only by ApsaraDB RDS for PostgreSQL. It indicates the actual specifications of the proxy instance.</p>
          * <p>Format: <code>CPU/Memory</code>.</p>
          * <p>Example: 4/8 indicates 4 CPU cores and 8 GB of memory.</p>
          * 
@@ -369,7 +369,7 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         /**
          * <p>The running status of the proxy instance. Valid values:</p>
          * <ul>
-         * <li>DBInstanceClassChanging: The specification is being changed.</li>
+         * <li>DBInstanceClassChanging: The specifications are being changed.</li>
          * <li>Creating: The instance is being created.</li>
          * <li>Running: The instance is running.</li>
          * <li>Deleting: The instance is being deleted.</li>
@@ -386,12 +386,12 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         /**
          * <p>The type of the proxy service. Valid values:</p>
          * <ul>
-         * <li>1: shared database proxy</li>
-         * <li>2: dedicated database proxy</li>
+         * <li>1: shared proxy</li>
+         * <li>2: dedicated proxy</li>
          * <li>3: general-purpose database proxy</li>
          * </ul>
          * <blockquote>
-         * <p>ApsaraDB RDS for PostgreSQL does not support shared database proxies.</p>
+         * <p>ApsaraDB RDS for PostgreSQL does not support shared proxies.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -403,7 +403,7 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>An internal parameter. You can ignore this parameter.</p>
+         * <p>This is an internal parameter and can be ignored.</p>
          * 
          * <strong>example:</strong>
          * <p>18</p>
@@ -422,11 +422,11 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The persistent connection status. Valid values:</p>
+         * <p>The status of connection persistence. Valid values:</p>
          * <ul>
-         * <li><strong>Enabled</strong>: Persistent connections are enabled.</li>
-         * <li><strong>Disabled</strong>: Persistent connections are disabled.</li>
-         * <li><strong>Unsupported</strong>: The instance does not support persistent connections.</li>
+         * <li><strong>Enabled</strong>: enabled</li>
+         * <li><strong>Disabled</strong>: disabled</li>
+         * <li><strong>Unsupported</strong>: The instance does not support connection persistence.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -461,7 +461,7 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>909A69EE-71C8-4417-A0B9-FF085407E1E3</p>
@@ -472,7 +472,7 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmy****</p>

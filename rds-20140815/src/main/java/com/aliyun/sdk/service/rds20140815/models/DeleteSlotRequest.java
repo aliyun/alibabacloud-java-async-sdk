@@ -175,7 +175,7 @@ public class DeleteSlotRequest extends Request {
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <p>You can generate the value from your client and make sure that the value is unique across different requests. The client token supports only ASCII characters.</p>
          * 
          * <strong>example:</strong>
          * <p>ETnLKlblzczshOTUbOC****</p>
@@ -187,7 +187,7 @@ public class DeleteSlotRequest extends Request {
         }
 
         /**
-         * <p>Target instance ID. You can call the DescribeDBInstances operation to query target instance ID.</p>
+         * <p>Instance ID of the target instance. You can call the DescribeDBInstances operation to query instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -218,7 +218,7 @@ public class DeleteSlotRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID. This parameter can be left empty.</p>
+         * <p>The ID of the resource group. This parameter can be left empty.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmy****</p>
@@ -248,7 +248,7 @@ public class DeleteSlotRequest extends Request {
         }
 
         /**
-         * <p>The replication slot name. You can call the DescribeSlots operation to query the replication slot name.</p>
+         * <p>The name of the replication slot. You can call the DescribeSlots operation to query the name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -261,10 +261,10 @@ public class DeleteSlotRequest extends Request {
         }
 
         /**
-         * <p>The replication slot status. You can call the DescribeSlots operation to query the replication slot status. Valid values:</p>
+         * <p>The status of the replication slot. You can call the DescribeSlots operation to query the status. Valid values:</p>
          * <ul>
-         * <li><strong>ACTIVE</strong>: active.</li>
-         * <li><strong>INACTIVE</strong>: inactive.</li>
+         * <li><strong>ACTIVE</strong>: The replication slot is active.</li>
+         * <li><strong>INACTIVE</strong>: The replication slot is inactive.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

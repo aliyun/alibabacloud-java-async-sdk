@@ -174,7 +174,7 @@ public class DescribeUpgradeMajorVersionPrecheckTaskRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</p>
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -205,8 +205,8 @@ public class DescribeUpgradeMajorVersionPrecheckTaskRequest extends Request {
         }
 
         /**
-         * <p>The page number of the pre-upgrade check report.</p>
-         * <p>Valid values: a value greater than 0 that does not exceed the maximum value of the Integer data type. Default value: 1.</p>
+         * <p>The page number of the check report for the major version upgrade.</p>
+         * <p>Valid values: an integer greater than 0 and less than or equal to the maximum value of the Integer data type. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -218,8 +218,7 @@ public class DescribeUpgradeMajorVersionPrecheckTaskRequest extends Request {
         }
 
         /**
-         * <p>The number of records per page in the major engine version upgrade check report.</p>
-         * <p>Valid values:</p>
+         * <p>The number of entries to return on each page for the check report before a major engine version upgrade. Valid values:</p>
          * <ul>
          * <li>30 (default)</li>
          * <li>50</li>
@@ -254,7 +253,7 @@ public class DescribeUpgradeMajorVersionPrecheckTaskRequest extends Request {
         }
 
         /**
-         * <p>The target instance version. The value must be greater than the current major engine version of the instance.</p>
+         * <p>The target major engine version of target instance. The value must be later than the current major engine version of target instance.</p>
          * 
          * <strong>example:</strong>
          * <p>12.0</p>
@@ -266,7 +265,7 @@ public class DescribeUpgradeMajorVersionPrecheckTaskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the pre-upgrade check task. You can obtain this value from the <strong>TaskId</strong> response parameter after you call the UpgradeDBInstanceMajorVersionPrecheck operation to perform a pre-upgrade check.</p>
+         * <p>The ID of the pre-upgrade check task. You can obtain the task ID from the <strong>TaskId</strong> response parameter after you call the UpgradeDBInstanceMajorVersionPrecheck operation to perform a pre-upgrade check.</p>
          * 
          * <strong>example:</strong>
          * <p>416980000</p>

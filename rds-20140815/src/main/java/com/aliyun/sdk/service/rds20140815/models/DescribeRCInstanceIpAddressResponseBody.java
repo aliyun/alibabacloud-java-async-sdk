@@ -80,7 +80,7 @@ public class DescribeRCInstanceIpAddressResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of instances to which the assets that are assigned public IP addresses belong.</p>
+         * <p>The details of the instances to which the assets that are assigned public IP addresses belong.</p>
          */
         public Builder RCInstanceList(java.util.List<RCInstanceList> RCInstanceList) {
             this.RCInstanceList = RCInstanceList;
@@ -99,7 +99,7 @@ public class DescribeRCInstanceIpAddressResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of assets that are assigned public IP addresses returned.</p>
+         * <p>The total number of assets that are assigned public IP addresses.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -272,7 +272,7 @@ public class DescribeRCInstanceIpAddressResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The basic DDoS Mitigation Threshold of the assets that are assigned public IP addresses. Unit: Mbit/s.</p>
+             * <p>The basic protection Mitigation Threshold for the assets that are assigned public IP addresses. Unit: Mbit/s.</p>
              * 
              * <strong>example:</strong>
              * <p>5200</p>
@@ -283,7 +283,7 @@ public class DescribeRCInstanceIpAddressResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The traffic scrubbing threshold of the assets that are assigned public IP addresses. Unit: Mbit/s.</p>
+             * <p>The traffic scrubbing threshold for the assets that are assigned public IP addresses. Unit: Mbit/s.</p>
              * 
              * <strong>example:</strong>
              * <p>300</p>
@@ -294,7 +294,7 @@ public class DescribeRCInstanceIpAddressResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The message rate scrubbing threshold of the assets that are assigned public IP addresses. Unit: pps.</p>
+             * <p>The packet rate scrubbing threshold for the assets that are assigned public IP addresses. Unit: pps.</p>
              * 
              * <strong>example:</strong>
              * <p>70000</p>
@@ -305,7 +305,7 @@ public class DescribeRCInstanceIpAddressResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The DDoS burstable Mitigation Threshold of the assets that are assigned public IP addresses. Unit: Mbit/s.</p>
+             * <p>The burstable Mitigation Threshold for the assets that are assigned public IP addresses. Unit: Mbit/s.</p>
              * 
              * <strong>example:</strong>
              * <p>12310</p>
@@ -329,9 +329,9 @@ public class DescribeRCInstanceIpAddressResponseBody extends TeaModel {
             /**
              * <p>The DDoS mitigation status of the assets that are assigned public IP addresses. Valid values:</p>
              * <ul>
-             * <li><strong>mitigating</strong>: Cleaning.</li>
-             * <li><strong>blackholed</strong>: Black Hole Activated.</li>
-             * <li><strong>normal</strong>: Normal.</li>
+             * <li><strong>mitigating</strong>: Cleaning</li>
+             * <li><strong>blackholed</strong>: Black Hole Activated</li>
+             * <li><strong>normal</strong>: Normal</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -343,7 +343,7 @@ public class DescribeRCInstanceIpAddressResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP protocol version of the instance. Valid values:</p>
+             * <p>The IP version of the instance. Valid values:</p>
              * <ul>
              * <li><strong>v4</strong></li>
              * <li><strong>v6</strong></li>
@@ -358,10 +358,10 @@ public class DescribeRCInstanceIpAddressResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the assets that are assigned public IP addresses is attached to Anti-DDoS Origin. Valid values:</p>
+             * <p>Indicates whether the public IP asset is attached to Anti-DDoS Origin. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: Attached.</li>
-             * <li><strong>false</strong>: Not attached.</li>
+             * <li><strong>true</strong>: Yes.</li>
+             * <li><strong>false</strong>: No.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -375,7 +375,7 @@ public class DescribeRCInstanceIpAddressResponseBody extends TeaModel {
             /**
              * <p>Indicates whether best-effort protection is enabled for the assets that are assigned public IP addresses in Anti-DDoS Origin. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: Best-effort protection is not enabled.</li>
+             * <li><strong>0</strong>: Best-effort protection is disabled.</li>
              * <li><strong>1</strong>: Best-effort protection is enabled.</li>
              * </ul>
              * 
@@ -497,7 +497,7 @@ public class DescribeRCInstanceIpAddressResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The Custom instance ID.</p>
+             * <p>The instance ID of the RDS Custom instance.</p>
              * 
              * <strong>example:</strong>
              * <p>rc-kti8hw44yy0x53******</p>
@@ -508,7 +508,7 @@ public class DescribeRCInstanceIpAddressResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Custom instance name.</p>
+             * <p>The name of the RDS Custom instance.</p>
              * 
              * <strong>example:</strong>
              * <p>rc-kti8hw44yy0x53******</p>
@@ -534,7 +534,7 @@ public class DescribeRCInstanceIpAddressResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the assets that are assigned public IP addresses. The value is fixed as <strong>ecs</strong>.</p>
+             * <p>The type of the assets that are assigned public IP addresses. Set the value to <strong>ecs</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>ecs</p>

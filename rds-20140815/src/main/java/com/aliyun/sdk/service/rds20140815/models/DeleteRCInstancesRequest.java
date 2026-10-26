@@ -116,10 +116,10 @@ public class DeleteRCInstancesRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to perform a dry run for this release operation. Valid values:</p>
+         * <p>Specifies whether to perform a precheck before releasing the instances. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Performs a dry run without releasing the instance.</li>
-         * <li><strong>false</strong> (default): Sends a normal request and directly releases the instance after the request passes the check.</li>
+         * <li><strong>true</strong>: Performs a precheck and does not release the instances.</li>
+         * <li><strong>false</strong> (default): Sends a normal request and directly releases the instances after the check passes.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -132,10 +132,10 @@ public class DeleteRCInstancesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to forcefully release running instances. Valid values:</p>
+         * <p>Specifies whether to forcibly release running instances. Valid values:</p>
          * <ul>
-         * <li><strong>Yes</strong>: Forcefully releases the instances.</li>
-         * <li><strong>No</strong> (default): Does not forcefully release the instances.</li>
+         * <li><strong>Yes</strong>: Forcibly releases the instances.</li>
+         * <li><strong>No</strong> (default): Does not forcibly release the instances.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -171,7 +171,7 @@ public class DeleteRCInstancesRequest extends Request {
         }
 
         /**
-         * <p>A reserved parameter.</p>
+         * <p>The reserved parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>

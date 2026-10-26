@@ -156,7 +156,7 @@ public class DescribeReplicationLinkLogsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of records per page.</p>
+         * <p>The maximum number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -168,7 +168,7 @@ public class DescribeReplicationLinkLogsRequest extends Request {
         }
 
         /**
-         * <p>The task ID. The task ID returned when you call the <strong>CreateReplicationLink</strong> operation to create a disaster recovery instance.</p>
+         * <p>The task ID. This ID is returned when you call the <strong>CreateReplicationLink</strong> operation to create a disaster recovery instance.</p>
          * 
          * <strong>example:</strong>
          * <p>8413252</p>
@@ -180,7 +180,7 @@ public class DescribeReplicationLinkLogsRequest extends Request {
         }
 
         /**
-         * <p>The task name. The task name returned when you call the <strong>CreateReplicationLink</strong> operation to create a disaster recovery instance.</p>
+         * <p>The task name. This is the name of the task when you call the <strong>CreateReplicationLink</strong> operation to create a disaster recovery instance.</p>
          * 
          * <strong>example:</strong>
          * <p>test01</p>
@@ -194,8 +194,8 @@ public class DescribeReplicationLinkLogsRequest extends Request {
         /**
          * <p>The task type. Valid values:</p>
          * <ul>
-         * <li><strong>create</strong>: Create a replication link.</li>
-         * <li><strong>create-dryrun</strong>: Dry run for creating a replication link.</li>
+         * <li><strong>create</strong>: Creates a synchronization link.</li>
+         * <li><strong>create-dryrun</strong>: Performs a precheck for creating a synchronization link.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

@@ -157,7 +157,7 @@ public class ModifyCustinsResourceRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. You can call <a href="https://help.aliyun.com/document_detail/610396.html">DescribeDBInstances</a> to obtain the instance ID.</p>
+         * <p>Instance ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/610396.html">DescribeDBInstances</a> operation to query instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -203,7 +203,7 @@ public class ModifyCustinsResourceRequest extends Request {
         }
 
         /**
-         * <p>The original value. This parameter is required when <strong>ResourceType</strong> is set to <strong>instance</strong>.</p>
+         * <p>The original value. This parameter is required when <strong>resourcetype</strong> is set to <strong>instance</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -215,7 +215,7 @@ public class ModifyCustinsResourceRequest extends Request {
         }
 
         /**
-         * <p>The target value. This parameter is applicable to target tracking rules and predictive rules. The value of TargetValue can contain up to three decimal places and must be greater than 0.</p>
+         * <p>The target value, which applies to target tracking rules and predictive rules. The TargetValue parameter supports up to three decimal places and must be greater than 0.</p>
          * 
          * <strong>example:</strong>
          * <p>3000</p>

@@ -122,10 +122,10 @@ public class AttachWhitelistTemplateToInstanceResponseBody extends TeaModel {
          * <p>The response code. Valid values:</p>
          * <ul>
          * <li><strong>200</strong>: Normal.</li>
-         * <li><strong>400</strong>: Client fault.</li>
+         * <li><strong>400</strong>: Client error.</li>
          * <li><strong>401</strong>: Authentication failed.</li>
-         * <li><strong>404</strong>: Request page not found.</li>
-         * <li><strong>500</strong>: Server fault.</li>
+         * <li><strong>404</strong>: Requested page not found.</li>
+         * <li><strong>500</strong>: Server error.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -137,7 +137,7 @@ public class AttachWhitelistTemplateToInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>The list of returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -147,7 +147,7 @@ public class AttachWhitelistTemplateToInstanceResponseBody extends TeaModel {
         /**
          * <p>The HTTP status code. Valid values:</p>
          * <ul>
-         * <li><strong>200</strong>: Success.</li>
+         * <li><strong>200</strong>: Normal.</li>
          * <li><strong>400</strong>: Client error.</li>
          * <li><strong>500</strong>: Server error.</li>
          * </ul>
@@ -161,7 +161,7 @@ public class AttachWhitelistTemplateToInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -243,9 +243,9 @@ public class AttachWhitelistTemplateToInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The return status. Valid values:</p>
+             * <p>The returned status. Valid values:</p>
              * <ul>
-             * <li><strong>ok</strong>: Success.</li>
+             * <li><strong>ok</strong>: Normal.</li>
              * <li><strong>error</strong>: Error.</li>
              * </ul>
              * 

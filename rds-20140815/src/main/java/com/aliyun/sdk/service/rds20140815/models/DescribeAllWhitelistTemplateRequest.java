@@ -159,7 +159,7 @@ public class DescribeAllWhitelistTemplateRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to enable fuzzy search. Valid values:</p>
+         * <p>Specifies whether to enable fuzzy match. Valid values:</p>
          * <ul>
          * <li><strong>true</strong>: Enabled.</li>
          * <li><strong>false</strong>: Disabled.</li>
@@ -175,7 +175,7 @@ public class DescribeAllWhitelistTemplateRequest extends Request {
         }
 
         /**
-         * <p>The number of records per page. Valid values: 10, 30, and 50.</p>
+         * <p>The number of entries per page. Valid values: 10, 30, and 50.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -188,7 +188,7 @@ public class DescribeAllWhitelistTemplateRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The current page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -201,7 +201,7 @@ public class DescribeAllWhitelistTemplateRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/610399.html">DescribeRegions</a> operation to query the available regions.</p>
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/610399.html">DescribeRegions</a> operation to query region IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -213,7 +213,7 @@ public class DescribeAllWhitelistTemplateRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID. For more information about resource groups, see What is a resource group.</p>
+         * <p>The ID of the resource group. For more information, see What is a resource group?</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmyhigx******</p>
@@ -243,7 +243,7 @@ public class DescribeAllWhitelistTemplateRequest extends Request {
         }
 
         /**
-         * <p>The name of the whitelist template. Specify this parameter for fuzzy search. Fuzzy match is supported for template names. You can call the DescribeWhitelistTemplate operation to obtain the template name.</p>
+         * <p>The name of the whitelist template. Specify this parameter for fuzzy match. You can call the DescribeWhitelistTemplate operation to obtain the template name.</p>
          * 
          * <strong>example:</strong>
          * <p>template</p>

@@ -67,7 +67,7 @@ public class DescribeHistoryEventsStatResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The event list.</p>
+         * <p>The list of events.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -144,12 +144,12 @@ public class DescribeHistoryEventsStatResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The system event categorization. Valid values:</p>
+             * <p>The categorization of system events. Valid values:</p>
              * <ul>
-             * <li><strong>Exception</strong>: abnormal event.</li>
+             * <li><strong>Exception</strong>: abnormal events.</li>
              * <li><strong>Optimize</strong>: optimization events.</li>
-             * <li><strong>Notification</strong>: notification event.</li>
-             * <li><strong>Maintenance</strong>: scheduled maintenance event.</li>
+             * <li><strong>Notification</strong>: notification events.</li>
+             * <li><strong>Maintenance</strong>: scheduled O&amp;M events.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -161,7 +161,7 @@ public class DescribeHistoryEventsStatResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of records.</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>31</p>

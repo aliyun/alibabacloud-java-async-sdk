@@ -274,8 +274,8 @@ public class DescribeActiveOperationTasksRequest extends Request {
          * <p>Specifies whether the task can be canceled. Default value: -1. Valid values:</p>
          * <ul>
          * <li><strong>-1</strong>: all tasks.</li>
-         * <li><strong>0</strong>: Only tasks that cannot be canceled are returned.</li>
-         * <li><strong>1</strong>: Only tasks that can be canceled are returned.</li>
+         * <li><strong>0</strong>: tasks that cannot be canceled.</li>
+         * <li><strong>1</strong>: tasks that can be canceled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -288,11 +288,11 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the task time can be modified. Default value: -1. Valid values:</p>
+         * <p>Specifies whether the execution time can be modified. Default value: -1. Valid values:</p>
          * <ul>
          * <li><strong>-1</strong>: all tasks.</li>
-         * <li><strong>0</strong>: Only tasks whose time cannot be modified are returned.</li>
-         * <li><strong>1</strong>: Only tasks whose time can be modified are returned.</li>
+         * <li><strong>0</strong>: tasks whose execution time cannot be modified.</li>
+         * <li><strong>1</strong>: tasks whose execution time can be modified.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -307,9 +307,9 @@ public class DescribeActiveOperationTasksRequest extends Request {
         /**
          * <p>The task level. Default value: all. Valid values:</p>
          * <ul>
-         * <li><strong>all</strong>: all levels.</li>
-         * <li><strong>S0</strong>: Only tasks at the exception recovery level are returned.</li>
-         * <li><strong>S1</strong>: Only tasks at the system O&amp;M level are returned.</li>
+         * <li><strong>all</strong>: all tasks.</li>
+         * <li><strong>S0</strong>: exception recovery tasks.</li>
+         * <li><strong>S1</strong>: system O&amp;M tasks.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -322,7 +322,7 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * <p>The database type. Default value: all. Valid values: mysql, pgsql, and mssql.</p>
+         * <p>The database engine. Default value: all. Valid values: mysql, pgsql, mssql, and others.</p>
          * 
          * <strong>example:</strong>
          * <p>all</p>
@@ -334,7 +334,7 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * <p>The instance name. This parameter is optional. You can specify at most one instance name.</p>
+         * <p>The instance name. This parameter is optional. If you specify this parameter, you can specify only one instance name.</p>
          * 
          * <strong>example:</strong>
          * <p>rm-bp191w771kd3****</p>
@@ -364,7 +364,7 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * <p>The page number. The value must be greater than 0. Default value: 1.</p>
+         * <p>The page number, which must be greater than 0. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -388,7 +388,7 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * <p>The product name. Valid values: RDS, POLARDB, MongoDB, and Redis. For ApsaraDB RDS instances, set this parameter to RDS.</p>
+         * <p>The product name. Valid values: RDS, POLARDB, MongoDB, and Redis. For an ApsaraDB RDS instance, set the value to RDS.</p>
          * 
          * <strong>example:</strong>
          * <p>RDS</p>
@@ -400,9 +400,9 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the pending event. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>The region ID of the pending event. You can call the DescribeRegions operation to query the region ID.</p>
          * <blockquote>
-         * <p>Set this parameter to <strong>all</strong> to specify all region IDs.</p>
+         * <p>A value of <strong>all</strong> specifies all region IDs.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -442,12 +442,12 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * <p>The task status. This parameter is used to filter the returned tasks. Valid values:</p>
+         * <p>The task status, which is used to filter the returned tasks. Valid values:</p>
          * <ul>
          * <li><strong>-1</strong>: all tasks.</li>
          * <li><strong>3</strong>: pending tasks.</li>
-         * <li><strong>4</strong>: in-progress tasks.</li>
-         * <li><strong>5</strong>: succeeded tasks.</li>
+         * <li><strong>4</strong>: tasks in progress.</li>
+         * <li><strong>5</strong>: successfully completed tasks.</li>
          * <li><strong>6</strong>: failed tasks.</li>
          * <li><strong>7</strong>: canceled tasks.</li>
          * </ul>
@@ -464,7 +464,7 @@ public class DescribeActiveOperationTasksRequest extends Request {
         /**
          * <p>The task type. Valid values:</p>
          * <ul>
-         * <li><strong>rds_apsaradb_ha</strong>: primary/secondary node switch.</li>
+         * <li><strong>rds_apsaradb_ha</strong>: primary and secondary node switch.</li>
          * <li><strong>rds_apsaradb_transfer</strong>: instance migration.</li>
          * <li><strong>rds_apsaradb_upgrade</strong>: minor engine version update.</li>
          * <li><strong>rds_apsaradb_maxscale</strong>: proxy minor version upgrade.</li>

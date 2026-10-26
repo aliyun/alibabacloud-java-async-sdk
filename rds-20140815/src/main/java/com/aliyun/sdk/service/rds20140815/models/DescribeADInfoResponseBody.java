@@ -143,9 +143,9 @@ public class DescribeADInfoResponseBody extends TeaModel {
         /**
          * <p>The status of the AD domain. Valid values:</p>
          * <ul>
-         * <li><strong>-1</strong>: The instance is being joined to the AD domain.</li>
-         * <li><strong>0</strong>: Failed to join the AD domain.</li>
-         * <li><strong>1</strong>: Joined the AD domain.</li>
+         * <li><strong>-1</strong>: The instance is joining the AD domain.</li>
+         * <li><strong>0</strong>: The instance failed to join the AD domain.</li>
+         * <li><strong>1</strong>: The instance joined the AD domain.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -157,7 +157,7 @@ public class DescribeADInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The reason for the exception.</p>
+         * <p>The cause of the exception.</p>
          * 
          * <strong>example:</strong>
          * <hr>
@@ -168,7 +168,7 @@ public class DescribeADInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
@@ -179,7 +179,7 @@ public class DescribeADInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The username of the AD domain.</p>
+         * <p>The username for the AD domain.</p>
          * 
          * <strong>example:</strong>
          * <p>test_01</p>

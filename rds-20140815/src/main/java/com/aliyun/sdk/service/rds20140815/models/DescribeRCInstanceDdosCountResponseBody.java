@@ -67,7 +67,7 @@ public class DescribeRCInstanceDdosCountResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details about the number of instances that are under DDoS attacks.</p>
+         * <p>The details of the number of instances that are under DDoS attacks.</p>
          */
         public Builder ddosCount(DdosCount ddosCount) {
             this.ddosCount = ddosCount;
@@ -157,7 +157,7 @@ public class DescribeRCInstanceDdosCountResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of instances in blackhole filtering status.</p>
+             * <p>The number of instances under blackhole filtering.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -168,7 +168,7 @@ public class DescribeRCInstanceDdosCountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of instances for which attack traffic scrubs traffic.</p>
+             * <p>The number of instances that are undergoing traffic scrubbing.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>

@@ -197,10 +197,10 @@ public class DescribeClassDetailsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The edition. Valid values:</p>
+         * <p>The instance edition. Valid values:</p>
          * <ul>
          * <li><strong>Basic</strong>: Basic Edition</li>
-         * <li><strong>HighAvailability</strong>: High-availability Edition</li>
+         * <li><strong>HighAvailability</strong>: high availability series</li>
          * <li><strong>AlwaysOn</strong>: Cluster Edition</li>
          * <li><strong>Finance</strong>: RDS Enterprise Edition</li>
          * </ul>
@@ -236,7 +236,7 @@ public class DescribeClassDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of CPU cores for the instance type. Unit: cores.</p>
+         * <p>The number of CPU cores of the instance type. Unit: cores.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -265,7 +265,7 @@ public class DescribeClassDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The architecture.</p>
+         * <p>The instruction set architecture.</p>
          * 
          * <strong>example:</strong>
          * <p>x86</p>
@@ -287,7 +287,7 @@ public class DescribeClassDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum I/O bandwidth for the instance type. Unit: Mbit/s.</p>
+         * <p>The maximum I/O bandwidth of the instance type. Unit: Mbit/s.</p>
          * 
          * <strong>example:</strong>
          * <p>1024</p>
@@ -298,7 +298,7 @@ public class DescribeClassDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum IOPS for the instance type. Unit: operations per second.</p>
+         * <p>The maximum IOPS of the instance type. Unit: operations per second.</p>
          * 
          * <strong>example:</strong>
          * <p>N/A</p>
@@ -320,13 +320,13 @@ public class DescribeClassDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The price.</p>
+         * <p>The reference price.</p>
          * <p>&lt;props=&quot;china&quot;&gt;Unit: cents (CNY).
          * &lt;props=&quot;intl&quot;&gt;Unit: cents (USD).</p>
          * <blockquote>
          * <ul>
-         * <li>If you set the CommodityCode parameter to a pay-as-you-go commodity code, the hourly price is returned.</li>
-         * <li>If you set the CommodityCode parameter to a subscription commodity code, the monthly price is returned.</li>
+         * <li>If you specify a pay-as-you-go commodity code in the CommodityCode parameter, the hourly price is displayed.</li>
+         * <li>If you specify a subscription commodity code in the CommodityCode parameter, the monthly price is displayed.</li>
          * </ul>
          * </blockquote>
          * 

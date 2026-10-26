@@ -180,7 +180,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The database engine type.</p>
+         * <p>The database engine.</p>
          * 
          * <strong>example:</strong>
          * <p>SQLServer</p>

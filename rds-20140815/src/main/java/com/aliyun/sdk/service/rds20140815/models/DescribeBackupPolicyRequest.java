@@ -179,8 +179,8 @@ public class DescribeBackupPolicyRequest extends Request {
          * <li><strong>0</strong>: no compression</li>
          * <li><strong>1</strong>: zlib compression</li>
          * <li><strong>2</strong>: parallel zlib compression</li>
-         * <li><strong>4</strong>: QuickLZ compression with fast restoration for individual databases and tables enabled</li>
-         * <li><strong>8</strong>: QuickLZ compression without fast restoration for individual databases and tables supported</li>
+         * <li><strong>4</strong>: quicklz compression with database and table restoration enabled</li>
+         * <li><strong>8</strong>: quicklz compression without database and table restoration supported</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -193,7 +193,7 @@ public class DescribeBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</p>
+         * <p>The instance ID. You can call the DescribeDBInstances operation to retrieve the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -224,11 +224,11 @@ public class DescribeBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>The archived backup data retention policy for deleted <strong>MySQL</strong> instances. Valid values:</p>
+         * <p>The data retention policy for archived backups of deleted <strong>MySQL</strong> instances. Valid values:</p>
          * <ul>
-         * <li><strong>None</strong>: No archived backups are retained.</li>
-         * <li><strong>Lastest</strong>: Only the last archived backup is retained.</li>
-         * <li><strong>All</strong>: All archived backups are retained.</li>
+         * <li><strong>None</strong>: no retention</li>
+         * <li><strong>Lastest</strong>: retains the last backup</li>
+         * <li><strong>All</strong>: retains all backups</li>
          * </ul>
          * 
          * <strong>example:</strong>

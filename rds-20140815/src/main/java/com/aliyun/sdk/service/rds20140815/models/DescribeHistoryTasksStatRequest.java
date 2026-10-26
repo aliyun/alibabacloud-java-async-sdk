@@ -244,7 +244,7 @@ public class DescribeHistoryTasksStatRequest extends Request {
         } 
 
         /**
-         * <p>The minimum execution duration. Tasks whose execution duration is greater than this value are returned. Unit: seconds. Default value: 0, which indicates no limit.</p>
+         * <p>The minimum execution duration of the task. This parameter is used to filter tasks whose execution duration is greater than the specified value. Unit: seconds. Default value: 0, which indicates that no limit is applied.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -256,7 +256,7 @@ public class DescribeHistoryTasksStatRequest extends Request {
         }
 
         /**
-         * <p>The start time of the query. Format: <i>yyyy-mm-dd</i>t<i>hh:mm</i>z (UTC).</p>
+         * <p>The start time of the query. Specify the time in the <i>yyyy-mm-dd</i>T<i>hh:mm</i>Z format. The time must be in UTC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -290,7 +290,7 @@ public class DescribeHistoryTasksStatRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call DescribeRegions to query the available regions.</p>
+         * <p>The region ID. You can call the DescribeRegions operation to obtain the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -344,15 +344,15 @@ public class DescribeHistoryTasksStatRequest extends Request {
         /**
          * <p>The task status. Valid values:</p>
          * <ul>
-         * <li><strong>Scheduled</strong>: Waiting to be executed.</li>
-         * <li><strong>Running</strong>: Running.</li>
-         * <li><strong>Succeed</strong>: Succeeded.</li>
-         * <li><strong>Failed</strong>: Failed.</li>
-         * <li><strong>Cancelling</strong>: Being stopped.</li>
-         * <li><strong>Canceled</strong>: Stopped.</li>
-         * <li><strong>Waiting</strong>: Waiting for the scheduled time.</li>
+         * <li><strong>Scheduled</strong>: pending execution</li>
+         * <li><strong>Running</strong>: running</li>
+         * <li><strong>Succeed</strong>: succeeded</li>
+         * <li><strong>Failed</strong>: failed</li>
+         * <li><strong>Cancelling</strong>: being canceled</li>
+         * <li><strong>Canceled</strong>: canceled</li>
+         * <li><strong>Waiting</strong>: waiting for the scheduled time</li>
          * </ul>
-         * <p>Separate multiple statuses with commas (,). Default value: empty, which indicates all statuses.</p>
+         * <p>Separate multiple values with commas (,). If this parameter is left empty, all statuses are queried.</p>
          * 
          * <strong>example:</strong>
          * <p>Scheduled</p>
@@ -388,7 +388,7 @@ public class DescribeHistoryTasksStatRequest extends Request {
         }
 
         /**
-         * <p>The maximum execution duration. Tasks whose execution duration is not less than this value are returned. Unit: seconds. Default value: 0, which indicates no limit.</p>
+         * <p>The maximum execution duration of the task. This parameter is used to filter tasks whose execution duration is not less than the specified value. Unit: seconds. Default value: 0, which indicates that no limit is applied.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -400,7 +400,7 @@ public class DescribeHistoryTasksStatRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range for the task start time. Tasks whose start time is earlier than this time are queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p>
+         * <p>The end time of the task start time range. This parameter specifies that only tasks started before this time are queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

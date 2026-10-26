@@ -80,7 +80,7 @@ public class CreateYouhuiForOrderResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response message.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>Successful</p>

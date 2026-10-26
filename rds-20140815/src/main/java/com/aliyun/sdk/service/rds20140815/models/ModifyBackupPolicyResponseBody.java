@@ -186,11 +186,11 @@ public class ModifyBackupPolicyResponseBody extends TeaModel {
         /**
          * <p>The backup compression method. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: not compressed.</li>
+         * <li><strong>0</strong>: no compression.</li>
          * <li><strong>1</strong>: zlib compression.</li>
          * <li><strong>2</strong>: parallel zlib compression.</li>
-         * <li><strong>4</strong>: quicklz compression with database and table restoration enabled.</li>
-         * <li><strong>8</strong>: MySQL 8.0 quicklz compression without database and table restoration support.</li>
+         * <li><strong>4</strong>: quicklz compression. Database and table restoration is enabled.</li>
+         * <li><strong>8</strong>: quicklz compression for MySQL 8.0. Database and table restoration is not supported.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -216,10 +216,10 @@ public class ModifyBackupPolicyResponseBody extends TeaModel {
          * <p>Indicates whether instance log backup is enabled. Valid values:</p>
          * <ul>
          * <li><strong>1</strong>: enabled.</li>
-         * <li><strong>0</strong>: disabled.</li>
+         * <li><strong>0</strong>: shutdown.</li>
          * </ul>
          * <blockquote>
-         * <p>Instance log backup for SQL Server instances is enabled by default and cannot be disabled.</p>
+         * <p>Instance log backup is enabled by default and cannot be shut down for ApsaraDB RDS for SQL Server instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -231,7 +231,7 @@ public class ModifyBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * EnableIncrementDataBackup.
+         * <p>Indicates whether incremental backup is enabled.</p>
          */
         public Builder enableIncrementDataBackup(Boolean enableIncrementDataBackup) {
             this.enableIncrementDataBackup = enableIncrementDataBackup;
@@ -239,7 +239,7 @@ public class ModifyBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * EnablePitrProtection.
+         * <p>Indicates whether point-in-time recovery (PITR) is enabled for the ApsaraDB RDS for MySQL instance.</p>
          */
         public Builder enablePitrProtection(Boolean enablePitrProtection) {
             this.enablePitrProtection = enablePitrProtection;
@@ -247,7 +247,7 @@ public class ModifyBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether binary logs are unconditionally cleaned up when the storage usage of a <strong>MySQL</strong> instance exceeds 80% or the remaining storage is less than 5 GB.</p>
+         * <p>Indicates whether binary log files are unconditionally deleted when the storage usage of the <strong>ApsaraDB RDS for MySQL</strong> instance exceeds 80% or the remaining storage space is less than 5 GB.</p>
          * 
          * <strong>example:</strong>
          * <p>Disable</p>
@@ -258,7 +258,10 @@ public class ModifyBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * IncBackupInterval.
+         * <p>The high-frequency incremental backup interval. Unit: minutes. Valid values: 60, 120, 240, 360, and 720.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120</p>
          */
         public Builder incBackupInterval(Integer incBackupInterval) {
             this.incBackupInterval = incBackupInterval;
@@ -266,7 +269,7 @@ public class ModifyBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of hours for which instance log backups are retained on the local storage of a <strong>MySQL</strong> instance.</p>
+         * <p>The number of hours for which instance log backups are retained locally on the <strong>MySQL</strong> instance.</p>
          * 
          * <strong>example:</strong>
          * <p>18</p>
@@ -277,7 +280,7 @@ public class ModifyBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum loop space usage of binary logs for a <strong>MySQL</strong> instance.</p>
+         * <p>The maximum loop space usage of the local binary log on the <strong>MySQL</strong> instance.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -288,7 +291,7 @@ public class ModifyBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of binary logs retained locally for a <strong>MySQL</strong> instance.</p>
+         * <p>The number of binary log files retained locally on the <strong>ApsaraDB RDS for MySQL</strong> instance.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>

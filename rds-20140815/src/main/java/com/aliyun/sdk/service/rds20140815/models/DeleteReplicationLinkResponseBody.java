@@ -105,7 +105,7 @@ public class DeleteReplicationLinkResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>1EFCFB59-7152-19C4-8C53-F887D107AFD3</p>
@@ -116,7 +116,7 @@ public class DeleteReplicationLinkResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The task ID.</p>
+         * <p>The ID of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>159****</p>
@@ -127,7 +127,7 @@ public class DeleteReplicationLinkResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The task name.</p>
+         * <p>The name of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>zbtest</p>

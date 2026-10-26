@@ -228,15 +228,16 @@ public class ModifyDBNodeRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to automatically complete automatic payment. Valid values:</p>
+         * <p>Specifies whether to automatically pay for the order.
+         * Valid values:</p>
          * <ol>
-         * <li><p><strong>true</strong>: Automatic payment is automatically completed. Make sure that your account balance is sufficient.</p>
+         * <li><p><strong>true</strong>: Automatic payment is enabled. Make sure that your account balance is sufficient.</p>
          * </li>
-         * <li><p><strong>false</strong>: An order is generated but no payment is made.</p>
+         * <li><p><strong>false</strong>: Only an order is generated and no payment is made.</p>
          * </li>
          * </ol>
          * <blockquote>
-         * <p>Default value: true. If your payment method has insufficient balance, set AutoPay to false. In this case, an unpaid order is generated. You can log on to the ApsaraDB RDS console to complete automatic payment.</p>
+         * <p>Default value: true. If your payment method has an insufficient balance, you can set this parameter to false. In this case, an unpaid order is generated, and you can log on to the ApsaraDB RDS console to complete the payment.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -288,9 +289,9 @@ public class ModifyDBNodeRequest extends Request {
         /**
          * <p>The storage type of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>cloud_essd</strong>: PL1 ESSD</li>
-         * <li><strong>cloud_essd2</strong>: PL2 ESSD</li>
-         * <li><strong>cloud_essd3</strong>: PL3 ESSD</li>
+         * <li><strong>cloud_essd</strong>: PL1 ESSD.</li>
+         * <li><strong>cloud_essd2</strong>: PL2 ESSD.</li>
+         * <li><strong>cloud_essd3</strong>: PL3 ESSD.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -305,7 +306,7 @@ public class ModifyDBNodeRequest extends Request {
         /**
          * <p>The node information.</p>
          * <blockquote>
-         * <p>This parameter is used for MySQL Cluster Edition instances.</p>
+         * <p>This parameter applies to ApsaraDB RDS for MySQL Cluster Edition instances.</p>
          * </blockquote>
          */
         public Builder DBNode(java.util.List<DBNode> DBNode) {
@@ -316,10 +317,10 @@ public class ModifyDBNodeRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform a dry run for this node modification. Valid values:</p>
+         * <p>Specifies whether to perform a precheck before the node modifications. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: A dry run is performed without executing the modification. The system checks items such as request parameters, request format, business limits, and inventory.</li>
-         * <li><strong>false</strong>: A request is sent. After the request passes the check, the modification is directly executed. This is the default value.</li>
+         * <li><strong>true</strong>: A precheck is performed, but the modifications are not applied. The precheck includes checks on request parameters, request format, service limits, and inventory.</li>
+         * <li><strong>false</strong>: A normal request is sent, and the modifications are directly applied after the precheck is passed (default).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -334,8 +335,8 @@ public class ModifyDBNodeRequest extends Request {
         /**
          * <p>The effective period. Valid values:</p>
          * <ul>
-         * <li><strong>Immediate</strong> (default): The modification takes effect immediately.</li>
-         * <li><strong>MaintainTime</strong>: The modification takes effect during the maintenance window. For more information, see ModifyDBInstanceMaintainTime.</li>
+         * <li><strong>Immediate</strong> (default): The modifications immediately take effect.</li>
+         * <li><strong>MaintainTime</strong>: The modifications take effect within the maintenance window. For more information, see ModifyDBInstanceMaintainTime.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -366,13 +367,13 @@ public class ModifyDBNodeRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to asynchronously execute the provisioning. Valid values:</p>
+         * <p>Specifies whether to asynchronously apply the modifications. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The request only submits an order, and the modification is asynchronously executed. This is the default value.</li>
-         * <li><strong>false</strong>: After the request passes the check, the modification is directly executed.</li>
+         * <li><strong>true</strong>: Only an order is generated, and the modifications are asynchronously applied (default).</li>
+         * <li><strong>false</strong>: The modifications are synchronously applied after the precheck is passed.</li>
          * </ul>
          * <blockquote>
-         * <p>Default value: true. The modification is asynchronously executed. If you set this parameter to false, the modification is synchronously executed, and the response time is relatively longer.</p>
+         * <p>Default value: true. The modifications are asynchronously applied. If you set this parameter to false, the modifications are synchronously applied, and the API response time is relatively long.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

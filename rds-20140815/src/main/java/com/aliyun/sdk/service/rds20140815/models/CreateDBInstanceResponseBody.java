@@ -182,9 +182,9 @@ public class CreateDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The instance ID. If you set the <strong>Amount</strong> parameter to a value greater than <strong>1</strong>, the response contains the specified number of instance IDs separated by commas.</p>
-         * <p>For example, if you set the <strong>Amount</strong> parameter to <strong>3</strong>, the response contains three instance IDs. Example:
-         * <code>rm-uf6wjk5*****1,rm-uf6wjk5*****2,rm-uf6wjk5*****3</code></p>
+         * <p>The instance ID. If the <strong>Amount</strong> parameter is set to a value greater than <strong>1</strong>, the number of instance IDs returned corresponds to the value, separated by commas.</p>
+         * <p>For example, if the <strong>Amount</strong> parameter is set to <strong>3</strong>, three instance IDs are returned. Example:
+         * <code>rm-uf6wjk5*****1, rm-uf6wjk5*****2, rm-uf6wjk5*****3</code></p>
          * 
          * <strong>example:</strong>
          * <p>rm-uf6wjk5****</p>
@@ -195,10 +195,10 @@ public class CreateDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether a dry run was performed before the instance was created.</p>
+         * <p>Indicates whether the current request requires a precheck before creating the instance.</p>
          * <ul>
-         * <li>The value is fixed to <strong>true</strong>.</li>
-         * <li>If no dry run is performed, this parameter is not returned.</li>
+         * <li>The return value is fixed to <strong>true</strong>.</li>
+         * <li>If no precheck is performed, this parameter is not returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -210,15 +210,15 @@ public class CreateDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the dry run passed. Valid values:</p>
+         * <p>Indicates whether the precheck for creating the instance is successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The dry run passed.</li>
-         * <li><strong>false</strong>: The dry run failed.</li>
+         * <li><strong>true</strong>: Passed.</li>
+         * <li><strong>false</strong>: Failed.</li>
          * </ul>
          * <blockquote>
          * <ul>
-         * <li>If no dry run is performed, this parameter is not returned.</li>
-         * <li>If the dry run fails, the corresponding error is returned.</li>
+         * <li>If no precheck is performed, this parameter is not returned.</li>
+         * <li>If the precheck fails, the corresponding error is returned.</li>
          * </ul>
          * </blockquote>
          * 
@@ -233,7 +233,7 @@ public class CreateDBInstanceResponseBody extends TeaModel {
         /**
          * <p>The prompt message for the batch creation task.</p>
          * <blockquote>
-         * <p>This parameter is returned only when the <strong>Amount</strong> parameter is set to a value greater than 1.</p>
+         * <p>This parameter is returned only when the <strong>Amount</strong> parameter is greater than 1.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -256,7 +256,7 @@ public class CreateDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The port number of the internal endpoint of the instance.</p>
+         * <p>The port number corresponding to the internal endpoint of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>3306</p>
@@ -278,13 +278,13 @@ public class CreateDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the instance was successfully tagged. Valid values:</p>
+         * <p>Indicates whether the instance is successfully tagged. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The instance was successfully tagged.</li>
-         * <li><strong>false</strong>: The instance failed to be tagged.</li>
+         * <li><strong>true</strong>: Succeeded.</li>
+         * <li><strong>false</strong>: Failed.</li>
          * </ul>
          * <blockquote>
-         * <p>If no tags are bound to the instance, this parameter is not returned.</p>
+         * <p>If no tag is bound to the instance, this parameter is not returned.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -298,8 +298,8 @@ public class CreateDBInstanceResponseBody extends TeaModel {
         /**
          * <p>The task ID of the batch creation task.</p>
          * <ul>
-         * <li>This parameter is returned only when the <strong>Amount</strong> parameter is set to a value greater than 1.</li>
-         * <li>You cannot query the task by using the <strong>TaskId</strong> value.</li>
+         * <li>This parameter is returned only when the <strong>Amount</strong> parameter is greater than 1.</li>
+         * <li>Currently, you cannot view the task by using the value of <strong>TaskId</strong>.</li>
          * </ul>
          * 
          * <strong>example:</strong>

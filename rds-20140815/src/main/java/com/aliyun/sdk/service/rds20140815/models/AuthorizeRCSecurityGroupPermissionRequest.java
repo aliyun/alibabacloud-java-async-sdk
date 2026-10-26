@@ -101,10 +101,10 @@ public class AuthorizeRCSecurityGroupPermissionRequest extends Request {
         } 
 
         /**
-         * <p>The direction of the rule. Valid values:</p>
+         * <p>The rule direction. Valid values:</p>
          * <ul>
-         * <li><strong>ingress</strong>: inbound.</li>
-         * <li><strong>egress</strong>: outbound.</li>
+         * <li><strong>ingress</strong>: inbound traffic to the security group.</li>
+         * <li><strong>egress</strong>: outbound traffic from the security group.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -275,7 +275,7 @@ public class AuthorizeRCSecurityGroupPermissionRequest extends Request {
             } 
 
             /**
-             * <p>The destination IP address range for outbound authorization. CIDR format and IPv4 IP address ranges are supported.</p>
+             * <p>The destination IP address range for outbound authorization. Both CIDR format and IPv4 format IP address ranges are supported.</p>
              * 
              * <strong>example:</strong>
              * <p>192.168.0.1/12</p>
@@ -286,13 +286,13 @@ public class AuthorizeRCSecurityGroupPermissionRequest extends Request {
             }
 
             /**
-             * <p>The protocol type. This parameter is case-insensitive. Valid values: </p>
+             * <p>The protocol type. This parameter is not case-sensitive. Valid values: </p>
              * <ul>
              * <li><strong>ICMP</strong></li>
              * <li><strong>GRE</strong></li>
              * <li><strong>TCP</strong></li>
              * <li><strong>UDP</strong></li>
-             * <li><strong>ALL</strong>: all protocols.</li>
+             * <li><strong>ALL</strong>: All protocols are supported.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -315,12 +315,12 @@ public class AuthorizeRCSecurityGroupPermissionRequest extends Request {
             }
 
             /**
-             * <p>The range of destination ports for the transport layer protocol. Valid values:</p>
+             * <p>The destination port range for the transport layer protocol. Valid values:</p>
              * <ul>
-             * <li>TCP/UDP: valid values are <strong>1</strong> to <strong>65535</strong>. Separate the start port and the end port with a forward slash (/). Example of a valid value: <strong>1/200</strong>. Example of an invalid value: <strong>200/1</strong>.</li>
+             * <li>TCP or UDP: <strong>1</strong> to <strong>65535</strong>. Separate the start port and the end port with a forward slash (/). Example: <strong>1/200</strong>. Invalid example: <strong>200/1</strong>.</li>
              * <li>ICMP: <strong>-1/-1</strong>.</li>
              * <li>GRE: <strong>-1/-1</strong>.</li>
-             * <li>If IpProtocol is set to all: <strong>-1/-1</strong>.</li>
+             * <li>ALL: <strong>-1/-1</strong>.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -332,7 +332,7 @@ public class AuthorizeRCSecurityGroupPermissionRequest extends Request {
             }
 
             /**
-             * <p>The priority of the rule. Valid values: 1 to 100. A smaller value indicates a higher priority. If two security group rules have the same priority, the deny rule takes precedence.</p>
+             * <p>The rule priority. Valid values: 1 to 100. A smaller value indicates a higher priority. If multiple security group rules have the same priority, the drop rule takes precedence.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -343,7 +343,7 @@ public class AuthorizeRCSecurityGroupPermissionRequest extends Request {
             }
 
             /**
-             * <p>The source IP address range for inbound authorization. CIDR format and IPv4 IP address ranges are supported.</p>
+             * <p>The source IP address range for inbound authorization. Both CIDR format and IPv4 format IP address ranges are supported.</p>
              * 
              * <strong>example:</strong>
              * <p>192.168.0.1/12</p>
@@ -354,12 +354,12 @@ public class AuthorizeRCSecurityGroupPermissionRequest extends Request {
             }
 
             /**
-             * <p>The range of source ports for the transport layer protocol. Valid values:</p>
+             * <p>The source port range for the transport layer protocol. Valid values:</p>
              * <ul>
-             * <li>TCP/UDP: valid values are <strong>1</strong> to <strong>65535</strong>. Separate the start port and the end port with a forward slash (/). Example of a valid value: <strong>1/200</strong>. Example of an invalid value: <strong>200/1</strong>.</li>
+             * <li>TCP or UDP: <strong>1</strong> to <strong>65535</strong>. Separate the start port and the end port with a forward slash (/). Example: <strong>1/200</strong>. Invalid example: <strong>200/1</strong>.</li>
              * <li>ICMP: <strong>-1/-1</strong>.</li>
              * <li>GRE: <strong>-1/-1</strong>.</li>
-             * <li>If IpProtocol is set to all: <strong>-1/-1</strong>.</li>
+             * <li>ALL: <strong>-1/-1</strong>.</li>
              * </ul>
              * 
              * <strong>example:</strong>

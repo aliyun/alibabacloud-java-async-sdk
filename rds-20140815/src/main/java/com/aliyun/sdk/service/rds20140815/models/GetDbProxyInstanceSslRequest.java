@@ -88,7 +88,7 @@ public class GetDbProxyInstanceSslRequest extends Request {
         } 
 
         /**
-         * <p>A reserved parameter. You do not need to specify this parameter.</p>
+         * <p>A reserved parameter. No configuration is required.</p>
          * 
          * <strong>example:</strong>
          * <p>normal</p>
@@ -100,7 +100,7 @@ public class GetDbProxyInstanceSslRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,7 +113,7 @@ public class GetDbProxyInstanceSslRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call DescribeRegions to query the most recent region list.</p>
+         * <p>The region ID. You can call the DescribeRegions operation to query the region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

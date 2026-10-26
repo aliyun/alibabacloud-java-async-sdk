@@ -78,7 +78,7 @@ public class RestoreDdrTableResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>75BBF1EF-1E90-4950-BFFB-252D26E8259B</p>

@@ -159,7 +159,7 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The price information.</p>
+         * <p>The pricing information.</p>
          */
         public Builder priceInfo(PriceInfo priceInfo) {
             this.priceInfo = priceInfo;
@@ -186,7 +186,7 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The serverless price information.</p>
+         * <p>The pricing information of the serverless instance.</p>
          */
         public Builder serverlessPrice(ServerlessPrice serverlessPrice) {
             this.serverlessPrice = serverlessPrice;
@@ -205,7 +205,7 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The estimated hourly fee calculated based on the maximum RCU selected by the user.</p>
+         * <p>The estimated hourly fee calculated based on the maximum number of RCUs selected by the user.</p>
          * 
          * <strong>example:</strong>
          * <p>2**</p>
@@ -216,7 +216,7 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The estimated hourly fee calculated based on the minimum RCU selected by the user.</p>
+         * <p>The estimated hourly fee calculated based on the minimum number of RCUs selected by the user.</p>
          * 
          * <strong>example:</strong>
          * <p>1**</p>
@@ -298,7 +298,7 @@ public class DescribePriceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The error description.</p>
+             * <p>The error message.</p>
              * 
              * <strong>example:</strong>
              * <p>Error description</p>
@@ -320,7 +320,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the request was successful.</p>
+             * <p>Indicates whether the request is successful.</p>
              * 
              * <strong>example:</strong>
              * <p>Success</p>
@@ -719,7 +719,7 @@ public class DescribePriceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The price information.</p>
+             * <p>The pricing information.</p>
              */
             public Builder activityInfo(ActivityInfo activityInfo) {
                 this.activityInfo = activityInfo;
@@ -746,7 +746,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The discount.</p>
+             * <p>The discount amount.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -787,7 +787,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The estimated hourly fee calculated based on the maximum RCU selected by the user.</p>
+             * <p>The estimated hourly fee calculated based on the maximum number of RCUs selected by the user.</p>
              * 
              * <strong>example:</strong>
              * <p>1**</p>
@@ -798,7 +798,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The estimated hourly fee calculated based on the minimum RCU selected by the user.</p>
+             * <p>The estimated hourly fee calculated based on the minimum number of RCUs selected by the user.</p>
              * 
              * <strong>example:</strong>
              * <p>2**</p>
@@ -809,7 +809,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The final price, which is the original price minus the discount.</p>
+             * <p>The final price, which is the original price minus the discount amount.</p>
              * 
              * <strong>example:</strong>
              * <p>10508</p>
@@ -1133,7 +1133,7 @@ public class DescribePriceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The discount amount for the maximum RCU.</p>
+             * <p>The discount amount for the maximum number of RCUs.</p>
              * 
              * <strong>example:</strong>
              * <p>1**.*</p>
@@ -1144,7 +1144,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The discount amount for the minimum RCU.</p>
+             * <p>The discount amount for the minimum number of RCUs.</p>
              * 
              * <strong>example:</strong>
              * <p>1*.*</p>
@@ -1155,7 +1155,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The original price for the maximum RCU.</p>
+             * <p>The original price for the maximum number of RCUs.</p>
              * 
              * <strong>example:</strong>
              * <p>2**.*</p>
@@ -1166,7 +1166,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The original price for the minimum RCU.</p>
+             * <p>The original price for the minimum number of RCUs.</p>
              * 
              * <strong>example:</strong>
              * <p>3*.*</p>
@@ -1177,7 +1177,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The original price of the disk.</p>
+             * <p>The original price of the cloud disk.</p>
              * 
              * <strong>example:</strong>
              * <p>1*</p>
@@ -1188,7 +1188,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum total price before discount.</p>
+             * <p>The maximum total original price before discount.</p>
              * 
              * <strong>example:</strong>
              * <p>2**.*</p>
@@ -1199,7 +1199,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The minimum total price before discount.</p>
+             * <p>The minimum total original price before discount.</p>
              * 
              * <strong>example:</strong>
              * <p>2*.*</p>
@@ -1210,7 +1210,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The trade price for the maximum RCU.</p>
+             * <p>The final price for the maximum number of RCUs.</p>
              * 
              * <strong>example:</strong>
              * <p>1**.*</p>
@@ -1221,7 +1221,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The trade price for the minimum RCU.</p>
+             * <p>The final price for the minimum number of RCUs.</p>
              * 
              * <strong>example:</strong>
              * <p>2*.*</p>
@@ -1232,7 +1232,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The discount price of the disk.</p>
+             * <p>The discount amount for the cloud disk.</p>
              * 
              * <strong>example:</strong>
              * <p>2.*</p>

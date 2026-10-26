@@ -80,7 +80,7 @@ public class DescribeComputeBurstConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The configuration details of the committed serverless feature.</p>
+         * <p>The configuration details of the committed Serverless feature.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -98,7 +98,7 @@ public class DescribeComputeBurstConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the committed serverless feature is enabled.</p>
+         * <p>Indicates whether the committed Serverless feature is enabled. Valid values:</p>
          * <ul>
          * <li><strong>true</strong>: Enabled.</li>
          * <li><strong>false</strong>: Disabled.</li>
@@ -113,7 +113,7 @@ public class DescribeComputeBurstConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>847BA085-B377-4BFA-8267-F82345ECE1D2</p>

@@ -128,7 +128,7 @@ public class ModifyBackupSetExpireTimeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response code message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -139,7 +139,7 @@ public class ModifyBackupSetExpireTimeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>76364A52-E0AB-5CC8-9818-CF1DC482C092</p>

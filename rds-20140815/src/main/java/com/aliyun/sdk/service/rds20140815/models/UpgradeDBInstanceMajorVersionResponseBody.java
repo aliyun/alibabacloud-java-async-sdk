@@ -126,7 +126,7 @@ public class UpgradeDBInstanceMajorVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Reserved parameter.</p>
+         * <p>A reserved parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>416980000</p>

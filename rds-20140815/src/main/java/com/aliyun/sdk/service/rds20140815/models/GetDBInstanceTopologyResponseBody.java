@@ -388,9 +388,9 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The dedicated cluster ID.</p>
+             * <p>The ID of the dedicated cluster.</p>
              * <blockquote>
-             * <p>This parameter is empty for non-dedicated cluster instances.</p>
+             * <p>An empty value is returned for instances that are not deployed in a dedicated cluster.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -402,9 +402,9 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The host ID in the dedicated cluster.</p>
+             * <p>The ID of the host in the dedicated cluster.</p>
              * <blockquote>
-             * <p>This parameter is empty for non-dedicated cluster instances.</p>
+             * <p>An empty value is returned for instances that are not deployed in a dedicated cluster.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -418,7 +418,7 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
             /**
              * <p>The unique identifier of the instance.</p>
              * <blockquote>
-             * <p>This parameter returns <strong>-1</strong> for non-dedicated cluster instances.</p>
+             * <p><strong>-1</strong> is returned for instances that are not deployed in a dedicated cluster.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -430,7 +430,7 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node type. Valid values:</p>
+             * <p>The role of the node. Valid values:</p>
              * <ul>
              * <li><strong>Master</strong>: primary node.</li>
              * <li><strong>Slave</strong>: secondary node.</li>
@@ -528,7 +528,7 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The network connectivity information of the instance.</p>
+             * <p>The list of network connection information for the instance.</p>
              */
             public Builder connections(java.util.List<Connections> connections) {
                 this.connections = connections;
@@ -547,7 +547,7 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node list.</p>
+             * <p>The nodes.</p>
              */
             public Builder nodes(java.util.List<Nodes> nodes) {
                 this.nodes = nodes;
