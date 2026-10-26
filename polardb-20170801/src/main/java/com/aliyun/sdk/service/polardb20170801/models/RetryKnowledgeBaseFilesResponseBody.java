@@ -106,7 +106,7 @@ public class RetryKnowledgeBaseFilesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of failed retries.</p>
+         * <p>The number of failed records.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -136,7 +136,7 @@ public class RetryKnowledgeBaseFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of successful retries.</p>
+         * <p>The number of successful records.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -253,7 +253,7 @@ public class RetryKnowledgeBaseFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The failure reason.</p>
+             * <p>The cause of the failure.</p>
              * 
              * <strong>example:</strong>
              * <p>No active ACL projection exists for the IM document</p>
@@ -277,7 +277,7 @@ public class RetryKnowledgeBaseFilesResponseBody extends TeaModel {
             /**
              * <p>The request result. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: The request was successful.</li>
+             * <li><strong>true</strong>: The request is successful.</li>
              * <li><strong>false</strong>: The request failed.</li>
              * </ul>
              * 

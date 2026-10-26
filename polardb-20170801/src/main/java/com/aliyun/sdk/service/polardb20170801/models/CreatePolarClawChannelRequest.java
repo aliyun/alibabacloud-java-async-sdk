@@ -165,7 +165,7 @@ public class CreatePolarClawChannelRequest extends Request {
         }
 
         /**
-         * <p>The channel\&quot;s unique identifier.</p>
+         * <p>The unique identifier of the channel.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -178,7 +178,7 @@ public class CreatePolarClawChannelRequest extends Request {
         }
 
         /**
-         * <p>The name and version of the npm package for the channel plugin.</p>
+         * <p>The npm package name of the channel plugin, including the version number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -191,7 +191,7 @@ public class CreatePolarClawChannelRequest extends Request {
         }
 
         /**
-         * <p>The channel plugin\&quot;s name.</p>
+         * <p>The channel plugin name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -204,7 +204,7 @@ public class CreatePolarClawChannelRequest extends Request {
         }
 
         /**
-         * <p>Indicates whether to restart the gateway after the channel is created. Default: <code>true</code>.</p>
+         * <p>Specifies whether to restart the gateway after creation. Default value: true.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

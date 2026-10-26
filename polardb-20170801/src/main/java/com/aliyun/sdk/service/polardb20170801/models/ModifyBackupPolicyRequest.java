@@ -1247,6 +1247,9 @@ public class ModifyBackupPolicyRequest extends Request {
 
             /**
              * <p>The storage class used by the advanced backup policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STANDARD</p>
              */
             public Builder storageClass(String storageClass) {
                 this.storageClass = storageClass;

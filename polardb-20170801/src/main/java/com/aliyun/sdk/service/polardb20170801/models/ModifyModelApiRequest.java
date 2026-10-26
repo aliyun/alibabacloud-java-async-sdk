@@ -287,7 +287,7 @@ public class ModifyModelApiRequest extends Request {
         }
 
         /**
-         * <p>The number of input points.</p>
+         * <p>The number of input tokens.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -299,7 +299,7 @@ public class ModifyModelApiRequest extends Request {
         }
 
         /**
-         * <p>The number of output points.</p>
+         * <p>The number of output tokens.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -323,7 +323,7 @@ public class ModifyModelApiRequest extends Request {
         }
 
         /**
-         * <p>The list of routing rules (JSON array string).</p>
+         * <p>The list of routing rules. The value is a JSON array string.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

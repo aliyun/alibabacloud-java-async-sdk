@@ -132,7 +132,7 @@ public class CreateAgenticDBTenantApiKeyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The API key in plaintext. This value is returned only in this response.</p>
+         * <p>The plaintext of the API key. This value is returned only in the current response.</p>
          * 
          * <strong>example:</strong>
          * <p>pagc_key_xxxx.yyyy</p>
@@ -154,8 +154,7 @@ public class CreateAgenticDBTenantApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the API key was created.</p>
-         * <p>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+         * <p>The creation time. The time is in ISO 8601 format and follows the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</p>
          * 
          * <strong>example:</strong>
          * <p>2026-06-10T08:00:00Z</p>
@@ -166,8 +165,7 @@ public class CreateAgenticDBTenantApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The expiration time of the API key. This value is empty if the API key never expires.</p>
-         * <p>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+         * <p>The expiration time. This parameter is empty if the API key never expires. The time is in ISO 8601 format and follows the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</p>
          * 
          * <strong>example:</strong>
          * <p>2027-01-01T00:00:00Z</p>

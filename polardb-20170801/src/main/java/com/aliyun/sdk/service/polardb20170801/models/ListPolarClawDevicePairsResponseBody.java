@@ -130,7 +130,7 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status code of the response.</p>
+         * <p>The response status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -152,7 +152,7 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A list of paired devices.</p>
+         * <p>The list of paired devices.</p>
          */
         public Builder paired(java.util.List<Paired> paired) {
             this.paired = paired;
@@ -160,7 +160,7 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A list of pending pairing requests.</p>
+         * <p>The list of pending pairing requests.</p>
          */
         public Builder pending(java.util.List<Pending> pending) {
             this.pending = pending;
@@ -168,7 +168,7 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>A7E6A8FD-C50B-46B2-BA85-D8B8D3******</p>
@@ -341,7 +341,7 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The client ID.</p>
+             * <p>The client identifier.</p>
              * 
              * <strong>example:</strong>
              * <p>cli</p>
@@ -363,7 +363,7 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the device pairing was created, in Unix milliseconds.</p>
+             * <p>The creation time of the device pairing in Unix milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1778659807727</p>
@@ -374,7 +374,7 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The device family.</p>
+             * <p>The hardware category.</p>
              * 
              * <strong>example:</strong>
              * <p>empty</p>
@@ -385,7 +385,7 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique device ID.</p>
+             * <p>The unique identifier of the device.</p>
              * 
              * <strong>example:</strong>
              * <p>f92620d6bea04f65d48cf603c57b367c97e837c1ab9f6d78f741f477e99d857c</p>
@@ -407,7 +407,7 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the device was last active, in Unix milliseconds.</p>
+             * <p>The last active time of the device in Unix milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1778659807727</p>
@@ -418,7 +418,7 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The operating system.</p>
+             * <p>The operating system platform.</p>
              * 
              * <strong>example:</strong>
              * <p>linux</p>
@@ -676,7 +676,7 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The client ID.</p>
+             * <p>The client identifier.</p>
              * 
              * <strong>example:</strong>
              * <p>cli</p>
@@ -698,7 +698,7 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The device family.</p>
+             * <p>The hardware category.</p>
              * 
              * <strong>example:</strong>
              * <p>server</p>
@@ -709,7 +709,7 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique device ID.</p>
+             * <p>The unique identifier of the device.</p>
              * 
              * <strong>example:</strong>
              * <p>device-784x37k0vko734fk</p>
@@ -731,7 +731,7 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether the request is to repair an existing pairing.</p>
+             * <p>Specifies whether the request is for re-pairing.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -753,7 +753,7 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The operating system.</p>
+             * <p>The operating system platform.</p>
              * 
              * <strong>example:</strong>
              * <p>linux</p>
@@ -775,7 +775,7 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The requester\&quot;s remote IP address.</p>
+             * <p>The IP address of the requester.</p>
              * 
              * <strong>example:</strong>
              * <p>127.0.0.1</p>
@@ -813,7 +813,7 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether this is a silent pairing.</p>
+             * <p>Specifies whether silent pairing is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -824,7 +824,7 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp of the pairing request, in Unix milliseconds.</p>
+             * <p>The timestamp of the pairing request in Unix milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1778660347550</p>

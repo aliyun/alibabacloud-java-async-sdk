@@ -1875,10 +1875,26 @@ public class CreateApplicationRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("LlmModel")
         private String llmModel;
 
+        @com.aliyun.core.annotation.NameInMap("PolarAIEmbedderInstanceId")
+        private String polarAIEmbedderInstanceId;
+
+        @com.aliyun.core.annotation.NameInMap("PolarAILlmInstanceId")
+        private String polarAILlmInstanceId;
+
+        @com.aliyun.core.annotation.NameInMap("PolarAIRerankerInstanceId")
+        private String polarAIRerankerInstanceId;
+
+        @com.aliyun.core.annotation.NameInMap("PolarAIVlInstanceId")
+        private String polarAIVlInstanceId;
+
         private KnowledgeApplicationSpec(Builder builder) {
             this.dashboardPassword = builder.dashboardPassword;
             this.dbPassword = builder.dbPassword;
             this.llmModel = builder.llmModel;
+            this.polarAIEmbedderInstanceId = builder.polarAIEmbedderInstanceId;
+            this.polarAILlmInstanceId = builder.polarAILlmInstanceId;
+            this.polarAIRerankerInstanceId = builder.polarAIRerankerInstanceId;
+            this.polarAIVlInstanceId = builder.polarAIVlInstanceId;
         }
 
         public static Builder builder() {
@@ -1910,10 +1926,42 @@ public class CreateApplicationRequest extends Request {
             return this.llmModel;
         }
 
+        /**
+         * @return polarAIEmbedderInstanceId
+         */
+        public String getPolarAIEmbedderInstanceId() {
+            return this.polarAIEmbedderInstanceId;
+        }
+
+        /**
+         * @return polarAILlmInstanceId
+         */
+        public String getPolarAILlmInstanceId() {
+            return this.polarAILlmInstanceId;
+        }
+
+        /**
+         * @return polarAIRerankerInstanceId
+         */
+        public String getPolarAIRerankerInstanceId() {
+            return this.polarAIRerankerInstanceId;
+        }
+
+        /**
+         * @return polarAIVlInstanceId
+         */
+        public String getPolarAIVlInstanceId() {
+            return this.polarAIVlInstanceId;
+        }
+
         public static final class Builder {
             private String dashboardPassword; 
             private String dbPassword; 
             private String llmModel; 
+            private String polarAIEmbedderInstanceId; 
+            private String polarAILlmInstanceId; 
+            private String polarAIRerankerInstanceId; 
+            private String polarAIVlInstanceId; 
 
             private Builder() {
             } 
@@ -1922,6 +1970,10 @@ public class CreateApplicationRequest extends Request {
                 this.dashboardPassword = model.dashboardPassword;
                 this.dbPassword = model.dbPassword;
                 this.llmModel = model.llmModel;
+                this.polarAIEmbedderInstanceId = model.polarAIEmbedderInstanceId;
+                this.polarAILlmInstanceId = model.polarAILlmInstanceId;
+                this.polarAIRerankerInstanceId = model.polarAIRerankerInstanceId;
+                this.polarAIVlInstanceId = model.polarAIVlInstanceId;
             } 
 
             /**
@@ -1954,6 +2006,38 @@ public class CreateApplicationRequest extends Request {
              */
             public Builder llmModel(String llmModel) {
                 this.llmModel = llmModel;
+                return this;
+            }
+
+            /**
+             * PolarAIEmbedderInstanceId.
+             */
+            public Builder polarAIEmbedderInstanceId(String polarAIEmbedderInstanceId) {
+                this.polarAIEmbedderInstanceId = polarAIEmbedderInstanceId;
+                return this;
+            }
+
+            /**
+             * PolarAILlmInstanceId.
+             */
+            public Builder polarAILlmInstanceId(String polarAILlmInstanceId) {
+                this.polarAILlmInstanceId = polarAILlmInstanceId;
+                return this;
+            }
+
+            /**
+             * PolarAIRerankerInstanceId.
+             */
+            public Builder polarAIRerankerInstanceId(String polarAIRerankerInstanceId) {
+                this.polarAIRerankerInstanceId = polarAIRerankerInstanceId;
+                return this;
+            }
+
+            /**
+             * PolarAIVlInstanceId.
+             */
+            public Builder polarAIVlInstanceId(String polarAIVlInstanceId) {
+                this.polarAIVlInstanceId = polarAIVlInstanceId;
                 return this;
             }
 

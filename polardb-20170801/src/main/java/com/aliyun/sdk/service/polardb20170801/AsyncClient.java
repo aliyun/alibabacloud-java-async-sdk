@@ -47,13 +47,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>The <code>ApplicationId</code> and <code>ServerName</code> parameters are required.</li>
-     * <li>The <code>ApplicationId</code> parameter specifies the application ID.</li>
-     * <li>The <code>ServerName</code> parameter specifies the MCP server name to add.</li>
-     * <li>A successful response returns the request ID, a message, a status code, the application ID, and the server name.</li>
-     * <li>If the request fails, the API may return a 500 error code with a detailed error message.</li>
+     * <li><code>ApplicationId</code> and <code>ServerName</code> are required query parameters.</li>
+     * <li><code>ApplicationId</code> specifies the ID of the application program to operate on.</li>
+     * <li><code>ServerName</code> specifies the name of the MCP server to add.</li>
+     * <li>A successful response returns the request ID, message, status code, application program ID, and server name.</li>
+     * <li>In case of a failed request, a 500 error code may be returned, along with a specific error message describing the fault.</li>
      * </ul>
      * 
      * @param request the request parameters of AddPolarClawMCPServer  AddPolarClawMCPServerRequest
@@ -407,9 +407,9 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>Each cluster can have a maximum of three manually created backups at a time.</li>
-     * <li>If the error message <code>Exceeding the daily backup times of this DB cluster</code> is returned, three manually created backups already exist in your cluster. <a href="https://help.aliyun.com/document_detail/98101.html">Delete backups</a> before you call this operation.</li>
-     * <li>After you call this operation, a backup task is created in the background. If the data volume is large, the backup may take a long time. Wait until the backup is complete.</li>
+     * <li>A maximum of three manually created backups can exist for each cluster at the same time.</li>
+     * <li>If the error message <code>Exceeding the daily backup times of this DB cluster</code> is returned, it indicates that three manually created backups already exist in your cluster. <a href="https://help.aliyun.com/document_detail/98101.html">Delete a backup</a> before you call this operation.</li>
+     * <li>After you call this operation, a backup task is created in the background. If the data volume is large, the task may take a long time to complete.</li>
      * </ul>
      * </blockquote>
      * 
@@ -651,8 +651,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
-     * <p>Use this operation to create a PolarClaw Agent. You can optionally specify an <code>emoji</code> and an <code>avatar</code>.</p>
+     * <h2>Request description</h2>
+     * <p>You can use this API to create a PolarClaw agent and optionally configure its <code>Emoji</code> and <code>Avatar</code>.</p>
      * 
      * @param request the request parameters of CreatePolarClawAgent  CreatePolarClawAgentRequest
      * @return CreatePolarClawAgentResponse
@@ -661,7 +661,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
+     * <h2>Request description.</h2>
      * 
      * @param request the request parameters of CreatePolarClawChannel  CreatePolarClawChannelRequest
      * @return CreatePolarClawChannelResponse
@@ -670,8 +670,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
-     * <p>Use this API to create a cron job. You can configure the job\&quot;s payload, execution frequency, timezone, target channel, recipients, and a failure alert mechanism.</p>
+     * <h2>Request description</h2>
+     * <p>You can use this API to define and create a scheduled task. The task is triggered periodically based on a specified schedule and carries specific messages or instructions. This API supports advanced options such as custom execution frequency, time zone settings, and failure alert mechanisms. You can also configure details such as message content, target channels, and recipients.</p>
      * 
      * @param request the request parameters of CreatePolarClawCronJob  CreatePolarClawCronJobRequest
      * @return CreatePolarClawCronJobResponse
@@ -686,13 +686,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li><strong>Path</strong>: The absolute path of the directory to create.</li>
-     * <li><strong>Recursive</strong>: Specifies whether to recursively create parent directories. The default value is <code>false</code>.</li>
-     * <li>This operation creates a directory structure with one or more levels in the specified PolarFS instance.</li>
-     * <li>Setting <code>Recursive</code> to <code>true</code> automatically creates all non-existent parent directories.</li>
-     * <li>Ensure that you have sufficient permissions to create the directory.</li>
+     * <li><strong>Path</strong>: The absolute path of the folder to create.</li>
+     * <li><strong>Recursive</strong>: Specifies whether to use recursion to create parent folders. Default value: <code>false</code>.</li>
+     * <li>This operation supports creating single-level or multi-level folder structures in a specified PolarFS instance.</li>
+     * <li>If the <code>Recursive</code> Settings are <code>true</code>, the automatic creation of all non-existent parent folders is enabled.</li>
+     * <li>Ensure that you have sufficient permissions when creating a folder.</li>
      * </ul>
      * 
      * @param request the request parameters of CreatePolarFsObject  CreatePolarFsObjectRequest
@@ -708,13 +708,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Resource Control limits the CPU resources that can be used by a specified user, database, query, or connection in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding resource control rules. Querying Resource Control CPU usage is not supported.</p>
-     * <h3>Before you begin</h3>
+     * <p>Resource Control limits the CPU resources available to specified users, databases, queries, or connections in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding resource control rules, but does not support querying CPU utilization for Resource Control.</p>
+     * <h3>Limits</h3>
      * <ul>
-     * <li>This feature applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</li>
+     * <li>Applies only to PolarDB for MySQL Cluster Edition that supports Resource Control. PolarDB for MySQL Standard Edition is not supported.</li>
      * <li>The cluster kernel parameter loose_enable_resource_control must be set to ON.</li>
      * <li>MaxCpu and CpuCount are two mutually exclusive CPU quota modes.</li>
-     * <li>The maximum value of CpuCount is determined by the kernel parameter resource_control_cpu_count_limit of the target cluster.<blockquote>
+     * <li>The maximum value of CpuCount is determined by the resource_control_cpu_count_limit kernel parameter of the target cluster.<blockquote>
      * <p>Notice: This is a notice.</notice></p>
      * </blockquote>
      * </li>
@@ -1708,7 +1708,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>For more information about the minor Milvus versions and details of PolarDB for MySQL Cluster Edition, see <a href="https://help.aliyun.com/document_detail/471239.html">Minor Milvus version description</a> and <a href="https://help.aliyun.com/document_detail/423884.html">Release notes</a>.</p>
+     * <p>For more information about the Milvus versions of PolarDB for MySQL clusters, see <a href="https://help.aliyun.com/document_detail/471239.html">Milvus version overview</a> and <a href="https://help.aliyun.com/document_detail/423884.html">Kernel release notes</a>.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DescribeDBClusterVersion  DescribeDBClusterVersionRequest
@@ -3109,13 +3109,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Resource Control limits the CPU resources that can be used by a specified user, database, query, or connection in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding resource control rules. It does not support querying Resource Control CPU usage.</p>
-     * <h3>Before you begin</h3>
+     * <p>Resource Control is used to limit the CPU resources available to specified users, databases, queries, or connections in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding resource control rules, but does not support querying Resource Control CPU utilization.</p>
+     * <h3>Limits</h3>
      * <ul>
-     * <li>This operation applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</li>
+     * <li>Applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</li>
      * <li>The cluster kernel parameter loose_enable_resource_control must be set to ON.</li>
      * <li>MaxCpu and CpuCount are two mutually exclusive CPU quota modes.</li>
-     * <li>The maximum value of CpuCount is determined by the cluster kernel parameter resource_control_cpu_count_limit.<blockquote>
+     * <li>The maximum value of CpuCount is determined by the resource_control_cpu_count_limit kernel parameter of the target cluster.<blockquote>
      * <p>Notice: This is a notice.</notice></p>
      * </blockquote>
      * </li>
@@ -3416,8 +3416,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <p>调用前，先通过 BindPolarClawAgent 为指定应用、Agent 和通道建立绑定。本接口使用同一组 ApplicationId、AgentId 和 Channel 解除绑定。</p>
+     * <h2>Request description</h2>
+     * <p>Before calling this operation, use BindPolarClawAgent to establish a binding for the specified application, agent, and channel. This operation uses the same ApplicationId, AgentId, and Channel to remove the binding.</p>
      * 
      * @param request the request parameters of UnbindPolarClawAgent  UnbindPolarClawAgentRequest
      * @return UnbindPolarClawAgentResponse

@@ -143,7 +143,7 @@ public class UpdatePolarClawSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response status code.</p>
+         * <p>The returned status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -154,7 +154,7 @@ public class UpdatePolarClawSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The updated Skill configuration. Sensitive values are masked.</p>
+         * <p>The updated skill configuration. Sensitive values are masked.</p>
          */
         public Builder config(Config config) {
             this.config = config;
@@ -162,7 +162,7 @@ public class UpdatePolarClawSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -195,7 +195,7 @@ public class UpdatePolarClawSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The Skill identifier key.</p>
+         * <p>The skill identifier key.</p>
          * 
          * <strong>example:</strong>
          * <p>alibacloud-rds-copilot</p>
@@ -264,7 +264,7 @@ public class UpdatePolarClawSkillResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Specifies whether to enable the Skill.</p>
+             * <p>Specifies whether the skill is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>

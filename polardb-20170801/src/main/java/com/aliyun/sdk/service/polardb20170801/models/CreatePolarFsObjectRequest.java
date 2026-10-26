@@ -75,7 +75,7 @@ public class CreatePolarFsObjectRequest extends Request {
         } 
 
         /**
-         * <p>The absolute path of the directory to create.</p>
+         * <p>The destination path.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class CreatePolarFsObjectRequest extends Request {
         }
 
         /**
-         * <p>The PolarFS instance id.</p>
+         * <p>The PolarFS instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

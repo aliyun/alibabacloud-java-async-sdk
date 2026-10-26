@@ -117,7 +117,7 @@ public class UpdatePolarClawSkillRequest extends Request {
         } 
 
         /**
-         * <p>The Skill API key. An empty string indicates that the key is deleted.</p>
+         * <p>The skill API key. An empty string indicates that the key is deleted.</p>
          * 
          * <strong>example:</strong>
          * <p>my-api</p>
@@ -142,7 +142,7 @@ public class UpdatePolarClawSkillRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the Skill.</p>
+         * <p>Specifies whether the skill is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -154,7 +154,7 @@ public class UpdatePolarClawSkillRequest extends Request {
         }
 
         /**
-         * <p>The environment variables as a key-value map. A null value indicates that the variable is deleted.</p>
+         * <p>The environment variables as a key-value map. An empty value indicates that the variable is deleted.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;NETA_TOKEN&quot;:&quot;my-token&quot;}</p>
@@ -167,7 +167,7 @@ public class UpdatePolarClawSkillRequest extends Request {
         }
 
         /**
-         * <p>The Skill identifier key.</p>
+         * <p>The skill identifier key.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

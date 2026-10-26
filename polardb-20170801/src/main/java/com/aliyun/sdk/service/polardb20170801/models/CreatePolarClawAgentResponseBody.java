@@ -145,7 +145,7 @@ public class CreatePolarClawAgentResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Details of the new agent.</p>
+         * <p>The details of the created agent.</p>
          */
         public Builder agent(Agent agent) {
             this.agent = agent;
@@ -153,7 +153,7 @@ public class CreatePolarClawAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The agent ID.</p>
+         * <p>Agent ID</p>
          * 
          * <strong>example:</strong>
          * <p>work</p>
@@ -175,7 +175,7 @@ public class CreatePolarClawAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status code.</p>
+         * <p>The response status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -197,7 +197,7 @@ public class CreatePolarClawAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The display name of the agent.</p>
+         * <p>The agent name.</p>
          * 
          * <strong>example:</strong>
          * <p>work</p>
@@ -219,7 +219,7 @@ public class CreatePolarClawAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The workspace path.</p>
+         * <p>The working directory path.</p>
          * 
          * <strong>example:</strong>
          * <p>/home/node/.openclaw/workspace-work</p>
@@ -327,7 +327,7 @@ public class CreatePolarClawAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The avatar\&quot;s path or content.</p>
+             * <p>The avatar path or content.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -467,7 +467,7 @@ public class CreatePolarClawAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The agent ID.</p>
+             * <p>Agent ID</p>
              * 
              * <strong>example:</strong>
              * <p>work</p>
@@ -478,7 +478,7 @@ public class CreatePolarClawAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The agent\&quot;s identity.</p>
+             * <p>The identity information.</p>
              */
             public Builder identity(Identity identity) {
                 this.identity = identity;
@@ -497,7 +497,7 @@ public class CreatePolarClawAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The workspace path.</p>
+             * <p>The working directory path.</p>
              * 
              * <strong>example:</strong>
              * <p>/home/node/.openclaw/workspace-work</p>

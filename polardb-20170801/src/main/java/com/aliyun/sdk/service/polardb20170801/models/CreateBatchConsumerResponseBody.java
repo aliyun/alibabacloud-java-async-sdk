@@ -491,7 +491,7 @@ public class CreateBatchConsumerResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the key is active.</p>
+             * <p>Indicates whether the consumer is active.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -502,7 +502,7 @@ public class CreateBatchConsumerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The complete API key. Returned only in this response.</p>
+             * <p>The complete API key. This value is returned only in the current response.</p>
              * 
              * <strong>example:</strong>
              * <p>xxxxxxxx</p>
@@ -535,7 +535,7 @@ public class CreateBatchConsumerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The API key status. Default value: Active.</p>
+             * <p>The status of the API key. Default value: Active.</p>
              * 
              * <strong>example:</strong>
              * <p>Active</p>
@@ -546,7 +546,7 @@ public class CreateBatchConsumerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The budget limit, which equals the number of credits per package.</p>
+             * <p>The budget limit, which is equal to the points of a single package.</p>
              * 
              * <strong>example:</strong>
              * <p>3000</p>
@@ -557,7 +557,7 @@ public class CreateBatchConsumerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The budget policy ID. Each key has an independent budget policy.</p>
+             * <p>The ID of the budget policy. Each key has an independent budget policy.</p>
              * 
              * <strong>example:</strong>
              * <p>023aacc1effc4b56bb154bfbec6ba9**</p>
@@ -579,7 +579,7 @@ public class CreateBatchConsumerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user group ID.</p>
+             * <p>The ID of the consumer group.</p>
              * 
              * <strong>example:</strong>
              * <p>cg-xxxxxx</p>
@@ -612,7 +612,7 @@ public class CreateBatchConsumerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The application description or remarks.</p>
+             * <p>The application description or remark.</p>
              * 
              * <strong>example:</strong>
              * <p>myapp</p>
@@ -624,7 +624,7 @@ public class CreateBatchConsumerResponseBody extends TeaModel {
 
             /**
              * <p>The expiration time.</p>
-             * <p>The time is in the ISO 8601 standard in the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+             * <p>The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-06-25T09:37:10Z</p>
@@ -635,7 +635,7 @@ public class CreateBatchConsumerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the key has expired.</p>
+             * <p>Indicates whether the consumer has expired.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -690,7 +690,7 @@ public class CreateBatchConsumerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The consumer status. Default value: Enabled.</p>
+             * <p>The status of the consumer. Default value: Enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>Enabled</p>

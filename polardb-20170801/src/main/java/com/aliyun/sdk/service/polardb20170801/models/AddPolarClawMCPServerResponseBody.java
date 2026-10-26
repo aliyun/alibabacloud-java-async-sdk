@@ -130,7 +130,7 @@ public class AddPolarClawMCPServerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned status code.</p>
+         * <p>The response status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -141,7 +141,7 @@ public class AddPolarClawMCPServerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -152,7 +152,7 @@ public class AddPolarClawMCPServerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the operation was successful.</p>
+         * <p>Indicates whether the operation is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -174,7 +174,7 @@ public class AddPolarClawMCPServerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the added or updated MCP server.</p>
+         * <p>The ID of the added or updated MCP server.</p>
          * 
          * <strong>example:</strong>
          * <p>test-v1</p>

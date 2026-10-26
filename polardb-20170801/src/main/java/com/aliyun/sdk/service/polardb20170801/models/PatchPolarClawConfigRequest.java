@@ -101,7 +101,7 @@ public class PatchPolarClawConfigRequest extends Request {
         }
 
         /**
-         * <p>A JSON merge-patch object.</p>
+         * <p>The JSON merge patch object.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -122,7 +122,7 @@ public class PatchPolarClawConfigRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to restart the gateway after applying the patch. The default is <code>true</code>.</p>
+         * <p>Specifies whether to restart the gateway after the patch is applied. Default value: true.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

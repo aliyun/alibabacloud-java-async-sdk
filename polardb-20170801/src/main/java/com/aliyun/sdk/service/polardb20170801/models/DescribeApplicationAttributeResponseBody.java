@@ -1965,6 +1965,9 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
 
             /**
              * <p>The domain name of the application endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app.example.com</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;

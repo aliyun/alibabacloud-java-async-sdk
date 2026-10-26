@@ -90,6 +90,7 @@ public class ApplyLakebaseMountParameterGroupRequest extends Request {
         } 
 
         /**
+         * <p>The parameter template ID. The ID starts with pagp-.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class ApplyLakebaseMountParameterGroupRequest extends Request {
         }
 
         /**
+         * <p>The PolarFS instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,7 @@ public class ApplyLakebaseMountParameterGroupRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

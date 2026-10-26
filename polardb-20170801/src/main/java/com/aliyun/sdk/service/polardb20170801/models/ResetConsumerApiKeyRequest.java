@@ -102,7 +102,7 @@ public class ResetConsumerApiKeyRequest extends Request {
         }
 
         /**
-         * <p>The ID of the gateway instance.</p>
+         * <p>The gateway instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

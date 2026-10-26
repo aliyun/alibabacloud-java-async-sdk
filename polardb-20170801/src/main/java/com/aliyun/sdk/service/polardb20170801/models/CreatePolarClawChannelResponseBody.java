@@ -182,7 +182,7 @@ public class CreatePolarClawChannelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the channel that was created.</p>
+         * <p>The ID of the created channel.</p>
          * 
          * <strong>example:</strong>
          * <p>feishu</p>
@@ -226,7 +226,7 @@ public class CreatePolarClawChannelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the operation was successful.</p>
+         * <p>Indicates whether the operation is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -248,7 +248,7 @@ public class CreatePolarClawChannelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether a new plugin was installed.</p>
+         * <p>Indicates whether a new plugin is installed.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -270,7 +270,7 @@ public class CreatePolarClawChannelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the gateway was restarted.</p>
+         * <p>Indicates whether the gateway is restarted.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

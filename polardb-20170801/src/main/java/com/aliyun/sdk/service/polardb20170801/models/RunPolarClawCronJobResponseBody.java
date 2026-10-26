@@ -143,7 +143,7 @@ public class RunPolarClawCronJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status code.</p>
+         * <p>The returned status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -154,7 +154,7 @@ public class RunPolarClawCronJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique ID for this job execution.</p>
+         * <p>The ID of the executed task.</p>
          * 
          * <strong>example:</strong>
          * <p>8006e51c-dab3-4602-bc69-4f728002c6ce</p>
@@ -165,7 +165,7 @@ public class RunPolarClawCronJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -176,7 +176,7 @@ public class RunPolarClawCronJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the operation was successful.</p>
+         * <p>Indicates whether the operation is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -187,7 +187,7 @@ public class RunPolarClawCronJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the job actually ran.</p>
+         * <p>Indicates whether the task was actually executed.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -198,7 +198,7 @@ public class RunPolarClawCronJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>C61892A4-0850-4516-9E26-44D96C1782DE</p>

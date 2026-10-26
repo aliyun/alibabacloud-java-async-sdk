@@ -67,7 +67,10 @@ public class ApplyLakebaseMountParameterGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F45FFACC-xxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class ApplyLakebaseMountParameterGroupResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The asynchronous task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder taskId(Long taskId) {
             this.taskId = taskId;

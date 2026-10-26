@@ -131,10 +131,10 @@ public class CreateAgenticDBTenantApiKeyRequest extends Request {
         }
 
         /**
-         * <p>The description of the API key usage.</p>
+         * <p>The description of the purpose.</p>
          * 
          * <strong>example:</strong>
-         * <p>Dedicated key for MCP Server</p>
+         * <p>Dedicated key for MCP server</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -168,7 +168,7 @@ public class CreateAgenticDBTenantApiKeyRequest extends Request {
         }
 
         /**
-         * <p>The tenant name. The name must be unique within the cluster and must be 2 to 64 characters in length.</p>
+         * <p>The name of the tenant. The name must be unique within the same cluster and be 2 to 64 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
