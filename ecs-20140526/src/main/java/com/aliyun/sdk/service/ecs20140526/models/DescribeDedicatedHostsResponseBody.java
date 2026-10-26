@@ -127,7 +127,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The query token returned by the current invoke. If you use MaxResults and NextToken for paged query and this paging token is empty, no more data is returned.</p>
+         * <p>The paging token returned by this invoke. When you use MaxResults and NextToken for paged query, and this return value is empty, it indicates that no more data is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>e71d8a535bd9cc11</p>

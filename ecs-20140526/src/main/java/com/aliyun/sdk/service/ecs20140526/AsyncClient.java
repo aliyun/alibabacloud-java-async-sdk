@@ -554,9 +554,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Auto provisioning is a solution that uses spot instances and pay-as-you-go instances to quickly deploy an instance cluster. It supports one-click deployment of instance clusters across billing methods, zones, and instance families. For more information, see <a href="https://help.aliyun.com/document_detail/200772.html">Use the auto provisioning group API to batch create ECS instances</a>.</li>
-     * <li>Auto provisioning uses auto provisioning groups for scheduling and maintenance of compute resources. You can use auto provisioning groups to stably provide computing power and mitigate the instability caused by the revoke mechanism of spot instances.</li>
-     * <li>The auto provisioning feature is free of charge. However, you are billed for the instance resources created by using auto provisioning groups. For more information, see <a href="https://help.aliyun.com/document_detail/52088.html">Billing of spot instances</a> and <a href="https://help.aliyun.com/document_detail/40653.html">Pay-as-you-go</a>.</li>
+     * <li>Auto provisioning is a solution that uses spot instances and pay-as-you-go instances to quickly deploy instance clusters. It supports one-click deployment of instance clusters across Billable methods, zones, and instance family. For more information, see <a href="https://help.aliyun.com/document_detail/200772.html">Use the auto provisioning group API to create ECS instances in batches</a>.</li>
+     * <li>Auto provisioning relies on auto provisioning groups for scheduling and maintenance of compute resources. You can use auto provisioning groups to stably provide computing power and mitigate the instability caused by the revoke mechanism of spot instances.</li>
+     * <li>The auto provisioning feature is free of charge, but you are billed for the instance resources created by using auto provisioning groups. For more information, see <a href="https://help.aliyun.com/document_detail/52088.html">Billing of spot instances</a> and <a href="https://help.aliyun.com/document_detail/40653.html">Pay-as-you-go</a>.</li>
      * <li>If you specify both a launch template (<code>LaunchTemplateId</code>) and launch configurations (<code>LaunchConfiguration.*</code>), the system preferentially uses the launch template.</li>
      * </ul>
      * 
@@ -764,15 +764,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <h2>Operation description</h2>
-     * <p>You can use image templates to customize image content and support cross-region and cross-account image building. Before you create an image template, take note of the following items:</p>
+     * <p>You can use an image template to customize image content and support cross-region and cross-account image building. Before you create an image template, take note of the following items:</p>
      * <ul>
      * <li>You can only create custom image templates.</li>
      * <li>You can only use public images, custom images, shared images, or an image family as source images for building.</li>
      * <li>When you build an image by using an image template, multiple intermediate instances are created to assist in the image building process. Intermediate instances are ECS instances that use the pay-as-you-go billing method and incur fees. For more information, see <a href="https://help.aliyun.com/document_detail/40653.html">Pay-as-you-go</a>.
      * Take note of the following items about the build template content BuildContent:</li>
      * <li>The FROM command is deprecated. Regardless of the FROM command Settings in the BuildContent parameter, the system selects the source image based on the BaseImageType and BaseImage parameters.</li>
-     * <li>The content size of an image template cannot exceed 16 KB. For more details about supported commands, see <a href="https://help.aliyun.com/document_detail/200206.html">Commands supported by Image Builder</a>.
-     * For more information, see <a href="https://help.aliyun.com/document_detail/197410.html">Image Builder overview</a>.</li>
+     * <li>The content size of an image template cannot exceed 16 KB. For details about supported commands, see <a href="https://help.aliyun.com/document_detail/200206.html">Commands supported by the image building service</a>.
+     * For more information, see <a href="https://help.aliyun.com/document_detail/197410.html">Image building overview</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateImagePipeline  CreateImagePipelineRequest
@@ -1936,7 +1936,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can set the NextToken query token to the NextToken value returned from the previous DescribeImagePipelines call, and use MaxResults to specify the maximum number of entries per page for the query.</p>
+     * <p>You can use the NextToken parameter to paginate queries. Set this parameter to the NextToken value returned from the previous call to the DescribeImagePipelines operation. You can also use the MaxResults parameter to specify the maximum number of entries to return per page.</p>
      * 
      * @param request the request parameters of DescribeImagePipelines  DescribeImagePipelinesRequest
      * @return DescribeImagePipelinesResponse
@@ -2027,9 +2027,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Only pricing information for upgrading unexpired subscription ECS instances is supported. Pricing information for downgrading instances is not supported.</li>
-     * <li>Pricing information for specification changes of pay-as-you-go ECS instances is not supported. Because the price of a pay-as-you-go ECS instance after a specification change is the same as the price of a new instance, you can call <a href="https://help.aliyun.com/document_detail/107829.html">DescribePrice</a> to query the latest price of an ECS instance.</li>
-     * <li>Before you upgrade an instance, call <a href="https://help.aliyun.com/document_detail/66187.html">DescribeResourcesModification</a> to query the instance types available for upgrade in a specified zone.</li>
+     * <li>Only querying the pricing information for upgrading unexpired subscription ECS instances is supported. Querying the pricing information for downgrading instances is not supported.</li>
+     * <li>Querying the pricing information for changing the configurations of pay-as-you-go ECS instances is not supported. Because the price of a pay-as-you-go ECS instance after a configuration change is the same as that of a newly created instance, you can directly call <a href="https://help.aliyun.com/document_detail/107829.html">DescribePrice</a> to query the latest price of the ECS instance.</li>
+     * <li>Before upgrading an instance, call <a href="https://help.aliyun.com/document_detail/66187.html">DescribeResourcesModification</a> to query the instance types available for upgrade in the specified zone.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeInstanceModificationPrice  DescribeInstanceModificationPriceRequest

@@ -202,6 +202,9 @@ public class ModifyImageShareGroupPermissionRequest extends Request {
         /**
          * <p>The image ID.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-bp1a2b3c4d5e6f7g</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -230,6 +233,9 @@ public class ModifyImageShareGroupPermissionRequest extends Request {
         /**
          * <p>The region ID. You can call DescribeRegions to query available regions.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

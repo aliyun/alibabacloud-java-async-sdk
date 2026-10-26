@@ -69,6 +69,10 @@ public class CreateImagePipelineRequest extends Request {
     private ImageOptions imageOptions;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageSecurityOptions")
+    private ImageSecurityOptions imageSecurityOptions;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ImportImageOptions")
     private ImportImageOptions importImageOptions;
 
@@ -156,6 +160,7 @@ public class CreateImagePipelineRequest extends Request {
         this.imageFamily = builder.imageFamily;
         this.imageName = builder.imageName;
         this.imageOptions = builder.imageOptions;
+        this.imageSecurityOptions = builder.imageSecurityOptions;
         this.importImageOptions = builder.importImageOptions;
         this.instanceType = builder.instanceType;
         this.internetMaxBandwidthOut = builder.internetMaxBandwidthOut;
@@ -271,6 +276,13 @@ public class CreateImagePipelineRequest extends Request {
      */
     public ImageOptions getImageOptions() {
         return this.imageOptions;
+    }
+
+    /**
+     * @return imageSecurityOptions
+     */
+    public ImageSecurityOptions getImageSecurityOptions() {
+        return this.imageSecurityOptions;
     }
 
     /**
@@ -412,6 +424,7 @@ public class CreateImagePipelineRequest extends Request {
         private String imageFamily; 
         private String imageName; 
         private ImageOptions imageOptions; 
+        private ImageSecurityOptions imageSecurityOptions; 
         private ImportImageOptions importImageOptions; 
         private String instanceType; 
         private Integer internetMaxBandwidthOut; 
@@ -449,6 +462,7 @@ public class CreateImagePipelineRequest extends Request {
             this.imageFamily = request.imageFamily;
             this.imageName = request.imageName;
             this.imageOptions = request.imageOptions;
+            this.imageSecurityOptions = request.imageSecurityOptions;
             this.importImageOptions = request.importImageOptions;
             this.instanceType = request.instanceType;
             this.internetMaxBandwidthOut = request.internetMaxBandwidthOut;
@@ -519,9 +533,9 @@ public class CreateImagePipelineRequest extends Request {
         /**
          * <p>The source image type. Valid values:</p>
          * <ul>
-         * <li>IMAGE: image.</li>
-         * <li>IMAGE_FAMILY: image family.</li>
-         * <li>OSS: OSS object.</li>
+         * <li>IMAGE: image</li>
+         * <li>IMAGE_FAMILY: image family</li>
+         * <li>OSS: OSS object</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -535,7 +549,7 @@ public class CreateImagePipelineRequest extends Request {
         }
 
         /**
-         * <p>The content of the image build template. The content size cannot exceed 16 KB. For more information about supported commands, see <a href="https://help.aliyun.com/document_detail/200206.html">Commands supported by Image Builder</a>.</p>
+         * <p>The content of the image build template. The content size cannot exceed 16 KB. For more information about supported commands, see <a href="https://help.aliyun.com/document_detail/200206.html">Commands supported by the image building service</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>COMPONENT ic-bp12dvdzvr9k9*****
@@ -548,7 +562,7 @@ public class CreateImagePipelineRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">Ensure idempotence</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -560,10 +574,10 @@ public class CreateImagePipelineRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to release the intermediate instance if the image build fails. Valid values:</p>
+         * <p>Specifies whether to release the intermediate instance if the image building fails. Valid values:</p>
          * <ul>
-         * <li>true: releases the instance.</li>
-         * <li>false: does not release the instance.</li>
+         * <li>true: Releases the instance.</li>
+         * <li>false: Does not release the instance.</li>
          * </ul>
          * <p>Default value: true.</p>
          * <blockquote>
@@ -631,6 +645,15 @@ public class CreateImagePipelineRequest extends Request {
         }
 
         /**
+         * ImageSecurityOptions.
+         */
+        public Builder imageSecurityOptions(ImageSecurityOptions imageSecurityOptions) {
+            this.putQueryParameter("ImageSecurityOptions", imageSecurityOptions);
+            this.imageSecurityOptions = imageSecurityOptions;
+            return this;
+        }
+
+        /**
          * <p>The properties and settings of the imported image. This parameter is required when BaseImageType is set to OSS.</p>
          */
         public Builder importImageOptions(ImportImageOptions importImageOptions) {
@@ -641,7 +664,7 @@ public class CreateImagePipelineRequest extends Request {
 
         /**
          * <p>The instance type. You can call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query available instance types.</p>
-         * <p>If you do not specify this parameter, the system automatically selects an instance type with the minimum number of vCPUs and memory size based on resource availability. For example, the system selects the ecs.g6.large instance type by default. If ecs.g6.large is out of stock, the system selects ecs.g6.xlarge.</p>
+         * <p>If you do not specify this parameter, the system automatically selects an instance type with the minimum number of vCPUs and memory size based on resource availability. For example, the system selects the ecs.g6.large instance type by default. If the inventory is insufficient, the ecs.g6.xlarge instance type is selected.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs.g6.large</p>
@@ -666,7 +689,7 @@ public class CreateImagePipelineRequest extends Request {
         }
 
         /**
-         * <p>The template name. It must be 2 to 128 characters in length and must start with a letter or a Chinese character. It cannot start with <code>http://</code> or <code>https://</code>. It can contain letters, digits, Chinese characters, colons (:), underscores (_), periods (.), and hyphens (-).</p>
+         * <p>The template name. The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It cannot start with <code>http://</code> or <code>https://</code>. It can contain Chinese characters, letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
          * <blockquote>
          * <p>If you do not specify <code>Name</code>, the value of <code>ImagePipelineId</code> is used by default.</p>
          * </blockquote>
@@ -764,10 +787,10 @@ public class CreateImagePipelineRequest extends Request {
         }
 
         /**
-         * <p>The repair mode in the image template.</p>
+         * <p>The repair option in the image template.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><p>Standard: standard repair mode.</p>
+         * <li><p>Standard: Standard repair mode.</p>
          * <p>The standard repair package for Linux includes:</p>
          * <ul>
          * <li>GUESTOS.CloudInit</li>
@@ -791,7 +814,7 @@ public class CreateImagePipelineRequest extends Request {
          * <li>GUESTOS.Vminit</li>
          * </ul>
          * </li>
-         * <li><p>All: full repair mode.</p>
+         * <li><p>All: Full repair mode.</p>
          * <p>The full repair package for Linux includes the following items in addition to those in the standard repair package:</p>
          * <ul>
          * <li>GUESTOS.Selinux</li>
@@ -802,11 +825,11 @@ public class CreateImagePipelineRequest extends Request {
          * <li>GUESTOS.Server</li>
          * </ul>
          * </li>
-         * <li><p>Customized: custom repair mode. In this mode, the repair items in the repair package are specified by the RepairItem parameter.</p>
+         * <li><p>Customized: Custom repair mode. In this mode, the repair items in the repair package are specified by the RepairItem parameter.</p>
          * </li>
          * </ul>
          * <blockquote>
-         * <p>As the detection and repair capabilities improve, the included repair items may increase. For more information about the specific meanings of repair items, see <a href="https://help.aliyun.com/document_detail/439819.html">Image check overview</a>.</p>
+         * <p>As the detection and repair capabilities continue to improve, the included repair items may increase. For more information about the specific meanings of repair items, see <a href="https://help.aliyun.com/document_detail/439819.html">Image detection overview</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -871,7 +894,7 @@ public class CreateImagePipelineRequest extends Request {
         }
 
         /**
-         * <p>The content of the image test template. The content size cannot exceed 16 KB. For more information about supported commands, see <a href="https://help.aliyun.com/document_detail/200206.html">Commands supported by Image Builder</a>.</p>
+         * <p>The content of the image test template. The content size cannot exceed 16 KB. For more information about supported commands, see <a href="https://help.aliyun.com/document_detail/200206.html">Commands supported by the image building service</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>COMPONENT ic-bp12dvdzvr9k9*****
@@ -884,7 +907,7 @@ public class CreateImagePipelineRequest extends Request {
         }
 
         /**
-         * <p>The list of regions to which the destination image is distributed. Valid values of N: 1 to 20.</p>
+         * <p>The list of regions to which the destination image is to be distributed. Valid values of N: 1 to 20.</p>
          * <p>If you do not specify this parameter, the image is created only in the current region by default.</p>
          * 
          * <strong>example:</strong>
@@ -971,7 +994,7 @@ public class CreateImagePipelineRequest extends Request {
             /**
              * <p>Specifies whether to disable the automatic addition of a suffix to the destination image name. Valid values:</p>
              * <ul>
-             * <li>disable: disables the automatic addition.</li>
+             * <li>disable: Disables the automatic addition.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -983,10 +1006,10 @@ public class CreateImagePipelineRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to retain Cloud Assistant. During the build process, the system automatically installs Cloud Assistant on the intermediate instance to execute commands. You can choose whether to retain it in the built destination image. Valid values:</p>
+             * <p>Specifies whether to retain Cloud Assistant. During the building process, the system automatically installs Cloud Assistant on the intermediate instance to execute commands. You can choose whether to retain it in the built destination image. Valid values:</p>
              * <ul>
-             * <li>true: retains Cloud Assistant.</li>
-             * <li>false: does not retain Cloud Assistant.</li>
+             * <li>true: Retains Cloud Assistant.</li>
+             * <li>false: Does not retain Cloud Assistant.</li>
              * </ul>
              * <p>Default value: false.</p>
              * <blockquote>
@@ -1050,9 +1073,9 @@ public class CreateImagePipelineRequest extends Request {
             /**
              * <p>Specifies whether the built destination image supports NVMe. Valid values:</p>
              * <ul>
-             * <li>supported: supported. This indicates that instances created from this image support the NVMe protocol.</li>
-             * <li>unsupported: not supported. This indicates that instances created from this image do not support the NVMe protocol.</li>
-             * <li>auto: automatic detection. The system automatically detects whether the NVMe driver is installed in your image. This detection occurs before the build phase. If you install or uninstall the NVMe driver during the build, the detection result may be inaccurate. We recommend that you set this parameter to supported or unsupported based on the build content.</li>
+             * <li>supported: Supported. Instances created from this image support the NVMe protocol.</li>
+             * <li>unsupported: Not supported. Instances created from this image do not support the NVMe protocol.</li>
+             * <li>auto: Automatic detection. The system automatically detects whether the NVMe driver is installed in your image. This detection occurs before the building phase. If you install or uninstall the NVMe driver during building, the result may be inaccurate. We recommend that you set this parameter to supported or unsupported based on the build content.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1134,7 +1157,7 @@ public class CreateImagePipelineRequest extends Request {
             }
 
             /**
-             * <p>The tag value. Valid values of N: 1 to 20. If this parameter is specified, it can be an empty string. The tag value can be up to 128 characters in length. It cannot start with <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag value of the resource. Valid values of N: 1 to 20. If this parameter is specified, it can be an empty string. The tag value can be up to 128 characters in length. It cannot start with <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>TestValue</p>
@@ -1273,7 +1296,8 @@ public class CreateImagePipelineRequest extends Request {
             }
 
             /**
-             * <p>The prefix of the target image name. The prefix must be 2 to 64 characters in length and must start with a letter or a Chinese character. It cannot start with http:// or https://. It can contain letters, Chinese characters, digits, colons (:), underscores (<em>), periods (.), and hyphens (-). The system automatically generates the final image name by concatenating the prefix and the build task ID (ExecutionId) in the {ImageName}</em>{ExecutionId} format.</p>
+             * <p>The prefix of the target image name. It must be 2 to 64 characters in length, start with a letter or a Chinese character, and cannot start with <code>http://</code> or <code>https://</code>. It can contain Chinese characters, letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
+             * <p>The system automatically generates the final image name by concatenating the prefix and the build task ID (<code>ExecutionId</code>) in the <code>{ImageName}_{ExecutionId}</code> format.</p>
              * 
              * <strong>example:</strong>
              * <p>testImageName</p>
@@ -1293,6 +1317,60 @@ public class CreateImagePipelineRequest extends Request {
 
             public ImageOptions build() {
                 return new ImageOptions(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateImagePipelineRequest} extends {@link TeaModel}
+     *
+     * <p>CreateImagePipelineRequest</p>
+     */
+    public static class ImageSecurityOptions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("SecurityScanMode")
+        private String securityScanMode;
+
+        private ImageSecurityOptions(Builder builder) {
+            this.securityScanMode = builder.securityScanMode;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ImageSecurityOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return securityScanMode
+         */
+        public String getSecurityScanMode() {
+            return this.securityScanMode;
+        }
+
+        public static final class Builder {
+            private String securityScanMode; 
+
+            private Builder() {
+            } 
+
+            private Builder(ImageSecurityOptions model) {
+                this.securityScanMode = model.securityScanMode;
+            } 
+
+            /**
+             * SecurityScanMode.
+             */
+            public Builder securityScanMode(String securityScanMode) {
+                this.securityScanMode = securityScanMode;
+                return this;
+            }
+
+            public ImageSecurityOptions build() {
+                return new ImageSecurityOptions(this);
             } 
 
         } 
@@ -1400,7 +1478,7 @@ public class CreateImagePipelineRequest extends Request {
              * <li>VHD</li>
              * <li>QCOW2</li>
              * </ul>
-             * <p>Default value: none. This indicates that Alibaba Cloud automatically detects the image format, and the detected format prevails.</p>
+             * <p>Default value: none. This indicates that Alibaba Cloud automatically detects the image format and uses the detected format.</p>
              * 
              * <strong>example:</strong>
              * <p>RAW</p>
@@ -1494,9 +1572,9 @@ public class CreateImagePipelineRequest extends Request {
             /**
              * <p>The metadata access mode of the image. Valid values:</p>
              * <ul>
-             * <li><p>v1: When you create an ECS instance from this image, you cannot set the metadata access mode to &quot;Reinforced mode only&quot;.</p>
+             * <li><p>v1: When you create an ECS instance from this image, you cannot set the metadata access mode to enforced mode.</p>
              * </li>
-             * <li><p>v2: When you create an ECS instance from this image, you can set the metadata access mode to &quot;Reinforced mode only&quot;.</p>
+             * <li><p>v2: When you create an ECS instance from this image, you can set the metadata access mode to enforced mode.</p>
              * </li>
              * </ul>
              * <p>Default value: v1.</p>
@@ -1512,8 +1590,8 @@ public class CreateImagePipelineRequest extends Request {
             /**
              * <p>Specifies whether the imported original image supports NVMe. Valid values:</p>
              * <ul>
-             * <li>supported: supported. This indicates that instances created from this image support the NVMe protocol.</li>
-             * <li>unsupported: not supported. This indicates that instances created from this image do not support the NVMe protocol.</li>
+             * <li>supported: Supported. Instances created from this image support the NVMe protocol.</li>
+             * <li>unsupported: Not supported. Instances created from this image do not support the NVMe protocol.</li>
              * </ul>
              * <p>Default value: unsupported.</p>
              * 
@@ -1809,7 +1887,7 @@ public class CreateImagePipelineRequest extends Request {
             } 
 
             /**
-             * <p>The system architecture of the system disk. After you specify a data disk snapshot to create a system disk, you must use Architecture to determine the system architecture of the system disk. Valid values:</p>
+             * <p>The system architecture of the system disk. After you specify a data disk snapshot as the system disk of an image, you must use Architecture to determine the system architecture of the system disk. Valid values:</p>
              * <ul>
              * <li>x86_64</li>
              * <li>arm64</li>
@@ -1830,7 +1908,7 @@ public class CreateImagePipelineRequest extends Request {
              * <li>BIOS: BIOS boot mode.</li>
              * <li>UEFI: UEFI boot mode.</li>
              * </ul>
-             * <p>Default value: BIOS. If Architecture is set to arm64, the default value is UEFI, and you can only set this parameter to UEFI.</p>
+             * <p>Default value: BIOS. If Architecture is set to arm64, the default value is UEFI, and only UEFI can be set.</p>
              * <notice>
              * 
              * <p>To prevent instances from failing to start due to unsupported boot modes, make sure that you understand the boot modes supported by the destination image before you specify this parameter. For more information about image boot modes, see <a href="~~2244655#b9caa9b8bb1wf~~">Image boot modes</a>.</p>
@@ -1897,9 +1975,9 @@ public class CreateImagePipelineRequest extends Request {
             /**
              * <p>The license type used to activate the operating system after the image is imported. Valid values:</p>
              * <ul>
-             * <li>Auto: Alibaba Cloud detects the source operating system and assigns a license. In auto mode, the system first checks whether the Platform you specified has a license from official Alibaba Cloud channels and assigns it to the imported image. If no such license is available, the system switches to the Bring Your Own License (BYOL) method.</li>
-             * <li>Aliyun: uses a license from official Alibaba Cloud channels based on the Platform you specified.</li>
-             * <li>BYOL: uses the license provided by the source operating system. If you use BYOL, you must ensure that your license key is supported on Alibaba Cloud.</li>
+             * <li>Auto: Alibaba Cloud detects the source operating system and assigns a license. In auto mode, the system first checks whether the Platform you specified has a license from an official Alibaba Cloud channel and assigns it to the imported image. If no such license is available, the system switches to the Bring Your Own License (BYOL) method.</li>
+             * <li>Aliyun: Uses a license from an official Alibaba Cloud channel based on the Platform you specified.</li>
+             * <li>BYOL: Uses the license provided by the source operating system. If you use BYOL, you must ensure that your license key is supported in Alibaba Cloud.</li>
              * </ul>
              * <p>Default value: Auto.</p>
              * 
@@ -1958,7 +2036,7 @@ public class CreateImagePipelineRequest extends Request {
              * <li>Windows Server 2003</li>
              * <li>Other Windows</li>
              * </ul>
-             * <p>Default value: Others Linux if the operating system type is Linux, or Other Windows if the operating system type is Windows.</p>
+             * <p>Default value: Others Linux if the operating system type is Linux, or Other Windows if the operating system type is not Linux.</p>
              * 
              * <strong>example:</strong>
              * <p>Aliyun</p>
@@ -1984,10 +2062,10 @@ public class CreateImagePipelineRequest extends Request {
             /**
              * <p>The data retention policy for the imported image. Valid values:</p>
              * <ul>
-             * <li>RetainOnlySuccessful: retains the image only if the build succeeds.</li>
-             * <li>RetainOnlyFailed: retains the image only if the build fails.</li>
-             * <li>RetainAlways: always retains the image regardless of the build result.</li>
-             * <li>RetainNever: never retains the image regardless of the build result.</li>
+             * <li>RetainOnlySuccessful: Retains the image only if the building succeeds.</li>
+             * <li>RetainOnlyFailed: Retains the image only if the building fails.</li>
+             * <li>RetainAlways: Always retains the image regardless of the building result.</li>
+             * <li>RetainNever: Never retains the image regardless of the building result.</li>
              * </ul>
              * <p>Default value: RetainNever.</p>
              * 
@@ -2000,7 +2078,10 @@ public class CreateImagePipelineRequest extends Request {
             }
 
             /**
-             * <p>The name of the RAM role used when the image is imported.</p>
+             * <p>The name of the RAM role used when importing the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AliyunECSImageImportDefaultRole</p>
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;

@@ -114,7 +114,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page in a paging query.</p>
+         * <p>The number of entries returned per page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -125,7 +125,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The query token returned by the current call. For more information about how to use the token, see the operation description.</p>
+         * <p>The pagination token returned by this call. For more information, see the operation description.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAdDWBF2****</p>
@@ -147,7 +147,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of image templates returned.</p>
+         * <p>The total number of image templates returned.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -608,6 +608,60 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
 
             public ImageOptions build() {
                 return new ImageOptions(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeImagePipelinesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImagePipelinesResponseBody</p>
+     */
+    public static class ImageSecurityOptions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("SecurityScanMode")
+        private String securityScanMode;
+
+        private ImageSecurityOptions(Builder builder) {
+            this.securityScanMode = builder.securityScanMode;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ImageSecurityOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return securityScanMode
+         */
+        public String getSecurityScanMode() {
+            return this.securityScanMode;
+        }
+
+        public static final class Builder {
+            private String securityScanMode; 
+
+            private Builder() {
+            } 
+
+            private Builder(ImageSecurityOptions model) {
+                this.securityScanMode = model.securityScanMode;
+            } 
+
+            /**
+             * SecurityScanMode.
+             */
+            public Builder securityScanMode(String securityScanMode) {
+                this.securityScanMode = securityScanMode;
+                return this;
+            }
+
+            public ImageSecurityOptions build() {
+                return new ImageSecurityOptions(this);
             } 
 
         } 
@@ -1576,6 +1630,9 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ImagePipelineId")
         private String imagePipelineId;
 
+        @com.aliyun.core.annotation.NameInMap("ImageSecurityOptions")
+        private ImageSecurityOptions imageSecurityOptions;
+
         @com.aliyun.core.annotation.NameInMap("ImportImageOptions")
         private ImportImageOptions importImageOptions;
 
@@ -1629,6 +1686,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             this.imageName = builder.imageName;
             this.imageOptions = builder.imageOptions;
             this.imagePipelineId = builder.imagePipelineId;
+            this.imageSecurityOptions = builder.imageSecurityOptions;
             this.importImageOptions = builder.importImageOptions;
             this.instanceType = builder.instanceType;
             this.internetMaxBandwidthOut = builder.internetMaxBandwidthOut;
@@ -1737,6 +1795,13 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         }
 
         /**
+         * @return imageSecurityOptions
+         */
+        public ImageSecurityOptions getImageSecurityOptions() {
+            return this.imageSecurityOptions;
+        }
+
+        /**
          * @return importImageOptions
          */
         public ImportImageOptions getImportImageOptions() {
@@ -1840,6 +1905,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             private String imageName; 
             private ImageOptions imageOptions; 
             private String imagePipelineId; 
+            private ImageSecurityOptions imageSecurityOptions; 
             private ImportImageOptions importImageOptions; 
             private String instanceType; 
             private Integer internetMaxBandwidthOut; 
@@ -1870,6 +1936,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
                 this.imageName = model.imageName;
                 this.imageOptions = model.imageOptions;
                 this.imagePipelineId = model.imagePipelineId;
+                this.imageSecurityOptions = model.imageSecurityOptions;
                 this.importImageOptions = model.importImageOptions;
                 this.instanceType = model.instanceType;
                 this.internetMaxBandwidthOut = model.internetMaxBandwidthOut;
@@ -1978,6 +2045,14 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
              */
             public Builder imagePipelineId(String imagePipelineId) {
                 this.imagePipelineId = imagePipelineId;
+                return this;
+            }
+
+            /**
+             * ImageSecurityOptions.
+             */
+            public Builder imageSecurityOptions(ImageSecurityOptions imageSecurityOptions) {
+                this.imageSecurityOptions = imageSecurityOptions;
                 return this;
             }
 

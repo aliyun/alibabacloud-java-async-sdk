@@ -291,8 +291,8 @@ public class DescribeCapacityReservationsRequest extends Request {
         /**
          * <p>The billing method of the instance. Valid values:</p>
          * <ul>
-         * <li>PostPaid: pay-as-you-go.</li>
-         * <li>PrePaid: subscription.</li>
+         * <li>PostPaid: Pay-as-you-go.</li>
+         * <li>PrePaid: Subscription.</li>
          * </ul>
          * <p>Default value: PostPaid.</p>
          * 
@@ -306,7 +306,7 @@ public class DescribeCapacityReservationsRequest extends Request {
         }
 
         /**
-         * <p>The instance type. You can use the instance type to query only active capacity reservations. Released capacity reservations can be queried only by using PrivatePoolOptions.Ids.</p>
+         * <p>The instance type. You can use this parameter to query only active capacity reservations. To query released capacity reservations, you can only use the PrivatePoolOptions.Ids parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs.c6.large</p>
@@ -318,7 +318,7 @@ public class DescribeCapacityReservationsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries per page for a paged query.</p>
+         * <p>The number of entries per page in a paging query.</p>
          * <p>Maximum value: 100.</p>
          * <p>Default value: 10.</p>
          * 
@@ -332,7 +332,7 @@ public class DescribeCapacityReservationsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token for the capacity reservation query. Obtain the value from the result of the previous request.</p>
+         * <p>The pagination token for the capacity reservation query. Obtain the token from the response of the previous request.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -364,9 +364,9 @@ public class DescribeCapacityReservationsRequest extends Request {
         /**
          * <p>The operating system of the instance. Valid values:</p>
          * <ul>
-         * <li>windows: queries only capacity reservations for Windows instances.</li>
-         * <li>linux: queries only capacity reservations for Linux instances.</li>
-         * <li>all: queries all capacity reservations.</li>
+         * <li>windows: Queries only capacity reservations for Windows instances.</li>
+         * <li>linux: Queries only capacity reservations for Linux instances.</li>
+         * <li>all: Queries all capacity reservations.</li>
          * </ul>
          * <p>Default value: all.</p>
          * 
@@ -380,7 +380,7 @@ public class DescribeCapacityReservationsRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the capacity reservation. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+         * <p>The region ID of the capacity reservation. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -393,9 +393,9 @@ public class DescribeCapacityReservationsRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID. When you use this parameter to filter resources, the resource count cannot exceed 1000.</p>
+         * <p>The resource group ID. When you use this parameter to filter resources, the resource count cannot exceed 1,000.</p>
          * <blockquote>
-         * <p>Filtering by the default resource group is not supported.</p>
+         * <p>Default resource group filtering is not supported.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -428,14 +428,14 @@ public class DescribeCapacityReservationsRequest extends Request {
         /**
          * <p>The status of the capacity reservation. Valid values:</p>
          * <ul>
-         * <li>All: all states.</li>
-         * <li>Pending: initializing. A capacity reservation that takes effect at a specified time enters the initializing state first.</li>
-         * <li>Preparing: being prepared. A capacity reservation that takes effect at a specified time is in the being prepared state during the resource delivery phase.</li>
-         * <li>Prepared: to take effect. A capacity reservation that takes effect at a specified time is in the to take effect state after resource delivery is complete but before the service officially takes effect.</li>
-         * <li>Active: active.</li>
-         * <li>Released: released, including manual release and automatic release upon expiration.</li>
+         * <li>All: All statuses.</li>
+         * <li>Pending: Initialization. Capacity reservations that take effect at a specified time enter the initialization status first.</li>
+         * <li>Preparing: Preparing. Capacity reservations that take effect at a specified time are in the preparing status during resource delivery.</li>
+         * <li>Prepared: Pending. Capacity reservations that take effect at a specified time are in the pending status after resource delivery is complete and before the service officially takes effect.</li>
+         * <li>Active: Active.</li>
+         * <li>Released: Released, including manual release and automatic release upon expiration.</li>
          * </ul>
-         * <p>If you do not specify this parameter, capacity reservations in all states except Pending and Released are queried.</p>
+         * <p>If you do not specify this parameter, capacity reservations in all statuses except Pending and Released are queried.</p>
          * 
          * <strong>example:</strong>
          * <p>Active</p>
@@ -514,7 +514,7 @@ public class DescribeCapacityReservationsRequest extends Request {
             } 
 
             /**
-             * <p>The list of capacity reservation IDs. The value can be a JSON array that consists of up to 100 IDs, separated by commas (,).</p>
+             * <p>The IDs of the capacity reservations. The value can be a JSON array that consists of up to 100 IDs. Separate multiple IDs with commas (,).</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;crp-bp1gubrkqutenqdd****&quot;, &quot;crp-bp67acfmxazb5****&quot;]</p>
@@ -584,8 +584,8 @@ public class DescribeCapacityReservationsRequest extends Request {
             } 
 
             /**
-             * <p>The tag key. N specifies that you can set multiple tag keys for filtering. Valid values of N: 1 to 20.</p>
-             * <p>If you use a single tag to filter resources, the resource count with the tag cannot exceed 1000. If you use multiple tags to filter resources, the resource count with all specified tags attached cannot exceed 1000. If the resource count exceeds 1000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query resources.</p>
+             * <p>The tag key. N specifies that you can configure multiple tag keys for filtering. Valid values of N: 1 to 20.</p>
+             * <p>If you use a single tag to filter resources, the resource count returned cannot exceed 1,000. If you use multiple tags to filter resources, the resource count of resources that are attached to all the specified tags cannot exceed 1,000. If the resource count exceeds 1,000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query the resources.</p>
              * 
              * <strong>example:</strong>
              * <p>TestKey</p>
@@ -596,7 +596,7 @@ public class DescribeCapacityReservationsRequest extends Request {
             }
 
             /**
-             * <p>The tag value. N specifies that you can set multiple tag values for filtering. Valid values of N: 1 to 20.</p>
+             * <p>The tag value. N specifies that you can configure multiple tag values for filtering. Valid values of N: 1 to 20.</p>
              * 
              * <strong>example:</strong>
              * <p>TestValue</p>

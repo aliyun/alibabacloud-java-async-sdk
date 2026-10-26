@@ -67,7 +67,7 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The price information, including the price and discount rule information.</p>
+         * <p>The PriceInfo data type, which includes pricing and discount rule information.</p>
          */
         public Builder priceInfo(PriceInfo priceInfo) {
             this.priceInfo = priceInfo;
@@ -551,7 +551,7 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The transaction price, which is equal to the original price minus the discount.</p>
+             * <p>The final price, which is the original price minus the discount.</p>
              * 
              * <strong>example:</strong>
              * <p>113.880</p>
@@ -682,7 +682,7 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The transaction price, which is equal to the original price minus the discount.</p>
+             * <p>The final price, which is the original price minus the discount.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -956,7 +956,7 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The related price.</p>
+             * <p>The associated price.</p>
              */
             public Builder relatedPrice(RelatedPrice relatedPrice) {
                 this.relatedPrice = relatedPrice;

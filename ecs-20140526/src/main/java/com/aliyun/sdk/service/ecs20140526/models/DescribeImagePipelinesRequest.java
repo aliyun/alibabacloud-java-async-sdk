@@ -236,7 +236,7 @@ public class DescribeImagePipelinesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page in a paging query. Valid values: 1 to 500.</p>
+         * <p>The maximum number of entries to return per page in a paging query. Valid values: 1 to 500.</p>
          * <p>Default value: 50.</p>
          * 
          * <strong>example:</strong>
@@ -291,7 +291,7 @@ public class DescribeImagePipelinesRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the latest list of Alibaba Cloud regions.</p>
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -304,7 +304,7 @@ public class DescribeImagePipelinesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the enterprise resource group. When you use this parameter to filter resources, the resource count cannot exceed 1,000.</p>
+         * <p>The ID of the resource group. When you use this parameter to filter resources, the resource count cannot exceed 1,000.</p>
          * <blockquote>
          * <p>Filtering by the default resource group is not supported.</p>
          * </blockquote>
@@ -337,7 +337,7 @@ public class DescribeImagePipelinesRequest extends Request {
         }
 
         /**
-         * <p>The list of tags.</p>
+         * <p>The tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
