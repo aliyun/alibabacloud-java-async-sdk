@@ -104,7 +104,7 @@ public class CreateDatasetRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the workspace.</p>
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,7 +117,7 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
-         * <p>The name of the dataset.</p>
+         * <p>The dataset name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,7 +130,7 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
-         * <p>The description of the dataset.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -142,7 +142,7 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
-         * <p>The schema of the dataset.</p>
+         * <p>The table schema.</p>
          * <p>This parameter is required.</p>
          */
         public Builder schema(java.util.Map<String, IndexKey> schema) {

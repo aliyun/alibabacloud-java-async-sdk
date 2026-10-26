@@ -158,7 +158,7 @@ public class CreateDataPipelineRequest extends Request {
         } 
 
         /**
-         * <p>The workspace name.</p>
+         * <p>The name of the workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -171,7 +171,7 @@ public class CreateDataPipelineRequest extends Request {
         }
 
         /**
-         * <p>The pipeline description.</p>
+         * <p>The description of the pipeline.</p>
          * 
          * <strong>example:</strong>
          * <p>Export selected trace services to the target workspace.</p>
@@ -183,7 +183,7 @@ public class CreateDataPipelineRequest extends Request {
         }
 
         /**
-         * <p>The pipeline type.</p>
+         * <p>The type of the pipeline.</p>
          * 
          * <strong>example:</strong>
          * <p>export</p>
@@ -225,7 +225,7 @@ public class CreateDataPipelineRequest extends Request {
         }
 
         /**
-         * <p>The output destinations.</p>
+         * <p>The sinks.</p>
          */
         public Builder sinks(java.util.List<Sinks> sinks) {
             this.putBodyParameter("sinks", sinks);
@@ -516,7 +516,7 @@ public class CreateDataPipelineRequest extends Request {
             } 
 
             /**
-             * <p>The length of the prefix to retain.</p>
+             * <p>The length of the retained prefix.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -527,7 +527,7 @@ public class CreateDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>The length of the suffix to retain.</p>
+             * <p>The length of the retained suffix.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -559,7 +559,7 @@ public class CreateDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>The masking mode.</p>
+             * <p>The data masking mode.</p>
              * 
              * <strong>example:</strong>
              * <p>keyword</p>
@@ -685,7 +685,7 @@ public class CreateDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>The field or dimension name.</p>
+             * <p>The name of the field or dimension.</p>
              * 
              * <strong>example:</strong>
              * <p>serviceName</p>
@@ -784,7 +784,7 @@ public class CreateDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>The matching method.</p>
+             * <p>The match type.</p>
              * 
              * <strong>example:</strong>
              * <p>EXACT</p>
@@ -862,7 +862,7 @@ public class CreateDataPipelineRequest extends Request {
             } 
 
             /**
-             * <p>The matching method.</p>
+             * <p>The match type.</p>
              * 
              * <strong>example:</strong>
              * <p>EXACT</p>
@@ -943,7 +943,7 @@ public class CreateDataPipelineRequest extends Request {
             } 
 
             /**
-             * <p>The matching method.</p>
+             * <p>The match type.</p>
              * 
              * <strong>example:</strong>
              * <p>EXACT</p>
@@ -1104,7 +1104,7 @@ public class CreateDataPipelineRequest extends Request {
             } 
 
             /**
-             * <p>The list of service names.</p>
+             * <p>The service name list.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;checkout-*&quot;,&quot;order-service&quot;]</p>
@@ -1383,7 +1383,7 @@ public class CreateDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>The extended parameters.</p>
+             * <p>The additional parameters.</p>
              */
             public Builder parameters(java.util.Map<String, ?> parameters) {
                 this.parameters = parameters;
@@ -1399,7 +1399,7 @@ public class CreateDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>The list of masking rules.</p>
+             * <p>The list of data masking rules.</p>
              */
             public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
@@ -1407,7 +1407,7 @@ public class CreateDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>The pipeline processing scope.</p>
+             * <p>The effective scope of pipeline processing.</p>
              */
             public Builder scope(Scope scope) {
                 this.scope = scope;
@@ -1605,7 +1605,7 @@ public class CreateDataPipelineRequest extends Request {
             } 
 
             /**
-             * <p>The output name.</p>
+             * <p>The name of the output.</p>
              * 
              * <strong>example:</strong>
              * <p>checkout_route</p>
@@ -1897,7 +1897,7 @@ public class CreateDataPipelineRequest extends Request {
             } 
 
             /**
-             * <p>The length of the prefix to retain.</p>
+             * <p>The length of the retained prefix.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -1908,7 +1908,7 @@ public class CreateDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>The length of the suffix to retain.</p>
+             * <p>The length of the retained suffix.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -1940,7 +1940,7 @@ public class CreateDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>The masking mode.</p>
+             * <p>The data masking mode.</p>
              * 
              * <strong>example:</strong>
              * <p>keyword</p>
@@ -2066,7 +2066,7 @@ public class CreateDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>The field or dimension name.</p>
+             * <p>The name of the field or dimension.</p>
              * 
              * <strong>example:</strong>
              * <p>serviceName</p>
@@ -2165,7 +2165,7 @@ public class CreateDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>The matching method.</p>
+             * <p>The match type.</p>
              * 
              * <strong>example:</strong>
              * <p>EXACT</p>
@@ -2243,7 +2243,7 @@ public class CreateDataPipelineRequest extends Request {
             } 
 
             /**
-             * <p>The matching method.</p>
+             * <p>The match type.</p>
              * 
              * <strong>example:</strong>
              * <p>EXACT</p>
@@ -2324,7 +2324,7 @@ public class CreateDataPipelineRequest extends Request {
             } 
 
             /**
-             * <p>The matching method.</p>
+             * <p>The match type.</p>
              * 
              * <strong>example:</strong>
              * <p>EXACT</p>
@@ -2485,7 +2485,7 @@ public class CreateDataPipelineRequest extends Request {
             } 
 
             /**
-             * <p>The list of service names.</p>
+             * <p>The service name list.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;checkout-*&quot;,&quot;order-service&quot;]</p>
@@ -2764,7 +2764,7 @@ public class CreateDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>The extended parameters.</p>
+             * <p>The additional parameters.</p>
              */
             public Builder parameters(java.util.Map<String, ?> parameters) {
                 this.parameters = parameters;
@@ -2780,7 +2780,7 @@ public class CreateDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>The list of masking rules.</p>
+             * <p>The list of data masking rules.</p>
              */
             public Builder rules(java.util.List<ConfigRules> rules) {
                 this.rules = rules;
@@ -2788,7 +2788,7 @@ public class CreateDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>The pipeline processing scope in which the processor takes effect.</p>
+             * <p>The effective scope of pipeline processing.</p>
              */
             public Builder scope(ConfigScope scope) {
                 this.scope = scope;
@@ -3025,7 +3025,7 @@ public class CreateDataPipelineRequest extends Request {
             } 
 
             /**
-             * <p>The list of datasets.</p>
+             * <p>The dataset list.</p>
              */
             public Builder datasets(java.util.List<String> datasets) {
                 this.datasets = datasets;
@@ -3044,7 +3044,7 @@ public class CreateDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>The name of the output destination.</p>
+             * <p>The sink name.</p>
              * 
              * <strong>example:</strong>
              * <p>error-archive</p>
@@ -3066,7 +3066,7 @@ public class CreateDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>The type of the output destination.</p>
+             * <p>The sink type.</p>
              * 
              * <strong>example:</strong>
              * <p>logstore</p>
@@ -3241,7 +3241,7 @@ public class CreateDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>The read start point.</p>
+             * <p>The start position.</p>
              * 
              * <strong>example:</strong>
              * <p>latest</p>
@@ -3327,7 +3327,7 @@ public class CreateDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>The type of the data source.</p>
+             * <p>The data source type.</p>
              * 
              * <strong>example:</strong>
              * <p>traces-default</p>

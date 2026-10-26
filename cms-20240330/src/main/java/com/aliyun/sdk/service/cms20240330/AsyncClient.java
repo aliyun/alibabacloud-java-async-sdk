@@ -129,8 +129,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Creates a silence policy in a specified workspace. A silence policy uses filterSetting to filter events. When the policy is enabled and the current time hits the configured effective rules, hit events do not trigger subscribe notifications, direct notifications, or global subscribe notifications. The events are still Normal and stored in the database.
-     * When you create a silence policy, maintainWindowName and filterSetting are required. filterSetting must contain at least one condition. You do not have to configure any effective period. In this case, the policy does not hit any events. If you configure effective, you must also configure at least one of startTime, endTime, or effectTimeRange. Otherwise, the validation is failed. If a policy name already exists in the same workspace, the InvalidParameterValue error is returned. After the policy is created, the silence policy ID is returned.</p>
+     * <p>Creates a silence policy in a specified workspace. A silence policy filters events by using filterSetting. When the policy is enabled and the current time hits the configured effective period, the hit events do not trigger subscribe notifications, direct notifications, or global subscribe notifications, but the events are still stored normally. When you create a policy, maintainWindowName and filterSetting are required, and filterSetting must contain at least one condition. You can leave the effective period unconfigured, in which case the policy does not hit any events. If you configure effective, you must also configure at least one of startTime, endTime, or effectTimeRange. Otherwise, the validation failed. If the policy name already exists in the same workspace, InvalidParameterValue is returned. After the policy is created, the silence policy ID is returned.</p>
      * 
      * @param request the request parameters of CreateMaintainWindow  CreateMaintainWindowRequest
      * @return CreateMaintainWindowResponse
@@ -145,7 +144,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Creates a notification policy in a specified workspace. The notifyStrategy field in the request body NotifyPolicyConfig is required, while subscription and responsePlan are optional. After the policy is created, the generated policy UUID and complete policy details are returned. If a policy with the same Policy Name already exists in the workspace, a ConflictName error is returned.</p>
+     * <p>Creates a notification policy in a specified workspace. In the request body NotifyPolicyConfig, notifyStrategy is required, while subscription and responsePlan are optional. Upon successful creation, the generated policy UUID and complete policy details are returned. If a duplicate policy name exists in the same workspace, ConflictName is returned.</p>
      * 
      * @param request the request parameters of CreateNotifyPolicy  CreateNotifyPolicyRequest
      * @return CreateNotifyPolicyResponse
@@ -557,12 +556,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This operation queries all entities of a specific cloud service within a specified time range.</li>
-     * <li>The <code>from</code> and <code>to</code> parameters specify the time range of the query in seconds-level timestamps.</li>
-     * <li>The <code>spl</code> parameter supports entityStore query statements to filter or select the required entities and their properties.</li>
-     * <li>If you need only specific fields, use the <code>project</code> clause in <code>spl</code> to filter them.</li>
+     * <li>This operation queries all entities under a specific cloud service within a specified time range.</li>
+     * <li>The <code>from</code> and <code>to</code> parameters specify the time range for the query, represented by timestamps in seconds.</li>
+     * <li>The <code>spl</code> parameter supports filtering or selecting required entities and their properties by using entityStore query statements.</li>
+     * <li>If only specific fields are required, you can use the <code>project</code> clause in <code>spl</code> to filter them.</li>
      * <li>The response contains the specific property values of each entity and the corresponding list of property names for easy parsing and processing.</li>
      * </ul>
      * 
@@ -753,7 +752,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the configuration of a Umodel.</p>
+     * <p>Retrieves Umodel configuration information.</p>
      * 
      * @param request the request parameters of GetUmodel  GetUmodelRequest
      * @return GetUmodelResponse
@@ -783,7 +782,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation retrieves a list of integration configurations.</p>
+     * <p>Queries the list of integration configurations.</p>
      * 
      * @param request the request parameters of ListAddonReleases  ListAddonReleasesRequest
      * @return ListAddonReleasesResponse
@@ -792,7 +791,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Creates a site monitoring job.</p>
+     * <p>Creates a site monitoring task.</p>
      * 
      * @param request the request parameters of ListAddons  ListAddonsRequest
      * @return ListAddonsResponse
@@ -894,7 +893,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Lists the add-ons that are installed for a specified policy.</p>
+     * <p>Retrieves the list of add-ons installed for the current policy.</p>
      * 
      * @param request the request parameters of ListIntegrationPolicyAddons  ListIntegrationPolicyAddonsRequest
      * @return ListIntegrationPolicyAddonsResponse
@@ -915,7 +914,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example of how to query a list of integration policy dashboards.</p>
+     * <p>This topic provides an example of querying the alert template list. The response shows that the list contains two alert templates: <code>ECS_Template1</code> and <code>ECS_Template2</code>.</p>
      * 
      * @param request the request parameters of ListIntegrationPolicyDashboards  ListIntegrationPolicyDashboardsRequest
      * @return ListIntegrationPolicyDashboardsResponse
@@ -924,7 +923,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to query the list of alert templates. The response shows that the alert template list contains two alert templates: <code>ECS_Template1</code> and <code>ECS_Template2</code>.</p>
+     * <p>This topic provides an example of querying alert templates. The response indicates that the alert template list contains two alert templates: <code>ECS_Template1</code> and <code>ECS_Template2</code>.</p>
      * 
      * @param request the request parameters of ListIntegrationPolicyPodMonitors  ListIntegrationPolicyPodMonitorsRequest
      * @return ListIntegrationPolicyPodMonitorsResponse
@@ -1067,7 +1066,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Compiles a candidate configuration and queries read-only samples grouped by dataset within a specified time window.</p>
+     * <p>Compiles candidate configurations and queries read-only samples grouped by dataset within a specified time window.</p>
      * 
      * @param request the request parameters of PreviewDataPipeline  PreviewDataPipelineRequest
      * @return PreviewDataPipelineResponse
@@ -1082,7 +1081,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example of querying an alert template list. The response shows that the list contains two alert templates: <code>ECS_Template1</code> and <code>ECS_Template2</code>.</p>
+     * <p>This topic provides an example of querying the list of alert templates. The response shows that the list contains two alert templates: <code>ECS_Template1</code> and <code>ECS_Template2</code>.</p>
      * 
      * @param request the request parameters of QueryAlertRules  QueryAlertRulesRequest
      * @return QueryAlertRulesResponse
@@ -1173,7 +1172,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Modifies a specified data pipeline by using a complete candidate configuration.</p>
+     * <p>Updates the specified data pipeline with a full candidate configuration.</p>
      * 
      * @param request the request parameters of UpdateDataPipeline  UpdateDataPipelineRequest
      * @return UpdateDataPipelineResponse

@@ -111,7 +111,7 @@ public class GetAddonRequest extends Request {
         }
 
         /**
-         * <p>This is a query parameter.</p>
+         * <p>The query parameter.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,7 +124,7 @@ public class GetAddonRequest extends Request {
         }
 
         /**
-         * <p>The language of the response. Valid values: zh and en. Default value: zh.</p>
+         * <p>The locale. Default value: zh. Valid values: zh, en.</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -136,7 +136,7 @@ public class GetAddonRequest extends Request {
         }
 
         /**
-         * <p>The version number of the add-on.</p>
+         * <p>The version of the add-on.</p>
          * 
          * <strong>example:</strong>
          * <ul>

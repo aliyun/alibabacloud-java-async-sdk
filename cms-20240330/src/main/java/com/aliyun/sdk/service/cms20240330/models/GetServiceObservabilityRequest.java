@@ -75,7 +75,7 @@ public class GetServiceObservabilityRequest extends Request {
         } 
 
         /**
-         * <p>The Cloud Monitor 2.0 workspace.</p>
+         * <p>The CMS 2.0 workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

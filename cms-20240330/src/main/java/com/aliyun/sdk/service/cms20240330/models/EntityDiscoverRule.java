@@ -158,7 +158,7 @@ public class EntityDiscoverRule extends TeaModel {
         } 
 
         /**
-         * <p>The collection of annotation matching rules.</p>
+         * <p>The annotation matches.</p>
          */
         public Builder annotations(java.util.List<Annotations> annotations) {
             this.annotations = annotations;
@@ -166,7 +166,7 @@ public class EntityDiscoverRule extends TeaModel {
         }
 
         /**
-         * <p>The collection of entity types.</p>
+         * <p>The entity types.</p>
          */
         public Builder entityTypes(java.util.List<String> entityTypes) {
             this.entityTypes = entityTypes;
@@ -174,7 +174,7 @@ public class EntityDiscoverRule extends TeaModel {
         }
 
         /**
-         * <p>The property matching rules.</p>
+         * <p>The field matching rules.</p>
          */
         public Builder fieldRules(java.util.List<FieldRules> fieldRules) {
             this.fieldRules = fieldRules;
@@ -182,7 +182,7 @@ public class EntityDiscoverRule extends TeaModel {
         }
 
         /**
-         * <p>The collection of instance IDs.</p>
+         * <p>The instance IDs.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             this.instanceIds = instanceIds;
@@ -190,7 +190,7 @@ public class EntityDiscoverRule extends TeaModel {
         }
 
         /**
-         * <p>The collection of IP matching rules.</p>
+         * <p>The IP matching rules.</p>
          */
         public Builder ipMatchRule(IpMatchRule ipMatchRule) {
             this.ipMatchRule = ipMatchRule;
@@ -198,7 +198,7 @@ public class EntityDiscoverRule extends TeaModel {
         }
 
         /**
-         * <p>The collection of label matching rules.</p>
+         * <p>The label matches.</p>
          */
         public Builder labels(java.util.List<Labels> labels) {
             this.labels = labels;
@@ -206,7 +206,7 @@ public class EntityDiscoverRule extends TeaModel {
         }
 
         /**
-         * <p>The collection of region IDs.</p>
+         * <p>The region IDs.</p>
          */
         public Builder regionIds(java.util.List<String> regionIds) {
             this.regionIds = regionIds;
@@ -225,7 +225,7 @@ public class EntityDiscoverRule extends TeaModel {
         }
 
         /**
-         * <p>The tag-based service discovery settings.</p>
+         * <p>The tags used for service discovery.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.tags = tags;
@@ -315,7 +315,7 @@ public class EntityDiscoverRule extends TeaModel {
             }
 
             /**
-             * <p>The key of the annotation.</p>
+             * <p>The annotation key.</p>
              * 
              * <strong>example:</strong>
              * <p>instanceId</p>
@@ -326,7 +326,7 @@ public class EntityDiscoverRule extends TeaModel {
             }
 
             /**
-             * <p>The collection of annotation values.</p>
+             * <p>The annotation values.</p>
              */
             public Builder tagValues(java.util.List<String> tagValues) {
                 this.tagValues = tagValues;
@@ -406,7 +406,7 @@ public class EntityDiscoverRule extends TeaModel {
             } 
 
             /**
-             * <p>The key of the property.</p>
+             * <p>The field key.</p>
              * 
              * <strong>example:</strong>
              * <p>instanceId</p>
@@ -417,7 +417,7 @@ public class EntityDiscoverRule extends TeaModel {
             }
 
             /**
-             * <p>The collection of property values.</p>
+             * <p>The field values.</p>
              */
             public Builder fieldValues(java.util.List<String> fieldValues) {
                 this.fieldValues = fieldValues;
@@ -495,7 +495,7 @@ public class EntityDiscoverRule extends TeaModel {
             } 
 
             /**
-             * <p>The CIDR block of the IP address.</p>
+             * <p>The IP CIDR block.</p>
              * 
              * <strong>example:</strong>
              * <p>192.168.0.0/16</p>
@@ -506,7 +506,7 @@ public class EntityDiscoverRule extends TeaModel {
             }
 
             /**
-             * <p>The property key of the IP address.</p>
+             * <p>The IP attribute key.</p>
              * 
              * <strong>example:</strong>
              * <p>ecs_ip</p>
@@ -600,7 +600,7 @@ public class EntityDiscoverRule extends TeaModel {
             }
 
             /**
-             * <p>The key of the label.</p>
+             * <p>The label key.</p>
              * 
              * <strong>example:</strong>
              * <p>project</p>
@@ -611,7 +611,7 @@ public class EntityDiscoverRule extends TeaModel {
             }
 
             /**
-             * <p>The collection of label values.</p>
+             * <p>The label values.</p>
              */
             public Builder tagValues(java.util.List<String> tagValues) {
                 this.tagValues = tagValues;
@@ -702,7 +702,7 @@ public class EntityDiscoverRule extends TeaModel {
             }
 
             /**
-             * <p>The key of the tag.</p>
+             * <p>The tag key.</p>
              * 
              * <strong>example:</strong>
              * <p>project</p>
@@ -713,7 +713,7 @@ public class EntityDiscoverRule extends TeaModel {
             }
 
             /**
-             * <p>The collection of tag values.</p>
+             * <p>The tag values.</p>
              */
             public Builder tagValues(java.util.List<String> tagValues) {
                 this.tagValues = tagValues;

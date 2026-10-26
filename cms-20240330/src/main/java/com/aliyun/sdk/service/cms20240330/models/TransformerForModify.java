@@ -139,7 +139,7 @@ public class TransformerForModify extends TeaModel {
         }
 
         /**
-         * <p>The filter criteria.</p>
+         * <p>The filter conditions.</p>
          */
         public Builder filterSetting(FilterSetting filterSetting) {
             this.filterSetting = filterSetting;
@@ -147,7 +147,7 @@ public class TransformerForModify extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether to exit after a match is processed.</p>
+         * <p>Specifies whether to exit after match processing.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -158,7 +158,7 @@ public class TransformerForModify extends TeaModel {
         }
 
         /**
-         * <p>The sort number.</p>
+         * <p>The sort order.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

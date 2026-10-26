@@ -116,7 +116,7 @@ public class ListIntegrationPolicyPodMonitorsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the access center policy.</p>
+         * <p>The Integration Center policy ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,7 +129,7 @@ public class ListIntegrationPolicyPodMonitorsRequest extends Request {
         }
 
         /**
-         * <p>The name of the addon release.</p>
+         * <p>The addon release name.</p>
          * 
          * <strong>example:</strong>
          * <p>release-123456789</p>
@@ -141,7 +141,7 @@ public class ListIntegrationPolicyPodMonitorsRequest extends Request {
         }
 
         /**
-         * <p>The identifier of the collector. If a release exists, pass the release name. If no release exists, pass the component name.</p>
+         * <p>The collector identifier. If a release is available, specify the release name. Otherwise, specify the component name.</p>
          * 
          * <strong>example:</strong>
          * <p>collector:metric-agent:policy:policy-bfd3d455fd6f4bc8</p>
@@ -153,7 +153,7 @@ public class ListIntegrationPolicyPodMonitorsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to encrypt the YAML.</p>
+         * <p>Specifies whether to encrypt the YAML content.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

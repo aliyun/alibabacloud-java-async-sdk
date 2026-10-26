@@ -106,7 +106,7 @@ public class GetUmodelResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>This parameter is reserved.</p>
+         * <p>This field does not need to be populated.</p>
          */
         public Builder commonSchemaRef(java.util.List<CommonSchemaRef> commonSchemaRef) {
             this.commonSchemaRef = commonSchemaRef;
@@ -125,7 +125,7 @@ public class GetUmodelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The region of the resource.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-heyuan</p>
@@ -216,7 +216,7 @@ public class GetUmodelResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The public Umodel schema group.</p>
+             * <p>The common Umodel schema group.</p>
              * 
              * <strong>example:</strong>
              * <p>test-job-123123</p>

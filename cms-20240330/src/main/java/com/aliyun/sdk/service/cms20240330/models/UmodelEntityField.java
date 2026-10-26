@@ -67,7 +67,7 @@ public class UmodelEntityField extends TeaModel {
         } 
 
         /**
-         * <p>The name of the entity field.</p>
+         * field.
          */
         public Builder field(String field) {
             this.field = field;
@@ -75,7 +75,7 @@ public class UmodelEntityField extends TeaModel {
         }
 
         /**
-         * <p>The field alias or display value.</p>
+         * value.
          */
         public Builder value(String value) {
             this.value = value;

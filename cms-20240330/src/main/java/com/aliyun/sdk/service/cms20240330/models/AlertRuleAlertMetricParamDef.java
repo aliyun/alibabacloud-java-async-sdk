@@ -145,7 +145,7 @@ public class AlertRuleAlertMetricParamDef extends TeaModel {
         } 
 
         /**
-         * <p>The maximum width of the input control. This parameter is valid only for SELECT_PARAM and INPUT_PARAM.</p>
+         * <p>The maximum width of the input box, which applies only to SELECT_PARAM and INPUT_PARAM.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -156,7 +156,7 @@ public class AlertRuleAlertMetricParamDef extends TeaModel {
         }
 
         /**
-         * <p>The minimum width of the input control. This parameter is valid only for SELECT_PARAM and INPUT_PARAM.</p>
+         * <p>The minimum width of the input box, which applies only to SELECT_PARAM and INPUT_PARAM.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -178,7 +178,7 @@ public class AlertRuleAlertMetricParamDef extends TeaModel {
         }
 
         /**
-         * <p>The Chinese placeholder text displayed on the frontend. This parameter is valid only for INPUT_PARAM.</p>
+         * <p>The Chinese placeholder for frontend display, which applies only to INPUT_PARAM.</p>
          * 
          * <strong>example:</strong>
          * <p>请输入值</p>
@@ -189,7 +189,7 @@ public class AlertRuleAlertMetricParamDef extends TeaModel {
         }
 
         /**
-         * <p>The English placeholder text displayed on the frontend. This parameter is valid only for INPUT_PARAM.</p>
+         * <p>The English placeholder for frontend display, which applies only to INPUT_PARAM.</p>
          * 
          * <strong>example:</strong>
          * <p>Enter value</p>
@@ -200,7 +200,12 @@ public class AlertRuleAlertMetricParamDef extends TeaModel {
         }
 
         /**
-         * <p>● TEXT_PARAM: A read-only text parameter defined by the backend. No user input control is displayed on the frontend.● INPUT_PARAM: An input box parameter.● SELECT_PARAM: A selection box parameter.</p>
+         * <p>The parameter type. Valid values:</p>
+         * <ul>
+         * <li>TEXT_PARAM: Read-only text parameter defined by the backend. No user input control is displayed on the frontend.</li>
+         * <li>INPUT_PARAM: Input box parameter.</li>
+         * <li>SELECT_PARAM: Selection box parameter.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>TEXT_PARAM</p>
@@ -222,7 +227,7 @@ public class AlertRuleAlertMetricParamDef extends TeaModel {
         }
 
         /**
-         * <p>The list of available options in the drop-down list. This parameter is valid only for SELECT_PARAM.</p>
+         * <p>The list of selectable values for the drop-down list, which applies only to SELECT_PARAM.</p>
          */
         public Builder values(java.util.List<Values> values) {
             this.values = values;

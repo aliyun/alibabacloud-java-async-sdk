@@ -132,10 +132,10 @@ public class NotificationChannelsFilter extends TeaModel {
         } 
 
         /**
-         * <p>The alert contact list of the rule contains any value in the array (OR semantics), corresponding to V1 notification.contacts.</p>
+         * <p>The list of notification contacts in the rule contains any value in the array. This uses OR logic and corresponds to notification.contacts in V1.</p>
          * 
          * <strong>example:</strong>
-         * <p>[&quot;John&quot;,&quot;Jane&quot;]</p>
+         * <p>[&quot;张三&quot;,&quot;李四&quot;]</p>
          */
         public Builder containsContacts(java.util.List<String> containsContacts) {
             this.containsContacts = containsContacts;
@@ -143,7 +143,7 @@ public class NotificationChannelsFilter extends TeaModel {
         }
 
         /**
-         * <p>The custom webhook list of the rule contains any value in the array (OR semantics), corresponding to V1 notification.customWebhooks.</p>
+         * <p>The list of custom webhooks in the rule contains any value in the array. This uses OR logic and corresponds to notification.customWebhooks in V1.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;<a href="https://my-service.example.com/webhook/alert%22%5D">https://my-service.example.com/webhook/alert&quot;]</a></p>
@@ -154,7 +154,7 @@ public class NotificationChannelsFilter extends TeaModel {
         }
 
         /**
-         * <p>The DingTalk webhook list of the rule contains any value in the array (OR semantics), corresponding to V1 notification.dingWebhooks.</p>
+         * <p>The list of DingTalk webhooks in the rule contains any value in the array. This uses OR logic and corresponds to notification.dingWebhooks in V1.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;<a href="https://oapi.dingtalk.com/robot/send?access_token=abc123%22%5D">https://oapi.dingtalk.com/robot/send?access_token=abc123&quot;]</a></p>
@@ -165,7 +165,7 @@ public class NotificationChannelsFilter extends TeaModel {
         }
 
         /**
-         * <p>The Lark webhook list of the rule contains any value in the array (OR semantics), corresponding to V1 notification.fsWebhooks.</p>
+         * <p>The list of Lark webhooks in the rule contains any value in the array. This uses OR logic and corresponds to notification.fsWebhooks in V1.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;<a href="https://open.feishu.cn/open-apis/bot/v2/hook/abc123%22%5D">https://open.feishu.cn/open-apis/bot/v2/hook/abc123&quot;]</a></p>
@@ -176,10 +176,10 @@ public class NotificationChannelsFilter extends TeaModel {
         }
 
         /**
-         * <p>The alert contact group list of the rule contains any value in the array (OR semantics), corresponding to V1 notification.groups.</p>
+         * <p>The list of contact groups in the rule contains any value in the array. This uses OR logic and corresponds to notification.groups in V1.</p>
          * 
          * <strong>example:</strong>
-         * <p>[&quot;OpsTeam&quot;,&quot;SRETeam&quot;]</p>
+         * <p>[&quot;运维组&quot;,&quot;SRE团队&quot;]</p>
          */
         public Builder containsGroups(java.util.List<String> containsGroups) {
             this.containsGroups = containsGroups;
@@ -187,7 +187,7 @@ public class NotificationChannelsFilter extends TeaModel {
         }
 
         /**
-         * <p>The Slack webhook list of the rule contains any value in the array (OR semantics), corresponding to V1 notification.slackWebhooks.</p>
+         * <p>The list of Slack webhooks in the rule contains any value in the array. This uses OR logic and corresponds to notification.slackWebhooks in V1.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;<a href="https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXX%22%5D">https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXX&quot;]</a></p>
@@ -198,7 +198,7 @@ public class NotificationChannelsFilter extends TeaModel {
         }
 
         /**
-         * <p>The WeCom webhook list of the rule contains any value in the array (OR semantics), corresponding to V1 notification.wxWebhooks.</p>
+         * <p>The list of WeCom webhooks in the rule contains any value in the array. This uses OR logic and corresponds to notification.wxWebhooks in V1.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;<a href="https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=abc123%22%5D">https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=abc123&quot;]</a></p>

@@ -138,7 +138,7 @@ public class CreateBizTraceRequest extends Request {
         }
 
         /**
-         * <p>The advanced configuration.</p>
+         * <p>The advanced configurations.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;sample&quot;:{&quot;strategy&quot;:&quot;BY_APP&quot;}}</p>
@@ -150,7 +150,7 @@ public class CreateBizTraceRequest extends Request {
         }
 
         /**
-         * <p>The identifier for the business trace. It can contain only letters, digits, and underscores (_). The first character must be a lowercase letter.</p>
+         * <p>The business trace code. The code can contain only letters, digits, and underscores (_), and must start with a lowercase letter.</p>
          * 
          * <strong>example:</strong>
          * <p>label_env</p>
@@ -174,7 +174,7 @@ public class CreateBizTraceRequest extends Request {
         }
 
         /**
-         * <p>The configuration rules.</p>
+         * <p>The list of configuration rules.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;entrancePid&quot;:&quot;xxx@d9w3jd9j3&quot;,&quot;rpcMatcher&quot;:{&quot;matchType&quot;:&quot;EQUALS&quot;,&quot;pattern&quot;:&quot;/&quot;},&quot;characteristics&quot;:{&quot;operation&quot;:&quot;OR&quot;,&quot;rules&quot;:[{&quot;target&quot;:&quot;CUSTOM_EXTRACT&quot;,&quot;id&quot;:&quot;oi0b3bb7&quot;,&quot;key&quot;:&quot;biz.test&quot;,&quot;matcher&quot;:{&quot;matchType&quot;:&quot;CONTAINS&quot;,&quot;pattern&quot;:[&quot;1&quot;]}}]}}]</p>

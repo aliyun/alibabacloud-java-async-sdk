@@ -67,7 +67,7 @@ public class ListAddonsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A list of available add-ons.</p>
+         * <p>The list of available integration components.</p>
          */
         public Builder addons(java.util.List<Addons> addons) {
             this.addons = addons;
@@ -157,7 +157,7 @@ public class ListAddonsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Dashboard description.</p>
+             * <p>The dashboard description.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -168,7 +168,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Dashboard name.</p>
+             * <p>The dashboard name.</p>
              * 
              * <strong>example:</strong>
              * <p>rum_view_link_rum_api</p>
@@ -179,7 +179,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the dashboard\&quot;s preview image.</p>
+             * <p>The URL of the dashboard preview image.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://xxxxxxx">http://xxxxxxx</a></p>
@@ -249,7 +249,7 @@ public class ListAddonsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The group name of the Common Schema.</p>
+             * <p>The group name of the common schema.</p>
              * 
              * <strong>example:</strong>
              * <p>acs-ecs</p>
@@ -260,7 +260,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the Common Schema.</p>
+             * <p>The version of the common schema.</p>
              * 
              * <strong>example:</strong>
              * <p>0.1.4</p>
@@ -343,7 +343,7 @@ public class ListAddonsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Supported cluster types.</p>
+             * <p>The supported cluster types.</p>
              */
             public Builder clusterTypes(java.util.List<String> clusterTypes) {
                 this.clusterTypes = clusterTypes;
@@ -351,7 +351,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The probes on which the integration depends.</p>
+             * <p>The probes required for integration dependencies.</p>
              */
             public Builder features(java.util.Map<String, Boolean> features) {
                 this.features = features;
@@ -359,7 +359,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A list of dependent services.</p>
+             * <p>The list of dependent services.</p>
              */
             public Builder services(java.util.List<String> services) {
                 this.services = services;
@@ -413,7 +413,7 @@ public class ListAddonsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>A list of Prometheus Query Language (PromQL) statements.</p>
+             * <p>The list of PromQL query statements.</p>
              */
             public Builder promQL(java.util.List<String> promQL) {
                 this.promQL = promQL;
@@ -506,7 +506,7 @@ public class ListAddonsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Protocol description.</p>
+             * <p>The protocol description.</p>
              * 
              * <strong>example:</strong>
              * <p>Support OpenTelemetry Protocal</p>
@@ -517,7 +517,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Icon URL.</p>
+             * <p>The icon URL.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://xxxxxxx">http://xxxxxxx</a></p>
@@ -528,7 +528,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Protocol display name.</p>
+             * <p>The display name of the protocol.</p>
              * 
              * <strong>example:</strong>
              * <p>OpenTelemetry</p>
@@ -539,7 +539,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Protocol name.</p>
+             * <p>The protocol name.</p>
              * 
              * <strong>example:</strong>
              * <p>openTelemetry</p>
@@ -674,7 +674,7 @@ public class ListAddonsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The default status of the alert rule policy.</p>
+             * <p>The enabling status of the default policy for alert rules.</p>
              * 
              * <strong>example:</strong>
              * <p>RUNNING</p>
@@ -685,7 +685,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the add-on is installed by default.</p>
+             * <p>Specifies whether to install the component by default.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -696,7 +696,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether to assign a Service Account to communicate with the Console API.</p>
+             * <p>Specifies whether to assign a service account for communication with the console API.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -707,7 +707,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Metric check rule.</p>
+             * <p>The metric check rule.</p>
              */
             public Builder metricCheckRule(MetricCheckRule metricCheckRule) {
                 this.metricCheckRule = metricCheckRule;
@@ -715,7 +715,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether to guide the user to restart pods after the add-on is installed.</p>
+             * <p>Specifies whether to trigger a pod restart guide immediately after the plug-in installation is completed during integration.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -726,7 +726,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The supported protocol types.</p>
+             * <p>The supported protocol types in the configuration.</p>
              */
             public Builder protocols(java.util.List<Protocols> protocols) {
                 this.protocols = protocols;
@@ -882,7 +882,7 @@ public class ListAddonsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>A list of associated Common Schemas.</p>
+             * <p>The list of associated common schemas.</p>
              */
             public Builder commonSchemaRefs(java.util.List<CommonSchemaRefs> commonSchemaRefs) {
                 this.commonSchemaRefs = commonSchemaRefs;
@@ -890,7 +890,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A list of dependencies for the add-on.</p>
+             * <p>The list of dependencies for the integration component.</p>
              */
             public Builder dependencies(Dependencies dependencies) {
                 this.dependencies = dependencies;
@@ -909,7 +909,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the add-on is enabled.</p>
+             * <p>Specifies whether the integration policy type is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -923,7 +923,7 @@ public class ListAddonsResponseBody extends TeaModel {
              * <p>The label of the integration policy type.</p>
              * 
              * <strong>example:</strong>
-             * <p>容器环境</p>
+             * <p>Container environment</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -942,7 +942,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Integration policy configuration.</p>
+             * <p>The integration policy configurations.</p>
              */
             public Builder policies(Policies policies) {
                 this.policies = policies;
@@ -950,7 +950,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Integration Center policy type.</p>
+             * <p>The integration center policy type.</p>
              * 
              * <strong>example:</strong>
              * <p>CS</p>
@@ -1176,7 +1176,7 @@ public class ListAddonsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The alias of the add-on.</p>
+             * <p>The alias of the integration component.</p>
              * 
              * <strong>example:</strong>
              * <p>resume_vector_alias</p>
@@ -1187,7 +1187,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A list of tags for the add-on.</p>
+             * <p>The list of tags for the integration component.</p>
              */
             public Builder categories(java.util.List<String> categories) {
                 this.categories = categories;
@@ -1195,7 +1195,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A list of dashboards.</p>
+             * <p>The list of dashboards.</p>
              */
             public Builder dashboards(java.util.List<Dashboards> dashboards) {
                 this.dashboards = dashboards;
@@ -1203,7 +1203,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Description</p>
+             * <p>The description.</p>
              * 
              * <strong>example:</strong>
              * <p>workspace api monitor test</p>
@@ -1214,7 +1214,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A list of supported integration policy types.</p>
+             * <p>The list of supported integration policy types.</p>
              */
             public Builder environments(java.util.List<Environments> environments) {
                 this.environments = environments;
@@ -1222,7 +1222,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the icon.</p>
+             * <p>The icon URL.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://xxxxxxx">http://xxxxxxx</a></p>
@@ -1233,7 +1233,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A list of keywords.</p>
+             * <p>The list of keywords.</p>
              */
             public Builder keywords(java.util.List<String> keywords) {
                 this.keywords = keywords;
@@ -1241,7 +1241,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Language.</p>
+             * <p>The language.</p>
              * 
              * <strong>example:</strong>
              * <p>zh</p>
@@ -1252,7 +1252,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the latest version was created.</p>
+             * <p>The latest release creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-09-03T03:15:56Z</p>
@@ -1263,7 +1263,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the add-on.</p>
+             * <p>The name of the integration component.</p>
              * 
              * <strong>example:</strong>
              * <p>rum_api_dashboard_explorer_link_metric_set</p>
@@ -1274,7 +1274,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the add-on can be installed only once.</p>
+             * <p>Specifies whether the component can be installed only once.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1285,7 +1285,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scenario of the component.</p>
+             * <p>The component scenario.</p>
              * 
              * <strong>example:</strong>
              * <p>middleware</p>
@@ -1296,7 +1296,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the component.</p>
+             * <p>The component version.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -1309,7 +1309,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display weight of the add-on.</p>
+             * <p>The display weight of the integration component.</p>
              * 
              * <strong>example:</strong>
              * <p>99</p>

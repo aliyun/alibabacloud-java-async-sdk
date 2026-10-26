@@ -89,7 +89,7 @@ public class ListDataPipelinesRequest extends Request {
         } 
 
         /**
-         * <p>The workspace name.</p>
+         * <p>The name of the workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +114,7 @@ public class ListDataPipelinesRequest extends Request {
         }
 
         /**
-         * <p>The pagination token for the next page.</p>
+         * <p>The next page token.</p>
          * 
          * <strong>example:</strong>
          * <p>eyJvZmZzZXQiOjEwfQ==</p>

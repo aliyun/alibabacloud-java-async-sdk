@@ -93,7 +93,7 @@ public class GetCloudResourceDataResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The total list of returned data.</p>
+         * <p>The total number of returned data records.</p>
          */
         public Builder data(java.util.List<java.util.List<String>> data) {
             this.data = data;
@@ -101,7 +101,7 @@ public class GetCloudResourceDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of headers.</p>
+         * <p>The list of request headers.</p>
          */
         public Builder header(java.util.List<String> header) {
             this.header = header;
@@ -245,7 +245,7 @@ public class GetCloudResourceDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The suggestion when an execution error occurs.</p>
+             * <p>The suggestions provided when an execution error occurs.</p>
              * 
              * <strong>example:</strong>
              * <p>Try to reduce the query scope or increase timeout limit, then retry</p>
@@ -354,7 +354,7 @@ public class GetCloudResourceDataResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The information during execution.</p>
+             * <p>The information during the execution process.</p>
              * 
              * <strong>example:</strong>
              * <p>{}</p>

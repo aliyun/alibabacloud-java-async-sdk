@@ -223,7 +223,10 @@ public class GetMemoryResponseBody extends TeaModel {
         } 
 
         /**
-         * agentId.
+         * <p>The agent ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_user_001</p>
          */
         public Builder agentId(String agentId) {
             this.agentId = agentId;
@@ -231,7 +234,10 @@ public class GetMemoryResponseBody extends TeaModel {
         }
 
         /**
-         * appId.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_user_001</p>
          */
         public Builder appId(String appId) {
             this.appId = appId;
@@ -239,7 +245,7 @@ public class GetMemoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the memory was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1751595283143</p>
@@ -272,7 +278,7 @@ public class GetMemoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>This property is mutable.</p>
+         * <p>The immutable properties.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -283,7 +289,7 @@ public class GetMemoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The memory content.</p>
+         * <p>The memory.</p>
          * 
          * <strong>example:</strong>
          * <p>My name is Zhang San and I live in Hangzhou.</p>
@@ -316,7 +322,7 @@ public class GetMemoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The owner of the memory.</p>
+         * <p>The memory owner.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -338,7 +344,10 @@ public class GetMemoryResponseBody extends TeaModel {
         }
 
         /**
-         * runId.
+         * <p>The run ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_user_001</p>
          */
         public Builder runId(String runId) {
             this.runId = runId;
@@ -346,7 +355,7 @@ public class GetMemoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the memory was last updated.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>1744428159434</p>
@@ -357,7 +366,10 @@ public class GetMemoryResponseBody extends TeaModel {
         }
 
         /**
-         * userId.
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_user_001</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;

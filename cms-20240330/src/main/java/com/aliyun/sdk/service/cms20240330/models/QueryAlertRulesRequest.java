@@ -148,7 +148,7 @@ public class QueryAlertRulesRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure idempotence.</p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxxx-xxxx-xxxx</p>

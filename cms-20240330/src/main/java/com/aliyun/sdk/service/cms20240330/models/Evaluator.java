@@ -119,7 +119,7 @@ public class Evaluator extends TeaModel {
         } 
 
         /**
-         * config.
+         * <p>The evaluator configuration parameters.</p>
          */
         public Builder config(java.util.Map<String, ?> config) {
             this.config = config;
@@ -127,7 +127,7 @@ public class Evaluator extends TeaModel {
         }
 
         /**
-         * filters.
+         * <p>The evaluation filter conditions.</p>
          */
         public Builder filters(java.util.Map<String, String> filters) {
             this.filters = filters;
@@ -135,7 +135,10 @@ public class Evaluator extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The evaluator name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent_task_completion</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -143,7 +146,10 @@ public class Evaluator extends TeaModel {
         }
 
         /**
-         * resultName.
+         * <p>The evaluation result name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent_task_completion</p>
          */
         public Builder resultName(String resultName) {
             this.resultName = resultName;
@@ -151,7 +157,10 @@ public class Evaluator extends TeaModel {
         }
 
         /**
-         * resultType.
+         * <p>The evaluation result type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>score</p>
          */
         public Builder resultType(String resultType) {
             this.resultType = resultType;
@@ -159,7 +168,7 @@ public class Evaluator extends TeaModel {
         }
 
         /**
-         * variableMapping.
+         * <p>The evaluation variable mapping.</p>
          */
         public Builder variableMapping(java.util.Map<String, String> variableMapping) {
             this.variableMapping = variableMapping;

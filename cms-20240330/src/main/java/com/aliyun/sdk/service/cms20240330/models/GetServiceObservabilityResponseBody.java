@@ -177,7 +177,7 @@ public class GetServiceObservabilityResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The quota configuration.</p>
+         * <p>The quota configurations.</p>
          */
         public Builder quotas(java.util.Map<String, String> quotas) {
             this.quotas = quotas;
@@ -207,7 +207,7 @@ public class GetServiceObservabilityResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The system configuration.</p>
+         * <p>The system configurations.</p>
          */
         public Builder settings(java.util.Map<String, String> settings) {
             this.settings = settings;
@@ -226,7 +226,7 @@ public class GetServiceObservabilityResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The type of application observability.</p>
+         * <p>The application observability type.</p>
          * 
          * <strong>example:</strong>
          * <p>apm</p>
@@ -332,7 +332,7 @@ public class GetServiceObservabilityResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The authentication token for reporting data.</p>
+             * <p>The authentication token for data reporting.</p>
              * 
              * <strong>example:</strong>
              * <p>gaddp****@de20f2<em><strong>1ce</strong></em></p>
@@ -343,7 +343,7 @@ public class GetServiceObservabilityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The internal endpoint.</p>
+             * <p>The internal-facing access address.</p>
              * 
              * <strong>example:</strong>
              * <p>project-xtrace-xxxx-cn-hangzhou.cn-hangzhou-intranet.log.aliyuncs.com</p>
@@ -354,7 +354,7 @@ public class GetServiceObservabilityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Simple Log Service project.</p>
+             * <p>SLS Project</p>
              * 
              * <strong>example:</strong>
              * <p>proj-xtrace-xxxxx</p>
@@ -365,7 +365,7 @@ public class GetServiceObservabilityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public endpoint.</p>
+             * <p>The public network access address.</p>
              * 
              * <strong>example:</strong>
              * <p>project-xtrace-xxxx-cn-hangzhou.cn-hangzhou.log.aliyuncs.com</p>

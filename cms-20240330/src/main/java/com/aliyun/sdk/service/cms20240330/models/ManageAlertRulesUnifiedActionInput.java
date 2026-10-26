@@ -45,6 +45,15 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("displayName")
     private String displayName;
 
+    @com.aliyun.core.annotation.NameInMap("drillEvalTime")
+    private Long drillEvalTime;
+
+    @com.aliyun.core.annotation.NameInMap("drillMode")
+    private String drillMode;
+
+    @com.aliyun.core.annotation.NameInMap("drillTimeRange")
+    private DrillTimeRange drillTimeRange;
+
     @com.aliyun.core.annotation.NameInMap("enabled")
     private Boolean enabled;
 
@@ -96,6 +105,9 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         this.contentTemplate = builder.contentTemplate;
         this.datasourceConfig = builder.datasourceConfig;
         this.displayName = builder.displayName;
+        this.drillEvalTime = builder.drillEvalTime;
+        this.drillMode = builder.drillMode;
+        this.drillTimeRange = builder.drillTimeRange;
         this.enabled = builder.enabled;
         this.labels = builder.labels;
         this.notifyConfig = builder.notifyConfig;
@@ -184,6 +196,27 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
      */
     public String getDisplayName() {
         return this.displayName;
+    }
+
+    /**
+     * @return drillEvalTime
+     */
+    public Long getDrillEvalTime() {
+        return this.drillEvalTime;
+    }
+
+    /**
+     * @return drillMode
+     */
+    public String getDrillMode() {
+        return this.drillMode;
+    }
+
+    /**
+     * @return drillTimeRange
+     */
+    public DrillTimeRange getDrillTimeRange() {
+        return this.drillTimeRange;
     }
 
     /**
@@ -287,6 +320,9 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         private String contentTemplate; 
         private DatasourceConfigUnified datasourceConfig; 
         private String displayName; 
+        private Long drillEvalTime; 
+        private String drillMode; 
+        private DrillTimeRange drillTimeRange; 
         private Boolean enabled; 
         private java.util.Map<String, String> labels; 
         private NotifyConfigUnified notifyConfig; 
@@ -314,6 +350,9 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
             this.contentTemplate = model.contentTemplate;
             this.datasourceConfig = model.datasourceConfig;
             this.displayName = model.displayName;
+            this.drillEvalTime = model.drillEvalTime;
+            this.drillMode = model.drillMode;
+            this.drillTimeRange = model.drillTimeRange;
             this.enabled = model.enabled;
             this.labels = model.labels;
             this.notifyConfig = model.notifyConfig;
@@ -343,6 +382,9 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
 
         /**
          * <p>The action integration configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;enabled&quot;:true,&quot;actions&quot;:[]}</p>
          */
         public Builder actionIntegrationConfig(ActionIntegrationConfig actionIntegrationConfig) {
             this.actionIntegrationConfig = actionIntegrationConfig;
@@ -351,6 +393,9 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
 
         /**
          * <p>The annotations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;summary&quot;:&quot;CPU usage exceeds 90%&quot;}</p>
          */
         public Builder annotations(java.util.Map<String, String> annotations) {
             this.annotations = annotations;
@@ -359,6 +404,9 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
 
         /**
          * <p>The ARMS integration configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;enabled&quot;:false}</p>
          */
         public Builder armsIntegrationConfig(ArmsIntegrationConfig armsIntegrationConfig) {
             this.armsIntegrationConfig = armsIntegrationConfig;
@@ -378,6 +426,9 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
 
         /**
          * <p>The aggregated condition configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;type&quot;:&quot;PROMETHEUS_SIMPLE_CONDITION&quot;,&quot;durationSecs&quot;:0,&quot;severity&quot;:&quot;CRITICAL&quot;}</p>
          */
         public Builder conditionConfig(ConditionConfigUnified conditionConfig) {
             this.conditionConfig = conditionConfig;
@@ -397,6 +448,9 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
 
         /**
          * <p>The aggregated data source configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;type&quot;:&quot;PROMETHEUS&quot;,&quot;instanceId&quot;:&quot;prom-cn-hangzhou-xxxxx&quot;}</p>
          */
         public Builder datasourceConfig(DatasourceConfigUnified datasourceConfig) {
             this.datasourceConfig = datasourceConfig;
@@ -415,6 +469,30 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         }
 
         /**
+         * drillEvalTime.
+         */
+        public Builder drillEvalTime(Long drillEvalTime) {
+            this.drillEvalTime = drillEvalTime;
+            return this;
+        }
+
+        /**
+         * drillMode.
+         */
+        public Builder drillMode(String drillMode) {
+            this.drillMode = drillMode;
+            return this;
+        }
+
+        /**
+         * drillTimeRange.
+         */
+        public Builder drillTimeRange(DrillTimeRange drillTimeRange) {
+            this.drillTimeRange = drillTimeRange;
+            return this;
+        }
+
+        /**
          * <p>Specifies whether the rule is enabled.</p>
          * 
          * <strong>example:</strong>
@@ -427,6 +505,9 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
 
         /**
          * <p>The labels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;env&quot;:&quot;production&quot;}</p>
          */
         public Builder labels(java.util.Map<String, String> labels) {
             this.labels = labels;
@@ -435,6 +516,9 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
 
         /**
          * <p>The aggregated notification configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;type&quot;:&quot;DIRECT_NOTIFY&quot;,&quot;channels&quot;:[{&quot;type&quot;:&quot;GROUP&quot;,&quot;identifiers&quot;:[&quot;<contact-group-id>&quot;]}]}</p>
          */
         public Builder notifyConfig(NotifyConfigUnified notifyConfig) {
             this.notifyConfig = notifyConfig;
@@ -443,6 +527,9 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
 
         /**
          * <p>The observable resource configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;relationType&quot;:&quot;CLOUD_INSTANCE&quot;,&quot;resources&quot;:[]}</p>
          */
         public Builder observeResourceConfig(ObserveResourceConfig observeResourceConfig) {
             this.observeResourceConfig = observeResourceConfig;
@@ -473,6 +560,9 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
 
         /**
          * <p>The aggregated query configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;type&quot;:&quot;PROMETHEUS_SINGLE_QUERY&quot;,&quot;expr&quot;:&quot;up &gt; 0&quot;}</p>
          */
         public Builder queryConfig(QueryConfigUnified queryConfig) {
             this.queryConfig = queryConfig;
@@ -481,6 +571,9 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
 
         /**
          * <p>The root cause analysis (RCA) configuration (optional). Provide as needed for CREATE/UPDATE/PATCH.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;enabled&quot;:false}</p>
          */
         public Builder rcaConfig(AlertRuleRcaConfig rcaConfig) {
             this.rcaConfig = rcaConfig;
@@ -500,6 +593,9 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
 
         /**
          * <p>The aggregated schedule configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;type&quot;:&quot;FIXED&quot;,&quot;intervalSecs&quot;:60}</p>
          */
         public Builder scheduleConfig(ScheduleConfigUnified scheduleConfig) {
             this.scheduleConfig = scheduleConfig;
@@ -519,6 +615,9 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
 
         /**
          * <p>The list of rule UUIDs to delete (BATCH_DELETE).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;cms_v2_81d01768-fee9-459f-af49-ab2704f1db2b&quot;]</p>
          */
         public Builder uuidList(java.util.List<String> uuidList) {
             this.uuidList = uuidList;
@@ -542,4 +641,79 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ManageAlertRulesUnifiedActionInput} extends {@link TeaModel}
+     *
+     * <p>ManageAlertRulesUnifiedActionInput</p>
+     */
+    public static class DrillTimeRange extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("endTime")
+        private Long endTime;
+
+        @com.aliyun.core.annotation.NameInMap("startTime")
+        private Long startTime;
+
+        private DrillTimeRange(Builder builder) {
+            this.endTime = builder.endTime;
+            this.startTime = builder.startTime;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DrillTimeRange create() {
+            return builder().build();
+        }
+
+        /**
+         * @return endTime
+         */
+        public Long getEndTime() {
+            return this.endTime;
+        }
+
+        /**
+         * @return startTime
+         */
+        public Long getStartTime() {
+            return this.startTime;
+        }
+
+        public static final class Builder {
+            private Long endTime; 
+            private Long startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(DrillTimeRange model) {
+                this.endTime = model.endTime;
+                this.startTime = model.startTime;
+            } 
+
+            /**
+             * endTime.
+             */
+            public Builder endTime(Long endTime) {
+                this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * startTime.
+             */
+            public Builder startTime(Long startTime) {
+                this.startTime = startTime;
+                return this;
+            }
+
+            public DrillTimeRange build() {
+                return new DrillTimeRange(this);
+            } 
+
+        } 
+
+    }
 }

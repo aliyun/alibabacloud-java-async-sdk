@@ -26,6 +26,9 @@ public class ManageAlertRulesResult extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("deletedUuidList")
     private java.util.List<String> deletedUuidList;
 
+    @com.aliyun.core.annotation.NameInMap("drillUuid")
+    private String drillUuid;
+
     @com.aliyun.core.annotation.NameInMap("updatedCount")
     private Integer updatedCount;
 
@@ -36,6 +39,7 @@ public class ManageAlertRulesResult extends TeaModel {
         this.alertRule = builder.alertRule;
         this.deletedCount = builder.deletedCount;
         this.deletedUuidList = builder.deletedUuidList;
+        this.drillUuid = builder.drillUuid;
         this.updatedCount = builder.updatedCount;
         this.updatedUuidList = builder.updatedUuidList;
     }
@@ -74,6 +78,13 @@ public class ManageAlertRulesResult extends TeaModel {
     }
 
     /**
+     * @return drillUuid
+     */
+    public String getDrillUuid() {
+        return this.drillUuid;
+    }
+
+    /**
      * @return updatedCount
      */
     public Integer getUpdatedCount() {
@@ -91,6 +102,7 @@ public class ManageAlertRulesResult extends TeaModel {
         private AlertRuleV2 alertRule; 
         private Integer deletedCount; 
         private java.util.List<String> deletedUuidList; 
+        private String drillUuid; 
         private Integer updatedCount; 
         private java.util.List<String> updatedUuidList; 
 
@@ -101,12 +113,16 @@ public class ManageAlertRulesResult extends TeaModel {
             this.alertRule = model.alertRule;
             this.deletedCount = model.deletedCount;
             this.deletedUuidList = model.deletedUuidList;
+            this.drillUuid = model.drillUuid;
             this.updatedCount = model.updatedCount;
             this.updatedUuidList = model.updatedUuidList;
         } 
 
         /**
-         * <p>The alert rule V2.</p>
+         * <p>The V2 alert rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;uuid&quot;:&quot;cms_v2_81d01768-fee9-459f-af49-ab2704f1db2b&quot;,&quot;displayName&quot;:&quot;drill-e2e-验证规则&quot;,&quot;enabled&quot;:true}</p>
          */
         public Builder alertRule(AlertRuleV2 alertRule) {
             this.alertRule = alertRule;
@@ -114,7 +130,7 @@ public class ManageAlertRulesResult extends TeaModel {
         }
 
         /**
-         * <p>The number of rules that were successfully deleted.</p>
+         * <p>The number of successfully deleted rules.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +141,10 @@ public class ManageAlertRulesResult extends TeaModel {
         }
 
         /**
-         * <p>The list of UUIDs of rules that were successfully deleted.</p>
+         * <p>The list of UUIDs of successfully deleted rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;cms_v2_81d01768-fee9-459f-af49-ab2704f1db2b&quot;]</p>
          */
         public Builder deletedUuidList(java.util.List<String> deletedUuidList) {
             this.deletedUuidList = deletedUuidList;
@@ -133,7 +152,15 @@ public class ManageAlertRulesResult extends TeaModel {
         }
 
         /**
-         * <p>The number of rules that were successfully enabled or disabled.</p>
+         * drillUuid.
+         */
+        public Builder drillUuid(String drillUuid) {
+            this.drillUuid = drillUuid;
+            return this;
+        }
+
+        /**
+         * <p>The number of successfully enabled or disabled rules.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -144,7 +171,7 @@ public class ManageAlertRulesResult extends TeaModel {
         }
 
         /**
-         * <p>The list of UUIDs of rules that were successfully enabled or disabled.</p>
+         * <p>The list of UUIDs of successfully enabled or disabled rules.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;a1b2c3d4-e5f6-7890-abcd-ef1234567890&quot;,&quot;b2c3d4e5-f6a7-8901-bcde-f12345678901&quot;]</p>

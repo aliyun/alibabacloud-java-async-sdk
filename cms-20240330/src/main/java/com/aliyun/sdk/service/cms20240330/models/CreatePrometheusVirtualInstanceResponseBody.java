@@ -67,7 +67,7 @@ public class CreatePrometheusVirtualInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The instance.</p>
+         * <p>The instance ID.</p>
          */
         public Builder instance(Instance instance) {
             this.instance = instance;
@@ -196,7 +196,7 @@ public class CreatePrometheusVirtualInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the instance was created.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>1751520976660</p>
@@ -218,7 +218,7 @@ public class CreatePrometheusVirtualInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance ID.</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>rw-e815960b4c9ebc5c3d89790c7e82</p>
@@ -229,7 +229,7 @@ public class CreatePrometheusVirtualInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cloud product.</p>
+             * <p>The cloud service.</p>
              * 
              * <strong>example:</strong>
              * <p>ack-csi-fuse</p>
@@ -240,7 +240,7 @@ public class CreatePrometheusVirtualInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Region ID</p>
+             * <p>The user ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-zhengzhou-jva</p>

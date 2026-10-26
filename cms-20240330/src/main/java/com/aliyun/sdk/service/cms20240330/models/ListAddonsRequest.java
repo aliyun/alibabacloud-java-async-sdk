@@ -26,6 +26,10 @@ public class ListAddonsRequest extends Request {
     private String aliyunLang;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("apiVersion")
+    private String apiVersion;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("category")
     private String category;
 
@@ -41,6 +45,7 @@ public class ListAddonsRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.aliyunLang = builder.aliyunLang;
+        this.apiVersion = builder.apiVersion;
         this.category = builder.category;
         this.regexp = builder.regexp;
         this.search = builder.search;
@@ -74,6 +79,13 @@ public class ListAddonsRequest extends Request {
     }
 
     /**
+     * @return apiVersion
+     */
+    public String getApiVersion() {
+        return this.apiVersion;
+    }
+
+    /**
      * @return category
      */
     public String getCategory() {
@@ -97,6 +109,7 @@ public class ListAddonsRequest extends Request {
     public static final class Builder extends Request.Builder<ListAddonsRequest, Builder> {
         private String regionId; 
         private String aliyunLang; 
+        private String apiVersion; 
         private String category; 
         private Boolean regexp; 
         private String search; 
@@ -109,6 +122,7 @@ public class ListAddonsRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.aliyunLang = request.aliyunLang;
+            this.apiVersion = request.apiVersion;
             this.category = request.category;
             this.regexp = request.regexp;
             this.search = request.search;
@@ -124,7 +138,7 @@ public class ListAddonsRequest extends Request {
         }
 
         /**
-         * <p>The language. Valid values: zh and en. The default value is zh.</p>
+         * <p>The locale. Valid values: zh and en. Default value: zh.</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -136,7 +150,16 @@ public class ListAddonsRequest extends Request {
         }
 
         /**
-         * <p>Tag filtering.</p>
+         * apiVersion.
+         */
+        public Builder apiVersion(String apiVersion) {
+            this.putQueryParameter("apiVersion", apiVersion);
+            this.apiVersion = apiVersion;
+            return this;
+        }
+
+        /**
+         * <p>The tag filter.</p>
          * 
          * <strong>example:</strong>
          * <p>database</p>
@@ -148,7 +171,10 @@ public class ListAddonsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to use regular expressions for the search. The default value is false.</p>
+         * <p>Specifies whether to use regular expression matching for the query field. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder regexp(Boolean regexp) {
             this.putQueryParameter("regexp", regexp);
@@ -157,7 +183,7 @@ public class ListAddonsRequest extends Request {
         }
 
         /**
-         * <p>The search keyword. You can search for add-ons by name, description, or keyword.</p>
+         * <p>The search query. Supports searching by add-on name, description, or keyword.</p>
          * 
          * <strong>example:</strong>
          * <p>105095</p>

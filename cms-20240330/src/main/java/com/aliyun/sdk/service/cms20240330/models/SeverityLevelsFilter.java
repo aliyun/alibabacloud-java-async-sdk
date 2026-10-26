@@ -54,7 +54,7 @@ public class SeverityLevelsFilter extends TeaModel {
         } 
 
         /**
-         * <p>The hit condition: the set of severity levels covered by the rule contains at least one level in the array (OR semantics).</p>
+         * <p>The match condition where the set of severity levels covered by the rule contains at least one severity level in the array (OR semantics).</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;CRITICAL&quot;,&quot;ERROR&quot;]</p>

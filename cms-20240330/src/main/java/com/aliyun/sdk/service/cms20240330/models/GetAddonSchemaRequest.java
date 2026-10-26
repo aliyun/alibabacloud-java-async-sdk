@@ -31,6 +31,10 @@ public class GetAddonSchemaRequest extends Request {
     private String aliyunLang;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("apiVersion")
+    private String apiVersion;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("environmentType")
     private String environmentType;
 
@@ -43,6 +47,7 @@ public class GetAddonSchemaRequest extends Request {
         this.regionId = builder.regionId;
         this.addonName = builder.addonName;
         this.aliyunLang = builder.aliyunLang;
+        this.apiVersion = builder.apiVersion;
         this.environmentType = builder.environmentType;
         this.version = builder.version;
     }
@@ -82,6 +87,13 @@ public class GetAddonSchemaRequest extends Request {
     }
 
     /**
+     * @return apiVersion
+     */
+    public String getApiVersion() {
+        return this.apiVersion;
+    }
+
+    /**
      * @return environmentType
      */
     public String getEnvironmentType() {
@@ -99,6 +111,7 @@ public class GetAddonSchemaRequest extends Request {
         private String regionId; 
         private String addonName; 
         private String aliyunLang; 
+        private String apiVersion; 
         private String environmentType; 
         private String version; 
 
@@ -111,6 +124,7 @@ public class GetAddonSchemaRequest extends Request {
             this.regionId = request.regionId;
             this.addonName = request.addonName;
             this.aliyunLang = request.aliyunLang;
+            this.apiVersion = request.apiVersion;
             this.environmentType = request.environmentType;
             this.version = request.version;
         } 
@@ -146,6 +160,15 @@ public class GetAddonSchemaRequest extends Request {
         public Builder aliyunLang(String aliyunLang) {
             this.putQueryParameter("aliyunLang", aliyunLang);
             this.aliyunLang = aliyunLang;
+            return this;
+        }
+
+        /**
+         * apiVersion.
+         */
+        public Builder apiVersion(String apiVersion) {
+            this.putQueryParameter("apiVersion", apiVersion);
+            this.apiVersion = apiVersion;
             return this;
         }
 

@@ -93,7 +93,7 @@ public class AlertRuleTimeSpan extends TeaModel {
         } 
 
         /**
-         * <p>The days of the week.</p>
+         * <p>The day of the week.</p>
          */
         public Builder dayOfWeek(java.util.List<Integer> dayOfWeek) {
             this.dayOfWeek = dayOfWeek;
@@ -101,7 +101,7 @@ public class AlertRuleTimeSpan extends TeaModel {
         }
 
         /**
-         * <p>The end time. The format is HH:mm.</p>
+         * <p>The end time in HH:mm format.</p>
          * 
          * <strong>example:</strong>
          * <p>23:00</p>
@@ -112,7 +112,7 @@ public class AlertRuleTimeSpan extends TeaModel {
         }
 
         /**
-         * <p>The default value is +0800 (UTC+8).</p>
+         * <p>The default UTC+8 offset: +0800.</p>
          * 
          * <strong>example:</strong>
          * <p>+0800</p>
@@ -123,7 +123,7 @@ public class AlertRuleTimeSpan extends TeaModel {
         }
 
         /**
-         * <p>The start time. The format is HH:mm.</p>
+         * <p>The start time in HH:mm format.</p>
          * 
          * <strong>example:</strong>
          * <p>09:00</p>

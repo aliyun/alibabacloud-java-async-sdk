@@ -174,7 +174,7 @@ public class ListAggTaskGroupsRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID of the Managed Service for Prometheus instance to which the aggregation node group belongs. The aggregation node reads data from this instance.</p>
+         * <p>The instance ID of the Prometheus instance to which the aggregation node group belongs. Aggregation nodes read data from this instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -187,7 +187,7 @@ public class ListAggTaskGroupsRequest extends Request {
         }
 
         /**
-         * <p>The list of aggregation task group IDs. The value must be a JSON-parsable string.</p>
+         * <p>The list of IDs of the aggregation task groups. The value must be in JSON format.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;aggTaskGroup-xxx&quot;]</p>
@@ -199,7 +199,7 @@ public class ListAggTaskGroupsRequest extends Request {
         }
 
         /**
-         * <p>The list of aggregation task group names. The value must be a JSON-parsable string.</p>
+         * <p>The list of names of the aggregation task groups. The value must be in JSON format.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;apiserver_request_total&quot;]</p>
@@ -235,7 +235,7 @@ public class ListAggTaskGroupsRequest extends Request {
         }
 
         /**
-         * <p>The name to search for. Fuzzy match is supported.</p>
+         * <p>The search keyword for names. Fuzzy match is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -247,12 +247,7 @@ public class ListAggTaskGroupsRequest extends Request {
         }
 
         /**
-         * <p>The status of the aggregation task group. Valid values:</p>
-         * <ul>
-         * <li>Running</li>
-         * <li>Stopped</li>
-         * </ul>
-         * <p>Default value: Running.</p>
+         * <p>The status of the aggregation task group. Valid values: Running and Stopped. Default value: Running.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -264,7 +259,7 @@ public class ListAggTaskGroupsRequest extends Request {
         }
 
         /**
-         * <p>The resource group tags.</p>
+         * <p>The tags of the resource group.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             String tagsShrink = shrink(tags, "tags", "json");
@@ -274,7 +269,7 @@ public class ListAggTaskGroupsRequest extends Request {
         }
 
         /**
-         * <p>The instance ID of the target Managed Service for Prometheus instance for the aggregation node group.</p>
+         * <p>The instance ID of the target Prometheus instance for the aggregation node group.</p>
          * 
          * <strong>example:</strong>
          * <p>rw-pq4apob9jm</p>

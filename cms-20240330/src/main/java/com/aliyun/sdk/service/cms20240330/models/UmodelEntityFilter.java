@@ -80,7 +80,7 @@ public class UmodelEntityFilter extends TeaModel {
         } 
 
         /**
-         * <p>The field name to filter on.</p>
+         * field.
          */
         public Builder field(String field) {
             this.field = field;
@@ -88,7 +88,7 @@ public class UmodelEntityFilter extends TeaModel {
         }
 
         /**
-         * <p>The comparison operator to use. Supported operators include <code>=</code>, <code>&gt;</code>, <code>&lt;</code>, <code>!=</code>, <code>IN</code>, and <code>NOT IN</code>.</p>
+         * operator.
          */
         public Builder operator(String operator) {
             this.operator = operator;
@@ -96,7 +96,7 @@ public class UmodelEntityFilter extends TeaModel {
         }
 
         /**
-         * <p>The value to compare the field against.</p>
+         * value.
          */
         public Builder value(String value) {
             this.value = value;

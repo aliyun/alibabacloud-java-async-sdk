@@ -132,7 +132,7 @@ public class AddContextsRequest extends Request {
         }
 
         /**
-         * <p>The context store name.</p>
+         * <p>The name of the context store.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,7 +158,7 @@ public class AddContextsRequest extends Request {
         }
 
         /**
-         * <p>An array of context items.</p>
+         * <p>The context information.</p>
          * <p>This parameter is required.</p>
          */
         public Builder items(java.util.List<Items> items) {
@@ -421,7 +421,7 @@ public class AddContextsRequest extends Request {
             } 
 
             /**
-             * <p>The unique agent ID.</p>
+             * <p>The agent ID of the application.</p>
              * 
              * <strong>example:</strong>
              * <p>952730733889060865</p>
@@ -443,7 +443,7 @@ public class AddContextsRequest extends Request {
             }
 
             /**
-             * <p>A list of categories to apply to the context item.</p>
+             * <p>The categories.</p>
              */
             public Builder categories(java.util.List<String> categories) {
                 this.categories = categories;
@@ -451,7 +451,7 @@ public class AddContextsRequest extends Request {
             }
 
             /**
-             * <p>The content of the context item.</p>
+             * <p>The content.</p>
              * 
              * <strong>example:</strong>
              * <p>You are a conversation assistant.</p>
@@ -462,7 +462,7 @@ public class AddContextsRequest extends Request {
             }
 
             /**
-             * <p>The custom instructions for processing the context.</p>
+             * <p>The custom instructions.</p>
              * 
              * <strong>example:</strong>
              * <p>Your custom instructions here</p>
@@ -473,7 +473,7 @@ public class AddContextsRequest extends Request {
             }
 
             /**
-             * <p>An object containing experience information for the context.</p>
+             * <p>The experience.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -488,7 +488,7 @@ public class AddContextsRequest extends Request {
             }
 
             /**
-             * <p>The expiration timestamp for the context item.</p>
+             * <p>The expiration date.</p>
              * 
              * <strong>example:</strong>
              * <p>1731231212334396</p>
@@ -499,7 +499,7 @@ public class AddContextsRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether the context item is immutable. If set to <code>true</code>, the item cannot be changed after it is created. The default value is <code>false</code>.</p>
+             * <p>The mutability.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -510,7 +510,7 @@ public class AddContextsRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to perform inference based on the context. The default value is <code>false</code>.</p>
+             * <p>The inference.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -521,7 +521,7 @@ public class AddContextsRequest extends Request {
             }
 
             /**
-             * <p>A map of key-value pairs to apply as labels.</p>
+             * <p>The labels.</p>
              */
             public Builder labels(java.util.Map<String, String> labels) {
                 this.labels = labels;
@@ -529,7 +529,7 @@ public class AddContextsRequest extends Request {
             }
 
             /**
-             * <p>An array of message objects.</p>
+             * <p>The messages.</p>
              */
             public Builder messages(java.util.List<java.util.Map<String, ?>> messages) {
                 this.messages = messages;
@@ -537,7 +537,7 @@ public class AddContextsRequest extends Request {
             }
 
             /**
-             * <p>Key-value pairs to store as metadata.</p>
+             * <p>The metadata.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;sessionId&quot;:&quot;test_session_001&quot;}</p>
@@ -559,7 +559,7 @@ public class AddContextsRequest extends Request {
             }
 
             /**
-             * <p>The timestamp of the context item.</p>
+             * <p>The timestamp.</p>
              * 
              * <strong>example:</strong>
              * <p>1774578167</p>
@@ -570,7 +570,7 @@ public class AddContextsRequest extends Request {
             }
 
             /**
-             * <p>The condition that triggers the context.</p>
+             * <p>The trigger condition.</p>
              * 
              * <strong>example:</strong>
              * <p>Identify and troubleshoot SLs issues</p>
@@ -581,7 +581,7 @@ public class AddContextsRequest extends Request {
             }
 
             /**
-             * <p>The unique user ID.</p>
+             * <p>The user ID.</p>
              * 
              * <strong>example:</strong>
              * <p>test_user_001</p>

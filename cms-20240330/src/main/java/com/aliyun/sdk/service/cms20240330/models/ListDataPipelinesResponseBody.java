@@ -117,7 +117,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token for the next page.</p>
+         * <p>The next page token.</p>
          * 
          * <strong>example:</strong>
          * <p>eyJvZmZzZXQiOjIwfQ==</p>
@@ -128,7 +128,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of data pipelines.</p>
+         * <p>The data pipeline list.</p>
          */
         public Builder pipelines(java.util.List<Pipelines> pipelines) {
             this.pipelines = pipelines;
@@ -430,7 +430,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The length of the prefix to retain.</p>
+             * <p>The retained prefix length.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -441,7 +441,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The length of the suffix to retain.</p>
+             * <p>The retained suffix length.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -473,7 +473,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The masking mode.</p>
+             * <p>The data masking mode.</p>
              * 
              * <strong>example:</strong>
              * <p>keyword</p>
@@ -1018,7 +1018,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of service names.</p>
+             * <p>The service name list.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;checkout-*&quot;,&quot;order-service&quot;]</p>
@@ -1262,7 +1262,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of applications.</p>
+             * <p>The application list.</p>
              */
             public Builder applications(java.util.List<String> applications) {
                 this.applications = applications;
@@ -1270,7 +1270,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of field assignments.</p>
+             * <p>The field assignment list.</p>
              */
             public Builder assignments(java.util.List<Assignments> assignments) {
                 this.assignments = assignments;
@@ -1289,7 +1289,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of fields.</p>
+             * <p>The field list.</p>
              */
             public Builder fields(java.util.List<String> fields) {
                 this.fields = fields;
@@ -1305,7 +1305,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of field projections.</p>
+             * <p>The field projection list.</p>
              */
             public Builder projections(java.util.List<Projections> projections) {
                 this.projections = projections;
@@ -1313,7 +1313,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of masking rules.</p>
+             * <p>The data masking rule list.</p>
              */
             public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
@@ -1321,7 +1321,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scope in which the pipeline processing processor takes effect.</p>
+             * <p>The effective scope of pipeline processing.</p>
              */
             public Builder scope(Scope scope) {
                 this.scope = scope;
@@ -1811,7 +1811,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The length of the prefix to retain.</p>
+             * <p>The retained prefix length.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -1822,7 +1822,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The length of the suffix to retain.</p>
+             * <p>The retained suffix length.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -1854,7 +1854,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The masking mode.</p>
+             * <p>The data masking mode.</p>
              * 
              * <strong>example:</strong>
              * <p>keyword</p>
@@ -2399,7 +2399,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of service names.</p>
+             * <p>The service name list.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;checkout-*&quot;,&quot;order-service&quot;]</p>
@@ -2643,7 +2643,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of applications.</p>
+             * <p>The application list.</p>
              */
             public Builder applications(java.util.List<String> applications) {
                 this.applications = applications;
@@ -2651,7 +2651,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of field assignments.</p>
+             * <p>The field assignment list.</p>
              */
             public Builder assignments(java.util.List<ConfigAssignments> assignments) {
                 this.assignments = assignments;
@@ -2670,7 +2670,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of fields.</p>
+             * <p>The field list.</p>
              */
             public Builder fields(java.util.List<String> fields) {
                 this.fields = fields;
@@ -2686,7 +2686,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of field projections.</p>
+             * <p>The field projection list.</p>
              */
             public Builder projections(java.util.List<ConfigProjections> projections) {
                 this.projections = projections;
@@ -2694,7 +2694,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of masking rules.</p>
+             * <p>The data masking rule list.</p>
              */
             public Builder rules(java.util.List<ConfigRules> rules) {
                 this.rules = rules;
@@ -2702,7 +2702,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scope in which the pipeline processing takes effect.</p>
+             * <p>The effective scope of pipeline processing.</p>
              */
             public Builder scope(ConfigScope scope) {
                 this.scope = scope;
@@ -2958,7 +2958,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the output destination.</p>
+             * <p>The name of the sink.</p>
              * 
              * <strong>example:</strong>
              * <p>error-archive</p>
@@ -2980,7 +2980,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the output destination.</p>
+             * <p>The type of the sink.</p>
              * 
              * <strong>example:</strong>
              * <p>logstore</p>
@@ -3155,7 +3155,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The read start point.</p>
+             * <p>The start position.</p>
              * 
              * <strong>example:</strong>
              * <p>latest</p>
@@ -3241,7 +3241,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data source type.</p>
+             * <p>The type of the source.</p>
              * 
              * <strong>example:</strong>
              * <p>traces-default</p>
@@ -3465,7 +3465,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation time.</p>
+             * <p>The creation time in UTC format that follows the ISO 8601 standard, such as 2026-08-10T05:00:00Z.</p>
              * <p>This parameter is required.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
              * 
@@ -3543,7 +3543,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The output destinations.</p>
+             * <p>The sinks.</p>
              * <p>This parameter is required.</p>
              */
             public Builder sinks(java.util.List<Sinks> sinks) {
@@ -3584,7 +3584,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time.</p>
+             * <p>The update time in UTC and ISO 8601 format, such as 2026-08-10T05:10:00Z.</p>
              * <p>This parameter is required.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
              * 

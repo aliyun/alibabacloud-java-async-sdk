@@ -101,7 +101,7 @@ public class ListContextStoreAPIKeysRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the workspace.</p>
+         * <p>The workspace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>workspace-test</p>
@@ -113,7 +113,7 @@ public class ListContextStoreAPIKeysRequest extends Request {
         }
 
         /**
-         * <p>The name of the context store.</p>
+         * <p>The context store.</p>
          * 
          * <strong>example:</strong>
          * <p>test-context-Store</p>
@@ -125,7 +125,7 @@ public class ListContextStoreAPIKeysRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return in a single request. If this parameter is not specified, the service returns a default number of entries.</p>
+         * <p>The maximum number of results to return.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -137,7 +137,7 @@ public class ListContextStoreAPIKeysRequest extends Request {
         }
 
         /**
-         * <p>The pagination token used to retrieve the next page of results. Leave this parameter empty to retrieve the first page.</p>
+         * <p>The pagination token.</p>
          * 
          * <strong>example:</strong>
          * <p>615dfe7fd00f699ea94d5e63ba564aaf22450858c58f1387cc78f883b2254ab47232ce40fa95d9cb</p>

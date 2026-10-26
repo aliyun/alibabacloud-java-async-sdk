@@ -148,7 +148,7 @@ public class EntityGroupBase extends TeaModel {
          * <p>The entity description.</p>
          * 
          * <strong>example:</strong>
-         * <p>ECS 实例</p>
+         * <p>ECS instance</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -170,7 +170,7 @@ public class EntityGroupBase extends TeaModel {
          * <p>The entity name.</p>
          * 
          * <strong>example:</strong>
-         * <p>ECS 全部实体</p>
+         * <p>All ECS entities</p>
          */
         public Builder entityGroupName(String entityGroupName) {
             this.entityGroupName = entityGroupName;
@@ -178,7 +178,7 @@ public class EntityGroupBase extends TeaModel {
         }
 
         /**
-         * <p>A collection of entity query rules.</p>
+         * <p>The entity query rule set.</p>
          */
         public Builder entityQueries(java.util.List<EntityQueries> entityQueries) {
             this.entityQueries = entityQueries;
@@ -186,7 +186,7 @@ public class EntityGroupBase extends TeaModel {
         }
 
         /**
-         * <p>The rule for entity discovery.</p>
+         * <p>The rules used for entity discovery.</p>
          */
         public Builder entityRules(EntityDiscoverRule entityRules) {
             this.entityRules = entityRules;
@@ -296,7 +296,7 @@ public class EntityGroupBase extends TeaModel {
             }
 
             /**
-             * <p>The Structured Process Language (SPL) search statement.</p>
+             * <p>The SPL query statement.</p>
              * 
              * <strong>example:</strong>
              * <p>.entity with(type=\&quot;acs.ecs.instance\&quot;) | where region_id in (\&quot;cn-beijing\&quot;)</p>

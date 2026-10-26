@@ -288,7 +288,7 @@ public class ObserveGroupDetail extends TeaModel {
         } 
 
         /**
-         * <p>The UID of the Alibaba Cloud account to which the group belongs.</p>
+         * <p>分组归属的阿里云主账号 UID。</p>
          */
         public Builder aliUid(String aliUid) {
             this.aliUid = aliUid;
@@ -296,7 +296,7 @@ public class ObserveGroupDetail extends TeaModel {
         }
 
         /**
-         * <p>The time when the group was created, in UTC format (yyyy-MM-ddTHH:mm:ssZ).</p>
+         * <p>创建时间，UTC 格式 yyyy-MM-ddTHH:mm:ssZ。</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -304,7 +304,7 @@ public class ObserveGroupDetail extends TeaModel {
         }
 
         /**
-         * <p>The description of the observability group, which explains its business purpose.</p>
+         * <p>观测分组描述（业务用途说明）。</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -312,7 +312,7 @@ public class ObserveGroupDetail extends TeaModel {
         }
 
         /**
-         * <p>The list of entity discovery rules that define which entities the group automatically matches.</p>
+         * <p>实体发现规则列表，定义分组自动匹配哪些实体。</p>
          */
         public Builder discoverRules(java.util.List<ObserveGroupDiscoverRule> discoverRules) {
             this.discoverRules = discoverRules;
@@ -320,7 +320,7 @@ public class ObserveGroupDetail extends TeaModel {
         }
 
         /**
-         * <p>The statistics of entities in the group, categorized by entity type.</p>
+         * <p>分组内实体按类型的统计。</p>
          */
         public Builder entitySummaries(java.util.List<EntitySummaries> entitySummaries) {
             this.entitySummaries = entitySummaries;
@@ -328,7 +328,7 @@ public class ObserveGroupDetail extends TeaModel {
         }
 
         /**
-         * <p>The extended information in JSON string format, which carries alert templates, alert contact groups, suspension policies, and other configurations.</p>
+         * <p>扩展信息（JSON 字符串，承载告警模板/联系人组/暂停策略等）。</p>
          */
         public Builder extraInfo(String extraInfo) {
             this.extraInfo = extraInfo;
@@ -336,7 +336,7 @@ public class ObserveGroupDetail extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the current user has followed the group.</p>
+         * <p>当前用户是否已关注该分组。</p>
          */
         public Builder favorited(Boolean favorited) {
             this.favorited = favorited;
@@ -352,7 +352,7 @@ public class ObserveGroupDetail extends TeaModel {
         }
 
         /**
-         * <p>The name of the observability group. The name must be unique within the same workspace.</p>
+         * <p>观测分组名称（同 workspace 下唯一）。</p>
          */
         public Builder groupName(String groupName) {
             this.groupName = groupName;
@@ -360,7 +360,7 @@ public class ObserveGroupDetail extends TeaModel {
         }
 
         /**
-         * <p>The type of the observability group.</p>
+         * <p>观测分组类型。</p>
          */
         public Builder groupType(String groupType) {
             this.groupType = groupType;
@@ -368,7 +368,7 @@ public class ObserveGroupDetail extends TeaModel {
         }
 
         /**
-         * <p>The time when the group was last modified, in UTC format (yyyy-MM-ddTHH:mm:ssZ). This value is automatically updated when any property of the resource changes.</p>
+         * <p>最后修改时间，UTC 格式 yyyy-MM-ddTHH:mm:ssZ。资源任意属性变更时自动更新。</p>
          */
         public Builder modifyTime(String modifyTime) {
             this.modifyTime = modifyTime;
@@ -376,7 +376,7 @@ public class ObserveGroupDetail extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether to enable the og_entity_info metric output. When enabled, the data plane writes the group ownership information to the target Prometheus instance.</p>
+         * <p>是否开启 og_entity_info 指标输出。开启后数据面会把本分组归属写入目标 Prometheus 实例。</p>
          */
         public Builder ogEntityInfoEnabled(Boolean ogEntityInfoEnabled) {
             this.ogEntityInfoEnabled = ogEntityInfoEnabled;
@@ -384,7 +384,7 @@ public class ObserveGroupDetail extends TeaModel {
         }
 
         /**
-         * <p>The set of Prometheus instances to which og_entity_info is written. This includes two source types: system (automatically identified by the system) and custom (user-defined).</p>
+         * <p>写入 og_entity_info 的 Prometheus 实例集合，包含系统自动识别(system)和用户自定义(custom)两类来源。</p>
          */
         public Builder ogEntityInfoPromInstances(java.util.List<ObserveGroupPromInstance> ogEntityInfoPromInstances) {
             this.ogEntityInfoPromInstances = ogEntityInfoPromInstances;
@@ -392,7 +392,7 @@ public class ObserveGroupDetail extends TeaModel {
         }
 
         /**
-         * <p>The product_group.id of the version 1.0 application group. This parameter is valid only when sourceOrigin is set to synced_from_1_0.</p>
+         * <p>仅 synced_from_1_0 时填值，存 1.0 应用分组的 product_group.id。</p>
          */
         public Builder originGroupId(String originGroupId) {
             this.originGroupId = originGroupId;
@@ -400,7 +400,7 @@ public class ObserveGroupDetail extends TeaModel {
         }
 
         /**
-         * <p>The region ID of the group.</p>
+         * <p>分组所属地域 ID。</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -408,7 +408,7 @@ public class ObserveGroupDetail extends TeaModel {
         }
 
         /**
-         * <p>The Alibaba Cloud resource group ID.</p>
+         * <p>阿里云资源组 ID。</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -416,11 +416,7 @@ public class ObserveGroupDetail extends TeaModel {
         }
 
         /**
-         * <p>The data source. Valid values:</p>
-         * <ul>
-         * <li>native_2_0: created natively in version 2.0.</li>
-         * <li>synced_from_1_0: synchronized from a version 1.0 application group.</li>
-         * </ul>
+         * <p>数据来源：native_2_0（2.0 原生）/ synced_from_1_0（从 1.0 应用分组同步）。</p>
          */
         public Builder sourceOrigin(String sourceOrigin) {
             this.sourceOrigin = sourceOrigin;
@@ -428,7 +424,7 @@ public class ObserveGroupDetail extends TeaModel {
         }
 
         /**
-         * <p>The resource tags (Alibaba Cloud standard tags), represented as an array of key-value pairs.</p>
+         * <p>资源标签（阿里云标准标签），键值对数组。</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.tags = tags;
@@ -436,7 +432,7 @@ public class ObserveGroupDetail extends TeaModel {
         }
 
         /**
-         * <p>The workspace ID to which the group belongs. This value is set at the workspace level and cannot be changed after the group is created.</p>
+         * <p>分组归属的 workspace ID（workspace 级归属，创建后不可变）。</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = workspaceId;
@@ -528,7 +524,7 @@ public class ObserveGroupDetail extends TeaModel {
             } 
 
             /**
-             * <p>The entity category.</p>
+             * <p>实体分类。</p>
              */
             public Builder entityCategory(String entityCategory) {
                 this.entityCategory = entityCategory;
@@ -536,7 +532,7 @@ public class ObserveGroupDetail extends TeaModel {
             }
 
             /**
-             * <p>The number of entities.</p>
+             * <p>实体数量。</p>
              */
             public Builder entityCount(Integer entityCount) {
                 this.entityCount = entityCount;
@@ -544,7 +540,7 @@ public class ObserveGroupDetail extends TeaModel {
             }
 
             /**
-             * <p>The entity domain.</p>
+             * <p>实体域。</p>
              */
             public Builder entityDomain(String entityDomain) {
                 this.entityDomain = entityDomain;
@@ -552,7 +548,7 @@ public class ObserveGroupDetail extends TeaModel {
             }
 
             /**
-             * <p>The entity type.</p>
+             * <p>实体类型。</p>
              */
             public Builder entityType(String entityType) {
                 this.entityType = entityType;
@@ -619,7 +615,7 @@ public class ObserveGroupDetail extends TeaModel {
             } 
 
             /**
-             * <p>The tag key.</p>
+             * <p>标签键。</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -627,7 +623,7 @@ public class ObserveGroupDetail extends TeaModel {
             }
 
             /**
-             * <p>The tag value.</p>
+             * <p>标签值。</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

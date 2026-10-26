@@ -131,7 +131,7 @@ public class UpdateMemoryStoreRequest extends Request {
         } 
 
         /**
-         * <p>Workspace name.</p>
+         * <p>The name of the workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,7 +144,7 @@ public class UpdateMemoryStoreRequest extends Request {
         }
 
         /**
-         * <p>Memory store name.</p>
+         * <p>The name of the memory store.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,7 +157,7 @@ public class UpdateMemoryStoreRequest extends Request {
         }
 
         /**
-         * <p>Custom extraction strategies.</p>
+         * <p>The custom extraction strategies.</p>
          */
         public Builder customExtractionStrategies(java.util.List<CustomExtractionStrategy> customExtractionStrategies) {
             this.putBodyParameter("customExtractionStrategies", customExtractionStrategies);
@@ -166,7 +166,7 @@ public class UpdateMemoryStoreRequest extends Request {
         }
 
         /**
-         * <p>Description.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>memoryStore test</p>
@@ -178,7 +178,7 @@ public class UpdateMemoryStoreRequest extends Request {
         }
 
         /**
-         * <p>Extraction strategies. Supports &quot;Episodic&quot;, &quot;Summary&quot;, and &quot;Fact&quot;.</p>
+         * <p>The extraction strategies. Valid values: Episodic, Summary, and Fact.</p>
          */
         public Builder extractionStrategies(java.util.List<String> extractionStrategies) {
             this.putBodyParameter("extractionStrategies", extractionStrategies);
@@ -187,7 +187,7 @@ public class UpdateMemoryStoreRequest extends Request {
         }
 
         /**
-         * <p>Short-term memory retention time.</p>
+         * <p>The retention period for short-term memory.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>

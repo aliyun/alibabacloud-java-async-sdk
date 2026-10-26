@@ -145,7 +145,7 @@ public class CreateContextStoreRequest extends Request {
         }
 
         /**
-         * <p>The configuration.</p>
+         * <p>The configuration information.</p>
          */
         public Builder config(Config config) {
             this.putBodyParameter("config", config);
@@ -167,7 +167,7 @@ public class CreateContextStoreRequest extends Request {
         }
 
         /**
-         * <p>The type of the context store.</p>
+         * <p>The context type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -180,7 +180,7 @@ public class CreateContextStoreRequest extends Request {
         }
 
         /**
-         * <p>The properties of the dataset.</p>
+         * <p>The dataset.</p>
          */
         public Builder dataset(Dataset dataset) {
             this.putBodyParameter("dataset", dataset);
@@ -189,7 +189,7 @@ public class CreateContextStoreRequest extends Request {
         }
 
         /**
-         * <p>The description of the context store.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>desc</p>
@@ -273,7 +273,7 @@ public class CreateContextStoreRequest extends Request {
             } 
 
             /**
-             * <p>The name of the Log Service Logstore.</p>
+             * <p>The name of the Simple Log Service Logstore.</p>
              * 
              * <strong>example:</strong>
              * <p>sls-test-logstore</p>
@@ -284,7 +284,7 @@ public class CreateContextStoreRequest extends Request {
             }
 
             /**
-             * <p>The name of the Log Service project.</p>
+             * <p>The name of the Simple Log Service project.</p>
              * 
              * <strong>example:</strong>
              * <p>sls-test-project</p>
@@ -366,7 +366,7 @@ public class CreateContextStoreRequest extends Request {
             } 
 
             /**
-             * <p>The metadata fields.</p>
+             * <p>The metadata field.</p>
              */
             public Builder metadataField(java.util.Map<String, String> metadataField) {
                 this.metadataField = metadataField;

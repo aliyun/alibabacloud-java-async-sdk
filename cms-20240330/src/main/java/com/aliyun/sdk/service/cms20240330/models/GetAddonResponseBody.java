@@ -67,7 +67,7 @@ public class GetAddonResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The data returned.</p>
+         * <p>The list of data corresponding to the request header.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,7 @@ public class GetAddonResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>0B9377D9-C56B-5C2E-A8A4-A01D6CC3F4B8</p>
@@ -413,7 +413,7 @@ public class GetAddonResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The data check rule that is used after installation.</p>
+             * <p>The data check rule after installation.</p>
              */
             public Builder promQL(java.util.List<String> promQL) {
                 this.promQL = promQL;
@@ -674,7 +674,7 @@ public class GetAddonResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The status of the default policy for alert rules.</p>
+             * <p>The enabled status of the default alert rule policy.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -696,7 +696,7 @@ public class GetAddonResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether a service account is assigned for communication with the console API.</p>
+             * <p>Indicates whether a service account is assigned to communicate with the Console API.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -715,7 +715,7 @@ public class GetAddonResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether to guide the user to restart pods after the add-on is installed.</p>
+             * <p>Indicates whether a pod restart is triggered immediately after the add-on is installed during integration.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -726,7 +726,7 @@ public class GetAddonResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The protocol.</p>
+             * <p>The protocols.</p>
              */
             public Builder protocols(java.util.List<Protocols> protocols) {
                 this.protocols = protocols;
@@ -734,7 +734,7 @@ public class GetAddonResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the target add-on to which the system redirects.</p>
+             * <p>The name of the target add-on for redirection.</p>
              * 
              * <strong>example:</strong>
              * <p>cs-default</p>
@@ -890,7 +890,7 @@ public class GetAddonResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The dependencies.</p>
+             * <p>The additional dependencies.</p>
              */
             public Builder dependencies(Dependencies dependencies) {
                 this.dependencies = dependencies;
@@ -909,7 +909,7 @@ public class GetAddonResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the feature is enabled.</p>
+             * <p>Indicates whether the environment is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -923,7 +923,7 @@ public class GetAddonResponseBody extends TeaModel {
              * <p>The display name of the environment.</p>
              * 
              * <strong>example:</strong>
-             * <p>容器环境</p>
+             * <p>Container environment</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -942,7 +942,7 @@ public class GetAddonResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource group.</p>
+             * <p>The resource group ID.</p>
              */
             public Builder policies(Policies policies) {
                 this.policies = policies;
@@ -1176,7 +1176,7 @@ public class GetAddonResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The alias of the component.</p>
+             * <p>The alias of the integrated component.</p>
              * 
              * <strong>example:</strong>
              * <p>resume_vector_alias</p>
@@ -1187,7 +1187,7 @@ public class GetAddonResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of component categories.</p>
+             * <p>The list of categories for the integrated component.</p>
              */
             public Builder categories(java.util.List<String> categories) {
                 this.categories = categories;
@@ -1214,7 +1214,7 @@ public class GetAddonResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The environment information.</p>
+             * <p>The environment context.</p>
              */
             public Builder environments(java.util.List<Environments> environments) {
                 this.environments = environments;
@@ -1252,7 +1252,7 @@ public class GetAddonResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the latest version was created.</p>
+             * <p>The latest creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-09-12 12:30:30</p>
@@ -1309,7 +1309,7 @@ public class GetAddonResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The weight.</p>
+             * <p>The weight value.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>

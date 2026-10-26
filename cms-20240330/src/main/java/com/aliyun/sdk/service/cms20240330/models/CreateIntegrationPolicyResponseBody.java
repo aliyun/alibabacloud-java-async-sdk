@@ -80,7 +80,7 @@ public class CreateIntegrationPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether the policy was created.</p>
+         * <p>Indicates whether the policy is created.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -91,7 +91,7 @@ public class CreateIntegrationPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The upload policy.</p>
+         * <p>The policy.</p>
          */
         public Builder policy(Policy policy) {
             this.policy = policy;
@@ -277,7 +277,7 @@ public class CreateIntegrationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region.</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-heyuan</p>
@@ -299,7 +299,7 @@ public class CreateIntegrationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The workspace where the policy resides.</p>
+             * <p>The workspace to which the policy belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>prometheus</p>

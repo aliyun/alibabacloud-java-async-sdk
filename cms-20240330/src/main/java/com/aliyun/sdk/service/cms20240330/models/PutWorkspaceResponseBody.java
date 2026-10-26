@@ -78,7 +78,7 @@ public class PutWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the workspace.</p>
+         * <p>The workspace name.</p>
          * 
          * <strong>example:</strong>
          * <p>workspace-test-001</p>

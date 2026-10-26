@@ -358,7 +358,7 @@ public class CreateDataPipelineResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The length of the prefix to retain.</p>
+             * <p>The length of the retained prefix.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -369,7 +369,7 @@ public class CreateDataPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The length of the suffix to retain.</p>
+             * <p>The length of the retained suffix.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -401,7 +401,7 @@ public class CreateDataPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The masking mode.</p>
+             * <p>The data masking mode.</p>
              * 
              * <strong>example:</strong>
              * <p>keyword</p>
@@ -527,7 +527,7 @@ public class CreateDataPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The field or dimension name.</p>
+             * <p>The name of the field or dimension.</p>
              * 
              * <strong>example:</strong>
              * <p>serviceName</p>
@@ -626,7 +626,7 @@ public class CreateDataPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The matching method.</p>
+             * <p>The match type.</p>
              * 
              * <strong>example:</strong>
              * <p>EXACT</p>
@@ -704,7 +704,7 @@ public class CreateDataPipelineResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The matching method.</p>
+             * <p>The match type.</p>
              * 
              * <strong>example:</strong>
              * <p>EXACT</p>
@@ -785,7 +785,7 @@ public class CreateDataPipelineResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The matching method.</p>
+             * <p>The match type.</p>
              * 
              * <strong>example:</strong>
              * <p>EXACT</p>
@@ -946,7 +946,7 @@ public class CreateDataPipelineResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of service names.</p>
+             * <p>The service name list.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;checkout-*&quot;,&quot;order-service&quot;]</p>
@@ -1225,7 +1225,7 @@ public class CreateDataPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The extended parameters.</p>
+             * <p>The additional parameters.</p>
              */
             public Builder parameters(java.util.Map<String, ?> parameters) {
                 this.parameters = parameters;
@@ -1241,7 +1241,7 @@ public class CreateDataPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of masking rules.</p>
+             * <p>The list of data masking rules.</p>
              */
             public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
@@ -1249,7 +1249,7 @@ public class CreateDataPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scope in which the pipeline processing processor takes effect.</p>
+             * <p>The effective scope of pipeline processing.</p>
              */
             public Builder scope(Scope scope) {
                 this.scope = scope;
@@ -1447,7 +1447,7 @@ public class CreateDataPipelineResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The output name.</p>
+             * <p>The name of the output.</p>
              * 
              * <strong>example:</strong>
              * <p>checkout_route</p>
@@ -1739,7 +1739,7 @@ public class CreateDataPipelineResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The length of the prefix to retain.</p>
+             * <p>The length of the retained prefix.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -1750,7 +1750,7 @@ public class CreateDataPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The length of the suffix to retain.</p>
+             * <p>The length of the retained suffix.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -1782,7 +1782,7 @@ public class CreateDataPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The masking mode.</p>
+             * <p>The data masking mode.</p>
              * 
              * <strong>example:</strong>
              * <p>keyword</p>
@@ -1908,7 +1908,7 @@ public class CreateDataPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The field or dimension name.</p>
+             * <p>The name of the field or dimension.</p>
              * 
              * <strong>example:</strong>
              * <p>service.name</p>
@@ -2007,7 +2007,7 @@ public class CreateDataPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The matching method.</p>
+             * <p>The match type.</p>
              * 
              * <strong>example:</strong>
              * <p>EXACT</p>
@@ -2085,7 +2085,7 @@ public class CreateDataPipelineResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The matching method.</p>
+             * <p>The match type.</p>
              * 
              * <strong>example:</strong>
              * <p>EXACT</p>
@@ -2166,7 +2166,7 @@ public class CreateDataPipelineResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The matching method.</p>
+             * <p>The match type.</p>
              * 
              * <strong>example:</strong>
              * <p>GLOB</p>
@@ -2327,7 +2327,7 @@ public class CreateDataPipelineResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of service names.</p>
+             * <p>The service name list.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;checkout-*&quot;,&quot;order-service&quot;]</p>
@@ -2606,7 +2606,7 @@ public class CreateDataPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The extended parameters.</p>
+             * <p>The additional parameters.</p>
              */
             public Builder parameters(java.util.Map<String, ?> parameters) {
                 this.parameters = parameters;
@@ -2622,7 +2622,7 @@ public class CreateDataPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of masking rules.</p>
+             * <p>The list of data masking rules.</p>
              */
             public Builder rules(java.util.List<ConfigRules> rules) {
                 this.rules = rules;
@@ -2630,7 +2630,7 @@ public class CreateDataPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scope in which the pipeline processing processor takes effect.</p>
+             * <p>The effective scope of pipeline processing.</p>
              */
             public Builder scope(ConfigScope scope) {
                 this.scope = scope;
@@ -2867,7 +2867,7 @@ public class CreateDataPipelineResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of datasets.</p>
+             * <p>The dataset list.</p>
              */
             public Builder datasets(java.util.List<String> datasets) {
                 this.datasets = datasets;
@@ -2886,7 +2886,7 @@ public class CreateDataPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the output destination.</p>
+             * <p>The sink name.</p>
              * 
              * <strong>example:</strong>
              * <p>error-archive</p>
@@ -2908,7 +2908,7 @@ public class CreateDataPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the output destination.</p>
+             * <p>The sink type.</p>
              * 
              * <strong>example:</strong>
              * <p>logstore</p>
@@ -3083,7 +3083,7 @@ public class CreateDataPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The read start point.</p>
+             * <p>The start position.</p>
              * 
              * <strong>example:</strong>
              * <p>latest</p>
@@ -3169,7 +3169,7 @@ public class CreateDataPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the data source.</p>
+             * <p>The data source type.</p>
              * 
              * <strong>example:</strong>
              * <p>traces-default</p>
@@ -3393,7 +3393,7 @@ public class CreateDataPipelineResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation time.</p>
+             * <p>The creation time in UTC format that follows the ISO 8601 standard, such as 2026-08-10T05:00:00Z.</p>
              * <p>This parameter is required.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
              * 
@@ -3406,7 +3406,7 @@ public class CreateDataPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The pipeline description.</p>
+             * <p>The description of the pipeline.</p>
              * 
              * <strong>example:</strong>
              * <p>Export selected trace services to the target workspace.</p>
@@ -3417,7 +3417,7 @@ public class CreateDataPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The pipeline type.</p>
+             * <p>The type of the pipeline.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -3471,7 +3471,7 @@ public class CreateDataPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The output destinations.</p>
+             * <p>The sinks.</p>
              * <p>This parameter is required.</p>
              */
             public Builder sinks(java.util.List<Sinks> sinks) {
@@ -3512,7 +3512,7 @@ public class CreateDataPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time.</p>
+             * <p>The update time in ISO 8601 format in UTC. Example: 2026-08-10T05:10:00Z.</p>
              * <p>This parameter is required.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
              * 

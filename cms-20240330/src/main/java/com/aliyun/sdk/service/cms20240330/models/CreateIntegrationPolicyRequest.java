@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateIntegrationPolicyRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("apiVersion")
+    private String apiVersion;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("entityGroup")
     private EntityGroup entityGroup;
 
@@ -44,6 +48,7 @@ public class CreateIntegrationPolicyRequest extends Request {
 
     private CreateIntegrationPolicyRequest(Builder builder) {
         super(builder);
+        this.apiVersion = builder.apiVersion;
         this.entityGroup = builder.entityGroup;
         this.policyName = builder.policyName;
         this.policyType = builder.policyType;
@@ -63,6 +68,13 @@ public class CreateIntegrationPolicyRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return apiVersion
+     */
+    public String getApiVersion() {
+        return this.apiVersion;
     }
 
     /**
@@ -108,6 +120,7 @@ public class CreateIntegrationPolicyRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateIntegrationPolicyRequest, Builder> {
+        private String apiVersion; 
         private EntityGroup entityGroup; 
         private String policyName; 
         private String policyType; 
@@ -121,6 +134,7 @@ public class CreateIntegrationPolicyRequest extends Request {
 
         private Builder(CreateIntegrationPolicyRequest request) {
             super(request);
+            this.apiVersion = request.apiVersion;
             this.entityGroup = request.entityGroup;
             this.policyName = request.policyName;
             this.policyType = request.policyType;
@@ -130,7 +144,16 @@ public class CreateIntegrationPolicyRequest extends Request {
         } 
 
         /**
-         * <p>The entity group used to create the policy. You can quickly create a policy using an entity group. The clusterId and vpcId parameters are independent of each other.</p>
+         * apiVersion.
+         */
+        public Builder apiVersion(String apiVersion) {
+            this.putBodyParameter("apiVersion", apiVersion);
+            this.apiVersion = apiVersion;
+            return this;
+        }
+
+        /**
+         * <p>The entity group used to create the policy. You can quickly create the policy by using the entity group. The clusterId and vpcId parameters are independent of each other.</p>
          */
         public Builder entityGroup(EntityGroup entityGroup) {
             this.putBodyParameter("entityGroup", entityGroup);
@@ -321,7 +344,7 @@ public class CreateIntegrationPolicyRequest extends Request {
             } 
 
             /**
-             * <p>The cluster entity type. Examples: acs.ack.cluster, acs.one.cluster, and acs.asi.cluster.</p>
+             * <p>The cluster entity type, such as acs.ack.cluster, acs.one.cluster, acs.asi.cluster, or others.</p>
              * 
              * <strong>example:</strong>
              * <p>acs.ack.cluster</p>
@@ -351,7 +374,7 @@ public class CreateIntegrationPolicyRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to disable unique policy binding. If this parameter is set to true, you can create multiple policies for a container cluster.</p>
+             * <p>Specifies whether to disable the unique binding of the policy. If this parameter is set to true, you can create multiple policies for a container cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>ture</p>
@@ -373,7 +396,7 @@ public class CreateIntegrationPolicyRequest extends Request {
             }
 
             /**
-             * <p>The ID of the user who owns the cluster.</p>
+             * <p>The ID of the user to which the cluster belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>12xxxx</p>
@@ -384,7 +407,7 @@ public class CreateIntegrationPolicyRequest extends Request {
             }
 
             /**
-             * <p>The virtual private cloud (VPC) ID.</p>
+             * <p>The VPC ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-bp18fgg3ffxa9czna40xt</p>
@@ -454,7 +477,7 @@ public class CreateIntegrationPolicyRequest extends Request {
             } 
 
             /**
-             * <p>The key of the tag.</p>
+             * <p>The tag key.</p>
              * 
              * <strong>example:</strong>
              * <p>use</p>
@@ -465,7 +488,7 @@ public class CreateIntegrationPolicyRequest extends Request {
             }
 
             /**
-             * <p>The value of the tag.</p>
+             * <p>The tag value.</p>
              * 
              * <strong>example:</strong>
              * <p>database</p>

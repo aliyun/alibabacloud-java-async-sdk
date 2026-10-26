@@ -132,7 +132,7 @@ public class MergeContactGroup extends TeaModel {
         } 
 
         /**
-         * <p>A list of unique identifiers for the members in the group.</p>
+         * <p>The list of unique identifiers for members in the group.</p>
          */
         public Builder contacts(java.util.List<String> contacts) {
             this.contacts = contacts;
@@ -140,10 +140,10 @@ public class MergeContactGroup extends TeaModel {
         }
 
         /**
-         * <p>An extension field that stores additional information.</p>
+         * <p>The extension field used to store additional information.</p>
          * 
          * <strong>example:</strong>
-         * <p>{ &quot;department&quot;: &quot;运维部&quot;, &quot;role&quot;: &quot;工程师&quot; }</p>
+         * <p>{ &quot;department&quot;: &quot;O&amp;M Department&quot;, &quot;role&quot;: &quot;Engineer&quot; }</p>
          */
         public Builder extend(java.util.Map<String, ?> extend) {
             this.extend = extend;
@@ -151,7 +151,7 @@ public class MergeContactGroup extends TeaModel {
         }
 
         /**
-         * <p>The time when the contact group was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-03-11T08:21:58.789Z</p>
@@ -162,7 +162,7 @@ public class MergeContactGroup extends TeaModel {
         }
 
         /**
-         * <p>The time when the contact group was last modified.</p>
+         * <p>The last modification time.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-03-11T08:21:58.789Z</p>
@@ -187,7 +187,7 @@ public class MergeContactGroup extends TeaModel {
          * <p>The name of the contact group.</p>
          * 
          * <strong>example:</strong>
-         * <p>运维团队</p>
+         * <p>O&amp;M Team</p>
          */
         public Builder name(String name) {
             this.name = name;

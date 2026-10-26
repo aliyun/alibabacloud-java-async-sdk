@@ -124,7 +124,7 @@ public class ListPrometheusVirtualInstancesRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of instances to return per page.</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -133,7 +133,7 @@ public class ListPrometheusVirtualInstancesRequest extends Request {
         }
 
         /**
-         * <p>The namespace of the cloud product. This parameter is optional.</p>
+         * <p>The optional cloud services.</p>
          * 
          * <strong>example:</strong>
          * <p>ack-csi-fuse</p>
@@ -145,7 +145,7 @@ public class ListPrometheusVirtualInstancesRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The next paging token for the paged query.</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);

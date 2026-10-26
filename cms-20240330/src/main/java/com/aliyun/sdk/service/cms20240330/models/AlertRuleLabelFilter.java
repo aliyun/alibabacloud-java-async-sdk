@@ -75,7 +75,7 @@ public class AlertRuleLabelFilter extends TeaModel {
         }
 
         /**
-         * <p>The relationship operator between multiple labels.</p>
+         * <p>The relational operator between multiple labels.</p>
          * 
          * <strong>example:</strong>
          * <p>AND</p>

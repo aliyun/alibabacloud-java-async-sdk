@@ -104,7 +104,7 @@ public class ListIntegrationPolicyPodMonitorsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of PodMonitors.</p>
+         * <p>The PodMonitor list.</p>
          */
         public Builder podMonitors(java.util.List<PodMonitors> podMonitors) {
             this.podMonitors = podMonitors;
@@ -482,7 +482,7 @@ public class ListIntegrationPolicyPodMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configuration YAML.</p>
+             * <p>The YAML configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>apiVersion: xxxxx</p>

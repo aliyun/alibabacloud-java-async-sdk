@@ -106,7 +106,7 @@ public class ListContextStoreAPIKeysResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The maximum number of entries returned per page.</p>
+         * <p>The maximum number of results to return.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -117,7 +117,7 @@ public class ListContextStoreAPIKeysResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A pagination token. To retrieve the next page of results, include this value in the <code>nextToken</code> parameter of your next request. If this parameter is not returned, there are no more results.</p>
+         * <p>The pagination token.</p>
          * 
          * <strong>example:</strong>
          * <p>xCs4wJD41qEejNkappMSJ1OL2Ky2GeKLqmBLJrC61WrgUOj9F-31jHbo5Kgqzifv</p>
@@ -128,7 +128,7 @@ public class ListContextStoreAPIKeysResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>8FDE2569-626B-5176-9844-28877A*****</p>
@@ -139,7 +139,7 @@ public class ListContextStoreAPIKeysResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of API keys.</p>
+         * <p>The results.</p>
          */
         public Builder results(java.util.List<Results> results) {
             this.results = results;
@@ -147,7 +147,7 @@ public class ListContextStoreAPIKeysResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total count of entries that match the query.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>454</p>
@@ -255,7 +255,7 @@ public class ListContextStoreAPIKeysResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The complete API key value.</p>
+             * <p>The full value of the API key.</p>
              * 
              * <strong>example:</strong>
              * <p>sk-3ac8d45d741e4f31b81aa6ee984ce9fd</p>
@@ -277,7 +277,7 @@ public class ListContextStoreAPIKeysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the API key was created, represented as a Unix timestamp.</p>
+             * <p>The creation time.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
              * 
              * <strong>example:</strong>
@@ -289,7 +289,7 @@ public class ListContextStoreAPIKeysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the API key. This name helps you identify the purpose of the key.</p>
+             * <p>The display name of the API key, used to identify its purpose.</p>
              * 
              * <strong>example:</strong>
              * <p>Production Service Key</p>
@@ -300,7 +300,7 @@ public class ListContextStoreAPIKeysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the workspace.</p>
+             * <p>The workspace ID.</p>
              * 
              * <strong>example:</strong>
              * <p>test-workspace</p>

@@ -131,7 +131,7 @@ public class ExecuteQueryRequest extends Request {
         }
 
         /**
-         * <p>The query statement to execute.</p>
+         * <p>The query content.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,7 +144,7 @@ public class ExecuteQueryRequest extends Request {
         }
 
         /**
-         * <p>The query type. Valid values: SQL and SPL.</p>
+         * <p>The type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

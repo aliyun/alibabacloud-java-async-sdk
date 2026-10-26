@@ -114,7 +114,7 @@ public class ListDeliveryTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of entries returned. Maximum value: 100.</p>
+         * <p>The maximum number of results returned. Maximum value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -136,7 +136,7 @@ public class ListDeliveryTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>7D7DF334-B2F2-5453-AD51-A27B337E3191</p>
@@ -270,7 +270,7 @@ public class ListDeliveryTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The detailed configuration of the delivery target. The meanings of key/value pairs vary depending on the sinkType.</p>
+             * <p>The detailed configuration of the delivery sink. The meanings of the key and value vary based on the sinkType.</p>
              */
             public Builder sinkConfigs(java.util.Map<String, String> sinkConfigs) {
                 this.sinkConfigs = sinkConfigs;
@@ -278,7 +278,7 @@ public class ListDeliveryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The delivery target type.</p>
+             * <p>The type of the delivery sink.</p>
              * 
              * <strong>example:</strong>
              * <p>Prometheus</p>
@@ -585,8 +585,7 @@ public class ListDeliveryTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation time.</p>
-             * <p>The time is in the ISO 8601 standard format (YYYY-MM-DDThh:mm:ssZ) in UTC.</p>
+             * <p>The creation time. The time is displayed in the ISO 8601 standard format (YYYY-MM-DDThh:mm:ssZ) in UTC.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
              * 
              * <strong>example:</strong>
@@ -598,7 +597,7 @@ public class ListDeliveryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data source ID (Prometheus instance ID).</p>
+             * <p>The ID of the data source, which is the ID of the Prometheus instance.</p>
              * 
              * <strong>example:</strong>
              * <p>rw-5f2b4c7e66342s</p>
@@ -609,7 +608,7 @@ public class ListDeliveryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The additional labels attached to all delivered metrics. The key is the label name and the value is the label value.</p>
+             * <p>The additional labels attached to all delivered metrics. The key is the label name, and the value is the label value.</p>
              */
             public Builder externalLabels(java.util.Map<String, String> externalLabels) {
                 this.externalLabels = externalLabels;
@@ -625,7 +624,7 @@ public class ListDeliveryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The metric filter conditions. Used together with labelFiltersType. The key is the metric label name and the value is the match value.</p>
+             * <p>The metric filtering conditions, used in conjunction with labelFiltersType. The key is the metric label name, and the value is the matching value.</p>
              */
             public Builder labelFilters(java.util.Map<String, String> labelFilters) {
                 this.labelFilters = labelFilters;
@@ -644,7 +643,7 @@ public class ListDeliveryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource group ID.</p>
+             * <p>The ID of the resource group.</p>
              * 
              * <strong>example:</strong>
              * <p>rg-acfm3gn5i6bigbi</p>
@@ -655,7 +654,7 @@ public class ListDeliveryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of delivery targets. Multiple sinks can be configured.</p>
+             * <p>The list of delivery sinks. You can configure multiple sinks.</p>
              */
             public Builder sinkList(java.util.List<SinkList> sinkList) {
                 this.sinkList = sinkList;
@@ -682,7 +681,7 @@ public class ListDeliveryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task description.</p>
+             * <p>The description of the task.</p>
              * 
              * <strong>example:</strong>
              * <p>my delivery task</p>
@@ -693,7 +692,7 @@ public class ListDeliveryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task ID.</p>
+             * <p>The ID of the task.</p>
              * 
              * <strong>example:</strong>
              * <p>db21f8a126d96953</p>
@@ -704,7 +703,7 @@ public class ListDeliveryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task name.</p>
+             * <p>The name of the task.</p>
              * 
              * <strong>example:</strong>
              * <p>test-task</p>
@@ -715,8 +714,7 @@ public class ListDeliveryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time.</p>
-             * <p>The time is in the ISO 8601 standard format (YYYY-MM-DDThh:mm:ssZ) in UTC.</p>
+             * <p>The update time. The time is displayed in the ISO 8601 standard format (YYYY-MM-DDThh:mm:ssZ) in UTC.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
              * 
              * <strong>example:</strong>

@@ -75,7 +75,7 @@ public class GetDataPipelineRequest extends Request {
         } 
 
         /**
-         * <p>The workspace name.</p>
+         * <p>The name of the workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class GetDataPipelineRequest extends Request {
         }
 
         /**
-         * <p>The pipeline name.</p>
+         * <p>The name of the pipeline.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -32,6 +32,10 @@ public class CreateAddonReleaseRequest extends Request {
     private String aliyunLang;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("apiVersion")
+    private String apiVersion;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("dryRun")
     @Deprecated
     private Boolean dryRun;
@@ -70,6 +74,7 @@ public class CreateAddonReleaseRequest extends Request {
         this.policyId = builder.policyId;
         this.addonName = builder.addonName;
         this.aliyunLang = builder.aliyunLang;
+        this.apiVersion = builder.apiVersion;
         this.dryRun = builder.dryRun;
         this.entityRules = builder.entityRules;
         this.envType = builder.envType;
@@ -112,6 +117,13 @@ public class CreateAddonReleaseRequest extends Request {
      */
     public String getAliyunLang() {
         return this.aliyunLang;
+    }
+
+    /**
+     * @return apiVersion
+     */
+    public String getApiVersion() {
+        return this.apiVersion;
     }
 
     /**
@@ -174,6 +186,7 @@ public class CreateAddonReleaseRequest extends Request {
         private String policyId; 
         private String addonName; 
         private String aliyunLang; 
+        private String apiVersion; 
         private Boolean dryRun; 
         private EntityDiscoverRule entityRules; 
         private String envType; 
@@ -192,6 +205,7 @@ public class CreateAddonReleaseRequest extends Request {
             this.policyId = request.policyId;
             this.addonName = request.addonName;
             this.aliyunLang = request.aliyunLang;
+            this.apiVersion = request.apiVersion;
             this.dryRun = request.dryRun;
             this.entityRules = request.entityRules;
             this.envType = request.envType;
@@ -216,7 +230,7 @@ public class CreateAddonReleaseRequest extends Request {
         }
 
         /**
-         * <p>The name of the addon component to be connected to monitoring.</p>
+         * <p>The name of the add-on component to be integrated for monitoring.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -237,6 +251,15 @@ public class CreateAddonReleaseRequest extends Request {
         public Builder aliyunLang(String aliyunLang) {
             this.putBodyParameter("aliyunLang", aliyunLang);
             this.aliyunLang = aliyunLang;
+            return this;
+        }
+
+        /**
+         * apiVersion.
+         */
+        public Builder apiVersion(String apiVersion) {
+            this.putBodyParameter("apiVersion", apiVersion);
+            this.apiVersion = apiVersion;
             return this;
         }
 
@@ -262,7 +285,7 @@ public class CreateAddonReleaseRequest extends Request {
         }
 
         /**
-         * <p>The environment type. If the policy type is CS or ECS, the corresponding value is used. For other types, the value is Cloud.</p>
+         * <p>The environment type. If the policy type is CS or ECS, the corresponding environment type is used. For other policy types, the value is uniformly set to Cloud.</p>
          * 
          * <strong>example:</strong>
          * <p>CS</p>
@@ -274,7 +297,7 @@ public class CreateAddonReleaseRequest extends Request {
         }
 
         /**
-         * <p>The parent AddonReleaseId.</p>
+         * <p>The parent add-on release ID.</p>
          * 
          * <strong>example:</strong>
          * <p>policy-xxxxxxxxxxx</p>
@@ -286,7 +309,7 @@ public class CreateAddonReleaseRequest extends Request {
         }
 
         /**
-         * <p>The name of the plugin after access. If this parameter is not specified, a default rule name is generated.</p>
+         * <p>The name of the plug-in after integration. If you do not specify this parameter, a default rule name is generated.</p>
          * 
          * <strong>example:</strong>
          * <p>test-gpu-integration-name</p>
@@ -310,7 +333,7 @@ public class CreateAddonReleaseRequest extends Request {
         }
 
         /**
-         * <p>The version of the addon component to be connected to monitoring.</p>
+         * <p>The version of the add-on component to be integrated for monitoring.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

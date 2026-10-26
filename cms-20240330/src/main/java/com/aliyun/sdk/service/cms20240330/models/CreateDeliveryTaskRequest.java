@@ -174,7 +174,7 @@ public class CreateDeliveryTaskRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the Prometheus instance that serves as the data source.</p>
+         * <p>The ID of the data source, which is the ID of the Prometheus instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -187,7 +187,7 @@ public class CreateDeliveryTaskRequest extends Request {
         }
 
         /**
-         * <p>A map of key-value pairs to attach as additional labels to all delivered metrics.</p>
+         * <p>The additional labels attached to all delivered metrics. The key is the label name, and the value is the label value.</p>
          */
         public Builder externalLabels(java.util.Map<String, String> externalLabels) {
             this.putBodyParameter("externalLabels", externalLabels);
@@ -196,7 +196,7 @@ public class CreateDeliveryTaskRequest extends Request {
         }
 
         /**
-         * <p>The label conditions for filtering metrics. The key is the label name and the value is the value to match. The filtering behavior is controlled by <code>labelFiltersType</code>.</p>
+         * <p>The metric filtering conditions. This parameter is used together with labelFiltersType. The key is the metric label name, and the value is the match value.</p>
          */
         public Builder labelFilters(java.util.Map<String, String> labelFilters) {
             this.putBodyParameter("labelFilters", labelFilters);
@@ -205,7 +205,7 @@ public class CreateDeliveryTaskRequest extends Request {
         }
 
         /**
-         * <p>The mode for applying the label filters.</p>
+         * <p>The metric filtering mode.</p>
          * 
          * <strong>example:</strong>
          * <p>Allow</p>
@@ -229,7 +229,7 @@ public class CreateDeliveryTaskRequest extends Request {
         }
 
         /**
-         * <p>An array of delivery destination objects.</p>
+         * <p>The list of delivery destinations.</p>
          * <p>This parameter is required.</p>
          */
         public Builder sinkList(java.util.List<SinkList> sinkList) {
@@ -239,7 +239,7 @@ public class CreateDeliveryTaskRequest extends Request {
         }
 
         /**
-         * <p>An array of resource tags.</p>
+         * <p>The tags of the resource.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putBodyParameter("tags", tags);
@@ -248,7 +248,7 @@ public class CreateDeliveryTaskRequest extends Request {
         }
 
         /**
-         * <p>The task description.</p>
+         * <p>The description of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>my delivery task</p>
@@ -333,7 +333,7 @@ public class CreateDeliveryTaskRequest extends Request {
             } 
 
             /**
-             * <p>The configuration for the sink, specified as key-value pairs. The valid keys and values depend on the value of <code>sinkType</code>.</p>
+             * <p>The detailed configuration of the delivery destination. The meanings of the key and value vary based on the sinkType. For more information, see the following descriptions.</p>
              */
             public Builder sinkConfigs(java.util.Map<String, String> sinkConfigs) {
                 this.sinkConfigs = sinkConfigs;
@@ -341,7 +341,7 @@ public class CreateDeliveryTaskRequest extends Request {
             }
 
             /**
-             * <p>The type of the delivery destination (sink).</p>
+             * <p>The type of the delivery destination.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

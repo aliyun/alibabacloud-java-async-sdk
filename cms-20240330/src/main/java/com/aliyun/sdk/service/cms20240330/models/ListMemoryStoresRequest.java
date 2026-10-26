@@ -115,7 +115,7 @@ public class ListMemoryStoresRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of results to return. The maximum value is 200.</p>
+         * <p>The maximum number of results to return. Maximum value: 200.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -139,7 +139,7 @@ public class ListMemoryStoresRequest extends Request {
         }
 
         /**
-         * <p>The token for the next page of results.</p>
+         * <p>The pagination token.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxxxxxxx</p>

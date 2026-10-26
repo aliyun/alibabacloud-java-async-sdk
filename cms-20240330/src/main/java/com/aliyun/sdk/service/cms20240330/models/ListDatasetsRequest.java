@@ -102,7 +102,7 @@ public class ListDatasetsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the workspace.</p>
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +115,7 @@ public class ListDatasetsRequest extends Request {
         }
 
         /**
-         * <p>The name of the dataset.</p>
+         * <p>The dataset name.</p>
          * 
          * <strong>example:</strong>
          * <p>test_dataset</p>
@@ -127,7 +127,7 @@ public class ListDatasetsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of results to return per page.</p>
+         * <p>The maximum number of results to return.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -139,7 +139,7 @@ public class ListDatasetsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token for retrieving the next page of results. A <code>nextToken</code> is included in the response when the result set is truncated. To continue pagination, provide the <code>nextToken</code> from the previous response.</p>
+         * <p>The pagination token.</p>
          * 
          * <strong>example:</strong>
          * <p>d9a48d977f45aa6fcf6981ed13b885b3fab0b124c12dcbbe70edce5d81ba****************</p>

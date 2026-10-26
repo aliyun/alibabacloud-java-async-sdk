@@ -106,7 +106,7 @@ public class ListPrometheusVirtualInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A list of instances.</p>
+         * <p>The instance information.</p>
          */
         public Builder instances(java.util.List<Instances> instances) {
             this.instances = instances;
@@ -114,7 +114,10 @@ public class ListPrometheusVirtualInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of entries returned on each page.</p>
+         * <p>The maximum number of instances to return per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(String maxResults) {
             this.maxResults = maxResults;
@@ -122,7 +125,7 @@ public class ListPrometheusVirtualInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. If all results are returned, this parameter is left empty.</p>
+         * <p>The next token for the next page. It is empty when all results are returned.</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -130,7 +133,7 @@ public class ListPrometheusVirtualInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>264C3E89-XXXX-XXXX-XXXX-CE9C2196C7DC</p>
@@ -141,7 +144,7 @@ public class ListPrometheusVirtualInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of instances returned.</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -281,7 +284,7 @@ public class ListPrometheusVirtualInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Returned for the <code>PROMETHEUS_DS</code> data source type.</p>
+             * <p>The applicable data source type: PROMETHEUS_DS.</p>
              * <p>The Prometheus instance ID.</p>
              * 
              * <strong>example:</strong>
@@ -293,7 +296,7 @@ public class ListPrometheusVirtualInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Returned for the <code>CMS_BASIC_QUERY</code> query type.</p>
+             * <p>The applicable query type: CMS_BASIC_QUERY.</p>
              * <p>The namespace of the metric.</p>
              * 
              * <strong>example:</strong>

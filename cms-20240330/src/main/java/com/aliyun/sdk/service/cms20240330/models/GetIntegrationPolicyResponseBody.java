@@ -1352,6 +1352,9 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("addonNames")
         private java.util.List<String> addonNames;
 
+        @com.aliyun.core.annotation.NameInMap("apiVersion")
+        private String apiVersion;
+
         @com.aliyun.core.annotation.NameInMap("bindResource")
         private BindResource bindResource;
 
@@ -1390,6 +1393,7 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
 
         private Policy(Builder builder) {
             this.addonNames = builder.addonNames;
+            this.apiVersion = builder.apiVersion;
             this.bindResource = builder.bindResource;
             this.csUmodelStatus = builder.csUmodelStatus;
             this.entityGroup = builder.entityGroup;
@@ -1417,6 +1421,13 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
          */
         public java.util.List<String> getAddonNames() {
             return this.addonNames;
+        }
+
+        /**
+         * @return apiVersion
+         */
+        public String getApiVersion() {
+            return this.apiVersion;
         }
 
         /**
@@ -1505,6 +1516,7 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> addonNames; 
+            private String apiVersion; 
             private BindResource bindResource; 
             private Boolean csUmodelStatus; 
             private EntityGroup entityGroup; 
@@ -1523,6 +1535,7 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
 
             private Builder(Policy model) {
                 this.addonNames = model.addonNames;
+                this.apiVersion = model.apiVersion;
                 this.bindResource = model.bindResource;
                 this.csUmodelStatus = model.csUmodelStatus;
                 this.entityGroup = model.entityGroup;
@@ -1542,6 +1555,14 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
              */
             public Builder addonNames(java.util.List<String> addonNames) {
                 this.addonNames = addonNames;
+                return this;
+            }
+
+            /**
+             * apiVersion.
+             */
+            public Builder apiVersion(String apiVersion) {
+                this.apiVersion = apiVersion;
                 return this;
             }
 

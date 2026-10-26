@@ -215,7 +215,7 @@ public class AddMemoriesRequest extends Request {
         } 
 
         /**
-         * <p>Workspace name.</p>
+         * <p>The workspace name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -228,7 +228,7 @@ public class AddMemoriesRequest extends Request {
         }
 
         /**
-         * <p>Memory store name.</p>
+         * <p>The memory store name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -241,7 +241,7 @@ public class AddMemoriesRequest extends Request {
         }
 
         /**
-         * <p>Application agent ID.</p>
+         * <p>The agent ID of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>952730733889060865</p>
@@ -253,7 +253,7 @@ public class AddMemoriesRequest extends Request {
         }
 
         /**
-         * <p>Application ID.</p>
+         * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>mm_480d961a1b5e4efe84603f4cbc0f</p>
@@ -265,7 +265,7 @@ public class AddMemoriesRequest extends Request {
         }
 
         /**
-         * <p>Asynchronous mode.</p>
+         * <p>The asynchronous mode.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -277,7 +277,7 @@ public class AddMemoriesRequest extends Request {
         }
 
         /**
-         * <p>Custom instructions.</p>
+         * <p>The custom instructions.</p>
          * 
          * <strong>example:</strong>
          * <p>Your custom instructions here</p>
@@ -289,7 +289,7 @@ public class AddMemoriesRequest extends Request {
         }
 
         /**
-         * <p>Infer.</p>
+         * <p>The inference setting.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -301,7 +301,7 @@ public class AddMemoriesRequest extends Request {
         }
 
         /**
-         * <p>Messages.</p>
+         * <p>The messages.</p>
          */
         public Builder messages(java.util.List<Messages> messages) {
             this.putBodyParameter("messages", messages);
@@ -310,7 +310,7 @@ public class AddMemoriesRequest extends Request {
         }
 
         /**
-         * <p>Metadata.</p>
+         * <p>The metadata.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;sessionId&quot;:&quot;test_session_001&quot;}</p>
@@ -322,7 +322,7 @@ public class AddMemoriesRequest extends Request {
         }
 
         /**
-         * <p>Run ID.</p>
+         * <p>The run ID.</p>
          * 
          * <strong>example:</strong>
          * <p>jr-80ded1d6953c64ea</p>
@@ -334,7 +334,10 @@ public class AddMemoriesRequest extends Request {
         }
 
         /**
-         * timestamp.
+         * <p>The timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12312314214</p>
          */
         public Builder timestamp(Long timestamp) {
             this.putBodyParameter("timestamp", timestamp);
@@ -343,7 +346,7 @@ public class AddMemoriesRequest extends Request {
         }
 
         /**
-         * <p>User ID.</p>
+         * <p>The user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>test_user_001</p>
@@ -414,7 +417,7 @@ public class AddMemoriesRequest extends Request {
             } 
 
             /**
-             * <p>Content.</p>
+             * <p>The content.</p>
              * 
              * <strong>example:</strong>
              * <p>My name is Zhang San and I live in Hangzhou.</p>
@@ -425,7 +428,7 @@ public class AddMemoriesRequest extends Request {
             }
 
             /**
-             * <p>Role.</p>
+             * <p>The role.</p>
              * 
              * <strong>example:</strong>
              * <p>user</p>

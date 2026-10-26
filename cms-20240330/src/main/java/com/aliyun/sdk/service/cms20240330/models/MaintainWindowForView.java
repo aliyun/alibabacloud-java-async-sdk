@@ -211,7 +211,7 @@ public class MaintainWindowForView extends TeaModel {
         } 
 
         /**
-         * <p>The time when the policy was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-03-11T08:21:58Z</p>
@@ -233,7 +233,7 @@ public class MaintainWindowForView extends TeaModel {
         }
 
         /**
-         * <p>The effective time range.</p>
+         * <p>The effective period range.</p>
          */
         public Builder effectTimeRange(EffectTimeRange effectTimeRange) {
             this.effectTimeRange = effectTimeRange;
@@ -257,7 +257,7 @@ public class MaintainWindowForView extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the policy is enabled.</p>
+         * <p>Indicates whether the mute policy is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -268,7 +268,7 @@ public class MaintainWindowForView extends TeaModel {
         }
 
         /**
-         * <p>The end time of the effective period.</p>
+         * <p>The effective end time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-11-26 12:02:01</p>
@@ -287,7 +287,7 @@ public class MaintainWindowForView extends TeaModel {
         }
 
         /**
-         * <p>The UUID.</p>
+         * <p>UUID</p>
          * 
          * <strong>example:</strong>
          * <p>123-12-312-31-23123</p>
@@ -302,7 +302,7 @@ public class MaintainWindowForView extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test policy.</p>
+         * <p>测试策略</p>
          */
         public Builder maintainWindowName(String maintainWindowName) {
             this.maintainWindowName = maintainWindowName;
@@ -310,7 +310,7 @@ public class MaintainWindowForView extends TeaModel {
         }
 
         /**
-         * <p>The start time of the effective period.</p>
+         * <p>The effective start time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-11-26 10:02:01</p>
@@ -321,7 +321,7 @@ public class MaintainWindowForView extends TeaModel {
         }
 
         /**
-         * <p>The last time the resource was updated.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-05-07T02:19:05Z</p>
@@ -343,7 +343,7 @@ public class MaintainWindowForView extends TeaModel {
         }
 
         /**
-         * <p>The workspace.</p>
+         * <p>workspace</p>
          * 
          * <strong>example:</strong>
          * <p>workspace-test</p>
@@ -440,7 +440,7 @@ public class MaintainWindowForView extends TeaModel {
             } 
 
             /**
-             * <p>The days of the week when the policy is effective.</p>
+             * <p>The effective days of the week (Monday to Sunday).</p>
              */
             public Builder dayInWeek(java.util.List<Integer> dayInWeek) {
                 this.dayInWeek = dayInWeek;

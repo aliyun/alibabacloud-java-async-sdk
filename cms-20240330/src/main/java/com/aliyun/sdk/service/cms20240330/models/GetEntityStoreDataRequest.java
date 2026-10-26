@@ -167,8 +167,8 @@ public class GetEntityStoreDataRequest extends Request {
         }
 
         /**
-         * <p>The start point in time for the query.</p>
-         * <p>This is a UNIX timestamp. It represents the number of seconds that have elapsed since 00:00:00 UTC on January 1, 1970.</p>
+         * <p>The start time of the query.</p>
+         * <p>The value is a UNIX timestamp that indicates the number of seconds that have elapsed since 00:00:00 UTC on January 1, 1970.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -181,7 +181,7 @@ public class GetEntityStoreDataRequest extends Request {
         }
 
         /**
-         * <p>The search statement.</p>
+         * <p>The query statement.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -194,8 +194,8 @@ public class GetEntityStoreDataRequest extends Request {
         }
 
         /**
-         * <p>The end point in time for the query.</p>
-         * <p>This is a UNIX timestamp. It represents the number of seconds that have elapsed since 00:00:00 UTC on January 1, 1970.</p>
+         * <p>The end time of the query.</p>
+         * <p>The value is a UNIX timestamp that indicates the number of seconds that have elapsed since 00:00:00 UTC on January 1, 1970.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

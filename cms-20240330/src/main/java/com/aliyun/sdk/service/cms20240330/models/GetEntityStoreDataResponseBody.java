@@ -93,7 +93,7 @@ public class GetEntityStoreDataResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of returned data.</p>
+         * <p>The total count of the returned data list.</p>
          */
         public Builder data(java.util.List<java.util.List<String>> data) {
             this.data = data;
@@ -234,7 +234,7 @@ public class GetEntityStoreDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution information.</p>
+             * <p>The computation execution information.</p>
              * 
              * <strong>example:</strong>
              * <p>Query execution timeout after 30 seconds</p>
@@ -245,7 +245,7 @@ public class GetEntityStoreDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The suggestion provided when an execution fault occurs.</p>
+             * <p>The suggestions provided when an execution error occurs.</p>
              * 
              * <strong>example:</strong>
              * <p>Try to reduce the query scope or increase timeout limit, then retry</p>
@@ -354,7 +354,7 @@ public class GetEntityStoreDataResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Information about the execution procedure.</p>
+             * <p>The information during the execution process.</p>
              * 
              * <strong>example:</strong>
              * <p>{}</p>
@@ -398,7 +398,7 @@ public class GetEntityStoreDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A list of detailed status information.</p>
+             * <p>The list of detailed status information.</p>
              */
             public Builder statusItem(java.util.List<StatusItem> statusItem) {
                 this.statusItem = statusItem;

@@ -116,7 +116,7 @@ public class CreateContextStoreAPIKeyRequest extends Request {
         }
 
         /**
-         * <p>The display name of the API key. Use this name to identify its purpose.</p>
+         * <p>The display name of the API key, used to identify its purpose.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

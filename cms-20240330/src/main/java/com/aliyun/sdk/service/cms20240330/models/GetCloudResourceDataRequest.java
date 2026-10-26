@@ -113,8 +113,8 @@ public class GetCloudResourceDataRequest extends Request {
         }
 
         /**
-         * <p>The start of the query time range.</p>
-         * <p>The value is a UNIX timestamp in seconds, which represents the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The start time of the query.</p>
+         * <p>The UNIX timestamp format, which represents the number of seconds that have elapsed since 00:00:00 UTC on January 1, 1970.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,8 +140,8 @@ public class GetCloudResourceDataRequest extends Request {
         }
 
         /**
-         * <p>The end of the query time range.</p>
-         * <p>The value is a UNIX timestamp in seconds, which represents the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The end time of the query.</p>
+         * <p>The UNIX timestamp format, which represents the number of seconds that have elapsed since 00:00:00 UTC on January 1, 1970.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

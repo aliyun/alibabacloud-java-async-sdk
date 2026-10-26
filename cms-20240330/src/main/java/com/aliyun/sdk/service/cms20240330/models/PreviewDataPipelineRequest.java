@@ -186,7 +186,7 @@ public class PreviewDataPipelineRequest extends Request {
         } 
 
         /**
-         * <p>The workspace name.</p>
+         * <p>The name of the workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -199,7 +199,7 @@ public class PreviewDataPipelineRequest extends Request {
         }
 
         /**
-         * <p>The pipeline description.</p>
+         * <p>The description of the pipeline.</p>
          * 
          * <strong>example:</strong>
          * <p>Preview error span routing.</p>
@@ -211,7 +211,7 @@ public class PreviewDataPipelineRequest extends Request {
         }
 
         /**
-         * <p>The start time of the preview.</p>
+         * <p>The start time of the preview. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1784563200</p>
@@ -223,7 +223,7 @@ public class PreviewDataPipelineRequest extends Request {
         }
 
         /**
-         * <p>The pipeline type.</p>
+         * <p>The type of the pipeline.</p>
          * 
          * <strong>example:</strong>
          * <p>custom</p>
@@ -283,7 +283,7 @@ public class PreviewDataPipelineRequest extends Request {
         }
 
         /**
-         * <p>The end time for the preview.</p>
+         * <p>The end time for the preview. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1784566800</p>
@@ -568,7 +568,7 @@ public class PreviewDataPipelineRequest extends Request {
             } 
 
             /**
-             * <p>The length of the prefix to retain.</p>
+             * <p>The length of the retained prefix.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -579,7 +579,7 @@ public class PreviewDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>The length of the suffix to retain.</p>
+             * <p>The length of the retained suffix.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -611,7 +611,7 @@ public class PreviewDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>The masking mode.</p>
+             * <p>The data masking mode.</p>
              * 
              * <strong>example:</strong>
              * <p>keyword</p>
@@ -622,7 +622,7 @@ public class PreviewDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>The built-in sensitive types.</p>
+             * <p>The built-in sensitive data types.</p>
              */
             public Builder types(java.util.List<String> types) {
                 this.types = types;
@@ -737,7 +737,7 @@ public class PreviewDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>The field or dimension name.</p>
+             * <p>The name of the field or dimension.</p>
              * 
              * <strong>example:</strong>
              * <p>service.name</p>
@@ -836,7 +836,7 @@ public class PreviewDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>The matching method.</p>
+             * <p>The match type.</p>
              * 
              * <strong>example:</strong>
              * <p>EXACT</p>
@@ -914,7 +914,7 @@ public class PreviewDataPipelineRequest extends Request {
             } 
 
             /**
-             * <p>The matching method.</p>
+             * <p>The match type.</p>
              * 
              * <strong>example:</strong>
              * <p>EXACT</p>
@@ -995,7 +995,7 @@ public class PreviewDataPipelineRequest extends Request {
             } 
 
             /**
-             * <p>The matching method.</p>
+             * <p>The match type.</p>
              * 
              * <strong>example:</strong>
              * <p>EXACT</p>
@@ -1156,7 +1156,7 @@ public class PreviewDataPipelineRequest extends Request {
             } 
 
             /**
-             * <p>The list of service names.</p>
+             * <p>The service name list.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;checkout-*&quot;,&quot;order-service&quot;]</p>
@@ -1451,7 +1451,7 @@ public class PreviewDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>The list of masking rules.</p>
+             * <p>The list of data masking rules.</p>
              */
             public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
@@ -1459,7 +1459,7 @@ public class PreviewDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>The pipeline processing scope.</p>
+             * <p>The effective scope of pipeline processing.</p>
              */
             public Builder scope(Scope scope) {
                 this.scope = scope;
@@ -1657,7 +1657,7 @@ public class PreviewDataPipelineRequest extends Request {
             } 
 
             /**
-             * <p>The output name.</p>
+             * <p>The name of the output.</p>
              * 
              * <strong>example:</strong>
              * <p>checkout_route</p>
@@ -1949,7 +1949,7 @@ public class PreviewDataPipelineRequest extends Request {
             } 
 
             /**
-             * <p>The length of the prefix to retain.</p>
+             * <p>The length of the retained prefix.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -1960,7 +1960,7 @@ public class PreviewDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>The length of the suffix to retain.</p>
+             * <p>The length of the retained suffix.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -1992,7 +1992,7 @@ public class PreviewDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>The masking mode.</p>
+             * <p>The data masking mode.</p>
              * 
              * <strong>example:</strong>
              * <p>keyword</p>
@@ -2003,7 +2003,7 @@ public class PreviewDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>The built-in sensitive types.</p>
+             * <p>The built-in sensitive data types.</p>
              */
             public Builder types(java.util.List<String> types) {
                 this.types = types;
@@ -2118,7 +2118,7 @@ public class PreviewDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>The field or dimension name.</p>
+             * <p>The name of the field or dimension.</p>
              * 
              * <strong>example:</strong>
              * <p>service.name</p>
@@ -2217,7 +2217,7 @@ public class PreviewDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>The matching method.</p>
+             * <p>The match type.</p>
              * 
              * <strong>example:</strong>
              * <p>EXACT</p>
@@ -2295,7 +2295,7 @@ public class PreviewDataPipelineRequest extends Request {
             } 
 
             /**
-             * <p>The matching method.</p>
+             * <p>The match type.</p>
              * 
              * <strong>example:</strong>
              * <p>EXACT</p>
@@ -2376,7 +2376,7 @@ public class PreviewDataPipelineRequest extends Request {
             } 
 
             /**
-             * <p>The matching method.</p>
+             * <p>The match type.</p>
              * 
              * <strong>example:</strong>
              * <p>EXACT</p>
@@ -2537,7 +2537,7 @@ public class PreviewDataPipelineRequest extends Request {
             } 
 
             /**
-             * <p>The list of service names.</p>
+             * <p>The service name list.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;checkout-*&quot;,&quot;order-service&quot;]</p>
@@ -2832,7 +2832,7 @@ public class PreviewDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>The list of masking rules.</p>
+             * <p>The list of data masking rules.</p>
              */
             public Builder rules(java.util.List<ConfigRules> rules) {
                 this.rules = rules;
@@ -2840,7 +2840,7 @@ public class PreviewDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>The scope in which pipeline processing takes effect.</p>
+             * <p>The effective scope of pipeline processing.</p>
              */
             public Builder scope(ConfigScope scope) {
                 this.scope = scope;
@@ -3293,7 +3293,7 @@ public class PreviewDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>The read start point.</p>
+             * <p>The read start position.</p>
              * 
              * <strong>example:</strong>
              * <p>latest</p>

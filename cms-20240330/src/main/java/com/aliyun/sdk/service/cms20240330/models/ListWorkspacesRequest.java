@@ -144,7 +144,7 @@ public class ListWorkspacesRequest extends Request {
         } 
 
         /**
-         * <p>The number of entries per page.
+         * <p>The maximum number of entries per page.
          * Default value:
          *     50
          * Maximum value:
@@ -184,7 +184,7 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-ae******ey</p>
@@ -206,7 +206,7 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * <p>The workspace name. Fuzzy match is used.</p>
+         * <p>The workspace name. Fuzzy match is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>workspace-test-001</p>
@@ -218,7 +218,7 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * <p>The workspace name. Exact match is used.</p>
+         * <p>The names of the workspaces. Exact match is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>workspace-test-001</p>
@@ -291,6 +291,9 @@ public class ListWorkspacesRequest extends Request {
 
             /**
              * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -299,6 +302,9 @@ public class ListWorkspacesRequest extends Request {
 
             /**
              * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;

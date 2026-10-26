@@ -97,7 +97,7 @@ public class DeleteAlertRobotsRequest extends Request {
         }
 
         /**
-         * <p>The chatbot ID.</p>
+         * <p>The chatbot IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder robotIds(java.util.List<String> robotIds) {

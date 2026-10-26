@@ -104,7 +104,7 @@ public class GetContextRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the workspace.</p>
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,7 +117,7 @@ public class GetContextRequest extends Request {
         }
 
         /**
-         * <p>The name of the context store.</p>
+         * <p>The context store name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,7 +130,7 @@ public class GetContextRequest extends Request {
         }
 
         /**
-         * <p>The ID of the context.</p>
+         * <p>The context ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,7 +143,7 @@ public class GetContextRequest extends Request {
         }
 
         /**
-         * <p>Whether to return the context in a formatted structure. Valid values: <code>true</code> and <code>false</code>. Default value: <code>false</code>.</p>
+         * <p>Specifies whether to format the context.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

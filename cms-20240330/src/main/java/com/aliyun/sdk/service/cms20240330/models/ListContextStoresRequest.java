@@ -116,7 +116,7 @@ public class ListContextStoresRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the workspace.</p>
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -165,7 +165,7 @@ public class ListContextStoresRequest extends Request {
         }
 
         /**
-         * <p>The token for the next page of results.</p>
+         * <p>The pagination token.</p>
          * 
          * <strong>example:</strong>
          * <p>OCAQV0pBqldexv7EidbIZw==</p>

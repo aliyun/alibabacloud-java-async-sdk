@@ -129,7 +129,7 @@ public class ListAddonReleasesRequest extends Request {
         }
 
         /**
-         * <p>The name of the add-on.</p>
+         * <p>The add-on name.</p>
          * 
          * <strong>example:</strong>
          * <p>cs-gpu</p>
@@ -141,7 +141,10 @@ public class ListAddonReleasesRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of results to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(String maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -150,7 +153,7 @@ public class ListAddonReleasesRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The next token for pagination.</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -159,7 +162,7 @@ public class ListAddonReleasesRequest extends Request {
         }
 
         /**
-         * <p>The parent AddonRelease ID.</p>
+         * <p>The parent add-on release ID.</p>
          * 
          * <strong>example:</strong>
          * <p>policy-xxxxxxxxxxxxx</p>

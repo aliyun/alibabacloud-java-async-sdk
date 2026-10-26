@@ -80,7 +80,7 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A list of add-ons.</p>
+         * <p>The list of add-ons.</p>
          */
         public Builder addons(java.util.List<Addons> addons) {
             this.addons = addons;
@@ -88,7 +88,7 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>7E00EF90-CEF9-57C9-9AE9-5AA937D37C03</p>
@@ -184,7 +184,7 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
              * <p>The description.</p>
              * 
              * <strong>example:</strong>
-             * <p>用于mysql的监控大盘</p>
+             * <p>Monitoring dashboard for MySQL</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -203,7 +203,7 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the dashboard.</p>
+             * <p>The dashboard URL.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://xxxxxxx">http://xxxxxxx</a></p>
@@ -356,7 +356,7 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The PromQL search statements.</p>
+             * <p>The PromQL query statement.</p>
              */
             public Builder promQl(java.util.List<String> promQl) {
                 this.promQl = promQl;
@@ -617,7 +617,7 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The default status of the alert rule policy.</p>
+             * <p>The enabled status of the default alert rule policy.</p>
              * 
              * <strong>example:</strong>
              * <p>RUNNING</p>
@@ -628,7 +628,7 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the add-on is installed by default.</p>
+             * <p>Specifies whether the add-on is installed by default.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -639,7 +639,7 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether to assign a Service Account for communication with the console API.</p>
+             * <p>Specifies whether a service account is assigned for communication with the console API.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -658,7 +658,7 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether a pod restart is required after the add-on is installed.</p>
+             * <p>Specifies whether the pod restart guide is triggered immediately after the plug-in is installed during integration.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -818,7 +818,7 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the feature is enabled.</p>
+             * <p>Indicates whether the environment is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -840,7 +840,7 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the environment.</p>
+             * <p>The environment name.</p>
              * 
              * <strong>example:</strong>
              * <p>Cloud</p>
@@ -851,7 +851,7 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The policy.</p>
+             * <p>The policies.</p>
              */
             public Builder policies(Policies policies) {
                 this.policies = policies;
@@ -1093,7 +1093,7 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A list of dashboards.</p>
+             * <p>The list of dashboards.</p>
              */
             public Builder dashboards(java.util.List<Dashboards> dashboards) {
                 this.dashboards = dashboards;
@@ -1112,7 +1112,7 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A list of supported environments.</p>
+             * <p>The list of supported environments.</p>
              */
             public Builder environments(java.util.List<Environments> environments) {
                 this.environments = environments;
@@ -1120,7 +1120,7 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The icon of the add-on.</p>
+             * <p>The component icon.</p>
              * 
              * <strong>example:</strong>
              * <p>asert/mysql.svg</p>
@@ -1150,7 +1150,7 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the latest version was created.</p>
+             * <p>The latest release creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-09-03T03:15:56Z</p>
@@ -1161,7 +1161,7 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the add-on.</p>
+             * <p>The add-on name.</p>
              * 
              * <strong>example:</strong>
              * <p>mysql</p>
@@ -1172,7 +1172,7 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the add-on can be installed only once.</p>
+             * <p>Specifies whether the add-on can be installed only once.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1183,7 +1183,7 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scenario of the add-on.</p>
+             * <p>The component scenario.</p>
              * 
              * <strong>example:</strong>
              * <p>container</p>
@@ -1194,7 +1194,7 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the add-on.</p>
+             * <p>The component version.</p>
              * 
              * <strong>example:</strong>
              * <p>0.1.1</p>
