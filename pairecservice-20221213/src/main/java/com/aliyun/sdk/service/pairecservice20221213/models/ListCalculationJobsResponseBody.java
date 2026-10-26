@@ -80,7 +80,7 @@ public class ListCalculationJobsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A list of calculation jobs.</p>
+         * <p>The calculation tasks.</p>
          */
         public Builder calculationJobs(java.util.List<CalculationJobs> calculationJobs) {
             this.calculationJobs = calculationJobs;
@@ -99,7 +99,7 @@ public class ListCalculationJobsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries.</p>
+         * <p>The total number of items.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -257,7 +257,7 @@ public class ListCalculationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The business date.</p>
+             * <p>The business date. The date is in the YYYY-MM-DD format.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-12-15</p>
@@ -268,7 +268,7 @@ public class ListCalculationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The calculation job ID.</p>
+             * <p>The ID of the calculation task.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -279,7 +279,7 @@ public class ListCalculationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The job configuration.</p>
+             * <p>The task configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>{}</p>
@@ -290,7 +290,7 @@ public class ListCalculationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the job was run.</p>
+             * <p>The execution time. The time is in the ISO 8601 format and includes the time zone offset.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-12-15T23:24:33.132+08:00</p>
@@ -301,7 +301,7 @@ public class ListCalculationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The job messages.</p>
+             * <p>The task message.</p>
              */
             public Builder jobMessage(java.util.List<String> jobMessage) {
                 this.jobMessage = jobMessage;
@@ -309,12 +309,10 @@ public class ListCalculationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source of the job. Valid values:</p>
+             * <p>The task source. Valid values:</p>
              * <ul>
-             * <li><p>CronOffline: The job is an offline scheduled task.</p>
-             * </li>
-             * <li><p>DataRerun: The job is a data rerun task.</p>
-             * </li>
+             * <li>CronOffline: Offline scheduled task.</li>
+             * <li>DataRerun: Data rerun task.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -326,16 +324,12 @@ public class ListCalculationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the job. Valid values:</p>
+             * <p>The task status. Valid values:</p>
              * <ul>
-             * <li><p>Success</p>
-             * </li>
-             * <li><p>Failure</p>
-             * </li>
-             * <li><p>Initializing</p>
-             * </li>
-             * <li><p>Running</p>
-             * </li>
+             * <li>Success: Succeeded.</li>
+             * <li>Failure: Failed.</li>
+             * <li>Initializing: Initializing.</li>
+             * <li>Running: Running.</li>
              * </ul>
              * 
              * <strong>example:</strong>

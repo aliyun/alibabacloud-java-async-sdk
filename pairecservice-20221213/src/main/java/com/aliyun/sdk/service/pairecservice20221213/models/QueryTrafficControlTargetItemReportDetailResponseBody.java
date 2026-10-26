@@ -67,7 +67,7 @@ public class QueryTrafficControlTargetItemReportDetailResponseBody extends TeaMo
         } 
 
         /**
-         * <p>The unique identifier for the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
@@ -78,7 +78,7 @@ public class QueryTrafficControlTargetItemReportDetailResponseBody extends TeaMo
         }
 
         /**
-         * <p>Traffic control details for an item.</p>
+         * <p>The item traffic control details.</p>
          */
         public Builder trafficControlTargetItemReportDetail(TrafficControlTargetItemReportDetail trafficControlTargetItemReportDetail) {
             this.trafficControlTargetItemReportDetail = trafficControlTargetItemReportDetail;
@@ -170,7 +170,7 @@ public class QueryTrafficControlTargetItemReportDetailResponseBody extends TeaMo
             } 
 
             /**
-             * <p>Key-value pairs for the traffic control target.</p>
+             * <p>The key-value pairs restricted in the traffic control target.</p>
              */
             public Builder features(java.util.Map<String, ?> features) {
                 this.features = features;
@@ -189,7 +189,7 @@ public class QueryTrafficControlTargetItemReportDetailResponseBody extends TeaMo
             }
 
             /**
-             * <p>The progress toward the target.</p>
+             * <p>The completion progress.</p>
              * 
              * <strong>example:</strong>
              * <p>49%</p>
@@ -200,7 +200,7 @@ public class QueryTrafficControlTargetItemReportDetailResponseBody extends TeaMo
             }
 
             /**
-             * <p>The target traffic.</p>
+             * <p>The actual traffic.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -296,7 +296,7 @@ public class QueryTrafficControlTargetItemReportDetailResponseBody extends TeaMo
             } 
 
             /**
-             * <p>Key-value pairs for the traffic control target.</p>
+             * <p>The key-value pairs restricted in the traffic control target.</p>
              */
             public Builder features(java.util.Map<String, ?> features) {
                 this.features = features;
@@ -315,7 +315,7 @@ public class QueryTrafficControlTargetItemReportDetailResponseBody extends TeaMo
             }
 
             /**
-             * <p>The progress toward the target.</p>
+             * <p>The completion progress.</p>
              * 
              * <strong>example:</strong>
              * <p>49%</p>
@@ -326,7 +326,7 @@ public class QueryTrafficControlTargetItemReportDetailResponseBody extends TeaMo
             }
 
             /**
-             * <p>The target traffic.</p>
+             * <p>The actual traffic.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -396,7 +396,7 @@ public class QueryTrafficControlTargetItemReportDetailResponseBody extends TeaMo
             } 
 
             /**
-             * <p>Report details for the tail 100 controlled items.</p>
+             * <p>The list of details for the bottom 100 items after traffic control.</p>
              */
             public Builder itemControlTailReportDetails(java.util.List<ItemControlTailReportDetails> itemControlTailReportDetails) {
                 this.itemControlTailReportDetails = itemControlTailReportDetails;
@@ -404,7 +404,7 @@ public class QueryTrafficControlTargetItemReportDetailResponseBody extends TeaMo
             }
 
             /**
-             * <p>Report details for the top 100 controlled items.</p>
+             * <p>The list of details for the top 100 items before traffic control.</p>
              */
             public Builder itemControlTopReportDetails(java.util.List<ItemControlTopReportDetails> itemControlTopReportDetails) {
                 this.itemControlTopReportDetails = itemControlTopReportDetails;

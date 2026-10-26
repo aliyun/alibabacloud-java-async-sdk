@@ -89,7 +89,7 @@ public class GetInstanceResourceRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation to obtain the instance ID.</p>
+         * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation to obtain the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class GetInstanceResourceRequest extends Request {
         }
 
         /**
-         * <p>The resource ID.</p>
+         * <p>The ID of the resource.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

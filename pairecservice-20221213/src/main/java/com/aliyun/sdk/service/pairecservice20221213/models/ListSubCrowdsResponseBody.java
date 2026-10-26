@@ -80,7 +80,7 @@ public class ListSubCrowdsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>C5AEB79E-FAA4-5DCE-8CD7-1CAF549ECC3E</p>
@@ -91,7 +91,7 @@ public class ListSubCrowdsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of subcrowds.</p>
+         * <p>The list of sub-crowds.</p>
          */
         public Builder subCrowds(java.util.List<SubCrowds> subCrowds) {
             this.subCrowds = subCrowds;
@@ -99,7 +99,7 @@ public class ListSubCrowdsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of subcrowds.</p>
+         * <p>The total number of elements in the list.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -207,7 +207,7 @@ public class ListSubCrowdsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the subcrowd was created.</p>
+             * <p>The creation time. The value is in ISO 8601 format and includes a time zone offset.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-12-15T23:24:33.132+08:00</p>
@@ -218,7 +218,7 @@ public class ListSubCrowdsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of users in the subcrowd.</p>
+             * <p>The number of users in the crowd group.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -229,7 +229,9 @@ public class ListSubCrowdsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source of the subcrowd.<br>● ManualInput: Users were added manually.<br>● UploadFile: Users were added by uploading a file.<br><br></p>
+             * <p>The crowd source. Valid values:
+             * ● ManualInput: Manual data entry.
+             * ● UploadFile: File upload.</p>
              * 
              * <strong>example:</strong>
              * <p>ManualInput</p>
@@ -240,7 +242,7 @@ public class ListSubCrowdsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The subcrowd ID.</p>
+             * <p>The sub-crowd ID.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -251,7 +253,7 @@ public class ListSubCrowdsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The users in the subcrowd.</p>
+             * <p>The users in the crowd group.</p>
              * 
              * <strong>example:</strong>
              * <p>user1,user2</p>

@@ -232,7 +232,7 @@ public class BackflowFeatureConsistencyCheckJobDataRequest extends Request {
         }
 
         /**
-         * <p>The feature consistency check job configuration ID. To obtain the configuration ID, call the <a href="https://help.aliyun.com/document_detail/2557567.html">ListFeatureConsistencyCheckJobConfigs</a> operation.</p>
+         * <p>The ID of the feature consistency check job configuration. For more information about how to obtain the configuration ID, see <a href="https://help.aliyun.com/document_detail/2557567.html">ListFeatureConsistencyCheckJobConfigs</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -245,7 +245,7 @@ public class BackflowFeatureConsistencyCheckJobDataRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. To obtain the instance ID, call the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation.</p>
+         * <p>The instance ID. For more information about how to obtain the instance ID, see <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -297,7 +297,7 @@ public class BackflowFeatureConsistencyCheckJobDataRequest extends Request {
         }
 
         /**
-         * <p>The log request time (UNIX epoch timestamp).</p>
+         * <p>The log request time (UNIX timestamp).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -349,7 +349,10 @@ public class BackflowFeatureConsistencyCheckJobDataRequest extends Request {
         }
 
         /**
-         * ServiceName.
+         * <p>The service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>se_demorec</p>
          */
         public Builder serviceName(String serviceName) {
             this.putBodyParameter("ServiceName", serviceName);

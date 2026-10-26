@@ -264,7 +264,7 @@ public class CreateTrafficControlTargetRequest extends Request {
         }
 
         /**
-         * <p>The end time of the traffic control target.</p>
+         * <p>The end time of the control target. The format is YYYY-MM-DD.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-04-25</p>
@@ -276,7 +276,7 @@ public class CreateTrafficControlTargetRequest extends Request {
         }
 
         /**
-         * <p>The event for the traffic control target.</p>
+         * <p>The control target event.</p>
          * 
          * <strong>example:</strong>
          * <p>click</p>
@@ -288,7 +288,7 @@ public class CreateTrafficControlTargetRequest extends Request {
         }
 
         /**
-         * <p>The item condition in array format.</p>
+         * <p>The item conditions in array format.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;field&quot;:&quot;status&quot;,&quot;option&quot;:&quot;=&quot;,&quot;value&quot;:&quot;1&quot;}]</p>
@@ -300,7 +300,7 @@ public class CreateTrafficControlTargetRequest extends Request {
         }
 
         /**
-         * <p>The item condition in expression format.</p>
+         * <p>The item conditions in expression format.</p>
          * 
          * <strong>example:</strong>
          * <p>status=1</p>
@@ -312,7 +312,7 @@ public class CreateTrafficControlTargetRequest extends Request {
         }
 
         /**
-         * <p>The item condition type.</p>
+         * <p>The condition type for item control.</p>
          * 
          * <strong>example:</strong>
          * <p>Array</p>
@@ -336,7 +336,7 @@ public class CreateTrafficControlTargetRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable new product regulation.</p>
+         * <p>Specifies whether the control applies to new products.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -348,7 +348,7 @@ public class CreateTrafficControlTargetRequest extends Request {
         }
 
         /**
-         * <p>The recall strategy name.</p>
+         * <p>The recall policy name.</p>
          * 
          * <strong>example:</strong>
          * <p>recall-1</p>
@@ -360,7 +360,7 @@ public class CreateTrafficControlTargetRequest extends Request {
         }
 
         /**
-         * <p>The start time of the traffic control target.</p>
+         * <p>The start time of the control target. The format is YYYY-MM-DD.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-03-25</p>
@@ -384,7 +384,7 @@ public class CreateTrafficControlTargetRequest extends Request {
         }
 
         /**
-         * <p>The status of the traffic control target.</p>
+         * <p>The status of the control target.</p>
          * 
          * <strong>example:</strong>
          * <p>Opened</p>
@@ -396,7 +396,7 @@ public class CreateTrafficControlTargetRequest extends Request {
         }
 
         /**
-         * <p>The tolerance value for the traffic control target.</p>
+         * <p>The tolerance range of the control target.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -408,7 +408,7 @@ public class CreateTrafficControlTargetRequest extends Request {
         }
 
         /**
-         * <p>The traffic control task ID.</p>
+         * <p>The ID of the traffic control task.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -420,7 +420,7 @@ public class CreateTrafficControlTargetRequest extends Request {
         }
 
         /**
-         * <p>The value of the traffic control target.</p>
+         * <p>The target value.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

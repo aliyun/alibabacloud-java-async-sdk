@@ -194,7 +194,7 @@ public class ListRecallManagementJobsRequest extends Request {
         }
 
         /**
-         * <p>The filter condition. Filtering is supported only for the <code>Table</code> type. For example: <code>{&quot;RecallManagementTableId&quot;:&quot;1&quot;}</code></p>
+         * <p><strong>The filter conditions.</strong> Currently, only filter conditions for the Table type are supported, such as <code>{&quot;RecallManagementTableId&quot;:&quot;1&quot;}</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;RecallManagementTableId&quot;:&quot;1&quot;}</p>
@@ -206,7 +206,7 @@ public class ListRecallManagementJobsRequest extends Request {
         }
 
         /**
-         * <p>The instance ID.</p>
+         * <p><strong>The instance ID.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>pairec-test1</p>
@@ -218,7 +218,7 @@ public class ListRecallManagementJobsRequest extends Request {
         }
 
         /**
-         * <p>This parameter is not used.</p>
+         * <p>This parameter does not take effect.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -230,7 +230,7 @@ public class ListRecallManagementJobsRequest extends Request {
         }
 
         /**
-         * <p>This parameter is not used.</p>
+         * <p>This parameter does not take effect.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
@@ -242,7 +242,7 @@ public class ListRecallManagementJobsRequest extends Request {
         }
 
         /**
-         * <p>The sort order. Valid values: <code>ASC</code> (ascending) and <code>DESC</code> (descending).</p>
+         * <p><strong>The sorting order.</strong> <code>ASC</code>: ascending order. <code>DESC</code>: descending order.</p>
          * 
          * <strong>example:</strong>
          * <p>ASC</p>
@@ -254,7 +254,7 @@ public class ListRecallManagementJobsRequest extends Request {
         }
 
         /**
-         * <p>The page number. Default value: 1.</p>
+         * <p><strong>The page number.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -266,7 +266,7 @@ public class ListRecallManagementJobsRequest extends Request {
         }
 
         /**
-         * <p>The page size. Default value: 10.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -278,7 +278,7 @@ public class ListRecallManagementJobsRequest extends Request {
         }
 
         /**
-         * <p>The sorting basis. Valid values: <code>GmtCreateTime</code> (creation time) and <code>GmtModifiedTime</code> (update time).</p>
+         * <p><strong>The sorting criterion.</strong> <code>GmtCreateTime</code>: creation time. <code>GmtModifiedTime</code>: update time.</p>
          * 
          * <strong>example:</strong>
          * <p>GmtCreateTime</p>
@@ -290,7 +290,7 @@ public class ListRecallManagementJobsRequest extends Request {
         }
 
         /**
-         * <p>The task type.</p>
+         * <p><strong>The task type.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>Table</p>

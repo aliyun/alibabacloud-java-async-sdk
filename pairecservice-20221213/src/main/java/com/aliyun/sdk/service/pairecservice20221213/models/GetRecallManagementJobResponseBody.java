@@ -145,7 +145,7 @@ public class GetRecallManagementJobResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The time when the job ended.</p>
+         * <p>The synchronization end time. The format is YYYY-MM-DDTHH:mm:ss.SSS.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-12-15T23:24:33.132</p>
@@ -156,7 +156,7 @@ public class GetRecallManagementJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The log of the job.</p>
+         * <p>The log.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;success&quot;</p>
@@ -167,7 +167,7 @@ public class GetRecallManagementJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The recall management job ID.</p>
+         * <p>The recall management task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -178,7 +178,7 @@ public class GetRecallManagementJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Details of the recall management table.</p>
+         * <p>The recall management table details.</p>
          */
         public Builder recallManagementTableInfo(RecallManagementTableInfo recallManagementTableInfo) {
             this.recallManagementTableInfo = recallManagementTableInfo;
@@ -186,7 +186,7 @@ public class GetRecallManagementJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Details of the recall management table.</p>
+         * <p>The recall management table information.</p>
          */
         public Builder recallManagerTableInfo(RecallManagerTableInfo recallManagerTableInfo) {
             this.recallManagerTableInfo = recallManagerTableInfo;
@@ -205,7 +205,7 @@ public class GetRecallManagementJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the job started.</p>
+         * <p>The synchronization start time. The format is YYYY-MM-DDTHH:mm:ss.SSS.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-12-15T22:24:33.132</p>
@@ -216,16 +216,12 @@ public class GetRecallManagementJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the job. Valid values are:</p>
+         * <p>The task status. Valid values:</p>
          * <ul>
-         * <li><p><code>Init</code>: Initializing.</p>
-         * </li>
-         * <li><p><code>Running</code>: Running.</p>
-         * </li>
-         * <li><p><code>Success</code>: Successful.</p>
-         * </li>
-         * <li><p><code>Failed</code>: Failed.</p>
-         * </li>
+         * <li><code>Init</code>: init.</li>
+         * <li><code>Running</code>: running.</li>
+         * <li><code>Success</code>: succeeded.</li>
+         * <li><code>Failed</code>: failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -332,7 +328,7 @@ public class GetRecallManagementJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The recall management table version ID.</p>
+             * <p>The table version ID.</p>
              * 
              * <strong>example:</strong>
              * <p>20250101000</p>
@@ -450,7 +446,7 @@ public class GetRecallManagementJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The data version.</p>
+             * <p>The data version number.</p>
              * 
              * <strong>example:</strong>
              * <p>ds=20250701</p>
@@ -461,7 +457,7 @@ public class GetRecallManagementJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The recall management table version ID.</p>
+             * <p>The recall table version ID.</p>
              * 
              * <strong>example:</strong>
              * <p>20250101000</p>

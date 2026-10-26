@@ -180,7 +180,7 @@ public class ListRecallManagementServicesRequest extends Request {
         }
 
         /**
-         * <p>The instance ID.</p>
+         * <p><strong>The instance ID.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>pairec-cn-test123</p>
@@ -192,7 +192,7 @@ public class ListRecallManagementServicesRequest extends Request {
         }
 
         /**
-         * <p>This parameter is not currently in effect.</p>
+         * <p>This parameter does not take effect.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
@@ -204,7 +204,7 @@ public class ListRecallManagementServicesRequest extends Request {
         }
 
         /**
-         * <p>Filters results by name.</p>
+         * <p>Filters the results by name.</p>
          * 
          * <strong>example:</strong>
          * <p>service-1</p>
@@ -216,7 +216,7 @@ public class ListRecallManagementServicesRequest extends Request {
         }
 
         /**
-         * <p>This parameter is not currently in effect.</p>
+         * <p>This parameter does not take effect.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -228,7 +228,7 @@ public class ListRecallManagementServicesRequest extends Request {
         }
 
         /**
-         * <p>The sort order. Valid values:  </p>
+         * <p><strong>The sort order.</strong><br>Valid values:</p>
          * <ul>
          * <li>ASC: ascending order.</li>
          * <li>DESC: descending order.</li>
@@ -244,7 +244,7 @@ public class ListRecallManagementServicesRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p><strong>The page number.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -256,7 +256,7 @@ public class ListRecallManagementServicesRequest extends Request {
         }
 
         /**
-         * <p>The page size.</p>
+         * <p><strong>The page size.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -268,7 +268,7 @@ public class ListRecallManagementServicesRequest extends Request {
         }
 
         /**
-         * <p>The sorting field. Valid values:  </p>
+         * <p><strong>The sort field.</strong><br>Valid values:</p>
          * <ul>
          * <li>GmtCreateTime: creation time.</li>
          * <li>GmtModifiedTime: update time.</li>

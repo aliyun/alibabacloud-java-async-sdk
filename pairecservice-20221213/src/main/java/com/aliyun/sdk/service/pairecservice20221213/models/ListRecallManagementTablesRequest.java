@@ -195,7 +195,7 @@ public class ListRecallManagementTablesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -208,7 +208,7 @@ public class ListRecallManagementTablesRequest extends Request {
         }
 
         /**
-         * <p>This parameter is reserved for future use.</p>
+         * <p>This parameter is not in effect.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -232,7 +232,7 @@ public class ListRecallManagementTablesRequest extends Request {
         }
 
         /**
-         * <p>This parameter is reserved for future use.</p>
+         * <p>This parameter is not in effect.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
@@ -244,7 +244,11 @@ public class ListRecallManagementTablesRequest extends Request {
         }
 
         /**
-         * <p>The sort order for the results. Valid values: <code>ASC</code> (ascending) and <code>DESC</code> (descending).</p>
+         * <p>The sort order. Valid values:</p>
+         * <ul>
+         * <li><code>ASC</code>: ascending order.</li>
+         * <li><code>DESC</code>: descending order.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>ASC</p>
@@ -280,7 +284,11 @@ public class ListRecallManagementTablesRequest extends Request {
         }
 
         /**
-         * <p>The field to sort the results by. Valid values: <code>GmtCreateTime</code> (creation time) and <code>GmtModifiedTime</code> (update time).</p>
+         * <p>The sorting field. Valid values:</p>
+         * <ul>
+         * <li><code>GmtCreateTime</code>: creation time.</li>
+         * <li><code>GmtModifiedTime</code>: update time.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>GmtCreateTime</p>
@@ -292,7 +300,12 @@ public class ListRecallManagementTablesRequest extends Request {
         }
 
         /**
-         * <p>The table type. Valid values: <code>X2I</code> (U2I recall or I2I recall), <code>Vector</code> (vector recall), and <code>Random</code> (random recall).</p>
+         * <p>The table type. Valid values:</p>
+         * <ul>
+         * <li><code>X2I</code>: U2I recall or I2I recall.</li>
+         * <li><code>Vector</code>: vector recall.</li>
+         * <li><code>Ramdom</code>: random recall.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>X2I</p>

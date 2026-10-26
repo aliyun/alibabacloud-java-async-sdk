@@ -153,7 +153,7 @@ public class ListFeatureConsistencyCheckJobConfigsRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. For information about how to obtain an instance ID, see <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</p>
+         * <p>The ID of the instance. For information about how to obtain the instance ID, see <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -182,7 +182,7 @@ public class ListFeatureConsistencyCheckJobConfigsRequest extends Request {
         }
 
         /**
-         * <p>The page number. Minimum value: 1. Default value: 1.</p>
+         * <p>The page number. Starting value: 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -194,7 +194,7 @@ public class ListFeatureConsistencyCheckJobConfigsRequest extends Request {
         }
 
         /**
-         * <p>The page size.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -218,7 +218,7 @@ public class ListFeatureConsistencyCheckJobConfigsRequest extends Request {
         }
 
         /**
-         * <p>The field used to sort the results. Valid values:</p>
+         * <p>The sort field. Valid values:</p>
          * <ul>
          * <li>GmtCreateTime: sorts by creation time.</li>
          * <li>GmtModifiedTime: sorts by update time.</li>

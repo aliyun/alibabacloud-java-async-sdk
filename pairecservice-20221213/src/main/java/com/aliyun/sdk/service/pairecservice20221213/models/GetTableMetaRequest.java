@@ -89,7 +89,7 @@ public class GetTableMetaRequest extends Request {
         } 
 
         /**
-         * <p>The table ID.</p>
+         * <p>The ID of the data table.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,11 +111,11 @@ public class GetTableMetaRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance. Call the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> API to obtain it.</p>
+         * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation to obtain the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>实例ID	pairec-cn-test1</p>
+         * <p>Instance ID	pairec-cn-test1</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

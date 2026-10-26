@@ -83,7 +83,7 @@ public class ListCrowdsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance. Call the <code>ListInstances</code> operation to obtain this ID.</p>
+         * <p>The ID of the instance. You can call the ListInstances operation to obtain the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

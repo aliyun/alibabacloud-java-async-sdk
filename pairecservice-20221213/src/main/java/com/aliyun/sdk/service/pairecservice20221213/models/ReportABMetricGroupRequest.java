@@ -218,7 +218,7 @@ public class ReportABMetricGroupRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the AB metric group.</p>
+         * <p>The ID of the metric group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -240,7 +240,7 @@ public class ReportABMetricGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the base experiment.</p>
+         * <p>The ID of the baseline experiment.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -265,7 +265,7 @@ public class ReportABMetricGroupRequest extends Request {
         }
 
         /**
-         * <p>The end date.</p>
+         * <p>The end date. Format: YYYY-MM-DD.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-07-01</p>
@@ -277,7 +277,7 @@ public class ReportABMetricGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the experiment group. You can call the <a href="https://help.aliyun.com/document_detail/2402573.html">ListExperimentGroups</a> operation to obtain the ID of the experiment group. This parameter is required for offline and real-time reports.</p>
+         * <p>The ID of the experiment group. You can call the <a href="https://help.aliyun.com/document_detail/2402573.html">ListExperimentGroups</a> operation to obtain the ID. This parameter is required for offline and real-time reports.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -289,7 +289,7 @@ public class ReportABMetricGroupRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the experiments. You can call the <a href="https://help.aliyun.com/document_detail/2402582.html">ListExperiments</a> operation to obtain the IDs of the experiments.</p>
+         * <p>The list of experiment IDs. You can call the <a href="https://help.aliyun.com/document_detail/2402582.html">ListExperiments</a> operation to obtain the IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -302,7 +302,7 @@ public class ReportABMetricGroupRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation to obtain the instance ID.</p>
+         * <p>Instance ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation to obtain instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -315,14 +315,11 @@ public class ReportABMetricGroupRequest extends Request {
         }
 
         /**
-         * <p>The type of the report.</p>
+         * <p>The report type. Valid values:</p>
          * <ul>
-         * <li><p>Realtime: real-time report.</p>
-         * </li>
-         * <li><p>Offline: offline report.</p>
-         * </li>
-         * <li><p>Market: dashboard report.</p>
-         * </li>
+         * <li>Realtime: real-time report</li>
+         * <li>Offline: offline report</li>
+         * <li>Market: dashboard report</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -336,7 +333,7 @@ public class ReportABMetricGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the scene. You can call the <a href="https://help.aliyun.com/document_detail/2402581.html">ListScenes</a> operation to obtain the scene ID.</p>
+         * <p>The ID of the scene. You can call the <a href="https://help.aliyun.com/document_detail/2402581.html">ListScenes</a> operation to obtain the ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -348,7 +345,7 @@ public class ReportABMetricGroupRequest extends Request {
         }
 
         /**
-         * <p>The start date.</p>
+         * <p>The start date. Format: YYYY-MM-DD.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-07-01</p>
@@ -360,12 +357,10 @@ public class ReportABMetricGroupRequest extends Request {
         }
 
         /**
-         * <p>The time statistics method. This parameter is required for real-time reports.</p>
+         * <p>The statistical time type. This parameter is required for real-time reports. Valid values:</p>
          * <ul>
-         * <li><p>Hour: The statistics are collected by hour.</p>
-         * </li>
-         * <li><p>Day: The statistics are accumulated from 00:00 on the current day.</p>
-         * </li>
+         * <li>Hour: hourly statistics</li>
+         * <li>Day: cumulative statistics starting from 00:00 on the current day</li>
          * </ul>
          * 
          * <strong>example:</strong>

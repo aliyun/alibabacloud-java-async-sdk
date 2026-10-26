@@ -80,7 +80,7 @@ public class ListABMetricsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of AB metrics.</p>
+         * <p>The list of AB test metrics.</p>
          */
         public Builder ABMetrics(java.util.List<ABMetrics> ABMetrics) {
             this.ABMetrics = ABMetrics;
@@ -99,7 +99,7 @@ public class ListABMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of AB metrics returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -402,7 +402,7 @@ public class ListABMetricsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The AB metric ID.</p>
+             * <p>The ID of the AB test metric.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -413,7 +413,10 @@ public class ListABMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether to aggregate data by user.</p>
+             * <p>Specifies whether to calculate significance based on the user dimension. The calculation can be based on users or samples.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder aggregationByUser(Boolean aggregationByUser) {
                 this.aggregationByUser = aggregationByUser;
@@ -432,7 +435,7 @@ public class ListABMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The denominator of the derived metric.</p>
+             * <p>The denominator used for significance calculation.</p>
              * 
              * <strong>example:</strong>
              * <p>pv</p>
@@ -446,7 +449,7 @@ public class ListABMetricsResponseBody extends TeaModel {
              * <p>The metric description.</p>
              * 
              * <strong>example:</strong>
-             * <p>pv指标</p>
+             * <p>PV metric</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -454,7 +457,10 @@ public class ListABMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the metric follows a binomial distribution.</p>
+             * <p>Specifies whether the current metric conforms to a binomial distribution when the metric type is a derived metric. If yes, the mean and variance of the metric are calculated based on the binomial distribution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isBinomialDistribution(Boolean isBinomialDistribution) {
                 this.isBinomialDistribution = isBinomialDistribution;
@@ -462,7 +468,7 @@ public class ListABMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the left-hand metric in the formula for the derived metric.</p>
+             * <p>The ID of the left metric for the derived metric.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -484,7 +490,10 @@ public class ListABMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether significance calculation is required.</p>
+             * <p>Specifies whether to calculate significance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder needSignificance(Boolean needSignificance) {
                 this.needSignificance = needSignificance;
@@ -492,7 +501,7 @@ public class ListABMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The numerator of the derived metric.</p>
+             * <p>The numerator used for significance calculation.</p>
              * 
              * <strong>example:</strong>
              * <p>click</p>
@@ -505,13 +514,13 @@ public class ListABMetricsResponseBody extends TeaModel {
             /**
              * <p>The operator used to calculate the derived metric. Valid values:</p>
              * <ul>
-             * <li><p><code>Plus</code>: addition</p>
+             * <li><p>Plus: Addition.</p>
              * </li>
-             * <li><p><code>Minus</code>: subtraction</p>
+             * <li><p>Minus: Subtraction.</p>
              * </li>
-             * <li><p><code>Multiplication</code>: multiplication</p>
+             * <li><p>Multiplication: Multiplication.</p>
              * </li>
-             * <li><p><code>Division</code>: division</p>
+             * <li><p>Division: Division.</p>
              * </li>
              * </ul>
              * 
@@ -524,11 +533,11 @@ public class ListABMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the metric is a real-time metric.</p>
+             * <p>Specifies whether the metric is a real-time metric. Valid values:</p>
              * <ul>
-             * <li><p><code>true</code>: The metric is calculated in real time.</p>
+             * <li><p>true: Yes.</p>
              * </li>
-             * <li><p><code>false</code>: The metric is not calculated in real time.</p>
+             * <li><p>false: No.</p>
              * </li>
              * </ul>
              * 
@@ -541,7 +550,7 @@ public class ListABMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the data source for the data table to which the results are written.</p>
+             * <p>The ID of the data source for the write-back data table.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -552,7 +561,7 @@ public class ListABMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the data table to which the results are written.</p>
+             * <p>The ID of the data table to which data is written back.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -563,7 +572,7 @@ public class ListABMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the right-hand metric in the formula for the derived metric.</p>
+             * <p>The ID of the right metric for the derived metric.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -607,7 +616,7 @@ public class ListABMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data table ID.</p>
+             * <p>The ID of the data table.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -620,9 +629,9 @@ public class ListABMetricsResponseBody extends TeaModel {
             /**
              * <p>The metric type. Valid values:</p>
              * <ul>
-             * <li><p><code>Single</code>: a single metric.</p>
+             * <li><p>Single: Single metric.</p>
              * </li>
-             * <li><p><code>Derived</code>: a derived metric.</p>
+             * <li><p>Derived: Derived metric.</p>
              * </li>
              * </ul>
              * 

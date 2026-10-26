@@ -143,7 +143,7 @@ public class ListRecallManagementServiceVersionsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the Recall Management Service.</p>
+         * <p>The data table ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -176,7 +176,11 @@ public class ListRecallManagementServiceVersionsRequest extends Request {
         }
 
         /**
-         * <p>The sort order. Valid values: <code>ASC</code> for ascending order and <code>DESC</code> for descending order.</p>
+         * <p>The sort order. Valid values:</p>
+         * <ul>
+         * <li>ASC: ascending order</li>
+         * <li>DESC: descending order</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>ASC</p>
@@ -200,7 +204,7 @@ public class ListRecallManagementServiceVersionsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -212,7 +216,11 @@ public class ListRecallManagementServiceVersionsRequest extends Request {
         }
 
         /**
-         * <p>The field to sort the results by. Valid values: <code>GmtCreateTime</code> for creation time and <code>GmtModifiedTime</code> for modification time.</p>
+         * <p>The sort criterion. Valid values:</p>
+         * <ul>
+         * <li>GmtCreateTime: creation time</li>
+         * <li>GmtModifiedTime: update time</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>GmtCreateTime</p>

@@ -156,7 +156,7 @@ public class QueryTrafficControlTaskItemReportRequest extends Request {
         }
 
         /**
-         * <p>The end time.</p>
+         * <p>The end time. The format is YYYY-MM-DD HH:mm:ss.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -169,7 +169,12 @@ public class QueryTrafficControlTaskItemReportRequest extends Request {
         }
 
         /**
-         * <p>The execution environment for the task. Valid values: Daily (development environment), Pre (staging environment), Prod (production environment).</p>
+         * <p>The environment to which the task belongs. Valid values:</p>
+         * <ul>
+         * <li>Daily: daily environment</li>
+         * <li>Pre: pre-release environment</li>
+         * <li>Prod: production environment</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -195,7 +200,7 @@ public class QueryTrafficControlTaskItemReportRequest extends Request {
         }
 
         /**
-         * <p>The start time.</p>
+         * <p>The start time. The format is YYYY-MM-DD HH:mm:ss.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -89,7 +89,7 @@ public class GetRecallManagementTableRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the recall management table.</p>
+         * <p>The table ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

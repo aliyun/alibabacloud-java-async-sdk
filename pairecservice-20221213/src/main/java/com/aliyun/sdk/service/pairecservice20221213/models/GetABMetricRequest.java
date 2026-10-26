@@ -89,7 +89,7 @@ public class GetABMetricRequest extends Request {
         } 
 
         /**
-         * <p>The A/B metric ID.</p>
+         * <p>The ID of the ABTest metric.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,7 +111,7 @@ public class GetABMetricRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. To get this ID, call the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation.</p>
+         * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation to obtain the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -139,7 +139,7 @@ public class ListExperimentGroupsRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. You can get this ID by calling the ListInstances operation.</p>
+         * <p>The instance ID. You can retrieve this value by calling ListInstances.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,7 +152,7 @@ public class ListExperimentGroupsRequest extends Request {
         }
 
         /**
-         * <p>The layer ID. You can get this ID by calling the ListLayers operation.</p>
+         * <p>The layer ID. You can retrieve this value by calling ListLayers.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -164,7 +164,10 @@ public class ListExperimentGroupsRequest extends Request {
         }
 
         /**
-         * <p>The status of the experiment group. Valid values: Offline, Online, and Pushed.</p>
+         * <p>The status filter. Valid values:
+         * ● Offline: Not online.
+         * ● Online: Online.
+         * ● Pushed: Fully pushed.</p>
          * 
          * <strong>example:</strong>
          * <p>Online</p>
@@ -176,7 +179,7 @@ public class ListExperimentGroupsRequest extends Request {
         }
 
         /**
-         * <p>The end time for filtering experiment groups.</p>
+         * <p>Filters experiment groups by end time. The format is YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-08-31 12:00:00</p>
@@ -188,7 +191,7 @@ public class ListExperimentGroupsRequest extends Request {
         }
 
         /**
-         * <p>The start time for filtering experiment groups.</p>
+         * <p>Filters experiment groups by start time. The format is YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-08-30 12:00:00</p>

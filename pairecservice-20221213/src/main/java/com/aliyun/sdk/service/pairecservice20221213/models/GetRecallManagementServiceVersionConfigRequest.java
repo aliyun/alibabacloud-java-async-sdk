@@ -115,7 +115,7 @@ public class GetRecallManagementServiceVersionConfigRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the RecallManagementService.</p>
+         * <p>The recall management service ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -127,7 +127,7 @@ public class GetRecallManagementServiceVersionConfigRequest extends Request {
         }
 
         /**
-         * <p>The ID of the RecallManagementServiceVersion.</p>
+         * <p>The recall management service version ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -139,7 +139,7 @@ public class GetRecallManagementServiceVersionConfigRequest extends Request {
         }
 
         /**
-         * <p>The ID of the RecallManagementServiceVersionConfig.</p>
+         * <p>The recall management service version configuration ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -160,7 +160,7 @@ public class GetRecallManagementServiceVersionConfigRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>learn-pairec-xxx</p>

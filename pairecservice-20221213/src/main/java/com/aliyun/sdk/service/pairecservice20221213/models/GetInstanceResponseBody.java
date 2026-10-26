@@ -223,7 +223,7 @@ public class GetInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The billing type of the instance. Currently, only Subscription (prepayment) is supported.</p>
+         * <p>The billing method of the instance. Only subscription is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>Subscription</p>
@@ -245,7 +245,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The instance configuration.</p>
+         * <p>The configuration of the instance.</p>
          */
         public Builder config(Config config) {
             this.config = config;
@@ -253,10 +253,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the instance expires.</p>
+         * <p>The time when the instance expires. The time is displayed in UTC and follows the ISO 8601 standard.</p>
          * 
          * <strong>example:</strong>
-         * <p>2022-12-14 00:00:00.0</p>
+         * <p>2022-12-14T00:00:00Z</p>
          */
         public Builder expiredTime(String expiredTime) {
             this.expiredTime = expiredTime;
@@ -264,7 +264,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * FeatureStoreInfo.
+         * <p>The Feature Store information.</p>
          */
         public Builder featureStoreInfo(FeatureStoreInfo featureStoreInfo) {
             this.featureStoreInfo = featureStoreInfo;
@@ -272,10 +272,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the instance was created.</p>
+         * <p>The time when the instance was created. The time is displayed in UTC and follows the ISO 8601 standard.</p>
          * 
          * <strong>example:</strong>
-         * <p>2022-10-13 17:34:52.0</p>
+         * <p>2022-10-13T04:55:12Z</p>
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -283,10 +283,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the instance was last updated.</p>
+         * <p>The time when the instance was updated. The time is displayed in UTC and follows the ISO 8601 standard.</p>
          * 
          * <strong>example:</strong>
-         * <p>2022-11-05 09:02:30.0</p>
+         * <p>2022-11-05T09:02:30Z</p>
          */
         public Builder gmtModifiedTime(String gmtModifiedTime) {
             this.gmtModifiedTime = gmtModifiedTime;
@@ -294,7 +294,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The ID of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>pairec-test1</p>
@@ -305,7 +305,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The configuration of the operations tool.</p>
+         * <p>The configurations of the operations tool.</p>
          */
         public Builder operatingTool(OperatingTool operatingTool) {
             this.operatingTool = operatingTool;
@@ -313,7 +313,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RecommendCustomization.
+         * <p>The recommendation customization configurations.</p>
          */
         public Builder recommendCustomization(RecommendCustomization recommendCustomization) {
             this.recommendCustomization = recommendCustomization;
@@ -323,10 +323,10 @@ public class GetInstanceResponseBody extends TeaModel {
         /**
          * <p>The region ID. Valid values:</p>
          * <ul>
-         * <li>cn-shenzhen: China (Shenzhen).</li>
-         * <li>cn-hangzhou: China (Hangzhou).</li>
-         * <li>cn-beijing: China (Beijing).</li>
-         * <li>cn-shanghai: China (Shanghai).</li>
+         * <li>cn-shenzhen: Shenzhen.</li>
+         * <li>cn-hangzhou: Hangzhou.</li>
+         * <li>cn-beijing: Beijing.</li>
+         * <li>cn-shanghai: Shanghai.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -338,7 +338,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
@@ -351,9 +351,9 @@ public class GetInstanceResponseBody extends TeaModel {
         /**
          * <p>The instance status. Valid values:</p>
          * <ul>
-         * <li>Initializing: The instance is being initialized.</li>
-         * <li>Stopped: The instance is stopped.</li>
-         * <li>Running: The instance is running.</li>
+         * <li>Initializing: Initializing.</li>
+         * <li>Stopped: Stopped.</li>
+         * <li>Running: Running.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -453,7 +453,7 @@ public class GetInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The component code.</p>
+             * <p>The code of the component.</p>
              * 
              * <strong>example:</strong>
              * <p>storage</p>
@@ -472,7 +472,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The component type.</p>
+             * <p>The type of the component.</p>
              * 
              * <strong>example:</strong>
              * <p>OSS</p>
@@ -555,7 +555,7 @@ public class GetInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The component code.</p>
+             * <p>The code of the component.</p>
              * 
              * <strong>example:</strong>
              * <p>feature</p>
@@ -574,7 +574,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The component type.</p>
+             * <p>The type of the component.</p>
              * 
              * <strong>example:</strong>
              * <p>Hologres</p>
@@ -657,7 +657,7 @@ public class GetInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The component code.</p>
+             * <p>The code of the component.</p>
              * 
              * <strong>example:</strong>
              * <p>featuresets</p>
@@ -676,7 +676,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The component type.</p>
+             * <p>The type of the component.</p>
              * 
              * <strong>example:</strong>
              * <p>Platform</p>
@@ -759,7 +759,7 @@ public class GetInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of modeling environments.</p>
+             * <p>The modeling environments.</p>
              */
             public Builder dataManagements(java.util.List<DataManagements> dataManagements) {
                 this.dataManagements = dataManagements;
@@ -767,7 +767,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of service engines.</p>
+             * <p>The service engines.</p>
              */
             public Builder engines(java.util.List<Engines> engines) {
                 this.engines = engines;
@@ -775,7 +775,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of supporting features.</p>
+             * <p>The supporting features.</p>
              */
             public Builder monitors(java.util.List<Monitors> monitors) {
                 this.monitors = monitors;
@@ -842,7 +842,7 @@ public class GetInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * FeatureDBStatus.
+             * <p>The status of FeatureDB.</p>
              */
             public Builder featureDBStatus(String featureDBStatus) {
                 this.featureDBStatus = featureDBStatus;
@@ -850,10 +850,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>pairec-test1</p>
+             * <p>The ID of the Feature Store instance.</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -907,10 +904,10 @@ public class GetInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the operations tool is enabled for the instance. Valid values:</p>
+             * <p>Specifies whether the operations tool is enabled for the instance. Valid values:</p>
              * <ul>
              * <li>True: Enabled.</li>
-             * <li>False: Not enabled.</li>
+             * <li>False: Disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -968,14 +965,7 @@ public class GetInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the operations tool is enabled for the instance. Valid values:</p>
-             * <ul>
-             * <li>True: Enabled.</li>
-             * <li>False: Not enabled.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>True</p>
+             * <p>Specifies whether recommendation customization is enabled.</p>
              */
             public Builder isEnable(Boolean isEnable) {
                 this.isEnable = isEnable;

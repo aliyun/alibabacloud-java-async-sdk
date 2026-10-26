@@ -80,7 +80,7 @@ public class ListRecallManagementServiceVersionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A list of Recall Management Service versions.</p>
+         * <p>The list of recall management service versions.</p>
          */
         public Builder recallManagementServiceVersions(java.util.List<RecallManagementServiceVersions> recallManagementServiceVersions) {
             this.recallManagementServiceVersions = recallManagementServiceVersions;
@@ -99,7 +99,7 @@ public class ListRecallManagementServiceVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries.</p>
+         * <p>The total number of returned entries.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -207,7 +207,7 @@ public class ListRecallManagementServiceVersionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation time.</p>
+             * <p>The creation time. The time follows the ISO 8601 standard and includes a time zone offset.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-12-15T23:24:33.132+08:00</p>
@@ -218,7 +218,7 @@ public class ListRecallManagementServiceVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The modification time.</p>
+             * <p>The update time. The time follows the ISO 8601 standard and includes a time zone offset.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-12-15T23:24:33.132+08:00</p>
@@ -237,7 +237,7 @@ public class ListRecallManagementServiceVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version name.</p>
+             * <p>The name of the recall management service version.</p>
              * 
              * <strong>example:</strong>
              * <p>version-1</p>
@@ -248,7 +248,7 @@ public class ListRecallManagementServiceVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version ID of the Recall Management Service.</p>
+             * <p>The ID of the recall management service version.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

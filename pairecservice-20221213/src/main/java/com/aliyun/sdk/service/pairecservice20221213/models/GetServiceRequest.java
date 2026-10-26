@@ -108,7 +108,7 @@ public class GetServiceRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. You can call <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> to obtain the instance ID.</p>
+         * <p>The instance ID. You can obtain it by calling the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation.</p>
          * 
          * <strong>example:</strong>
          * <p>pairec-test-xxx</p>

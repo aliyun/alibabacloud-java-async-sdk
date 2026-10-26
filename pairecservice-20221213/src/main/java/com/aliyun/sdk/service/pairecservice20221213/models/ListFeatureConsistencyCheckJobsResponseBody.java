@@ -99,7 +99,7 @@ public class ListFeatureConsistencyCheckJobsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of jobs.</p>
+         * <p>The total count.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -246,7 +246,7 @@ public class ListFeatureConsistencyCheckJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The configuration of the job.</p>
+             * <p>The configuration information.</p>
              * 
              * <strong>example:</strong>
              * <p>{}</p>
@@ -290,7 +290,7 @@ public class ListFeatureConsistencyCheckJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the job.</p>
+             * <p>The end time. The time follows the ISO 8601 standard and includes a time zone offset.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-12-15T23:24:33.132+08:00</p>
@@ -301,7 +301,7 @@ public class ListFeatureConsistencyCheckJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the job.</p>
+             * <p>The start time. The time follows the ISO 8601 standard and includes a time zone offset.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-12-15T23:24:33.132+08:00</p>
@@ -312,7 +312,7 @@ public class ListFeatureConsistencyCheckJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A list of log entries.</p>
+             * <p>The log information.</p>
              */
             public Builder logs(java.util.List<String> logs) {
                 this.logs = logs;
@@ -320,18 +320,13 @@ public class ListFeatureConsistencyCheckJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the job. Valid values:</p>
+             * <p>The job status. Valid values:</p>
              * <ul>
-             * <li><p><code>ToRun</code>: Waiting to run.</p>
-             * </li>
-             * <li><p><code>Running</code>: In progress.</p>
-             * </li>
-             * <li><p><code>Success</code>: Successful.</p>
-             * </li>
-             * <li><p><code>Failure</code>: Failed.</p>
-             * </li>
-             * <li><p><code>Stopped</code>: Stopped or canceled.</p>
-             * </li>
+             * <li>ToRun: pending</li>
+             * <li>Running: running</li>
+             * <li>Success: successful</li>
+             * <li>Failure: failed</li>
+             * <li>Stopped: stopped or canceled</li>
              * </ul>
              * 
              * <strong>example:</strong>

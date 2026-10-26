@@ -67,7 +67,7 @@ public class CreateCalculationJobsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A list of calculation job IDs.</p>
+         * <p>The list of compute task IDs.</p>
          */
         public Builder calculationJobIds(java.util.List<String> calculationJobIds) {
             this.calculationJobIds = calculationJobIds;

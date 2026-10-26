@@ -89,7 +89,7 @@ public class GetFeatureConsistencyCheckJobConfigRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the feature consistency check configuration. For information about how to obtain the ID, see <a href="https://help.aliyun.com/document_detail/2557567.html">ListFeatureConsistencyCheckJobConfigs</a>.</p>
+         * <p>The ID of the feature consistency check configuration. For information about how to obtain the configuration ID, see <a href="https://help.aliyun.com/document_detail/2557567.html">ListFeatureConsistencyCheckJobConfigs</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,7 +111,7 @@ public class GetFeatureConsistencyCheckJobConfigRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance. See <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> for details on how to obtain it.</p>
+         * <p>The ID of the instance. For information about how to obtain the instance ID, see <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

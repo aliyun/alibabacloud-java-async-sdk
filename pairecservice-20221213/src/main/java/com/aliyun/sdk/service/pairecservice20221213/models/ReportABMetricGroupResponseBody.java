@@ -88,7 +88,7 @@ public class ReportABMetricGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dimensions used for grouping the report data.</p>
+         * <p>The dimension fields.</p>
          */
         public Builder groupDimension(java.util.List<String> groupDimension) {
             this.groupDimension = groupDimension;
@@ -96,7 +96,7 @@ public class ReportABMetricGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>59CE7EC6-F268-5D71-9215-32922CC50D72</p>

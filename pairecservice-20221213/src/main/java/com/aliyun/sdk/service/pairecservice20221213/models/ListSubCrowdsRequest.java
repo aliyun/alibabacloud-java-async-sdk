@@ -89,7 +89,7 @@ public class ListSubCrowdsRequest extends Request {
         } 
 
         /**
-         * <p>The crowd ID. You can call the ListCrowds operation to obtain this ID.</p>
+         * <p>The crowd ID. You can call ListCrowds to obtain the crowd ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,7 +111,7 @@ public class ListSubCrowdsRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. You can call the ListInstances operation to obtain this ID.</p>
+         * <p>The instance ID. You can call ListInstances to obtain the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

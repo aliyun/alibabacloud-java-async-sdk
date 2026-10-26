@@ -275,7 +275,7 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The end time.</p>
+         * <p>The end time. Format: YYYY-MM-DD.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-04-25</p>
@@ -286,7 +286,7 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The event of the control target.</p>
+         * <p>The traffic control target event.</p>
          * 
          * <strong>example:</strong>
          * <p>click</p>
@@ -297,7 +297,7 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the traffic control target was created.</p>
+         * <p>The creation time. Format: ISO 8601, where Z indicates the UTC time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-01-03T02:28:00.000Z</p>
@@ -308,7 +308,7 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The item condition, specified in an array format.</p>
+         * <p>The item conditions in array format.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;field&quot;:&quot;status&quot;,&quot;option&quot;:&quot;=&quot;,&quot;value&quot;:&quot;1&quot;}]</p>
@@ -319,7 +319,7 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The item condition, specified in an expression format.</p>
+         * <p>The item conditions in expression format.</p>
          * 
          * <strong>example:</strong>
          * <p>status=1</p>
@@ -341,7 +341,7 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the traffic control target.</p>
+         * <p>The traffic control target.</p>
          * 
          * <strong>example:</strong>
          * <p>target-1</p>
@@ -352,7 +352,7 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether new product regulation is enabled.</p>
+         * <p>Indicates whether the regulation applies to new products.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -363,7 +363,7 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the recall strategy.</p>
+         * <p>The recall policy name.</p>
          * 
          * <strong>example:</strong>
          * <p>recall-1</p>
@@ -374,7 +374,7 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
@@ -385,7 +385,7 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The piecewise control settings.</p>
+         * <p>The target setting values.</p>
          */
         public Builder splitParts(SplitParts splitParts) {
             this.splitParts = splitParts;
@@ -393,7 +393,7 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The start time.</p>
+         * <p>The start time. Format: YYYY-MM-DD.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-03-25</p>
@@ -404,7 +404,7 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The statistics period.</p>
+         * <p>The statistical period.</p>
          * 
          * <strong>example:</strong>
          * <p>Daily</p>
@@ -415,10 +415,14 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the traffic control target.</p>
+         * <p>The status.</p>
          * 
          * <strong>example:</strong>
-         * <p>枚举值：开启：Opened关闭：Closed</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Opened: Enabled.</li>
+         * <li>Closed: Disabled</li>
+         * </ul>
          */
         public Builder status(String status) {
             this.status = status;
@@ -426,7 +430,7 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The tolerance value.</p>
+         * <p>The tolerance range of the traffic control target.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -459,7 +463,7 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The value of the control target.</p>
+         * <p>The traffic control target value.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -541,7 +545,7 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The set points.</p>
+             * <p>The target value split points.</p>
              */
             public Builder setPoints(java.util.List<Long> setPoints) {
                 this.setPoints = setPoints;
@@ -549,7 +553,7 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The set values.</p>
+             * <p>The target setting values.</p>
              */
             public Builder setValues(java.util.List<Long> setValues) {
                 this.setValues = setValues;
@@ -557,7 +561,7 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time points.</p>
+             * <p>The time split points.</p>
              */
             public Builder timePoints(java.util.List<Long> timePoints) {
                 this.timePoints = timePoints;

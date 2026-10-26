@@ -152,7 +152,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance. You can use this parameter to perform a fuzzy search for instances.</p>
+         * <p>The instance ID for fuzzy matching.</p>
          * 
          * <strong>example:</strong>
          * <p>pairec-test1</p>
@@ -164,7 +164,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * <p>The sort order. Valid values: <code>Asc</code> (ascending) and <code>Desc</code> (descending).</p>
+         * <p>The sort order.</p>
          * 
          * <strong>example:</strong>
          * <p>Desc</p>
@@ -176,7 +176,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -200,7 +200,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * <p>The field by which to sort the results.</p>
+         * <p>The sort criterion.</p>
          * 
          * <strong>example:</strong>
          * <p>Type</p>
@@ -214,14 +214,10 @@ public class ListInstancesRequest extends Request {
         /**
          * <p>The instance type. Valid values:</p>
          * <ul>
-         * <li><p><code>basic</code>: Basic edition</p>
-         * </li>
-         * <li><p><code>high-level</code>: High-level edition</p>
-         * </li>
-         * <li><p><code>advanced</code>: Advanced edition</p>
-         * </li>
-         * <li><p><code>standard</code>: Standard edition</p>
-         * </li>
+         * <li>basic: Basic Edition.</li>
+         * <li>highleve: Upgraded Edition.</li>
+         * <li>advance: Advanced Edition.</li>
+         * <li>standard: Standard Edition.</li>
          * </ul>
          * 
          * <strong>example:</strong>

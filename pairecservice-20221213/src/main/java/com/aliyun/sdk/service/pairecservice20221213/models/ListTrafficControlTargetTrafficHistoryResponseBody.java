@@ -91,7 +91,7 @@ public class ListTrafficControlTargetTrafficHistoryResponseBody extends TeaModel
         }
 
         /**
-         * <p>The total count of historical records.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -102,7 +102,7 @@ public class ListTrafficControlTargetTrafficHistoryResponseBody extends TeaModel
         }
 
         /**
-         * <p>A list of the traffic control history records.</p>
+         * <p>The traffic control history records.</p>
          */
         public Builder trafficControlTaskTrafficHistories(java.util.List<TrafficControlTaskTrafficHistories> trafficControlTaskTrafficHistories) {
             this.trafficControlTaskTrafficHistories = trafficControlTaskTrafficHistories;
@@ -242,7 +242,7 @@ public class ListTrafficControlTargetTrafficHistoryResponseBody extends TeaModel
             }
 
             /**
-             * <p>The timestamp of the record.</p>
+             * <p>The time in the behavior table, up to the current time. The format is YYYY-MM-DD HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-10-10 10:10:58</p>
@@ -253,7 +253,7 @@ public class ListTrafficControlTargetTrafficHistoryResponseBody extends TeaModel
             }
 
             /**
-             * <p>The intended traffic for the traffic control target.</p>
+             * <p>The target traffic of the traffic control target.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>

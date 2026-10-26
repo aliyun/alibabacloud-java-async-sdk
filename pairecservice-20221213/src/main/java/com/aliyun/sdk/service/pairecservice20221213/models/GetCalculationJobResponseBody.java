@@ -158,7 +158,7 @@ public class GetCalculationJobResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the AB metric.</p>
+         * <p>The AB metric ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -169,7 +169,7 @@ public class GetCalculationJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the AB metric.</p>
+         * <p>The AB metric name.</p>
          * 
          * <strong>example:</strong>
          * <p>pv</p>
@@ -180,7 +180,7 @@ public class GetCalculationJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The business date.</p>
+         * <p>The business date. The value is in YYYY-MM-DD format.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-12-15</p>
@@ -191,7 +191,7 @@ public class GetCalculationJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The job configuration.</p>
+         * <p>The task configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -202,7 +202,7 @@ public class GetCalculationJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The runtime of the job.</p>
+         * <p>The time when the task ran. The value is in ISO 8601 format and includes a time zone offset.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-12-15T23:24:33.132+08:00</p>
@@ -213,7 +213,7 @@ public class GetCalculationJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The job messages.</p>
+         * <p>The task information.</p>
          */
         public Builder jobMessage(java.util.List<String> jobMessage) {
             this.jobMessage = jobMessage;
@@ -221,12 +221,10 @@ public class GetCalculationJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The job source. Valid values:</p>
+         * <p>The task source. Valid values:</p>
          * <ul>
-         * <li><p>CronOffline: An offline cron job.</p>
-         * </li>
-         * <li><p>DataRerun: A data rerun task.</p>
-         * </li>
+         * <li>CronOffline: a scheduled offline task.</li>
+         * <li>DataRerun: a data rerun task.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -249,16 +247,12 @@ public class GetCalculationJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the calculation job. Valid values:</p>
+         * <p>The status of the compute task. Valid values:</p>
          * <ul>
-         * <li><p>Success: The job completed successfully.</p>
-         * </li>
-         * <li><p>Failure: The job failed.</p>
-         * </li>
-         * <li><p>Initializing: The job is initializing.</p>
-         * </li>
-         * <li><p>Running: The job is running.</p>
-         * </li>
+         * <li>Success: The task succeeded.</li>
+         * <li>Failure: The task failed.</li>
+         * <li>Initializing: The task is being initialized.</li>
+         * <li>Running: The task is running.</li>
          * </ul>
          * 
          * <strong>example:</strong>

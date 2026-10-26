@@ -493,7 +493,7 @@ public class UpdateTrafficControlTaskRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the traffic control task to update.</p>
+         * <p>The ID of the traffic control task.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -514,7 +514,7 @@ public class UpdateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * <p>The behavior table ID.</p>
+         * <p>The ID of the behavior table.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -574,7 +574,7 @@ public class UpdateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * <p>A list of effective scene IDs.</p>
+         * <p>The list of effective service IDs.</p>
          */
         public Builder effectiveSceneIds(java.util.List<Integer> effectiveSceneIds) {
             this.putBodyParameter("EffectiveSceneIds", effectiveSceneIds);
@@ -583,7 +583,7 @@ public class UpdateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * <p>The end time.</p>
+         * <p>The end time. The format is YYYY-MM-DD.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-04-25</p>
@@ -595,7 +595,11 @@ public class UpdateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * <p>The execution time. Valid values: <code>Permanent</code> (runs indefinitely) and <code>TimeRange</code> (runs within a specified period). If you select <code>TimeRange</code>, you must also specify <code>StartTime</code> and <code>EndTime</code>.</p>
+         * <p>The execution time. Valid values:</p>
+         * <ul>
+         * <li><code>Permanent</code>: The task runs permanently.</li>
+         * <li><code>TimeRange</code>: The task runs within a specified time range. If you select this value, you must specify <code>StartTime</code> and <code>EndTime</code>.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Permanent</p>
@@ -631,7 +635,7 @@ public class UpdateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * <p>The item conditions, specified in an array format.</p>
+         * <p>The conditions for items, specified in array format.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;field&quot;:&quot;status&quot;,&quot;option&quot;:&quot;=&quot;,&quot;value&quot;:&quot;1&quot;}]</p>
@@ -643,7 +647,7 @@ public class UpdateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * <p>The item conditions, specified as an expression.</p>
+         * <p>The conditions for items, specified in expression format.</p>
          * 
          * <strong>example:</strong>
          * <p>status=1</p>
@@ -655,7 +659,7 @@ public class UpdateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * <p>The item condition type.</p>
+         * <p>The condition type for items.</p>
          * 
          * <strong>example:</strong>
          * <p>Array</p>
@@ -667,7 +671,7 @@ public class UpdateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * <p>The item table ID.</p>
+         * <p>The ID of the item table.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -691,7 +695,7 @@ public class UpdateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * <p>A comma-separated list of pre-release experiment IDs.</p>
+         * <p>The list of pre-release experiment IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>3,4</p>
@@ -703,7 +707,7 @@ public class UpdateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * <p>A comma-separated list of production experiment IDs.</p>
+         * <p>The list of production experiment IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>1,2</p>
@@ -727,7 +731,7 @@ public class UpdateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * <p>The engine service ID.</p>
+         * <p>The service ID.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -739,7 +743,7 @@ public class UpdateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * <p>A list of associated engine service IDs.</p>
+         * <p>The list of bound engine service IDs.</p>
          */
         public Builder serviceIds(java.util.List<Integer> serviceIds) {
             this.putBodyParameter("ServiceIds", serviceIds);
@@ -748,7 +752,7 @@ public class UpdateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * <p>The start time.</p>
+         * <p>The start time. The format is YYYY-MM-DD.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-03-25</p>
@@ -760,7 +764,7 @@ public class UpdateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * <p>The conditions for behavior statistics, specified in an array format.</p>
+         * <p>The conditions for statistical behaviors, specified in array format.</p>
          * 
          * <strong>example:</strong>
          * <p>click=exposure</p>
@@ -772,7 +776,7 @@ public class UpdateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * <p>The conditions for behavior statistics, specified in an array format.</p>
+         * <p>The conditions for behavior statistics, specified in array format.</p>
          * 
          * <strong>example:</strong>
          * <p>click=exposure</p>
@@ -784,7 +788,7 @@ public class UpdateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * <p>The conditions for behavior statistics, specified as an expression.</p>
+         * <p>The conditions for statistical behaviors, specified in expression format.</p>
          * 
          * <strong>example:</strong>
          * <p>click=30</p>
@@ -796,7 +800,7 @@ public class UpdateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * <p>The condition type for behavior statistics.</p>
+         * <p>The condition type for statistical behaviors.</p>
          * 
          * <strong>example:</strong>
          * <p>Array</p>
@@ -808,7 +812,7 @@ public class UpdateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * <p>A list of traffic control targets.</p>
+         * <p>The list of traffic control targets.</p>
          */
         public Builder trafficControlTargets(java.util.List<TrafficControlTargets> trafficControlTargets) {
             this.putBodyParameter("TrafficControlTargets", trafficControlTargets);
@@ -817,7 +821,7 @@ public class UpdateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * <p>The conditions for the target user group, specified in an array format.</p>
+         * <p>The conditions for the target user group, specified in array format.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;field&quot;:&quot;gender&quot;,&quot;option&quot;:&quot;=&quot;,&quot;value&quot;:&quot;male&quot;}]</p>
@@ -829,7 +833,7 @@ public class UpdateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * <p>The conditions for the target user group, specified as an expression.</p>
+         * <p>The conditions for the target user group, specified in expression format.</p>
          * 
          * <strong>example:</strong>
          * <p>age&lt;=30&amp;&amp;(3&lt;=level&lt;=6)&amp;&amp;gender=male</p>
@@ -853,7 +857,7 @@ public class UpdateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * <p>The user table ID.</p>
+         * <p>The ID of the user table.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -1067,7 +1071,7 @@ public class UpdateTrafficControlTaskRequest extends Request {
             } 
 
             /**
-             * <p>The end time of the traffic control target.</p>
+             * <p>The end time. The format follows ISO 8601 and includes a time zone offset.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-02-06T18:02:57.487556956+08:00</p>
@@ -1078,7 +1082,7 @@ public class UpdateTrafficControlTaskRequest extends Request {
             }
 
             /**
-             * <p>The event for the traffic control target.</p>
+             * <p>The event of the control target.</p>
              * 
              * <strong>example:</strong>
              * <p>exposure</p>
@@ -1089,7 +1093,7 @@ public class UpdateTrafficControlTaskRequest extends Request {
             }
 
             /**
-             * <p>The item conditions, specified in an array format.</p>
+             * <p>The conditions for items, specified in array format.</p>
              * 
              * <strong>example:</strong>
              * <p>[{&quot;field&quot;:&quot;status&quot;,&quot;option&quot;:&quot;=&quot;,&quot;value&quot;:&quot;1&quot;}]</p>
@@ -1100,7 +1104,7 @@ public class UpdateTrafficControlTaskRequest extends Request {
             }
 
             /**
-             * <p>The item conditions, specified as an expression.</p>
+             * <p>The conditions for items, specified in expression format.</p>
              * 
              * <strong>example:</strong>
              * <p>age&gt;20</p>
@@ -1111,7 +1115,7 @@ public class UpdateTrafficControlTaskRequest extends Request {
             }
 
             /**
-             * <p>The item condition type.</p>
+             * <p>The condition type for items.</p>
              * 
              * <strong>example:</strong>
              * <p>Array</p>
@@ -1133,7 +1137,7 @@ public class UpdateTrafficControlTaskRequest extends Request {
             }
 
             /**
-             * <p>Indicates whether this is a new item recall.</p>
+             * <p>Specifies whether the target is a new product recall.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1144,7 +1148,7 @@ public class UpdateTrafficControlTaskRequest extends Request {
             }
 
             /**
-             * <p>The recall policy name.</p>
+             * <p>The Policy Name of the recall.</p>
              * 
              * <strong>example:</strong>
              * <p>hot_recall</p>
@@ -1155,7 +1159,7 @@ public class UpdateTrafficControlTaskRequest extends Request {
             }
 
             /**
-             * <p>The start time of the traffic control target.</p>
+             * <p>The start time of the control target. The format follows ISO 8601 and includes a time zone offset.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-02-10T09:16:03.893+08:00</p>
@@ -1188,7 +1192,7 @@ public class UpdateTrafficControlTaskRequest extends Request {
             }
 
             /**
-             * <p>The tolerance range for the traffic control target.</p>
+             * <p>The tolerance range of the control target.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -1199,7 +1203,7 @@ public class UpdateTrafficControlTaskRequest extends Request {
             }
 
             /**
-             * <p>The value of the traffic control target.</p>
+             * <p>The value of the control target.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>

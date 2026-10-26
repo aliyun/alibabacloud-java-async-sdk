@@ -78,7 +78,7 @@ public class QueryDataDiagnosisStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The statistics for the data diagnosis task.</p>
+         * <p>The list of data diagnostic nodes.</p>
          */
         public Builder statistics(Statistics statistics) {
             this.statistics = statistics;
@@ -144,7 +144,7 @@ public class QueryDataDiagnosisStatisticsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The dates of task failures.</p>
+             * <p>The list of dates when tasks failed.</p>
              */
             public Builder failedDates(java.util.List<String> failedDates) {
                 this.failedDates = failedDates;
@@ -152,7 +152,7 @@ public class QueryDataDiagnosisStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The dates with missing task data.</p>
+             * <p>The list of dates with missing tasks.</p>
              */
             public Builder noDataDates(java.util.List<String> noDataDates) {
                 this.noDataDates = noDataDates;

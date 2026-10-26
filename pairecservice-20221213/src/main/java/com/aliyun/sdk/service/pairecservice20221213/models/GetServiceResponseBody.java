@@ -223,7 +223,7 @@ public class GetServiceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The instance ID of the Container Registry Enterprise instance selected when a non-official image is used.</p>
+         * <p>The instance ID of the Container Registry Enterprise instance selected by the user when a non-official image is used.</p>
          * 
          * <strong>example:</strong>
          * <p>cri-xxx</p>
@@ -256,7 +256,7 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time of the most recent production publish.</p>
+         * <p>The time of the most recent production release. The time follows the ISO 8601 standard and includes a time zone offset.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-12-15T23:24:33.132+08:00</p>
@@ -267,7 +267,7 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The image secret.</p>
+         * <p>The image key.</p>
          * 
          * <strong>example:</strong>
          * <hr>
@@ -286,7 +286,7 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The most recent production publish record.</p>
+         * <p>The most recent production release record.</p>
          */
         public Builder latestProdReleaseOrder(LatestProdReleaseOrder latestProdReleaseOrder) {
             this.latestProdReleaseOrder = latestProdReleaseOrder;
@@ -316,7 +316,7 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the Container Registry Enterprise Edition repository selected when a non-official image is used.</p>
+         * <p>The ID of the Container Registry Enterprise Edition repository selected by the user when a non-official image is used.</p>
          * 
          * <strong>example:</strong>
          * <p>crr-xxx</p>
@@ -349,7 +349,7 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The configuration used to publish the service, such as the Elastic Algorithm Service (EAS) service configuration.</p>
+         * <p>The configuration used to deploy the service, such as the service configuration in Elastic Algorithm Service (EAS).</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;Port&quot;:8080}</p>
@@ -360,7 +360,7 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The resource address used to publish the service, such as the EAS resource group name.</p>
+         * <p>The resource URI used to deploy the service, such as the resource group name in Elastic Algorithm Service (EAS).</p>
          * 
          * <strong>example:</strong>
          * <p>eas-resource-xxx</p>
@@ -481,7 +481,7 @@ public class GetServiceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The publish content.</p>
+             * <p>The release content.</p>
              * 
              * <strong>example:</strong>
              * <p>update golang version to 1.22</p>
@@ -503,7 +503,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The publish information.</p>
+             * <p>The release information.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -523,7 +523,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The publish order ID.</p>
+             * <p>The release order ID.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -545,7 +545,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The publish title.</p>
+             * <p>The release title.</p>
              * 
              * <strong>example:</strong>
              * <p>update version</p>

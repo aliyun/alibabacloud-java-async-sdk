@@ -80,7 +80,7 @@ public class ListExperimentsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of experiments.</p>
+         * <p>The experiment list.</p>
          */
         public Builder experiments(java.util.List<Experiments> experiments) {
             this.experiments = experiments;
@@ -88,7 +88,7 @@ public class ListExperimentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>68075085-1A7D-55C2-B51D-7AD9B02A6DD6</p>
@@ -99,7 +99,7 @@ public class ListExperimentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of experiments returned.</p>
+         * <p>The total number of elements in the list.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -363,7 +363,7 @@ public class ListExperimentsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The alias for the experiment ID.</p>
+             * <p>The alias of the experiment ID.</p>
              * 
              * <strong>example:</strong>
              * <p>L1#EG1#E1</p>
@@ -374,7 +374,7 @@ public class ListExperimentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The allocated bucket numbers.</p>
+             * <p>The allocated bucket number.</p>
              * 
              * <strong>example:</strong>
              * <p>1,2,3</p>
@@ -385,7 +385,7 @@ public class ListExperimentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configuration of the experiment.</p>
+             * <p>The experiment configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>{}</p>
@@ -396,7 +396,7 @@ public class ListExperimentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the debug crowd.</p>
+             * <p>The debug crowd ID.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -407,7 +407,7 @@ public class ListExperimentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A comma-separated list of user IDs for debugging.</p>
+             * <p>The debug users.</p>
              * 
              * <strong>example:</strong>
              * <p>uid1,uid2,uid3</p>
@@ -418,7 +418,7 @@ public class ListExperimentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the experiment.</p>
+             * <p>The experiment description.</p>
              * 
              * <strong>example:</strong>
              * <p>This is a test.</p>
@@ -429,7 +429,7 @@ public class ListExperimentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the experiment group.</p>
+             * <p>The experiment group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -440,7 +440,7 @@ public class ListExperimentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the experiment.</p>
+             * <p>The experiment ID.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -451,7 +451,7 @@ public class ListExperimentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The percentage of flow allocated to the experiment.</p>
+             * <p>The traffic allocation percentage.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -462,7 +462,7 @@ public class ListExperimentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp indicating when the experiment was created.</p>
+             * <p>The creation time. The value is in ISO 8601 format and includes the time zone offset.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-12-15T23:24:33.132+08:00</p>
@@ -473,7 +473,7 @@ public class ListExperimentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp indicating when the experiment was last modified.</p>
+             * <p>The update time. The value is in ISO 8601 format and includes the time zone offset.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-12-15T23:24:33.132+08:00</p>
@@ -484,7 +484,7 @@ public class ListExperimentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the laboratory.</p>
+             * <p>The laboratory ID.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -495,7 +495,7 @@ public class ListExperimentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the layer.</p>
+             * <p>The layer ID.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -506,7 +506,7 @@ public class ListExperimentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the experiment.</p>
+             * <p>The experiment name.</p>
              * 
              * <strong>example:</strong>
              * <p>experiment_test1</p>
@@ -517,7 +517,7 @@ public class ListExperimentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the scene.</p>
+             * <p>The scene ID.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -528,12 +528,10 @@ public class ListExperimentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the experiment. Valid values:</p>
+             * <p>The status filter. Valid values:</p>
              * <ul>
-             * <li><p><code>Offline</code>: The experiment is inactive and does not receive flow.</p>
-             * </li>
-             * <li><p><code>Online</code>: The experiment is active and can receive flow.</p>
-             * </li>
+             * <li>Offline: Not online.</li>
+             * <li>Online: Online.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -545,12 +543,10 @@ public class ListExperimentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the experiment. Valid values:</p>
+             * <p>The experiment type. Valid values:</p>
              * <ul>
-             * <li><p><code>Baseline</code>: The control experiment.</p>
-             * </li>
-             * <li><p><code>Normal</code>: A variant experiment.</p>
-             * </li>
+             * <li>Baseline: Baseline experiment.</li>
+             * <li>Normal: Common experiment.</li>
              * </ul>
              * 
              * <strong>example:</strong>

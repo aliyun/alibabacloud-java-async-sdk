@@ -128,7 +128,7 @@ public class CreateDataDiagnosisJobsRequest extends Request {
         }
 
         /**
-         * <p>The data diagnosis ID.</p>
+         * <p>The data modeling diagnostics ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,7 +141,7 @@ public class CreateDataDiagnosisJobsRequest extends Request {
         }
 
         /**
-         * <p>The end date for the job.</p>
+         * <p>The end date. The format is YYYY-MM-DD.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,7 +167,7 @@ public class CreateDataDiagnosisJobsRequest extends Request {
         }
 
         /**
-         * <p>The start date for the job.</p>
+         * <p>The start date. The format is YYYY-MM-DD.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

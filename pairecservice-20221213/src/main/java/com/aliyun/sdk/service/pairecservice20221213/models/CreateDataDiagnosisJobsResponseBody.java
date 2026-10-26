@@ -67,7 +67,7 @@ public class CreateDataDiagnosisJobsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A list of data diagnosis job IDs.</p>
+         * <p>The list of data modeling diagnostics node IDs.</p>
          */
         public Builder dataDiagnosisJobIds(java.util.List<String> dataDiagnosisJobIds) {
             this.dataDiagnosisJobIds = dataDiagnosisJobIds;

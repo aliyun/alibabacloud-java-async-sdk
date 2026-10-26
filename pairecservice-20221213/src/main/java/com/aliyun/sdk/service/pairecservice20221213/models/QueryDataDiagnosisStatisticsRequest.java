@@ -130,7 +130,7 @@ public class QueryDataDiagnosisStatisticsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the data diagnosis task.</p>
+         * <p>The data diagnostics ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,7 +152,7 @@ public class QueryDataDiagnosisStatisticsRequest extends Request {
         }
 
         /**
-         * <p>The end date.</p>
+         * <p>The end date. The format is YYYY-MM-DD.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-08-08</p>
@@ -176,9 +176,9 @@ public class QueryDataDiagnosisStatisticsRequest extends Request {
         }
 
         /**
-         * <p>The retention rate report type.</p>
+         * <p>The retention rate report type. Valid values:</p>
          * <ul>
-         * <li>Period: A periodic report.</li>
+         * <li>Period: periodic report.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -191,7 +191,7 @@ public class QueryDataDiagnosisStatisticsRequest extends Request {
         }
 
         /**
-         * <p>The start date.</p>
+         * <p>The start date. The format is YYYY-MM-DD.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-08-01</p>

@@ -475,7 +475,7 @@ public class CreateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * <p>The behavior table ID.</p>
+         * <p>The ID of the behavior table.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -487,7 +487,11 @@ public class CreateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * <p>The control granularity. Valid values: Global (applies globally) and Single (applies to a specific item).</p>
+         * <p>The control granularity. Valid values:</p>
+         * <ul>
+         * <li>Global: global</li>
+         * <li>Single: single item</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Global</p>
@@ -499,12 +503,10 @@ public class CreateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * <p>The control logic.</p>
+         * <p>The control logic. Valid values:</p>
          * <ul>
-         * <li><p>Guaranteed: The system strictly enforces the control target.</p>
-         * </li>
-         * <li><p>Approach: The system attempts to meet the control target, but enforcement is not strict.</p>
-         * </li>
+         * <li>Guaranteed: guaranteed traffic control</li>
+         * <li>Approach: approximate traffic control</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -517,12 +519,10 @@ public class CreateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * <p>The control type.</p>
+         * <p>The control type. Valid values:</p>
          * <ul>
-         * <li><p>Percent: Controls traffic by percentage.</p>
-         * </li>
-         * <li><p>Quantity: Controls traffic by quantity.</p>
-         * </li>
+         * <li>Percent: percentage-based control</li>
+         * <li>Quantity: quantity-based control</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -547,7 +547,7 @@ public class CreateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * <p>A list of effective scene IDs.</p>
+         * <p>The list of effective scene IDs.</p>
          */
         public Builder effectiveSceneIds(java.util.List<Integer> effectiveSceneIds) {
             this.putBodyParameter("EffectiveSceneIds", effectiveSceneIds);
@@ -556,7 +556,7 @@ public class CreateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * <p>The end time.</p>
+         * <p>The end time. Specify the time in the YYYY-MM-DD format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-03-26</p>
@@ -568,12 +568,10 @@ public class CreateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * <p>The execution time.</p>
+         * <p>The execution time. Valid values:</p>
          * <ul>
-         * <li><p>Permanent: The task runs permanently.</p>
-         * </li>
-         * <li><p>TimeRange: The task runs within a specified time range. This option requires you to also specify the StartTime and EndTime parameters.</p>
-         * </li>
+         * <li>Permanent: The task is executed permanently.</li>
+         * <li>TimeRange: The task is executed within a specified time range. If you select this value, you must specify StartTime and EndTime.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -586,7 +584,7 @@ public class CreateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * <p>The Flink data source ID.</p>
+         * <p>The ID of the Flink data source.</p>
          * 
          * <strong>example:</strong>
          * <p>res-***</p>
@@ -598,7 +596,7 @@ public class CreateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. You can get this ID by calling the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation.</p>
+         * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation to obtain the instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pairec-cn-***test</p>
@@ -610,7 +608,7 @@ public class CreateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * <p>The item condition in array format.</p>
+         * <p>The conditions for items in array format.</p>
          * 
          * <strong>example:</strong>
          * <p>[{\&quot;field\&quot;:\&quot;status\&quot;,\&quot;option\&quot;:\&quot;=\&quot;,\&quot;value\&quot;:\&quot;1\&quot;}]</p>
@@ -622,7 +620,7 @@ public class CreateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * <p>The item condition in expression format.</p>
+         * <p>The conditions for items in expression format.</p>
          * 
          * <strong>example:</strong>
          * <p>status=1</p>
@@ -634,12 +632,10 @@ public class CreateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * <p>The item condition type.</p>
+         * <p>The condition type for items. Valid values:</p>
          * <ul>
-         * <li><p>Array: Specifies the array format.</p>
-         * </li>
-         * <li><p>Expression: Specifies the expression format.</p>
-         * </li>
+         * <li>Array: array format</li>
+         * <li>Expression: expression format</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -652,7 +648,7 @@ public class CreateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * <p>The item table ID.</p>
+         * <p>The ID of the item table.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -676,7 +672,7 @@ public class CreateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * <p>The experiment IDs for the staging environment. Separate multiple IDs with a comma (,).</p>
+         * <p>The IDs of the experiments in the pre-release environment. Separate multiple IDs with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>1,2,3</p>
@@ -688,7 +684,7 @@ public class CreateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * <p>The experiment IDs for the production environment. Separate multiple IDs with a comma (,).</p>
+         * <p>The IDs of the experiments in the production environment. Separate multiple IDs with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>4,5,6</p>
@@ -700,7 +696,7 @@ public class CreateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * <p>The scene ID. You can get this ID by calling the <a href="https://help.aliyun.com/document_detail/2402581.html">ListScenes</a> operation.</p>
+         * <p>The scene ID. You can call the <a href="https://help.aliyun.com/document_detail/2402581.html">ListScenes</a> operation to obtain the scene ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -725,7 +721,7 @@ public class CreateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * <p>A list of bound engine service IDs.</p>
+         * <p>The list of bound engine service IDs.</p>
          */
         public Builder serviceIds(java.util.List<Integer> serviceIds) {
             this.putBodyParameter("ServiceIds", serviceIds);
@@ -734,7 +730,7 @@ public class CreateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * <p>The start time.</p>
+         * <p>The start time. Specify the time in the YYYY-MM-DD format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-03-25</p>
@@ -746,7 +742,7 @@ public class CreateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * <p>The statistical behavior condition in array format.</p>
+         * <p>The conditions for statistical behaviors in array format.</p>
          * 
          * <strong>example:</strong>
          * <p>[{\&quot;field\&quot;:\&quot;click\&quot;,\&quot;option\&quot;:\&quot;&lt;=\&quot;,\&quot;value\&quot;:\&quot;30\&quot;}]</p>
@@ -758,7 +754,7 @@ public class CreateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * <p>The statistical behavior condition in expression format.</p>
+         * <p>The conditions for statistical behaviors in expression format.</p>
          * 
          * <strong>example:</strong>
          * <p>click=30</p>
@@ -770,12 +766,10 @@ public class CreateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * <p>The condition type for the statistical behavior.</p>
+         * <p>The condition type for statistical behaviors. Valid values:</p>
          * <ul>
-         * <li><p>Array: Specifies the array format.</p>
-         * </li>
-         * <li><p>Expression: Specifies the expression format.</p>
-         * </li>
+         * <li>Array: array format</li>
+         * <li>Expression: expression format</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -788,7 +782,7 @@ public class CreateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * <p>A list of traffic control targets.</p>
+         * <p>The list of traffic control targets.</p>
          */
         public Builder trafficControlTargets(java.util.List<TrafficControlTargets> trafficControlTargets) {
             this.putBodyParameter("TrafficControlTargets", trafficControlTargets);
@@ -797,7 +791,7 @@ public class CreateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * <p>The intervention user group condition in array format.</p>
+         * <p>The conditions for the target users in array format.</p>
          * 
          * <strong>example:</strong>
          * <p>[{\&quot;field\&quot;:\&quot;gender\&quot;,\&quot;option\&quot;:\&quot;=\&quot;,\&quot;value\&quot;:\&quot;male\&quot;}]</p>
@@ -809,7 +803,7 @@ public class CreateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * <p>The intervention user group condition in expression format.</p>
+         * <p>The conditions for the target users in expression format.</p>
          * 
          * <strong>example:</strong>
          * <p>age&lt;=30&amp;&amp;(3&lt;=level&lt;=6)&amp;&amp;gender=male</p>
@@ -821,12 +815,10 @@ public class CreateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * <p>The condition type for the intervention user group.</p>
+         * <p>The condition type for the target users. Valid values:</p>
          * <ul>
-         * <li><p>Array: Specifies the array format.</p>
-         * </li>
-         * <li><p>Expression: Specifies the expression format.</p>
-         * </li>
+         * <li>Array: array format</li>
+         * <li>Expression: expression format</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -839,7 +831,7 @@ public class CreateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * <p>The user table ID.</p>
+         * <p>The ID of the user table.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -1053,7 +1045,7 @@ public class CreateTrafficControlTaskRequest extends Request {
             } 
 
             /**
-             * <p>The end time of the traffic control target.</p>
+             * <p>The end time of the control target. Specify the time in the YYYY-MM-DD format.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-04-25</p>
@@ -1064,7 +1056,7 @@ public class CreateTrafficControlTaskRequest extends Request {
             }
 
             /**
-             * <p>The event for the traffic control target.</p>
+             * <p>The event of the control target.</p>
              * 
              * <strong>example:</strong>
              * <p>click</p>
@@ -1075,7 +1067,7 @@ public class CreateTrafficControlTaskRequest extends Request {
             }
 
             /**
-             * <p>The item condition in array format.</p>
+             * <p>The conditions for items in array format.</p>
              * 
              * <strong>example:</strong>
              * <p>[{\&quot;field\&quot;:\&quot;status\&quot;,\&quot;option\&quot;:\&quot;=\&quot;,\&quot;value\&quot;:\&quot;1\&quot;}]</p>
@@ -1086,7 +1078,7 @@ public class CreateTrafficControlTaskRequest extends Request {
             }
 
             /**
-             * <p>The item condition in expression format.</p>
+             * <p>The conditions for items in expression format.</p>
              * 
              * <strong>example:</strong>
              * <p>status=1</p>
@@ -1097,12 +1089,10 @@ public class CreateTrafficControlTaskRequest extends Request {
             }
 
             /**
-             * <p>The condition type for item control.</p>
+             * <p>The condition type for item control. Valid values:</p>
              * <ul>
-             * <li><p>Array: Specifies the array format.</p>
-             * </li>
-             * <li><p>Expression: Specifies the expression format.</p>
-             * </li>
+             * <li>Array: array format</li>
+             * <li>Expression: expression format</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1125,7 +1115,7 @@ public class CreateTrafficControlTaskRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable new product regulation.</p>
+             * <p>Specifies whether the target is for new product regulation.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1136,7 +1126,7 @@ public class CreateTrafficControlTaskRequest extends Request {
             }
 
             /**
-             * <p>The name of the recall strategy.</p>
+             * <p>The recall policy name.</p>
              * 
              * <strong>example:</strong>
              * <p>recall_1</p>
@@ -1147,7 +1137,7 @@ public class CreateTrafficControlTaskRequest extends Request {
             }
 
             /**
-             * <p>The start time of the traffic control target.</p>
+             * <p>The start time of the control target. Specify the time in the YYYY-MM-DD format.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-03-25</p>
@@ -1158,12 +1148,10 @@ public class CreateTrafficControlTaskRequest extends Request {
             }
 
             /**
-             * <p>The statistics period.</p>
+             * <p>The statistical period. Valid values:</p>
              * <ul>
-             * <li><p>Daily: Statistics are aggregated daily.</p>
-             * </li>
-             * <li><p>Hour: Statistics are aggregated hourly.</p>
-             * </li>
+             * <li>Daily: daily</li>
+             * <li>Hour: hourly</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1175,12 +1163,10 @@ public class CreateTrafficControlTaskRequest extends Request {
             }
 
             /**
-             * <p>The status of the traffic control target.</p>
+             * <p>The status of the control target. Valid values:</p>
              * <ul>
-             * <li><p>Opened: The traffic control target is enabled.</p>
-             * </li>
-             * <li><p>Closed: The traffic control target is disabled.</p>
-             * </li>
+             * <li>Opened: enabled</li>
+             * <li>Closed: disabled</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1192,7 +1178,7 @@ public class CreateTrafficControlTaskRequest extends Request {
             }
 
             /**
-             * <p>The tolerance value for the traffic control target.</p>
+             * <p>The tolerance range of the control target.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -1203,7 +1189,7 @@ public class CreateTrafficControlTaskRequest extends Request {
             }
 
             /**
-             * <p>The value of the traffic control target.</p>
+             * <p>The target value for control.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>

@@ -142,7 +142,7 @@ public class ChatConversationRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>校验引擎配置</p>
+         * <p>Validation engine configuration</p>
          */
         public Builder content(String content) {
             this.putBodyParameter("Content", content);
@@ -151,7 +151,7 @@ public class ChatConversationRequest extends Request {
         }
 
         /**
-         * <p>The session ID. If this parameter is not specified, a new session is created. If this parameter is specified, the conversation continues in the context of the existing session.</p>
+         * <p>The session ID. If you do not specify this parameter, a new session is created. If you specify this parameter, the conversation continues in the context of the existing session.</p>
          * 
          * <strong>example:</strong>
          * <p>e47cfae9-c0cc-42e1-91e2-e67cdb0e7b96</p>

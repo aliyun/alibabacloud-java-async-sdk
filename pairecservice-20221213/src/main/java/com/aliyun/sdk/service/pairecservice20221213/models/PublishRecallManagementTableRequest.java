@@ -46,6 +46,10 @@ public class PublishRecallManagementTableRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SkipThresholdCheck")
     private Boolean skipThresholdCheck;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("StartTimestampMs")
+    private Long startTimestampMs;
+
     private PublishRecallManagementTableRequest(Builder builder) {
         super(builder);
         this.recallManagementTableId = builder.recallManagementTableId;
@@ -55,6 +59,7 @@ public class PublishRecallManagementTableRequest extends Request {
         this.partition = builder.partition;
         this.partitions = builder.partitions;
         this.skipThresholdCheck = builder.skipThresholdCheck;
+        this.startTimestampMs = builder.startTimestampMs;
     }
 
     public static Builder builder() {
@@ -119,6 +124,13 @@ public class PublishRecallManagementTableRequest extends Request {
         return this.skipThresholdCheck;
     }
 
+    /**
+     * @return startTimestampMs
+     */
+    public Long getStartTimestampMs() {
+        return this.startTimestampMs;
+    }
+
     public static final class Builder extends Request.Builder<PublishRecallManagementTableRequest, Builder> {
         private String recallManagementTableId; 
         private String regionId; 
@@ -127,6 +139,7 @@ public class PublishRecallManagementTableRequest extends Request {
         private java.util.Map<String, String> partition; 
         private java.util.Map<String, String> partitions; 
         private Boolean skipThresholdCheck; 
+        private Long startTimestampMs; 
 
         private Builder() {
             super();
@@ -141,6 +154,7 @@ public class PublishRecallManagementTableRequest extends Request {
             this.partition = request.partition;
             this.partitions = request.partitions;
             this.skipThresholdCheck = request.skipThresholdCheck;
+            this.startTimestampMs = request.startTimestampMs;
         } 
 
         /**
@@ -178,9 +192,9 @@ public class PublishRecallManagementTableRequest extends Request {
         }
 
         /**
-         * <p><strong>The synchronization mode.</strong> Valid values:</p>
+         * <p><strong>The enumeration value for the table synchronization mode</strong>:</p>
          * <ul>
-         * <li><code>Merge</code>: Adds new data and updates existing data.</li>
+         * <li><code>Merge</code>: Merge.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -193,7 +207,7 @@ public class PublishRecallManagementTableRequest extends Request {
         }
 
         /**
-         * <p>The table partitions to publish.</p>
+         * <p>The partition of the table to be published.</p>
          */
         public Builder partition(java.util.Map<String, String> partition) {
             this.putBodyParameter("Partition", partition);
@@ -202,7 +216,7 @@ public class PublishRecallManagementTableRequest extends Request {
         }
 
         /**
-         * <p>The table partitions to publish.</p>
+         * <p>The partition of the table to be published.</p>
          */
         public Builder partitions(java.util.Map<String, String> partitions) {
             this.putBodyParameter("Partitions", partitions);
@@ -211,7 +225,7 @@ public class PublishRecallManagementTableRequest extends Request {
         }
 
         /**
-         * <p><strong>Specifies whether to skip the threshold check during table synchronization.</strong></p>
+         * <p><strong>Specifies whether to skip the threshold check when synchronizing the table.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -219,6 +233,18 @@ public class PublishRecallManagementTableRequest extends Request {
         public Builder skipThresholdCheck(Boolean skipThresholdCheck) {
             this.putBodyParameter("SkipThresholdCheck", skipThresholdCheck);
             this.skipThresholdCheck = skipThresholdCheck;
+            return this;
+        }
+
+        /**
+         * <p>The start time of incremental data playback (UNIX milliseconds).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1792512000000</p>
+         */
+        public Builder startTimestampMs(Long startTimestampMs) {
+            this.putBodyParameter("StartTimestampMs", startTimestampMs);
+            this.startTimestampMs = startTimestampMs;
             return this;
         }
 
