@@ -125,7 +125,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
      *
      * <p>QueryDatasetInfoResponseBody</p>
      */
-    public static class CubeTableList extends TeaModel {
+    public static class ChildTables extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Caption")
         private String caption;
 
@@ -150,7 +150,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UniqueId")
         private String uniqueId;
 
-        private CubeTableList(Builder builder) {
+        private ChildTables(Builder builder) {
             this.caption = builder.caption;
             this.customsql = builder.customsql;
             this.datasourceId = builder.datasourceId;
@@ -165,7 +165,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static CubeTableList create() {
+        public static ChildTables create() {
             return builder().build();
         }
 
@@ -238,8 +238,222 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             private Builder() {
             } 
 
+            private Builder(ChildTables model) {
+                this.caption = model.caption;
+                this.customsql = model.customsql;
+                this.datasourceId = model.datasourceId;
+                this.dsType = model.dsType;
+                this.factTable = model.factTable;
+                this.sql = model.sql;
+                this.tableName = model.tableName;
+                this.uniqueId = model.uniqueId;
+            } 
+
+            /**
+             * Caption.
+             */
+            public Builder caption(String caption) {
+                this.caption = caption;
+                return this;
+            }
+
+            /**
+             * Customsql.
+             */
+            public Builder customsql(Boolean customsql) {
+                this.customsql = customsql;
+                return this;
+            }
+
+            /**
+             * DatasourceId.
+             */
+            public Builder datasourceId(String datasourceId) {
+                this.datasourceId = datasourceId;
+                return this;
+            }
+
+            /**
+             * DsType.
+             */
+            public Builder dsType(String dsType) {
+                this.dsType = dsType;
+                return this;
+            }
+
+            /**
+             * FactTable.
+             */
+            public Builder factTable(Boolean factTable) {
+                this.factTable = factTable;
+                return this;
+            }
+
+            /**
+             * Sql.
+             */
+            public Builder sql(String sql) {
+                this.sql = sql;
+                return this;
+            }
+
+            /**
+             * TableName.
+             */
+            public Builder tableName(String tableName) {
+                this.tableName = tableName;
+                return this;
+            }
+
+            /**
+             * UniqueId.
+             */
+            public Builder uniqueId(String uniqueId) {
+                this.uniqueId = uniqueId;
+                return this;
+            }
+
+            public ChildTables build() {
+                return new ChildTables(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link QueryDatasetInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDatasetInfoResponseBody</p>
+     */
+    public static class CubeTableList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Caption")
+        private String caption;
+
+        @com.aliyun.core.annotation.NameInMap("ChildTables")
+        private java.util.List<ChildTables> childTables;
+
+        @com.aliyun.core.annotation.NameInMap("Customsql")
+        private Boolean customsql;
+
+        @com.aliyun.core.annotation.NameInMap("DatasourceId")
+        private String datasourceId;
+
+        @com.aliyun.core.annotation.NameInMap("DsType")
+        private String dsType;
+
+        @com.aliyun.core.annotation.NameInMap("FactTable")
+        private Boolean factTable;
+
+        @com.aliyun.core.annotation.NameInMap("Sql")
+        private String sql;
+
+        @com.aliyun.core.annotation.NameInMap("TableName")
+        private String tableName;
+
+        @com.aliyun.core.annotation.NameInMap("UniqueId")
+        private String uniqueId;
+
+        private CubeTableList(Builder builder) {
+            this.caption = builder.caption;
+            this.childTables = builder.childTables;
+            this.customsql = builder.customsql;
+            this.datasourceId = builder.datasourceId;
+            this.dsType = builder.dsType;
+            this.factTable = builder.factTable;
+            this.sql = builder.sql;
+            this.tableName = builder.tableName;
+            this.uniqueId = builder.uniqueId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CubeTableList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return caption
+         */
+        public String getCaption() {
+            return this.caption;
+        }
+
+        /**
+         * @return childTables
+         */
+        public java.util.List<ChildTables> getChildTables() {
+            return this.childTables;
+        }
+
+        /**
+         * @return customsql
+         */
+        public Boolean getCustomsql() {
+            return this.customsql;
+        }
+
+        /**
+         * @return datasourceId
+         */
+        public String getDatasourceId() {
+            return this.datasourceId;
+        }
+
+        /**
+         * @return dsType
+         */
+        public String getDsType() {
+            return this.dsType;
+        }
+
+        /**
+         * @return factTable
+         */
+        public Boolean getFactTable() {
+            return this.factTable;
+        }
+
+        /**
+         * @return sql
+         */
+        public String getSql() {
+            return this.sql;
+        }
+
+        /**
+         * @return tableName
+         */
+        public String getTableName() {
+            return this.tableName;
+        }
+
+        /**
+         * @return uniqueId
+         */
+        public String getUniqueId() {
+            return this.uniqueId;
+        }
+
+        public static final class Builder {
+            private String caption; 
+            private java.util.List<ChildTables> childTables; 
+            private Boolean customsql; 
+            private String datasourceId; 
+            private String dsType; 
+            private Boolean factTable; 
+            private String sql; 
+            private String tableName; 
+            private String uniqueId; 
+
+            private Builder() {
+            } 
+
             private Builder(CubeTableList model) {
                 this.caption = model.caption;
+                this.childTables = model.childTables;
                 this.customsql = model.customsql;
                 this.datasourceId = model.datasourceId;
                 this.dsType = model.dsType;
@@ -261,6 +475,14 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
              */
             public Builder caption(String caption) {
                 this.caption = caption;
+                return this;
+            }
+
+            /**
+             * ChildTables.
+             */
+            public Builder childTables(java.util.List<ChildTables> childTables) {
+                this.childTables = childTables;
                 return this;
             }
 
@@ -758,7 +980,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
              * <p>Test directory</p>
              * 
              * <strong>example:</strong>
-             * <p>测试目录</p>
+             * <p>The name of the directory.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -780,7 +1002,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
              * <p>The path of the directory ID, for example, aa/bb/cc/dd.</p>
              * 
              * <strong>example:</strong>
-             * <p>测试目录</p>
+             * <p>The path name of the directory ID, for example, one-level directory /two-level directory.</p>
              */
             public Builder pathName(String pathName) {
                 this.pathName = pathName;
@@ -1472,7 +1694,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
              * <p>The unique ID of the data source.</p>
              * 
              * <strong>example:</strong>
-             * <p>大娃</p>
+             * <p>The name of the dataset owner.</p>
              */
             public Builder ownerName(String ownerName) {
                 this.ownerName = ownerName;
@@ -1509,7 +1731,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
              * <p>Big Baby</p>
              * 
              * <strong>example:</strong>
-             * <p>测试空间</p>
+             * <p>The name of the workspace in which the dataset resides.</p>
              */
             public Builder workspaceName(String workspaceName) {
                 this.workspaceName = workspaceName;

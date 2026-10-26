@@ -212,7 +212,7 @@ public class QuerySharesToUserListResponseBody extends TeaModel {
              * <p>The name of the resource.</p>
              * 
              * <strong>example:</strong>
-             * <p>图表报表</p>
+             * <p>Chart Report</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -231,7 +231,7 @@ public class QuerySharesToUserListResponseBody extends TeaModel {
              * <p>The path name of the directory where the resource is located.</p>
              * 
              * <strong>example:</strong>
-             * <p>一级目录/二级目录</p>
+             * <p>Level -1 Directory /Level -2 Directory</p>
              */
             public Builder pathName(String pathName) {
                 this.pathName = pathName;
@@ -481,7 +481,7 @@ public class QuerySharesToUserListResponseBody extends TeaModel {
              * <p>Remarks on the work.</p>
              * 
              * <strong>example:</strong>
-             * <p>测试报表的描述</p>
+             * <p>Description of the test report</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -600,7 +600,7 @@ public class QuerySharesToUserListResponseBody extends TeaModel {
              * <p>The name of the report.</p>
              * 
              * <strong>example:</strong>
-             * <p>测试报表</p>
+             * <p>Test report</p>
              */
             public Builder workName(String workName) {
                 this.workName = workName;
@@ -651,7 +651,7 @@ public class QuerySharesToUserListResponseBody extends TeaModel {
              * <p>The name of the workspace to which the report belongs.</p>
              * 
              * <strong>example:</strong>
-             * <p>专业版回归</p>
+             * <p>Return to Professional Edition</p>
              */
             public Builder workspaceName(String workspaceName) {
                 this.workspaceName = workspaceName;

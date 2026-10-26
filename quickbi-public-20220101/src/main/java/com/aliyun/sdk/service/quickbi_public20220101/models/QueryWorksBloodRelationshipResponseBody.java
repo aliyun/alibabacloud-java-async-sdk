@@ -264,7 +264,7 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
              * <p>The name of the owning location.</p>
              * 
              * <strong>example:</strong>
-             * <p>列（度量）</p>
+             * <p>Column (Measure)</p>
              */
             public Builder areaName(String areaName) {
                 this.areaName = areaName;
@@ -309,7 +309,7 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
              * <p>Calculate field expression.</p>
              * 
              * <strong>example:</strong>
-             * <p>BI_DATEADD([时间], 100, \&quot;day\&quot;)</p>
+             * <p>BI_DATEADD([date], 100, \&quot;day\&quot;)</p>
              */
             public Builder expression(String expression) {
                 this.expression = expression;
@@ -489,7 +489,7 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
              * <p>The name of the component.</p>
              * 
              * <strong>example:</strong>
-             * <p>线图</p>
+             * <p>Line</p>
              */
             public Builder componentName(String componentName) {
                 this.componentName = componentName;
@@ -511,7 +511,7 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
              * <p>Chinese name of the component type</p>
              * 
              * <strong>example:</strong>
-             * <p>交叉表</p>
+             * <p>ddd</p>
              */
             public Builder componentTypeCnName(String componentTypeCnName) {
                 this.componentTypeCnName = componentTypeCnName;

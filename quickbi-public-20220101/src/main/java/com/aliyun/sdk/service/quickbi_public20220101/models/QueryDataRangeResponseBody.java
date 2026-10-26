@@ -83,7 +83,7 @@ public class QueryDataRangeResponseBody extends TeaModel {
          * <p>Request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
+         * <p>D787E1A3-A93C-****-B626-C2B05DF8D885</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -188,7 +188,7 @@ public class QueryDataRangeResponseBody extends TeaModel {
              * <p>Alias of the LlmCube resource.</p>
              * 
              * <strong>example:</strong>
-             * <p>测试</p>
+             * <p>test</p>
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -199,7 +199,7 @@ public class QueryDataRangeResponseBody extends TeaModel {
              * <p>Nickname of the creator.</p>
              * 
              * <strong>example:</strong>
-             * <p>诸葛</p>
+             * <p>zhuge</p>
              */
             public Builder createUser(String createUser) {
                 this.createUser = createUser;
@@ -293,7 +293,7 @@ public class QueryDataRangeResponseBody extends TeaModel {
              * <p>Alias of the LLM cube resource.</p>
              * 
              * <strong>example:</strong>
-             * <p>测哈</p>
+             * <p>test</p>
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -304,7 +304,7 @@ public class QueryDataRangeResponseBody extends TeaModel {
              * <p>Nickname of the creator.</p>
              * 
              * <strong>example:</strong>
-             * <p>诸葛</p>
+             * <p>zhuge</p>
              */
             public Builder createUser(String createUser) {
                 this.createUser = createUser;
@@ -419,7 +419,7 @@ public class QueryDataRangeResponseBody extends TeaModel {
              * <p>Nickname of the creator.</p>
              * 
              * <strong>example:</strong>
-             * <p>诸葛</p>
+             * <p>zhuge</p>
              */
             public Builder createUser(String createUser) {
                 this.createUser = createUser;
@@ -441,7 +441,7 @@ public class QueryDataRangeResponseBody extends TeaModel {
              * <p>Nickname of the analysis theme.</p>
              * 
              * <strong>example:</strong>
-             * <p>测试主题</p>
+             * <p>test theme</p>
              */
             public Builder themeName(String themeName) {
                 this.themeName = themeName;

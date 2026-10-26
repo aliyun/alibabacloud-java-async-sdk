@@ -332,7 +332,7 @@ public class QueryWorkspaceRoleConfigResponseBody extends TeaModel {
              * <p>Role name.</p>
              * 
              * <strong>example:</strong>
-             * <p>空间管理员</p>
+             * <p>pace administrator</p>
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;

@@ -184,6 +184,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateTicketResponse> createTicket(CreateTicketRequest request);
 
     /**
+     * @param request the request parameters of CreateTicket4AiPro  CreateTicket4AiProRequest
+     * @return CreateTicket4AiProResponse
+     */
+    CompletableFuture<CreateTicket4AiProResponse> createTicket4AiPro(CreateTicket4AiProRequest request);
+
+    /**
      * @param request the request parameters of CreateTicket4Copilot  CreateTicket4CopilotRequest
      * @return CreateTicket4CopilotResponse
      */
@@ -477,6 +483,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ManualRunMailTaskResponse> manualRunMailTask(ManualRunMailTaskRequest request);
 
     /**
+     * @param request the request parameters of ModifyAiproEmbedConfig  ModifyAiproEmbedConfigRequest
+     * @return ModifyAiproEmbedConfigResponse
+     */
+    CompletableFuture<ModifyAiproEmbedConfigResponse> modifyAiproEmbedConfig(ModifyAiproEmbedConfigRequest request);
+
+    /**
      * <b>description</b> :
      * <p>When you modify a query statement, you can modify only the top-level JsonObject. You cannot modify parameters that are nested in multiple layers. For more information about the parameters, see <a href="https://help.aliyun.com/document_detail/409330.html">Create an API data source</a>.</p>
      * 
@@ -502,6 +514,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return QueryAccelerationLogByCubeIdResponse
      */
     CompletableFuture<QueryAccelerationLogByCubeIdResponse> queryAccelerationLogByCubeId(QueryAccelerationLogByCubeIdRequest request);
+
+    /**
+     * @param request the request parameters of QueryAiproEmbedConfig  QueryAiproEmbedConfigRequest
+     * @return QueryAiproEmbedConfigResponse
+     */
+    CompletableFuture<QueryAiproEmbedConfigResponse> queryAiproEmbedConfig(QueryAiproEmbedConfigRequest request);
 
     /**
      * @param request the request parameters of QueryApprovalInfo  QueryApprovalInfoRequest
@@ -897,6 +915,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateDataSourceResponse
      */
     CompletableFuture<UpdateDataSourceResponse> updateDataSource(UpdateDataSourceRequest request);
+
+    /**
+     * @param request the request parameters of UpdateDataSourceProperties  UpdateDataSourcePropertiesRequest
+     * @return UpdateDataSourcePropertiesResponse
+     */
+    CompletableFuture<UpdateDataSourcePropertiesResponse> updateDataSourceProperties(UpdateDataSourcePropertiesRequest request);
 
     /**
      * @param request the request parameters of UpdateEmbeddedStatus  UpdateEmbeddedStatusRequest

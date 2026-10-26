@@ -207,7 +207,7 @@ public class GetWorksEmbedListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the report was embedded, in the format of YYYY-mm-DD hh:MM:ss.</p>
+             * <p>The time when the report was embedded. Format: YYYY-MM-DD hh:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>YYYY-mm-DD hh:MM:ss</p>

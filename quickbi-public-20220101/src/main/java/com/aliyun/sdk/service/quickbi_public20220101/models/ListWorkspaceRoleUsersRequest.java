@@ -119,7 +119,7 @@ public class ListWorkspaceRoleUsersRequest extends Request {
          * <p>Keyword for the user\&quot;s nickname.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试pop用户</p>
+         * <p>test</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);

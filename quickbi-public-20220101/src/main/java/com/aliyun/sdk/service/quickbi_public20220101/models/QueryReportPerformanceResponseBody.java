@@ -91,7 +91,7 @@ public class QueryReportPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned results.</p>
+         * <p>The list of report performance logs, which includes report information and performance statistics such as query count, query duration, and cache hits.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -99,10 +99,10 @@ public class QueryReportPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
          * <ul>
-         * <li>true: The request was successful.</li>
-         * <li>false: The request failed.</li>
+         * <li>true: The request is successful.</li>
+         * <li>false: The request fails.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -458,7 +458,7 @@ public class QueryReportPerformanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The average duration of cache hits.</p>
+             * <p>The average time consumed for cache hits.</p>
              * 
              * <strong>example:</strong>
              * <p>2.2</p>
@@ -480,7 +480,7 @@ public class QueryReportPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of times the chart is queried.</p>
+             * <p>The number of chart queries.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -491,7 +491,7 @@ public class QueryReportPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The average number of times the chart is queried.</p>
+             * <p>The average number of chart queries.</p>
              * 
              * <strong>example:</strong>
              * <p>2.0</p>
@@ -502,7 +502,7 @@ public class QueryReportPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The average query duration associated with the SQL pattern.</p>
+             * <p>The average query time.</p>
              * 
              * <strong>example:</strong>
              * <p>0.2</p>
@@ -535,7 +535,7 @@ public class QueryReportPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The percentage of the number of queries that exceed the 5S.</p>
+             * <p>The proportion of queries that take more than 5 seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>0.5</p>
@@ -546,7 +546,7 @@ public class QueryReportPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Query the proportion of more than 5S.</p>
+             * <p>The percentage of queries that take more than 5 seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>0.5</p>
@@ -557,7 +557,7 @@ public class QueryReportPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The percentage of queries that exceed 10s.</p>
+             * <p>The percentage of queries that take more than 10 seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>0.5</p>
@@ -568,7 +568,7 @@ public class QueryReportPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of queries that exceed 10 seconds.</p>
+             * <p>The number of queries that take more than 10 seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>0.5</p>
@@ -579,7 +579,7 @@ public class QueryReportPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of times that the chart query times out.</p>
+             * <p>The number of chart query timeouts.</p>
              * 
              * <strong>example:</strong>
              * <p>8</p>
@@ -590,7 +590,7 @@ public class QueryReportPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The percentage of timeout times for chart queries.</p>
+             * <p>The proportion of chart query timeouts.</p>
              * 
              * <strong>example:</strong>
              * <p>0.5</p>
@@ -601,7 +601,7 @@ public class QueryReportPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The average time consumed by the Quick engine query.</p>
+             * <p>The average query time for Quick engine hits.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -612,7 +612,7 @@ public class QueryReportPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of times that the Quick engine is hit.</p>
+             * <p>The number of Quick engine hits.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -623,7 +623,7 @@ public class QueryReportPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The proportion of duplicate queries.</p>
+             * <p>The proportion of repeated queries.</p>
              * 
              * <strong>example:</strong>
              * <p>0.8</p>
@@ -634,7 +634,7 @@ public class QueryReportPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of duplicate queries.</p>
+             * <p>The number of repeated queries.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -645,7 +645,7 @@ public class QueryReportPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of times the query is repeated.</p>
+             * <p>The number of repeated SQL queries.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -656,7 +656,7 @@ public class QueryReportPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The proportion of duplicate queries.</p>
+             * <p>The proportion of repeated queries.</p>
              * 
              * <strong>example:</strong>
              * <p>0.7</p>
@@ -667,7 +667,7 @@ public class QueryReportPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the work.</p>
+             * <p>The report ID.</p>
              * 
              * <strong>example:</strong>
              * <p>6b407e50-e774-406b-9956-da2425c2****</p>
@@ -678,7 +678,7 @@ public class QueryReportPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the report.</p>
+             * <p>The report name.</p>
              * 
              * <strong>example:</strong>
              * <p>ClusterAddonUpgradeReport</p>
@@ -689,7 +689,7 @@ public class QueryReportPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The format of the report.</p>
+             * <p>The report type.</p>
              * 
              * <strong>example:</strong>
              * <p>report</p>
@@ -700,7 +700,7 @@ public class QueryReportPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the workspace to which the work belongs.</p>
+             * <p>The ID of the workspace to which the report belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>ab46ed33-6278-4ef7-8013-8c1335f266ee</p>
@@ -711,10 +711,10 @@ public class QueryReportPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the group.</p>
+             * <p>The workspace name.</p>
              * 
              * <strong>example:</strong>
-             * <p>自定义模板</p>
+             * <p>Custom template</p>
              */
             public Builder workspaceName(String workspaceName) {
                 this.workspaceName = workspaceName;

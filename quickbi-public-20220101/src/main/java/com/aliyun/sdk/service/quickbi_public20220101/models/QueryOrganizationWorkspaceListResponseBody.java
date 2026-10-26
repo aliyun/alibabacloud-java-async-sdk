@@ -91,7 +91,7 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The paginated result of the workspace list. The detailed information of workspaces is stored in the Data response parameter.</p>
+         * <p>The paginated result of the workspace list. The detailed information of the workspaces is stored in the Data response parameter.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -99,10 +99,10 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
          * <ul>
-         * <li>true: The request was successful.</li>
-         * <li>false: The request failed.</li>
+         * <li>true: The request is successful.</li>
+         * <li>false: The request fails.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -263,11 +263,10 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Specifies how images are handled when exporting Excel files with formatting. This field takes effect only when configured at the organization level.
-             * Valid values:</p>
+             * <p>The image processing method when exporting to Excel with formatting. This parameter takes effect only when configured at the organization level. Valid values:</p>
              * <ul>
              * <li>false: Image fields are not converted to images.</li>
-             * <li>true: Image fields can be converted to images. The option appears on the report export page, and users must manually select it to convert images.</li>
+             * <li>true: Image fields are converted to images. The option is displayed on the report export page, and users must manually select it to convert to images.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -279,7 +278,7 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to allow exporting data as an Excel file.</p>
+             * <p>Specifies whether to export data to Excel.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -290,7 +289,7 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The default export type (with formatting: true. Without formatting: false).</p>
+             * <p>The default export type. Valid values: true (with formatting) and false (without formatting).</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -301,7 +300,7 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The master switch for export. If set to false, all export settings below do not take effect.</p>
+             * <p>The master switch for export. If this parameter is set to false, the following configurations do not take effect.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -312,7 +311,7 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to allow exporting to a local device.</p>
+             * <p>Specifies whether to export to the local device.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -323,7 +322,7 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether public links of works support export.</p>
+             * <p>Specifies whether to support exporting public links of the content.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -334,7 +333,7 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to allow exporting to a server.</p>
+             * <p>Specifies whether to export to the server.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -345,7 +344,7 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to allow exporting as an image.</p>
+             * <p>Specifies whether to export images.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -356,7 +355,7 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to allow exporting as a PDF.</p>
+             * <p>Specifies whether to export to PDF.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -608,7 +607,7 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether works can be made public. Valid values:</p>
+             * <p>Indicates whether the content can be made public. Valid values:</p>
              * <ul>
              * <li>true: Public.</li>
              * <li>false: Not public.</li>
@@ -623,7 +622,7 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether works can be shared with authorization. Valid values:</p>
+             * <p>Indicates whether the content can be shared with authorization. Valid values:</p>
              * <ul>
              * <li>true: Authorized.</li>
              * <li>false: Not authorized.</li>
@@ -638,7 +637,7 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the workspace was created.</p>
+             * <p>The time when the workspace was created. The time is in the yyyy-MM-dd HH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-11-10 17:51:07</p>
@@ -671,7 +670,7 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the workspace was last modified.</p>
+             * <p>The time when the workspace was last modified. The time is in the yyyy-MM-dd HH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-11-10 17:51:07</p>
@@ -906,7 +905,7 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of rows per page specified in the request.</p>
+             * <p>The number of entries per page.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -917,7 +916,7 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of rows.</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

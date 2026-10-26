@@ -199,7 +199,7 @@ public class QueryUserTagValueListResponseBody extends TeaModel {
              * <p>Tag name.</p>
              * 
              * <strong>example:</strong>
-             * <p>职位</p>
+             * <p>Position</p>
              */
             public Builder tagName(String tagName) {
                 this.tagName = tagName;
@@ -210,7 +210,7 @@ public class QueryUserTagValueListResponseBody extends TeaModel {
              * <p>The value of the tag.</p>
              * 
              * <strong>example:</strong>
-             * <p>主管</p>
+             * <p>Supervisor</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

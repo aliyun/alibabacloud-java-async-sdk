@@ -105,7 +105,7 @@ public class ListSharedReportsRequest extends Request {
          * <p>Keyword of the name of the work.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试报表</p>
+         * <p>Test report</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);

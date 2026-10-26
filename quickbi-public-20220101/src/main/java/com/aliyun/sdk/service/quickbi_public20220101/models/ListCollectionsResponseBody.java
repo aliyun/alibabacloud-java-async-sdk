@@ -269,7 +269,7 @@ public class ListCollectionsResponseBody extends TeaModel {
              * <p>The name of the work.</p>
              * 
              * <strong>example:</strong>
-             * <p>奇异博士</p>
+             * <p>test</p>
              */
             public Builder worksName(String worksName) {
                 this.worksName = worksName;
@@ -309,7 +309,7 @@ public class ListCollectionsResponseBody extends TeaModel {
              * <p>Workspace Name.</p>
              * 
              * <strong>example:</strong>
-             * <p>测试工作空间</p>
+             * <p>test</p>
              */
             public Builder workspaceName(String workspaceName) {
                 this.workspaceName = workspaceName;

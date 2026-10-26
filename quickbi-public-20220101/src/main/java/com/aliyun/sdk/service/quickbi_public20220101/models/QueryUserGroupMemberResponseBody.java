@@ -240,7 +240,7 @@ public class QueryUserGroupMemberResponseBody extends TeaModel {
              * <p>Name or nickname of the user group or its member.</p>
              * 
              * <strong>example:</strong>
-             * <p>小刘的测试用户组</p>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -262,7 +262,7 @@ public class QueryUserGroupMemberResponseBody extends TeaModel {
              * <p>Name of the parent user group.</p>
              * 
              * <strong>example:</strong>
-             * <p>财务组</p>
+             * <p>test</p>
              */
             public Builder parentUserGroupName(String parentUserGroupName) {
                 this.parentUserGroupName = parentUserGroupName;

@@ -145,7 +145,7 @@ public class QueryComponentPerformanceRequest extends Request {
         } 
 
         /**
-         * <p>The average duration (minutes).</p>
+         * <p>The average duration, in minutes.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -157,11 +157,7 @@ public class QueryComponentPerformanceRequest extends Request {
         }
 
         /**
-         * <p>The current page number of the workspace member list:</p>
-         * <ul>
-         * <li>Pages start from page 1.</li>
-         * <li>Default value: 1.</li>
-         * </ul>
+         * <p>The current page number of the workspace member list. Starting value: 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -173,11 +169,7 @@ public class QueryComponentPerformanceRequest extends Request {
         }
 
         /**
-         * <p>The number of rows per page in a paged query.</p>
-         * <ul>
-         * <li>Default value: 10.</li>
-         * <li>Maximum value: 1,000.</li>
-         * </ul>
+         * <p>The number of entries per page for a paged query. Default value: 10. Maximum value: 1000.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -191,9 +183,9 @@ public class QueryComponentPerformanceRequest extends Request {
         /**
          * <p>The query type. Valid values:</p>
          * <ul>
-         * <li><strong>lastDay</strong>: Yesterday</li>
-         * <li><strong>sevenDays</strong>: Within seven days</li>
-         * <li><strong>thirtyDays</strong>: Within 30 days</li>
+         * <li><strong>lastDay</strong>: yesterday</li>
+         * <li><strong>sevenDays</strong>: within the last seven days</li>
+         * <li><strong>thirtyDays</strong>: within the last thirty days</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -207,7 +199,7 @@ public class QueryComponentPerformanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the work. The works here include BI portal, dashboards, spreadsheets, and self-service access.</p>
+         * <p>The ID of the report. Reports include data portals, dashboards, workbooks, and ad hoc queries.</p>
          * 
          * <strong>example:</strong>
          * <p>6b407e50-e774-406b-9956-da2425c2****</p>
@@ -219,7 +211,7 @@ public class QueryComponentPerformanceRequest extends Request {
         }
 
         /**
-         * <p>The resource types.</p>
+         * <p>The resource type.</p>
          * 
          * <strong>example:</strong>
          * <p>report</p>

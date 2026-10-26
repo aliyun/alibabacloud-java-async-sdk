@@ -212,7 +212,7 @@ public class QueryWorksByWorkspaceResponseBody extends TeaModel {
              * <p>The name of the directory.</p>
              * 
              * <strong>example:</strong>
-             * <p>所属目录名称。</p>
+             * <p>The name of the directory.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -234,7 +234,7 @@ public class QueryWorksByWorkspaceResponseBody extends TeaModel {
              * <p>The hierarchical structure of the directory to which the directory belongs. Separate the hierarchical structure with a (/).</p>
              * 
              * <strong>example:</strong>
-             * <p>测试目录</p>
+             * <p>Test directory</p>
              */
             public Builder pathName(String pathName) {
                 this.pathName = pathName;
@@ -514,7 +514,7 @@ public class QueryWorksByWorkspaceResponseBody extends TeaModel {
              * <p>Remarks on the work.</p>
              * 
              * <strong>example:</strong>
-             * <p>备注</p>
+             * <p>Description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -555,7 +555,7 @@ public class QueryWorksByWorkspaceResponseBody extends TeaModel {
              * <p>Nickname of the work modifier.</p>
              * 
              * <strong>example:</strong>
-             * <p>张三</p>
+             * <p>Tom</p>
              */
             public Builder modifyName(String modifyName) {
                 this.modifyName = modifyName;
@@ -566,7 +566,7 @@ public class QueryWorksByWorkspaceResponseBody extends TeaModel {
              * <p>The user ID of the work owner in the Quick BI.</p>
              * 
              * <strong>example:</strong>
-             * <p>作品所属工作空间名称。</p>
+             * <p>The name of the workspace to which the work belongs.</p>
              */
             public Builder ownerId(String ownerId) {
                 this.ownerId = ownerId;
@@ -577,7 +577,7 @@ public class QueryWorksByWorkspaceResponseBody extends TeaModel {
              * <p>The nickname of the work owner.</p>
              * 
              * <strong>example:</strong>
-             * <p>李四</p>
+             * <p>Li Si</p>
              */
             public Builder ownerName(String ownerName) {
                 this.ownerName = ownerName;
@@ -651,7 +651,7 @@ public class QueryWorksByWorkspaceResponseBody extends TeaModel {
              * <p>The name of the work.</p>
              * 
              * <strong>example:</strong>
-             * <p>测试报表</p>
+             * <p>Test report</p>
              */
             public Builder workName(String workName) {
                 this.workName = workName;
@@ -704,7 +704,7 @@ public class QueryWorksByWorkspaceResponseBody extends TeaModel {
              * <p>The name of the workspace to which the work belongs.</p>
              * 
              * <strong>example:</strong>
-             * <p>测试工作空间</p>
+             * <p>Test Workspace</p>
              */
             public Builder workspaceName(String workspaceName) {
                 this.workspaceName = workspaceName;

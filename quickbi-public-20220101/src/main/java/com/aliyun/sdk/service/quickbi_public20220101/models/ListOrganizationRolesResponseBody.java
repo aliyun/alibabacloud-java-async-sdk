@@ -307,7 +307,7 @@ public class ListOrganizationRolesResponseBody extends TeaModel {
              * <p>Role name.</p>
              * 
              * <strong>example:</strong>
-             * <p>组织管理员</p>
+             * <p>Organization Admin</p>
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;

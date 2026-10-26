@@ -105,7 +105,7 @@ public class ListOrganizationRoleUsersRequest extends Request {
          * <p>Keyword for the nickname of the organization member.</p>
          * 
          * <strong>example:</strong>
-         * <p>小刘</p>
+         * <p>zhangsan</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);

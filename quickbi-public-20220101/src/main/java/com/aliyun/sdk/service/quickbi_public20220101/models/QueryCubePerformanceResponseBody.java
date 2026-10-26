@@ -91,7 +91,7 @@ public class QueryCubePerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Array of report objects</p>
+         * <p>The list of dataset performance logs, which includes dataset information and performance statistics information such as query count, query duration, and cache hits.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -99,9 +99,9 @@ public class QueryCubePerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
          * <ul>
-         * <li>true: The request was successful.</li>
+         * <li>true: The request succeeded.</li>
          * <li>false: The request failed.</li>
          * </ul>
          * 
@@ -419,7 +419,7 @@ public class QueryCubePerformanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The average duration of cache hits.</p>
+             * <p>The average duration for cache hits.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -441,7 +441,7 @@ public class QueryCubePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The average query duration associated with the SQL pattern.</p>
+             * <p>The average query duration.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -463,7 +463,7 @@ public class QueryCubePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the dataset.</p>
+             * <p>The dataset name.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -496,7 +496,7 @@ public class QueryCubePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The percentage of the number of queries that exceed the 5S.</p>
+             * <p>The proportion of queries that take more than 5 seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0</p>
@@ -507,7 +507,7 @@ public class QueryCubePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Query the proportion of more than 5S.</p>
+             * <p>The percentage of queries that take more than 5 seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0</p>
@@ -518,7 +518,7 @@ public class QueryCubePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The percentage of queries that exceed 10s.</p>
+             * <p>The percentage of queries that take more than 10 seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0</p>
@@ -529,7 +529,7 @@ public class QueryCubePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The percentage of queries that exceed 10s.</p>
+             * <p>The proportion of queries that take more than 10 seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0</p>
@@ -540,7 +540,7 @@ public class QueryCubePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of times that the chart query times out.</p>
+             * <p>The number of chart query timeouts.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -551,7 +551,7 @@ public class QueryCubePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The percentage of timeout times for chart queries.</p>
+             * <p>The proportion of chart query timeouts.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -562,7 +562,7 @@ public class QueryCubePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The average time consumed by the Quick engine query.</p>
+             * <p>The average query duration for Quick engine hits.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -573,7 +573,7 @@ public class QueryCubePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of times that the Quick engine is hit.</p>
+             * <p>The number of Quick engine hits.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -584,7 +584,7 @@ public class QueryCubePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The proportion of duplicate queries.</p>
+             * <p>The proportion of repeated queries.</p>
              * 
              * <strong>example:</strong>
              * <p>0.3</p>
@@ -595,7 +595,7 @@ public class QueryCubePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of duplicate queries.</p>
+             * <p>The number of repeated queries.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -606,7 +606,7 @@ public class QueryCubePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of times the query is repeated.</p>
+             * <p>The number of repeated queries.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -617,7 +617,7 @@ public class QueryCubePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The proportion of duplicate queries.</p>
+             * <p>The proportion of repeated queries.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -628,7 +628,7 @@ public class QueryCubePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the workspace to which the work belongs.</p>
+             * <p>The ID of the workspace to which the resource belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>87c6b145-090c-43e1-9426-8f93be23****</p>
@@ -639,10 +639,10 @@ public class QueryCubePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the group.</p>
+             * <p>The workspace name.</p>
              * 
              * <strong>example:</strong>
-             * <p>测试工作空间</p>
+             * <p>Test workspace</p>
              */
             public Builder workspaceName(String workspaceName) {
                 this.workspaceName = workspaceName;

@@ -373,7 +373,7 @@ public class ListSharedReportsResponseBody extends TeaModel {
              * <p>The name of the work.</p>
              * 
              * <strong>example:</strong>
-             * <p>测试报表</p>
+             * <p>Test report</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -384,7 +384,7 @@ public class ListSharedReportsResponseBody extends TeaModel {
              * <p>The Alibaba Cloud account name of the work owner.</p>
              * 
              * <strong>example:</strong>
-             * <p>test账号</p>
+             * <p>test account</p>
              */
             public Builder ownerName(String ownerName) {
                 this.ownerName = ownerName;
@@ -461,7 +461,7 @@ public class ListSharedReportsResponseBody extends TeaModel {
              * <p>The name of the workspace to which the work belongs.</p>
              * 
              * <strong>example:</strong>
-             * <p>测试工作空间</p>
+             * <p>Test Workspace</p>
              */
             public Builder workspaceName(String workspaceName) {
                 this.workspaceName = workspaceName;

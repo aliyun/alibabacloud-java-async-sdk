@@ -77,7 +77,7 @@ public class AddUserTagMetaRequest extends Request {
          * <p>Tag description. Format check: maximum length of 255 characters.</p>
          * 
          * <strong>example:</strong>
-         * <p>部门内的职位</p>
+         * <p>test</p>
          */
         public Builder tagDescription(String tagDescription) {
             this.putQueryParameter("TagDescription", tagDescription);
@@ -94,7 +94,7 @@ public class AddUserTagMetaRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>职位</p>
+         * <p>test</p>
          */
         public Builder tagName(String tagName) {
             this.putQueryParameter("TagName", tagName);

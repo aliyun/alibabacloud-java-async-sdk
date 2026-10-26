@@ -91,10 +91,10 @@ public class UpdateWorkspaceUserRoleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the operation was successful. Valid values:</p>
+         * <p>The execution result of the API operation. Valid values:</p>
          * <ul>
-         * <li>true: The operation succeeded.</li>
-         * <li>false: The operation failed.</li>
+         * <li>true: The execution succeeded.</li>
+         * <li>false: The execution failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -106,7 +106,7 @@ public class UpdateWorkspaceUserRoleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the request succeeded. Valid values:</p>
          * <ul>
          * <li>true: The request succeeded.</li>
          * <li>false: The request failed.</li>

@@ -107,7 +107,7 @@ public class ResultCallbackRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>你不是A部门分析师。</p>
+         * <p>You are not a Division A analyst.</p>
          */
         public Builder handleReason(String handleReason) {
             this.putQueryParameter("HandleReason", handleReason);

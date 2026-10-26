@@ -216,7 +216,7 @@ public class QueryUserRoleInfoInWorkspaceResponseBody extends TeaModel {
              * <p>Preset role name.</p>
              * 
              * <strong>example:</strong>
-             * <p>空间管理员</p>
+             * <p>test</p>
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;

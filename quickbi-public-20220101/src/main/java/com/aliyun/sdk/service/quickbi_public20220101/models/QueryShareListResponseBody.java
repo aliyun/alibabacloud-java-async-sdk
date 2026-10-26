@@ -315,7 +315,7 @@ public class QueryShareListResponseBody extends TeaModel {
              * <p>The name of the sharing target.</p>
              * 
              * <strong>example:</strong>
-             * <p>小张</p>
+             * <p>test</p>
              */
             public Builder shareToName(String shareToName) {
                 this.shareToName = shareToName;

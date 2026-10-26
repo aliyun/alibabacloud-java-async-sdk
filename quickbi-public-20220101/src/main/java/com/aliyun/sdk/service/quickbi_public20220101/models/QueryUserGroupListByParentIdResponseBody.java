@@ -329,7 +329,7 @@ public class QueryUserGroupListByParentIdResponseBody extends TeaModel {
              * <p>The description of the sub-user group.</p>
              * 
              * <strong>example:</strong>
-             * <p>用来测试的用户组</p>
+             * <p>User Group for Testing</p>
              */
             public Builder userGroupDescription(String userGroupDescription) {
                 this.userGroupDescription = userGroupDescription;
@@ -351,7 +351,7 @@ public class QueryUserGroupListByParentIdResponseBody extends TeaModel {
              * <p>The name of the sub-user group.</p>
              * 
              * <strong>example:</strong>
-             * <p>popapi测试分组</p>
+             * <p>popapi test group</p>
              */
             public Builder userGroupName(String userGroupName) {
                 this.userGroupName = userGroupName;

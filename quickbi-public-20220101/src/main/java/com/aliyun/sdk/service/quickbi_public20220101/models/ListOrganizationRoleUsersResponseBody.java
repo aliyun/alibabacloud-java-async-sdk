@@ -83,7 +83,7 @@ public class ListOrganizationRoleUsersResponseBody extends TeaModel {
          * <p>Request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>BCE45E6D-9304-4F94-86BB-5A772B1615FF</p>
+         * <p>BCE45E6D-****-4F94-86BB-****2B1615FF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -175,7 +175,7 @@ public class ListOrganizationRoleUsersResponseBody extends TeaModel {
              * <p>Nickname of the organization member.</p>
              * 
              * <strong>example:</strong>
-             * <p>测试用户</p>
+             * <p>Test User</p>
              */
             public Builder nickName(String nickName) {
                 this.nickName = nickName;

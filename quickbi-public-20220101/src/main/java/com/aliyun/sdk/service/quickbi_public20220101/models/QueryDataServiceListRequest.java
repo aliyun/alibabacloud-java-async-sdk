@@ -104,7 +104,7 @@ public class QueryDataServiceListRequest extends Request {
          * <p>Data service name.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试sql</p>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

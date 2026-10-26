@@ -329,7 +329,7 @@ public class ListUserGroupsByUserIdResponseBody extends TeaModel {
              * <p>The description of the user group.</p>
              * 
              * <strong>example:</strong>
-             * <p>备注</p>
+             * <p>Description</p>
              */
             public Builder usergroupDesc(String usergroupDesc) {
                 this.usergroupDesc = usergroupDesc;
@@ -351,7 +351,7 @@ public class ListUserGroupsByUserIdResponseBody extends TeaModel {
              * <p>The name of the user group.</p>
              * 
              * <strong>example:</strong>
-             * <p>测试用户组</p>
+             * <p>Test user group</p>
              */
             public Builder usergroupName(String usergroupName) {
                 this.usergroupName = usergroupName;

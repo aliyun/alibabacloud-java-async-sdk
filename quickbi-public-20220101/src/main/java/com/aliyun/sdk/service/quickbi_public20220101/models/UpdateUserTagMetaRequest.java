@@ -95,7 +95,7 @@ public class UpdateUserTagMetaRequest extends Request {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>部门内的工作职位</p>
+         * <p>Job Positions within the Department</p>
          */
         public Builder tagDescription(String tagDescription) {
             this.putQueryParameter("TagDescription", tagDescription);
@@ -128,7 +128,7 @@ public class UpdateUserTagMetaRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>职位</p>
+         * <p>Department</p>
          */
         public Builder tagName(String tagName) {
             this.putQueryParameter("TagName", tagName);
