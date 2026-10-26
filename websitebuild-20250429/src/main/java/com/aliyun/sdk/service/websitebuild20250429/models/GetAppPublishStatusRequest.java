@@ -122,7 +122,7 @@ public class GetAppPublishStatusRequest extends Request {
         }
 
         /**
-         * <p>The deployment order ID.</p>
+         * <p>The deployment ticket ID.</p>
          * 
          * <strong>example:</strong>
          * <p>4998717</p>

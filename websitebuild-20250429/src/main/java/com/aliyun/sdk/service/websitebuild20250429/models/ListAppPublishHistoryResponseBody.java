@@ -221,7 +221,7 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether retries are allowed.</p>
+         * <p>Specifies whether retries are allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -288,7 +288,7 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
          * <ul>
          * <li>ABTest: experiment data table</li>
          * <li>ExperimentTool: experiment tool table</li>
-         * <li>DataDiagnosis: data diagnosis</li>
+         * <li>DataDiagnosis: data diagnostics</li>
          * </ul>
          */
         public Builder module(Module module) {
@@ -297,7 +297,7 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token used to start the next query. This parameter is empty if no next query is available.</p>
+         * <p>The token that is used to start the next query. If no next query exists, this parameter is empty.</p>
          * 
          * <strong>example:</strong>
          * <p>0l45bkwM022Dt+rOvPi/oQ==</p>
@@ -644,7 +644,7 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether quick rollback is supported.</p>
+             * <p>Specifies whether quick rollback is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -766,7 +766,7 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sort type. Valid values: ASC and DESC.</p>
+             * <p>The sort order. Valid values: ASC and DESC.</p>
              * 
              * <strong>example:</strong>
              * <p>DESC</p>
@@ -849,7 +849,10 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The release subchannel.</p>
+             * <p>The release sub-channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>wx0123456789abcdef</p>
              */
             public Builder subchannel(String subchannel) {
                 this.subchannel = subchannel;
@@ -968,8 +971,8 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
             /**
              * <p>Specifies whether to display the history of applying alert templates to application groups. Valid values:</p>
              * <ul>
-             * <li>true: Display.</li>
-             * <li>false: Do not display. This is the default value.</li>
+             * <li>true: Displayed.</li>
+             * <li>false: Not displayed. Default value: false.</li>
              * </ul>
              */
             public Builder history(java.util.List<History> history) {

@@ -467,7 +467,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the configuration information of the code generation plugin.</p>
+     * <p>Retrieves the configuration information of the code generation plug-in.</p>
      * 
      * @param request the request parameters of GetAppInstanceForPartner  GetAppInstanceForPartnerRequest
      * @return GetAppInstanceForPartnerResponse
@@ -503,7 +503,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the configuration information of the code generation plugin.</p>
+     * <p>Retrieves the configuration information of the code generation plug-in.</p>
      * 
      * @param request the request parameters of GetAppPublishStatus  GetAppPublishStatusRequest
      * @return GetAppPublishStatusResponse

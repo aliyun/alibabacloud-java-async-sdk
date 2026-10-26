@@ -38,6 +38,9 @@ public class AppInstanceAggregate extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("BuildType")
     private String buildType;
 
+    @com.aliyun.core.annotation.NameInMap("ConversationInfo")
+    private ConversationInfo conversationInfo;
+
     @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
@@ -127,6 +130,7 @@ public class AppInstanceAggregate extends TeaModel {
         this.appType = builder.appType;
         this.bizId = builder.bizId;
         this.buildType = builder.buildType;
+        this.conversationInfo = builder.conversationInfo;
         this.createTime = builder.createTime;
         this.deleted = builder.deleted;
         this.description = builder.description;
@@ -215,6 +219,13 @@ public class AppInstanceAggregate extends TeaModel {
      */
     public String getBuildType() {
         return this.buildType;
+    }
+
+    /**
+     * @return conversationInfo
+     */
+    public ConversationInfo getConversationInfo() {
+        return this.conversationInfo;
     }
 
     /**
@@ -414,6 +425,7 @@ public class AppInstanceAggregate extends TeaModel {
         private String appType; 
         private String bizId; 
         private String buildType; 
+        private ConversationInfo conversationInfo; 
         private String createTime; 
         private Integer deleted; 
         private String description; 
@@ -453,6 +465,7 @@ public class AppInstanceAggregate extends TeaModel {
             this.appType = model.appType;
             this.bizId = model.bizId;
             this.buildType = model.buildType;
+            this.conversationInfo = model.conversationInfo;
             this.createTime = model.createTime;
             this.deleted = model.deleted;
             this.description = model.description;
@@ -547,6 +560,14 @@ public class AppInstanceAggregate extends TeaModel {
          */
         public Builder buildType(String buildType) {
             this.buildType = buildType;
+            return this;
+        }
+
+        /**
+         * <p>没有关联会话时为 null。</p>
+         */
+        public Builder conversationInfo(ConversationInfo conversationInfo) {
+            this.conversationInfo = conversationInfo;
             return this;
         }
 
@@ -838,6 +859,63 @@ public class AppInstanceAggregate extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AppInstanceAggregate} extends {@link TeaModel}
+     *
+     * <p>AppInstanceAggregate</p>
+     */
+    public static class ConversationInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ChatNum")
+        private Long chatNum;
+
+        private ConversationInfo(Builder builder) {
+            this.chatNum = builder.chatNum;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ConversationInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return chatNum
+         */
+        public Long getChatNum() {
+            return this.chatNum;
+        }
+
+        public static final class Builder {
+            private Long chatNum; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConversationInfo model) {
+                this.chatNum = model.chatNum;
+            } 
+
+            /**
+             * <p>0 表示存在空会话。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder chatNum(Long chatNum) {
+                this.chatNum = chatNum;
+                return this;
+            }
+
+            public ConversationInfo build() {
+                return new ConversationInfo(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link AppInstanceAggregate} extends {@link TeaModel}

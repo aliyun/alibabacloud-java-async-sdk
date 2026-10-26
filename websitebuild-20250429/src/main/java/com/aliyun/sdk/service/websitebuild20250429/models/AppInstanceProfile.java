@@ -92,6 +92,9 @@ public class AppInstanceProfile extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("TemplateId")
     private String templateId;
 
+    @com.aliyun.core.annotation.NameInMap("UpgradeStatus")
+    private String upgradeStatus;
+
     private AppInstanceProfile(Builder builder) {
         this.applicationType = builder.applicationType;
         this.applicationTypeText = builder.applicationTypeText;
@@ -118,6 +121,7 @@ public class AppInstanceProfile extends TeaModel {
         this.source = builder.source;
         this.templateEtag = builder.templateEtag;
         this.templateId = builder.templateId;
+        this.upgradeStatus = builder.upgradeStatus;
     }
 
     public static Builder builder() {
@@ -307,6 +311,13 @@ public class AppInstanceProfile extends TeaModel {
         return this.templateId;
     }
 
+    /**
+     * @return upgradeStatus
+     */
+    public String getUpgradeStatus() {
+        return this.upgradeStatus;
+    }
+
     public static final class Builder {
         private String applicationType; 
         private String applicationTypeText; 
@@ -333,6 +344,7 @@ public class AppInstanceProfile extends TeaModel {
         private String source; 
         private String templateEtag; 
         private String templateId; 
+        private String upgradeStatus; 
 
         private Builder() {
         } 
@@ -363,6 +375,7 @@ public class AppInstanceProfile extends TeaModel {
             this.source = model.source;
             this.templateEtag = model.templateEtag;
             this.templateId = model.templateId;
+            this.upgradeStatus = model.upgradeStatus;
         } 
 
         /**
@@ -631,6 +644,14 @@ public class AppInstanceProfile extends TeaModel {
          */
         public Builder templateId(String templateId) {
             this.templateId = templateId;
+            return this;
+        }
+
+        /**
+         * UpgradeStatus.
+         */
+        public Builder upgradeStatus(String upgradeStatus) {
+            this.upgradeStatus = upgradeStatus;
             return this;
         }
 

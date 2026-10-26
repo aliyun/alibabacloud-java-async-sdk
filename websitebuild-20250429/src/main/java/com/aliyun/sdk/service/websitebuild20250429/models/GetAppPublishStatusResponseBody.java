@@ -184,7 +184,7 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The detailed reason for the access denial.</p>
+         * <p>The detailed reason why access is denied.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -678,10 +678,8 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
             /**
              * <p>Indicates whether the call is successful. Valid values:</p>
              * <ul>
-             * <li><p><code>true</code>: The call is successful.</p>
-             * </li>
-             * <li><p><code>false</code>: The call fails.</p>
-             * </li>
+             * <li><code>true</code>: The call is successful.</li>
+             * <li><code>false</code>: The call failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -693,7 +691,7 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The additional information.</p>
+             * <p>The additional description.</p>
              * 
              * <strong>example:</strong>
              * <p>common notify successfully.</p>
@@ -704,7 +702,7 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sort type, such as ASC or DESC.</p>
+             * <p>The sorting type, such as ASC or DESC.</p>
              * 
              * <strong>example:</strong>
              * <p>DESC</p>
@@ -799,6 +797,9 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
 
             /**
              * <p>The publish subchannel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>wx0123456789abcdef</p>
              */
             public Builder subchannel(String subchannel) {
                 this.subchannel = subchannel;
