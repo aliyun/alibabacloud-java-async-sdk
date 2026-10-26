@@ -440,6 +440,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Encrypted")
         private Boolean encrypted;
 
+        @com.aliyun.core.annotation.NameInMap("EosDate")
+        private String eosDate;
+
         @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private Long expireTime;
 
@@ -503,6 +506,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
+        @com.aliyun.core.annotation.NameInMap("VersionLifecycleStatus")
+        private String versionLifecycleStatus;
+
         @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
@@ -519,6 +525,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             this.enableSSL = builder.enableSSL;
             this.enabledAuditLoader = builder.enabledAuditLoader;
             this.encrypted = builder.encrypted;
+            this.eosDate = builder.eosDate;
             this.expireTime = builder.expireTime;
             this.instanceId = builder.instanceId;
             this.instanceName = builder.instanceName;
@@ -540,6 +547,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             this.tags = builder.tags;
             this.vSwitches = builder.vSwitches;
             this.version = builder.version;
+            this.versionLifecycleStatus = builder.versionLifecycleStatus;
             this.vpcId = builder.vpcId;
         }
 
@@ -633,6 +641,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
          */
         public Boolean getEncrypted() {
             return this.encrypted;
+        }
+
+        /**
+         * @return eosDate
+         */
+        public String getEosDate() {
+            return this.eosDate;
         }
 
         /**
@@ -783,6 +798,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return versionLifecycleStatus
+         */
+        public String getVersionLifecycleStatus() {
+            return this.versionLifecycleStatus;
+        }
+
+        /**
          * @return vpcId
          */
         public String getVpcId() {
@@ -802,6 +824,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private Boolean enableSSL; 
             private Boolean enabledAuditLoader; 
             private Boolean encrypted; 
+            private String eosDate; 
             private Long expireTime; 
             private String instanceId; 
             private String instanceName; 
@@ -823,6 +846,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private java.util.List<Tags> tags; 
             private java.util.List<VSwitches> vSwitches; 
             private String version; 
+            private String versionLifecycleStatus; 
             private String vpcId; 
 
             private Builder() {
@@ -841,6 +865,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
                 this.enableSSL = model.enableSSL;
                 this.enabledAuditLoader = model.enabledAuditLoader;
                 this.encrypted = model.encrypted;
+                this.eosDate = model.eosDate;
                 this.expireTime = model.expireTime;
                 this.instanceId = model.instanceId;
                 this.instanceName = model.instanceName;
@@ -862,6 +887,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
                 this.tags = model.tags;
                 this.vSwitches = model.vSwitches;
                 this.version = model.version;
+                this.versionLifecycleStatus = model.versionLifecycleStatus;
                 this.vpcId = model.vpcId;
             } 
 
@@ -993,6 +1019,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
              */
             public Builder encrypted(Boolean encrypted) {
                 this.encrypted = encrypted;
+                return this;
+            }
+
+            /**
+             * EosDate.
+             */
+            public Builder eosDate(String eosDate) {
+                this.eosDate = eosDate;
                 return this;
             }
 
@@ -1284,6 +1318,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
              */
             public Builder version(String version) {
                 this.version = version;
+                return this;
+            }
+
+            /**
+             * VersionLifecycleStatus.
+             */
+            public Builder versionLifecycleStatus(String versionLifecycleStatus) {
+                this.versionLifecycleStatus = versionLifecycleStatus;
                 return this;
             }
 
