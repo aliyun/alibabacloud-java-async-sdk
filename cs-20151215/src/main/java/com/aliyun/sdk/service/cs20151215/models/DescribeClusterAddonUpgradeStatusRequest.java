@@ -89,7 +89,7 @@ public class DescribeClusterAddonUpgradeStatusRequest extends Request {
 
         /**
          * <p>The component ID. Examples: nginx-ingress-controller, flexvolume, and metrics-server.</p>
-         * <p>You can call the <code>DescribeAddons</code> API operation to query the add-ons supported by the cluster.</p>
+         * <p>You can call the DescribeAddons API to query the components supported by the cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

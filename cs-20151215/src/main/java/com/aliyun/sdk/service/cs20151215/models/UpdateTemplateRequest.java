@@ -130,7 +130,7 @@ public class UpdateTemplateRequest extends Request {
         } 
 
         /**
-         * <p>The template ID.</p>
+         * <p>The ID of the template.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,7 +143,7 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * <p>The description of the deployment template.</p>
+         * <p>The description of the orchestration template.</p>
          * 
          * <strong>example:</strong>
          * <p>web server cluster</p>
@@ -155,7 +155,7 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * <p>The name of the deployment template.</p>
+         * <p>The name of the orchestration template.</p>
          * 
          * <strong>example:</strong>
          * <p>webserver01</p>
@@ -167,7 +167,7 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * <p>The tags of the deployment template.</p>
+         * <p>The tags of the orchestration template.</p>
          * 
          * <strong>example:</strong>
          * <p>web</p>
@@ -179,7 +179,7 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * <p>The template content in YAML format.</p>
+         * <p>The content of the template in YAML format.</p>
          * 
          * <strong>example:</strong>
          * <p>apiVersion: apps/v1\\nkind: Deployment\\nmetadata:\\n  name: nginx-deployment-basic\\n  labels:\\n    app: nginx\\nspec:\\n  replicas: 2\\n  selector:\\n    matchLabels:\\n      app: nginx\\n  template:\\n    metadata:\\n      labels:\\n        app: nginx\\n    spec:\\n      containers:\\n      - name: nginx\\n        image: busybox:latest\\n        ports:\\n        - containerPort: 8080</p>
@@ -193,12 +193,12 @@ public class UpdateTemplateRequest extends Request {
         /**
          * <p>The templatetype.</p>
          * <ul>
-         * <li><p>If you set this parameter to <code>kubernetes</code>, the template is displayed on the Orchestration Templates page in the console.</p>
+         * <li><p>If you set the value to <code>kubernetes</code>, the template is displayed on the Orchestration Templates page in the console.</p>
          * </li>
-         * <li><p>If you leave this parameter empty or set it to other values, the template is not displayed on the Orchestration Templates page in the console.</p>
+         * <li><p>If you do not specify this parameter or set the value to other values, the template is not displayed on the Orchestration Templates page in the console.</p>
          * </li>
          * </ul>
-         * <p>Settings this parameter to <code>kubernetes</code> is recommended.</p>
+         * <p>Recommended Settings: <code>kubernetes</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>kubernetes</p>

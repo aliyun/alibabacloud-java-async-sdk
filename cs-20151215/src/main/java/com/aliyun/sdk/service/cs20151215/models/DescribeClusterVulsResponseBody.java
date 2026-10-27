@@ -206,7 +206,7 @@ public class DescribeClusterVulsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The vulnerability severity level.</p>
+             * <p>The severity level of the vulnerability.</p>
              * 
              * <strong>example:</strong>
              * <p>asap</p>
@@ -217,7 +217,7 @@ public class DescribeClusterVulsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of nodes that have this vulnerability.</p>
+             * <p>The number of nodes that have the vulnerability.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -228,7 +228,7 @@ public class DescribeClusterVulsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node pool ID.</p>
+             * <p>The ID of the node pool.</p>
              * 
              * <strong>example:</strong>
              * <p>np0156da1082b54fa987e32618dd******</p>
@@ -239,7 +239,7 @@ public class DescribeClusterVulsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node pool name.</p>
+             * <p>The name of the node pool.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -250,7 +250,7 @@ public class DescribeClusterVulsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The vulnerability alias.</p>
+             * <p>The alias of the vulnerability.</p>
              * 
              * <strong>example:</strong>
              * <p>CVE-2022-xxxx:rsync security vulnerability</p>
@@ -261,7 +261,7 @@ public class DescribeClusterVulsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The vulnerability name.</p>
+             * <p>The name of the vulnerability.</p>
              * 
              * <strong>example:</strong>
              * <p>oval:com.redhat.rhsa:def:xxxxxxx</p>
@@ -272,7 +272,7 @@ public class DescribeClusterVulsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The vulnerability type.</p>
+             * <p>The type of the vulnerability.</p>
              * 
              * <strong>example:</strong>
              * <p>cve</p>

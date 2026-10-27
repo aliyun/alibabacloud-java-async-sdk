@@ -99,7 +99,7 @@ public class ListUserKubeConfigStatesRequest extends Request {
         }
 
         /**
-         * <p>The current page number.</p>
+         * <p>The page number.</p>
          * <ul>
          * <li><p>Valid values: greater than or equal to 1.</p>
          * </li>
@@ -117,7 +117,7 @@ public class ListUserKubeConfigStatesRequest extends Request {
         }
 
         /**
-         * <p>The number of results per page.</p>
+         * <p>The number of entries to return on each page.</p>
          * <ul>
          * <li><p>Valid values: 1 to 100.</p>
          * </li>

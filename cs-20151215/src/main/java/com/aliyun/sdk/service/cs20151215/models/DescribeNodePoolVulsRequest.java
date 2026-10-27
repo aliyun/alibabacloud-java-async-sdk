@@ -115,7 +115,7 @@ public class DescribeNodePoolVulsRequest extends Request {
         }
 
         /**
-         * <p>The severity levels of vulnerabilities to query. Separate multiple levels with commas (,). Valid values:</p>
+         * <p>The necessity levels of the vulnerability fixes to query. Separate multiple levels with commas (,). Valid values:</p>
          * <ul>
          * <li><code>asap</code>: high</li>
          * <li><code>later</code>: medium</li>

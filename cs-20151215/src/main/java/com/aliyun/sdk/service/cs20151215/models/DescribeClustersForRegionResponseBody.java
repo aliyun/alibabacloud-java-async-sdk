@@ -465,14 +465,14 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             /**
              * <p>The specification of the cluster. Valid values:</p>
              * <ul>
-             * <li><code>ack.standard</code>: Basic</li>
-             * <li><code>ack.pro.small</code>: Pro</li>
-             * <li><code>ack.pro.xlarge</code>: Pro XL</li>
-             * <li><code>ack.pro.2xlarge</code>: Pro 2XL</li>
-             * <li><code>ack.pro.4xlarge</code>: Pro 4XL (Contact customer service to add your account to the whitelist.)</li>
+             * <li><code>ack.standard</code>: Basic Edition.</li>
+             * <li><code>ack.pro.small</code>: Pro Edition.</li>
+             * <li><code>ack.pro.xlarge</code>: Pro XL.</li>
+             * <li><code>ack.pro.2xlarge</code>: Pro 2XL.</li>
+             * <li><code>ack.pro.4xlarge</code>: Pro 4XL. To use this specification, submit a ticket to contact customer service and apply for whitelist access.</li>
              * </ul>
-             * <p>Pro XL, Pro 2XL, and Pro 4XL are three tiers provided by &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro provisioned control plane</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro provisioned control plane</a>. By pre-allocating and dedicating control plane resources, these tiers ensure that API concurrency and pod scheduling capabilities remain at a consistently high level. They are suitable for AI training and inference, ultra-large-scale clusters, and mission-critical workloads.</p>
-             * <p>For information about the cluster management fees for Pro and provisioned control plane editions, see &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fees</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fees</a>.</p>
+             * <p>Pro XL, Pro 2XL, and Pro 4XL are the three tiers provided by the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro provisioned control plane</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro provisioned control plane</a>. By pre-allocating and reserving control plane resources, these tiers ensure that API concurrency and pod scheduling capabilities remain consistently at a high level. They are suitable for AI training and inference, ultra-large-scale clusters, and mission-critical workloads.</p>
+             * <p>For more information about the cluster management fees for the Pro Edition and provisioned control plane editions, see &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fees</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fees</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>ack.standard</p>
@@ -486,7 +486,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
              * <p>The cluster type. Valid values:</p>
              * <ul>
              * <li>Kubernetes: ACK dedicated cluster.</li>
-             * <li>ManagedKubernetes: ACK managed cluster types, including ACK managed clusters (ACK Pro and ACK Basic), ACK Serverless clusters (Pro and Basic), ACK Edge clusters (Pro and Basic), and ACK Lingjun clusters (Pro).</li>
+             * <li>ManagedKubernetes: ACK managed clusters, including ACK managed clusters (ACK Pro and ACK Basic), ACK Serverless clusters (Pro and Basic), ACK Edge clusters (Pro and Basic), and ACK Lingjun clusters (Pro).</li>
              * <li>ExternalKubernetes: registered cluster.</li>
              * </ul>
              * 
@@ -499,7 +499,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The CIDR block used by the cluster pods.</p>
+             * <p>The CIDR block for pods in the cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>172.20.0.0/16</p>
@@ -532,10 +532,10 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether deletion protection is enabled for the cluster. Deletion protection prevents the cluster from being accidentally deleted in the console or by calling API operations. Valid values:</p>
+             * <p>Indicates whether deletion protection is enabled for the cluster to prevent accidental deletion through the console or API. Valid values:</p>
              * <ul>
-             * <li>true: Deletion protection is enabled. The cluster cannot be deleted in the console or by calling API operations.</li>
-             * <li>false: Deletion protection is disabled. The cluster can be deleted in the console or by calling API operations.</li>
+             * <li>true: Deletion protection is enabled. The cluster cannot be deleted through the console or API.</li>
+             * <li>false: Deletion protection is disabled. The cluster can be deleted through the console or API.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -558,7 +558,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP protocol stack of the cluster.</p>
+             * <p>The IP stack of the cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>ipv4</p>
@@ -591,12 +591,12 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cluster subtype. Valid values:</p>
+             * <p>The subtype of the cluster. Valid values:</p>
              * <ul>
-             * <li>Default: ACK managed cluster, including ACK Pro and ACK Basic.</li>
-             * <li>Edge: ACK Edge cluster, including ACK Edge Pro and ACK Edge Basic.</li>
-             * <li>Serverless: ACK Serverless cluster, including ACK Serverless Pro and ACK Serverless Basic.</li>
-             * <li>LingJun: ACK Lingjun cluster, available in Pro.</li>
+             * <li>Default: ACK managed clusters, including ACK Pro and ACK Basic.</li>
+             * <li>Edge: ACK Edge clusters, including ACK Edge Pro and ACK Edge Basic.</li>
+             * <li>Serverless: ACK Serverless clusters, including ACK Serverless Pro and ACK Serverless Basic.</li>
+             * <li>LingJun: ACK Lingjun clusters, which provide the Pro edition.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -608,7 +608,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The kube-proxy mode of the cluster.</p>
+             * <p>The proxy mode of kube-proxy in the cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>ipvs</p>
@@ -641,7 +641,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the security group associated with the cluster.</p>
+             * <p>The ID of the security group to which the cluster belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>sg-2zeihch86ooz9io4****</p>
@@ -652,7 +652,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service CIDR block.</p>
+             * <p>The CIDR block for services.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -688,9 +688,9 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
              * <li><code>inactive</code>: The cluster is inactive.</li>
              * <li><code>unavailable</code>: The cluster is unavailable.</li>
              * <li><code>deleting</code>: The cluster is being deleted.</li>
-             * <li><code>deleted</code>: The cluster has been deleted.</li>
+             * <li><code>deleted</code>: The cluster is deleted.</li>
              * <li><code>delete_failed</code>: The cluster failed to be deleted.</li>
-             * <li><code>waiting</code>: The cluster is in the accessed state, waiting to be connected.</li>
+             * <li><code>waiting</code>: The cluster is waiting to be accessed.</li>
              * <li><code>disconnected</code>: The cluster is disconnected.</li>
              * </ul>
              * 
@@ -703,7 +703,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of cluster tags.</p>
+             * <p>The list of tags for the cluster.</p>
              */
             public Builder tags(java.util.List<Tag> tags) {
                 this.tags = tags;
@@ -744,7 +744,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of vSwitches used by the cluster control plane.</p>
+             * <p>The list of vSwitches for the cluster control plane.</p>
              */
             public Builder vswitchIds(java.util.List<String> vswitchIds) {
                 this.vswitchIds = vswitchIds;
@@ -835,7 +835,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of records per page.</p>
+             * <p>The number of entries per page.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>

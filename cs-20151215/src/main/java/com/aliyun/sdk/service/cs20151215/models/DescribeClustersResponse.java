@@ -181,7 +181,10 @@ public class DescribeClustersResponse extends Response {
             } 
 
             /**
-             * key.
+             * <p>The key of the cluster tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.tag.key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -189,7 +192,10 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * value.
+             * <p>The value of the cluster tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-tag-value</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -607,7 +613,10 @@ public class DescribeClustersResponse extends Response {
             } 
 
             /**
-             * cluster_id.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c0123456789abcdef0123456789abcdef0</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -615,7 +624,10 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * cluster_type.
+             * <p>The cluster type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ManagedKubernetes</p>
              */
             public Builder clusterType(String clusterType) {
                 this.clusterType = clusterType;
@@ -623,7 +635,10 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * created.
+             * <p>The time when the cluster was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-10-01T08:00:00+08:00</p>
              */
             public Builder created(String created) {
                 this.created = created;
@@ -631,7 +646,10 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * current_version.
+             * <p>The current version of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.32.1-aliyun.1</p>
              */
             public Builder currentVersion(String currentVersion) {
                 this.currentVersion = currentVersion;
@@ -639,7 +657,7 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * data_disk_category.
+             * <p>The data disk category of the node.</p>
              */
             public Builder dataDiskCategory(String dataDiskCategory) {
                 this.dataDiskCategory = dataDiskCategory;
@@ -647,7 +665,7 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * data_disk_size.
+             * <p>The data disk size of the node.</p>
              */
             public Builder dataDiskSize(Long dataDiskSize) {
                 this.dataDiskSize = dataDiskSize;
@@ -655,7 +673,7 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * deletion_protection.
+             * <p>Indicates whether deletion protection is enabled for the cluster.</p>
              */
             public Builder deletionProtection(Boolean deletionProtection) {
                 this.deletionProtection = deletionProtection;
@@ -663,7 +681,10 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * docker_version.
+             * <p>The Docker version of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20.10.17</p>
              */
             public Builder dockerVersion(String dockerVersion) {
                 this.dockerVersion = dockerVersion;
@@ -671,7 +692,10 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * external_loadbalancer_id.
+             * <p>The ID of the external load balancing instance used by the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lb-a1b2c3d4e5f6g7h8i9j0k</p>
              */
             public Builder externalLoadbalancerId(String externalLoadbalancerId) {
                 this.externalLoadbalancerId = externalLoadbalancerId;
@@ -679,7 +703,10 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * init_version.
+             * <p>The initial version of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.32.1-aliyun.1</p>
              */
             public Builder initVersion(String initVersion) {
                 this.initVersion = initVersion;
@@ -687,7 +714,10 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * master_url.
+             * <p>The access address of the cluster API server, including the internal network access address and the public network access address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;api_server_endpoint&quot;:&quot;&quot;,&quot;intranet_api_server_endpoint&quot;:&quot;<a href="https://192.0.2.10:6443%22%7D">https://192.0.2.10:6443&quot;}</a></p>
              */
             public Builder masterUrl(String masterUrl) {
                 this.masterUrl = masterUrl;
@@ -695,7 +725,10 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * meta_data.
+             * <p>The metadata of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;addons&quot;:[{&quot;name&quot;:&quot;kube-proxy&quot;,&quot;version&quot;:&quot;v1.32.1&quot;}]}</p>
              */
             public Builder metaData(String metaData) {
                 this.metaData = metaData;
@@ -703,7 +736,10 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * name.
+             * <p>The name of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-cluster</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -711,7 +747,10 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * network_mode.
+             * <p>The network mode of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc</p>
              */
             public Builder networkMode(String networkMode) {
                 this.networkMode = networkMode;
@@ -719,7 +758,7 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * private_zone.
+             * <p>Indicates whether Private Zone is enabled for the cluster. Default value: false.</p>
              */
             public Builder privateZone(Boolean privateZone) {
                 this.privateZone = privateZone;
@@ -727,7 +766,10 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * profile.
+             * <p>The subtype of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Default</p>
              */
             public Builder profile(String profile) {
                 this.profile = profile;
@@ -735,7 +777,10 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * region_id.
+             * <p>The region ID of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -743,7 +788,10 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * resource_group_id.
+             * <p>The resource group ID of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-a1b2c3d4e5f6g7h</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -751,7 +799,10 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * security_group_id.
+             * <p>The security group ID of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-a1b2c3d4e5f6g7h8i9j0</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -759,7 +810,10 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * size.
+             * <p>The current number of nodes in the cluster, including master and worker nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -767,7 +821,10 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * state.
+             * <p>The state of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>running</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -775,7 +832,10 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * subnet_cidr.
+             * <p>The subnet CIDR of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.16.0.0/16</p>
              */
             public Builder subnetCidr(String subnetCidr) {
                 this.subnetCidr = subnetCidr;
@@ -783,7 +843,7 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * tags.
+             * <p>The tags of the cluster.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -791,7 +851,10 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * updated.
+             * <p>The time when the cluster was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-10-02T08:00:00+08:00</p>
              */
             public Builder updated(String updated) {
                 this.updated = updated;
@@ -799,7 +862,10 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * vpc_id.
+             * <p>The VPC ID of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-a1b2c3d4e5f6g7h8i9j0k</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -807,7 +873,7 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * vswitch_cidr.
+             * <p>The vSwitch CIDR.</p>
              */
             public Builder vswitchCidr(String vswitchCidr) {
                 this.vswitchCidr = vswitchCidr;
@@ -815,7 +881,10 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * vswitch_id.
+             * <p>The ID of the vSwitch where the cluster is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-a1b2c3d4e5f6g7h8i9j0k</p>
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
@@ -823,7 +892,10 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * worker_ram_role_name.
+             * <p>The name of the RAM role used by the worker nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-worker-ram-role</p>
              */
             public Builder workerRamRoleName(String workerRamRoleName) {
                 this.workerRamRoleName = workerRamRoleName;
@@ -831,7 +903,10 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * zone_id.
+             * <p>The zone ID of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-h</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

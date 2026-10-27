@@ -106,7 +106,7 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The custom parameter settings of the component.</p>
+         * <p>The custom parameter settings of the add-on.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;sls_project_name&quot;:&quot;&quot;}</p>
@@ -117,7 +117,7 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The logging status of the component.</p>
+         * <p>The log feature status of the add-on.</p>
          */
         public Builder logging(Logging logging) {
             this.logging = logging;
@@ -125,7 +125,7 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The component instance name.</p>
+         * <p>The name of the add-on instance.</p>
          * 
          * <strong>example:</strong>
          * <p>ack-node-problem-detector</p>
@@ -136,12 +136,12 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The component status. Valid values:</p>
+         * <p>The state of the add-on. Valid values:</p>
          * <ul>
-         * <li>active: The component is installed.</li>
-         * <li>updating: The component is being modified.</li>
-         * <li>upgrading: The component is being upgraded.</li>
-         * <li>deleting: The component is being uninstalled.</li>
+         * <li>active: Installed.</li>
+         * <li>updating: Updating.</li>
+         * <li>upgrading: Upgrading.</li>
+         * <li>deleting: Uninstalling.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -153,7 +153,7 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The component instance version.</p>
+         * <p>The version of the add-on instance.</p>
          * 
          * <strong>example:</strong>
          * <p>1.2.16</p>
@@ -248,7 +248,7 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the component supports the logging feature.</p>
+             * <p>Specifies whether the add-on supports the log feature. Valid values:</p>
              * <ul>
              * <li><p>true: Supported.</p>
              * </li>
@@ -265,11 +265,11 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the logging feature is enabled for the component.</p>
+             * <p>Specifies whether the log feature is enabled. Valid values:</p>
              * <ul>
              * <li><p>true: Enabled.</p>
              * </li>
-             * <li><p>false: Not enabled.</p>
+             * <li><p>false: Disabled.</p>
              * </li>
              * </ul>
              * 
@@ -282,7 +282,7 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The log project used by the logging feature of the component.</p>
+             * <p>The Log Service project used by the add-on log feature.</p>
              * 
              * <strong>example:</strong>
              * <p>k8s-log-c02b3e03be10643e8a644a843ffcb****</p>
@@ -293,7 +293,7 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Logstore used by the logging feature of the component.</p>
+             * <p>The Logstore used by the add-on log feature.</p>
              * 
              * <strong>example:</strong>
              * <p>my-logstore</p>

@@ -99,7 +99,7 @@ public class DescribeClustersRequest extends Request {
         }
 
         /**
-         * <p>Specifies the cluster name for fuzzy matching.</p>
+         * <p>The cluster name used for fuzzy matching.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -111,7 +111,10 @@ public class DescribeClustersRequest extends Request {
         }
 
         /**
-         * resource_group_id.
+         * <p>The ID of the resource group used to filter clusters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-a1b2c3d4e5f6g7h</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("resource_group_id", resourceGroupId);

@@ -87,7 +87,7 @@ public class RunClusterInspectRequest extends Request {
         }
 
         /**
-         * <p>The idempotence token.</p>
+         * <p>The idempotency token.</p>
          * 
          * <strong>example:</strong>
          * <p>c82e6987e2961451182edacd74faf</p>

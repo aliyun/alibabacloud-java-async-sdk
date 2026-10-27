@@ -88,6 +88,7 @@ public class DescribeClusterV2UserKubeconfigRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          */
         public Builder clusterId(String clusterId) {
@@ -97,7 +98,7 @@ public class DescribeClusterV2UserKubeconfigRequest extends Request {
         }
 
         /**
-         * PrivateIpAddress.
+         * <p>Specifies whether to access the cluster over the internal network.</p>
          */
         public Builder privateIpAddress(Boolean privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);

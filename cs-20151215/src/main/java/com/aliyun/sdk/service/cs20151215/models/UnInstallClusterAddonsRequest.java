@@ -74,7 +74,7 @@ public class UnInstallClusterAddonsRequest extends Request {
         } 
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>The ID of the cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,7 +155,7 @@ public class UnInstallClusterAddonsRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to clean up associated cloud resources when uninstalling the component. Valid values:</p>
+             * <p>Specifies whether to clean up the associated cloud resources when uninstalling the component. Valid values:</p>
              * <ul>
              * <li>true: Clean up.</li>
              * <li>false: Retain.</li>
@@ -170,7 +170,7 @@ public class UnInstallClusterAddonsRequest extends Request {
             }
 
             /**
-             * <p>The name of the component to uninstall. You can call the <a href="https://help.aliyun.com/document_detail/2667940.html">ListClusterAddonInstances</a> operation to query the components installed in a cluster.</p>
+             * <p>The name of the component to uninstall. You can call the <a href="https://help.aliyun.com/document_detail/2667940.html">ListClusterAddonInstances</a> operation to query the components installed in the cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>ack-node-problem-detector</p>

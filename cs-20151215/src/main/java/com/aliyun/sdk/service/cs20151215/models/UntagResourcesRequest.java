@@ -121,8 +121,8 @@ public class UntagResourcesRequest extends Request {
         /**
          * <p>Specifies whether to delete all custom tags. This parameter takes effect only when <code>tag_keys</code> is empty. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: Deletes all tags.</li>
-         * <li><code>false</code>: Does not delete all tags.</li>
+         * <li><code>true</code>: deletes all tags.</li>
+         * <li><code>false</code>: does not delete all tags.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -148,7 +148,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The list of resource IDs. You can specify up to 50 resource IDs.</p>
+         * <p>The list of resource IDs. Up to 50 resource IDs can be specified.</p>
          * <p>This parameter is required.</p>
          */
         public Builder resourceIds(java.util.List<String> resourceIds) {
@@ -159,8 +159,10 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The resource type.</p>
-         * <p>CLUSTER: cluster.</p>
+         * <p>The resource type. Valid values:</p>
+         * <ul>
+         * <li>CLUSTER: cluster.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -173,7 +175,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The list of tag keys for the resource. You can specify up to 20 tag keys.</p>
+         * <p>The list of tag keys for the resources. Up to 20 tag keys can be specified.</p>
          * <p>This parameter is required.</p>
          */
         public Builder tagKeys(java.util.List<String> tagKeys) {

@@ -80,7 +80,7 @@ public class ListNodePoolComponentsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of node components.</p>
+         * <p>The node components.</p>
          */
         public Builder components(java.util.List<Components> components) {
             this.components = components;
@@ -88,7 +88,7 @@ public class ListNodePoolComponentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of results to return. Default value: 200.</p>
+         * <p>The maximum number of results per page. Default value: 200.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

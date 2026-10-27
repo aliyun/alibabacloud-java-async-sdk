@@ -133,9 +133,7 @@ public class CreateKubernetesTriggerRequest extends Request {
         }
 
         /**
-         * <p>The project name of the trigger.</p>
-         * <p>It consists of the namespace and the name of the application, in the format of <code>${namespace}/${name}</code>.</p>
-         * <p>Example: <code>default/test-app</code>.</p>
+         * <p>The project name of the trigger. It consists of the namespace and the name of the application, in the format of <code>${namespace}/${name}</code>. Example: <code>default/test-app</code>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -150,10 +148,10 @@ public class CreateKubernetesTriggerRequest extends Request {
         /**
          * <p>The type of the trigger. Valid values:</p>
          * <ul>
-         * <li><code>deployment</code>: The trigger for stateless applications. </li>
-         * <li><code>application</code>: The trigger for Hybrid Cloud Application Center applications.</li>
+         * <li><code>deployment</code>: The trigger for stateless applications.</li>
+         * <li><code>application</code>: The trigger for applications in Hybrid Cloud Application Center.
+         * Default value: <code>deployment</code>.</li>
          * </ul>
-         * <p>Default value: <code>deployment</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>deployment</p>

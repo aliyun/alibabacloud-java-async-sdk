@@ -186,7 +186,7 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the event.</p>
+             * <p>The event details.</p>
              * 
              * <strong>example:</strong>
              * <p>Start to upgrade NodePool nodePool/npdd89dc2b76c04f14b06774883b******</p>
@@ -197,7 +197,7 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the event.</p>
+             * <p>The event status.</p>
              * 
              * <strong>example:</strong>
              * <p>Started</p>
@@ -332,7 +332,7 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the cluster.</p>
+             * <p>The cluster ID.</p>
              * 
              * <strong>example:</strong>
              * <p>c82e6987e2961451182edacd74faf****</p>
@@ -343,7 +343,7 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the event.</p>
+             * <p>The event description.</p>
              */
             public Builder data(Data data) {
                 this.data = data;
@@ -351,7 +351,7 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the event.</p>
+             * <p>The event ID.</p>
              * 
              * <strong>example:</strong>
              * <p>e-9ad04f72-8ee7-46bf-a02c-e4a06b39****</p>
@@ -362,7 +362,7 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source of the event.</p>
+             * <p>The event source.</p>
              * 
              * <strong>example:</strong>
              * <p>task</p>
@@ -373,7 +373,7 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The operation object associated with the event.</p>
+             * <p>The object associated with the event.</p>
              * 
              * <strong>example:</strong>
              * <p>npdd89dc2b76c04f14b06774883b******</p>
@@ -397,22 +397,22 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
             /**
              * <p>The event type. Valid values:</p>
              * <ul>
-             * <li>cluster_create: Creates a cluster.</li>
-             * <li>cluster_scaleout: Scales out a cluster.</li>
-             * <li>cluster_attach: Adds existing nodes.</li>
-             * <li>cluster_delete: Deletes a cluster.</li>
-             * <li>cluster_upgrade: Upgrades a cluster.</li>
-             * <li>cluster_migrate: Migrates a cluster.</li>
-             * <li>cluster_node_delete: Removes a node.</li>
-             * <li>cluster_node_drain: Drains a node.</li>
-             * <li>cluster_modify: Modifies a cluster.</li>
-             * <li>cluster_configuration_modify: Modifies the control configurations of a cluster.</li>
-             * <li>cluster_addon_install: Installs a component.</li>
-             * <li>cluster_addon_upgrade: Upgrades a component.</li>
-             * <li>cluster_addon_uninstall: Uninstalls a component.</li>
-             * <li>runtime_upgrade: Upgrades the runtime.</li>
-             * <li>nodepool_upgrade: Upgrades a node pool.</li>
-             * <li>nodepool_update: Updates a node pool.</li>
+             * <li>cluster_create: cluster creation</li>
+             * <li>cluster_scaleout: cluster scale-out</li>
+             * <li>cluster_attach: addition of existing nodes</li>
+             * <li>cluster_delete: cluster deletion</li>
+             * <li>cluster_upgrade: cluster upgrade</li>
+             * <li>cluster_migrate: cluster migration</li>
+             * <li>cluster_node_delete: node removal</li>
+             * <li>cluster_node_drain: node draining</li>
+             * <li>cluster_modify: cluster modification</li>
+             * <li>cluster_configuration_modify: cluster management configuration modification</li>
+             * <li>cluster_addon_install: add-on installation</li>
+             * <li>cluster_addon_upgrade: add-on upgrade</li>
+             * <li>cluster_addon_uninstall: add-on uninstallation</li>
+             * <li>runtime_upgrade: runtime upgrade</li>
+             * <li>nodepool_upgrade: node pool upgrade</li>
+             * <li>nodepool_update: node pool update</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -507,7 +507,7 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of results to return per page.</p>
+             * <p>The maximum number of results to display on each page.</p>
              * 
              * <strong>example:</strong>
              * <p>50</p>

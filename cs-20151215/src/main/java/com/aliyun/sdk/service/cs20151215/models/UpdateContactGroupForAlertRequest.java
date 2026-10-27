@@ -115,7 +115,7 @@ public class UpdateContactGroupForAlertRequest extends Request {
         } 
 
         /**
-         * <p>The cluster ID. You can call the ListCluster operation to obtain the cluster ID.</p>
+         * <p>The ID of the cluster. You can call the ListCluster operation to obtain the cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ce7d08276f8a6422282c46272a84bxxxx</p>
@@ -127,7 +127,7 @@ public class UpdateContactGroupForAlertRequest extends Request {
         }
 
         /**
-         * <p>The name of the alert metric contact group.</p>
+         * <p>The name of the contact group for the alert metric.</p>
          * 
          * <strong>example:</strong>
          * <p>sample</p>
@@ -160,7 +160,7 @@ public class UpdateContactGroupForAlertRequest extends Request {
         }
 
         /**
-         * <p>The namespace in which the resource resides.</p>
+         * <p>The namespace where the resource resides.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>

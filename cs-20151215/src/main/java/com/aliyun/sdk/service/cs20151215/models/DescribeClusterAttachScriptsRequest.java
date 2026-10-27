@@ -188,7 +188,7 @@ public class DescribeClusterAttachScriptsRequest extends Request {
          * <p>The CPU architecture of the node. Valid values: <code>amd64</code>, <code>arm</code>, and <code>arm64</code>.</p>
          * <p>Default value: <code>amd64</code>.</p>
          * <blockquote>
-         * <p>This parameter is required when the cluster type is managed edge.</p>
+         * <p>This parameter is required when the cluster type is ACK Edge.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -201,7 +201,7 @@ public class DescribeClusterAttachScriptsRequest extends Request {
         }
 
         /**
-         * <p>The expiration time of the generated token, in UNIX timestamp format. For example, 1739980800 indicates 2025-02-20 00:00:00.</p>
+         * <p>The expiration time of the generated token. The time is in the UNIX timestamp format. For example, 1739980800 indicates 2025-02-20 00:00:00.</p>
          * 
          * <strong>example:</strong>
          * <p>1740037333</p>
@@ -213,16 +213,16 @@ public class DescribeClusterAttachScriptsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to mount data cloud disks to the instance when manually adding existing instances to the cluster, storing containers and images on the data cloud disks. Valid values:</p>
+         * <p>Specifies whether to mount a data cloud disk to the instance when manually adding an existing instance to the cluster, and store containers and images on the data cloud disk. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: Mounts data cloud disks to the instance. Existing data on the data cloud disks will be lost. Back up your data in advance.</li>
-         * <li><code>false</code>: Does not mount data cloud disks to the instance.</li>
+         * <li><code>true</code>: Mounts a data cloud disk to the instance. The existing data on the data cloud disk will be lost. Back up your data first.</li>
+         * <li><code>false</code>: Does not mount a data cloud disk to the instance.</li>
          * </ul>
          * <p>Default value: <code>false</code>.</p>
          * <p>Data mounting rules:</p>
          * <ul>
-         * <li>If the ECS instance already has data cloud disks mounted and the file system of the last data cloud disk is not initialized, the system automatically formats the data cloud disk as ext4 to store the content of /var/lib/docker and /var/lib/kubelet.</li>
-         * <li>If the ECS instance does not have data cloud disks mounted, no new data cloud disks are mounted.</li>
+         * <li>If the ECS instance has a data cloud disk mounted and the file system of the last data cloud disk is not initialized, the system automatically formats the data cloud disk to ext4 to store the /var/lib/docker and /var/lib/kubelet directories.</li>
+         * <li>If the ECS instance does not have a data cloud disk mounted, no new data cloud disk is mounted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -235,10 +235,10 @@ public class DescribeClusterAttachScriptsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to retain the instance name when adding existing instances to the cluster. If the instance name is not retained, the instance name format is <code>worker-k8s-for-cs-&lt;clusterid&gt;</code>. Valid values:</p>
+         * <p>Specifies whether to retain the instance name when adding an existing instance to the cluster. If you do not retain the instance name, the instance name format is <code>worker-k8s-for-cs-&lt;clusterid&gt;</code>. Valid values:</p>
          * <ul>
          * <li><code>true</code>: Retains the instance name.</li>
-         * <li><code>false</code>: Does not retain the instance name. The name is replaced based on system rules.</li>
+         * <li><code>false</code>: Does not retain the instance name. The instance name is replaced based on system rules.</li>
          * </ul>
          * <p>Default value: <code>true</code>.</p>
          * 
@@ -252,7 +252,7 @@ public class DescribeClusterAttachScriptsRequest extends Request {
         }
 
         /**
-         * <p>The node pool ID. When adding a node, you can add the node to the specified node pool.</p>
+         * <p>The node pool ID. You can add the node to a specified node pool when adding nodes.</p>
          * <blockquote>
          * <p>If you do not specify a node pool ID, the node is added to the default node pool.</p>
          * </blockquote>
@@ -276,9 +276,9 @@ public class DescribeClusterAttachScriptsRequest extends Request {
         }
 
         /**
-         * <p>The access configuration parameters of the node.</p>
+         * <p>The access configuration parameters for the node.</p>
          * <blockquote>
-         * <p>This parameter is required when the cluster type is managed edge.</p>
+         * <p>This parameter is required when the cluster type is ACK Edge.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -291,7 +291,7 @@ public class DescribeClusterAttachScriptsRequest extends Request {
         }
 
         /**
-         * <p>If you specify a list of RDS instances, the ECS nodes in the cluster are automatically added to the RDS whitelist.</p>
+         * <p>If an ApsaraDB RDS instance list is specified, the ECS instances of the cluster nodes are automatically added to the RDS access whitelist.</p>
          */
         public Builder rdsInstances(java.util.List<String> rdsInstances) {
             this.putBodyParameter("rds_instances", rdsInstances);

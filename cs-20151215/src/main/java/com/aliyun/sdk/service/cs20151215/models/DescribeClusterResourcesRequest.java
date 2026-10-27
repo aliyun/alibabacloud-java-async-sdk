@@ -75,8 +75,8 @@ public class DescribeClusterResourcesRequest extends Request {
 
         /**
          * <p>The cluster ID.</p>
-         * <p>For information about how to view the cluster ID, see <a href="https://help.aliyun.com/document_detail/89446.html">View cluster information</a>.</p>
-         * <p>You can also call the <a href="https://help.aliyun.com/document_detail/183905.html">DescribeClustersV1</a> API operation to view information about all clusters created under your Alibaba Cloud account.</p>
+         * <p>For more information about how to view the cluster ID, see <a href="https://help.aliyun.com/document_detail/89446.html">View cluster information</a>.</p>
+         * <p>You can also call the <a href="https://help.aliyun.com/document_detail/183905.html">DescribeClustersV1</a> API operation to view all clusters created within your Alibaba Cloud account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -89,12 +89,10 @@ public class DescribeClusterResourcesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to also query resources created by cluster components.</p>
+         * <p>Specifies whether to query the resources created by cluster add-ons. Valid values:</p>
          * <ul>
-         * <li><p>true: Queries the resources.</p>
-         * </li>
-         * <li><p>false: Does not query the resources.</p>
-         * </li>
+         * <li>true: Queries the resources.</li>
+         * <li>false: Does not query the resources.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -88,7 +88,7 @@ public class DescribeClusterAddonInstanceRequest extends Request {
         }
 
         /**
-         * <p>The component name.</p>
+         * <p>The add-on name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

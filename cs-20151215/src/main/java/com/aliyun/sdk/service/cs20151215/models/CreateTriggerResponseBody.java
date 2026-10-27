@@ -106,7 +106,7 @@ public class CreateTriggerResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The trigger action.</p>
+         * <p>The action of the trigger.</p>
          * 
          * <strong>example:</strong>
          * <p>redeploy</p>
@@ -139,7 +139,7 @@ public class CreateTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The trigger project name.</p>
+         * <p>The project name of the trigger.</p>
          * 
          * <strong>example:</strong>
          * <p>default/test-app</p>
@@ -150,7 +150,7 @@ public class CreateTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The trigger type.</p>
+         * <p>The type of the trigger.</p>
          * 
          * <strong>example:</strong>
          * <p>deployment</p>

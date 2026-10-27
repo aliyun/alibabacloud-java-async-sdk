@@ -130,7 +130,7 @@ public class DescribeClusterEventsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,6 +144,9 @@ public class DescribeClusterEventsRequest extends Request {
 
         /**
          * <p>The maximum number of results to return for a single request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("max_results", maxResults);
@@ -152,7 +155,10 @@ public class DescribeClusterEventsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token. The value is the next_token parameter returned by the previous API call.</p>
+         * <p>The pagination token. Set the value to the next_token value returned from the previous API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0123456789abcdef0123456789abcdef</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("next_token", nextToken);
@@ -173,9 +179,7 @@ public class DescribeClusterEventsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of results to return per page.</p>
-         * <p>Valid values: 1 to 100.</p>
-         * <p>Default value: 50.</p>
+         * <p>The maximum number of entries to return on each page. Valid values: 1 to 100. Default value: 50.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>

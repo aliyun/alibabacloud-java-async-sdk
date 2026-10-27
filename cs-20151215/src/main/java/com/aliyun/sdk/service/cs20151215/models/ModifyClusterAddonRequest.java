@@ -102,7 +102,7 @@ public class ModifyClusterAddonRequest extends Request {
         }
 
         /**
-         * <p>The component ID.</p>
+         * <p>The add-on ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

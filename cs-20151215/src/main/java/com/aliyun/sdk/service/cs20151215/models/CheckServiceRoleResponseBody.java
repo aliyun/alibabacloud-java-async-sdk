@@ -54,7 +54,7 @@ public class CheckServiceRoleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The service role check results.</p>
+         * <p>The check results of the service roles.</p>
          */
         public Builder roles(java.util.List<Roles> roles) {
             this.roles = roles;
@@ -133,7 +133,7 @@ public class CheckServiceRoleResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the role has been authorized.</p>
+             * <p>Indicates whether the service role is authorized.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -144,7 +144,7 @@ public class CheckServiceRoleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The message returned when the role is not authorized.</p>
+             * <p>The prompt message when the service role is not authorized.</p>
              * 
              * <strong>example:</strong>
              * <p>The role does not exist: AliyunCSManagedAutoScalerRole</p>
@@ -155,7 +155,7 @@ public class CheckServiceRoleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service role name.</p>
+             * <p>The name of the service role.</p>
              * 
              * <strong>example:</strong>
              * <p>AliyunCSManagedAutoScalerRole</p>

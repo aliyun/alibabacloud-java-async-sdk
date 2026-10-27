@@ -106,7 +106,7 @@ public class UpdateResourcesDeleteProtectionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The namespace of the resource.</p>
+         * <p>The namespace where the resource resides.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -150,7 +150,7 @@ public class UpdateResourcesDeleteProtectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of resources whose deletion protection status is updated.</p>
+         * <p>The list of resources for which the deletion protection status is updated.</p>
          */
         public Builder resources(java.util.List<String> resources) {
             this.resources = resources;

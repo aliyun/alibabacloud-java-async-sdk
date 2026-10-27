@@ -87,7 +87,7 @@ public class ModifyClusterTagsRequest extends Request {
         }
 
         /**
-         * <p>The data to update.</p>
+         * <p>The data to be updated.</p>
          */
         public Builder body(java.util.List<Tag> body) {
             this.putBodyParameter("body", body);

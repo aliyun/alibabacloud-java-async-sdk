@@ -127,7 +127,10 @@ public class DescribeClusterTasksRequest extends Request {
         }
 
         /**
-         * max_results.
+         * <p>The maximum number of results to return per request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("max_results", maxResults);
@@ -136,7 +139,7 @@ public class DescribeClusterTasksRequest extends Request {
         }
 
         /**
-         * next_token.
+         * <p>The pagination token. Set the value to the next_token parameter value returned from the previous API call.</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("next_token", nextToken);
@@ -145,7 +148,7 @@ public class DescribeClusterTasksRequest extends Request {
         }
 
         /**
-         * <p>The current page number.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -157,7 +160,7 @@ public class DescribeClusterTasksRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of items per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

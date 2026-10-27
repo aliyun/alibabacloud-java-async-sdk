@@ -205,7 +205,7 @@ public class ModifyAutoRepairPolicyRequest extends Request {
             } 
 
             /**
-             * <p>The name of the fault.</p>
+             * <p>The name of the incident.</p>
              * 
              * <strong>example:</strong>
              * <p>Node.FaultNeedReboot.HOST</p>
@@ -286,7 +286,7 @@ public class ModifyAutoRepairPolicyRequest extends Request {
             } 
 
             /**
-             * <p>The key value of the label.</p>
+             * <p>The key of the label.</p>
              * 
              * <strong>example:</strong>
              * <p>k8s.aliyun.com/incident</p>
@@ -367,7 +367,7 @@ public class ModifyAutoRepairPolicyRequest extends Request {
             } 
 
             /**
-             * <p>The key value of the label.</p>
+             * <p>The key of the label.</p>
              * 
              * <strong>example:</strong>
              * <p>k8s.aliyun.com/incident</p>
@@ -474,7 +474,7 @@ public class ModifyAutoRepairPolicyRequest extends Request {
             } 
 
             /**
-             * <p>The label configuration for authorization confirmation. When you add the following labels to the node, you authorize ACK to execute the operation for this stage. After completing the operation for this stage, ACK automatically removes the authorization inquiry and authorization confirmation labels corresponding to this stage. If you do not promptly add the following labels to grant authorization, ACK will not execute the action for this stage and subsequent actions, and the node may remain in a damaged state.</p>
+             * <p>The label configuration for authorization confirmation. When you add the following labels to the node, you authorize ACK to execute the operation for this stage. After completing the operation for this stage, ACK automatically removes the authorization inquiry and confirmation labels corresponding to this stage. If you do not add the following labels in time to grant authorization, ACK will not execute the action for this stage and subsequent actions, and the node may remain in a damaged state.</p>
              */
             public Builder approvedLabel(ApprovedLabel approvedLabel) {
                 this.approvedLabel = approvedLabel;
@@ -670,7 +670,7 @@ public class ModifyAutoRepairPolicyRequest extends Request {
             } 
 
             /**
-             * <p>The list of identified faults.</p>
+             * <p>The list of identified incidents.</p>
              */
             public Builder incidents(java.util.List<Incidents> incidents) {
                 this.incidents = incidents;

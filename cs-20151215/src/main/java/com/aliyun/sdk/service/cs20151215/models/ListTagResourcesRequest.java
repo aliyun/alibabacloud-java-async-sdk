@@ -158,7 +158,10 @@ public class ListTagResourcesRequest extends Request {
 
         /**
          * <p>The resource type.</p>
-         * <p>CLUSTER: cluster.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>CLUSTER: cluster.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -171,7 +174,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The list of tags to query. A maximum of 20 items can be specified.</p>
+         * <p>The list of tags to query. You can specify a maximum of 20 tags.</p>
          * 
          * <strong>example:</strong>
          * <p>[{\&quot;key\&quot;:\&quot;env\&quot;,\&quot;value\&quot;,\&quot;dev\&quot;},{\&quot;key\&quot;:\&quot;dev\&quot;, \&quot;value\&quot;:\&quot;IT\&quot;}]</p>

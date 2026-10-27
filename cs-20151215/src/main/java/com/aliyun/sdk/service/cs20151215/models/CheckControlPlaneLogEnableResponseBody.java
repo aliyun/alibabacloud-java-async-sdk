@@ -105,7 +105,7 @@ public class CheckControlPlaneLogEnableResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of components for which control plane logging is enabled.</p>
+         * <p>The list of components for which control plane logging is currently enabled.</p>
          * <p>This parameter is required.</p>
          */
         public Builder components(java.util.List<String> components) {
@@ -114,8 +114,8 @@ public class CheckControlPlaneLogEnableResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the SLS project that stores the control plane component logs.</p>
-         * <p>Default value: k8s-log-$Cluster ID.</p>
+         * <p>The name of the SLS project where control plane component logs are stored.</p>
+         * <p>Default value: k8s-log-$ClusterId.</p>
          * 
          * <strong>example:</strong>
          * <p>k8s-log-c5b5e80b0b64a4bf6939d2d8fbbc5****</p>
@@ -126,7 +126,7 @@ public class CheckControlPlaneLogEnableResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data retention period of logs in the SLS Logstore. Unit: days.</p>
+         * <p>The retention period of logs in the SLS Logstore. Unit: days.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>

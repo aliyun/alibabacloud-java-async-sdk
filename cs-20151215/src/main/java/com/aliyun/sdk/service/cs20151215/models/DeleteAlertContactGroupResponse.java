@@ -194,10 +194,10 @@ public class DeleteAlertContactGroupResponse extends Response {
             } 
 
             /**
-             * <p>The deletion status. Valid values:</p>
+             * <p>The deletion status.</p>
              * <ul>
-             * <li>true: Deleted.</li>
-             * <li>false: Failed to delete.</li>
+             * <li>true: Deletion succeeded.</li>
+             * <li>false: Deletion failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -209,7 +209,7 @@ public class DeleteAlertContactGroupResponse extends Response {
             }
 
             /**
-             * <p>The message returned when the operation fails.</p>
+             * <p>The message returned when the execution fails.</p>
              * 
              * <strong>example:</strong>
              * <p>Delete contact group resource failed.</p>
@@ -220,7 +220,7 @@ public class DeleteAlertContactGroupResponse extends Response {
             }
 
             /**
-             * <p>The alert contact group ID.</p>
+             * <p>The ID of the alert contact group.</p>
              * 
              * <strong>example:</strong>
              * <p>12345</p>

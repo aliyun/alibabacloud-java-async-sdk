@@ -555,6 +555,9 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
 
             /**
              * <p>The description of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Restricts the creation of Application Load Balancer (ALB) instances.</p>
              */
             public Builder policyDescription(String policyDescription) {
                 this.policyDescription = policyDescription;
@@ -563,6 +566,9 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
 
             /**
              * <p>The policy name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACKRestrictALBCreation</p>
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -571,6 +577,9 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
 
             /**
              * <p>The severity level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>low</p>
              */
             public Builder severity(String severity) {
                 this.severity = severity;

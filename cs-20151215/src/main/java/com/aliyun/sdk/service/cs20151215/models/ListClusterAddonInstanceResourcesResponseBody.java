@@ -353,7 +353,7 @@ public class ListClusterAddonInstanceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Kubernetes API version to which the object belongs.</p>
+             * <p>The Kubernetes API version of the object.</p>
              * 
              * <strong>example:</strong>
              * <p>v1</p>

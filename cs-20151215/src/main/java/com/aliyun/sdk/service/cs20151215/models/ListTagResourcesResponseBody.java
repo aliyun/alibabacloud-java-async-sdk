@@ -102,7 +102,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The collection of tag resources.</p>
+         * <p>The collection of tagged resources.</p>
          */
         public Builder tagResources(TagResources tagResources) {
             this.tagResources = tagResources;
@@ -284,7 +284,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The tag resource.</p>
+             * <p>The tagged resource.</p>
              */
             public Builder tagResource(java.util.List<TagResource> tagResource) {
                 this.tagResource = tagResource;

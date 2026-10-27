@@ -303,7 +303,7 @@ public class GetClusterDiagnosisCheckItemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The assessment result of the check item.</p>
+             * <p>The evaluation result of the check item.</p>
              * 
              * <strong>example:</strong>
              * <p>normal</p>
@@ -325,7 +325,7 @@ public class GetClusterDiagnosisCheckItemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The check item name.</p>
+             * <p>The name of the check item.</p>
              * 
              * <strong>example:</strong>
              * <p>HostDNS</p>
@@ -347,7 +347,7 @@ public class GetClusterDiagnosisCheckItemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The check item value.</p>
+             * <p>The value of the check item.</p>
              * 
              * <strong>example:</strong>
              * <p>True</p>

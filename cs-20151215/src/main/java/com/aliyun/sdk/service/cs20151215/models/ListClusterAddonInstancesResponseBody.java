@@ -54,7 +54,7 @@ public class ListClusterAddonInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of installed component instances.</p>
+         * <p>The list of installed add-on instances.</p>
          */
         public Builder addons(java.util.List<Addons> addons) {
             this.addons = addons;
@@ -133,7 +133,7 @@ public class ListClusterAddonInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The component name.</p>
+             * <p>The add-on name.</p>
              * 
              * <strong>example:</strong>
              * <p>coredns</p>
@@ -144,12 +144,12 @@ public class ListClusterAddonInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The component status. Valid values:</p>
+             * <p>The add-on status. Valid values:</p>
              * <ul>
-             * <li>active: installed</li>
-             * <li>updating: being updated</li>
-             * <li>upgrading: being upgraded</li>
-             * <li>deleting: being uninstalled</li>
+             * <li>active: Installed.</li>
+             * <li>updating: Modifying.</li>
+             * <li>upgrading: Upgrading.</li>
+             * <li>deleting: Uninstalling.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -161,7 +161,7 @@ public class ListClusterAddonInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The component version.</p>
+             * <p>The add-on version.</p>
              * 
              * <strong>example:</strong>
              * <p>v1.9.3.10-7dfca203-aliyun</p>

@@ -99,7 +99,7 @@ public class CreateClusterDiagnosisRequest extends Request {
         }
 
         /**
-         * <p>The parameters used to specify the diagnosis target. The following examples show the parameters for different diagnosis types:</p>
+         * <p>The parameters used to specify the diagnosis target. Examples of parameters for different diagnosis types:</p>
          * <p>node:</p>
          * <pre><code>{&quot;name&quot;: &quot;cn-shanghai.10.10.10.107&quot;}
          * </code></pre>

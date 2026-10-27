@@ -93,7 +93,7 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
         } 
 
         /**
-         * next_token.
+         * <p>The pagination token.</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -120,7 +120,7 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The task array.</p>
+         * <p>The array of tasks.</p>
          */
         public Builder tasks(java.util.List<Tasks> tasks) {
             this.tasks = tasks;
@@ -210,7 +210,7 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries per page.</p>
+             * <p>The number of items per page.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -435,7 +435,7 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node fault error message.</p>
+             * <p>The node fault message.</p>
              */
             public Builder error(Error error) {
                 this.error = error;

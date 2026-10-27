@@ -209,7 +209,7 @@ public class DescribeAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The names of the components in the group.</p>
+             * <p>The names of the components included in the group.</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;

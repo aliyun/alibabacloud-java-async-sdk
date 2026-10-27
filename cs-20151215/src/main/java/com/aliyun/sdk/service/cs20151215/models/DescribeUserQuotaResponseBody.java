@@ -132,7 +132,7 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The quota of managed clusters. Default value: 20. If you need to exceed the default value, <a href="https://quotas.console.aliyun.com/products/csk/quotas">submit a request on the Quota Center page</a> to increase the quota.</p>
+         * <p>The managed cluster quota. Default value: 20. To increase the quota, <a href="https://quotas.console.aliyun.com/products/csk/quotas">submit an application in Quota Center</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -143,7 +143,7 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The quota of ASK clusters. Default value: 20. If you need to exceed the default value, <a href="https://quotas.console.aliyun.com/products/csk/quotas">submit a request on the Quota Center page</a> to increase the quota.</p>
+         * <p>The ASK cluster quota. Default value: 20. To increase the quota, <a href="https://quotas.console.aliyun.com/products/csk/quotas">submit an application in Quota Center</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -154,7 +154,7 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The node pool quota per cluster. Default value: 20. If you need to exceed the default value, <a href="https://quotas.console.aliyun.com/products/csk/quotas">submit a request on the Quota Center page</a> to increase the quota.</p>
+         * <p>The node pool quota per cluster. Default value: 20. To increase the quota, <a href="https://quotas.console.aliyun.com/products/csk/quotas">submit an application in Quota Center</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -165,7 +165,7 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total cluster quota per account. Default value: 50. If you need to exceed the default value, <a href="https://quotas.console.aliyun.com/products/csk/quotas">submit a request on the Quota Center page</a> to increase the quota.</p>
+         * <p>The total cluster quota per account. Default value: 50. To increase the quota, <a href="https://quotas.console.aliyun.com/products/csk/quotas">submit an application in Quota Center</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -184,7 +184,7 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The node quota per cluster. Default value: 100. If you need to exceed the default value, <a href="https://quotas.console.aliyun.com/products/csk/quotas">submit a request on the Quota Center page</a> to increase the quota.</p>
+         * <p>The node quota per cluster. Default value: 100. To increase the quota, <a href="https://quotas.console.aliyun.com/products/csk/quotas">submit an application in Quota Center</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -195,7 +195,7 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The new quota items. If this field exists, the values in this field take precedence.</p>
+         * <p>The new quota items. If this field is present, it takes precedence.</p>
          */
         public Builder quotas(java.util.Map<String, QuotasValue> quotas) {
             this.quotas = quotas;

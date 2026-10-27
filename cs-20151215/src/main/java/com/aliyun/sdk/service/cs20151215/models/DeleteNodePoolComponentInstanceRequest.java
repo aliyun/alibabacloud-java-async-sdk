@@ -211,7 +211,7 @@ public class DeleteNodePoolComponentInstanceRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of nodes that can fail during the rolling process. Default value: 0. A value of 0 indicates that the task fails if any node fails. A value greater than 0 indicates that the task fails and stops if the cumulative number of failed nodes exceeds this value.</p>
+         * <p>The maximum number of nodes that are allowed to fail during the rolling process. Default value: 0. A value of 0 indicates that the task fails if any node fails. A value greater than 0 indicates that the task fails and stops if the cumulative number of failed nodes exceeds this value.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -223,7 +223,7 @@ public class DeleteNodePoolComponentInstanceRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of parallel operations per batch. Default value: 1.</p>
+         * <p>The maximum number of parallel nodes per batch. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -248,7 +248,7 @@ public class DeleteNodePoolComponentInstanceRequest extends Request {
         }
 
         /**
-         * <p>The auto-pause policy during a node upgrade. Valid values:</p>
+         * <p>The auto-pause policy during the node upgrade process. Valid values:</p>
          * <ul>
          * <li>NotPause</li>
          * <li>FirstBatch</li>

@@ -144,7 +144,7 @@ public class ModifyPolicyInstanceRequest extends Request {
         }
 
         /**
-         * <p>The name of the policy rule.</p>
+         * <p>The name of the policy governance rule.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,8 +159,8 @@ public class ModifyPolicyInstanceRequest extends Request {
         /**
          * <p>The governance action of the rule. Valid values:</p>
          * <ul>
-         * <li><code>deny</code>: blocks non-compliant deployments.</li>
-         * <li><code>warn</code>: generates alerts.</li>
+         * <li><code>deny</code>: Blocks non-compliant deployments.</li>
+         * <li><code>warn</code>: Generates an alert.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -173,7 +173,7 @@ public class ModifyPolicyInstanceRequest extends Request {
         }
 
         /**
-         * <p>The instance ID of the policy rule instance.</p>
+         * <p>The instance ID of the policy rule.</p>
          * 
          * <strong>example:</strong>
          * <p>allowed-repos-cbhhb</p>
@@ -185,7 +185,7 @@ public class ModifyPolicyInstanceRequest extends Request {
         }
 
         /**
-         * <p>The namespaces to which the policy applies. An empty value indicates all namespaces.</p>
+         * <p>The namespaces where the policy is enforced. If this parameter is left empty, the policy is enforced in all namespaces.</p>
          */
         public Builder namespaces(java.util.List<String> namespaces) {
             this.putBodyParameter("namespaces", namespaces);
@@ -194,7 +194,7 @@ public class ModifyPolicyInstanceRequest extends Request {
         }
 
         /**
-         * <p>The configuration parameters of the current rule instance. For more information about parameter settings rules, see <a href="https://help.aliyun.com/document_detail/359819.html">Container Security Policy Rule Library</a>.</p>
+         * <p>The configuration parameters of the current rule instance. For more information about the rules for parameter settings, see <a href="https://help.aliyun.com/document_detail/359819.html">Container security policy rule library</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;restrictedNamespaces&quot;: [ &quot;test&quot; ]</p>

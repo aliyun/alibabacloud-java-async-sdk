@@ -85,7 +85,7 @@ public class GetClusterAddonInstanceRequest extends Request {
         }
 
         /**
-         * <p>The component instance name.</p>
+         * <p>The name of the add-on instance.</p>
          * 
          * <strong>example:</strong>
          * <p>ack-node-problem-detector</p>

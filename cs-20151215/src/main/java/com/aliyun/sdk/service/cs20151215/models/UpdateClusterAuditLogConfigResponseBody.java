@@ -80,7 +80,7 @@ public class UpdateClusterAuditLogConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>The ID of the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>c93095129fc41463aa455d89444fd****</p>
@@ -91,7 +91,7 @@ public class UpdateClusterAuditLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>48BD70F6-A7E6-543D-9F23-08DEB764****</p>
@@ -102,7 +102,7 @@ public class UpdateClusterAuditLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The task ID.</p>
+         * <p>The ID of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>T-5faa48fb31b6b8078d00****</p>

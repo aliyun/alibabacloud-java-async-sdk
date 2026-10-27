@@ -80,7 +80,7 @@ public class UnInstallClusterAddonsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>The ID of the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>c5b5e80b0b64a4bf6939d2d8fbb******</p>
@@ -91,7 +91,7 @@ public class UnInstallClusterAddonsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>74D1512F-67DA-54E8-99EA-4D50EB******</p>
@@ -102,7 +102,7 @@ public class UnInstallClusterAddonsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The task ID.</p>
+         * <p>The ID of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>T-66e39b39c0fdd00132******</p>
