@@ -80,7 +80,7 @@ public class DescribeOrgsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The pagination token. Set this parameter to the value of NextToken that was returned in the previous API call.</p>
+         * <p>The pagination token. Set the value to the NextToken parameter returned by the previous API call.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK****</p>
@@ -168,7 +168,7 @@ public class DescribeOrgsResponseBody extends TeaModel {
             } 
 
             /**
-             * PolicyId.
+             * <p>The resource policy ID.</p>
              */
             public Builder policyId(String policyId) {
                 this.policyId = policyId;
@@ -176,7 +176,7 @@ public class DescribeOrgsResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyName.
+             * <p>The Policy Name.</p>
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -295,11 +295,10 @@ public class DescribeOrgsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The access type of the organization node. Valid values:</p>
-             * <ul>
-             * <li>MANAGEABLE: indicates a manageable node.</li>
-             * <li>PATH_ONLY: indicates a node used only to display the full path to the root organization.</li>
-             * </ul>
+             * <p>The access type of the organization node. A value of MANAGEABLE indicates a manageable node. A value of PATH_ONLY indicates that the node is used only to display the full path to the root organization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MANAGEABLE</p>
              */
             public Builder accessType(String accessType) {
                 this.accessType = accessType;
@@ -318,10 +317,10 @@ public class DescribeOrgsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The organization name.</p>
+             * <p>The name of the organization.</p>
              * 
              * <strong>example:</strong>
-             * <p>DesignDepartment****</p>
+             * <p>Design Department****</p>
              */
             public Builder orgName(String orgName) {
                 this.orgName = orgName;
@@ -329,7 +328,10 @@ public class DescribeOrgsResponseBody extends TeaModel {
             }
 
             /**
-             * OrgNamePath.
+             * <p>The name path from the root organization to the current organization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Product Department/Design Department</p>
              */
             public Builder orgNamePath(String orgNamePath) {
                 this.orgNamePath = orgNamePath;
@@ -337,7 +339,7 @@ public class DescribeOrgsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parent organization ID.</p>
+             * <p>The ID of the parent organization.</p>
              * 
              * <strong>example:</strong>
              * <p>org-ezqr****</p>
@@ -348,7 +350,7 @@ public class DescribeOrgsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourcePolicyList.
+             * <p>The list of resource policies associated with the organization.</p>
              */
             public Builder resourcePolicyList(java.util.List<ResourcePolicyList> resourcePolicyList) {
                 this.resourcePolicyList = resourcePolicyList;

@@ -87,7 +87,7 @@ public class UserBatchQuitGroupRequest extends Request {
         } 
 
         /**
-         * <p>Channel</p>
+         * <p>The business channel.</p>
          * 
          * <strong>example:</strong>
          * <p>ENTERPRISE</p>
@@ -99,7 +99,7 @@ public class UserBatchQuitGroupRequest extends Request {
         }
 
         /**
-         * <p>The user IDs.</p>
+         * <p>The list of user IDs.</p>
          */
         public Builder endUserIds(java.util.List<String> endUserIds) {
             this.putBodyParameter("EndUserIds", endUserIds);

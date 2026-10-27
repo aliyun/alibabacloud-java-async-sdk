@@ -80,7 +80,7 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>68BA1DF7-8814-5AED-B844-F8F7F7****</p>
@@ -181,7 +181,10 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>The ID of the application rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ruleId1</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -189,7 +192,10 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the application rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ruleName1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -197,7 +203,10 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the application rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder type(Integer type) {
                 this.type = type;
@@ -277,7 +286,7 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The policy ID.</p>
+             * <p>The ID of the policy.</p>
              * 
              * <strong>example:</strong>
              * <p>pl-a8jnatl8kjasb***</p>
@@ -288,7 +297,7 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the policy is the default policy.</p>
+             * <p>Specifies whether the policy is the default policy.</p>
              * 
              * <strong>example:</strong>
              * <p>False</p>
@@ -302,7 +311,7 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
              * <p>The policy name.</p>
              * 
              * <strong>example:</strong>
-             * <p>TestPolicy123</p>
+             * <p>Test policy 123</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -408,7 +417,10 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * BindStatus.
+             * <p>The association status between the scheduled task and the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BIND</p>
              */
             public Builder bindStatus(String bindStatus) {
                 this.bindStatus = bindStatus;
@@ -416,7 +428,7 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scheduled task ID.</p>
+             * <p>The ID of the scheduled task.</p>
              * 
              * <strong>example:</strong>
              * <p>t-asdzx0mbjhg***</p>
@@ -427,10 +439,10 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scheduled task name.</p>
+             * <p>The name of the scheduled task.</p>
              * 
              * <strong>example:</strong>
-             * <p>TestTask123</p>
+             * <p>Test task 123</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -438,7 +450,10 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * TimerStatus.
+             * <p>The running status of the scheduled task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AVAILABLE</p>
              */
             public Builder timerStatus(String timerStatus) {
                 this.timerStatus = timerStatus;
@@ -446,7 +461,10 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the scheduled task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TIMER</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -488,6 +506,9 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceCount")
         private String resourceCount;
 
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupDescription")
+        private String resourceGroupDescription;
+
         @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
@@ -505,6 +526,7 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
             this.createTime = builder.createTime;
             this.policies = builder.policies;
             this.resourceCount = builder.resourceCount;
+            this.resourceGroupDescription = builder.resourceGroupDescription;
             this.resourceGroupId = builder.resourceGroupId;
             this.resourceGroupName = builder.resourceGroupName;
             this.timers = builder.timers;
@@ -568,6 +590,13 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupDescription
+         */
+        public String getResourceGroupDescription() {
+            return this.resourceGroupDescription;
+        }
+
+        /**
          * @return resourceGroupId
          */
         public String getResourceGroupId() {
@@ -596,6 +625,7 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
             private String createTime; 
             private java.util.List<Policies> policies; 
             private String resourceCount; 
+            private String resourceGroupDescription; 
             private String resourceGroupId; 
             private String resourceGroupName; 
             private java.util.List<Timers> timers; 
@@ -611,13 +641,17 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
                 this.createTime = model.createTime;
                 this.policies = model.policies;
                 this.resourceCount = model.resourceCount;
+                this.resourceGroupDescription = model.resourceGroupDescription;
                 this.resourceGroupId = model.resourceGroupId;
                 this.resourceGroupName = model.resourceGroupName;
                 this.timers = model.timers;
             } 
 
             /**
-             * AgentType.
+             * <p>The agent subtype of the DesktopAgent resource group. Valid values: JVSClaw and HermesAgent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>JVSClaw</p>
              */
             public Builder agentType(String agentType) {
                 this.agentType = agentType;
@@ -625,7 +659,7 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Alibaba Cloud resource group ID.</p>
+             * <p>The ID of the Alibaba Cloud resource group.</p>
              * 
              * <strong>example:</strong>
              * <p>rg-123456</p>
@@ -636,7 +670,7 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * AppRules.
+             * <p>The list of application rules associated with the resource group.</p>
              */
             public Builder appRules(java.util.List<AppRules> appRules) {
                 this.appRules = appRules;
@@ -655,7 +689,7 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time.</p>
+             * <p>The creation time in ISO 8601 UTC format.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-11-29T17:25:40.000000000Z</p>
@@ -669,8 +703,8 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
              * <blockquote>
              * <p>The policies associated with the resource group.</p>
              * <ul>
-             * <li>Associated policies take effect on cloud computers in the resource group. If multiple policies are associated, they take effect based on policy priority.</li>
-             * <li>If a cloud computer in the resource group already has other policies specified, the policies associated with the resource group take effect first.</li>
+             * <li>The associated policies take effect on the cloud computers in the resource group. If multiple policies exist, they take effect based on their priorities.</li>
+             * <li>If a cloud computer in the resource group is already assigned another policy, the policy associated with the resource group takes precedence.</li>
              * </ul>
              * </blockquote>
              */
@@ -691,7 +725,18 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource group ID.</p>
+             * <p>The description of the resource group. If not set, an empty string is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Department A resource group</p>
+             */
+            public Builder resourceGroupDescription(String resourceGroupDescription) {
+                this.resourceGroupDescription = resourceGroupDescription;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the resource group.</p>
              * 
              * <strong>example:</strong>
              * <p>rg-cyo0il2pzge1***</p>
@@ -702,10 +747,10 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource group name.</p>
+             * <p>The name of the resource group.</p>
              * 
              * <strong>example:</strong>
-             * <p>TestResourceGroup</p>
+             * <p>Test resource group</p>
              */
             public Builder resourceGroupName(String resourceGroupName) {
                 this.resourceGroupName = resourceGroupName;
@@ -714,9 +759,9 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
 
             /**
              * <blockquote>
-             * <p>The associated scheduled tasks.</p>
+             * <p>The scheduled tasks associated with the resource group.</p>
              * <ul>
-             * <li>Associated scheduled tasks take effect on cloud computers in the resource group. If a cloud computer in the resource group already has other scheduled tasks associated, the tasks associated with the resource group take effect first.</li>
+             * <li>The associated scheduled tasks take effect on the cloud computers in the resource group. If a cloud computer in the resource group is already associated with another scheduled task, the task associated with the resource group takes precedence.</li>
              * </ul>
              * </blockquote>
              */

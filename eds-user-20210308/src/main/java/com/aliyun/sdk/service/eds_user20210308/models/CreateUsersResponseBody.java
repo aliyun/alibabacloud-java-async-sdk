@@ -80,7 +80,7 @@ public class CreateUsersResponseBody extends TeaModel {
         } 
 
         /**
-         * AllSucceed.
+         * <p>Indicates whether all convenience accounts are created.</p>
          */
         public Builder allSucceed(Boolean allSucceed) {
             this.allSucceed = allSucceed;
@@ -88,7 +88,7 @@ public class CreateUsersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result of creating convenience accounts.</p>
+         * <p>The result of the convenience account creation operation.</p>
          */
         public Builder createResult(CreateResult createResult) {
             this.createResult = createResult;
@@ -215,7 +215,7 @@ public class CreateUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user name.</p>
+             * <p>The username.</p>
              * 
              * <strong>example:</strong>
              * <p>test1</p>
@@ -237,7 +237,7 @@ public class CreateUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name.</p>
+             * <p>The display name of the user.</p>
              * 
              * <strong>example:</strong>
              * <p>Bean</p>
@@ -248,7 +248,7 @@ public class CreateUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user\&quot;s remark.</p>
+             * <p>The user remarks.</p>
              * 
              * <strong>example:</strong>
              * <p>remark1</p>
@@ -368,7 +368,7 @@ public class CreateUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user name.</p>
+             * <p>The username.</p>
              * 
              * <strong>example:</strong>
              * <p>test2</p>
@@ -471,7 +471,7 @@ public class CreateUsersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The convenience accounts that were successfully created.</p>
+             * <p>The information about the convenience accounts that are created.</p>
              */
             public Builder createdUsers(java.util.List<CreatedUsers> createdUsers) {
                 this.createdUsers = createdUsers;
@@ -479,7 +479,7 @@ public class CreateUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The convenience accounts that failed to be created.</p>
+             * <p>The information about the convenience accounts that failed to be created.</p>
              */
             public Builder failedUsers(java.util.List<FailedUsers> failedUsers) {
                 this.failedUsers = failedUsers;

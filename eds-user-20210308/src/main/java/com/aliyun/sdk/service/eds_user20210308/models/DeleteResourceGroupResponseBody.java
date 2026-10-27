@@ -54,7 +54,7 @@ public class DeleteResourceGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>2463A343-BD32-5803-959E-9A8472A1***</p>

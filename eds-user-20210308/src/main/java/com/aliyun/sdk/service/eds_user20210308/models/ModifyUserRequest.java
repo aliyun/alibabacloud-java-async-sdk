@@ -102,7 +102,7 @@ public class ModifyUserRequest extends Request {
         } 
 
         /**
-         * <p>Channel</p>
+         * <p>The business channel.</p>
          * 
          * <strong>example:</strong>
          * <p>ENTERPRISE</p>
@@ -114,7 +114,7 @@ public class ModifyUserRequest extends Request {
         }
 
         /**
-         * <p>The email address of the convenience user. For a user-activated convenience user, the email address or mobile number must be verified. You can choose to verify the email address or the mobile number. For an administrator-activated convenience user, the email address and mobile number can be left empty.</p>
+         * <p>The email address of the convenience account.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:username@example.com">username@example.com</a></p>
@@ -126,7 +126,7 @@ public class ModifyUserRequest extends Request {
         }
 
         /**
-         * <p>The name of the user.</p>
+         * <p>The user ID of the convenience account, which corresponds to the username field displayed in the console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,10 +139,7 @@ public class ModifyUserRequest extends Request {
         }
 
         /**
-         * <p>The mobile number of the convenience user. For a user-activated convenience user, the email address or mobile number must be verified. You can choose to verify the email address or the mobile number. For an administrator-activated convenience user, the email address and mobile number can be left empty.</p>
-         * <blockquote>
-         * <p> Accounts created on the International site (alibabacloud.com) do not support mobile number-based authentication.</p>
-         * </blockquote>
+         * <p>The mobile phone number of the convenience account.</p>
          * 
          * <strong>example:</strong>
          * <p>1381111****</p>

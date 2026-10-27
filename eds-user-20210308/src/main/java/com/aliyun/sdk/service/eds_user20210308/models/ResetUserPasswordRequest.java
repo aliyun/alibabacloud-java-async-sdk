@@ -88,7 +88,7 @@ public class ResetUserPasswordRequest extends Request {
         } 
 
         /**
-         * <p>Channel</p>
+         * <p>The channel.</p>
          * 
          * <strong>example:</strong>
          * <p>ENTERPRISE</p>
@@ -100,9 +100,9 @@ public class ResetUserPasswordRequest extends Request {
         }
 
         /**
-         * <p>The method to notify the user after the password is reset.</p>
+         * <p>The method used to notify the user after the password is reset.</p>
          * <blockquote>
-         * <p>Alibaba Cloud accounts of the international site do not support sending notification through text messages.</p>
+         * <p>Notification by text message is not supported for Alibaba Cloud International Website accounts.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -115,7 +115,7 @@ public class ResetUserPasswordRequest extends Request {
         }
 
         /**
-         * <p>The names of the convenience users whose passwords you want to reset.</p>
+         * <p>The usernames of the convenience users whose passwords you want to reset.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

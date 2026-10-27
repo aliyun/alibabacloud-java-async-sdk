@@ -67,7 +67,7 @@ public class ResetUserPasswordResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>32D05B39-E6EE-4D7A-9FD0-762A26859D0D</p>
@@ -78,7 +78,7 @@ public class ResetUserPasswordResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result of resetting the password of the convenience user.</p>
+         * <p>The result of the password reset operation for the convenience users.</p>
          */
         public Builder resetUsersResult(ResetUsersResult resetUsersResult) {
             this.resetUsersResult = resetUsersResult;
@@ -157,7 +157,7 @@ public class ResetUserPasswordResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the convenience user whose password failed to be reset.</p>
+             * <p>The convenience user for whom the password reset failed.</p>
              * 
              * <strong>example:</strong>
              * <p>alice</p>
@@ -249,7 +249,7 @@ public class ResetUserPasswordResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The information about the convenience users whose passwords failed to be reset.</p>
+             * <p>The list of convenience users for whom the password reset failed.</p>
              */
             public Builder failedUsers(java.util.List<FailedUsers> failedUsers) {
                 this.failedUsers = failedUsers;
@@ -257,7 +257,7 @@ public class ResetUserPasswordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The convenience users to which the system sent a password reset email.</p>
+             * <p>The list of convenience users to whom the password reset emails have been sent.</p>
              */
             public Builder resetUsers(java.util.List<String> resetUsers) {
                 this.resetUsers = resetUsers;

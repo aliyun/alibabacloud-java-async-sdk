@@ -41,7 +41,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>A convenience account with local administrator permissions can install software or modify certain system settings on the cloud computer.</p>
+     * <p>A convenience account with local administrator permissions can install software or modify specific system settings on the cloud desktop.</p>
      * 
      * @param request the request parameters of BatchSetDesktopManager  BatchSetDesktopManagerRequest
      * @return BatchSetDesktopManagerResponse
@@ -153,8 +153,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can create up to 10 different properties under one Alibaba Cloud account. Each property includes a property name (PropertyKey) and multiple attribute values (PropertyValue).  </li>
-     * <li>You can add up to 50 different attribute values to a single property.</li>
+     * <li>You can create up to 10 different properties under an Alibaba Cloud account. Each property includes a property key (PropertyKey) and multiple property values (PropertyValue).</li>
+     * <li>You can add up to 50 different property values to a single property.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateProperty  CreatePropertyRequest
@@ -194,10 +194,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>&lt;props=&quot;china&quot;&gt;
-     * A convenience account is a dedicated account system in Wuying Workspace for simple use cases that do not require enterprise AD integration. Accounts require a username, and either an email or a phone number.
-     * &lt;props=&quot;intl&quot;&gt;
-     * A convenience account is a dedicated account system in Wuying Workspace for simple use cases that do not require enterprise AD integration. Accounts require both a username and an email.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;A convenience account is an account system dedicated to Wuying Workspace, which is suitable for simple scenarios where you do not want to connect to an enterprise Active Directory (AD). The information of a convenience account includes the username, email address, and phone number. The username is required, and you must specify at least one of the email address and phone number.
+     * &lt;props=&quot;intl&quot;&gt;A convenience account is an account system dedicated to Wuying Workspace, which is suitable for simple scenarios where you do not want to connect to an enterprise Active Directory (AD). The information of a convenience account includes the username and email address, both of which are required.</p>
      * 
      * @param request the request parameters of CreateUsers  CreateUsersRequest
      * @return CreateUsersResponse
@@ -326,7 +324,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Organizations have a tree structure. The root organization ID is org-aliyun-wy-org-id.</p>
+     * <p>Organizations use a tree structure. The root organization ID is org-aliyun-wy-org-id.</p>
      * 
      * @param request the request parameters of DescribeOrgs  DescribeOrgsRequest
      * @return DescribeOrgsResponse
@@ -419,9 +417,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>出于安全考虑，您可以锁定便捷账号。被锁定的便捷用户无法登录无影终端，因此也无法访问任何无影云资源。</p>
+     * <p>For security purposes, you can lock convenience accounts. Locked convenience users cannot log on to Wuying terminals and therefore cannot access any Wuying cloud resources.</p>
      * <blockquote>
-     * <p>您可以调用<a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a>查询便捷账号信息。若返回数据中<code>Status</code>取值为0，表示该便捷账号未被锁定；若<code>Status</code>取值为9，表示该便捷账号已被锁定。</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a> to query convenience account information. If the <code>Status</code> value in the returned data is 0, the convenience account is not locked. If the <code>Status</code> value is 9, the convenience account is locked.</p>
      * </blockquote>
      * 
      * @param request the request parameters of GetAdUsersCount  GetAdUsersCountRequest
@@ -461,9 +459,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>出于安全考虑，您可以锁定便捷账号。被锁定的便捷用户无法登录无影终端，因此也无法访问任何无影云资源。</p>
+     * <p>For security purposes, you can lock convenience accounts. Locked convenience users cannot log on to Wuying terminals and therefore cannot access any Wuying cloud resources.</p>
      * <blockquote>
-     * <p>您可以调用<a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a>查询便捷账号信息。若返回数据中<code>Status</code>取值为0，表示该便捷账号未被锁定；若<code>Status</code>取值为9，表示该便捷账号已被锁定。</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a> to query convenience account information. If the <code>Status</code> value in the returned data is 0, the convenience account is not locked. If the <code>Status</code> value is 9, the convenience account is locked.</p>
      * </blockquote>
      * 
      * @param request the request parameters of GetUsersCount  GetUsersCountRequest
@@ -539,7 +537,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>After locking, the status of the virtual MFA device changes to LOCKED. When the associated convenience account attempts to log on to a WUYING Terminal through an office network with MFA enabled, authentication will fail due to the locked MFA device, preventing successful logon. You can invoke <a href="~~UnlockMfaDevice~~">UnlockMfaDevice</a> to unlock it.</p>
+     * <p>After the device is locked, the status of the virtual MFA device changes to LOCKED. When the corresponding convenience account logs on to a Wuying terminal through an office network with MFA enabled, the logon fails because the MFA device cannot be authenticated. You can call <a href="~~UnlockMfaDevice~~">UnlockMfaDevice</a> to unlock the device.</p>
      * 
      * @param request the request parameters of LockMfaDevice  LockMfaDeviceRequest
      * @return LockMfaDeviceResponse
@@ -560,9 +558,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>For security purposes, you can lock convenience accounts. Locked convenience users cannot sign in to Wuying clients, and therefore cannot access any Wuying cloud resources.</p>
+     * <p>For security purposes, you can lock convenience accounts. Locked convenience users cannot log on to cloud desktop terminals and therefore cannot access any cloud desktop resources.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a> operation to check the lock status of convenience accounts. The <code>Status</code> value in the response is 0 for unlocked accounts and 9 for locked accounts.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a> to query convenience account information. If the <code>Status</code> value in the response is 0, the convenience account is not locked. If the <code>Status</code> value is 9, the convenience account is locked.</p>
      * </blockquote>
      * 
      * @param request the request parameters of LockUsers  LockUsersRequest
@@ -710,7 +708,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Deleting the virtual MFA device attached to a convenience account unbinds the MFA device, which is equivalent to resetting or disabling it. The corresponding convenience account must reattach a new virtual MFA device when logging on to a WUYING Terminal.</p>
+     * <p>Deleting the virtual MFA device bound to a convenience user unbinds the MFA device, which is equivalent to resetting or disabling the MFA device. The convenience user must bind a new virtual MFA device when logging on to the Wuying terminal.</p>
      * 
      * @param request the request parameters of RemoveMfaDevice  RemoveMfaDeviceRequest
      * @return RemoveMfaDeviceResponse
@@ -893,9 +891,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Locked convenience accounts cannot log on to WUYING Terminal and therefore cannot access any WUYING cloud resources. To allow a convenience account to log on to WUYING Terminal, you must first unlock it.  </p>
+     * <p>Locked convenience users cannot log on to Wuying terminals and therefore cannot access any Wuying cloud resources. To allow a convenience user to log on to a Wuying terminal, you must unlock the user first.</p>
      * <blockquote>
-     * <p>You can invoke <a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a> to query convenience account information. If the value of <code>Status</code> in the returned data is 0, the convenience account is not locked. If the value of <code>Status</code> is 9, the convenience account is locked.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a> to query the information of convenience users. If the <code>Status</code> parameter in the response is 0, the convenience user is not locked. If the <code>Status</code> parameter is 9, the convenience user is locked.</p>
      * </blockquote>
      * 
      * @param request the request parameters of UnlockUsers  UnlockUsersRequest

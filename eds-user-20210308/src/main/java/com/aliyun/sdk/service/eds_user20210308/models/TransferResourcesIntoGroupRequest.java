@@ -101,7 +101,10 @@ public class TransferResourcesIntoGroupRequest extends Request {
         } 
 
         /**
-         * BusinessChannel.
+         * <p>The channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENTERPRISE</p>
          */
         public Builder businessChannel(String businessChannel) {
             this.putQueryParameter("BusinessChannel", businessChannel);
@@ -110,7 +113,10 @@ public class TransferResourcesIntoGroupRequest extends Request {
         }
 
         /**
-         * Platform.
+         * <p>The WUYING product type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AliyunConsole</p>
          */
         public Builder platform(String platform) {
             this.putQueryParameter("Platform", platform);
@@ -119,7 +125,10 @@ public class TransferResourcesIntoGroupRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-ckf3cx7isinhk***</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -128,7 +137,7 @@ public class TransferResourcesIntoGroupRequest extends Request {
         }
 
         /**
-         * Resources.
+         * <p>The list of resource objects.</p>
          */
         public Builder resources(java.util.List<Resources> resources) {
             this.putQueryParameter("Resources", resources);
@@ -209,7 +218,10 @@ public class TransferResourcesIntoGroupRequest extends Request {
             } 
 
             /**
-             * RegionId.
+             * <p>The region ID of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -217,7 +229,10 @@ public class TransferResourcesIntoGroupRequest extends Request {
             }
 
             /**
-             * ResourceId.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecd-0jl0dwz61hn59tto****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -225,7 +240,10 @@ public class TransferResourcesIntoGroupRequest extends Request {
             }
 
             /**
-             * ResourceType.
+             * <p>The resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DESKTOP</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;

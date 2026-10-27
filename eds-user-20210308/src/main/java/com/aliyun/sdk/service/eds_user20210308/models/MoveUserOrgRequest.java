@@ -89,7 +89,7 @@ public class MoveUserOrgRequest extends Request {
         } 
 
         /**
-         * <p>Channel</p>
+         * <p>The channel.</p>
          * 
          * <strong>example:</strong>
          * <p>ENTERPRISE</p>
@@ -101,7 +101,7 @@ public class MoveUserOrgRequest extends Request {
         }
 
         /**
-         * <p>The user IDs.</p>
+         * <p>The list of user IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder endUserIds(java.util.List<String> endUserIds) {
@@ -111,7 +111,7 @@ public class MoveUserOrgRequest extends Request {
         }
 
         /**
-         * <p>The organization ID.</p>
+         * <p>The ID of the organizational structure.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

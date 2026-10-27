@@ -87,7 +87,7 @@ public class RemoveGroupRequest extends Request {
         } 
 
         /**
-         * <p>Channel</p>
+         * <p>The business channel.</p>
          * 
          * <strong>example:</strong>
          * <p>ENTERPRISE</p>
@@ -99,7 +99,7 @@ public class RemoveGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the user group to be deleted.</p>
+         * <p>The ID of the user group to delete.</p>
          * 
          * <strong>example:</strong>
          * <p>ug-dzjax1ez5qgph****</p>
@@ -111,7 +111,7 @@ public class RemoveGroupRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the user groups to be deleted.</p>
+         * <p>The IDs of the user groups to delete.</p>
          */
         public Builder groupIds(java.util.List<String> groupIds) {
             this.putQueryParameter("GroupIds", groupIds);

@@ -130,7 +130,7 @@ public class GetManagerInfoByAuthCodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The mobile number.</p>
+         * <p>The phone number.</p>
          * 
          * <strong>example:</strong>
          * <p>1301234****</p>
@@ -174,7 +174,7 @@ public class GetManagerInfoByAuthCodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the Elastic Desktop Service account.</p>
+         * <p>The Wuying account ID of the tenant.</p>
          * 
          * <strong>example:</strong>
          * <p>12345678901234****</p>

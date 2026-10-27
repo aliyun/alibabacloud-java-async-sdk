@@ -42,6 +42,10 @@ public class CreateResourceGroupRequest extends Request {
     private String resourceClassification;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupDescription")
+    private String resourceGroupDescription;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceGroupName")
     private String resourceGroupName;
 
@@ -53,6 +57,7 @@ public class CreateResourceGroupRequest extends Request {
         this.isResourceGroupWithOfficeSite = builder.isResourceGroupWithOfficeSite;
         this.platform = builder.platform;
         this.resourceClassification = builder.resourceClassification;
+        this.resourceGroupDescription = builder.resourceGroupDescription;
         this.resourceGroupName = builder.resourceGroupName;
     }
 
@@ -112,6 +117,13 @@ public class CreateResourceGroupRequest extends Request {
     }
 
     /**
+     * @return resourceGroupDescription
+     */
+    public String getResourceGroupDescription() {
+        return this.resourceGroupDescription;
+    }
+
+    /**
      * @return resourceGroupName
      */
     public String getResourceGroupName() {
@@ -125,6 +137,7 @@ public class CreateResourceGroupRequest extends Request {
         private Long isResourceGroupWithOfficeSite; 
         private String platform; 
         private String resourceClassification; 
+        private String resourceGroupDescription; 
         private String resourceGroupName; 
 
         private Builder() {
@@ -139,6 +152,7 @@ public class CreateResourceGroupRequest extends Request {
             this.isResourceGroupWithOfficeSite = request.isResourceGroupWithOfficeSite;
             this.platform = request.platform;
             this.resourceClassification = request.resourceClassification;
+            this.resourceGroupDescription = request.resourceGroupDescription;
             this.resourceGroupName = request.resourceGroupName;
         } 
 
@@ -187,7 +201,7 @@ public class CreateResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>For WUYING Workspace Enterprise Edition, set this parameter to <code>AliyunConsole</code>. Other platforms are not supported.</p>
+         * <p>For Elastic Desktop Service (EDS) Enterprise Edition, set the value to <code>AliyunConsole</code>. Other platforms are not supported.</p>
          * 
          * <strong>example:</strong>
          * <p>AliyunConsole</p>
@@ -199,7 +213,10 @@ public class CreateResourceGroupRequest extends Request {
         }
 
         /**
-         * ResourceClassification.
+         * <p>The resource category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Default</p>
          */
         public Builder resourceClassification(String resourceClassification) {
             this.putQueryParameter("ResourceClassification", resourceClassification);
@@ -208,10 +225,22 @@ public class CreateResourceGroupRequest extends Request {
         }
 
         /**
+         * <p>The description of the resource group. This parameter is optional. The description can be up to 500 characters in length and is saved as-is.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Department A resource group</p>
+         */
+        public Builder resourceGroupDescription(String resourceGroupDescription) {
+            this.putQueryParameter("ResourceGroupDescription", resourceGroupDescription);
+            this.resourceGroupDescription = resourceGroupDescription;
+            return this;
+        }
+
+        /**
          * <p>The name of the resource group.</p>
          * 
          * <strong>example:</strong>
-         * <p>部门A资源组</p>
+         * <p>Department A resource group</p>
          */
         public Builder resourceGroupName(String resourceGroupName) {
             this.putQueryParameter("ResourceGroupName", resourceGroupName);

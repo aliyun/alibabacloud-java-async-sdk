@@ -67,7 +67,7 @@ public class DescribeUserResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
@@ -78,7 +78,7 @@ public class DescribeUserResponseBody extends TeaModel {
         }
 
         /**
-         * <p>User information.</p>
+         * <p>The user information.</p>
          */
         public Builder user(User user) {
             this.user = user;
@@ -170,7 +170,7 @@ public class DescribeUserResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>External User ID.</p>
+             * <p>The external user ID.</p>
              * 
              * <strong>example:</strong>
              * <p>oijjnabsf****</p>
@@ -181,7 +181,7 @@ public class DescribeUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>External information name.</p>
+             * <p>The external information name.</p>
              * 
              * <strong>example:</strong>
              * <p>Alex</p>
@@ -192,7 +192,7 @@ public class DescribeUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Employee ID.</p>
+             * <p>The employee ID.</p>
              * 
              * <strong>example:</strong>
              * <p>15412***</p>
@@ -203,7 +203,7 @@ public class DescribeUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>SSO logon type.</p>
+             * <p>The SSO logon type.</p>
              * 
              * <strong>example:</strong>
              * <p>OIDC</p>
@@ -273,7 +273,7 @@ public class DescribeUserResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Attribute key.</p>
+             * <p>The property key.</p>
              * 
              * <strong>example:</strong>
              * <p>role</p>
@@ -284,7 +284,7 @@ public class DescribeUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Attribute value.</p>
+             * <p>The property value.</p>
              * 
              * <strong>example:</strong>
              * <p>teacher</p>
@@ -497,7 +497,7 @@ public class DescribeUserResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Mailbox.</p>
+             * <p>The email address.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="mailto:alex@test-email.com">alex@test-email.com</a></p>
@@ -508,7 +508,7 @@ public class DescribeUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Username.</p>
+             * <p>The username.</p>
              * 
              * <strong>example:</strong>
              * <p>alex</p>
@@ -519,7 +519,7 @@ public class DescribeUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Associated external user information.</p>
+             * <p>The associated external user information.</p>
              */
             public Builder externalInfo(ExternalInfo externalInfo) {
                 this.externalInfo = externalInfo;
@@ -527,7 +527,7 @@ public class DescribeUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Extension information.</p>
+             * <p>The extended information.</p>
              */
             public Builder extras(java.util.Map<String, String> extras) {
                 this.extras = extras;
@@ -535,7 +535,7 @@ public class DescribeUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Creation Time.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-01-01 12:00:00</p>
@@ -546,7 +546,10 @@ public class DescribeUserResponseBody extends TeaModel {
             }
 
             /**
-             * NickName.
+             * <p>The display nickname of the convenience user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Li**</p>
              */
             public Builder nickName(String nickName) {
                 this.nickName = nickName;
@@ -554,7 +557,7 @@ public class DescribeUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>List of organization IDs.</p>
+             * <p>The list of organization IDs.</p>
              */
             public Builder orgIds(java.util.List<String> orgIds) {
                 this.orgIds = orgIds;
@@ -562,7 +565,7 @@ public class DescribeUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>List of organizations.</p>
+             * <p>The list of organizations.</p>
              */
             public Builder orgPaths(java.util.List<String> orgPaths) {
                 this.orgPaths = orgPaths;
@@ -570,7 +573,7 @@ public class DescribeUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Phone number.</p>
+             * <p>The mobile phone number.</p>
              * 
              * <strong>example:</strong>
              * <p>1888888****</p>
@@ -581,7 +584,7 @@ public class DescribeUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>User attributes.</p>
+             * <p>The user properties.</p>
              */
             public Builder properties(java.util.List<Properties> properties) {
                 this.properties = properties;
@@ -589,7 +592,7 @@ public class DescribeUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Remarks.</p>
+             * <p>The remark.</p>
              * 
              * <strong>example:</strong>
              * <p>remark</p>
@@ -600,7 +603,7 @@ public class DescribeUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>User status.</p>
+             * <p>The user status.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -611,7 +614,7 @@ public class DescribeUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Unique ID of the Wuying user.</p>
+             * <p>The unique ID of the Wuying user.</p>
              * 
              * <strong>example:</strong>
              * <p>aisdfumj****</p>

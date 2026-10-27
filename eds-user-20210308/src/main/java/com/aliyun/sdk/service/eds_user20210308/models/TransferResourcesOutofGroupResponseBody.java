@@ -54,7 +54,10 @@ public class TransferResourcesOutofGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D2B1DF9E-576B-5B91-BAF6-2C3DD1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -130,7 +130,7 @@ public class CreateGroupRequest extends Request {
 
         /**
          * <blockquote>
-         * <p>This parameter is not publicly available for use.</p>
+         * <p>This parameter is not publicly available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -143,7 +143,7 @@ public class CreateGroupRequest extends Request {
         }
 
         /**
-         * <p>Channel</p>
+         * <p>The channel.</p>
          * 
          * <strong>example:</strong>
          * <p>ENTERPRISE</p>
@@ -167,10 +167,10 @@ public class CreateGroupRequest extends Request {
         }
 
         /**
-         * <p>The group name.</p>
+         * <p>The name of the user group.</p>
          * 
          * <strong>example:</strong>
-         * <p>开发组</p>
+         * <p>Development Group</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);

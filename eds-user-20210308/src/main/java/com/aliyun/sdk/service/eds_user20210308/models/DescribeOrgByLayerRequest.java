@@ -87,7 +87,7 @@ public class DescribeOrgByLayerRequest extends Request {
         } 
 
         /**
-         * <p>Channel</p>
+         * <p>The business channel.</p>
          * 
          * <strong>example:</strong>
          * <p>ENTERPRISE</p>
@@ -102,7 +102,7 @@ public class DescribeOrgByLayerRequest extends Request {
          * <p>The name of the organization.</p>
          * 
          * <strong>example:</strong>
-         * <p>产品部</p>
+         * <p>Product Department</p>
          */
         public Builder orgName(String orgName) {
             this.putBodyParameter("OrgName", orgName);

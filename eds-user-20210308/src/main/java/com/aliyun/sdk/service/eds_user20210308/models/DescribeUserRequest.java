@@ -87,7 +87,7 @@ public class DescribeUserRequest extends Request {
         } 
 
         /**
-         * <p>Business type.</p>
+         * <p>The business type.</p>
          * 
          * <strong>example:</strong>
          * <p>ENTERPRISE</p>
@@ -99,7 +99,7 @@ public class DescribeUserRequest extends Request {
         }
 
         /**
-         * <p>Username.</p>
+         * <p>The username.</p>
          * 
          * <strong>example:</strong>
          * <p>alex</p>
@@ -111,7 +111,7 @@ public class DescribeUserRequest extends Request {
         }
 
         /**
-         * <p>List of attributes to query.</p>
+         * <p>The list of attributes to query.</p>
          */
         public Builder requireExtraAttributes(java.util.List<String> requireExtraAttributes) {
             this.putQueryParameter("RequireExtraAttributes", requireExtraAttributes);

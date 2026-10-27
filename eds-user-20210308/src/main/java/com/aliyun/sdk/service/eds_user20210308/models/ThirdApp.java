@@ -93,7 +93,7 @@ public class ThirdApp extends TeaModel {
         } 
 
         /**
-         * AppKey.
+         * <p>The application ID.</p>
          */
         public Builder appKey(String appKey) {
             this.appKey = appKey;
@@ -101,7 +101,7 @@ public class ThirdApp extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The application name.</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -109,7 +109,7 @@ public class ThirdApp extends TeaModel {
         }
 
         /**
-         * OidcSsoConfig.
+         * <p>The OIDC configuration.</p>
          */
         public Builder oidcSsoConfig(OidcSsoConfig oidcSsoConfig) {
             this.oidcSsoConfig = oidcSsoConfig;
@@ -117,7 +117,7 @@ public class ThirdApp extends TeaModel {
         }
 
         /**
-         * Secrets.
+         * <p>The secrets.</p>
          */
         public Builder secrets(java.util.List<Secrets> secrets) {
             this.secrets = secrets;
@@ -274,7 +274,7 @@ public class ThirdApp extends TeaModel {
             } 
 
             /**
-             * AuthorizationEndpoint.
+             * <p>The authorization endpoint.</p>
              */
             public Builder authorizationEndpoint(String authorizationEndpoint) {
                 this.authorizationEndpoint = authorizationEndpoint;
@@ -282,7 +282,7 @@ public class ThirdApp extends TeaModel {
             }
 
             /**
-             * DiscoveryEndpoint.
+             * <p>The discovery endpoint.</p>
              */
             public Builder discoveryEndpoint(String discoveryEndpoint) {
                 this.discoveryEndpoint = discoveryEndpoint;
@@ -290,7 +290,7 @@ public class ThirdApp extends TeaModel {
             }
 
             /**
-             * GuestAuthorizationEndpoint.
+             * <p>The guest authorization endpoint.</p>
              */
             public Builder guestAuthorizationEndpoint(String guestAuthorizationEndpoint) {
                 this.guestAuthorizationEndpoint = guestAuthorizationEndpoint;
@@ -298,7 +298,7 @@ public class ThirdApp extends TeaModel {
             }
 
             /**
-             * Issuer.
+             * <p>Issuer</p>
              */
             public Builder issuer(String issuer) {
                 this.issuer = issuer;
@@ -306,7 +306,7 @@ public class ThirdApp extends TeaModel {
             }
 
             /**
-             * JwksEndpoint.
+             * <p>The signature public key endpoint.</p>
              */
             public Builder jwksEndpoint(String jwksEndpoint) {
                 this.jwksEndpoint = jwksEndpoint;
@@ -314,7 +314,7 @@ public class ThirdApp extends TeaModel {
             }
 
             /**
-             * LogoutEndpoint.
+             * <p>The logout endpoint.</p>
              */
             public Builder logoutEndpoint(String logoutEndpoint) {
                 this.logoutEndpoint = logoutEndpoint;
@@ -322,7 +322,7 @@ public class ThirdApp extends TeaModel {
             }
 
             /**
-             * RevokeEndpoint.
+             * <p>The revocation endpoint.</p>
              */
             public Builder revokeEndpoint(String revokeEndpoint) {
                 this.revokeEndpoint = revokeEndpoint;
@@ -330,7 +330,7 @@ public class ThirdApp extends TeaModel {
             }
 
             /**
-             * TokenEndpoint.
+             * <p>The token endpoint.</p>
              */
             public Builder tokenEndpoint(String tokenEndpoint) {
                 this.tokenEndpoint = tokenEndpoint;
@@ -338,7 +338,7 @@ public class ThirdApp extends TeaModel {
             }
 
             /**
-             * UserinfoEndpoint.
+             * <p>The user information endpoint.</p>
              */
             public Builder userinfoEndpoint(String userinfoEndpoint) {
                 this.userinfoEndpoint = userinfoEndpoint;
@@ -509,7 +509,7 @@ public class ThirdApp extends TeaModel {
             } 
 
             /**
-             * AccessTokenEffectiveTime.
+             * <p>1</p>
              */
             public Builder accessTokenEffectiveTime(Integer accessTokenEffectiveTime) {
                 this.accessTokenEffectiveTime = accessTokenEffectiveTime;
@@ -517,7 +517,7 @@ public class ThirdApp extends TeaModel {
             }
 
             /**
-             * CodeEffectiveTime.
+             * <p>1</p>
              */
             public Builder codeEffectiveTime(Integer codeEffectiveTime) {
                 this.codeEffectiveTime = codeEffectiveTime;
@@ -525,7 +525,7 @@ public class ThirdApp extends TeaModel {
             }
 
             /**
-             * EnableAuthLogin.
+             * <p>Specifies whether to enable authorized logon.</p>
              */
             public Builder enableAuthLogin(Boolean enableAuthLogin) {
                 this.enableAuthLogin = enableAuthLogin;
@@ -533,7 +533,7 @@ public class ThirdApp extends TeaModel {
             }
 
             /**
-             * Endpoints.
+             * <p>The endpoints.</p>
              */
             public Builder endpoints(Endpoints endpoints) {
                 this.endpoints = endpoints;
@@ -541,7 +541,7 @@ public class ThirdApp extends TeaModel {
             }
 
             /**
-             * GrantScopes.
+             * <p>The grant scopes.</p>
              */
             public Builder grantScopes(java.util.List<String> grantScopes) {
                 this.grantScopes = grantScopes;
@@ -549,7 +549,7 @@ public class ThirdApp extends TeaModel {
             }
 
             /**
-             * GrantTypes.
+             * <p>The grant types.</p>
              */
             public Builder grantTypes(java.util.List<String> grantTypes) {
                 this.grantTypes = grantTypes;
@@ -557,7 +557,7 @@ public class ThirdApp extends TeaModel {
             }
 
             /**
-             * IdTokenAlgorithmType.
+             * <p>The signature type.</p>
              */
             public Builder idTokenAlgorithmType(String idTokenAlgorithmType) {
                 this.idTokenAlgorithmType = idTokenAlgorithmType;
@@ -565,7 +565,7 @@ public class ThirdApp extends TeaModel {
             }
 
             /**
-             * IdTokenEffectiveTime.
+             * <p>1</p>
              */
             public Builder idTokenEffectiveTime(Integer idTokenEffectiveTime) {
                 this.idTokenEffectiveTime = idTokenEffectiveTime;
@@ -573,7 +573,7 @@ public class ThirdApp extends TeaModel {
             }
 
             /**
-             * RedirectUris.
+             * <p>The URI whitelist.</p>
              */
             public Builder redirectUris(java.util.List<String> redirectUris) {
                 this.redirectUris = redirectUris;
@@ -581,7 +581,7 @@ public class ThirdApp extends TeaModel {
             }
 
             /**
-             * RefreshTokenEffective.
+             * <p>1</p>
              */
             public Builder refreshTokenEffective(Integer refreshTokenEffective) {
                 this.refreshTokenEffective = refreshTokenEffective;
@@ -648,7 +648,7 @@ public class ThirdApp extends TeaModel {
             } 
 
             /**
-             * Enable.
+             * <p>Specifies whether it is enabled.</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -656,7 +656,7 @@ public class ThirdApp extends TeaModel {
             }
 
             /**
-             * Secret.
+             * <p>The ciphertext.</p>
              */
             public Builder secret(String secret) {
                 this.secret = secret;

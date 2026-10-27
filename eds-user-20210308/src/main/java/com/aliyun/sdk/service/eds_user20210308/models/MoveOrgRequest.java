@@ -89,7 +89,7 @@ public class MoveOrgRequest extends Request {
         } 
 
         /**
-         * <p>Channel</p>
+         * <p>The business channel.</p>
          * 
          * <strong>example:</strong>
          * <p>ENTERPRISE</p>
@@ -101,7 +101,7 @@ public class MoveOrgRequest extends Request {
         }
 
         /**
-         * <p>The ID of the parent organization.</p>
+         * <p>The ID of the target parent organization.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +114,7 @@ public class MoveOrgRequest extends Request {
         }
 
         /**
-         * <p>The ID of the organization that you want to move.</p>
+         * <p>The ID of the organization to be moved.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

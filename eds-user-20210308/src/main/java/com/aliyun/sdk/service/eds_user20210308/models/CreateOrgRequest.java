@@ -89,7 +89,7 @@ public class CreateOrgRequest extends Request {
         } 
 
         /**
-         * <p>Channel</p>
+         * <p>The channel.</p>
          * 
          * <strong>example:</strong>
          * <p>ENTERPRISE</p>
@@ -105,7 +105,7 @@ public class CreateOrgRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>设计部门</p>
+         * <p>Design Department</p>
          */
         public Builder orgName(String orgName) {
             this.putQueryParameter("OrgName", orgName);

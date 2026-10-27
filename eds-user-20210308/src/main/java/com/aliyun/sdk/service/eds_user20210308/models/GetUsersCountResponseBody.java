@@ -106,7 +106,10 @@ public class GetUsersCountResponseBody extends TeaModel {
         } 
 
         /**
-         * GroupCount.
+         * <p>The number of user groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder groupCount(Integer groupCount) {
             this.groupCount = groupCount;
@@ -114,7 +117,10 @@ public class GetUsersCountResponseBody extends TeaModel {
         }
 
         /**
-         * MaxUserNumber.
+         * <p>The user quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder maxUserNumber(Integer maxUserNumber) {
             this.maxUserNumber = maxUserNumber;
@@ -122,7 +128,10 @@ public class GetUsersCountResponseBody extends TeaModel {
         }
 
         /**
-         * OrgCount.
+         * <p>The number of organizations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>278</p>
          */
         public Builder orgCount(Integer orgCount) {
             this.orgCount = orgCount;
@@ -130,7 +139,10 @@ public class GetUsersCountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9677D40F-0040-5956-A0EB-11B8B88****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,10 @@ public class GetUsersCountResponseBody extends TeaModel {
         }
 
         /**
-         * UserCount.
+         * <p>The number of users.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder userCount(Integer userCount) {
             this.userCount = userCount;

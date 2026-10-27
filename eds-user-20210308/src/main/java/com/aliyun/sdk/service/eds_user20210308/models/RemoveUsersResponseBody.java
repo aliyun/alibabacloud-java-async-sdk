@@ -67,7 +67,7 @@ public class RemoveUsersResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The result of removing the convenience user.</p>
+         * <p>The result of deleting the convenience users.</p>
          */
         public Builder removeUsersResult(RemoveUsersResult removeUsersResult) {
             this.removeUsersResult = removeUsersResult;
@@ -75,7 +75,7 @@ public class RemoveUsersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
@@ -157,7 +157,7 @@ public class RemoveUsersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the convenience user that failed to be removed.</p>
+             * <p>The convenience user that failed to be deleted.</p>
              * 
              * <strong>example:</strong>
              * <p>test2</p>
@@ -206,12 +206,20 @@ public class RemoveUsersResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FailedUsers")
         private java.util.List<FailedUsers> failedUsers;
 
+        @com.aliyun.core.annotation.NameInMap("ProcessingUsers")
+        private java.util.List<String> processingUsers;
+
         @com.aliyun.core.annotation.NameInMap("RemovedUsers")
         private java.util.List<String> removedUsers;
 
+        @com.aliyun.core.annotation.NameInMap("SubmittedUsers")
+        private java.util.List<String> submittedUsers;
+
         private RemoveUsersResult(Builder builder) {
             this.failedUsers = builder.failedUsers;
+            this.processingUsers = builder.processingUsers;
             this.removedUsers = builder.removedUsers;
+            this.submittedUsers = builder.submittedUsers;
         }
 
         public static Builder builder() {
@@ -230,26 +238,44 @@ public class RemoveUsersResponseBody extends TeaModel {
         }
 
         /**
+         * @return processingUsers
+         */
+        public java.util.List<String> getProcessingUsers() {
+            return this.processingUsers;
+        }
+
+        /**
          * @return removedUsers
          */
         public java.util.List<String> getRemovedUsers() {
             return this.removedUsers;
         }
 
+        /**
+         * @return submittedUsers
+         */
+        public java.util.List<String> getSubmittedUsers() {
+            return this.submittedUsers;
+        }
+
         public static final class Builder {
             private java.util.List<FailedUsers> failedUsers; 
+            private java.util.List<String> processingUsers; 
             private java.util.List<String> removedUsers; 
+            private java.util.List<String> submittedUsers; 
 
             private Builder() {
             } 
 
             private Builder(RemoveUsersResult model) {
                 this.failedUsers = model.failedUsers;
+                this.processingUsers = model.processingUsers;
                 this.removedUsers = model.removedUsers;
+                this.submittedUsers = model.submittedUsers;
             } 
 
             /**
-             * <p>The convenience users that failed to be removed.</p>
+             * <p>The information about the users that failed to be deleted.</p>
              */
             public Builder failedUsers(java.util.List<FailedUsers> failedUsers) {
                 this.failedUsers = failedUsers;
@@ -257,10 +283,26 @@ public class RemoveUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The convenience users that were removed.</p>
+             * ProcessingUsers.
+             */
+            public Builder processingUsers(java.util.List<String> processingUsers) {
+                this.processingUsers = processingUsers;
+                return this;
+            }
+
+            /**
+             * <p>The convenience users that are successfully deleted.</p>
              */
             public Builder removedUsers(java.util.List<String> removedUsers) {
                 this.removedUsers = removedUsers;
+                return this;
+            }
+
+            /**
+             * SubmittedUsers.
+             */
+            public Builder submittedUsers(java.util.List<String> submittedUsers) {
+                this.submittedUsers = submittedUsers;
                 return this;
             }
 

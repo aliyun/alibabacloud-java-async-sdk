@@ -74,7 +74,7 @@ public class RemoveOrgRequest extends Request {
         } 
 
         /**
-         * <p>Channel</p>
+         * <p>The channel.</p>
          * 
          * <strong>example:</strong>
          * <p>ENTERPRISE</p>

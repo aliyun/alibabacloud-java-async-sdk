@@ -89,7 +89,7 @@ public class CheckUsedPropertyValueRequest extends Request {
         } 
 
         /**
-         * <p>Channel</p>
+         * <p>The channel.</p>
          * 
          * <strong>example:</strong>
          * <p>ENTERPRISE</p>
@@ -101,7 +101,7 @@ public class CheckUsedPropertyValueRequest extends Request {
         }
 
         /**
-         * <p>The property ID. You can call the <a href="~~ListProperty~~">ListProperty</a> operation to query property ID.</p>
+         * <p>The property ID. You can call the <a href="~~ListProperty~~">ListProperty</a> operation to obtain this parameter.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +114,7 @@ public class CheckUsedPropertyValueRequest extends Request {
         }
 
         /**
-         * <p>The ID of the property value. You can call the <a href="~~ListProperty~~">ListProperty</a> operation to query the ID of the property value.</p>
+         * <p>The property value ID. You can call the <a href="~~ListProperty~~">ListProperty</a> operation to obtain this parameter.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

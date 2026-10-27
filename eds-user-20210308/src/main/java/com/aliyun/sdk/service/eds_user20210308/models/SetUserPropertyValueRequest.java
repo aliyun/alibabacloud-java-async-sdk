@@ -119,7 +119,7 @@ public class SetUserPropertyValueRequest extends Request {
         } 
 
         /**
-         * <p>Channel</p>
+         * <p>The business channel.</p>
          * 
          * <strong>example:</strong>
          * <p>ENTERPRISE</p>
@@ -131,7 +131,7 @@ public class SetUserPropertyValueRequest extends Request {
         }
 
         /**
-         * <p>The property ID. You can call the <a href="~~ListProperty~~">ListProperty</a> operation to query the property ID.</p>
+         * <p>The property ID. You can call the <a href="~~ListProperty~~">ListProperty</a> operation to obtain this parameter.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,7 +144,7 @@ public class SetUserPropertyValueRequest extends Request {
         }
 
         /**
-         * <p>The ID of the property value. You can call the <a href="~~ListProperty~~">ListProperty</a> operation to query the ID of the property value.</p>
+         * <p>The property value ID. You can call the <a href="~~ListProperty~~">ListProperty</a> operation to obtain this parameter.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,7 +157,7 @@ public class SetUserPropertyValueRequest extends Request {
         }
 
         /**
-         * <p>The ID of the convenience user. You can call the <a href="~~DescribeUsers~~">DescribeUsers</a> operation to query the user ID.</p>
+         * <p>The user ID. You can call the <a href="~~DescribeUsers~~">DescribeUsers</a> operation to obtain this parameter, which corresponds to the value of the <code>Id</code> response parameter.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,7 +170,7 @@ public class SetUserPropertyValueRequest extends Request {
         }
 
         /**
-         * <p>The username of the convenience user.</p>
+         * <p>The username. You can call the <a href="~~DescribeUsers~~">DescribeUsers</a> operation to obtain this parameter, which corresponds to the value of the <code>EndUserId</code> response parameter.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -88,7 +88,7 @@ public class LockUsersRequest extends Request {
         } 
 
         /**
-         * <p>The channel.</p>
+         * <p>The business channel.</p>
          * 
          * <strong>example:</strong>
          * <p>ENTERPRISE</p>
@@ -100,7 +100,7 @@ public class LockUsersRequest extends Request {
         }
 
         /**
-         * LogoutSession.
+         * <p>Specifies whether to log off the current session of the convenience account when the account is locked.</p>
          */
         public Builder logoutSession(Boolean logoutSession) {
             this.putQueryParameter("LogoutSession", logoutSession);

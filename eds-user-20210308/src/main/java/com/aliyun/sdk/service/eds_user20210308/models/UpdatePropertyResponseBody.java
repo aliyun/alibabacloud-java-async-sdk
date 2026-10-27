@@ -67,7 +67,7 @@ public class UpdatePropertyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
@@ -78,7 +78,7 @@ public class UpdatePropertyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result of the modification.</p>
+         * <p>The update result.</p>
          */
         public Builder updateResult(UpdateResult updateResult) {
             this.updateResult = updateResult;
@@ -192,7 +192,7 @@ public class UpdatePropertyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the property.</p>
+             * <p>The property ID.</p>
              * 
              * <strong>example:</strong>
              * <p>390</p>
@@ -203,7 +203,7 @@ public class UpdatePropertyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the property.</p>
+             * <p>The property value.</p>
              * 
              * <strong>example:</strong>
              * <p>testvalue</p>
@@ -273,7 +273,7 @@ public class UpdatePropertyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The value of the property.</p>
+             * <p>The property value.</p>
              * 
              * <strong>example:</strong>
              * <p>testvalue2</p>
@@ -284,7 +284,7 @@ public class UpdatePropertyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the property value.</p>
+             * <p>The property value ID.</p>
              * 
              * <strong>example:</strong>
              * <p>978</p>
@@ -354,7 +354,7 @@ public class UpdatePropertyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The property values that failed to be modified.</p>
+             * <p>The property values that failed to update.</p>
              */
             public Builder failedPropertyValues(java.util.List<FailedPropertyValues> failedPropertyValues) {
                 this.failedPropertyValues = failedPropertyValues;
@@ -362,7 +362,7 @@ public class UpdatePropertyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The property values that were modified.</p>
+             * <p>The successfully updated property values.</p>
              */
             public Builder savePropertyValues(java.util.List<SavePropertyValues> savePropertyValues) {
                 this.savePropertyValues = savePropertyValues;
@@ -442,7 +442,7 @@ public class UpdatePropertyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the property.</p>
+             * <p>The property ID.</p>
              * 
              * <strong>example:</strong>
              * <p>390</p>
@@ -453,7 +453,7 @@ public class UpdatePropertyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the property.</p>
+             * <p>The property name.</p>
              * 
              * <strong>example:</strong>
              * <p>testkey2</p>
@@ -464,7 +464,7 @@ public class UpdatePropertyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The result of the property value modification.</p>
+             * <p>The property value update result.</p>
              */
             public Builder savePropertyValueModel(SavePropertyValueModel savePropertyValueModel) {
                 this.savePropertyValueModel = savePropertyValueModel;

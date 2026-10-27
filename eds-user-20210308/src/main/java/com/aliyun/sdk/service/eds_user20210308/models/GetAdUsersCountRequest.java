@@ -87,7 +87,12 @@ public class GetAdUsersCountRequest extends Request {
         } 
 
         /**
-         * BizType.
+         * <blockquote>
+         * <p>This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>ENTERPRISE</p>
          */
         public Builder bizType(String bizType) {
             this.putBodyParameter("BizType", bizType);
@@ -96,7 +101,10 @@ public class GetAdUsersCountRequest extends Request {
         }
 
         /**
-         * BusinessChannel.
+         * <p>The business channel type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENTERPRISE</p>
          */
         public Builder businessChannel(String businessChannel) {
             this.putQueryParameter("BusinessChannel", businessChannel);
@@ -105,7 +113,12 @@ public class GetAdUsersCountRequest extends Request {
         }
 
         /**
-         * SolutionId.
+         * <blockquote>
+         * <p>This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>co-0esnf80jab***</p>
          */
         public Builder solutionId(String solutionId) {
             this.putBodyParameter("SolutionId", solutionId);

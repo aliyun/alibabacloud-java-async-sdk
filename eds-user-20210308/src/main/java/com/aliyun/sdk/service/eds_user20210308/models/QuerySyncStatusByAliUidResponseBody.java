@@ -119,7 +119,7 @@ public class QuerySyncStatusByAliUidResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>System status code.</p>
+         * <p>The system status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -149,7 +149,7 @@ public class QuerySyncStatusByAliUidResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned when the request fails.</p>
+         * <p>The error message returned if the request fails.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -171,7 +171,7 @@ public class QuerySyncStatusByAliUidResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request succeeded.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -331,7 +331,7 @@ public class QuerySyncStatusByAliUidResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Alibaba Cloud account ID.</p>
+             * <p>The Alibaba Cloud account ID.</p>
              * 
              * <strong>example:</strong>
              * <p>131239236086****</p>
@@ -353,7 +353,7 @@ public class QuerySyncStatusByAliUidResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Creation Time.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-06-30 07:50:42</p>
@@ -364,7 +364,7 @@ public class QuerySyncStatusByAliUidResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The updated at time.</p>
+             * <p>The modification time.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-03-02 14:27:39</p>
@@ -375,7 +375,7 @@ public class QuerySyncStatusByAliUidResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Auto increment ID.</p>
+             * <p>The auto-increment ID.</p>
              * 
              * <strong>example:</strong>
              * <p>18500</p>
@@ -386,7 +386,7 @@ public class QuerySyncStatusByAliUidResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The latest start time.</p>
+             * <p>The last start time. The format is YYYY-MM-DD HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-03-02 14:31:39</p>
@@ -397,7 +397,7 @@ public class QuerySyncStatusByAliUidResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The latest end time, regardless of whether the operation succeeded or failed.</p>
+             * <p>The last end time, regardless of success or failure. The format is YYYY-MM-DD HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-03-02 16:13:12</p>
@@ -408,7 +408,7 @@ public class QuerySyncStatusByAliUidResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The latest success time.</p>
+             * <p>The last success time. The format is YYYY-MM-DD HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-03-02 18:24:01</p>

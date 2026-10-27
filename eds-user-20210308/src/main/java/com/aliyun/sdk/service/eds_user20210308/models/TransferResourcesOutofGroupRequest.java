@@ -18,12 +18,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class TransferResourcesOutofGroupRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppRuleId")
+    private String appRuleId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BusinessChannel")
     private String businessChannel;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Platform")
     private String platform;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyId")
+    private String policyId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
@@ -37,13 +45,20 @@ public class TransferResourcesOutofGroupRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("TargetResourceGroupId")
     private String targetResourceGroupId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TimerId")
+    private String timerId;
+
     private TransferResourcesOutofGroupRequest(Builder builder) {
         super(builder);
+        this.appRuleId = builder.appRuleId;
         this.businessChannel = builder.businessChannel;
         this.platform = builder.platform;
+        this.policyId = builder.policyId;
         this.resourceGroupId = builder.resourceGroupId;
         this.resources = builder.resources;
         this.targetResourceGroupId = builder.targetResourceGroupId;
+        this.timerId = builder.timerId;
     }
 
     public static Builder builder() {
@@ -60,6 +75,13 @@ public class TransferResourcesOutofGroupRequest extends Request {
     }
 
     /**
+     * @return appRuleId
+     */
+    public String getAppRuleId() {
+        return this.appRuleId;
+    }
+
+    /**
      * @return businessChannel
      */
     public String getBusinessChannel() {
@@ -71,6 +93,13 @@ public class TransferResourcesOutofGroupRequest extends Request {
      */
     public String getPlatform() {
         return this.platform;
+    }
+
+    /**
+     * @return policyId
+     */
+    public String getPolicyId() {
+        return this.policyId;
     }
 
     /**
@@ -94,12 +123,22 @@ public class TransferResourcesOutofGroupRequest extends Request {
         return this.targetResourceGroupId;
     }
 
+    /**
+     * @return timerId
+     */
+    public String getTimerId() {
+        return this.timerId;
+    }
+
     public static final class Builder extends Request.Builder<TransferResourcesOutofGroupRequest, Builder> {
+        private String appRuleId; 
         private String businessChannel; 
         private String platform; 
+        private String policyId; 
         private String resourceGroupId; 
         private java.util.List<Resources> resources; 
         private String targetResourceGroupId; 
+        private String timerId; 
 
         private Builder() {
             super();
@@ -107,15 +146,33 @@ public class TransferResourcesOutofGroupRequest extends Request {
 
         private Builder(TransferResourcesOutofGroupRequest request) {
             super(request);
+            this.appRuleId = request.appRuleId;
             this.businessChannel = request.businessChannel;
             this.platform = request.platform;
+            this.policyId = request.policyId;
             this.resourceGroupId = request.resourceGroupId;
             this.resources = request.resources;
             this.targetResourceGroupId = request.targetResourceGroupId;
+            this.timerId = request.timerId;
         } 
 
         /**
-         * BusinessChannel.
+         * <p>The software blacklists and whitelists rule ID to associate with the resources after they are moved out of the resource group. This parameter is used only for pure move-out operations and cannot be set together with TargetResourceGroupId. If this parameter is left empty, no rule is associated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bwr-47wdwfe5x3ql7qwf4</p>
+         */
+        public Builder appRuleId(String appRuleId) {
+            this.putQueryParameter("AppRuleId", appRuleId);
+            this.appRuleId = appRuleId;
+            return this;
+        }
+
+        /**
+         * <p>The channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENTERPRISE</p>
          */
         public Builder businessChannel(String businessChannel) {
             this.putQueryParameter("BusinessChannel", businessChannel);
@@ -124,7 +181,15 @@ public class TransferResourcesOutofGroupRequest extends Request {
         }
 
         /**
-         * Platform.
+         * <blockquote>
+         * <p>Fixed value: AliyunConsole.</p>
+         * <ul>
+         * <li>For Wuying Enterprise Edition, set this parameter to AliyunConsole. Other platforms are not publicly available.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>AliyunConsole</p>
          */
         public Builder platform(String platform) {
             this.putQueryParameter("Platform", platform);
@@ -133,7 +198,22 @@ public class TransferResourcesOutofGroupRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The policy ID to associate with the resources after they are moved out of the resource group. This parameter is used only for pure move-out operations and cannot be specified together with TargetResourceGroupId. If this parameter is left empty, the system default behavior is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>system-all-enabled-policy</p>
+         */
+        public Builder policyId(String policyId) {
+            this.putQueryParameter("PolicyId", policyId);
+            this.policyId = policyId;
+            return this;
+        }
+
+        /**
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-66konqltcpx43****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -142,7 +222,7 @@ public class TransferResourcesOutofGroupRequest extends Request {
         }
 
         /**
-         * Resources.
+         * <p>The list of resources.</p>
          */
         public Builder resources(java.util.List<Resources> resources) {
             this.putQueryParameter("Resources", resources);
@@ -151,11 +231,26 @@ public class TransferResourcesOutofGroupRequest extends Request {
         }
 
         /**
-         * TargetResourceGroupId.
+         * <p>The ID of the target resource group to which you want to move the resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-hcjo6dugpo1****</p>
          */
         public Builder targetResourceGroupId(String targetResourceGroupId) {
             this.putQueryParameter("TargetResourceGroupId", targetResourceGroupId);
             this.targetResourceGroupId = targetResourceGroupId;
+            return this;
+        }
+
+        /**
+         * <p>The scheduled task ID to associate with the resources after they are moved out of the resource group. This parameter is used only for pure move-out operations and cannot be specified together with TargetResourceGroupId. If this parameter is left empty, no scheduled task is associated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccg-0bf5d87dtipve4aqt</p>
+         */
+        public Builder timerId(String timerId) {
+            this.putQueryParameter("TimerId", timerId);
+            this.timerId = timerId;
             return this;
         }
 
@@ -232,7 +327,10 @@ public class TransferResourcesOutofGroupRequest extends Request {
             } 
 
             /**
-             * RegionId.
+             * <p>The region ID of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -240,7 +338,10 @@ public class TransferResourcesOutofGroupRequest extends Request {
             }
 
             /**
-             * ResourceId.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecd-1shc5sk0vo****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -248,7 +349,10 @@ public class TransferResourcesOutofGroupRequest extends Request {
             }
 
             /**
-             * ResourceType.
+             * <p>The resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DESKTOP</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;

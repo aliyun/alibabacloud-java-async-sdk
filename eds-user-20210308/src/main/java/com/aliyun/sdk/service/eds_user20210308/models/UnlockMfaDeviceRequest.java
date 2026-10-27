@@ -88,7 +88,7 @@ public class UnlockMfaDeviceRequest extends Request {
         } 
 
         /**
-         * <p>The domain of the Active Directory (AD) workspace.</p>
+         * <p>The address of the AD office network.</p>
          * 
          * <strong>example:</strong>
          * <p>welab.co.id</p>
@@ -100,7 +100,7 @@ public class UnlockMfaDeviceRequest extends Request {
         }
 
         /**
-         * <p>Channel</p>
+         * <p>The channel.</p>
          * 
          * <strong>example:</strong>
          * <p>ENTERPRISE</p>
@@ -112,7 +112,7 @@ public class UnlockMfaDeviceRequest extends Request {
         }
 
         /**
-         * <p>The serial number of the virtual MFA device. The serial number is unique for each device.</p>
+         * <p>The serial number of the virtual MFA device. You can call <a href="~~DescribeMfaDevices~~">DescribeMfaDevices</a> to obtain the serial number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

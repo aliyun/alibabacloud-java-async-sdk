@@ -80,7 +80,7 @@ public class DescribeGroupsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of entries returned in the query result.</p>
+         * <p>The number of query results.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -99,7 +99,7 @@ public class DescribeGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
@@ -168,7 +168,7 @@ public class DescribeGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * Name.
+             * <p>The Policy Name of the logon policy.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -176,7 +176,7 @@ public class DescribeGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyId.
+             * <p>The ID of the logon policy.</p>
              */
             public Builder policyId(String policyId) {
                 this.policyId = policyId;
@@ -347,7 +347,7 @@ public class DescribeGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * AttachedLoginPolicy.
+             * <p>The logon policy associated with the user group.</p>
              */
             public Builder attachedLoginPolicy(AttachedLoginPolicy attachedLoginPolicy) {
                 this.attachedLoginPolicy = attachedLoginPolicy;
@@ -355,7 +355,7 @@ public class DescribeGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of assigned resources.</p>
+             * <p>The list of allocated resources.</p>
              */
             public Builder authedResources(java.util.Map<String, String> authedResources) {
                 this.authedResources = authedResources;
@@ -363,7 +363,7 @@ public class DescribeGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time.</p>
+             * <p>The creation time in the ISO 8601 standard in the UTC+08:00 time zone.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-08-07T13:40:40+08:00</p>
@@ -385,7 +385,7 @@ public class DescribeGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether download requires approval.</p>
+             * <p>Indicates whether approval is required for downloads.</p>
              */
             public Builder downloadNeedApproval(Boolean downloadNeedApproval) {
                 this.downloadNeedApproval = downloadNeedApproval;
@@ -393,7 +393,7 @@ public class DescribeGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user group ID.</p>
+             * <p>The ID of the user group.</p>
              * 
              * <strong>example:</strong>
              * <p>ug-2412ojkwtybd****</p>
@@ -404,7 +404,7 @@ public class DescribeGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user group name.</p>
+             * <p>The name of the user group.</p>
              * 
              * <strong>example:</strong>
              * <p>TestGroup</p>
@@ -415,7 +415,7 @@ public class DescribeGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether file approval is enabled.</p>
+             * <p>Specifies whether file approval is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -426,7 +426,7 @@ public class DescribeGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether upload requires approval.</p>
+             * <p>Indicates whether approval is required for uploads.</p>
              */
             public Builder uploadNeedApproval(Boolean uploadNeedApproval) {
                 this.uploadNeedApproval = uploadNeedApproval;

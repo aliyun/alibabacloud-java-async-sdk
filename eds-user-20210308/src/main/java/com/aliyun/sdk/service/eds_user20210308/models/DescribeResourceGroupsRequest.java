@@ -185,7 +185,10 @@ public class DescribeResourceGroupsRequest extends Request {
         } 
 
         /**
-         * AgentType.
+         * <p>The agent subtype of the DesktopAgent resource group. Valid values: JVSClaw and HermesAgent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JVSClaw</p>
          */
         public Builder agentType(String agentType) {
             this.putQueryParameter("AgentType", agentType);
@@ -194,7 +197,7 @@ public class DescribeResourceGroupsRequest extends Request {
         }
 
         /**
-         * <p>The Alibaba Cloud resource group ID.</p>
+         * <p>The IDs of the cloud platform resource groups.</p>
          */
         public Builder aliyunResourceGroupIds(java.util.List<String> aliyunResourceGroupIds) {
             this.putQueryParameter("AliyunResourceGroupIds", aliyunResourceGroupIds);
@@ -256,7 +259,7 @@ public class DescribeResourceGroupsRequest extends Request {
          * <blockquote>
          * <p>Fixed value: AliyunConsole.</p>
          * <ul>
-         * <li>For Elastic Desktop Service Enterprise Edition, set this parameter to AliyunConsole. Other platforms are not publicly available.</li>
+         * <li>For Wuying Enterprise Edition, set this parameter to AliyunConsole. Other platforms are not publicly available.</li>
          * </ul>
          * </blockquote>
          * 
@@ -270,7 +273,10 @@ public class DescribeResourceGroupsRequest extends Request {
         }
 
         /**
-         * <p>The resource classification within the resource group.</p>
+         * <p>The resource classification in the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Default</p>
          */
         public Builder resourceClassification(String resourceClassification) {
             this.putQueryParameter("ResourceClassification", resourceClassification);
@@ -279,7 +285,7 @@ public class DescribeResourceGroupsRequest extends Request {
         }
 
         /**
-         * <p>The list of resource group IDs.</p>
+         * <p>The IDs of the resource groups.</p>
          */
         public Builder resourceGroupIds(java.util.List<String> resourceGroupIds) {
             this.putQueryParameter("ResourceGroupIds", resourceGroupIds);
@@ -288,10 +294,10 @@ public class DescribeResourceGroupsRequest extends Request {
         }
 
         /**
-         * <p>The resource group name.</p>
+         * <p>The name of the resource group.</p>
          * 
          * <strong>example:</strong>
-         * <p>DepartmentAResourceGroup</p>
+         * <p>Department A resource group</p>
          */
         public Builder resourceGroupName(String resourceGroupName) {
             this.putQueryParameter("ResourceGroupName", resourceGroupName);

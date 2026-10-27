@@ -87,7 +87,7 @@ public class DeleteResourceGroupRequest extends Request {
         } 
 
         /**
-         * <p>Channel</p>
+         * <p>The channel.</p>
          * 
          * <strong>example:</strong>
          * <p>ENTERPRISE</p>
@@ -99,12 +99,10 @@ public class DeleteResourceGroupRequest extends Request {
         }
 
         /**
+         * <p>The ID of the resource group to delete.</p>
          * <blockquote>
-         * <p> The ID of the resource group that you want to delete.</p>
+         * <p>If the <code>ResourceGroupIds</code> parameter is not empty, both parameters take effect.</p>
          * </blockquote>
-         * <ul>
-         * <li>If you also specify ResourceGroupIds, both parameters take effect.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>rg-aj01tck67a0szp***</p>
@@ -116,12 +114,10 @@ public class DeleteResourceGroupRequest extends Request {
         }
 
         /**
+         * <p>The list of IDs of the resource groups to delete.</p>
          * <blockquote>
-         * <p> The IDs of the resource groups that you want to delete.</p>
+         * <p>If the <code>ResourceGroupIds</code> parameter is not empty, both parameters take effect.</p>
          * </blockquote>
-         * <ul>
-         * <li>If you also specify ResourceGroupId, both parameters take effect.</li>
-         * </ul>
          */
         public Builder resourceGroupIds(java.util.List<String> resourceGroupIds) {
             this.putQueryParameter("ResourceGroupIds", resourceGroupIds);

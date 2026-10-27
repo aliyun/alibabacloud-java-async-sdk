@@ -67,7 +67,10 @@ public class GetAdUsersCountResponseBody extends TeaModel {
         } 
 
         /**
-         * AdUserCount.
+         * <p>The number of Active Directory (AD) users.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder adUserCount(Integer adUserCount) {
             this.adUserCount = adUserCount;
@@ -75,7 +78,10 @@ public class GetAdUsersCountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

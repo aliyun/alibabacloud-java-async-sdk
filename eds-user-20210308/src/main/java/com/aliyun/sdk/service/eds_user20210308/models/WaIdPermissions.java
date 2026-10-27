@@ -106,7 +106,7 @@ public class WaIdPermissions extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>code</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +114,7 @@ public class WaIdPermissions extends TeaModel {
         }
 
         /**
-         * IsBasicChild.
+         * <p>basic</p>
          */
         public Builder isBasicChild(Boolean isBasicChild) {
             this.isBasicChild = isBasicChild;
@@ -122,7 +122,7 @@ public class WaIdPermissions extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>name</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -130,7 +130,7 @@ public class WaIdPermissions extends TeaModel {
         }
 
         /**
-         * SubPermissions.
+         * <p>subPermissions</p>
          */
         public Builder subPermissions(java.util.List<WaIdPermissions> subPermissions) {
             this.subPermissions = subPermissions;
@@ -138,7 +138,7 @@ public class WaIdPermissions extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>type</p>
          */
         public Builder type(String type) {
             this.type = type;

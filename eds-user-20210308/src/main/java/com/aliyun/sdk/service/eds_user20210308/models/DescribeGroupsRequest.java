@@ -214,7 +214,10 @@ public class DescribeGroupsRequest extends Request {
         }
 
         /**
-         * BusinessChannel.
+         * <p>The business channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENTERPRISE</p>
          */
         public Builder businessChannel(String businessChannel) {
             this.putQueryParameter("BusinessChannel", businessChannel);
@@ -223,7 +226,7 @@ public class DescribeGroupsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to exclude user groups that have associated logon policies.</p>
+         * <p>Specifies whether to exclude user groups that are associated with logon policies.</p>
          */
         public Builder excludeAttachedLoginPolicyGroups(Boolean excludeAttachedLoginPolicyGroups) {
             this.putQueryParameter("ExcludeAttachedLoginPolicyGroups", excludeAttachedLoginPolicyGroups);
@@ -232,7 +235,7 @@ public class DescribeGroupsRequest extends Request {
         }
 
         /**
-         * <p>The user group ID.</p>
+         * <p>The ID of the user group.</p>
          * 
          * <strong>example:</strong>
          * <p>ug-16nf7xxh4o9gc****</p>
@@ -244,7 +247,7 @@ public class DescribeGroupsRequest extends Request {
         }
 
         /**
-         * <p>The user group name.</p>
+         * <p>The name of the user group.</p>
          * 
          * <strong>example:</strong>
          * <p>TestGroup</p>
@@ -256,7 +259,10 @@ public class DescribeGroupsRequest extends Request {
         }
 
         /**
-         * IdpId.
+         * <p>Filters user groups by the identity provider ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idp-hlyexfvwert9m8****</p>
          */
         public Builder idpId(String idpId) {
             this.putQueryParameter("IdpId", idpId);
@@ -265,7 +271,7 @@ public class DescribeGroupsRequest extends Request {
         }
 
         /**
-         * <p>Filters user groups by the specified associated logon policy.</p>
+         * <p>Specifies the ID of the associated logon policy for filtering.</p>
          */
         public Builder loginPolicyId(String loginPolicyId) {
             this.putQueryParameter("LoginPolicyId", loginPolicyId);
@@ -274,7 +280,7 @@ public class DescribeGroupsRequest extends Request {
         }
 
         /**
-         * <p>The page number for a paged query.</p>
+         * <p>The page number for paging in the paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -286,7 +292,7 @@ public class DescribeGroupsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page for a paged query. Maximum value: 100. Default value: 10.</p>
+         * <p>The number of entries per page for paging in the paged query Settings. Maximum value: 100. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -312,7 +318,7 @@ public class DescribeGroupsRequest extends Request {
         }
 
         /**
-         * <p>Indicates whether file approval is enabled.</p>
+         * <p>Specifies whether file approval is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

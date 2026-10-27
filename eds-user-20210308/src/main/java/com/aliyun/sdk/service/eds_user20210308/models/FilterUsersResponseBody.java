@@ -80,7 +80,7 @@ public class FilterUsersResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The token for paginated results. If the response is truncated, this parameter is returned. To retrieve the next page of results, include this value in a subsequent request.</p>
+         * <p>The token for the next query. If a query does not return all results, the returned NextToken is not empty. You can pass the returned NextToken in a subsequent query to continue the query.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a****</p>
@@ -102,7 +102,7 @@ public class FilterUsersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A list of convenience accounts.</p>
+         * <p>The collection of convenience user information.</p>
          */
         public Builder users(java.util.List<Users> users) {
             this.users = users;
@@ -168,7 +168,7 @@ public class FilterUsersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the mapped external account.</p>
+             * <p>The name of the external account associated with the user.</p>
              * 
              * <strong>example:</strong>
              * <p>account</p>
@@ -179,7 +179,7 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the external account, such as a student ID or an employee ID.</p>
+             * <p>The external account, student ID, or employee ID associated with the user.</p>
              * 
              * <strong>example:</strong>
              * <p>030801</p>
@@ -249,7 +249,10 @@ public class FilterUsersResponseBody extends TeaModel {
             } 
 
             /**
-             * GroupId.
+             * <p>The user group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ug-2412ojkwtybd****</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -257,7 +260,10 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * <p>The user group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestGroup</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -337,7 +343,10 @@ public class FilterUsersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The organization ID.</p>
+             * <p>The organization structure ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>org-1mox****</p>
              */
             public Builder orgId(String orgId) {
                 this.orgId = orgId;
@@ -345,7 +354,10 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The organization name.</p>
+             * <p>The organization structure name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Design Department</p>
              */
             public Builder orgName(String orgName) {
                 this.orgName = orgName;
@@ -353,7 +365,10 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The organization name path.</p>
+             * <p>The organization structure name path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Product Department/Design Department</p>
              */
             public Builder orgNamePath(String orgNamePath) {
                 this.orgNamePath = orgNamePath;
@@ -420,7 +435,7 @@ public class FilterUsersResponseBody extends TeaModel {
             } 
 
             /**
-             * PolicyId.
+             * <p>The resource policy ID.</p>
              */
             public Builder policyId(String policyId) {
                 this.policyId = policyId;
@@ -428,7 +443,7 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyName.
+             * <p>The resource policy name.</p>
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -495,7 +510,10 @@ public class FilterUsersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the identity provider (IdP).</p>
+             * <p>The enterprise identity source ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>idp-hlyexfvwert9m8****</p>
              */
             public Builder idpId(String idpId) {
                 this.idpId = idpId;
@@ -503,7 +521,10 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the identity provider (IdP).</p>
+             * <p>The enterprise identity source name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DingTalk</p>
              */
             public Builder idpName(String idpName) {
                 this.idpName = idpName;
@@ -570,7 +591,7 @@ public class FilterUsersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The property value.</p>
+             * <p>The user property value.</p>
              * 
              * <strong>example:</strong>
              * <p>dev</p>
@@ -581,7 +602,7 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the property value.</p>
+             * <p>The user property value ID.</p>
              * 
              * <strong>example:</strong>
              * <p>42</p>
@@ -703,7 +724,7 @@ public class FilterUsersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the user property.</p>
+             * <p>The user property ID.</p>
              * 
              * <strong>example:</strong>
              * <p>12</p>
@@ -714,7 +735,7 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the user property.</p>
+             * <p>The user property name.</p>
              * 
              * <strong>example:</strong>
              * <p>department</p>
@@ -725,7 +746,7 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the user property.</p>
+             * <p>The user property number.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -736,7 +757,7 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The property values.</p>
+             * <p>The user property value.</p>
              */
             public Builder propertyValues(java.util.List<PropertyValues> propertyValues) {
                 this.propertyValues = propertyValues;
@@ -744,7 +765,7 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the user associated with the property.</p>
+             * <p>The ID of the user to which the property is bound.</p>
              * 
              * <strong>example:</strong>
              * <p>4205**</p>
@@ -755,7 +776,7 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user name associated with the property.</p>
+             * <p>The username of the user to which the property is bound.</p>
              * 
              * <strong>example:</strong>
              * <p>alice</p>
@@ -1072,7 +1093,7 @@ public class FilterUsersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The date the account will be automatically locked.</p>
+             * <p>The date when the account is automatically locked, in the YYYY-MM-DD format.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-03-03</p>
@@ -1083,7 +1104,7 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of cloud desktops assigned to the user.</p>
+             * <p>The number of cloud computers assigned to the user.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1094,7 +1115,7 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of desktop groups the user can access. This parameter is returned only when <code>IncludeDesktopGroupCount</code> is set to <code>true</code>.</p>
+             * <p>The number of cloud computer pools authorized for the user. This value is returned when <code>IncludeDesktopGroupCount</code> is set to <code>true</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -1116,7 +1137,7 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the user has local administrator permissions.</p>
+             * <p>Indicates whether the user is a local administrator.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1127,7 +1148,7 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user name.</p>
+             * <p>The username.</p>
              * 
              * <strong>example:</strong>
              * <p>alice</p>
@@ -1138,7 +1159,7 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>External user information.</p>
+             * <p>The extended user information.</p>
              */
             public Builder externalInfo(ExternalInfo externalInfo) {
                 this.externalInfo = externalInfo;
@@ -1146,7 +1167,7 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Groups.
+             * <p>The list of user groups to which the convenience user belongs.</p>
              */
             public Builder groups(java.util.List<Groups> groups) {
                 this.groups = groups;
@@ -1176,7 +1197,7 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A list of organizations the user belongs to.</p>
+             * <p>The list of organizations to which the user belongs.</p>
              */
             public Builder orgList(java.util.List<OrgList> orgList) {
                 this.orgList = orgList;
@@ -1184,7 +1205,7 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The account ownership type.</p>
+             * <p>The ownership type of the account.</p>
              * 
              * <strong>example:</strong>
              * <p>Normal</p>
@@ -1195,9 +1216,9 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The password validity period in days. By default, passwords do not expire. Set this to a value from 30 to 365 to enforce an expiration policy. When a password expires, the user must change it before logging on again.</p>
+             * <p>The password of the user account is valid permanently by default. You can use this parameter to set a password validity period of 30 to 365 days. After the password expires, the end user must change the password before logging on again.</p>
              * <blockquote>
-             * <p>This feature is in preview and available by invitation only. To use this feature, submit a ticket.</p>
+             * <p>This feature is currently in invitational preview. To use this feature, submit a ticket.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1209,7 +1230,7 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of days until the password expires.</p>
+             * <p>The remaining days of the password validity period for the account.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -1220,7 +1241,7 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The phone number.</p>
+             * <p>The mobile phone number.</p>
              * 
              * <strong>example:</strong>
              * <p>1381111****</p>
@@ -1231,10 +1252,10 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user\&quot;s nickname.</p>
+             * <p>The user nickname.</p>
              * 
              * <strong>example:</strong>
-             * <p>小明</p>
+             * <p>Xiaoming</p>
              */
             public Builder realNickName(String realNickName) {
                 this.realNickName = realNickName;
@@ -1242,10 +1263,10 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The remark about the user.</p>
+             * <p>The user remarks.</p>
              * 
              * <strong>example:</strong>
-             * <p>测试专用</p>
+             * <p>For testing only</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -1253,7 +1274,7 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * ResourcePolicyList.
+             * <p>The list of resource policies associated with the convenience user.</p>
              */
             public Builder resourcePolicyList(java.util.List<ResourcePolicyList> resourcePolicyList) {
                 this.resourcePolicyList = resourcePolicyList;
@@ -1261,7 +1282,7 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the convenience account.</p>
+             * <p>The status of the convenience user.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1272,7 +1293,7 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A list of identity providers (IdPs) that the user can use to log on.</p>
+             * <p>The supported logon identity sources.</p>
              */
             public Builder supportLoginIdps(java.util.List<SupportLoginIdps> supportLoginIdps) {
                 this.supportLoginIdps = supportLoginIdps;
@@ -1280,7 +1301,7 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A list of user properties.</p>
+             * <p>The collection of user properties.</p>
              */
             public Builder userSetPropertiesModels(java.util.List<UserSetPropertiesModels> userSetPropertiesModels) {
                 this.userSetPropertiesModels = userSetPropertiesModels;

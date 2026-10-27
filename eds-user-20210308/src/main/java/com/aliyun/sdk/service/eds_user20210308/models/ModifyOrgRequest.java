@@ -89,7 +89,7 @@ public class ModifyOrgRequest extends Request {
         } 
 
         /**
-         * <p>Channel</p>
+         * <p>The channel.</p>
          * 
          * <strong>example:</strong>
          * <p>ENTERPRISE</p>
@@ -118,7 +118,7 @@ public class ModifyOrgRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>开发部。</p>
+         * <p>Development Department</p>
          */
         public Builder orgName(String orgName) {
             this.putQueryParameter("OrgName", orgName);

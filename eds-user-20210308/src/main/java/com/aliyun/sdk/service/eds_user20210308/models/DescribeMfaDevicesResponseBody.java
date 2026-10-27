@@ -80,7 +80,7 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A list of virtual MFA devices.</p>
+         * <p>The information about the virtual MFA devices.</p>
          */
         public Builder mfaDevices(java.util.List<MfaDevices> mfaDevices) {
             this.mfaDevices = mfaDevices;
@@ -88,7 +88,7 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token that is used to retrieve the next page of results.</p>
+         * <p>The token used to start the next query.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK1AP0pfERHZN5pu6na6YlN9asMM31MsMcdQNpp</p>
@@ -194,7 +194,10 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
             } 
 
             /**
-             * DisplayName.
+             * <p>The display name of the AD user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aduser</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -202,7 +205,10 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayNameNew.
+             * <p>The new display name of the AD user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Zhang San</p>
              */
             public Builder displayNameNew(String displayNameNew) {
                 this.displayNameNew = displayNameNew;
@@ -210,7 +216,10 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * EndUser.
+             * <p>The AD username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aduser</p>
              */
             public Builder endUser(String endUser) {
                 this.endUser = endUser;
@@ -218,7 +227,10 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * UserPrincipalName.
+             * <p>The user principal name of the AD user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:alice@example.com">alice@example.com</a></p>
              */
             public Builder userPrincipalName(String userPrincipalName) {
                 this.userPrincipalName = userPrincipalName;
@@ -389,7 +401,7 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
             } 
 
             /**
-             * AdUser.
+             * <p>The information about the AD user associated with the virtual MFA device.</p>
              */
             public Builder adUser(AdUser adUser) {
                 this.adUser = adUser;
@@ -397,7 +409,7 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of consecutive failed attempts to bind or authenticate the virtual MFA device.</p>
+             * <p>The number of consecutive failures to bind or authenticate the virtual MFA device.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -408,7 +420,7 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the virtual MFA device. Set the value to <code>TOTP_VIRTUAL</code>, which indicates a virtual MFA device that complies with the Time-based One-time Password (TOTP) algorithm.</p>
+             * <p>The type of the virtual MFA device. Currently, only <code>TOTP_VIRTUAL</code> is supported, which indicates a virtual MFA device that complies with the TOTP algorithm.</p>
              * 
              * <strong>example:</strong>
              * <p>TOTP_VIRTUAL</p>
@@ -420,7 +432,7 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
 
             /**
              * <blockquote>
-             * <p>This parameter is not in use.</p>
+             * <p>This parameter is not available.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -432,7 +444,7 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The username of the convenience user who uses the virtual MFA device.</p>
+             * <p>The username of the convenience account that uses the virtual MFA device.</p>
              * 
              * <strong>example:</strong>
              * <p>alice</p>
@@ -443,7 +455,7 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the virtual MFA device was enabled. The time is displayed in UTC and is formatted as <code>yyyy-MM-ddTHH:mm:ssZ</code>.</p>
+             * <p>The time when the virtual MFA device was enabled. The time is specified in ISO 8601 format in UTC. Format: <code>yyyy-MM-ddTHH:mm:ssZ</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-06-22T06:20:49Z</p>
@@ -454,7 +466,7 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the locked virtual MFA device is automatically unlocked. The time is displayed in UTC and is formatted as <code>yyyy-MM-ddTHH:mm:ssZ</code>.</p>
+             * <p>The automatic unlock time after the virtual MFA device is locked. The time is specified in ISO 8601 format in UTC. Format: <code>yyyy-MM-ddTHH:mm:ssZ</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-06-23T06:20:49Z</p>

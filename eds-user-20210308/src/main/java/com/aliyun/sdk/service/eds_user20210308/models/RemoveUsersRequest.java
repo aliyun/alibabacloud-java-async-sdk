@@ -21,6 +21,10 @@ public class RemoveUsersRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("BusinessChannel")
     private String businessChannel;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UnbindDesktops")
+    private Boolean unbindDesktops;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Users")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -29,6 +33,7 @@ public class RemoveUsersRequest extends Request {
     private RemoveUsersRequest(Builder builder) {
         super(builder);
         this.businessChannel = builder.businessChannel;
+        this.unbindDesktops = builder.unbindDesktops;
         this.users = builder.users;
     }
 
@@ -53,6 +58,13 @@ public class RemoveUsersRequest extends Request {
     }
 
     /**
+     * @return unbindDesktops
+     */
+    public Boolean getUnbindDesktops() {
+        return this.unbindDesktops;
+    }
+
+    /**
      * @return users
      */
     public java.util.List<String> getUsers() {
@@ -61,6 +73,7 @@ public class RemoveUsersRequest extends Request {
 
     public static final class Builder extends Request.Builder<RemoveUsersRequest, Builder> {
         private String businessChannel; 
+        private Boolean unbindDesktops; 
         private java.util.List<String> users; 
 
         private Builder() {
@@ -70,11 +83,12 @@ public class RemoveUsersRequest extends Request {
         private Builder(RemoveUsersRequest request) {
             super(request);
             this.businessChannel = request.businessChannel;
+            this.unbindDesktops = request.unbindDesktops;
             this.users = request.users;
         } 
 
         /**
-         * <p>Channel</p>
+         * <p>The business channel.</p>
          * 
          * <strong>example:</strong>
          * <p>ENTERPRISE</p>
@@ -86,7 +100,16 @@ public class RemoveUsersRequest extends Request {
         }
 
         /**
-         * <p>The usernames of the convenience users that you want to remove.</p>
+         * UnbindDesktops.
+         */
+        public Builder unbindDesktops(Boolean unbindDesktops) {
+            this.putQueryParameter("UnbindDesktops", unbindDesktops);
+            this.unbindDesktops = unbindDesktops;
+            return this;
+        }
+
+        /**
+         * <p>The usernames of the convenience users to delete.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

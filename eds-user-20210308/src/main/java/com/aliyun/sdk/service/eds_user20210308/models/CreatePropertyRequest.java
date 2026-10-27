@@ -88,7 +88,7 @@ public class CreatePropertyRequest extends Request {
         } 
 
         /**
-         * <p>Channel</p>
+         * <p>The channel.</p>
          * 
          * <strong>example:</strong>
          * <p>ENTERPRISE</p>
@@ -100,7 +100,7 @@ public class CreatePropertyRequest extends Request {
         }
 
         /**
-         * <p>The property name.</p>
+         * <p>The property key.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,7 +113,7 @@ public class CreatePropertyRequest extends Request {
         }
 
         /**
-         * <p>The values of the property. You can specify up to 50 values for a property.</p>
+         * <p>The property values. You can add up to 50 different property values to a single property.</p>
          */
         public Builder propertyValues(java.util.List<String> propertyValues) {
             this.putBodyParameter("PropertyValues", propertyValues);

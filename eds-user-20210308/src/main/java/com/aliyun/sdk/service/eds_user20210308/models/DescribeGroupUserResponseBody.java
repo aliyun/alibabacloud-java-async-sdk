@@ -94,7 +94,7 @@ public class DescribeGroupUserResponseBody extends TeaModel {
 
         /**
          * <blockquote>
-         * <p> This field is deprecated.</p>
+         * <p><strong>[Deprecated]</strong> This field is deprecated.</p>
          * </blockquote>
          */
         public Builder groups(java.util.List<Groups> groups) {
@@ -103,7 +103,7 @@ public class DescribeGroupUserResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token for the next query. If NextToken is empty, all results have been queried.</p>
+         * <p>The token for the next query. If NextToken is empty, all results have been returned.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK****</p>
@@ -114,7 +114,7 @@ public class DescribeGroupUserResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>AA8D67CB-345D-5CDA-986E-FFAC7D0****</p>
@@ -125,7 +125,7 @@ public class DescribeGroupUserResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The members.</p>
+         * <p>The list of members.</p>
          */
         public Builder users(java.util.List<Users> users) {
             this.users = users;
@@ -204,7 +204,7 @@ public class DescribeGroupUserResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The user group ID.</p>
+             * <p>The ID of the user group.</p>
              * 
              * <strong>example:</strong>
              * <p>ug-91mvbosdjsdfh****</p>
@@ -218,7 +218,7 @@ public class DescribeGroupUserResponseBody extends TeaModel {
              * <p>The name of the user group.</p>
              * 
              * <strong>example:</strong>
-             * <p>开发组</p>
+             * <p>Development team</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -226,7 +226,7 @@ public class DescribeGroupUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of members in the user group.</p>
+             * <p>The number of members.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -401,7 +401,7 @@ public class DescribeGroupUserResponseBody extends TeaModel {
 
             /**
              * <blockquote>
-             * <p> This field is deprecated.</p>
+             * <p><strong>[Deprecated]</strong> This field is deprecated.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -414,7 +414,7 @@ public class DescribeGroupUserResponseBody extends TeaModel {
 
             /**
              * <blockquote>
-             * <p> This field is deprecated.</p>
+             * <p><strong>[Deprecated]</strong> This field is deprecated.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -437,7 +437,7 @@ public class DescribeGroupUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user name.</p>
+             * <p>The username.</p>
              * 
              * <strong>example:</strong>
              * <p>alex****</p>
@@ -459,7 +459,7 @@ public class DescribeGroupUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the user was added to the user group.</p>
+             * <p>The time when the member was added.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-08-26T02:59:22.000+00:00</p>
@@ -471,7 +471,7 @@ public class DescribeGroupUserResponseBody extends TeaModel {
 
             /**
              * <blockquote>
-             * <p> This field is deprecated.</p>
+             * <p><strong>[Deprecated]</strong> This field is deprecated.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -494,7 +494,7 @@ public class DescribeGroupUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The mobile number.</p>
+             * <p>The mobile phone number.</p>
              * 
              * <strong>example:</strong>
              * <p>138****1111</p>
@@ -505,7 +505,7 @@ public class DescribeGroupUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The remarks on the user.</p>
+             * <p>The remarks of the user.</p>
              * 
              * <strong>example:</strong>
              * <p>remark</p>

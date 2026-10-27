@@ -103,7 +103,7 @@ public class UpdatePropertyRequest extends Request {
         } 
 
         /**
-         * <p>Channel</p>
+         * <p>The business channel.</p>
          * 
          * <strong>example:</strong>
          * <p>ENTERPRISE</p>
@@ -115,7 +115,7 @@ public class UpdatePropertyRequest extends Request {
         }
 
         /**
-         * <p>The ID of the property that you want to modify. You can call the <a href="https://help.aliyun.com/document_detail/410890.html">ListProperty</a> operation to query the property ID.</p>
+         * <p>The ID of the property to update. You can call <a href="~~ListProperty~~">ListProperty</a> to query the property ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,7 +128,7 @@ public class UpdatePropertyRequest extends Request {
         }
 
         /**
-         * <p>The new property name.</p>
+         * <p>The updated property name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,7 +141,10 @@ public class UpdatePropertyRequest extends Request {
         }
 
         /**
-         * <p>The values of property.</p>
+         * <p>The list of all updated property values for the property.</p>
+         * <blockquote>
+         * <p>Notice: The property values specified here overwrite the existing property values instead of appending to them.</p>
+         * </blockquote>
          */
         public Builder propertyValues(java.util.List<PropertyValues> propertyValues) {
             this.putBodyParameter("PropertyValues", propertyValues);
@@ -209,7 +212,7 @@ public class UpdatePropertyRequest extends Request {
             } 
 
             /**
-             * <p>The new property value.</p>
+             * <p>The updated property value.</p>
              * 
              * <strong>example:</strong>
              * <p>testvalue</p>
@@ -220,7 +223,7 @@ public class UpdatePropertyRequest extends Request {
             }
 
             /**
-             * <p>The ID of property value that you want to modify. You can call the <a href="https://help.aliyun.com/document_detail/410890.html">ListProperty</a> operation to query the property value ID.</p>
+             * <p>The ID of the updated property value.</p>
              * 
              * <strong>example:</strong>
              * <p>978</p>

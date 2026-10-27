@@ -324,7 +324,7 @@ public class FilterUsersRequest extends Request {
         }
 
         /**
-         * <p>The usernames (<code>EndUserId</code>) to exclude by exact match.</p>
+         * <p>The list of usernames (EndUserIds) to exclude by exact match.</p>
          */
         public Builder excludeEndUserIds(java.util.List<String> excludeEndUserIds) {
             this.putQueryParameter("ExcludeEndUserIds", excludeEndUserIds);
@@ -333,7 +333,7 @@ public class FilterUsersRequest extends Request {
         }
 
         /**
-         * <p>The string for a fuzzy search on the username (<code>EndUserId</code>) and email address (<code>Email</code>). The wildcard character (<code>*</code>) is supported. For example, if you set this parameter to <code>a*m</code>, the query returns all results where the username or email address starts with <code>a</code> and ends with <code>m</code>.</p>
+         * <p>The fuzzy search string. This parameter supports matching the username (EndUserId) and email address (Email). Wildcards (<em>) are supported. For example, if you set this parameter to a</em>m, all results where the username or email address starts with a and ends with m are returned.</p>
          * 
          * <strong>example:</strong>
          * <p>a*m</p>
@@ -345,7 +345,7 @@ public class FilterUsersRequest extends Request {
         }
 
         /**
-         * FilterMap.
+         * <p>The fuzzy match condition mapping for user information. This parameter supports fields such as the username, remarks, phone number, email address, nickname, and employee ID.</p>
          */
         public Builder filterMap(java.util.Map<String, String> filterMap) {
             String filterMapShrink = shrink(filterMap, "FilterMap", "json");
@@ -355,7 +355,7 @@ public class FilterUsersRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return the number of cloud desktops that are assigned to the user.</p>
+         * <p>Specifies whether to return the number of cloud computers assigned to the user.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -367,7 +367,7 @@ public class FilterUsersRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return the number of desktop groups that are assigned to the user.</p>
+         * <p>Specifies whether to return the number of cloud computer pools assigned to the user.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -379,7 +379,7 @@ public class FilterUsersRequest extends Request {
         }
 
         /**
-         * IncludeEndUserIds.
+         * <p>The list of convenience account usernames to include in the query results.</p>
          */
         public Builder includeEndUserIds(java.util.List<String> includeEndUserIds) {
             this.putQueryParameter("IncludeEndUserIds", includeEndUserIds);
@@ -388,7 +388,7 @@ public class FilterUsersRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to include organization information in the response.</p>
+         * <p>Specifies whether to include organization information.</p>
          */
         public Builder includeOrgInfo(Boolean includeOrgInfo) {
             this.putQueryParameter("IncludeOrgInfo", includeOrgInfo);
@@ -397,7 +397,7 @@ public class FilterUsersRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to include the supported logon types in the response.</p>
+         * <p>Specifies whether to include the supported logon types.</p>
          */
         public Builder includeSupportIdps(Boolean includeSupportIdps) {
             this.putQueryParameter("IncludeSupportIdps", includeSupportIdps);
@@ -415,7 +415,7 @@ public class FilterUsersRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. If you specify a value greater than 100, the system automatically sets this parameter to 100.</p>
+         * <p>The number of entries per page in a paged query. If the value exceeds 100, it is automatically reset to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -427,7 +427,7 @@ public class FilterUsersRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. If the number of results exceeds the value of the <code>MaxResults</code> parameter, a <code>NextToken</code> is returned. You can use the <code>NextToken</code> to query the next page of results.</p>
+         * <p>The token for the next query. You do not need to specify this parameter when you call this operation for the first time. If the response does not contain all results, a non-empty NextToken is returned. You can use the returned NextToken in subsequent queries to obtain the remaining results.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a****</p>
@@ -439,7 +439,7 @@ public class FilterUsersRequest extends Request {
         }
 
         /**
-         * <p>The sorting parameters.</p>
+         * <p>The supported sorting parameters.</p>
          */
         public Builder orderParam(OrderParam orderParam) {
             String orderParamShrink = shrink(orderParam, "OrderParam", "json");
@@ -449,7 +449,7 @@ public class FilterUsersRequest extends Request {
         }
 
         /**
-         * <p>The organization ID.</p>
+         * <p>The ID of the enterprise organization.</p>
          * 
          * <strong>example:</strong>
          * <p>org-aliyun-wy-org-id</p>
@@ -473,7 +473,7 @@ public class FilterUsersRequest extends Request {
         }
 
         /**
-         * <p>The user properties for a fuzzy search.</p>
+         * <p>The list of user attributes for fuzzy queries.</p>
          */
         public Builder propertyFilterParam(java.util.List<PropertyFilterParam> propertyFilterParam) {
             this.putQueryParameter("PropertyFilterParam", propertyFilterParam);
@@ -482,7 +482,7 @@ public class FilterUsersRequest extends Request {
         }
 
         /**
-         * <p>The information about property keys and property values.</p>
+         * <p>The list of attribute names and attribute values.</p>
          */
         public Builder propertyKeyValueFilterParam(java.util.List<PropertyKeyValueFilterParam> propertyKeyValueFilterParam) {
             this.putQueryParameter("PropertyKeyValueFilterParam", propertyKeyValueFilterParam);
@@ -491,7 +491,7 @@ public class FilterUsersRequest extends Request {
         }
 
         /**
-         * ShowExtras.
+         * <p>The switch mapping for additional response information. This parameter controls whether to include desktop policy information.</p>
          */
         public Builder showExtras(java.util.Map<String, String> showExtras) {
             this.putQueryParameter("ShowExtras", showExtras);
@@ -500,7 +500,7 @@ public class FilterUsersRequest extends Request {
         }
 
         /**
-         * <p>The user status by which to filter the results.</p>
+         * <p>The user status used to filter results.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -571,7 +571,7 @@ public class FilterUsersRequest extends Request {
             } 
 
             /**
-             * <p>The field by which to sort the results.</p>
+             * <p>The field by which to sort.</p>
              * 
              * <strong>example:</strong>
              * <p>id</p>
@@ -582,7 +582,7 @@ public class FilterUsersRequest extends Request {
             }
 
             /**
-             * <p>The sort order.</p>
+             * <p>The sort order, which can be ascending or descending.</p>
              * 
              * <strong>example:</strong>
              * <p>DESC</p>
@@ -652,7 +652,7 @@ public class FilterUsersRequest extends Request {
             } 
 
             /**
-             * <p>The property ID.</p>
+             * <p>The ID of the attribute.</p>
              * 
              * <strong>example:</strong>
              * <p>328</p>
@@ -663,7 +663,7 @@ public class FilterUsersRequest extends Request {
             }
 
             /**
-             * <p>The property value ID.</p>
+             * <p>The IDs of the attribute values.</p>
              * 
              * <strong>example:</strong>
              * <p>1255</p>
@@ -733,7 +733,7 @@ public class FilterUsersRequest extends Request {
             } 
 
             /**
-             * <p>The property key.</p>
+             * <p>The name of the attribute.</p>
              * 
              * <strong>example:</strong>
              * <p>job</p>
@@ -744,7 +744,7 @@ public class FilterUsersRequest extends Request {
             }
 
             /**
-             * <p>The property value.</p>
+             * <p>The values of the attribute.</p>
              * 
              * <strong>example:</strong>
              * <p>dev</p>

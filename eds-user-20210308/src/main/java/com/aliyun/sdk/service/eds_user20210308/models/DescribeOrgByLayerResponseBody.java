@@ -67,7 +67,7 @@ public class DescribeOrgByLayerResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The organizations.</p>
+         * <p>The list of organization information.</p>
          */
         public Builder orgs(java.util.List<Orgs> orgs) {
             this.orgs = orgs;
@@ -75,7 +75,7 @@ public class DescribeOrgByLayerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
@@ -171,7 +171,7 @@ public class DescribeOrgByLayerResponseBody extends TeaModel {
              * <p>The name of the organization.</p>
              * 
              * <strong>example:</strong>
-             * <p>开发部</p>
+             * <p>Development Department</p>
              */
             public Builder orgName(String orgName) {
                 this.orgName = orgName;
