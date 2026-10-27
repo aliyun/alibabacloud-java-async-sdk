@@ -200,6 +200,9 @@ public class ListContextStoresResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("storageMode")
         private String storageMode;
 
+        @com.aliyun.core.annotation.NameInMap("storageModes")
+        private java.util.List<String> storageModes;
+
         @com.aliyun.core.annotation.NameInMap("updateTime")
         private String updateTime;
 
@@ -214,6 +217,7 @@ public class ListContextStoresResponseBody extends TeaModel {
             this.sourceType = builder.sourceType;
             this.status = builder.status;
             this.storageMode = builder.storageMode;
+            this.storageModes = builder.storageModes;
             this.updateTime = builder.updateTime;
         }
 
@@ -296,6 +300,13 @@ public class ListContextStoresResponseBody extends TeaModel {
         }
 
         /**
+         * @return storageModes
+         */
+        public java.util.List<String> getStorageModes() {
+            return this.storageModes;
+        }
+
+        /**
          * @return updateTime
          */
         public String getUpdateTime() {
@@ -313,6 +324,7 @@ public class ListContextStoresResponseBody extends TeaModel {
             private String sourceType; 
             private String status; 
             private String storageMode; 
+            private java.util.List<String> storageModes; 
             private String updateTime; 
 
             private Builder() {
@@ -329,6 +341,7 @@ public class ListContextStoresResponseBody extends TeaModel {
                 this.sourceType = model.sourceType;
                 this.status = model.status;
                 this.storageMode = model.storageMode;
+                this.storageModes = model.storageModes;
                 this.updateTime = model.updateTime;
             } 
 
@@ -440,6 +453,14 @@ public class ListContextStoresResponseBody extends TeaModel {
              */
             public Builder storageMode(String storageMode) {
                 this.storageMode = storageMode;
+                return this;
+            }
+
+            /**
+             * storageModes.
+             */
+            public Builder storageModes(java.util.List<String> storageModes) {
+                this.storageModes = storageModes;
                 return this;
             }
 

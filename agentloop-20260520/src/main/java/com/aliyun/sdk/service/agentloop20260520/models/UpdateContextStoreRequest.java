@@ -428,6 +428,186 @@ public class UpdateContextStoreRequest extends Request {
      *
      * <p>UpdateContextStoreRequest</p>
      */
+    public static class StoragePolicy extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("allowedActions")
+        private java.util.List<String> allowedActions;
+
+        @com.aliyun.core.annotation.NameInMap("dedupe")
+        private Boolean dedupe;
+
+        @com.aliyun.core.annotation.NameInMap("humanEditProtection")
+        private Boolean humanEditProtection;
+
+        @com.aliyun.core.annotation.NameInMap("mergeKey")
+        private String mergeKey;
+
+        @com.aliyun.core.annotation.NameInMap("mode")
+        private String mode;
+
+        @com.aliyun.core.annotation.NameInMap("similarityThreshold")
+        private Double similarityThreshold;
+
+        @com.aliyun.core.annotation.NameInMap("ttlDays")
+        private Integer ttlDays;
+
+        private StoragePolicy(Builder builder) {
+            this.allowedActions = builder.allowedActions;
+            this.dedupe = builder.dedupe;
+            this.humanEditProtection = builder.humanEditProtection;
+            this.mergeKey = builder.mergeKey;
+            this.mode = builder.mode;
+            this.similarityThreshold = builder.similarityThreshold;
+            this.ttlDays = builder.ttlDays;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static StoragePolicy create() {
+            return builder().build();
+        }
+
+        /**
+         * @return allowedActions
+         */
+        public java.util.List<String> getAllowedActions() {
+            return this.allowedActions;
+        }
+
+        /**
+         * @return dedupe
+         */
+        public Boolean getDedupe() {
+            return this.dedupe;
+        }
+
+        /**
+         * @return humanEditProtection
+         */
+        public Boolean getHumanEditProtection() {
+            return this.humanEditProtection;
+        }
+
+        /**
+         * @return mergeKey
+         */
+        public String getMergeKey() {
+            return this.mergeKey;
+        }
+
+        /**
+         * @return mode
+         */
+        public String getMode() {
+            return this.mode;
+        }
+
+        /**
+         * @return similarityThreshold
+         */
+        public Double getSimilarityThreshold() {
+            return this.similarityThreshold;
+        }
+
+        /**
+         * @return ttlDays
+         */
+        public Integer getTtlDays() {
+            return this.ttlDays;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> allowedActions; 
+            private Boolean dedupe; 
+            private Boolean humanEditProtection; 
+            private String mergeKey; 
+            private String mode; 
+            private Double similarityThreshold; 
+            private Integer ttlDays; 
+
+            private Builder() {
+            } 
+
+            private Builder(StoragePolicy model) {
+                this.allowedActions = model.allowedActions;
+                this.dedupe = model.dedupe;
+                this.humanEditProtection = model.humanEditProtection;
+                this.mergeKey = model.mergeKey;
+                this.mode = model.mode;
+                this.similarityThreshold = model.similarityThreshold;
+                this.ttlDays = model.ttlDays;
+            } 
+
+            /**
+             * allowedActions.
+             */
+            public Builder allowedActions(java.util.List<String> allowedActions) {
+                this.allowedActions = allowedActions;
+                return this;
+            }
+
+            /**
+             * dedupe.
+             */
+            public Builder dedupe(Boolean dedupe) {
+                this.dedupe = dedupe;
+                return this;
+            }
+
+            /**
+             * humanEditProtection.
+             */
+            public Builder humanEditProtection(Boolean humanEditProtection) {
+                this.humanEditProtection = humanEditProtection;
+                return this;
+            }
+
+            /**
+             * mergeKey.
+             */
+            public Builder mergeKey(String mergeKey) {
+                this.mergeKey = mergeKey;
+                return this;
+            }
+
+            /**
+             * mode.
+             */
+            public Builder mode(String mode) {
+                this.mode = mode;
+                return this;
+            }
+
+            /**
+             * similarityThreshold.
+             */
+            public Builder similarityThreshold(Double similarityThreshold) {
+                this.similarityThreshold = similarityThreshold;
+                return this;
+            }
+
+            /**
+             * ttlDays.
+             */
+            public Builder ttlDays(Integer ttlDays) {
+                this.ttlDays = ttlDays;
+                return this;
+            }
+
+            public StoragePolicy build() {
+                return new StoragePolicy(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateContextStoreRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateContextStoreRequest</p>
+     */
     public static class ExtractionPolicies extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("categories")
         private java.util.List<String> categories;
@@ -450,6 +630,9 @@ public class UpdateContextStoreRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("preset")
         private String preset;
 
+        @com.aliyun.core.annotation.NameInMap("storagePolicy")
+        private StoragePolicy storagePolicy;
+
         @com.aliyun.core.annotation.NameInMap("strategyId")
         @com.aliyun.core.annotation.Validation(maxLength = 64, minLength = 1)
         private String strategyId;
@@ -462,6 +645,7 @@ public class UpdateContextStoreRequest extends Request {
             this.model = builder.model;
             this.name = builder.name;
             this.preset = builder.preset;
+            this.storagePolicy = builder.storagePolicy;
             this.strategyId = builder.strategyId;
         }
 
@@ -523,6 +707,13 @@ public class UpdateContextStoreRequest extends Request {
         }
 
         /**
+         * @return storagePolicy
+         */
+        public StoragePolicy getStoragePolicy() {
+            return this.storagePolicy;
+        }
+
+        /**
          * @return strategyId
          */
         public String getStrategyId() {
@@ -537,6 +728,7 @@ public class UpdateContextStoreRequest extends Request {
             private Model model; 
             private String name; 
             private String preset; 
+            private StoragePolicy storagePolicy; 
             private String strategyId; 
 
             private Builder() {
@@ -550,6 +742,7 @@ public class UpdateContextStoreRequest extends Request {
                 this.model = model.model;
                 this.name = model.name;
                 this.preset = model.preset;
+                this.storagePolicy = model.storagePolicy;
                 this.strategyId = model.strategyId;
             } 
 
@@ -624,6 +817,14 @@ public class UpdateContextStoreRequest extends Request {
              */
             public Builder preset(String preset) {
                 this.preset = preset;
+                return this;
+            }
+
+            /**
+             * storagePolicy.
+             */
+            public Builder storagePolicy(StoragePolicy storagePolicy) {
+                this.storagePolicy = storagePolicy;
                 return this;
             }
 
@@ -1752,7 +1953,7 @@ public class UpdateContextStoreRequest extends Request {
      *
      * <p>UpdateContextStoreRequest</p>
      */
-    public static class StoragePolicy extends TeaModel {
+    public static class ConfigStoragePolicy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("allowedActions")
         private java.util.List<String> allowedActions;
 
@@ -1774,7 +1975,7 @@ public class UpdateContextStoreRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("ttlDays")
         private Integer ttlDays;
 
-        private StoragePolicy(Builder builder) {
+        private ConfigStoragePolicy(Builder builder) {
             this.allowedActions = builder.allowedActions;
             this.dedupe = builder.dedupe;
             this.humanEditProtection = builder.humanEditProtection;
@@ -1788,7 +1989,7 @@ public class UpdateContextStoreRequest extends Request {
             return new Builder();
         }
 
-        public static StoragePolicy create() {
+        public static ConfigStoragePolicy create() {
             return builder().build();
         }
 
@@ -1853,7 +2054,7 @@ public class UpdateContextStoreRequest extends Request {
             private Builder() {
             } 
 
-            private Builder(StoragePolicy model) {
+            private Builder(ConfigStoragePolicy model) {
                 this.allowedActions = model.allowedActions;
                 this.dedupe = model.dedupe;
                 this.humanEditProtection = model.humanEditProtection;
@@ -1940,8 +2141,8 @@ public class UpdateContextStoreRequest extends Request {
                 return this;
             }
 
-            public StoragePolicy build() {
-                return new StoragePolicy(this);
+            public ConfigStoragePolicy build() {
+                return new ConfigStoragePolicy(this);
             } 
 
         } 
@@ -1973,7 +2174,7 @@ public class UpdateContextStoreRequest extends Request {
         private Source source;
 
         @com.aliyun.core.annotation.NameInMap("storagePolicy")
-        private StoragePolicy storagePolicy;
+        private ConfigStoragePolicy storagePolicy;
 
         private Config(Builder builder) {
             this.audit = builder.audit;
@@ -2038,7 +2239,7 @@ public class UpdateContextStoreRequest extends Request {
         /**
          * @return storagePolicy
          */
-        public StoragePolicy getStoragePolicy() {
+        public ConfigStoragePolicy getStoragePolicy() {
             return this.storagePolicy;
         }
 
@@ -2049,7 +2250,7 @@ public class UpdateContextStoreRequest extends Request {
             private java.util.Map<String, String> metadataField; 
             private ScopePolicy scopePolicy; 
             private Source source; 
-            private StoragePolicy storagePolicy; 
+            private ConfigStoragePolicy storagePolicy; 
 
             private Builder() {
             } 
@@ -2118,7 +2319,7 @@ public class UpdateContextStoreRequest extends Request {
             /**
              * <p>The storage policy for the memory type.</p>
              */
-            public Builder storagePolicy(StoragePolicy storagePolicy) {
+            public Builder storagePolicy(ConfigStoragePolicy storagePolicy) {
                 this.storagePolicy = storagePolicy;
                 return this;
             }
