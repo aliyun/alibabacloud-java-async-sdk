@@ -260,6 +260,9 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SupportBackup")
         private Boolean supportBackup;
 
+        @com.aliyun.core.annotation.NameInMap("SupportConvertComputeFreeToPostPaid")
+        private Boolean supportConvertComputeFreeToPostPaid;
+
         @com.aliyun.core.annotation.NameInMap("SupportCreateAgent")
         private Boolean supportCreateAgent;
 
@@ -315,6 +318,7 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
             this.mountDlfMetaToken = builder.mountDlfMetaToken;
             this.supportAddConfigTypes = builder.supportAddConfigTypes;
             this.supportBackup = builder.supportBackup;
+            this.supportConvertComputeFreeToPostPaid = builder.supportConvertComputeFreeToPostPaid;
             this.supportCreateAgent = builder.supportCreateAgent;
             this.supportCreateNonStandardNodeGroup = builder.supportCreateNonStandardNodeGroup;
             this.supportEed = builder.supportEed;
@@ -381,6 +385,13 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
          */
         public Boolean getSupportBackup() {
             return this.supportBackup;
+        }
+
+        /**
+         * @return supportConvertComputeFreeToPostPaid
+         */
+        public Boolean getSupportConvertComputeFreeToPostPaid() {
+            return this.supportConvertComputeFreeToPostPaid;
         }
 
         /**
@@ -502,6 +513,7 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
             private Boolean mountDlfMetaToken; 
             private java.util.List<String> supportAddConfigTypes; 
             private Boolean supportBackup; 
+            private Boolean supportConvertComputeFreeToPostPaid; 
             private Boolean supportCreateAgent; 
             private Boolean supportCreateNonStandardNodeGroup; 
             private Boolean supportEed; 
@@ -529,6 +541,7 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
                 this.mountDlfMetaToken = model.mountDlfMetaToken;
                 this.supportAddConfigTypes = model.supportAddConfigTypes;
                 this.supportBackup = model.supportBackup;
+                this.supportConvertComputeFreeToPostPaid = model.supportConvertComputeFreeToPostPaid;
                 this.supportCreateAgent = model.supportCreateAgent;
                 this.supportCreateNonStandardNodeGroup = model.supportCreateNonStandardNodeGroup;
                 this.supportEed = model.supportEed;
@@ -611,6 +624,14 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
              */
             public Builder supportBackup(Boolean supportBackup) {
                 this.supportBackup = supportBackup;
+                return this;
+            }
+
+            /**
+             * SupportConvertComputeFreeToPostPaid.
+             */
+            public Builder supportConvertComputeFreeToPostPaid(Boolean supportConvertComputeFreeToPostPaid) {
+                this.supportConvertComputeFreeToPostPaid = supportConvertComputeFreeToPostPaid;
                 return this;
             }
 

@@ -1,3 +1,6 @@
+2026-10-27 Version: 1.0.23
+- Generated java-async 2022-10-19 for starrocks.
+
 2026-10-26 Version: 1.0.22
 - Generated java-async 2022-10-19 for starrocks.
 

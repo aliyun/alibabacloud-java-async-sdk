@@ -358,7 +358,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Specifies whether the vSwitch is the primary vSwitch.</p>
+             * <p>Indicates whether the vSwitch is the primary vSwitch.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -421,6 +421,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("BeginTime")
         private Long beginTime;
+
+        @com.aliyun.core.annotation.NameInMap("ComputeFree")
+        private Boolean computeFree;
 
         @com.aliyun.core.annotation.NameInMap("EnableAiFunction")
         private Boolean enableAiFunction;
@@ -519,6 +522,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             this.aiFunctionInstanceId = builder.aiFunctionInstanceId;
             this.architecture = builder.architecture;
             this.beginTime = builder.beginTime;
+            this.computeFree = builder.computeFree;
             this.enableAiFunction = builder.enableAiFunction;
             this.enableAutoMinorVersionUpgrade = builder.enableAutoMinorVersionUpgrade;
             this.enableMultiAz = builder.enableMultiAz;
@@ -599,6 +603,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
          */
         public Long getBeginTime() {
             return this.beginTime;
+        }
+
+        /**
+         * @return computeFree
+         */
+        public Boolean getComputeFree() {
+            return this.computeFree;
         }
 
         /**
@@ -818,6 +829,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String aiFunctionInstanceId; 
             private String architecture; 
             private Long beginTime; 
+            private Boolean computeFree; 
             private Boolean enableAiFunction; 
             private Boolean enableAutoMinorVersionUpgrade; 
             private Boolean enableMultiAz; 
@@ -859,6 +871,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
                 this.aiFunctionInstanceId = model.aiFunctionInstanceId;
                 this.architecture = model.architecture;
                 this.beginTime = model.beginTime;
+                this.computeFree = model.computeFree;
                 this.enableAiFunction = model.enableAiFunction;
                 this.enableAutoMinorVersionUpgrade = model.enableAutoMinorVersionUpgrade;
                 this.enableMultiAz = model.enableMultiAz;
@@ -903,7 +916,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The AI dedicated cluster ID. The ID is prefixed with af-. This parameter is returned if an unreleased dedicated cluster exists, including those being created. If no dedicated cluster is created, this parameter is empty.</p>
+             * <p>The AI dedicated cluster ID. The ID has an af- prefix. This parameter is returned if an unreleased dedicated cluster exists, including those being created. If no dedicated cluster is created, this parameter is empty.</p>
              * 
              * <strong>example:</strong>
              * <p>af-498ae4af</p>
@@ -914,7 +927,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The internal network connection endpoint of the AI dedicated cluster. The format is fe-{AiFunctionClusterId}-internal.starrocks.aliyuncs.com. This parameter is returned only after the dedicated cluster is created. If no dedicated cluster is created, this parameter is empty.</p>
+             * <p>The internal network endpoint of the AI dedicated cluster. The format is fe-{AiFunctionClusterId}-internal.starrocks.aliyuncs.com. This parameter is returned only after the dedicated cluster is created. If no dedicated cluster is created, this parameter is empty.</p>
              * 
              * <strong>example:</strong>
              * <p>fe-af-498ae4af-internal.starrocks.aliyuncs.com</p>
@@ -963,7 +976,15 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether the AI center is enabled. Default value: false.</p>
+             * ComputeFree.
+             */
+            public Builder computeFree(Boolean computeFree) {
+                this.computeFree = computeFree;
+                return this;
+            }
+
+            /**
+             * <p>Indicates whether the AI center is enabled. Default value: false.</p>
              */
             public Builder enableAiFunction(Boolean enableAiFunction) {
                 this.enableAiFunction = enableAiFunction;
@@ -971,7 +992,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether automatic minor version upgrades are allowed.</p>
+             * <p>Indicates whether automatic minor version upgrades are allowed.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -982,7 +1003,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether disaster recovery is enabled.</p>
+             * <p>Indicates whether disaster recovery is enabled.</p>
              */
             public Builder enableMultiAz(Boolean enableMultiAz) {
                 this.enableMultiAz = enableMultiAz;
@@ -990,7 +1011,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether SSL is enabled.</p>
+             * <p>Indicates whether SSL is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1001,7 +1022,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether the audit plug-in is enabled.</p>
+             * <p>Indicates whether the audit plug-in is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1012,7 +1033,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether encryption is enabled.</p>
+             * <p>Indicates whether encryption is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1023,7 +1044,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * EosDate.
+             * <p>The end-of-support date for the cluster version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-07</p>
              */
             public Builder eosDate(String eosDate) {
                 this.eosDate = eosDate;
@@ -1067,13 +1091,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
              * <p>The instance status. Valid values:</p>
              * <ul>
              * <li>not_init: Not initialized.</li>
-             * <li>unpaid: Pending payment.</li>
+             * <li>unpaid: Unpaid.</li>
              * <li>paid: Paid.</li>
              * <li>creating: Creating.</li>
              * <li>creating_failed: Creation failed.</li>
              * <li>created: Created.</li>
              * <li>running: Running.</li>
-             * <li>updating: Updating.</li>
+             * <li>updating: Upgrading.</li>
              * <li>agent_creating: Creating the agent.</li>
              * <li>agent_scaling_up: Scaling up the agent.</li>
              * <li>modifying_config: Updating configurations.</li>
@@ -1082,14 +1106,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
              * <li>scaling_in: Scaling in.</li>
              * <li>scaling_up: Scaling up.</li>
              * <li>scaling_down: Scaling down.</li>
-             * <li>upgrading: Upgrading.</li>
-             * <li>enable_public_network: Enabling public network access.</li>
-             * <li>disable_public_network: Disabling public network access.</li>
+             * <li>upgrading: Upgrading the version.</li>
+             * <li>enable_public_network: Enabling the public network.</li>
+             * <li>disable_public_network: Disabling the public network.</li>
              * <li>convert_from_trial_to_official: Converting the edition.</li>
              * <li>migration_cluster_to_serverless: Migrating the cluster.</li>
              * <li>modifying_timezone: Modifying the time zone.</li>
              * <li>switch_az: Switching the primary and secondary zones.</li>
-             * <li>enabling: Resuming.</li>
+             * <li>enabling: Recovering.</li>
              * <li>disable: Unavailable.</li>
              * <li>actively_disabled: Unavailable.</li>
              * <li>deleting: Deleting.</li>
@@ -1107,7 +1131,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether read/write splitting is enabled. If enabled, the leader FE node processes write requests and other nodes process read requests.</p>
+             * <p>Indicates whether read/write splitting is enabled. If enabled, the leader FE node processes write requests and other nodes process read requests.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1248,8 +1272,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
             /**
              * <p>The running mode of the cluster. Valid values:</p>
              * <ul>
-             * <li>shared_nothing: Shared-nothing architecture.</li>
-             * <li>shared_data: Shared-data architecture.</li>
+             * <li>shared_nothing: Shared-nothing.</li>
+             * <li>shared_data: Shared-data.</li>
              * <li>lakehouse: Lakehouse.</li>
              * </ul>
              * 
@@ -1273,7 +1297,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether the security group is a managed security group.</p>
+             * <p>Indicates whether the managed security group is used.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1303,7 +1327,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of vSwitches.</p>
+             * <p>The vSwitches.</p>
              */
             public Builder vSwitches(java.util.List<VSwitches> vSwitches) {
                 this.vSwitches = vSwitches;
@@ -1322,7 +1346,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VersionLifecycleStatus.
+             * <p>The version lifecycle status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Long-term support</p>
              */
             public Builder versionLifecycleStatus(String versionLifecycleStatus) {
                 this.versionLifecycleStatus = versionLifecycleStatus;

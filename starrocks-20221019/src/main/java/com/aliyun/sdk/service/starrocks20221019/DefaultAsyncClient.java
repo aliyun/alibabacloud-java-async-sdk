@@ -486,7 +486,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Danger: After an instance is released, the physical resources used by the instance are reclaimed. All related data is lost and cannot be recovered.</p>
+     * <p>Danger: After an instance is released, all physical resources used by the instance are reclaimed. All related data is lost and cannot be recovered.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DescribeInstances  DescribeInstancesRequest
