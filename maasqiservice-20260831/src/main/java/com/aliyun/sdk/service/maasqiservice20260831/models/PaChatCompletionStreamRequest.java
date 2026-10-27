@@ -567,6 +567,7 @@ public class PaChatCompletionStreamRequest extends Request {
         } 
 
         /**
+         * <p>The Agent instance access key used for QICloud Customer API authentication.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -579,6 +580,7 @@ public class PaChatCompletionStreamRequest extends Request {
         }
 
         /**
+         * <p>The published Mobile Planner Agent instance ID. Must correspond to the X-QI-Agent-Api-Key.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -591,7 +593,10 @@ public class PaChatCompletionStreamRequest extends Request {
         }
 
         /**
-         * X-QI-Session-Id.
+         * <p>The optional session identifier. Can be omitted for the first turn, in which case the server generates one. Pass it back in subsequent turns to continue the Mobile Planner Agent session.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>session-xxx</p>
          */
         public Builder xQISessionId(String xQISessionId) {
             this.putHeaderParameter("X-QI-Session-Id", xQISessionId);
@@ -600,7 +605,10 @@ public class PaChatCompletionStreamRequest extends Request {
         }
 
         /**
-         * allowedTokenIds.
+         * <p>The whitelist of token IDs allowed for generation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[10,11]</p>
          */
         public Builder allowedTokenIds(java.util.List<Long> allowedTokenIds) {
             this.putBodyParameter("allowedTokenIds", allowedTokenIds);
@@ -609,7 +617,10 @@ public class PaChatCompletionStreamRequest extends Request {
         }
 
         /**
-         * badWords.
+         * <p>The list of words or strings prohibited from generation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;blocked&quot;]</p>
          */
         public Builder badWords(java.util.List<String> badWords) {
             this.putBodyParameter("badWords", badWords);
@@ -618,7 +629,7 @@ public class PaChatCompletionStreamRequest extends Request {
         }
 
         /**
-         * chatTemplateKwargs.
+         * <p>The vLLM/OpenAI-Compatible template parameter object. Request values are merged with model defaults, with request keys taking precedence, and passed to the model as-is.</p>
          */
         public Builder chatTemplateKwargs(ChatTemplateKwargs chatTemplateKwargs) {
             this.putBodyParameter("chatTemplateKwargs", chatTemplateKwargs);
@@ -627,7 +638,10 @@ public class PaChatCompletionStreamRequest extends Request {
         }
 
         /**
-         * frequencyPenalty.
+         * <p>The frequency penalty parameter passed through to the Mobile Planner Agent model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         public Builder frequencyPenalty(Double frequencyPenalty) {
             this.putBodyParameter("frequencyPenalty", frequencyPenalty);
@@ -636,7 +650,10 @@ public class PaChatCompletionStreamRequest extends Request {
         }
 
         /**
-         * ignoreEos.
+         * <p>Specifies whether to ignore EOS and continue generation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder ignoreEos(Boolean ignoreEos) {
             this.putBodyParameter("ignoreEos", ignoreEos);
@@ -645,7 +662,10 @@ public class PaChatCompletionStreamRequest extends Request {
         }
 
         /**
-         * includeReasoning.
+         * <p>Specifies whether to request reasoning content from the upstream. The actual capability depends on the model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder includeReasoning(Boolean includeReasoning) {
             this.putBodyParameter("includeReasoning", includeReasoning);
@@ -654,7 +674,10 @@ public class PaChatCompletionStreamRequest extends Request {
         }
 
         /**
-         * logprobs.
+         * <p>A model-compatible parameter with the JSON field name logprobs. Whether it is accepted and takes effect depends on the model used by the instance. The current Agent response does not provide token log probability details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder logprobs(Boolean logprobs) {
             this.putBodyParameter("logprobs", logprobs);
@@ -663,7 +686,10 @@ public class PaChatCompletionStreamRequest extends Request {
         }
 
         /**
-         * maxCompletionTokens.
+         * <p>The maximum number of completion tokens. Must be greater than 0 if provided, and is passed as an OpenAI-compatible model parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2048</p>
          */
         public Builder maxCompletionTokens(Long maxCompletionTokens) {
             this.putBodyParameter("maxCompletionTokens", maxCompletionTokens);
@@ -672,7 +698,10 @@ public class PaChatCompletionStreamRequest extends Request {
         }
 
         /**
-         * maxTokens.
+         * <p>The OpenAI-compatible maximum number of generated tokens. Must be greater than 0 if provided.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2048</p>
          */
         public Builder maxTokens(Long maxTokens) {
             this.putBodyParameter("maxTokens", maxTokens);
@@ -681,6 +710,7 @@ public class PaChatCompletionStreamRequest extends Request {
         }
 
         /**
+         * <p>The list of conversation messages. The first call can submit one turn or an existing multi-turn conversation. When continuing with an existing session ID, retain the complete and unmodified historical message prefix and append the current turn messages. Tool results are associated through role=tool and the corresponding tool_call_id.</p>
          * <p>This parameter is required.</p>
          */
         public Builder messages(java.util.List<Messages> messages) {
@@ -690,7 +720,10 @@ public class PaChatCompletionStreamRequest extends Request {
         }
 
         /**
-         * minP.
+         * <p>The vLLM Min-P sampling parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.05</p>
          */
         public Builder minP(Double minP) {
             this.putBodyParameter("minP", minP);
@@ -699,7 +732,10 @@ public class PaChatCompletionStreamRequest extends Request {
         }
 
         /**
-         * minTokens.
+         * <p>The minimum number of tokens to generate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder minTokens(Long minTokens) {
             this.putBodyParameter("minTokens", minTokens);
@@ -708,7 +744,7 @@ public class PaChatCompletionStreamRequest extends Request {
         }
 
         /**
-         * mmProcessorKwargs.
+         * <p>The multimodal preprocessor parameters passed through to vLLM as-is by key.</p>
          */
         public Builder mmProcessorKwargs(MmProcessorKwargs mmProcessorKwargs) {
             this.putBodyParameter("mmProcessorKwargs", mmProcessorKwargs);
@@ -717,7 +753,10 @@ public class PaChatCompletionStreamRequest extends Request {
         }
 
         /**
-         * model.
+         * <p>Reserved for OpenAI client compatibility. Ignored during routing. The actual model is determined by the published instance configuration. The model field in the response is always an empty string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot; &quot;</p>
          */
         public Builder model(String model) {
             this.putBodyParameter("model", model);
@@ -726,7 +765,10 @@ public class PaChatCompletionStreamRequest extends Request {
         }
 
         /**
-         * n.
+         * <p>Set this parameter to 1. Whether the model accepts this parameter depends on the model. The current Mobile Planner Agent response does not return multiple candidate results. Do not use this parameter for multiple-candidate responses.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder n(Long n) {
             this.putBodyParameter("n", n);
@@ -735,7 +777,10 @@ public class PaChatCompletionStreamRequest extends Request {
         }
 
         /**
-         * parallelToolCalls.
+         * <p>Specifies whether the model is allowed to generate multiple tool calling requests in parallel. The model invokes tools concurrently when this parameter is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder parallelToolCalls(Boolean parallelToolCalls) {
             this.putBodyParameter("parallelToolCalls", parallelToolCalls);
@@ -744,7 +789,10 @@ public class PaChatCompletionStreamRequest extends Request {
         }
 
         /**
-         * presencePenalty.
+         * <p>The presence penalty parameter, passed through to the Mobile Planner Agent model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         public Builder presencePenalty(Double presencePenalty) {
             this.putBodyParameter("presencePenalty", presencePenalty);
@@ -753,7 +801,10 @@ public class PaChatCompletionStreamRequest extends Request {
         }
 
         /**
-         * promptLogprobs.
+         * <p>A model compatibility parameter. The JSON field is prompt_logprobs. Whether the model accepts this parameter depends on the model. The current Agent response does not return probability details for input tokens.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder promptLogprobs(Long promptLogprobs) {
             this.putBodyParameter("promptLogprobs", promptLogprobs);
@@ -762,7 +813,10 @@ public class PaChatCompletionStreamRequest extends Request {
         }
 
         /**
-         * reasoningEffort.
+         * <p>The OpenAI-compatible reasoning effort level, such as low, medium, or high.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>high</p>
          */
         public Builder reasoningEffort(String reasoningEffort) {
             this.putBodyParameter("reasoningEffort", reasoningEffort);
@@ -771,7 +825,10 @@ public class PaChatCompletionStreamRequest extends Request {
         }
 
         /**
-         * repetitionPenalty.
+         * <p>The vLLM repetition penalty parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1</p>
          */
         public Builder repetitionPenalty(Double repetitionPenalty) {
             this.putBodyParameter("repetitionPenalty", repetitionPenalty);
@@ -780,7 +837,7 @@ public class PaChatCompletionStreamRequest extends Request {
         }
 
         /**
-         * responseFormat.
+         * <p>The structured response format, such as json_object or json_schema.</p>
          */
         public Builder responseFormat(ResponseFormat responseFormat) {
             this.putBodyParameter("responseFormat", responseFormat);
@@ -789,7 +846,10 @@ public class PaChatCompletionStreamRequest extends Request {
         }
 
         /**
-         * seed.
+         * <p>The random seed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>42</p>
          */
         public Builder seed(Long seed) {
             this.putBodyParameter("seed", seed);
@@ -798,7 +858,10 @@ public class PaChatCompletionStreamRequest extends Request {
         }
 
         /**
-         * skipSpecialTokens.
+         * <p>Specifies whether to skip special tokens.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder skipSpecialTokens(Boolean skipSpecialTokens) {
             this.putBodyParameter("skipSpecialTokens", skipSpecialTokens);
@@ -807,7 +870,10 @@ public class PaChatCompletionStreamRequest extends Request {
         }
 
         /**
-         * stop.
+         * <p>The stop sequences. Compatible with a single string or an array of strings. This field is displayed in array format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;END&quot;]</p>
          */
         public Builder stop(java.util.List<String> stop) {
             this.putBodyParameter("stop", stop);
@@ -816,7 +882,10 @@ public class PaChatCompletionStreamRequest extends Request {
         }
 
         /**
-         * stopTokenIds.
+         * <p>The vLLM stop token ID list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[1,2]</p>
          */
         public Builder stopTokenIds(java.util.List<Long> stopTokenIds) {
             this.putBodyParameter("stopTokenIds", stopTokenIds);
@@ -825,6 +894,7 @@ public class PaChatCompletionStreamRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether to use SSE streaming responses. This parameter must be set to true for this operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -837,7 +907,7 @@ public class PaChatCompletionStreamRequest extends Request {
         }
 
         /**
-         * streamOptions.
+         * <p>The OpenAI-compatible streaming options.</p>
          */
         public Builder streamOptions(StreamOptions streamOptions) {
             this.putBodyParameter("streamOptions", streamOptions);
@@ -846,7 +916,7 @@ public class PaChatCompletionStreamRequest extends Request {
         }
 
         /**
-         * structuredOutputs.
+         * <p>The vLLM structured output constraints.</p>
          */
         public Builder structuredOutputs(StructuredOutputs structuredOutputs) {
             this.putBodyParameter("structuredOutputs", structuredOutputs);
@@ -855,7 +925,10 @@ public class PaChatCompletionStreamRequest extends Request {
         }
 
         /**
-         * temperature.
+         * <p>The sampling temperature. Passed as an OpenAI-compatible model parameter to override the model default value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.2</p>
          */
         public Builder temperature(Double temperature) {
             this.putBodyParameter("temperature", temperature);
@@ -864,7 +937,10 @@ public class PaChatCompletionStreamRequest extends Request {
         }
 
         /**
-         * toolChoice.
+         * <p>The tool choice strategy. Valid values: auto, none, required, or a named selection supported by the model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>auto</p>
          */
         public Builder toolChoice(String toolChoice) {
             this.putBodyParameter("toolChoice", toolChoice);
@@ -873,7 +949,7 @@ public class PaChatCompletionStreamRequest extends Request {
         }
 
         /**
-         * tools.
+         * <p>The array of function tool definitions available for this request. Mobile Planner Agent registers each named function in the runtime Toolkit and returns tool_calls in the streaming response.</p>
          */
         public Builder tools(java.util.List<Tools> tools) {
             this.putBodyParameter("tools", tools);
@@ -882,7 +958,10 @@ public class PaChatCompletionStreamRequest extends Request {
         }
 
         /**
-         * topK.
+         * <p>The vLLM Top-K sampling parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder topK(Long topK) {
             this.putBodyParameter("topK", topK);
@@ -891,7 +970,10 @@ public class PaChatCompletionStreamRequest extends Request {
         }
 
         /**
-         * topLogprobs.
+         * <p>A model compatibility parameter. The JSON field is top_logprobs. Used for models that support this feature. The current Agent response does not provide candidate token probability details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder topLogprobs(Long topLogprobs) {
             this.putBodyParameter("topLogprobs", topLogprobs);
@@ -900,7 +982,10 @@ public class PaChatCompletionStreamRequest extends Request {
         }
 
         /**
-         * topP.
+         * <p>Top-P sampling parameter. Passed as an OpenAI-compatible model parameter to override the model default value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.9</p>
          */
         public Builder topP(Double topP) {
             this.putBodyParameter("topP", topP);
@@ -968,7 +1053,10 @@ public class PaChatCompletionStreamRequest extends Request {
             } 
 
             /**
-             * enableThinking.
+             * <p>Controls whether the model generates reasoning_content through chat_template_kwargs. This value is passed to the model used by the Mobile Planner Agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableThinking(Boolean enableThinking) {
                 this.enableThinking = enableThinking;
@@ -976,7 +1064,10 @@ public class PaChatCompletionStreamRequest extends Request {
             }
 
             /**
-             * preserveThinking.
+             * <p>Specifies whether the model preserves and reuses existing reasoning content in subsequent turns. Passed through as-is per vLLM/Qwen chat_template_kwargs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder preserveThinking(Boolean preserveThinking) {
                 this.preserveThinking = preserveThinking;
@@ -1030,7 +1121,10 @@ public class PaChatCompletionStreamRequest extends Request {
             } 
 
             /**
-             * url.
+             * <p>The image URL. Remote images must use HTTPS. Base64 Data URLs are also accepted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example.com/image.png">https://example.com/image.png</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -1110,7 +1204,7 @@ public class PaChatCompletionStreamRequest extends Request {
             } 
 
             /**
-             * imageUrl.
+             * <p>The image reference when type=image_url. Supports HTTPS URLs or data:image/...;base64,... format.</p>
              */
             public Builder imageUrl(ImageUrl imageUrl) {
                 this.imageUrl = imageUrl;
@@ -1118,7 +1212,10 @@ public class PaChatCompletionStreamRequest extends Request {
             }
 
             /**
-             * text.
+             * <p>The non-empty text when type=text.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Analyze this image</p>
              */
             public Builder text(String text) {
                 this.text = text;
@@ -1126,7 +1223,10 @@ public class PaChatCompletionStreamRequest extends Request {
             }
 
             /**
-             * type.
+             * <p>The content part type. Mobile Planner Agent user messages support text or image_url.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>text</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1193,7 +1293,10 @@ public class PaChatCompletionStreamRequest extends Request {
             } 
 
             /**
-             * arguments.
+             * <p>The JSON object string of function arguments.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;city&quot;:&quot;Hangzhou&quot;}</p>
              */
             public Builder arguments(String arguments) {
                 this.arguments = arguments;
@@ -1201,7 +1304,10 @@ public class PaChatCompletionStreamRequest extends Request {
             }
 
             /**
-             * name.
+             * <p>The name of the function to call.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>get_weather</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1281,7 +1387,7 @@ public class PaChatCompletionStreamRequest extends Request {
             } 
 
             /**
-             * function.
+             * <p>The function information of a historical tool invocation entry, including name and arguments as a JSON character string. Retain the actual returned values in subsequent turns.</p>
              */
             public Builder function(Function function) {
                 this.function = function;
@@ -1289,7 +1395,10 @@ public class PaChatCompletionStreamRequest extends Request {
             }
 
             /**
-             * id.
+             * <p>The tool invocation ID. Subsequent tool messages reference this through tool_call_id.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>call_weather_1</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -1297,7 +1406,10 @@ public class PaChatCompletionStreamRequest extends Request {
             }
 
             /**
-             * type.
+             * <p>The tool invocation type. Currently fixed as function.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>function</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1390,7 +1502,10 @@ public class PaChatCompletionStreamRequest extends Request {
             } 
 
             /**
-             * content.
+             * <p>The message content. Mobile Planner Agent supports text and multimodal content. Image URLs or base64 Data URLs are passed through to the Mobile Planner Agent model if it supports multimodal input.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Analyze the image content</p>
              */
             public Builder content(java.util.List<Content> content) {
                 this.content = content;
@@ -1398,7 +1513,10 @@ public class PaChatCompletionStreamRequest extends Request {
             }
 
             /**
-             * role.
+             * <p>The message role: user, assistant, tool, system, or developer. system/developer is used for optional per-turn text instruction overrides. If omitted, the instructions from the instance configuration are used. Tool results use tool and are associated with tool_call_id.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -1406,7 +1524,10 @@ public class PaChatCompletionStreamRequest extends Request {
             }
 
             /**
-             * toolCallId.
+             * <p>Required when role=tool. Must match an id from the preceding assistant.tool_calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>call_weather_1</p>
              */
             public Builder toolCallId(String toolCallId) {
                 this.toolCallId = toolCallId;
@@ -1414,7 +1535,7 @@ public class PaChatCompletionStreamRequest extends Request {
             }
 
             /**
-             * toolCalls.
+             * <p>The list of function invocation entries that can be carried when role=assistant. Used for multi-turn tool invocation continuation.</p>
              */
             public Builder toolCalls(java.util.List<ToolCalls> toolCalls) {
                 this.toolCalls = toolCalls;
@@ -1468,7 +1589,10 @@ public class PaChatCompletionStreamRequest extends Request {
             } 
 
             /**
-             * maxDynamicPatch.
+             * <p>Example: the maximum number of dynamic image patches allowed by the vision model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder maxDynamicPatch(Long maxDynamicPatch) {
                 this.maxDynamicPatch = maxDynamicPatch;
@@ -1522,7 +1646,10 @@ public class PaChatCompletionStreamRequest extends Request {
             } 
 
             /**
-             * type.
+             * <p>The response format type, such as text, json_object, or json_schema.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>json_object</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1576,7 +1703,10 @@ public class PaChatCompletionStreamRequest extends Request {
             } 
 
             /**
-             * includeUsage.
+             * <p>Specifies whether to output a usage statistics chunk before data:[DONE].</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder includeUsage(Boolean includeUsage) {
                 this.includeUsage = includeUsage;
@@ -1630,7 +1760,10 @@ public class PaChatCompletionStreamRequest extends Request {
             } 
 
             /**
-             * choice.
+             * <p>The set of allowed enumeration text values.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;yes&quot;,&quot;no&quot;]</p>
              */
             public Builder choice(java.util.List<String> choice) {
                 this.choice = choice;
@@ -1697,7 +1830,10 @@ public class PaChatCompletionStreamRequest extends Request {
             } 
 
             /**
-             * description.
+             * <p>The sample parameter description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The name of the city for which to query the weather</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1705,7 +1841,10 @@ public class PaChatCompletionStreamRequest extends Request {
             }
 
             /**
-             * type.
+             * <p>The JSON Schema type of the sample city field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>string</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1759,7 +1898,7 @@ public class PaChatCompletionStreamRequest extends Request {
             } 
 
             /**
-             * city.
+             * <p>The Schema for the sample business parameter city. The actual fields are determined by the caller\&quot;s tool definition.</p>
              */
             public Builder city(City city) {
                 this.city = city;
@@ -1839,7 +1978,7 @@ public class PaChatCompletionStreamRequest extends Request {
             } 
 
             /**
-             * properties.
+             * <p>The property definitions of the JSON Schema.</p>
              */
             public Builder properties(Properties properties) {
                 this.properties = properties;
@@ -1847,7 +1986,7 @@ public class PaChatCompletionStreamRequest extends Request {
             }
 
             /**
-             * required.
+             * <p>The array of required field names in the JSON Schema.</p>
              */
             public Builder required(java.util.List<String> required) {
                 this.required = required;
@@ -1855,7 +1994,10 @@ public class PaChatCompletionStreamRequest extends Request {
             }
 
             /**
-             * type.
+             * <p>The root Schema type of the function parameters. Typically set to object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>object</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1948,7 +2090,10 @@ public class PaChatCompletionStreamRequest extends Request {
             } 
 
             /**
-             * description.
+             * <p>The description of the function purpose. The model uses this to determine when to call the tool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Query the weather for a specified city</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1956,7 +2101,10 @@ public class PaChatCompletionStreamRequest extends Request {
             }
 
             /**
-             * name.
+             * <p>The function name. This parameter is required. Used to match assistant.tool_calls with subsequent tool results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>get_weather</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1964,7 +2112,7 @@ public class PaChatCompletionStreamRequest extends Request {
             }
 
             /**
-             * parameters.
+             * <p>The JSON Schema for function parameters, passed to the model as raw JSON. If not provided, an empty object Schema is used.</p>
              */
             public Builder parameters(Parameters parameters) {
                 this.parameters = parameters;
@@ -1972,7 +2120,10 @@ public class PaChatCompletionStreamRequest extends Request {
             }
 
             /**
-             * strict.
+             * <p>Specifies whether the model must strictly follow the function parameter JSON Schema.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder strict(Boolean strict) {
                 this.strict = strict;
@@ -2039,7 +2190,7 @@ public class PaChatCompletionStreamRequest extends Request {
             } 
 
             /**
-             * function.
+             * <p>The function tool definition, including the name, description, and JSON Schema parameters.</p>
              */
             public Builder function(ToolsFunction function) {
                 this.function = function;
@@ -2047,7 +2198,10 @@ public class PaChatCompletionStreamRequest extends Request {
             }
 
             /**
-             * type.
+             * <p>The tool type. This parameter must be set to function.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>function</p>
              */
             public Builder type(String type) {
                 this.type = type;
