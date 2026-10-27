@@ -106,7 +106,7 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The returned HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -127,7 +127,7 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
         /**
          * <p>The returned message.</p>
          * <blockquote>
-         * <p>If the request is successful, <strong>Successful</strong> is returned. Otherwise, an error message is returned.</p>
+         * <p>If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message such as an error code is returned.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -152,10 +152,8 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: The request was successful.</p>
-         * </li>
-         * <li><p><strong>false</strong>: The request failed.</p>
-         * </li>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -754,7 +752,8 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The client IP address.</p>
+             * <p>The client IP address in the SQL log record.
+             * The IP address of the client in the SQL log record.</p>
              * 
              * <strong>example:</strong>
              * <p>10.0.0.1xx</p>
@@ -765,7 +764,7 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The client port.</p>
+             * <p>The port number of the client.</p>
              * 
              * <strong>example:</strong>
              * <p>3306</p>
@@ -776,7 +775,7 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This parameter is reserved.</p>
+             * <p>The reserved parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>None</p>
@@ -787,7 +786,7 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The connection ID.</p>
+             * <p>The connection ID of the SQL log record.</p>
              * 
              * <strong>example:</strong>
              * <p>ld-******</p>
@@ -798,7 +797,7 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution duration. Unit: microseconds (μs).</p>
+             * <p>The execution duration in microseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>58</p>
@@ -809,7 +808,7 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The CPU execution time. Unit: microseconds (μs).</p>
+             * <p>The CPU execution time in microseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -820,7 +819,7 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The database name.</p>
+             * <p>The name of the database.</p>
              * 
              * <strong>example:</strong>
              * <p>testdb</p>
@@ -831,7 +830,7 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution time. The time is in UTC. Format: <code>yyyy-MM-ddTHH:mm:ssZ</code>.</p>
+             * <p>The execution time in the UTC format: <code>yyyy-MM-ddTHH:mm:ssZ</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-12-07T02:15:32Z</p>
@@ -842,7 +841,7 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The extended information. This parameter is reserved.</p>
+             * <p>The extended information field. This is a reserved parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>None</p>
@@ -853,7 +852,7 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of rows fetched by the compute node (CN) in a PolarDB-X 2.0 instance.</p>
+             * <p>The number of rows pulled by the compute node (CN) in PolarDB-X 2.0.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -864,7 +863,7 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The client IP address.</p>
+             * <p>The IP address of the client.</p>
              * 
              * <strong>example:</strong>
              * <p>11.197.XX.XX</p>
@@ -875,7 +874,7 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The lock wait time. Unit: milliseconds.</p>
+             * <p>The lock wait time in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -908,7 +907,7 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution time. This value is a UNIX timestamp. Unit: milliseconds.</p>
+             * <p>The execution timestamp. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1701886532000</p>
@@ -919,7 +918,7 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The degree of parallelism (DOP) for the PolarDB for MySQL instance.</p>
+             * <p>The parallel queue time of the PolarDB for MySQL instance in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -930,7 +929,7 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parallel queue time for the PolarDB for MySQL instance. Unit: milliseconds.</p>
+             * <p>The degree of parallelism of the PolarDB for MySQL instance.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -941,7 +940,7 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The SQL parameters.</p>
+             * <p>The parameters of the SQL log record.</p>
              * 
              * <strong>example:</strong>
              * <p>[1, &quot;das&quot;]</p>
@@ -952,7 +951,7 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of asynchronous physical reads.</p>
+             * <p>The number of physical asynchronous reads.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -974,7 +973,7 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of synchronous physical reads.</p>
+             * <p>The number of physical synchronous reads.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -985,7 +984,7 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The protocol type.</p>
+             * <p>The protocol type of the SQL log record.</p>
              * 
              * <strong>example:</strong>
              * <p>MySQL</p>
@@ -1018,7 +1017,7 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of rows updated or returned by the compute node (CN) of a PolarDB-X 2.0 instance.</p>
+             * <p>The total number of rows updated or returned by the compute node of the PolarDB-X 2.0 instance.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -1040,7 +1039,7 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of requests sent from a compute node (CN) to data nodes (DNs) in a PolarDB-X 2.0 instance.</p>
+             * <p>The number of requests from the compute node (CN) to the data node (DN) in PolarDB-X 2.0.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -1086,10 +1085,8 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             /**
              * <p>The execution status. Valid values:</p>
              * <ul>
-             * <li><p><strong>0</strong>: The execution was successful.</p>
-             * </li>
-             * <li><p><strong>1</strong>: The execution failed.</p>
-             * </li>
+             * <li><strong>0</strong>: The execution was successful.</li>
+             * <li><strong>1</strong>: The execution failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1101,7 +1098,7 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the table that the SQL statement references.</p>
+             * <p>The table name in the SQL log record.</p>
              * 
              * <strong>example:</strong>
              * <p>das</p>
@@ -1123,7 +1120,7 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The trace ID for a PolarDB-X 2.0 instance. This is the ID of the SQL statement that was executed on a data node (DN).</p>
+             * <p>The trace ID in PolarDB-X 2.0, which is the execution ID of the SQL statement on the data node.</p>
              * 
              * <strong>example:</strong>
              * <p>14c93b7c7bf00000</p>
@@ -1156,12 +1153,10 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether an In-Memory Column Index (IMCI) is used for the PolarDB for MySQL instance.</p>
+             * <p>Indicates whether the PolarDB for MySQL instance uses IMCI. Valid values:</p>
              * <ul>
-             * <li><p><strong>true</strong></p>
-             * </li>
-             * <li><p><strong>false</strong></p>
-             * </li>
+             * <li><strong>true</strong>: Yes.</li>
+             * <li><strong>false</strong>: No.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1173,7 +1168,7 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The endpoint that is resolved from the query connection string.</p>
+             * <p>The resolved endpoint address of the query connection.</p>
              * 
              * <strong>example:</strong>
              * <p>100.115.XX.XX</p>
@@ -1184,7 +1179,7 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of write operations on an ApsaraDB RDS for SQL Server instance.</p>
+             * <p>The number of writes for the ApsaraDB RDS for SQL Server engine.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -1360,7 +1355,7 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The end time of the query. This value is a UNIX timestamp. Unit: milliseconds.</p>
+             * <p>The end time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1608888296000</p>
@@ -1371,15 +1366,13 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the task is complete. Valid values:</p>
+             * <p>Indicates whether the task is completed. Valid values:</p>
              * <ul>
-             * <li><p><strong>0</strong>: The task is in progress.</p>
-             * </li>
-             * <li><p><strong>1</strong>: The task is complete.</p>
-             * </li>
+             * <li><strong>0</strong>: Not completed.</li>
+             * <li><strong>1</strong>: Completed.</li>
              * </ul>
              * <blockquote>
-             * <p>If this parameter is <strong>0</strong> and the <strong>JobId</strong> parameter is returned, the current request is an asynchronous request and you cannot obtain the returned results. You must use the value of <strong>JobId</strong> to initiate another request. Set the <strong>Filters</strong> parameter to the value of <strong>JobId</strong>. Example: <code>Filters=[{&quot;Key&quot;: &quot;JobId&quot;, &quot;Value&quot;: &quot;******&quot;}]</code>.</p>
+             * <p>If <strong>Finish</strong> is 0 and the <strong>JobId</strong> field is included, the current request is an asynchronous request and the result cannot be directly obtained. You must query the result based on <strong>JobId</strong>. When you query the result, use <strong>JobId</strong> as the input value for <strong>Filters</strong>. Example: <code>Filters=[{&quot;Key&quot;: &quot;JobId&quot;, &quot;Value&quot;: &quot;******&quot;}]</code>.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1391,7 +1384,7 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the SQL logs.</p>
+             * <p>The list data.</p>
              */
             public Builder items(Items items) {
                 this.items = items;
@@ -1399,7 +1392,7 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The asynchronous task ID.</p>
+             * <p>The ID of the asynchronous task.</p>
              * 
              * <strong>example:</strong>
              * <p>MzI4NTZfUUlOR0RBT19DTTlfTlUyMF9NWVNRTF9PREJTX0xWU18zMjg1Nl9teXNxbF9XZWQgTWFyIDA2IDE0OjUwOjQ3IENTVCAyMDI0XzBfMzBfRXhlY3V0ZVRpbWVfREVTQ19XZWQgTWFyIDA2IDE0OjM1OjQ3IENTVCAyMDI0Xw==_1709708406465</p>
@@ -1410,7 +1403,7 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the query. This value is a UNIX timestamp. Unit: milliseconds.</p>
+             * <p>The start time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1596177993000</p>
@@ -1421,7 +1414,7 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of records.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

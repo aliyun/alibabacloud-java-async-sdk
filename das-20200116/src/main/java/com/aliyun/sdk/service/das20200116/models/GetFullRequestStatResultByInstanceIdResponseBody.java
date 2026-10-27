@@ -106,7 +106,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The returned status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -125,9 +125,9 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The message returned for the request.</p>
          * <blockquote>
-         * <p>If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message that contains information such as an error code is returned.</p>
+         * <p>If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message such as an error code is returned.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -152,10 +152,8 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong></p>
-         * </li>
-         * <li><p><strong>false</strong></p>
-         * </li>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -617,7 +615,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             /**
              * <p>The average number of scanned rows.</p>
              * <blockquote>
-             * <p>This parameter is returned only for ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, and PolarDB for MySQL databases.</p>
+             * <p>This field is supported by the following databases: ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, and PolarDB for MySQL.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -629,7 +627,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The average number of rows that are fetched by compute nodes from data nodes on the PolarDB-X 2.0 instance.</p>
+             * <p>The average number of rows pulled by the compute node from the data node in the PolarDB-X 2.0 database instance.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -640,7 +638,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The average lock wait latency. Unit: seconds.</p>
+             * <p>The average lock wait time, in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>0.00009589874265269765</p>
@@ -695,7 +693,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The average execution duration.</p>
+             * <p>The average time to execute.</p>
              * 
              * <strong>example:</strong>
              * <p>2.499</p>
@@ -706,7 +704,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The average number of SQL statements.</p>
+             * <p>The average SQL count.</p>
              * 
              * <strong>example:</strong>
              * <p>10000</p>
@@ -719,7 +717,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             /**
              * <p>The average number of updated rows.</p>
              * <blockquote>
-             * <p>This parameter is returned only for ApsaraDB RDS for MySQL and PolarDB-X 2.0 databases.</p>
+             * <p>This field is supported by the following databases: ApsaraDB RDS for MySQL and PolarDB-X 2.0.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -742,7 +740,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The percentage of the total number of executions.</p>
+             * <p>The proportion of times the statements execute.</p>
              * 
              * <strong>example:</strong>
              * <p>0.0586</p>
@@ -764,7 +762,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of failed executions.</p>
+             * <p>The number of execution errors.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -777,7 +775,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             /**
              * <p>The total number of scanned rows.</p>
              * <blockquote>
-             * <p>This parameter is returned only for ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, and PolarDB for MySQL databases.</p>
+             * <p>This field is supported by the following databases: ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, and PolarDB for MySQL.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -789,7 +787,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of rows that are fetched by compute nodes from data nodes on the PolarDB-X 2.0 instance.</p>
+             * <p>The number of rows pulled by the compute node from the data node in the PolarDB-X 2.0 database instance.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -800,7 +798,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address of the database instance.</p>
+             * <p>The network address of the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>rm-uf6dyi58dm6****.mysql.rds.aliy****.com</p>
@@ -811,7 +809,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The lock wait latency. Unit: seconds.</p>
+             * <p>The lock wait time, in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1089.4177720290281</p>
@@ -855,7 +853,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The port number that is used to connect to the database instance.</p>
+             * <p>The port number.</p>
              * 
              * <strong>example:</strong>
              * <p>3306</p>
@@ -877,7 +875,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of rows updated or returned by the compute nodes of the PolarDB-X 2.0 instance.</p>
+             * <p>The total number of rows updated or returned by the compute node in the PolarDB-X 2.0 database instance.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -888,7 +886,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of SQL statements that take longer than 1 second to execute.</p>
+             * <p>The number of SQL statements whose execution time is greater than 1 second.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -899,7 +897,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution duration percentage.</p>
+             * <p>The execution time proportion.</p>
              * 
              * <strong>example:</strong>
              * <p>2.499</p>
@@ -932,7 +930,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of updated rows.</p>
+             * <p>The total number of changed rows.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -943,7 +941,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The names of tables in the database.</p>
+             * <p>The name of the database table.</p>
              */
             public Builder tables(java.util.List<String> tables) {
                 this.tables = tables;
@@ -951,7 +949,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version number.</p>
+             * <p>The version.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -962,7 +960,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The virtual private cloud (VPC) ID.</p>
+             * <p>The VPC ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-2zentqj1sk4qmolci****</p>
@@ -1032,7 +1030,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The full request data.</p>
+             * <p>The list of full request data.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -1040,7 +1038,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total amount of data.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1162,11 +1160,11 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the asynchronous request failed. Valid values:</p>
+             * <p>Indicates whether the request failed. Valid values:</p>
              * <ul>
-             * <li><p><strong>true</strong></p>
+             * <li><p><strong>true</strong>: yes.</p>
              * </li>
-             * <li><p><strong>false</strong></p>
+             * <li><p><strong>false</strong>: no.</p>
              * </li>
              * </ul>
              * 
@@ -1179,11 +1177,11 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the asynchronous request was complete. Valid values:</p>
+             * <p>Indicates whether the asynchronous request is completed. Valid values:</p>
              * <ul>
-             * <li><p><strong>true</strong></p>
+             * <li><p><strong>true</strong>: yes.</p>
              * </li>
-             * <li><p><strong>false</strong></p>
+             * <li><p><strong>false</strong>: no.</p>
              * </li>
              * </ul>
              * 
@@ -1204,7 +1202,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The request ID.</p>
+             * <p>The ID of the request.</p>
              * 
              * <strong>example:</strong>
              * <p>9CB97BC4-6479-55D0-B9D0-EA925AFE****</p>
@@ -1215,13 +1213,13 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the asynchronous request. Valid values:</p>
+             * <p>The execution status of the asynchronous request. Valid values:</p>
              * <ul>
-             * <li><p><strong>RUNNING</strong></p>
+             * <li><p><strong>RUNNING</strong>: running.</p>
              * </li>
-             * <li><p><strong>SUCCESS</strong></p>
+             * <li><p><strong>SUCCESS</strong>: successful.</p>
              * </li>
-             * <li><p><strong>FAIL</strong></p>
+             * <li><p><strong>FAIL</strong>: failed.</p>
              * </li>
              * </ul>
              * 
@@ -1234,7 +1232,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the asynchronous request was sent. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * <p>The execution time. The time is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1645668213000</p>

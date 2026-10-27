@@ -106,7 +106,7 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code returned.</p>
+         * <p>The returned status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
         }
 
         /**
-         * <p>AsyncResult<Histogram>。</p>
+         * <p>The AsyncResult<Histogram>.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -127,7 +127,7 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
         /**
          * <p>The message returned for the request.</p>
          * <blockquote>
-         * <p> This parameter returns <strong>Successful</strong> when the request succeeds. If the request fails, an exception message (such as an error code) is returned.</p>
+         * <p>If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message such as an error code is returned.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -150,7 +150,7 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful:</p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
          * <li><strong>true</strong>: The request was successful.</li>
          * <li><strong>false</strong>: The request failed.</li>
@@ -259,7 +259,7 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
             /**
              * <p>The instance role ID.</p>
              * <blockquote>
-             * <p>Supported only for ApsaraDB for MongoDB instances.</p>
+             * <p>This field is supported only by ApsaraDB for MongoDB instances.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -273,7 +273,7 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
             /**
              * <p>The instance role.</p>
              * <blockquote>
-             * <p>Supported only for ApsaraDB for MongoDB instances.</p>
+             * <p>This field is supported only by ApsaraDB for MongoDB instances.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -285,7 +285,7 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of slow logs on the physical node.</p>
+             * <p>The number of slow query logs on the physical node.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -394,7 +394,7 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of slow logs.</p>
+             * <p>The number of slow query logs.</p>
              */
             public Builder count(java.util.List<Long> count) {
                 this.count = count;
@@ -404,7 +404,7 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
             /**
              * <p>The trend metrics.</p>
              * <blockquote>
-             * <p>Supported only for ApsaraDB for MongoDB instances.</p>
+             * <p>This field is supported only by ApsaraDB for MongoDB instances.</p>
              * </blockquote>
              */
             public Builder insItems(java.util.List<InsItems> insItems) {
@@ -415,8 +415,11 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
             /**
              * <p>The instance role.</p>
              * <blockquote>
-             * <p>Supported only for ApsaraDB for MongoDB instances.</p>
+             * <p>This field is supported only by ApsaraDB for MongoDB instances.</p>
              * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>userAdmin</p>
              */
             public Builder insRole(String insRole) {
                 this.insRole = insRole;
@@ -435,7 +438,7 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of slow logs.</p>
+             * <p>The total number of slow query logs.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -1181,7 +1184,7 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The average CPU processing duration. Unit: seconds (s).</p>
+             * <p>The average CPU processing time. Unit: seconds.</p>
              * <blockquote>
              * <p>Only ApsaraDB RDS for SQL Server instances are supported.</p>
              * </blockquote>
@@ -1192,9 +1195,9 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The average number of document rows scanned.</p>
+             * <p>The average number of scanned documents.</p>
              * <blockquote>
-             * <p>Supported only for ApsaraDB for MongoDB instances.</p>
+             * <p>This field is supported only by ApsaraDB for MongoDB instances.</p>
              * </blockquote>
              */
             public Builder avgDocExamined(java.util.List<Double> avgDocExamined) {
@@ -1203,7 +1206,7 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The average number of rows fetched.</p>
+             * <p>The average number of fetched rows.</p>
              */
             public Builder avgFrows(java.util.List<Double> avgFrows) {
                 this.avgFrows = avgFrows;
@@ -1222,9 +1225,9 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The average number of index rows scanned.</p>
+             * <p>The average number of scanned index rows.</p>
              * <blockquote>
-             * <p>Supported only for ApsaraDB for MongoDB instances.</p>
+             * <p>This field is supported only by ApsaraDB for MongoDB instances.</p>
              * </blockquote>
              */
             public Builder avgKeysExamined(java.util.List<Double> avgKeysExamined) {
@@ -1244,7 +1247,7 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The average lock wait time. Unit: seconds.</p>
+             * <p>The average lock wait time, in seconds.</p>
              */
             public Builder avgLockTime(java.util.List<Double> avgLockTime) {
                 this.avgLockTime = avgLockTime;
@@ -1274,9 +1277,9 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The average number of rows returned.</p>
+             * <p>The average number of returned rows.</p>
              * <blockquote>
-             * <p>Supported only for ApsaraDB for MongoDB instances.</p>
+             * <p>This field is supported only by ApsaraDB for MongoDB instances.</p>
              * </blockquote>
              */
             public Builder avgReturnNum(java.util.List<Double> avgReturnNum) {
@@ -1293,7 +1296,7 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The average number of rows affected.</p>
+             * <p>The average number of affected rows.</p>
              * <blockquote>
              * <p>Only ApsaraDB RDS for SQL Server instances are supported.</p>
              * </blockquote>
@@ -1304,7 +1307,7 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The average number of rows scanned.</p>
+             * <p>The average number of scanned rows.</p>
              */
             public Builder avgRowsExamined(java.util.List<Double> avgRowsExamined) {
                 this.avgRowsExamined = avgRowsExamined;
@@ -1312,7 +1315,7 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The average number of rows returned.</p>
+             * <p>The average number of returned rows.</p>
              */
             public Builder avgRowsSent(java.util.List<Double> avgRowsSent) {
                 this.avgRowsSent = avgRowsSent;
@@ -1336,7 +1339,7 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The CPU processing duration. Unit: seconds (s).</p>
+             * <p>The CPU processing time. Unit: seconds.</p>
              * <blockquote>
              * <p>Only ApsaraDB RDS for SQL Server instances are supported.</p>
              * </blockquote>
@@ -1347,7 +1350,7 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The slow log count trend.</p>
+             * <p>The trend of the number of slow query logs.</p>
              */
             public Builder count(java.util.List<Long> count) {
                 this.count = count;
@@ -1355,9 +1358,9 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of document rows scanned.</p>
+             * <p>The number of scanned documents.</p>
              * <blockquote>
-             * <p>Supported only for ApsaraDB for MongoDB instances.</p>
+             * <p>This field is supported only by ApsaraDB for MongoDB instances.</p>
              * </blockquote>
              */
             public Builder docExamined(java.util.List<Long> docExamined) {
@@ -1366,9 +1369,9 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of rows fetched by the compute node (CN) of the PolarDB-X 2.0 database instance.</p>
+             * <p>The number of rows fetched by the compute nodes (CN) of a PolarDB-X 2.0 database instance.</p>
              * <blockquote>
-             * <p>Only ApsaraDB PolarDB-X 2.0 instances are supported.</p>
+             * <p>Only ApsaraDB PolarDB-X 2.0 database instances are supported.</p>
              * </blockquote>
              */
             public Builder frows(java.util.List<Long> frows) {
@@ -1396,9 +1399,9 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of index rows scanned.</p>
+             * <p>The number of scanned index rows.</p>
              * <blockquote>
-             * <p>Supported only for ApsaraDB for MongoDB instances.</p>
+             * <p>This field is supported only by ApsaraDB for MongoDB instances.</p>
              * </blockquote>
              */
             public Builder keysExamined(java.util.List<Long> keysExamined) {
@@ -1418,7 +1421,7 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total lock wait time. Unit: seconds.</p>
+             * <p>The total lock wait time, in seconds.</p>
              */
             public Builder lockTime(java.util.List<Double> lockTime) {
                 this.lockTime = lockTime;
@@ -1437,7 +1440,7 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum CPU processing duration. Unit: seconds (s).</p>
+             * <p>The maximum CPU processing time. Unit: seconds.</p>
              * <blockquote>
              * <p>Only ApsaraDB RDS for SQL Server instances are supported.</p>
              * </blockquote>
@@ -1448,9 +1451,9 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of document rows scanned.</p>
+             * <p>The maximum number of scanned documents.</p>
              * <blockquote>
-             * <p>Supported only for ApsaraDB for MongoDB instances.</p>
+             * <p>This field is supported only by ApsaraDB for MongoDB instances.</p>
              * </blockquote>
              */
             public Builder maxDocExamined(java.util.List<Long> maxDocExamined) {
@@ -1459,7 +1462,7 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of rows fetched.</p>
+             * <p>The maximum number of fetched rows.</p>
              */
             public Builder maxFrows(java.util.List<Long> maxFrows) {
                 this.maxFrows = maxFrows;
@@ -1478,9 +1481,9 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of index rows scanned.</p>
+             * <p>The maximum number of scanned index rows.</p>
              * <blockquote>
-             * <p>Supported only for ApsaraDB for MongoDB instances.</p>
+             * <p>This field is supported only by ApsaraDB for MongoDB instances.</p>
              * </blockquote>
              */
             public Builder maxKeysExamined(java.util.List<Long> maxKeysExamined) {
@@ -1500,7 +1503,7 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum lock wait time. Unit: seconds.</p>
+             * <p>The maximum lock wait time, in seconds.</p>
              */
             public Builder maxLockTime(java.util.List<Double> maxLockTime) {
                 this.maxLockTime = maxLockTime;
@@ -1530,9 +1533,9 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of rows returned.</p>
+             * <p>The maximum number of returned rows.</p>
              * <blockquote>
-             * <p>Supported only for ApsaraDB for MongoDB instances.</p>
+             * <p>This field is supported only by ApsaraDB for MongoDB instances.</p>
              * </blockquote>
              */
             public Builder maxReturnNum(java.util.List<Long> maxReturnNum) {
@@ -1549,7 +1552,7 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of rows affected.</p>
+             * <p>The maximum number of affected rows.</p>
              * <blockquote>
              * <p>Only ApsaraDB RDS for SQL Server instances are supported.</p>
              * </blockquote>
@@ -1560,7 +1563,7 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of rows scanned.</p>
+             * <p>The maximum number of scanned rows.</p>
              */
             public Builder maxRowsExamined(java.util.List<Long> maxRowsExamined) {
                 this.maxRowsExamined = maxRowsExamined;
@@ -1568,7 +1571,7 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of rows returned.</p>
+             * <p>The maximum number of returned rows.</p>
              */
             public Builder maxRowsSent(java.util.List<Long> maxRowsSent) {
                 this.maxRowsSent = maxRowsSent;
@@ -1576,7 +1579,7 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum execution duration. Unit: seconds.</p>
+             * <p>The maximum execution duration, in seconds.</p>
              */
             public Builder maxRt(java.util.List<Double> maxRt) {
                 this.maxRt = maxRt;
@@ -1603,9 +1606,9 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of rows returned.</p>
+             * <p>The number of returned rows.</p>
              * <blockquote>
-             * <p>Supported only for ApsaraDB for MongoDB instances.</p>
+             * <p>This field is supported only by ApsaraDB for MongoDB instances.</p>
              * </blockquote>
              */
             public Builder returnNum(java.util.List<Long> returnNum) {
@@ -1614,9 +1617,9 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of rows updated or returned by compute nodes of the PolarDB-X 2.0 database instance.</p>
+             * <p>The total number of rows updated or returned by the compute nodes of a PolarDB-X 2.0 database instance.</p>
              * <blockquote>
-             * <p>Only ApsaraDB PolarDB-X 2.0 instances are supported.</p>
+             * <p>Only ApsaraDB PolarDB-X 2.0 database instances are supported.</p>
              * </blockquote>
              */
             public Builder rows(java.util.List<Long> rows) {
@@ -1625,7 +1628,7 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of rows affected.</p>
+             * <p>The number of affected rows.</p>
              * <blockquote>
              * <p>Only ApsaraDB RDS for SQL Server instances are supported.</p>
              * </blockquote>
@@ -1636,9 +1639,9 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of rows scanned.</p>
+             * <p>The total number of scanned rows.</p>
              * <blockquote>
-             * <p>Databases that currently support this field: ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, and PolarDB for MySQL.</p>
+             * <p>This field is supported by the following databases: ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, and PolarDB for MySQL.</p>
              * </blockquote>
              */
             public Builder rowsExamined(java.util.List<Long> rowsExamined) {
@@ -1647,7 +1650,7 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of rows returned.</p>
+             * <p>The number of returned rows.</p>
              */
             public Builder rowsSent(java.util.List<Long> rowsSent) {
                 this.rowsSent = rowsSent;
@@ -1655,7 +1658,7 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total execution duration. Unit: seconds.</p>
+             * <p>The total execution duration, in seconds.</p>
              */
             public Builder rt(java.util.List<Double> rt) {
                 this.rt = rt;
@@ -1663,9 +1666,9 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of DN requests from the compute node (CN) of the PolarDB-X 2.0 database instance.</p>
+             * <p>The number of requests sent to data nodes (DN) by the compute nodes (CN) of a PolarDB-X 2.0 database instance.</p>
              * <blockquote>
-             * <p>Only ApsaraDB PolarDB-X 2.0 instances are supported.</p>
+             * <p>Only ApsaraDB PolarDB-X 2.0 database instances are supported.</p>
              * </blockquote>
              */
             public Builder scnt(java.util.List<Long> scnt) {
@@ -1696,7 +1699,7 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Used only for relational databases.</p>
+             * <p>The timestamp. This field is used only for relational databases.</p>
              */
             public Builder ts(java.util.List<Long> ts) {
                 this.ts = ts;
@@ -1704,7 +1707,7 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Not used. Reserved field.</p>
+             * <p>Unused. Reserved field.</p>
              */
             public Builder tsEnd(java.util.List<Long> tsEnd) {
                 this.tsEnd = tsEnd;
@@ -1868,7 +1871,7 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the task is finished.</p>
+             * <p>Indicates whether the task is completed.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1914,9 +1917,9 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
             /**
              * <p>The current state. Valid values:</p>
              * <ul>
-             * <li><strong>RUNNING</strong>: Running.</li>
-             * <li><strong>SUCCESS</strong>: Succeeded.</li>
-             * <li><strong>FAIL</strong>: Failed.</li>
+             * <li><strong>RUNNING</strong>: The task is running.</li>
+             * <li><strong>SUCCESS</strong>: The task was successful.</li>
+             * <li><strong>FAIL</strong>: The task failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1928,7 +1931,7 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The request time.</p>
+             * <p>The request time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1645668213000</p>

@@ -107,8 +107,8 @@ public class ModifyForwardSqlLogConfigRequest extends Request {
         /**
          * <p>Specifies whether to enable the feature. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Enable.</li>
-         * <li><strong>false</strong>: Disable.</li>
+         * <li><strong>true</strong>: yes.</li>
+         * <li><strong>false</strong>: no.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -135,8 +135,10 @@ public class ModifyForwardSqlLogConfigRequest extends Request {
         }
 
         /**
-         * <p>The service type. Valid values:
-         * DAS_OPS: enables TOP KEY delivery.</p>
+         * <p>The service type. Valid values:</p>
+         * <ul>
+         * <li>DAS_OPS: enables top key delivery.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -149,9 +151,9 @@ public class ModifyForwardSqlLogConfigRequest extends Request {
         }
 
         /**
-         * <p>The task source. Valid values:</p>
+         * <p>The source of the task. Valid values:</p>
          * <ul>
-         * <li>TOP_KEY: enables TOP KEY delivery.</li>
+         * <li>TOP_KEY: enables top key delivery.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

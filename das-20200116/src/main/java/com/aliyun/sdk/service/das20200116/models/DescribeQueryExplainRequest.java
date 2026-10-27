@@ -117,7 +117,7 @@ public class DescribeQueryExplainRequest extends Request {
         } 
 
         /**
-         * <p>The name of the database.</p>
+         * <p>The database name.</p>
          * 
          * <strong>example:</strong>
          * <p>dbtest01</p>
@@ -129,7 +129,7 @@ public class DescribeQueryExplainRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,9 +142,10 @@ public class DescribeQueryExplainRequest extends Request {
         }
 
         /**
-         * <p>The ID of the node.</p>
+         * <p>The instance ID.</p>
          * <blockquote>
-         * <p>For PolarDB for MySQL instances, if you specify a node ID, the system queries the execution plan on that node. Otherwise, it queries the execution plan on a secondary node.For high availability ApsaraDB RDS for MySQL instances, if you specify an instance ID, the system queries the execution plan on that node. Otherwise, it queries the execution plan on a secondary node.</p>
+         * <p>For a PolarDB for MySQL instance, if a instance ID is specified, the execution plan is queried on the specified node. Otherwise, the execution plan is queried on a secondary node.
+         * For an ApsaraDB RDS for MySQL High-availability Edition instance, if a instance ID is specified, the execution plan is queried on the specified node. Otherwise, the execution plan is queried on the secondary node.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -157,10 +158,10 @@ public class DescribeQueryExplainRequest extends Request {
         }
 
         /**
-         * <p>Schema information. This is a reserved parameter.</p>
+         * <p>The schema information. This is a reserved parameter.</p>
          * 
          * <strong>example:</strong>
-         * <p>无</p>
+         * <p>None</p>
          */
         public Builder schema(String schema) {
             this.putBodyParameter("Schema", schema);
@@ -169,7 +170,7 @@ public class DescribeQueryExplainRequest extends Request {
         }
 
         /**
-         * <p>The SQL statement for which you want to get the execution plan.</p>
+         * <p>The SQL statement for which to query the execution plan.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

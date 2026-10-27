@@ -106,7 +106,7 @@ public class DescribeQueryExplainResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code returned. A value of 200 indicates success.</p>
+         * <p>The returned status code. A value of 200 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class DescribeQueryExplainResponseBody extends TeaModel {
         }
 
         /**
-         * <p>List of execution plans.</p>
+         * <p>List<ExplainedSqlDO></p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -125,9 +125,9 @@ public class DescribeQueryExplainResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message.</p>
+         * <p>The message returned for the request.</p>
          * <blockquote>
-         * <p>If the request succeeds, this parameter returns Successful. If the request fails, this parameter returns error details such as an error code.</p>
+         * <p>If the request is successful, Successful is returned. If the request fails, an error message such as an error code is returned.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -139,7 +139,7 @@ public class DescribeQueryExplainResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>B6D17591-B48B-4D31-9CD6-9B9796B2****</p>
@@ -150,12 +150,10 @@ public class DescribeQueryExplainResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request succeeded:</p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: The request succeeded.</p>
-         * </li>
-         * <li><p><strong>false</strong>: The request failed.</p>
-         * </li>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -602,10 +600,10 @@ public class DescribeQueryExplainResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>A reserved field for the SQL Server engine.</p>
+             * <p>The reserved field for the SQL Server engine.</p>
              * 
              * <strong>example:</strong>
-             * <p>无</p>
+             * <p>None</p>
              */
             public Builder argument(String argument) {
                 this.argument = argument;
@@ -613,10 +611,10 @@ public class DescribeQueryExplainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A reserved field for the SQL Server engine.</p>
+             * <p>The reserved field for the SQL Server engine.</p>
              * 
              * <strong>example:</strong>
-             * <p>无</p>
+             * <p>None</p>
              */
             public Builder avgRowSize(String avgRowSize) {
                 this.avgRowSize = avgRowSize;
@@ -624,10 +622,10 @@ public class DescribeQueryExplainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A reserved field for the SQL Server engine.</p>
+             * <p>The reserved field for the SQL Server engine.</p>
              * 
              * <strong>example:</strong>
-             * <p>无</p>
+             * <p>None</p>
              */
             public Builder definedValues(String definedValues) {
                 this.definedValues = definedValues;
@@ -635,10 +633,10 @@ public class DescribeQueryExplainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A reserved field for the SQL Server engine.</p>
+             * <p>The reserved field for the SQL Server engine.</p>
              * 
              * <strong>example:</strong>
-             * <p>无</p>
+             * <p>None</p>
              */
             public Builder estimateCPU(String estimateCPU) {
                 this.estimateCPU = estimateCPU;
@@ -646,10 +644,10 @@ public class DescribeQueryExplainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A reserved field for the SQL Server engine.</p>
+             * <p>The reserved field for the SQL Server engine.</p>
              * 
              * <strong>example:</strong>
-             * <p>无</p>
+             * <p>None</p>
              */
             public Builder estimateExecutions(String estimateExecutions) {
                 this.estimateExecutions = estimateExecutions;
@@ -657,10 +655,10 @@ public class DescribeQueryExplainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A reserved field for the SQL Server engine.</p>
+             * <p>The reserved field for the SQL Server engine.</p>
              * 
              * <strong>example:</strong>
-             * <p>无</p>
+             * <p>None</p>
              */
             public Builder estimateIO(String estimateIO) {
                 this.estimateIO = estimateIO;
@@ -668,10 +666,10 @@ public class DescribeQueryExplainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A reserved field for the SQL Server engine.</p>
+             * <p>The reserved field for the SQL Server engine.</p>
              * 
              * <strong>example:</strong>
-             * <p>无</p>
+             * <p>None</p>
              */
             public Builder estimateRows(String estimateRows) {
                 this.estimateRows = estimateRows;
@@ -679,10 +677,10 @@ public class DescribeQueryExplainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Additional information.</p>
+             * <p>The additional information.</p>
              * 
              * <strong>example:</strong>
-             * <p>无</p>
+             * <p>None</p>
              */
             public Builder extra(String extra) {
                 this.extra = extra;
@@ -690,7 +688,7 @@ public class DescribeQueryExplainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the query.</p>
+             * <p>The query ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -701,7 +699,7 @@ public class DescribeQueryExplainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A reserved field for the PostgreSQL engine.</p>
+             * <p>The reserved field for the PostgreSQL engine.</p>
              */
             public Builder indexList(java.util.List<String> indexList) {
                 this.indexList = indexList;
@@ -709,7 +707,7 @@ public class DescribeQueryExplainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The index actually used in the execution plan.</p>
+             * <p>The index that is actually used in the execution plan.</p>
              * 
              * <strong>example:</strong>
              * <p>PRIMARY</p>
@@ -720,7 +718,7 @@ public class DescribeQueryExplainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The length of the index actually used.</p>
+             * <p>The length of the used index.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -731,10 +729,10 @@ public class DescribeQueryExplainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A reserved field for the SQL Server engine.</p>
+             * <p>The reserved field for the SQL Server engine.</p>
              * 
              * <strong>example:</strong>
-             * <p>无</p>
+             * <p>None</p>
              */
             public Builder logicalOp(String logicalOp) {
                 this.logicalOp = logicalOp;
@@ -742,7 +740,7 @@ public class DescribeQueryExplainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A reserved field for the PolarDB X engine.</p>
+             * <p>The reserved field for the PolarDB-X engine.</p>
              */
             public Builder logicalPlanList(java.util.List<String> logicalPlanList) {
                 this.logicalPlanList = logicalPlanList;
@@ -750,10 +748,10 @@ public class DescribeQueryExplainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A reserved field for the SQL Server engine.</p>
+             * <p>The reserved field for the SQL Server engine.</p>
              * 
              * <strong>example:</strong>
-             * <p>无</p>
+             * <p>None</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -761,10 +759,10 @@ public class DescribeQueryExplainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A reserved field for the SQL Server engine.</p>
+             * <p>The reserved field for the SQL Server engine.</p>
              * 
              * <strong>example:</strong>
-             * <p>无</p>
+             * <p>None</p>
              */
             public Builder outputList(String outputList) {
                 this.outputList = outputList;
@@ -772,10 +770,10 @@ public class DescribeQueryExplainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A reserved field for the SQL Server engine.</p>
+             * <p>The reserved field for the SQL Server engine.</p>
              * 
              * <strong>example:</strong>
-             * <p>无</p>
+             * <p>None</p>
              */
             public Builder parallel(String parallel) {
                 this.parallel = parallel;
@@ -783,10 +781,10 @@ public class DescribeQueryExplainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A reserved field for the SQL Server engine.</p>
+             * <p>The reserved field for the SQL Server engine.</p>
              * 
              * <strong>example:</strong>
-             * <p>无</p>
+             * <p>None</p>
              */
             public Builder parent(String parent) {
                 this.parent = parent;
@@ -794,10 +792,10 @@ public class DescribeQueryExplainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A reserved field for the SQL Server engine.</p>
+             * <p>The reserved field for the SQL Server engine.</p>
              * 
              * <strong>example:</strong>
-             * <p>无</p>
+             * <p>None</p>
              */
             public Builder physicalOp(String physicalOp) {
                 this.physicalOp = physicalOp;
@@ -805,7 +803,7 @@ public class DescribeQueryExplainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The indexes that might be used.</p>
+             * <p>The possible indexes.</p>
              * 
              * <strong>example:</strong>
              * <p>test_idx</p>
@@ -816,10 +814,10 @@ public class DescribeQueryExplainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A reserved field for the PostgreSQL engine.</p>
+             * <p>The reserved field for the PostgreSQL engine.</p>
              * 
              * <strong>example:</strong>
-             * <p>无</p>
+             * <p>None</p>
              */
             public Builder queryPlan(String queryPlan) {
                 this.queryPlan = queryPlan;
@@ -827,7 +825,7 @@ public class DescribeQueryExplainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The column used by the index.</p>
+             * <p>The columns used with the index.</p>
              * 
              * <strong>example:</strong>
              * <p>test_column</p>
@@ -849,7 +847,7 @@ public class DescribeQueryExplainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the query.</p>
+             * <p>The select type.</p>
              * 
              * <strong>example:</strong>
              * <p>SIMPLE</p>
@@ -860,10 +858,10 @@ public class DescribeQueryExplainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A reserved field for the SQL Server engine.</p>
+             * <p>The reserved field for the SQL Server engine.</p>
              * 
              * <strong>example:</strong>
-             * <p>无</p>
+             * <p>None</p>
              */
             public Builder stmtId(String stmtId) {
                 this.stmtId = stmtId;
@@ -871,10 +869,10 @@ public class DescribeQueryExplainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A reserved field for the SQL Server engine.</p>
+             * <p>The reserved field for the SQL Server engine.</p>
              * 
              * <strong>example:</strong>
-             * <p>无</p>
+             * <p>None</p>
              */
             public Builder stmtText(String stmtText) {
                 this.stmtText = stmtText;
@@ -882,7 +880,7 @@ public class DescribeQueryExplainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the table.</p>
+             * <p>The table name.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -893,7 +891,7 @@ public class DescribeQueryExplainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A reserved field for the PostgreSQL engine.</p>
+             * <p>The reserved field for the PostgreSQL engine.</p>
              */
             public Builder tableList(java.util.List<String> tableList) {
                 this.tableList = tableList;
@@ -901,10 +899,10 @@ public class DescribeQueryExplainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A reserved field for the SQL Server engine.</p>
+             * <p>The reserved field for the SQL Server engine.</p>
              * 
              * <strong>example:</strong>
-             * <p>无</p>
+             * <p>None</p>
              */
             public Builder totalSubtreeCost(String totalSubtreeCost) {
                 this.totalSubtreeCost = totalSubtreeCost;
@@ -923,10 +921,10 @@ public class DescribeQueryExplainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A reserved field for the SQL Server engine.</p>
+             * <p>The reserved field for the SQL Server engine.</p>
              * 
              * <strong>example:</strong>
-             * <p>无</p>
+             * <p>None</p>
              */
             public Builder warnings(String warnings) {
                 this.warnings = warnings;

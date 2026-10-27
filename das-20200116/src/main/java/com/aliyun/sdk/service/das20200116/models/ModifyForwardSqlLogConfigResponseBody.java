@@ -125,9 +125,9 @@ public class ModifyForwardSqlLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The message returned for the request.</p>
          * <blockquote>
-         * <p>If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message that contains information such as an error code is returned.</p>
+         * <p>If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message such as an error code is returned.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -139,7 +139,7 @@ public class ModifyForwardSqlLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>B6D17591-B48B-4D31-9CD6-9B9796B2****</p>
@@ -150,10 +150,10 @@ public class ModifyForwardSqlLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li>true: The request is successful.</li>
-         * <li>false: The request fails.</li>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -236,7 +236,7 @@ public class ModifyForwardSqlLogConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The LogStore name for real-time delivery to Simple Log Service.</p>
+             * <p>The name of the Simple Log Service Logstore for real-time log delivery.</p>
              * 
              * <strong>example:</strong>
              * <p>cdn222</p>

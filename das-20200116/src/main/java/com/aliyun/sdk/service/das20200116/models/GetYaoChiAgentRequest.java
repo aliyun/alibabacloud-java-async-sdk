@@ -116,7 +116,7 @@ public class GetYaoChiAgentRequest extends Request {
         } 
 
         /**
-         * <p>The additional information in JSON string format. This parameter is optional.</p>
+         * <p>Optional. The additional information, which is a JSON string.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -137,7 +137,7 @@ public class GetYaoChiAgentRequest extends Request {
         }
 
         /**
-         * <p>The natural language description of the question.</p>
+         * <p>The natural language description of the query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -150,7 +150,7 @@ public class GetYaoChiAgentRequest extends Request {
         }
 
         /**
-         * <p>The session ID in UUID string format. This parameter is optional. If you do not specify this parameter, a new session is created. To maintain context across a conversation, use the same session ID.</p>
+         * <p>Optional. The session ID, which is a UUID string. If this parameter is not specified, a new session is created. To maintain context in a conversation, use the same session ID.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-xxxxxxxxxxxx</p>
@@ -162,7 +162,7 @@ public class GetYaoChiAgentRequest extends Request {
         }
 
         /**
-         * <p>The cloud service source that specifies which cloud service the question belongs to. This parameter is optional. Default value: yaochi.</p>
+         * <p>Optional. The source cloud service. Specifies the cloud service to which the Q&amp;A belongs. Default value: yaochi.</p>
          * 
          * <strong>example:</strong>
          * <p>yaochi</p>

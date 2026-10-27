@@ -23,6 +23,9 @@ public class ChatResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AgentId")
     private String agentId;
 
+    @com.aliyun.core.annotation.NameInMap("Code")
+    private String code;
+
     @com.aliyun.core.annotation.NameInMap("Content")
     private String content;
 
@@ -34,6 +37,9 @@ public class ChatResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("Label")
     private String label;
+
+    @com.aliyun.core.annotation.NameInMap("Message")
+    private String message;
 
     @com.aliyun.core.annotation.NameInMap("MessageId")
     private String messageId;
@@ -89,10 +95,12 @@ public class ChatResponseBody extends TeaModel {
     private ChatResponseBody(Builder builder) {
         this.activityType = builder.activityType;
         this.agentId = builder.agentId;
+        this.code = builder.code;
         this.content = builder.content;
         this.delta = builder.delta;
         this.kind = builder.kind;
         this.label = builder.label;
+        this.message = builder.message;
         this.messageId = builder.messageId;
         this.name = builder.name;
         this.originatingToolCallId = builder.originatingToolCallId;
@@ -139,6 +147,13 @@ public class ChatResponseBody extends TeaModel {
     }
 
     /**
+     * @return code
+     */
+    public String getCode() {
+        return this.code;
+    }
+
+    /**
      * @return content
      */
     public String getContent() {
@@ -164,6 +179,13 @@ public class ChatResponseBody extends TeaModel {
      */
     public String getLabel() {
         return this.label;
+    }
+
+    /**
+     * @return message
+     */
+    public String getMessage() {
+        return this.message;
     }
 
     /**
@@ -288,10 +310,12 @@ public class ChatResponseBody extends TeaModel {
     public static final class Builder {
         private String activityType; 
         private String agentId; 
+        private String code; 
         private String content; 
         private String delta; 
         private String kind; 
         private String label; 
+        private String message; 
         private String messageId; 
         private String name; 
         private String originatingToolCallId; 
@@ -316,10 +340,12 @@ public class ChatResponseBody extends TeaModel {
         private Builder(ChatResponseBody model) {
             this.activityType = model.activityType;
             this.agentId = model.agentId;
+            this.code = model.code;
             this.content = model.content;
             this.delta = model.delta;
             this.kind = model.kind;
             this.label = model.label;
+            this.message = model.message;
             this.messageId = model.messageId;
             this.name = model.name;
             this.originatingToolCallId = model.originatingToolCallId;
@@ -358,6 +384,14 @@ public class ChatResponseBody extends TeaModel {
          */
         public Builder agentId(String agentId) {
             this.agentId = agentId;
+            return this;
+        }
+
+        /**
+         * Code.
+         */
+        public Builder code(String code) {
+            this.code = code;
             return this;
         }
 
@@ -402,6 +436,14 @@ public class ChatResponseBody extends TeaModel {
          */
         public Builder label(String label) {
             this.label = label;
+            return this;
+        }
+
+        /**
+         * Message.
+         */
+        public Builder message(String message) {
+            this.message = message;
             return this;
         }
 

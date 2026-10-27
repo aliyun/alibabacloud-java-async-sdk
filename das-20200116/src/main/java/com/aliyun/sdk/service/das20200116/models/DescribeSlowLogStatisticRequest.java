@@ -202,7 +202,7 @@ public class DescribeSlowLogStatisticRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to sort results in ascending order. This feature is disabled by default.</p>
+         * <p>Specifies whether to sort the results in ascending order. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -214,7 +214,7 @@ public class DescribeSlowLogStatisticRequest extends Request {
         }
 
         /**
-         * <p>The end time of the query. Specify a UNIX timestamp in UTC. Unit: milliseconds.</p>
+         * <p>The end time of the query. The time is a UNIX timestamp in UTC. Unit: milliseconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -251,8 +251,8 @@ public class DescribeSlowLogStatisticRequest extends Request {
         /**
          * <p>The node ID.</p>
          * <ul>
-         * <li>For ApsaraDB RDS for MySQL and PolarDB for MySQL, this parameter is applicable only to cluster instances. If you do not specify this parameter, the log details of the primary node are queried by default.</li>
-         * <li>For PolarDB-X 2.0, set this parameter to <strong>polarx_cn</strong> (compute node) or <strong>polarx_dn</strong> (data node).</li>
+         * <li>For ApsaraDB RDS for MySQL and PolarDB for MySQL, this parameter applies only to Cluster Edition instances. If you do not specify this parameter, the slow query logs of the primary node are queried by default.</li>
+         * <li>For PolarDB-X 2.0, set this parameter to <strong>polarx_cn</strong> for compute nodes or <strong>polarx_dn</strong> for data nodes.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -282,7 +282,7 @@ public class DescribeSlowLogStatisticRequest extends Request {
         }
 
         /**
-         * <p>The page number. The value starts from 1. Default value: 1.</p>
+         * <p>The page number. Pages start from 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -306,7 +306,7 @@ public class DescribeSlowLogStatisticRequest extends Request {
         }
 
         /**
-         * <p>The start time of the query. Specify a UNIX timestamp in UTC. Unit: milliseconds.</p>
+         * <p>The start time of the query task. The time is a UNIX timestamp in UTC. Unit: milliseconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -332,19 +332,19 @@ public class DescribeSlowLogStatisticRequest extends Request {
 
         /**
          * <p>The task type.</p>
-         * <p>SQL engine-specific:</p>
+         * <p>Specific to SQL engines:</p>
          * <p><strong>SlowLogRequestOrigin</strong>: aggregates logs by source IP address.</p>
          * <p><strong>SlowLogRequestUser</strong>: aggregates logs by source user.</p>
          * <p><strong>SQL</strong>: aggregates logs by SQL ID.</p>
-         * <p>MongoDB engine-specific:</p>
+         * <p>Specific to MongoDB engines:</p>
          * <p><strong>SlowLogRequestOrigin</strong>: aggregates logs by source IP address.</p>
          * <p><strong>SlowLogRequestUser</strong>: aggregates logs by source user.</p>
-         * <p><strong>SQL</strong>: aggregates logs by Query ID.</p>
+         * <p><strong>SQL</strong>: aggregates logs by query ID.</p>
          * <p><strong>SlowLogRequestOpType</strong>: aggregates logs by operation type.</p>
          * <p><strong>SlowLogRequestNamespace</strong>: aggregates logs by namespace.</p>
-         * <p>Redis engine-specific:</p>
+         * <p>Specific to Redis engines:</p>
          * <p><strong>SlowLogRequestNodeId</strong>: aggregates logs by node ID.</p>
-         * <p><strong>SlowLogRequestHostInsId</strong>: aggregates logs by HostInsId.</p>
+         * <p><strong>SlowLogRequestHostInsId</strong>: aggregates logs by host instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>SQL</p>
@@ -415,7 +415,7 @@ public class DescribeSlowLogStatisticRequest extends Request {
             } 
 
             /**
-             * <p>The filter parameter.</p>
+             * <p>The filter key.</p>
              * 
              * <strong>example:</strong>
              * <p>KeyWords</p>
@@ -426,7 +426,7 @@ public class DescribeSlowLogStatisticRequest extends Request {
             }
 
             /**
-             * <p>The value of the filter parameter.</p>
+             * <p>The value of the filter key.</p>
              * 
              * <strong>example:</strong>
              * <p>select</p>

@@ -119,7 +119,7 @@ public class EnableDasProResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -141,9 +141,9 @@ public class EnableDasProResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The message returned for the request.</p>
          * <blockquote>
-         * <p>If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message that contains information such as an error code is returned.</p>
+         * <p>If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message such as an error code is returned.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -155,7 +155,7 @@ public class EnableDasProResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>7172BECE-588A-5961-8126-C216E16B****</p>
@@ -168,9 +168,9 @@ public class EnableDasProResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong></p>
+         * <li><p><strong>true</strong>: The request was successful.</p>
          * </li>
-         * <li><p><strong>false</strong></p>
+         * <li><p><strong>false</strong>: The request failed.</p>
          * </li>
          * </ul>
          * 

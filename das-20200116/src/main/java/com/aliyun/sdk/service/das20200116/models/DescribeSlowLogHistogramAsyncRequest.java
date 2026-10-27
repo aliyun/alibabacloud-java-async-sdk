@@ -118,7 +118,7 @@ public class DescribeSlowLogHistogramAsyncRequest extends Request {
         } 
 
         /**
-         * <p>The end time of the query. Specify a UNIX timestamp in milliseconds.</p>
+         * <p>The end time of the query. Specify the time as a UNIX timestamp in milliseconds.</p>
          * <blockquote>
          * <p>The end time must be later than the start time.</p>
          * </blockquote>
@@ -156,9 +156,9 @@ public class DescribeSlowLogHistogramAsyncRequest extends Request {
         }
 
         /**
-         * <p>The node ID.</p>
+         * <p>The ID of the node.</p>
          * <blockquote>
-         * <p>For PolarDB for MySQL instances, specify the node ID.</p>
+         * <p>For a PolarDB for MySQL instance, you must specify the node ID.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -171,7 +171,7 @@ public class DescribeSlowLogHistogramAsyncRequest extends Request {
         }
 
         /**
-         * <p>The start time of the query. Specify a UNIX timestamp in milliseconds.</p>
+         * <p>The start time of the query task. Specify the time as a UNIX timestamp in milliseconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

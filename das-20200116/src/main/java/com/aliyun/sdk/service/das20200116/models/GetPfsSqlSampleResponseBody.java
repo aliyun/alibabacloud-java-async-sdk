@@ -106,7 +106,7 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The returned status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The SQL sample data.</p>
+         * <p>The returned SQL sample data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -125,9 +125,9 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The message returned for the request.</p>
          * <blockquote>
-         * <p>If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
+         * <p>If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message such as an error code is returned.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -152,10 +152,8 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: The request was successful.</p>
-         * </li>
-         * <li><p><strong>false</strong>: The request failed.</p>
-         * </li>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -615,7 +613,7 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of internal on-disk temporary tables that were created when the SQL statement was executed.</p>
+             * <p>The number of on-disk internal temporary tables created during statement execution.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -626,7 +624,7 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of internal temporary tables that were created when the SQL statement was executed.</p>
+             * <p>The number of internal temporary tables created during statement execution.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -637,7 +635,7 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the database.</p>
+             * <p>The database name.</p>
              * 
              * <strong>example:</strong>
              * <p>testDB</p>
@@ -648,7 +646,7 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end ID of the event. By default, the value of this parameter is NULL when the event starts and is changed to the event ID when the event ends.</p>
+             * <p>The end event ID. This parameter is NULL by default when the event starts and is updated to the current event ID of the thread when the event ends.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -659,7 +657,7 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of errors returned for the SQL statement.</p>
+             * <p>The number of errors in the SQL statement.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -681,7 +679,7 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the event.</p>
+             * <p>The event name.</p>
              * 
              * <strong>example:</strong>
              * <p>statement/sql/select</p>
@@ -703,7 +701,7 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution duration. Unit: millisecond.</p>
+             * <p>The execution duration, in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>0.199</p>
@@ -714,7 +712,7 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The lock wait duration. Unit: millisecond.</p>
+             * <p>The lock wait time, in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>0.09</p>
@@ -725,7 +723,7 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the logical database.</p>
+             * <p>The logical database ID.</p>
              * 
              * <strong>example:</strong>
              * <p>xxxxx</p>
@@ -736,12 +734,10 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the server failed to find an index that can be used for the SQL statement. Valid values:</p>
+             * <p>Indicates whether the server could not find a good index to use for the statement. Valid values:</p>
              * <ul>
-             * <li><p><strong>1</strong>: yes.</p>
-             * </li>
-             * <li><p><strong>0</strong>: no.</p>
-             * </li>
+             * <li><strong>1</strong>: Yes.</li>
+             * <li><strong>0</strong>: No.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -753,12 +749,10 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether table scans were performed when indexes were not used. Valid values:</p>
+             * <p>Indicates whether the statement performed a table scan without using an index. Valid values:</p>
              * <ul>
-             * <li><p><strong>1</strong>: yes.</p>
-             * </li>
-             * <li><p><strong>0</strong>: no.</p>
-             * </li>
+             * <li><strong>1</strong>: Yes.</li>
+             * <li><strong>0</strong>: No.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -784,7 +778,7 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of rows affected by the SQL statement.</p>
+             * <p>The number of affected rows.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -795,7 +789,7 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of rows scanned by the SQL statement.</p>
+             * <p>The number of scanned rows.</p>
              * 
              * <strong>example:</strong>
              * <p>2048576</p>
@@ -817,9 +811,9 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of joins that are used to perform table scans without using indexes.</p>
+             * <p>The number of joins that perform table scans without using indexes.</p>
              * <blockquote>
-             * <p>: This parameter is used for the scenario in which indexes are not used in a union query. If the returned value is not 0, check the indexes of tables.</p>
+             * <p>Notice: This parameter counts the joins that do not use indexes during a join query. If the value is not 0, check the table indexes.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -831,7 +825,7 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of joins that used ranges on referenced tables.</p>
+             * <p>The number of joins that use a range search on a reference table.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -842,7 +836,7 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of joins that used ranges on the first table.</p>
+             * <p>The number of joins that use a range on the first table.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -853,9 +847,9 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of joins that did not have key values. The keys and values were checked for each row of data.</p>
+             * <p>The number of joins without keys that check for key usage after each row.</p>
              * <blockquote>
-             * <p>: This parameter is used for the scenario in which indexes are not used in a union query. If the returned value is not 0, check the indexes of tables.</p>
+             * <p>Notice: This parameter counts the joins that do not use indexes during a join query. If the value is not 0, check the table indexes.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -878,7 +872,7 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of merges that the sorting algorithm must perform.</p>
+             * <p>The number of merge passes that the sort algorithm must perform.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -889,7 +883,7 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of times the data was sorted by using ranges.</p>
+             * <p>The number of sorts that use a range.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -911,7 +905,7 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of sorts that were performed during table scans.</p>
+             * <p>The number of sort scans.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -922,7 +916,7 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sample SQL statement.</p>
+             * <p>The SQL sample.</p>
              * 
              * <strong>example:</strong>
              * <p>select * from xxxx where ****</p>
@@ -933,7 +927,7 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The SQL statement ID.</p>
+             * <p>The SQL ID.</p>
              * 
              * <strong>example:</strong>
              * <p>651b56fe9418d48edb8fdf0980ec****</p>
@@ -955,7 +949,7 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the SQL statement was executed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * <p>The time when the SQL statement was executed. The time is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1660100753556</p>
@@ -977,7 +971,7 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of warnings returned for the SQL statement.</p>
+             * <p>The number of warnings for the SQL statement.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>

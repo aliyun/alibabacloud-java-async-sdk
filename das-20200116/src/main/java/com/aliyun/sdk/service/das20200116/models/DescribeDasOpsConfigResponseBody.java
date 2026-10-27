@@ -127,7 +127,7 @@ public class DescribeDasOpsConfigResponseBody extends TeaModel {
         /**
          * <p>The returned message.</p>
          * <blockquote>
-         * <p>If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message that contains information such as an error code is returned.</p>
+         * <p>If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message such as an error code is returned.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -150,10 +150,10 @@ public class DescribeDasOpsConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The request is successful.</li>
-         * <li><strong>false</strong>: The request fails.</li>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -329,7 +329,7 @@ public class DescribeDasOpsConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The payment method.</p>
+             * <p>The billing method.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://prodpopscanGGfYbZif.302prod.xaliyun.com">http://prodpopscanGGfYbZif.302prod.xaliyun.com</a></p>
@@ -340,7 +340,7 @@ public class DescribeDasOpsConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Alibaba Cloud Managed Services instance ID.</p>
+             * <p>The instance ID of Alibaba Cloud Managed Services.</p>
              * 
              * <strong>example:</strong>
              * <p>pc-2zelo5v5u0678jx04</p>
@@ -362,7 +362,7 @@ public class DescribeDasOpsConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the Alibaba Cloud Managed Services is enabled.</p>
+             * <p>Indicates whether Alibaba Cloud Managed Services is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -373,7 +373,7 @@ public class DescribeDasOpsConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * <p>The end time. The time is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1608888296000</p>
@@ -384,7 +384,7 @@ public class DescribeDasOpsConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the Alibaba Cloud Managed Services is enabled.</p>
+             * <p>Indicates whether Alibaba Cloud Managed Services is enabled.</p>
              */
             public Builder opsEnable(Boolean opsEnable) {
                 this.opsEnable = opsEnable;
@@ -403,7 +403,7 @@ public class DescribeDasOpsConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * <p>The start time. The time is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1672531200000</p>

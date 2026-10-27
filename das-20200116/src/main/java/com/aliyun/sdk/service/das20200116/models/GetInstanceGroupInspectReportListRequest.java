@@ -117,7 +117,7 @@ public class GetInstanceGroupInspectReportListRequest extends Request {
         } 
 
         /**
-         * <p>Optional. By default, the default agent is used. You can also specify the ID of an agent that is generated after DAS Agent is activated or manually created.</p>
+         * <p>Optional. The default agent is used by default. Alternatively, you can specify an agent that was generated after DAS Agent was activated or manually created.</p>
          * 
          * <strong>example:</strong>
          * <p>ag-472T0DxtmjIxxxxx</p>
@@ -129,7 +129,7 @@ public class GetInstanceGroupInspectReportListRequest extends Request {
         }
 
         /**
-         * <p>The end time of the query. The time is a UNIX timestamp in milliseconds.</p>
+         * <p>The end time of the query, which is a UNIX timestamp in milliseconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,7 +154,10 @@ public class GetInstanceGroupInspectReportListRequest extends Request {
         }
 
         /**
-         * ReportType.
+         * <p>The type of the inspection report.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>daily</p>
          */
         public Builder reportType(String reportType) {
             this.putQueryParameter("ReportType", reportType);
@@ -163,7 +166,7 @@ public class GetInstanceGroupInspectReportListRequest extends Request {
         }
 
         /**
-         * <p>The start time of the query. The time is a UNIX timestamp in milliseconds.</p>
+         * <p>The start time of the query, which is a UNIX timestamp in milliseconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
