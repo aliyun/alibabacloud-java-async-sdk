@@ -75,7 +75,7 @@ public class DeleteAliasRequest extends Request {
         } 
 
         /**
-         * <p>The function name.</p>
+         * <p>The name of the function.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class DeleteAliasRequest extends Request {
         }
 
         /**
-         * <p>The alias of the function.</p>
+         * <p>The name of the function alias.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

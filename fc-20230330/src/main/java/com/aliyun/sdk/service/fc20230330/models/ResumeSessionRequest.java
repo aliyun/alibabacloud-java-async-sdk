@@ -101,7 +101,7 @@ public class ResumeSessionRequest extends Request {
         } 
 
         /**
-         * <p>The name of the function associated with the session.</p>
+         * <p>The name of the function for the session.</p>
          * 
          * <strong>example:</strong>
          * <p>my-func</p>
@@ -113,7 +113,7 @@ public class ResumeSessionRequest extends Request {
         }
 
         /**
-         * <p>The ID of the session to resume.</p>
+         * <p>The ID of the session to be resumed.</p>
          * 
          * <strong>example:</strong>
          * <p>test-sessionid-1</p>
@@ -134,7 +134,7 @@ public class ResumeSessionRequest extends Request {
         }
 
         /**
-         * <p>The function alias or version associated with the session ID to resume.</p>
+         * <p>The alias or version of the function associated with the session ID to be resumed.</p>
          * 
          * <strong>example:</strong>
          * <p>aliasName1</p>

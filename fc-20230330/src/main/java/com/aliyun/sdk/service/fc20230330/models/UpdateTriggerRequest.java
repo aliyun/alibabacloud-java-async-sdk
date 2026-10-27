@@ -90,7 +90,7 @@ public class UpdateTriggerRequest extends Request {
         } 
 
         /**
-         * <p>The name of the function.</p>
+         * <p>The function name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -103,7 +103,7 @@ public class UpdateTriggerRequest extends Request {
         }
 
         /**
-         * <p>The name of the trigger.</p>
+         * <p>The trigger name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -35,6 +35,9 @@ public class MicroSandboxConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("startCommand")
     private String startCommand;
 
+    @com.aliyun.core.annotation.NameInMap("steps")
+    private java.util.List<Step> steps;
+
     private MicroSandboxConfig(Builder builder) {
         this.acrInstanceId = builder.acrInstanceId;
         this.image = builder.image;
@@ -42,6 +45,7 @@ public class MicroSandboxConfig extends TeaModel {
         this.readyCommand = builder.readyCommand;
         this.registryConfig = builder.registryConfig;
         this.startCommand = builder.startCommand;
+        this.steps = builder.steps;
     }
 
     public static Builder builder() {
@@ -98,6 +102,13 @@ public class MicroSandboxConfig extends TeaModel {
         return this.startCommand;
     }
 
+    /**
+     * @return steps
+     */
+    public java.util.List<Step> getSteps() {
+        return this.steps;
+    }
+
     public static final class Builder {
         private String acrInstanceId; 
         private String image; 
@@ -105,6 +116,7 @@ public class MicroSandboxConfig extends TeaModel {
         private String readyCommand; 
         private RegistryConfig registryConfig; 
         private String startCommand; 
+        private java.util.List<Step> steps; 
 
         private Builder() {
         } 
@@ -116,10 +128,11 @@ public class MicroSandboxConfig extends TeaModel {
             this.readyCommand = model.readyCommand;
             this.registryConfig = model.registryConfig;
             this.startCommand = model.startCommand;
+            this.steps = model.steps;
         } 
 
         /**
-         * <p>The instance ID of the Container Registry (ACR) Enterprise Edition image repository. This parameter is used together with MicroSandbox images. This parameter is optional. If not provided, the server resolves it as needed.</p>
+         * <p>The ID of the ACR Enterprise Edition image repository instance. It is used in combination with MicroSandbox images. This parameter is optional. If it is not provided, the server resolves it on demand.</p>
          */
         public Builder acrInstanceId(String acrInstanceId) {
             this.acrInstanceId = acrInstanceId;
@@ -159,10 +172,18 @@ public class MicroSandboxConfig extends TeaModel {
         }
 
         /**
-         * <p>The start command.</p>
+         * <p>The startup command.</p>
          */
         public Builder startCommand(String startCommand) {
             this.startCommand = startCommand;
+            return this;
+        }
+
+        /**
+         * <p>The build steps.</p>
+         */
+        public Builder steps(java.util.List<Step> steps) {
+            this.steps = steps;
             return this;
         }
 

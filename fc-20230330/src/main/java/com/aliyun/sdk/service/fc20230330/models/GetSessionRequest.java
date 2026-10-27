@@ -111,7 +111,7 @@ public class GetSessionRequest extends Request {
         }
 
         /**
-         * <p>The function alias or version associated with the session ID to query.</p>
+         * <p>The alias or version of the function associated with the session ID to query.</p>
          * 
          * <strong>example:</strong>
          * <p>aliasName1</p>

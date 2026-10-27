@@ -130,7 +130,7 @@ public class InvokeFunctionRequest extends Request {
         } 
 
         /**
-         * <p>Function name</p>
+         * <p>The name of the function.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,7 +143,7 @@ public class InvokeFunctionRequest extends Request {
         }
 
         /**
-         * <p>Function invocation parameter</p>
+         * <p>The parameters for function invoke.</p>
          * 
          * <strong>example:</strong>
          * <p>event</p>
@@ -155,7 +155,7 @@ public class InvokeFunctionRequest extends Request {
         }
 
         /**
-         * <p>Function version or alias</p>
+         * <p>The version or alias of the function.</p>
          * 
          * <strong>example:</strong>
          * <p>LATEST</p>
@@ -167,9 +167,9 @@ public class InvokeFunctionRequest extends Request {
         }
 
         /**
-         * <p>Asynchronous task ID. Enable asynchronous tasks beforehand.</p>
+         * <p>The ID of the asynchronous task. You must enable asynchronous tasks in advance.</p>
          * <blockquote>
-         * <p>When using the SDK for invocation, set a business-related ID. This helps with subsequent operations on the execution. For example, a video processing function can use the video filename as the invocation ID. Use this ID to check if the video processing is complete or to stop it. The ID naming convention must start with an English letter (uppercase or lowercase) or an underscore (<em>). It can contain English letters (uppercase or lowercase), digits (0-9), underscores (</em>), and hyphens (-). The ID cannot exceed 128 characters. If you do not set an ID for asynchronous invocation, the system automatically generates one.</p>
+         * <p>We recommend that you set a business-related ID when you use the SDK to invoke the function, which facilitates subsequent operations on the execution. For example, a video processing function can use the video file name as the invoke ID, through which you can check whether the video processing is complete or stop the video processing. The ID must start with an uppercase or lowercase letter or an underscore (<em>), and can contain uppercase and lowercase letters, digits (0-9), underscores (</em>), and hyphens (-). It can be up to 128 characters in length. If you do not specify an ID for the asynchronous invoke, the system automatically generates one.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -182,7 +182,7 @@ public class InvokeFunctionRequest extends Request {
         }
 
         /**
-         * <p>Function invocation type. Sync or Async.</p>
+         * <p>The function invoke type. Valid values: Sync and Async.</p>
          * 
          * <strong>example:</strong>
          * <p>Sync</p>
@@ -194,7 +194,7 @@ public class InvokeFunctionRequest extends Request {
         }
 
         /**
-         * <p>Log type returned by function invocation. None or Tail.</p>
+         * <p>The log type returned for function invoke. Valid values: None and Tail.</p>
          * 
          * <strong>example:</strong>
          * <p>Tail</p>

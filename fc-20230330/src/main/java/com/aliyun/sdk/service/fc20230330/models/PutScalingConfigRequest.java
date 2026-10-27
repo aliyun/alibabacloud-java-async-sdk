@@ -87,7 +87,7 @@ public class PutScalingConfigRequest extends Request {
         } 
 
         /**
-         * <p>Function name</p>
+         * <p>The function name.</p>
          * 
          * <strong>example:</strong>
          * <p>my-func</p>
@@ -99,7 +99,7 @@ public class PutScalingConfigRequest extends Request {
         }
 
         /**
-         * <p>Elastic scaling configuration for the function</p>
+         * <p>The elastic configuration for the function.</p>
          */
         public Builder body(PutScalingConfigInput body) {
             this.putBodyParameter("body", body);
@@ -108,7 +108,7 @@ public class PutScalingConfigRequest extends Request {
         }
 
         /**
-         * <p>Function alias</p>
+         * <p>The function alias.</p>
          * 
          * <strong>example:</strong>
          * <p>LATEST</p>

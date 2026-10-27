@@ -68,7 +68,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>To change the resource group of a Function Compute resource, you must have the ChangeResourceGroup permission for both the current and target resource groups.</p>
+     * <p>Updates the resource group of a Function Compute resource. You must grant the user the ChangeResourceGroup permission on both the current and target resource groups.</p>
      * 
      * @param request the request parameters of ChangeResourceGroup  ChangeResourceGroupRequest
      * @return ChangeResourceGroupResponse
@@ -107,7 +107,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can attach a custom domain name to an application or function in Function Compute to access it through a fixed domain name in a production environment, or to resolve the forced download behavior when you access an HTTP trigger.</p>
+     * <p>To access applications or functions created in Function Compute through a fixed domain name in a production environment, or to resolve the forced download behavior when accessing HTTP triggers, you can bind a custom domain name to the application or function.</p>
      * 
      * @param request the request parameters of CreateCustomDomain  CreateCustomDomainRequest
      * @return CreateCustomDomainResponse
@@ -128,7 +128,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>When you create a function by using an OSS code package, if the error &quot;unable to access object xxx in bucket xxx&quot; is reported, grant the current user access permissions on the OSS bucket. For example, you can use the system access policy AliyunOSSReadOnlyAccess or a custom policy with finer granularity such as authorization for oss:GetObject. For details about the policy content, see <a href="https://help.aliyun.com/document_detail/199058.html">Grant a Resource Access Management (RAM) user permissions to read all resources in a bucket</a>.</p>
+     * <p>When you create a function by using an OSS code package, if the error &quot;unable to access object xxx in bucket xxx&quot; is returned, grant the current user access permissions to the OSS bucket. For example, you can attach the system access policy AliyunOSSReadOnlyAccess or a custom authorization with finer granularity such as oss:GetObject. For details about the policy content, see <a href="https://help.aliyun.com/document_detail/199058.html">Grant a Resource Access Management (RAM) user the permissions to read all resources in a bucket</a>.</p>
      * 
      * @param request the request parameters of CreateFunction  CreateFunctionRequest
      * @return CreateFunctionResponse
@@ -185,12 +185,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This API operation creates a user snapshot from a specified micro-sandbox session.</li>
-     * <li>The optional parameter <code>qualifier</code> identifies the valid alias or specific function version used when creating the source session. If omitted, it defaults to <code>LATEST</code>.</li>
-     * <li>The <code>sessionId</code> parameter is required to specify the client session ID from which to create the snapshot.</li>
-     * <li>The <code>description</code> parameter is optional. If provided, it cannot contain control characters and is limited to 256 UTF-8 bytes.</li>
+     * <li>This operation creates a user snapshot from the specified micro-sandbox session.</li>
+     * <li>The optional <code>qualifier</code> parameter identifies the valid alias or specific function version used when the source session was created. If omitted, the default value is <code>LATEST</code>.</li>
+     * <li>The <code>sessionId</code> parameter is required to specify the client session ID from which the snapshot is created.</li>
+     * <li>The <code>description</code> parameter is optional. If provided, it must not contain control characters and is limited to 256 UTF-8 bytes in length.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateSnapshot  CreateSnapshotRequest
@@ -765,9 +765,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>This API operation retrieves the MicroSandbox snapshot information of a specified function for the user.</li>
-     * <li>Snapshot details are returned only when the snapshot belongs to the current function, has a status of Available, and has not expired.</li>
-     * <li>If the snapshot does not exist, has expired, is being created, is being deleted, is an internal snapshot, or does not belong to the current function, it is treated as invisible and a 404 SnapshotNotFound error is returned.</li>
+     * <li>Retrieves user MicroSandbox snapshot information for a specified function.</li>
+     * <li>Returns snapshot details only when the snapshot belongs to the current function, its status is Available, and it has not expired.</li>
+     * <li>Treats the snapshot as invisible and returns a 404 SnapshotNotFound error if the snapshot does not exist, has expired, is being created, is being deleted, is an internal snapshot, or does not belong to the current function.</li>
      * </ul>
      * 
      * @param request the request parameters of GetSnapshot  GetSnapshotRequest
@@ -962,7 +962,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>ListFunctions returns only a subset of function attribute fields. To retrieve more attribute fields for a specific function, including state, stateReasonCode, stateReason, lastUpdateStatus, lastUpdateStatusReasonCode, and lastUpdateStatusReason, use <a href="https://help.aliyun.com/document_detail/2618610.html">GetFunction</a>.</p>
+     * <p>Calling ListFunctions returns only a subset of function property fields. To retrieve more properties of a specific function, including state, stateReasonCode, stateReason, lastUpdateStatus, lastUpdateStatusReasonCode, and lastUpdateStatusReason, use <a href="https://help.aliyun.com/document_detail/2618610.html">GetFunction</a>.</p>
      * 
      * @param request the request parameters of ListFunctions  ListFunctionsRequest
      * @return ListFunctionsResponse
@@ -1172,7 +1172,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Pauses an Active session by persisting the state of its associated execution environment and then releasing compute resources. After you invoke this operation, the session status changes to Paused, and the session no longer accepts function invocation requests. This operation retains the session configuration (such as SessionTTL) and SessionID. You can use it to break long-running tasks or save snapshots of development environments for cost optimization and state management. This operation applies to custom image functions configured with the HEADER_FIELD or GENERATED_COOKIE affinity type and session isolation.</p>
+     * <p>Pauses an Active session, persists the state of the environment used to execute functions, and then releases compute resources. After you invoke this operation, the session state changes to Paused, and the session no longer accepts function invocation requests. This operation retains the session configurations, such as SessionTTL, and the SessionID. It can be used to interrupt long-running tasks or save snapshots of development environments for cost optimization and state management. This operation applies to custom image functions that are configured with the HEADER_FIELD or GENERATED_COOKIE affinity type and session isolation.</p>
      * 
      * @param request the request parameters of PauseSession  PauseSessionRequest
      * @return PauseSessionResponse
@@ -1301,7 +1301,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Resumes a session that is in the Paused state. The system quickly restores the session in a new execution environment based on the previously persisted state, returning it to the state before it was paused. After the session is successfully resumed, its status changes back to Active, and it can continue to accept function calling requests that are routed to the restored instance. This operation applies to custom image functions that are configured with the HEADER_FIELD or GENERATED_COOKIE affinity type and session isolation.</p>
+     * <p>Resumes a session in the Paused state. The system quickly resumes the session in a new environment to execute based on the previously persisted state, restoring it to the state before it was paused. After the session is successfully resumed, its state changes back to Active, and it can continue to receive requests to invoke functions and route them to the resumed instance. This operation applies to custom image functions configured with the HEADER_FIELD or GENERATED_COOKIE affinity type and session isolation.</p>
      * 
      * @param request the request parameters of ResumeSession  ResumeSessionRequest
      * @return ResumeSessionResponse

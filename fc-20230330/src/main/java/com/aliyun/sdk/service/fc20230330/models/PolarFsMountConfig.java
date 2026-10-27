@@ -106,7 +106,10 @@ public class PolarFsMountConfig extends TeaModel {
         } 
 
         /**
-         * extraOptions.
+         * <p>The additional mount parameter settings.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>--skip-delete-rows-check=false  --skip-dir-nlink=0</p>
          */
         public Builder extraOptions(String extraOptions) {
             this.extraOptions = extraOptions;
@@ -114,7 +117,7 @@ public class PolarFsMountConfig extends TeaModel {
         }
 
         /**
-         * <p>The ID of the PolarFS file system instance to mount.</p>
+         * <p>The PolarFS instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pfs-xxx</p>
@@ -125,7 +128,7 @@ public class PolarFsMountConfig extends TeaModel {
         }
 
         /**
-         * <p>The local mount directory in the function\&quot;s runtime environment.</p>
+         * <p>The local mount directory.</p>
          * 
          * <strong>example:</strong>
          * <p>/mnt/polarfs</p>
@@ -136,7 +139,7 @@ public class PolarFsMountConfig extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether the file system is mounted as read-only. If <code>true</code>, write operations are prohibited.</p>
+         * <p>The read-only mount.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -147,7 +150,7 @@ public class PolarFsMountConfig extends TeaModel {
         }
 
         /**
-         * <p>The directory within the PolarFS file system to mount.</p>
+         * <p>The PolarFS directory.</p>
          * 
          * <strong>example:</strong>
          * <p>/share</p>

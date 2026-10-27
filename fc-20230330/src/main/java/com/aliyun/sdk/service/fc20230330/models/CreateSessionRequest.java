@@ -99,7 +99,7 @@ public class CreateSessionRequest extends Request {
         }
 
         /**
-         * <p>The session configuration for creating the session.</p>
+         * <p>The session configuration.</p>
          */
         public Builder body(CreateSessionInput body) {
             this.putBodyParameter("body", body);
@@ -108,7 +108,7 @@ public class CreateSessionRequest extends Request {
         }
 
         /**
-         * <p>The version or alias of the function to which the session belongs.</p>
+         * <p>The version or alias of the function.</p>
          * 
          * <strong>example:</strong>
          * <p>aliasName1</p>

@@ -60,7 +60,7 @@ public class CreateFunctionRequest extends Request {
         } 
 
         /**
-         * <p>The function configuration.</p>
+         * <p>The function configuration information.</p>
          * <p>This parameter is required.</p>
          */
         public Builder body(CreateFunctionInput body) {

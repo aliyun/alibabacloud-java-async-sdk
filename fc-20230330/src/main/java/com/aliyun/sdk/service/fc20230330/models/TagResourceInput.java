@@ -69,7 +69,6 @@ public class TagResourceInput extends TeaModel {
         } 
 
         /**
-         * <p>Resource descriptor.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -81,7 +80,6 @@ public class TagResourceInput extends TeaModel {
         }
 
         /**
-         * <p>Tag dictionary.</p>
          * <p>This parameter is required.</p>
          */
         public Builder tags(java.util.Map<String, String> tags) {

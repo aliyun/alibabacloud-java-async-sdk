@@ -73,7 +73,7 @@ public class DeleteScalingConfigRequest extends Request {
         } 
 
         /**
-         * <p>The function name.</p>
+         * <p>The name of the function.</p>
          * 
          * <strong>example:</strong>
          * <p>my-func</p>
@@ -85,7 +85,7 @@ public class DeleteScalingConfigRequest extends Request {
         }
 
         /**
-         * <p>The function alias.</p>
+         * <p>The alias of the function.</p>
          * 
          * <strong>example:</strong>
          * <p>LATEST</p>

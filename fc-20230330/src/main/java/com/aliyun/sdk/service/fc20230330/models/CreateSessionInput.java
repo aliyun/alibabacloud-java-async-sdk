@@ -20,6 +20,9 @@ public class CreateSessionInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("allowInternetAccess")
     private Boolean allowInternetAccess;
 
+    @com.aliyun.core.annotation.NameInMap("autoPauseFileSystemOnly")
+    private Boolean autoPauseFileSystemOnly;
+
     @com.aliyun.core.annotation.NameInMap("disableSessionIdReuse")
     private Boolean disableSessionIdReuse;
 
@@ -59,6 +62,7 @@ public class CreateSessionInput extends TeaModel {
 
     private CreateSessionInput(Builder builder) {
         this.allowInternetAccess = builder.allowInternetAccess;
+        this.autoPauseFileSystemOnly = builder.autoPauseFileSystemOnly;
         this.disableSessionIdReuse = builder.disableSessionIdReuse;
         this.enableAutoPause = builder.enableAutoPause;
         this.enableAutoResume = builder.enableAutoResume;
@@ -90,6 +94,13 @@ public class CreateSessionInput extends TeaModel {
      */
     public Boolean getAllowInternetAccess() {
         return this.allowInternetAccess;
+    }
+
+    /**
+     * @return autoPauseFileSystemOnly
+     */
+    public Boolean getAutoPauseFileSystemOnly() {
+        return this.autoPauseFileSystemOnly;
     }
 
     /**
@@ -178,6 +189,7 @@ public class CreateSessionInput extends TeaModel {
 
     public static final class Builder {
         private Boolean allowInternetAccess; 
+        private Boolean autoPauseFileSystemOnly; 
         private Boolean disableSessionIdReuse; 
         private Boolean enableAutoPause; 
         private Boolean enableAutoResume; 
@@ -196,6 +208,7 @@ public class CreateSessionInput extends TeaModel {
 
         private Builder(CreateSessionInput model) {
             this.allowInternetAccess = model.allowInternetAccess;
+            this.autoPauseFileSystemOnly = model.autoPauseFileSystemOnly;
             this.disableSessionIdReuse = model.disableSessionIdReuse;
             this.enableAutoPause = model.enableAutoPause;
             this.enableAutoResume = model.enableAutoResume;
@@ -215,6 +228,14 @@ public class CreateSessionInput extends TeaModel {
          */
         public Builder allowInternetAccess(Boolean allowInternetAccess) {
             this.allowInternetAccess = allowInternetAccess;
+            return this;
+        }
+
+        /**
+         * autoPauseFileSystemOnly.
+         */
+        public Builder autoPauseFileSystemOnly(Boolean autoPauseFileSystemOnly) {
+            this.autoPauseFileSystemOnly = autoPauseFileSystemOnly;
             return this;
         }
 

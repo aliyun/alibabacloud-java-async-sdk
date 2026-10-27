@@ -75,7 +75,7 @@ public class DeleteLayerVersionRequest extends Request {
         } 
 
         /**
-         * <p>The name of the layer.</p>
+         * <p>The layer name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class DeleteLayerVersionRequest extends Request {
         }
 
         /**
-         * <p>The version of the layer.</p>
+         * <p>The layer version.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

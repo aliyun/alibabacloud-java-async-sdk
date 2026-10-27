@@ -60,7 +60,7 @@ public class CreateCustomDomainRequest extends Request {
         } 
 
         /**
-         * <p>The information about the custom domain name.</p>
+         * <p>The custom domain name information.</p>
          * <p>This parameter is required.</p>
          */
         public Builder body(CreateCustomDomainInput body) {

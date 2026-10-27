@@ -186,6 +186,9 @@ public class ListInstancesRequest extends Request {
 
         /**
          * <p>The end time of the query range, specified as a UNIX timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1790899200000</p>
          */
         public Builder endTimeMs(Long endTimeMs) {
             this.putQueryParameter("endTimeMs", endTimeMs);
@@ -215,6 +218,9 @@ public class ListInstancesRequest extends Request {
 
         /**
          * <p>The maximum number of instances to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder limit(String limit) {
             this.putQueryParameter("limit", limit);
@@ -236,6 +242,9 @@ public class ListInstancesRequest extends Request {
 
         /**
          * <p>The token that specifies where to start the query. It is returned in a truncated response and can be used to retrieve the next page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-01234567-89abcdef-0123456789ab～</p>
          */
         public Builder startKey(String startKey) {
             this.putQueryParameter("startKey", startKey);
@@ -245,6 +254,9 @@ public class ListInstancesRequest extends Request {
 
         /**
          * <p>The start time of the query range, specified as a UNIX timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1790812800000</p>
          */
         public Builder startTimeMs(Long startTimeMs) {
             this.putQueryParameter("startTimeMs", startTimeMs);

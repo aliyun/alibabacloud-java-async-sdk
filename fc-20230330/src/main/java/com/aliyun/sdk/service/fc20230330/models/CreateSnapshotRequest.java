@@ -88,7 +88,7 @@ public class CreateSnapshotRequest extends Request {
         } 
 
         /**
-         * <p>The name of the function from which to create the snapshot.</p>
+         * <p>The name of the function for which the snapshot is created.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,7 +110,7 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * <p>The function alias.</p>
+         * <p>The alias of the function.</p>
          * 
          * <strong>example:</strong>
          * <p>alias</p>

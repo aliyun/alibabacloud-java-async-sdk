@@ -123,7 +123,7 @@ public class DescribeRegionsOutput extends TeaModel {
              * <p>The region name.</p>
              * 
              * <strong>example:</strong>
-             * <p>华北1（青岛）</p>
+             * <p>China (Qingdao)</p>
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -188,7 +188,7 @@ public class DescribeRegionsOutput extends TeaModel {
             } 
 
             /**
-             * <p>The collection of region information.</p>
+             * <p>The region information collection.</p>
              */
             public Builder region(java.util.List<Region> region) {
                 this.region = region;

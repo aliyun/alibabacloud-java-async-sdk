@@ -75,7 +75,7 @@ public class CreateVpcBindingRequest extends Request {
         } 
 
         /**
-         * <p>The name of the function.</p>
+         * <p>The function name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

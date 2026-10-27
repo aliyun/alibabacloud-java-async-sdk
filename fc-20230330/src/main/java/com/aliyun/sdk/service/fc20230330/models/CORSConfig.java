@@ -119,7 +119,10 @@ public class CORSConfig extends TeaModel {
         } 
 
         /**
-         * allowCredentials.
+         * <p>Specifies whether to allow sending credentials.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder allowCredentials(Boolean allowCredentials) {
             this.allowCredentials = allowCredentials;
@@ -127,7 +130,10 @@ public class CORSConfig extends TeaModel {
         }
 
         /**
-         * allowHeaders.
+         * <p>The list of allowed request headers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;Content-Type&quot;, &quot;Authorization&quot;]</p>
          */
         public Builder allowHeaders(java.util.List<String> allowHeaders) {
             this.allowHeaders = allowHeaders;
@@ -135,7 +141,10 @@ public class CORSConfig extends TeaModel {
         }
 
         /**
-         * allowMethods.
+         * <p>The list of allowed HTTP methods.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;GET&quot;, &quot;POST&quot;, &quot;OPTIONS&quot;]</p>
          */
         public Builder allowMethods(java.util.List<String> allowMethods) {
             this.allowMethods = allowMethods;
@@ -143,7 +152,10 @@ public class CORSConfig extends TeaModel {
         }
 
         /**
-         * allowOrigins.
+         * <p>The list of allowed origins.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;<a href="https://example.com">https://example.com</a>&quot;, &quot;<a href="https://app.example.com%22%5D">https://app.example.com&quot;]</a></p>
          */
         public Builder allowOrigins(java.util.List<String> allowOrigins) {
             this.allowOrigins = allowOrigins;
@@ -151,7 +163,10 @@ public class CORSConfig extends TeaModel {
         }
 
         /**
-         * exposeHeaders.
+         * <p>The list of exposed response headers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;X-Custom-Header&quot;]</p>
          */
         public Builder exposeHeaders(java.util.List<String> exposeHeaders) {
             this.exposeHeaders = exposeHeaders;
@@ -159,7 +174,10 @@ public class CORSConfig extends TeaModel {
         }
 
         /**
-         * maxAge.
+         * <p>The cache time for preflight requests, in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         public Builder maxAge(Integer maxAge) {
             this.maxAge = maxAge;

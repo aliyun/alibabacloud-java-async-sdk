@@ -223,7 +223,7 @@ public class CustomDomain extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the Alibaba Cloud account (primary account).</p>
+         * <p>The ID of your Alibaba Cloud account.</p>
          * 
          * <strong>example:</strong>
          * <p>186851234023****</p>
@@ -253,7 +253,7 @@ public class CustomDomain extends TeaModel {
         }
 
         /**
-         * <p>The HTTPS certificate configuration.</p>
+         * <p>The HTTPS certificate information.</p>
          */
         public Builder certConfig(CertConfig certConfig) {
             this.certConfig = certConfig;
@@ -261,7 +261,7 @@ public class CustomDomain extends TeaModel {
         }
 
         /**
-         * <p>The cross-origin resource sharing (CORS) configuration.</p>
+         * corsConfig.
          */
         public Builder corsConfig(CORSConfig corsConfig) {
             this.corsConfig = corsConfig;
@@ -269,7 +269,7 @@ public class CustomDomain extends TeaModel {
         }
 
         /**
-         * <p>The time when the custom domain was created.</p>
+         * <p>The time when the custom domain name was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-03-30T08:02:19Z</p>
@@ -299,7 +299,7 @@ public class CustomDomain extends TeaModel {
         }
 
         /**
-         * <p>The time when the custom domain was last modified.</p>
+         * <p>The time when the custom domain name was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-03-30T08:02:19Z</p>
@@ -310,7 +310,7 @@ public class CustomDomain extends TeaModel {
         }
 
         /**
-         * <p>The protocols that are supported by the domain name. Valid values: HTTP (HTTP only), HTTPS (HTTPS only), and HTTP,HTTPS (both HTTP and HTTPS).</p>
+         * <p>The protocol types supported by the domain name. HTTP: supports only the HTTP protocol. HTTPS: supports only the HTTPS protocol. HTTP,HTTPS: supports both the HTTP and HTTPS protocols.</p>
          * 
          * <strong>example:</strong>
          * <p>HTTP</p>
@@ -321,7 +321,7 @@ public class CustomDomain extends TeaModel {
         }
 
         /**
-         * <p>The route table that maps paths to functions.</p>
+         * <p>The route table that maps paths to functions when the custom domain name is accessed.</p>
          */
         public Builder routeConfig(RouteConfig routeConfig) {
             this.routeConfig = routeConfig;
@@ -348,7 +348,7 @@ public class CustomDomain extends TeaModel {
         }
 
         /**
-         * <p>The Web Application Firewall (WAF) aconfiguration.</p>
+         * <p>The Web Application Firewall (WAF) configuration.</p>
          */
         public Builder wafConfig(WAFConfig wafConfig) {
             this.wafConfig = wafConfig;
