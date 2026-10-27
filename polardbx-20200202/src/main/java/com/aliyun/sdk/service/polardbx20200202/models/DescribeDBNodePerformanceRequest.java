@@ -164,6 +164,7 @@ public class DescribeDBNodePerformanceRequest extends Request {
         } 
 
         /**
+         * <p>The node type. Valid values: polarx_cn, polarx_dn, polarx_cdc, polarx_gms, and polarx_columnar.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -176,6 +177,7 @@ public class DescribeDBNodePerformanceRequest extends Request {
         }
 
         /**
+         * <p>The name of the PolarDB-X instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -188,6 +190,7 @@ public class DescribeDBNodePerformanceRequest extends Request {
         }
 
         /**
+         * <p>The node names. Separate multiple names with commas (,). You can specify up to 10 CDC nodes or compute nodes at a time, and up to 1 data node at a time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -200,7 +203,15 @@ public class DescribeDBNodePerformanceRequest extends Request {
         }
 
         /**
-         * DBNodeRole.
+         * <p>The node role. Valid values:</p>
+         * <ul>
+         * <li>master: primary node.</li>
+         * <li>slave: secondary node. Applies to DN and GMS nodes.</li>
+         * <li>standby: secondary node. Applies to CN nodes.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>master</p>
          */
         public Builder DBNodeRole(String DBNodeRole) {
             this.putQueryParameter("DBNodeRole", DBNodeRole);
@@ -209,6 +220,7 @@ public class DescribeDBNodePerformanceRequest extends Request {
         }
 
         /**
+         * <p>The end time of the query. Format: YYYY-MM-ddTHH:mmZ (UTC).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -221,6 +233,7 @@ public class DescribeDBNodePerformanceRequest extends Request {
         }
 
         /**
+         * <p>The metric names. Separate multiple names with commas (,). You can specify up to 6 metrics. For more information, see <a href="https://help.aliyun.com/document_detail/332726.html">Performance metrics</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -233,6 +246,7 @@ public class DescribeDBNodePerformanceRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -245,6 +259,7 @@ public class DescribeDBNodePerformanceRequest extends Request {
         }
 
         /**
+         * <p>The start time of the query. Format: YYYY-MM-ddTHH:mmZ (UTC).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

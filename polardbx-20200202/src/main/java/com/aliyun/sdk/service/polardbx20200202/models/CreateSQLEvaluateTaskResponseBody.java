@@ -93,7 +93,7 @@ public class CreateSQLEvaluateTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +101,10 @@ public class CreateSQLEvaluateTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message. &gt; This parameter is empty when the request succeeds. If the request fails, an exception message is returned, such as an error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +112,10 @@ public class CreateSQLEvaluateTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6352AC16-76BF-5135-B1EA-ED49293526E6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +123,10 @@ public class CreateSQLEvaluateTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -170,7 +179,10 @@ public class CreateSQLEvaluateTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * SlinkTaskId.
+             * <p>The slink task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>etx-szr2rr6i*****</p>
              */
             public Builder slinkTaskId(String slinkTaskId) {
                 this.slinkTaskId = slinkTaskId;

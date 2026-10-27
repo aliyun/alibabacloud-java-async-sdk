@@ -93,7 +93,7 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +101,10 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The additional information returned. &quot;success&quot; is returned if the request is successful. Otherwise, an error code is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +112,10 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14036EBE-CF2E-44DB-ACE9-AC6157D3A6FC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +123,10 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -183,7 +192,10 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
             } 
 
             /**
-             * GroupName.
+             * <p>The name of the whitelist group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>defaultGroup</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -191,7 +203,10 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityIPList.
+             * <p>The details of the whitelist in the group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>127.0.0.1,172.168.0.0</p>
              */
             public Builder securityIPList(String securityIPList) {
                 this.securityIPList = securityIPList;
@@ -258,7 +273,10 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
             } 
 
             /**
-             * DBInstanceName.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxc-hzjasd****</p>
              */
             public Builder DBInstanceName(String DBInstanceName) {
                 this.DBInstanceName = DBInstanceName;
@@ -266,7 +284,7 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * GroupItems.
+             * <p>The list of whitelist groups.</p>
              */
             public Builder groupItems(java.util.List<GroupItems> groupItems) {
                 this.groupItems = groupItems;

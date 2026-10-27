@@ -106,7 +106,10 @@ public class DescribeDataImportTaskInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code. This parameter is empty when the request succeeds. If the request fails, an error message is returned, such as an error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class DescribeDataImportTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The result set.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class DescribeDataImportTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message. This parameter has a value only when the task status is success. Otherwise, an empty value is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class DescribeDataImportTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9B2F3840-5C98-****-B269-2D5C3A31797C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class DescribeDataImportTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -282,7 +294,10 @@ public class DescribeDataImportTaskInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * Delay.
+             * <p>The delay time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>58329</p>
              */
             public Builder delay(Long delay) {
                 this.delay = delay;
@@ -290,7 +305,10 @@ public class DescribeDataImportTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * LastError.
+             * <p>The most recent error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder lastError(String lastError) {
                 this.lastError = lastError;
@@ -298,7 +316,10 @@ public class DescribeDataImportTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * PhysicalDbName.
+             * <p>The physical database name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>drds_test</p>
              */
             public Builder physicalDbName(String physicalDbName) {
                 this.physicalDbName = physicalDbName;
@@ -306,7 +327,10 @@ public class DescribeDataImportTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * <p>The data import progress.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder progress(Long progress) {
                 this.progress = progress;
@@ -314,7 +338,15 @@ public class DescribeDataImportTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Statistics.
+             * <p>The performance and runtime metrics recorded during the execution of the data migration or import task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *   &quot;applyCount&quot;: 0,
+             *   &quot;cpuUseRatio&quot;: 41,
+             *   &quot;fsmId&quot;: 1,
+             *   &quot;fullGcCount&quot;: 
+             * }</p>
              */
             public Builder statistics(String statistics) {
                 this.statistics = statistics;
@@ -322,7 +354,10 @@ public class DescribeDataImportTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The task status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>active</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -330,7 +365,10 @@ public class DescribeDataImportTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fc3b1568-ad96-****-adca-dfe018b38077</p>
              */
             public Builder taskId(Long taskId) {
                 this.taskId = taskId;
@@ -338,7 +376,10 @@ public class DescribeDataImportTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The task type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FULL_COPY</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -431,7 +472,10 @@ public class DescribeDataImportTaskInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>The service detail ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1991609</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -439,7 +483,10 @@ public class DescribeDataImportTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The task execution status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FINISHED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -447,7 +494,7 @@ public class DescribeDataImportTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * TaskDetailList.
+             * <p>The task details.</p>
              */
             public Builder taskDetailList(java.util.List<TaskDetailList> taskDetailList) {
                 this.taskDetailList = taskDetailList;
@@ -455,7 +502,14 @@ public class DescribeDataImportTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The replication type. Valid values:</p>
+             * <ul>
+             * <li>FULL_COPY: full replication.</li>
+             * <li>INC_COPY: incremental replication.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>FULL_COPY</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -548,7 +602,10 @@ public class DescribeDataImportTaskInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * FsmId.
+             * <p>The progress ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder fsmId(Long fsmId) {
                 this.fsmId = fsmId;
@@ -556,7 +613,10 @@ public class DescribeDataImportTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * FsmState.
+             * <p>The state identifier in the data migration or synchronization task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RECON_FINISHED_CATCH_UP</p>
              */
             public Builder fsmState(String fsmState) {
                 this.fsmState = fsmState;
@@ -564,7 +624,10 @@ public class DescribeDataImportTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * FsmStatus.
+             * <p>The status in the data migration, import, or synchronization system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IMPORT_NOT_BEGIN</p>
              */
             public Builder fsmStatus(String fsmStatus) {
                 this.fsmStatus = fsmStatus;
@@ -572,7 +635,7 @@ public class DescribeDataImportTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceDetailList.
+             * <p>The data import task details.</p>
              */
             public Builder serviceDetailList(java.util.List<ServiceDetailList> serviceDetailList) {
                 this.serviceDetailList = serviceDetailList;
@@ -626,7 +689,7 @@ public class DescribeDataImportTaskInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * DataImportTaskDetailInfo.
+             * <p>The task details.</p>
              */
             public Builder dataImportTaskDetailInfo(DataImportTaskDetailInfo dataImportTaskDetailInfo) {
                 this.dataImportTaskDetailInfo = dataImportTaskDetailInfo;

@@ -67,7 +67,7 @@ public class ReleaseMem0PublicConnectionResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -75,7 +75,7 @@ public class ReleaseMem0PublicConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>173CA69A-3513-591D-8A09-C1EA37CBE2D9</p>
@@ -209,7 +209,10 @@ public class ReleaseMem0PublicConnectionResponseBody extends TeaModel {
             } 
 
             /**
-             * AuthAction.
+             * <p>Same as above.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -217,7 +220,10 @@ public class ReleaseMem0PublicConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalDisplayName.
+             * <p>The identity used for authentication in the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -225,7 +231,10 @@ public class ReleaseMem0PublicConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalOwnerId.
+             * <p>Same as above.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder authPrincipalOwnerId(String authPrincipalOwnerId) {
                 this.authPrincipalOwnerId = authPrincipalOwnerId;
@@ -233,7 +242,10 @@ public class ReleaseMem0PublicConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalType.
+             * <p>Same as above.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>222</p>
              */
             public Builder authPrincipalType(String authPrincipalType) {
                 this.authPrincipalType = authPrincipalType;
@@ -241,7 +253,10 @@ public class ReleaseMem0PublicConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * EncodedDiagnosticMessage.
+             * <p>The encoded diagnostic message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
              */
             public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
                 this.encodedDiagnosticMessage = encodedDiagnosticMessage;
@@ -249,7 +264,7 @@ public class ReleaseMem0PublicConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>NoPermissionType</p>
+             * <p>The type of missing permission.</p>
              * 
              * <strong>example:</strong>
              * <p>ImplicitDeny</p>
@@ -260,7 +275,7 @@ public class ReleaseMem0PublicConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>PolicyType</p>
+             * <p>The policy type.</p>
              * 
              * <strong>example:</strong>
              * <p>PRIORITY</p>

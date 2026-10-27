@@ -118,6 +118,7 @@ public class ModifyColumnarClassRequest extends Request {
         } 
 
         /**
+         * <p>The column store specifications.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,7 +131,10 @@ public class ModifyColumnarClassRequest extends Request {
         }
 
         /**
-         * ColumnarNodeCount.
+         * <p>The number of column store nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>**</p>
          */
         public Builder columnarNodeCount(String columnarNodeCount) {
             this.putQueryParameter("ColumnarNodeCount", columnarNodeCount);
@@ -139,6 +143,7 @@ public class ModifyColumnarClassRequest extends Request {
         }
 
         /**
+         * <p>The instance name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -151,6 +156,7 @@ public class ModifyColumnarClassRequest extends Request {
         }
 
         /**
+         * <p>The region in which the instance resides. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196841.html">DescribeRegions</a> operation to query the regions supported by PolarDB-X, including region IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -163,7 +169,10 @@ public class ModifyColumnarClassRequest extends Request {
         }
 
         /**
-         * SwitchMode.
+         * <p>The switch mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder switchMode(String switchMode) {
             this.putQueryParameter("SwitchMode", switchMode);

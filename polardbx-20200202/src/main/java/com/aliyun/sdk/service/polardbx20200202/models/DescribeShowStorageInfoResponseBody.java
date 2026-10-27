@@ -80,7 +80,10 @@ public class DescribeShowStorageInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The return code of the request. &gt; This parameter is empty when the request is successful. When the request fails, exception information such as error codes is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -88,7 +91,7 @@ public class DescribeShowStorageInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -256,7 +259,10 @@ public class DescribeShowStorageInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * Class.
+             * <p>The specification type (specification code) of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>polar.mysql.x4.large</p>
              */
             public Builder _class(String _class) {
                 this._class = _class;
@@ -264,7 +270,10 @@ public class DescribeShowStorageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DbCount.
+             * <p>The number of databases.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder dbCount(Long dbCount) {
                 this.dbCount = dbCount;
@@ -272,7 +281,10 @@ public class DescribeShowStorageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Deletable.
+             * <p>Indicates whether the instance can be deleted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder deletable(Boolean deletable) {
                 this.deletable = deletable;
@@ -280,7 +292,10 @@ public class DescribeShowStorageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * GroupCount.
+             * <p>The number of node groups.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder groupCount(Long groupCount) {
                 this.groupCount = groupCount;
@@ -288,7 +303,15 @@ public class DescribeShowStorageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * InstKind.
+             * <p>The role type of the instance. Valid values:</p>
+             * <ul>
+             * <li>MASTER: primary instance.</li>
+             * <li>READONLY: read-only instance.</li>
+             * <li>STANDBY: standby instance (high-availability scenario).</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>MASTER</p>
              */
             public Builder instKind(String instKind) {
                 this.instKind = instKind;
@@ -296,7 +319,10 @@ public class DescribeShowStorageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * IsHealthy.
+             * <p>Indicates whether the instance or cluster is currently in a healthy state.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isHealthy(Boolean isHealthy) {
                 this.isHealthy = isHealthy;
@@ -304,7 +330,10 @@ public class DescribeShowStorageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * LeaderNode.
+             * <p>The identifier of the leader node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11.117.237.205:3029</p>
              */
             public Builder leaderNode(String leaderNode) {
                 this.leaderNode = leaderNode;
@@ -312,7 +341,10 @@ public class DescribeShowStorageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The instance status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder status(Long status) {
                 this.status = status;
@@ -320,7 +352,10 @@ public class DescribeShowStorageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * StorageInstName.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxc-xdb-m-pxcbjrylg49skcxb17394</p>
              */
             public Builder storageInstName(String storageInstName) {
                 this.storageInstName = storageInstName;
@@ -374,7 +409,7 @@ public class DescribeShowStorageInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * StorageInfos.
+             * <p>The list of storage information.</p>
              */
             public Builder storageInfos(java.util.List<StorageInfos> storageInfos) {
                 this.storageInfos = storageInfos;

@@ -93,7 +93,7 @@ public class CreateBackupResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +101,10 @@ public class CreateBackupResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message. If the request is successful, this field is empty. If the request fails, an error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +112,10 @@ public class CreateBackupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9B2F3840-5C98-475C-B269-2D5C3A31797C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +123,10 @@ public class CreateBackupResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -170,7 +179,10 @@ public class CreateBackupResponseBody extends TeaModel {
             } 
 
             /**
-             * BackupSetId.
+             * <p>The ID of the backup set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder backupSetId(String backupSetId) {
                 this.backupSetId = backupSetId;

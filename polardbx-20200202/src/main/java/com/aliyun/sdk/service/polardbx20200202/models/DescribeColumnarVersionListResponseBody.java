@@ -67,7 +67,7 @@ public class DescribeColumnarVersionListResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The parameter details.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -131,7 +131,7 @@ public class DescribeColumnarVersionListResponseBody extends TeaModel {
             } 
 
             /**
-             * VersionList.
+             * <p>The version list.</p>
              */
             public Builder versionList(java.util.List<String> versionList) {
                 this.versionList = versionList;

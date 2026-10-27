@@ -119,6 +119,7 @@ public class CreateOpenSearchWhitelistGroupRequest extends Request {
         } 
 
         /**
+         * <p>The name of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,6 +132,7 @@ public class CreateOpenSearchWhitelistGroupRequest extends Request {
         }
 
         /**
+         * <p>The name of the whitelist group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,6 +145,7 @@ public class CreateOpenSearchWhitelistGroupRequest extends Request {
         }
 
         /**
+         * <p>The list of source IP addresses.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,6 +158,7 @@ public class CreateOpenSearchWhitelistGroupRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/196841.html">DescribeRegions</a> operation to query the regions supported by PolarDB-X, including region IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,7 +171,10 @@ public class CreateOpenSearchWhitelistGroupRequest extends Request {
         }
 
         /**
-         * Remark.
+         * <p>The description of the group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MAIN</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);

@@ -89,7 +89,7 @@ public class CreateSupabaseNetTypeRequest extends Request {
         } 
 
         /**
-         * <p>自定义连接地址前缀</p>
+         * <p>The custom endpoint prefix.</p>
          * 
          * <strong>example:</strong>
          * <p>pxsp-*********</p>
@@ -101,7 +101,7 @@ public class CreateSupabaseNetTypeRequest extends Request {
         }
 
         /**
-         * <p>实例名称</p>
+         * <p>The instance name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +114,7 @@ public class CreateSupabaseNetTypeRequest extends Request {
         }
 
         /**
-         * <p>地域ID</p>
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

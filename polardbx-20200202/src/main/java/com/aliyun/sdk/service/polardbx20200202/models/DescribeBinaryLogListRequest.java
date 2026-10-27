@@ -148,6 +148,7 @@ public class DescribeBinaryLogListRequest extends Request {
         } 
 
         /**
+         * <p>The name of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -160,6 +161,7 @@ public class DescribeBinaryLogListRequest extends Request {
         }
 
         /**
+         * <p>The end time of the query. Specify the time in the YYYY-MM-DD HH:mm:ss format.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -172,7 +174,10 @@ public class DescribeBinaryLogListRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxc-hzrh51fze****pon-cdc</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -181,7 +186,10 @@ public class DescribeBinaryLogListRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -190,7 +198,10 @@ public class DescribeBinaryLogListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 30.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -199,6 +210,7 @@ public class DescribeBinaryLogListRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -211,6 +223,7 @@ public class DescribeBinaryLogListRequest extends Request {
         }
 
         /**
+         * <p>The start time of the query. Specify the time in the YYYY-MM-DD HH:mm:ss format.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -131,7 +131,7 @@ public class CreatePxfsRequest extends Request {
         } 
 
         /**
-         * <p>Agent文件服务的节点规格代码。</p>
+         * <p>The node specifications.</p>
          * 
          * <strong>example:</strong>
          * <p>polarx.pxfs.x4.xlarge</p>
@@ -143,7 +143,7 @@ public class CreatePxfsRequest extends Request {
         }
 
         /**
-         * <p>Agent文件服务关联的PolarDB-X实例ID。</p>
+         * <p>The PolarDB-X instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,7 +156,7 @@ public class CreatePxfsRequest extends Request {
         }
 
         /**
-         * <p>Agent文件服务的节点数量。</p>
+         * <p>The number of nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -168,7 +168,7 @@ public class CreatePxfsRequest extends Request {
         }
 
         /**
-         * <p>Agent文件服务实例所属地域的ID。</p>
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -181,7 +181,7 @@ public class CreatePxfsRequest extends Request {
         }
 
         /**
-         * <p>允许访问Agent文件服务的IP地址或CIDR列表，多个条目用英文逗号分隔。</p>
+         * <p>The IP whitelist.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.1.0/24,10.0.0.1</p>
@@ -193,7 +193,7 @@ public class CreatePxfsRequest extends Request {
         }
 
         /**
-         * <p>Agent文件服务的数据盘容量，单位为GiB。</p>
+         * <p>The storage capacity.</p>
          * 
          * <strong>example:</strong>
          * <p>500</p>

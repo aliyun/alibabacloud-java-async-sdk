@@ -80,7 +80,7 @@ public class CreateMem0ResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The detailed reasons for the access denial.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -88,7 +88,7 @@ public class CreateMem0ResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data struct.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -230,7 +230,10 @@ public class CreateMem0ResponseBody extends TeaModel {
             } 
 
             /**
-             * AuthAction.
+             * <p>The authentication action.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>polardbx:CreateMem0</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -238,7 +241,10 @@ public class CreateMem0ResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalDisplayName.
+             * <p>The name of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Example RAM user</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -246,7 +252,10 @@ public class CreateMem0ResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalOwnerId.
+             * <p>The owner ID of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder authPrincipalOwnerId(String authPrincipalOwnerId) {
                 this.authPrincipalOwnerId = authPrincipalOwnerId;
@@ -254,7 +263,10 @@ public class CreateMem0ResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalType.
+             * <p>The type of the authentication principal, such as RAM user SubUser or RAM role AssumedRoleUser.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SubUser</p>
              */
             public Builder authPrincipalType(String authPrincipalType) {
                 this.authPrincipalType = authPrincipalType;
@@ -262,7 +274,10 @@ public class CreateMem0ResponseBody extends TeaModel {
             }
 
             /**
-             * EncodedDiagnosticMessage.
+             * <p>The diagnostic message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
              */
             public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
                 this.encodedDiagnosticMessage = encodedDiagnosticMessage;
@@ -270,7 +285,10 @@ public class CreateMem0ResponseBody extends TeaModel {
             }
 
             /**
-             * NoPermissionType.
+             * <p>The no-permission type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ImplicitDeny</p>
              */
             public Builder noPermissionType(String noPermissionType) {
                 this.noPermissionType = noPermissionType;
@@ -278,7 +296,10 @@ public class CreateMem0ResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * <p>The policy type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PRIORITY</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -332,7 +353,10 @@ public class CreateMem0ResponseBody extends TeaModel {
             } 
 
             /**
-             * TaskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2209883</p>
              */
             public Builder taskId(Integer taskId) {
                 this.taskId = taskId;

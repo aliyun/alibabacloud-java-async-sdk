@@ -80,7 +80,7 @@ public class DescribePxfuseSecurityIpsResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -88,7 +88,7 @@ public class DescribePxfuseSecurityIpsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The instance details.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -96,7 +96,10 @@ public class DescribePxfuseSecurityIpsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -227,7 +230,10 @@ public class DescribePxfuseSecurityIpsResponseBody extends TeaModel {
             } 
 
             /**
-             * AuthAction.
+             * <p>The description is the same as above.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -235,7 +241,10 @@ public class DescribePxfuseSecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalDisplayName.
+             * <p>The display name of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -243,7 +252,10 @@ public class DescribePxfuseSecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalOwnerId.
+             * <p>The owner ID of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder authPrincipalOwnerId(String authPrincipalOwnerId) {
                 this.authPrincipalOwnerId = authPrincipalOwnerId;
@@ -251,7 +263,10 @@ public class DescribePxfuseSecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalType.
+             * <p>The type of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>222</p>
              */
             public Builder authPrincipalType(String authPrincipalType) {
                 this.authPrincipalType = authPrincipalType;
@@ -259,7 +274,10 @@ public class DescribePxfuseSecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * EncodedDiagnosticMessage.
+             * <p>The encoded diagnostic message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
              */
             public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
                 this.encodedDiagnosticMessage = encodedDiagnosticMessage;
@@ -267,7 +285,10 @@ public class DescribePxfuseSecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * NoPermissionType.
+             * <p>The type of the no-permission error.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ImplicitDeny</p>
              */
             public Builder noPermissionType(String noPermissionType) {
                 this.noPermissionType = noPermissionType;
@@ -275,7 +296,10 @@ public class DescribePxfuseSecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * <p>The policy type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PRIORITY</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -355,7 +379,10 @@ public class DescribePxfuseSecurityIpsResponseBody extends TeaModel {
             } 
 
             /**
-             * GroupName.
+             * <p>The name of the whitelist group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bigdata</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -363,7 +390,10 @@ public class DescribePxfuseSecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * GroupTag.
+             * <p>The group tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder groupTag(String groupTag) {
                 this.groupTag = groupTag;
@@ -371,7 +401,16 @@ public class DescribePxfuseSecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * IpLists.
+             * <p>Specifies whether an IP address that is already used for a DNAT entry can also be used for an SNAT entry. Valid values:</p>
+             * <ul>
+             * <li><p><strong>true</strong>: Destination IP address can also be used for an SNAT entry.</p>
+             * </li>
+             * <li><p><strong>false</strong>: Destination IP address cannot be used for an SNAT entry.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>127.0.0.1</p>
              */
             public Builder ipLists(String ipLists) {
                 this.ipLists = ipLists;
@@ -438,7 +477,10 @@ public class DescribePxfuseSecurityIpsResponseBody extends TeaModel {
             } 
 
             /**
-             * CustinsName.
+             * <p>The name of the memory engine instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxc-***-mem</p>
              */
             public Builder custinsName(String custinsName) {
                 this.custinsName = custinsName;
@@ -446,7 +488,7 @@ public class DescribePxfuseSecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * Groups.
+             * <p>The groups corresponding to the consumed service.</p>
              */
             public Builder groups(java.util.List<Groups> groups) {
                 this.groups = groups;

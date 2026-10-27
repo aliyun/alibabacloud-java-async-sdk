@@ -80,7 +80,7 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
         } 
 
         /**
-         * Config.
+         * <p>The configuration information.</p>
          */
         public Builder config(Config config) {
             this.config = config;
@@ -88,7 +88,14 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
         }
 
         /**
-         * HasConfig.
+         * <p>Specifies whether the settings are configured. Valid values:</p>
+         * <ul>
+         * <li>1: Configured.</li>
+         * <li>0: Not configured.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder hasConfig(Long hasConfig) {
             this.hasConfig = hasConfig;
@@ -96,7 +103,10 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1A586DCB-39A6-4050-81CC-C7BD4CCDB49F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -227,7 +237,10 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
             } 
 
             /**
-             * CreatedTime.
+             * <p>The creation time. The time is displayed in UTC in the YYYY-MM-DDTHH:mm:ssZ format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-08-11T10:08:27Z</p>
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -235,7 +248,10 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
             }
 
             /**
-             * CycleTime.
+             * <p>The cycle time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1,2,3,4,5,6,7</p>
              */
             public Builder cycleTime(String cycleTime) {
                 this.cycleTime = cycleTime;
@@ -243,7 +259,10 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
             }
 
             /**
-             * CycleType.
+             * <p>The cycle type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Week</p>
              */
             public Builder cycleType(String cycleType) {
                 this.cycleType = cycleType;
@@ -251,7 +270,10 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
             }
 
             /**
-             * MaintainEndTime.
+             * <p>The end time of the O&amp;M window. The time is displayed in UTC in the HH:mm:ssZ format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>04:00:00Z</p>
              */
             public Builder maintainEndTime(String maintainEndTime) {
                 this.maintainEndTime = maintainEndTime;
@@ -259,7 +281,10 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
             }
 
             /**
-             * MaintainStartTime.
+             * <p>The start time of the O&amp;M window. The time is displayed in UTC in the HH:mm:ssZ format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>04:00:00Z</p>
              */
             public Builder maintainStartTime(String maintainStartTime) {
                 this.maintainStartTime = maintainStartTime;
@@ -267,7 +292,10 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * <p>The update time. The time is displayed in UTC in the YYYY-MM-DDTHH:mm:ssZ format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-08-11T10:08:27Z</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -275,7 +303,10 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Long status) {
                 this.status = status;

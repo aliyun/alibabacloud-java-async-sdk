@@ -80,7 +80,7 @@ public class DeleteOpenSearchWhitelistGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details of the access denial.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -88,7 +88,7 @@ public class DeleteOpenSearchWhitelistGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The monitoring data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -230,7 +230,10 @@ public class DeleteOpenSearchWhitelistGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * AuthAction.
+             * <p>The authentication action.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -238,7 +241,10 @@ public class DeleteOpenSearchWhitelistGroupResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalDisplayName.
+             * <p>The display name of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -246,7 +252,10 @@ public class DeleteOpenSearchWhitelistGroupResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalOwnerId.
+             * <p>The owner ID of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder authPrincipalOwnerId(String authPrincipalOwnerId) {
                 this.authPrincipalOwnerId = authPrincipalOwnerId;
@@ -254,7 +263,10 @@ public class DeleteOpenSearchWhitelistGroupResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalType.
+             * <p>The type of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>222</p>
              */
             public Builder authPrincipalType(String authPrincipalType) {
                 this.authPrincipalType = authPrincipalType;
@@ -262,7 +274,10 @@ public class DeleteOpenSearchWhitelistGroupResponseBody extends TeaModel {
             }
 
             /**
-             * EncodedDiagnosticMessage.
+             * <p>The diagnostic information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
              */
             public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
                 this.encodedDiagnosticMessage = encodedDiagnosticMessage;
@@ -270,7 +285,10 @@ public class DeleteOpenSearchWhitelistGroupResponseBody extends TeaModel {
             }
 
             /**
-             * NoPermissionType.
+             * <p>The type of the permission denial.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ImplicitDeny</p>
              */
             public Builder noPermissionType(String noPermissionType) {
                 this.noPermissionType = noPermissionType;
@@ -278,7 +296,10 @@ public class DeleteOpenSearchWhitelistGroupResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * <p>The policy type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PRIORITY</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -332,7 +353,10 @@ public class DeleteOpenSearchWhitelistGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * Message.
+             * <p>The response message. &quot;success&quot; is returned if the request is successful. Otherwise, the corresponding error code is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>get app list success</p>
              */
             public Builder message(String message) {
                 this.message = message;

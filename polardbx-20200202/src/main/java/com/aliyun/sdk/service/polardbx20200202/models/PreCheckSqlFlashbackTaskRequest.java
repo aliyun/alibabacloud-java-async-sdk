@@ -120,6 +120,7 @@ public class PreCheckSqlFlashbackTaskRequest extends Request {
         } 
 
         /**
+         * <p>The database name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -132,6 +133,7 @@ public class PreCheckSqlFlashbackTaskRequest extends Request {
         }
 
         /**
+         * <p>The end time of the flashback SQL execution.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,6 +146,7 @@ public class PreCheckSqlFlashbackTaskRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,6 +159,7 @@ public class PreCheckSqlFlashbackTaskRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -168,6 +172,7 @@ public class PreCheckSqlFlashbackTaskRequest extends Request {
         }
 
         /**
+         * <p>The start time of the flashback SQL execution.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

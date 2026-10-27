@@ -80,7 +80,10 @@ public class ModifyAccountDescriptionResponseBody extends TeaModel {
         } 
 
         /**
-         * Message.
+         * <p>The additional information returned. If the request is successful, success is returned. If the request fails, the corresponding error code is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>msg</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -88,7 +91,10 @@ public class ModifyAccountDescriptionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FEA5DC20-6D8A-5979-97AA-FC57546ADC20</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +102,10 @@ public class ModifyAccountDescriptionResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

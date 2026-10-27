@@ -67,7 +67,7 @@ public class DescribeDBInstanceTDEResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The data struct.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class DescribeDBInstanceTDEResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C458B1E8-1683-3645-B154-6BA32080EEA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -128,7 +131,14 @@ public class DescribeDBInstanceTDEResponseBody extends TeaModel {
             } 
 
             /**
-             * TDEStatus.
+             * <p>Indicates whether TDE is enabled. Valid values:</p>
+             * <ul>
+             * <li>0: Not enabled.</li>
+             * <li>1: Enabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder TDEStatus(String TDEStatus) {
                 this.TDEStatus = TDEStatus;

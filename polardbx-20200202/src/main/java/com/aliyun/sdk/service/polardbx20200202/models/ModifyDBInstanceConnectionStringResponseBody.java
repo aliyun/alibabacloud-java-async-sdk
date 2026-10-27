@@ -93,7 +93,10 @@ public class ModifyDBInstanceConnectionStringResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class ModifyDBInstanceConnectionStringResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The new connection string information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class ModifyDBInstanceConnectionStringResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message, which is typically an error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +123,10 @@ public class ModifyDBInstanceConnectionStringResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID, which is a unique identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c3cf535c-a585-11ea-8263-00163e04d3a7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -209,7 +218,10 @@ public class ModifyDBInstanceConnectionStringResponseBody extends TeaModel {
             } 
 
             /**
-             * ConnectionString.
+             * <p>The connection string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test2.polarx.huhehaote.rds.aliyuncs.com</p>
              */
             public Builder connectionString(String connectionString) {
                 this.connectionString = connectionString;
@@ -217,7 +229,10 @@ public class ModifyDBInstanceConnectionStringResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceName.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxc-unrf5ssig0ecg8</p>
              */
             public Builder DBInstanceName(String DBInstanceName) {
                 this.DBInstanceName = DBInstanceName;
@@ -225,7 +240,10 @@ public class ModifyDBInstanceConnectionStringResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceNetType.
+             * <p>The network type of the connection string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder DBInstanceNetType(String DBInstanceNetType) {
                 this.DBInstanceNetType = DBInstanceNetType;
@@ -233,7 +251,10 @@ public class ModifyDBInstanceConnectionStringResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * <p>The port number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3300</p>
              */
             public Builder port(String port) {
                 this.port = port;

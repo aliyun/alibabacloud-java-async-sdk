@@ -93,7 +93,7 @@ public class SwitchGdnMemberRoleResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The data struct.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +101,10 @@ public class SwitchGdnMemberRoleResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The additional information returned by the API operation. If the request is successful, success is returned. If the request fails, the corresponding error code is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -120,7 +123,10 @@ public class SwitchGdnMemberRoleResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -173,7 +179,10 @@ public class SwitchGdnMemberRoleResponseBody extends TeaModel {
             } 
 
             /**
-             * TaskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2209883</p>
              */
             public Builder taskId(Integer taskId) {
                 this.taskId = taskId;

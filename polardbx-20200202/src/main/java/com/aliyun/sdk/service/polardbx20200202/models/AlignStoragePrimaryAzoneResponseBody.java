@@ -80,7 +80,10 @@ public class AlignStoragePrimaryAzoneResponseBody extends TeaModel {
         } 
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successs</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -88,7 +91,10 @@ public class AlignStoragePrimaryAzoneResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1A6D328C-84B8-40DC-BF49-6C73984D7494</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +102,7 @@ public class AlignStoragePrimaryAzoneResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -80,7 +80,7 @@ public class DescribeContext0SecurityIpsResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details of the access denied error.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -88,7 +88,7 @@ public class DescribeContext0SecurityIpsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The monitoring data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -96,7 +96,10 @@ public class DescribeContext0SecurityIpsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>173CA69A-3513-591D-8A09-C1EA37CBE2D9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -227,7 +230,10 @@ public class DescribeContext0SecurityIpsResponseBody extends TeaModel {
             } 
 
             /**
-             * AuthAction.
+             * <p>The authentication action.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -235,7 +241,10 @@ public class DescribeContext0SecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalDisplayName.
+             * <p>The name of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -243,7 +252,10 @@ public class DescribeContext0SecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalOwnerId.
+             * <p>The owner ID of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder authPrincipalOwnerId(String authPrincipalOwnerId) {
                 this.authPrincipalOwnerId = authPrincipalOwnerId;
@@ -251,7 +263,10 @@ public class DescribeContext0SecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalType.
+             * <p>The type of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>222</p>
              */
             public Builder authPrincipalType(String authPrincipalType) {
                 this.authPrincipalType = authPrincipalType;
@@ -259,7 +274,10 @@ public class DescribeContext0SecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * EncodedDiagnosticMessage.
+             * <p>The diagnostic information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
              */
             public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
                 this.encodedDiagnosticMessage = encodedDiagnosticMessage;
@@ -278,7 +296,10 @@ public class DescribeContext0SecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * <p>The type of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PRIORITY</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -358,7 +379,10 @@ public class DescribeContext0SecurityIpsResponseBody extends TeaModel {
             } 
 
             /**
-             * GroupName.
+             * <p>The name of the whitelist group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>defaultGroup</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -366,7 +390,10 @@ public class DescribeContext0SecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * GroupTag.
+             * <p>The tag of the group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>group1</p>
              */
             public Builder groupTag(String groupTag) {
                 this.groupTag = groupTag;
@@ -374,7 +401,10 @@ public class DescribeContext0SecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityIPList.
+             * <p>The details of the whitelist in the group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>127.0.0.1,172.168.0.0</p>
              */
             public Builder securityIPList(String securityIPList) {
                 this.securityIPList = securityIPList;
@@ -454,7 +484,10 @@ public class DescribeContext0SecurityIpsResponseBody extends TeaModel {
             } 
 
             /**
-             * Context0InstanceName.
+             * <p>The name of the context service instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>context0-example</p>
              */
             public Builder context0InstanceName(String context0InstanceName) {
                 this.context0InstanceName = context0InstanceName;
@@ -462,7 +495,10 @@ public class DescribeContext0SecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceName.
+             * <p>The name of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxc-*********</p>
              */
             public Builder DBInstanceName(String DBInstanceName) {
                 this.DBInstanceName = DBInstanceName;
@@ -470,7 +506,7 @@ public class DescribeContext0SecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * GroupItems.
+             * <p>The list of whitelist groups.</p>
              */
             public Builder groupItems(java.util.List<GroupItems> groupItems) {
                 this.groupItems = groupItems;

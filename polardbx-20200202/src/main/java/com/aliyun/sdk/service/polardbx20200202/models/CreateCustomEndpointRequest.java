@@ -163,6 +163,7 @@ public class CreateCustomEndpointRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -175,6 +176,7 @@ public class CreateCustomEndpointRequest extends Request {
         }
 
         /**
+         * <p>The name of the access control instance. The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. The name can contain digits, underscores (_), and hyphens (-).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -187,6 +189,7 @@ public class CreateCustomEndpointRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether the node automatically joins the cluster and starts providing services after being added or recovered.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -199,6 +202,7 @@ public class CreateCustomEndpointRequest extends Request {
         }
 
         /**
+         * <p>The IDs of the monitored nodes when RemindUnit (object type) is set to NODE (node). Separate multiple IDs with commas (,). A maximum of 50 nodes can be monitored by a single rule.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -211,7 +215,13 @@ public class CreateCustomEndpointRequest extends Request {
         }
 
         /**
-         * NodeRole.
+         * <p>To query the metrics of a read-only node in a cloud-native read/write splitting architecture instance, specify <strong>READONLY</strong> for this parameter along with the specific <strong>NodeId</strong>.</p>
+         * <blockquote>
+         * <p> In other cases, you do not need to specify this parameter or you can specify <strong>MASTER</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>READONLY</p>
          */
         public Builder nodeRole(String nodeRole) {
             this.putQueryParameter("NodeRole", nodeRole);
@@ -220,7 +230,10 @@ public class CreateCustomEndpointRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region in which the instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -229,6 +242,7 @@ public class CreateCustomEndpointRequest extends Request {
         }
 
         /**
+         * <p>The vSwitch ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -241,6 +255,7 @@ public class CreateCustomEndpointRequest extends Request {
         }
 
         /**
+         * <p>The ID of the virtual private cloud (VPC) in which the endpoint resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

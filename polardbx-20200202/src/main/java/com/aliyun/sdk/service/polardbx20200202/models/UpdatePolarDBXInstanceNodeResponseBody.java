@@ -67,7 +67,10 @@ public class UpdatePolarDBXInstanceNodeResponseBody extends TeaModel {
         } 
 
         /**
-         * OrderId.
+         * <p>The ID of the order generated when the number of nodes for the instance is changed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20211103105558</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -75,7 +78,10 @@ public class UpdatePolarDBXInstanceNodeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FEA5DC20-6D8A-5979-97AA-FC57546ADC20</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

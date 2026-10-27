@@ -117,7 +117,10 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * NextToken.
+         * <p>The token used to start the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxdds</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -126,6 +129,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,7 +142,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * <p>The resource IDs. You can specify up to 50 subkeys.</p>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -147,6 +151,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
+         * <p>The resource type. Set this parameter to PolarDBXInstance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,7 +164,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The list of labels. You can specify up to 20 subkeys.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -227,7 +232,10 @@ public class ListTagResourcesRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The key of the label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -235,7 +243,10 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of the label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder value(String value) {
                 this.value = value;

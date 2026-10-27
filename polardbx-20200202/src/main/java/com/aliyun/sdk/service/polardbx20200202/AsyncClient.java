@@ -32,12 +32,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AllocateColdDataVolumeResponse> allocateColdDataVolume(AllocateColdDataVolumeRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This operation confirms that no active connections exist before a rollback task to ensure operational security.</p>
+     * 
      * @param request the request parameters of AllocateContext0PublicConnection  AllocateContext0PublicConnectionRequest
      * @return AllocateContext0PublicConnectionResponse
      */
     CompletableFuture<AllocateContext0PublicConnectionResponse> allocateContext0PublicConnection(AllocateContext0PublicConnectionRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This operation is used to confirm that no active connections exist before a rollback task, ensuring operation safety.</p>
+     * 
      * @param request the request parameters of AllocateContextDBPublicConnection  AllocateContextDBPublicConnectionRequest
      * @return AllocateContextDBPublicConnectionResponse
      */
@@ -50,6 +56,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AllocateInstancePublicConnectionResponse> allocateInstancePublicConnection(AllocateInstancePublicConnectionRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This operation checks for active connections before a rollback task to ensure operational security.</p>
+     * 
      * @param request the request parameters of AllocateMem0PublicConnection  AllocateMem0PublicConnectionRequest
      * @return AllocateMem0PublicConnectionResponse
      */
@@ -57,7 +66,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>开通Agent文件服务公网连接。</p>
+     * <p>Enables public network connection for the agent file service.</p>
      * 
      * @param request the request parameters of AllocatePxfsPublicConnection  AllocatePxfsPublicConnectionRequest
      * @return AllocatePxfsPublicConnectionResponse
@@ -77,6 +86,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CancelActiveOperationTasksResponse> cancelActiveOperationTasks(CancelActiveOperationTasksRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Note: </p>
+     * <ul>
+     * <li>The <strong>endpoint</strong> differs from other operations. Use <strong>polardbx.aliyuncs.com</strong> for Chinese regions and Singapore. For other regions, use <strong>polardbx.{region id}.aliyunc.com</strong>.</li>
+     * <li>When testing this API operation, if a service unavailable error is returned, verify that the <strong>endpoint</strong> is correct. You can switch the <strong>service address</strong> to <strong>Dubai</strong> or <strong>India</strong> to change the <strong>endpoint</strong> to <strong>polardbx.aliyuncs.com</strong>.</li>
+     * </ul>
+     * 
      * @param request the request parameters of ChangeResourceGroup  ChangeResourceGroupRequest
      * @return ChangeResourceGroupResponse
      */
@@ -95,6 +111,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CheckHealthResponse> checkHealth(CheckHealthRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data delivery. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
+     * </ul>
+     * </blockquote>
+     * 
      * @param request the request parameters of CheckSqlAuditSlsStatus  CheckSqlAuditSlsStatusRequest
      * @return CheckSqlAuditSlsStatusResponse
      */
@@ -107,6 +130,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CloseEngineMigrationResponse> closeEngineMigration(CloseEngineMigrationRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Confirms that no active connections exist before a rollback task to ensure operation safety.</p>
+     * 
      * @param request the request parameters of ConfirmNoConnection  ConfirmNoConnectionRequest
      * @return ConfirmNoConnectionResponse
      */
@@ -125,18 +151,27 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateBackupResponse> createBackup(CreateBackupRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</p>
+     * 
      * @param request the request parameters of CreateContext0  CreateContext0Request
      * @return CreateContext0Response
      */
     CompletableFuture<CreateContext0Response> createContext0(CreateContext0Request request);
 
     /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</p>
+     * 
      * @param request the request parameters of CreateContextDB  CreateContextDBRequest
      * @return CreateContextDBResponse
      */
     CompletableFuture<CreateContextDBResponse> createContextDB(CreateContextDBRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</p>
+     * 
      * @param request the request parameters of CreateCustomEndpoint  CreateCustomEndpointRequest
      * @return CreateCustomEndpointResponse
      */
@@ -149,12 +184,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateDBResponse> createDB(CreateDBRequest request);
 
     /**
+     * <b>description</b> :
+     * <hr>
+     * 
      * @param request the request parameters of CreateDBInstance  CreateDBInstanceRequest
      * @return CreateDBInstanceResponse
      */
     CompletableFuture<CreateDBInstanceResponse> createDBInstance(CreateDBInstanceRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>The CreateDataImportTask operation creates a data import task that supports importing SQL or CSV files stored in OSS, ECS, or directly uploaded into a target database instance. By specifying the instance ID, database name, engine type, data source (such as an OSS path), and import type, the system performs data write operations asynchronously or synchronously. This operation is applicable to scenarios such as data migration, initialization, and data backfill. A task ID is returned for subsequent status queries and management.</p>
+     * 
      * @param request the request parameters of CreateDataImportTask  CreateDataImportTaskRequest
      * @return CreateDataImportTaskResponse
      */
@@ -176,30 +217,45 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateGdnInstanceResponse> createGdnInstance(CreateGdnInstanceRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</p>
+     * 
      * @param request the request parameters of CreateGdnStandbyMember  CreateGdnStandbyMemberRequest
      * @return CreateGdnStandbyMemberResponse
      */
     CompletableFuture<CreateGdnStandbyMemberResponse> createGdnStandbyMember(CreateGdnStandbyMemberRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</p>
+     * 
      * @param request the request parameters of CreateMem0  CreateMem0Request
      * @return CreateMem0Response
      */
     CompletableFuture<CreateMem0Response> createMem0(CreateMem0Request request);
 
     /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</p>
+     * 
      * @param request the request parameters of CreateOpenSearch  CreateOpenSearchRequest
      * @return CreateOpenSearchResponse
      */
     CompletableFuture<CreateOpenSearchResponse> createOpenSearch(CreateOpenSearchRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</p>
+     * 
      * @param request the request parameters of CreateOpenSearchAccount  CreateOpenSearchAccountRequest
      * @return CreateOpenSearchAccountResponse
      */
     CompletableFuture<CreateOpenSearchAccountResponse> createOpenSearchAccount(CreateOpenSearchAccountRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</p>
+     * 
      * @param request the request parameters of CreateOpenSearchWhitelistGroup  CreateOpenSearchWhitelistGroupRequest
      * @return CreateOpenSearchWhitelistGroupResponse
      */
@@ -216,7 +272,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>创建Agent文件服务实例。</p>
+     * <p>Creates an Agent file service instance.</p>
      * 
      * @param request the request parameters of CreatePxfs  CreatePxfsRequest
      * @return CreatePxfsResponse
@@ -225,7 +281,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>签发Agent文件服务访问Token。</p>
+     * <p>Issues an access token for the Agent file service.</p>
      * 
      * @param request the request parameters of CreatePxfsAccessToken  CreatePxfsAccessTokenRequest
      * @return CreatePxfsAccessTokenResponse
@@ -234,7 +290,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>创建Agent文件服务租户。</p>
+     * <p>Creates an Agent file service tenant.</p>
      * 
      * @param request the request parameters of CreatePxfsTenant  CreatePxfsTenantRequest
      * @return CreatePxfsTenantResponse
@@ -243,7 +299,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>创建Agent文件服务租户身份。</p>
+     * <p>Creates a tenant identity for the Agent file service.</p>
      * 
      * @param request the request parameters of CreatePxfsUser  CreatePxfsUserRequest
      * @return CreatePxfsUserResponse
@@ -251,12 +307,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreatePxfsUserResponse> createPxfsUser(CreatePxfsUserRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</p>
+     * 
      * @param request the request parameters of CreatePxfuse  CreatePxfuseRequest
      * @return CreatePxfuseResponse
      */
     CompletableFuture<CreatePxfuseResponse> createPxfuse(CreatePxfuseRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>During the data synchronization phase, proactively initiates a diagnostic task for the replication task to check for issues such as latency, replication interruption, or data inconsistency.</p>
+     * 
      * @param request the request parameters of CreateRplInspectionTask  CreateRplInspectionTaskRequest
      * @return CreateRplInspectionTaskResponse
      */
@@ -269,6 +331,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateSQLEvaluateTaskResponse> createSQLEvaluateTask(CreateSQLEvaluateTaskRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</p>
+     * 
      * @param request the request parameters of CreateServiceAccount  CreateServiceAccountRequest
      * @return CreateServiceAccountResponse
      */
@@ -323,18 +388,27 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteAccountResponse> deleteAccount(DeleteAccountRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Deletes the custom endpoint of a specified database instance and disables access through the domain name.</p>
+     * 
      * @param request the request parameters of DeleteContext0  DeleteContext0Request
      * @return DeleteContext0Response
      */
     CompletableFuture<DeleteContext0Response> deleteContext0(DeleteContext0Request request);
 
     /**
+     * <b>description</b> :
+     * <p>Deletes the custom endpoint of a specified database instance and disables access through the domain name.</p>
+     * 
      * @param request the request parameters of DeleteContextDB  DeleteContextDBRequest
      * @return DeleteContextDBResponse
      */
     CompletableFuture<DeleteContextDBResponse> deleteContextDB(DeleteContextDBRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Deletes the custom endpoint of a specified database instance and disables access through the domain name.</p>
+     * 
      * @param request the request parameters of DeleteCustomEndpoint  DeleteCustomEndpointRequest
      * @return DeleteCustomEndpointResponse
      */
@@ -353,6 +427,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteDBInstanceResponse> deleteDBInstance(DeleteDBInstanceRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a created assessment task and performs subsequent data import operations.</p>
+     * 
      * @param request the request parameters of DeleteEvaluateAndImportTask  DeleteEvaluateAndImportTaskRequest
      * @return DeleteEvaluateAndImportTaskResponse
      */
@@ -365,24 +442,40 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteGdnInstanceResponse> deleteGdnInstance(DeleteGdnInstanceRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Deletes the custom endpoint of a specified database instance and disables access to the domain name.</p>
+     * 
      * @param request the request parameters of DeleteMem0  DeleteMem0Request
      * @return DeleteMem0Response
      */
     CompletableFuture<DeleteMem0Response> deleteMem0(DeleteMem0Request request);
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a custom endpoint of a specified database instance and disables access through the domain name.</p>
+     * 
      * @param request the request parameters of DeleteOpenSearch  DeleteOpenSearchRequest
      * @return DeleteOpenSearchResponse
      */
     CompletableFuture<DeleteOpenSearchResponse> deleteOpenSearch(DeleteOpenSearchRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</p>
+     * 
      * @param request the request parameters of DeleteOpenSearchAccount  DeleteOpenSearchAccountRequest
      * @return DeleteOpenSearchAccountResponse
      */
     CompletableFuture<DeleteOpenSearchAccountResponse> deleteOpenSearchAccount(DeleteOpenSearchAccountRequest request);
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Binary log files are retained for 15 days by default.</li>
+     * <li>The returned log list contains all logs whose log record end time is after the query start time and whose log record start time is before the query end time.</li>
+     * <li>If DownloadLink is not NULL, you can use the URL to download the backup file. The URL is valid for 2 days after it is generated. Download the file before the URL expires.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DeleteOpenSearchWhitelistGroup  DeleteOpenSearchWhitelistGroupRequest
      * @return DeleteOpenSearchWhitelistGroupResponse
      */
@@ -399,7 +492,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>删除Agent文件服务实例。</p>
+     * <p>Deletes an Agent file service instance.</p>
      * 
      * @param request the request parameters of DeletePxfs  DeletePxfsRequest
      * @return DeletePxfsResponse
@@ -408,7 +501,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>删除Agent文件服务租户身份。</p>
+     * <p>Deletes an Agent file service tenant identity.</p>
      * 
      * @param request the request parameters of DeletePxfsUser  DeletePxfsUserRequest
      * @return DeletePxfsUserResponse
@@ -416,12 +509,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeletePxfsUserResponse> deletePxfsUser(DeletePxfsUserRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a custom endpoint of a specified database instance and disables access through the domain name.</p>
+     * 
      * @param request the request parameters of DeletePxfuse  DeletePxfuseRequest
      * @return DeletePxfuseResponse
      */
     CompletableFuture<DeletePxfuseResponse> deletePxfuse(DeletePxfuseRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</p>
+     * 
      * @param request the request parameters of DeleteServiceAccount  DeleteServiceAccountRequest
      * @return DeleteServiceAccountResponse
      */
@@ -500,12 +599,26 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeBackupSetListResponse> describeBackupSetList(DescribeBackupSetListRequest request);
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Binary log files are retained for 15 days by default.</li>
+     * <li>The returned log list includes all log records whose end time is later than the query start time and whose start time is earlier than the query end time.</li>
+     * <li>If the value of DownloadLink is not NULL, you can use this URL to download the backup file. The URL is valid for two days after it is generated. Download the file before it expires.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeBinaryLogList  DescribeBinaryLogListRequest
      * @return DescribeBinaryLogListResponse
      */
     CompletableFuture<DescribeBinaryLogListResponse> describeBinaryLogList(DescribeBinaryLogListRequest request);
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Binary log files are retained for 15 days by default.</li>
+     * <li>The returned log list includes all logs log record end time is after the query start time and log record start time is before the query end time.</li>
+     * <li>When DownloadLink is not NULL, you can download the backup file from this URL. The URL is valid for 2 days after it is generated. Download the file before the expiration time.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeCdcClassList  DescribeCdcClassListRequest
      * @return DescribeCdcClassListResponse
      */
@@ -518,6 +631,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeCdcInfoResponse> describeCdcInfo(DescribeCdcInfoRequest request);
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Binary log files are retained for 15 days by default.</li>
+     * <li>The returned log list includes all log records whose end time is after the query start time and whose start time is before the query end time.</li>
+     * <li>If DownloadLink is not NULL, you can download the backup file by using this URL. The URL is valid for 2 days after it is generated. Download the file before it expires.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeCdcVersionList  DescribeCdcVersionListRequest
      * @return DescribeCdcVersionListResponse
      */
@@ -548,6 +668,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeColumnarInfoResponse> describeColumnarInfo(DescribeColumnarInfoRequest request);
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Binary log files are retained for 15 days by default.</li>
+     * <li>The returned log list includes all logs whose log record end time is after the query start time and whose log record start time is before the query end time.</li>
+     * <li>If DownloadLink is not NULL, you can download the backup file from this URL. The URL is valid for 2 days after it is generated. Download the file before the URL expires.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeColumnarVersionList  DescribeColumnarVersionListRequest
      * @return DescribeColumnarVersionListResponse
      */
@@ -560,48 +687,96 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeComponentPropetiesResponse> describeComponentPropeties(DescribeComponentPropetiesRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>PolarDB-X 2.0 SQL audit and analysis feature is free of charge, but Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
+     * </ul>
+     * </blockquote>
+     * 
      * @param request the request parameters of DescribeContext0Config  DescribeContext0ConfigRequest
      * @return DescribeContext0ConfigResponse
      */
     CompletableFuture<DescribeContext0ConfigResponse> describeContext0Config(DescribeContext0ConfigRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
+     * </ul>
+     * </blockquote>
+     * 
      * @param request the request parameters of DescribeContext0Info  DescribeContext0InfoRequest
      * @return DescribeContext0InfoResponse
      */
     CompletableFuture<DescribeContext0InfoResponse> describeContext0Info(DescribeContext0InfoRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
+     * </ul>
+     * </blockquote>
+     * 
      * @param request the request parameters of DescribeContext0SecurityIps  DescribeContext0SecurityIpsRequest
      * @return DescribeContext0SecurityIpsResponse
      */
     CompletableFuture<DescribeContext0SecurityIpsResponse> describeContext0SecurityIps(DescribeContext0SecurityIpsRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
+     * </ul>
+     * </blockquote>
+     * 
      * @param request the request parameters of DescribeContextDBConfig  DescribeContextDBConfigRequest
      * @return DescribeContextDBConfigResponse
      */
     CompletableFuture<DescribeContextDBConfigResponse> describeContextDBConfig(DescribeContextDBConfigRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
+     * </ul>
+     * </blockquote>
+     * 
      * @param request the request parameters of DescribeContextDBInfo  DescribeContextDBInfoRequest
      * @return DescribeContextDBInfoResponse
      */
     CompletableFuture<DescribeContextDBInfoResponse> describeContextDBInfo(DescribeContextDBInfoRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
+     * </ul>
+     * </blockquote>
+     * 
      * @param request the request parameters of DescribeContextDBSecurityIps  DescribeContextDBSecurityIpsRequest
      * @return DescribeContextDBSecurityIpsResponse
      */
     CompletableFuture<DescribeContextDBSecurityIpsResponse> describeContextDBSecurityIps(DescribeContextDBSecurityIpsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This operation retrieves the list of custom endpoints configured by the user, which facilitates the management and viewing of private connection or VPC endpoint service settings.</p>
+     * 
      * @param request the request parameters of DescribeCustomEndpointList  DescribeCustomEndpointListRequest
      * @return DescribeCustomEndpointListResponse
      */
     CompletableFuture<DescribeCustomEndpointListResponse> describeCustomEndpointList(DescribeCustomEndpointListRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This operation retrieves the list of custom endpoints configured by the user to facilitate the management and viewing of private connections or VPC endpoint service settings.</p>
+     * 
      * @param request the request parameters of DescribeDBInstanceAttribute  DescribeDBInstanceAttributeRequest
      * @return DescribeDBInstanceAttributeResponse
      */
@@ -614,6 +789,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDBInstanceConfigResponse> describeDBInstanceConfig(DescribeDBInstanceConfigRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Queries the list of custom endpoints configured by a user, which helps manage and view private connection or VPC endpoint service settings.</p>
+     * 
      * @param request the request parameters of DescribeDBInstanceEndpoint  DescribeDBInstanceEndpointRequest
      * @return DescribeDBInstanceEndpointResponse
      */
@@ -656,6 +834,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDBInstancesResponse> describeDBInstances(DescribeDBInstancesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Note: </p>
+     * <ul>
+     * <li>The <strong>endpoint</strong> differs from other API operations. For Chinese mainland regions and Singapore, use <strong>polardbx.aliyuncs.com</strong>. For other regions, use <strong>polardbx.{region id}.aliyunc.com</strong>.</li>
+     * <li>When debugging this API operation, if you receive a service unavailable error, verify that the <strong>endpoint</strong> is correct. You can switch the <strong>service address</strong> to <strong>Dubai</strong> or <strong>India</strong> and change the <strong>endpoint</strong> to <strong>polardbx.aliyuncs.com</strong>.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeDBNodePerformance  DescribeDBNodePerformanceRequest
      * @return DescribeDBNodePerformanceResponse
      */
@@ -692,6 +877,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeEvaluateAndImportTaskResponse> describeEvaluateAndImportTask(DescribeEvaluateAndImportTaskRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>The CreateDataImportTask operation creates a data import task. You can use this operation to import SQL or CSV files stored in OSS or ECS, or directly provided, into a destination database instance. By specifying the instance ID, database name, engine type, data source (such as an OSS path), and import type, the system performs data write operations asynchronously or synchronously. This operation is applicable to scenarios such as data migration, initialization, and data backfill. A task ID is returned for subsequent status queries and management.</p>
+     * 
      * @param request the request parameters of DescribeEvaluateAndImportTasks  DescribeEvaluateAndImportTasksRequest
      * @return DescribeEvaluateAndImportTasksResponse
      */
@@ -710,12 +898,26 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeGdnInstancesResponse> describeGdnInstances(DescribeGdnInstancesRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Log Service charges fees for storage space, read traffic, the number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
+     * </ul>
+     * </blockquote>
+     * 
      * @param request the request parameters of DescribeMem0Info  DescribeMem0InfoRequest
      * @return DescribeMem0InfoResponse
      */
     CompletableFuture<DescribeMem0InfoResponse> describeMem0Info(DescribeMem0InfoRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Log Service charges fees for storage space, read traffic, number of requests, data processing, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL Audit and Analysis</a>.</li>
+     * </ul>
+     * </blockquote>
+     * 
      * @param request the request parameters of DescribeMem0SecurityIps  DescribeMem0SecurityIpsRequest
      * @return DescribeMem0SecurityIpsResponse
      */
@@ -728,48 +930,84 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeOpenBackupSetResponse> describeOpenBackupSet(DescribeOpenBackupSetRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</p>
+     * 
      * @param request the request parameters of DescribeOpenSearchAccountInfo  DescribeOpenSearchAccountInfoRequest
      * @return DescribeOpenSearchAccountInfoResponse
      */
     CompletableFuture<DescribeOpenSearchAccountInfoResponse> describeOpenSearchAccountInfo(DescribeOpenSearchAccountInfoRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>During the data synchronization phase, proactively initiates a diagnostic task for the replication task to check for exceptions such as latency, replication interruption, or data inconsistency.</p>
+     * 
      * @param request the request parameters of DescribeOpenSearchConnectionInfo  DescribeOpenSearchConnectionInfoRequest
      * @return DescribeOpenSearchConnectionInfoResponse
      */
     CompletableFuture<DescribeOpenSearchConnectionInfoResponse> describeOpenSearchConnectionInfo(DescribeOpenSearchConnectionInfoRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
+     * </ul>
+     * </blockquote>
+     * 
      * @param request the request parameters of DescribeOpenSearchInfo  DescribeOpenSearchInfoRequest
      * @return DescribeOpenSearchInfoResponse
      */
     CompletableFuture<DescribeOpenSearchInfoResponse> describeOpenSearchInfo(DescribeOpenSearchInfoRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Queries the list of custom endpoints that you have configured. This operation helps you manage and view the settings of private connections or VPC endpoint services.</p>
+     * 
      * @param request the request parameters of DescribeOpenSearchInstances  DescribeOpenSearchInstancesRequest
      * @return DescribeOpenSearchInstancesResponse
      */
     CompletableFuture<DescribeOpenSearchInstancesResponse> describeOpenSearchInstances(DescribeOpenSearchInstancesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves the list of virtual private clouds (VPCs) available under your account for an instance, so that you can select an appropriate network environment when creating or managing database instances.</p>
+     * 
      * @param request the request parameters of DescribeOpenSearchNodes  DescribeOpenSearchNodesRequest
      * @return DescribeOpenSearchNodesResponse
      */
     CompletableFuture<DescribeOpenSearchNodesResponse> describeOpenSearchNodes(DescribeOpenSearchNodesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</p>
+     * 
      * @param request the request parameters of DescribeOpenSearchResourceUsage  DescribeOpenSearchResourceUsageRequest
      * @return DescribeOpenSearchResourceUsageResponse
      */
     CompletableFuture<DescribeOpenSearchResourceUsageResponse> describeOpenSearchResourceUsage(DescribeOpenSearchResourceUsageRequest request);
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Binary log files are retained for 15 days by default.</li>
+     * <li>The returned log list contains all log records whose log record end time is later than the query start time and whose log record start time is earlier than the query end time.</li>
+     * <li>If DownloadLink is not NULL, you can use this URL to download the backup file. This URL is valid for 2 days after it is generated. Download the file before the URL expires.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeOpenSearchTopology  DescribeOpenSearchTopologyRequest
      * @return DescribeOpenSearchTopologyResponse
      */
     CompletableFuture<DescribeOpenSearchTopologyResponse> describeOpenSearchTopology(DescribeOpenSearchTopologyRequest request);
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Binary log files are retained for 15 days by default.</li>
+     * <li>The returned log list includes all logs whose log record end time is after the query start time and whose log record start time is before the query end time.</li>
+     * <li>If DownloadLink is not NULL, you can use the URL to download the backup file. The URL is valid for 2 days after it is generated. Download the file before the URL expires.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeOpenSearchWhitelists  DescribeOpenSearchWhitelistsRequest
      * @return DescribeOpenSearchWhitelistsResponse
      */
@@ -801,7 +1039,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>查询Agent文件服务访问Token。</p>
+     * <p>Queries the access token for the Agent file service.</p>
      * 
      * @param request the request parameters of DescribePxfsAccessTokens  DescribePxfsAccessTokensRequest
      * @return DescribePxfsAccessTokensResponse
@@ -810,7 +1048,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>查询Agent文件服务实例信息。</p>
+     * <p>Queries the information about an Agent file service instance.</p>
      * 
      * @param request the request parameters of DescribePxfsInfo  DescribePxfsInfoRequest
      * @return DescribePxfsInfoResponse
@@ -819,7 +1057,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>查询Agent文件服务白名单。</p>
+     * <p>Queries the whitelist for the Agent file service.</p>
      * 
      * @param request the request parameters of DescribePxfsSecurityIps  DescribePxfsSecurityIpsRequest
      * @return DescribePxfsSecurityIpsResponse
@@ -828,7 +1066,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>查询Agent文件服务租户。</p>
+     * <p>Queries the Agent file service tenant.</p>
      * 
      * @param request the request parameters of DescribePxfsTenant  DescribePxfsTenantRequest
      * @return DescribePxfsTenantResponse
@@ -837,7 +1075,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>查询Agent文件服务租户身份。</p>
+     * <p>Queries the tenant identity of the Agent file service.</p>
      * 
      * @param request the request parameters of DescribePxfsUsers  DescribePxfsUsersRequest
      * @return DescribePxfsUsersResponse
@@ -845,24 +1083,44 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribePxfsUsersResponse> describePxfsUsers(DescribePxfsUsersRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
+     * </ul>
+     * </blockquote>
+     * 
      * @param request the request parameters of DescribePxfuseInfo  DescribePxfuseInfoRequest
      * @return DescribePxfuseInfoResponse
      */
     CompletableFuture<DescribePxfuseInfoResponse> describePxfuseInfo(DescribePxfuseInfoRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
+     * </ul>
+     * </blockquote>
+     * 
      * @param request the request parameters of DescribePxfuseSecurityIps  DescribePxfuseSecurityIpsRequest
      * @return DescribePxfuseSecurityIpsResponse
      */
     CompletableFuture<DescribePxfuseSecurityIpsResponse> describePxfuseSecurityIps(DescribePxfuseSecurityIpsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Queries the list of virtual private clouds (VPCs) available under your account. You can use this operation to select an appropriate network environment when creating or managing database instances.</p>
+     * 
      * @param request the request parameters of DescribeRdsVpcs  DescribeRdsVpcsRequest
      * @return DescribeRdsVpcsResponse
      */
     CompletableFuture<DescribeRdsVpcsResponse> describeRdsVpcs(DescribeRdsVpcsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Queries the list of available virtual private clouds (VPCs) under your account for an instance, so that you can select an appropriate network environment when creating or managing database instances.</p>
+     * 
      * @param request the request parameters of DescribeRdsVswitches  DescribeRdsVswitchesRequest
      * @return DescribeRdsVswitchesResponse
      */
@@ -875,6 +1133,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>During the data synchronization phase, proactively initiates a diagnostic task for the replication task to check for exceptions such as latency, interruption, or data inconsistency.</p>
+     * 
      * @param request the request parameters of DescribeRplInspectionTask  DescribeRplInspectionTaskRequest
      * @return DescribeRplInspectionTaskResponse
      */
@@ -893,6 +1154,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeSecurityIpsResponse> describeSecurityIps(DescribeSecurityIpsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</p>
+     * 
      * @param request the request parameters of DescribeServiceAccount  DescribeServiceAccountRequest
      * @return DescribeServiceAccountResponse
      */
@@ -911,6 +1175,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeSlowLogRecordsResponse> describeSlowLogRecords(DescribeSlowLogRecordsRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data delivery. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
+     * </ul>
+     * </blockquote>
+     * 
      * @param request the request parameters of DescribeSqlAuditInfo  DescribeSqlAuditInfoRequest
      * @return DescribeSqlAuditInfoResponse
      */
@@ -929,12 +1200,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeStoragePoolInfoResponse> describeStoragePoolInfo(DescribeStoragePoolInfoRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>The CreateDataImportTask operation creates a data import task. This operation supports importing SQL or CSV files stored in OSS or ECS, or directly provided, into a destination database instance. By specifying the instance ID, database name, engine type, data source (such as an OSS path), and import type, the system performs data write operations asynchronously or synchronously. This operation is applicable to scenarios such as data migration, initialization, and data backfill. A task ID is returned for subsequent status queries and management.</p>
+     * 
      * @param request the request parameters of DescribeStructureImportTaskInfo  DescribeStructureImportTaskInfoRequest
      * @return DescribeStructureImportTaskInfoResponse
      */
     CompletableFuture<DescribeStructureImportTaskInfoResponse> describeStructureImportTaskInfo(DescribeStructureImportTaskInfoRequest request);
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Binary log files are retained for 15 days by default.</li>
+     * <li>The returned log list includes all log records whose end time is after the query start time and whose start time is before the query end time.</li>
+     * <li>If DownloadLink is not NULL, you can use this URL to download the backup file. This URL is valid for 2 days after it is generated. Download the file before it expires.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeSupabaseApiKey  DescribeSupabaseApiKeyRequest
      * @return DescribeSupabaseApiKeyResponse
      */
@@ -950,12 +1231,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeSupabaseInstanceAttributeResponse> describeSupabaseInstanceAttribute(DescribeSupabaseInstanceAttributeRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves the list of custom endpoints configured by the user to facilitate the management and viewing of private connections or VPC endpoint service settings.</p>
+     * 
      * @param request the request parameters of DescribeSupabaseInstances  DescribeSupabaseInstancesRequest
      * @return DescribeSupabaseInstancesResponse
      */
     CompletableFuture<DescribeSupabaseInstancesResponse> describeSupabaseInstances(DescribeSupabaseInstancesRequest request);
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Binary log files are retained for 15 days by default.</li>
+     * <li>The returned log list includes all log records whose record end time is after the query start time and whose record start time is before the query end time.</li>
+     * <li>If DownloadLink is not NULL, you can use this URL to download the backup file. The URL is valid for two days after it is generated. Download the file before it expires.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeSupabaseIpWhitelist  DescribeSupabaseIpWhitelistRequest
      * @return DescribeSupabaseIpWhitelistResponse
      */
@@ -986,6 +1277,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeUserEncryptionKeyListResponse> describeUserEncryptionKeyList(DescribeUserEncryptionKeyListRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</p>
+     * 
      * @param request the request parameters of DisableOpenSearchPublicEndpoint  DisableOpenSearchPublicEndpointRequest
      * @return DisableOpenSearchPublicEndpointResponse
      */
@@ -998,12 +1292,20 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DisableRightsSeparationResponse> disableRightsSeparation(DisableRightsSeparationRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>After the SQL audit and analysis feature is disabled, data is no longer written to Simple Log Service. However, you can still view historical data, which incurs storage and indexing fees. You can delete all data to deactivate Simple Log Service. After Simple Log Service is deactivated, no further fees are incurred. For more information about deactivating Simple Log Service, see <a href="https://help.aliyun.com/document_detail/90650.html">Deactivate Simple Log Service</a>.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of DisableSqlAudit  DisableSqlAuditRequest
      * @return DisableSqlAuditResponse
      */
     CompletableFuture<DisableSqlAuditResponse> disableSqlAudit(DisableSqlAuditRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</p>
+     * 
      * @param request the request parameters of EnableOpenSearchPublicEndpoint  EnableOpenSearchPublicEndpointRequest
      * @return EnableOpenSearchPublicEndpointResponse
      */
@@ -1016,12 +1318,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<EnableRightsSeparationResponse> enableRightsSeparation(EnableRightsSeparationRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
+     * </ul>
+     * </blockquote>
+     * 
      * @param request the request parameters of EnableSqlAudit  EnableSqlAuditRequest
      * @return EnableSqlAuditResponse
      */
     CompletableFuture<EnableSqlAuditResponse> enableSqlAudit(EnableSqlAuditRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Deletes the custom endpoint of a specified database instance and disables access through the domain name.</p>
+     * 
      * @param request the request parameters of ExecuteMetaQuery  ExecuteMetaQueryRequest
      * @return ExecuteMetaQueryResponse
      */
@@ -1100,12 +1412,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyContextDBSecurityIpsResponse> modifyContextDBSecurityIps(ModifyContextDBSecurityIpsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>In PolarDB-X, in addition to the default primary endpoint and read-only endpoint, you can create custom endpoints to implement more flexible read/write splitting, load balancing, or business isolation strategies. The ModifyCustomEndpoint operation allows you to dynamically adjust the attributes of these custom endpoints without restarting the instance.</p>
+     * 
      * @param request the request parameters of ModifyCustomEndpoint  ModifyCustomEndpointRequest
      * @return ModifyCustomEndpointResponse
      */
     CompletableFuture<ModifyCustomEndpointResponse> modifyCustomEndpoint(ModifyCustomEndpointRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Deletes the custom endpoint of a specified database instance and disables access through the domain name.</p>
+     * 
      * @param request the request parameters of ModifyCustomEndpointNet  ModifyCustomEndpointNetRequest
      * @return ModifyCustomEndpointNetResponse
      */
@@ -1136,6 +1454,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyDBInstanceDescriptionResponse> modifyDBInstanceDescription(ModifyDBInstanceDescriptionRequest request);
 
     /**
+     * <b>description</b> :
+     * <hr>
+     * 
      * @param request the request parameters of ModifyDBInstanceMaintainTime  ModifyDBInstanceMaintainTimeRequest
      * @return ModifyDBInstanceMaintainTimeResponse
      */
@@ -1209,7 +1530,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>修改Agent文件服务白名单。</p>
+     * <p>Modifies the whitelist of the Agent file service.</p>
      * 
      * @param request the request parameters of ModifyPxfsSecurityIps  ModifyPxfsSecurityIpsRequest
      * @return ModifyPxfsSecurityIpsResponse
@@ -1288,12 +1609,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ReleaseColdDataVolumeResponse> releaseColdDataVolume(ReleaseColdDataVolumeRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This operation is used to confirm that no active connections exist before a rollback task, ensuring operation safety.</p>
+     * 
      * @param request the request parameters of ReleaseContext0PublicConnection  ReleaseContext0PublicConnectionRequest
      * @return ReleaseContext0PublicConnectionResponse
      */
     CompletableFuture<ReleaseContext0PublicConnectionResponse> releaseContext0PublicConnection(ReleaseContext0PublicConnectionRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This operation is used to confirm that no active connections exist before a rollback task, ensuring operation safety.</p>
+     * 
      * @param request the request parameters of ReleaseContextDBPublicConnection  ReleaseContextDBPublicConnectionRequest
      * @return ReleaseContextDBPublicConnectionResponse
      */
@@ -1306,6 +1633,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ReleaseInstancePublicConnectionResponse> releaseInstancePublicConnection(ReleaseInstancePublicConnectionRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This operation is used to verify that no active connections exist before a rollback task to ensure operational safety.</p>
+     * 
      * @param request the request parameters of ReleaseMem0PublicConnection  ReleaseMem0PublicConnectionRequest
      * @return ReleaseMem0PublicConnectionResponse
      */
@@ -1313,7 +1643,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>关闭Agent文件服务公网连接。</p>
+     * <p>Disables the public network connection for the Agent file service.</p>
      * 
      * @param request the request parameters of ReleasePxfsPublicConnection  ReleasePxfsPublicConnectionRequest
      * @return ReleasePxfsPublicConnectionResponse
@@ -1376,7 +1706,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>重启Agent文件服务实例。</p>
+     * <p>Restarts an Agent file service instance.</p>
      * 
      * @param request the request parameters of RestartPxfs  RestartPxfsRequest
      * @return RestartPxfsResponse
@@ -1403,7 +1733,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>吊销Agent文件服务访问Token。</p>
+     * <p>Revokes an access token for the Agent file service.</p>
      * 
      * @param request the request parameters of RevokePxfsAccessToken  RevokePxfsAccessTokenRequest
      * @return RevokePxfsAccessTokenResponse
@@ -1420,6 +1750,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ScaleInOpenSearchResponse> scaleInOpenSearch(ScaleInOpenSearchRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</p>
+     * 
      * @param request the request parameters of ScaleOutOpenSearch  ScaleOutOpenSearchRequest
      * @return ScaleOutOpenSearchResponse
      */
@@ -1480,6 +1813,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateBackupPolicyResponse> updateBackupPolicy(UpdateBackupPolicyRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</p>
+     * 
      * @param request the request parameters of UpdateCustinsParam  UpdateCustinsParamRequest
      * @return UpdateCustinsParamResponse
      */
@@ -1523,7 +1859,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>升级Agent文件服务小版本。</p>
+     * <p>Upgrades the minor version of the Agent file service.</p>
      * 
      * @param request the request parameters of UpgradePxfsVersion  UpgradePxfsVersionRequest
      * @return UpgradePxfsVersionResponse

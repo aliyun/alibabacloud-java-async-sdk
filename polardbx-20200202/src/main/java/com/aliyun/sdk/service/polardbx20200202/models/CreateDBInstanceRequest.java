@@ -486,7 +486,14 @@ public class CreateDBInstanceRequest extends Request {
         } 
 
         /**
-         * AutoRenew.
+         * <p>Specifies whether to enable auto-renewal. Default value: true. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Enables auto-renewal.</li>
+         * <li><strong>false</strong>: Disables auto-renewal.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -495,7 +502,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * CNNodeCount.
+         * <p>The number of compute nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder CNNodeCount(Integer CNNodeCount) {
             this.putQueryParameter("CNNodeCount", CNNodeCount);
@@ -504,7 +514,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request. You must specify a unique token for each request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxx-xxx</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -513,7 +526,42 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * CnClass.
+         * <p>The specifications of compute nodes. Required when you create an Enterprise Edition instance. Not required for a Standard Edition instance.</p>
+         * <p>Local node specifications for Enterprise Edition:</p>
+         * <ul>
+         * <li><strong>polarx.x4.medium.2e</strong>: 2 vCPUs, 8 GB (general-purpose)</li>
+         * <li><strong>polarx.x4.large.2e</strong>: 4 vCPUs, 16 GB (general-purpose)</li>
+         * <li><strong>polarx.x4.xlarge.2e</strong>: 8 vCPUs, 32 GB (general-purpose)</li>
+         * <li><strong>polarx.x4.2xlarge.2e</strong>: 16 vCPUs, 64 GB (general-purpose)</li>
+         * <li><strong>polarx.x8.large.2e</strong>: 4 vCPUs, 32 GB (dedicated)</li>
+         * <li><strong>polarx.x2.large.2x</strong>: 8 vCPUs, 16 GB (dedicated)</li>
+         * <li><strong>polarx.x4.xlarge.2x</strong>: 8 vCPUs, 32 GB (dedicated)</li>
+         * <li><strong>polarx.x8.xlarge.2e</strong>: 8 vCPUs, 64 GB (dedicated)</li>
+         * <li><strong>polarx.x8.2xlarge.2e</strong>: 16 vCPUs, 128 GB (dedicated)</li>
+         * <li><strong>polarx.x4.4xlarge.2e</strong>: 32 vCPUs, 128 GB (dedicated)</li>
+         * <li><strong>polarx.x8.4xlarge.2e</strong>: 32 vCPUs, 256 GB (dedicated)</li>
+         * <li><strong>polarx.st.8xlarge.2e</strong>: 60 vCPUs, 470 GB (dedicated)</li>
+         * <li><strong>polarx.st.12xlarge.2e</strong>: 90 vCPUs, 720 GB (dedicated)</li>
+         * </ul>
+         * <p>Cloud node specifications for Enterprise Edition:</p>
+         * <ul>
+         * <li><strong>polarx.x4.medium.c2e</strong>: 2 vCPUs, 8 GB (general-purpose)</li>
+         * <li><strong>polarx.x4.large.c2e</strong>: 4 vCPUs, 16 GB (general-purpose)</li>
+         * <li><strong>polarx.x4.xlarge.c2e</strong>: 8 vCPUs, 32 GB (general-purpose)</li>
+         * <li><strong>polarx.x4.2xlarge.c2e</strong>: 16 vCPUs, 64 GB (general-purpose)</li>
+         * <li><strong>polarx.x8.large.c2e</strong>: 4 vCPUs, 32 GB (dedicated)</li>
+         * <li><strong>polarx.x2.large.c2x</strong>: 8 vCPUs, 16 GB (dedicated)</li>
+         * <li><strong>polarx.x4.xlarge.c2x</strong>: 8 vCPUs, 32 GB (dedicated)</li>
+         * <li><strong>polarx.x8.xlarge.c2e</strong>: 8 vCPUs, 64 GB (dedicated)</li>
+         * <li><strong>polarx.x8.2xlarge.c2e</strong>: 16 vCPUs, 128 GB (dedicated)</li>
+         * <li><strong>polarx.x4.4xlarge.c2e</strong>: 32 vCPUs, 128 GB (dedicated)</li>
+         * <li><strong>polarx.x8.4xlarge.c2e</strong>: 32 vCPUs, 256 GB (dedicated)</li>
+         * <li><strong>polarx.st.8xlarge.c2e</strong>: 60 vCPUs, 470 GB (dedicated)</li>
+         * <li><strong>polarx.st.12xlarge.c2e</strong>: 90 vCPUs, 720 GB (dedicated)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>polarx.x4.medium.2e</p>
          */
         public Builder cnClass(String cnClass) {
             this.putQueryParameter("CnClass", cnClass);
@@ -522,7 +570,73 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * DBNodeClass.
+         * <p>Required when you create a Standard Edition instance. Not required for an Enterprise Edition instance.</p>
+         * <p>Local disk specifications for Standard Edition:</p>
+         * <ul>
+         * <li><strong>mysql.n8.small.25</strong>: 1 vCPU, 8 GB (general-purpose)</li>
+         * <li><strong>mysql.n2.medium.25</strong>: 2 vCPUs, 4 GB (general-purpose)</li>
+         * <li><strong>mysql.n4.medium.25</strong>: 2 vCPUs, 8 GB (general-purpose)</li>
+         * <li><strong>mysql.n8.medium.25</strong>: 2 vCPUs, 16 GB (general-purpose)</li>
+         * <li><strong>mysql.n2.large.25</strong>: 4 vCPUs, 8 GB (general-purpose)</li>
+         * <li><strong>mysql.n4.large.25</strong>: 4 vCPUs, 16 GB (general-purpose)</li>
+         * <li><strong>mysql.n8.large.25</strong>: 4 vCPUs, 32 GB (general-purpose)</li>
+         * <li><strong>mysql.n2.xlarge.25</strong>: 8 vCPUs, 16 GB (general-purpose)</li>
+         * <li><strong>mysql.n4.xlarge.25</strong>: 8 vCPUs, 32 GB (general-purpose)</li>
+         * <li><strong>mysql.n8.xlarge.25</strong>: 8 vCPUs, 64 GB (general-purpose)</li>
+         * <li><strong>mysql.n2.2xlarge.25</strong>: 16 vCPUs, 32 GB (general-purpose)</li>
+         * <li><strong>mysql.n4.2xlarge.25</strong>: 16 vCPUs, 64 GB (general-purpose)</li>
+         * <li><strong>mysql.n8.2xlarge.25</strong>: 16 vCPUs, 128 GB (general-purpose)</li>
+         * <li><strong>mysql.x2.medium.25</strong>: 2 vCPUs, 4 GB (dedicated)</li>
+         * <li><strong>mysql.x4.medium.25</strong>: 2 vCPUs, 8 GB (dedicated)</li>
+         * <li><strong>mysql.x8.medium.25</strong>: 2 vCPUs, 16 GB (dedicated)</li>
+         * <li><strong>mysql.x2.large.25</strong>: 4 vCPUs, 8 GB (dedicated)</li>
+         * <li><strong>mysql.x4.large.25</strong>: 4 vCPUs, 16 GB (dedicated)</li>
+         * <li><strong>mysql.x8.large.25</strong>: 4 vCPUs, 32 GB (dedicated)</li>
+         * <li><strong>mysql.x2.xlarge.25</strong>: 8 vCPUs, 16 GB (dedicated)</li>
+         * <li><strong>mysql.x4.xlarge.25</strong>: 8 vCPUs, 32 GB (dedicated)</li>
+         * <li><strong>mysql.x8.xlarge.25</strong>: 8 vCPUs, 64 GB (dedicated)</li>
+         * <li><strong>mysql.x2.2xlarge.25</strong>: 16 vCPUs, 32 GB (dedicated)</li>
+         * <li><strong>mysql.x4.2xlarge.25</strong>: 16 vCPUs, 64 GB (dedicated)</li>
+         * <li><strong>mysql.x8.2xlarge.25</strong>: 16 vCPUs, 128 GB (dedicated)</li>
+         * <li><strong>mysql.x4.4xlarge.25</strong>: 32 vCPUs, 128 GB (dedicated)</li>
+         * <li><strong>mysql.x8.4xlarge.25</strong>: 32 vCPUs, 256 GB (dedicated)</li>
+         * <li><strong>mysql.x4.8xlarge.25</strong>: 64 vCPUs, 256 GB (dedicated)</li>
+         * <li><strong>mysql.x8.8xlarge.25</strong>: 64 vCPUs, 512 GB (dedicated)</li>
+         * <li><strong>mysql.st.12xlarge.25</strong>: 90 vCPUs, 720 GB (dedicated)</li>
+         * </ul>
+         * <p>Cloud disk specifications for Standard Edition:</p>
+         * <ul>
+         * <li><strong>polarx.mysql.n2.medium.c25</strong>: 2 vCPUs, 4 GB (general-purpose)</li>
+         * <li><strong>polarx.mysql.n4.medium.c25</strong>: 2 vCPUs, 8 GB (general-purpose)</li>
+         * <li><strong>polarx.mysql.n8.medium.c25</strong>: 2 vCPUs, 16 GB (general-purpose)</li>
+         * <li><strong>polarx.mysql.n2.large.c25</strong>: 4 vCPUs, 8 GB (general-purpose)</li>
+         * <li><strong>polarx.mysql.n4.large.c25</strong>: 4 vCPUs, 16 GB (general-purpose)</li>
+         * <li><strong>polarx.mysql.n8.large.c25</strong>: 4 vCPUs, 32 GB (general-purpose)</li>
+         * <li><strong>polarx.mysql.n2.xlarge.c25</strong>: 8 vCPUs, 16 GB (general-purpose)</li>
+         * <li><strong>polarx.mysql.n4.xlarge.c25</strong>: 8 vCPUs, 32 GB (general-purpose)</li>
+         * <li><strong>polarx.mysql.n8.xlarge.c25</strong>: 8 vCPUs, 64 GB (general-purpose)</li>
+         * <li><strong>polarx.mysql.x2.medium.c25</strong>: 2 vCPUs, 4 GB (dedicated)</li>
+         * <li><strong>polarx.mysql.x4.medium.c25</strong>: 2 vCPUs, 8 GB (dedicated)</li>
+         * <li><strong>polarx.mysql.x8.medium.c25</strong>: 2 vCPUs, 16 GB (dedicated)</li>
+         * <li><strong>polarx.mysql.x2.large.c25</strong>: 4 vCPUs, 8 GB (dedicated)</li>
+         * <li><strong>polarx.mysql.x4.large.c25</strong>: 4 vCPUs, 16 GB (dedicated)</li>
+         * <li><strong>polarx.mysql.x8.large.c25</strong>: 4 vCPUs, 32 GB (dedicated)</li>
+         * <li><strong>polarx.mysql.x2.xlarge.c25</strong>: 8 vCPUs, 16 GB (dedicated)</li>
+         * <li><strong>polarx.mysql.x4.xlarge.c25</strong>: 8 vCPUs, 32 GB (dedicated)</li>
+         * <li><strong>polarx.mysql.x8.xlarge.c25</strong>: 8 vCPUs, 64 GB (dedicated)</li>
+         * <li><strong>polarx.mysql.x2.2xlarge.c25</strong>: 16 vCPUs, 32 GB (dedicated)</li>
+         * <li><strong>polarx.mysql.x4.2xlarge.c25</strong>: 16 vCPUs, 64 GB (dedicated)</li>
+         * <li><strong>polarx.mysql.x8.2xlarge.c25</strong>: 16 vCPUs, 128 GB (dedicated)</li>
+         * <li><strong>polarx.mysql.x2.4xlarge.c25</strong>: 32 vCPUs, 64 GB (dedicated)</li>
+         * <li><strong>polarx.mysql.x4.4xlarge.c25</strong>: 32 vCPUs, 128 GB (dedicated)</li>
+         * <li><strong>polarx.mysql.x8.4xlarge.c25</strong>: 32 vCPUs, 256 GB (dedicated)</li>
+         * <li><strong>polarx.mysql.x2.8xlarge.c25</strong>: 64 vCPUs, 128 GB (dedicated)</li>
+         * <li><strong>polarx.mysql.x4.8xlarge.c25</strong>: 64 vCPUs, 256 GB (dedicated)</li>
+         * <li><strong>polarx.mysql.x8.8xlarge.c25</strong>: 64 vCPUs, 512 GB (dedicated)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>polarx.x4.2xlarge.2d</p>
          */
         public Builder DBNodeClass(String DBNodeClass) {
             this.putQueryParameter("DBNodeClass", DBNodeClass);
@@ -531,7 +645,14 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * DBNodeCount.
+         * <p>The number of nodes in the instance. Valid values:</p>
+         * <ul>
+         * <li>Standard Edition: 1</li>
+         * <li>Enterprise Edition: 2 or greater</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder DBNodeCount(Integer DBNodeCount) {
             this.putQueryParameter("DBNodeCount", DBNodeCount);
@@ -540,7 +661,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * DNNodeCount.
+         * <p>The number of storage nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder DNNodeCount(Integer DNNodeCount) {
             this.putQueryParameter("DNNodeCount", DNNodeCount);
@@ -549,7 +673,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ods_api_apidata_mobilegame_pay_api_di</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -558,7 +685,50 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * DnClass.
+         * <p>The specifications of storage nodes. Required when you create an Enterprise Edition instance. Not required for a Standard Edition instance.</p>
+         * <p>Local node specifications for Enterprise Edition:</p>
+         * <ul>
+         * <li><strong>mysql.n2.medium.25</strong>: 2 vCPUs, 4 GB (general-purpose)</li>
+         * <li><strong>mysql.n4.medium.25</strong>: 2 vCPUs, 8 GB (general-purpose)</li>
+         * <li><strong>mysql.n2.large.25</strong>: 4 vCPUs, 8 GB (general-purpose)</li>
+         * <li><strong>mysql.n4.large.25</strong>: 4 vCPUs, 16 GB (general-purpose)</li>
+         * <li><strong>mysql.n4.xlarge.25</strong>: 8 vCPUs, 32 GB (general-purpose)</li>
+         * <li><strong>mysql.n4.2xlarge.25</strong>: 16 vCPUs, 64 GB (general-purpose)</li>
+         * <li><strong>mysql.x4.large.25</strong>: 4 vCPUs, 16 GB (dedicated)</li>
+         * <li><strong>mysql.x8.large.25</strong>: 4 vCPUs, 32 GB (dedicated)</li>
+         * <li><strong>mysql.x2.xlarge.25</strong>: 8 vCPUs, 16 GB (dedicated)</li>
+         * <li><strong>mysql.x8.xlarge.25</strong>: 8 vCPUs, 64 GB (dedicated)</li>
+         * <li><strong>mysql.x8.2xlarge.25</strong>: 16 vCPUs, 128 GB (dedicated)</li>
+         * <li><strong>mysql.x4.4xlarge.25</strong>: 32 vCPUs, 128 GB (dedicated)</li>
+         * <li><strong>mysql.x8.4xlarge.25</strong>: 32 vCPUs, 256 GB (dedicated)</li>
+         * <li><strong>mysql.st.8xlarge.25</strong>: 60 vCPUs, 470 GB (dedicated)</li>
+         * <li><strong>mysql.st.12xlarge.25</strong>: 90 vCPUs, 720 GB (dedicated)</li>
+         * <li><strong>mysql.x8.45xlarge.25</strong>: 180 vCPUs, 1440 GB (dedicated)</li>
+         * <li><strong>mysql.x8.60xlarge.25</strong>: 240 vCPUs, 1920 GB (dedicated)</li>
+         * </ul>
+         * <p>Cloud node specifications for Enterprise Edition:</p>
+         * <ul>
+         * <li><strong>polarx.mysql.n2.medium.c25</strong>: 2 vCPUs, 4 GB (general-purpose)</li>
+         * <li><strong>polarx.mysql.n4.medium.c25</strong>: 2 vCPUs, 8 GB (general-purpose)</li>
+         * <li><strong>polarx.mysql.n2.large.c25</strong>: 4 vCPUs, 8 GB (general-purpose)</li>
+         * <li><strong>polarx.mysql.n4.large.c25</strong>: 4 vCPUs, 16 GB (general-purpose)</li>
+         * <li><strong>polarx.mysql.n4.xlarge.c25</strong>: 8 vCPUs, 32 GB (general-purpose)</li>
+         * <li><strong>polarx.mysql.n4.2xlarge.c25</strong>: 16 vCPUs, 64 GB (general-purpose)</li>
+         * <li><strong>polarx.mysql.x4.large.c25</strong>: 4 vCPUs, 16 GB (dedicated)</li>
+         * <li><strong>polarx.mysql.x8.large.c25</strong>: 4 vCPUs, 32 GB (dedicated)</li>
+         * <li><strong>polarx.mysql.x2.xlarge.c25</strong>: 8 vCPUs, 16 GB (dedicated)</li>
+         * <li><strong>polarx.mysql.x8.xlarge.c25</strong>: 8 vCPUs, 64 GB (dedicated)</li>
+         * <li><strong>polarx.mysql.x8.2xlarge.c25</strong>: 16 vCPUs, 128 GB (dedicated)</li>
+         * <li><strong>polarx.mysql.x4.4xlarge.c25</strong>: 32 vCPUs, 128 GB (dedicated)</li>
+         * <li><strong>polarx.mysql.x8.4xlarge.c25</strong>: 32 vCPUs, 256 GB (dedicated)</li>
+         * <li><strong>polarx.mysql.st.8xlarge.c25</strong>: 60 vCPUs, 470 GB (dedicated)</li>
+         * <li><strong>polarx.mysql.st.12xlarge.c25</strong>: 90 vCPUs, 720 GB (dedicated)</li>
+         * <li><strong>polarx.mysql.x8.45xlarge.c25</strong>: 180 vCPUs, 1440 GB (dedicated)</li>
+         * <li><strong>polarx.mysql.x8.60xlarge.c25</strong>: 240 vCPUs, 1920 GB (dedicated)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql.n4.medium.25</p>
          */
         public Builder dnClass(String dnClass) {
             this.putQueryParameter("DnClass", dnClass);
@@ -567,7 +737,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * DnStorageSpace.
+         * <p>The disk space of the storage nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1500</p>
          */
         public Builder dnStorageSpace(String dnStorageSpace) {
             this.putQueryParameter("DnStorageSpace", dnStorageSpace);
@@ -576,10 +749,11 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
+         * <p>The MySQL DPI engine version. Valid values: 5.7 and 8.0.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>2.0</p>
+         * <p>5.7</p>
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -588,7 +762,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * ExtraParams.
+         * <p>The extra parameters.</p>
          */
         public Builder extraParams(java.util.Map<String, String> extraParams) {
             String extraParamsShrink = shrink(extraParams, "ExtraParams", "json");
@@ -598,7 +772,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * IsColumnarReadDBInstance.
+         * <p>Specifies whether the instance to be created is a column store read-only instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isColumnarReadDBInstance(Boolean isColumnarReadDBInstance) {
             this.putQueryParameter("IsColumnarReadDBInstance", isColumnarReadDBInstance);
@@ -607,7 +784,14 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * IsReadDBInstance.
+         * <p>Specifies whether the instance is a read-only instance. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Yes.</li>
+         * <li><strong>false</strong>: No.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isReadDBInstance(Boolean isReadDBInstance) {
             this.putQueryParameter("IsReadDBInstance", isReadDBInstance);
@@ -616,7 +800,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * NetworkType.
+         * <p>The network type of the instance. Only VPC is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc</p>
          */
         public Builder networkType(String networkType) {
             this.putQueryParameter("NetworkType", networkType);
@@ -625,7 +812,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * OriginMinorVersion.
+         * <p>The minor engine version. This parameter is generally not required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>polardb-2.4.0_standard_xcluster8.4.20-20260331</p>
          */
         public Builder originMinorVersion(String originMinorVersion) {
             this.putQueryParameter("OriginMinorVersion", originMinorVersion);
@@ -634,6 +824,11 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
+         * <p>The billing method of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>PREPAY</strong>: subscription</li>
+         * <li><strong>POSTPAY</strong>: pay-as-you-go</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -646,7 +841,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * Period.
+         * <p>The billing cycle. Valid values for subscription instances: Year and Month. Default value for pay-as-you-go instances: Hour.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -655,7 +853,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * PrimaryDBInstanceName.
+         * <p>The name of the primary instance. This parameter is required if the instance is a read-only instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxc-*********</p>
          */
         public Builder primaryDBInstanceName(String primaryDBInstanceName) {
             this.putQueryParameter("PrimaryDBInstanceName", primaryDBInstanceName);
@@ -664,7 +865,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * PrimaryZone.
+         * <p>The primary zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen-e</p>
          */
         public Builder primaryZone(String primaryZone) {
             this.putQueryParameter("PrimaryZone", primaryZone);
@@ -673,6 +877,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
+         * <p>The region of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -685,7 +890,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID. This parameter is not supported and can be left empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -694,7 +902,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * SecondaryZone.
+         * <p>The secondary zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen-a</p>
          */
         public Builder secondaryZone(String secondaryZone) {
             this.putQueryParameter("SecondaryZone", secondaryZone);
@@ -703,7 +914,14 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * Series.
+         * <p>The edition of the instance. Valid values:</p>
+         * <ul>
+         * <li>enterprise: Enterprise Edition</li>
+         * <li>standard: Standard Edition</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>enterprise</p>
          */
         public Builder series(String series) {
             this.putQueryParameter("Series", series);
@@ -712,7 +930,14 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * StorageType.
+         * <p>The storage type. Valid values:</p>
+         * <ul>
+         * <li>custom_local_ssd: local disk</li>
+         * <li>cloud_auto: cloud disk</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_auto</p>
          */
         public Builder storageType(String storageType) {
             this.putQueryParameter("StorageType", storageType);
@@ -721,7 +946,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * TertiaryZone.
+         * <p>The third active zone in a Three-zone deployment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen-e</p>
          */
         public Builder tertiaryZone(String tertiaryZone) {
             this.putQueryParameter("TertiaryZone", tertiaryZone);
@@ -730,6 +958,11 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
+         * <p>The topology type. Valid values:</p>
+         * <ul>
+         * <li><strong>3azones</strong>: Three-zone deployment (three active zones).</li>
+         * <li><strong>1azone</strong>: Single active zone.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -742,7 +975,13 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * UsedTime.
+         * <p>The subscription duration. This parameter is required when the billing method is set to subscription.</p>
+         * <blockquote>
+         * <p>If Period is set to Year, valid values are 1, 2, and 3.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder usedTime(Integer usedTime) {
             this.putQueryParameter("UsedTime", usedTime);
@@ -751,7 +990,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>VPC ID。</p>
+         * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-*****</p>
@@ -763,7 +1002,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * <p>The vSwitch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-*********</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -772,7 +1014,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * <p>The zone of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-a</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

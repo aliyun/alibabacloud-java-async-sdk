@@ -117,7 +117,7 @@ public class AllocateContextDBPublicConnectionRequest extends Request {
         } 
 
         /**
-         * <p>公网连接串前缀（无需包含 -pub）；不传时按目标物理实例名生成</p>
+         * <p>The prefix of the public network connection string.</p>
          * 
          * <strong>example:</strong>
          * <p>pxc-**************</p>
@@ -129,7 +129,7 @@ public class AllocateContextDBPublicConnectionRequest extends Request {
         }
 
         /**
-         * <p>关联的 PolarDB-X 实例名（pxc- 前缀）</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,7 +142,7 @@ public class AllocateContextDBPublicConnectionRequest extends Request {
         }
 
         /**
-         * <p>目标节点类型：service 或 dashboard</p>
+         * <p>The type of the target node. Valid values: service and dashboard.</p>
          * 
          * <strong>example:</strong>
          * <p>service</p>
@@ -154,7 +154,7 @@ public class AllocateContextDBPublicConnectionRequest extends Request {
         }
 
         /**
-         * <p>公网端口；不传时 service 使用 4040，dashboard 使用 8080</p>
+         * <p>The port.</p>
          * 
          * <strong>example:</strong>
          * <p>3306</p>
@@ -166,7 +166,7 @@ public class AllocateContextDBPublicConnectionRequest extends Request {
         }
 
         /**
-         * <p>地域 ID</p>
+         * <p>The region in which the instance resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

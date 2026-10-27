@@ -67,7 +67,7 @@ public class DescribeParametersResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The parameter details.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class DescribeParametersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6BA32080EEA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +157,10 @@ public class DescribeParametersResponseBody extends TeaModel {
             } 
 
             /**
-             * ParameterDescription.
+             * <p>The parameter description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Storage node private protocol switch (-1: disabled, 0: enabled)</p>
              */
             public Builder parameterDescription(String parameterDescription) {
                 this.parameterDescription = parameterDescription;
@@ -162,7 +168,10 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterName.
+             * <p>The parameter name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONN_POOL_XPROTO_STORAGE_DB_PORT</p>
              */
             public Builder parameterName(String parameterName) {
                 this.parameterName = parameterName;
@@ -170,7 +179,10 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterValue.
+             * <p>The parameter value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-1</p>
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;
@@ -250,7 +262,10 @@ public class DescribeParametersResponseBody extends TeaModel {
             } 
 
             /**
-             * ParameterDescription.
+             * <p>The parameter description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Storage node private protocol switch (-1: disabled, 0: enabled)</p>
              */
             public Builder parameterDescription(String parameterDescription) {
                 this.parameterDescription = parameterDescription;
@@ -258,7 +273,10 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterName.
+             * <p>The parameter name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONN_POOL_XPROTO_STORAGE_DB_PORT</p>
              */
             public Builder parameterName(String parameterName) {
                 this.parameterName = parameterName;
@@ -266,7 +284,10 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterValue.
+             * <p>The parameter value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-1</p>
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;
@@ -372,7 +393,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             } 
 
             /**
-             * ConfigParameters.
+             * <p>The list of original parameters.</p>
              */
             public Builder configParameters(java.util.List<ConfigParameters> configParameters) {
                 this.configParameters = configParameters;
@@ -380,7 +401,10 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxc-********</p>
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -388,7 +412,10 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * Engine.
+             * <p>The engine. Default value: polarx.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>polarx</p>
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -396,7 +423,10 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * EngineVersion.
+             * <p>The DPI engine version. Default value: 2.0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.0</p>
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;
@@ -404,7 +434,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * RunningParameters.
+             * <p>The list of running parameter details.</p>
              */
             public Builder runningParameters(java.util.List<RunningParameters> runningParameters) {
                 this.runningParameters = runningParameters;

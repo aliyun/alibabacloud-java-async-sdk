@@ -147,7 +147,11 @@ public class DescribeArchiveTableListRequest extends Request {
         } 
 
         /**
+         * <p>The name of the PolarDB-X instance.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxc-htri0ori2r****</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.putQueryParameter("DBInstanceName", DBInstanceName);
@@ -156,7 +160,11 @@ public class DescribeArchiveTableListRequest extends Request {
         }
 
         /**
+         * <p>The page number, starting from 1.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageIndex(Long pageIndex) {
             this.putQueryParameter("PageIndex", pageIndex);
@@ -165,7 +173,11 @@ public class DescribeArchiveTableListRequest extends Request {
         }
 
         /**
+         * <p>The number of tables to return on each page. Default value: 20.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -174,7 +186,11 @@ public class DescribeArchiveTableListRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -183,7 +199,10 @@ public class DescribeArchiveTableListRequest extends Request {
         }
 
         /**
-         * SchemaName.
+         * <p>The database name used to filter archived tables.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testdb</p>
          */
         public Builder schemaName(String schemaName) {
             this.putQueryParameter("SchemaName", schemaName);
@@ -192,7 +211,10 @@ public class DescribeArchiveTableListRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The archiving status used to filter tables. Valid values: SUCCESS, PAUSE, and RUNNING.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -201,7 +223,10 @@ public class DescribeArchiveTableListRequest extends Request {
         }
 
         /**
-         * TableName.
+         * <p>The table name used to filter archived tables.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);

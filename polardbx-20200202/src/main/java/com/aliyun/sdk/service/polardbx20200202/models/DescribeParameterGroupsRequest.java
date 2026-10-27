@@ -59,7 +59,10 @@ public class DescribeParameterGroupsRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>The region where the instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

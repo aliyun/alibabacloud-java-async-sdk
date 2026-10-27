@@ -106,7 +106,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         } 
 
         /**
-         * Items.
+         * <p>The list of items.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -114,7 +114,10 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23</p>
          */
         public Builder totalRecordCount(Long totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -529,7 +541,14 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * AllowCancel.
+             * <p>Indicates whether the event can be canceled. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: No.</li>
+             * <li><strong>1</strong>: Yes.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder allowCancel(String allowCancel) {
                 this.allowCancel = allowCancel;
@@ -537,7 +556,14 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * AllowChange.
+             * <p>Indicates whether the time can be modified. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: No.</li>
+             * <li><strong>1</strong>: Yes.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder allowChange(String allowChange) {
                 this.allowChange = allowChange;
@@ -545,7 +571,10 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ChangeLevel.
+             * <p>The change level. This parameter can be ignored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Risk</p>
              */
             public Builder changeLevel(String changeLevel) {
                 this.changeLevel = changeLevel;
@@ -553,7 +582,10 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ChangeLevelEn.
+             * <p>The change level in English.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Risk repairment</p>
              */
             public Builder changeLevelEn(String changeLevelEn) {
                 this.changeLevelEn = changeLevelEn;
@@ -561,7 +593,10 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ChangeLevelZh.
+             * <p>The change level in Chinese.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>风险修复</p>
              */
             public Builder changeLevelZh(String changeLevelZh) {
                 this.changeLevelZh = changeLevelZh;
@@ -569,7 +604,10 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedTime.
+             * <p>The creation time. The time is displayed in UTC in the YYYY-MM-DDTHH:mm:ssZ format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-06-15T16:00:00Z</p>
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -577,7 +615,10 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentAVZ.
+             * <p>The current availability zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai-et-a</p>
              */
             public Builder currentAVZ(String currentAVZ) {
                 this.currentAVZ = currentAVZ;
@@ -585,7 +626,10 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * DbType.
+             * <p>The database type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>polarx</p>
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -593,7 +637,10 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * DbVersion.
+             * <p>The database version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.0</p>
              */
             public Builder dbVersion(String dbVersion) {
                 this.dbVersion = dbVersion;
@@ -601,7 +648,10 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Deadline.
+             * <p>The deadline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-06-15T16:00:00Z</p>
              */
             public Builder deadline(String deadline) {
                 this.deadline = deadline;
@@ -609,7 +659,10 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -617,7 +670,10 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Impact.
+             * <p>The impact. This parameter is not returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>--</p>
              */
             public Builder impact(String impact) {
                 this.impact = impact;
@@ -625,7 +681,10 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ImpactEn.
+             * <p>The impact in English.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Transient instance disconnection</p>
              */
             public Builder impactEn(String impactEn) {
                 this.impactEn = impactEn;
@@ -633,7 +692,10 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ImpactZh.
+             * <p>The impact in Chinese.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>中断</p>
              */
             public Builder impactZh(String impactZh) {
                 this.impactZh = impactZh;
@@ -641,7 +703,10 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * InsComment.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder insComment(String insComment) {
                 this.insComment = insComment;
@@ -649,7 +714,10 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * InsName.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxc-dd</p>
              */
             public Builder insName(String insName) {
                 this.insName = insName;
@@ -657,7 +725,10 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * <p>The modification time. The time is displayed in UTC in the YYYY-MM-DDTHH:mm:ssZ format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-06-15T16:00:00Z</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -665,7 +736,10 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * PrepareInterval.
+             * <p>The preparation interval.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>03:00:00</p>
              */
             public Builder prepareInterval(String prepareInterval) {
                 this.prepareInterval = prepareInterval;
@@ -673,7 +747,10 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * <p>The region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai-et15-b01</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -681,7 +758,10 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ResultInfo.
+             * <p>The result information. This parameter can be ignored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>--</p>
              */
             public Builder resultInfo(String resultInfo) {
                 this.resultInfo = resultInfo;
@@ -689,7 +769,10 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time. The time is displayed in UTC in the YYYY-MM-DDTHH:mm:ssZ format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-06-15T16:00:00Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -697,7 +780,14 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status. Valid values:</p>
+             * <ul>
+             * <li><strong>3</strong>: pending </li>
+             * <li><strong>4</strong>: running</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder status(Long status) {
                 this.status = status;
@@ -705,7 +795,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * SubInsNames.
+             * <p>The list of child instances.</p>
              */
             public Builder subInsNames(java.util.List<String> subInsNames) {
                 this.subInsNames = subInsNames;
@@ -713,7 +803,10 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * SwitchTime.
+             * <p>The switchover time. The time is displayed in UTC in the YYYY-MM-DDTHH:mm:ssZ format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-06-15T16:00:00Z</p>
              */
             public Builder switchTime(String switchTime) {
                 this.switchTime = switchTime;
@@ -721,7 +814,10 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskType.
+             * <p>The task type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds_apsaradb_transfer</p>
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;
@@ -729,7 +825,10 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskTypeEn.
+             * <p>The task type in English. This parameter can be ignored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>--</p>
              */
             public Builder taskTypeEn(String taskTypeEn) {
                 this.taskTypeEn = taskTypeEn;
@@ -737,7 +836,10 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskTypeZh.
+             * <p>The task type in Chinese. This parameter can be ignored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>--</p>
              */
             public Builder taskTypeZh(String taskTypeZh) {
                 this.taskTypeZh = taskTypeZh;

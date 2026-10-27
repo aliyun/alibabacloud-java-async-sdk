@@ -93,7 +93,7 @@ public class DescribeSqlFlashbackTaskListResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The data returned by the request.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +101,10 @@ public class DescribeSqlFlashbackTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The description of the request result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +112,10 @@ public class DescribeSqlFlashbackTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9B2F3840-5C98-475C-B269-2D5C3A31797C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +123,10 @@ public class DescribeSqlFlashbackTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -391,7 +400,10 @@ public class DescribeSqlFlashbackTaskListResponseBody extends TeaModel {
             } 
 
             /**
-             * DbName.
+             * <p>The name of the database on which the flashback task was performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder dbName(String dbName) {
                 this.dbName = dbName;
@@ -399,7 +411,10 @@ public class DescribeSqlFlashbackTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * DownloadUrl.
+             * <p>The download URL of the result file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>http://...</p>
              */
             public Builder downloadUrl(String downloadUrl) {
                 this.downloadUrl = downloadUrl;
@@ -407,7 +422,10 @@ public class DescribeSqlFlashbackTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * <p>The expiration time of the download URL. Unit: ms.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1569216270000</p>
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -415,7 +433,10 @@ public class DescribeSqlFlashbackTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The creation time of the flashback task in the database. Unit: ms.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1568611408000</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -423,7 +444,10 @@ public class DescribeSqlFlashbackTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The last modification time of the flashback task in the database. Unit: ms.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1568611469000</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -431,7 +455,10 @@ public class DescribeSqlFlashbackTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The primary key ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -439,7 +466,10 @@ public class DescribeSqlFlashbackTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * InstId.
+             * <p>The instance ID of the PolarDB-X instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxc-********</p>
              */
             public Builder instId(String instId) {
                 this.instId = instId;
@@ -447,7 +477,10 @@ public class DescribeSqlFlashbackTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * RecallProgress.
+             * <p>The execution progress of the flashback task. Value range: 1 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder recallProgress(String recallProgress) {
                 this.recallProgress = recallProgress;
@@ -455,7 +488,14 @@ public class DescribeSqlFlashbackTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * RecallRestoreType.
+             * <p>The SQL flashback restoration type. Valid values: </p>
+             * <ul>
+             * <li><strong>1</strong>: Image-based restoration.</li>
+             * <li><strong>2</strong>: Reverse restoration.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder recallRestoreType(String recallRestoreType) {
                 this.recallRestoreType = recallRestoreType;
@@ -463,7 +503,14 @@ public class DescribeSqlFlashbackTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * RecallStatus.
+             * <p>The status of the data recall task. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: In progress.</li>
+             * <li><strong>2</strong>: Completed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder recallStatus(String recallStatus) {
                 this.recallStatus = recallStatus;
@@ -471,7 +518,14 @@ public class DescribeSqlFlashbackTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * RecallType.
+             * <p>The recall type. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: Exact match.</li>
+             * <li><strong>1</strong>: Fuzzy match.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder recallType(String recallType) {
                 this.recallType = recallType;
@@ -479,7 +533,10 @@ public class DescribeSqlFlashbackTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * SearchEndTime.
+             * <p>The end time specified when the SQL flashback task was submitted. Unit: ms.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1568609597000</p>
              */
             public Builder searchEndTime(String searchEndTime) {
                 this.searchEndTime = searchEndTime;
@@ -487,7 +544,10 @@ public class DescribeSqlFlashbackTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * SearchStartTime.
+             * <p>The start time specified when the SQL flashback task was submitted. Unit: ms.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1568609597000</p>
              */
             public Builder searchStartTime(String searchStartTime) {
                 this.searchStartTime = searchStartTime;
@@ -495,7 +555,10 @@ public class DescribeSqlFlashbackTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * SqlCounter.
+             * <p>The number of recovered data rows.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder sqlCounter(String sqlCounter) {
                 this.sqlCounter = sqlCounter;
@@ -503,7 +566,10 @@ public class DescribeSqlFlashbackTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * SqlPk.
+             * <p>The primary key value involved in the SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>id</p>
              */
             public Builder sqlPk(String sqlPk) {
                 this.sqlPk = sqlPk;
@@ -511,7 +577,10 @@ public class DescribeSqlFlashbackTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * SqlType.
+             * <p>The type of the SQL statement. Valid values: INSERT, UPDATE, and DELETE. Multiple types are separated by commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>INSERT,UPDATE</p>
              */
             public Builder sqlType(String sqlType) {
                 this.sqlType = sqlType;
@@ -519,7 +588,10 @@ public class DescribeSqlFlashbackTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * <p>The name of the table to which the data belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -527,7 +599,10 @@ public class DescribeSqlFlashbackTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * TraceId.
+             * <p>The trace_id of the SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13ed05705f801000</p>
              */
             public Builder traceId(String traceId) {
                 this.traceId = traceId;
@@ -581,7 +656,7 @@ public class DescribeSqlFlashbackTaskListResponseBody extends TeaModel {
             } 
 
             /**
-             * SqlFlashbackTasks.
+             * <p>The flashback task objects.</p>
              */
             public Builder sqlFlashbackTasks(java.util.List<SqlFlashbackTasks> sqlFlashbackTasks) {
                 this.sqlFlashbackTasks = sqlFlashbackTasks;

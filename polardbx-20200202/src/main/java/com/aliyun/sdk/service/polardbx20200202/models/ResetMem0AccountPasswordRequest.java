@@ -90,6 +90,7 @@ public class ResetMem0AccountPasswordRequest extends Request {
         } 
 
         /**
+         * <p>The instance name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +115,7 @@ public class ResetMem0AccountPasswordRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

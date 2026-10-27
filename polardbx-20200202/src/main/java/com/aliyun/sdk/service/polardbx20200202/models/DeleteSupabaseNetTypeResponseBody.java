@@ -80,7 +80,7 @@ public class DeleteSupabaseNetTypeResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details of the access denial.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -88,7 +88,7 @@ public class DeleteSupabaseNetTypeResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The operation result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -96,7 +96,10 @@ public class DeleteSupabaseNetTypeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C457B28E-9CAB-4B77-B5C6-5D71B7870B6E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -227,7 +230,10 @@ public class DeleteSupabaseNetTypeResponseBody extends TeaModel {
             } 
 
             /**
-             * AuthAction.
+             * <p>The authentication action.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -235,7 +241,10 @@ public class DeleteSupabaseNetTypeResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalDisplayName.
+             * <p>The display name of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -243,7 +252,10 @@ public class DeleteSupabaseNetTypeResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalOwnerId.
+             * <p>The owner ID of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder authPrincipalOwnerId(String authPrincipalOwnerId) {
                 this.authPrincipalOwnerId = authPrincipalOwnerId;
@@ -251,7 +263,10 @@ public class DeleteSupabaseNetTypeResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalType.
+             * <p>The type of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>222</p>
              */
             public Builder authPrincipalType(String authPrincipalType) {
                 this.authPrincipalType = authPrincipalType;
@@ -259,7 +274,10 @@ public class DeleteSupabaseNetTypeResponseBody extends TeaModel {
             }
 
             /**
-             * EncodedDiagnosticMessage.
+             * <p>The encoded diagnostic information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
              */
             public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
                 this.encodedDiagnosticMessage = encodedDiagnosticMessage;
@@ -267,7 +285,10 @@ public class DeleteSupabaseNetTypeResponseBody extends TeaModel {
             }
 
             /**
-             * NoPermissionType.
+             * <p>The type of the permission denial.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ImplicitDeny</p>
              */
             public Builder noPermissionType(String noPermissionType) {
                 this.noPermissionType = noPermissionType;
@@ -275,7 +296,10 @@ public class DeleteSupabaseNetTypeResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * <p>The policy type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PRIORITY</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -342,7 +366,10 @@ public class DeleteSupabaseNetTypeResponseBody extends TeaModel {
             } 
 
             /**
-             * DBInstanceName.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxc-********</p>
              */
             public Builder DBInstanceName(String DBInstanceName) {
                 this.DBInstanceName = DBInstanceName;
@@ -350,7 +377,10 @@ public class DeleteSupabaseNetTypeResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2209883</p>
              */
             public Builder taskId(Integer taskId) {
                 this.taskId = taskId;

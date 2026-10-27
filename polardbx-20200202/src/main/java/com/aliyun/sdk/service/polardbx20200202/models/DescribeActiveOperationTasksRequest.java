@@ -214,7 +214,15 @@ public class DescribeActiveOperationTasksRequest extends Request {
         } 
 
         /**
-         * AllowCancel.
+         * <p>Specifies whether the event can be canceled. Valid values:</p>
+         * <ul>
+         * <li><strong>-1</strong>: All O&amp;M events can be canceled.</li>
+         * <li><strong>0</strong>: The event cannot be canceled. </li>
+         * <li><strong>1</strong>: The event can be canceled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder allowCancel(Long allowCancel) {
             this.putQueryParameter("AllowCancel", allowCancel);
@@ -223,7 +231,15 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * AllowChange.
+         * <p>Specifies whether the time can be modified. Valid values:</p>
+         * <ul>
+         * <li><strong>-1</strong>: The time of all O&amp;M events can be modified.</li>
+         * <li><strong>0</strong>: The time cannot be modified. </li>
+         * <li><strong>1</strong>: The time can be modified.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder allowChange(Long allowChange) {
             this.putQueryParameter("AllowChange", allowChange);
@@ -232,7 +248,15 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * ChangeLevel.
+         * <p>The change level. Default value: all. Valid values:</p>
+         * <ul>
+         * <li><strong>all</strong>: all exception fix and system O&amp;M levels</li>
+         * <li><strong>S0</strong>: exception fix</li>
+         * <li><strong>S1</strong>: system O&amp;M</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>all</p>
          */
         public Builder changeLevel(String changeLevel) {
             this.putQueryParameter("ChangeLevel", changeLevel);
@@ -241,7 +265,10 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * DbType.
+         * <p>The database type. Set the value to polarx.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>polarx</p>
          */
         public Builder dbType(String dbType) {
             this.putQueryParameter("DbType", dbType);
@@ -250,7 +277,10 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * InsName.
+         * <p>The instance name. Default value: an empty string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxc-xxxxx</p>
          */
         public Builder insName(String insName) {
             this.putQueryParameter("InsName", insName);
@@ -259,7 +289,10 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. The value must be greater than 0. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -268,7 +301,10 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 25.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -277,7 +313,10 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * ProductId.
+         * <p>The product name. Default value: polarx.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>polarx</p>
          */
         public Builder productId(String productId) {
             this.putQueryParameter("ProductId", productId);
@@ -286,7 +325,10 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * Region.
+         * <p>The region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -295,6 +337,7 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -307,7 +350,15 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The task status. Valid values:</p>
+         * <ul>
+         * <li><strong>-1</strong>: all pending and running tasks  </li>
+         * <li><strong>3</strong>: pending </li>
+         * <li><strong>4</strong>: running</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder status(Long status) {
             this.putQueryParameter("Status", status);
@@ -316,7 +367,10 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * TaskType.
+         * <p>The task type. Set the value to all to query all tasks under the current account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>all</p>
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

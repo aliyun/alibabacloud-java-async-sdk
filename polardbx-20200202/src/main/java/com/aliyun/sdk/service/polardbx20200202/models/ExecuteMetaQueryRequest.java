@@ -119,6 +119,7 @@ public class ExecuteMetaQueryRequest extends Request {
         } 
 
         /**
+         * <p>The primary instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,7 +132,10 @@ public class ExecuteMetaQueryRequest extends Request {
         }
 
         /**
-         * <p>本次最多返回的结果行数。缺省为 100，取值范围 1~1000；最终行数还会取代码硬上限、Biz DB 上限和 SQL 最外层 LIMIT 的最小值，连续取数请在 SQL 中自行分页。</p>
+         * <p>The maximum number of result rows to return for this request. Valid values: 1 to 1000. Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder maxResultRows(Long maxResultRows) {
             this.putQueryParameter("MaxResultRows", maxResultRows);
@@ -140,6 +144,7 @@ public class ExecuteMetaQueryRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,6 +157,7 @@ public class ExecuteMetaQueryRequest extends Request {
         }
 
         /**
+         * <p>The SQL statement to execute.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -164,7 +170,10 @@ public class ExecuteMetaQueryRequest extends Request {
         }
 
         /**
-         * StorageInstId.
+         * <p>The data node (DN) instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxc-xdb-s-*</p>
          */
         public Builder storageInstId(String storageInstId) {
             this.putQueryParameter("StorageInstId", storageInstId);

@@ -176,7 +176,10 @@ public class UpdatePolarDBXInstanceNodeRequest extends Request {
         } 
 
         /**
-         * AddDNSpec.
+         * <p>The node specifications of the storage nodes to add.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql.n4.medium.25</p>
          */
         public Builder addDNSpec(String addDNSpec) {
             this.putQueryParameter("AddDNSpec", addDNSpec);
@@ -185,7 +188,10 @@ public class UpdatePolarDBXInstanceNodeRequest extends Request {
         }
 
         /**
-         * CNNodeCount.
+         * <p>The number of compute nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder CNNodeCount(Integer CNNodeCount) {
             this.putQueryParameter("CNNodeCount", CNNodeCount);
@@ -194,7 +200,10 @@ public class UpdatePolarDBXInstanceNodeRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token. It can be any random string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FEA5DC20-6D8A-5979-97AA-FC57546ADC20</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -203,6 +212,7 @@ public class UpdatePolarDBXInstanceNodeRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -215,7 +225,10 @@ public class UpdatePolarDBXInstanceNodeRequest extends Request {
         }
 
         /**
-         * DNNodeCount.
+         * <p>The number of storage nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder DNNodeCount(Integer DNNodeCount) {
             this.putQueryParameter("DNNodeCount", DNNodeCount);
@@ -224,7 +237,10 @@ public class UpdatePolarDBXInstanceNodeRequest extends Request {
         }
 
         /**
-         * DbInstanceNodeCount.
+         * <p>The target number of nodes for the instance. Valid values: 0 to 99.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder dbInstanceNodeCount(Integer dbInstanceNodeCount) {
             this.putQueryParameter("DbInstanceNodeCount", dbInstanceNodeCount);
@@ -233,7 +249,10 @@ public class UpdatePolarDBXInstanceNodeRequest extends Request {
         }
 
         /**
-         * DeleteDNIds.
+         * <p>The IDs of the storage nodes to remove.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxc-xdb-s-pxcshr****rh7fn2654fc</p>
          */
         public Builder deleteDNIds(String deleteDNIds) {
             this.putQueryParameter("DeleteDNIds", deleteDNIds);
@@ -242,6 +261,7 @@ public class UpdatePolarDBXInstanceNodeRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -254,7 +274,10 @@ public class UpdatePolarDBXInstanceNodeRequest extends Request {
         }
 
         /**
-         * StoragePoolName.
+         * <p>The name of the storage pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder storagePoolName(String storagePoolName) {
             this.putQueryParameter("StoragePoolName", storagePoolName);

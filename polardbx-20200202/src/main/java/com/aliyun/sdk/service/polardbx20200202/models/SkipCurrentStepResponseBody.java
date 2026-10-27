@@ -93,7 +93,7 @@ public class SkipCurrentStepResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +101,10 @@ public class SkipCurrentStepResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message. This parameter is empty when the request succeeds. When the request fails, an exception message is returned, such as an error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder message(String message) {
             this.message = message;
@@ -120,7 +123,10 @@ public class SkipCurrentStepResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -173,7 +179,10 @@ public class SkipCurrentStepResponseBody extends TeaModel {
             } 
 
             /**
-             * SlinkTaskId.
+             * <p>The Slink task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>etx-szr2rr6i*****</p>
              */
             public Builder slinkTaskId(String slinkTaskId) {
                 this.slinkTaskId = slinkTaskId;

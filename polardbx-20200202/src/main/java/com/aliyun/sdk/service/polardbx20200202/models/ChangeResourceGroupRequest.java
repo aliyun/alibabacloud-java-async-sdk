@@ -105,6 +105,7 @@ public class ChangeResourceGroupRequest extends Request {
         } 
 
         /**
+         * <p>The new resource group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,6 +118,7 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,6 +131,7 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
+         * <p>The resource ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,10 +144,11 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
+         * <p>The resource type. Currently, only PolarDB-X 2.0 instances are supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>PolarDBXInstance</p>
+         * <p>polardbxinstance</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

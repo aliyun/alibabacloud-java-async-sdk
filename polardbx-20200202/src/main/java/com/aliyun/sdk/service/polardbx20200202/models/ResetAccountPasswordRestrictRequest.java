@@ -133,6 +133,7 @@ public class ResetAccountPasswordRestrictRequest extends Request {
         } 
 
         /**
+         * <p>The name of the account whose password you want to reset. &gt; Only the passwords of standard accounts can be reset.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -145,6 +146,7 @@ public class ResetAccountPasswordRestrictRequest extends Request {
         }
 
         /**
+         * <p>The account information for the accounts whose passwords you want to reset. Separate multiple account entries with commas (,).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,6 +159,7 @@ public class ResetAccountPasswordRestrictRequest extends Request {
         }
 
         /**
+         * <p>The instance ID. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDBInstances</a> operation to query the details of all instances in the specified region, including instance IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -169,6 +172,7 @@ public class ResetAccountPasswordRestrictRequest extends Request {
         }
 
         /**
+         * <p>The region ID. &gt; You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query available regions.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -181,7 +185,10 @@ public class ResetAccountPasswordRestrictRequest extends Request {
         }
 
         /**
-         * SecurityAccountName.
+         * <p>The name of the account whose password you want to reset. &gt; Only the passwords of standard accounts can be reset. You can invoke the <a href="https://help.aliyun.com/document_detail/196844.html">DescribeAccountList</a> operation to query the account information of the target instance, including account names.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>account_sec</p>
          */
         public Builder securityAccountName(String securityAccountName) {
             this.putQueryParameter("SecurityAccountName", securityAccountName);
@@ -190,7 +197,10 @@ public class ResetAccountPasswordRestrictRequest extends Request {
         }
 
         /**
-         * SecurityAccountPassword.
+         * <p>The password of the security administrator account. &gt; This parameter is required if the three-role mode is enabled. For more information about the three-role mode, see <a href="https://help.aliyun.com/document_detail/213824.html">Three-role mode</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder securityAccountPassword(String securityAccountPassword) {
             this.putQueryParameter("SecurityAccountPassword", securityAccountPassword);

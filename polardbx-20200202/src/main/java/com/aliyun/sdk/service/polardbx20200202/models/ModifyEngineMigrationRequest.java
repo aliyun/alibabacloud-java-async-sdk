@@ -129,7 +129,13 @@ public class ModifyEngineMigrationRequest extends Request {
         } 
 
         /**
-         * ConnectionStrings.
+         * <p>The specific endpoints to switch. The value is a JSON string that corresponds to the endpoint pairs to be swapped.</p>
+         * <blockquote>
+         * <p>This parameter takes effect only when SwapConnectionString is set to true.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;pc-bp1m9tt23o5kh834y.rwlb.rds.aliyuncs.com\&quot;:\&quot;rm-bp1ycl5o6ojs957o0.mysql.rds.aliyuncs.com\&quot;}</p>
          */
         public Builder connectionStrings(String connectionStrings) {
             this.putQueryParameter("ConnectionStrings", connectionStrings);
@@ -138,7 +144,10 @@ public class ModifyEngineMigrationRequest extends Request {
         }
 
         /**
-         * DBInstanceName.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxc-htri0****r4k9p</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.putQueryParameter("DBInstanceName", DBInstanceName);
@@ -147,7 +156,10 @@ public class ModifyEngineMigrationRequest extends Request {
         }
 
         /**
-         * NewMasterDBInstanceName.
+         * <p>The name of the new primary instance after the migration is complete.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>newmaster789</p>
          */
         public Builder newMasterDBInstanceName(String newMasterDBInstanceName) {
             this.putQueryParameter("NewMasterDBInstanceName", newMasterDBInstanceName);
@@ -156,7 +168,10 @@ public class ModifyEngineMigrationRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -165,7 +180,10 @@ public class ModifyEngineMigrationRequest extends Request {
         }
 
         /**
-         * SourceDBInstanceName.
+         * <p>The name of the source database instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>source456</p>
          */
         public Builder sourceDBInstanceName(String sourceDBInstanceName) {
             this.putQueryParameter("SourceDBInstanceName", sourceDBInstanceName);
@@ -174,7 +192,16 @@ public class ModifyEngineMigrationRequest extends Request {
         }
 
         /**
-         * SwapConnectionString.
+         * <p>Specifies whether to automatically swap connection strings. Valid values:</p>
+         * <ul>
+         * <li><p>true: The application does not need to modify configurations. Connections are automatically directed to the new instance.</p>
+         * </li>
+         * <li><p>false: You must manually update the application endpoint.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder swapConnectionString(String swapConnectionString) {
             this.putQueryParameter("SwapConnectionString", swapConnectionString);

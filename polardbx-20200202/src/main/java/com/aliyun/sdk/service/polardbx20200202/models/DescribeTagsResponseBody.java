@@ -78,7 +78,7 @@ public class DescribeTagsResponseBody extends TeaModel {
         }
 
         /**
-         * TagInfos.
+         * <p>The list of tag information.</p>
          */
         public Builder tagInfos(java.util.List<TagInfos> tagInfos) {
             this.tagInfos = tagInfos;
@@ -157,7 +157,7 @@ public class DescribeTagsResponseBody extends TeaModel {
             } 
 
             /**
-             * DBInstanceIds.
+             * <p>The list of database instances associated with the tag.</p>
              */
             public Builder DBInstanceIds(java.util.List<String> DBInstanceIds) {
                 this.DBInstanceIds = DBInstanceIds;
@@ -165,7 +165,10 @@ public class DescribeTagsResponseBody extends TeaModel {
             }
 
             /**
-             * TagKey.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testKey</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -173,7 +176,10 @@ public class DescribeTagsResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testValue</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

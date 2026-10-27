@@ -93,7 +93,7 @@ public class DescribeEnabledCrossRegionsResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The parameter details.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -101,7 +101,10 @@ public class DescribeEnabledCrossRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder message(String message) {
             this.message = message;
@@ -120,7 +123,10 @@ public class DescribeEnabledCrossRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -173,7 +179,7 @@ public class DescribeEnabledCrossRegionsResponseBody extends TeaModel {
             } 
 
             /**
-             * Regions.
+             * <p>Indicates whether VPC is supported.</p>
              */
             public Builder regions(java.util.List<String> regions) {
                 this.regions = regions;

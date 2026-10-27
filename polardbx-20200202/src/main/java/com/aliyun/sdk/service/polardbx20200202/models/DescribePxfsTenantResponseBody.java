@@ -80,7 +80,7 @@ public class DescribePxfsTenantResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details of the access denial.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -88,7 +88,7 @@ public class DescribePxfsTenantResponseBody extends TeaModel {
         }
 
         /**
-         * <p>接口返回的业务数据。</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -96,7 +96,7 @@ public class DescribePxfsTenantResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求的唯一标识，可用于排查问题。</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -230,7 +230,10 @@ public class DescribePxfsTenantResponseBody extends TeaModel {
             } 
 
             /**
-             * AuthAction.
+             * <p>The authentication action.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>polardbx:QueryColumnarLog</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -238,7 +241,10 @@ public class DescribePxfsTenantResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalDisplayName.
+             * <p>The display name of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -246,7 +252,10 @@ public class DescribePxfsTenantResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalOwnerId.
+             * <p>The owner ID of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder authPrincipalOwnerId(String authPrincipalOwnerId) {
                 this.authPrincipalOwnerId = authPrincipalOwnerId;
@@ -254,7 +263,10 @@ public class DescribePxfsTenantResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalType.
+             * <p>The type of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>222</p>
              */
             public Builder authPrincipalType(String authPrincipalType) {
                 this.authPrincipalType = authPrincipalType;
@@ -262,7 +274,10 @@ public class DescribePxfsTenantResponseBody extends TeaModel {
             }
 
             /**
-             * EncodedDiagnosticMessage.
+             * <p>The encoded diagnostic message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
              */
             public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
                 this.encodedDiagnosticMessage = encodedDiagnosticMessage;
@@ -270,7 +285,10 @@ public class DescribePxfsTenantResponseBody extends TeaModel {
             }
 
             /**
-             * NoPermissionType.
+             * <p>The type of the permission denial.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ImplicitDeny</p>
              */
             public Builder noPermissionType(String noPermissionType) {
                 this.noPermissionType = noPermissionType;
@@ -278,7 +296,10 @@ public class DescribePxfsTenantResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * <p>The policy type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PRIORITY</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -436,7 +457,7 @@ public class DescribePxfsTenantResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>租户容量配额，单位为字节；0表示禁止新增数据。</p>
+             * <p>The capacity quota.</p>
              * 
              * <strong>example:</strong>
              * <p>107374182400</p>
@@ -447,7 +468,7 @@ public class DescribePxfsTenantResponseBody extends TeaModel {
             }
 
             /**
-             * <p>租户文件数量配额；0表示禁止新增文件。</p>
+             * <p>The file count quota.</p>
              * 
              * <strong>example:</strong>
              * <p>1000000</p>
@@ -458,7 +479,7 @@ public class DescribePxfsTenantResponseBody extends TeaModel {
             }
 
             /**
-             * <p>租户每秒请求数上限；0表示不限制。</p>
+             * <p>The request rate limit.</p>
              * 
              * <strong>example:</strong>
              * <p>1000</p>
@@ -469,7 +490,7 @@ public class DescribePxfsTenantResponseBody extends TeaModel {
             }
 
             /**
-             * <p>租户每秒写入字节数上限；0表示不限制。</p>
+             * <p>The write bandwidth limit.</p>
              * 
              * <strong>example:</strong>
              * <p>104857600</p>
@@ -480,7 +501,7 @@ public class DescribePxfsTenantResponseBody extends TeaModel {
             }
 
             /**
-             * <p>当前资源状态。</p>
+             * <p>The status.</p>
              * 
              * <strong>example:</strong>
              * <p>ACTIVE</p>
@@ -491,7 +512,7 @@ public class DescribePxfsTenantResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Agent文件服务的租户ID。</p>
+             * <p>The tenant ID.</p>
              * 
              * <strong>example:</strong>
              * <p>tenant-001</p>
@@ -502,7 +523,7 @@ public class DescribePxfsTenantResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Agent文件服务的租户名称。</p>
+             * <p>The tenant name.</p>
              * 
              * <strong>example:</strong>
              * <p>agent-files</p>
@@ -513,7 +534,7 @@ public class DescribePxfsTenantResponseBody extends TeaModel {
             }
 
             /**
-             * <p>租户已使用的容量，单位为字节。</p>
+             * <p>The used capacity.</p>
              * 
              * <strong>example:</strong>
              * <p>1048576</p>
@@ -524,7 +545,7 @@ public class DescribePxfsTenantResponseBody extends TeaModel {
             }
 
             /**
-             * <p>租户已使用的文件数量。</p>
+             * <p>The used file count.</p>
              * 
              * <strong>example:</strong>
              * <p>128</p>

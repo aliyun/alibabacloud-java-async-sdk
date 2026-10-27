@@ -105,6 +105,7 @@ public class UpdateCustinsParamRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,7 +118,11 @@ public class UpdateCustinsParamRequest extends Request {
         }
 
         /**
+         * <p>The name.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Data warehouse data extraction address</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -126,6 +131,7 @@ public class UpdateCustinsParamRequest extends Request {
         }
 
         /**
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196841.html">DescribeRegions</a> operation to query the regions supported by PolarDB-X, including region IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,6 +144,7 @@ public class UpdateCustinsParamRequest extends Request {
         }
 
         /**
+         * <p>The tag value.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

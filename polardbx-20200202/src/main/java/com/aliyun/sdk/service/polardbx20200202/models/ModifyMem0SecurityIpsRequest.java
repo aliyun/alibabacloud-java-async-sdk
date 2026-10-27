@@ -118,7 +118,7 @@ public class ModifyMem0SecurityIpsRequest extends Request {
         } 
 
         /**
-         * <p>PolarDB-X实例名称（逻辑实例名，如pxc-xxx）</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,7 +131,7 @@ public class ModifyMem0SecurityIpsRequest extends Request {
         }
 
         /**
-         * <p>白名单分组名称，不传默认为default</p>
+         * <p>The name of the whitelist group of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -143,7 +143,12 @@ public class ModifyMem0SecurityIpsRequest extends Request {
         }
 
         /**
-         * <p>修改模式。0：覆盖原白名单（默认值）；1：追加IP到白名单；2：从白名单中删除IP</p>
+         * <p>The modification mode of the whitelist. Valid values:</p>
+         * <ul>
+         * <li>0: overwrites the whitelist group.</li>
+         * <li>1: adds a whitelist group.</li>
+         * <li>2: deletes a whitelist group.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -155,7 +160,7 @@ public class ModifyMem0SecurityIpsRequest extends Request {
         }
 
         /**
-         * <p>地域ID</p>
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -168,7 +173,7 @@ public class ModifyMem0SecurityIpsRequest extends Request {
         }
 
         /**
-         * <p>IP白名单列表，多个IP之间用英文逗号分隔</p>
+         * <p>The IP addresses in the whitelist group. Separate multiple IP addresses with commas (,).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

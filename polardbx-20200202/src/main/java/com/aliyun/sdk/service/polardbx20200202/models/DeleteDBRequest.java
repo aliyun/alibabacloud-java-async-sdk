@@ -90,6 +90,7 @@ public class DeleteDBRequest extends Request {
         } 
 
         /**
+         * <p>The name of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class DeleteDBRequest extends Request {
         }
 
         /**
+         * <p>The name of the database to delete.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,7 @@ public class DeleteDBRequest extends Request {
         }
 
         /**
+         * <p>The region where the instance resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

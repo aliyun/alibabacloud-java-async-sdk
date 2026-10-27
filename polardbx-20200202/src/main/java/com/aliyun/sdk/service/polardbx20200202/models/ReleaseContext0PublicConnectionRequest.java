@@ -103,7 +103,7 @@ public class ReleaseContext0PublicConnectionRequest extends Request {
         } 
 
         /**
-         * <p>当前公网连接串；不传时按公网类型释放</p>
+         * <p>The public network connection string to release. If this parameter is not specified, the Mem0 public address is subject to automatic release.</p>
          * 
          * <strong>example:</strong>
          * <p>pxc-hzjasdyuoo.polarx.rds.aliyuncs.com</p>
@@ -115,7 +115,7 @@ public class ReleaseContext0PublicConnectionRequest extends Request {
         }
 
         /**
-         * <p>关联的 PolarDB-X 实例名（pxc- 前缀）</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,7 +128,11 @@ public class ReleaseContext0PublicConnectionRequest extends Request {
         }
 
         /**
-         * <p>目标节点类型：service 或 dashboard</p>
+         * <p>The target node type. Valid values:</p>
+         * <ul>
+         * <li>service</li>
+         * <li>dashboard</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>dn</p>
@@ -140,7 +144,7 @@ public class ReleaseContext0PublicConnectionRequest extends Request {
         }
 
         /**
-         * <p>地域 ID</p>
+         * <p>The region ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

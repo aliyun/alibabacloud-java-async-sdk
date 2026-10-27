@@ -75,6 +75,7 @@ public class CreateGatewayConsumerForPolarDBXRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/196830.html">describedbinstances</a> operation to query the details of all instances in the specified region, including the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class CreateGatewayConsumerForPolarDBXRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

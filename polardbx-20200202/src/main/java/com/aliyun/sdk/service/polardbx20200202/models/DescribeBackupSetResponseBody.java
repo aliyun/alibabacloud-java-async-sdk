@@ -93,7 +93,7 @@ public class DescribeBackupSetResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The data list.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -101,7 +101,10 @@ public class DescribeBackupSetResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successs</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +112,10 @@ public class DescribeBackupSetResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1A6D328C-84B8-40DC-BF49-6C73984D7494</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +123,10 @@ public class DescribeBackupSetResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -209,7 +218,10 @@ public class DescribeBackupSetResponseBody extends TeaModel {
             } 
 
             /**
-             * BackupSetFile.
+             * <p>The OSS file name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hins3084_data_20220418110623_qp.xb</p>
              */
             public Builder backupSetFile(String backupSetFile) {
                 this.backupSetFile = backupSetFile;
@@ -217,7 +229,10 @@ public class DescribeBackupSetResponseBody extends TeaModel {
             }
 
             /**
-             * DownloadLink.
+             * <p>The public download URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://pre-rdsbak-cn-xxx.oss-cn-beijing.aliyuncs.com/custins2255/hins3084_data_20220418110623_qp.xb?OSSAccessKeyId=LTAI****************&Expires=1650441697&dd=7KJzkUSbXf6dwy">https://pre-rdsbak-cn-xxx.oss-cn-beijing.aliyuncs.com/custins2255/hins3084_data_20220418110623_qp.xb?OSSAccessKeyId=LTAI****************&amp;Expires=1650441697&amp;dd=7KJzkUSbXf6dwy</a></p>
              */
             public Builder downloadLink(String downloadLink) {
                 this.downloadLink = downloadLink;
@@ -225,7 +240,10 @@ public class DescribeBackupSetResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetDownloadLink.
+             * <p>The internal network OSS download URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://pre-rdsbak-cn-beijing.oss-cn-beijing-internal.aliyuncs.com/custins2255/hins3084_data_20220418110623_qp.xb">http://pre-rdsbak-cn-beijing.oss-cn-beijing-internal.aliyuncs.com/custins2255/hins3084_data_20220418110623_qp.xb</a>?</p>
              */
             public Builder intranetDownloadLink(String intranetDownloadLink) {
                 this.intranetDownloadLink = intranetDownloadLink;
@@ -233,7 +251,10 @@ public class DescribeBackupSetResponseBody extends TeaModel {
             }
 
             /**
-             * LinkExpiredTime.
+             * <p>The expiration time of the OSS file link.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-04-20T08:01:37Z</p>
              */
             public Builder linkExpiredTime(String linkExpiredTime) {
                 this.linkExpiredTime = linkExpiredTime;
@@ -378,7 +399,14 @@ public class DescribeBackupSetResponseBody extends TeaModel {
             } 
 
             /**
-             * BackupModel.
+             * <p>The backup mode. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: Automatic backup.</li>
+             * <li><strong>1</strong>: Manual backup.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder backupModel(Integer backupModel) {
                 this.backupModel = backupModel;
@@ -386,7 +414,10 @@ public class DescribeBackupSetResponseBody extends TeaModel {
             }
 
             /**
-             * BackupSetId.
+             * <p>The backup set ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder backupSetId(Long backupSetId) {
                 this.backupSetId = backupSetId;
@@ -394,7 +425,10 @@ public class DescribeBackupSetResponseBody extends TeaModel {
             }
 
             /**
-             * BackupSetSize.
+             * <p>The size of the backup set, in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>88803195</p>
              */
             public Builder backupSetSize(Long backupSetSize) {
                 this.backupSetSize = backupSetSize;
@@ -402,7 +436,14 @@ public class DescribeBackupSetResponseBody extends TeaModel {
             }
 
             /**
-             * BackupType.
+             * <p>The backup type. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: Fast backup.</li>
+             * <li><strong>1</strong>: Consistent backup.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder backupType(Integer backupType) {
                 this.backupType = backupType;
@@ -410,7 +451,10 @@ public class DescribeBackupSetResponseBody extends TeaModel {
             }
 
             /**
-             * BeginTime.
+             * <p>The backup start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1650250861754</p>
              */
             public Builder beginTime(Long beginTime) {
                 this.beginTime = beginTime;
@@ -418,7 +462,10 @@ public class DescribeBackupSetResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The backup end time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1650251308000</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -426,7 +473,7 @@ public class DescribeBackupSetResponseBody extends TeaModel {
             }
 
             /**
-             * OSSList.
+             * <p>The list of OSS information for the backup set.</p>
              */
             public Builder OSSList(java.util.List<OSSList> OSSList) {
                 this.OSSList = OSSList;
@@ -434,7 +481,15 @@ public class DescribeBackupSetResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the backup set. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: Backing up.</li>
+             * <li><strong>1</strong>: Backup succeeded.</li>
+             * <li><strong>2</strong>: Backup failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;

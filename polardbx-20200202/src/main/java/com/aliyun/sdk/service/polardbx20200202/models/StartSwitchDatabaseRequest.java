@@ -159,7 +159,10 @@ public class StartSwitchDatabaseRequest extends Request {
         } 
 
         /**
-         * DBInstanceName.
+         * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxc-xxx</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.putQueryParameter("DBInstanceName", DBInstanceName);
@@ -168,7 +171,10 @@ public class StartSwitchDatabaseRequest extends Request {
         }
 
         /**
-         * DstMainConnectString.
+         * <p>The endpoint of the primary node of the target instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxc-*********.polarx.rds.aliyuncs.com</p>
          */
         public Builder dstMainConnectString(String dstMainConnectString) {
             this.putQueryParameter("DstMainConnectString", dstMainConnectString);
@@ -177,7 +183,10 @@ public class StartSwitchDatabaseRequest extends Request {
         }
 
         /**
-         * DstMainPort.
+         * <p>The port number of the target instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3313</p>
          */
         public Builder dstMainPort(String dstMainPort) {
             this.putQueryParameter("DstMainPort", dstMainPort);
@@ -186,7 +195,10 @@ public class StartSwitchDatabaseRequest extends Request {
         }
 
         /**
-         * IsModifyEndpoint.
+         * <p>Specifies whether to modify the endpoint or port of the source or target instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isModifyEndpoint(String isModifyEndpoint) {
             this.putQueryParameter("IsModifyEndpoint", isModifyEndpoint);
@@ -195,6 +207,7 @@ public class StartSwitchDatabaseRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -207,6 +220,7 @@ public class StartSwitchDatabaseRequest extends Request {
         }
 
         /**
+         * <p>The ID of the import task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -219,7 +233,10 @@ public class StartSwitchDatabaseRequest extends Request {
         }
 
         /**
-         * SrcMainConnectString.
+         * <p>The endpoint of the primary node of the source instance. This is typically the internal or public endpoint of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-*********.mysql.rds.aliyuncs.com</p>
          */
         public Builder srcMainConnectString(String srcMainConnectString) {
             this.putQueryParameter("SrcMainConnectString", srcMainConnectString);
@@ -228,7 +245,10 @@ public class StartSwitchDatabaseRequest extends Request {
         }
 
         /**
-         * SrcMainPort.
+         * <p>The port number of the primary node of the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3308</p>
          */
         public Builder srcMainPort(String srcMainPort) {
             this.putQueryParameter("SrcMainPort", srcMainPort);

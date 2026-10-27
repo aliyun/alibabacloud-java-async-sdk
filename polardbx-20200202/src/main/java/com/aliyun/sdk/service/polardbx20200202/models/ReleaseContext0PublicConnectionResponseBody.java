@@ -80,7 +80,7 @@ public class ReleaseContext0PublicConnectionResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details of the access denial.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -88,7 +88,7 @@ public class ReleaseContext0PublicConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The task details.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -230,7 +230,10 @@ public class ReleaseContext0PublicConnectionResponseBody extends TeaModel {
             } 
 
             /**
-             * AuthAction.
+             * <p>The description is as above.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -238,7 +241,10 @@ public class ReleaseContext0PublicConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalDisplayName.
+             * <p>The identity used for authentication in the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -246,7 +252,10 @@ public class ReleaseContext0PublicConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalOwnerId.
+             * <p>The description is as above.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder authPrincipalOwnerId(String authPrincipalOwnerId) {
                 this.authPrincipalOwnerId = authPrincipalOwnerId;
@@ -254,7 +263,10 @@ public class ReleaseContext0PublicConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalType.
+             * <p>The description is as above.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>222</p>
              */
             public Builder authPrincipalType(String authPrincipalType) {
                 this.authPrincipalType = authPrincipalType;
@@ -262,7 +274,10 @@ public class ReleaseContext0PublicConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * EncodedDiagnosticMessage.
+             * <p>The diagnostic information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
              */
             public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
                 this.encodedDiagnosticMessage = encodedDiagnosticMessage;
@@ -281,7 +296,10 @@ public class ReleaseContext0PublicConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * <p>The policy type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>System</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -426,7 +444,10 @@ public class ReleaseContext0PublicConnectionResponseBody extends TeaModel {
             } 
 
             /**
-             * Context0InstanceName.
+             * <p>The context service instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>context0-example</p>
              */
             public Builder context0InstanceName(String context0InstanceName) {
                 this.context0InstanceName = context0InstanceName;
@@ -434,7 +455,10 @@ public class ReleaseContext0PublicConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxsp-xxxxxxxxxx</p>
              */
             public Builder DBInstanceId(Integer DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -442,7 +466,10 @@ public class ReleaseContext0PublicConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceName.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxc-hzjasd****</p>
              */
             public Builder DBInstanceName(String DBInstanceName) {
                 this.DBInstanceName = DBInstanceName;
@@ -450,7 +477,10 @@ public class ReleaseContext0PublicConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * NetType.
+             * <p>The network type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder netType(Integer netType) {
                 this.netType = netType;
@@ -458,7 +488,14 @@ public class ReleaseContext0PublicConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * NodeType.
+             * <p>The query node type. Valid values:</p>
+             * <ul>
+             * <li>service</li>
+             * <li>dashboard</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>service</p>
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -466,7 +503,10 @@ public class ReleaseContext0PublicConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * OldConnectionString.
+             * <p>The database endpoint before the switchover.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>***.polarxcontextdb.rds.aliyuncs.com</p>
              */
             public Builder oldConnectionString(String oldConnectionString) {
                 this.oldConnectionString = oldConnectionString;
@@ -474,7 +514,10 @@ public class ReleaseContext0PublicConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * OldPort.
+             * <p>The previous port value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8080</p>
              */
             public Builder oldPort(String oldPort) {
                 this.oldPort = oldPort;
@@ -482,7 +525,10 @@ public class ReleaseContext0PublicConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2209883</p>
              */
             public Builder taskId(Integer taskId) {
                 this.taskId = taskId;

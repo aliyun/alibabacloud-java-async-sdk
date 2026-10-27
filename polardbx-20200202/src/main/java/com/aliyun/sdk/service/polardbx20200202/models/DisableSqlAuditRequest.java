@@ -103,7 +103,10 @@ public class DisableSqlAuditRequest extends Request {
         } 
 
         /**
-         * AuditAccountName.
+         * <p>The name of the audit administrator account. &gt; This parameter is required if the three-role mode is enabled. For more information about the three-role mode, see <a href="https://help.aliyun.com/document_detail/213824.html">Three-role mode</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_daa</p>
          */
         public Builder auditAccountName(String auditAccountName) {
             this.putQueryParameter("AuditAccountName", auditAccountName);
@@ -112,7 +115,10 @@ public class DisableSqlAuditRequest extends Request {
         }
 
         /**
-         * AuditAccountPassword.
+         * <p>The password of the audit administrator account. &gt; This parameter is required if the three-role mode is enabled. For more information about the three-role mode, see <a href="https://help.aliyun.com/document_detail/213824.html">Three-role mode</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Pw@11111</p>
          */
         public Builder auditAccountPassword(String auditAccountPassword) {
             this.putQueryParameter("AuditAccountPassword", auditAccountPassword);
@@ -121,6 +127,7 @@ public class DisableSqlAuditRequest extends Request {
         }
 
         /**
+         * <p>The instance ID. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDBInstances</a> operation to query the details of all instances in the specified region, including instance IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +140,7 @@ public class DisableSqlAuditRequest extends Request {
         }
 
         /**
+         * <p>The ID of the region where the instance resides. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196841.html">DescribeRegions</a> operation to query the regions supported by PolarDB-X, including region IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

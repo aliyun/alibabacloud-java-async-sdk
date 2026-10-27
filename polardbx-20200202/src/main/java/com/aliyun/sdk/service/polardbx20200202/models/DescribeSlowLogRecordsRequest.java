@@ -176,6 +176,7 @@ public class DescribeSlowLogRecordsRequest extends Request {
         } 
 
         /**
+         * <p>The node type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -188,6 +189,7 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
+         * <p>The instance name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -200,7 +202,10 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * DBName.
+         * <p>The database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testdb</p>
          */
         public Builder DBName(String DBName) {
             this.putQueryParameter("DBName", DBName);
@@ -209,7 +214,10 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * DBNodeIds.
+         * <p>The node IDs. You can specify multiple node IDs separated by commas (<code>,</code>). This parameter is required when you query storage nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxc-i-mezcj4ejdz</p>
          */
         public Builder DBNodeIds(String DBNodeIds) {
             this.putQueryParameter("DBNodeIds", DBNodeIds);
@@ -218,6 +226,7 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
+         * <p>The start time of the query. Format: YYYY-MM-ddTHH:mmZ (UTC).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -230,7 +239,10 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * Page.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Integer page) {
             this.putQueryParameter("Page", page);
@@ -239,7 +251,11 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 100.</p>
+         * <p>Limit: A maximum of 100 entries can be returned at a time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -248,6 +264,7 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -260,6 +277,7 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
+         * <p>The start time of the query. Format: YYYY-MM-ddTHH:mmZ (UTC).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

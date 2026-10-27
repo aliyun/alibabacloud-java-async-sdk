@@ -93,7 +93,7 @@ public class CreateRplInspectionTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The task details.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +101,10 @@ public class CreateRplInspectionTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message of the task. &gt; This parameter is returned only when the task status is <strong>stop</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +112,10 @@ public class CreateRplInspectionTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9B2F3840-5C98-475C-B269-2D5C3A31797C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +123,10 @@ public class CreateRplInspectionTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -170,7 +179,10 @@ public class CreateRplInspectionTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * SlinkTaskId.
+             * <p>The slink task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>etx-szr2rr6i*****</p>
              */
             public Builder slinkTaskId(String slinkTaskId) {
                 this.slinkTaskId = slinkTaskId;

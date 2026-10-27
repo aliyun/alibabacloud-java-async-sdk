@@ -163,7 +163,10 @@ public class EnableRightsSeparationRequest extends Request {
         } 
 
         /**
-         * AuditAccountDescription.
+         * <p>The description of the audit account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test123</p>
          */
         public Builder auditAccountDescription(String auditAccountDescription) {
             this.putQueryParameter("AuditAccountDescription", auditAccountDescription);
@@ -172,6 +175,7 @@ public class EnableRightsSeparationRequest extends Request {
         }
 
         /**
+         * <p>The name of the audit account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -184,6 +188,7 @@ public class EnableRightsSeparationRequest extends Request {
         }
 
         /**
+         * <p>The password of the audit account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -196,6 +201,7 @@ public class EnableRightsSeparationRequest extends Request {
         }
 
         /**
+         * <p>The name of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -208,6 +214,7 @@ public class EnableRightsSeparationRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -220,7 +227,10 @@ public class EnableRightsSeparationRequest extends Request {
         }
 
         /**
-         * SecurityAccountDescription.
+         * <p>The description of the security administrator account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test123</p>
          */
         public Builder securityAccountDescription(String securityAccountDescription) {
             this.putQueryParameter("SecurityAccountDescription", securityAccountDescription);
@@ -229,6 +239,7 @@ public class EnableRightsSeparationRequest extends Request {
         }
 
         /**
+         * <p>The name of the security administrator account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -241,6 +252,7 @@ public class EnableRightsSeparationRequest extends Request {
         }
 
         /**
+         * <p>The password of the security administrator account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

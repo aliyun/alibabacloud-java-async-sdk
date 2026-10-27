@@ -67,7 +67,7 @@ public class DescribeColdDataBasicInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The details.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class DescribeColdDataBasicInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1A6D328C-84B8-40DC-BF49-6C73984D7494</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -245,7 +248,10 @@ public class DescribeColdDataBasicInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * BackupSetCount.
+             * <p>The number of backup sets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder backupSetCount(Integer backupSetCount) {
                 this.backupSetCount = backupSetCount;
@@ -253,7 +259,10 @@ public class DescribeColdDataBasicInfoResponseBody extends TeaModel {
             }
 
             /**
-             * BackupSetSpaceSize.
+             * <p>The data size of valid backup sets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder backupSetSpaceSize(Double backupSetSpaceSize) {
                 this.backupSetSpaceSize = backupSetSpaceSize;
@@ -261,7 +270,10 @@ public class DescribeColdDataBasicInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CloudProduct.
+             * <p>The underlying cloud storage service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliyunOSS</p>
              */
             public Builder cloudProduct(String cloudProduct) {
                 this.cloudProduct = cloudProduct;
@@ -269,7 +281,10 @@ public class DescribeColdDataBasicInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentSpaceSize.
+             * <p>The data size of cold storage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder currentSpaceSize(Double currentSpaceSize) {
                 this.currentSpaceSize = currentSpaceSize;
@@ -277,7 +292,10 @@ public class DescribeColdDataBasicInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DataRedundancyType.
+             * <p>The data redundancy type of cold storage. LRS indicates locally redundant storage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LRS</p>
              */
             public Builder dataRedundancyType(String dataRedundancyType) {
                 this.dataRedundancyType = dataRedundancyType;
@@ -285,7 +303,7 @@ public class DescribeColdDataBasicInfoResponseBody extends TeaModel {
             }
 
             /**
-             * EnableStatus.
+             * <p>Indicates whether cold storage is enabled.</p>
              */
             public Builder enableStatus(Boolean enableStatus) {
                 this.enableStatus = enableStatus;
@@ -293,7 +311,10 @@ public class DescribeColdDataBasicInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ReadAccessNum.
+             * <p>The number of read accesses to cold data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder readAccessNum(Long readAccessNum) {
                 this.readAccessNum = readAccessNum;
@@ -301,7 +322,10 @@ public class DescribeColdDataBasicInfoResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -309,7 +333,10 @@ public class DescribeColdDataBasicInfoResponseBody extends TeaModel {
             }
 
             /**
-             * VolumeName.
+             * <p>The name of the storage volume.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>polardbx-oss-columnar-bucket-cn-hangzhou-1</p>
              */
             public Builder volumeName(String volumeName) {
                 this.volumeName = volumeName;
@@ -317,7 +344,10 @@ public class DescribeColdDataBasicInfoResponseBody extends TeaModel {
             }
 
             /**
-             * WriteAccessNum.
+             * <p>The number of write accesses to cold data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder writeAccessNum(Double writeAccessNum) {
                 this.writeAccessNum = writeAccessNum;

@@ -80,7 +80,7 @@ public class DeletePxfsUserResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details of the access denial.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -88,7 +88,7 @@ public class DeletePxfsUserResponseBody extends TeaModel {
         }
 
         /**
-         * <p>接口返回的业务数据。</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -96,7 +96,7 @@ public class DeletePxfsUserResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求的唯一标识，可用于排查问题。</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -230,7 +230,10 @@ public class DeletePxfsUserResponseBody extends TeaModel {
             } 
 
             /**
-             * AuthAction.
+             * <p>The authorization action.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -238,7 +241,10 @@ public class DeletePxfsUserResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalDisplayName.
+             * <p>The display name of the authorization principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -246,7 +252,10 @@ public class DeletePxfsUserResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalOwnerId.
+             * <p>The description is the same as above.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder authPrincipalOwnerId(String authPrincipalOwnerId) {
                 this.authPrincipalOwnerId = authPrincipalOwnerId;
@@ -254,7 +263,10 @@ public class DeletePxfsUserResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalType.
+             * <p>The type of the authorization principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>222</p>
              */
             public Builder authPrincipalType(String authPrincipalType) {
                 this.authPrincipalType = authPrincipalType;
@@ -262,7 +274,10 @@ public class DeletePxfsUserResponseBody extends TeaModel {
             }
 
             /**
-             * EncodedDiagnosticMessage.
+             * <p>The encoded diagnostic message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
              */
             public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
                 this.encodedDiagnosticMessage = encodedDiagnosticMessage;
@@ -270,7 +285,10 @@ public class DeletePxfsUserResponseBody extends TeaModel {
             }
 
             /**
-             * NoPermissionType.
+             * <p>The type of the no-permission error.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ImplicitDeny</p>
              */
             public Builder noPermissionType(String noPermissionType) {
                 this.noPermissionType = noPermissionType;
@@ -278,7 +296,10 @@ public class DeletePxfsUserResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * <p>The policy type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PRIORITY</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -358,7 +379,7 @@ public class DeletePxfsUserResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>租户身份是否已删除。</p>
+             * <p>Indicates whether the identity is deleted.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -369,7 +390,7 @@ public class DeletePxfsUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Agent文件服务租户内的身份名称，不是阿里云账号UID。</p>
+             * <p>The identity name.</p>
              * 
              * <strong>example:</strong>
              * <p>agent-runtime</p>
@@ -380,7 +401,7 @@ public class DeletePxfsUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Agent文件服务的租户ID。</p>
+             * <p>The tenant ID.</p>
              * 
              * <strong>example:</strong>
              * <p>tenant-001</p>

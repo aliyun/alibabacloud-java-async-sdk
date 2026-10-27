@@ -67,7 +67,7 @@ public class DescribeCdcClassListResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The data struct.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -157,7 +157,10 @@ public class DescribeCdcClassListResponseBody extends TeaModel {
             } 
 
             /**
-             * ClassCode.
+             * <p>The instance specification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>polarx.n2.small.2e.cdc</p>
              */
             public Builder classCode(String classCode) {
                 this.classCode = classCode;
@@ -165,7 +168,10 @@ public class DescribeCdcClassListResponseBody extends TeaModel {
             }
 
             /**
-             * CpuCore.
+             * <p>The number of CPU cores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder cpuCore(String cpuCore) {
                 this.cpuCore = cpuCore;
@@ -173,7 +179,10 @@ public class DescribeCdcClassListResponseBody extends TeaModel {
             }
 
             /**
-             * Mem.
+             * <p>The total memory size of the tenant. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2048</p>
              */
             public Builder mem(String mem) {
                 this.mem = mem;

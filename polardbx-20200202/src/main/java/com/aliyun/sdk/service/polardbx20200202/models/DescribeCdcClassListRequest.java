@@ -89,6 +89,7 @@ public class DescribeCdcClassListRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +102,10 @@ public class DescribeCdcClassListRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxc-hzrh51fze****pon-cdc</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -110,6 +114,7 @@ public class DescribeCdcClassListRequest extends Request {
         }
 
         /**
+         * <p>The region where the instance resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

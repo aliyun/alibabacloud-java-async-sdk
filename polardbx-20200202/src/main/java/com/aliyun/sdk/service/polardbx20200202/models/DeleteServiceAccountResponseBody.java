@@ -106,7 +106,7 @@ public class DeleteServiceAccountResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details of the access denial.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -114,7 +114,7 @@ public class DeleteServiceAccountResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data struct.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +122,10 @@ public class DeleteServiceAccountResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message returned if the request failed. This parameter is empty if the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +133,10 @@ public class DeleteServiceAccountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9B2F3840-5C98-475C-B269-2D5C3A31797C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +144,10 @@ public class DeleteServiceAccountResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -243,7 +252,10 @@ public class DeleteServiceAccountResponseBody extends TeaModel {
             } 
 
             /**
-             * AuthAction.
+             * <p>The authentication action.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -251,7 +263,10 @@ public class DeleteServiceAccountResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalType.
+             * <p>The type of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>222</p>
              */
             public Builder authPrincipalType(String authPrincipalType) {
                 this.authPrincipalType = authPrincipalType;
@@ -259,7 +274,10 @@ public class DeleteServiceAccountResponseBody extends TeaModel {
             }
 
             /**
-             * EncodedDiagnosticMessage.
+             * <p>The diagnostic information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
              */
             public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
                 this.encodedDiagnosticMessage = encodedDiagnosticMessage;
@@ -267,7 +285,10 @@ public class DeleteServiceAccountResponseBody extends TeaModel {
             }
 
             /**
-             * NoPermissionType.
+             * <p>The type of the missing permission.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ImplicitDeny</p>
              */
             public Builder noPermissionType(String noPermissionType) {
                 this.noPermissionType = noPermissionType;
@@ -275,7 +296,10 @@ public class DeleteServiceAccountResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * <p>The policy type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PRIORITY</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -394,7 +418,10 @@ public class DeleteServiceAccountResponseBody extends TeaModel {
             } 
 
             /**
-             * AccountName.
+             * <p>The account name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>polardbx_meta_ro</p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -402,7 +429,10 @@ public class DeleteServiceAccountResponseBody extends TeaModel {
             }
 
             /**
-             * Deleted.
+             * <p>Indicates whether the import task is successful.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fase</p>
              */
             public Builder deleted(Boolean deleted) {
                 this.deleted = deleted;
@@ -410,7 +440,10 @@ public class DeleteServiceAccountResponseBody extends TeaModel {
             }
 
             /**
-             * RequestId.
+             * <p>The request ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1E5DCFFC-A00D-****-836E-73318F8CA577</p>
              */
             public Builder requestId(String requestId) {
                 this.requestId = requestId;
@@ -418,7 +451,10 @@ public class DeleteServiceAccountResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceAccountType.
+             * <p>The type of the service account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>METADATA_READONLY</p>
              */
             public Builder serviceAccountType(String serviceAccountType) {
                 this.serviceAccountType = serviceAccountType;
@@ -426,7 +462,10 @@ public class DeleteServiceAccountResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The instance status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -434,7 +473,10 @@ public class DeleteServiceAccountResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder taskId(Integer taskId) {
                 this.taskId = taskId;

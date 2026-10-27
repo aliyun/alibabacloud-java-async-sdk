@@ -80,7 +80,7 @@ public class DescribeOpenSearchTopologyResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details of the access denial.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -88,7 +88,7 @@ public class DescribeOpenSearchTopologyResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data struct.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -230,7 +230,10 @@ public class DescribeOpenSearchTopologyResponseBody extends TeaModel {
             } 
 
             /**
-             * AuthAction.
+             * <p>The authentication action.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -238,7 +241,10 @@ public class DescribeOpenSearchTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalDisplayName.
+             * <p>The display name of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -246,7 +252,10 @@ public class DescribeOpenSearchTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalOwnerId.
+             * <p>The owner ID of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder authPrincipalOwnerId(String authPrincipalOwnerId) {
                 this.authPrincipalOwnerId = authPrincipalOwnerId;
@@ -254,7 +263,10 @@ public class DescribeOpenSearchTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalType.
+             * <p>The authentication principal type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>222</p>
              */
             public Builder authPrincipalType(String authPrincipalType) {
                 this.authPrincipalType = authPrincipalType;
@@ -262,7 +274,10 @@ public class DescribeOpenSearchTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * EncodedDiagnosticMessage.
+             * <p>The encoded diagnostic message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
              */
             public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
                 this.encodedDiagnosticMessage = encodedDiagnosticMessage;
@@ -281,7 +296,10 @@ public class DescribeOpenSearchTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * <p>The policy type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PRIORITY</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -426,7 +444,10 @@ public class DescribeOpenSearchTopologyResponseBody extends TeaModel {
             } 
 
             /**
-             * AvailabilityZone.
+             * <p>The zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t1222576965886205</p>
              */
             public Builder availabilityZone(String availabilityZone) {
                 this.availabilityZone = availabilityZone;
@@ -434,7 +455,10 @@ public class DescribeOpenSearchTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * Cpu.
+             * <p>The total number of CPU cores in the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.25</p>
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -442,7 +466,10 @@ public class DescribeOpenSearchTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * Host.
+             * <p>The Origin Domain Name that you configured in the DCDN console, including IPv4 addresses, IPv6 addresses, common domain names, and OSS domain names.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://secnet-defense-vastip.oss-cn-hangzhou.aliyuncs.com">https://secnet-defense-vastip.oss-cn-hangzhou.aliyuncs.com</a></p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -450,7 +477,7 @@ public class DescribeOpenSearchTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * IsLeader.
+             * <p>Indicates whether the current node is the primary node.</p>
              */
             public Builder isLeader(Boolean isLeader) {
                 this.isLeader = isLeader;
@@ -458,7 +485,10 @@ public class DescribeOpenSearchTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * MemoryGB.
+             * <p>The memory size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder memoryGB(Integer memoryGB) {
                 this.memoryGB = memoryGB;
@@ -466,7 +496,10 @@ public class DescribeOpenSearchTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * <p>The node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxc-c-jf0pivh2dt</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -474,7 +507,15 @@ public class DescribeOpenSearchTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * Role.
+             * <p>The role of a node in the three-node RDS cluster. Valid values:</p>
+             * <ul>
+             * <li><strong>leader</strong>: primary node</li>
+             * <li><strong>follower</strong>: secondary node</li>
+             * <li><strong>logger</strong>: logger node</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>polarx_cn</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -482,7 +523,19 @@ public class DescribeOpenSearchTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The node status. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: Running</li>
+             * <li><strong>1</strong>: Creating</li>
+             * <li><strong>2</strong>: Abnormal</li>
+             * <li><strong>3</strong>: Expired</li>
+             * <li><strong>4</strong>: Releasing</li>
+             * <li><strong>5</strong>: Released</li>
+             * <li><strong>6</strong>: Locked</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -562,7 +615,13 @@ public class DescribeOpenSearchTopologyResponseBody extends TeaModel {
             } 
 
             /**
-             * ReplicaCount.
+             * <p>The number of secondary nodes in the primary zone.</p>
+             * <blockquote>
+             * <p>The <strong>ReplicaCount</strong> and <strong>SlaveReplicaCount</strong> parameters apply only to cloud-native instances. If the instance uses the cluster architecture, these parameters indicate the number of secondary nodes of a <strong>single shard</strong> in the primary and secondary zones.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder replicaCount(Integer replicaCount) {
                 this.replicaCount = replicaCount;
@@ -570,7 +629,10 @@ public class DescribeOpenSearchTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * StorageTotalGB.
+             * <p>The total storage capacity of the node. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder storageTotalGB(Integer storageTotalGB) {
                 this.storageTotalGB = storageTotalGB;
@@ -578,7 +640,10 @@ public class DescribeOpenSearchTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * StorageType.
+             * <p>The storage type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_auto</p>
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;
@@ -645,7 +710,7 @@ public class DescribeOpenSearchTopologyResponseBody extends TeaModel {
             } 
 
             /**
-             * Nodes.
+             * <p>The node IDs.</p>
              */
             public Builder nodes(java.util.List<Nodes> nodes) {
                 this.nodes = nodes;
@@ -653,7 +718,7 @@ public class DescribeOpenSearchTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * Storage.
+             * <p>The configuration of the automatic storage scaling feature for the instance.</p>
              */
             public Builder storage(Storage storage) {
                 this.storage = storage;

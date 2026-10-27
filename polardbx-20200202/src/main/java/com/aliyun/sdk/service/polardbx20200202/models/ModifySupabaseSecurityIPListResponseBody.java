@@ -80,7 +80,7 @@ public class ModifySupabaseSecurityIPListResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details of the access denied error.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -88,7 +88,7 @@ public class ModifySupabaseSecurityIPListResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The operation result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -96,7 +96,10 @@ public class ModifySupabaseSecurityIPListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C457B28E-9CAB-4B77-B5C6-5D71B7870B6E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -227,7 +230,10 @@ public class ModifySupabaseSecurityIPListResponseBody extends TeaModel {
             } 
 
             /**
-             * AuthAction.
+             * <p>The authentication action.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -235,7 +241,10 @@ public class ModifySupabaseSecurityIPListResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalDisplayName.
+             * <p>The display name of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -243,7 +252,10 @@ public class ModifySupabaseSecurityIPListResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalOwnerId.
+             * <p>The owner ID of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder authPrincipalOwnerId(String authPrincipalOwnerId) {
                 this.authPrincipalOwnerId = authPrincipalOwnerId;
@@ -251,7 +263,10 @@ public class ModifySupabaseSecurityIPListResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalType.
+             * <p>The type of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>222</p>
              */
             public Builder authPrincipalType(String authPrincipalType) {
                 this.authPrincipalType = authPrincipalType;
@@ -259,7 +274,10 @@ public class ModifySupabaseSecurityIPListResponseBody extends TeaModel {
             }
 
             /**
-             * EncodedDiagnosticMessage.
+             * <p>The diagnostic message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
              */
             public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
                 this.encodedDiagnosticMessage = encodedDiagnosticMessage;
@@ -267,7 +285,10 @@ public class ModifySupabaseSecurityIPListResponseBody extends TeaModel {
             }
 
             /**
-             * NoPermissionType.
+             * <p>The type of the no permission error.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ImplicitDeny</p>
              */
             public Builder noPermissionType(String noPermissionType) {
                 this.noPermissionType = noPermissionType;
@@ -275,7 +296,10 @@ public class ModifySupabaseSecurityIPListResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * <p>The policy type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PRIORITY</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -355,7 +379,10 @@ public class ModifySupabaseSecurityIPListResponseBody extends TeaModel {
             } 
 
             /**
-             * DBInstanceName.
+             * <p>The name of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxsp-*********</p>
              */
             public Builder DBInstanceName(String DBInstanceName) {
                 this.DBInstanceName = DBInstanceName;
@@ -363,7 +390,10 @@ public class ModifySupabaseSecurityIPListResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * <p>The name of the whitelist group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>special</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -371,7 +401,10 @@ public class ModifySupabaseSecurityIPListResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityIPList.
+             * <p>The IP whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.104.187.192/26,100.104.225.192/26,100.104.145.64/26</p>
              */
             public Builder securityIPList(String securityIPList) {
                 this.securityIPList = securityIPList;

@@ -80,7 +80,7 @@ public class ResetOpenSearchPasswordResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details of the access denial.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -88,7 +88,7 @@ public class ResetOpenSearchPasswordResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The monitoring data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -230,7 +230,10 @@ public class ResetOpenSearchPasswordResponseBody extends TeaModel {
             } 
 
             /**
-             * AuthAction.
+             * <p>The authentication action.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -238,7 +241,10 @@ public class ResetOpenSearchPasswordResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalDisplayName.
+             * <p>The display name of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -246,7 +252,10 @@ public class ResetOpenSearchPasswordResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalOwnerId.
+             * <p>The owner ID of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder authPrincipalOwnerId(String authPrincipalOwnerId) {
                 this.authPrincipalOwnerId = authPrincipalOwnerId;
@@ -254,7 +263,10 @@ public class ResetOpenSearchPasswordResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalType.
+             * <p>The type of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>222</p>
              */
             public Builder authPrincipalType(String authPrincipalType) {
                 this.authPrincipalType = authPrincipalType;
@@ -262,7 +274,10 @@ public class ResetOpenSearchPasswordResponseBody extends TeaModel {
             }
 
             /**
-             * EncodedDiagnosticMessage.
+             * <p>The encoded diagnostic message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
              */
             public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
                 this.encodedDiagnosticMessage = encodedDiagnosticMessage;
@@ -270,7 +285,10 @@ public class ResetOpenSearchPasswordResponseBody extends TeaModel {
             }
 
             /**
-             * NoPermissionType.
+             * <p>The type of the missing permission.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ImplicitDeny</p>
              */
             public Builder noPermissionType(String noPermissionType) {
                 this.noPermissionType = noPermissionType;
@@ -278,7 +296,10 @@ public class ResetOpenSearchPasswordResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * <p>The policy type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>System</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -345,7 +366,10 @@ public class ResetOpenSearchPasswordResponseBody extends TeaModel {
             } 
 
             /**
-             * Message.
+             * <p>The additional information returned by the operation. &quot;success&quot; is returned if the operation is successful. Otherwise, the corresponding error code is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>【环境：huanghe】\nhuanghe 503_UC_OUTBOUND告警超过阈值！\n\n详情请查看: <a href="https://grafana-cn-lbj34sreu03.grafana.aliyuncs.com/d/_rOiq2lNk/asm-status-code-monitor?var-datasource=DataSource-HUANGHE%5C%5Cn">https://grafana-cn-lbj34sreu03.grafana.aliyuncs.com/d/_rOiq2lNk/asm-status-code-monitor?var-datasource=DataSource-HUANGHE\\n</a></p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -353,7 +377,10 @@ public class ResetOpenSearchPasswordResponseBody extends TeaModel {
             }
 
             /**
-             * PasswordLastModified.
+             * <p>The time when the password was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-08-21T12:00:00Z</p>
              */
             public Builder passwordLastModified(String passwordLastModified) {
                 this.passwordLastModified = passwordLastModified;

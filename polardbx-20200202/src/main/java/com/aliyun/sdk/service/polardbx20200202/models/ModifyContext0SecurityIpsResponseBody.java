@@ -80,7 +80,7 @@ public class ModifyContext0SecurityIpsResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details of the access denial.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -88,7 +88,7 @@ public class ModifyContext0SecurityIpsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -96,7 +96,10 @@ public class ModifyContext0SecurityIpsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9B2F3840-5C98-475C-B269-2D5C3A31797C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -227,7 +230,10 @@ public class ModifyContext0SecurityIpsResponseBody extends TeaModel {
             } 
 
             /**
-             * AuthAction.
+             * <p>The authentication action.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -235,7 +241,10 @@ public class ModifyContext0SecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalDisplayName.
+             * <p>The name of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -243,7 +252,10 @@ public class ModifyContext0SecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalOwnerId.
+             * <p>The owner ID of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder authPrincipalOwnerId(String authPrincipalOwnerId) {
                 this.authPrincipalOwnerId = authPrincipalOwnerId;
@@ -251,7 +263,15 @@ public class ModifyContext0SecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalType.
+             * <p>The type of identity used for authentication in the request. Valid values:</p>
+             * <ul>
+             * <li>SubUser: RAM user.</li>
+             * <li>AssumedRoleUser: RAM role.</li>
+             * <li>Federated: SSO federated identity.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>222</p>
              */
             public Builder authPrincipalType(String authPrincipalType) {
                 this.authPrincipalType = authPrincipalType;
@@ -259,7 +279,10 @@ public class ModifyContext0SecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * EncodedDiagnosticMessage.
+             * <p>The diagnostic information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
              */
             public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
                 this.encodedDiagnosticMessage = encodedDiagnosticMessage;
@@ -387,7 +410,10 @@ public class ModifyContext0SecurityIpsResponseBody extends TeaModel {
             } 
 
             /**
-             * Context0InstanceName.
+             * <p>The name of the context service instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>context0-example</p>
              */
             public Builder context0InstanceName(String context0InstanceName) {
                 this.context0InstanceName = context0InstanceName;
@@ -395,7 +421,10 @@ public class ModifyContext0SecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxsp-xxxxxxxxxx</p>
              */
             public Builder DBInstanceId(Integer DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -403,7 +432,10 @@ public class ModifyContext0SecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceName.
+             * <p>The name of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxc-hzjasd****</p>
              */
             public Builder DBInstanceName(String DBInstanceName) {
                 this.DBInstanceName = DBInstanceName;
@@ -411,7 +443,10 @@ public class ModifyContext0SecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The ID of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder taskId(Integer taskId) {
                 this.taskId = taskId;
@@ -419,7 +454,7 @@ public class ModifyContext0SecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * TaskIds.
+             * <p>The list of task IDs in the task group.</p>
              */
             public Builder taskIds(java.util.List<Integer> taskIds) {
                 this.taskIds = taskIds;

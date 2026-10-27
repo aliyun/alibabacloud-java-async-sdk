@@ -67,7 +67,7 @@ public class CreateCustomEndpointResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -144,7 +144,10 @@ public class CreateCustomEndpointResponseBody extends TeaModel {
             } 
 
             /**
-             * CustomEndpointId.
+             * <p>The endpoint ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxe-c4gkgqg****7sgyg</p>
              */
             public Builder customEndpointId(String customEndpointId) {
                 this.customEndpointId = customEndpointId;
@@ -152,7 +155,10 @@ public class CreateCustomEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceName.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxc-*********</p>
              */
             public Builder DBInstanceName(String DBInstanceName) {
                 this.DBInstanceName = DBInstanceName;

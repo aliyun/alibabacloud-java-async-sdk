@@ -73,7 +73,10 @@ public class DescribeEnabledCrossRegionsRequest extends Request {
         } 
 
         /**
-         * DBInstanceName.
+         * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxc-bjxxxxxxxx</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.putQueryParameter("DBInstanceName", DBInstanceName);
@@ -82,7 +85,10 @@ public class DescribeEnabledCrossRegionsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

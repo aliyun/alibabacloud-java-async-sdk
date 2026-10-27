@@ -80,7 +80,10 @@ public class ResetAccountPasswordRestrictResponseBody extends TeaModel {
         } 
 
         /**
-         * Message.
+         * <p>The additional information about the call result.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder message(String message) {
             this.message = message;
@@ -88,7 +91,10 @@ public class ResetAccountPasswordRestrictResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9B2F3840-5C98-****-B269-2D5C3A31797C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +102,10 @@ public class ResetAccountPasswordRestrictResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

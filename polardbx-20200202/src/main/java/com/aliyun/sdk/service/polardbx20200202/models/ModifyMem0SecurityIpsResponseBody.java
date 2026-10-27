@@ -80,7 +80,7 @@ public class ModifyMem0SecurityIpsResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -88,7 +88,7 @@ public class ModifyMem0SecurityIpsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data structure.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -96,7 +96,10 @@ public class ModifyMem0SecurityIpsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B87E2AB3-B7C9-4394-9160-7F639F732031</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -227,7 +230,10 @@ public class ModifyMem0SecurityIpsResponseBody extends TeaModel {
             } 
 
             /**
-             * AuthAction.
+             * <p>The API operation name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -235,7 +241,10 @@ public class ModifyMem0SecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalDisplayName.
+             * <p>The identity used for authentication in the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -243,7 +252,10 @@ public class ModifyMem0SecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalOwnerId.
+             * <p>The ID of the Alibaba Cloud account to which the identity used for authentication belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder authPrincipalOwnerId(String authPrincipalOwnerId) {
                 this.authPrincipalOwnerId = authPrincipalOwnerId;
@@ -251,7 +263,15 @@ public class ModifyMem0SecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalType.
+             * <p>The type of identity used for authentication in the request. Valid values:</p>
+             * <ul>
+             * <li>SubUser: RAM user.</li>
+             * <li>AssumedRoleUser: RAM role.</li>
+             * <li>Federated: SSO federated identity.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>222</p>
              */
             public Builder authPrincipalType(String authPrincipalType) {
                 this.authPrincipalType = authPrincipalType;
@@ -259,7 +279,10 @@ public class ModifyMem0SecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * EncodedDiagnosticMessage.
+             * <p>The encrypted complete diagnostic information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
              */
             public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
                 this.encodedDiagnosticMessage = encodedDiagnosticMessage;
@@ -267,7 +290,14 @@ public class ModifyMem0SecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * NoPermissionType.
+             * <p>The type of the permission denial. Valid values:</p>
+             * <ul>
+             * <li><strong>ImplicitDeny</strong>: The resource owner has not granted the required permissions to the current user. Unauthorized operations are denied by default.</li>
+             * <li><strong>ExplicitDeny</strong>: The RAM policy configured by the resource owner explicitly denies the current user access to the corresponding resource.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ImplicitDeny</p>
              */
             public Builder noPermissionType(String noPermissionType) {
                 this.noPermissionType = noPermissionType;
@@ -275,7 +305,7 @@ public class ModifyMem0SecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>PolicyType</p>
+             * <p>The policy type.</p>
              * 
              * <strong>example:</strong>
              * <p>PRIORITY</p>
@@ -332,7 +362,10 @@ public class ModifyMem0SecurityIpsResponseBody extends TeaModel {
             } 
 
             /**
-             * TaskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2209883</p>
              */
             public Builder taskId(Integer taskId) {
                 this.taskId = taskId;

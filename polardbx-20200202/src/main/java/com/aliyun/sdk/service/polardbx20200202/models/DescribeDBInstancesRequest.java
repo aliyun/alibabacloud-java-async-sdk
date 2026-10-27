@@ -187,7 +187,10 @@ public class DescribeDBInstancesRequest extends Request {
         } 
 
         /**
-         * DbVersion.
+         * <p>The database version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5.5</p>
          */
         public Builder dbVersion(String dbVersion) {
             this.putQueryParameter("DbVersion", dbVersion);
@@ -196,7 +199,10 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description or remark of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app-test</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -205,7 +211,10 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dinga93c84f4d***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -214,7 +223,10 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * MustHasCdc.
+         * <p>Specifies whether a log engine is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder mustHasCdc(Boolean mustHasCdc) {
             this.putQueryParameter("MustHasCdc", mustHasCdc);
@@ -223,7 +235,10 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -232,7 +247,15 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values:</p>
+         * <ul>
+         * <li>30</li>
+         * <li>50</li>
+         * <li>100</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -241,6 +264,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -253,7 +277,10 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmyst47******</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -262,7 +289,14 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * Series.
+         * <p>The instance edition. Valid values:</p>
+         * <ul>
+         * <li><strong>enterprise</strong>: Enterprise Edition</li>
+         * <li><strong>standard</strong>: Standard Edition</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>enterprise</p>
          */
         public Builder series(String series) {
             this.putQueryParameter("Series", series);
@@ -271,7 +305,10 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>The list of tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{\&quot;TagKey\&quot;:\&quot;test\&quot;,\&quot;TagValue\&quot;:\&quot;test-value\&quot;}]</p>
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);

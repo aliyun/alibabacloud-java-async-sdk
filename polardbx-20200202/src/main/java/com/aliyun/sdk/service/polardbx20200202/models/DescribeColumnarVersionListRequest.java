@@ -73,7 +73,10 @@ public class DescribeColumnarVersionListRequest extends Request {
         } 
 
         /**
-         * DBInstanceName.
+         * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxc-hzjasd****</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.putQueryParameter("DBInstanceName", DBInstanceName);
@@ -82,7 +85,10 @@ public class DescribeColumnarVersionListRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region where the instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

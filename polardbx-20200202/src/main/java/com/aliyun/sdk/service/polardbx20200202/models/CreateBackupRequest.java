@@ -89,7 +89,10 @@ public class CreateBackupRequest extends Request {
         } 
 
         /**
-         * BackupType.
+         * <p>The backup type. Valid values: 0: quick backup.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder backupType(String backupType) {
             this.putQueryParameter("BackupType", backupType);
@@ -98,6 +101,7 @@ public class CreateBackupRequest extends Request {
         }
 
         /**
+         * <p>The name of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +114,7 @@ public class CreateBackupRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

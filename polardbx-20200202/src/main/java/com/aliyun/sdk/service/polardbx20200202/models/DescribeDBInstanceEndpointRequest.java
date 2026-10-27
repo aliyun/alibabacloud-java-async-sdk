@@ -102,6 +102,7 @@ public class DescribeDBInstanceEndpointRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +115,10 @@ public class DescribeDBInstanceEndpointRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page for a paged query. Maximum value: 100. Default value: If the value is not specified or is less than 10, the default value is 10. If the value is greater than 100, the default value is 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -123,7 +127,10 @@ public class DescribeDBInstanceEndpointRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxdds</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -132,7 +139,10 @@ public class DescribeDBInstanceEndpointRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region in which the instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

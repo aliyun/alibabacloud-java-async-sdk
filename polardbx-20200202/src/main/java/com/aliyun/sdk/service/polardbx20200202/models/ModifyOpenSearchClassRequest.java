@@ -103,7 +103,10 @@ public class ModifyOpenSearchClassRequest extends Request {
         } 
 
         /**
-         * DBInstanceDiskSize.
+         * <p>The target disk size per node, in GB. If this parameter is not specified, the current disk size is retained.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder DBInstanceDiskSize(Integer DBInstanceDiskSize) {
             this.putQueryParameter("DBInstanceDiskSize", DBInstanceDiskSize);
@@ -112,6 +115,7 @@ public class ModifyOpenSearchClassRequest extends Request {
         }
 
         /**
+         * <p>The name of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,6 +128,7 @@ public class ModifyOpenSearchClassRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -136,7 +141,10 @@ public class ModifyOpenSearchClassRequest extends Request {
         }
 
         /**
-         * SearchClassCode.
+         * <p>The node specifications code for PolarDBX Search data nodes. This parameter is required. The active node specifications depend on the region and sales configuration, and must differ from the current node specifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>opensearch.sn2ne.large.1</p>
          */
         public Builder searchClassCode(String searchClassCode) {
             this.putQueryParameter("SearchClassCode", searchClassCode);

@@ -119,7 +119,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         } 
 
         /**
-         * DBInstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxc-********</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -127,7 +130,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * <p>The list of slow log details.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -135,7 +138,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the current query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -143,7 +149,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageRecordCount(String pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -162,7 +171,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -540,7 +552,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * CNname.
+             * <p>The compute node name. This field is available only for CN.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxc-i-xxxx</p>
              */
             public Builder cNname(String cNname) {
                 this.cNname = cNname;
@@ -548,7 +563,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * DBName.
+             * <p>The database name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dcdev</p>
              */
             public Builder DBName(String DBName) {
                 this.DBName = DBName;
@@ -556,7 +574,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Extension.
+             * <p>The extension field. This field is available only for CN.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tddl:5.4.19-20240927</p>
              */
             public Builder extension(String extension) {
                 this.extension = extension;
@@ -564,7 +585,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Fail.
+             * <p>Indicates whether the execution failed. This field is available only for CN.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder fail(String fail) {
                 this.fail = fail;
@@ -572,7 +596,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Frows.
+             * <p>The number of rows fetched. This field is available only for CN.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder frows(String frows) {
                 this.frows = frows;
@@ -580,7 +607,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * HostAddress.
+             * <p>The client name and address that connects to the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>[</strong></strong>] @ [1XX.XX.XX.XX]</p>
              */
             public Builder hostAddress(String hostAddress) {
                 this.hostAddress = hostAddress;
@@ -588,7 +618,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * InsName.
+             * <p>The instance name. This field is available only for DN.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxc-xdb-s-xxxx</p>
              */
             public Builder insName(String insName) {
                 this.insName = insName;
@@ -596,7 +629,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * IsBind.
+             * <p>Indicates whether the Prepare mode is used. This field is available only for CN.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder isBind(String isBind) {
                 this.isBind = isBind;
@@ -604,7 +640,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * LockTimeMS.
+             * <p>The lock duration. Unit: milliseconds (ms). This field is available only for DN.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder lockTimeMS(String lockTimeMS) {
                 this.lockTimeMS = lockTimeMS;
@@ -612,7 +651,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Params.
+             * <p>The parameters in Prepare mode. This field is available only for CN.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;1&quot;]</p>
              */
             public Builder params(String params) {
                 this.params = params;
@@ -620,7 +662,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ParseRowCounts.
+             * <p>The number of rows scanned. This field is available only for DN.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder parseRowCounts(String parseRowCounts) {
                 this.parseRowCounts = parseRowCounts;
@@ -628,7 +673,14 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * QueryStartTime.
+             * <p>The timestamp. Format: YYYY-MM-ddTHH:mm.ss.SSSZ (UTC).</p>
+             * <ul>
+             * <li>In CN slow logs, this field indicates the execution start time.</li>
+             * <li>In DN slow logs, this field indicates the execution end time.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-11-22T02:22:22.444Z</p>
              */
             public Builder queryStartTime(String queryStartTime) {
                 this.queryStartTime = queryStartTime;
@@ -636,7 +688,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * QueryTime.
+             * <p>The execution duration of the SQL statement. Unit: seconds (s).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3.000</p>
              */
             public Builder queryTime(String queryTime) {
                 this.queryTime = queryTime;
@@ -644,7 +699,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * QueryTimeMS.
+             * <p>The execution duration of the SQL statement. Unit: milliseconds (ms).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3000.000</p>
              */
             public Builder queryTimeMS(String queryTimeMS) {
                 this.queryTimeMS = queryTimeMS;
@@ -652,7 +710,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ReturnRowCounts.
+             * <p>The number of rows returned. This field is available only for DN.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder returnRowCounts(String returnRowCounts) {
                 this.returnRowCounts = returnRowCounts;
@@ -660,7 +721,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Rows.
+             * <p>The number of rows affected or returned. This field is available only for CN.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder rows(String rows) {
                 this.rows = rows;
@@ -668,7 +732,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * SCNT.
+             * <p>The number of physical SQL statements. This field is available only for CN.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder SCNT(String SCNT) {
                 this.SCNT = SCNT;
@@ -676,7 +743,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * SQLHash.
+             * <p>The unique identity of the SQL statement in slow query log statistics.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c8df07e5d45cd68da8b4771c2016e20b</p>
              */
             public Builder SQLHash(String SQLHash) {
                 this.SQLHash = SQLHash;
@@ -684,7 +754,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * SQLText.
+             * <p>The SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>select * from test</p>
              */
             public Builder SQLText(String SQLText) {
                 this.SQLText = SQLText;
@@ -692,7 +765,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * SqlType.
+             * <p>The SQL type. This field is available only for CN.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>select</p>
              */
             public Builder sqlType(String sqlType) {
                 this.sqlType = sqlType;
@@ -700,7 +776,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>The kernel template ID. This field is available only for CN.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>af33ffee</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -708,7 +787,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * TooLong.
+             * <p>Indicates whether the SQL statement is too long. This field is available only for CN.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder tooLong(String tooLong) {
                 this.tooLong = tooLong;
@@ -716,7 +798,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * TraceId.
+             * <p>The trace ID. This field is available only for CN.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>17a5c5c840006000</p>
              */
             public Builder traceId(String traceId) {
                 this.traceId = traceId;
@@ -724,7 +809,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * TransactionPolicy.
+             * <p>The transaction policy. This field is available only for CN.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>XA</p>
              */
             public Builder transactionPolicy(String transactionPolicy) {
                 this.transactionPolicy = transactionPolicy;
@@ -732,7 +820,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * TrxId.
+             * <p>The transaction ID. This field is available only for CN.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>17a5c5c840006000</p>
              */
             public Builder trxId(String trxId) {
                 this.trxId = trxId;
@@ -740,7 +831,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * WT.
+             * <p>The workload type. This field is available only for CN.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TP</p>
              */
             public Builder wt(String wt) {
                 this.wt = wt;

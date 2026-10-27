@@ -119,7 +119,10 @@ public class ModifyEngineMigrationResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ModifyEngineMigrationResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ModifyEngineMigrationResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class ModifyEngineMigrationResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The additional information. The value success is returned if the request is successful. Otherwise, an error code is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -162,7 +171,10 @@ public class ModifyEngineMigrationResponseBody extends TeaModel {
         }
 
         /**
-         * SuccessResponse.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder successResponse(String successResponse) {
             this.successResponse = successResponse;
@@ -228,7 +240,10 @@ public class ModifyEngineMigrationResponseBody extends TeaModel {
             } 
 
             /**
-             * DBInstanceName.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxc-*********</p>
              */
             public Builder DBInstanceName(String DBInstanceName) {
                 this.DBInstanceName = DBInstanceName;
@@ -236,7 +251,10 @@ public class ModifyEngineMigrationResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>42292****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

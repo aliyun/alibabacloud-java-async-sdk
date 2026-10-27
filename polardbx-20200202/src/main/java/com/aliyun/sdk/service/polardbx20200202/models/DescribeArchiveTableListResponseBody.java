@@ -67,7 +67,7 @@ public class DescribeArchiveTableListResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class DescribeArchiveTableListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1A6D328C-84B8-40DC-BF49-6C73984D7494</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -206,7 +209,10 @@ public class DescribeArchiveTableListResponseBody extends TeaModel {
             } 
 
             /**
-             * ArchiveStatus.
+             * <p>The archiving status. Valid values: SUCCESS, PAUSE, and RUNNING.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder archiveStatus(String archiveStatus) {
                 this.archiveStatus = archiveStatus;
@@ -214,7 +220,7 @@ public class DescribeArchiveTableListResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedDate.
+             * <p>The time when the table was created.</p>
              */
             public Builder createdDate(Long createdDate) {
                 this.createdDate = createdDate;
@@ -222,7 +228,10 @@ public class DescribeArchiveTableListResponseBody extends TeaModel {
             }
 
             /**
-             * FileCount.
+             * <p>The number of files.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder fileCount(Integer fileCount) {
                 this.fileCount = fileCount;
@@ -230,7 +239,7 @@ public class DescribeArchiveTableListResponseBody extends TeaModel {
             }
 
             /**
-             * LastSuccessArchiveTime.
+             * <p>The time of the last successful archiving.</p>
              */
             public Builder lastSuccessArchiveTime(Long lastSuccessArchiveTime) {
                 this.lastSuccessArchiveTime = lastSuccessArchiveTime;
@@ -238,7 +247,10 @@ public class DescribeArchiveTableListResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaName.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -246,7 +258,10 @@ public class DescribeArchiveTableListResponseBody extends TeaModel {
             }
 
             /**
-             * SpaceSize.
+             * <p>The amount of storage space used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder spaceSize(Double spaceSize) {
                 this.spaceSize = spaceSize;
@@ -254,7 +269,10 @@ public class DescribeArchiveTableListResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * <p>The name of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -399,7 +417,10 @@ public class DescribeArchiveTableListResponseBody extends TeaModel {
             } 
 
             /**
-             * PageIndex.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageIndex(Long pageIndex) {
                 this.pageIndex = pageIndex;
@@ -407,7 +428,10 @@ public class DescribeArchiveTableListResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -415,7 +439,10 @@ public class DescribeArchiveTableListResponseBody extends TeaModel {
             }
 
             /**
-             * PausedCount.
+             * <p>The number of tables in the PAUSE state.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder pausedCount(Integer pausedCount) {
                 this.pausedCount = pausedCount;
@@ -423,7 +450,10 @@ public class DescribeArchiveTableListResponseBody extends TeaModel {
             }
 
             /**
-             * RunningCount.
+             * <p>The number of tables being archived.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder runningCount(Integer runningCount) {
                 this.runningCount = runningCount;
@@ -431,7 +461,10 @@ public class DescribeArchiveTableListResponseBody extends TeaModel {
             }
 
             /**
-             * SuccessCount.
+             * <p>The number of successfully archived tables.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder successCount(Integer successCount) {
                 this.successCount = successCount;
@@ -439,7 +472,7 @@ public class DescribeArchiveTableListResponseBody extends TeaModel {
             }
 
             /**
-             * Tables.
+             * <p>The list of archived tables.</p>
              */
             public Builder tables(java.util.List<Tables> tables) {
                 this.tables = tables;
@@ -447,7 +480,10 @@ public class DescribeArchiveTableListResponseBody extends TeaModel {
             }
 
             /**
-             * TobeArchivedConut.
+             * <p>The number of tables to be archived.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder tobeArchivedConut(Integer tobeArchivedConut) {
                 this.tobeArchivedConut = tobeArchivedConut;
@@ -455,7 +491,10 @@ public class DescribeArchiveTableListResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder total(Long total) {
                 this.total = total;

@@ -118,7 +118,10 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * All.
+         * <p>Specifies whether to delete all tags. This parameter is valid only when TagKey.N is empty. Valid values: true, false, True, and False. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Specifies whether to delete all tags</p>
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -127,6 +130,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,6 +143,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
+         * <p>The resource IDs. A maximum of 50 subkeys are supported.</p>
          * <p>This parameter is required.</p>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
@@ -148,6 +153,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
+         * <p>The resource type. The value must be PolarDBXInstance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -160,7 +166,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * TagKey.
+         * <p>The tag keys. A maximum of 20 subkeys are supported.</p>
          */
         public Builder tagKey(java.util.List<String> tagKey) {
             this.putQueryParameter("TagKey", tagKey);

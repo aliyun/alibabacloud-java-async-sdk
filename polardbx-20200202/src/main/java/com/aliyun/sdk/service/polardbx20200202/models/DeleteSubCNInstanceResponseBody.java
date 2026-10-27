@@ -67,7 +67,7 @@ public class DeleteSubCNInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -131,7 +131,10 @@ public class DeleteSubCNInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * TaskId.
+             * <p>The backend task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2209883</p>
              */
             public Builder taskId(Integer taskId) {
                 this.taskId = taskId;

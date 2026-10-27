@@ -75,7 +75,7 @@ public class DeletePxfsRequest extends Request {
         } 
 
         /**
-         * <p>Agent文件服务关联的PolarDB-X实例ID。</p>
+         * <p>The ID of the PolarDB-X instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class DeletePxfsRequest extends Request {
         }
 
         /**
-         * <p>Agent文件服务实例所属地域的ID。</p>
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

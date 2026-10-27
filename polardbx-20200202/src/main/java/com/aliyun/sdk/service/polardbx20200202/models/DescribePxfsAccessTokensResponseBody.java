@@ -80,7 +80,7 @@ public class DescribePxfsAccessTokensResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The detailed reason why access was denied.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -88,7 +88,7 @@ public class DescribePxfsAccessTokensResponseBody extends TeaModel {
         }
 
         /**
-         * <p>接口返回的业务数据。</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -96,7 +96,7 @@ public class DescribePxfsAccessTokensResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求的唯一标识，可用于排查问题。</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -230,7 +230,10 @@ public class DescribePxfsAccessTokensResponseBody extends TeaModel {
             } 
 
             /**
-             * AuthAction.
+             * <p>The authorization action.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -238,7 +241,10 @@ public class DescribePxfsAccessTokensResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalDisplayName.
+             * <p>The identity used for authorization in the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -246,7 +252,10 @@ public class DescribePxfsAccessTokensResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalOwnerId.
+             * <p>The owner ID of the authorization principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder authPrincipalOwnerId(String authPrincipalOwnerId) {
                 this.authPrincipalOwnerId = authPrincipalOwnerId;
@@ -254,7 +263,10 @@ public class DescribePxfsAccessTokensResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalType.
+             * <p>The type of the authorization principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>222</p>
              */
             public Builder authPrincipalType(String authPrincipalType) {
                 this.authPrincipalType = authPrincipalType;
@@ -262,7 +274,10 @@ public class DescribePxfsAccessTokensResponseBody extends TeaModel {
             }
 
             /**
-             * EncodedDiagnosticMessage.
+             * <p>The diagnostic information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
              */
             public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
                 this.encodedDiagnosticMessage = encodedDiagnosticMessage;
@@ -281,7 +296,10 @@ public class DescribePxfsAccessTokensResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * <p>The policy type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>System</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -400,7 +418,7 @@ public class DescribePxfsAccessTokensResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>资源的创建时间。</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-09-03T12:00:00Z</p>
@@ -411,7 +429,7 @@ public class DescribePxfsAccessTokensResponseBody extends TeaModel {
             }
 
             /**
-             * <p>访问Token的过期时间。</p>
+             * <p>The expiration time.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-12-31T23:59:59Z</p>
@@ -422,7 +440,7 @@ public class DescribePxfsAccessTokensResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Agent文件服务租户内的身份名称，不是阿里云账号UID。</p>
+             * <p>The identity name.</p>
              * 
              * <strong>example:</strong>
              * <p>agent-runtime</p>
@@ -433,7 +451,7 @@ public class DescribePxfsAccessTokensResponseBody extends TeaModel {
             }
 
             /**
-             * <p>访问Token的用途标签。</p>
+             * <p>The token label.</p>
              * 
              * <strong>example:</strong>
              * <p>production-agent</p>
@@ -444,7 +462,7 @@ public class DescribePxfsAccessTokensResponseBody extends TeaModel {
             }
 
             /**
-             * <p>当前资源状态。</p>
+             * <p>The status.</p>
              * 
              * <strong>example:</strong>
              * <p>ACTIVE</p>
@@ -512,7 +530,7 @@ public class DescribePxfsAccessTokensResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>访问Token元数据列表，不包含Token明文。</p>
+             * <p>The list of access tokens.</p>
              */
             public Builder accessTokens(java.util.List<AccessTokens> accessTokens) {
                 this.accessTokens = accessTokens;

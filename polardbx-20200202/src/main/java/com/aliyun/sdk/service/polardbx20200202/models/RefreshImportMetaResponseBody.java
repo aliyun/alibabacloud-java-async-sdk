@@ -93,7 +93,7 @@ public class RefreshImportMetaResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The monitoring data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +101,10 @@ public class RefreshImportMetaResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The result details of the import or export task. &gt; This parameter is empty unless an exception occurs.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +112,10 @@ public class RefreshImportMetaResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AE4F6C34-065F-45AA-B5DC-4B8D816F6305</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +123,10 @@ public class RefreshImportMetaResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -170,7 +179,10 @@ public class RefreshImportMetaResponseBody extends TeaModel {
             } 
 
             /**
-             * SlinkTaskId.
+             * <p>The export task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>etx-szr2rr6i*****</p>
              */
             public Builder slinkTaskId(String slinkTaskId) {
                 this.slinkTaskId = slinkTaskId;

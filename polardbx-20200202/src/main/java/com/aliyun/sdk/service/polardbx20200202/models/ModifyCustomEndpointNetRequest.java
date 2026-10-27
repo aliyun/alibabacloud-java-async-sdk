@@ -145,7 +145,10 @@ public class ModifyCustomEndpointNetRequest extends Request {
         } 
 
         /**
-         * ConnPrefix.
+         * <p>The connection prefix.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxc-****</p>
          */
         public Builder connPrefix(String connPrefix) {
             this.putQueryParameter("ConnPrefix", connPrefix);
@@ -154,6 +157,7 @@ public class ModifyCustomEndpointNetRequest extends Request {
         }
 
         /**
+         * <p>The ID of the custom endpoint.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -166,6 +170,7 @@ public class ModifyCustomEndpointNetRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -178,7 +183,10 @@ public class ModifyCustomEndpointNetRequest extends Request {
         }
 
         /**
-         * Port.
+         * <p>The public endpoint port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         public Builder port(Integer port) {
             this.putQueryParameter("Port", port);
@@ -187,7 +195,10 @@ public class ModifyCustomEndpointNetRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region in which the instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -196,7 +207,10 @@ public class ModifyCustomEndpointNetRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * <p>The vSwitch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-*********</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -205,7 +219,10 @@ public class ModifyCustomEndpointNetRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * <p>The ID of the virtual private cloud (VPC) in which the endpoint resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1ndoug37dtwoedlmru0</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

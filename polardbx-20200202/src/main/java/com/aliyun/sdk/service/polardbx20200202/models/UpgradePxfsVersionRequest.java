@@ -89,7 +89,7 @@ public class UpgradePxfsVersionRequest extends Request {
         } 
 
         /**
-         * <p>Agent文件服务关联的PolarDB-X实例ID。</p>
+         * <p>The PolarDB-X instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class UpgradePxfsVersionRequest extends Request {
         }
 
         /**
-         * <p>升级后的Agent文件服务目标小版本；不传时使用最新可用版本。</p>
+         * <p>The target minor version.</p>
          * 
          * <strong>example:</strong>
          * <p>1.1.0</p>
@@ -114,7 +114,7 @@ public class UpgradePxfsVersionRequest extends Request {
         }
 
         /**
-         * <p>Agent文件服务实例所属地域的ID。</p>
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

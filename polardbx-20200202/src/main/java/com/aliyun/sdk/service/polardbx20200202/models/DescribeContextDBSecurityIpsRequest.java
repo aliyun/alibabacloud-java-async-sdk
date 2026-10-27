@@ -75,7 +75,7 @@ public class DescribeContextDBSecurityIpsRequest extends Request {
         } 
 
         /**
-         * <p>关联的 PolarDB-X 实例名（pxc- 前缀）</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class DescribeContextDBSecurityIpsRequest extends Request {
         }
 
         /**
-         * <p>地域 ID</p>
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

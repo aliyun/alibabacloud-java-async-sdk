@@ -67,7 +67,7 @@ public class ModifyCdcClassResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The data struct.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -131,7 +131,10 @@ public class ModifyCdcClassResponseBody extends TeaModel {
             } 
 
             /**
-             * TaskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2209883</p>
              */
             public Builder taskId(Integer taskId) {
                 this.taskId = taskId;

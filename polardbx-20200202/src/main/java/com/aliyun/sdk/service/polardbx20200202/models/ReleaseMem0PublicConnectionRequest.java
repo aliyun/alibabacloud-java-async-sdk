@@ -89,7 +89,10 @@ public class ReleaseMem0PublicConnectionRequest extends Request {
         } 
 
         /**
-         * CurrentConnectionString.
+         * <p>The public endpoint to be released. This parameter is optional. If this parameter is not specified, the public endpoint of Mem0 is automatically released.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxc-hzjasdyuoo.polarx.rds.aliyuncs.com</p>
          */
         public Builder currentConnectionString(String currentConnectionString) {
             this.putQueryParameter("CurrentConnectionString", currentConnectionString);
@@ -98,6 +101,7 @@ public class ReleaseMem0PublicConnectionRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +114,7 @@ public class ReleaseMem0PublicConnectionRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the instance. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196841.html">DescribeRegions</a> operation to query the details of regions supported by PolarDB-X, including region IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

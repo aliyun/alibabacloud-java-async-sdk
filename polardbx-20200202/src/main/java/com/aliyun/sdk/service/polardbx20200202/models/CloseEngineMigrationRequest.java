@@ -88,7 +88,18 @@ public class CloseEngineMigrationRequest extends Request {
         } 
 
         /**
-         * ContinueEnableBinlog.
+         * <p>Specifies whether to keep binlog enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Keeps binlog enabled.</li>
+         * <li><strong>false</strong>: Disables binlog.</li>
+         * </ul>
+         * <p>Default value: <strong>true</strong>.</p>
+         * <blockquote>
+         * <p>Disabling binlog will restart your PolarDB cluster.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder continueEnableBinlog(String continueEnableBinlog) {
             this.putQueryParameter("ContinueEnableBinlog", continueEnableBinlog);
@@ -97,6 +108,7 @@ public class CloseEngineMigrationRequest extends Request {
         }
 
         /**
+         * <p>The instance name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -109,7 +121,10 @@ public class CloseEngineMigrationRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

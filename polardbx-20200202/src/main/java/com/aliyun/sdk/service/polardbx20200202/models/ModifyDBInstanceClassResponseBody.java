@@ -80,7 +80,10 @@ public class ModifyDBInstanceClassResponseBody extends TeaModel {
         } 
 
         /**
-         * OrderId.
+         * <p>The order ID. An order is generated when you upgrade or downgrade an instance, or change the instance specifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20211103105558</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -88,7 +91,10 @@ public class ModifyDBInstanceClassResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FEA5DC20-6D8A-5979-97AA-FC57546ADC20</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +102,10 @@ public class ModifyDBInstanceClassResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The ID of the instance specification change task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder taskId(Integer taskId) {
             this.taskId = taskId;

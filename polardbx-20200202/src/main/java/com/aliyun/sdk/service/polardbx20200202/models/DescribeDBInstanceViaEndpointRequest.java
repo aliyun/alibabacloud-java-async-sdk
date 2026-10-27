@@ -75,6 +75,7 @@ public class DescribeDBInstanceViaEndpointRequest extends Request {
         } 
 
         /**
+         * <p>The endpoint of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,7 +88,11 @@ public class DescribeDBInstanceViaEndpointRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

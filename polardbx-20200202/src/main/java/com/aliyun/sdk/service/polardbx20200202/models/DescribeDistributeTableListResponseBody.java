@@ -93,7 +93,7 @@ public class DescribeDistributeTableListResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The data struct.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +101,10 @@ public class DescribeDistributeTableListResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message. &quot;success&quot; is returned if the request is successful. Otherwise, an error code is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +112,10 @@ public class DescribeDistributeTableListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C458B1E8-1683-3645-B154-6BA32080EEA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +123,10 @@ public class DescribeDistributeTableListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -209,7 +218,10 @@ public class DescribeDistributeTableListResponseBody extends TeaModel {
             } 
 
             /**
-             * DbKey.
+             * <p>The data key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>id</p>
              */
             public Builder dbKey(String dbKey) {
                 this.dbKey = dbKey;
@@ -217,7 +229,10 @@ public class DescribeDistributeTableListResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * <p>The table name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sbtest1</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -225,7 +240,10 @@ public class DescribeDistributeTableListResponseBody extends TeaModel {
             }
 
             /**
-             * TableType.
+             * <p>The table type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>multi</p>
              */
             public Builder tableType(String tableType) {
                 this.tableType = tableType;
@@ -233,7 +251,10 @@ public class DescribeDistributeTableListResponseBody extends TeaModel {
             }
 
             /**
-             * TbKey.
+             * <p>The table key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>“”</p>
              */
             public Builder tbKey(String tbKey) {
                 this.tbKey = tbKey;
@@ -287,7 +308,7 @@ public class DescribeDistributeTableListResponseBody extends TeaModel {
             } 
 
             /**
-             * Tables.
+             * <p>The list of tables.</p>
              */
             public Builder tables(java.util.List<Tables> tables) {
                 this.tables = tables;

@@ -93,7 +93,7 @@ public class DescribeAccountListResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The data struct.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -101,7 +101,10 @@ public class DescribeAccountListResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message. &quot;success&quot; is returned if the request is successful. Otherwise, the corresponding error code is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +112,10 @@ public class DescribeAccountListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9B2F3840-5C98-475C-B269-2D5C3A31797C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +123,10 @@ public class DescribeAccountListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -248,7 +257,10 @@ public class DescribeAccountListResponseBody extends TeaModel {
             } 
 
             /**
-             * AccountDescription.
+             * <p>The description of the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testaccount desc</p>
              */
             public Builder accountDescription(String accountDescription) {
                 this.accountDescription = accountDescription;
@@ -256,7 +268,10 @@ public class DescribeAccountListResponseBody extends TeaModel {
             }
 
             /**
-             * AccountName.
+             * <p>The name of the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testAccount</p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -264,7 +279,10 @@ public class DescribeAccountListResponseBody extends TeaModel {
             }
 
             /**
-             * AccountPrivilege.
+             * <p>The permissions granted to the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ReadWrite</p>
              */
             public Builder accountPrivilege(String accountPrivilege) {
                 this.accountPrivilege = accountPrivilege;
@@ -272,7 +290,14 @@ public class DescribeAccountListResponseBody extends TeaModel {
             }
 
             /**
-             * AccountType.
+             * <p>The type of the account.</p>
+             * <ul>
+             * <li>Before three-role mode is enabled: 0 indicates a standard account, and 1 indicates a privileged user account.</li>
+             * <li>After three-role mode is enabled: 0 indicates a standard account, 2 indicates a system administrator account, 3 indicates a security administrator account, and 4 indicates an audit administrator account.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;
@@ -280,7 +305,10 @@ public class DescribeAccountListResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceName.
+             * <p>The name of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxc-*********</p>
              */
             public Builder DBInstanceName(String DBInstanceName) {
                 this.DBInstanceName = DBInstanceName;
@@ -288,7 +316,10 @@ public class DescribeAccountListResponseBody extends TeaModel {
             }
 
             /**
-             * DBName.
+             * <p>The database to which the account is granted permissions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testdb</p>
              */
             public Builder DBName(String DBName) {
                 this.DBName = DBName;
@@ -296,7 +327,10 @@ public class DescribeAccountListResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreated.
+             * <p>The time when the account was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2012-06-08T15:00Z</p>
              */
             public Builder gmtCreated(String gmtCreated) {
                 this.gmtCreated = gmtCreated;

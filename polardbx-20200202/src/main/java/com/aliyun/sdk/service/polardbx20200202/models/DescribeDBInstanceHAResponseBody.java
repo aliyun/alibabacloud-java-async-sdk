@@ -93,7 +93,7 @@ public class DescribeDBInstanceHAResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The high availability deployment information of the instance.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +101,10 @@ public class DescribeDBInstanceHAResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successs</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +112,10 @@ public class DescribeDBInstanceHAResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1A6D328C-84B8-40DC-BF49-6C73984D7494</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +123,7 @@ public class DescribeDBInstanceHAResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -222,7 +228,10 @@ public class DescribeDBInstanceHAResponseBody extends TeaModel {
             } 
 
             /**
-             * PrimaryAzoneId.
+             * <p>The zone ID of the primary node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-d</p>
              */
             public Builder primaryAzoneId(String primaryAzoneId) {
                 this.primaryAzoneId = primaryAzoneId;
@@ -230,7 +239,10 @@ public class DescribeDBInstanceHAResponseBody extends TeaModel {
             }
 
             /**
-             * PrimaryRegionId.
+             * <p>The region ID of the primary node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder primaryRegionId(String primaryRegionId) {
                 this.primaryRegionId = primaryRegionId;
@@ -238,7 +250,10 @@ public class DescribeDBInstanceHAResponseBody extends TeaModel {
             }
 
             /**
-             * SecondaryAzoneId.
+             * <p>The zone ID of the secondary node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-b</p>
              */
             public Builder secondaryAzoneId(String secondaryAzoneId) {
                 this.secondaryAzoneId = secondaryAzoneId;
@@ -246,7 +261,10 @@ public class DescribeDBInstanceHAResponseBody extends TeaModel {
             }
 
             /**
-             * SecondaryRegionId.
+             * <p>The region ID of the secondary node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder secondaryRegionId(String secondaryRegionId) {
                 this.secondaryRegionId = secondaryRegionId;
@@ -254,7 +272,10 @@ public class DescribeDBInstanceHAResponseBody extends TeaModel {
             }
 
             /**
-             * TopologyType.
+             * <p>The high availability topology type of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3azones</p>
              */
             public Builder topologyType(String topologyType) {
                 this.topologyType = topologyType;

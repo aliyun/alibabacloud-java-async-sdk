@@ -90,7 +90,7 @@ public class CreateContext0Request extends Request {
         } 
 
         /**
-         * <p>关联的 PolarDB-X 实例名（pxc- 前缀）</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -103,6 +103,7 @@ public class CreateContext0Request extends Request {
         }
 
         /**
+         * <p>The name of the PolarDB-X Search instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,6 +116,7 @@ public class CreateContext0Request extends Request {
         }
 
         /**
+         * <p>The region where the instance resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

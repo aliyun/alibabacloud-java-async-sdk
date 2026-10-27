@@ -93,7 +93,10 @@ public class StopDataImportTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>Indicates whether the import task is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -101,7 +104,10 @@ public class StopDataImportTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message. &gt;This parameter is empty when the request succeeds. When the request fails, exception information such as an error code is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +115,10 @@ public class StopDataImportTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14036EBE-***-44DB-ACE9-AC6157D3A6FC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,10 @@ public class StopDataImportTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

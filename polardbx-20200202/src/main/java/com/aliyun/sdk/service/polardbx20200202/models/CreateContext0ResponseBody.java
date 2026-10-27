@@ -80,7 +80,7 @@ public class CreateContext0ResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The access denial details.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -88,7 +88,7 @@ public class CreateContext0ResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The instance data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -96,7 +96,10 @@ public class CreateContext0ResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9B2F3840-5C98-475C-B269-2D5C3A31797C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -227,7 +230,10 @@ public class CreateContext0ResponseBody extends TeaModel {
             } 
 
             /**
-             * AuthAction.
+             * <p>The authentication action.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -235,7 +241,10 @@ public class CreateContext0ResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalDisplayName.
+             * <p>The name of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -243,7 +252,10 @@ public class CreateContext0ResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalOwnerId.
+             * <p>The owner ID of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder authPrincipalOwnerId(String authPrincipalOwnerId) {
                 this.authPrincipalOwnerId = authPrincipalOwnerId;
@@ -251,7 +263,10 @@ public class CreateContext0ResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalType.
+             * <p>The authentication principal type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>222</p>
              */
             public Builder authPrincipalType(String authPrincipalType) {
                 this.authPrincipalType = authPrincipalType;
@@ -259,7 +274,10 @@ public class CreateContext0ResponseBody extends TeaModel {
             }
 
             /**
-             * EncodedDiagnosticMessage.
+             * <p>The encoded diagnostic message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
              */
             public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
                 this.encodedDiagnosticMessage = encodedDiagnosticMessage;
@@ -278,7 +296,10 @@ public class CreateContext0ResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * <p>The policy type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>System</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -410,7 +431,10 @@ public class CreateContext0ResponseBody extends TeaModel {
             } 
 
             /**
-             * Context0AdminKey.
+             * <p>The administrator key of the context service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>admin-key-example</p>
              */
             public Builder context0AdminKey(String context0AdminKey) {
                 this.context0AdminKey = context0AdminKey;
@@ -418,7 +442,10 @@ public class CreateContext0ResponseBody extends TeaModel {
             }
 
             /**
-             * Context0InstanceName.
+             * <p>The name of the context service instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>context0-example</p>
              */
             public Builder context0InstanceName(String context0InstanceName) {
                 this.context0InstanceName = context0InstanceName;
@@ -426,7 +453,10 @@ public class CreateContext0ResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceName.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxc-*********</p>
              */
             public Builder DBInstanceName(String DBInstanceName) {
                 this.DBInstanceName = DBInstanceName;
@@ -434,7 +464,10 @@ public class CreateContext0ResponseBody extends TeaModel {
             }
 
             /**
-             * DashboardReplicaSetName.
+             * <p>The dashboard instance name of the context service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxt-*********-d</p>
              */
             public Builder dashboardReplicaSetName(String dashboardReplicaSetName) {
                 this.dashboardReplicaSetName = dashboardReplicaSetName;
@@ -442,7 +475,10 @@ public class CreateContext0ResponseBody extends TeaModel {
             }
 
             /**
-             * OpenSearchInstanceName.
+             * <p>The name of the PolarDB-X Search instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxs-*********</p>
              */
             public Builder openSearchInstanceName(String openSearchInstanceName) {
                 this.openSearchInstanceName = openSearchInstanceName;
@@ -450,7 +486,10 @@ public class CreateContext0ResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceReplicaSetName.
+             * <p>The service instance name of the context service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxt-*********-s</p>
              */
             public Builder serviceReplicaSetName(String serviceReplicaSetName) {
                 this.serviceReplicaSetName = serviceReplicaSetName;
@@ -458,7 +497,10 @@ public class CreateContext0ResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The backend task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2209883</p>
              */
             public Builder taskId(Integer taskId) {
                 this.taskId = taskId;

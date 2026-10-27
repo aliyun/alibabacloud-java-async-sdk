@@ -93,7 +93,7 @@ public class DescribeRplInspectionTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The task details.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +101,10 @@ public class DescribeRplInspectionTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +112,10 @@ public class DescribeRplInspectionTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +123,10 @@ public class DescribeRplInspectionTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -248,7 +257,10 @@ public class DescribeRplInspectionTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The timestamp when the task was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-09-25T02:36:20.000+0000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -256,7 +268,10 @@ public class DescribeRplInspectionTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the inspection task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>For database: wms ,Found SIMPLE sequences in 1.0. PolarDB-X 2.0 does not support SIMPLE sequence any more， please use show sequence to check them.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -264,7 +279,10 @@ public class DescribeRplInspectionTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10142</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -283,7 +301,10 @@ public class DescribeRplInspectionTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Stage.
+             * <p>The stage name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONNECTIVITY</p>
              */
             public Builder stage(String stage) {
                 this.stage = stage;
@@ -291,7 +312,10 @@ public class DescribeRplInspectionTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The task status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCEEDED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -299,7 +323,10 @@ public class DescribeRplInspectionTaskResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The timestamp when the task was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-09-23T03:25:21.000+0000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -366,7 +393,7 @@ public class DescribeRplInspectionTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * InspectionTaskList.
+             * <p>The machine task information.</p>
              */
             public Builder inspectionTaskList(java.util.List<InspectionTaskList> inspectionTaskList) {
                 this.inspectionTaskList = inspectionTaskList;
@@ -374,7 +401,10 @@ public class DescribeRplInspectionTaskResponseBody extends TeaModel {
             }
 
             /**
-             * SlinkStage.
+             * <p>The slink status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PRE_CHECK</p>
              */
             public Builder slinkStage(String slinkStage) {
                 this.slinkStage = slinkStage;

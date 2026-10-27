@@ -104,7 +104,10 @@ public class ModifyDBInstanceMaintainTimeRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * <p>The unique token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>73559800-3c8c-11ec-bd40-99cfcff3fe1e</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -113,6 +116,7 @@ public class ModifyDBInstanceMaintainTimeRequest extends Request {
         }
 
         /**
+         * <p>The name of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,10 +129,11 @@ public class ModifyDBInstanceMaintainTimeRequest extends Request {
         }
 
         /**
+         * <p>The maintenance window in UTC. Valid values: 00:00Z-23:59Z.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>19:00Z-20:00Z</p>
+         * <p>21:00Z-00:00Z</p>
          */
         public Builder maintainTime(String maintainTime) {
             this.putQueryParameter("MaintainTime", maintainTime);
@@ -137,6 +142,7 @@ public class ModifyDBInstanceMaintainTimeRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

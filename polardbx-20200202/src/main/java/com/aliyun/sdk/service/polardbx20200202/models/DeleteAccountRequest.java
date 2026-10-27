@@ -118,6 +118,7 @@ public class DeleteAccountRequest extends Request {
         } 
 
         /**
+         * <p>The name of the account to delete.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,6 +131,7 @@ public class DeleteAccountRequest extends Request {
         }
 
         /**
+         * <p>The instance name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,6 +144,7 @@ public class DeleteAccountRequest extends Request {
         }
 
         /**
+         * <p>The region where the instance resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,7 +157,13 @@ public class DeleteAccountRequest extends Request {
         }
 
         /**
-         * SecurityAccountName.
+         * <p>The name of the security administrator account.</p>
+         * <blockquote>
+         * <p>If three-role mode is enabled, this parameter is required. If three-role mode is not enabled, this parameter is not required.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>securityAccount</p>
          */
         public Builder securityAccountName(String securityAccountName) {
             this.putQueryParameter("SecurityAccountName", securityAccountName);
@@ -163,7 +172,13 @@ public class DeleteAccountRequest extends Request {
         }
 
         /**
-         * SecurityAccountPassword.
+         * <p>The password of the security administrator account.</p>
+         * <blockquote>
+         * <p>If three-role mode is enabled, this parameter is required. If three-role mode is not enabled, this parameter is not required.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>securityPassword</p>
          */
         public Builder securityAccountPassword(String securityAccountPassword) {
             this.putQueryParameter("SecurityAccountPassword", securityAccountPassword);

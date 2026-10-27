@@ -93,7 +93,7 @@ public class DescribeStructureImportTaskInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The result set.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +101,10 @@ public class DescribeStructureImportTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message. This parameter is empty when the request succeeds. When the request fails, an exception message is returned, such as an error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +112,10 @@ public class DescribeStructureImportTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +123,10 @@ public class DescribeStructureImportTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -235,7 +244,10 @@ public class DescribeStructureImportTaskInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * ExceptionDetail.
+             * <p>The cause of the exception.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>java.sql.SQLException: [1a7a5f22aa403000][10.239.190.4:3058][hash_realtime_new]ERR-CODE: [TDDL-5123][ERR_INSTANCE_READ_ONLY_OPTION_NOT_SUPPORT] server is running with the instance-read-only option so it cannot execute this statement</p>
              */
             public Builder exceptionDetail(String exceptionDetail) {
                 this.exceptionDetail = exceptionDetail;
@@ -243,7 +255,10 @@ public class DescribeStructureImportTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ExceptionFullTableName.
+             * <p>The name of the table that encountered an exception.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hash_realtime_new.wm_in_job_et</p>
              */
             public Builder exceptionFullTableName(String exceptionFullTableName) {
                 this.exceptionFullTableName = exceptionFullTableName;
@@ -251,7 +266,10 @@ public class DescribeStructureImportTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * FinishedNum.
+             * <p>The number of completed records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>118</p>
              */
             public Builder finishedNum(Integer finishedNum) {
                 this.finishedNum = finishedNum;
@@ -259,7 +277,10 @@ public class DescribeStructureImportTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Percentage.
+             * <p>The current progress in percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder percentage(Integer percentage) {
                 this.percentage = percentage;
@@ -267,7 +288,10 @@ public class DescribeStructureImportTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The import status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>finish</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -275,7 +299,10 @@ public class DescribeStructureImportTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * TotalNum.
+             * <p>The total number of results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalNum(Integer totalNum) {
                 this.totalNum = totalNum;
@@ -342,7 +369,10 @@ public class DescribeStructureImportTaskInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * SlinkStage.
+             * <p>The slink status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STRUCTURE_IMPORT</p>
              */
             public Builder slinkStage(String slinkStage) {
                 this.slinkStage = slinkStage;
@@ -350,7 +380,7 @@ public class DescribeStructureImportTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * StructureImportResult.
+             * <p>The import result of the schema import task.</p>
              */
             public Builder structureImportResult(StructureImportResult structureImportResult) {
                 this.structureImportResult = structureImportResult;

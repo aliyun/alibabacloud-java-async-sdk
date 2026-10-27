@@ -117,6 +117,7 @@ public class CreateStoragePoolRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,6 +130,7 @@ public class CreateStoragePoolRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,7 +143,10 @@ public class CreateStoragePoolRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-xxxxx</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -150,7 +155,10 @@ public class CreateStoragePoolRequest extends Request {
         }
 
         /**
-         * StoragePoolDNList.
+         * <p>The list of storage pool DNs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>node6</p>
          */
         public Builder storagePoolDNList(String storagePoolDNList) {
             this.putQueryParameter("StoragePoolDNList", storagePoolDNList);
@@ -159,7 +167,10 @@ public class CreateStoragePoolRequest extends Request {
         }
 
         /**
-         * StoragePoolName.
+         * <p>The storage pool name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder storagePoolName(String storagePoolName) {
             this.putQueryParameter("StoragePoolName", storagePoolName);

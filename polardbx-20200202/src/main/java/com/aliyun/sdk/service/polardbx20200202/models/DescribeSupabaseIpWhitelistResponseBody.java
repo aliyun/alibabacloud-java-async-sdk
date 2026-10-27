@@ -80,7 +80,7 @@ public class DescribeSupabaseIpWhitelistResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details of the access denied error.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -88,7 +88,7 @@ public class DescribeSupabaseIpWhitelistResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The whitelist information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -96,7 +96,10 @@ public class DescribeSupabaseIpWhitelistResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C457B28E-9CAB-4B77-B5C6-5D71B7870B6E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -227,7 +230,10 @@ public class DescribeSupabaseIpWhitelistResponseBody extends TeaModel {
             } 
 
             /**
-             * AuthAction.
+             * <p>The authentication action.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -235,7 +241,10 @@ public class DescribeSupabaseIpWhitelistResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalDisplayName.
+             * <p>The display name of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -243,7 +252,10 @@ public class DescribeSupabaseIpWhitelistResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalOwnerId.
+             * <p>The owner ID of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder authPrincipalOwnerId(String authPrincipalOwnerId) {
                 this.authPrincipalOwnerId = authPrincipalOwnerId;
@@ -251,7 +263,10 @@ public class DescribeSupabaseIpWhitelistResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalType.
+             * <p>The type of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>222</p>
              */
             public Builder authPrincipalType(String authPrincipalType) {
                 this.authPrincipalType = authPrincipalType;
@@ -259,7 +274,10 @@ public class DescribeSupabaseIpWhitelistResponseBody extends TeaModel {
             }
 
             /**
-             * EncodedDiagnosticMessage.
+             * <p>The encoded diagnostic message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
              */
             public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
                 this.encodedDiagnosticMessage = encodedDiagnosticMessage;
@@ -267,7 +285,10 @@ public class DescribeSupabaseIpWhitelistResponseBody extends TeaModel {
             }
 
             /**
-             * NoPermissionType.
+             * <p>The type of the permission denial.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ImplicitDeny</p>
              */
             public Builder noPermissionType(String noPermissionType) {
                 this.noPermissionType = noPermissionType;
@@ -275,7 +296,10 @@ public class DescribeSupabaseIpWhitelistResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * <p>The type of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PRIORITY</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -355,7 +379,10 @@ public class DescribeSupabaseIpWhitelistResponseBody extends TeaModel {
             } 
 
             /**
-             * GroupName.
+             * <p>The name of the group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>defaultGroup</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -363,7 +390,10 @@ public class DescribeSupabaseIpWhitelistResponseBody extends TeaModel {
             }
 
             /**
-             * GroupTag.
+             * <p>The tag of the group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>group1</p>
              */
             public Builder groupTag(String groupTag) {
                 this.groupTag = groupTag;
@@ -371,7 +401,10 @@ public class DescribeSupabaseIpWhitelistResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityIPList.
+             * <p>The IP whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>127.0.0.1,172.168.0.0</p>
              */
             public Builder securityIPList(String securityIPList) {
                 this.securityIPList = securityIPList;
@@ -438,7 +471,10 @@ public class DescribeSupabaseIpWhitelistResponseBody extends TeaModel {
             } 
 
             /**
-             * DBInstanceName.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxc-unrf5ssig0ecg8</p>
              */
             public Builder DBInstanceName(String DBInstanceName) {
                 this.DBInstanceName = DBInstanceName;
@@ -446,7 +482,7 @@ public class DescribeSupabaseIpWhitelistResponseBody extends TeaModel {
             }
 
             /**
-             * GroupItems.
+             * <p>The list of whitelist groups.</p>
              */
             public Builder groupItems(java.util.List<GroupItems> groupItems) {
                 this.groupItems = groupItems;

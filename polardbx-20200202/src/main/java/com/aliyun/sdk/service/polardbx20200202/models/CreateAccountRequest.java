@@ -175,7 +175,10 @@ public class CreateAccountRequest extends Request {
         } 
 
         /**
-         * AccountDescription.
+         * <p>The description of the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder accountDescription(String accountDescription) {
             this.putQueryParameter("AccountDescription", accountDescription);
@@ -184,6 +187,7 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
+         * <p>The name of the account to be created.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -196,6 +200,7 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
+         * <p>The password of the account to be created.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -208,7 +213,16 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * AccountPrivilege.
+         * <p>The permissions to be granted to the new account on the specified database. Valid values:</p>
+         * <ul>
+         * <li>ReadWrite</li>
+         * <li>ReadOnly</li>
+         * <li>DMLOnly</li>
+         * <li>DDLOnly</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ReadWrite</p>
          */
         public Builder accountPrivilege(String accountPrivilege) {
             this.putQueryParameter("AccountPrivilege", accountPrivilege);
@@ -217,6 +231,7 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
+         * <p>The name of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -229,7 +244,10 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * DBName.
+         * <p>The name of the database to be authorized.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testdb</p>
          */
         public Builder DBName(String DBName) {
             this.putQueryParameter("DBName", DBName);
@@ -238,6 +256,7 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
+         * <p>The region where the instance resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -250,7 +269,13 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * SecurityAccountName.
+         * <p>The name of the security administrator account.</p>
+         * <blockquote>
+         * <p>If the three-role mode is enabled, this parameter is required. If the three-role mode is not enabled, this parameter is not required.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>securityAccount</p>
          */
         public Builder securityAccountName(String securityAccountName) {
             this.putQueryParameter("SecurityAccountName", securityAccountName);
@@ -259,7 +284,13 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * SecurityAccountPassword.
+         * <p>The password of the security administrator account.</p>
+         * <blockquote>
+         * <p>If the three-role mode is enabled, this parameter is required. If the three-role mode is not enabled, this parameter is not required.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>securityPassword</p>
          */
         public Builder securityAccountPassword(String securityAccountPassword) {
             this.putQueryParameter("SecurityAccountPassword", securityAccountPassword);

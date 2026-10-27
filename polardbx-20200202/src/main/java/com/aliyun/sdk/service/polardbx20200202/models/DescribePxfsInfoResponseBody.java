@@ -80,7 +80,7 @@ public class DescribePxfsInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -88,7 +88,7 @@ public class DescribePxfsInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>接口返回的业务数据。</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -96,7 +96,7 @@ public class DescribePxfsInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求的唯一标识，可用于排查问题。</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -230,7 +230,10 @@ public class DescribePxfsInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * AuthAction.
+             * <p>The authorization action. Same as described above.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -238,7 +241,10 @@ public class DescribePxfsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalDisplayName.
+             * <p>The display name of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -246,7 +252,10 @@ public class DescribePxfsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalOwnerId.
+             * <p>The owner ID of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder authPrincipalOwnerId(String authPrincipalOwnerId) {
                 this.authPrincipalOwnerId = authPrincipalOwnerId;
@@ -254,7 +263,10 @@ public class DescribePxfsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalType.
+             * <p>The authorization action. Same as described above.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>222</p>
              */
             public Builder authPrincipalType(String authPrincipalType) {
                 this.authPrincipalType = authPrincipalType;
@@ -262,7 +274,10 @@ public class DescribePxfsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * EncodedDiagnosticMessage.
+             * <p>The encoded diagnostic message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
              */
             public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
                 this.encodedDiagnosticMessage = encodedDiagnosticMessage;
@@ -270,7 +285,10 @@ public class DescribePxfsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * NoPermissionType.
+             * <p>The type of missing permission.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ImplicitDeny</p>
              */
             public Builder noPermissionType(String noPermissionType) {
                 this.noPermissionType = noPermissionType;
@@ -278,7 +296,10 @@ public class DescribePxfsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * <p>The policy type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PRIORITY</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -436,7 +457,7 @@ public class DescribePxfsInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>客户端连接Agent文件服务使用的连接字符串。</p>
+             * <p>The connection string.</p>
              * 
              * <strong>example:</strong>
              * <p>agent-files.example.com:12049</p>
@@ -447,7 +468,7 @@ public class DescribePxfsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Agent文件服务的访问地址。</p>
+             * <p>The endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p>agent-files.example.com</p>
@@ -458,7 +479,7 @@ public class DescribePxfsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Agent文件服务的访问端口。</p>
+             * <p>The port number.</p>
              * 
              * <strong>example:</strong>
              * <p>12049</p>
@@ -469,7 +490,7 @@ public class DescribePxfsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>客户端访问Agent文件服务使用的协议。</p>
+             * <p>The access protocol.</p>
              * 
              * <strong>example:</strong>
              * <p>NFS</p>
@@ -480,7 +501,7 @@ public class DescribePxfsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>客户端连接是否启用TLS。</p>
+             * <p>Indicates whether TLS is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -491,7 +512,7 @@ public class DescribePxfsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>客户端连接使用的传输安全协议。</p>
+             * <p>The transport protocol.</p>
              * 
              * <strong>example:</strong>
              * <p>TLS</p>
@@ -502,7 +523,7 @@ public class DescribePxfsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>连接地址类型。</p>
+             * <p>The connection type.</p>
              * 
              * <strong>example:</strong>
              * <p>Intranet</p>
@@ -513,7 +534,7 @@ public class DescribePxfsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Agent文件服务所属专有网络的ID。</p>
+             * <p>The virtual private cloud (VPC) ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-xxxxxxxx</p>
@@ -524,7 +545,7 @@ public class DescribePxfsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Agent文件服务所属交换机的ID。</p>
+             * <p>The vSwitch ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-xxxxxxxx</p>
@@ -763,7 +784,7 @@ public class DescribePxfsInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Agent文件服务的节点规格代码。</p>
+             * <p>The node specification.</p>
              * 
              * <strong>example:</strong>
              * <p>polarx.pxfs.x4.xlarge</p>
@@ -774,7 +795,7 @@ public class DescribePxfsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Agent文件服务的连接地址列表。</p>
+             * <p>The list of connection addresses.</p>
              */
             public Builder connAddrs(java.util.List<ConnAddrs> connAddrs) {
                 this.connAddrs = connAddrs;
@@ -782,7 +803,7 @@ public class DescribePxfsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>资源的创建时间。</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-09-03T12:00:00Z</p>
@@ -793,7 +814,7 @@ public class DescribePxfsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Agent文件服务关联的PolarDB-X实例ID。</p>
+             * <p>The PolarDB-X instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>pxc-xxxxxxxx</p>
@@ -804,7 +825,7 @@ public class DescribePxfsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Agent文件服务关联的PolarDB-X实例ID。</p>
+             * <p>The associated instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>pxc-xxxxxxxx</p>
@@ -815,7 +836,7 @@ public class DescribePxfsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Agent文件服务的节点数量。</p>
+             * <p>The number of nodes.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -826,7 +847,7 @@ public class DescribePxfsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Agent文件服务实例ID。</p>
+             * <p>The Agent file service instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>pxfs-xxxxxxxx</p>
@@ -837,7 +858,7 @@ public class DescribePxfsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Agent文件服务实例所属地域的ID。</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -848,7 +869,7 @@ public class DescribePxfsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>当前资源状态。</p>
+             * <p>The status.</p>
              * 
              * <strong>example:</strong>
              * <p>ACTIVE</p>
@@ -859,7 +880,7 @@ public class DescribePxfsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Agent文件服务的数据盘容量，单位为GiB。</p>
+             * <p>The storage size.</p>
              * 
              * <strong>example:</strong>
              * <p>500</p>
@@ -870,7 +891,7 @@ public class DescribePxfsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Agent文件服务使用的存储类型。</p>
+             * <p>The storage type.</p>
              * 
              * <strong>example:</strong>
              * <p>cloud_essd</p>
@@ -881,7 +902,7 @@ public class DescribePxfsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Agent文件服务所属专有网络的ID。</p>
+             * <p>The virtual private cloud (VPC) ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-xxxxxxxx</p>
@@ -892,7 +913,7 @@ public class DescribePxfsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Agent文件服务所属交换机的ID。</p>
+             * <p>The vSwitch ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-xxxxxxxx</p>
@@ -903,7 +924,7 @@ public class DescribePxfsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Agent文件服务当前运行版本。</p>
+             * <p>The current version.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0.0</p>
@@ -914,7 +935,7 @@ public class DescribePxfsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Agent文件服务实例所在可用区的ID。</p>
+             * <p>The zone ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou-h</p>
@@ -971,7 +992,7 @@ public class DescribePxfsInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Agent文件服务实例的详细信息。</p>
+             * <p>The instance information.</p>
              */
             public Builder instance(Instance instance) {
                 this.instance = instance;

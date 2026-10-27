@@ -80,7 +80,7 @@ public class DescribeContextDBConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details of the access denial.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -88,7 +88,7 @@ public class DescribeContextDBConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data struct.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -230,7 +230,10 @@ public class DescribeContextDBConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * AuthAction.
+             * <p>The authentication action.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -238,7 +241,10 @@ public class DescribeContextDBConfigResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalDisplayName.
+             * <p>The display name of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -246,7 +252,10 @@ public class DescribeContextDBConfigResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalOwnerId.
+             * <p>The owner ID of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder authPrincipalOwnerId(String authPrincipalOwnerId) {
                 this.authPrincipalOwnerId = authPrincipalOwnerId;
@@ -254,7 +263,10 @@ public class DescribeContextDBConfigResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalType.
+             * <p>The type of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>222</p>
              */
             public Builder authPrincipalType(String authPrincipalType) {
                 this.authPrincipalType = authPrincipalType;
@@ -262,7 +274,10 @@ public class DescribeContextDBConfigResponseBody extends TeaModel {
             }
 
             /**
-             * EncodedDiagnosticMessage.
+             * <p>The encoded diagnostic message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
              */
             public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
                 this.encodedDiagnosticMessage = encodedDiagnosticMessage;
@@ -281,7 +296,10 @@ public class DescribeContextDBConfigResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * <p>The policy type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PRIORITY</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -387,7 +405,10 @@ public class DescribeContextDBConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * ContextDBAdminKey.
+             * <p>The admin key of the context service instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ctx-admin-***</p>
              */
             public Builder contextDBAdminKey(String contextDBAdminKey) {
                 this.contextDBAdminKey = contextDBAdminKey;
@@ -395,7 +416,10 @@ public class DescribeContextDBConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ContextDBInstanceName.
+             * <p>The name of the context service instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxt-*********</p>
              */
             public Builder contextDBInstanceName(String contextDBInstanceName) {
                 this.contextDBInstanceName = contextDBInstanceName;
@@ -403,7 +427,10 @@ public class DescribeContextDBConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ContextDBOwnerKey.
+             * <p>The owner key of the context service instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ctx-***</p>
              */
             public Builder contextDBOwnerKey(String contextDBOwnerKey) {
                 this.contextDBOwnerKey = contextDBOwnerKey;
@@ -411,7 +438,10 @@ public class DescribeContextDBConfigResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceName.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxc-*********</p>
              */
             public Builder DBInstanceName(String DBInstanceName) {
                 this.DBInstanceName = DBInstanceName;
@@ -419,7 +449,10 @@ public class DescribeContextDBConfigResponseBody extends TeaModel {
             }
 
             /**
-             * OpenSearchInstanceName.
+             * <p>The name of the PolarDB-X Search instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxs-*********</p>
              */
             public Builder openSearchInstanceName(String openSearchInstanceName) {
                 this.openSearchInstanceName = openSearchInstanceName;

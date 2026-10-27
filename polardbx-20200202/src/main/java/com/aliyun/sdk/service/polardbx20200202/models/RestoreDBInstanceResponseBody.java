@@ -80,7 +80,10 @@ public class RestoreDBInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * DBInstanceName.
+         * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxc-*********</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.DBInstanceName = DBInstanceName;
@@ -88,7 +91,10 @@ public class RestoreDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -96,7 +102,10 @@ public class RestoreDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9B2F3840-XXXX-XXXX-XXXX-2D5C3A31797C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -119,6 +119,7 @@ public class ModifyDBInstanceVipRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,7 +132,10 @@ public class ModifyDBInstanceVipRequest extends Request {
         }
 
         /**
-         * InstanceClusterName.
+         * <p>The name of the CN cluster for the instance, such as default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder instanceClusterName(String instanceClusterName) {
             this.putQueryParameter("InstanceClusterName", instanceClusterName);
@@ -140,6 +144,7 @@ public class ModifyDBInstanceVipRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,6 +157,7 @@ public class ModifyDBInstanceVipRequest extends Request {
         }
 
         /**
+         * <p>The vSwitch ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -164,6 +170,7 @@ public class ModifyDBInstanceVipRequest extends Request {
         }
 
         /**
+         * <p>The ID of the VPC where the endpoint is located.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

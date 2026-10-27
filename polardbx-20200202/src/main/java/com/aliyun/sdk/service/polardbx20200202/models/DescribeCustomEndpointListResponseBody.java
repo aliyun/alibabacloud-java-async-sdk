@@ -67,7 +67,7 @@ public class DescribeCustomEndpointListResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The data struct.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -261,7 +261,7 @@ public class DescribeCustomEndpointListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>[&quot;pxc-i-vb1sqa7llp&quot;,&quot;pxc-i-bemprx50ad&quot;]</p>
+             * <p>[\&quot;pxc-i-vb1sqa7llp\&quot;,\&quot;pxc-i-bemprx50ad\&quot;]</p>
              */
             public Builder cnNames(java.util.List<String> cnNames) {
                 this.cnNames = cnNames;
@@ -269,7 +269,10 @@ public class DescribeCustomEndpointListResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectionString.
+             * <p>The endpoint of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxc-shra****zq0j01.polarx.rds.aliyuncs.com</p>
              */
             public Builder connectionString(String connectionString) {
                 this.connectionString = connectionString;
@@ -277,7 +280,10 @@ public class DescribeCustomEndpointListResponseBody extends TeaModel {
             }
 
             /**
-             * CustomEndpointId.
+             * <p>The custom endpoint ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxe-b6e****o4pfap1s</p>
              */
             public Builder customEndpointId(String customEndpointId) {
                 this.customEndpointId = customEndpointId;
@@ -285,7 +291,10 @@ public class DescribeCustomEndpointListResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceName.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxc-hz****zoxherr7</p>
              */
             public Builder DBInstanceName(String DBInstanceName) {
                 this.DBInstanceName = DBInstanceName;
@@ -293,7 +302,10 @@ public class DescribeCustomEndpointListResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -301,7 +313,10 @@ public class DescribeCustomEndpointListResponseBody extends TeaModel {
             }
 
             /**
-             * NodeAutoEnter.
+             * <p>Specifies whether the node automatically joins the cluster and starts providing services after being added or restored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder nodeAutoEnter(String nodeAutoEnter) {
                 this.nodeAutoEnter = nodeAutoEnter;
@@ -309,7 +324,13 @@ public class DescribeCustomEndpointListResponseBody extends TeaModel {
             }
 
             /**
-             * NodeRole.
+             * <p>If you want to query the metrics of a read-only node in a cloud-native read/write splitting architecture instance, set this parameter to <strong>READONLY</strong> along with the specific <strong>NodeId</strong>.</p>
+             * <blockquote>
+             * <p> In other cases, you do not need to specify this parameter (or set it to <strong>MASTER</strong>).</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>same_azone_as_last</p>
              */
             public Builder nodeRole(String nodeRole) {
                 this.nodeRole = nodeRole;
@@ -317,7 +338,10 @@ public class DescribeCustomEndpointListResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * <p>The connection port of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3306</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -325,7 +349,10 @@ public class DescribeCustomEndpointListResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>created</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -333,7 +360,10 @@ public class DescribeCustomEndpointListResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-8vbkw****5yh4nrd639ih</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -341,7 +371,10 @@ public class DescribeCustomEndpointListResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>The ID of the VPC where the endpoint resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-uf61h****dj1zg5fqp5x7</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -408,7 +441,10 @@ public class DescribeCustomEndpointListResponseBody extends TeaModel {
             } 
 
             /**
-             * CanDeleteCount.
+             * <p>Indicates whether the node can be deleted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder canDeleteCount(Integer canDeleteCount) {
                 this.canDeleteCount = canDeleteCount;
@@ -416,7 +452,7 @@ public class DescribeCustomEndpointListResponseBody extends TeaModel {
             }
 
             /**
-             * Endpoints.
+             * <p>The endpoint details.</p>
              */
             public Builder endpoints(java.util.List<Endpoints> endpoints) {
                 this.endpoints = endpoints;

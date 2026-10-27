@@ -67,7 +67,7 @@ public class DescribeSqlAuditInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned result set.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class DescribeSqlAuditInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DC3ABA3E-0F8A-4596-9104-F5155C******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +157,10 @@ public class DescribeSqlAuditInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * IsEnabled.
+             * <p>Indicates whether the SQL audit feature is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isEnabled(Boolean isEnabled) {
                 this.isEnabled = isEnabled;
@@ -162,7 +168,10 @@ public class DescribeSqlAuditInfoResponseBody extends TeaModel {
             }
 
             /**
-             * SLSLogStore.
+             * <p>The name of the Simple Log Service Logstore.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>polardbx-sqlaudit-log</p>
              */
             public Builder SLSLogStore(String SLSLogStore) {
                 this.SLSLogStore = SLSLogStore;
@@ -170,7 +179,10 @@ public class DescribeSqlAuditInfoResponseBody extends TeaModel {
             }
 
             /**
-             * SLSProject.
+             * <p>The name of the Simple Log Service project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>polardbx-sqlaudit-cn-hangzhou-1852045029120897</p>
              */
             public Builder SLSProject(String SLSProject) {
                 this.SLSProject = SLSProject;

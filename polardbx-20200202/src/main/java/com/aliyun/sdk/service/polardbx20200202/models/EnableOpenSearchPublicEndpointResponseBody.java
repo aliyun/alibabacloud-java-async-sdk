@@ -106,7 +106,7 @@ public class EnableOpenSearchPublicEndpointResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details of the access denial.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -114,7 +114,10 @@ public class EnableOpenSearchPublicEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * Host.
+         * <p>The host required for upload.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://sddp-datamask.oss-cn-zhangjiakou.aliyuncs.com">https://sddp-datamask.oss-cn-zhangjiakou.aliyuncs.com</a></p>
          */
         public Builder host(String host) {
             this.host = host;
@@ -122,7 +125,10 @@ public class EnableOpenSearchPublicEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The additional information returned by the operation. &quot;success&quot; is returned if the operation is successful. Otherwise, the corresponding error code is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class EnableOpenSearchPublicEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * Port.
+         * <p>The public endpoint port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         public Builder port(Integer port) {
             this.port = port;
@@ -272,7 +281,10 @@ public class EnableOpenSearchPublicEndpointResponseBody extends TeaModel {
             } 
 
             /**
-             * AuthAction.
+             * <p>The authentication action.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -280,7 +292,10 @@ public class EnableOpenSearchPublicEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalDisplayName.
+             * <p>The display name of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -288,7 +303,10 @@ public class EnableOpenSearchPublicEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalOwnerId.
+             * <p>The description is the same as above.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder authPrincipalOwnerId(String authPrincipalOwnerId) {
                 this.authPrincipalOwnerId = authPrincipalOwnerId;
@@ -296,7 +314,10 @@ public class EnableOpenSearchPublicEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalType.
+             * <p>The type of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>222</p>
              */
             public Builder authPrincipalType(String authPrincipalType) {
                 this.authPrincipalType = authPrincipalType;
@@ -304,7 +325,10 @@ public class EnableOpenSearchPublicEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * EncodedDiagnosticMessage.
+             * <p>The encoded diagnostic message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
              */
             public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
                 this.encodedDiagnosticMessage = encodedDiagnosticMessage;
@@ -312,7 +336,10 @@ public class EnableOpenSearchPublicEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * NoPermissionType.
+             * <p>The type of the permission denial.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ImplicitDeny</p>
              */
             public Builder noPermissionType(String noPermissionType) {
                 this.noPermissionType = noPermissionType;
@@ -320,7 +347,10 @@ public class EnableOpenSearchPublicEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * <p>The policy type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PRIORITY</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;

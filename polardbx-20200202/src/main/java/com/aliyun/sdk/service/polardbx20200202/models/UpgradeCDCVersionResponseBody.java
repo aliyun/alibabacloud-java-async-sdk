@@ -93,7 +93,7 @@ public class UpgradeCDCVersionResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +101,10 @@ public class UpgradeCDCVersionResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -120,7 +123,10 @@ public class UpgradeCDCVersionResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -186,7 +192,10 @@ public class UpgradeCDCVersionResponseBody extends TeaModel {
             } 
 
             /**
-             * DbInstanceName.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-uf68f345****88zf8</p>
              */
             public Builder dbInstanceName(String dbInstanceName) {
                 this.dbInstanceName = dbInstanceName;
@@ -194,7 +203,10 @@ public class UpgradeCDCVersionResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The target task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1861190497624654848</p>
              */
             public Builder taskId(Integer taskId) {
                 this.taskId = taskId;
@@ -261,7 +273,10 @@ public class UpgradeCDCVersionResponseBody extends TeaModel {
             } 
 
             /**
-             * MinorVersion.
+             * <p>The target version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>polardb-2.4.0_5.4.19-20250116_xcluster5.4.20-20241213</p>
              */
             public Builder minorVersion(String minorVersion) {
                 this.minorVersion = minorVersion;
@@ -269,7 +284,7 @@ public class UpgradeCDCVersionResponseBody extends TeaModel {
             }
 
             /**
-             * TaskList.
+             * <p>The list of upgrade tasks.</p>
              */
             public Builder taskList(java.util.List<TaskList> taskList) {
                 this.taskList = taskList;

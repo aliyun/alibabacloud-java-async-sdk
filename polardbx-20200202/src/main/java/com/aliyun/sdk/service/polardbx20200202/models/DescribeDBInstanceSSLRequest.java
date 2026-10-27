@@ -73,7 +73,10 @@ public class DescribeDBInstanceSSLRequest extends Request {
         } 
 
         /**
-         * DBInstanceName.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxc-*********</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.putQueryParameter("DBInstanceName", DBInstanceName);
@@ -82,7 +85,10 @@ public class DescribeDBInstanceSSLRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

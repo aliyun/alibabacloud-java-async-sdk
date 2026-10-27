@@ -262,7 +262,7 @@ public class CreatePolardbxSupabaseInstanceRequest extends Request {
         } 
 
         /**
-         * <p>是否自动续费，默认 true</p>
+         * <p>Specifies whether to enable auto-renewal.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -274,7 +274,7 @@ public class CreatePolardbxSupabaseInstanceRequest extends Request {
         }
 
         /**
-         * <p>幂等Token，最长 64 字符</p>
+         * <p>The idempotency token.</p>
          * 
          * <strong>example:</strong>
          * <p>FEA5DC20-6D8A-5979-97AA-FC57546ADC20</p>
@@ -286,11 +286,11 @@ public class CreatePolardbxSupabaseInstanceRequest extends Request {
         }
 
         /**
-         * <p>Dashboard 密码（6-32 位，包含大写、小写、数字、特殊字符中至少 3 种）</p>
+         * <p>The Dashboard password.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>dTyMQem0o3HOAFh</p>
+         * <p>dTyMQem0o3HOAFh!</p>
          */
         public Builder dashboardPassword(String dashboardPassword) {
             this.putQueryParameter("DashboardPassword", dashboardPassword);
@@ -299,7 +299,10 @@ public class CreatePolardbxSupabaseInstanceRequest extends Request {
         }
 
         /**
-         * <p>实例描述</p>
+         * <p>The description of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Supabase instance</p>
          */
         public Builder dbInstanceDescription(String dbInstanceDescription) {
             this.putQueryParameter("DbInstanceDescription", dbInstanceDescription);
@@ -308,8 +311,11 @@ public class CreatePolardbxSupabaseInstanceRequest extends Request {
         }
 
         /**
-         * <p>数据库密码（6-32 位，包含大写、小写、数字、特殊字符中至少 3 种）</p>
+         * <p>The database password.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dTyMQem0o3HOAFh!</p>
          */
         public Builder dbPassword(String dbPassword) {
             this.putQueryParameter("DbPassword", dbPassword);
@@ -318,7 +324,10 @@ public class CreatePolardbxSupabaseInstanceRequest extends Request {
         }
 
         /**
-         * <p>实例规格代码，如 polarx.supabase.x2.small / polarx.supabase.x4.xlarge，不传时默认 x2.small</p>
+         * <p>The node specifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>polarx.supabase.x2.small</p>
          */
         public Builder nodeSpec(String nodeSpec) {
             this.putQueryParameter("NodeSpec", nodeSpec);
@@ -327,7 +336,7 @@ public class CreatePolardbxSupabaseInstanceRequest extends Request {
         }
 
         /**
-         * <p>付费类型，取值 PREPAY 或 POSTPAY</p>
+         * <p>The billing method. Valid values: PREPAY and POSTPAY.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -340,7 +349,7 @@ public class CreatePolardbxSupabaseInstanceRequest extends Request {
         }
 
         /**
-         * <p>计费周期，取值 Year/Month/Hour</p>
+         * <p>The billing cycle. Valid values: Year, Month, and Hour.</p>
          * 
          * <strong>example:</strong>
          * <p>Month</p>
@@ -352,7 +361,7 @@ public class CreatePolardbxSupabaseInstanceRequest extends Request {
         }
 
         /**
-         * <p>地域ID</p>
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -365,7 +374,7 @@ public class CreatePolardbxSupabaseInstanceRequest extends Request {
         }
 
         /**
-         * <p>资源组ID</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -377,10 +386,10 @@ public class CreatePolardbxSupabaseInstanceRequest extends Request {
         }
 
         /**
-         * <p>是否多租户模式，true=多租户，false=单租户（平台），默认 false</p>
+         * <p>Specifies whether to enable multi-tenant mode.</p>
          * 
          * <strong>example:</strong>
-         * <p>MySQL</p>
+         * <p>false</p>
          */
         public Builder tenantMode(Boolean tenantMode) {
             this.putQueryParameter("TenantMode", tenantMode);
@@ -389,7 +398,7 @@ public class CreatePolardbxSupabaseInstanceRequest extends Request {
         }
 
         /**
-         * <p>购买时长，按 Period 单位计算（PREPAY 时必填）</p>
+         * <p>The subscription duration.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -401,7 +410,7 @@ public class CreatePolardbxSupabaseInstanceRequest extends Request {
         }
 
         /**
-         * <p>交换机ID</p>
+         * <p>The vSwitch ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -427,7 +436,7 @@ public class CreatePolardbxSupabaseInstanceRequest extends Request {
         }
 
         /**
-         * <p>可用区ID</p>
+         * <p>The zone ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

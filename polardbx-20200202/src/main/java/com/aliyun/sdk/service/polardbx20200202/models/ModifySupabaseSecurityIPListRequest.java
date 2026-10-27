@@ -118,7 +118,7 @@ public class ModifySupabaseSecurityIPListRequest extends Request {
         } 
 
         /**
-         * <p>实例名称</p>
+         * <p>The name of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,7 +131,7 @@ public class ModifySupabaseSecurityIPListRequest extends Request {
         }
 
         /**
-         * <p>白名单分组名</p>
+         * <p>The name of the whitelist group.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -143,7 +143,7 @@ public class ModifySupabaseSecurityIPListRequest extends Request {
         }
 
         /**
-         * <p>修改模式：Cover（覆盖）/Append（追加）/Delete（删除）</p>
+         * <p>The modification mode. Valid values: Cover, Append, and Delete.</p>
          * 
          * <strong>example:</strong>
          * <p>Append</p>
@@ -155,7 +155,7 @@ public class ModifySupabaseSecurityIPListRequest extends Request {
         }
 
         /**
-         * <p>地域ID</p>
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -168,7 +168,7 @@ public class ModifySupabaseSecurityIPListRequest extends Request {
         }
 
         /**
-         * <p>IP白名单列表，多个用逗号分隔</p>
+         * <p>The IP whitelist. Separate multiple IP addresses with commas.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

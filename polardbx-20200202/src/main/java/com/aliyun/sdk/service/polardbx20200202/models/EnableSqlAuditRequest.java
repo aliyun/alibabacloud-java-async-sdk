@@ -118,7 +118,10 @@ public class EnableSqlAuditRequest extends Request {
         } 
 
         /**
-         * AuditAccountName.
+         * <p>The name of the audit administrator account. &gt; If the three-role mode is enabled, this parameter is required. For more information about the three-role mode, see <a href="https://help.aliyun.com/document_detail/213824.html">Three-role mode</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_daa</p>
          */
         public Builder auditAccountName(String auditAccountName) {
             this.putQueryParameter("AuditAccountName", auditAccountName);
@@ -127,7 +130,10 @@ public class EnableSqlAuditRequest extends Request {
         }
 
         /**
-         * AuditAccountPassword.
+         * <p>The password of the audit administrator account. &gt; If the three-role mode is enabled, this parameter is required. For more information about the three-role mode, see <a href="https://help.aliyun.com/document_detail/213824.html">Three-role mode</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Pw@11111</p>
          */
         public Builder auditAccountPassword(String auditAccountPassword) {
             this.putQueryParameter("AuditAccountPassword", auditAccountPassword);
@@ -136,6 +142,7 @@ public class EnableSqlAuditRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -148,7 +155,18 @@ public class EnableSqlAuditRequest extends Request {
         }
 
         /**
-         * ExpireAfterDays.
+         * <p>The number of days for which audit logs are retained.</p>
+         * <ul>
+         * <li><p>0: Logs are not retained. Automatic log expiration is disabled.</p>
+         * </li>
+         * <li><p>Greater than 0: Logs are automatically deleted after N days.</p>
+         * </li>
+         * <li><p>Common values: 30, 45, 90, 180, and 365.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>45</p>
          */
         public Builder expireAfterDays(Integer expireAfterDays) {
             this.putQueryParameter("ExpireAfterDays", expireAfterDays);
@@ -157,6 +175,7 @@ public class EnableSqlAuditRequest extends Request {
         }
 
         /**
+         * <p>The region in which the instance resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -93,7 +93,10 @@ public class UpgradeDBInstanceKernelVersionResponseBody extends TeaModel {
         } 
 
         /**
-         * DBInstanceName.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxc-hzjasd****</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.DBInstanceName = DBInstanceName;
@@ -101,7 +104,10 @@ public class UpgradeDBInstanceKernelVersionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FEA5DC20-6D8A-5979-97AA-FC57546ADC20</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +115,10 @@ public class UpgradeDBInstanceKernelVersionResponseBody extends TeaModel {
         }
 
         /**
-         * TargetMinorVersion.
+         * <p>The target version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>polarx-kernel_5.4.7-16001481_xcluster-20200910</p>
          */
         public Builder targetMinorVersion(String targetMinorVersion) {
             this.targetMinorVersion = targetMinorVersion;
@@ -117,7 +126,10 @@ public class UpgradeDBInstanceKernelVersionResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The backend task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>422922413</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

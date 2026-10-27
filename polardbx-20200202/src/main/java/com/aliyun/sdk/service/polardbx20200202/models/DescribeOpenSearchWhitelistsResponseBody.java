@@ -80,7 +80,7 @@ public class DescribeOpenSearchWhitelistsResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details of the access denial.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -88,7 +88,7 @@ public class DescribeOpenSearchWhitelistsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The monitoring data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -230,7 +230,10 @@ public class DescribeOpenSearchWhitelistsResponseBody extends TeaModel {
             } 
 
             /**
-             * AuthAction.
+             * <p>The authentication action.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -238,7 +241,10 @@ public class DescribeOpenSearchWhitelistsResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalDisplayName.
+             * <p>The display name of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -246,7 +252,10 @@ public class DescribeOpenSearchWhitelistsResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalOwnerId.
+             * <p>The owner ID of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder authPrincipalOwnerId(String authPrincipalOwnerId) {
                 this.authPrincipalOwnerId = authPrincipalOwnerId;
@@ -254,7 +263,10 @@ public class DescribeOpenSearchWhitelistsResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalType.
+             * <p>The authentication principal type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>222</p>
              */
             public Builder authPrincipalType(String authPrincipalType) {
                 this.authPrincipalType = authPrincipalType;
@@ -262,7 +274,10 @@ public class DescribeOpenSearchWhitelistsResponseBody extends TeaModel {
             }
 
             /**
-             * EncodedDiagnosticMessage.
+             * <p>The encoded diagnostic message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
              */
             public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
                 this.encodedDiagnosticMessage = encodedDiagnosticMessage;
@@ -270,7 +285,10 @@ public class DescribeOpenSearchWhitelistsResponseBody extends TeaModel {
             }
 
             /**
-             * NoPermissionType.
+             * <p>The type of the missing permission.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ImplicitDeny</p>
              */
             public Builder noPermissionType(String noPermissionType) {
                 this.noPermissionType = noPermissionType;
@@ -278,7 +296,10 @@ public class DescribeOpenSearchWhitelistsResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * <p>The policy type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PRIORITY</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -410,7 +431,10 @@ public class DescribeOpenSearchWhitelistsResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-07-22T02:26:08Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -418,7 +442,10 @@ public class DescribeOpenSearchWhitelistsResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * <p>The ID of the group to which the instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GID_QMPRUNTIME_BROADCAST_TASK_CONSUMER_GROUP</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -426,7 +453,10 @@ public class DescribeOpenSearchWhitelistsResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * <p>The name of the whitelist group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ack_worker_new</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -434,7 +464,10 @@ public class DescribeOpenSearchWhitelistsResponseBody extends TeaModel {
             }
 
             /**
-             * Ips.
+             * <p>The IP address list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[]</p>
              */
             public Builder ips(String ips) {
                 this.ips = ips;
@@ -442,7 +475,10 @@ public class DescribeOpenSearchWhitelistsResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkType.
+             * <p>The network type. Only VPC is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc</p>
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -450,7 +486,10 @@ public class DescribeOpenSearchWhitelistsResponseBody extends TeaModel {
             }
 
             /**
-             * Remark.
+             * <p>The policy remarks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-t4nt9qxfgbzab587cshhc</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -458,7 +497,10 @@ public class DescribeOpenSearchWhitelistsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The time when the task was last updated, in timestamp format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0001-01-01T00:00:00Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -512,7 +554,7 @@ public class DescribeOpenSearchWhitelistsResponseBody extends TeaModel {
             } 
 
             /**
-             * Whitelists.
+             * <p>The type of the Internet IPv4 whitelist addresses.</p>
              */
             public Builder whitelists(java.util.List<Whitelists> whitelists) {
                 this.whitelists = whitelists;

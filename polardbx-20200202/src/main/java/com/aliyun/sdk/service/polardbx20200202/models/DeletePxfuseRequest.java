@@ -75,7 +75,7 @@ public class DeletePxfuseRequest extends Request {
         } 
 
         /**
-         * <p>PolarDB-X实例名称</p>
+         * <p>The instance name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class DeletePxfuseRequest extends Request {
         }
 
         /**
-         * <p>地域ID</p>
+         * <p>The region in which the instance resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

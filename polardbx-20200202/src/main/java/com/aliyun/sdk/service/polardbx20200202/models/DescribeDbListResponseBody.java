@@ -93,7 +93,7 @@ public class DescribeDbListResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The list of databases.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -101,7 +101,10 @@ public class DescribeDbListResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message. &quot;success&quot; is returned if the request is successful. Otherwise, an error code is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +112,10 @@ public class DescribeDbListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C458B1E8-1683-3645-B154-6BA32080EEA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +123,10 @@ public class DescribeDbListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -183,7 +192,10 @@ public class DescribeDbListResponseBody extends TeaModel {
             } 
 
             /**
-             * AccountName.
+             * <p>The account name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root4test</p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -191,7 +203,10 @@ public class DescribeDbListResponseBody extends TeaModel {
             }
 
             /**
-             * AccountPrivilege.
+             * <p>The account privilege.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ReadWrite</p>
              */
             public Builder accountPrivilege(String accountPrivilege) {
                 this.accountPrivilege = accountPrivilege;
@@ -297,7 +312,7 @@ public class DescribeDbListResponseBody extends TeaModel {
             } 
 
             /**
-             * Accounts.
+             * <p>The list of accounts.</p>
              */
             public Builder accounts(java.util.List<Accounts> accounts) {
                 this.accounts = accounts;
@@ -305,7 +320,10 @@ public class DescribeDbListResponseBody extends TeaModel {
             }
 
             /**
-             * CharacterSetName.
+             * <p>The character set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>utf8mb4</p>
              */
             public Builder characterSetName(String characterSetName) {
                 this.characterSetName = characterSetName;
@@ -313,7 +331,10 @@ public class DescribeDbListResponseBody extends TeaModel {
             }
 
             /**
-             * DBDescription.
+             * <p>The database description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder DBDescription(String DBDescription) {
                 this.DBDescription = DBDescription;
@@ -321,7 +342,10 @@ public class DescribeDbListResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceName.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxc-********</p>
              */
             public Builder DBInstanceName(String DBInstanceName) {
                 this.DBInstanceName = DBInstanceName;
@@ -329,7 +353,10 @@ public class DescribeDbListResponseBody extends TeaModel {
             }
 
             /**
-             * DBName.
+             * <p>The database name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder DBName(String DBName) {
                 this.DBName = DBName;

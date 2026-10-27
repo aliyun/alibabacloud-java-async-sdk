@@ -89,7 +89,7 @@ public class DescribeSupabaseIpWhitelistRequest extends Request {
         } 
 
         /**
-         * <p>实例名称</p>
+         * <p>The instance name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class DescribeSupabaseIpWhitelistRequest extends Request {
         }
 
         /**
-         * <p>白名单分组名</p>
+         * <p>The name of the whitelist group.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -114,7 +114,7 @@ public class DescribeSupabaseIpWhitelistRequest extends Request {
         }
 
         /**
-         * <p>地域ID</p>
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

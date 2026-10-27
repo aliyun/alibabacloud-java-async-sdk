@@ -75,7 +75,7 @@ public class DescribeContext0InfoRequest extends Request {
         } 
 
         /**
-         * <p>关联的 PolarDB-X 实例名（pxc- 前缀）</p>
+         * <p>The instance name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,6 +88,7 @@ public class DescribeContext0InfoRequest extends Request {
         }
 
         /**
+         * <p>The region where the instance resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

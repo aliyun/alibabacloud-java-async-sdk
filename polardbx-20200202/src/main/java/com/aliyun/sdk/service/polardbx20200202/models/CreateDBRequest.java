@@ -204,6 +204,7 @@ public class CreateDBRequest extends Request {
         } 
 
         /**
+         * <p>The name of the account to be authorized for the new database.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -216,7 +217,16 @@ public class CreateDBRequest extends Request {
         }
 
         /**
-         * AccountPrivilege.
+         * <p>The permissions granted to the new account on the database. Valid values:</p>
+         * <ul>
+         * <li><strong>ReadWrite</strong></li>
+         * <li><strong>ReadOnly</strong></li>
+         * <li><strong>DMLOnly</strong></li>
+         * <li><strong>DDLOnly</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ReadWrite</p>
          */
         public Builder accountPrivilege(String accountPrivilege) {
             this.putQueryParameter("AccountPrivilege", accountPrivilege);
@@ -225,6 +235,13 @@ public class CreateDBRequest extends Request {
         }
 
         /**
+         * <p>The character set. Valid values:</p>
+         * <ul>
+         * <li><strong>utf8</strong></li>
+         * <li><strong>gbk</strong></li>
+         * <li><strong>latin1</strong></li>
+         * <li><strong>utf8mb4</strong></li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -237,6 +254,7 @@ public class CreateDBRequest extends Request {
         }
 
         /**
+         * <p>The name of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -249,7 +267,10 @@ public class CreateDBRequest extends Request {
         }
 
         /**
-         * DbDescription.
+         * <p>The description of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>db for test</p>
          */
         public Builder dbDescription(String dbDescription) {
             this.putQueryParameter("DbDescription", dbDescription);
@@ -258,6 +279,7 @@ public class CreateDBRequest extends Request {
         }
 
         /**
+         * <p>The name of the database to be created.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -270,7 +292,14 @@ public class CreateDBRequest extends Request {
         }
 
         /**
-         * Mode.
+         * <p>The mode selected when creating the database. Valid values:</p>
+         * <ul>
+         * <li><strong>auto</strong>: The database supports automatic partitioning. You do not need to specify a partition key when creating a table.</li>
+         * <li><strong>drds</strong>: The database does not support automatic partitioning. You must use the dedicated database and table sharding syntax and specify the shard keys when creating a table.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>auto</p>
          */
         public Builder mode(String mode) {
             this.putQueryParameter("Mode", mode);
@@ -279,6 +308,7 @@ public class CreateDBRequest extends Request {
         }
 
         /**
+         * <p>The region where the instance resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -291,7 +321,13 @@ public class CreateDBRequest extends Request {
         }
 
         /**
-         * SecurityAccountName.
+         * <p>The name of the security administrator account.</p>
+         * <blockquote>
+         * <p>This parameter is required if the three-role mode is enabled. If the three-role mode is not enabled, this parameter is optional.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>securityAccount</p>
          */
         public Builder securityAccountName(String securityAccountName) {
             this.putQueryParameter("SecurityAccountName", securityAccountName);
@@ -300,7 +336,13 @@ public class CreateDBRequest extends Request {
         }
 
         /**
-         * SecurityAccountPassword.
+         * <p>The password of the security administrator account.</p>
+         * <blockquote>
+         * <p>This parameter is required if the three-role mode is enabled. If the three-role mode is not enabled, this parameter is optional.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>securityPassword</p>
          */
         public Builder securityAccountPassword(String securityAccountPassword) {
             this.putQueryParameter("SecurityAccountPassword", securityAccountPassword);
@@ -309,7 +351,10 @@ public class CreateDBRequest extends Request {
         }
 
         /**
-         * StoragePoolName.
+         * <p>The name of the storage pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder storagePoolName(String storagePoolName) {
             this.putQueryParameter("StoragePoolName", storagePoolName);

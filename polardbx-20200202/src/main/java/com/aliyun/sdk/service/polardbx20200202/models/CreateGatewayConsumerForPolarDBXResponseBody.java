@@ -80,7 +80,10 @@ public class CreateGatewayConsumerForPolarDBXResponseBody extends TeaModel {
         } 
 
         /**
-         * DBInstanceName.
+         * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxc-**************</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.DBInstanceName = DBInstanceName;
@@ -99,7 +102,10 @@ public class CreateGatewayConsumerForPolarDBXResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The backend task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>422922413</p>
          */
         public Builder taskId(Integer taskId) {
             this.taskId = taskId;

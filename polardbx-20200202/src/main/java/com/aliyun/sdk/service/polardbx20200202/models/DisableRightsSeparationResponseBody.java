@@ -80,7 +80,10 @@ public class DisableRightsSeparationResponseBody extends TeaModel {
         } 
 
         /**
-         * Message.
+         * <p>Returns success if the request is successful, or returns the corresponding error code if an error occurs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -88,7 +91,10 @@ public class DisableRightsSeparationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FE5D94E3-3C93-3594-95D9-AAED2A980915</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +102,10 @@ public class DisableRightsSeparationResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

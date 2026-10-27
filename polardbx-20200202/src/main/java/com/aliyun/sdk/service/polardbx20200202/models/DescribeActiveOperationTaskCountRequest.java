@@ -88,7 +88,10 @@ public class DescribeActiveOperationTaskCountRequest extends Request {
         } 
 
         /**
-         * Category.
+         * <p>A reserved parameter. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Category</p>
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -97,7 +100,10 @@ public class DescribeActiveOperationTaskCountRequest extends Request {
         }
 
         /**
-         * Product.
+         * <p>The product. Default value: polarx.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>polarx</p>
          */
         public Builder product(String product) {
             this.putQueryParameter("Product", product);
@@ -106,6 +112,7 @@ public class DescribeActiveOperationTaskCountRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

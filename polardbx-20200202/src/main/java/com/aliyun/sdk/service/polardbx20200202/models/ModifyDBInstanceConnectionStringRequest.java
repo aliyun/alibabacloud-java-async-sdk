@@ -120,6 +120,7 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         } 
 
         /**
+         * <p>The original connection string.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -132,6 +133,7 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,6 +146,7 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
+         * <p>The new port number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,6 +159,7 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
+         * <p>The new address prefix.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -168,6 +172,7 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

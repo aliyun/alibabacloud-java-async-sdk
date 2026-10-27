@@ -106,7 +106,7 @@ public class DescribeTasksResponseBody extends TeaModel {
         } 
 
         /**
-         * Items.
+         * <p>The list of result items.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -114,7 +114,10 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -130,7 +136,10 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D6045D78-C119-5A17-9DEA-0F810394E008</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -321,7 +333,10 @@ public class DescribeTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * BeginTime.
+             * <p>The start time of the task. The format is yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot;.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-10-20T19:40:00Z</p>
              */
             public Builder beginTime(String beginTime) {
                 this.beginTime = beginTime;
@@ -329,7 +344,10 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * DBName.
+             * <p>The name of the database associated with the task. This field is usually empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DBName</p>
              */
             public Builder DBName(String DBName) {
                 this.DBName = DBName;
@@ -337,7 +355,10 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * FinishTime.
+             * <p>The end time of the task. The format is yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot;.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-10-20T20:00:00Z</p>
              */
             public Builder finishTime(String finishTime) {
                 this.finishTime = finishTime;
@@ -345,7 +366,10 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * <p>The task progress, in percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -353,7 +377,10 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ProgressInfo.
+             * <p>The detailed progress of the task. This field is usually empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ProgressInfo</p>
              */
             public Builder progressInfo(String progressInfo) {
                 this.progressInfo = progressInfo;
@@ -361,7 +388,10 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ScaleOutToken.
+             * <p>The scale-out token. If the task is a scale-out task, this field returns a scale-out ID, which is a unique backend key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FEA5DC20-6D8A-5979-97AA-FC57546ADC20</p>
              */
             public Builder scaleOutToken(String scaleOutToken) {
                 this.scaleOutToken = scaleOutToken;
@@ -369,7 +399,14 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The task status. Valid values:</p>
+             * <ul>
+             * <li><strong>RUNNING</strong>: The task is running.</li>
+             * <li><strong>FAILED</strong>: The task failed and was interrupted.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -377,7 +414,10 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskAction.
+             * <p>The task action. This is a unique key for the backend task type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>multi_scale_out</p>
              */
             public Builder taskAction(String taskAction) {
                 this.taskAction = taskAction;
@@ -385,7 +425,10 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskErrorCode.
+             * <p>The error code of the failed task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TaskErrorCode</p>
              */
             public Builder taskErrorCode(String taskErrorCode) {
                 this.taskErrorCode = taskErrorCode;
@@ -393,7 +436,10 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskErrorMessage.
+             * <p>The error message of the failed task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TaskErrorMessage</p>
              */
             public Builder taskErrorMessage(String taskErrorMessage) {
                 this.taskErrorMessage = taskErrorMessage;
@@ -401,7 +447,10 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20089398</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

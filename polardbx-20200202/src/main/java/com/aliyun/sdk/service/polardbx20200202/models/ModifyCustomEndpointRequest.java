@@ -145,6 +145,7 @@ public class ModifyCustomEndpointRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the custom endpoint.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,6 +158,7 @@ public class ModifyCustomEndpointRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -169,7 +171,10 @@ public class ModifyCustomEndpointRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>secondary-endpoint</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -178,7 +183,10 @@ public class ModifyCustomEndpointRequest extends Request {
         }
 
         /**
-         * NodeAutoEnter.
+         * <p>Specifies whether a node automatically joins the cluster and starts providing services after it is added or recovered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder nodeAutoEnter(Boolean nodeAutoEnter) {
             this.putQueryParameter("NodeAutoEnter", nodeAutoEnter);
@@ -199,7 +207,10 @@ public class ModifyCustomEndpointRequest extends Request {
         }
 
         /**
-         * NodeRole.
+         * <p>The role of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>master</p>
          */
         public Builder nodeRole(String nodeRole) {
             this.putQueryParameter("NodeRole", nodeRole);
@@ -208,7 +219,10 @@ public class ModifyCustomEndpointRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region in which the instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-zhangjiakou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

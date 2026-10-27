@@ -80,7 +80,7 @@ public class DescribeOpenSearchAccountInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details of the access denial.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -88,7 +88,7 @@ public class DescribeOpenSearchAccountInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data struct.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -230,7 +230,10 @@ public class DescribeOpenSearchAccountInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * AuthAction.
+             * <p>The authentication action.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -238,7 +241,10 @@ public class DescribeOpenSearchAccountInfoResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalDisplayName.
+             * <p>The display name of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -246,7 +252,10 @@ public class DescribeOpenSearchAccountInfoResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalOwnerId.
+             * <p>The owner ID of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder authPrincipalOwnerId(String authPrincipalOwnerId) {
                 this.authPrincipalOwnerId = authPrincipalOwnerId;
@@ -254,7 +263,10 @@ public class DescribeOpenSearchAccountInfoResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalType.
+             * <p>The authentication principal type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>222</p>
              */
             public Builder authPrincipalType(String authPrincipalType) {
                 this.authPrincipalType = authPrincipalType;
@@ -262,7 +274,10 @@ public class DescribeOpenSearchAccountInfoResponseBody extends TeaModel {
             }
 
             /**
-             * EncodedDiagnosticMessage.
+             * <p>The diagnostic information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
              */
             public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
                 this.encodedDiagnosticMessage = encodedDiagnosticMessage;
@@ -281,7 +296,10 @@ public class DescribeOpenSearchAccountInfoResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * <p>The policy type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PRIORITY</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -361,7 +379,15 @@ public class DescribeOpenSearchAccountInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * AccountStatus.
+             * <p>The account status. Valid values: </p>
+             * <ul>
+             * <li><strong>Creating</strong>: The account is being created.</li>
+             * <li><strong>Available</strong>: The account is available.</li>
+             * <li><strong>Deleting</strong>: The account is being deleted.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder accountStatus(String accountStatus) {
                 this.accountStatus = accountStatus;
@@ -369,7 +395,14 @@ public class DescribeOpenSearchAccountInfoResponseBody extends TeaModel {
             }
 
             /**
-             * AccountType.
+             * <p>The account type.</p>
+             * <ul>
+             * <li>Before three-role mode is enabled: 0 indicates a standard account, and 1 indicates a privileged account.</li>
+             * <li>After three-role mode is enabled: 0 indicates a standard account, 2 indicates a system administrator account, 3 indicates a security administrator account, and 4 indicates an audit administrator account.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2,3,4</p>
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;
@@ -377,7 +410,10 @@ public class DescribeOpenSearchAccountInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Username.
+             * <p>The account name of the OpenSearch instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>elastic</p>
              */
             public Builder username(String username) {
                 this.username = username;
@@ -457,7 +493,7 @@ public class DescribeOpenSearchAccountInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * Accounts.
+             * <p>The list of accounts.</p>
              */
             public Builder accounts(java.util.List<Accounts> accounts) {
                 this.accounts = accounts;
@@ -465,7 +501,10 @@ public class DescribeOpenSearchAccountInfoResponseBody extends TeaModel {
             }
 
             /**
-             * PasswordLastModified.
+             * <p>The time when the password was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-08-21T12:00:00Z</p>
              */
             public Builder passwordLastModified(String passwordLastModified) {
                 this.passwordLastModified = passwordLastModified;
@@ -473,7 +512,10 @@ public class DescribeOpenSearchAccountInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Username.
+             * <p>The account name of the OpenSearch instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>elastic</p>
              */
             public Builder username(String username) {
                 this.username = username;

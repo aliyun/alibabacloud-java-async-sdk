@@ -106,7 +106,7 @@ public class CreateServiceAccountResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details of the access denial.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -114,7 +114,7 @@ public class CreateServiceAccountResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned policy details.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +122,10 @@ public class CreateServiceAccountResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The additional information returned. If the request is successful, <strong>success</strong> is returned. If the request fails, the corresponding error code is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +133,10 @@ public class CreateServiceAccountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6BA32080EEA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +144,10 @@ public class CreateServiceAccountResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -243,7 +252,10 @@ public class CreateServiceAccountResponseBody extends TeaModel {
             } 
 
             /**
-             * AuthAction.
+             * <p>The authentication action.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -251,7 +263,10 @@ public class CreateServiceAccountResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalType.
+             * <p>The authentication principal type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>222</p>
              */
             public Builder authPrincipalType(String authPrincipalType) {
                 this.authPrincipalType = authPrincipalType;
@@ -259,7 +274,10 @@ public class CreateServiceAccountResponseBody extends TeaModel {
             }
 
             /**
-             * EncodedDiagnosticMessage.
+             * <p>The encoded diagnostic message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
              */
             public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
                 this.encodedDiagnosticMessage = encodedDiagnosticMessage;
@@ -278,7 +296,10 @@ public class CreateServiceAccountResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * <p>The policy type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PRIORITY</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -397,7 +418,10 @@ public class CreateServiceAccountResponseBody extends TeaModel {
             } 
 
             /**
-             * AccountName.
+             * <p>The account name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>polardbx_meta_ro</p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -405,7 +429,10 @@ public class CreateServiceAccountResponseBody extends TeaModel {
             }
 
             /**
-             * AlreadyExists.
+             * <p>Indicates whether the account already exists.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>False</p>
              */
             public Builder alreadyExists(Boolean alreadyExists) {
                 this.alreadyExists = alreadyExists;
@@ -413,7 +440,10 @@ public class CreateServiceAccountResponseBody extends TeaModel {
             }
 
             /**
-             * RequestId.
+             * <p>The request ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1E5DCFFC-A00D-****-836E-73318F8CA577</p>
              */
             public Builder requestId(String requestId) {
                 this.requestId = requestId;
@@ -421,7 +451,10 @@ public class CreateServiceAccountResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceAccountType.
+             * <p>The type of the service account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>服务账号类型</p>
              */
             public Builder serviceAccountType(String serviceAccountType) {
                 this.serviceAccountType = serviceAccountType;
@@ -429,7 +462,10 @@ public class CreateServiceAccountResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The instance status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -437,7 +473,10 @@ public class CreateServiceAccountResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2209883</p>
              */
             public Builder taskId(Integer taskId) {
                 this.taskId = taskId;

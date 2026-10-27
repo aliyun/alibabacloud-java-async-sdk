@@ -80,7 +80,7 @@ public class DescribePxfsSecurityIpsResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details of the access denial.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -88,7 +88,7 @@ public class DescribePxfsSecurityIpsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>接口返回的业务数据。</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -96,7 +96,7 @@ public class DescribePxfsSecurityIpsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求的唯一标识，可用于排查问题。</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -230,7 +230,10 @@ public class DescribePxfsSecurityIpsResponseBody extends TeaModel {
             } 
 
             /**
-             * AuthAction.
+             * <p>The authentication action.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -238,7 +241,10 @@ public class DescribePxfsSecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalDisplayName.
+             * <p>The identity used for authentication in the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -246,7 +252,10 @@ public class DescribePxfsSecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalOwnerId.
+             * <p>The owner ID of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder authPrincipalOwnerId(String authPrincipalOwnerId) {
                 this.authPrincipalOwnerId = authPrincipalOwnerId;
@@ -254,7 +263,10 @@ public class DescribePxfsSecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalType.
+             * <p>The description is as described above.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>222</p>
              */
             public Builder authPrincipalType(String authPrincipalType) {
                 this.authPrincipalType = authPrincipalType;
@@ -262,7 +274,10 @@ public class DescribePxfsSecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * EncodedDiagnosticMessage.
+             * <p>The diagnostic message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
              */
             public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
                 this.encodedDiagnosticMessage = encodedDiagnosticMessage;
@@ -270,7 +285,10 @@ public class DescribePxfsSecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * NoPermissionType.
+             * <p>The no-permission type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ImplicitDeny</p>
              */
             public Builder noPermissionType(String noPermissionType) {
                 this.noPermissionType = noPermissionType;
@@ -278,7 +296,10 @@ public class DescribePxfsSecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * <p>The policy type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PRIORITY</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -358,7 +379,7 @@ public class DescribePxfsSecurityIpsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Agent文件服务白名单分组名称。</p>
+             * <p>The name of the whitelist group.</p>
              * 
              * <strong>example:</strong>
              * <p>default</p>
@@ -369,7 +390,7 @@ public class DescribePxfsSecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>白名单分组标签。</p>
+             * <p>The tag of the whitelist group.</p>
              * 
              * <strong>example:</strong>
              * <p>default</p>
@@ -380,7 +401,7 @@ public class DescribePxfsSecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>白名单分组中的IP地址或CIDR列表。</p>
+             * <p>The IP addresses.</p>
              * 
              * <strong>example:</strong>
              * <p>192.168.1.0/24,10.0.0.1</p>
@@ -450,7 +471,7 @@ public class DescribePxfsSecurityIpsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Agent文件服务在管控系统中的实例名称。</p>
+             * <p>The name of the managed instance.</p>
              * 
              * <strong>example:</strong>
              * <p>pxfs-xxxxxxxx</p>
@@ -461,7 +482,7 @@ public class DescribePxfsSecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Agent文件服务白名单分组列表。</p>
+             * <p>The whitelist groups.</p>
              */
             public Builder groups(java.util.List<Groups> groups) {
                 this.groups = groups;

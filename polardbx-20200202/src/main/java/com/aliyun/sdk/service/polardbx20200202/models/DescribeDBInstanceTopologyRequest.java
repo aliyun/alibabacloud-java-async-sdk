@@ -117,6 +117,7 @@ public class DescribeDBInstanceTopologyRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,7 +130,10 @@ public class DescribeDBInstanceTopologyRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time of the historical instance range for the topology query, in the yyyy-MM-dd HH:mm:ss format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-10-22T10:30:45Z 04:00:00</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -138,7 +142,10 @@ public class DescribeDBInstanceTopologyRequest extends Request {
         }
 
         /**
-         * MinuteSimple.
+         * <p>Specifies whether to query the historical topology.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder minuteSimple(Boolean minuteSimple) {
             this.putQueryParameter("MinuteSimple", minuteSimple);
@@ -147,6 +154,7 @@ public class DescribeDBInstanceTopologyRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,7 +167,10 @@ public class DescribeDBInstanceTopologyRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time of the historical instance range for the topology query, in the yyyy-MM-dd HH:mm:ss format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-10-21T10:30:45Z 04:00:00</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

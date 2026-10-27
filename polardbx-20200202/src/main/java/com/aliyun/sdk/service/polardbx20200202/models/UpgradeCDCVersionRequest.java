@@ -129,7 +129,10 @@ public class UpgradeCDCVersionRequest extends Request {
         } 
 
         /**
-         * CdcDbVersion.
+         * <p>The target database version to which you want to upgrade. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDBClusterVersion</a> operation to query the upgrade instructions for all database versions in the specified region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.343</p>
          */
         public Builder cdcDbVersion(String cdcDbVersion) {
             this.putQueryParameter("CdcDbVersion", cdcDbVersion);
@@ -138,7 +141,10 @@ public class UpgradeCDCVersionRequest extends Request {
         }
 
         /**
-         * CdcMinorVersion.
+         * <p>The target version number to which you want to upgrade.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>polarx-cdc-kernel-5.4.19-20240928_17274884</p>
          */
         public Builder cdcMinorVersion(String cdcMinorVersion) {
             this.putQueryParameter("CdcMinorVersion", cdcMinorVersion);
@@ -147,7 +153,10 @@ public class UpgradeCDCVersionRequest extends Request {
         }
 
         /**
-         * DBInstanceName.
+         * <p>The instance ID. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDBInstances</a> operation to query the details of all instances in the specified region, including instance IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxc-hzrp****3p72fi</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.putQueryParameter("DBInstanceName", DBInstanceName);
@@ -156,7 +165,10 @@ public class UpgradeCDCVersionRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxc-shrvdc****wtf5uk-cdc</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -165,7 +177,10 @@ public class UpgradeCDCVersionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region in which the instance resides. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196841.html">DescribeRegions</a> operation to query the regions supported by PolarDB-X, including region IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -174,7 +189,14 @@ public class UpgradeCDCVersionRequest extends Request {
         }
 
         /**
-         * SwitchMode.
+         * <p>The switch mode. Valid values:</p>
+         * <ul>
+         * <li>0: immediately switches.</li>
+         * <li>1: switches within the O&amp;M window.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder switchMode(String switchMode) {
             this.putQueryParameter("SwitchMode", switchMode);

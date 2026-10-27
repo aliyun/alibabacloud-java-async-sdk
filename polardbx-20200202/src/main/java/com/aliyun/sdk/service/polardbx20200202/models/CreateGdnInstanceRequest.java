@@ -145,6 +145,7 @@ public class CreateGdnInstanceRequest extends Request {
         } 
 
         /**
+         * <p>The name of the primary instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,7 +158,10 @@ public class CreateGdnInstanceRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FASTJSON 2.0.x has been released, faster and more secure, recommend you upgrade.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -166,7 +170,10 @@ public class CreateGdnInstanceRequest extends Request {
         }
 
         /**
-         * GdnMode.
+         * <p>The GDN mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gdn_mode_master_slave, gdn_mode_bidirectional</p>
          */
         public Builder gdnMode(String gdnMode) {
             this.putQueryParameter("GdnMode", gdnMode);
@@ -175,6 +182,7 @@ public class CreateGdnInstanceRequest extends Request {
         }
 
         /**
+         * <p>The region where the instance resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -187,7 +195,10 @@ public class CreateGdnInstanceRequest extends Request {
         }
 
         /**
-         * RplConflictStrategy.
+         * <p>The conflict strategy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DIRECT_OVERWRITE, OVERWRITE, IGNORE, INTERRUPT</p>
          */
         public Builder rplConflictStrategy(String rplConflictStrategy) {
             this.putQueryParameter("RplConflictStrategy", rplConflictStrategy);
@@ -196,7 +207,10 @@ public class CreateGdnInstanceRequest extends Request {
         }
 
         /**
-         * RplDmlStrategy.
+         * <p>The DML replication policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MERGE,  SERIAL, TRANSACTION, SPLIT</p>
          */
         public Builder rplDmlStrategy(String rplDmlStrategy) {
             this.putQueryParameter("RplDmlStrategy", rplDmlStrategy);
@@ -205,7 +219,7 @@ public class CreateGdnInstanceRequest extends Request {
         }
 
         /**
-         * RplSyncDdl.
+         * <p>Specifies whether to synchronize DDL statements.</p>
          */
         public Builder rplSyncDdl(Boolean rplSyncDdl) {
             this.putQueryParameter("RplSyncDdl", rplSyncDdl);

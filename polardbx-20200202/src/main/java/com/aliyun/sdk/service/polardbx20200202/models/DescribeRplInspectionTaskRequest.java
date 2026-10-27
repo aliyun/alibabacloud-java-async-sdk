@@ -131,7 +131,10 @@ public class DescribeRplInspectionTaskRequest extends Request {
         } 
 
         /**
-         * FailPageNumber.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder failPageNumber(Integer failPageNumber) {
             this.putQueryParameter("FailPageNumber", failPageNumber);
@@ -140,7 +143,10 @@ public class DescribeRplInspectionTaskRequest extends Request {
         }
 
         /**
-         * FailPageSize.
+         * <p>The number of records per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder failPageSize(Integer failPageSize) {
             this.putQueryParameter("FailPageSize", failPageSize);
@@ -149,6 +155,7 @@ public class DescribeRplInspectionTaskRequest extends Request {
         }
 
         /**
+         * <p>The region where the instance resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -161,7 +168,10 @@ public class DescribeRplInspectionTaskRequest extends Request {
         }
 
         /**
-         * SlinkTaskId.
+         * <p>The switchover task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>etx-szr2rr6i*****</p>
          */
         public Builder slinkTaskId(String slinkTaskId) {
             this.putQueryParameter("SlinkTaskId", slinkTaskId);
@@ -170,7 +180,10 @@ public class DescribeRplInspectionTaskRequest extends Request {
         }
 
         /**
-         * SuccessPageNumber.
+         * <p>The requested page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder successPageNumber(Long successPageNumber) {
             this.putQueryParameter("SuccessPageNumber", successPageNumber);
@@ -179,7 +192,10 @@ public class DescribeRplInspectionTaskRequest extends Request {
         }
 
         /**
-         * SuccessPageSize.
+         * <p>The number of records per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder successPageSize(Long successPageSize) {
             this.putQueryParameter("SuccessPageSize", successPageSize);

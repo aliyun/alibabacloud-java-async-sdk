@@ -129,7 +129,11 @@ public class DescribeGdnInstancesRequest extends Request {
         } 
 
         /**
-         * FilterType.
+         * <p>The message filter type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gdn_id、
+         * polarx_id</p>
          */
         public Builder filterType(String filterType) {
             this.putQueryParameter("FilterType", filterType);
@@ -138,7 +142,12 @@ public class DescribeGdnInstancesRequest extends Request {
         }
 
         /**
-         * FilterValue.
+         * <p>The filter value used when querying resources.</p>
+         * <p>This parameter is used in conjunction with FilterKey.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gdn-<em><strong>、
+         * pxc-</strong></em></p>
          */
         public Builder filterValue(String filterValue) {
             this.putQueryParameter("FilterValue", filterValue);
@@ -147,7 +156,7 @@ public class DescribeGdnInstancesRequest extends Request {
         }
 
         /**
-         * <p>GDN ID。</p>
+         * <p>The GDN ID.</p>
          * 
          * <strong>example:</strong>
          * <p>gdn-***</p>
@@ -159,7 +168,10 @@ public class DescribeGdnInstancesRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>The page number. Valid values: an integer greater than 0 and less than or equal to the maximum value of the Integer data type. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder pageNum(String pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -168,7 +180,10 @@ public class DescribeGdnInstancesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -177,7 +192,10 @@ public class DescribeGdnInstancesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

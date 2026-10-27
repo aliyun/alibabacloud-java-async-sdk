@@ -80,7 +80,7 @@ public class DescribeOpenSearchResourceUsageResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details of the access denial.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -88,7 +88,7 @@ public class DescribeOpenSearchResourceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -230,7 +230,10 @@ public class DescribeOpenSearchResourceUsageResponseBody extends TeaModel {
             } 
 
             /**
-             * AuthAction.
+             * <p>The authentication action.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -238,7 +241,10 @@ public class DescribeOpenSearchResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalDisplayName.
+             * <p>The display name of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -246,7 +252,10 @@ public class DescribeOpenSearchResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalOwnerId.
+             * <p>The owner ID of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder authPrincipalOwnerId(String authPrincipalOwnerId) {
                 this.authPrincipalOwnerId = authPrincipalOwnerId;
@@ -254,7 +263,10 @@ public class DescribeOpenSearchResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalType.
+             * <p>The type of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>222</p>
              */
             public Builder authPrincipalType(String authPrincipalType) {
                 this.authPrincipalType = authPrincipalType;
@@ -262,7 +274,10 @@ public class DescribeOpenSearchResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * EncodedDiagnosticMessage.
+             * <p>The diagnostic information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
              */
             public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
                 this.encodedDiagnosticMessage = encodedDiagnosticMessage;
@@ -281,7 +296,10 @@ public class DescribeOpenSearchResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * <p>The policy type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PRIORITY</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -387,7 +405,10 @@ public class DescribeOpenSearchResourceUsageResponseBody extends TeaModel {
             } 
 
             /**
-             * DocCount.
+             * <p>The total number of documents in the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000000</p>
              */
             public Builder docCount(Long docCount) {
                 this.docCount = docCount;
@@ -395,7 +416,12 @@ public class DescribeOpenSearchResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * IndexCount.
+             * <p>The number of indexes. This is a filter condition for the number of indexes that the missing index table currently has. The input format is <code>operator + separator &quot;&quot; + index count</code>, for example, <code>&gt;=100</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <blockquote>
+             * <p>=</p>
+             * </blockquote>
              */
             public Builder indexCount(Integer indexCount) {
                 this.indexCount = indexCount;
@@ -403,7 +429,10 @@ public class DescribeOpenSearchResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * StorageSizeInBytes.
+             * <p>The used storage space, in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>107374182400</p>
              */
             public Builder storageSizeInBytes(Long storageSizeInBytes) {
                 this.storageSizeInBytes = storageSizeInBytes;
@@ -411,7 +440,10 @@ public class DescribeOpenSearchResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * StorageTotalInBytes.
+             * <p>The total storage capacity, in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>536870912000</p>
              */
             public Builder storageTotalInBytes(Long storageTotalInBytes) {
                 this.storageTotalInBytes = storageTotalInBytes;
@@ -419,7 +451,10 @@ public class DescribeOpenSearchResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * StorageUsagePercent.
+             * <p>The storage space usage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20.0</p>
              */
             public Builder storageUsagePercent(Double storageUsagePercent) {
                 this.storageUsagePercent = storageUsagePercent;

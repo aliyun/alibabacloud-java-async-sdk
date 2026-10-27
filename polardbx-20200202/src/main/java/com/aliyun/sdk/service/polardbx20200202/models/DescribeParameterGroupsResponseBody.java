@@ -67,7 +67,7 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The instance details.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -274,7 +274,7 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * CnForceRestart.
+             * <p>Indicates whether a forced restart of CN is required.</p>
              */
             public Builder cnForceRestart(Boolean cnForceRestart) {
                 this.cnForceRestart = cnForceRestart;
@@ -282,7 +282,10 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * CnParamCount.
+             * <p>The number of CN parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder cnParamCount(Integer cnParamCount) {
                 this.cnParamCount = cnParamCount;
@@ -290,7 +293,10 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * DbType.
+             * <p>The database type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>polarx</p>
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -298,7 +304,10 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * DbVersion.
+             * <p>The database engine version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5.7</p>
              */
             public Builder dbVersion(String dbVersion) {
                 this.dbVersion = dbVersion;
@@ -306,7 +315,7 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * DnForceRestart.
+             * <p>Indicates whether a forced restart of DN is required.</p>
              */
             public Builder dnForceRestart(Boolean dnForceRestart) {
                 this.dnForceRestart = dnForceRestart;
@@ -314,7 +323,10 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * DnParamCount.
+             * <p>The number of DN parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder dnParamCount(Integer dnParamCount) {
                 this.dnParamCount = dnParamCount;
@@ -322,7 +334,10 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreated.
+             * <p>The time when the account was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-12-19T16:41:31+08:00</p>
              */
             public Builder gmtCreated(String gmtCreated) {
                 this.gmtCreated = gmtCreated;
@@ -330,7 +345,10 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The modification time, in timestamp format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1605079985000</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -338,7 +356,13 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterGroupId.
+             * <p>The parameter template ID.</p>
+             * <blockquote>
+             * <p>You can call the <a href="https://help.aliyun.com/document_detail/207178.html">DescribeParameterGroups</a> operation to query the details of all parameter templates in the specified region, including the parameter template ID.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>rpg-s1y1xy06****fqs7y</p>
              */
             public Builder parameterGroupId(String parameterGroupId) {
                 this.parameterGroupId = parameterGroupId;
@@ -346,7 +370,10 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterGroupName.
+             * <p>The parameter template name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dstest_api_new</p>
              */
             public Builder parameterGroupName(String parameterGroupName) {
                 this.parameterGroupName = parameterGroupName;
@@ -354,7 +381,10 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterGroupType.
+             * <p>The parameter templatetype.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder parameterGroupType(String parameterGroupType) {
                 this.parameterGroupType = parameterGroupType;
@@ -362,7 +392,14 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Series.
+             * <p>The instance edition. Valid values:</p>
+             * <ul>
+             * <li><strong>enterprise</strong>: Enterprise Edition.</li>
+             * <li><strong>standard</strong>: Standard Edition.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>enterprise</p>
              */
             public Builder series(String series) {
                 this.series = series;
@@ -429,7 +466,7 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * ParameterGroups.
+             * <p>The parameter template name.</p>
              */
             public Builder parameterGroups(java.util.List<ParameterGroups> parameterGroups) {
                 this.parameterGroups = parameterGroups;
@@ -437,10 +474,10 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Id of the request</p>
+             * <p>The request ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>9B2F3840-5C98-475C-B269-2D5C3A31797C</p>
+             * <p>1E5DCFFC-A00D-****-836E-73318F8CA577</p>
              */
             public Builder requestId(String requestId) {
                 this.requestId = requestId;

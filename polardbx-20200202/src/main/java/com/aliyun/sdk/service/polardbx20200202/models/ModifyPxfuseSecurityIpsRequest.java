@@ -118,7 +118,7 @@ public class ModifyPxfuseSecurityIpsRequest extends Request {
         } 
 
         /**
-         * <p>PolarDB-X逻辑实例名称</p>
+         * <p>The name of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,7 +131,7 @@ public class ModifyPxfuseSecurityIpsRequest extends Request {
         }
 
         /**
-         * <p>白名单分组名称，不传默认为default</p>
+         * <p>The name of the whitelist group for the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -143,7 +143,12 @@ public class ModifyPxfuseSecurityIpsRequest extends Request {
         }
 
         /**
-         * <p>修改模式：0覆盖、1追加、2删除</p>
+         * <p>The modification mode of the whitelist. Valid values:</p>
+         * <ul>
+         * <li>0: overwrites the whitelist group.</li>
+         * <li>1: adds a whitelist group.</li>
+         * <li>2: deletes a whitelist group.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -155,7 +160,7 @@ public class ModifyPxfuseSecurityIpsRequest extends Request {
         }
 
         /**
-         * <p>地域ID</p>
+         * <p>The region in which the instance resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -168,7 +173,7 @@ public class ModifyPxfuseSecurityIpsRequest extends Request {
         }
 
         /**
-         * <p>白名单IP列表，多个IP以英文逗号分隔</p>
+         * <p>The IP addresses in the whitelist group. Separate multiple IP addresses with commas (,).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -118,7 +118,7 @@ public class ModifyContextDBSecurityIpsRequest extends Request {
         } 
 
         /**
-         * <p>关联的 PolarDB-X 实例名（pxc- 前缀）</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,7 +131,7 @@ public class ModifyContextDBSecurityIpsRequest extends Request {
         }
 
         /**
-         * <p>白名单分组名</p>
+         * <p>The name of the whitelist group for the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -143,7 +143,12 @@ public class ModifyContextDBSecurityIpsRequest extends Request {
         }
 
         /**
-         * <p>修改模式。0：覆盖原白名单（默认值）；1：追加IP到白名单；2：从白名单中删除IP</p>
+         * <p>The modification mode of the whitelist. Valid values:</p>
+         * <ul>
+         * <li>0: overwrites the whitelist group.</li>
+         * <li>1: adds a whitelist group.</li>
+         * <li>2: deletes a whitelist group.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -155,7 +160,7 @@ public class ModifyContextDBSecurityIpsRequest extends Request {
         }
 
         /**
-         * <p>地域 ID</p>
+         * <p>The region in which the instance resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -168,7 +173,7 @@ public class ModifyContextDBSecurityIpsRequest extends Request {
         }
 
         /**
-         * <p>IP 白名单，多个地址用逗号分隔；传入 0.0.0.0 时按 0.0.0.0/0 全网 CIDR 处理</p>
+         * <p>The IP addresses in the whitelist group. Separate multiple IP addresses with commas (,).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

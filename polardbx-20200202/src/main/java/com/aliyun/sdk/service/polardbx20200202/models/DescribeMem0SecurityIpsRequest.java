@@ -75,7 +75,7 @@ public class DescribeMem0SecurityIpsRequest extends Request {
         } 
 
         /**
-         * <p>PolarDB-X实例名称（逻辑实例名，如pxc-xxx）</p>
+         * <p>The name of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class DescribeMem0SecurityIpsRequest extends Request {
         }
 
         /**
-         * <p>地域ID</p>
+         * <p>The ID of the region where the instance resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -341,7 +341,19 @@ public class UpdateBackupPolicyRequest extends Request {
         } 
 
         /**
-         * BackupPeriod.
+         * <p>The backup cycle. You must specify at least 2 days. The value is a 7-digit number. From left to right, each digit represents whether backup is enabled from Monday to Sunday. A value of 0 indicates that backup is disabled, and a value of 1 indicates that backup is enabled:</p>
+         * <ul>
+         * <li>First digit: Monday</li>
+         * <li>Second digit: Tuesday</li>
+         * <li>Third digit: Wednesday</li>
+         * <li>Fourth digit: Thursday</li>
+         * <li>Fifth digit: Friday</li>
+         * <li>Sixth digit: Saturday</li>
+         * <li>Seventh digit: Sunday</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1001000</p>
          */
         public Builder backupPeriod(String backupPeriod) {
             this.putQueryParameter("BackupPeriod", backupPeriod);
@@ -350,7 +362,10 @@ public class UpdateBackupPolicyRequest extends Request {
         }
 
         /**
-         * BackupPlanBegin.
+         * <p>The daily backup start time in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>03:00Z</p>
          */
         public Builder backupPlanBegin(String backupPlanBegin) {
             this.putQueryParameter("BackupPlanBegin", backupPlanBegin);
@@ -359,7 +374,10 @@ public class UpdateBackupPolicyRequest extends Request {
         }
 
         /**
-         * BackupSetRetention.
+         * <p>The retention period of backup sets. Unit: days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder backupSetRetention(Integer backupSetRetention) {
             this.putQueryParameter("BackupSetRetention", backupSetRetention);
@@ -368,7 +386,10 @@ public class UpdateBackupPolicyRequest extends Request {
         }
 
         /**
-         * BackupType.
+         * <p>The backup type. Currently, only &quot;0&quot; is supported, which indicates fast backup.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder backupType(String backupType) {
             this.putQueryParameter("BackupType", backupType);
@@ -377,7 +398,14 @@ public class UpdateBackupPolicyRequest extends Request {
         }
 
         /**
-         * BackupWay.
+         * <p>The backup method. Valid values:</p>
+         * <ul>
+         * <li><strong>P</strong>: physical backup.</li>
+         * <li><strong>L</strong>: logical backup.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>P</p>
          */
         public Builder backupWay(String backupWay) {
             this.putQueryParameter("BackupWay", backupWay);
@@ -386,7 +414,10 @@ public class UpdateBackupPolicyRequest extends Request {
         }
 
         /**
-         * ColdDataBackupInterval.
+         * <p>The interval of cold data backups. Unit: days. Valid values: 1 to 59.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder coldDataBackupInterval(Integer coldDataBackupInterval) {
             this.putQueryParameter("ColdDataBackupInterval", coldDataBackupInterval);
@@ -395,7 +426,10 @@ public class UpdateBackupPolicyRequest extends Request {
         }
 
         /**
-         * ColdDataBackupRetention.
+         * <p>The retention period of cold data backups. Unit: days. Valid values: 30 to 730.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder coldDataBackupRetention(Integer coldDataBackupRetention) {
             this.putQueryParameter("ColdDataBackupRetention", coldDataBackupRetention);
@@ -404,7 +438,10 @@ public class UpdateBackupPolicyRequest extends Request {
         }
 
         /**
-         * CrossRegionDataBackupRetention.
+         * <p>The retention period of cross-region data backups. Unit: days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder crossRegionDataBackupRetention(Integer crossRegionDataBackupRetention) {
             this.putQueryParameter("CrossRegionDataBackupRetention", crossRegionDataBackupRetention);
@@ -422,7 +459,10 @@ public class UpdateBackupPolicyRequest extends Request {
         }
 
         /**
-         * CrossRegionLogBackupRetention.
+         * <p>The retention period of cross-region log backups. Unit: days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder crossRegionLogBackupRetention(Integer crossRegionLogBackupRetention) {
             this.putQueryParameter("CrossRegionLogBackupRetention", crossRegionLogBackupRetention);
@@ -431,6 +471,7 @@ public class UpdateBackupPolicyRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -443,7 +484,10 @@ public class UpdateBackupPolicyRequest extends Request {
         }
 
         /**
-         * DestCrossRegion.
+         * <p>The destination region for cross-region backup.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder destCrossRegion(String destCrossRegion) {
             this.putQueryParameter("DestCrossRegion", destCrossRegion);
@@ -452,7 +496,14 @@ public class UpdateBackupPolicyRequest extends Request {
         }
 
         /**
-         * ForceCleanOnHighSpaceUsage.
+         * <p>Specifies whether to forcibly clean up binary logs when the total space usage of the instance exceeds 80% or the remaining space is less than 50 GB. The cleanup starts from the earliest logs until the total space usage drops below 80% and the remaining space exceeds 50 GB. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Yes.</li>
+         * <li><strong>0</strong>: No.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder forceCleanOnHighSpaceUsage(Integer forceCleanOnHighSpaceUsage) {
             this.putQueryParameter("ForceCleanOnHighSpaceUsage", forceCleanOnHighSpaceUsage);
@@ -461,7 +512,10 @@ public class UpdateBackupPolicyRequest extends Request {
         }
 
         /**
-         * IsCrossRegionDataBackupEnabled.
+         * <p>Specifies whether to enable cross-region data backup. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isCrossRegionDataBackupEnabled(Boolean isCrossRegionDataBackupEnabled) {
             this.putQueryParameter("IsCrossRegionDataBackupEnabled", isCrossRegionDataBackupEnabled);
@@ -470,7 +524,10 @@ public class UpdateBackupPolicyRequest extends Request {
         }
 
         /**
-         * IsCrossRegionLogBackupEnabled.
+         * <p>Specifies whether to enable cross-region log backup. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isCrossRegionLogBackupEnabled(Boolean isCrossRegionLogBackupEnabled) {
             this.putQueryParameter("IsCrossRegionLogBackupEnabled", isCrossRegionLogBackupEnabled);
@@ -479,7 +536,10 @@ public class UpdateBackupPolicyRequest extends Request {
         }
 
         /**
-         * IsEnabled.
+         * <p>Specifies whether to enable backup. The value is fixed to 1, which indicates that backup is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder isEnabled(Integer isEnabled) {
             this.putQueryParameter("IsEnabled", isEnabled);
@@ -488,7 +548,10 @@ public class UpdateBackupPolicyRequest extends Request {
         }
 
         /**
-         * LocalLogRetention.
+         * <p>The number of hours that log backups are retained locally. Valid values: 0 to 168 (7 × 24 hours). A value of 0 indicates that log backups are not retained locally. Default value: 7.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder localLogRetention(Integer localLogRetention) {
             this.putQueryParameter("LocalLogRetention", localLogRetention);
@@ -497,7 +560,10 @@ public class UpdateBackupPolicyRequest extends Request {
         }
 
         /**
-         * LocalLogRetentionNumber.
+         * <p>The number of local binary logs to retain. Default value: 60. Valid values: 6 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder localLogRetentionNumber(Integer localLogRetentionNumber) {
             this.putQueryParameter("LocalLogRetentionNumber", localLogRetentionNumber);
@@ -506,7 +572,10 @@ public class UpdateBackupPolicyRequest extends Request {
         }
 
         /**
-         * LogLocalRetentionSpace.
+         * <p>The maximum binary log space usage in percentage. Valid values: 0 to 50. This parameter specifies a loop space. Default value: 30.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder logLocalRetentionSpace(Integer logLocalRetentionSpace) {
             this.putQueryParameter("LogLocalRetentionSpace", logLocalRetentionSpace);
@@ -515,6 +584,7 @@ public class UpdateBackupPolicyRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -527,7 +597,10 @@ public class UpdateBackupPolicyRequest extends Request {
         }
 
         /**
-         * RemoveLogRetention.
+         * <p>The number of days that log backups are retained remotely. Valid values: 7 to 730. Unit: days. Default value: 7.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder removeLogRetention(Integer removeLogRetention) {
             this.putQueryParameter("RemoveLogRetention", removeLogRetention);

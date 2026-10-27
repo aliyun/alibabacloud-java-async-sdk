@@ -90,6 +90,7 @@ public class ScaleInOpenSearchRequest extends Request {
         } 
 
         /**
+         * <p>The name of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class ScaleInOpenSearchRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,7 @@ public class ScaleInOpenSearchRequest extends Request {
         }
 
         /**
+         * <p>The total number of data nodes after the scale-in. The value must be a positive integer and less than the current number of data nodes.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

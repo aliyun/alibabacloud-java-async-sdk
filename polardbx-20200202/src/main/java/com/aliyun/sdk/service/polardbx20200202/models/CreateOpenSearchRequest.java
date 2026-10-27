@@ -332,7 +332,14 @@ public class CreateOpenSearchRequest extends Request {
         } 
 
         /**
-         * AutoRenew.
+         * <p>Specifies whether to enable auto-renewal. Default value: true. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: enables auto-renewal</li>
+         * <li><strong>false</strong>: disables auto-renewal</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -341,7 +348,10 @@ public class CreateOpenSearchRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The idempotency token. Make sure that the value is unique for each creation request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FEA5DC20-6D8A-5979-97AA-FC57546ADC20</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -350,7 +360,10 @@ public class CreateOpenSearchRequest extends Request {
         }
 
         /**
-         * DBInstanceDescription.
+         * <p>The description of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test instance</p>
          */
         public Builder DBInstanceDescription(String DBInstanceDescription) {
             this.putQueryParameter("DBInstanceDescription", DBInstanceDescription);
@@ -359,6 +372,7 @@ public class CreateOpenSearchRequest extends Request {
         }
 
         /**
+         * <p>The code for the node specifications of the PolarDBX Search data node. The active node specifications vary by region and sales configuration. Use a PolarDBX Search node specifications code that is available for purchase in the current region.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -371,7 +385,10 @@ public class CreateOpenSearchRequest extends Request {
         }
 
         /**
-         * EngineVersion.
+         * <p>The database engine version of PolarDBX Search. The current fixed DPI engine version is 3.0. If this parameter is not specified, 3.0 is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3.0</p>
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -380,7 +397,10 @@ public class CreateOpenSearchRequest extends Request {
         }
 
         /**
-         * InstanceSpec.
+         * <p>A compatible parameter. This parameter does not take effect. Specify the node specifications of the PolarDBX Search data node by using DBNodeClass.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>opensearch.sn2ne.large.1</p>
          */
         public Builder instanceSpec(String instanceSpec) {
             this.putQueryParameter("InstanceSpec", instanceSpec);
@@ -389,6 +409,7 @@ public class CreateOpenSearchRequest extends Request {
         }
 
         /**
+         * <p>The number of PolarDBX Search data nodes. The value must be a positive integer and an integer multiple of the number of selected zones.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -401,6 +422,11 @@ public class CreateOpenSearchRequest extends Request {
         }
 
         /**
+         * <p>The billing method of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>PREPAY</strong>: subscription</li>
+         * <li><strong>POSTPAY</strong>: pay-as-you-go</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -413,7 +439,10 @@ public class CreateOpenSearchRequest extends Request {
         }
 
         /**
-         * Period.
+         * <p>The billing cycle. For subscription instances, only Year and Month are supported. For pay-as-you-go instances, the default value is Hour.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -422,6 +451,7 @@ public class CreateOpenSearchRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -434,7 +464,10 @@ public class CreateOpenSearchRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID. This parameter can be left empty and is not currently supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-xxxxx</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -443,7 +476,10 @@ public class CreateOpenSearchRequest extends Request {
         }
 
         /**
-         * StorageSpace.
+         * <p>The storage space per node, in GB. The value must be a positive integer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder storageSpace(Integer storageSpace) {
             this.putQueryParameter("StorageSpace", storageSpace);
@@ -452,7 +488,10 @@ public class CreateOpenSearchRequest extends Request {
         }
 
         /**
-         * StorageType.
+         * <p>The storage type. Default value: cloud_auto.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_auto</p>
          */
         public Builder storageType(String storageType) {
             this.putQueryParameter("StorageType", storageType);
@@ -461,7 +500,14 @@ public class CreateOpenSearchRequest extends Request {
         }
 
         /**
-         * TopologyType.
+         * <p>The active topology type. Valid values:</p>
+         * <ul>
+         * <li><strong>1azone</strong>: single-zone.</li>
+         * <li><strong>3azones</strong>: Three-zone deployment.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>3azones</p>
          */
         public Builder topologyType(String topologyType) {
             this.putQueryParameter("TopologyType", topologyType);
@@ -470,7 +516,13 @@ public class CreateOpenSearchRequest extends Request {
         }
 
         /**
-         * UsedTime.
+         * <p>The subscription duration. You can specify a duration in months or years for subscription instances.</p>
+         * <blockquote>
+         * <p>When Period is set to Year, valid values for this parameter are 1, 2, and 3.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder usedTime(Integer usedTime) {
             this.putQueryParameter("UsedTime", usedTime);
@@ -479,7 +531,7 @@ public class CreateOpenSearchRequest extends Request {
         }
 
         /**
-         * <p>VPC ID。</p>
+         * <p>The VPC ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -492,6 +544,7 @@ public class CreateOpenSearchRequest extends Request {
         }
 
         /**
+         * <p>The vSwitch ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -504,7 +557,10 @@ public class CreateOpenSearchRequest extends Request {
         }
 
         /**
-         * Zone2.
+         * <p>The secondary zone. This parameter is required when TopologyType is set to 3azones, and the value must be different from other zones.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-i</p>
          */
         public Builder zone2(String zone2) {
             this.putQueryParameter("Zone2", zone2);
@@ -513,7 +569,10 @@ public class CreateOpenSearchRequest extends Request {
         }
 
         /**
-         * Zone3.
+         * <p>The third zone for Three-zone deployment. This parameter is required when TopologyType is set to 3azones, and the value must be different from other active zones.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-j</p>
          */
         public Builder zone3(String zone3) {
             this.putQueryParameter("Zone3", zone3);
@@ -522,6 +581,7 @@ public class CreateOpenSearchRequest extends Request {
         }
 
         /**
+         * <p>The zone of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

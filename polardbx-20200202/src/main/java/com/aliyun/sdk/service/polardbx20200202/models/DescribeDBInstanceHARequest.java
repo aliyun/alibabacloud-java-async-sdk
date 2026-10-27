@@ -75,7 +75,11 @@ public class DescribeDBInstanceHARequest extends Request {
         } 
 
         /**
+         * <p>The name of the PolarDB-X instance.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxc-htri0ori2r****</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.putQueryParameter("DBInstanceName", DBInstanceName);
@@ -84,7 +88,11 @@ public class DescribeDBInstanceHARequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

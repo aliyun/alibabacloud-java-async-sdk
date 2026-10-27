@@ -145,6 +145,7 @@ public class DescribeBackupSetListRequest extends Request {
         } 
 
         /**
+         * <p>The name of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,7 +158,10 @@ public class DescribeBackupSetListRequest extends Request {
         }
 
         /**
-         * DestCrossRegion.
+         * <p>The region where the backup set resides. After you specify this parameter, backup sets in the specified region are returned. Only one region can be specified at a time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder destCrossRegion(String destCrossRegion) {
             this.putQueryParameter("DestCrossRegion", destCrossRegion);
@@ -166,7 +170,10 @@ public class DescribeBackupSetListRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time timestamp, in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1635707845000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -175,7 +182,10 @@ public class DescribeBackupSetListRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number, starting from 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -184,7 +194,10 @@ public class DescribeBackupSetListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -193,6 +206,7 @@ public class DescribeBackupSetListRequest extends Request {
         }
 
         /**
+         * <p>The ID of the region where the instance resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -205,7 +219,10 @@ public class DescribeBackupSetListRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time timestamp, in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1635707845000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

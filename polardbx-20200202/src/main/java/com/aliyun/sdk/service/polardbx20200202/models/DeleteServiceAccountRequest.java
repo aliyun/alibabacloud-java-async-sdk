@@ -90,6 +90,7 @@ public class DeleteServiceAccountRequest extends Request {
         } 
 
         /**
+         * <p>The name of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class DeleteServiceAccountRequest extends Request {
         }
 
         /**
+         * <p>The region in which the instance resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,7 @@ public class DeleteServiceAccountRequest extends Request {
         }
 
         /**
+         * <p>The type of the service account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -106,7 +106,10 @@ public class DescribeDBNodePerformanceResponseBody extends TeaModel {
         } 
 
         /**
-         * DBInstanceName.
+         * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxc-********</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.DBInstanceName = DBInstanceName;
@@ -114,7 +117,10 @@ public class DescribeDBNodePerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * <p>The end time of the query. Format: YYYY-MM-ddTHH:mm:ssZ (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-10-20T02:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -130,7 +136,10 @@ public class DescribeDBNodePerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EFB5E10B-5268-170F-A378-9AF86CCEACC8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class DescribeDBNodePerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>The start time of the query. Format: YYYY-MM-ddTHH:mm:ssZ (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-10-20T00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;

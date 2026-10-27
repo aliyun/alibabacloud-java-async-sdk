@@ -119,6 +119,7 @@ public class ModifyOpenSearchWhitelistGroupRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,6 +132,7 @@ public class ModifyOpenSearchWhitelistGroupRequest extends Request {
         }
 
         /**
+         * <p>The group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,6 +145,7 @@ public class ModifyOpenSearchWhitelistGroupRequest extends Request {
         }
 
         /**
+         * <p>The list of source IP addresses.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,6 +158,7 @@ public class ModifyOpenSearchWhitelistGroupRequest extends Request {
         }
 
         /**
+         * <p>The region of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,7 +171,10 @@ public class ModifyOpenSearchWhitelistGroupRequest extends Request {
         }
 
         /**
-         * Remark.
+         * <p>The remark.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>000G2DJ1YGee321432</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);

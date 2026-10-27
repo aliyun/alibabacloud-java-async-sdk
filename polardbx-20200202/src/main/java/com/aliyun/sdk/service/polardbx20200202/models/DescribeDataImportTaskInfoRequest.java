@@ -132,7 +132,10 @@ public class DescribeDataImportTaskInfoRequest extends Request {
         } 
 
         /**
-         * FailPageNumber.
+         * <p>The page number of the failed records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder failPageNumber(Integer failPageNumber) {
             this.putQueryParameter("FailPageNumber", failPageNumber);
@@ -141,7 +144,10 @@ public class DescribeDataImportTaskInfoRequest extends Request {
         }
 
         /**
-         * FailPageSize.
+         * <p>The number of failed records to display per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder failPageSize(Integer failPageSize) {
             this.putQueryParameter("FailPageSize", failPageSize);
@@ -150,6 +156,7 @@ public class DescribeDataImportTaskInfoRequest extends Request {
         }
 
         /**
+         * <p>The region where the instance resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -162,6 +169,7 @@ public class DescribeDataImportTaskInfoRequest extends Request {
         }
 
         /**
+         * <p>The task ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -174,7 +182,10 @@ public class DescribeDataImportTaskInfoRequest extends Request {
         }
 
         /**
-         * SuccessPageNumber.
+         * <p>The page number of the successful records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder successPageNumber(Long successPageNumber) {
             this.putQueryParameter("SuccessPageNumber", successPageNumber);
@@ -183,7 +194,10 @@ public class DescribeDataImportTaskInfoRequest extends Request {
         }
 
         /**
-         * SuccessPageSize.
+         * <p>The number of successful records to display per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder successPageSize(Long successPageSize) {
             this.putQueryParameter("SuccessPageSize", successPageSize);

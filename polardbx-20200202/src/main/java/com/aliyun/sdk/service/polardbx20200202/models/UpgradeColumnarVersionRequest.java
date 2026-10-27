@@ -115,7 +115,10 @@ public class UpgradeColumnarVersionRequest extends Request {
         } 
 
         /**
-         * ColumnarVersion.
+         * <p>The column store version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>polarx-col-kernel-5.4.20-20250819_17555906</p>
          */
         public Builder columnarVersion(String columnarVersion) {
             this.putQueryParameter("ColumnarVersion", columnarVersion);
@@ -124,7 +127,10 @@ public class UpgradeColumnarVersionRequest extends Request {
         }
 
         /**
-         * DBInstanceName.
+         * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxc-xxx</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.putQueryParameter("DBInstanceName", DBInstanceName);
@@ -133,7 +139,10 @@ public class UpgradeColumnarVersionRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxc-hzrh51fze****pon-cdc</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -142,7 +151,10 @@ public class UpgradeColumnarVersionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region in which the instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -151,7 +163,10 @@ public class UpgradeColumnarVersionRequest extends Request {
         }
 
         /**
-         * SwitchMode.
+         * <p>The switch mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder switchMode(String switchMode) {
             this.putQueryParameter("SwitchMode", switchMode);

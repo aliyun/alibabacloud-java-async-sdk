@@ -175,6 +175,7 @@ public class MigrateDBInstanceRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -187,6 +188,7 @@ public class MigrateDBInstanceRequest extends Request {
         }
 
         /**
+         * <p>The zone ID of the primary zone for a multi-zone instance. <strong>This parameter is required if you want to create a multi-zone instance.</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -199,6 +201,7 @@ public class MigrateDBInstanceRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -211,7 +214,13 @@ public class MigrateDBInstanceRequest extends Request {
         }
 
         /**
-         * SecondaryZoneId.
+         * <p>The secondary zone ID.</p>
+         * <blockquote>
+         * <p>This parameter cannot be set to the same value as ZoneId.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing-l</p>
          */
         public Builder secondaryZoneId(String secondaryZoneId) {
             this.putQueryParameter("SecondaryZoneId", secondaryZoneId);
@@ -220,7 +229,14 @@ public class MigrateDBInstanceRequest extends Request {
         }
 
         /**
-         * SwitchMode.
+         * <p>The switchover mode. Valid values:</p>
+         * <ul>
+         * <li>0: immediately switches over.</li>
+         * <li>1: switches over within the O&amp;M window.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder switchMode(String switchMode) {
             this.putQueryParameter("SwitchMode", switchMode);
@@ -229,7 +245,10 @@ public class MigrateDBInstanceRequest extends Request {
         }
 
         /**
-         * TertiaryZoneId.
+         * <p>The zone ID for Three-zone deployment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing-h</p>
          */
         public Builder tertiaryZoneId(String tertiaryZoneId) {
             this.putQueryParameter("TertiaryZoneId", tertiaryZoneId);
@@ -238,6 +257,11 @@ public class MigrateDBInstanceRequest extends Request {
         }
 
         /**
+         * <p>The topology type. Valid values:</p>
+         * <ul>
+         * <li><strong>3azones</strong>: three-zone deployment.</li>
+         * <li><strong>1azone</strong>: single-zone deployment.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -250,7 +274,10 @@ public class MigrateDBInstanceRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * <p>The ID of the virtual private cloud (VPC) where the access endpoint resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -259,7 +286,10 @@ public class MigrateDBInstanceRequest extends Request {
         }
 
         /**
-         * VswitchId.
+         * <p>The vSwitch ID. This parameter is required when you create a DRDS instance of the VPC network type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-****</p>
          */
         public Builder vswitchId(String vswitchId) {
             this.putQueryParameter("VswitchId", vswitchId);

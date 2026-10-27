@@ -93,7 +93,7 @@ public class CreateGdnInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The instance details.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +101,13 @@ public class CreateGdnInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * <blockquote>
+         * <p>This parameter is empty when the request succeeds. If the request fails, an exception message is returned, such as an error code.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder message(String message) {
             this.message = message;
@@ -120,7 +126,10 @@ public class CreateGdnInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -173,7 +182,10 @@ public class CreateGdnInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * TaskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2209883</p>
              */
             public Builder taskId(Integer taskId) {
                 this.taskId = taskId;

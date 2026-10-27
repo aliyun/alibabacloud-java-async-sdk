@@ -80,7 +80,7 @@ public class DescribeOpenSearchInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details of the access denial.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -88,7 +88,7 @@ public class DescribeOpenSearchInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The operation result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -96,7 +96,10 @@ public class DescribeOpenSearchInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A501A191-BD70-5E50-98A9-C2A486A82****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -227,7 +230,10 @@ public class DescribeOpenSearchInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * AuthAction.
+             * <p>The authentication action.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -235,7 +241,10 @@ public class DescribeOpenSearchInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalDisplayName.
+             * <p>The display name of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -243,7 +252,10 @@ public class DescribeOpenSearchInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalOwnerId.
+             * <p>The owner ID of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder authPrincipalOwnerId(String authPrincipalOwnerId) {
                 this.authPrincipalOwnerId = authPrincipalOwnerId;
@@ -251,7 +263,10 @@ public class DescribeOpenSearchInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalType.
+             * <p>The type of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>222</p>
              */
             public Builder authPrincipalType(String authPrincipalType) {
                 this.authPrincipalType = authPrincipalType;
@@ -259,7 +274,10 @@ public class DescribeOpenSearchInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * EncodedDiagnosticMessage.
+             * <p>The encoded diagnostic message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
              */
             public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
                 this.encodedDiagnosticMessage = encodedDiagnosticMessage;
@@ -267,7 +285,10 @@ public class DescribeOpenSearchInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * NoPermissionType.
+             * <p>The type of the permission denial.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ImplicitDeny</p>
              */
             public Builder noPermissionType(String noPermissionType) {
                 this.noPermissionType = noPermissionType;
@@ -275,7 +296,10 @@ public class DescribeOpenSearchInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * <p>The policy type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PRIORITY</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -498,7 +522,10 @@ public class DescribeOpenSearchInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * AvailabilityZone.
+             * <p>The zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t1222576965886205</p>
              */
             public Builder availabilityZone(String availabilityZone) {
                 this.availabilityZone = availabilityZone;
@@ -506,7 +533,14 @@ public class DescribeOpenSearchInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ChargeType.
+             * <p>The billing method. Valid values:</p>
+             * <ul>
+             * <li><strong>PrePaid</strong>: subscription.</li>
+             * <li><strong>PostPaid</strong>: pay-as-you-go.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PostPaid</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -514,7 +548,10 @@ public class DescribeOpenSearchInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Cpu.
+             * <p>The number of CPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4000</p>
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -522,7 +559,10 @@ public class DescribeOpenSearchInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-06-08T07:19:05.000+0000</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -530,7 +570,10 @@ public class DescribeOpenSearchInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DataNodeCount.
+             * <p>The number of data nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder dataNodeCount(Integer dataNodeCount) {
                 this.dataNodeCount = dataNodeCount;
@@ -538,7 +581,10 @@ public class DescribeOpenSearchInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The instance description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>My Supabase project</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -546,7 +592,10 @@ public class DescribeOpenSearchInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * EngineVersion.
+             * <p>The DPI engine version. Default value: 2.0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8.0</p>
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;
@@ -554,7 +603,10 @@ public class DescribeOpenSearchInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxc-shrdb7a2t8w3c1</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -562,7 +614,10 @@ public class DescribeOpenSearchInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * MemoryGB.
+             * <p>The memory size. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder memoryGB(Integer memoryGB) {
                 this.memoryGB = memoryGB;
@@ -570,7 +625,15 @@ public class DescribeOpenSearchInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * NetType.
+             * <p>The network type of the connection string. Valid values:</p>
+             * <ul>
+             * <li><strong>Public</strong>: public endpoint.</li>
+             * <li><strong>Private</strong>: private endpoint.</li>
+             * <li><strong>Inner</strong>: private endpoint (classic network).</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder netType(String netType) {
                 this.netType = netType;
@@ -578,7 +641,10 @@ public class DescribeOpenSearchInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -586,7 +652,10 @@ public class DescribeOpenSearchInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SpecDisplay.
+             * <p>The display name of the instance specifications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8 cores 32 GB</p>
              */
             public Builder specDisplay(String specDisplay) {
                 this.specDisplay = specDisplay;
@@ -594,7 +663,10 @@ public class DescribeOpenSearchInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The instance status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -602,7 +674,10 @@ public class DescribeOpenSearchInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * StorageSizeGB.
+             * <p>The storage size of a single data node. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder storageSizeGB(Integer storageSizeGB) {
                 this.storageSizeGB = storageSizeGB;
@@ -721,7 +796,7 @@ public class DescribeOpenSearchInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * Instances.
+             * <p>The cluster ID.</p>
              */
             public Builder instances(java.util.List<Instances> instances) {
                 this.instances = instances;
@@ -729,7 +804,10 @@ public class DescribeOpenSearchInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * MaxResults.
+             * <p>The maximum number of entries per page for a paging query. Maximum value: 100. Default value: If you do not specify a value or the value is less than 10, the default value is 10. If the value is greater than 100, the default value is 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder maxResults(Integer maxResults) {
                 this.maxResults = maxResults;
@@ -737,7 +815,10 @@ public class DescribeOpenSearchInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * NextToken.
+             * <p>The token for the next query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kmMV9kamx92yNWehxph5Fw</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -745,7 +826,10 @@ public class DescribeOpenSearchInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -753,7 +837,10 @@ public class DescribeOpenSearchInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The page size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -761,7 +848,10 @@ public class DescribeOpenSearchInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalNumber.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>130</p>
              */
             public Builder totalNumber(Integer totalNumber) {
                 this.totalNumber = totalNumber;

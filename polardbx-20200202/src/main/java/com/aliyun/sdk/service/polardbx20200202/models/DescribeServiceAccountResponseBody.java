@@ -106,7 +106,7 @@ public class DescribeServiceAccountResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details of the access denial.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -114,7 +114,7 @@ public class DescribeServiceAccountResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The instance details.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +122,10 @@ public class DescribeServiceAccountResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message. &quot;success&quot; is returned if the request was successful. Otherwise, an error code is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder message(String message) {
             this.message = message;
@@ -141,7 +144,10 @@ public class DescribeServiceAccountResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -246,7 +252,10 @@ public class DescribeServiceAccountResponseBody extends TeaModel {
             } 
 
             /**
-             * AuthAction.
+             * <p>The authentication action.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -254,7 +263,10 @@ public class DescribeServiceAccountResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalType.
+             * <p>The authentication principal type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>222</p>
              */
             public Builder authPrincipalType(String authPrincipalType) {
                 this.authPrincipalType = authPrincipalType;
@@ -262,7 +274,10 @@ public class DescribeServiceAccountResponseBody extends TeaModel {
             }
 
             /**
-             * EncodedDiagnosticMessage.
+             * <p>The diagnostic information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
              */
             public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
                 this.encodedDiagnosticMessage = encodedDiagnosticMessage;
@@ -270,7 +285,10 @@ public class DescribeServiceAccountResponseBody extends TeaModel {
             }
 
             /**
-             * NoPermissionType.
+             * <p>The type of the permission denial.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ImplicitDeny</p>
              */
             public Builder noPermissionType(String noPermissionType) {
                 this.noPermissionType = noPermissionType;
@@ -278,7 +296,10 @@ public class DescribeServiceAccountResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * <p>The policy type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PRIORITY</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -371,7 +392,10 @@ public class DescribeServiceAccountResponseBody extends TeaModel {
             } 
 
             /**
-             * AccountName.
+             * <p>The account name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>polardbx_meta_ro</p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -379,7 +403,10 @@ public class DescribeServiceAccountResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-07-21T14:17:25+08:00</p>
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -387,7 +414,10 @@ public class DescribeServiceAccountResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceAccountType.
+             * <p>The service account type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>METADATA_READONLY</p>
              */
             public Builder serviceAccountType(String serviceAccountType) {
                 this.serviceAccountType = serviceAccountType;
@@ -395,7 +425,15 @@ public class DescribeServiceAccountResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the backup set. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: Backing up.</li>
+             * <li><strong>1</strong>: Backup succeeded.</li>
+             * <li><strong>2</strong>: Backup failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -449,7 +487,7 @@ public class DescribeServiceAccountResponseBody extends TeaModel {
             } 
 
             /**
-             * ServiceAccounts.
+             * <p>A service account in the list.</p>
              */
             public Builder serviceAccounts(java.util.List<ServiceAccounts> serviceAccounts) {
                 this.serviceAccounts = serviceAccounts;

@@ -67,7 +67,7 @@ public class ModifyColumnarClassResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned policy details.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -131,7 +131,10 @@ public class ModifyColumnarClassResponseBody extends TeaModel {
             } 
 
             /**
-             * TaskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder taskId(Integer taskId) {
                 this.taskId = taskId;

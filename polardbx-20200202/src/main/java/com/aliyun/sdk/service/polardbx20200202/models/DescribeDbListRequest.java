@@ -89,6 +89,7 @@ public class DescribeDbListRequest extends Request {
         } 
 
         /**
+         * <p>The instance name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +102,10 @@ public class DescribeDbListRequest extends Request {
         }
 
         /**
-         * DBName.
+         * <p>The database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>db_name</p>
          */
         public Builder DBName(String DBName) {
             this.putQueryParameter("DBName", DBName);
@@ -110,6 +114,7 @@ public class DescribeDbListRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

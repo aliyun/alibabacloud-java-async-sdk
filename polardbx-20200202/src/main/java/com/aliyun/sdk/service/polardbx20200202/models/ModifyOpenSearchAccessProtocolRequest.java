@@ -90,6 +90,7 @@ public class ModifyOpenSearchAccessProtocolRequest extends Request {
         } 
 
         /**
+         * <p>The instance name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,11 @@ public class ModifyOpenSearchAccessProtocolRequest extends Request {
         }
 
         /**
+         * <p>The access protocol. Valid values:</p>
+         * <ul>
+         * <li><strong>http</strong>: HTTP protocol.</li>
+         * <li><strong>https</strong>: HTTPS protocol.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +120,7 @@ public class ModifyOpenSearchAccessProtocolRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

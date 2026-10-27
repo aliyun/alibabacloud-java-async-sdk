@@ -105,6 +105,7 @@ public class DisableRightsSeparationRequest extends Request {
         } 
 
         /**
+         * <p>The name of the database instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,6 +118,7 @@ public class DisableRightsSeparationRequest extends Request {
         }
 
         /**
+         * <p>The name of the DBA account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,6 +131,7 @@ public class DisableRightsSeparationRequest extends Request {
         }
 
         /**
+         * <p>The password of the DBA account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,6 +144,7 @@ public class DisableRightsSeparationRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

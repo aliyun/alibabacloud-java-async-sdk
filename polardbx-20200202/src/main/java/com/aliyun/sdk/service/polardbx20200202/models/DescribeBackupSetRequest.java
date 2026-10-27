@@ -103,6 +103,7 @@ public class DescribeBackupSetRequest extends Request {
         } 
 
         /**
+         * <p>The backup set ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,6 +116,7 @@ public class DescribeBackupSetRequest extends Request {
         }
 
         /**
+         * <p>The name of the PolarDB-X instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -127,7 +129,10 @@ public class DescribeBackupSetRequest extends Request {
         }
 
         /**
-         * DestCrossRegion.
+         * <p>The destination region for cross-region backup.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder destCrossRegion(String destCrossRegion) {
             this.putQueryParameter("DestCrossRegion", destCrossRegion);
@@ -136,7 +141,10 @@ public class DescribeBackupSetRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -67,7 +67,7 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The data structure.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C458B1E8-1683-3645-B154-6BA32080EEA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -219,7 +222,10 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             } 
 
             /**
-             * Activated.
+             * <p>Indicates whether the node is enabled. In the compute layer, only the nodes in the primary zone are enabled. After a primary/secondary switchover is performed on the instance, the secondary nodes in the compute layer are switched to primary nodes. All nodes in the storage layer are enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder activated(Boolean activated) {
                 this.activated = activated;
@@ -227,7 +233,10 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * Azone.
+             * <p>The zone to which the node belongs. If the node is an ApsaraDB RDS node, the zones of multiple child nodes are separated by semicolons (;).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-a</p>
              */
             public Builder azone(String azone) {
                 this.azone = azone;
@@ -235,7 +244,15 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * CharacterType.
+             * <p>The node attribute. Valid values:</p>
+             * <ul>
+             * <li><strong>polarx_cn</strong>: Compute node.</li>
+             * <li><strong>polarx_store</strong>: Data node.</li>
+             * <li><strong>polarx_gms</strong>: GMS node.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Node role</p>
              */
             public Builder characterType(String characterType) {
                 this.characterType = characterType;
@@ -243,7 +260,10 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>304726049</p>
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -251,7 +271,10 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceName.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxc-sprcym7g7w****</p>
              */
             public Builder DBInstanceName(String DBInstanceName) {
                 this.DBInstanceName = DBInstanceName;
@@ -259,7 +282,10 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * PhyInstanceName.
+             * <p>The name of the physical instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxc-unrbk8oyz**********</p>
              */
             public Builder phyInstanceName(String phyInstanceName) {
                 this.phyInstanceName = phyInstanceName;
@@ -267,7 +293,10 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * <p>The region to which the node belongs. If the node is an ApsaraDB RDS node, the regions of multiple child nodes are separated by semicolons (;).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -275,7 +304,14 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * Role.
+             * <p>The node role. Valid values:</p>
+             * <ul>
+             * <li><strong>master</strong>: Primary node.</li>
+             * <li><strong>standby</strong>: Secondary node.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>master</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -342,7 +378,10 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             } 
 
             /**
-             * Azone.
+             * <p>The zone to which a specific node in the three-node ApsaraDB RDS deployment belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-a</p>
              */
             public Builder azone(String azone) {
                 this.azone = azone;
@@ -350,7 +389,15 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * Role.
+             * <p>The role of a specific node in the three-node ApsaraDB RDS deployment. Valid values:</p>
+             * <ul>
+             * <li><strong>leader</strong>: Primary node.</li>
+             * <li><strong>follower</strong>: Secondary node.</li>
+             * <li><strong>logger</strong>: Logger node.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>leader</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -430,7 +477,10 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             } 
 
             /**
-             * ConnectionString.
+             * <p>The connection information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxc-xdb-m-pxcdym7g7w********.mysql.singapore.rds.aliyuncs.com</p>
              */
             public Builder connectionString(String connectionString) {
                 this.connectionString = connectionString;
@@ -438,7 +488,10 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceNetType.
+             * <p>The internal connection type. The value is fixed to 1, which indicates the classic network.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder DBInstanceNetType(Integer DBInstanceNetType) {
                 this.DBInstanceNetType = DBInstanceNetType;
@@ -446,7 +499,10 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * <p>The port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3306</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -877,7 +933,10 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             } 
 
             /**
-             * Activated.
+             * <p>Indicates whether the node is enabled. In the compute layer, only the nodes in the primary zone are enabled. After a primary/secondary switchover is performed on the instance, the secondary nodes in the compute layer are switched to primary nodes. All nodes in the storage layer are enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder activated(Boolean activated) {
                 this.activated = activated;
@@ -885,7 +944,10 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * Azone.
+             * <p>The zone to which the node belongs. If the node is an ApsaraDB RDS node, the zones of multiple child nodes are separated by semicolons (;).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-a</p>
              */
             public Builder azone(String azone) {
                 this.azone = azone;
@@ -893,7 +955,7 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * AzoneRoleList.
+             * <p>The list of data information for the three-node ApsaraDB RDS deployment.</p>
              */
             public Builder azoneRoleList(java.util.List<AzoneRoleList> azoneRoleList) {
                 this.azoneRoleList = azoneRoleList;
@@ -901,7 +963,15 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * CharacterType.
+             * <p>The node attribute. Valid values:</p>
+             * <ul>
+             * <li><strong>polarx_cn</strong>: Compute node.</li>
+             * <li><strong>polarx_store</strong>: Data node.</li>
+             * <li><strong>polarx_gms</strong>: GMS node.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Node role</p>
              */
             public Builder characterType(String characterType) {
                 this.characterType = characterType;
@@ -909,7 +979,7 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectionIp.
+             * <p>The data structure.</p>
              */
             public Builder connectionIp(java.util.List<ConnectionIp> connectionIp) {
                 this.connectionIp = connectionIp;
@@ -917,7 +987,10 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceConnType.
+             * <p>The connection type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Not displayed</p>
              */
             public Builder DBInstanceConnType(Integer DBInstanceConnType) {
                 this.DBInstanceConnType = DBInstanceConnType;
@@ -925,7 +998,10 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceCreateTime.
+             * <p>The time when the instance was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-10-21T10:30:45Z</p>
              */
             public Builder DBInstanceCreateTime(String DBInstanceCreateTime) {
                 this.DBInstanceCreateTime = DBInstanceCreateTime;
@@ -933,7 +1009,10 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceDescription.
+             * <p>The instance description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Not displayed</p>
              */
             public Builder DBInstanceDescription(String DBInstanceDescription) {
                 this.DBInstanceDescription = DBInstanceDescription;
@@ -941,7 +1020,10 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>304726049</p>
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -949,7 +1031,10 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceName.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxc-i-tk6t4z****</p>
              */
             public Builder DBInstanceName(String DBInstanceName) {
                 this.DBInstanceName = DBInstanceName;
@@ -957,7 +1042,10 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceStatus.
+             * <p>The instance status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder DBInstanceStatus(Integer DBInstanceStatus) {
                 this.DBInstanceStatus = DBInstanceStatus;
@@ -965,7 +1053,10 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceStatusDescription.
+             * <p>The instance status description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Not displayed</p>
              */
             public Builder DBInstanceStatusDescription(String DBInstanceStatusDescription) {
                 this.DBInstanceStatusDescription = DBInstanceStatusDescription;
@@ -973,7 +1064,10 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * DiskSize.
+             * <p>The disk size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3145728</p>
              */
             public Builder diskSize(Long diskSize) {
                 this.diskSize = diskSize;
@@ -981,7 +1075,15 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * Engine.
+             * <p>The DPI engine version. Valid values:</p>
+             * <ul>
+             * <li><strong>mysql</strong></li>
+             * <li><strong>polarx_cdc</strong></li>
+             * <li><strong>polarx_dn</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql</p>
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -989,7 +1091,10 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * EngineVersion.
+             * <p>The DPI engine version. Default value: 2.0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5.7</p>
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;
@@ -997,7 +1102,10 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceClusterName.
+             * <p>The name of the CN cluster for the instance, such as default.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder instanceClusterName(String instanceClusterName) {
                 this.instanceClusterName = instanceClusterName;
@@ -1005,7 +1113,14 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * LockMode.
+             * <p>The lock status. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: Unlocked.</li>
+             * <li><strong>1</strong>: Locked.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder lockMode(Integer lockMode) {
                 this.lockMode = lockMode;
@@ -1013,7 +1128,10 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * LockReason.
+             * <p>The lock reason.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Not displayed</p>
              */
             public Builder lockReason(String lockReason) {
                 this.lockReason = lockReason;
@@ -1021,7 +1139,10 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * MaintainEndTime.
+             * <p>The end time of the O&amp;M window.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Not displayed</p>
              */
             public Builder maintainEndTime(String maintainEndTime) {
                 this.maintainEndTime = maintainEndTime;
@@ -1029,7 +1150,10 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * MaintainStartTime.
+             * <p>The start time of the O&amp;M window.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Not displayed</p>
              */
             public Builder maintainStartTime(String maintainStartTime) {
                 this.maintainStartTime = maintainStartTime;
@@ -1037,7 +1161,10 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * MaxConnections.
+             * <p>The maximum number of connections.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4000</p>
              */
             public Builder maxConnections(Integer maxConnections) {
                 this.maxConnections = maxConnections;
@@ -1045,7 +1172,10 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * MaxIops.
+             * <p>The maximum IOPS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7000</p>
              */
             public Builder maxIops(Integer maxIops) {
                 this.maxIops = maxIops;
@@ -1053,7 +1183,23 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * NodeClass.
+             * <p>The node specifications. Valid values:</p>
+             * <ul>
+             * <li><strong>polarx.x4.medium.2e</strong>: 2 vCPUs and 8 GB of memory.</li>
+             * <li><strong>polarx.x4.large.2e</strong>: 4 vCPUs and 16 GB of memory.</li>
+             * <li><strong>polarx.x8.large.2e</strong>: 4 vCPUs and 32 GB of memory.</li>
+             * <li><strong>polarx.x4.xlarge.2e</strong>: 8 vCPUs and 32 GB of memory.</li>
+             * <li><strong>polarx.x8.xlarge.2e</strong>: 8 vCPUs and 64 GB of memory.</li>
+             * <li><strong>polarx.x4.2xlarge.2e</strong>: 16 vCPUs and 64 GB of memory.</li>
+             * <li><strong>polarx.x8.2xlarge.2e</strong>: 16 vCPUs and 128 GB of memory.</li>
+             * <li><strong>polarx.x4.4xlarge.2e</strong>: 32 vCPUs and 128 GB of memory.</li>
+             * <li><strong>polarx.x8.4xlarge.2e</strong>: 32 vCPUs and 256 GB of memory.</li>
+             * <li><strong>polarx.st.8xlarge.2e</strong>: 60 vCPUs and 470 GB of memory.</li>
+             * <li><strong>polarx.st.12xlarge.2e</strong>: 90 vCPUs and 720 GB of memory.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>polarx.x4.large.2e</p>
              */
             public Builder nodeClass(String nodeClass) {
                 this.nodeClass = nodeClass;
@@ -1061,7 +1207,10 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * PhyInstanceName.
+             * <p>The name of the physical instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxc-unrbk8oyz**********</p>
              */
             public Builder phyInstanceName(String phyInstanceName) {
                 this.phyInstanceName = phyInstanceName;
@@ -1069,7 +1218,10 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * ReadType.
+             * <p>The read/write type, such as ReadWrite.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ReadWrite</p>
              */
             public Builder readType(String readType) {
                 this.readType = readType;
@@ -1077,7 +1229,10 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * <p>The region to which the node belongs. If the node is an ApsaraDB RDS node, the regions of multiple child nodes are separated by semicolons (;).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -1085,7 +1240,14 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * Role.
+             * <p>The node role. Valid values:</p>
+             * <ul>
+             * <li><strong>master</strong>: Primary node.</li>
+             * <li><strong>standby</strong>: Secondary node.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>master</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -1093,7 +1255,19 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The node status. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: Running.</li>
+             * <li><strong>1</strong>: Creating.</li>
+             * <li><strong>2</strong>: Abnormal.</li>
+             * <li><strong>3</strong>: Expired.</li>
+             * <li><strong>4</strong>: Releasing.</li>
+             * <li><strong>5</strong>: Released.</li>
+             * <li><strong>6</strong>: Locked.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1101,7 +1275,10 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * StorageUsed.
+             * <p>The amount of used storage space. Unit: MB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16681</p>
              */
             public Builder storageUsed(String storageUsed) {
                 this.storageUsed = storageUsed;
@@ -1109,7 +1286,10 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The version of the logger node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>polarx-cdc-kernel-2.0.0-3985896</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -1358,7 +1538,10 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             } 
 
             /**
-             * DBInstanceConnType.
+             * <p>Indicates that LVS is used for load balancing.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lvs</p>
              */
             public Builder DBInstanceConnType(String DBInstanceConnType) {
                 this.DBInstanceConnType = DBInstanceConnType;
@@ -1366,7 +1549,10 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceCreateTime.
+             * <p>The time when the instance was created. The format is yyyy-MM-dd HH:mm:ss.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-10-21T10:30:45Z 04:00:00</p>
              */
             public Builder DBInstanceCreateTime(String DBInstanceCreateTime) {
                 this.DBInstanceCreateTime = DBInstanceCreateTime;
@@ -1374,7 +1560,10 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceDescription.
+             * <p>The instance description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxc-sprcym7******</p>
              */
             public Builder DBInstanceDescription(String DBInstanceDescription) {
                 this.DBInstanceDescription = DBInstanceDescription;
@@ -1382,7 +1571,10 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>304726047</p>
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -1390,7 +1582,10 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceName.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxc-sprcym7g7w****</p>
              */
             public Builder DBInstanceName(String DBInstanceName) {
                 this.DBInstanceName = DBInstanceName;
@@ -1398,7 +1593,10 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceStatus.
+             * <p>The instance status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder DBInstanceStatus(Integer DBInstanceStatus) {
                 this.DBInstanceStatus = DBInstanceStatus;
@@ -1406,7 +1604,10 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceStatusDescription.
+             * <p>The instance status description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TDE_MODIFYING</p>
              */
             public Builder DBInstanceStatusDescription(String DBInstanceStatusDescription) {
                 this.DBInstanceStatusDescription = DBInstanceStatusDescription;
@@ -1414,7 +1615,10 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceStorage.
+             * <p>The number of storage nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder DBInstanceStorage(Integer DBInstanceStorage) {
                 this.DBInstanceStorage = DBInstanceStorage;
@@ -1422,7 +1626,10 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * Engine.
+             * <p>The engine. Default value: polarx.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>polarx</p>
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -1430,7 +1637,10 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * EngineVersion.
+             * <p>The DPI engine version. Default value: 2.0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.0</p>
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;
@@ -1438,7 +1648,7 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * HistoryItems.
+             * <p>The list of historical nodes.</p>
              */
             public Builder historyItems(java.util.List<HistoryItems> historyItems) {
                 this.historyItems = historyItems;
@@ -1446,7 +1656,7 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * Items.
+             * <p>The list of nodes.</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;
@@ -1454,7 +1664,14 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * LockMode.
+             * <p>The lock status. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: Unlocked.</li>
+             * <li><strong>1</strong>: Locked.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder lockMode(Integer lockMode) {
                 this.lockMode = lockMode;
@@ -1462,7 +1679,10 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * LockReason.
+             * <p>The lock reason.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Overdue payment</p>
              */
             public Builder lockReason(String lockReason) {
                 this.lockReason = lockReason;
@@ -1470,7 +1690,10 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * MaintainEndTime.
+             * <p>The end time of the O&amp;M window. The format is HH:mm:ss.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>05:00:00</p>
              */
             public Builder maintainEndTime(String maintainEndTime) {
                 this.maintainEndTime = maintainEndTime;
@@ -1478,7 +1701,10 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * MaintainStartTime.
+             * <p>The start time of the O&amp;M window. The format is HH:mm:ss.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>04:00:00</p>
              */
             public Builder maintainStartTime(String maintainStartTime) {
                 this.maintainStartTime = maintainStartTime;
@@ -1532,7 +1758,7 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             } 
 
             /**
-             * LogicInstanceTopology.
+             * <p>The topology information.</p>
              */
             public Builder logicInstanceTopology(LogicInstanceTopology logicInstanceTopology) {
                 this.logicInstanceTopology = logicInstanceTopology;

@@ -67,7 +67,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The data struct.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C458B1E8-1683-3645-B154-6BA32080EEA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -206,7 +209,10 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * CheckingCode.
+             * <p>The validation constraint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[0|1]</p>
              */
             public Builder checkingCode(String checkingCode) {
                 this.checkingCode = checkingCode;
@@ -214,7 +220,14 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Dynamic.
+             * <p>Specifies whether the parameter is dynamic. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: no.</li>
+             * <li><strong>1</strong>: yes.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder dynamic(Integer dynamic) {
                 this.dynamic = dynamic;
@@ -222,7 +235,10 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterDescription.
+             * <p>The parameter description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>polarx hatp addition param</p>
              */
             public Builder parameterDescription(String parameterDescription) {
                 this.parameterDescription = parameterDescription;
@@ -230,7 +246,10 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterName.
+             * <p>The parameter name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>loose_enable_gts</p>
              */
             public Builder parameterName(String parameterName) {
                 this.parameterName = parameterName;
@@ -238,7 +257,10 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterValue.
+             * <p>The parameter value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;
@@ -246,7 +268,14 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Revisable.
+             * <p>Specifies whether the parameter can be modified. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: The parameter cannot be modified.</li>
+             * <li><strong>1</strong>: The parameter can be modified.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder revisable(Integer revisable) {
                 this.revisable = revisable;
@@ -254,7 +283,10 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * UserChangable.
+             * <p>Specifies whether the parameter can be modified by the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder userChangable(Integer userChangable) {
                 this.userChangable = userChangable;
@@ -347,7 +379,10 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * Engine.
+             * <p>The engine. Default value: polarx.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>polarx</p>
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -355,7 +390,10 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * EngineVersion.
+             * <p>The DPI engine version. Default value: 2.0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.0</p>
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;
@@ -363,7 +401,10 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterCount.
+             * <p>The number of parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>218</p>
              */
             public Builder parameterCount(Integer parameterCount) {
                 this.parameterCount = parameterCount;
@@ -371,7 +412,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Parameters.
+             * <p>The list of parameters.</p>
              */
             public Builder parameters(java.util.List<Parameters> parameters) {
                 this.parameters = parameters;

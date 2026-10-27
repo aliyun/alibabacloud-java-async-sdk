@@ -54,7 +54,10 @@ public class DisableSqlAuditResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DC3DAE3E-0F8A-4596-9104-F5167C******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

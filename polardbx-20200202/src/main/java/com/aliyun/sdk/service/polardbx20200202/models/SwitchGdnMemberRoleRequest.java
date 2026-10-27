@@ -174,6 +174,7 @@ public class SwitchGdnMemberRoleRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID of the primary instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,7 +187,10 @@ public class SwitchGdnMemberRoleRequest extends Request {
         }
 
         /**
-         * DstMainConnectString.
+         * <p>The endpoint of the primary node of the target instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxc-*********.polarx.rds.aliyuncs.com</p>
          */
         public Builder dstMainConnectString(String dstMainConnectString) {
             this.putQueryParameter("DstMainConnectString", dstMainConnectString);
@@ -195,7 +199,10 @@ public class SwitchGdnMemberRoleRequest extends Request {
         }
 
         /**
-         * DstMainPort.
+         * <p>The port number of the primary node of the target instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3313</p>
          */
         public Builder dstMainPort(String dstMainPort) {
             this.putQueryParameter("DstMainPort", dstMainPort);
@@ -204,7 +211,10 @@ public class SwitchGdnMemberRoleRequest extends Request {
         }
 
         /**
-         * IsModifyEndpoint.
+         * <p>Specifies whether the endpoint and port of the source or target instance is simultaneously modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isModifyEndpoint(String isModifyEndpoint) {
             this.putQueryParameter("IsModifyEndpoint", isModifyEndpoint);
@@ -213,6 +223,7 @@ public class SwitchGdnMemberRoleRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -225,7 +236,10 @@ public class SwitchGdnMemberRoleRequest extends Request {
         }
 
         /**
-         * SrcMainConnectString.
+         * <p>The endpoint of the primary node of the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-*********.mysql.rds.aliyuncs.com</p>
          */
         public Builder srcMainConnectString(String srcMainConnectString) {
             this.putQueryParameter("SrcMainConnectString", srcMainConnectString);
@@ -234,7 +248,10 @@ public class SwitchGdnMemberRoleRequest extends Request {
         }
 
         /**
-         * SrcMainPort.
+         * <p>The port number of the primary node of the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3308</p>
          */
         public Builder srcMainPort(String srcMainPort) {
             this.putQueryParameter("SrcMainPort", srcMainPort);
@@ -243,7 +260,12 @@ public class SwitchGdnMemberRoleRequest extends Request {
         }
 
         /**
+         * <p>The switchover mode.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal switchover: switch_over
+         * Forced switchover: fail_over</p>
          */
         public Builder switchMode(String switchMode) {
             this.putQueryParameter("SwitchMode", switchMode);
@@ -252,7 +274,10 @@ public class SwitchGdnMemberRoleRequest extends Request {
         }
 
         /**
-         * TaskTimeout.
+         * <p>The timeout period for the switchover task, in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder taskTimeout(Long taskTimeout) {
             this.putQueryParameter("TaskTimeout", taskTimeout);

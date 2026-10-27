@@ -80,7 +80,7 @@ public class DescribeContextDBInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details of the access denial.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -88,7 +88,7 @@ public class DescribeContextDBInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The instance data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -230,7 +230,10 @@ public class DescribeContextDBInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * AuthAction.
+             * <p>The authentication action.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -238,7 +241,10 @@ public class DescribeContextDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalDisplayName.
+             * <p>The display name of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -246,7 +252,10 @@ public class DescribeContextDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalOwnerId.
+             * <p>The owner ID of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder authPrincipalOwnerId(String authPrincipalOwnerId) {
                 this.authPrincipalOwnerId = authPrincipalOwnerId;
@@ -254,7 +263,10 @@ public class DescribeContextDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalType.
+             * <p>The authentication principal type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>222</p>
              */
             public Builder authPrincipalType(String authPrincipalType) {
                 this.authPrincipalType = authPrincipalType;
@@ -262,7 +274,10 @@ public class DescribeContextDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * EncodedDiagnosticMessage.
+             * <p>The diagnostic information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
              */
             public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
                 this.encodedDiagnosticMessage = encodedDiagnosticMessage;
@@ -270,7 +285,10 @@ public class DescribeContextDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * NoPermissionType.
+             * <p>The type of missing permission.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ImplicitDeny</p>
              */
             public Builder noPermissionType(String noPermissionType) {
                 this.noPermissionType = noPermissionType;
@@ -278,7 +296,10 @@ public class DescribeContextDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * <p>The policy type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PRIORITY</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -410,7 +431,10 @@ public class DescribeContextDBInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * ConnectionString.
+             * <p>The endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxc-spsil01pww4hfz.polarx.singapore.rds.aliyuncs.com</p>
              */
             public Builder connectionString(String connectionString) {
                 this.connectionString = connectionString;
@@ -418,7 +442,10 @@ public class DescribeContextDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * NodeType.
+             * <p>The target node type: service or dashboard.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>service</p>
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -426,7 +453,10 @@ public class DescribeContextDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * <p>The port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3306</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -434,7 +464,10 @@ public class DescribeContextDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The endpoint type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VPC</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -453,7 +486,10 @@ public class DescribeContextDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-t4ny14pr37spmjsbv5dc2</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -461,7 +497,10 @@ public class DescribeContextDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * VpcInstanceId.
+             * <p>The VPC-connected instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxc-spsil01pww4hfzjayd-cn-20251013180429</p>
              */
             public Builder vpcInstanceId(String vpcInstanceId) {
                 this.vpcInstanceId = vpcInstanceId;
@@ -593,7 +632,10 @@ public class DescribeContextDBInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * ConnectionString.
+             * <p>The endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxc-hzrlz8e3khuaoz.polarx.rds.aliyuncs.com</p>
              */
             public Builder connectionString(String connectionString) {
                 this.connectionString = connectionString;
@@ -601,7 +643,10 @@ public class DescribeContextDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * NodeType.
+             * <p>The target node type: service or dashboard.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>service</p>
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -609,7 +654,10 @@ public class DescribeContextDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * <p>The port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3306</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -617,7 +665,14 @@ public class DescribeContextDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The instance type. Valid values:</p>
+             * <ul>
+             * <li><strong>ReadWrite</strong>: primary instance.</li>
+             * <li><strong>ReadOnly</strong>: read-only instance.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>RemoveHeader</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -636,7 +691,10 @@ public class DescribeContextDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-2zedp17pfss1133bvdizl</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -644,7 +702,10 @@ public class DescribeContextDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * VpcInstanceId.
+             * <p>The VPC-connected instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-8vbdw66evguopfcfvieoi</p>
              */
             public Builder vpcInstanceId(String vpcInstanceId) {
                 this.vpcInstanceId = vpcInstanceId;
@@ -802,7 +863,10 @@ public class DescribeContextDBInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * ClassCode.
+             * <p>The instance specifications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pg.x2.13large.2c</p>
              */
             public Builder classCode(String classCode) {
                 this.classCode = classCode;
@@ -810,7 +874,7 @@ public class DescribeContextDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ConnAddrs.
+             * <p>The endpoint type.</p>
              */
             public Builder connAddrs(java.util.List<ReplicaSetsConnAddrs> connAddrs) {
                 this.connAddrs = connAddrs;
@@ -818,7 +882,10 @@ public class DescribeContextDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-07-28T02:01:13Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -826,7 +893,10 @@ public class DescribeContextDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxc-hzrbqgiocrpu8a</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -834,7 +904,10 @@ public class DescribeContextDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * NodeCount.
+             * <p>The number of nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder nodeCount(Integer nodeCount) {
                 this.nodeCount = nodeCount;
@@ -842,7 +915,10 @@ public class DescribeContextDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * NodeType.
+             * <p>The target node type: service or dashboard.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>service</p>
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -850,7 +926,19 @@ public class DescribeContextDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The node status. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: Running.</li>
+             * <li><strong>1</strong>: Creating.</li>
+             * <li><strong>2</strong>: Abnormal.</li>
+             * <li><strong>3</strong>: Expired.</li>
+             * <li><strong>4</strong>: Releasing.</li>
+             * <li><strong>5</strong>: Released.</li>
+             * <li><strong>6</strong>: Locked.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -858,7 +946,10 @@ public class DescribeContextDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * StorageType.
+             * <p>The storage type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_essd</p>
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;
@@ -866,7 +957,10 @@ public class DescribeContextDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing-i</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -1089,7 +1183,10 @@ public class DescribeContextDBInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * ClassCode.
+             * <p>The instance specifications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql.x2.large.2c</p>
              */
             public Builder classCode(String classCode) {
                 this.classCode = classCode;
@@ -1097,7 +1194,7 @@ public class DescribeContextDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ConnAddrs.
+             * <p>The list of endpoints.</p>
              */
             public Builder connAddrs(java.util.List<ConnAddrs> connAddrs) {
                 this.connAddrs = connAddrs;
@@ -1105,7 +1202,10 @@ public class DescribeContextDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-02-17T02:00:20Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -1113,7 +1213,10 @@ public class DescribeContextDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceName.
+             * <p>The database instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxc-hzr9qzafkeury3</p>
              */
             public Builder DBInstanceName(String DBInstanceName) {
                 this.DBInstanceName = DBInstanceName;
@@ -1121,7 +1224,10 @@ public class DescribeContextDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxc-spsil01pww4hfz-mem</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1129,7 +1235,10 @@ public class DescribeContextDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * NodeCount.
+             * <p>The number of nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder nodeCount(Integer nodeCount) {
                 this.nodeCount = nodeCount;
@@ -1137,7 +1246,10 @@ public class DescribeContextDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * OpenSearchInstanceName.
+             * <p>The PolarDB-X Search instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxs-********</p>
              */
             public Builder openSearchInstanceName(String openSearchInstanceName) {
                 this.openSearchInstanceName = openSearchInstanceName;
@@ -1145,7 +1257,10 @@ public class DescribeContextDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ap-southeast-1</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1153,7 +1268,10 @@ public class DescribeContextDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ReplicaSets.
+             * <p>The VPC instance ID of the replica set node.</p>
+             * <blockquote>
+             * <p>This parameter is returned only when the network type of the instance is VPC.</p>
+             * </blockquote>
              */
             public Builder replicaSets(java.util.List<ReplicaSets> replicaSets) {
                 this.replicaSets = replicaSets;
@@ -1161,7 +1279,10 @@ public class DescribeContextDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The instance status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1169,7 +1290,10 @@ public class DescribeContextDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * StorageType.
+             * <p>The storage type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>local_ssd</p>
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;
@@ -1188,7 +1312,10 @@ public class DescribeContextDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-t4ny14pr37spmjsbv5dc2</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -1196,7 +1323,10 @@ public class DescribeContextDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ap-southeast-1a</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -1250,7 +1380,7 @@ public class DescribeContextDBInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * Instance.
+             * <p>The instance information.</p>
              */
             public Builder instance(Instance instance) {
                 this.instance = instance;

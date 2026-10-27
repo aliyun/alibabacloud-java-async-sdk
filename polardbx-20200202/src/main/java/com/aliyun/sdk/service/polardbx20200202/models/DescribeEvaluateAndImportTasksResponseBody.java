@@ -132,7 +132,7 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The details of the restoration tasks.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -140,7 +140,10 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message. &gt; This parameter is empty when the request succeeds. When the request fails, exception information such as an error code is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -148,7 +151,10 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -156,7 +162,10 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -164,7 +173,10 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>81519FDE-713B-****-B6F1-231479A4C9DB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -172,7 +184,10 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -180,7 +195,10 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
         }
 
         /**
-         * TotalNumber.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder totalNumber(Long totalNumber) {
             this.totalNumber = totalNumber;
@@ -467,7 +485,10 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * Bid.
+             * <p>The business ID of the import task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>26842</p>
              */
             public Builder bid(String bid) {
                 this.bid = bid;
@@ -475,7 +496,10 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Creator.
+             * <p>The creator of the import task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>346650</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -483,7 +507,10 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Deleted.
+             * <p>Indicates whether the task is deleted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fase</p>
              */
             public Builder deleted(Boolean deleted) {
                 this.deleted = deleted;
@@ -491,7 +518,10 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreated.
+             * <p>The timestamp when the task was created. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-01-08T15:00Z</p>
              */
             public Builder gmtCreated(Long gmtCreated) {
                 this.gmtCreated = gmtCreated;
@@ -499,7 +529,10 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The time when the metadata information was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-04-02T02:10:59Z</p>
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -507,7 +540,10 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ap-northeast-1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -515,7 +551,10 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-zhangjiakou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -523,7 +562,10 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * SlinkDstDb.
+             * <p>The name of the slink destination database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e3plus_*****_prod</p>
              */
             public Builder slinkDstDb(String slinkDstDb) {
                 this.slinkDstDb = slinkDstDb;
@@ -531,7 +573,10 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * SlinkDstResId.
+             * <p>The instance ID of the destination.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxc-hzrehc****5zye</p>
              */
             public Builder slinkDstResId(String slinkDstResId) {
                 this.slinkDstResId = slinkDstResId;
@@ -539,7 +584,10 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * SlinkDstUserName.
+             * <p>The username for the data connection of the destination.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dts_temp_2_23</p>
              */
             public Builder slinkDstUserName(String slinkDstUserName) {
                 this.slinkDstUserName = slinkDstUserName;
@@ -547,7 +595,10 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * SlinkSrcDb.
+             * <p>The name of the slink source database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>stock</p>
              */
             public Builder slinkSrcDb(String slinkSrcDb) {
                 this.slinkSrcDb = slinkSrcDb;
@@ -555,7 +606,10 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * SlinkSrcResId.
+             * <p>The instance ID of the source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>drdshbga*****w4p</p>
              */
             public Builder slinkSrcResId(String slinkSrcResId) {
                 this.slinkSrcResId = slinkSrcResId;
@@ -563,7 +617,10 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * SlinkSrcResType.
+             * <p>The resource type of the source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RDS_MYSQL</p>
              */
             public Builder slinkSrcResType(String slinkSrcResType) {
                 this.slinkSrcResType = slinkSrcResType;
@@ -571,7 +628,10 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * SlinkSrcUserName.
+             * <p>The username for the data connection of the source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dtdba</p>
              */
             public Builder slinkSrcUserName(String slinkSrcUserName) {
                 this.slinkSrcUserName = slinkSrcUserName;
@@ -579,7 +639,10 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * SlinkStage.
+             * <p>The stage of the synchronization task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DATA_IMPORT_RUNNING</p>
              */
             public Builder slinkStage(String slinkStage) {
                 this.slinkStage = slinkStage;
@@ -587,7 +650,10 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * SlinkStatus.
+             * <p>The running status of the synchronization task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IMPORT_NOT_BEGIN</p>
              */
             public Builder slinkStatus(String slinkStatus) {
                 this.slinkStatus = slinkStatus;
@@ -595,7 +661,10 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * SlinkTaskDesc.
+             * <p>The description of the slink task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder slinkTaskDesc(String slinkTaskDesc) {
                 this.slinkTaskDesc = slinkTaskDesc;
@@ -603,7 +672,10 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * SlinkTaskId.
+             * <p>The slink task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>etx-szr2rr6i*****</p>
              */
             public Builder slinkTaskId(String slinkTaskId) {
                 this.slinkTaskId = slinkTaskId;
@@ -611,7 +683,10 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * SlinkType.
+             * <p>The synchronization type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>evaluate_import</p>
              */
             public Builder slinkType(String slinkType) {
                 this.slinkType = slinkType;

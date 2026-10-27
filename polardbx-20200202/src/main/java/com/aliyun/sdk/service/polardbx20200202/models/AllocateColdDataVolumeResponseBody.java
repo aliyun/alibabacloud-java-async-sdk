@@ -54,7 +54,10 @@ public class AllocateColdDataVolumeResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D6A4256F-7B83-5BD7-9AC0-72E1FAC05330</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

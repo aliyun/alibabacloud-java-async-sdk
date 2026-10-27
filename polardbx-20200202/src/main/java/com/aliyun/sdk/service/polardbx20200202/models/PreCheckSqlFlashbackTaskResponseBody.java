@@ -93,7 +93,7 @@ public class PreCheckSqlFlashbackTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned result set.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +101,10 @@ public class PreCheckSqlFlashbackTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message. This parameter is empty when the request succeeds. When the request fails, an exception message is returned, such as an error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successs</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +112,10 @@ public class PreCheckSqlFlashbackTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14036EBE-***-44DB-ACE9-AC6157D3A6FC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +123,10 @@ public class PreCheckSqlFlashbackTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>The request result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -222,7 +231,7 @@ public class PreCheckSqlFlashbackTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * BinlogExists.
+             * <p>Indicates whether valid binary log files exist. This is used to determine whether flashback or synchronization operations can be performed.</p>
              */
             public Builder binlogExists(Boolean binlogExists) {
                 this.binlogExists = binlogExists;
@@ -230,7 +239,11 @@ public class PreCheckSqlFlashbackTaskResponseBody extends TeaModel {
             }
 
             /**
-             * BinlogRowQueryEventEnabled.
+             * <p>Indicates whether the recording of original SQL query events is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: Enabled.</li>
+             * <li><strong>false</strong>: Disabled.</li>
+             * </ul>
              */
             public Builder binlogRowQueryEventEnabled(Boolean binlogRowQueryEventEnabled) {
                 this.binlogRowQueryEventEnabled = binlogRowQueryEventEnabled;
@@ -238,7 +251,7 @@ public class PreCheckSqlFlashbackTaskResponseBody extends TeaModel {
             }
 
             /**
-             * CanUpgradeSupportBinlogRowQueryEvents.
+             * <p>Indicates whether the upgrade can succeed.</p>
              */
             public Builder canUpgradeSupportBinlogRowQueryEvents(Boolean canUpgradeSupportBinlogRowQueryEvents) {
                 this.canUpgradeSupportBinlogRowQueryEvents = canUpgradeSupportBinlogRowQueryEvents;
@@ -246,7 +259,7 @@ public class PreCheckSqlFlashbackTaskResponseBody extends TeaModel {
             }
 
             /**
-             * HasTable.
+             * <p>Indicates whether the table exists. Valid values: true and false.</p>
              */
             public Builder hasTable(Boolean hasTable) {
                 this.hasTable = hasTable;
@@ -254,7 +267,11 @@ public class PreCheckSqlFlashbackTaskResponseBody extends TeaModel {
             }
 
             /**
-             * SupportBinlogRowQueryEvents.
+             * <p>Indicates whether log recording is supported. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: Supported.</li>
+             * <li><strong>false</strong>: Not supported.</li>
+             * </ul>
              */
             public Builder supportBinlogRowQueryEvents(Boolean supportBinlogRowQueryEvents) {
                 this.supportBinlogRowQueryEvents = supportBinlogRowQueryEvents;
@@ -308,7 +325,7 @@ public class PreCheckSqlFlashbackTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * CheckResult.
+             * <p>The check result.</p>
              */
             public Builder checkResult(CheckResult checkResult) {
                 this.checkResult = checkResult;

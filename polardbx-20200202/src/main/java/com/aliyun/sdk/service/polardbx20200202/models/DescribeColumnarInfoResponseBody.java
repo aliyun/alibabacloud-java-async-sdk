@@ -95,7 +95,7 @@ public class DescribeColumnarInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The data struct.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -103,6 +103,7 @@ public class DescribeColumnarInfoResponseBody extends TeaModel {
         }
 
         /**
+         * <p>The HTTP status code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,6 +126,7 @@ public class DescribeColumnarInfoResponseBody extends TeaModel {
         }
 
         /**
+         * <p>Indicates whether the request was successful.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -246,7 +248,10 @@ public class DescribeColumnarInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * AZone.
+             * <p>The zone where the instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-h</p>
              */
             public Builder aZone(String aZone) {
                 this.aZone = aZone;
@@ -254,7 +259,10 @@ public class DescribeColumnarInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Disk.
+             * <p>The disk size, in MB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>204800</p>
              */
             public Builder disk(Integer disk) {
                 this.disk = disk;
@@ -262,7 +270,10 @@ public class DescribeColumnarInfoResponseBody extends TeaModel {
             }
 
             /**
-             * NodeClass.
+             * <p>The instance specifications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>polarx.n8.medium.col</p>
              */
             public Builder nodeClass(String nodeClass) {
                 this.nodeClass = nodeClass;
@@ -270,7 +281,10 @@ public class DescribeColumnarInfoResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * <p>The node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -278,7 +292,10 @@ public class DescribeColumnarInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The instance status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACTIVATION</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -286,7 +303,10 @@ public class DescribeColumnarInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The instance version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>polarx-col-kernel-5.4.20-20250819_17555906</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -366,7 +386,10 @@ public class DescribeColumnarInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * Comment.
+             * <p>The instance type description.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -374,7 +397,10 @@ public class DescribeColumnarInfoResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxc-***</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -382,7 +408,7 @@ public class DescribeColumnarInfoResponseBody extends TeaModel {
             }
 
             /**
-             * PhysicalNodes.
+             * <p>The node array.</p>
              */
             public Builder physicalNodes(java.util.List<PhysicalNodes> physicalNodes) {
                 this.physicalNodes = physicalNodes;
@@ -530,7 +556,10 @@ public class DescribeColumnarInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * BinlogPersistTime.
+             * <p>The number of days that binlogs are retained.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder binlogPersistTime(Integer binlogPersistTime) {
                 this.binlogPersistTime = binlogPersistTime;
@@ -538,6 +567,7 @@ public class DescribeColumnarInfoResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The binlog size.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -549,7 +579,10 @@ public class DescribeColumnarInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CheckSumSwitch.
+             * <p>The checksum switch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ON</p>
              */
             public Builder checkSumSwitch(String checkSumSwitch) {
                 this.checkSumSwitch = checkSumSwitch;
@@ -557,7 +590,10 @@ public class DescribeColumnarInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ClassCode.
+             * <p>The instance specifications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>polarx.n8.medium.col</p>
              */
             public Builder classCode(String classCode) {
                 this.classCode = classCode;
@@ -565,6 +601,7 @@ public class DescribeColumnarInfoResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The new version of the column store.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -576,7 +613,10 @@ public class DescribeColumnarInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ColumnarVersion.
+             * <p>The column store version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>polarx-col-kernel-5.4.20-20250819_17555906</p>
              */
             public Builder columnarVersion(String columnarVersion) {
                 this.columnarVersion = columnarVersion;
@@ -584,7 +624,7 @@ public class DescribeColumnarInfoResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceTopologyList.
+             * <p>The instance list.</p>
              */
             public Builder instanceTopologyList(java.util.List<InstanceTopologyList> instanceTopologyList) {
                 this.instanceTopologyList = instanceTopologyList;

@@ -93,7 +93,7 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The list of instance details.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +101,13 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message returned for the request.</p>
+         * <blockquote>
+         * <p>This parameter is empty if the request is successful. If the request fails, an error message such as an error code is returned.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +115,10 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7B044BD1-6402-5DE9-9AED-63D15A994E37</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,10 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -430,7 +442,10 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * ClassCode.
+             * <p>The instance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>polarx.x4.medium.2e</p>
              */
             public Builder classCode(String classCode) {
                 this.classCode = classCode;
@@ -438,7 +453,23 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CnNodeClassCode.
+             * <p>The CN node specifications. Valid values:</p>
+             * <ul>
+             * <li><strong>polarx.x4.medium.2e</strong>: 2 cores, 8 GB</li>
+             * <li><strong>polarx.x4.large.2e</strong>: 4 cores, 16 GB</li>
+             * <li><strong>polarx.x8.large.2e</strong>: 4 cores, 32 GB</li>
+             * <li><strong>polarx.x4.xlarge.2e</strong>: 8 cores, 32 GB</li>
+             * <li><strong>polarx.x8.xlarge.2e</strong>: 8 cores, 64 GB</li>
+             * <li><strong>polarx.x4.2xlarge.2e</strong>: 16 cores, 64 GB</li>
+             * <li><strong>polarx.x8.2xlarge.2e</strong>: 16 cores, 128 GB</li>
+             * <li><strong>polarx.x4.4xlarge.2e</strong>: 32 cores, 128 GB</li>
+             * <li><strong>polarx.x8.4xlarge.2e</strong>: 32 cores, 256 GB</li>
+             * <li><strong>polarx.st.8xlarge.2e</strong>: 60 cores, 470 GB</li>
+             * <li><strong>polarx.st.12xlarge.2e</strong>: 90 cores, 720 GB</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>polarx.x4.medium.2e</p>
              */
             public Builder cnNodeClassCode(String cnNodeClassCode) {
                 this.cnNodeClassCode = cnNodeClassCode;
@@ -446,7 +477,10 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CnNodeCount.
+             * <p>The number of compute nodes (CNs).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder cnNodeCount(String cnNodeCount) {
                 this.cnNodeCount = cnNodeCount;
@@ -454,7 +488,10 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CommodityCode.
+             * <p>The commodity code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>drds_polarxpre_public_cn</p>
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -462,7 +499,7 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DataSyncStatus.
+             * <p>The data synchronization status of the member.</p>
              */
             public Builder dataSyncStatus(String dataSyncStatus) {
                 this.dataSyncStatus = dataSyncStatus;
@@ -470,7 +507,27 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DnNodeClassCode.
+             * <p>The DN node specifications. Valid values:</p>
+             * <ul>
+             * <li><strong>mysql.n2.medium.25</strong>: 2 cores, 4 GB</li>
+             * <li><strong>mysql.n4.medium.25</strong>: 2 cores, 8 GB</li>
+             * <li><strong>mysql.x8.medium.25</strong>: 2 cores, 16 GB</li>
+             * <li><strong>mysql.n2.large.25</strong>: 4 cores, 8 GB</li>
+             * <li><strong>mysql.n4.large.25</strong>: 4 cores, 16 GB</li>
+             * <li><strong>mysql.x8.large.25</strong>: 4 cores, 32 GB</li>
+             * <li><strong>mysql.n2.xlarge.25</strong>: 8 cores, 16 GB</li>
+             * <li><strong>mysql.n4.xlarge.25</strong>: 8 cores, 32 GB</li>
+             * <li><strong>mysql.x8.xlarge.25</strong>: 8 cores, 64 GB</li>
+             * <li><strong>mysql.n4.2xlarge.25</strong>: 16 cores, 64 GB</li>
+             * <li><strong>mysql.x8.2xlarge.25</strong>: 16 cores, 128 GB</li>
+             * <li><strong>mysql.x4.4xlarge.25</strong>: 32 cores, 128 GB</li>
+             * <li><strong>mysql.x8.4xlarge.25</strong>: 32 cores, 256 GB</li>
+             * <li><strong>mysql.st.8xlarge.25</strong>: 60 cores, 470 GB</li>
+             * <li><strong>mysql.st.12xlarge.25</strong>: 90 cores, 720 GB</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql.n4.medium.25</p>
              */
             public Builder dnNodeClassCode(String dnNodeClassCode) {
                 this.dnNodeClassCode = dnNodeClassCode;
@@ -478,7 +535,10 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DnNodeCount.
+             * <p>The number of data nodes (DNs).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder dnNodeCount(String dnNodeCount) {
                 this.dnNodeCount = dnNodeCount;
@@ -486,7 +546,10 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * <p>The expiration time. The format is YYYY-MM-DDTHH:mm:ss.SSS±HHmm, which includes the time zone offset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-01-02T13:11:10.000+0000</p>
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -494,7 +557,10 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreated.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-01-02T13:11:10.000+0000</p>
              */
             public Builder gmtCreated(String gmtCreated) {
                 this.gmtCreated = gmtCreated;
@@ -502,7 +568,10 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * MemberName.
+             * <p>The name of the member, which is the name of the PolarDB-X instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxc-***</p>
              */
             public Builder memberName(String memberName) {
                 this.memberName = memberName;
@@ -510,7 +579,14 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PayType.
+             * <p>The billing method of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>Postpaid</strong>: pay-as-you-go</li>
+             * <li><strong>Prepaid</strong>: subscription</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Prepaid</p>
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -518,7 +594,10 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PrimaryZone.
+             * <p>The primary zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-zhangjiakou-a</p>
              */
             public Builder primaryZone(String primaryZone) {
                 this.primaryZone = primaryZone;
@@ -526,7 +605,7 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ReadWriteStatus.
+             * <p>The read/write status of the member.</p>
              */
             public Builder readWriteStatus(String readWriteStatus) {
                 this.readWriteStatus = readWriteStatus;
@@ -534,7 +613,10 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -542,7 +624,11 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Role.
+             * <p>The role of the member.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>primary、
+             * standby</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -550,7 +636,10 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SecondaryZone.
+             * <p>The secondary zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-zhangjiakou-a</p>
              */
             public Builder secondaryZone(String secondaryZone) {
                 this.secondaryZone = secondaryZone;
@@ -558,7 +647,10 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SecondsBehindMaster.
+             * <p>The data synchronization latency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1s</p>
              */
             public Builder secondsBehindMaster(String secondsBehindMaster) {
                 this.secondsBehindMaster = secondsBehindMaster;
@@ -566,7 +658,10 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the member.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Creating</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -574,7 +669,14 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * TaskStatus.
+             * <p>The status of the switchover task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>prepared: Parameter initialization completed
+             * set_old_primary_readonly: Write operations disabled on the original primary instance
+             * set_new_primary_read_write: Switchover completed
+             * timeout: Task timed out
+             * rollback: Rolled back</p>
              */
             public Builder taskStatus(String taskStatus) {
                 this.taskStatus = taskStatus;
@@ -582,7 +684,10 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * TertiaryZone.
+             * <p>The third active zone in a three-zone deployment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-zhangjiakou-a</p>
              */
             public Builder tertiaryZone(String tertiaryZone) {
                 this.tertiaryZone = tertiaryZone;
@@ -590,7 +695,10 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-zhangjiakou-a</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -774,7 +882,10 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -782,7 +893,10 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * GdnInstanceName.
+             * <p>The name of the GDN instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gdn-***</p>
              */
             public Builder gdnInstanceName(String gdnInstanceName) {
                 this.gdnInstanceName = gdnInstanceName;
@@ -790,7 +904,10 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * GdnMode.
+             * <p>The replication mode of the GDN. Valid values: gdn_mode_master_slave and gdn_mode_bidirectional.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gdn_mode_master_slave</p>
              */
             public Builder gdnMode(String gdnMode) {
                 this.gdnMode = gdnMode;
@@ -798,7 +915,10 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreated.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-01-02T13:11:10.000+0000</p>
              */
             public Builder gmtCreated(String gmtCreated) {
                 this.gmtCreated = gmtCreated;
@@ -806,7 +926,7 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * MemberList.
+             * <p>The list of members.</p>
              */
             public Builder memberList(java.util.List<MemberList> memberList) {
                 this.memberList = memberList;
@@ -814,7 +934,10 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * MysqlVersion.
+             * <p>The MySQL version supported by the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5.7</p>
              */
             public Builder mysqlVersion(String mysqlVersion) {
                 this.mysqlVersion = mysqlVersion;
@@ -822,7 +945,10 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RplConflictStrategy.
+             * <p>The replication conflict handling strategy. Valid values: DIRECT_OVERWRITE, OVERWRITE, IGNORE, and INTERRUPT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OVERWRITE</p>
              */
             public Builder rplConflictStrategy(String rplConflictStrategy) {
                 this.rplConflictStrategy = rplConflictStrategy;
@@ -830,7 +956,10 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RplDmlStrategy.
+             * <p>The DML replication policy. Valid values: MERGE, SERIAL, TRANSACTION, and SPLIT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SPLIT</p>
              */
             public Builder rplDmlStrategy(String rplDmlStrategy) {
                 this.rplDmlStrategy = rplDmlStrategy;
@@ -838,7 +967,7 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RplSyncDdl.
+             * <p>Specifies whether to synchronously replicate DDL operations.</p>
              */
             public Builder rplSyncDdl(Boolean rplSyncDdl) {
                 this.rplSyncDdl = rplSyncDdl;
@@ -846,7 +975,10 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Creating</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -854,7 +986,10 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SwitchHistory.
+             * <p>The switchover logs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder switchHistory(String switchHistory) {
                 this.switchHistory = switchHistory;
@@ -947,7 +1082,7 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * GdnInstanceList.
+             * <p>The list of GDN instances.</p>
              */
             public Builder gdnInstanceList(java.util.List<GdnInstanceList> gdnInstanceList) {
                 this.gdnInstanceList = gdnInstanceList;
@@ -955,7 +1090,10 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(String pageNumber) {
                 this.pageNumber = pageNumber;
@@ -963,7 +1101,10 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The page size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder pageSize(String pageSize) {
                 this.pageSize = pageSize;
@@ -971,7 +1112,10 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalNumber.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>130</p>
              */
             public Builder totalNumber(String totalNumber) {
                 this.totalNumber = totalNumber;

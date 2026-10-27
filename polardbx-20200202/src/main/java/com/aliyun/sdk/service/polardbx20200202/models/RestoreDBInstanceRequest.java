@@ -487,7 +487,14 @@ public class RestoreDBInstanceRequest extends Request {
         } 
 
         /**
-         * AutoRenew.
+         * <p>Specifies whether to enable auto-renewal. Default value: true.</p>
+         * <ul>
+         * <li>true: Enabled.</li>
+         * <li>false: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -496,7 +503,10 @@ public class RestoreDBInstanceRequest extends Request {
         }
 
         /**
-         * BackupSetId.
+         * <p>The backup set ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111</p>
          */
         public Builder backupSetId(String backupSetId) {
             this.putQueryParameter("BackupSetId", backupSetId);
@@ -505,6 +515,7 @@ public class RestoreDBInstanceRequest extends Request {
         }
 
         /**
+         * <p>The region where the backup set resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -517,7 +528,10 @@ public class RestoreDBInstanceRequest extends Request {
         }
 
         /**
-         * CNNodeCount.
+         * <p>The number of compute nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder CNNodeCount(String CNNodeCount) {
             this.putQueryParameter("CNNodeCount", CNNodeCount);
@@ -526,7 +540,10 @@ public class RestoreDBInstanceRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token used to ensure the idempotence of the request. Use a different value for each request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxx-xxx</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -535,6 +552,7 @@ public class RestoreDBInstanceRequest extends Request {
         }
 
         /**
+         * <p>The name of the source instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -547,7 +565,23 @@ public class RestoreDBInstanceRequest extends Request {
         }
 
         /**
-         * CnClass.
+         * <p>The compute node specifications. Valid values:</p>
+         * <ul>
+         * <li>polarx.x4.medium.2e: 2 cores, 8 GB</li>
+         * <li>polarx.x4.large.2e: 4 cores, 16 GB</li>
+         * <li>polarx.x8.large.2e: 4 cores, 32 GB</li>
+         * <li>polarx.x4.xlarge.2e: 8 cores, 32 GB</li>
+         * <li>polarx.x8.xlarge.2e: 8 cores, 64 GB</li>
+         * <li>polarx.x4.2xlarge.2e: 16 cores, 64 GB</li>
+         * <li>polarx.x8.2xlarge.2e: 16 cores, 128 GB</li>
+         * <li>polarx.x4.4xlarge.2e: 32 cores, 128 GB</li>
+         * <li>polarx.x8.4xlarge.2e: 32 cores, 256 GB</li>
+         * <li>polarx.st.8xlarge.2e: 60 cores, 470 GB</li>
+         * <li>polarx.st.12xlarge.2e: 90 cores, 720 GB</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>polarx.x4.medium.2e</p>
          */
         public Builder cnClass(String cnClass) {
             this.putQueryParameter("CnClass", cnClass);
@@ -556,7 +590,23 @@ public class RestoreDBInstanceRequest extends Request {
         }
 
         /**
-         * DBNodeClass.
+         * <p>The node specifications. Valid values:</p>
+         * <ul>
+         * <li>polarx.x4.medium.2e: 2 cores, 8 GB</li>
+         * <li>polarx.x4.large.2e: 4 cores, 16 GB</li>
+         * <li>polarx.x8.large.2e: 4 cores, 32 GB</li>
+         * <li>polarx.x4.xlarge.2e: 8 cores, 32 GB</li>
+         * <li>polarx.x8.xlarge.2e: 8 cores, 64 GB</li>
+         * <li>polarx.x4.2xlarge.2e: 16 cores, 64 GB</li>
+         * <li>polarx.x8.2xlarge.2e: 16 cores, 128 GB</li>
+         * <li>polarx.x4.4xlarge.2e: 32 cores, 128 GB</li>
+         * <li>polarx.x8.4xlarge.2e: 32 cores, 256 GB</li>
+         * <li>polarx.st.8xlarge.2e: 60 cores, 470 GB</li>
+         * <li>polarx.st.12xlarge.2e: 90 cores, 720 GB</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>polarx.x4.2xlarge.2d</p>
          */
         public Builder DBNodeClass(String DBNodeClass) {
             this.putQueryParameter("DBNodeClass", DBNodeClass);
@@ -565,7 +615,10 @@ public class RestoreDBInstanceRequest extends Request {
         }
 
         /**
-         * DBNodeCount.
+         * <p>The number of instance nodes. The minimum value is 2.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder DBNodeCount(Integer DBNodeCount) {
             this.putQueryParameter("DBNodeCount", DBNodeCount);
@@ -574,7 +627,10 @@ public class RestoreDBInstanceRequest extends Request {
         }
 
         /**
-         * DNNodeCount.
+         * <p>The number of storage nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder DNNodeCount(String DNNodeCount) {
             this.putQueryParameter("DNNodeCount", DNNodeCount);
@@ -583,7 +639,23 @@ public class RestoreDBInstanceRequest extends Request {
         }
 
         /**
-         * DnClass.
+         * <p>The storage node specifications. Valid values:</p>
+         * <ul>
+         * <li>mysql.n4.medium.25: 2 cores, 8 GB</li>
+         * <li>mysql.n4.large.25: 4 cores, 16 GB</li>
+         * <li>mysql.x8.large.25: 4 cores, 32 GB</li>
+         * <li>mysql.n4.xlarge.25: 8 cores, 32 GB</li>
+         * <li>mysql.x8.xlarge.25: 8 cores, 64 GB</li>
+         * <li>mysql.n4.2xlarge.25: 16 cores, 64 GB</li>
+         * <li>mysql.x8.2xlarge.25: 16 cores, 128 GB</li>
+         * <li>mysql.x4.4xlarge.25: 32 cores, 128 GB</li>
+         * <li>mysql.x8.4xlarge.25: 32 cores, 256 GB</li>
+         * <li>mysql.st.8xlarge.25: 60 cores, 470 GB</li>
+         * <li>mysql.st.12xlarge.25: 90 cores, 720 GB</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql.n4.medium.25</p>
          */
         public Builder dnClass(String dnClass) {
             this.putQueryParameter("DnClass", dnClass);
@@ -592,6 +664,7 @@ public class RestoreDBInstanceRequest extends Request {
         }
 
         /**
+         * <p>The MySQL DPI engine version. Valid values: 5.7 and 8.0.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -604,7 +677,10 @@ public class RestoreDBInstanceRequest extends Request {
         }
 
         /**
-         * GdnRole.
+         * <p>The GDN role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>standby</p>
          */
         public Builder gdnRole(String gdnRole) {
             this.putQueryParameter("GdnRole", gdnRole);
@@ -613,7 +689,10 @@ public class RestoreDBInstanceRequest extends Request {
         }
 
         /**
-         * NetworkType.
+         * <p>The network type. Only VPC is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc</p>
          */
         public Builder networkType(String networkType) {
             this.putQueryParameter("NetworkType", networkType);
@@ -622,6 +701,11 @@ public class RestoreDBInstanceRequest extends Request {
         }
 
         /**
+         * <p>The billing method of the instance.</p>
+         * <ul>
+         * <li>PREPAY: subscription</li>
+         * <li>POSTPAY: pay-as-you-go</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -634,7 +718,10 @@ public class RestoreDBInstanceRequest extends Request {
         }
 
         /**
-         * Period.
+         * <p>The billing cycle. Valid values for subscription: Year and Month. Default value for pay-as-you-go: Hour.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -643,7 +730,10 @@ public class RestoreDBInstanceRequest extends Request {
         }
 
         /**
-         * PrimaryZone.
+         * <p>The primary zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen-e</p>
          */
         public Builder primaryZone(String primaryZone) {
             this.putQueryParameter("PrimaryZone", primaryZone);
@@ -652,6 +742,7 @@ public class RestoreDBInstanceRequest extends Request {
         }
 
         /**
+         * <p>The recovery type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -664,6 +755,7 @@ public class RestoreDBInstanceRequest extends Request {
         }
 
         /**
+         * <p>The region where the instance resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -676,7 +768,10 @@ public class RestoreDBInstanceRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID. This parameter can be left empty. This parameter is not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -685,7 +780,10 @@ public class RestoreDBInstanceRequest extends Request {
         }
 
         /**
-         * RestoreTime.
+         * <p>The point in time to which you want to restore the instance. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-10-14T00:00:00Z</p>
          */
         public Builder restoreTime(String restoreTime) {
             this.putQueryParameter("RestoreTime", restoreTime);
@@ -694,7 +792,10 @@ public class RestoreDBInstanceRequest extends Request {
         }
 
         /**
-         * SecondaryZone.
+         * <p>The secondary zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen-a</p>
          */
         public Builder secondaryZone(String secondaryZone) {
             this.putQueryParameter("SecondaryZone", secondaryZone);
@@ -703,7 +804,14 @@ public class RestoreDBInstanceRequest extends Request {
         }
 
         /**
-         * Series.
+         * <p>The instance series. Valid values:</p>
+         * <ul>
+         * <li>enterprise: Enterprise Edition.</li>
+         * <li>standard: Standard Edition.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>enterprise</p>
          */
         public Builder series(String series) {
             this.putQueryParameter("Series", series);
@@ -712,6 +820,7 @@ public class RestoreDBInstanceRequest extends Request {
         }
 
         /**
+         * <p>The region where the source instance resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -724,7 +833,10 @@ public class RestoreDBInstanceRequest extends Request {
         }
 
         /**
-         * StorageType.
+         * <p>The storage type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_auto</p>
          */
         public Builder storageType(String storageType) {
             this.putQueryParameter("StorageType", storageType);
@@ -733,7 +845,10 @@ public class RestoreDBInstanceRequest extends Request {
         }
 
         /**
-         * TertiaryZone.
+         * <p>The zone for Three-zone deployment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen-e</p>
          */
         public Builder tertiaryZone(String tertiaryZone) {
             this.putQueryParameter("TertiaryZone", tertiaryZone);
@@ -742,6 +857,11 @@ public class RestoreDBInstanceRequest extends Request {
         }
 
         /**
+         * <p>The topology type. Valid values:</p>
+         * <ul>
+         * <li>3azones: three-zone deployment.</li>
+         * <li>1azone: single-zone deployment.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -754,7 +874,13 @@ public class RestoreDBInstanceRequest extends Request {
         }
 
         /**
-         * UsedTime.
+         * <p>The subscription duration. Specify the number of months or years.</p>
+         * <blockquote>
+         * <p>If Period is set to Year, valid values of this parameter are 1, 2, and 3.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder usedTime(Integer usedTime) {
             this.putQueryParameter("UsedTime", usedTime);
@@ -775,7 +901,10 @@ public class RestoreDBInstanceRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * <p>The vSwitch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-*********</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -784,7 +913,10 @@ public class RestoreDBInstanceRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * <p>The zone of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-a</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

@@ -103,6 +103,7 @@ public class UpgradeDBInstanceKernelVersionRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +116,10 @@ public class UpgradeDBInstanceKernelVersionRequest extends Request {
         }
 
         /**
-         * MinorVersion.
+         * <p>The kernel version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>polarx-kernel_5.4.12-16349923_xcluster-20210926</p>
          */
         public Builder minorVersion(String minorVersion) {
             this.putQueryParameter("MinorVersion", minorVersion);
@@ -124,6 +128,7 @@ public class UpgradeDBInstanceKernelVersionRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -136,7 +141,14 @@ public class UpgradeDBInstanceKernelVersionRequest extends Request {
         }
 
         /**
-         * SwitchMode.
+         * <p>The switch mode. Valid values:</p>
+         * <ul>
+         * <li>0: immediately switches.</li>
+         * <li>1: switches during the O&amp;M window.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder switchMode(String switchMode) {
             this.putQueryParameter("SwitchMode", switchMode);

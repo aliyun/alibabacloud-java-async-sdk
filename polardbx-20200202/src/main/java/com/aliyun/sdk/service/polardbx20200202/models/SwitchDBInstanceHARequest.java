@@ -131,7 +131,11 @@ public class SwitchDBInstanceHARequest extends Request {
         } 
 
         /**
+         * <p>The name of the PolarDB-X instance.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxc-htri0ori2r****</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.putQueryParameter("DBInstanceName", DBInstanceName);
@@ -140,7 +144,11 @@ public class SwitchDBInstanceHARequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -149,7 +157,10 @@ public class SwitchDBInstanceHARequest extends Request {
         }
 
         /**
-         * SwitchTime.
+         * <p>The specified switchover time. This parameter is required when SwitchTimeMode is set to 2. The time must be in UTC and in the YYYY-MM-DDThh:mm:ssZ format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-02-05T09:12:00Z</p>
          */
         public Builder switchTime(String switchTime) {
             this.putQueryParameter("SwitchTime", switchTime);
@@ -158,7 +169,10 @@ public class SwitchDBInstanceHARequest extends Request {
         }
 
         /**
-         * SwitchTimeMode.
+         * <p>The switchover mode. Valid values: 0: Immediate switchover. 1: Switchover during the O&amp;M window. 2: Switchover at a specified time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder switchTimeMode(String switchTimeMode) {
             this.putQueryParameter("SwitchTimeMode", switchTimeMode);
@@ -167,7 +181,10 @@ public class SwitchDBInstanceHARequest extends Request {
         }
 
         /**
-         * TargetPrimaryAzoneId.
+         * <p>The zone ID of the primary node after the switchover.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-d</p>
          */
         public Builder targetPrimaryAzoneId(String targetPrimaryAzoneId) {
             this.putQueryParameter("TargetPrimaryAzoneId", targetPrimaryAzoneId);
@@ -176,7 +193,10 @@ public class SwitchDBInstanceHARequest extends Request {
         }
 
         /**
-         * TargetPrimaryRegionId.
+         * <p>The region ID of the primary node after the switchover.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder targetPrimaryRegionId(String targetPrimaryRegionId) {
             this.putQueryParameter("TargetPrimaryRegionId", targetPrimaryRegionId);

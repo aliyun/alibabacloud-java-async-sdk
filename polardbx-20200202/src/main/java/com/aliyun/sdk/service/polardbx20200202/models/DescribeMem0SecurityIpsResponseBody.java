@@ -80,7 +80,7 @@ public class DescribeMem0SecurityIpsResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -88,7 +88,7 @@ public class DescribeMem0SecurityIpsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data list.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -96,7 +96,10 @@ public class DescribeMem0SecurityIpsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C458B1E8-1683-3645-B154-6BA32080EEA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -227,7 +230,10 @@ public class DescribeMem0SecurityIpsResponseBody extends TeaModel {
             } 
 
             /**
-             * AuthAction.
+             * <p>Same as above.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -235,7 +241,10 @@ public class DescribeMem0SecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalDisplayName.
+             * <p>The identity used for authentication in the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -243,7 +252,10 @@ public class DescribeMem0SecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalOwnerId.
+             * <p>Same as above.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder authPrincipalOwnerId(String authPrincipalOwnerId) {
                 this.authPrincipalOwnerId = authPrincipalOwnerId;
@@ -251,7 +263,10 @@ public class DescribeMem0SecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalType.
+             * <p>Same as above.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>222</p>
              */
             public Builder authPrincipalType(String authPrincipalType) {
                 this.authPrincipalType = authPrincipalType;
@@ -259,7 +274,10 @@ public class DescribeMem0SecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * EncodedDiagnosticMessage.
+             * <p>The encoded diagnostic message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AQEAAAAAacnceTlBNjlFODgyLTlBMDUtNUUyRC04MzE5LUQwMzZDRjJFQTM3NA==</p>
              */
             public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
                 this.encodedDiagnosticMessage = encodedDiagnosticMessage;
@@ -267,7 +285,7 @@ public class DescribeMem0SecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>NoPermissionType</p>
+             * <p>The type of no-permission error.</p>
              * 
              * <strong>example:</strong>
              * <p>ImplicitDeny</p>
@@ -278,7 +296,7 @@ public class DescribeMem0SecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>PolicyType</p>
+             * <p>The policy type.</p>
              * 
              * <strong>example:</strong>
              * <p>System</p>
@@ -361,7 +379,10 @@ public class DescribeMem0SecurityIpsResponseBody extends TeaModel {
             } 
 
             /**
-             * GroupName.
+             * <p>The name of the whitelist group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bigdata</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -369,7 +390,10 @@ public class DescribeMem0SecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * GroupTag.
+             * <p>The tag of the group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder groupTag(String groupTag) {
                 this.groupTag = groupTag;
@@ -377,7 +401,16 @@ public class DescribeMem0SecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * IpLists.
+             * <p>Indicates whether the IP addresses that are already used for DNAT entries can also be used for SNAT entries. Valid values:</p>
+             * <ul>
+             * <li><p><strong>true</strong>: The IP addresses can also be used for SNAT entries.</p>
+             * </li>
+             * <li><p><strong>false</strong>: The IP addresses cannot be used for SNAT entries.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>127.0.0.1</p>
              */
             public Builder ipLists(String ipLists) {
                 this.ipLists = ipLists;
@@ -444,7 +477,10 @@ public class DescribeMem0SecurityIpsResponseBody extends TeaModel {
             } 
 
             /**
-             * CustinsName.
+             * <p>The name of the memory engine instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxc-***-mem</p>
              */
             public Builder custinsName(String custinsName) {
                 this.custinsName = custinsName;
@@ -452,7 +488,7 @@ public class DescribeMem0SecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * Groups.
+             * <p>The groups corresponding to the consumed service.</p>
              */
             public Builder groups(java.util.List<Groups> groups) {
                 this.groups = groups;

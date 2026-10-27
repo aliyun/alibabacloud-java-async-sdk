@@ -106,7 +106,7 @@ public class ExecuteMetaQueryResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The detailed information about the access denial.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -114,7 +114,7 @@ public class ExecuteMetaQueryResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The list of instance details.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +122,10 @@ public class ExecuteMetaQueryResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The additional message returned by the API operation. If the request is successful, success is returned. If an error occurs, the corresponding error code is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -141,7 +144,10 @@ public class ExecuteMetaQueryResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -246,7 +252,10 @@ public class ExecuteMetaQueryResponseBody extends TeaModel {
             } 
 
             /**
-             * AuthAction.
+             * <p>Same as above.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -254,7 +263,10 @@ public class ExecuteMetaQueryResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalType.
+             * <p>Same as above.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>222</p>
              */
             public Builder authPrincipalType(String authPrincipalType) {
                 this.authPrincipalType = authPrincipalType;
@@ -262,7 +274,10 @@ public class ExecuteMetaQueryResponseBody extends TeaModel {
             }
 
             /**
-             * EncodedDiagnosticMessage.
+             * <p>The diagnostic information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
              */
             public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
                 this.encodedDiagnosticMessage = encodedDiagnosticMessage;
@@ -429,7 +444,10 @@ public class ExecuteMetaQueryResponseBody extends TeaModel {
             } 
 
             /**
-             * AppliedOffset.
+             * <p>The actual top-level LIMIT offset applied to the SQL statement. If no offset is specified, the value is 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder appliedOffset(Long appliedOffset) {
                 this.appliedOffset = appliedOffset;
@@ -437,7 +455,10 @@ public class ExecuteMetaQueryResponseBody extends TeaModel {
             }
 
             /**
-             * AppliedRowLimit.
+             * <p>The effective upper limit of returned rows for this request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder appliedRowLimit(Long appliedRowLimit) {
                 this.appliedRowLimit = appliedRowLimit;
@@ -445,7 +466,7 @@ public class ExecuteMetaQueryResponseBody extends TeaModel {
             }
 
             /**
-             * Columns.
+             * <p>The column names.</p>
              */
             public Builder columns(java.util.List<String> columns) {
                 this.columns = columns;
@@ -453,7 +474,7 @@ public class ExecuteMetaQueryResponseBody extends TeaModel {
             }
 
             /**
-             * HasMore.
+             * <p>Indicates whether the query result contains at least one more row beyond the effective row limit for this request.</p>
              */
             public Builder hasMore(Boolean hasMore) {
                 this.hasMore = hasMore;
@@ -461,7 +482,10 @@ public class ExecuteMetaQueryResponseBody extends TeaModel {
             }
 
             /**
-             * RecordsSizeBytes.
+             * <p>The size in bytes of the Rows JSON array in the returned result after UTF-8 encoding, excluding protocol overhead.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2048</p>
              */
             public Builder recordsSizeBytes(Long recordsSizeBytes) {
                 this.recordsSizeBytes = recordsSizeBytes;
@@ -469,7 +493,10 @@ public class ExecuteMetaQueryResponseBody extends TeaModel {
             }
 
             /**
-             * ReturnedRowCount.
+             * <p>The actual number of result rows returned for this request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder returnedRowCount(Long returnedRowCount) {
                 this.returnedRowCount = returnedRowCount;
@@ -477,7 +504,10 @@ public class ExecuteMetaQueryResponseBody extends TeaModel {
             }
 
             /**
-             * RowCount.
+             * <p>The total number of data rows.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>97901</p>
              */
             public Builder rowCount(Integer rowCount) {
                 this.rowCount = rowCount;
@@ -485,7 +515,7 @@ public class ExecuteMetaQueryResponseBody extends TeaModel {
             }
 
             /**
-             * Rows.
+             * <p>The number of affected or returned rows. This field is available only for CN.</p>
              */
             public Builder rows(java.util.List<java.util.Map<String, ?>> rows) {
                 this.rows = rows;

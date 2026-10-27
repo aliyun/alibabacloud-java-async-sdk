@@ -75,6 +75,7 @@ public class DescribeStructureImportTaskInfoRequest extends Request {
         } 
 
         /**
+         * <p>The region where the instance resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class DescribeStructureImportTaskInfoRequest extends Request {
         }
 
         /**
+         * <p>The ID of the target task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -87,7 +87,10 @@ public class CreateTransformOperationRequest extends Request {
         } 
 
         /**
-         * DBInstanceName.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxc-xxx</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.putQueryParameter("DBInstanceName", DBInstanceName);
@@ -96,7 +99,10 @@ public class CreateTransformOperationRequest extends Request {
         }
 
         /**
-         * Operation.
+         * <p>The type of the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>finish</p>
          */
         public Builder operation(String operation) {
             this.putQueryParameter("Operation", operation);
@@ -105,7 +111,10 @@ public class CreateTransformOperationRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the region where the instance resides. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196841.html">DescribeRegions</a> operation to query the regions supported by PolarDB-X, including region IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

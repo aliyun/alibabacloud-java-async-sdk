@@ -144,7 +144,10 @@ public class DescribeSupabaseInstancesRequest extends Request {
         } 
 
         /**
-         * DBInstanceName.
+         * <p>The instance name. Exact match is used for filtering. Separate multiple names with commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxsp-hz********</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.putQueryParameter("DBInstanceName", DBInstanceName);
@@ -153,7 +156,10 @@ public class DescribeSupabaseInstancesRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The instance description. Fuzzy match is used for filtering.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>project name</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -162,7 +168,10 @@ public class DescribeSupabaseInstancesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries to return on each page in a paged query. Maximum value: 100. Default value: 10. If you do not specify the Settings or the Settings value is less than 10, the default value is 10. If the Settings value is greater than 100, the default value is 100. This parameter is used for paging.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -171,7 +180,10 @@ public class DescribeSupabaseInstancesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token used to start the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxdds</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -180,7 +192,10 @@ public class DescribeSupabaseInstancesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -189,7 +204,10 @@ public class DescribeSupabaseInstancesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 20. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -198,6 +216,7 @@ public class DescribeSupabaseInstancesRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

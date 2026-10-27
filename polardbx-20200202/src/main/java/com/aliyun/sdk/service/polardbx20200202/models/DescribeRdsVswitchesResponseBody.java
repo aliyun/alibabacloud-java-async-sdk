@@ -67,7 +67,7 @@ public class DescribeRdsVswitchesResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The data struct.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -235,7 +235,10 @@ public class DescribeRdsVswitchesResponseBody extends TeaModel {
             } 
 
             /**
-             * AvailabeIpCount.
+             * <p>The number of available IP addresses.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16378</p>
              */
             public Builder availabeIpCount(String availabeIpCount) {
                 this.availabeIpCount = availabeIpCount;
@@ -243,7 +246,10 @@ public class DescribeRdsVswitchesResponseBody extends TeaModel {
             }
 
             /**
-             * CidrBlock.
+             * <p>The CIDR block of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.16.0.0/24</p>
              */
             public Builder cidrBlock(String cidrBlock) {
                 this.cidrBlock = cidrBlock;
@@ -251,7 +257,10 @@ public class DescribeRdsVswitchesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>describe</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -259,7 +268,10 @@ public class DescribeRdsVswitchesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>babac91eff704edf9bdccfaa6ba4efce</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -267,7 +279,10 @@ public class DescribeRdsVswitchesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>drdshbgae0han226</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -275,7 +290,14 @@ public class DescribeRdsVswitchesResponseBody extends TeaModel {
             }
 
             /**
-             * IsDefault.
+             * <p>Indicates whether the VPC is the default VPC. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The VPC is the default VPC.</li>
+             * <li><strong>false</strong>: The VPC is not the default VPC.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isDefault(String isDefault) {
                 this.isDefault = isDefault;
@@ -283,7 +305,10 @@ public class DescribeRdsVswitchesResponseBody extends TeaModel {
             }
 
             /**
-             * IzNo.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-j</p>
              */
             public Builder izNo(String izNo) {
                 this.izNo = izNo;
@@ -291,7 +316,10 @@ public class DescribeRdsVswitchesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>szt-backup</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -356,7 +384,7 @@ public class DescribeRdsVswitchesResponseBody extends TeaModel {
             } 
 
             /**
-             * VswitchList.
+             * <p>The vSwitch list.</p>
              */
             public Builder vswitchList(java.util.List<VswitchList> vswitchList) {
                 this.vswitchList = vswitchList;

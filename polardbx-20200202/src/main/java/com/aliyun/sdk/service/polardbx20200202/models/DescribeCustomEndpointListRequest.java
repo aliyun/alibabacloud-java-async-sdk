@@ -102,7 +102,10 @@ public class DescribeCustomEndpointListRequest extends Request {
         } 
 
         /**
-         * CheckDeleteCN.
+         * <p>Specifies whether to check if the CN node has been deleted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder checkDeleteCN(Boolean checkDeleteCN) {
             this.putQueryParameter("CheckDeleteCN", checkDeleteCN);
@@ -111,7 +114,10 @@ public class DescribeCustomEndpointListRequest extends Request {
         }
 
         /**
-         * CustomEndpointIds.
+         * <p>The custom endpoint IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxe-b6e****no4pfap1s</p>
          */
         public Builder customEndpointIds(String customEndpointIds) {
             this.putQueryParameter("CustomEndpointIds", customEndpointIds);
@@ -120,6 +126,7 @@ public class DescribeCustomEndpointListRequest extends Request {
         }
 
         /**
+         * <p>The name of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -132,7 +139,10 @@ public class DescribeCustomEndpointListRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region where the instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

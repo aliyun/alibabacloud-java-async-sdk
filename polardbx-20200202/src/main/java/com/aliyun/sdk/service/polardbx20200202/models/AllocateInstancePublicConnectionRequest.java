@@ -174,6 +174,7 @@ public class AllocateInstancePublicConnectionRequest extends Request {
         } 
 
         /**
+         * <p>The prefix of the public endpoint.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,6 +187,7 @@ public class AllocateInstancePublicConnectionRequest extends Request {
         }
 
         /**
+         * <p>The instance name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -198,7 +200,10 @@ public class AllocateInstancePublicConnectionRequest extends Request {
         }
 
         /**
-         * InstanceClusterName.
+         * <p>The name of the instance CN cluster, such as default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder instanceClusterName(String instanceClusterName) {
             this.putQueryParameter("InstanceClusterName", instanceClusterName);
@@ -225,6 +230,7 @@ public class AllocateInstancePublicConnectionRequest extends Request {
         }
 
         /**
+         * <p>The port of the public endpoint.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -237,7 +243,10 @@ public class AllocateInstancePublicConnectionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region in which the instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

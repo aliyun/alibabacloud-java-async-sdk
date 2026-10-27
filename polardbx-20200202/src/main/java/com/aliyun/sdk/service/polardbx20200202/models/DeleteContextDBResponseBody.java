@@ -80,7 +80,7 @@ public class DeleteContextDBResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details of the access denial.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -88,7 +88,7 @@ public class DeleteContextDBResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The parameter details.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -230,7 +230,10 @@ public class DeleteContextDBResponseBody extends TeaModel {
             } 
 
             /**
-             * AuthAction.
+             * <p>The authentication action.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -238,7 +241,10 @@ public class DeleteContextDBResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalDisplayName.
+             * <p>The display name of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -246,7 +252,10 @@ public class DeleteContextDBResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalOwnerId.
+             * <p>The owner ID of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder authPrincipalOwnerId(String authPrincipalOwnerId) {
                 this.authPrincipalOwnerId = authPrincipalOwnerId;
@@ -254,7 +263,10 @@ public class DeleteContextDBResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalType.
+             * <p>The type of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>222</p>
              */
             public Builder authPrincipalType(String authPrincipalType) {
                 this.authPrincipalType = authPrincipalType;
@@ -262,7 +274,10 @@ public class DeleteContextDBResponseBody extends TeaModel {
             }
 
             /**
-             * EncodedDiagnosticMessage.
+             * <p>The encoded diagnostic message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
              */
             public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
                 this.encodedDiagnosticMessage = encodedDiagnosticMessage;
@@ -270,7 +285,10 @@ public class DeleteContextDBResponseBody extends TeaModel {
             }
 
             /**
-             * NoPermissionType.
+             * <p>The type of the permission denial.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ImplicitDeny</p>
              */
             public Builder noPermissionType(String noPermissionType) {
                 this.noPermissionType = noPermissionType;
@@ -278,7 +296,10 @@ public class DeleteContextDBResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * <p>The policy type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PRIORITY</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -384,7 +405,10 @@ public class DeleteContextDBResponseBody extends TeaModel {
             } 
 
             /**
-             * ContextDBInstanceName.
+             * <p>The context service instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxt-*********</p>
              */
             public Builder contextDBInstanceName(String contextDBInstanceName) {
                 this.contextDBInstanceName = contextDBInstanceName;
@@ -392,7 +416,10 @@ public class DeleteContextDBResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceName.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxc-unrf5ssig0ecg8</p>
              */
             public Builder DBInstanceName(String DBInstanceName) {
                 this.DBInstanceName = DBInstanceName;
@@ -400,7 +427,10 @@ public class DeleteContextDBResponseBody extends TeaModel {
             }
 
             /**
-             * DashboardReplicaSetName.
+             * <p>The context service dashboard instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxt-*********-d</p>
              */
             public Builder dashboardReplicaSetName(String dashboardReplicaSetName) {
                 this.dashboardReplicaSetName = dashboardReplicaSetName;
@@ -408,7 +438,10 @@ public class DeleteContextDBResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceReplicaSetName.
+             * <p>The context service service instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxt-*********-s</p>
              */
             public Builder serviceReplicaSetName(String serviceReplicaSetName) {
                 this.serviceReplicaSetName = serviceReplicaSetName;
@@ -416,7 +449,10 @@ public class DeleteContextDBResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2209883</p>
              */
             public Builder taskId(Integer taskId) {
                 this.taskId = taskId;

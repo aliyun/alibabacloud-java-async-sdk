@@ -133,6 +133,7 @@ public class ResetAccountPasswordRequest extends Request {
         } 
 
         /**
+         * <p>The name of the account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -145,6 +146,7 @@ public class ResetAccountPasswordRequest extends Request {
         }
 
         /**
+         * <p>The password of the account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,6 +159,7 @@ public class ResetAccountPasswordRequest extends Request {
         }
 
         /**
+         * <p>The name of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -169,6 +172,7 @@ public class ResetAccountPasswordRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -181,7 +185,10 @@ public class ResetAccountPasswordRequest extends Request {
         }
 
         /**
-         * SecurityAccountName.
+         * <p>The name of the cryptographic officer (CO) account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>account_sec</p>
          */
         public Builder securityAccountName(String securityAccountName) {
             this.putQueryParameter("SecurityAccountName", securityAccountName);
@@ -190,7 +197,10 @@ public class ResetAccountPasswordRequest extends Request {
         }
 
         /**
-         * SecurityAccountPassword.
+         * <p>The password of the cryptographic officer (CO) account.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder securityAccountPassword(String securityAccountPassword) {
             this.putQueryParameter("SecurityAccountPassword", securityAccountPassword);

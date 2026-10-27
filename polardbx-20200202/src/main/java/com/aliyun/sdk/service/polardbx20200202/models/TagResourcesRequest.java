@@ -105,6 +105,7 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,6 +118,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
+         * <p>The resource IDs. You can specify up to 50 subkeys.</p>
          * <p>This parameter is required.</p>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
@@ -126,6 +128,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
+         * <p>The resource type. The value must be PolarDBXInstance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,6 +141,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
+         * <p>The list of labels. You can specify up to 20 subkeys.</p>
          * <p>This parameter is required.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
@@ -206,7 +210,10 @@ public class TagResourcesRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The label key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -214,7 +221,10 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The label value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22</p>
              */
             public Builder value(String value) {
                 this.value = value;

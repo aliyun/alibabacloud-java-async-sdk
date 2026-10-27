@@ -118,7 +118,10 @@ public class ModifyCdcClassRequest extends Request {
         } 
 
         /**
-         * CDCNodeCount.
+         * <p>The number of CDC nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder CDCNodeCount(String CDCNodeCount) {
             this.putQueryParameter("CDCNodeCount", CDCNodeCount);
@@ -127,6 +130,7 @@ public class ModifyCdcClassRequest extends Request {
         }
 
         /**
+         * <p>The instance type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,6 +143,7 @@ public class ModifyCdcClassRequest extends Request {
         }
 
         /**
+         * <p>The instance name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -151,6 +156,7 @@ public class ModifyCdcClassRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -163,7 +169,10 @@ public class ModifyCdcClassRequest extends Request {
         }
 
         /**
-         * SwitchMode.
+         * <p>The switch mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder switchMode(String switchMode) {
             this.putQueryParameter("SwitchMode", switchMode);

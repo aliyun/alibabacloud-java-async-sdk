@@ -80,7 +80,7 @@ public class ReleasePxfsPublicConnectionResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details of the access denial.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -88,7 +88,7 @@ public class ReleasePxfsPublicConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>接口返回的业务数据。</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -96,7 +96,7 @@ public class ReleasePxfsPublicConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求的唯一标识，可用于排查问题。</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -230,7 +230,10 @@ public class ReleasePxfsPublicConnectionResponseBody extends TeaModel {
             } 
 
             /**
-             * AuthAction.
+             * <p>The authentication action.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -238,7 +241,10 @@ public class ReleasePxfsPublicConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalDisplayName.
+             * <p>The identity used for authentication in the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -246,7 +252,10 @@ public class ReleasePxfsPublicConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalOwnerId.
+             * <p>The owner ID of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder authPrincipalOwnerId(String authPrincipalOwnerId) {
                 this.authPrincipalOwnerId = authPrincipalOwnerId;
@@ -254,7 +263,10 @@ public class ReleasePxfsPublicConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalType.
+             * <p>The type of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>222</p>
              */
             public Builder authPrincipalType(String authPrincipalType) {
                 this.authPrincipalType = authPrincipalType;
@@ -262,7 +274,10 @@ public class ReleasePxfsPublicConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * EncodedDiagnosticMessage.
+             * <p>The diagnostic information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
              */
             public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
                 this.encodedDiagnosticMessage = encodedDiagnosticMessage;
@@ -364,7 +379,7 @@ public class ReleasePxfsPublicConnectionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Agent文件服务关联的PolarDB-X实例ID。</p>
+             * <p>The instance ID of the PolarDB-X instance.</p>
              * 
              * <strong>example:</strong>
              * <p>pxc-xxxxxxxx</p>
@@ -375,7 +390,7 @@ public class ReleasePxfsPublicConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Agent文件服务实例ID。</p>
+             * <p>The instance ID of the Agent file service.</p>
              * 
              * <strong>example:</strong>
              * <p>pxfs-xxxxxxxx</p>
@@ -386,7 +401,7 @@ public class ReleasePxfsPublicConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>异步任务ID，可用于查询任务状态。</p>
+             * <p>The task ID.</p>
              * 
              * <strong>example:</strong>
              * <p>123456789</p>

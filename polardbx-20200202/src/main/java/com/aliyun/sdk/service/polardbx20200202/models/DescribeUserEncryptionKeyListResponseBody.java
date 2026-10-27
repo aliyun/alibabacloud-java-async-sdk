@@ -67,7 +67,7 @@ public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FEA5DC20-6D8A-5979-97AA-FC57546ADC20</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -128,7 +131,7 @@ public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
             } 
 
             /**
-             * KeyIds.
+             * <p>The key list.</p>
              */
             public Builder keyIds(java.util.List<String> keyIds) {
                 this.keyIds = keyIds;

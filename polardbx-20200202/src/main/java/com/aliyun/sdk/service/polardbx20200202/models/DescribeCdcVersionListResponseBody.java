@@ -67,7 +67,7 @@ public class DescribeCdcVersionListResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The data struct.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -131,7 +131,7 @@ public class DescribeCdcVersionListResponseBody extends TeaModel {
             } 
 
             /**
-             * VersionList.
+             * <p>The ID of the associated legacy project. You can ignore this field.</p>
              */
             public Builder versionList(java.util.List<String> versionList) {
                 this.versionList = versionList;

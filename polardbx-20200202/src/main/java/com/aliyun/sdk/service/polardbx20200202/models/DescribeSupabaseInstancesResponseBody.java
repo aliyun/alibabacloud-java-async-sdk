@@ -106,7 +106,7 @@ public class DescribeSupabaseInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The access denied details.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -114,7 +114,7 @@ public class DescribeSupabaseInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The paginated list of instances.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +122,10 @@ public class DescribeSupabaseInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries to return on each page in a paged query. Maximum value: 100. Default value: 10. If you do not specify the Settings or the Settings value is less than 10, the default value is 10. If the Settings value is greater than 100, the default value is 100. This parameter is used for paging.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -130,7 +133,10 @@ public class DescribeSupabaseInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token used to start the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxdds</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -138,7 +144,10 @@ public class DescribeSupabaseInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C457B28E-9CAB-4B77-B5C6-5D71B7870B6E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -269,7 +278,10 @@ public class DescribeSupabaseInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * AuthAction.
+             * <p>The authentication action.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -277,7 +289,10 @@ public class DescribeSupabaseInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalDisplayName.
+             * <p>The name of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -285,7 +300,10 @@ public class DescribeSupabaseInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalOwnerId.
+             * <p>The owner ID of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder authPrincipalOwnerId(String authPrincipalOwnerId) {
                 this.authPrincipalOwnerId = authPrincipalOwnerId;
@@ -293,7 +311,10 @@ public class DescribeSupabaseInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalType.
+             * <p>The authentication principal type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>222</p>
              */
             public Builder authPrincipalType(String authPrincipalType) {
                 this.authPrincipalType = authPrincipalType;
@@ -301,7 +322,10 @@ public class DescribeSupabaseInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * EncodedDiagnosticMessage.
+             * <p>The diagnostic message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AQEAAAAAacnceTlBNjlFODgyLTlBMDUtNUUyRC04MzE5LUQwMzZDRjJFQTM3NA==</p>
              */
             public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
                 this.encodedDiagnosticMessage = encodedDiagnosticMessage;
@@ -309,7 +333,10 @@ public class DescribeSupabaseInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * NoPermissionType.
+             * <p>The access denial type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ImplicitDeny</p>
              */
             public Builder noPermissionType(String noPermissionType) {
                 this.noPermissionType = noPermissionType;
@@ -317,7 +344,10 @@ public class DescribeSupabaseInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * <p>The policy type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>System</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -462,7 +492,10 @@ public class DescribeSupabaseInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The time when the instance was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-06-08T07:19:05.000+0000</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -470,7 +503,10 @@ public class DescribeSupabaseInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceName.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxsp-jinwusp30</p>
              */
             public Builder DBInstanceName(String DBInstanceName) {
                 this.DBInstanceName = DBInstanceName;
@@ -478,7 +514,10 @@ public class DescribeSupabaseInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The instance description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>My Supabase project</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -486,7 +525,10 @@ public class DescribeSupabaseInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -494,7 +536,10 @@ public class DescribeSupabaseInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The instance status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -502,7 +547,10 @@ public class DescribeSupabaseInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SupabaseClassCode.
+             * <p>The Supabase instance type code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>polarx.supabase.x4.2xlarge</p>
              */
             public Builder supabaseClassCode(String supabaseClassCode) {
                 this.supabaseClassCode = supabaseClassCode;
@@ -510,7 +558,7 @@ public class DescribeSupabaseInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>是否为多租户模式，true=多租户，false=单租户</p>
+             * <p>The multi-tenant mode.</p>
              * 
              * <strong>example:</strong>
              * <p>MySQL</p>
@@ -521,7 +569,10 @@ public class DescribeSupabaseInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing-i</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -614,7 +665,7 @@ public class DescribeSupabaseInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * Instances.
+             * <p>The list of instances.</p>
              */
             public Builder instances(java.util.List<Instances> instances) {
                 this.instances = instances;
@@ -622,7 +673,10 @@ public class DescribeSupabaseInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -630,7 +684,10 @@ public class DescribeSupabaseInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -638,7 +695,10 @@ public class DescribeSupabaseInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalNumber.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalNumber(Integer totalNumber) {
                 this.totalNumber = totalNumber;

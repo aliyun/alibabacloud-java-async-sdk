@@ -89,7 +89,10 @@ public class ConfirmNoConnectionRequest extends Request {
         } 
 
         /**
-         * DBInstanceName.
+         * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxc-hzravgpt8q****</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.putQueryParameter("DBInstanceName", DBInstanceName);
@@ -98,6 +101,7 @@ public class ConfirmNoConnectionRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +114,7 @@ public class ConfirmNoConnectionRequest extends Request {
         }
 
         /**
+         * <p>The unique ID of the short-link task, which is used to identify the task to be rolled back.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

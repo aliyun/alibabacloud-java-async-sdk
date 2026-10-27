@@ -87,7 +87,10 @@ public class DescribeTransformStatusRequest extends Request {
         } 
 
         /**
-         * DBInstanceName.
+         * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxc-xxx</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.putQueryParameter("DBInstanceName", DBInstanceName);
@@ -96,7 +99,10 @@ public class DescribeTransformStatusRequest extends Request {
         }
 
         /**
-         * QueryReport.
+         * <p>The check report.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder queryReport(Boolean queryReport) {
             this.putQueryParameter("QueryReport", queryReport);
@@ -105,7 +111,10 @@ public class DescribeTransformStatusRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

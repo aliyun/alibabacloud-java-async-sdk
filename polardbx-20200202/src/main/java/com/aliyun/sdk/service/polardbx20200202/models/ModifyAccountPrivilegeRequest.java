@@ -146,6 +146,7 @@ public class ModifyAccountPrivilegeRequest extends Request {
         } 
 
         /**
+         * <p>The account name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,7 +159,16 @@ public class ModifyAccountPrivilegeRequest extends Request {
         }
 
         /**
-         * AccountPrivilege.
+         * <p>The account permission. Valid values:</p>
+         * <ul>
+         * <li><strong>ReadWrite</strong></li>
+         * <li><strong>ReadOnly</strong></li>
+         * <li><strong>DMLOnly</strong></li>
+         * <li><strong>DDLOnly</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ReadWrite</p>
          */
         public Builder accountPrivilege(String accountPrivilege) {
             this.putQueryParameter("AccountPrivilege", accountPrivilege);
@@ -167,6 +177,7 @@ public class ModifyAccountPrivilegeRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -179,7 +190,10 @@ public class ModifyAccountPrivilegeRequest extends Request {
         }
 
         /**
-         * DbName.
+         * <p>The database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sbtest</p>
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("DbName", dbName);
@@ -188,6 +202,7 @@ public class ModifyAccountPrivilegeRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -200,7 +215,10 @@ public class ModifyAccountPrivilegeRequest extends Request {
         }
 
         /**
-         * SecurityAccountName.
+         * <p>The name of the security administrator account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>account_audit</p>
          */
         public Builder securityAccountName(String securityAccountName) {
             this.putQueryParameter("SecurityAccountName", securityAccountName);
@@ -209,7 +227,10 @@ public class ModifyAccountPrivilegeRequest extends Request {
         }
 
         /**
-         * SecurityAccountPassword.
+         * <p>The password of the security administrator account.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder securityAccountPassword(String securityAccountPassword) {
             this.putQueryParameter("SecurityAccountPassword", securityAccountPassword);

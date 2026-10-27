@@ -87,7 +87,10 @@ public class DeleteCustomEndpointRequest extends Request {
         } 
 
         /**
-         * CustomEndpointId.
+         * <p>The ID of the custom endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxe-8if3zrfsu****hgw</p>
          */
         public Builder customEndpointId(String customEndpointId) {
             this.putQueryParameter("CustomEndpointId", customEndpointId);
@@ -96,7 +99,10 @@ public class DeleteCustomEndpointRequest extends Request {
         }
 
         /**
-         * DBInstanceName.
+         * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxc-hzravgpt8q****</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.putQueryParameter("DBInstanceName", DBInstanceName);
@@ -105,7 +111,10 @@ public class DeleteCustomEndpointRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region in which the instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

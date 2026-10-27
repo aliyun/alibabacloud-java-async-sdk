@@ -67,7 +67,7 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The data struct.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C458B1E8-1683-3645-B154-6BA32080EEA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +157,10 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
             } 
 
             /**
-             * CertCommonName.
+             * <p>The domain name bound to the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxc-sddddddcym7g7w****.polarx.singapore.rds.aliyuncs.com</p>
              */
             public Builder certCommonName(String certCommonName) {
                 this.certCommonName = certCommonName;
@@ -162,7 +168,14 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
             }
 
             /**
-             * SSLEnabled.
+             * <p>Indicates whether SSL is enabled for the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: Enabled.</li>
+             * <li><strong>false</strong>: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder SSLEnabled(Boolean SSLEnabled) {
                 this.SSLEnabled = SSLEnabled;
@@ -170,7 +183,10 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
             }
 
             /**
-             * SSLExpiredTime.
+             * <p>The expiration time of the certificate. The time is in the YYYY-MM-DDTHH:mm:ssZ format and is in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-11-04T09:39:07Z</p>
              */
             public Builder SSLExpiredTime(String SSLExpiredTime) {
                 this.SSLExpiredTime = SSLExpiredTime;

@@ -80,7 +80,10 @@ public class AttachColumnarInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * DBInstanceName.
+         * <p>The name of the created instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxc-xxx</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.DBInstanceName = DBInstanceName;
@@ -88,7 +91,10 @@ public class AttachColumnarInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9B2F3840-5C98-475C-B269-2D5C3A31797C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +102,10 @@ public class AttachColumnarInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The backend task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>422922413</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

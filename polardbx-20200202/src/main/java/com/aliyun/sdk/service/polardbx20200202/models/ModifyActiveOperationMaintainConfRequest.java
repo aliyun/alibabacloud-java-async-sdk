@@ -135,6 +135,7 @@ public class ModifyActiveOperationMaintainConfRequest extends Request {
         } 
 
         /**
+         * <p>The day of the week. Valid values: 1 to 7.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -147,6 +148,7 @@ public class ModifyActiveOperationMaintainConfRequest extends Request {
         }
 
         /**
+         * <p>The cycle type. Valid value: Week.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,6 +161,7 @@ public class ModifyActiveOperationMaintainConfRequest extends Request {
         }
 
         /**
+         * <p>The end time. Specify the time in the HH:mm:ssZ format. The time must be in UTC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -171,6 +174,7 @@ public class ModifyActiveOperationMaintainConfRequest extends Request {
         }
 
         /**
+         * <p>The start time. Specify the time in the HH:mm:ssZ format. The time must be in UTC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -183,6 +187,7 @@ public class ModifyActiveOperationMaintainConfRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -195,6 +200,11 @@ public class ModifyActiveOperationMaintainConfRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether to enable the feature. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Enabled.</li>
+         * <li><strong>0</strong>: Disabled.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -75,7 +75,7 @@ public class CreatePxfuseRequest extends Request {
         } 
 
         /**
-         * <p>PolarDB-X实例名称</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class CreatePxfuseRequest extends Request {
         }
 
         /**
-         * <p>地域ID</p>
+         * <p>The region where the instance resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -67,7 +67,7 @@ public class DescribeTransformStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The monitoring data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -235,7 +235,10 @@ public class DescribeTransformStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * CanCancel.
+             * <p>Indicates whether the task can be canceled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder canCancel(Boolean canCancel) {
                 this.canCancel = canCancel;
@@ -243,7 +246,10 @@ public class DescribeTransformStatusResponseBody extends TeaModel {
             }
 
             /**
-             * CanFinish.
+             * <p>Indicates whether the current task is completed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder canFinish(Boolean canFinish) {
                 this.canFinish = canFinish;
@@ -251,7 +257,14 @@ public class DescribeTransformStatusResponseBody extends TeaModel {
             }
 
             /**
-             * CanSwitch.
+             * <p>Indicates whether a migration switchover can be performed. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: Yes.</li>
+             * <li><strong>false</strong>: No.</li>
+             * </ul>
+             * <blockquote>
+             * <p>This parameter is used by the one-click upgrade feature of PolarDB.</p>
+             * </blockquote>
              */
             public Builder canSwitch(Boolean canSwitch) {
                 this.canSwitch = canSwitch;
@@ -259,7 +272,7 @@ public class DescribeTransformStatusResponseBody extends TeaModel {
             }
 
             /**
-             * CanUndoSwitch.
+             * <p>Indicates whether the switchover operation can be undone.</p>
              */
             public Builder canUndoSwitch(Boolean canUndoSwitch) {
                 this.canUndoSwitch = canUndoSwitch;
@@ -267,7 +280,10 @@ public class DescribeTransformStatusResponseBody extends TeaModel {
             }
 
             /**
-             * EnterpriseInsName.
+             * <p>The name of the Enterprise instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxc-*****</p>
              */
             public Builder enterpriseInsName(String enterpriseInsName) {
                 this.enterpriseInsName = enterpriseInsName;
@@ -275,7 +291,10 @@ public class DescribeTransformStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Phase.
+             * <p>The current migration or upgrade phase.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>none</p>
              */
             public Builder phase(String phase) {
                 this.phase = phase;
@@ -283,7 +302,7 @@ public class DescribeTransformStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ReportSummary.
+             * <p>The report summary.</p>
              */
             public Builder reportSummary(java.util.Map<String, ?> reportSummary) {
                 this.reportSummary = reportSummary;
@@ -291,7 +310,10 @@ public class DescribeTransformStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ReportTime.
+             * <p>The generation date of the data report.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-09-02 16:52:47.0</p>
              */
             public Builder reportTime(Long reportTime) {
                 this.reportTime = reportTime;
@@ -299,7 +321,10 @@ public class DescribeTransformStatusResponseBody extends TeaModel {
             }
 
             /**
-             * StandardInsName.
+             * <p>The name of the standard instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxc-*****</p>
              */
             public Builder standardInsName(String standardInsName) {
                 this.standardInsName = standardInsName;

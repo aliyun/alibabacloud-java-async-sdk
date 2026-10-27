@@ -80,7 +80,7 @@ public class DescribeOpenSearchConnectionInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details of the access denial.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -88,7 +88,7 @@ public class DescribeOpenSearchConnectionInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data struct.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -230,7 +230,10 @@ public class DescribeOpenSearchConnectionInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * AuthAction.
+             * <p>The authentication action.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -238,7 +241,10 @@ public class DescribeOpenSearchConnectionInfoResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalDisplayName.
+             * <p>The display name of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -246,7 +252,10 @@ public class DescribeOpenSearchConnectionInfoResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalOwnerId.
+             * <p>The owner ID of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder authPrincipalOwnerId(String authPrincipalOwnerId) {
                 this.authPrincipalOwnerId = authPrincipalOwnerId;
@@ -254,7 +263,10 @@ public class DescribeOpenSearchConnectionInfoResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalType.
+             * <p>The description is the same as above.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>222</p>
              */
             public Builder authPrincipalType(String authPrincipalType) {
                 this.authPrincipalType = authPrincipalType;
@@ -262,7 +274,10 @@ public class DescribeOpenSearchConnectionInfoResponseBody extends TeaModel {
             }
 
             /**
-             * EncodedDiagnosticMessage.
+             * <p>The diagnostic information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
              */
             public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
                 this.encodedDiagnosticMessage = encodedDiagnosticMessage;
@@ -281,7 +296,10 @@ public class DescribeOpenSearchConnectionInfoResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * <p>The policy type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PRIORITY</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -374,7 +392,10 @@ public class DescribeOpenSearchConnectionInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * Enabled.
+             * <p>Specifies whether static frame check is enabled. Default value: false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -382,7 +403,10 @@ public class DescribeOpenSearchConnectionInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Host.
+             * <p>The host address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.118.102.0/24</p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -390,7 +414,10 @@ public class DescribeOpenSearchConnectionInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * <p>The port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3306</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -398,7 +425,10 @@ public class DescribeOpenSearchConnectionInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * <p>The URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://static.yipigai.cn/timuocr/tmp_c29e30497575a40193a24a7a83654e30e21b951cc6856cdb.jpg">https://static.yipigai.cn/timuocr/tmp_c29e30497575a40193a24a7a83654e30e21b951cc6856cdb.jpg</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -491,7 +521,14 @@ public class DescribeOpenSearchConnectionInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * Enabled.
+             * <p>The service activation status. Valid values:</p>
+             * <ul>
+             * <li><strong>on</strong>: Activated.</li>
+             * <li><strong>off</strong>: Not activated.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -499,7 +536,10 @@ public class DescribeOpenSearchConnectionInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Host.
+             * <p>The hostname. Retrieves data under the specified host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://secnet-defense-vastip.oss-cn-hangzhou.aliyuncs.com">https://secnet-defense-vastip.oss-cn-hangzhou.aliyuncs.com</a></p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -507,7 +547,10 @@ public class DescribeOpenSearchConnectionInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * <p>The port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3306</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -515,7 +558,10 @@ public class DescribeOpenSearchConnectionInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * <p>The URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://static.yipigai.cn/timuocr/tmp_c29e30497575a40193a24a7a83654e30e21b951cc6856cdb.jpg">https://static.yipigai.cn/timuocr/tmp_c29e30497575a40193a24a7a83654e30e21b951cc6856cdb.jpg</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -595,7 +641,10 @@ public class DescribeOpenSearchConnectionInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * Enabled.
+             * <p>Specifies whether to enable the echo feature. This parameter is required. Valid values: true/false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -603,7 +652,10 @@ public class DescribeOpenSearchConnectionInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Host.
+             * <p>The OSS domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.118.214.0/24</p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -611,7 +663,10 @@ public class DescribeOpenSearchConnectionInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * <p>The port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3306</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -691,7 +746,10 @@ public class DescribeOpenSearchConnectionInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * Enabled.
+             * <p>Specifies whether to enable dead-letter message delivery.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -699,7 +757,10 @@ public class DescribeOpenSearchConnectionInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Host.
+             * <p>The machine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.98.83.0/24</p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -707,7 +768,10 @@ public class DescribeOpenSearchConnectionInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * <p>The port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3306</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -826,7 +890,7 @@ public class DescribeOpenSearchConnectionInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * DashboardEndpoint.
+             * <p>The internal endpoint of the OpenSearch Dashboard.</p>
              */
             public Builder dashboardEndpoint(DashboardEndpoint dashboardEndpoint) {
                 this.dashboardEndpoint = dashboardEndpoint;
@@ -834,7 +898,7 @@ public class DescribeOpenSearchConnectionInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DashboardPublicEndpoint.
+             * <p>The public network access endpoint of the OpenSearch Dashboard.</p>
              */
             public Builder dashboardPublicEndpoint(DashboardPublicEndpoint dashboardPublicEndpoint) {
                 this.dashboardPublicEndpoint = dashboardPublicEndpoint;
@@ -842,7 +906,10 @@ public class DescribeOpenSearchConnectionInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultUsername.
+             * <p>The default account name of OpenSearch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>elastic</p>
              */
             public Builder defaultUsername(String defaultUsername) {
                 this.defaultUsername = defaultUsername;
@@ -850,7 +917,7 @@ public class DescribeOpenSearchConnectionInfoResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateEndpoint.
+             * <p>The VPC endpoint of the instance.</p>
              */
             public Builder privateEndpoint(PrivateEndpoint privateEndpoint) {
                 this.privateEndpoint = privateEndpoint;
@@ -858,7 +925,18 @@ public class DescribeOpenSearchConnectionInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * <p>The protocol of the monitoring task. Valid values:</p>
+             * <ul>
+             * <li><strong>ICMP</strong>.</li>
+             * <li><strong>TCP</strong>.</li>
+             * <li><strong>HTTP</strong>.</li>
+             * </ul>
+             * <blockquote>
+             * <p>Private network monitoring supports only the ICMP and TCP protocols.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTP</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -866,7 +944,7 @@ public class DescribeOpenSearchConnectionInfoResponseBody extends TeaModel {
             }
 
             /**
-             * PublicEndpoint.
+             * <p>The public endpoint of the instance.</p>
              */
             public Builder publicEndpoint(PublicEndpoint publicEndpoint) {
                 this.publicEndpoint = publicEndpoint;

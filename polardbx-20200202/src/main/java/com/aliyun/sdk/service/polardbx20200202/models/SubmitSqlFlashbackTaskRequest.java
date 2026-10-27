@@ -205,6 +205,7 @@ public class SubmitSqlFlashbackTaskRequest extends Request {
         } 
 
         /**
+         * <p>The database name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -217,6 +218,7 @@ public class SubmitSqlFlashbackTaskRequest extends Request {
         }
 
         /**
+         * <p>The end time for executing the flashback SQL.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -229,6 +231,7 @@ public class SubmitSqlFlashbackTaskRequest extends Request {
         }
 
         /**
+         * <p>The instance ID of the PolarDB-X instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -241,6 +244,11 @@ public class SubmitSqlFlashbackTaskRequest extends Request {
         }
 
         /**
+         * <p>The restore type. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: image-based restore.</li>
+         * <li><strong>0</strong>: reverse restore.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -253,7 +261,14 @@ public class SubmitSqlFlashbackTaskRequest extends Request {
         }
 
         /**
-         * RecallType.
+         * <p>The match type. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: exact match.</li>
+         * <li><strong>1</strong>: fuzzy match.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder recallType(String recallType) {
             this.putQueryParameter("RecallType", recallType);
@@ -262,6 +277,7 @@ public class SubmitSqlFlashbackTaskRequest extends Request {
         }
 
         /**
+         * <p>The region where the instance resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -274,7 +290,10 @@ public class SubmitSqlFlashbackTaskRequest extends Request {
         }
 
         /**
-         * SqlPk.
+         * <p>The primary key of the flashback SQL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1111</p>
          */
         public Builder sqlPk(String sqlPk) {
             this.putQueryParameter("SqlPk", sqlPk);
@@ -283,7 +302,10 @@ public class SubmitSqlFlashbackTaskRequest extends Request {
         }
 
         /**
-         * SqlType.
+         * <p>The type of SQL statement. Valid values: INSERT, UPDATE, and DELETE. Separate multiple types with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INSERT,UPDATE</p>
          */
         public Builder sqlType(String sqlType) {
             this.putQueryParameter("SqlType", sqlType);
@@ -292,6 +314,7 @@ public class SubmitSqlFlashbackTaskRequest extends Request {
         }
 
         /**
+         * <p>The start time for executing the flashback SQL.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -304,7 +327,10 @@ public class SubmitSqlFlashbackTaskRequest extends Request {
         }
 
         /**
-         * TableName.
+         * <p>The name of the table on which the flashback SQL operation is performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);
@@ -313,7 +339,10 @@ public class SubmitSqlFlashbackTaskRequest extends Request {
         }
 
         /**
-         * TraceId.
+         * <p>The trace ID of the flashback SQL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ase*****</p>
          */
         public Builder traceId(String traceId) {
             this.putQueryParameter("TraceId", traceId);

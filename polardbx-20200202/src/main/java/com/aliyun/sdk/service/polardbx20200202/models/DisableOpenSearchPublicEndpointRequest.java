@@ -89,6 +89,7 @@ public class DisableOpenSearchPublicEndpointRequest extends Request {
         } 
 
         /**
+         * <p>The name of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +102,14 @@ public class DisableOpenSearchPublicEndpointRequest extends Request {
         }
 
         /**
-         * NodeType.
+         * <p>The type of the target node. Valid values:</p>
+         * <ul>
+         * <li><strong>search</strong>: data node. This is the default value.</li>
+         * <li><strong>dashboard</strong>: dashboard node.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>search</p>
          */
         public Builder nodeType(String nodeType) {
             this.putQueryParameter("NodeType", nodeType);
@@ -110,6 +118,7 @@ public class DisableOpenSearchPublicEndpointRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

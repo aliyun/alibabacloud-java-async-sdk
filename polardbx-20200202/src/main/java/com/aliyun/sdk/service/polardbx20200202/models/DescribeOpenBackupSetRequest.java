@@ -88,6 +88,7 @@ public class DescribeOpenBackupSetRequest extends Request {
         } 
 
         /**
+         * <p>The instance name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,7 +101,10 @@ public class DescribeOpenBackupSetRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -109,7 +113,10 @@ public class DescribeOpenBackupSetRequest extends Request {
         }
 
         /**
-         * RestoreTime.
+         * <p>The point in time to which you want to restore the instance. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-10-14T00:00:00Z</p>
          */
         public Builder restoreTime(String restoreTime) {
             this.putQueryParameter("RestoreTime", restoreTime);

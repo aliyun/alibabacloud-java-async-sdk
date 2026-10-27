@@ -67,7 +67,10 @@ public class DescribeScaleOutMigrateTaskListResponseBody extends TeaModel {
         } 
 
         /**
-         * Progress.
+         * <p>The progress of the migration task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32</p>
          */
         public Builder progress(Integer progress) {
             this.progress = progress;
@@ -75,7 +78,10 @@ public class DescribeScaleOutMigrateTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C458B1E8-1683-3645-B154-6BA32080EEA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

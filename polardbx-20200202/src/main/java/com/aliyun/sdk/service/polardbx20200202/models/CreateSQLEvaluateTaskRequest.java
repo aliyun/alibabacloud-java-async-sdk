@@ -230,6 +230,7 @@ public class CreateSQLEvaluateTaskRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDBInstances</a> operation to query the details of all instances in the target region, including instance IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -242,7 +243,10 @@ public class CreateSQLEvaluateTaskRequest extends Request {
         }
 
         /**
-         * DstDb.
+         * <p>The ID of the instance on which the target SQL statement is executed. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDBInstances</a> operation to query the details of the target SQL statement, including the instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>transfer_for_st</p>
          */
         public Builder dstDb(String dstDb) {
             this.putQueryParameter("DstDb", dstDb);
@@ -251,7 +255,10 @@ public class CreateSQLEvaluateTaskRequest extends Request {
         }
 
         /**
-         * DstPassword.
+         * <p>The password of the target SQL statement. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDBInstances</a> operation to query the details of the target SQL statement, including the password.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder dstPassword(String dstPassword) {
             this.putQueryParameter("DstPassword", dstPassword);
@@ -260,7 +267,10 @@ public class CreateSQLEvaluateTaskRequest extends Request {
         }
 
         /**
-         * DstResId.
+         * <p>The ID of the target SQL statement. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDBInstances</a> operation to query the details of the target SQL statement, including the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxc-zkrc1****l54rc</p>
          */
         public Builder dstResId(String dstResId) {
             this.putQueryParameter("DstResId", dstResId);
@@ -269,7 +279,10 @@ public class CreateSQLEvaluateTaskRequest extends Request {
         }
 
         /**
-         * DstUserName.
+         * <p>The username of the destination instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drds_test</p>
          */
         public Builder dstUserName(String dstUserName) {
             this.putQueryParameter("DstUserName", dstUserName);
@@ -278,6 +291,7 @@ public class CreateSQLEvaluateTaskRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the instance. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196841.html">DescribeRegions</a> operation to query the regions supported by PolarDB-X, including region IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -290,7 +304,10 @@ public class CreateSQLEvaluateTaskRequest extends Request {
         }
 
         /**
-         * SlinkTaskDesc.
+         * <p>The description of the target SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-drds-&gt;auto</p>
          */
         public Builder slinkTaskDesc(String slinkTaskDesc) {
             this.putQueryParameter("SlinkTaskDesc", slinkTaskDesc);
@@ -299,7 +316,10 @@ public class CreateSQLEvaluateTaskRequest extends Request {
         }
 
         /**
-         * SlinkTaskId.
+         * <p>The task ID for executing the target SQL statement. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeCloudCenterInstances</a> operation to query the IDs of target SQL statements supported by PolarDB-X.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>etx-szr2rr6i*****</p>
          */
         public Builder slinkTaskId(String slinkTaskId) {
             this.putQueryParameter("SlinkTaskId", slinkTaskId);
@@ -308,7 +328,10 @@ public class CreateSQLEvaluateTaskRequest extends Request {
         }
 
         /**
-         * SrcDb.
+         * <p>Specifies whether to enable the source ApsaraDB RDS instance. Valid values: <strong>enable</strong>: enables the source ApsaraDB RDS instance. <strong>disabled</strong>: disables the source ApsaraDB RDS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>transfer_test3</p>
          */
         public Builder srcDb(String srcDb) {
             this.putQueryParameter("SrcDb", srcDb);
@@ -317,7 +340,10 @@ public class CreateSQLEvaluateTaskRequest extends Request {
         }
 
         /**
-         * SrcPassword.
+         * <p>The port number of the source instance. Valid values: 3200 to 3999. &gt; This parameter is available and required only when <strong>DBEndpointInstanceType</strong> is set to <strong>polardb-o</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder srcPassword(String srcPassword) {
             this.putQueryParameter("SrcPassword", srcPassword);
@@ -326,7 +352,10 @@ public class CreateSQLEvaluateTaskRequest extends Request {
         }
 
         /**
-         * SrcResId.
+         * <p>The ID of the source ApsaraDB RDS instance. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196836.html">DescribeDropSystemEventMetaList</a> operation to query the details of all source ApsaraDB RDS instances in the target region, including instance IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxc-shr****rgkh87z</p>
          */
         public Builder srcResId(String srcResId) {
             this.putQueryParameter("SrcResId", srcResId);
@@ -335,7 +364,10 @@ public class CreateSQLEvaluateTaskRequest extends Request {
         }
 
         /**
-         * SrcResType.
+         * <p>The type of the source instance. Valid values: RDS_MYSQL, POLARX1, POLARX2_STANDARD, POLARX2_ENTERPRISE, and POLARDB_M.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>POLARX2</p>
          */
         public Builder srcResType(String srcResType) {
             this.putQueryParameter("SrcResType", srcResType);
@@ -344,7 +376,10 @@ public class CreateSQLEvaluateTaskRequest extends Request {
         }
 
         /**
-         * SrcUserName.
+         * <p>The username of the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drds_test</p>
          */
         public Builder srcUserName(String srcUserName) {
             this.putQueryParameter("SrcUserName", srcUserName);

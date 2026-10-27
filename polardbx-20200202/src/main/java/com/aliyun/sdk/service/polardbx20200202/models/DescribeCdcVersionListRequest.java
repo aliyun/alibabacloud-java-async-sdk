@@ -87,7 +87,10 @@ public class DescribeCdcVersionListRequest extends Request {
         } 
 
         /**
-         * DBInstanceName.
+         * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxc-bjrl7****k2vp7</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.putQueryParameter("DBInstanceName", DBInstanceName);
@@ -96,7 +99,10 @@ public class DescribeCdcVersionListRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * <p>The name of the CDC instance. This parameter specifies the CDC instance for which to query versions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxc-***</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -105,7 +111,10 @@ public class DescribeCdcVersionListRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the region where the instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

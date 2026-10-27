@@ -75,7 +75,7 @@ public class DescribePxfuseSecurityIpsRequest extends Request {
         } 
 
         /**
-         * <p>PolarDB-X逻辑实例名称</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class DescribePxfuseSecurityIpsRequest extends Request {
         }
 
         /**
-         * <p>地域ID</p>
+         * <p>The region ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

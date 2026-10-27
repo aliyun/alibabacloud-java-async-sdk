@@ -67,7 +67,10 @@ public class CheckSqlAuditSlsStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>173CA69A-3513-591D-8A09-C1EA37CBE2D9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,14 @@ public class CheckSqlAuditSlsStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The enabling status of the SQL audit feature. Valid values:</p>
+         * <ul>
+         * <li>enabled: The feature is enabled.</li>
+         * <li>disabled: The feature is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         public Builder status(String status) {
             this.status = status;

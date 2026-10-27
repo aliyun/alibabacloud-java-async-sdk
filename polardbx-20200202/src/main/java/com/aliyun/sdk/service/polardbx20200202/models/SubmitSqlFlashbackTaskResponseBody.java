@@ -93,7 +93,7 @@ public class SubmitSqlFlashbackTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The data returned by the request.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +101,10 @@ public class SubmitSqlFlashbackTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The description of the request result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +112,10 @@ public class SubmitSqlFlashbackTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +123,10 @@ public class SubmitSqlFlashbackTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -170,7 +179,10 @@ public class SubmitSqlFlashbackTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * TaskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1111</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

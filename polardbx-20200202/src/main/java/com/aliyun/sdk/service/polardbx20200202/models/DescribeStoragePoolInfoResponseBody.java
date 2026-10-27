@@ -80,7 +80,10 @@ public class DescribeStoragePoolInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -88,7 +91,7 @@ public class DescribeStoragePoolInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The instance details.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -256,7 +259,10 @@ public class DescribeStoragePoolInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * Class.
+             * <p>The specification type of the instance (the specification code).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>polar.mysql.x4.large</p>
              */
             public Builder _class(String _class) {
                 this._class = _class;
@@ -264,7 +270,10 @@ public class DescribeStoragePoolInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DnIdList.
+             * <p>The list of DNs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[pxc-xdb-s-pxcbj<strong><strong>xxnwp0wac2c4\&quot;,\&quot;pxc-xdb-s-pxcbjr3b8</strong></strong>p0wa1589\&quot;]</p>
              */
             public Builder dnIdList(java.util.List<String> dnIdList) {
                 this.dnIdList = dnIdList;
@@ -283,7 +292,10 @@ public class DescribeStoragePoolInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Extra.
+             * <p>A reserved field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;appId\&quot;:\&quot;APP_ETLUP1E5FMI5ND5IFO8W\&quot;}</p>
              */
             public Builder extra(String extra) {
                 this.extra = extra;
@@ -291,7 +303,10 @@ public class DescribeStoragePoolInfoResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreated.
+             * <p>The time when the account was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-08-27 23:19:52.0</p>
              */
             public Builder gmtCreated(String gmtCreated) {
                 this.gmtCreated = gmtCreated;
@@ -299,7 +314,10 @@ public class DescribeStoragePoolInfoResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The time when the storage pool was last modified, in timestamp format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-09-02 16:52:47.0</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -307,7 +325,10 @@ public class DescribeStoragePoolInfoResponseBody extends TeaModel {
             }
 
             /**
-             * IdleDNIdList.
+             * <p>The list of idle DNs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>none</p>
              */
             public Builder idleDNIdList(java.util.List<String> idleDNIdList) {
                 this.idleDNIdList = idleDNIdList;
@@ -315,7 +336,10 @@ public class DescribeStoragePoolInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-cacheapi</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -323,7 +347,10 @@ public class DescribeStoragePoolInfoResponseBody extends TeaModel {
             }
 
             /**
-             * UnDeletableDNId.
+             * <p>The DN that cannot be deleted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxc-xdb-s-hzr*****6j4se284344</p>
              */
             public Builder unDeletableDNId(String unDeletableDNId) {
                 this.unDeletableDNId = unDeletableDNId;
@@ -377,7 +404,7 @@ public class DescribeStoragePoolInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * StoragePools.
+             * <p>The storage pools.</p>
              */
             public Builder storagePools(java.util.List<StoragePools> storagePools) {
                 this.storagePools = storagePools;

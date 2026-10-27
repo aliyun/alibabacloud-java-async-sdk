@@ -105,6 +105,7 @@ public class CreateOpenSearchAccountRequest extends Request {
         } 
 
         /**
+         * <p>The name of the account to be created.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,6 +118,7 @@ public class CreateOpenSearchAccountRequest extends Request {
         }
 
         /**
+         * <p>The password of the account. The password must be 6 to 32 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters (!@#$&amp;%^*()_+-=).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,6 +131,7 @@ public class CreateOpenSearchAccountRequest extends Request {
         }
 
         /**
+         * <p>The name of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,6 +144,7 @@ public class CreateOpenSearchAccountRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

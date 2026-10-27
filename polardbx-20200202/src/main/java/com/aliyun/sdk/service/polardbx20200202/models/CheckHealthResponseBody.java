@@ -67,7 +67,10 @@ public class CheckHealthResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>173CA69A-3513-591D-8A09-C1EA37CBE2D9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class CheckHealthResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>Indicates whether the component is healthy. A return value of UP indicates healthy. Any other value or an empty value indicates an exception.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UP</p>
          */
         public Builder status(String status) {
             this.status = status;

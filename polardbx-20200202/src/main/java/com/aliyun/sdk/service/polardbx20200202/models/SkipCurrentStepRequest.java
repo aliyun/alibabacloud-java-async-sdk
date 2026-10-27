@@ -87,7 +87,10 @@ public class SkipCurrentStepRequest extends Request {
         } 
 
         /**
-         * CurrentStep.
+         * <p>The current operation step number of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PRE_CHECK</p>
          */
         public Builder currentStep(String currentStep) {
             this.putQueryParameter("CurrentStep", currentStep);
@@ -96,7 +99,10 @@ public class SkipCurrentStepRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region where the instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -105,7 +111,10 @@ public class SkipCurrentStepRequest extends Request {
         }
 
         /**
-         * SlinkTaskId.
+         * <p>The import task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>etx-szr2rr6i*****</p>
          */
         public Builder slinkTaskId(String slinkTaskId) {
             this.putQueryParameter("SlinkTaskId", slinkTaskId);

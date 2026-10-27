@@ -106,7 +106,7 @@ public class DescribeBinaryLogListResponseBody extends TeaModel {
         } 
 
         /**
-         * LogList.
+         * <p>The list of binary log files.</p>
          */
         public Builder logList(java.util.List<LogList> logList) {
             this.logList = logList;
@@ -114,7 +114,10 @@ public class DescribeBinaryLogListResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class DescribeBinaryLogListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of binary logs returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class DescribeBinaryLogListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2DFF784E-DC31-5BBC-9B25-9261CD9E0AA9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class DescribeBinaryLogListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalNumber.
+         * <p>The total number of binary log files returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalNumber(Integer totalNumber) {
             this.totalNumber = totalNumber;
@@ -321,7 +333,10 @@ public class DescribeBinaryLogListResponseBody extends TeaModel {
             } 
 
             /**
-             * BeginTime.
+             * <p>The start time of the log. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-09-09 10:27:46</p>
              */
             public Builder beginTime(String beginTime) {
                 this.beginTime = beginTime;
@@ -329,7 +344,10 @@ public class DescribeBinaryLogListResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedTime.
+             * <p>The creation time of the file. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-09-09 10:27:46</p>
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -337,7 +355,10 @@ public class DescribeBinaryLogListResponseBody extends TeaModel {
             }
 
             /**
-             * DownloadLink.
+             * <p>The download URL of the file. The URL is valid for two days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://polarx-cdc-binlog-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/polardbx_cdc/pxc-hzfd132143sfds1/binlog.000001?Expires=1636469502&OSSAccessKeyId=LT13fds12dsafddsf&Signature=fdpm%bdsfadsa%2F%bdsafdsaf%3D">http://polarx-cdc-binlog-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/polardbx_cdc/pxc-hzfd132143sfds1/binlog.000001?Expires=1636469502&amp;OSSAccessKeyId=LT13fds12dsafddsf&amp;Signature=fdpm%bdsfadsa%2F%bdsafdsaf%3D</a></p>
              */
             public Builder downloadLink(String downloadLink) {
                 this.downloadLink = downloadLink;
@@ -345,7 +366,10 @@ public class DescribeBinaryLogListResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time of the binary log. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-11-09 10:27:46</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -353,7 +377,10 @@ public class DescribeBinaryLogListResponseBody extends TeaModel {
             }
 
             /**
-             * FileName.
+             * <p>The name of the binary log file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>binlog.000001</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -361,7 +388,10 @@ public class DescribeBinaryLogListResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The unique ID of the record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -369,7 +399,10 @@ public class DescribeBinaryLogListResponseBody extends TeaModel {
             }
 
             /**
-             * LogSize.
+             * <p>The size of the log file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>536870912</p>
              */
             public Builder logSize(Long logSize) {
                 this.logSize = logSize;
@@ -377,7 +410,10 @@ public class DescribeBinaryLogListResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * <p>The last update time. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-11-09 10:27:46</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -385,7 +421,14 @@ public class DescribeBinaryLogListResponseBody extends TeaModel {
             }
 
             /**
-             * PurgeStatus.
+             * <p>The cleanup status. Valid values:</p>
+             * <ul>
+             * <li>0: Not deleted. </li>
+             * <li>1: Deleted.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder purgeStatus(Integer purgeStatus) {
                 this.purgeStatus = purgeStatus;
@@ -393,7 +436,10 @@ public class DescribeBinaryLogListResponseBody extends TeaModel {
             }
 
             /**
-             * UploadHost.
+             * <p>The backup host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.110.88.9</p>
              */
             public Builder uploadHost(String uploadHost) {
                 this.uploadHost = uploadHost;
@@ -401,7 +447,15 @@ public class DescribeBinaryLogListResponseBody extends TeaModel {
             }
 
             /**
-             * UploadStatus.
+             * <p>The backup status. Valid values:</p>
+             * <ul>
+             * <li>0: Not backed up. </li>
+             * <li>1: Being backed up. </li>
+             * <li>2: Backed up.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder uploadStatus(Integer uploadStatus) {
                 this.uploadStatus = uploadStatus;

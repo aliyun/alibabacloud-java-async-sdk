@@ -130,7 +130,10 @@ public class DescribeOpenSearchInstancesRequest extends Request {
         } 
 
         /**
-         * DBInstanceName.
+         * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxc-spsil01pww4hfz</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.putQueryParameter("DBInstanceName", DBInstanceName);
@@ -139,7 +142,10 @@ public class DescribeOpenSearchInstancesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries per page for a paging query. Maximum value: 100. Default value: If you do not specify a value or the value is less than 10, the default value is 10. If the value is greater than 100, the default value is 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -148,7 +154,10 @@ public class DescribeOpenSearchInstancesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxdds</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -157,7 +166,10 @@ public class DescribeOpenSearchInstancesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -166,7 +178,10 @@ public class DescribeOpenSearchInstancesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -175,6 +190,7 @@ public class DescribeOpenSearchInstancesRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

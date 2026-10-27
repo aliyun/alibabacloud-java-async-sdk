@@ -80,7 +80,10 @@ public class CreateGdnStandbyMemberResponseBody extends TeaModel {
         } 
 
         /**
-         * DBInstanceName.
+         * <p>The name of the created instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxc-hzravgpt8q****</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.DBInstanceName = DBInstanceName;
@@ -88,7 +91,10 @@ public class CreateGdnStandbyMemberResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;

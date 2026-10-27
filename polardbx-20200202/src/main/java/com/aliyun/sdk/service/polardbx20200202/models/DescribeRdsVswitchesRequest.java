@@ -87,7 +87,10 @@ public class DescribeRdsVswitchesRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>The region in which the instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -96,7 +99,10 @@ public class DescribeRdsVswitchesRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * <p>The ID of the VPC in which the access endpoint resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1ndou****twoedlmru0</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -105,7 +111,10 @@ public class DescribeRdsVswitchesRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-a</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

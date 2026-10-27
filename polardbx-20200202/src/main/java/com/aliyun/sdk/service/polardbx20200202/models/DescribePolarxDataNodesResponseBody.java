@@ -106,7 +106,7 @@ public class DescribePolarxDataNodesResponseBody extends TeaModel {
         } 
 
         /**
-         * DBInstanceDataNodes.
+         * <p>The list of node information.</p>
          */
         public Builder DBInstanceDataNodes(java.util.List<DBInstanceDataNodes> DBInstanceDataNodes) {
             this.DBInstanceDataNodes = DBInstanceDataNodes;
@@ -114,7 +114,10 @@ public class DescribePolarxDataNodesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class DescribePolarxDataNodesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class DescribePolarxDataNodesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BD99340C-4A45-548B-****-27584B0BCFFF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class DescribePolarxDataNodesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalNumber.
+         * <p>The total number of nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder totalNumber(Integer totalNumber) {
             this.totalNumber = totalNumber;
@@ -217,7 +229,10 @@ public class DescribePolarxDataNodesResponseBody extends TeaModel {
             } 
 
             /**
-             * DBInstanceDescription.
+             * <p>The description of the node instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxc-z****nfxsxy728 : PROD-OMS-Auto-ProductionDBCloneInstance</p>
              */
             public Builder DBInstanceDescription(String DBInstanceDescription) {
                 this.DBInstanceDescription = DBInstanceDescription;
@@ -225,7 +240,10 @@ public class DescribePolarxDataNodesResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxc-hzrlcjc****sz9</p>
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -233,7 +251,10 @@ public class DescribePolarxDataNodesResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceName.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxc-hzrp5m****04w4</p>
              */
             public Builder DBInstanceName(String DBInstanceName) {
                 this.DBInstanceName = DBInstanceName;

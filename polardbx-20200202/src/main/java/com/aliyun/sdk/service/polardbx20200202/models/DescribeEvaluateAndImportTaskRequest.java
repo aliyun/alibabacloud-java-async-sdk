@@ -74,6 +74,7 @@ public class DescribeEvaluateAndImportTaskRequest extends Request {
         } 
 
         /**
+         * <p>The region where the instance resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,10 @@ public class DescribeEvaluateAndImportTaskRequest extends Request {
         }
 
         /**
-         * SlinkTaskId.
+         * <p>The ID of the link task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>etx-szr2rr6i*****</p>
          */
         public Builder slinkTaskId(String slinkTaskId) {
             this.putQueryParameter("SlinkTaskId", slinkTaskId);

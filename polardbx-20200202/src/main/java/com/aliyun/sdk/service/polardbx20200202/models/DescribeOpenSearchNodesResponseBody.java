@@ -80,7 +80,7 @@ public class DescribeOpenSearchNodesResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details of the access denial.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -88,7 +88,7 @@ public class DescribeOpenSearchNodesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data struct.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -230,7 +230,10 @@ public class DescribeOpenSearchNodesResponseBody extends TeaModel {
             } 
 
             /**
-             * AuthAction.
+             * <p>The authentication action.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -238,7 +241,10 @@ public class DescribeOpenSearchNodesResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalDisplayName.
+             * <p>The identity used for authentication in the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -246,7 +252,10 @@ public class DescribeOpenSearchNodesResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalOwnerId.
+             * <p>The owner ID of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder authPrincipalOwnerId(String authPrincipalOwnerId) {
                 this.authPrincipalOwnerId = authPrincipalOwnerId;
@@ -254,7 +263,10 @@ public class DescribeOpenSearchNodesResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalType.
+             * <p>The type of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>222</p>
              */
             public Builder authPrincipalType(String authPrincipalType) {
                 this.authPrincipalType = authPrincipalType;
@@ -262,7 +274,10 @@ public class DescribeOpenSearchNodesResponseBody extends TeaModel {
             }
 
             /**
-             * EncodedDiagnosticMessage.
+             * <p>The encoded diagnostic message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
              */
             public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
                 this.encodedDiagnosticMessage = encodedDiagnosticMessage;
@@ -270,7 +285,10 @@ public class DescribeOpenSearchNodesResponseBody extends TeaModel {
             }
 
             /**
-             * NoPermissionType.
+             * <p>The type of the permission denial.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ImplicitDeny</p>
              */
             public Builder noPermissionType(String noPermissionType) {
                 this.noPermissionType = noPermissionType;
@@ -278,7 +296,10 @@ public class DescribeOpenSearchNodesResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * <p>The policy type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PRIORITY</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -488,7 +509,10 @@ public class DescribeOpenSearchNodesResponseBody extends TeaModel {
             } 
 
             /**
-             * CpuCores.
+             * <p>The number of CPU cores of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder cpuCores(Integer cpuCores) {
                 this.cpuCores = cpuCores;
@@ -496,7 +520,10 @@ public class DescribeOpenSearchNodesResponseBody extends TeaModel {
             }
 
             /**
-             * CpuPercent.
+             * <p>The CPU usage (%).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>35.6</p>
              */
             public Builder cpuPercent(String cpuPercent) {
                 this.cpuPercent = cpuPercent;
@@ -504,7 +531,10 @@ public class DescribeOpenSearchNodesResponseBody extends TeaModel {
             }
 
             /**
-             * DiskSizeGB.
+             * <p>The total disk capacity of the node, in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder diskSizeGB(Integer diskSizeGB) {
                 this.diskSizeGB = diskSizeGB;
@@ -512,7 +542,10 @@ public class DescribeOpenSearchNodesResponseBody extends TeaModel {
             }
 
             /**
-             * DiskUsedPercent.
+             * <p>The disk space usage of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>42.5</p>
              */
             public Builder diskUsedPercent(String diskUsedPercent) {
                 this.diskUsedPercent = diskUsedPercent;
@@ -520,7 +553,10 @@ public class DescribeOpenSearchNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Health.
+             * <p>The total number of unresolved baseline check items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GREEN</p>
              */
             public Builder health(String health) {
                 this.health = health;
@@ -528,7 +564,10 @@ public class DescribeOpenSearchNodesResponseBody extends TeaModel {
             }
 
             /**
-             * HeapPercent.
+             * <p>The JVM heap memory usage of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>38.2</p>
              */
             public Builder heapPercent(String heapPercent) {
                 this.heapPercent = heapPercent;
@@ -536,7 +575,10 @@ public class DescribeOpenSearchNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Host.
+             * <p>The IP address and port of the session host that initiated the session.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.115.107.0/24</p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -544,7 +586,10 @@ public class DescribeOpenSearchNodesResponseBody extends TeaModel {
             }
 
             /**
-             * HostName.
+             * <p>The name of the host on which the node instance runs. You can log on to the host and run the <code>hostname</code> command to view the hostname.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hb2h-ali-oceanbase-public-online-013</p>
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -552,7 +597,10 @@ public class DescribeOpenSearchNodesResponseBody extends TeaModel {
             }
 
             /**
-             * LoadOneM.
+             * <p>The average system load of the node over the last 1 minute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.25</p>
              */
             public Builder loadOneM(String loadOneM) {
                 this.loadOneM = loadOneM;
@@ -560,7 +608,10 @@ public class DescribeOpenSearchNodesResponseBody extends TeaModel {
             }
 
             /**
-             * MemoryGB.
+             * <p>The amount of memory used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder memoryGB(Integer memoryGB) {
                 this.memoryGB = memoryGB;
@@ -568,7 +619,15 @@ public class DescribeOpenSearchNodesResponseBody extends TeaModel {
             }
 
             /**
-             * NodeType.
+             * <p>The node type to query. Valid values:</p>
+             * <ul>
+             * <li>all: queries both dn and gms nodes.</li>
+             * <li>gms: queries only gms nodes.</li>
+             * <li>dn: queries only dn nodes.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>dn</p>
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -576,7 +635,10 @@ public class DescribeOpenSearchNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * <p>The port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3306</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -584,7 +646,10 @@ public class DescribeOpenSearchNodesResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing-i</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -638,7 +703,7 @@ public class DescribeOpenSearchNodesResponseBody extends TeaModel {
             } 
 
             /**
-             * Result.
+             * <p>The query result object.</p>
              */
             public Builder result(java.util.List<Result> result) {
                 this.result = result;

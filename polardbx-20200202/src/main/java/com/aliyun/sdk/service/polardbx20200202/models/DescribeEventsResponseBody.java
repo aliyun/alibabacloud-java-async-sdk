@@ -106,7 +106,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         } 
 
         /**
-         * EventItems.
+         * <p>The event items.</p>
          */
         public Builder eventItems(java.util.List<EventItems> eventItems) {
             this.eventItems = eventItems;
@@ -114,7 +114,10 @@ public class DescribeEventsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class DescribeEventsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class DescribeEventsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4748127A-6D50-432C-B635-433467074C27</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class DescribeEventsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * <p>The total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalRecordCount(Long totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -321,7 +333,10 @@ public class DescribeEventsResponseBody extends TeaModel {
             } 
 
             /**
-             * EventId.
+             * <p>The event ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50421290</p>
              */
             public Builder eventId(Long eventId) {
                 this.eventId = eventId;
@@ -329,7 +344,10 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * EventName.
+             * <p>The event name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ModifySecurityIps</p>
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -337,7 +355,10 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * EventPayload.
+             * <p>The additional information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;Domain\&quot;: \&quot;rds-cn-hangzhou.aliyuncs.com\&quot;}</p>
              */
             public Builder eventPayload(String eventPayload) {
                 this.eventPayload = eventPayload;
@@ -345,7 +366,10 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * EventReason.
+             * <p>The reason.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FROM_USER</p>
              */
             public Builder eventReason(String eventReason) {
                 this.eventReason = eventReason;
@@ -353,7 +377,10 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * EventRecordTime.
+             * <p>The record time. The time is in the YYYY-MM-DDTHH:mm:ssZ format in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-10-15T06:39:49Z</p>
              */
             public Builder eventRecordTime(String eventRecordTime) {
                 this.eventRecordTime = eventRecordTime;
@@ -361,7 +388,10 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * EventTime.
+             * <p>The event time. The time is in the YYYY-MM-DDTHH:mm:ssZ format in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-10-15T06:35:00Z</p>
              */
             public Builder eventTime(String eventTime) {
                 this.eventTime = eventTime;
@@ -369,7 +399,10 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * EventType.
+             * <p>The event type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SecurityManagement</p>
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -377,7 +410,10 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * EventUserType.
+             * <p>The event user type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>USRE</p>
              */
             public Builder eventUserType(String eventUserType) {
                 this.eventUserType = eventUserType;
@@ -385,7 +421,10 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -393,7 +432,10 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceName.
+             * <p>The resource name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>px-bp1v8udesc89g156g</p>
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -401,7 +443,10 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * <p>The resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>instance</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;

@@ -75,6 +75,7 @@ public class CancelActiveOperationTasksRequest extends Request {
         } 
 
         /**
+         * <p>The event IDs, separated by commas.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class CancelActiveOperationTasksRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

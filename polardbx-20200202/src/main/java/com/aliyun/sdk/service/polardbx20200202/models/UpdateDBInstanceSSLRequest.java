@@ -103,7 +103,10 @@ public class UpdateDBInstanceSSLRequest extends Request {
         } 
 
         /**
-         * CertCommonName.
+         * <p>The domain name bound to the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxc-hzrqjarxdocd4t.polarx.rds.aliyuncs.com</p>
          */
         public Builder certCommonName(String certCommonName) {
             this.putQueryParameter("CertCommonName", certCommonName);
@@ -112,6 +115,7 @@ public class UpdateDBInstanceSSLRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,6 +128,7 @@ public class UpdateDBInstanceSSLRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether to enable SSL.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -136,7 +141,10 @@ public class UpdateDBInstanceSSLRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

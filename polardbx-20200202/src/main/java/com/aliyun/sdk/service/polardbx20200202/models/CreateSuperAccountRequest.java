@@ -119,7 +119,10 @@ public class CreateSuperAccountRequest extends Request {
         } 
 
         /**
-         * AccountDescription.
+         * <p>The account description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testdbadescription</p>
          */
         public Builder accountDescription(String accountDescription) {
             this.putQueryParameter("AccountDescription", accountDescription);
@@ -128,6 +131,7 @@ public class CreateSuperAccountRequest extends Request {
         }
 
         /**
+         * <p>The account name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,6 +144,7 @@ public class CreateSuperAccountRequest extends Request {
         }
 
         /**
+         * <p>The account password.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,6 +157,7 @@ public class CreateSuperAccountRequest extends Request {
         }
 
         /**
+         * <p>The instance name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -164,6 +170,7 @@ public class CreateSuperAccountRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

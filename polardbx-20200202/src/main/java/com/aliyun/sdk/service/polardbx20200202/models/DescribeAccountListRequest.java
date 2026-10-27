@@ -103,7 +103,10 @@ public class DescribeAccountListRequest extends Request {
         } 
 
         /**
-         * AccountName.
+         * <p>The name of the account. Specify this parameter to query a specific account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testaccount</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -112,7 +115,14 @@ public class DescribeAccountListRequest extends Request {
         }
 
         /**
-         * AccountType.
+         * <p>The type of the account. Specify this parameter to query accounts of a specific type. If you set this parameter to null, all accounts are returned.</p>
+         * <ul>
+         * <li>Before three-role mode is enabled: 0 indicates a standard account, and 1 indicates a privileged user account.</li>
+         * <li>After three-role mode is enabled: 0 indicates a standard account, 2 indicates a system administrator account, 3 indicates a security administrator account, and 4 indicates an audit administrator account.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder accountType(String accountType) {
             this.putQueryParameter("AccountType", accountType);
@@ -121,6 +131,7 @@ public class DescribeAccountListRequest extends Request {
         }
 
         /**
+         * <p>The name of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +144,7 @@ public class DescribeAccountListRequest extends Request {
         }
 
         /**
+         * <p>The region where the instance resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

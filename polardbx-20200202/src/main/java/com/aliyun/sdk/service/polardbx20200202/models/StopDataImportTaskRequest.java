@@ -103,7 +103,10 @@ public class StopDataImportTaskRequest extends Request {
         } 
 
         /**
-         * PageNumber.
+         * <p>The page number. The value must be greater than 0 and cannot exceed the maximum value of the integer data type. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -112,7 +115,10 @@ public class StopDataImportTaskRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values: <em><strong>30</strong></em><strong>50</strong>*<strong>100</strong>. Default value: <strong>30</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -121,6 +127,7 @@ public class StopDataImportTaskRequest extends Request {
         }
 
         /**
+         * <p>The region where the instance resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,7 +140,10 @@ public class StopDataImportTaskRequest extends Request {
         }
 
         /**
-         * SlinkTaskId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>etx-szr2rr6i*****</p>
          */
         public Builder slinkTaskId(String slinkTaskId) {
             this.putQueryParameter("SlinkTaskId", slinkTaskId);

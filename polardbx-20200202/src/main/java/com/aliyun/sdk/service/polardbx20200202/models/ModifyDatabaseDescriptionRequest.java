@@ -105,6 +105,7 @@ public class ModifyDatabaseDescriptionRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,7 +118,11 @@ public class ModifyDatabaseDescriptionRequest extends Request {
         }
 
         /**
+         * <p>The description of the database.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test database</p>
          */
         public Builder dbDescription(String dbDescription) {
             this.putQueryParameter("DbDescription", dbDescription);
@@ -126,6 +131,7 @@ public class ModifyDatabaseDescriptionRequest extends Request {
         }
 
         /**
+         * <p>The database name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,6 +144,7 @@ public class ModifyDatabaseDescriptionRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

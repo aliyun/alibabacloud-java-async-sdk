@@ -95,7 +95,7 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The instance data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -103,6 +103,7 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
         }
 
         /**
+         * <p>The HTTP status code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,6 +126,7 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
         }
 
         /**
+         * <p>Indicates whether the request was successful.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -259,7 +261,10 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * AZone.
+             * <p>The zone where the instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-h</p>
              */
             public Builder aZone(String aZone) {
                 this.aZone = aZone;
@@ -267,7 +272,10 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Disk.
+             * <p>The disk size, in MB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>204800</p>
              */
             public Builder disk(Integer disk) {
                 this.disk = disk;
@@ -275,7 +283,10 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
             }
 
             /**
-             * NodeClass.
+             * <p>The instance specifications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>polarx.x4.large.2e.cdc</p>
              */
             public Builder nodeClass(String nodeClass) {
                 this.nodeClass = nodeClass;
@@ -283,7 +294,10 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * <p>The node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -291,7 +305,10 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
             }
 
             /**
-             * NodeName.
+             * <p>The node name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxc-c-***</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -299,7 +316,10 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The instance status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACTIVATION</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -307,7 +327,10 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The instance version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>polarx-cdc-kernel-***</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -439,7 +462,10 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * ClusterType.
+             * <p>The cluster type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BINLOG_X</p>
              */
             public Builder clusterType(String clusterType) {
                 this.clusterType = clusterType;
@@ -447,7 +473,10 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Comment.
+             * <p>The instance type remarks.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -455,7 +484,10 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * <p>The multi-stream group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -463,7 +495,10 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
             }
 
             /**
-             * HashLevel.
+             * <p>The split level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RECORD</p>
              */
             public Builder hashLevel(String hashLevel) {
                 this.hashLevel = hashLevel;
@@ -471,7 +506,10 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pxc-***</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -479,7 +517,7 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
             }
 
             /**
-             * PhysicalNodes.
+             * <p>The node array.</p>
              */
             public Builder physicalNodes(java.util.List<PhysicalNodes> physicalNodes) {
                 this.physicalNodes = physicalNodes;
@@ -487,7 +525,10 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
             }
 
             /**
-             * StreamNum.
+             * <p>The number of splits.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder streamNum(Integer streamNum) {
                 this.streamNum = streamNum;
@@ -635,7 +676,10 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * BinlogPersistTime.
+             * <p>The number of days that binlogs are retained.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder binlogPersistTime(Integer binlogPersistTime) {
                 this.binlogPersistTime = binlogPersistTime;
@@ -643,6 +687,7 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The binlog size.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -654,6 +699,7 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The latest CDC version.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -665,7 +711,10 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CheckSumSwitch.
+             * <p>The checksum switch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ON</p>
              */
             public Builder checkSumSwitch(String checkSumSwitch) {
                 this.checkSumSwitch = checkSumSwitch;
@@ -673,7 +722,10 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
             }
 
             /**
-             * EnableCyclicReplication.
+             * <p>Indicates whether bidirectional replication is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableCyclicReplication(Boolean enableCyclicReplication) {
                 this.enableCyclicReplication = enableCyclicReplication;
@@ -681,7 +733,7 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceTopologyList.
+             * <p>The instance list.</p>
              */
             public Builder instanceTopologyList(java.util.List<InstanceTopologyList> instanceTopologyList) {
                 this.instanceTopologyList = instanceTopologyList;
@@ -701,7 +753,10 @@ public class DescribeCdcInfoResponseBody extends TeaModel {
             }
 
             /**
-             * VersionSupportMultiCdc.
+             * <p>Indicates whether multi-stream CDC is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder versionSupportMultiCdc(Boolean versionSupportMultiCdc) {
                 this.versionSupportMultiCdc = versionSupportMultiCdc;

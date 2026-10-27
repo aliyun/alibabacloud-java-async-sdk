@@ -103,7 +103,10 @@ public class DescribeSqlAuditInfoRequest extends Request {
         } 
 
         /**
-         * AuditAccountName.
+         * <p>The name of the audit administrator account. &gt; This parameter is required if the three-role mode is enabled. For more information, see <a href="https://help.aliyun.com/document_detail/213824.html">Three-role mode</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_daa</p>
          */
         public Builder auditAccountName(String auditAccountName) {
             this.putQueryParameter("AuditAccountName", auditAccountName);
@@ -112,7 +115,10 @@ public class DescribeSqlAuditInfoRequest extends Request {
         }
 
         /**
-         * AuditAccountPassword.
+         * <p>The password of the audit administrator account. &gt; This parameter is required if the three-role mode is enabled. For more information about the three-role mode, see <a href="https://help.aliyun.com/document_detail/213824.html">Three-role mode</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder auditAccountPassword(String auditAccountPassword) {
             this.putQueryParameter("AuditAccountPassword", auditAccountPassword);
@@ -121,6 +127,7 @@ public class DescribeSqlAuditInfoRequest extends Request {
         }
 
         /**
+         * <p>The instance ID. &gt; You can call <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDBInstances</a> to query the details of all instances in the specified region, including instance IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +140,7 @@ public class DescribeSqlAuditInfoRequest extends Request {
         }
 
         /**
+         * <p>The ID of the region in which the instance resides. &gt; You can call <a href="https://help.aliyun.com/document_detail/196841.html">DescribeRegions</a> to query the regions supported by PolarDB-X, including region IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

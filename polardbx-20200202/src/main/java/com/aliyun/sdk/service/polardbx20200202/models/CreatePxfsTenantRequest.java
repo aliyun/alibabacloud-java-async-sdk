@@ -163,7 +163,7 @@ public class CreatePxfsTenantRequest extends Request {
         } 
 
         /**
-         * <p>Agent文件服务关联的PolarDB-X实例ID。</p>
+         * <p>The PolarDB-X instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -176,7 +176,7 @@ public class CreatePxfsTenantRequest extends Request {
         }
 
         /**
-         * <p>租户容量配额，单位为字节；0表示禁止新增数据。</p>
+         * <p>The capacity quota.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -189,7 +189,7 @@ public class CreatePxfsTenantRequest extends Request {
         }
 
         /**
-         * <p>租户文件数量配额；0表示禁止新增文件。</p>
+         * <p>The file count quota.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -202,7 +202,7 @@ public class CreatePxfsTenantRequest extends Request {
         }
 
         /**
-         * <p>租户每秒请求数上限；0表示不限制。</p>
+         * <p>The request rate limit.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -214,7 +214,7 @@ public class CreatePxfsTenantRequest extends Request {
         }
 
         /**
-         * <p>租户每秒写入字节数上限；0表示不限制。</p>
+         * <p>The write bandwidth limit.</p>
          * 
          * <strong>example:</strong>
          * <p>104857600</p>
@@ -226,7 +226,7 @@ public class CreatePxfsTenantRequest extends Request {
         }
 
         /**
-         * <p>Agent文件服务实例所属地域的ID。</p>
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -239,7 +239,7 @@ public class CreatePxfsTenantRequest extends Request {
         }
 
         /**
-         * <p>Agent文件服务的租户ID。</p>
+         * <p>The ID of the tenant.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -252,7 +252,7 @@ public class CreatePxfsTenantRequest extends Request {
         }
 
         /**
-         * <p>Agent文件服务的租户名称。</p>
+         * <p>The name of the tenant.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

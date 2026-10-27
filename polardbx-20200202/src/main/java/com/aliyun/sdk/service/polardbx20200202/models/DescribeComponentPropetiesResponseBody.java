@@ -67,7 +67,7 @@ public class DescribeComponentPropetiesResponseBody extends TeaModel {
         } 
 
         /**
-         * Properties.
+         * <p>The export parameters of exception events.</p>
          */
         public Builder properties(java.util.List<Properties> properties) {
             this.properties = properties;
@@ -170,7 +170,10 @@ public class DescribeComponentPropetiesResponseBody extends TeaModel {
             } 
 
             /**
-             * Name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4C32G</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -178,7 +181,11 @@ public class DescribeComponentPropetiesResponseBody extends TeaModel {
             }
 
             /**
-             * OrderIndex.
+             * <p>The display order of the commodity module property.</p>
+             * <p>The returned content varies depending on the commodity module.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder orderIndex(String orderIndex) {
                 this.orderIndex = orderIndex;
@@ -186,7 +193,10 @@ public class DescribeComponentPropetiesResponseBody extends TeaModel {
             }
 
             /**
-             * PropertyCode.
+             * <p>The commodity module.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dn_node_spec</p>
              */
             public Builder propertyCode(String propertyCode) {
                 this.propertyCode = propertyCode;
@@ -194,7 +204,10 @@ public class DescribeComponentPropetiesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.27.35.</p>
              */
             public Builder value(String value) {
                 this.value = value;

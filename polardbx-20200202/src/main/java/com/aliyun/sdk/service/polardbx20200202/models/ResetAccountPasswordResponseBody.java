@@ -80,7 +80,10 @@ public class ResetAccountPasswordResponseBody extends TeaModel {
         } 
 
         /**
-         * Message.
+         * <p>The response message. &quot;success&quot; is returned if the request is successful. Otherwise, an error code is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -88,7 +91,10 @@ public class ResetAccountPasswordResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>73559800-3c8c-11ec-bd40-99cfcff3fe1e</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +102,10 @@ public class ResetAccountPasswordResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -102,7 +102,10 @@ public class DescribeParameterTemplatesRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxc-********</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -111,7 +114,10 @@ public class DescribeParameterTemplatesRequest extends Request {
         }
 
         /**
-         * EngineVersion.
+         * <p>The DPI engine version. Default value: 2.0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.0</p>
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -120,7 +126,14 @@ public class DescribeParameterTemplatesRequest extends Request {
         }
 
         /**
-         * ParamLevel.
+         * <p>The parameter level. Valid values:</p>
+         * <ul>
+         * <li><strong>compute</strong>: the compute layer.</li>
+         * <li><strong>storage</strong>: the storage layer.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>compute</p>
          */
         public Builder paramLevel(String paramLevel) {
             this.putQueryParameter("ParamLevel", paramLevel);
@@ -129,6 +142,7 @@ public class DescribeParameterTemplatesRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

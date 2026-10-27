@@ -80,7 +80,7 @@ public class CreatePxfsAccessTokenResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details of the access denial.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -88,7 +88,7 @@ public class CreatePxfsAccessTokenResponseBody extends TeaModel {
         }
 
         /**
-         * <p>接口返回的业务数据。</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -96,7 +96,7 @@ public class CreatePxfsAccessTokenResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求的唯一标识，可用于排查问题。</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -230,7 +230,10 @@ public class CreatePxfsAccessTokenResponseBody extends TeaModel {
             } 
 
             /**
-             * AuthAction.
+             * <p>The authentication action.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>polardbx:QueryColumnarLog</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -238,7 +241,10 @@ public class CreatePxfsAccessTokenResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalDisplayName.
+             * <p>The display name of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -246,7 +252,10 @@ public class CreatePxfsAccessTokenResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalOwnerId.
+             * <p>The owner ID of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder authPrincipalOwnerId(String authPrincipalOwnerId) {
                 this.authPrincipalOwnerId = authPrincipalOwnerId;
@@ -254,7 +263,10 @@ public class CreatePxfsAccessTokenResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalType.
+             * <p>The type of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>222</p>
              */
             public Builder authPrincipalType(String authPrincipalType) {
                 this.authPrincipalType = authPrincipalType;
@@ -262,7 +274,10 @@ public class CreatePxfsAccessTokenResponseBody extends TeaModel {
             }
 
             /**
-             * EncodedDiagnosticMessage.
+             * <p>The diagnostic message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
              */
             public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
                 this.encodedDiagnosticMessage = encodedDiagnosticMessage;
@@ -270,7 +285,10 @@ public class CreatePxfsAccessTokenResponseBody extends TeaModel {
             }
 
             /**
-             * NoPermissionType.
+             * <p>The type of the missing permission.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ImplicitDeny</p>
              */
             public Builder noPermissionType(String noPermissionType) {
                 this.noPermissionType = noPermissionType;
@@ -278,7 +296,10 @@ public class CreatePxfsAccessTokenResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * <p>The policy type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PRIORITY</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -423,7 +444,7 @@ public class CreatePxfsAccessTokenResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Agent文件服务的访问地址。</p>
+             * <p>The access endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p>agent-files.example.com</p>
@@ -434,7 +455,7 @@ public class CreatePxfsAccessTokenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>访问Token的过期时间。</p>
+             * <p>The expiration time.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-12-31T23:59:59Z</p>
@@ -445,7 +466,7 @@ public class CreatePxfsAccessTokenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Agent文件服务租户内的身份名称，不是阿里云账号UID。</p>
+             * <p>The name of the identity.</p>
              * 
              * <strong>example:</strong>
              * <p>agent-runtime</p>
@@ -456,7 +477,7 @@ public class CreatePxfsAccessTokenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>访问Token的用途标签。</p>
+             * <p>The label of the token.</p>
              * 
              * <strong>example:</strong>
              * <p>production-agent</p>
@@ -467,7 +488,7 @@ public class CreatePxfsAccessTokenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Agent文件服务的访问端口。</p>
+             * <p>The port.</p>
              * 
              * <strong>example:</strong>
              * <p>12049</p>
@@ -478,7 +499,7 @@ public class CreatePxfsAccessTokenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Agent文件服务的租户ID。</p>
+             * <p>The tenant ID.</p>
              * 
              * <strong>example:</strong>
              * <p>tenant-001</p>
@@ -489,7 +510,7 @@ public class CreatePxfsAccessTokenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>新签发的Token明文，仅在创建时返回一次，请妥善保存。</p>
+             * <p>The plaintext of the token.</p>
              * 
              * <strong>example:</strong>
              * <p>pxfs_tenant-001.token-001.******</p>

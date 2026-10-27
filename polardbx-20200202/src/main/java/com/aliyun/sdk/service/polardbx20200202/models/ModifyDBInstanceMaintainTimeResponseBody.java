@@ -54,7 +54,10 @@ public class ModifyDBInstanceMaintainTimeResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The unique request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>73559800-3c8c-11ec-bd40-99cfcff3fe1e</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

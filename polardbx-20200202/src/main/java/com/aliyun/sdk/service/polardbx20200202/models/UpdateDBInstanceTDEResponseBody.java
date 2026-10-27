@@ -67,7 +67,7 @@ public class UpdateDBInstanceTDEResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The response information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class UpdateDBInstanceTDEResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FEA5DC20-6D8A-5979-97AA-FC57546ADC20</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -128,7 +131,10 @@ public class UpdateDBInstanceTDEResponseBody extends TeaModel {
             } 
 
             /**
-             * TaskId.
+             * <p>The backend task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>42292****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

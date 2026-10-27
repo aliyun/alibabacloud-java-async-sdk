@@ -116,7 +116,10 @@ public class DescribeEventsRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * <p>The end time. Specify the time in the YYYY-MM-DDTHH:mm:ssZ format in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-10-18T03:07:25Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -125,7 +128,10 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -134,7 +140,10 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -143,6 +152,7 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,7 +165,10 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time. Specify the time in the YYYY-MM-DDTHH:mm:ssZ format in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-10-18T03:07:25Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

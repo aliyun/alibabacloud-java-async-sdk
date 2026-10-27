@@ -105,7 +105,7 @@ public class DeletePxfsUserRequest extends Request {
         } 
 
         /**
-         * <p>Agent文件服务关联的PolarDB-X实例ID。</p>
+         * <p>The PolarDB-X instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -118,7 +118,7 @@ public class DeletePxfsUserRequest extends Request {
         }
 
         /**
-         * <p>Agent文件服务租户内的身份名称，不是阿里云账号UID。</p>
+         * <p>The identity name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,7 +131,7 @@ public class DeletePxfsUserRequest extends Request {
         }
 
         /**
-         * <p>Agent文件服务实例所属地域的ID。</p>
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,7 +144,7 @@ public class DeletePxfsUserRequest extends Request {
         }
 
         /**
-         * <p>Agent文件服务的租户ID。</p>
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

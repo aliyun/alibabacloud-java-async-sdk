@@ -118,7 +118,7 @@ public class ModifyPxfsSecurityIpsRequest extends Request {
         } 
 
         /**
-         * <p>Agent文件服务关联的PolarDB-X实例ID。</p>
+         * <p>The ID of the PolarDB-X instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,7 +131,7 @@ public class ModifyPxfsSecurityIpsRequest extends Request {
         }
 
         /**
-         * <p>Agent文件服务白名单分组名称。</p>
+         * <p>The name of the whitelist group.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -143,7 +143,7 @@ public class ModifyPxfsSecurityIpsRequest extends Request {
         }
 
         /**
-         * <p>白名单修改模式：0表示覆盖，1表示添加，2表示删除。</p>
+         * <p>The modification mode of the whitelist.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -155,7 +155,7 @@ public class ModifyPxfsSecurityIpsRequest extends Request {
         }
 
         /**
-         * <p>Agent文件服务实例所属地域的ID。</p>
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -168,7 +168,7 @@ public class ModifyPxfsSecurityIpsRequest extends Request {
         }
 
         /**
-         * <p>允许访问Agent文件服务的IP地址或CIDR列表，多个条目用英文逗号分隔。</p>
+         * <p>The IP whitelist.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

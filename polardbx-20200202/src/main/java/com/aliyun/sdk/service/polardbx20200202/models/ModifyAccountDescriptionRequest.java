@@ -104,7 +104,10 @@ public class ModifyAccountDescriptionRequest extends Request {
         } 
 
         /**
-         * AccountDescription.
+         * <p>The description of the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test account</p>
          */
         public Builder accountDescription(String accountDescription) {
             this.putQueryParameter("AccountDescription", accountDescription);
@@ -113,6 +116,7 @@ public class ModifyAccountDescriptionRequest extends Request {
         }
 
         /**
+         * <p>The name of the instance account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,6 +129,7 @@ public class ModifyAccountDescriptionRequest extends Request {
         }
 
         /**
+         * <p>The name of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,6 +142,7 @@ public class ModifyAccountDescriptionRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

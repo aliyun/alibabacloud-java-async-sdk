@@ -93,7 +93,7 @@ public class ModifyOpenSearchAccessProtocolResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details of the access denial.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -101,7 +101,10 @@ public class ModifyOpenSearchAccessProtocolResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message. &quot;success&quot; is returned for a successful request. An error code is returned for a failed request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +112,21 @@ public class ModifyOpenSearchAccessProtocolResponseBody extends TeaModel {
         }
 
         /**
-         * Protocol.
+         * <p>The backend protocol. Valid values:</p>
+         * <ul>
+         * <li><p><strong>HTTP</strong> (default): supports association with HTTPS, HTTP, and QUIC listeners.</p>
+         * </li>
+         * <li><p><strong>HTTPS</strong>: supports association with HTTPS listeners.</p>
+         * </li>
+         * <li><p><strong>gRPC</strong>: supports association with HTTPS and QUIC listeners.</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>If <strong>ServerGroupType</strong> is set to <strong>Fc</strong>, you do not need to configure the backend protocol.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>icmp</p>
          */
         public Builder protocol(String protocol) {
             this.protocol = protocol;
@@ -251,7 +268,10 @@ public class ModifyOpenSearchAccessProtocolResponseBody extends TeaModel {
             } 
 
             /**
-             * AuthAction.
+             * <p>The authentication action.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -259,7 +279,10 @@ public class ModifyOpenSearchAccessProtocolResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalDisplayName.
+             * <p>The display name of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -267,7 +290,10 @@ public class ModifyOpenSearchAccessProtocolResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalOwnerId.
+             * <p>The owner ID of the authentication principal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder authPrincipalOwnerId(String authPrincipalOwnerId) {
                 this.authPrincipalOwnerId = authPrincipalOwnerId;
@@ -275,7 +301,15 @@ public class ModifyOpenSearchAccessProtocolResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalType.
+             * <p>The identity type used for authentication in the request. Valid values:</p>
+             * <ul>
+             * <li>SubUser: RAM user</li>
+             * <li>AssumedRoleUser: RAM role</li>
+             * <li>Federated: SSO federated identity</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>222</p>
              */
             public Builder authPrincipalType(String authPrincipalType) {
                 this.authPrincipalType = authPrincipalType;
@@ -283,7 +317,10 @@ public class ModifyOpenSearchAccessProtocolResponseBody extends TeaModel {
             }
 
             /**
-             * EncodedDiagnosticMessage.
+             * <p>The encoded diagnostic message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
              */
             public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
                 this.encodedDiagnosticMessage = encodedDiagnosticMessage;
@@ -291,7 +328,10 @@ public class ModifyOpenSearchAccessProtocolResponseBody extends TeaModel {
             }
 
             /**
-             * NoPermissionType.
+             * <p>The type of the permission denial.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ImplicitDeny</p>
              */
             public Builder noPermissionType(String noPermissionType) {
                 this.noPermissionType = noPermissionType;
@@ -299,7 +339,10 @@ public class ModifyOpenSearchAccessProtocolResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * <p>The policy type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PRIORITY</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
