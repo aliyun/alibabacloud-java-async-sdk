@@ -1489,6 +1489,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FileTransferSpeedLocation")
         private String fileTransferSpeedLocation;
 
+        @com.aliyun.core.annotation.NameInMap("FolderSync")
+        private String folderSync;
+
         @com.aliyun.core.annotation.NameInMap("GpuAcceleration")
         private String gpuAcceleration;
 
@@ -1844,6 +1847,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             this.fileTransferSizeLimit = builder.fileTransferSizeLimit;
             this.fileTransferSpeed = builder.fileTransferSpeed;
             this.fileTransferSpeedLocation = builder.fileTransferSpeedLocation;
+            this.folderSync = builder.folderSync;
             this.gpuAcceleration = builder.gpuAcceleration;
             this.hoverConfigMsg = builder.hoverConfigMsg;
             this.hoverHibernate = builder.hoverHibernate;
@@ -2310,6 +2314,13 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
          */
         public String getFileTransferSpeedLocation() {
             return this.fileTransferSpeedLocation;
+        }
+
+        /**
+         * @return folderSync
+         */
+        public String getFolderSync() {
+            return this.folderSync;
         }
 
         /**
@@ -3071,6 +3082,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             private String fileTransferSizeLimit; 
             private String fileTransferSpeed; 
             private String fileTransferSpeedLocation; 
+            private String folderSync; 
             private String gpuAcceleration; 
             private String hoverConfigMsg; 
             private String hoverHibernate; 
@@ -3228,6 +3240,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
                 this.fileTransferSizeLimit = model.fileTransferSizeLimit;
                 this.fileTransferSpeed = model.fileTransferSpeed;
                 this.fileTransferSpeedLocation = model.fileTransferSpeedLocation;
+                this.folderSync = model.folderSync;
                 this.gpuAcceleration = model.gpuAcceleration;
                 this.hoverConfigMsg = model.hoverConfigMsg;
                 this.hoverHibernate = model.hoverHibernate;
@@ -3923,6 +3936,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
              */
             public Builder fileTransferSpeedLocation(String fileTransferSpeedLocation) {
                 this.fileTransferSpeedLocation = fileTransferSpeedLocation;
+                return this;
+            }
+
+            /**
+             * FolderSync.
+             */
+            public Builder folderSync(String folderSync) {
+                this.folderSync = folderSync;
                 return this;
             }
 

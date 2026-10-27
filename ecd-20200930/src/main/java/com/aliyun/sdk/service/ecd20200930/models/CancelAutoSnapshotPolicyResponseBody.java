@@ -54,7 +54,7 @@ public class CancelAutoSnapshotPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>51592A88-0F2C-55E6-AD2C-2AD9C10D****</p>

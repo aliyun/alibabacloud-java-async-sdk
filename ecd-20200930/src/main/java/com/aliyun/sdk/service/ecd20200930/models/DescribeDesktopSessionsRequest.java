@@ -284,7 +284,7 @@ public class DescribeDesktopSessionsRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to check the session status within the cloud computer.</p>
+         * <p>Specifies whether to check the session status in the cloud computer.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -296,7 +296,7 @@ public class DescribeDesktopSessionsRequest extends Request {
         }
 
         /**
-         * <p>The cloud computer IDs. You can specify 1 to 100 IDs.</p>
+         * <p>The cloud computer ID. You can specify 1 to 100 IDs.</p>
          */
         public Builder desktopId(java.util.List<String> desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -317,8 +317,7 @@ public class DescribeDesktopSessionsRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query.
-         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The end time of the query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-02-13T02:51:43Z</p>
@@ -342,7 +341,7 @@ public class DescribeDesktopSessionsRequest extends Request {
         }
 
         /**
-         * <p>The end user ID. This parameter is the same as EndUserId. You only need to specify one of them.</p>
+         * <p>The end user ID. This parameter is the same as the EndUserId parameter. You only need to specify one of them.</p>
          * 
          * <strong>example:</strong>
          * <p>alice</p>
@@ -372,7 +371,7 @@ public class DescribeDesktopSessionsRequest extends Request {
         }
 
         /**
-         * <p>The language type of the response.</p>
+         * <p>The language of the response.</p>
          * 
          * <strong>example:</strong>
          * <p>zh-CN</p>
@@ -396,7 +395,7 @@ public class DescribeDesktopSessionsRequest extends Request {
         }
 
         /**
-         * <p>The page number of the current page in a paged query.</p>
+         * <p>The page number of the current page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -408,7 +407,7 @@ public class DescribeDesktopSessionsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of rows per page in a paged query.</p>
+         * <p>The maximum number of entries per page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -420,7 +419,7 @@ public class DescribeDesktopSessionsRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
+         * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions supported by Wuying Cloud Computer.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -457,8 +456,7 @@ public class DescribeDesktopSessionsRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query.
-         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The start time of the query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-01-28T02:31:43Z</p>
@@ -470,7 +468,7 @@ public class DescribeDesktopSessionsRequest extends Request {
         }
 
         /**
-         * <p>The purchase method of the cloud computer.</p>
+         * <p>The billing method of the cloud computer.</p>
          * 
          * <strong>example:</strong>
          * <p>monthPackage</p>

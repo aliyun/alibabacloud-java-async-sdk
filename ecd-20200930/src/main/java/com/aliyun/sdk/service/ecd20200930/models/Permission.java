@@ -171,7 +171,7 @@ public class Permission extends TeaModel {
         } 
 
         /**
-         * CreateTime.
+         * <p>The creation time.</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -179,7 +179,7 @@ public class Permission extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The description.</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -187,7 +187,7 @@ public class Permission extends TeaModel {
         }
 
         /**
-         * DestCidrIp.
+         * <p>The destination CIDR block.</p>
          */
         public Builder destCidrIp(String destCidrIp) {
             this.destCidrIp = destCidrIp;
@@ -195,7 +195,7 @@ public class Permission extends TeaModel {
         }
 
         /**
-         * IpProtocol.
+         * <p>The protocol type.</p>
          */
         public Builder ipProtocol(String ipProtocol) {
             this.ipProtocol = ipProtocol;
@@ -203,7 +203,7 @@ public class Permission extends TeaModel {
         }
 
         /**
-         * NicType.
+         * <p>The NIC type.</p>
          */
         public Builder nicType(String nicType) {
             this.nicType = nicType;
@@ -211,7 +211,7 @@ public class Permission extends TeaModel {
         }
 
         /**
-         * Policy.
+         * <p>The policy.</p>
          */
         public Builder policy(String policy) {
             this.policy = policy;
@@ -219,7 +219,7 @@ public class Permission extends TeaModel {
         }
 
         /**
-         * PortRange.
+         * <p>The port range.</p>
          */
         public Builder portRange(String portRange) {
             this.portRange = portRange;
@@ -227,7 +227,7 @@ public class Permission extends TeaModel {
         }
 
         /**
-         * Priority.
+         * <p>The priority.</p>
          */
         public Builder priority(String priority) {
             this.priority = priority;
@@ -235,7 +235,7 @@ public class Permission extends TeaModel {
         }
 
         /**
-         * SourceCidrIp.
+         * <p>The source CIDR block.</p>
          */
         public Builder sourceCidrIp(String sourceCidrIp) {
             this.sourceCidrIp = sourceCidrIp;
@@ -243,7 +243,7 @@ public class Permission extends TeaModel {
         }
 
         /**
-         * SourcePortRange.
+         * <p>The source port range.</p>
          */
         public Builder sourcePortRange(String sourcePortRange) {
             this.sourcePortRange = sourcePortRange;

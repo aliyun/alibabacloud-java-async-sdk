@@ -116,7 +116,7 @@ public class QueryEndUserHistoryUsageRequest extends Request {
         } 
 
         /**
-         * <p>The end date of the query. Format: yyyy-MM-dd. The date cannot be later than yesterday or earlier than StartDate. Default value: yesterday.</p>
+         * <p>The end date of the query, in yyyy-MM-dd format. The date cannot be later than yesterday or earlier than StartDate. Default value: yesterday.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-01-15</p>
@@ -128,7 +128,11 @@ public class QueryEndUserHistoryUsageRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to query Active Directory (AD) domain users. If this parameter is set to true, AD domain users are queried. If this parameter is set to false or not specified, convenience account users are queried.</p>
+         * <p>Specifies whether to query Active Directory (AD) domain users. Valid values:</p>
+         * <ul>
+         * <li>true: Queries AD domain users.</li>
+         * <li>false or unspecified: Queries convenience users.</li>
+         * </ul>
          */
         public Builder isAdUser(Boolean isAdUser) {
             this.putQueryParameter("IsAdUser", isAdUser);
@@ -161,7 +165,7 @@ public class QueryEndUserHistoryUsageRequest extends Request {
         }
 
         /**
-         * <p>The start date of the query. Format: yyyy-MM-dd. The date cannot be earlier than 32 days ago. Default value: yesterday.</p>
+         * <p>The start date of the query, in yyyy-MM-dd format. The date cannot be earlier than 32 days ago. Default value: yesterday.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-01-01</p>

@@ -215,6 +215,10 @@ public class ModifyCenterPolicyRequest extends Request {
     private String fileTransferSpeedLocation;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FolderSync")
+    private String folderSync;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GpuAcceleration")
     private String gpuAcceleration;
 
@@ -649,6 +653,7 @@ public class ModifyCenterPolicyRequest extends Request {
         this.fileTransferSizeLimit = builder.fileTransferSizeLimit;
         this.fileTransferSpeed = builder.fileTransferSpeed;
         this.fileTransferSpeedLocation = builder.fileTransferSpeedLocation;
+        this.folderSync = builder.folderSync;
         this.gpuAcceleration = builder.gpuAcceleration;
         this.hoverConfigMsg = builder.hoverConfigMsg;
         this.html5FileTransfer = builder.html5FileTransfer;
@@ -1100,6 +1105,13 @@ public class ModifyCenterPolicyRequest extends Request {
      */
     public String getFileTransferSpeedLocation() {
         return this.fileTransferSpeedLocation;
+    }
+
+    /**
+     * @return folderSync
+     */
+    public String getFolderSync() {
+        return this.folderSync;
     }
 
     /**
@@ -1817,6 +1829,7 @@ public class ModifyCenterPolicyRequest extends Request {
         private String fileTransferSizeLimit; 
         private String fileTransferSpeed; 
         private String fileTransferSpeedLocation; 
+        private String folderSync; 
         private String gpuAcceleration; 
         private String hoverConfigMsg; 
         private String html5FileTransfer; 
@@ -1968,6 +1981,7 @@ public class ModifyCenterPolicyRequest extends Request {
             this.fileTransferSizeLimit = request.fileTransferSizeLimit;
             this.fileTransferSpeed = request.fileTransferSpeed;
             this.fileTransferSpeedLocation = request.fileTransferSpeedLocation;
+            this.folderSync = request.folderSync;
             this.gpuAcceleration = request.gpuAcceleration;
             this.hoverConfigMsg = request.hoverConfigMsg;
             this.html5FileTransfer = request.html5FileTransfer;
@@ -2680,6 +2694,15 @@ public class ModifyCenterPolicyRequest extends Request {
         public Builder fileTransferSpeedLocation(String fileTransferSpeedLocation) {
             this.putQueryParameter("FileTransferSpeedLocation", fileTransferSpeedLocation);
             this.fileTransferSpeedLocation = fileTransferSpeedLocation;
+            return this;
+        }
+
+        /**
+         * FolderSync.
+         */
+        public Builder folderSync(String folderSync) {
+            this.putQueryParameter("FolderSync", folderSync);
+            this.folderSync = folderSync;
             return this;
         }
 

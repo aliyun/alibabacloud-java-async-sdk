@@ -99,7 +99,7 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of query results.</p>
+         * <p>The total number of entries returned.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -297,7 +297,7 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The terminal device serial number.</p>
+             * <p>The serial number of the terminal device.</p>
              * 
              * <strong>example:</strong>
              * <p>96c530bc-6095-4014-8bbc-d461b8ac****</p>
@@ -359,6 +359,9 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndUserId")
         private String endUserId;
 
+        @com.aliyun.core.annotation.NameInMap("LastClientIp")
+        private String lastClientIp;
+
         @com.aliyun.core.annotation.NameInMap("LatestConnectionTime")
         private Long latestConnectionTime;
 
@@ -411,6 +414,7 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             this.directoryType = builder.directoryType;
             this.endUserApplyCoordinateTime = builder.endUserApplyCoordinateTime;
             this.endUserId = builder.endUserId;
+            this.lastClientIp = builder.lastClientIp;
             this.latestConnectionTime = builder.latestConnectionTime;
             this.officeSiteId = builder.officeSiteId;
             this.officeSiteName = builder.officeSiteName;
@@ -496,6 +500,13 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
          */
         public String getEndUserId() {
             return this.endUserId;
+        }
+
+        /**
+         * @return lastClientIp
+         */
+        public String getLastClientIp() {
+            return this.lastClientIp;
         }
 
         /**
@@ -606,6 +617,7 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             private String directoryType; 
             private Long endUserApplyCoordinateTime; 
             private String endUserId; 
+            private String lastClientIp; 
             private Long latestConnectionTime; 
             private String officeSiteId; 
             private String officeSiteName; 
@@ -634,6 +646,7 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
                 this.directoryType = model.directoryType;
                 this.endUserApplyCoordinateTime = model.endUserApplyCoordinateTime;
                 this.endUserId = model.endUserId;
+                this.lastClientIp = model.lastClientIp;
                 this.latestConnectionTime = model.latestConnectionTime;
                 this.officeSiteId = model.officeSiteId;
                 this.officeSiteName = model.officeSiteName;
@@ -728,7 +741,7 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The duration of remote assistance for the end user. Unit: seconds.</p>
+             * <p>The duration of remote assistance requested by the end user. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>120</p>
@@ -746,6 +759,17 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
+                return this;
+            }
+
+            /**
+             * <p>The IP address of the last connected client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0.0.0:8080</p>
+             */
+            public Builder lastClientIp(String lastClientIp) {
+                this.lastClientIp = lastClientIp;
                 return this;
             }
 
@@ -772,7 +796,7 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the office network.</p>
+             * <p>The office network name.</p>
              * 
              * <strong>example:</strong>
              * <p>TestOfficeSite</p>
@@ -783,7 +807,7 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to check the session status within the cloud computer.</p>
+             * <p>Specifies whether to check the session status in the cloud computer.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -824,8 +848,7 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the session.
-             * The time is displayed in UTC in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+             * <p>The end time of the session. The time is displayed in UTC and follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-01-28T02:31:43Z</p>
@@ -836,7 +859,7 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The session idle duration. Unit: seconds.</p>
+             * <p>The idle duration of the session. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>120</p>
@@ -847,8 +870,7 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the session.
-             * The time is displayed in UTC in the ISO 8601 standard format: yyyy-MM-ddTHH:mm:ssZ.</p>
+             * <p>The start time of the session. The time is displayed in UTC and follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-01-28T02:31:43Z</p>
@@ -870,7 +892,7 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The purchase method of the cloud computer.</p>
+             * <p>The billing method of the cloud computer.</p>
              * 
              * <strong>example:</strong>
              * <p>monthPackage</p>

@@ -67,7 +67,7 @@ public class BatchModifyEntitlementResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The assignment results.</p>
+         * <p>The entitlements collection.</p>
          */
         public Builder entitlements(Entitlements entitlements) {
             this.entitlements = entitlements;
@@ -157,7 +157,7 @@ public class BatchModifyEntitlementResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The cloud computer ID.</p>
+             * <p>The cloud desktop ID.</p>
              * 
              * <strong>example:</strong>
              * <p>ecd-e94kzikmpljjx99pl</p>
@@ -168,7 +168,7 @@ public class BatchModifyEntitlementResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user IDs (usernames) authorized to use the cloud computer.</p>
+             * <p>The IDs of the users authorized to use the cloud desktop, which are the usernames.</p>
              */
             public Builder endUserIds(java.util.List<String> endUserIds) {
                 this.endUserIds = endUserIds;
@@ -176,7 +176,7 @@ public class BatchModifyEntitlementResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The assignment result for a single cloud computer.</p>
+             * <p>The assignment result for a single cloud desktop.</p>
              * 
              * <strong>example:</strong>
              * <p>FINISHED</p>
@@ -259,7 +259,7 @@ public class BatchModifyEntitlementResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The assignment result details.</p>
+             * <p>The collection of assignment results.</p>
              */
             public Builder assignModels(java.util.List<AssignModels> assignModels) {
                 this.assignModels = assignModels;

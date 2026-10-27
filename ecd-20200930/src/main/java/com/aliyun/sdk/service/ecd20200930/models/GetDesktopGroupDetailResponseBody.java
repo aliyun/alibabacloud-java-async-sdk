@@ -67,7 +67,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about shared cloud computers.</p>
+         * <p>The shared cloud desktop information.</p>
          */
         public Builder desktops(Desktops desktops) {
             this.desktops = desktops;
@@ -222,7 +222,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of cloud computers to purchase, which is one of the scaling policy parameters. Valid values: 0 to 200.</p>
+             * <p>One of the scaling policy parameters: the number of cloud computers to purchase. Valid values: 0 to 200.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -244,8 +244,8 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The duration for which a session is retained after disconnection. Unit: milliseconds. Valid values: 180000 (3 minutes) to 345600000 (4 days). A value of 0 indicates that the session is always retained.</p>
-             * <p>When a session is disconnected because the user actively disconnects or because of other unexpected factors, the retention period starts from the moment of disconnection. If the user does not reconnect to the session within the retention period, the session is logged off and all unsaved data is destroyed. If the user successfully reconnects within the retention period, the user can still access the original session and the data that existed before the disconnection.</p>
+             * <p>The retention period after a session is disconnected. Unit: milliseconds. Valid values: 180000 (3 minutes) to 345600000 (4 days). A value of 0 indicates that the session is always retained.</p>
+             * <p>When a session is disconnected intentionally by the user or unexpectedly due to other factors, the retention period starts from the time of disconnection. If the user does not reconnect to the session within this retention period, the session is logged off and unsaved data is destroyed. If the user successfully reconnects within this retention period, the user can enter the original session and access the data before the disconnection.</p>
              * 
              * <strong>example:</strong>
              * <p>180000</p>
@@ -256,7 +256,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The load balancing policy for multi-session shared cloud computers with multiple instances.</p>
+             * <p>The load balancing policy for multi-session shared cloud desktops.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -267,7 +267,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of cloud computers, which is one of the scaling policy parameters. Valid values: 0 to 200.</p>
+             * <p>One of the scaling policy parameters: the maximum number of cloud computers. Valid values: 0 to 200.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -278,7 +278,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The minimum number of cloud computers, which is one of the scaling policy parameters. Valid values: 0 to 200.</p>
+             * <p>One of the scaling policy parameters: the minimum number of cloud computers. Valid values: 0 to 200.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -289,9 +289,9 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The session occupancy threshold used as the trigger condition for auto scaling of multi-session shared cloud computers. The session occupancy is calculated by using the following formula:</p>
-             * <p><code>Session occupancy = Number of bound sessions / (Total number of cloud computer resources × Maximum number of sessions supported per cloud computer) × 100%</code></p>
-             * <p>When the session occupancy reaches this threshold, new cloud computers are created. When the session occupancy is below this threshold, excess cloud computers are deleted.</p>
+             * <p>The session usage threshold, which is used as the trigger for automatic scaling of multi-session shared cloud computers. The session usage is calculated by using the following formula:</p>
+             * <p><code>Session usage = Number of attached sessions / (Total number of cloud computers × Maximum number of sessions supported per cloud computer) × 100%</code></p>
+             * <p>When the session usage reaches this threshold, new cloud computers are created. If the session usage does not reach this threshold, excess cloud computers are deleted.</p>
              * 
              * <strong>example:</strong>
              * <p>0.85</p>
@@ -302,7 +302,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the scheduled task.</p>
+             * <p>The scheduled task type.</p>
              * 
              * <strong>example:</strong>
              * <p>rise</p>
@@ -409,7 +409,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the scheduled task is forcibly executed.</p>
+             * <p>Specifies whether to forcibly execute the scheduled task.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -431,7 +431,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the scheduled task.</p>
+             * <p>The scheduled task type.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -599,6 +599,9 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ScaleTimerInfos")
         private java.util.List<ScaleTimerInfos> scaleTimerInfos;
 
+        @com.aliyun.core.annotation.NameInMap("SessionType")
+        private Integer sessionType;
+
         @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
@@ -669,6 +672,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             this.resType = builder.resType;
             this.resetType = builder.resetType;
             this.scaleTimerInfos = builder.scaleTimerInfos;
+            this.sessionType = builder.sessionType;
             this.status = builder.status;
             this.stopDuration = builder.stopDuration;
             this.systemDiskCategory = builder.systemDiskCategory;
@@ -1023,6 +1027,13 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return sessionType
+         */
+        public Integer getSessionType() {
+            return this.sessionType;
+        }
+
+        /**
          * @return status
          */
         public Integer getStatus() {
@@ -1120,6 +1131,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             private Integer resType; 
             private Integer resetType; 
             private java.util.List<ScaleTimerInfos> scaleTimerInfos; 
+            private Integer sessionType; 
             private Integer status; 
             private Long stopDuration; 
             private String systemDiskCategory; 
@@ -1180,6 +1192,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
                 this.resType = model.resType;
                 this.resetType = model.resetType;
                 this.scaleTimerInfos = model.scaleTimerInfos;
+                this.sessionType = model.sessionType;
                 this.status = model.status;
                 this.stopDuration = model.stopDuration;
                 this.systemDiskCategory = model.systemDiskCategory;
@@ -1190,7 +1203,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether automatic creation of cloud computers is allowed for subscription shared cloud computers.</p>
+             * <p>Specifies whether automatic creation is allowed for subscription shared cloud desktops.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1201,7 +1214,11 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This parameter applies only to pay-as-you-go shared cloud computers. It specifies the number of cloud computers that are always reserved in the powered-on and idle state, ready for connections. Valid values:</p>
+             * <p>This parameter applies only to pay-as-you-go shared cloud desktops and indicates the number of cloud desktops that are always reserved in the started and idle state for connection. Valid values:</p>
+             * <ul>
+             * <li>0: no reservation</li>
+             * <li>N: reserve N cloud desktops (1 ≤ N ≤ 100)</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1212,7 +1229,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of concurrent sessions allowed per cloud computer in multi-session shared cloud computers with multiple instances.</p>
+             * <p>The number of concurrent sessions allowed per cloud desktop in multi-session shared cloud desktops.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -1223,7 +1240,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The initial number of cloud computers purchased. This parameter applies only to subscription shared cloud computers. Valid values: 0 to 200.</p>
+             * <p>This parameter applies only to subscription shared cloud computers and indicates the initial number of cloud computers purchased. Valid values: 0 to 200.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -1245,7 +1262,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum duration that a session can remain in the connected state. The session is automatically disconnected when this duration is reached. Unit: milliseconds.</p>
+             * <p>The maximum duration for a session to remain connected. When the session connection duration reaches this value, the session is automatically disconnected. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>3600000</p>
@@ -1256,7 +1273,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of vCPUs.</p>
+             * <p>The number of vCPU cores.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
@@ -1267,7 +1284,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time. The time is in the ISO 8601 standard in UTC.</p>
+             * <p>The creation time. The time follows the ISO 8601 standard in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-11-06T08:28Z</p>
@@ -1300,7 +1317,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user disk capacity. Unit: GiB.</p>
+             * <p>The user disk size. Unit: GiB.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>
@@ -1311,7 +1328,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the shared cloud computer.</p>
+             * <p>The ID of the shared cloud desktop.</p>
              * 
              * <strong>example:</strong>
              * <p>dg-3uiojcc0j4kh7****</p>
@@ -1322,7 +1339,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the shared cloud computer to query.</p>
+             * <p>The name of the shared cloud desktop to query.</p>
              * 
              * <strong>example:</strong>
              * <p>CloudComputerPool01</p>
@@ -1377,7 +1394,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration time of the subscription shared cloud computers. The time follows the ISO 8601 standard in UTC.</p>
+             * <p>The expiration time of the subscription shared cloud computer. The time is in the ISO 8601 standard (UTC time).</p>
              * 
              * <strong>example:</strong>
              * <p>2021-12-31T15:59Z</p>
@@ -1418,7 +1435,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum idle duration after a user session is connected. If no keyboard or mouse operation is performed within this duration, the session is disconnected. Unit: milliseconds.</p>
+             * <p>The maximum idle time before a user session is disconnected. If no keyboard or mouse operations are performed within this maximum duration after a user session is connected, the session is disconnected. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>900000</p>
@@ -1440,8 +1457,8 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The duration for which a session is retained after disconnection. Unit: milliseconds. Valid values: 180000 (3 minutes) to 345600000 (4 days). A value of 0 indicates that the session is retained indefinitely.</p>
-             * <p>When a session is disconnected because the user actively disconnects or because of unexpected factors, the retention period starts from the moment of disconnection. If the user does not reconnect to the session within the retention period, the session is logged off and all unsaved data is destroyed. If the user successfully reconnects within the retention period, the user can still access the original session and the data that existed before the disconnection.</p>
+             * <p>The retention period after a session is disconnected. Unit: milliseconds. Valid values: 180000 (3 minutes) to 345600000 (4 days). A value of 0 indicates that the session is always retained.</p>
+             * <p>When a session is disconnected intentionally by the user or unexpectedly due to other factors, the retention period starts from the time of disconnection. If the user does not reconnect to the session within this retention period, the session is logged off and unsaved data is destroyed. If the user successfully reconnects within this retention period, the user can enter the original session and access the data before the disconnection.</p>
              * 
              * <strong>example:</strong>
              * <p>180000</p>
@@ -1452,7 +1469,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The load balancing policy for multi-session shared cloud computers with multiple instances.</p>
+             * <p>The load balancing policy for multi-session shared cloud desktops.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1464,7 +1481,8 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
 
             /**
              * <ul>
-             * <li>For pay-as-you-go shared cloud computers, this parameter specifies the maximum number of cloud computers that can be created.</li>
+             * <li>For pay-as-you-go shared cloud desktops, this parameter indicates the maximum number of cloud desktops that can be created.</li>
+             * <li>For subscription shared cloud desktops, this parameter indicates the sum of the initially purchased cloud desktops (<code>BuyDesktopsCount</code>) and the number of cloud desktops allowed for automatic creation.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1488,8 +1506,8 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
 
             /**
              * <ul>
-             * <li>For pay-as-you-go shared cloud computers, this parameter indicates the minimum number of cloud computers to create.</li>
-             * <li>For subscription shared cloud computers, this parameter is equivalent to BuyDesktopsCount, indicating the number of cloud computers initially purchased.</li>
+             * <li>For pay-as-you-go shared cloud desktops, this parameter indicates the minimum number of cloud desktops to create.</li>
+             * <li>For subscription shared cloud desktops, this parameter is equivalent to <code>BuyDesktopsCount</code> and indicates the number of initially purchased cloud desktops.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1501,7 +1519,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the NAS file system used for user data roaming.</p>
+             * <p>The ID of the NAS file system used for the user data roaming feature.</p>
              * 
              * <strong>example:</strong>
              * <p>0783b4****</p>
@@ -1512,7 +1530,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the NAS file system used for user data roaming.</p>
+             * <p>The name of the NAS file system used for the user data roaming feature.</p>
              * 
              * <strong>example:</strong>
              * <p>abcd</p>
@@ -1534,10 +1552,10 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the office network to which the shared cloud computer belongs.</p>
+             * <p>The name of the office network to which the shared cloud desktop belongs.</p>
              * 
              * <strong>example:</strong>
-             * <p>R&amp;D Office Network</p>
+             * <p>R&amp;D Department Office Network</p>
              */
             public Builder officeSiteName(String officeSiteName) {
                 this.officeSiteName = officeSiteName;
@@ -1556,7 +1574,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The operating system type of the cloud computers.</p>
+             * <p>The operating system type of the cloud computer.</p>
              * 
              * <strong>example:</strong>
              * <p>Windows</p>
@@ -1567,7 +1585,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cloud computer template ID.</p>
+             * <p>The ID of the cloud desktop template.</p>
              * 
              * <strong>example:</strong>
              * <p>b-1se9fb37r5tfq****</p>
@@ -1578,7 +1596,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cloud computer template name.</p>
+             * <p>The name of the cloud desktop template.</p>
              * 
              * <strong>example:</strong>
              * <p>BundleDemo</p>
@@ -1589,7 +1607,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the shared cloud computer.</p>
+             * <p>The shared cloud desktop type.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1611,7 +1629,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the policy associated with the shared cloud computer.</p>
+             * <p>The ID of the policy associated with the shared cloud desktop.</p>
              * 
              * <strong>example:</strong>
              * <p>pg-9cktlowtxfl6****</p>
@@ -1622,7 +1640,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of policy IDs associated with the shared cloud computers.</p>
+             * <p>The list of policy IDs associated with the shared cloud computer.</p>
              */
             public Builder policyGroupIds(java.util.List<String> policyGroupIds) {
                 this.policyGroupIds = policyGroupIds;
@@ -1630,7 +1648,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Policy Name associated with the shared cloud computer.</p>
+             * <p>The policy name associated with the shared cloud desktop.</p>
              * 
              * <strong>example:</strong>
              * <p>All enabled policy</p>
@@ -1641,7 +1659,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of policy names associated with the shared cloud computers.</p>
+             * <p>The list of policy names associated with the shared cloud computer.</p>
              */
             public Builder policyGroupNames(java.util.List<String> policyGroupNames) {
                 this.policyGroupNames = policyGroupNames;
@@ -1649,7 +1667,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether user data roaming is enabled.</p>
+             * <p>Specifies whether to enable user data roaming.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1671,9 +1689,9 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The session occupancy threshold, used as the auto scaling trigger condition for multi-session shared cloud computers. The session occupancy is calculated by using the following formula:</p>
-             * <p><code>Session occupancy = Number of bound sessions / (Total number of cloud computer resources × Maximum number of sessions supported per cloud computer) × 100%</code></p>
-             * <p>When the session occupancy reaches this threshold, new cloud computers are created. When the session occupancy is below this threshold, excess cloud computers are deleted.</p>
+             * <p>The session usage threshold, which is used as the trigger condition for auto scaling of multi-session shared cloud desktops. The session usage is calculated by using the following formula:</p>
+             * <p><code>Session usage = Number of attached sessions / (Total number of cloud desktop resources × Maximum number of sessions supported per cloud desktop) × 100%</code></p>
+             * <p>When the session usage reaches this threshold, new cloud desktops are created. When the session usage does not reach this threshold, excess cloud desktops are deleted.</p>
              * 
              * <strong>example:</strong>
              * <p>0.85</p>
@@ -1695,7 +1713,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reset type of the cloud computer.</p>
+             * <p>The cloud desktop reset type.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1714,7 +1732,15 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the shared cloud computer.</p>
+             * SessionType.
+             */
+            public Builder sessionType(Integer sessionType) {
+                this.sessionType = sessionType;
+                return this;
+            }
+
+            /**
+             * <p>The status of the shared cloud desktop.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1725,7 +1751,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The idle shutdown duration. When the cloud computer has been idle for this duration, it is automatically shut down. If a user connects after shutdown, the cloud computer is automatically started. Unit: milliseconds.</p>
+             * <p>The idle shutdown time. When the idle time of the cloud desktop reaches this value, the cloud desktop is automatically shut down. If a user connects after the shutdown, the cloud desktop is automatically started. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>180000</p>
@@ -1747,7 +1773,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The system cloud disk capacity. Unit: GiB.</p>
+             * <p>The size of the system cloud disk. Unit: GiB.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>
@@ -1777,7 +1803,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version number of the shared cloud computer.</p>
+             * <p>The version number of the shared cloud desktop.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>

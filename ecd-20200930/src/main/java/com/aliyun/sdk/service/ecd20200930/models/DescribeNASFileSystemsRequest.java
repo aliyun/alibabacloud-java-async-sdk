@@ -131,7 +131,7 @@ public class DescribeNASFileSystemsRequest extends Request {
         } 
 
         /**
-         * <p>The list of NAS file system IDs.</p>
+         * <p>The IDs of the NAS file systems.</p>
          * 
          * <strong>example:</strong>
          * <p>04f314****</p>
@@ -155,7 +155,7 @@ public class DescribeNASFileSystemsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page for a paged query.    </p>
+         * <p>The number of entries to return per page in a paging query.    </p>
          * <ul>
          * <li>Maximum value: 100.    </li>
          * <li>Default value: 10.</li>
@@ -171,7 +171,7 @@ public class DescribeNASFileSystemsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</p>
+         * <p>The pagination token. Set the value to the NextToken value returned from the last API call.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -183,7 +183,7 @@ public class DescribeNASFileSystemsRequest extends Request {
         }
 
         /**
-         * <p>The office network ID.</p>
+         * <p>The ID of the office network.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou+dir-363353****</p>
@@ -195,7 +195,7 @@ public class DescribeNASFileSystemsRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by WUYING Workspace.</p>
+         * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions supported by WUYING Workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

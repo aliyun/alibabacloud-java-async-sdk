@@ -106,7 +106,7 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code.</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The cloud computers whose images can be and are pending to be updated to the version specified in <code>TaskUid</code>.</p>
+         * <p>The list of cloud computers that can be upgraded to the image version corresponding to <code>TaskUid</code> but have not been upgraded.</p>
          */
         public Builder fotaPendingDesktops(java.util.List<FotaPendingDesktops> fotaPendingDesktops) {
             this.fotaPendingDesktops = fotaPendingDesktops;
@@ -125,7 +125,7 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The message.</p>
          * 
          * <strong>example:</strong>
          * <p>Succeeded</p>
@@ -136,7 +136,7 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * <p>The pagination token for the next query. If NextToken is empty, no more results are available.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -203,10 +203,10 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the end user that connects to the cloud computer.</p>
+             * <p>The ID of the connected user.</p>
              * 
              * <strong>example:</strong>
-             * <p>end user id</p>
+             * <p>alice</p>
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -338,7 +338,7 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The current version of the image used by the cloud computer.</p>
+             * <p>The current image version of the cloud computer.</p>
              * 
              * <strong>example:</strong>
              * <p>0.0.1-D-20220513.143129</p>
@@ -363,7 +363,7 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
              * <p>The name of the cloud computer.</p>
              * 
              * <strong>example:</strong>
-             * <p>TestDesktop</p>
+             * <p>demo-computer</p>
              */
             public Builder desktopName(String desktopName) {
                 this.desktopName = desktopName;
@@ -376,7 +376,7 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
              * </blockquote>
              * 
              * <strong>example:</strong>
-             * <p>To be hidden</p>
+             * <p>windows</p>
              */
             public Builder fotaProject(String fotaProject) {
                 this.fotaProject = fotaProject;
@@ -387,7 +387,7 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
              * <p>The ID of the office network.</p>
              * 
              * <strong>example:</strong>
-             * <p>cn-hangzhou+dir-815419****</p>
+             * <p>cn-shanghai+dir-428216****</p>
              */
             public Builder officeSiteId(String officeSiteId) {
                 this.officeSiteId = officeSiteId;
@@ -395,7 +395,7 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The connected sessions.</p>
+             * <p>The list of connected sessions.</p>
              */
             public Builder sessions(java.util.List<Sessions> sessions) {
                 this.sessions = sessions;
@@ -404,17 +404,6 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
 
             /**
              * <p>The status of the cloud computer.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>0: The cloud computer is being created.</li>
-             * <li>1: The cloud computer is being started.</li>
-             * <li>2: The cloud computer is running.</li>
-             * <li>3: The cloud computer is being stopped.</li>
-             * <li>5: The cloud computer is stopped.</li>
-             * <li>6: The cloud computer expires.</li>
-             * <li>7: The cloud computer is deleted.</li>
-             * <li>9: Failed to create the cloud computer.</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>2</p>

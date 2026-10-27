@@ -119,7 +119,7 @@ public class CreateCloudDriveGroupRequest extends Request {
         } 
 
         /**
-         * <p>List of user IDs to be set as team space administrators.</p>
+         * <p>The list of user IDs to be set as team space administrators.</p>
          */
         public Builder adminUserIds(java.util.List<String> adminUserIds) {
             this.putQueryParameter("AdminUserIds", adminUserIds);
@@ -128,7 +128,7 @@ public class CreateCloudDriveGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the cloud disk in Cloud Drive Service.</p>
+         * <p>The ID of the Wuying cloud disk.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,7 +141,7 @@ public class CreateCloudDriveGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the team.</p>
+         * <p>The ID of the organizational team.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,7 +154,7 @@ public class CreateCloudDriveGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,7 +167,7 @@ public class CreateCloudDriveGroupRequest extends Request {
         }
 
         /**
-         * <p>The size of the cloud disk in Cloud Drive Service. Unit: bytes. The size is unlimited.</p>
+         * <p>The capacity of the Wuying cloud disk team space. Unit: bytes. Default value: unlimited.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

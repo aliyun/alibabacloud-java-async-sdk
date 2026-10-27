@@ -67,7 +67,7 @@ public class CopyImageResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The image ID in the destination region.</p>
+         * <p>The ID of the image in the destination region.</p>
          * 
          * <strong>example:</strong>
          * <p>m-2g65ljy3ynrdq****</p>

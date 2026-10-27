@@ -80,7 +80,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The NAS file system information list.</p>
+         * <p>The NAS file system information.</p>
          */
         public Builder fileSystems(java.util.List<FileSystems> fileSystems) {
             this.fileSystems = fileSystems;
@@ -88,7 +88,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token for the next query. An empty value indicates that no more results exist.</p>
+         * <p>The pagination token for the next query. An empty NextToken indicates that no more results are available.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -168,7 +168,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The delivery group ID.</p>
+             * <p>The ID of the delivery group.</p>
              * 
              * <strong>example:</strong>
              * <p>aig-0bz55ibznu9p7****</p>
@@ -179,7 +179,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The delivery group name.</p>
+             * <p>The name of the delivery group.</p>
              * 
              * <strong>example:</strong>
              * <p>DemoDeliveryGroup</p>
@@ -249,7 +249,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The shared cloud computer ID.</p>
+             * <p>The ID of the shared cloud desktop.</p>
              * 
              * <strong>example:</strong>
              * <p>dg-9eeyf15b25nyl****</p>
@@ -260,7 +260,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The shared cloud computer name.</p>
+             * <p>The name of the shared cloud desktop.</p>
              * 
              * <strong>example:</strong>
              * <p>test_dg</p>
@@ -330,7 +330,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The office network ID.</p>
+             * <p>The ID of the office network.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou+dir-363353****</p>
@@ -341,7 +341,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The office network name.</p>
+             * <p>The name of the office network.</p>
              * 
              * <strong>example:</strong>
              * <p>DemoOfficeNetwork</p>
@@ -736,7 +736,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether operations on user directories (adding users, deleting data) are supported.</p>
+             * <p>Indicates whether operations on user directories are supported, such as adding users and deleting data.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -747,7 +747,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of cloud application delivery group objects bound to the UPM-supported NAS file system.</p>
+             * <p>The list of cloud application delivery groups bound to the NAS file system that supports UPM.</p>
              */
             public Builder appInstanceGroups(java.util.List<AppInstanceGroups> appInstanceGroups) {
                 this.appInstanceGroups = appInstanceGroups;
@@ -768,8 +768,8 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             /**
              * <p>The total capacity of the NAS file system. Unit: GiB.</p>
              * <ul>
-             * <li>If the storage type is Capacity, the capacity is fixed at 10 PiB (10485760 GiB).</li>
-             * <li>If the storage type is Performance, the capacity is fixed at 1 PiB (1048576 GiB).</li>
+             * <li>If the storage type is Capacity, the capacity is fixed at 10 PiB, which is 10485760 GiB.</li>
+             * <li>If the storage type is Performance, the capacity is fixed at 1 PiB, which is 1048576 GiB.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -781,7 +781,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the NAS file system was created. The time is in the ISO 8601 format in UTC.</p>
+             * <p>The time when the NAS file system was created. The time follows the ISO 8601 standard in the UTC time zone.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-05-10T11:39Z</p>
@@ -803,7 +803,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of shared cloud computer objects bound to the UPM-supported NAS file system.</p>
+             * <p>The list of shared cloud desktops bound to the NAS file system that supports UPM.</p>
              */
             public Builder desktopGroups(java.util.List<DesktopGroups> desktopGroups) {
                 this.desktopGroups = desktopGroups;
@@ -822,7 +822,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The NAS file system ID.</p>
+             * <p>The ID of the NAS file system.</p>
              * 
              * <strong>example:</strong>
              * <p>04f314****</p>
@@ -866,7 +866,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The used capacity of the NAS file system. Unit: bytes.</p>
+             * <p>The used capacity of the NAS file system. Unit: Byte.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -877,7 +877,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The mount target domain name.</p>
+             * <p>The domain name of the mount target.</p>
              * 
              * <strong>example:</strong>
              * <p>04f314****-at***.cn-hangzhou.nas.aliyuncs.com</p>
@@ -888,7 +888,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The mount target status.</p>
+             * <p>The status of the mount target.</p>
              * 
              * <strong>example:</strong>
              * <p>Active</p>
@@ -899,7 +899,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The office network ID (deprecated).</p>
+             * <p><strong>[Deprecated]</strong> The ID of the office network.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou+dir-363353****</p>
@@ -910,7 +910,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The office network name (deprecated).</p>
+             * <p><strong>[Deprecated]</strong> The name of the office network.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -930,6 +930,9 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
 
             /**
              * <p>The product type of the NAS file system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CloudDesktop</p>
              */
             public Builder productType(String productType) {
                 this.productType = productType;
@@ -950,8 +953,8 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             /**
              * <p>The protocol type of the file system. Valid values:</p>
              * <ul>
-             * <li>NFS: NFS file protocol.</li>
-             * <li>SMB: SMB file protocol.</li>
+             * <li>NFS: NFS protocol</li>
+             * <li>SMB: SMB protocol</li>
              * </ul>
              * 
              * <strong>example:</strong>

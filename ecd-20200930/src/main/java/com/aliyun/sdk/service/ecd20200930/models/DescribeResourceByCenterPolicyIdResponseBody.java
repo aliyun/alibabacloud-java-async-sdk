@@ -93,7 +93,7 @@ public class DescribeResourceByCenterPolicyIdResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The total number of resources.</p>
+         * <p>The total count.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -104,7 +104,7 @@ public class DescribeResourceByCenterPolicyIdResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * <p>The token for the next query. If NextToken is empty, no more results are available.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -126,7 +126,7 @@ public class DescribeResourceByCenterPolicyIdResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The resources.</p>
+         * <p>The list of resources.</p>
          */
         public Builder resourceModelList(java.util.List<ResourceModelList> resourceModelList) {
             this.resourceModelList = resourceModelList;
@@ -192,7 +192,7 @@ public class DescribeResourceByCenterPolicyIdResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The application ID. This parameter is only applicable to cloud applications.</p>
+             * <p>The application ID. This parameter is specific to resources whose resource type is App.</p>
              * 
              * <strong>example:</strong>
              * <p>18</p>
@@ -481,7 +481,7 @@ public class DescribeResourceByCenterPolicyIdResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The cloud applications.</p>
+             * <p>The list of cloud applications.</p>
              */
             public Builder appModelList(java.util.List<AppModelList> appModelList) {
                 this.appModelList = appModelList;
@@ -500,7 +500,7 @@ public class DescribeResourceByCenterPolicyIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cloud computer type. You can call the <a href="https://help.aliyun.com/document_detail/188882.html">DescribeDesktopTypes</a> operation to query the IDs of the cloud computer types supported by Alibaba Cloud Workspace.</p>
+             * <p>The target cloud desktop specification. You can call <a href="https://help.aliyun.com/document_detail/188882.html">DescribeDesktopTypes</a> to query the specification IDs supported by WUYING Workspace.</p>
              * 
              * <strong>example:</strong>
              * <p>eds.enterprise_office.8c32g</p>
@@ -544,7 +544,7 @@ public class DescribeResourceByCenterPolicyIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The OS type.</p>
+             * <p>The operating system type.</p>
              * 
              * <strong>example:</strong>
              * <p>Linux</p>
@@ -566,7 +566,7 @@ public class DescribeResourceByCenterPolicyIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service type.</p>
+             * <p>The product type.</p>
              * 
              * <strong>example:</strong>
              * <p>desktop</p>
@@ -610,7 +610,7 @@ public class DescribeResourceByCenterPolicyIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of associated resource groups</p>
+             * <p>The number of associated resource groups.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -643,7 +643,7 @@ public class DescribeResourceByCenterPolicyIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the resource.</p>
+             * <p>The region where the resource resides.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-shenzhen</p>
@@ -665,7 +665,7 @@ public class DescribeResourceByCenterPolicyIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource status.</p>
+             * <p>The status of the resource.</p>
              * 
              * <strong>example:</strong>
              * <p>Stopped</p>

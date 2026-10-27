@@ -106,7 +106,7 @@ public class CreateCloudDriveGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned results. A value of success indicates that the operation is successful. If the operation failed, an error message is returned.</p>
+         * <p>The modification result. A value of success indicates that the operation is successful. Otherwise, an error message is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -128,7 +128,7 @@ public class CreateCloudDriveGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message that is returned. This parameter is not returned if the value of Code is success.</p>
+         * <p>The error message. This parameter is not returned when Code is success.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -139,7 +139,7 @@ public class CreateCloudDriveGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>FD14D2A1-CC39-5ED3-8EE7-11FDF4B9D6D2</p>
@@ -150,7 +150,7 @@ public class CreateCloudDriveGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call is successful. true: The call is successful. false: The call fails.</p>
+         * <p>Indicates whether the operation is successful. Valid values: true: Successful. false: Failed.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
