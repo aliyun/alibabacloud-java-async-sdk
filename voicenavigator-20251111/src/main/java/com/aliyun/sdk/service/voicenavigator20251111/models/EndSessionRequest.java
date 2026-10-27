@@ -89,7 +89,10 @@ public class EndSessionRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>36e9a4cd-a821-4f78-86fa-a9a4aefeea2e</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -98,7 +101,10 @@ public class EndSessionRequest extends Request {
         }
 
         /**
-         * ScriptId.
+         * <p>The ID of the script.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0a88e269-01f5-49ac-97af-5830f0ccb271</p>
          */
         public Builder scriptId(String scriptId) {
             this.putQueryParameter("ScriptId", scriptId);
@@ -107,6 +113,7 @@ public class EndSessionRequest extends Request {
         }
 
         /**
+         * <p>The ID of the session.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

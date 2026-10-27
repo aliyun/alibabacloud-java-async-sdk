@@ -119,7 +119,10 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>An object containing the returned call records.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,7 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>A list of invalid parameters in the request.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -159,7 +168,7 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>A8AED3C8-F57B-5D71-9A34-4A170287533F</p>
@@ -397,7 +406,10 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * Callee.
+             * <p>The callee\&quot;s phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15100000001</p>
              */
             public Builder callee(String callee) {
                 this.callee = callee;
@@ -405,7 +417,10 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Caller.
+             * <p>The caller\&quot;s phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4001027277</p>
              */
             public Builder caller(String caller) {
                 this.caller = caller;
@@ -413,7 +428,10 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * DispositionCode.
+             * <p>The disposition code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Answered</p>
              */
             public Builder dispositionCode(String dispositionCode) {
                 this.dispositionCode = dispositionCode;
@@ -421,7 +439,10 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * DispositionReason.
+             * <p>The disposition reason.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ConcurrentLimitExceeded</p>
              */
             public Builder dispositionReason(String dispositionReason) {
                 this.dispositionReason = dispositionReason;
@@ -429,7 +450,10 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>The total duration of the call, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>265</p>
              */
             public Builder duration(Integer duration) {
                 this.duration = duration;
@@ -437,7 +461,10 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time of the session, as a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1767315903531</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -445,7 +472,10 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * IssueResolved.
+             * <p>Indicates whether the customer\&quot;s issue was resolved.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder issueResolved(Boolean issueResolved) {
                 this.issueResolved = issueResolved;
@@ -453,7 +483,10 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseInitiator.
+             * <p>The party who released the call.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Customer</p>
              */
             public Builder releaseInitiator(String releaseInitiator) {
                 this.releaseInitiator = releaseInitiator;
@@ -461,7 +494,10 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ResolutionEvidence.
+             * <p>The evidence for the <code>IssueResolved</code> status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>unknown</p>
              */
             public Builder resolutionEvidence(String resolutionEvidence) {
                 this.resolutionEvidence = resolutionEvidence;
@@ -469,7 +505,10 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * SessionId.
+             * <p>The session ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>99eebcba-7f8a-4a54-b0da-603ada79d8e2</p>
              */
             public Builder sessionId(String sessionId) {
                 this.sessionId = sessionId;
@@ -477,7 +516,10 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the session, as a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1767315903531</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -485,7 +527,10 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * TalkTime.
+             * <p>The talk time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>245</p>
              */
             public Builder talkTime(Integer talkTime) {
                 this.talkTime = talkTime;
@@ -493,7 +538,10 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * TalkTurns.
+             * <p>The number of talk turns.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder talkTurns(Integer talkTurns) {
                 this.talkTurns = talkTurns;
@@ -501,7 +549,10 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * TransferTarget.
+             * <p>The transfer target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default@testinstance1</p>
              */
             public Builder transferTarget(String transferTarget) {
                 this.transferTarget = transferTarget;
@@ -509,7 +560,10 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * TransferType.
+             * <p>The transfer type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Agent</p>
              */
             public Builder transferType(String transferType) {
                 this.transferType = transferType;
@@ -602,7 +656,7 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * CallDetailRecords.
+             * <p>A list of call detail records.</p>
              */
             public Builder callDetailRecords(java.util.List<CallDetailRecords> callDetailRecords) {
                 this.callDetailRecords = callDetailRecords;
@@ -610,7 +664,10 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -618,7 +675,10 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries to return on each page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -626,7 +686,10 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries that match the query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>362</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

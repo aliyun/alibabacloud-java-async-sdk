@@ -547,6 +547,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>This API operation is used to query the script configuration details for a specific scenario, including settings for ASR, TTS, and dialog capabilities.</li>
+     * <li>No additional parameters are required in the request. The response contains configuration data for both the draft version and the published version.</li>
+     * <li>Check the <code>Data</code> field in the response to obtain detailed configuration information.</li>
+     * </ul>
+     * 
      * @param request the request parameters of GetInstanceTrendingReport  GetInstanceTrendingReportRequest
      * @return GetInstanceTrendingReportResponse
      */
@@ -619,6 +627,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <ul>
+     * <li>This operation queries the detailed script configuration for a specific scenario. The configuration includes settings for Automatic Speech Recognition (ASR), Text-to-Speech (TTS), and dialogue capabilities.</li>
+     * <li>No additional parameters are required for the request. The response contains the configuration data for both the draft and published versions.</li>
+     * <li>The detailed configuration information is returned in the <code>Data</code> field of the response.</li>
+     * </ul>
+     * 
      * @param request the request parameters of GetScript  GetScriptRequest
      * @return GetScriptResponse
      */
@@ -637,6 +653,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <ul>
+     * <li>This API returns the script configuration for a specific scenario, including settings for ASR, TTS, and conversational capability.</li>
+     * <li>This request requires no parameters. The response includes configuration data for both the draft and published versions.</li>
+     * <li>Check the <code>Data</code> field for configuration details.</li>
+     * </ul>
+     * 
      * @param request the request parameters of GetScriptTrendingReport  GetScriptTrendingReportRequest
      * @return GetScriptTrendingReportResponse
      */
@@ -799,6 +823,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <ul>
+     * <li>This API retrieves the script configuration for a specific scenario, including settings for ASR, TTS, and dialogue capability.</li>
+     * <li>This request requires no parameters. The response includes the configuration data for both the draft and published versions.</li>
+     * <li>The configuration data is returned in the <code>Data</code> field of the response.</li>
+     * </ul>
+     * 
      * @param request the request parameters of ListHistoricalInstanceReport  ListHistoricalInstanceReportRequest
      * @return ListHistoricalInstanceReportResponse
      */

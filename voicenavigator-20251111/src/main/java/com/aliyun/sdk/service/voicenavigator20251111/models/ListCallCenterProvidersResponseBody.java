@@ -119,7 +119,10 @@ public class ListCallCenterProvidersResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ListCallCenterProvidersResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The call center provider data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ListCallCenterProvidersResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class ListCallCenterProvidersResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,7 @@ public class ListCallCenterProvidersResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>A list of dynamic error parameters.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -159,7 +168,10 @@ public class ListCallCenterProvidersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75BAAB9B-40B2-5FF5-A59A-7BCF8154C6EE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -329,7 +341,10 @@ public class ListCallCenterProvidersResponseBody extends TeaModel {
             } 
 
             /**
-             * Destination.
+             * <p>The destination of the call transfer. Required if the transfer mode is <code>Bridge</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>153*********</p>
              */
             public Builder destination(String destination) {
                 this.destination = destination;
@@ -337,7 +352,10 @@ public class ListCallCenterProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p>The display name of the service provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>云联络中心内部服务提供商</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -345,7 +363,10 @@ public class ListCallCenterProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * Extras.
+             * <p>The extra data.&gt;Notice:  Format: <code>k1=v1;k2=v2</code></p>
+             * 
+             * <strong>example:</strong>
+             * <p>key1=value1</p>
              */
             public Builder extras(String extras) {
                 this.extras = extras;
@@ -353,7 +374,10 @@ public class ListCallCenterProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>36e9a4cd-a821-4f78-86fa-a9a4aefeea2e</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -361,7 +385,10 @@ public class ListCallCenterProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The service provider name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>云联络中心内部服务提供商</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -369,7 +396,10 @@ public class ListCallCenterProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * Originator.
+             * <p>The originator of the call transfer. Required if the transfer mode is <code>Bridge</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>010****</p>
              */
             public Builder originator(String originator) {
                 this.originator = originator;
@@ -377,7 +407,10 @@ public class ListCallCenterProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * ProviderId.
+             * <p>The call center provider ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxxxxxxx</p>
              */
             public Builder providerId(String providerId) {
                 this.providerId = providerId;
@@ -385,7 +418,18 @@ public class ListCallCenterProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * ProviderType.
+             * <p>The provider type.</p>
+             * <blockquote>
+             * <ul>
+             * <li><p><code>CCC</code>: Cloud Contact Center</p>
+             * </li>
+             * <li><p><code>CUSTOM</code>: customer-owned contact center</p>
+             * </li>
+             * </ul>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>CCC</p>
              */
             public Builder providerType(String providerType) {
                 this.providerType = providerType;
@@ -393,7 +437,12 @@ public class ListCallCenterProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * ReferTo.
+             * <p>The Refer address.&gt;Notice:  Required if the transfer mode is <code>Refer</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder referTo(String referTo) {
                 this.referTo = referTo;
@@ -401,7 +450,10 @@ public class ListCallCenterProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * TrunkId.
+             * <p>The trunk ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>trunk-xxx</p>
              */
             public Builder trunkId(String trunkId) {
                 this.trunkId = trunkId;
@@ -494,7 +546,10 @@ public class ListCallCenterProvidersResponseBody extends TeaModel {
             } 
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -502,7 +557,10 @@ public class ListCallCenterProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -510,7 +568,7 @@ public class ListCallCenterProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * Providers.
+             * <p>A list of call center providers.</p>
              */
             public Builder providers(java.util.List<Providers> providers) {
                 this.providers = providers;
@@ -518,7 +576,10 @@ public class ListCallCenterProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

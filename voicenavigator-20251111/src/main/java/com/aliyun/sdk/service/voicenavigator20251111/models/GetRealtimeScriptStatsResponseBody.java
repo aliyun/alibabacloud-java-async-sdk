@@ -119,7 +119,10 @@ public class GetRealtimeScriptStatsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetRealtimeScriptStatsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The real-time script statistics.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetRealtimeScriptStatsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetRealtimeScriptStatsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,7 @@ public class GetRealtimeScriptStatsResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>A list of error parameters.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -159,7 +168,7 @@ public class GetRealtimeScriptStatsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>d74d6290-7cbe-4436-b5d7-014ebb0f4060</p>
@@ -241,7 +250,10 @@ public class GetRealtimeScriptStatsResponseBody extends TeaModel {
             } 
 
             /**
-             * ConfiguredConcurrency.
+             * <p>The configured concurrency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13</p>
              */
             public Builder configuredConcurrency(Integer configuredConcurrency) {
                 this.configuredConcurrency = configuredConcurrency;
@@ -249,7 +261,10 @@ public class GetRealtimeScriptStatsResponseBody extends TeaModel {
             }
 
             /**
-             * StatsTime.
+             * <p>The time the statistics were collected, expressed as a Unix timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1774881658931</p>
              */
             public Builder statsTime(Long statsTime) {
                 this.statsTime = statsTime;
@@ -257,7 +272,10 @@ public class GetRealtimeScriptStatsResponseBody extends TeaModel {
             }
 
             /**
-             * UsedConcurrency.
+             * <p>The current concurrency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder usedConcurrency(Integer usedConcurrency) {
                 this.usedConcurrency = usedConcurrency;

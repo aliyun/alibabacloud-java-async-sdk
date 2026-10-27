@@ -74,7 +74,10 @@ public class GetDataChannelCredentialRequest extends Request {
         } 
 
         /**
-         * DeviceId.
+         * <p>The device ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d4c38420-<strong><strong>-43bc-b001-56bfc274</strong></strong></p>
          */
         public Builder deviceId(String deviceId) {
             this.putQueryParameter("DeviceId", deviceId);
@@ -83,7 +86,10 @@ public class GetDataChannelCredentialRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c28fc549-d88f-4f6e-85ad-a0806e5e39c0</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

@@ -73,7 +73,10 @@ public class DeleteVariableRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0099b75d-60fd-4c63-8541-7fbba0ae6bb0</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -82,7 +85,10 @@ public class DeleteVariableRequest extends Request {
         }
 
         /**
-         * VariableId.
+         * <p>The variable ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0099b75d-60fd-4c63-8541-7fbba0ae6bb1</p>
          */
         public Builder variableId(String variableId) {
             this.putBodyParameter("VariableId", variableId);

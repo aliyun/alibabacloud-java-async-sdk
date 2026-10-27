@@ -119,7 +119,10 @@ public class UpdateInstructionResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class UpdateInstructionResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The code of the instruction.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Transfer00</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -135,7 +141,10 @@ public class UpdateInstructionResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +152,10 @@ public class UpdateInstructionResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message. Returns &quot;Success&quot; if the request is successful, or an error message if it fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +163,7 @@ public class UpdateInstructionResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>The dynamic error parameters.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -159,7 +171,10 @@ public class UpdateInstructionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14C39896-AE6D-4643-9C9A-E0566B2C2DDD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

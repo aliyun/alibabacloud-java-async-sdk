@@ -186,7 +186,13 @@ public class BridgeWebCallRequest extends Request {
         } 
 
         /**
-         * AccessChannelId.
+         * <p>The channel ID.</p>
+         * <blockquote>
+         * <p>This parameter is valid only when AccessChannelType is set to Web or Trial.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>33606503-c22c-4547-a51c-dda5e8d87962</p>
          */
         public Builder accessChannelId(String accessChannelId) {
             this.putQueryParameter("AccessChannelId", accessChannelId);
@@ -195,7 +201,17 @@ public class BridgeWebCallRequest extends Request {
         }
 
         /**
-         * AccessChannelType.
+         * <p>The channel type.</p>
+         * <blockquote>
+         * <ul>
+         * <li>Text: text test window</li>
+         * <li>Test: test window</li>
+         * <li>Trial: trial link</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Text</p>
          */
         public Builder accessChannelType(String accessChannelType) {
             this.putQueryParameter("AccessChannelType", accessChannelType);
@@ -204,7 +220,10 @@ public class BridgeWebCallRequest extends Request {
         }
 
         /**
-         * Caller.
+         * <p>The caller number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>010123*****</p>
          */
         public Builder caller(String caller) {
             this.putQueryParameter("Caller", caller);
@@ -213,7 +232,10 @@ public class BridgeWebCallRequest extends Request {
         }
 
         /**
-         * DeviceId.
+         * <p>The device ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d4c38420-<strong><strong>-43bc-b001-56bfc274</strong></strong></p>
          */
         public Builder deviceId(String deviceId) {
             this.putQueryParameter("DeviceId", deviceId);
@@ -222,7 +244,13 @@ public class BridgeWebCallRequest extends Request {
         }
 
         /**
-         * DraftVersion.
+         * <p>Specifies whether the test environment is used.</p>
+         * <blockquote>
+         * <p>Default value: false.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder draftVersion(Boolean draftVersion) {
             this.putQueryParameter("DraftVersion", draftVersion);
@@ -231,7 +259,10 @@ public class BridgeWebCallRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>36e9a4cd-a821-4f78-86fa-a9a4aefeea2e</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -240,7 +271,10 @@ public class BridgeWebCallRequest extends Request {
         }
 
         /**
-         * SampleRate.
+         * <p>The sampling rate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8000</p>
          */
         public Builder sampleRate(Integer sampleRate) {
             this.putQueryParameter("SampleRate", sampleRate);
@@ -249,7 +283,10 @@ public class BridgeWebCallRequest extends Request {
         }
 
         /**
-         * ScriptId.
+         * <p>The script ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0a88e269-01f5-49ac-97af-5830f0ccb271</p>
          */
         public Builder scriptId(String scriptId) {
             this.putQueryParameter("ScriptId", scriptId);
@@ -258,7 +295,10 @@ public class BridgeWebCallRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>The attached data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;key&quot;:&quot;value&quot;}</p>
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);
@@ -267,7 +307,15 @@ public class BridgeWebCallRequest extends Request {
         }
 
         /**
-         * TimeoutSeconds.
+         * <p>The timeout period.</p>
+         * <blockquote>
+         * <ul>
+         * <li>If the call is not connected within the time specified by this parameter, the system actively hangs up the call. Unit: seconds. Default value: 60.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder timeoutSeconds(Integer timeoutSeconds) {
             this.putQueryParameter("TimeoutSeconds", timeoutSeconds);

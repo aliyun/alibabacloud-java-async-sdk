@@ -73,7 +73,10 @@ public class GetVocabularyRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d74d6290-7cbe-4436-b5d7-014ebb0f4060</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -82,7 +85,10 @@ public class GetVocabularyRequest extends Request {
         }
 
         /**
-         * VocabularyId.
+         * <p>The vocabulary ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d74d6290-7cbe-4436-b5d7-014ebb0f4061</p>
          */
         public Builder vocabularyId(String vocabularyId) {
             this.putBodyParameter("VocabularyId", vocabularyId);

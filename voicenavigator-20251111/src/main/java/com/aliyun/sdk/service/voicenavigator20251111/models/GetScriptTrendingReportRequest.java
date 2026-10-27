@@ -115,7 +115,16 @@ public class GetScriptTrendingReportRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * <p>The end time of the statistics. The parameter value must be a UNIX timestamp in milliseconds. It indicates the number of milliseconds that have elapsed since 00:00:00 UTC on January 1, 1970. The following limits apply:</p>
+         * <ol>
+         * <li><p>Time range: You can query data by hour for up to 7 days or by day for up to 180 days.</p>
+         * </li>
+         * <li><p>Alignment with time granularity: If you query data by hour, the minutes, seconds, and milliseconds must be 0. If you query data by day, the hours, minutes, seconds, and milliseconds must be 0. If the specified timestamp is not aligned with the time granularity, the system automatically rounds it up to the next valid time.</p>
+         * </li>
+         * </ol>
+         * 
+         * <strong>example:</strong>
+         * <p>1582103299434</p>
          */
         public Builder endTime(Long endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -124,7 +133,10 @@ public class GetScriptTrendingReportRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12f407b22cbe4890ac595f09985848d5</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -133,7 +145,10 @@ public class GetScriptTrendingReportRequest extends Request {
         }
 
         /**
-         * ScriptId.
+         * <p>The scenario ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>891264b9-5883-4068-94a6-241ceb8d51e4</p>
          */
         public Builder scriptId(String scriptId) {
             this.putBodyParameter("ScriptId", scriptId);
@@ -142,7 +157,18 @@ public class GetScriptTrendingReportRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time of the statistics. The parameter value is a UNIX timestamp in milliseconds. It indicates the number of milliseconds that have elapsed since 00:00:00 UTC on January 1, 1970. The following limits apply:</p>
+         * <ol>
+         * <li><p>Valid start time: You can query data collected within the last 365 days from the current date.</p>
+         * </li>
+         * <li><p>Alignment with time granularity: If you query data by hour, the minutes, seconds, and milliseconds must be 0. If you query data by day, the hours, minutes, seconds, and milliseconds must be 0.</p>
+         * </li>
+         * <li><p>If the specified timestamp is not aligned with the time granularity, the system automatically rounds it up to the next valid time.</p>
+         * </li>
+         * </ol>
+         * 
+         * <strong>example:</strong>
+         * <p>1582267398628</p>
          */
         public Builder startTime(Long startTime) {
             this.putBodyParameter("StartTime", startTime);
@@ -151,7 +177,10 @@ public class GetScriptTrendingReportRequest extends Request {
         }
 
         /**
-         * TimeInterval.
+         * <p>The time interval.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1d</p>
          */
         public Builder timeInterval(String timeInterval) {
             this.putBodyParameter("TimeInterval", timeInterval);

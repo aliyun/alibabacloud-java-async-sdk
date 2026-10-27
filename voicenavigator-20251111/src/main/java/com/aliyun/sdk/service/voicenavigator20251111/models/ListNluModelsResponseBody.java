@@ -119,7 +119,10 @@ public class ListNluModelsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ListNluModelsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>A list of the NLU models.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ListNluModelsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,11 @@ public class ListNluModelsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance af81a389-91f0-4157-8d82-720edd02b66a
+         *  does not exist.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +161,7 @@ public class ListNluModelsResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>The dynamic parameters for the error.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -159,7 +169,10 @@ public class ListNluModelsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7401D698-0AAC-5909-B68E-88C68805FFB8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -225,7 +238,10 @@ public class ListNluModelsResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>The model ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen-plus</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -233,7 +249,10 @@ public class ListNluModelsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The model name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>千问-Plus</p>
              */
             public Builder name(String name) {
                 this.name = name;

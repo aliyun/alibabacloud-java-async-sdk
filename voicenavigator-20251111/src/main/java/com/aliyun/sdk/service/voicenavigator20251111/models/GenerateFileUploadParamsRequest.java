@@ -87,7 +87,10 @@ public class GenerateFileUploadParamsRequest extends Request {
         } 
 
         /**
-         * BusinessType.
+         * <p>The file type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CloneVoice</p>
          */
         public Builder businessType(String businessType) {
             this.putBodyParameter("BusinessType", businessType);
@@ -96,7 +99,10 @@ public class GenerateFileUploadParamsRequest extends Request {
         }
 
         /**
-         * FileName.
+         * <p>The file name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test.wav</p>
          */
         public Builder fileName(String fileName) {
             this.putBodyParameter("FileName", fileName);
@@ -105,7 +111,10 @@ public class GenerateFileUploadParamsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>af81a389-91f0-4157-8d82-720edd02b66a</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);

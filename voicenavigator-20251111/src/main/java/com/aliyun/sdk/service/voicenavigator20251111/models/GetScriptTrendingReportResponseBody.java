@@ -119,7 +119,10 @@ public class GetScriptTrendingReportResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The service-specific error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetScriptTrendingReportResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>An array of scenario template objects.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetScriptTrendingReportResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetScriptTrendingReportResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>get upload tool url success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,7 @@ public class GetScriptTrendingReportResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>An array of error parameters.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -159,7 +168,7 @@ public class GetScriptTrendingReportResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9DB8BA95-4513-54B9-9C67-A28909CFB4AD</p>
@@ -410,7 +419,10 @@ public class GetScriptTrendingReportResponseBody extends TeaModel {
             } 
 
             /**
-             * CallsHandled.
+             * <p>The number of handled calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder callsHandled(Long callsHandled) {
                 this.callsHandled = callsHandled;
@@ -418,7 +430,10 @@ public class GetScriptTrendingReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsOffered.
+             * <p>The number of offered calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder callsOffered(Long callsOffered) {
                 this.callsOffered = callsOffered;
@@ -426,7 +441,10 @@ public class GetScriptTrendingReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsRejected.
+             * <p>The number of rejected calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder callsRejected(Long callsRejected) {
                 this.callsRejected = callsRejected;
@@ -434,7 +452,10 @@ public class GetScriptTrendingReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsResolved.
+             * <p>The number of resolved calls, based on the large model\&quot;s evaluation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder callsResolved(Long callsResolved) {
                 this.callsResolved = callsResolved;
@@ -442,7 +463,10 @@ public class GetScriptTrendingReportResponseBody extends TeaModel {
             }
 
             /**
-             * ConfiguredConcurrency.
+             * <p>The configured concurrency limit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13</p>
              */
             public Builder configuredConcurrency(Long configuredConcurrency) {
                 this.configuredConcurrency = configuredConcurrency;
@@ -450,7 +474,15 @@ public class GetScriptTrendingReportResponseBody extends TeaModel {
             }
 
             /**
-             * LabelBreakDown.
+             * <p>A JSON string that provides a breakdown of label distribution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *   &quot;label1&quot;:{ 
+             *      &quot;label1_sub1&quot;:10,
+             *      &quot;label1_sub2&quot;:2
+             * }
+             * }</p>
              */
             public Builder labelBreakDown(String labelBreakDown) {
                 this.labelBreakDown = labelBreakDown;
@@ -458,7 +490,10 @@ public class GetScriptTrendingReportResponseBody extends TeaModel {
             }
 
             /**
-             * MaxTalkTime.
+             * <p>The maximum talk time, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder maxTalkTime(Long maxTalkTime) {
                 this.maxTalkTime = maxTalkTime;
@@ -466,7 +501,12 @@ public class GetScriptTrendingReportResponseBody extends TeaModel {
             }
 
             /**
-             * RejectionBreakdown.
+             * <p>A JSON string that provides a breakdown of rejection reasons.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *   &quot;ConcurrentLimitExceeded&quot;:3
+             * }</p>
              */
             public Builder rejectionBreakdown(String rejectionBreakdown) {
                 this.rejectionBreakdown = rejectionBreakdown;
@@ -474,7 +514,16 @@ public class GetScriptTrendingReportResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseReasonBreakdown.
+             * <p>A JSON string that provides a breakdown of call disconnection reasons.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *   &quot;SilenceTimeout&quot;:1,
+             *   &quot;TurnsLimitExceeded&quot;:1,
+             *    &quot;Exception&quot;:1,
+             *    &quot;Transferred&quot;:1,
+             *    &quot;Normal&quot;:1
+             * }</p>
              */
             public Builder releaseReasonBreakdown(String releaseReasonBreakdown) {
                 this.releaseReasonBreakdown = releaseReasonBreakdown;
@@ -482,7 +531,10 @@ public class GetScriptTrendingReportResponseBody extends TeaModel {
             }
 
             /**
-             * StatsTime.
+             * <p>The start time of the interval. The value is a Unix timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1774881208361</p>
              */
             public Builder statsTime(Long statsTime) {
                 this.statsTime = statsTime;
@@ -490,7 +542,13 @@ public class GetScriptTrendingReportResponseBody extends TeaModel {
             }
 
             /**
-             * TalkTurnsDistribution.
+             * <p>A JSON string that provides a breakdown of conversation turn distribution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *   &quot;1&quot;:2,
+             *   &quot;10&quot;:3
+             * }</p>
              */
             public Builder talkTurnsDistribution(String talkTurnsDistribution) {
                 this.talkTurnsDistribution = talkTurnsDistribution;
@@ -498,7 +556,10 @@ public class GetScriptTrendingReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalInputTokens.
+             * <p>This parameter is reserved for future use.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalInputTokens(Long totalInputTokens) {
                 this.totalInputTokens = totalInputTokens;
@@ -506,7 +567,10 @@ public class GetScriptTrendingReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalOutputTokens.
+             * <p>This parameter is reserved for future use.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalOutputTokens(Long totalOutputTokens) {
                 this.totalOutputTokens = totalOutputTokens;
@@ -514,7 +578,10 @@ public class GetScriptTrendingReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalTalkTime.
+             * <p>The total talk time, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalTalkTime(Long totalTalkTime) {
                 this.totalTalkTime = totalTalkTime;
@@ -522,7 +589,10 @@ public class GetScriptTrendingReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalTokens.
+             * <p>This parameter is reserved for future use.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalTokens(Long totalTokens) {
                 this.totalTokens = totalTokens;
@@ -530,7 +600,10 @@ public class GetScriptTrendingReportResponseBody extends TeaModel {
             }
 
             /**
-             * UsedConcurrency.
+             * <p>The peak concurrency for the interval.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder usedConcurrency(Long usedConcurrency) {
                 this.usedConcurrency = usedConcurrency;

@@ -119,7 +119,10 @@ public class ListScriptsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The internal error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ListScriptsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The paginated result of the scenario list.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ListScriptsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,11 @@ public class ListScriptsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance af81a389-91f0-4157-8d82-720edd02b66a
+         *  does not exist.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +161,7 @@ public class ListScriptsResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>The list of dynamic error parameters.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -159,7 +169,10 @@ public class ListScriptsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BA092E9B-3421-5862-BC75-E646B7587531</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -355,7 +368,10 @@ public class ListScriptsResponseBody extends TeaModel {
             } 
 
             /**
-             * Concurrency.
+             * <p>The concurrency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder concurrency(Integer concurrency) {
                 this.concurrency = concurrency;
@@ -363,7 +379,10 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1773228988000</p>
              */
             public Builder createdTime(Long createdTime) {
                 this.createdTime = createdTime;
@@ -371,7 +390,10 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Used for testing</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -379,7 +401,10 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * DraftVersionId.
+             * <p>The draft version ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>efbafa38-336d-4eb0-865e-c16c97a91773</p>
              */
             public Builder draftVersionId(String draftVersionId) {
                 this.draftVersionId = draftVersionId;
@@ -387,7 +412,10 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The scenario name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Navigation test scenario</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -395,7 +423,10 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * NluAccessType.
+             * <p>The NLU invocation method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MANAGED</p>
              */
             public Builder nluAccessType(String nluAccessType) {
                 this.nluAccessType = nluAccessType;
@@ -403,7 +434,10 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * NluEngine.
+             * <p>The NLU engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BEEBOT</p>
              */
             public Builder nluEngine(String nluEngine) {
                 this.nluEngine = nluEngine;
@@ -411,7 +445,10 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * Number.
+             * <p>The number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13816111993</p>
              */
             public Builder number(String number) {
                 this.number = number;
@@ -419,7 +456,10 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * PublishedVersionId.
+             * <p>The published version ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>efbafa38-336d-4eb0-865e-c16c97a91774</p>
              */
             public Builder publishedVersionId(String publishedVersionId) {
                 this.publishedVersionId = publishedVersionId;
@@ -427,7 +467,10 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * ScriptId.
+             * <p>The scenario ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>efbafa38-336d-4eb0-865e-c16c97a91772</p>
              */
             public Builder scriptId(String scriptId) {
                 this.scriptId = scriptId;
@@ -435,7 +478,10 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DRAFT</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -443,7 +489,10 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedTime.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1773228988000</p>
              */
             public Builder updatedTime(Long updatedTime) {
                 this.updatedTime = updatedTime;
@@ -536,7 +585,10 @@ public class ListScriptsResponseBody extends TeaModel {
             } 
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -544,7 +596,10 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -552,7 +607,7 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * Scripts.
+             * <p>The list of scenarios.</p>
              */
             public Builder scripts(java.util.List<Scripts> scripts) {
                 this.scripts = scripts;
@@ -560,7 +615,10 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

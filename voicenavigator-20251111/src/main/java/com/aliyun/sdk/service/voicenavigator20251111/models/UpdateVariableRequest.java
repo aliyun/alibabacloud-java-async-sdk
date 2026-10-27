@@ -101,7 +101,10 @@ public class UpdateVariableRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The current age of the user</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -110,7 +113,10 @@ public class UpdateVariableRequest extends Request {
         }
 
         /**
-         * DisplayName.
+         * <p>The display name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Age</p>
          */
         public Builder displayName(String displayName) {
             this.putBodyParameter("DisplayName", displayName);
@@ -119,7 +125,10 @@ public class UpdateVariableRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>026ca0f4-483b-4252-ae1d-1f15f056f8b9</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -128,7 +137,10 @@ public class UpdateVariableRequest extends Request {
         }
 
         /**
-         * VariableId.
+         * <p>The variable ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>af81a389-91f0-4157-8d82-720edd02b66b</p>
          */
         public Builder variableId(String variableId) {
             this.putBodyParameter("VariableId", variableId);

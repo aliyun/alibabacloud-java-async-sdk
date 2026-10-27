@@ -73,7 +73,10 @@ public class GetRecordingRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>868eef14-7515-4856-8a50-5c9a22abdbcc</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -82,7 +85,10 @@ public class GetRecordingRequest extends Request {
         }
 
         /**
-         * SessionId.
+         * <p>The session ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>89ab28c2-eb94-4010-a539-f0eee922e371</p>
          */
         public Builder sessionId(String sessionId) {
             this.putBodyParameter("SessionId", sessionId);

@@ -73,7 +73,10 @@ public class ExportVocabularyRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>The ID of the Voice Navigator instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>af81a389-91f0-4157-8d82-720edd02b66a</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -82,7 +85,7 @@ public class ExportVocabularyRequest extends Request {
         }
 
         /**
-         * VocabularyIds.
+         * <p>The IDs of the vocabularies to export.</p>
          */
         public Builder vocabularyIds(java.util.List<String> vocabularyIds) {
             String vocabularyIdsShrink = shrink(vocabularyIds, "VocabularyIds", "json");

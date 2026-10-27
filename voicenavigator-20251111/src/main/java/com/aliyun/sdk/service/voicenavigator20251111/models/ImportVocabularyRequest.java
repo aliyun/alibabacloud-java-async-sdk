@@ -73,7 +73,10 @@ public class ImportVocabularyRequest extends Request {
         } 
 
         /**
-         * FileKey.
+         * <p>The path to the uploaded file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vocabulary/热词导入单元测试.zip</p>
          */
         public Builder fileKey(String fileKey) {
             this.putBodyParameter("FileKey", fileKey);
@@ -82,7 +85,10 @@ public class ImportVocabularyRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>af81a389-91f0-4157-8d82-720edd02b66a</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);

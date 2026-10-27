@@ -177,7 +177,10 @@ public class UpdateSubscriptionRequest extends Request {
         } 
 
         /**
-         * Endpoint.
+         * <p>The endpoint. This parameter is required when ROCKET_MQ_4 or ROCKET_MQ_5 is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rmq-cn-l4p89zajz67.cn-hangzhou.rmq.aliyuncs.com:8080</p>
          */
         public Builder endpoint(String endpoint) {
             this.putBodyParameter("Endpoint", endpoint);
@@ -186,7 +189,7 @@ public class UpdateSubscriptionRequest extends Request {
         }
 
         /**
-         * EventSubscriptions.
+         * <p>The list of subscribed events.</p>
          */
         public Builder eventSubscriptions(java.util.List<String> eventSubscriptions) {
             String eventSubscriptionsShrink = shrink(eventSubscriptions, "EventSubscriptions", "json");
@@ -196,7 +199,10 @@ public class UpdateSubscriptionRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>af81a389-91f0-4157-8d82-720edd02b66a</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -205,7 +211,10 @@ public class UpdateSubscriptionRequest extends Request {
         }
 
         /**
-         * MqInstanceId.
+         * <p>The MQ instance ID. This parameter is required when ROCKET_MQ_5 is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rmq-cn-l4p89zajz67.cn</p>
          */
         public Builder mqInstanceId(String mqInstanceId) {
             this.putBodyParameter("MqInstanceId", mqInstanceId);
@@ -214,7 +223,10 @@ public class UpdateSubscriptionRequest extends Request {
         }
 
         /**
-         * MqType.
+         * <p>The message push type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ROCKET_MQ_4</p>
          */
         public Builder mqType(String mqType) {
             this.putBodyParameter("MqType", mqType);
@@ -223,7 +235,10 @@ public class UpdateSubscriptionRequest extends Request {
         }
 
         /**
-         * Password.
+         * <p>The password. This parameter is required when ROCKET_MQ_5 is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pwd</p>
          */
         public Builder password(String password) {
             this.putBodyParameter("Password", password);
@@ -232,7 +247,10 @@ public class UpdateSubscriptionRequest extends Request {
         }
 
         /**
-         * ProducerId.
+         * <p>The producer ID. This parameter is required when ROCKET_MQ_4 is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user1</p>
          */
         public Builder producerId(String producerId) {
             this.putBodyParameter("ProducerId", producerId);
@@ -241,7 +259,10 @@ public class UpdateSubscriptionRequest extends Request {
         }
 
         /**
-         * Topic.
+         * <p>The queue topic. This parameter is required when ROCKET_MQ_4 or ROCKET_MQ_5 is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder topic(String topic) {
             this.putBodyParameter("Topic", topic);
@@ -250,7 +271,10 @@ public class UpdateSubscriptionRequest extends Request {
         }
 
         /**
-         * UserName.
+         * <p>The username. This parameter is required when ROCKET_MQ_5 is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>username</p>
          */
         public Builder userName(String userName) {
             this.putBodyParameter("UserName", userName);

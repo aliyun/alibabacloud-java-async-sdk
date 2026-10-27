@@ -119,7 +119,10 @@ public class ExportScriptResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code. A value of <code>OK</code> indicates a successful request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class ExportScriptResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The script ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>64241e64-190c-45d1-af66-06f51c07b090</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -135,7 +141,10 @@ public class ExportScriptResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +152,11 @@ public class ExportScriptResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance af81a389-91f0-4157-8d82-720edd02b66a
+         *  does not exist.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +164,7 @@ public class ExportScriptResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>The dynamic parameters for the error message.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -159,7 +172,10 @@ public class ExportScriptResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>83C6DA11-798F-5524-AB1D-555263E7A400</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

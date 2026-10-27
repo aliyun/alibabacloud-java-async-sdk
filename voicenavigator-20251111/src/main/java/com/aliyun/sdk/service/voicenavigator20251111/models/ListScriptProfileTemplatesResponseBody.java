@@ -119,7 +119,10 @@ public class ListScriptProfileTemplatesResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The internal error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ListScriptProfileTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The list of scenario templates.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ListScriptProfileTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,11 @@ public class ListScriptProfileTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance af81a389-91f0-4157-8d82-720edd02b66a
+         *  does not exist.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +161,7 @@ public class ListScriptProfileTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>The list of error parameters.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -159,7 +169,10 @@ public class ListScriptProfileTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E6E61E1A-D2DC-5ACF-AED4-A115B6691F98</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -277,7 +290,10 @@ public class ListScriptProfileTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * CreatedTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1752829090000</p>
              */
             public Builder createdTime(Long createdTime) {
                 this.createdTime = createdTime;
@@ -285,7 +301,10 @@ public class ListScriptProfileTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Build professional conversational prompt engineering from a blank document</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -293,7 +312,10 @@ public class ListScriptProfileTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The template name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>General scenario</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -301,7 +323,29 @@ public class ListScriptProfileTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Schema.
+             * <p>The template definition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *   &quot;name&quot;: &quot;General&quot;,
+             *   &quot;properties&quot;: {
+             *     &quot;prompts&quot;: {
+             *       &quot;displayName&quot;: &quot;Instruction information&quot;,
+             *       &quot;dataType&quot;: &quot;TEXT&quot;,
+             *       &quot;name&quot;: &quot;prompts&quot;,
+             *       &quot;displayOrder&quot;: 1,
+             *       &quot;defaultValue&quot;: &quot;You are a friendly and approachable chat assistant, focusing on natural Chinese conversations. Stay positive and patient, provide helpful responses, and avoid sensitive content. Honestly admit when you do not know the answer to create a relaxed and pleasant communication experience.&quot;,
+             *       &quot;attributes&quot;: {
+             *         &quot;placeholder&quot;: &quot;You are a friendly and approachable chat assistant, focusing on natural Chinese conversations. Stay positive and patient, provide helpful responses, and avoid sensitive content. Honestly admit when you do not know the answer to create a relaxed and pleasant communication experience.&quot;,
+             *         &quot;rows&quot;: 20
+             *       },
+             *       &quot;editorType&quot;: &quot;MENTIONS_TEXTAREA&quot;,
+             *       &quot;maxLength&quot;: 2000,
+             *       &quot;required&quot;: true,
+             *       &quot;group&quot;: &quot;Business description&quot;
+             *     }
+             *   }
+             * }</p>
              */
             public Builder schema(String schema) {
                 this.schema = schema;
@@ -309,7 +353,10 @@ public class ListScriptProfileTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>The template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CCC_PROMPTS_DEFAULT</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -317,7 +364,10 @@ public class ListScriptProfileTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedTime.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1752829090000</p>
              */
             public Builder updatedTime(Long updatedTime) {
                 this.updatedTime = updatedTime;

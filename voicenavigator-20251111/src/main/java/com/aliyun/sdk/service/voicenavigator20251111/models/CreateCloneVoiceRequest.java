@@ -87,7 +87,10 @@ public class CreateCloneVoiceRequest extends Request {
         } 
 
         /**
-         * FileKey.
+         * <p>The path of the uploaded file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>voice_clone/VoiceCloneUnitTest.wav</p>
          */
         public Builder fileKey(String fileKey) {
             this.putBodyParameter("FileKey", fileKey);
@@ -96,7 +99,10 @@ public class CreateCloneVoiceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>da37319b-6c83-4268-9f19-814aed62e401</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -105,7 +111,10 @@ public class CreateCloneVoiceRequest extends Request {
         }
 
         /**
-         * Model.
+         * <p>The voice cloning model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CosyVoice</p>
          */
         public Builder model(String model) {
             this.putBodyParameter("Model", model);

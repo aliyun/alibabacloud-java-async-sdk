@@ -119,7 +119,10 @@ public class ListLlmAccessProfilesResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The internal error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ListLlmAccessProfilesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The paginated list of third-party model configurations.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ListLlmAccessProfilesResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,11 @@ public class ListLlmAccessProfilesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance af81a389-91f0-4157-8d82-720edd02b66a
+         *  does not exist.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +161,7 @@ public class ListLlmAccessProfilesResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>A list of dynamic parameters associated with the error.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -159,7 +169,10 @@ public class ListLlmAccessProfilesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>A unique identifier for the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ED56B723-5802-5C32-865F-6E20B06D2455</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -264,7 +277,10 @@ public class ListLlmAccessProfilesResponseBody extends TeaModel {
             } 
 
             /**
-             * ApiKey.
+             * <p>The API key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>akm-93929110-d7c1-4014-8678-613aacd58fa2</p>
              */
             public Builder apiKey(String apiKey) {
                 this.apiKey = apiKey;
@@ -272,7 +288,10 @@ public class ListLlmAccessProfilesResponseBody extends TeaModel {
             }
 
             /**
-             * Endpoint.
+             * <p>The service endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>api.llm.enpoint.example.com</p>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -280,7 +299,10 @@ public class ListLlmAccessProfilesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>千问Omni</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -288,7 +310,10 @@ public class ListLlmAccessProfilesResponseBody extends TeaModel {
             }
 
             /**
-             * NluAccessType.
+             * <p>The NLU access type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MANAGED</p>
              */
             public Builder nluAccessType(String nluAccessType) {
                 this.nluAccessType = nluAccessType;
@@ -296,7 +321,10 @@ public class ListLlmAccessProfilesResponseBody extends TeaModel {
             }
 
             /**
-             * NluEngine.
+             * <p>The NLU engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BEEBOT</p>
              */
             public Builder nluEngine(String nluEngine) {
                 this.nluEngine = nluEngine;
@@ -402,7 +430,10 @@ public class ListLlmAccessProfilesResponseBody extends TeaModel {
             } 
 
             /**
-             * AccessProfileId.
+             * <p>The configuration ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>af81a389-91f0-4157-8d82-720edd02b66b</p>
              */
             public Builder accessProfileId(String accessProfileId) {
                 this.accessProfileId = accessProfileId;
@@ -410,7 +441,10 @@ public class ListLlmAccessProfilesResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1747620752000</p>
              */
             public Builder createdTime(Long createdTime) {
                 this.createdTime = createdTime;
@@ -418,7 +452,10 @@ public class ListLlmAccessProfilesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8fe2b8b1cdd446318610ccbc70bcfff0</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -426,7 +463,7 @@ public class ListLlmAccessProfilesResponseBody extends TeaModel {
             }
 
             /**
-             * Profile.
+             * <p>The parameter configuration.</p>
              */
             public Builder profile(Profile profile) {
                 this.profile = profile;
@@ -434,7 +471,10 @@ public class ListLlmAccessProfilesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedTime.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1768788798</p>
              */
             public Builder updatedTime(Long updatedTime) {
                 this.updatedTime = updatedTime;
@@ -527,7 +567,7 @@ public class ListLlmAccessProfilesResponseBody extends TeaModel {
             } 
 
             /**
-             * LlmAccessProfiles.
+             * <p>The list of third-party model configurations.</p>
              */
             public Builder llmAccessProfiles(java.util.List<LlmAccessProfiles> llmAccessProfiles) {
                 this.llmAccessProfiles = llmAccessProfiles;
@@ -535,7 +575,10 @@ public class ListLlmAccessProfilesResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -543,7 +586,10 @@ public class ListLlmAccessProfilesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -551,7 +597,10 @@ public class ListLlmAccessProfilesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

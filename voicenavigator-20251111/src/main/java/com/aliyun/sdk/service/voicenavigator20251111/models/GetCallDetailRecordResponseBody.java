@@ -119,7 +119,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The call detail record.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,7 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>A list of parameters related to the error.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -159,7 +168,7 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>a2c26e67-5984-4935-984e-bcee52971993</p>
@@ -209,6 +218,12 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Legacy")
         private Boolean legacy;
 
+        @com.aliyun.core.annotation.NameInMap("PlaybackStatus")
+        private String playbackStatus;
+
+        @com.aliyun.core.annotation.NameInMap("PlayedAnswer")
+        private String playedAnswer;
+
         @com.aliyun.core.annotation.NameInMap("PlayedWords")
         private Integer playedWords;
 
@@ -237,6 +252,8 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             this.extras = builder.extras;
             this.interrupted = builder.interrupted;
             this.legacy = builder.legacy;
+            this.playbackStatus = builder.playbackStatus;
+            this.playedAnswer = builder.playedAnswer;
             this.playedWords = builder.playedWords;
             this.role = builder.role;
             this.streamEnd = builder.streamEnd;
@@ -317,6 +334,20 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         }
 
         /**
+         * @return playbackStatus
+         */
+        public String getPlaybackStatus() {
+            return this.playbackStatus;
+        }
+
+        /**
+         * @return playedAnswer
+         */
+        public String getPlayedAnswer() {
+            return this.playedAnswer;
+        }
+
+        /**
          * @return playedWords
          */
         public Integer getPlayedWords() {
@@ -368,6 +399,8 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             private String extras; 
             private Boolean interrupted; 
             private Boolean legacy; 
+            private String playbackStatus; 
+            private String playedAnswer; 
             private Integer playedWords; 
             private String role; 
             private Boolean streamEnd; 
@@ -388,6 +421,8 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
                 this.extras = model.extras;
                 this.interrupted = model.interrupted;
                 this.legacy = model.legacy;
+                this.playbackStatus = model.playbackStatus;
+                this.playedAnswer = model.playedAnswer;
                 this.playedWords = model.playedWords;
                 this.role = model.role;
                 this.streamEnd = model.streamEnd;
@@ -397,7 +432,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             } 
 
             /**
-             * Answer.
+             * <p>The bot\&quot;s response. This parameter is valid when <code>Role</code> is <code>ASSISTANT</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>不好意思，</p>
              */
             public Builder answer(String answer) {
                 this.answer = answer;
@@ -405,7 +443,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * Backchannels.
+             * <p>Indicates whether the user\&quot;s utterance is a backchannel (for example, &quot;uh-huh&quot; or &quot;okay&quot;). This parameter is valid when <code>Role</code> is <code>USER</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder backchannels(Boolean backchannels) {
                 this.backchannels = backchannels;
@@ -413,7 +454,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * BeginTime.
+             * <p>The start timestamp of the turn, in milliseconds since the Unix epoch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1748945414222</p>
              */
             public Builder beginTime(Long beginTime) {
                 this.beginTime = beginTime;
@@ -421,7 +465,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * ControlParamsList.
+             * <p>A list of control parameters. This parameter is valid when <code>Role</code> is <code>ASSISTANT</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;endSilenceTimeout&quot;:500,&quot;interruptible&quot;:false,&quot;silenceDetectionTimeout&quot;:5,&quot;type&quot;:&quot;Voice&quot;}]</p>
              */
             public Builder controlParamsList(String controlParamsList) {
                 this.controlParamsList = controlParamsList;
@@ -429,7 +476,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end timestamp of the turn, in milliseconds since the Unix epoch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1767315903531</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -437,7 +487,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * EventTime.
+             * <p>The event timestamp, in milliseconds since the Unix epoch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1774859592165</p>
              */
             public Builder eventTime(String eventTime) {
                 this.eventTime = eventTime;
@@ -445,7 +498,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * Extras.
+             * <p>Additional input from the user other than speech. This parameter is valid when <code>Role</code> is <code>USER</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;dataType&quot;:&quot;Silence&quot;}]</p>
              */
             public Builder extras(String extras) {
                 this.extras = extras;
@@ -453,7 +509,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * Interrupted.
+             * <p>Indicates whether the turn was interrupted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder interrupted(Boolean interrupted) {
                 this.interrupted = interrupted;
@@ -461,7 +520,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * Legacy.
+             * <p>Indicates whether the bot\&quot;s response is obsolete. This parameter is valid when <code>Role</code> is <code>ASSISTANT</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder legacy(Boolean legacy) {
                 this.legacy = legacy;
@@ -469,7 +531,26 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * PlayedWords.
+             * PlaybackStatus.
+             */
+            public Builder playbackStatus(String playbackStatus) {
+                this.playbackStatus = playbackStatus;
+                return this;
+            }
+
+            /**
+             * PlayedAnswer.
+             */
+            public Builder playedAnswer(String playedAnswer) {
+                this.playedAnswer = playedAnswer;
+                return this;
+            }
+
+            /**
+             * <p>The number of words played from the bot\&quot;s response. This parameter is valid when <code>Role</code> is <code>USER</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder playedWords(Integer playedWords) {
                 this.playedWords = playedWords;
@@ -477,7 +558,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * Role.
+             * <p>The role of the speaker.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>USER</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -485,7 +569,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * StreamEnd.
+             * <p>Indicates if this is the final part of a streamed response.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder streamEnd(Boolean streamEnd) {
                 this.streamEnd = streamEnd;
@@ -493,7 +580,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * StreamId.
+             * <p>The ID of the conversation turn.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder streamId(String streamId) {
                 this.streamId = streamId;
@@ -501,7 +591,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * Utterance.
+             * <p>The user\&quot;s utterance. This parameter is valid when <code>Role</code> is <code>USER</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>你要说你快点说不说，我挂了哈。</p>
              */
             public Builder utterance(String utterance) {
                 this.utterance = utterance;
@@ -509,7 +602,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * VendorParams.
+             * <p>Vendor-specific data sent from the client. This parameter is valid when <code>Role</code> is <code>USER</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;test1&quot;:&quot;1234&quot;}</p>
              */
             public Builder vendorParams(String vendorParams) {
                 this.vendorParams = vendorParams;
@@ -758,7 +854,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             } 
 
             /**
-             * Callee.
+             * <p>The phone number of the callee.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15100000001</p>
              */
             public Builder callee(String callee) {
                 this.callee = callee;
@@ -766,7 +865,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * Caller.
+             * <p>The phone number of the caller.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15929990193</p>
              */
             public Builder caller(String caller) {
                 this.caller = caller;
@@ -774,7 +876,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * DispositionCode.
+             * <p>The disposition code for the call.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Answered</p>
              */
             public Builder dispositionCode(String dispositionCode) {
                 this.dispositionCode = dispositionCode;
@@ -782,7 +887,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * DispositionReason.
+             * <p>The reason for the call\&quot;s disposition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ConcurrentLimitExceeded</p>
              */
             public Builder dispositionReason(String dispositionReason) {
                 this.dispositionReason = dispositionReason;
@@ -790,7 +898,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>The session duration, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>160</p>
              */
             public Builder duration(Integer duration) {
                 this.duration = duration;
@@ -798,7 +909,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1752283603978</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -806,7 +920,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * IssueResolved.
+             * <p>Indicates whether the user\&quot;s issue was resolved.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder issueResolved(Boolean issueResolved) {
                 this.issueResolved = issueResolved;
@@ -814,7 +931,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseInitiator.
+             * <p>The party that ended the call.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Customer</p>
              */
             public Builder releaseInitiator(String releaseInitiator) {
                 this.releaseInitiator = releaseInitiator;
@@ -822,7 +942,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * ResolutionEvidence.
+             * <p>The basis for the resolution judgment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>unknown</p>
              */
             public Builder resolutionEvidence(String resolutionEvidence) {
                 this.resolutionEvidence = resolutionEvidence;
@@ -830,7 +953,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * SessionId.
+             * <p>The session ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>07d72ea0-6e38-48d4-8371-14deaaba996f</p>
              */
             public Builder sessionId(String sessionId) {
                 this.sessionId = sessionId;
@@ -838,7 +964,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1774858849987</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -846,7 +975,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * TalkTime.
+             * <p>The talk time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder talkTime(Integer talkTime) {
                 this.talkTime = talkTime;
@@ -854,7 +986,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * TalkTurns.
+             * <p>The number of conversation turns.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder talkTurns(Integer talkTurns) {
                 this.talkTurns = talkTurns;
@@ -862,7 +997,7 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * Transcripts.
+             * <p>The conversation transcripts.</p>
              */
             public Builder transcripts(java.util.List<Transcripts> transcripts) {
                 this.transcripts = transcripts;
@@ -870,7 +1005,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * TransferTarget.
+             * <p>The transfer target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default@testInstance1</p>
              */
             public Builder transferTarget(String transferTarget) {
                 this.transferTarget = transferTarget;
@@ -878,7 +1016,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             }
 
             /**
-             * TransferType.
+             * <p>The transfer type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SkillGroup</p>
              */
             public Builder transferType(String transferType) {
                 this.transferType = transferType;

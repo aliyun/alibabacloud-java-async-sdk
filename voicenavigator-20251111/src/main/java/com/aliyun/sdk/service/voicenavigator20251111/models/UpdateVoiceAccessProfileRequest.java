@@ -101,7 +101,10 @@ public class UpdateVoiceAccessProfileRequest extends Request {
         } 
 
         /**
-         * AccessProfileId.
+         * <p>The access profile ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>af81a389-91f0-4157-8d82-720edd02b66b</p>
          */
         public Builder accessProfileId(String accessProfileId) {
             this.putBodyParameter("AccessProfileId", accessProfileId);
@@ -110,7 +113,10 @@ public class UpdateVoiceAccessProfileRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>af81a389-91f0-4157-8d82-720edd02b66a</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -119,7 +125,10 @@ public class UpdateVoiceAccessProfileRequest extends Request {
         }
 
         /**
-         * NlsEngine.
+         * <p>The voice engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VOLC</p>
          */
         public Builder nlsEngine(String nlsEngine) {
             this.putBodyParameter("NlsEngine", nlsEngine);
@@ -128,7 +137,7 @@ public class UpdateVoiceAccessProfileRequest extends Request {
         }
 
         /**
-         * Profile.
+         * <p>The parameter configuration for the selected voice engine.</p>
          */
         public Builder profile(Profile profile) {
             String profileShrink = shrink(profile, "Profile", "json");
@@ -269,7 +278,10 @@ public class UpdateVoiceAccessProfileRequest extends Request {
             } 
 
             /**
-             * AccessKey.
+             * <p>This parameter is required when <code>NlsEngine</code> is set to <code>VOLC</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HwRnTXgwnQOlsj68URDS5_VMm4Wtapq9</p>
              */
             public Builder accessKey(String accessKey) {
                 this.accessKey = accessKey;
@@ -277,7 +289,10 @@ public class UpdateVoiceAccessProfileRequest extends Request {
             }
 
             /**
-             * ApiKey.
+             * <p>This parameter is required when <code>NlsEngine</code> is set to <code>BAILIAN</code> or <code>IFLYTEK</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sk-12341e259b1049e8872b47981e545f78</p>
              */
             public Builder apiKey(String apiKey) {
                 this.apiKey = apiKey;
@@ -285,7 +300,10 @@ public class UpdateVoiceAccessProfileRequest extends Request {
             }
 
             /**
-             * ApiSecret.
+             * <p>This parameter is required when <code>NlsEngine</code> is set to <code>IFLYTEK</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c0358c6e51c1013b446fdeb21a3a1234</p>
              */
             public Builder apiSecret(String apiSecret) {
                 this.apiSecret = apiSecret;
@@ -293,7 +311,10 @@ public class UpdateVoiceAccessProfileRequest extends Request {
             }
 
             /**
-             * AppId.
+             * <p>This parameter is required when <code>NlsEngine</code> is set to <code>IFLYTEK</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5b123bfb</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -301,7 +322,10 @@ public class UpdateVoiceAccessProfileRequest extends Request {
             }
 
             /**
-             * AppKey.
+             * <p>This parameter is required when <code>NlsEngine</code> is set to <code>VOLC</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2541370123</p>
              */
             public Builder appKey(String appKey) {
                 this.appKey = appKey;
@@ -309,7 +333,10 @@ public class UpdateVoiceAccessProfileRequest extends Request {
             }
 
             /**
-             * AsrAppKey.
+             * <p>Reserved for future use.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>暂无使用</p>
              */
             public Builder asrAppKey(String asrAppKey) {
                 this.asrAppKey = asrAppKey;
@@ -317,7 +344,10 @@ public class UpdateVoiceAccessProfileRequest extends Request {
             }
 
             /**
-             * TtsApiKey.
+             * <p>Reserved for future use.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>暂无使用</p>
              */
             public Builder ttsApiKey(String ttsApiKey) {
                 this.ttsApiKey = ttsApiKey;

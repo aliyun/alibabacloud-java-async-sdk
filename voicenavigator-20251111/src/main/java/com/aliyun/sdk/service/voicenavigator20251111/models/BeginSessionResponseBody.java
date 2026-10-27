@@ -119,7 +119,10 @@ public class BeginSessionResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The business status code. A value of OK indicates that the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class BeginSessionResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The business data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class BeginSessionResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code. A value of 200 indicates that the HTTP request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class BeginSessionResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The HTTP response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,7 @@ public class BeginSessionResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>The dynamic error parameters.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -159,7 +168,10 @@ public class BeginSessionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The POP request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14C39896-AE6D-4643-9C9A-E0566B2C2DDD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -212,7 +224,18 @@ public class BeginSessionResponseBody extends TeaModel {
             } 
 
             /**
-             * Type.
+             * <p>The control parameter type. Valid values:</p>
+             * <blockquote>
+             * <ul>
+             * <li>HangUp: Hang up.</li>
+             * <li>Transfer: Transfer.</li>
+             * <li>GatherDtmf: Gather DTMF.</li>
+             * <li>Voice: Voice.</li>
+             * </ul>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>Voice</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -344,7 +367,10 @@ public class BeginSessionResponseBody extends TeaModel {
             } 
 
             /**
-             * Answer.
+             * <p>The chatbot reply content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Hello, welcome to STO Express. How can I help you?</p>
              */
             public Builder answer(String answer) {
                 this.answer = answer;
@@ -352,7 +378,7 @@ public class BeginSessionResponseBody extends TeaModel {
             }
 
             /**
-             * ControlParamsList.
+             * <p>The list of control parameters.</p>
              */
             public Builder controlParamsList(java.util.List<ControlParamsList> controlParamsList) {
                 this.controlParamsList = controlParamsList;
@@ -360,7 +386,10 @@ public class BeginSessionResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1752283603978</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -368,7 +397,10 @@ public class BeginSessionResponseBody extends TeaModel {
             }
 
             /**
-             * SessionId.
+             * <p>The session ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>07d72ea0-6e38-48d4-8371-14deaaba996f</p>
              */
             public Builder sessionId(String sessionId) {
                 this.sessionId = sessionId;
@@ -376,7 +408,10 @@ public class BeginSessionResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1774858849987</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -384,7 +419,10 @@ public class BeginSessionResponseBody extends TeaModel {
             }
 
             /**
-             * StreamEnd.
+             * <p>Specifies whether the streaming response has ended.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder streamEnd(Boolean streamEnd) {
                 this.streamEnd = streamEnd;
@@ -392,7 +430,10 @@ public class BeginSessionResponseBody extends TeaModel {
             }
 
             /**
-             * StreamId.
+             * <p>The turn ID of the conversation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder streamId(String streamId) {
                 this.streamId = streamId;

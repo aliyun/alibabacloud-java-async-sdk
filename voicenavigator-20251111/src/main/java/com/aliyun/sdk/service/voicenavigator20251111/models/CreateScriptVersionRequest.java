@@ -157,7 +157,10 @@ public class CreateScriptVersionRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abb4aa26-3a8e-43dd-82f8-0c3898c9c67f</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -166,7 +169,7 @@ public class CreateScriptVersionRequest extends Request {
         }
 
         /**
-         * InteractionConfig.
+         * <p>The interaction configuration.</p>
          */
         public Builder interactionConfig(InteractionConfig interactionConfig) {
             String interactionConfigShrink = shrink(interactionConfig, "InteractionConfig", "json");
@@ -176,7 +179,7 @@ public class CreateScriptVersionRequest extends Request {
         }
 
         /**
-         * LabelConfig.
+         * <p>The custom label configuration.</p>
          */
         public Builder labelConfig(java.util.List<LabelConfig> labelConfig) {
             String labelConfigShrink = shrink(labelConfig, "LabelConfig", "json");
@@ -186,7 +189,10 @@ public class CreateScriptVersionRequest extends Request {
         }
 
         /**
-         * ScriptId.
+         * <p>The scenario ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>64241e64-190c-45d1-af66-06f51c07b090</p>
          */
         public Builder scriptId(String scriptId) {
             this.putBodyParameter("ScriptId", scriptId);
@@ -195,7 +201,7 @@ public class CreateScriptVersionRequest extends Request {
         }
 
         /**
-         * ScriptProfile.
+         * <p>The conversation capability configuration.</p>
          */
         public Builder scriptProfile(ScriptProfile scriptProfile) {
             String scriptProfileShrink = shrink(scriptProfile, "ScriptProfile", "json");
@@ -214,7 +220,7 @@ public class CreateScriptVersionRequest extends Request {
         }
 
         /**
-         * SynthesizerConfig.
+         * <p>The TTS configuration.</p>
          */
         public Builder synthesizerConfig(SynthesizerConfig synthesizerConfig) {
             String synthesizerConfigShrink = shrink(synthesizerConfig, "SynthesizerConfig", "json");
@@ -224,7 +230,7 @@ public class CreateScriptVersionRequest extends Request {
         }
 
         /**
-         * TranscriberConfig.
+         * <p>The ASR configuration.</p>
          */
         public Builder transcriberConfig(TranscriberConfig transcriberConfig) {
             String transcriberConfigShrink = shrink(transcriberConfig, "TranscriberConfig", "json");
@@ -319,7 +325,10 @@ public class CreateScriptVersionRequest extends Request {
             } 
 
             /**
-             * ClosingStatement.
+             * <p>The closing statement played when the turn limit is reached and the hang-up action is executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Thank you for your time. Have a nice day. Goodbye!</p>
              */
             public Builder closingStatement(String closingStatement) {
                 this.closingStatement = closingStatement;
@@ -327,7 +336,7 @@ public class CreateScriptVersionRequest extends Request {
             }
 
             /**
-             * KeyWords.
+             * <p>The list of custom interception keywords.</p>
              */
             public Builder keyWords(java.util.List<String> keyWords) {
                 this.keyWords = keyWords;
@@ -335,7 +344,16 @@ public class CreateScriptVersionRequest extends Request {
             }
 
             /**
-             * TriggerType.
+             * <p>Valid values:\</p>
+             * <ul>
+             * <li>TurnLimit: Maximum interaction turn check.\</li>
+             * <li>IntelligentVoiceAssistant: Voice assistant.\</li>
+             * <li>InteractiveVoiceResponse: Extension transfer.\</li>
+             * <li>KeyWords: Custom interception.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TurnLimit</p>
              */
             public Builder triggerType(String triggerType) {
                 this.triggerType = triggerType;
@@ -343,7 +361,10 @@ public class CreateScriptVersionRequest extends Request {
             }
 
             /**
-             * TurnLimit.
+             * <p>The maximum number of interaction turns before the hang-up action is executed. Valid values: 0 to 100. A value of 0 indicates that the turn-limit hang-up feature is disabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder turnLimit(Integer turnLimit) {
                 this.turnLimit = turnLimit;
@@ -410,7 +431,10 @@ public class CreateScriptVersionRequest extends Request {
             } 
 
             /**
-             * Delay.
+             * <p>The number of seconds to wait after the hang-up script finishes playing before executing the hang-up action. Valid values: 0 to 5.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder delay(Integer delay) {
                 this.delay = delay;
@@ -418,7 +442,7 @@ public class CreateScriptVersionRequest extends Request {
             }
 
             /**
-             * Triggers.
+             * <p>The special case interception rules.</p>
              */
             public Builder triggers(java.util.List<Triggers> triggers) {
                 this.triggers = triggers;
@@ -485,7 +509,11 @@ public class CreateScriptVersionRequest extends Request {
             } 
 
             /**
-             * MaxRepeats.
+             * <p>The number of consecutive silence turns before the hang-up action is executed.\
+             * This parameter takes effect when NluEngine is set to PROMPTS for the current scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder maxRepeats(Integer maxRepeats) {
                 this.maxRepeats = maxRepeats;
@@ -493,7 +521,12 @@ public class CreateScriptVersionRequest extends Request {
             }
 
             /**
-             * Timeout.
+             * <p>The silence timeout period, in milliseconds.\
+             * When the user remains silent for longer than the specified value, the silence timeout script is played.\
+             * Valid values: 2000 to 10000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5000</p>
              */
             public Builder timeout(Integer timeout) {
                 this.timeout = timeout;
@@ -586,7 +619,10 @@ public class CreateScriptVersionRequest extends Request {
             } 
 
             /**
-             * BackgroundMusicId.
+             * <p>The background music ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>office-ambience</p>
              */
             public Builder backgroundMusicId(String backgroundMusicId) {
                 this.backgroundMusicId = backgroundMusicId;
@@ -594,7 +630,7 @@ public class CreateScriptVersionRequest extends Request {
             }
 
             /**
-             * EndConversationConfig.
+             * <p>The hang-up configuration.</p>
              */
             public Builder endConversationConfig(EndConversationConfig endConversationConfig) {
                 this.endConversationConfig = endConversationConfig;
@@ -602,7 +638,10 @@ public class CreateScriptVersionRequest extends Request {
             }
 
             /**
-             * InitialGreetingDelayMilliseconds.
+             * <p>The delay before playing the greeting after the call is connected. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000</p>
              */
             public Builder initialGreetingDelayMilliseconds(Integer initialGreetingDelayMilliseconds) {
                 this.initialGreetingDelayMilliseconds = initialGreetingDelayMilliseconds;
@@ -610,7 +649,7 @@ public class CreateScriptVersionRequest extends Request {
             }
 
             /**
-             * SilenceDetectionConfig.
+             * <p>The silence detection configuration.</p>
              */
             public Builder silenceDetectionConfig(SilenceDetectionConfig silenceDetectionConfig) {
                 this.silenceDetectionConfig = silenceDetectionConfig;
@@ -690,7 +729,7 @@ public class CreateScriptVersionRequest extends Request {
             } 
 
             /**
-             * CandidateValues.
+             * <p>The list of candidate values for the label.</p>
              */
             public Builder candidateValues(java.util.List<String> candidateValues) {
                 this.candidateValues = candidateValues;
@@ -698,7 +737,10 @@ public class CreateScriptVersionRequest extends Request {
             }
 
             /**
-             * Description.
+             * <p>The label description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Whether the user agrees to repay before the repayment deadline</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -706,7 +748,10 @@ public class CreateScriptVersionRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The label name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Agree to repay</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -773,7 +818,10 @@ public class CreateScriptVersionRequest extends Request {
             } 
 
             /**
-             * PromptsJson.
+             * <p>The prompt in JSON format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;prompts\&quot;:\&quot;I am a chatbot.\&quot;}</p>
              */
             public Builder promptsJson(String promptsJson) {
                 this.promptsJson = promptsJson;
@@ -781,7 +829,10 @@ public class CreateScriptVersionRequest extends Request {
             }
 
             /**
-             * ScriptProfileTemplateId.
+             * <p>The scenario template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CCC_PROMPTS_DEFAULT</p>
              */
             public Builder scriptProfileTemplateId(String scriptProfileTemplateId) {
                 this.scriptProfileTemplateId = scriptProfileTemplateId;
@@ -887,7 +938,11 @@ public class CreateScriptVersionRequest extends Request {
             } 
 
             /**
-             * FunctionId.
+             * <p>The function service ID.\
+             * This parameter is required when NluEngine is set to FUNCTION for the current scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9b752bbb-805a-4d3e-9013-eab5555c3fef</p>
              */
             public Builder functionId(String functionId) {
                 this.functionId = functionId;
@@ -895,7 +950,11 @@ public class CreateScriptVersionRequest extends Request {
             }
 
             /**
-             * FunctionName.
+             * <p>The function service name.\
+             * This parameter is required when NluEngine is set to FUNCTION for the current scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my_funciton</p>
              */
             public Builder functionName(String functionName) {
                 this.functionName = functionName;
@@ -903,7 +962,11 @@ public class CreateScriptVersionRequest extends Request {
             }
 
             /**
-             * HttpTriggerName.
+             * <p>The HTTP trigger name.\
+             * This parameter is required when NluEngine is set to FUNCTION for the current scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>defaultTrigger</p>
              */
             public Builder httpTriggerName(String httpTriggerName) {
                 this.httpTriggerName = httpTriggerName;
@@ -911,7 +974,11 @@ public class CreateScriptVersionRequest extends Request {
             }
 
             /**
-             * HttpTriggerUrl.
+             * <p>The HTTP trigger URL.\
+             * This parameter is required when NluEngine is set to FUNCTION for the current scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://chat-xxxxx-v-yewiundukb.cn-hangzhou-xxx.run">http://chat-xxxxx-v-yewiundukb.cn-hangzhou-xxx.run</a></p>
              */
             public Builder httpTriggerUrl(String httpTriggerUrl) {
                 this.httpTriggerUrl = httpTriggerUrl;
@@ -919,7 +986,11 @@ public class CreateScriptVersionRequest extends Request {
             }
 
             /**
-             * RegionId.
+             * <p>The region where the function service resides.\
+             * This parameter is required when NluEngine is set to FUNCTION for the current scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -973,7 +1044,10 @@ public class CreateScriptVersionRequest extends Request {
             } 
 
             /**
-             * AccessProfileId.
+             * <p>The third-party conversation model configuration ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c2c9baae-9351-4c49-a8cb-6f24a83a8718</p>
              */
             public Builder accessProfileId(String accessProfileId) {
                 this.accessProfileId = accessProfileId;
@@ -1118,7 +1192,11 @@ public class CreateScriptVersionRequest extends Request {
             } 
 
             /**
-             * AgentKey.
+             * <p>The AgentKey of the chatbot.\
+             * This parameter is required when NluEngine is set to BEEBOT for the current scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1309723684579735_p_beebot_public</p>
              */
             public Builder agentKey(String agentKey) {
                 this.agentKey = agentKey;
@@ -1126,7 +1204,7 @@ public class CreateScriptVersionRequest extends Request {
             }
 
             /**
-             * AgentProfile.
+             * <p>The conversation agent configuration.</p>
              */
             public Builder agentProfile(AgentProfile agentProfile) {
                 this.agentProfile = agentProfile;
@@ -1134,7 +1212,11 @@ public class CreateScriptVersionRequest extends Request {
             }
 
             /**
-             * ChatbotId.
+             * <p>The chatbot ID.\
+             * This parameter is required when NluEngine is set to BEEBOT for the current scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>chatbot-cn-MQuyjjb666</p>
              */
             public Builder chatbotId(String chatbotId) {
                 this.chatbotId = chatbotId;
@@ -1142,7 +1224,7 @@ public class CreateScriptVersionRequest extends Request {
             }
 
             /**
-             * FunctionMeta.
+             * <p>The Function Compute configuration.</p>
              */
             public Builder functionMeta(FunctionMeta functionMeta) {
                 this.functionMeta = functionMeta;
@@ -1150,7 +1232,11 @@ public class CreateScriptVersionRequest extends Request {
             }
 
             /**
-             * Model.
+             * <p>The conversation model.\
+             * This parameter is required when NluEngine is set to PROMPTS for the current scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen-plus</p>
              */
             public Builder model(String model) {
                 this.model = model;
@@ -1158,7 +1244,7 @@ public class CreateScriptVersionRequest extends Request {
             }
 
             /**
-             * NluAccessProfile.
+             * <p>The associated configuration.</p>
              */
             public Builder nluAccessProfile(NluAccessProfile nluAccessProfile) {
                 this.nluAccessProfile = nluAccessProfile;
@@ -1166,7 +1252,10 @@ public class CreateScriptVersionRequest extends Request {
             }
 
             /**
-             * NluAccessType.
+             * <p>The conversation model invocation method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MANAGED</p>
              */
             public Builder nluAccessType(String nluAccessType) {
                 this.nluAccessType = nluAccessType;
@@ -1174,7 +1263,10 @@ public class CreateScriptVersionRequest extends Request {
             }
 
             /**
-             * OmniModel.
+             * <p>Specifies whether the model is an Omni model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder omniModel(Boolean omniModel) {
                 this.omniModel = omniModel;
@@ -1228,7 +1320,10 @@ public class CreateScriptVersionRequest extends Request {
             } 
 
             /**
-             * AccessProfileId.
+             * <p>The third-party voice configuration ID. This parameter is required when you use a third-party ASR service such as Doubao or iFLYTEK.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c2c9baae-9351-4c49-a8cb-6f24a83a8718</p>
              */
             public Builder accessProfileId(String accessProfileId) {
                 this.accessProfileId = accessProfileId;
@@ -1295,7 +1390,10 @@ public class CreateScriptVersionRequest extends Request {
             } 
 
             /**
-             * Pattern.
+             * <p>The commonly mispronounced word.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>还钱</p>
              */
             public Builder pattern(String pattern) {
                 this.pattern = pattern;
@@ -1303,7 +1401,10 @@ public class CreateScriptVersionRequest extends Request {
             }
 
             /**
-             * Replacement.
+             * <p>The homophone replacement word.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>环钱</p>
              */
             public Builder replacement(String replacement) {
                 this.replacement = replacement;
@@ -1461,7 +1562,10 @@ public class CreateScriptVersionRequest extends Request {
             } 
 
             /**
-             * Model.
+             * <p>The TTS model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CosyVoice</p>
              */
             public Builder model(String model) {
                 this.model = model;
@@ -1469,7 +1573,7 @@ public class CreateScriptVersionRequest extends Request {
             }
 
             /**
-             * NlsAccessProfile.
+             * <p>The associated configuration.</p>
              */
             public Builder nlsAccessProfile(NlsAccessProfile nlsAccessProfile) {
                 this.nlsAccessProfile = nlsAccessProfile;
@@ -1477,7 +1581,10 @@ public class CreateScriptVersionRequest extends Request {
             }
 
             /**
-             * NlsAccessType.
+             * <p>The TTS invocation method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MANAGED</p>
              */
             public Builder nlsAccessType(String nlsAccessType) {
                 this.nlsAccessType = nlsAccessType;
@@ -1485,7 +1592,10 @@ public class CreateScriptVersionRequest extends Request {
             }
 
             /**
-             * NlsEngine.
+             * <p>The TTS engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BAILIAN</p>
              */
             public Builder nlsEngine(String nlsEngine) {
                 this.nlsEngine = nlsEngine;
@@ -1493,7 +1603,12 @@ public class CreateScriptVersionRequest extends Request {
             }
 
             /**
-             * PitchRate.
+             * <p>The pitch rate.\
+             * Valid values: -500 to 500.\
+             * Default value: 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder pitchRate(Integer pitchRate) {
                 this.pitchRate = pitchRate;
@@ -1501,7 +1616,7 @@ public class CreateScriptVersionRequest extends Request {
             }
 
             /**
-             * PronRules.
+             * <p>The TTS pronunciation correction list.</p>
              */
             public Builder pronRules(java.util.List<PronRules> pronRules) {
                 this.pronRules = pronRules;
@@ -1509,7 +1624,12 @@ public class CreateScriptVersionRequest extends Request {
             }
 
             /**
-             * SpeechRate.
+             * <p>The speech rate.\
+             * Valid values: -500 to 500.\
+             * Default value: 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder speechRate(Integer speechRate) {
                 this.speechRate = speechRate;
@@ -1517,7 +1637,10 @@ public class CreateScriptVersionRequest extends Request {
             }
 
             /**
-             * Voice.
+             * <p>The voice speaker.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>longanyang</p>
              */
             public Builder voice(String voice) {
                 this.voice = voice;
@@ -1525,7 +1648,12 @@ public class CreateScriptVersionRequest extends Request {
             }
 
             /**
-             * Volume.
+             * <p>The volume.\
+             * Valid values: 0 to 100.\
+             * Default value: 50.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder volume(Integer volume) {
                 this.volume = volume;
@@ -1592,7 +1720,10 @@ public class CreateScriptVersionRequest extends Request {
             } 
 
             /**
-             * Pattern.
+             * <p>The commonly mispronounced word.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>还钱</p>
              */
             public Builder pattern(String pattern) {
                 this.pattern = pattern;
@@ -1600,7 +1731,10 @@ public class CreateScriptVersionRequest extends Request {
             }
 
             /**
-             * Replacement.
+             * <p>The homophone replacement word.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>环钱</p>
              */
             public Builder replacement(String replacement) {
                 this.replacement = replacement;
@@ -1654,7 +1788,10 @@ public class CreateScriptVersionRequest extends Request {
             } 
 
             /**
-             * AccessProfileId.
+             * <p>The third-party voice configuration ID. This parameter is required when you use a third-party ASR service such as Doubao or iFLYTEK.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c2c9baae-9351-4c49-a8cb-6f24a83a8718</p>
              */
             public Builder accessProfileId(String accessProfileId) {
                 this.accessProfileId = accessProfileId;
@@ -1820,7 +1957,10 @@ public class CreateScriptVersionRequest extends Request {
             }
 
             /**
-             * CustomizationId.
+             * <p>The custom language model ID for ASR.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cd97223f-42f2-4cd9-95af-e734e2fe1fe4</p>
              */
             public Builder customizationId(String customizationId) {
                 this.customizationId = customizationId;
@@ -1828,7 +1968,10 @@ public class CreateScriptVersionRequest extends Request {
             }
 
             /**
-             * EndSilenceTimeout.
+             * <p>The silence detection threshold. When the silence interval between speech segments exceeds x milliseconds, sentence segmentation is triggered (Voice Activity Detection, or VAD).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>700</p>
              */
             public Builder endSilenceTimeout(Integer endSilenceTimeout) {
                 this.endSilenceTimeout = endSilenceTimeout;
@@ -1836,7 +1979,10 @@ public class CreateScriptVersionRequest extends Request {
             }
 
             /**
-             * Model.
+             * <p>The ASR model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Paraformer</p>
              */
             public Builder model(String model) {
                 this.model = model;
@@ -1844,7 +1990,7 @@ public class CreateScriptVersionRequest extends Request {
             }
 
             /**
-             * NlsAccessProfile.
+             * <p>The associated configuration.</p>
              */
             public Builder nlsAccessProfile(TranscriberConfigNlsAccessProfile nlsAccessProfile) {
                 this.nlsAccessProfile = nlsAccessProfile;
@@ -1852,7 +1998,10 @@ public class CreateScriptVersionRequest extends Request {
             }
 
             /**
-             * NlsAccessType.
+             * <p>The ASR invocation method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MANAGED</p>
              */
             public Builder nlsAccessType(String nlsAccessType) {
                 this.nlsAccessType = nlsAccessType;
@@ -1860,7 +2009,10 @@ public class CreateScriptVersionRequest extends Request {
             }
 
             /**
-             * NlsEngine.
+             * <p>The ASR engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BAILIAN</p>
              */
             public Builder nlsEngine(String nlsEngine) {
                 this.nlsEngine = nlsEngine;
@@ -1868,7 +2020,12 @@ public class CreateScriptVersionRequest extends Request {
             }
 
             /**
-             * SpeechNoiseThreshold.
+             * <p>The noise threshold. Valid values: -100 to 100.</p>
+             * <p>A value closer to -100 increases the probability that noise is classified as speech.</p>
+             * <p>A value closer to +100 increases the probability that speech is classified as noise.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder speechNoiseThreshold(Integer speechNoiseThreshold) {
                 this.speechNoiseThreshold = speechNoiseThreshold;
@@ -1876,7 +2033,10 @@ public class CreateScriptVersionRequest extends Request {
             }
 
             /**
-             * VocabularyId.
+             * <p>The hot word list ID. You can obtain this ID from the hot word management page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cd97223f-42f2-4cd9-95af-e734e2fe1fe3</p>
              */
             public Builder vocabularyId(String vocabularyId) {
                 this.vocabularyId = vocabularyId;

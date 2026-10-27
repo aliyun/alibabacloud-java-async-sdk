@@ -119,7 +119,10 @@ public class ListBackgroundMusicsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The internal error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ListBackgroundMusicsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The paginated result of the background music list.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ListBackgroundMusicsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,11 @@ public class ListBackgroundMusicsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance af81a389-91f0-4157-8d82-720edd02b66a
+         *  does not exist.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +161,7 @@ public class ListBackgroundMusicsResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>The list of dynamic error parameters.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -159,7 +169,10 @@ public class ListBackgroundMusicsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7401D698-0AAC-5909-B68E-88C68805FFB8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -236,7 +249,10 @@ public class ListBackgroundMusicsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Office ambiance</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -329,7 +345,7 @@ public class ListBackgroundMusicsResponseBody extends TeaModel {
             } 
 
             /**
-             * BackgroundMusics.
+             * <p>The list of background music tracks.</p>
              */
             public Builder backgroundMusics(java.util.List<BackgroundMusics> backgroundMusics) {
                 this.backgroundMusics = backgroundMusics;
@@ -337,7 +353,10 @@ public class ListBackgroundMusicsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -345,7 +364,10 @@ public class ListBackgroundMusicsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -353,7 +375,10 @@ public class ListBackgroundMusicsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

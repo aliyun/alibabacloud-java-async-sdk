@@ -115,7 +115,10 @@ public class UpdateVocabularyRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Contains professional terms for finance scenarios</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -124,7 +127,10 @@ public class UpdateVocabularyRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>af81a389-91f0-4157-8d82-720edd02b66a</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -133,7 +139,10 @@ public class UpdateVocabularyRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the hot word.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Finance scenario hot words</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -142,7 +151,10 @@ public class UpdateVocabularyRequest extends Request {
         }
 
         /**
-         * VocabularyId.
+         * <p>The hot word ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d74d6290-7cbe-4436-b5d7-014ebb0f4061</p>
          */
         public Builder vocabularyId(String vocabularyId) {
             this.putBodyParameter("VocabularyId", vocabularyId);
@@ -151,7 +163,7 @@ public class UpdateVocabularyRequest extends Request {
         }
 
         /**
-         * Words.
+         * <p>The list of hot words.</p>
          */
         public Builder words(java.util.Map<String, String> words) {
             String wordsShrink = shrink(words, "Words", "json");

@@ -59,7 +59,10 @@ public class GetSubscriptionRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19ac2375-53e3-477f-abe9-6cd334227981</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);

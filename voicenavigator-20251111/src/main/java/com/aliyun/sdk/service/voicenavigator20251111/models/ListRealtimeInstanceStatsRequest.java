@@ -87,7 +87,7 @@ public class ListRealtimeInstanceStatsRequest extends Request {
         } 
 
         /**
-         * InstanceIds.
+         * <p>The IDs of the instances. You can specify 1 to 100 instance IDs.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             String instanceIdsShrink = shrink(instanceIds, "InstanceIds", "json");
@@ -97,7 +97,10 @@ public class ListRealtimeInstanceStatsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -106,7 +109,10 @@ public class ListRealtimeInstanceStatsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);

@@ -119,7 +119,10 @@ public class ListInstructionsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ListInstructionsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data returned for the list of instructions.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ListInstructionsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class ListInstructionsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The result message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,7 @@ public class ListInstructionsResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>A list of request parameters that are echoed in the response.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -159,7 +168,10 @@ public class ListInstructionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e48e45dd-e47a-4744-a063-f08cbebb1c5a</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -264,7 +276,10 @@ public class ListInstructionsResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>The instruction code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Transfer00</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -272,7 +287,33 @@ public class ListInstructionsResponseBody extends TeaModel {
             }
 
             /**
-             * Config.
+             * <p>The instruction configuration, in a JSON string format.</p>
+             * <blockquote>
+             * <ul>
+             * <li><p><code>providerId</code>: The ID of the call center provider. You can obtain this ID by calling the <code>ListCallCenterProviders</code> operation.</p>
+             * </li>
+             * <li><p><code>transferMethod</code>: The transfer method. Valid values: <code>BYE</code>, <code>BRIDGE</code>, and <code>REFER</code>.</p>
+             * </li>
+             * <li><p><code>transferType</code>: The transfer target type. Valid values: <code>External</code> (external number), <code>Agent</code> (agent), and <code>SkillGroup</code> (skill group).</p>
+             * </li>
+             * <li><p><code>transferTarget</code>: The transfer target.</p>
+             * </li>
+             * <li><p><code>transferor</code>: The caller ID. If not specified, the caller\&quot;s phone number is used.</p>
+             * </li>
+             * <li><p><code>timeoutSeconds</code>: The transfer timeout, in seconds. The default value is 30.</p>
+             * </li>
+             * </ul>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *     &quot;providerId&quot;: &quot;xxxxxxxxx&quot;,
+             *     &quot;transferMethod&quot;: &quot;BYE&quot;,
+             *     &quot;transferType&quot;: &quot;External&quot;,
+             *     &quot;transferTarget&quot;: &quot;152******&quot;,
+             *     &quot;transferor&quot;: &quot;01*****&quot;,
+             *     &quot;timeoutSeconds&quot;: &quot;10&quot;
+             * }</p>
              */
             public Builder config(String config) {
                 this.config = config;
@@ -280,7 +321,10 @@ public class ListInstructionsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>36e9a4cd-a821-4f78-86fa-a9a4aefeea2e</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -288,7 +332,10 @@ public class ListInstructionsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The instruction name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>转人工指令一</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -296,7 +343,10 @@ public class ListInstructionsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The instruction type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TRANSFER</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -389,7 +439,7 @@ public class ListInstructionsResponseBody extends TeaModel {
             } 
 
             /**
-             * Instructions.
+             * <p>The list of instructions.</p>
              */
             public Builder instructions(java.util.List<Instructions> instructions) {
                 this.instructions = instructions;
@@ -397,7 +447,10 @@ public class ListInstructionsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -405,7 +458,10 @@ public class ListInstructionsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The page size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -413,7 +469,10 @@ public class ListInstructionsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of instructions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

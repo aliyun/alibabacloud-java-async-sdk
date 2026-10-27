@@ -172,7 +172,10 @@ public class CreateCallCenterProviderRequest extends Request {
         } 
 
         /**
-         * Destination.
+         * <p>The callee number during the transfer. This parameter is required when the transfer method is Bridge.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>153*********</p>
          */
         public Builder destination(String destination) {
             this.putBodyParameter("Destination", destination);
@@ -181,7 +184,10 @@ public class CreateCallCenterProviderRequest extends Request {
         }
 
         /**
-         * DisplayName.
+         * <p>The display name of the service provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Internal service provider of Cloud Call Center</p>
          */
         public Builder displayName(String displayName) {
             this.putQueryParameter("DisplayName", displayName);
@@ -190,7 +196,13 @@ public class CreateCallCenterProviderRequest extends Request {
         }
 
         /**
-         * Extras.
+         * <p>The attached data.</p>
+         * <blockquote>
+         * <p>Notice: Format: k1=v1;k2=v2.</notice></p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>key1=value1</p>
          */
         public Builder extras(String extras) {
             this.putBodyParameter("Extras", extras);
@@ -199,7 +211,10 @@ public class CreateCallCenterProviderRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>36e9a4cd-a821-4f78-86fa-a9a4aefeea2e</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -208,7 +223,10 @@ public class CreateCallCenterProviderRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the service provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Internal service provider of Cloud Call Center</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -217,7 +235,10 @@ public class CreateCallCenterProviderRequest extends Request {
         }
 
         /**
-         * Originator.
+         * <p>The caller number during the transfer. This parameter is required when the transfer method is Bridge.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>010****</p>
          */
         public Builder originator(String originator) {
             this.putBodyParameter("Originator", originator);
@@ -226,7 +247,16 @@ public class CreateCallCenterProviderRequest extends Request {
         }
 
         /**
-         * ProviderType.
+         * <p>The provider type.</p>
+         * <blockquote>
+         * <ul>
+         * <li>CCC: Cloud Call Center.</li>
+         * <li>CUSTOM: Customer-owned call center.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>CCC</p>
          */
         public Builder providerType(String providerType) {
             this.putBodyParameter("ProviderType", providerType);
@@ -235,7 +265,12 @@ public class CreateCallCenterProviderRequest extends Request {
         }
 
         /**
-         * ReferTo.
+         * <p>The Refer address.<notice>This parameter is required when the transfer method is Refer.</notice></p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder referTo(String referTo) {
             this.putBodyParameter("ReferTo", referTo);
@@ -244,7 +279,13 @@ public class CreateCallCenterProviderRequest extends Request {
         }
 
         /**
-         * TrunkId.
+         * <p>The trunk ID.</p>
+         * <blockquote>
+         * <p>Notice: This parameter is required when the transfer method is Bridge.</notice></p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>trunk-xxx</p>
          */
         public Builder trunkId(String trunkId) {
             this.putBodyParameter("TrunkId", trunkId);

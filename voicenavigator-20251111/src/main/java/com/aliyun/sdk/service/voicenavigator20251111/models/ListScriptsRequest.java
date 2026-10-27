@@ -143,7 +143,10 @@ public class ListScriptsRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>af81a389-91f0-4157-8d82-720edd02b66a</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -152,7 +155,10 @@ public class ListScriptsRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The scenario name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Navigation test scenario</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -161,7 +167,10 @@ public class ListScriptsRequest extends Request {
         }
 
         /**
-         * Number.
+         * <p>The number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13816111993</p>
          */
         public Builder number(String number) {
             this.putBodyParameter("Number", number);
@@ -170,7 +179,10 @@ public class ListScriptsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -179,7 +191,10 @@ public class ListScriptsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -188,7 +203,7 @@ public class ListScriptsRequest extends Request {
         }
 
         /**
-         * ScriptIds.
+         * <p>The list of scenario IDs.</p>
          */
         public Builder scriptIds(java.util.List<String> scriptIds) {
             String scriptIdsShrink = shrink(scriptIds, "ScriptIds", "json");
@@ -198,7 +213,10 @@ public class ListScriptsRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DRAFT</p>
          */
         public Builder status(String status) {
             this.putBodyParameter("Status", status);

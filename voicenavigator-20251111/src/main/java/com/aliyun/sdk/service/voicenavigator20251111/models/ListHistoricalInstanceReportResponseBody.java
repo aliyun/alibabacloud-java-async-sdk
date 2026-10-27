@@ -119,7 +119,10 @@ public class ListHistoricalInstanceReportResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ListHistoricalInstanceReportResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ListHistoricalInstanceReportResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class ListHistoricalInstanceReportResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,7 @@ public class ListHistoricalInstanceReportResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>The list of error parameters.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -159,7 +168,7 @@ public class ListHistoricalInstanceReportResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>9DB8BA95-4513-54B9-9C67-A28909CFB4AD</p>
@@ -410,7 +419,10 @@ public class ListHistoricalInstanceReportResponseBody extends TeaModel {
             } 
 
             /**
-             * CallsHandled.
+             * <p>The number of answered calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder callsHandled(Long callsHandled) {
                 this.callsHandled = callsHandled;
@@ -418,7 +430,10 @@ public class ListHistoricalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsOffered.
+             * <p>The number of offered calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder callsOffered(Long callsOffered) {
                 this.callsOffered = callsOffered;
@@ -426,7 +441,10 @@ public class ListHistoricalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsRejected.
+             * <p>The number of rejected calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder callsRejected(Long callsRejected) {
                 this.callsRejected = callsRejected;
@@ -434,7 +452,10 @@ public class ListHistoricalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsResolved.
+             * <p>The number of calls classified as resolved by the large language model (LLM).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder callsResolved(Long callsResolved) {
                 this.callsResolved = callsResolved;
@@ -442,7 +463,10 @@ public class ListHistoricalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * ConfiguredConcurrency.
+             * <p>The most recent concurrency configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder configuredConcurrency(Long configuredConcurrency) {
                 this.configuredConcurrency = configuredConcurrency;
@@ -450,7 +474,10 @@ public class ListHistoricalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>38d5fb05092b469e86b6061ad7945437</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -458,7 +485,15 @@ public class ListHistoricalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * LabelBreakdown.
+             * <p>The breakdown of labels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *   &quot;label1&quot;:{ 
+             *      &quot;label1_sub1&quot;:10,
+             *      &quot;label1_sub2&quot;:2
+             * }
+             * }</p>
              */
             public Builder labelBreakdown(String labelBreakdown) {
                 this.labelBreakdown = labelBreakdown;
@@ -466,7 +501,10 @@ public class ListHistoricalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * MaxTalkTime.
+             * <p>The maximum talk time in milliseconds (ms).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder maxTalkTime(Long maxTalkTime) {
                 this.maxTalkTime = maxTalkTime;
@@ -474,7 +512,12 @@ public class ListHistoricalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * RejectionBreakdown.
+             * <p>The breakdown of rejection reasons.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *   &quot;ConcurrentLimitExceeded&quot;:3
+             * }</p>
              */
             public Builder rejectionBreakdown(String rejectionBreakdown) {
                 this.rejectionBreakdown = rejectionBreakdown;
@@ -482,7 +525,16 @@ public class ListHistoricalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseReasonBreakdown.
+             * <p>A breakdown of release reasons for answered calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *   &quot;SilenceTimeout&quot;:1,
+             *   &quot;TurnsLimitExceeded&quot;:1,
+             *    &quot;Exception&quot;:1,
+             *    &quot;Transferred&quot;:1,
+             *    &quot;Normal&quot;:1
+             * }</p>
              */
             public Builder releaseReasonBreakdown(String releaseReasonBreakdown) {
                 this.releaseReasonBreakdown = releaseReasonBreakdown;
@@ -490,7 +542,13 @@ public class ListHistoricalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * TalkTurnsDistribution.
+             * <p>The distribution of conversation turns.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *   &quot;1&quot;:2,
+             *   &quot;10&quot;:3
+             * }</p>
              */
             public Builder talkTurnsDistribution(String talkTurnsDistribution) {
                 this.talkTurnsDistribution = talkTurnsDistribution;
@@ -498,7 +556,10 @@ public class ListHistoricalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalInputTokens.
+             * <p>Reserved for future use.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalInputTokens(Long totalInputTokens) {
                 this.totalInputTokens = totalInputTokens;
@@ -506,7 +567,10 @@ public class ListHistoricalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalOutputTokens.
+             * <p>Reserved for future use.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalOutputTokens(Long totalOutputTokens) {
                 this.totalOutputTokens = totalOutputTokens;
@@ -514,7 +578,10 @@ public class ListHistoricalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalTalkTime.
+             * <p>The total talk time in milliseconds (ms).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalTalkTime(Long totalTalkTime) {
                 this.totalTalkTime = totalTalkTime;
@@ -522,7 +589,10 @@ public class ListHistoricalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalTokens.
+             * <p>Reserved for future use.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalTokens(Long totalTokens) {
                 this.totalTokens = totalTokens;
@@ -530,7 +600,10 @@ public class ListHistoricalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * UsedConcurrency.
+             * <p>The peak number of concurrent calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder usedConcurrency(Long usedConcurrency) {
                 this.usedConcurrency = usedConcurrency;
@@ -623,7 +696,7 @@ public class ListHistoricalInstanceReportResponseBody extends TeaModel {
             } 
 
             /**
-             * List.
+             * <p>A list of historical reports for the instances.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -631,7 +704,10 @@ public class ListHistoricalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -639,7 +715,10 @@ public class ListHistoricalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -647,7 +726,10 @@ public class ListHistoricalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

@@ -106,7 +106,10 @@ public class EndSessionResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The business status code. A value of OK indicates that the operation was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class EndSessionResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code. A value of 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +128,10 @@ public class EndSessionResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The HTTP response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +139,7 @@ public class EndSessionResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>The dynamic error parameters.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -138,7 +147,10 @@ public class EndSessionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9DB8BA95-4513-54B9-9C67-A28909CFB4AD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

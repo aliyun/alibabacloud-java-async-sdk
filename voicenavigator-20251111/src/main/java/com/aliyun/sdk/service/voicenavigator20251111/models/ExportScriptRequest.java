@@ -73,7 +73,10 @@ public class ExportScriptRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c28fc549-d88f-4f6e-85ad-a0806e5e39c0</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -82,7 +85,10 @@ public class ExportScriptRequest extends Request {
         }
 
         /**
-         * ScriptId.
+         * <p>The ID of the script.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>64241e64-190c-45d1-af66-06f51c07b090</p>
          */
         public Builder scriptId(String scriptId) {
             this.putBodyParameter("ScriptId", scriptId);

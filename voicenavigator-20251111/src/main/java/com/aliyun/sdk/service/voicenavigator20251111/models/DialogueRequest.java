@@ -116,7 +116,26 @@ public class DialogueRequest extends Request {
         } 
 
         /**
-         * Extras.
+         * <p>Extras.
+         * For example, a silence timeout: [{&quot;dataType&quot;:&quot;Silence&quot;}]</p>
+         * <blockquote>
+         * <p>Notice: Valid values for <code>dataType</code>: <code>DTMF</code>, <code>Silence</code>, or <code>RuntimePrompts</code>.</p>
+         * </blockquote>
+         * <blockquote>
+         * <ul>
+         * <li><p>If <code>dataType</code> is <code>DTMF</code>, use the format: <code>[{&quot;dataType&quot;:&quot;DTMF&quot;,&quot;dtmf&quot;:&quot;xxxx&quot;}]</code></p>
+         * </li>
+         * <li><p>If <code>dataType</code> is <code>Silence</code>, use the format: <code>[{&quot;dataType&quot;:&quot;Silence&quot;}]</code></p>
+         * </li>
+         * <li><p>If <code>dataType</code> is <code>RuntimePrompts</code>, use the format: <code>[{&quot;dataType&quot;:&quot;RuntimePrompts&quot;,&quot;prompts&quot;:&quot;xxxx&quot;,&quot;persistent&quot;:false/true}]</code></p>
+         * </li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>[{
+         *     &quot;dataType&quot;: &quot;Silence&quot;
+         * }]</p>
          */
         public Builder extras(String extras) {
             this.putQueryParameter("Extras", extras);
@@ -125,7 +144,10 @@ public class DialogueRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>36e9a4cd-a821-4f78-86fa-a9a4aefeea2e</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -134,7 +156,10 @@ public class DialogueRequest extends Request {
         }
 
         /**
-         * ScriptId.
+         * <p>The script ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0a88e269-01f5-49ac-97af-5830f0ccb271</p>
          */
         public Builder scriptId(String scriptId) {
             this.putQueryParameter("ScriptId", scriptId);
@@ -143,7 +168,10 @@ public class DialogueRequest extends Request {
         }
 
         /**
-         * SessionId.
+         * <p>The session ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>07d72ea0-6e38-48d4-8371-14deaaba996f</p>
          */
         public Builder sessionId(String sessionId) {
             this.putQueryParameter("SessionId", sessionId);
@@ -152,7 +180,10 @@ public class DialogueRequest extends Request {
         }
 
         /**
-         * Utterance.
+         * <p>The user\&quot;s input for the conversational turn.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>行吧，那我就不打扰您了，再见。</p>
          */
         public Builder utterance(String utterance) {
             this.putQueryParameter("Utterance", utterance);

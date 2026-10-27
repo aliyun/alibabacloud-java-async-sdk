@@ -284,7 +284,10 @@ public class ListCallDetailRecordsRequest extends Request {
         } 
 
         /**
-         * AccessChannelId.
+         * <p>The channel ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33606503-c22c-4547-a51c-dda5e8d87962</p>
          */
         public Builder accessChannelId(String accessChannelId) {
             this.putQueryParameter("AccessChannelId", accessChannelId);
@@ -293,7 +296,10 @@ public class ListCallDetailRecordsRequest extends Request {
         }
 
         /**
-         * AccessChannelType.
+         * <p>The channel type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PSTN</p>
          */
         public Builder accessChannelType(String accessChannelType) {
             this.putQueryParameter("AccessChannelType", accessChannelType);
@@ -302,7 +308,10 @@ public class ListCallDetailRecordsRequest extends Request {
         }
 
         /**
-         * Callee.
+         * <p>The callee\&quot;s number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18104560087</p>
          */
         public Builder callee(String callee) {
             this.putBodyParameter("Callee", callee);
@@ -311,7 +320,10 @@ public class ListCallDetailRecordsRequest extends Request {
         }
 
         /**
-         * Caller.
+         * <p>The caller\&quot;s number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>09876543210,</p>
          */
         public Builder caller(String caller) {
             this.putBodyParameter("Caller", caller);
@@ -320,7 +332,7 @@ public class ListCallDetailRecordsRequest extends Request {
         }
 
         /**
-         * DispositionCodes.
+         * <p>The disposition codes.</p>
          */
         public Builder dispositionCodes(java.util.List<String> dispositionCodes) {
             String dispositionCodesShrink = shrink(dispositionCodes, "DispositionCodes", "json");
@@ -330,7 +342,7 @@ public class ListCallDetailRecordsRequest extends Request {
         }
 
         /**
-         * DispositionReasons.
+         * <p>The disposition reasons.</p>
          */
         public Builder dispositionReasons(java.util.List<String> dispositionReasons) {
             String dispositionReasonsShrink = shrink(dispositionReasons, "DispositionReasons", "json");
@@ -340,7 +352,10 @@ public class ListCallDetailRecordsRequest extends Request {
         }
 
         /**
-         * DraftVersion.
+         * <p>Specifies whether to query a draft.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder draftVersion(Boolean draftVersion) {
             this.putQueryParameter("DraftVersion", draftVersion);
@@ -349,7 +364,10 @@ public class ListCallDetailRecordsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end of the time range to query. This value is a Unix timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1582103299434</p>
          */
         public Builder endTime(String endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -358,7 +376,10 @@ public class ListCallDetailRecordsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>af81a389-91f0-4157-8d82-720edd02b66a</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -367,7 +388,10 @@ public class ListCallDetailRecordsRequest extends Request {
         }
 
         /**
-         * IssueResolved.
+         * <p>Indicates whether the issue was resolved.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder issueResolved(Boolean issueResolved) {
             this.putQueryParameter("IssueResolved", issueResolved);
@@ -376,7 +400,10 @@ public class ListCallDetailRecordsRequest extends Request {
         }
 
         /**
-         * MaxTalkTurns.
+         * <p>The maximum number of conversational turns.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxTalkTurns(Integer maxTalkTurns) {
             this.putQueryParameter("MaxTalkTurns", maxTalkTurns);
@@ -385,7 +412,10 @@ public class ListCallDetailRecordsRequest extends Request {
         }
 
         /**
-         * MinTalkTurns.
+         * <p>The minimum number of conversational turns.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder minTalkTurns(Integer minTalkTurns) {
             this.putQueryParameter("MinTalkTurns", minTalkTurns);
@@ -394,7 +424,10 @@ public class ListCallDetailRecordsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -403,7 +436,10 @@ public class ListCallDetailRecordsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -412,7 +448,10 @@ public class ListCallDetailRecordsRequest extends Request {
         }
 
         /**
-         * ScriptId.
+         * <p>The script ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>64241e64-190c-45d1-af66-06f51c07b090</p>
          */
         public Builder scriptId(String scriptId) {
             this.putBodyParameter("ScriptId", scriptId);
@@ -421,7 +460,10 @@ public class ListCallDetailRecordsRequest extends Request {
         }
 
         /**
-         * SessionIds.
+         * <p>The session IDs.</p>
+         * <blockquote>
+         * <p>The value is a JSON array of strings. Example: <code>[&quot;session-id-1&quot;,&quot;session-id-2&quot;]</code>.</p>
+         * </blockquote>
          */
         public Builder sessionIds(java.util.List<String> sessionIds) {
             String sessionIdsShrink = shrink(sessionIds, "SessionIds", "json");
@@ -431,7 +473,10 @@ public class ListCallDetailRecordsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The beginning of the time range to query. This value is a Unix timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1774858849987</p>
          */
         public Builder startTime(String startTime) {
             this.putBodyParameter("StartTime", startTime);

@@ -87,7 +87,10 @@ public class ListBackgroundMusicsRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>af81a389-91f0-4157-8d82-720edd02b66a</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -96,7 +99,10 @@ public class ListBackgroundMusicsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -105,7 +111,10 @@ public class ListBackgroundMusicsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);

@@ -103,7 +103,10 @@ public class ListInstructionsRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>36e9a4cd-a821-4f78-86fa-a9a4aefeea2e</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -112,7 +115,10 @@ public class ListInstructionsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -121,7 +127,10 @@ public class ListInstructionsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -130,7 +139,13 @@ public class ListInstructionsRequest extends Request {
         }
 
         /**
-         * ProviderId.
+         * <p>The ID of the call center provider.</p>
+         * <blockquote>
+         * <p>You can obtain this ID by calling the <code>ListCallCenterProviders</code> operation.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder providerId(String providerId) {
             this.putBodyParameter("ProviderId", providerId);

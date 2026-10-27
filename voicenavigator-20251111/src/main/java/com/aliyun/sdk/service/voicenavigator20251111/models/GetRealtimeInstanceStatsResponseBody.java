@@ -119,7 +119,10 @@ public class GetRealtimeInstanceStatsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetRealtimeInstanceStatsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The real-time stats for the instance.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetRealtimeInstanceStatsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetRealtimeInstanceStatsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,7 @@ public class GetRealtimeInstanceStatsResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>A list of parameters that are related to an error, if one occurred.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -159,7 +168,7 @@ public class GetRealtimeInstanceStatsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3a530dc0-7cfa-48f6-9539-bf9001e77b16</p>
@@ -267,7 +276,10 @@ public class GetRealtimeInstanceStatsResponseBody extends TeaModel {
             } 
 
             /**
-             * ConfiguredConcurrency.
+             * <p>The maximum number of concurrent tasks configured for this script.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13</p>
              */
             public Builder configuredConcurrency(Integer configuredConcurrency) {
                 this.configuredConcurrency = configuredConcurrency;
@@ -275,7 +287,10 @@ public class GetRealtimeInstanceStatsResponseBody extends TeaModel {
             }
 
             /**
-             * ScriptId.
+             * <p>The script ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>92836ced-6f3a-4cec-bc3d-c3893d3c7efa</p>
              */
             public Builder scriptId(String scriptId) {
                 this.scriptId = scriptId;
@@ -283,7 +298,10 @@ public class GetRealtimeInstanceStatsResponseBody extends TeaModel {
             }
 
             /**
-             * ScriptName.
+             * <p>The script name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TypeCombinationTest</p>
              */
             public Builder scriptName(String scriptName) {
                 this.scriptName = scriptName;
@@ -291,7 +309,10 @@ public class GetRealtimeInstanceStatsResponseBody extends TeaModel {
             }
 
             /**
-             * StatsTime.
+             * <p>The time when the statistics were collected, expressed as a Unix timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1774881208361</p>
              */
             public Builder statsTime(Long statsTime) {
                 this.statsTime = statsTime;
@@ -299,7 +320,10 @@ public class GetRealtimeInstanceStatsResponseBody extends TeaModel {
             }
 
             /**
-             * UsedConcurrency.
+             * <p>The current number of concurrent tasks for this script.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder usedConcurrency(Integer usedConcurrency) {
                 this.usedConcurrency = usedConcurrency;
@@ -392,7 +416,10 @@ public class GetRealtimeInstanceStatsResponseBody extends TeaModel {
             } 
 
             /**
-             * ConfiguredConcurrency.
+             * <p>The maximum number of concurrent tasks configured for the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13</p>
              */
             public Builder configuredConcurrency(Integer configuredConcurrency) {
                 this.configuredConcurrency = configuredConcurrency;
@@ -400,7 +427,7 @@ public class GetRealtimeInstanceStatsResponseBody extends TeaModel {
             }
 
             /**
-             * RealtimeScriptStatsList.
+             * <p>A list of real-time stats for scripts.</p>
              */
             public Builder realtimeScriptStatsList(java.util.List<RealtimeScriptStatsList> realtimeScriptStatsList) {
                 this.realtimeScriptStatsList = realtimeScriptStatsList;
@@ -408,7 +435,10 @@ public class GetRealtimeInstanceStatsResponseBody extends TeaModel {
             }
 
             /**
-             * StatsTime.
+             * <p>The time when the statistics were collected, expressed as a Unix timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1774881208361</p>
              */
             public Builder statsTime(Long statsTime) {
                 this.statsTime = statsTime;
@@ -416,7 +446,10 @@ public class GetRealtimeInstanceStatsResponseBody extends TeaModel {
             }
 
             /**
-             * UsedConcurrency.
+             * <p>The current number of concurrent tasks for the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder usedConcurrency(Integer usedConcurrency) {
                 this.usedConcurrency = usedConcurrency;

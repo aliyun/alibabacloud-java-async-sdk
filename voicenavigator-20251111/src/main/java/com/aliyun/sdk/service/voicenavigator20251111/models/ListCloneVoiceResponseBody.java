@@ -106,7 +106,10 @@ public class ListCloneVoiceResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Internal error code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ListCloneVoiceResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The paginated list of cloned voices.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ListCloneVoiceResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +136,11 @@ public class ListCloneVoiceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance af81a389-91f0-4157-8d82-720edd02b66a
+         *  does not exist.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +148,10 @@ public class ListCloneVoiceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7401D698-0AAC-5909-B68E-88C68805FFB8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -308,7 +321,10 @@ public class ListCloneVoiceResponseBody extends TeaModel {
             } 
 
             /**
-             * CloneVoiceId.
+             * <p>The ID of the cloned voice.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>af81a389-91f0-4157-8d82-720edd02b66b</p>
              */
             public Builder cloneVoiceId(String cloneVoiceId) {
                 this.cloneVoiceId = cloneVoiceId;
@@ -316,7 +332,10 @@ public class ListCloneVoiceResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedTime.
+             * <p>The creation timestamp of the cloned voice.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1764900994000</p>
              */
             public Builder createdTime(Long createdTime) {
                 this.createdTime = createdTime;
@@ -324,7 +343,10 @@ public class ListCloneVoiceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>af81a389-91f0-4157-8d82-720edd02b66a</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -332,7 +354,10 @@ public class ListCloneVoiceResponseBody extends TeaModel {
             }
 
             /**
-             * Model.
+             * <p>The cloning model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CosyVoice</p>
              */
             public Builder model(String model) {
                 this.model = model;
@@ -340,7 +365,10 @@ public class ListCloneVoiceResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the cloned voice.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试克隆音</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -348,7 +376,10 @@ public class ListCloneVoiceResponseBody extends TeaModel {
             }
 
             /**
-             * NlsEngine.
+             * <p>The TTS engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BAILIAN</p>
              */
             public Builder nlsEngine(String nlsEngine) {
                 this.nlsEngine = nlsEngine;
@@ -356,7 +387,10 @@ public class ListCloneVoiceResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the cloned voice.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Published</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -364,7 +398,10 @@ public class ListCloneVoiceResponseBody extends TeaModel {
             }
 
             /**
-             * TenantId.
+             * <p>The tenant ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1308144684576655</p>
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -372,7 +409,10 @@ public class ListCloneVoiceResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedTime.
+             * <p>The last update timestamp of the cloned voice.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1764900994000</p>
              */
             public Builder updatedTime(Long updatedTime) {
                 this.updatedTime = updatedTime;
@@ -380,7 +420,10 @@ public class ListCloneVoiceResponseBody extends TeaModel {
             }
 
             /**
-             * Voice.
+             * <p>The base voice used for cloning.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cosyvoice-v3-plus-voicebot2-3666e4bbb2b94832ac4f4107b5804c34</p>
              */
             public Builder voice(String voice) {
                 this.voice = voice;
@@ -473,7 +516,7 @@ public class ListCloneVoiceResponseBody extends TeaModel {
             } 
 
             /**
-             * CloneVoices.
+             * <p>A list of cloned voices for the current page.</p>
              */
             public Builder cloneVoices(java.util.List<CloneVoices> cloneVoices) {
                 this.cloneVoices = cloneVoices;
@@ -481,7 +524,10 @@ public class ListCloneVoiceResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The returned page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -489,7 +535,10 @@ public class ListCloneVoiceResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -497,7 +546,10 @@ public class ListCloneVoiceResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of cloned voices that match the query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

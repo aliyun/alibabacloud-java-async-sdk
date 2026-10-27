@@ -101,7 +101,10 @@ public class CreateVariableRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Indicates the user type, including VIP and regular users</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -110,7 +113,10 @@ public class CreateVariableRequest extends Request {
         }
 
         /**
-         * DisplayName.
+         * <p>The display name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>User type</p>
          */
         public Builder displayName(String displayName) {
             this.putBodyParameter("DisplayName", displayName);
@@ -119,7 +125,10 @@ public class CreateVariableRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5daac920-d6c1-429f-a95f-2a798f5255b5</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -128,7 +137,10 @@ public class CreateVariableRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The variable name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>userType</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);

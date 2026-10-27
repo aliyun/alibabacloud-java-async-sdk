@@ -115,7 +115,10 @@ public class ListHistoricalInstanceReportRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * <p>The end time for the query. The server rounds this value up to the next hour.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1775131200000</p>
          */
         public Builder endTime(Long endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -124,7 +127,7 @@ public class ListHistoricalInstanceReportRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * <p>A JSON array of instance IDs. The array can contain up to 100 IDs.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             String instanceIdsShrink = shrink(instanceIds, "InstanceIds", "json");
@@ -134,7 +137,10 @@ public class ListHistoricalInstanceReportRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The number of the page to return. The maximum value is 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -143,7 +149,10 @@ public class ListHistoricalInstanceReportRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page. The maximum value is 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -152,7 +161,10 @@ public class ListHistoricalInstanceReportRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time for the query. The server rounds this value up to the next hour.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1775044800000</p>
          */
         public Builder startTime(Long startTime) {
             this.putBodyParameter("StartTime", startTime);

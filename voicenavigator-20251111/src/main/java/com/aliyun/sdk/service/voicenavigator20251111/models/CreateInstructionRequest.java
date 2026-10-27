@@ -116,7 +116,13 @@ public class CreateInstructionRequest extends Request {
         } 
 
         /**
-         * Code.
+         * <p>The instruction code.</p>
+         * <blockquote>
+         * <p>Notice: Globally unique.</notice></p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Transfer00</p>
          */
         public Builder code(String code) {
             this.putBodyParameter("Code", code);
@@ -125,7 +131,27 @@ public class CreateInstructionRequest extends Request {
         }
 
         /**
-         * Config.
+         * <p>The instruction configuration.</p>
+         * <blockquote>
+         * <ul>
+         * <li>providerId: the ID of the human agent service provider. You can obtain the ID by calling ListCallCenterProviders.</li>
+         * <li>transferMethod: the transfer method. Valid values: BYE, BRIDGE, and REFER.</li>
+         * <li>transferType: the transfer target type. Valid values: External (external number), Agent (agent), and SkillGroup (skill group).</li>
+         * <li>transferTarget: the transfer target.</li>
+         * <li>transferor: the caller number. If this parameter is left empty, the mobile phone number of the calling customer is used by default.</li>
+         * <li>timeoutSeconds: the timeout period for transferring to a human agent, in seconds. Default value: 30.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;providerId&quot;: &quot;xxxxxxxxx&quot;,
+         *     &quot;transferMethod&quot;: &quot;BYE&quot;,
+         *     &quot;transferType&quot;: &quot;External&quot;,
+         *     &quot;transferTarget&quot;: &quot;152******&quot;,
+         *     &quot;transferor&quot;: &quot;01*****&quot;,
+         *     &quot;timeoutSeconds&quot;: &quot;10&quot;
+         * }</p>
          */
         public Builder config(String config) {
             this.putBodyParameter("Config", config);
@@ -134,7 +160,10 @@ public class CreateInstructionRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>36e9a4cd-a821-4f78-86fa-a9a4aefeea2e</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -143,7 +172,10 @@ public class CreateInstructionRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The instruction name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Transfer to human agent instruction 1</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -152,7 +184,10 @@ public class CreateInstructionRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The instruction type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TRANSFER</p>
          */
         public Builder type(String type) {
             this.putBodyParameter("Type", type);

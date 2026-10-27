@@ -101,7 +101,10 @@ public class CreateVocabularyRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Contains financial industry terminology</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -110,7 +113,10 @@ public class CreateVocabularyRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e48e45dd-e47a-4744-a063-f08cbebb1c5a</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -119,7 +125,10 @@ public class CreateVocabularyRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The hotword name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Financial industry hotwords</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -128,7 +137,7 @@ public class CreateVocabularyRequest extends Request {
         }
 
         /**
-         * Words.
+         * <p>The list of hotwords.</p>
          */
         public Builder words(java.util.Map<String, String> words) {
             String wordsShrink = shrink(words, "Words", "json");

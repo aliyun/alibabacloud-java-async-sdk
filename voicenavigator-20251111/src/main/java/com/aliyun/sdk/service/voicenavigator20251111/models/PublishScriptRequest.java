@@ -87,7 +87,10 @@ public class PublishScriptRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19ac2375-53e3-477f-abe9-6cd334227981</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -96,7 +99,10 @@ public class PublishScriptRequest extends Request {
         }
 
         /**
-         * ScriptId.
+         * <p>The scenario ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>64241e64-190c-45d1-af66-06f51c07b090</p>
          */
         public Builder scriptId(String scriptId) {
             this.putBodyParameter("ScriptId", scriptId);
@@ -105,7 +111,10 @@ public class PublishScriptRequest extends Request {
         }
 
         /**
-         * VersionId.
+         * <p>The version ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>64241e64-190c-45d1-af66-06f51c07b091</p>
          */
         public Builder versionId(String versionId) {
             this.putBodyParameter("VersionId", versionId);

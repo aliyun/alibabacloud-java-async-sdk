@@ -119,7 +119,10 @@ public class ListVoiceEnginesResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The internal error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ListVoiceEnginesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The paginated results of voice engines.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ListVoiceEnginesResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,11 @@ public class ListVoiceEnginesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance af81a389-91f0-4157-8d82-720edd02b66a
+         *  does not exist.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +161,7 @@ public class ListVoiceEnginesResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>The list of dynamic error parameters.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -159,7 +169,10 @@ public class ListVoiceEnginesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7401D698-0AAC-5909-B68E-88C68805FFB8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -238,7 +251,10 @@ public class ListVoiceEnginesResponseBody extends TeaModel {
             } 
 
             /**
-             * ConfigSchema.
+             * <p>The engine configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{\&quot;displayName\&quot;:\&quot;AppKey\&quot;,\&quot;maxLength\&quot;:64,\&quot;name\&quot;:\&quot;AppKey\&quot;,\&quot;order\&quot;:1,\&quot;required\&quot;:true},{\&quot;displayName\&quot;:\&quot;AccessKey\&quot;,\&quot;maxLength\&quot;:64,\&quot;name\&quot;:\&quot;AccessKey\&quot;,\&quot;order\&quot;:2,\&quot;required\&quot;:true}]</p>
              */
             public Builder configSchema(String configSchema) {
                 this.configSchema = configSchema;
@@ -246,7 +262,10 @@ public class ListVoiceEnginesResponseBody extends TeaModel {
             }
 
             /**
-             * NlsEngine.
+             * <p>The voice engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VOLC</p>
              */
             public Builder nlsEngine(String nlsEngine) {
                 this.nlsEngine = nlsEngine;
@@ -254,7 +273,10 @@ public class ListVoiceEnginesResponseBody extends TeaModel {
             }
 
             /**
-             * NlsEngineName.
+             * <p>The display name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Doubao</p>
              */
             public Builder nlsEngineName(String nlsEngineName) {
                 this.nlsEngineName = nlsEngineName;
@@ -347,7 +369,10 @@ public class ListVoiceEnginesResponseBody extends TeaModel {
             } 
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -355,7 +380,10 @@ public class ListVoiceEnginesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -363,7 +391,10 @@ public class ListVoiceEnginesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -371,7 +402,7 @@ public class ListVoiceEnginesResponseBody extends TeaModel {
             }
 
             /**
-             * VoiceEngines.
+             * <p>The list of voice engine objects.</p>
              */
             public Builder voiceEngines(java.util.List<VoiceEngines> voiceEngines) {
                 this.voiceEngines = voiceEngines;

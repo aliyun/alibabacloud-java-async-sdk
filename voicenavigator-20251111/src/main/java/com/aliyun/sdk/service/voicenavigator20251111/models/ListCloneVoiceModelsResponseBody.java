@@ -119,7 +119,10 @@ public class ListCloneVoiceModelsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code of the request. A value of &quot;OK&quot; indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ListCloneVoiceModelsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The paginated data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ListCloneVoiceModelsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,11 @@ public class ListCloneVoiceModelsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The detailed message returned for the request. It provides more context about the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance af81a389-91f0-4157-8d82-720edd02b66a
+         *  does not exist.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +161,7 @@ public class ListCloneVoiceModelsResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>A list of dynamic error parameters.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -159,7 +169,10 @@ public class ListCloneVoiceModelsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique ID generated for the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9DB8BA95-4513-54B9-9C67-A28909CFB4AD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -238,7 +251,10 @@ public class ListCloneVoiceModelsResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The description of the model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>口音还原相似度高、韵律流畅</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -246,7 +262,10 @@ public class ListCloneVoiceModelsResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p>The display name of the model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CosyVoice</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -254,7 +273,10 @@ public class ListCloneVoiceModelsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The model name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CosyVoice</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -347,7 +369,7 @@ public class ListCloneVoiceModelsResponseBody extends TeaModel {
             } 
 
             /**
-             * CloneVoiceModels.
+             * <p>A list of clone voice models.</p>
              */
             public Builder cloneVoiceModels(java.util.List<CloneVoiceModels> cloneVoiceModels) {
                 this.cloneVoiceModels = cloneVoiceModels;
@@ -355,7 +377,10 @@ public class ListCloneVoiceModelsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -363,7 +388,10 @@ public class ListCloneVoiceModelsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -371,7 +399,10 @@ public class ListCloneVoiceModelsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>66</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

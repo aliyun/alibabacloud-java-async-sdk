@@ -101,7 +101,13 @@ public class GetInstanceTrendingReportRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * <p>The end time of the statistical period. The value is a millisecond-level UNIX timestamp that represents the number of milliseconds elapsed since 1970-01-01 00:00:00 UTC. The following constraints apply:</p>
+         * <p>Time range constraint: The maximum time range is 7 days for hourly queries and 180 days for daily queries.
+         * Time granularity alignment: For hourly queries, the minutes, seconds, and milliseconds must be 0. For daily queries, the hours, minutes, seconds, and milliseconds must be 0.
+         * If the specified timestamp is not aligned with the corresponding granularity, the server automatically rounds it up.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1582103299434</p>
          */
         public Builder endTime(Long endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -110,7 +116,10 @@ public class GetInstanceTrendingReportRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>82b2eaae-ce5c-45f8-8231-f15b6b27e55c</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -119,7 +128,15 @@ public class GetInstanceTrendingReportRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time of the statistical period. The value is a millisecond-level UNIX timestamp that represents the number of milliseconds elapsed since 1970-01-01 00:00:00 UTC. The following constraints apply:</p>
+         * <ol>
+         * <li>Earliest boundary: The start time can trace back to 00:00:00 of the date 365 calendar days before the current date.</li>
+         * <li>Time granularity alignment: For hourly queries, the minutes, seconds, and milliseconds must be 0. For daily queries, the hours, minutes, seconds, and milliseconds must be 0.</li>
+         * <li>If the specified timestamp is not aligned with the corresponding granularity, the server automatically rounds it up.</li>
+         * </ol>
+         * 
+         * <strong>example:</strong>
+         * <p>1582267398628</p>
          */
         public Builder startTime(Long startTime) {
             this.putBodyParameter("StartTime", startTime);
@@ -128,7 +145,10 @@ public class GetInstanceTrendingReportRequest extends Request {
         }
 
         /**
-         * TimeInterval.
+         * <p>The time interval.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1d</p>
          */
         public Builder timeInterval(String timeInterval) {
             this.putBodyParameter("TimeInterval", timeInterval);

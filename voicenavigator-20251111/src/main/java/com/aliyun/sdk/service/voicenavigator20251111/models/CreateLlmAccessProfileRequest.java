@@ -73,7 +73,10 @@ public class CreateLlmAccessProfileRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>af81a389-91f0-4157-8d82-720edd02b66a</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -82,7 +85,7 @@ public class CreateLlmAccessProfileRequest extends Request {
         }
 
         /**
-         * Profile.
+         * <p>The parameter settings.</p>
          */
         public Builder profile(Profile profile) {
             String profileShrink = shrink(profile, "Profile", "json");
@@ -164,7 +167,10 @@ public class CreateLlmAccessProfileRequest extends Request {
             } 
 
             /**
-             * ApiKey.
+             * <p>The API key of the third-party model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>70tKleNtMGaaIem7us7Miw-Tf3kPzE6l</p>
              */
             public Builder apiKey(String apiKey) {
                 this.apiKey = apiKey;
@@ -172,7 +178,10 @@ public class CreateLlmAccessProfileRequest extends Request {
             }
 
             /**
-             * Endpoint.
+             * <p>The endpoint of the third-party model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>api.llm.enpoint.example.com</p>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -180,7 +189,10 @@ public class CreateLlmAccessProfileRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The name of the third-party model configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Qwen-Omni</p>
              */
             public Builder name(String name) {
                 this.name = name;

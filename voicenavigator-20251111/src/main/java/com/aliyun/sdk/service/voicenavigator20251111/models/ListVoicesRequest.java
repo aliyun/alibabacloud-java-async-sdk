@@ -115,7 +115,10 @@ public class ListVoicesRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e48e45dd-e47a-4744-a063-f08cbebb1c5a</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -124,7 +127,10 @@ public class ListVoicesRequest extends Request {
         }
 
         /**
-         * NlsAccessType.
+         * <p>The TTS access type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MANAGED</p>
          */
         public Builder nlsAccessType(String nlsAccessType) {
             this.putBodyParameter("NlsAccessType", nlsAccessType);
@@ -133,7 +139,10 @@ public class ListVoicesRequest extends Request {
         }
 
         /**
-         * NlsEngine.
+         * <p>The TTS engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BAILIAN</p>
          */
         public Builder nlsEngine(String nlsEngine) {
             this.putBodyParameter("NlsEngine", nlsEngine);
@@ -142,7 +151,10 @@ public class ListVoicesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -151,7 +163,10 @@ public class ListVoicesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);

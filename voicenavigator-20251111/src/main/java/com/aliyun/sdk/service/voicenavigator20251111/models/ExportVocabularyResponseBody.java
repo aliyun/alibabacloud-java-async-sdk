@@ -119,7 +119,10 @@ public class ExportVocabularyResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The internal error code. A value of <code>OK</code> indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class ExportVocabularyResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>This parameter is reserved. You can ignore it.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>请忽略</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -135,7 +141,10 @@ public class ExportVocabularyResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +152,11 @@ public class ExportVocabularyResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance af81a389-91f0-4157-8d82-720edd02b66a
+         *  does not exist.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +164,7 @@ public class ExportVocabularyResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>A list of dynamic error parameters.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -159,7 +172,10 @@ public class ExportVocabularyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7401D698-0AAC-5909-B68E-88C68805FFB8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

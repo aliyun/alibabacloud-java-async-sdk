@@ -116,7 +116,10 @@ public class CreateScriptRequest extends Request {
         } 
 
         /**
-         * Concurrency.
+         * <p>The concurrency.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder concurrency(Integer concurrency) {
             this.putBodyParameter("Concurrency", concurrency);
@@ -125,7 +128,10 @@ public class CreateScriptRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The instance description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>First navigation instance</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -134,7 +140,10 @@ public class CreateScriptRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>36e9a4cd-a821-4f78-86fa-a9a4aefeea2e</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -143,7 +152,10 @@ public class CreateScriptRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Navigation test instance</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -152,7 +164,15 @@ public class CreateScriptRequest extends Request {
         }
 
         /**
-         * NluEngine.
+         * <p>The NLU engine. Valid values:</p>
+         * <ul>
+         * <li>PROMPTS: Prompt mode.</li>
+         * <li>FUNCTION: Function computing mode.</li>
+         * <li>BEEBOT: Workflow mode.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>BEEBOT</p>
          */
         public Builder nluEngine(String nluEngine) {
             this.putBodyParameter("NluEngine", nluEngine);

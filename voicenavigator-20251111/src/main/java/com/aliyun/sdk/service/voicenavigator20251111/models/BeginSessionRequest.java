@@ -102,7 +102,10 @@ public class BeginSessionRequest extends Request {
         } 
 
         /**
-         * DraftVersion.
+         * <p>Specifies whether the draft version is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder draftVersion(Boolean draftVersion) {
             this.putQueryParameter("DraftVersion", draftVersion);
@@ -111,7 +114,10 @@ public class BeginSessionRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>36e9a4cd-a821-4f78-86fa-a9a4aefeea2e</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -120,7 +126,10 @@ public class BeginSessionRequest extends Request {
         }
 
         /**
-         * ScriptId.
+         * <p>The scenario ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0a88e269-01f5-49ac-97af-5830f0ccb271</p>
          */
         public Builder scriptId(String scriptId) {
             this.putQueryParameter("ScriptId", scriptId);
@@ -129,7 +138,13 @@ public class BeginSessionRequest extends Request {
         }
 
         /**
-         * VendorParams.
+         * <p>The vendor parameters.</p>
+         * <blockquote>
+         * <p>JSON format: {&quot;key1&quot;:&quot;value1&quot;}</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;key1&quot;:&quot;value1&quot;}</p>
          */
         public Builder vendorParams(String vendorParams) {
             this.putQueryParameter("VendorParams", vendorParams);

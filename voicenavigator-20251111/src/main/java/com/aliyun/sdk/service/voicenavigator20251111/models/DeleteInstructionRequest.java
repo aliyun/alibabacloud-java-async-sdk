@@ -74,7 +74,10 @@ public class DeleteInstructionRequest extends Request {
         } 
 
         /**
-         * Code.
+         * <p>The instruction code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Transfer00</p>
          */
         public Builder code(String code) {
             this.putBodyParameter("Code", code);
@@ -83,7 +86,10 @@ public class DeleteInstructionRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>36e9a4cd-a821-4f78-86fa-a9a4aefeea2e</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);

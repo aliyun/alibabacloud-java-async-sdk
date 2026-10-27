@@ -143,7 +143,10 @@ public class PreviewVoiceRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>da37319b-6c83-4268-9f19-814aed62e401</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -152,7 +155,10 @@ public class PreviewVoiceRequest extends Request {
         }
 
         /**
-         * Model.
+         * <p>The TTS model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Qwen</p>
          */
         public Builder model(String model) {
             this.putBodyParameter("Model", model);
@@ -161,7 +167,10 @@ public class PreviewVoiceRequest extends Request {
         }
 
         /**
-         * NlsAccessType.
+         * <p>The TTS invocation method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MANAGED</p>
          */
         public Builder nlsAccessType(String nlsAccessType) {
             this.putBodyParameter("NlsAccessType", nlsAccessType);
@@ -170,7 +179,10 @@ public class PreviewVoiceRequest extends Request {
         }
 
         /**
-         * NlsEngine.
+         * <p>The TTS engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BAILIAN</p>
          */
         public Builder nlsEngine(String nlsEngine) {
             this.putBodyParameter("NlsEngine", nlsEngine);
@@ -179,7 +191,7 @@ public class PreviewVoiceRequest extends Request {
         }
 
         /**
-         * Params.
+         * <p>The synthesis parameters.</p>
          */
         public Builder params(Params params) {
             String paramsShrink = shrink(params, "Params", "json");
@@ -189,7 +201,10 @@ public class PreviewVoiceRequest extends Request {
         }
 
         /**
-         * Text.
+         * <p>The preview text.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hello, nice to meet you</p>
          */
         public Builder text(String text) {
             this.putBodyParameter("Text", text);
@@ -198,7 +213,10 @@ public class PreviewVoiceRequest extends Request {
         }
 
         /**
-         * Voice.
+         * <p>The voice.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Cherry</p>
          */
         public Builder voice(String voice) {
             this.putBodyParameter("Voice", voice);
@@ -279,7 +297,10 @@ public class PreviewVoiceRequest extends Request {
             } 
 
             /**
-             * PitchRate.
+             * <p>The pitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder pitchRate(Float pitchRate) {
                 this.pitchRate = pitchRate;
@@ -287,7 +308,10 @@ public class PreviewVoiceRequest extends Request {
             }
 
             /**
-             * SpeechRate.
+             * <p>The speech rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder speechRate(Float speechRate) {
                 this.speechRate = speechRate;
@@ -295,7 +319,10 @@ public class PreviewVoiceRequest extends Request {
             }
 
             /**
-             * Volume.
+             * <p>The volume.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder volume(Integer volume) {
                 this.volume = volume;

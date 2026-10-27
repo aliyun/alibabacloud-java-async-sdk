@@ -119,7 +119,10 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The internal error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The scenario ID.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,11 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance af81a389-91f0-4157-8d82-720edd02b66a
+         *  does not exist.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +161,7 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>The dynamic error parameters.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -410,7 +420,10 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
             } 
 
             /**
-             * CallsHandled.
+             * <p>The number of answered sessions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder callsHandled(Long callsHandled) {
                 this.callsHandled = callsHandled;
@@ -418,7 +431,10 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsOffered.
+             * <p>The number of incoming sessions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder callsOffered(Long callsOffered) {
                 this.callsOffered = callsOffered;
@@ -426,7 +442,10 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsRejected.
+             * <p>The number of rejected sessions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder callsRejected(Long callsRejected) {
                 this.callsRejected = callsRejected;
@@ -434,7 +453,10 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
             }
 
             /**
-             * CallsResolved.
+             * <p>The number of resolved sessions, based on the model evaluation results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder callsResolved(Long callsResolved) {
                 this.callsResolved = callsResolved;
@@ -442,7 +464,10 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
             }
 
             /**
-             * ConfiguredConcurrency.
+             * <p>The latest configured concurrency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13</p>
              */
             public Builder configuredConcurrency(Long configuredConcurrency) {
                 this.configuredConcurrency = configuredConcurrency;
@@ -450,7 +475,15 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
             }
 
             /**
-             * LabelBreakdown.
+             * <p>The distribution of labels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *   &quot;label1&quot;:{ 
+             *      &quot;label1_sub1&quot;:10,
+             *      &quot;label1_sub2&quot;:2
+             * }
+             * }</p>
              */
             public Builder labelBreakdown(String labelBreakdown) {
                 this.labelBreakdown = labelBreakdown;
@@ -458,7 +491,10 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
             }
 
             /**
-             * MaxTalkTime.
+             * <p>The maximum talk time, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder maxTalkTime(Long maxTalkTime) {
                 this.maxTalkTime = maxTalkTime;
@@ -466,7 +502,12 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
             }
 
             /**
-             * RejectionBreakdown.
+             * <p>The distribution of rejection reasons.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *   &quot;ConcurrentLimitExceeded&quot;:3
+             * }</p>
              */
             public Builder rejectionBreakdown(String rejectionBreakdown) {
                 this.rejectionBreakdown = rejectionBreakdown;
@@ -474,7 +515,16 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseReasonBreakdown.
+             * <p>The distribution of hang-up reasons after a session is connected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *   &quot;SilenceTimeout&quot;:1,
+             *   &quot;TurnsLimitExceeded&quot;:1,
+             *    &quot;Exception&quot;:1,
+             *    &quot;Transferred&quot;:1,
+             *    &quot;Normal&quot;:1
+             * }</p>
              */
             public Builder releaseReasonBreakdown(String releaseReasonBreakdown) {
                 this.releaseReasonBreakdown = releaseReasonBreakdown;
@@ -482,7 +532,10 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
             }
 
             /**
-             * StatsTime.
+             * <p>The statistical time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1774881208361</p>
              */
             public Builder statsTime(Long statsTime) {
                 this.statsTime = statsTime;
@@ -490,7 +543,13 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
             }
 
             /**
-             * TalkTurnsDistribution.
+             * <p>The distribution of dialog turns.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *   &quot;1&quot;:2,
+             *   &quot;10&quot;:3
+             * }</p>
              */
             public Builder talkTurnsDistribution(String talkTurnsDistribution) {
                 this.talkTurnsDistribution = talkTurnsDistribution;
@@ -498,7 +557,10 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalInputTokens.
+             * <p>Reserved for future use.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalInputTokens(Long totalInputTokens) {
                 this.totalInputTokens = totalInputTokens;
@@ -506,7 +568,10 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalOutputTokens.
+             * <p>Reserved for future use.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalOutputTokens(Long totalOutputTokens) {
                 this.totalOutputTokens = totalOutputTokens;
@@ -514,7 +579,10 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalTalkTime.
+             * <p>The total talk time, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalTalkTime(Long totalTalkTime) {
                 this.totalTalkTime = totalTalkTime;
@@ -522,7 +590,10 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
             }
 
             /**
-             * TotalTokens.
+             * <p>Reserved for future use.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalTokens(Long totalTokens) {
                 this.totalTokens = totalTokens;
@@ -530,7 +601,10 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
             }
 
             /**
-             * UsedConcurrency.
+             * <p>The maximum concurrency used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder usedConcurrency(Long usedConcurrency) {
                 this.usedConcurrency = usedConcurrency;

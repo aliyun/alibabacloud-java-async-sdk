@@ -129,7 +129,10 @@ public class ListHistoricalScriptReportRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * <p>The end of the query time range, which is a UNIX timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1582103299434</p>
          */
         public Builder endTime(Long endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -138,7 +141,10 @@ public class ListHistoricalScriptReportRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the Voice Bot instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12f407b22cbe4890ac595f09985848d5</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -147,7 +153,10 @@ public class ListHistoricalScriptReportRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number to retrieve.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -156,7 +165,10 @@ public class ListHistoricalScriptReportRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -165,7 +177,7 @@ public class ListHistoricalScriptReportRequest extends Request {
         }
 
         /**
-         * ScriptIds.
+         * <p>A list of up to 100 script IDs.</p>
          */
         public Builder scriptIds(java.util.List<String> scriptIds) {
             String scriptIdsShrink = shrink(scriptIds, "ScriptIds", "json");
@@ -175,7 +187,10 @@ public class ListHistoricalScriptReportRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start of the query time range, which is a UNIX timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1582267398628</p>
          */
         public Builder startTime(Long startTime) {
             this.putBodyParameter("StartTime", startTime);

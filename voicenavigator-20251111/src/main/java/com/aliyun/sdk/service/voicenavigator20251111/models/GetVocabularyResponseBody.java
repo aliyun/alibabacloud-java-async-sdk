@@ -119,7 +119,10 @@ public class GetVocabularyResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The internal error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetVocabularyResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The vocabulary object.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetVocabularyResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,11 @@ public class GetVocabularyResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance af81a389-91f0-4157-8d82-720edd02b66a
+         *  does not exist.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +161,7 @@ public class GetVocabularyResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>A list of dynamic error parameters.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -159,7 +169,10 @@ public class GetVocabularyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>97E7ED13-6884-52D7-B97E-C780D7870680</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -316,7 +329,10 @@ public class GetVocabularyResponseBody extends TeaModel {
             } 
 
             /**
-             * CreatedTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1773453676000</p>
              */
             public Builder createdTime(Long createdTime) {
                 this.createdTime = createdTime;
@@ -324,7 +340,10 @@ public class GetVocabularyResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The vocabulary description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>包含金融场景专业术语</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -332,7 +351,10 @@ public class GetVocabularyResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>af81a389-91f0-4157-8d82-720edd02b66a</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -340,7 +362,10 @@ public class GetVocabularyResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The vocabulary name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>金融场景热词</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -348,7 +373,10 @@ public class GetVocabularyResponseBody extends TeaModel {
             }
 
             /**
-             * TenantId.
+             * <p>The tenant ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1308144684576655</p>
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -356,7 +384,10 @@ public class GetVocabularyResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedTime.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1773453676000</p>
              */
             public Builder updatedTime(Long updatedTime) {
                 this.updatedTime = updatedTime;
@@ -364,7 +395,10 @@ public class GetVocabularyResponseBody extends TeaModel {
             }
 
             /**
-             * VocabularyId.
+             * <p>The vocabulary ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>af81a389-91f0-4157-8d82-720edd02b66b</p>
              */
             public Builder vocabularyId(String vocabularyId) {
                 this.vocabularyId = vocabularyId;
@@ -372,7 +406,10 @@ public class GetVocabularyResponseBody extends TeaModel {
             }
 
             /**
-             * WordCount.
+             * <p>The word count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder wordCount(String wordCount) {
                 this.wordCount = wordCount;
@@ -380,7 +417,10 @@ public class GetVocabularyResponseBody extends TeaModel {
             }
 
             /**
-             * Words.
+             * <p>A JSON string that contains the words and their weights.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;苹果\&quot;:\&quot;2\&quot;,\&quot;香蕉\&quot;:\&quot;3\&quot;}</p>
              */
             public Builder words(String words) {
                 this.words = words;

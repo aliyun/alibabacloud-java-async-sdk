@@ -87,7 +87,10 @@ public class UpdateCloneVoiceRequest extends Request {
         } 
 
         /**
-         * CloneVoiceId.
+         * <p>The cloned voice ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8ee1160a-6999-478f-8df6-f33ef21f27d5</p>
          */
         public Builder cloneVoiceId(String cloneVoiceId) {
             this.putBodyParameter("CloneVoiceId", cloneVoiceId);
@@ -96,7 +99,10 @@ public class UpdateCloneVoiceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0099b75d-60fd-4c63-8541-7fbba0ae6bb0</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -105,7 +111,10 @@ public class UpdateCloneVoiceRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the cloned voice.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test cloned voice</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);

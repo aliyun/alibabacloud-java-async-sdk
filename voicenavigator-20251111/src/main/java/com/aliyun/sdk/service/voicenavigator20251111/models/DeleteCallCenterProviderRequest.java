@@ -74,7 +74,10 @@ public class DeleteCallCenterProviderRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>36e9a4cd-a821-4f78-86fa-a9a4aefeea2e</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -83,7 +86,10 @@ public class DeleteCallCenterProviderRequest extends Request {
         }
 
         /**
-         * ProviderId.
+         * <p>The ID of the human service provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxxxxx</p>
          */
         public Builder providerId(String providerId) {
             this.putBodyParameter("ProviderId", providerId);

@@ -119,7 +119,10 @@ public class GetScriptResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Internal error code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetScriptResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Scenario object information</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetScriptResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,11 @@ public class GetScriptResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Error message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance af81a389-91f0-4157-8d82-720edd02b66a
+         *  does not exist.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +161,7 @@ public class GetScriptResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>List of dynamic error parameters</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -159,7 +169,10 @@ public class GetScriptResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>51E08AA9-8D1F-55F8-84A3-40635E2F0806</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -251,7 +264,10 @@ public class GetScriptResponseBody extends TeaModel {
             } 
 
             /**
-             * ClosingStatement.
+             * <p>The message to play when hanging up after reaching the maximum number of rounds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>感谢您的接听，祝您生活愉快，再见!</p>
              */
             public Builder closingStatement(String closingStatement) {
                 this.closingStatement = closingStatement;
@@ -259,7 +275,7 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * KeyWords.
+             * <p>List of custom interception keywords</p>
              */
             public Builder keyWords(java.util.List<String> keyWords) {
                 this.keyWords = keyWords;
@@ -267,7 +283,10 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * TriggerType.
+             * <p>TurnLimit: Maximum interaction rounds check. IntelligentVoiceAssistant: Voice assistant. InteractiveVoiceResponse: Extension transfer. KeyWords: Custom interception</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TurnLimit</p>
              */
             public Builder triggerType(String triggerType) {
                 this.triggerType = triggerType;
@@ -275,7 +294,10 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * TurnLimit.
+             * <p>Hangs up when the number of interaction rounds exceeds x. The range is 0 to 100. A value of 0 indicates that the hang-up feature for exceeding the round limit is disabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder turnLimit(Integer turnLimit) {
                 this.turnLimit = turnLimit;
@@ -342,7 +364,10 @@ public class GetScriptResponseBody extends TeaModel {
             } 
 
             /**
-             * Delay.
+             * <p>The hang-up action is executed x seconds after the hang-up message is played. The range is 0 to 5.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder delay(Integer delay) {
                 this.delay = delay;
@@ -350,7 +375,7 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * Triggers.
+             * <p>List of special case interceptions</p>
              */
             public Builder triggers(java.util.List<Triggers> triggers) {
                 this.triggers = triggers;
@@ -417,7 +442,10 @@ public class GetScriptResponseBody extends TeaModel {
             } 
 
             /**
-             * MaxRepeats.
+             * <p>Hang up after consecutive rounds of silence. This takes effect when NluEngine is set to PROMPTS for the current scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder maxRepeats(Integer maxRepeats) {
                 this.maxRepeats = maxRepeats;
@@ -425,7 +453,10 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * Timeout.
+             * <p>Silence timeout period in milliseconds. If the user remains silent for longer than the specified value, a silence timeout message is played. The range is 2000 to 10000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5000</p>
              */
             public Builder timeout(Integer timeout) {
                 this.timeout = timeout;
@@ -518,7 +549,10 @@ public class GetScriptResponseBody extends TeaModel {
             } 
 
             /**
-             * BackgroundMusicId.
+             * <p>Background music ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>office-ambience</p>
              */
             public Builder backgroundMusicId(String backgroundMusicId) {
                 this.backgroundMusicId = backgroundMusicId;
@@ -526,7 +560,7 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * EndConversationConfig.
+             * <p>Hang-up configuration</p>
              */
             public Builder endConversationConfig(EndConversationConfig endConversationConfig) {
                 this.endConversationConfig = endConversationConfig;
@@ -534,7 +568,10 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * InitialGreetingDelayMilliseconds.
+             * <p>The delay before playing audio after the call is connected, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000</p>
              */
             public Builder initialGreetingDelayMilliseconds(Integer initialGreetingDelayMilliseconds) {
                 this.initialGreetingDelayMilliseconds = initialGreetingDelayMilliseconds;
@@ -542,7 +579,7 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * SilenceDetectionConfig.
+             * <p>Silence detection configuration</p>
              */
             public Builder silenceDetectionConfig(SilenceDetectionConfig silenceDetectionConfig) {
                 this.silenceDetectionConfig = silenceDetectionConfig;
@@ -622,7 +659,7 @@ public class GetScriptResponseBody extends TeaModel {
             } 
 
             /**
-             * CandidateValues.
+             * <p>List of candidate values for the label</p>
              */
             public Builder candidateValues(java.util.List<String> candidateValues) {
                 this.candidateValues = candidateValues;
@@ -630,7 +667,10 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>Label description</p>
+             * 
+             * <strong>example:</strong>
+             * <p>用户是否同意于还款截止日期前还款</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -638,7 +678,10 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Label name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>是否同意还款</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -705,7 +748,10 @@ public class GetScriptResponseBody extends TeaModel {
             } 
 
             /**
-             * PromptsJson.
+             * <p>Prompt JSON</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;prompts\&quot;:\&quot;我是一个聊天机器人。\&quot;}</p>
              */
             public Builder promptsJson(String promptsJson) {
                 this.promptsJson = promptsJson;
@@ -713,7 +759,10 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * ScriptProfileTemplateId.
+             * <p>Scenario template ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CCC_PROMPTS_DEFAULT</p>
              */
             public Builder scriptProfileTemplateId(String scriptProfileTemplateId) {
                 this.scriptProfileTemplateId = scriptProfileTemplateId;
@@ -819,7 +868,10 @@ public class GetScriptResponseBody extends TeaModel {
             } 
 
             /**
-             * FunctionId.
+             * <p>Function service ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9b752bbb-805a-4d3e-9013-eab5555c3fef</p>
              */
             public Builder functionId(String functionId) {
                 this.functionId = functionId;
@@ -827,7 +879,10 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * FunctionName.
+             * <p>Function service name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my_funciton</p>
              */
             public Builder functionName(String functionName) {
                 this.functionName = functionName;
@@ -835,7 +890,10 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * HttpTriggerName.
+             * <p>Function trigger name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>defaultTrigger</p>
              */
             public Builder httpTriggerName(String httpTriggerName) {
                 this.httpTriggerName = httpTriggerName;
@@ -843,7 +901,10 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * HttpTriggerUrl.
+             * <p>Function trigger URL</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://chat-xxxxx-v-yewiundukb.cn-hangzhou-xxx.run">http://chat-xxxxx-v-yewiundukb.cn-hangzhou-xxx.run</a></p>
              */
             public Builder httpTriggerUrl(String httpTriggerUrl) {
                 this.httpTriggerUrl = httpTriggerUrl;
@@ -851,7 +912,10 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>Region where the function service is located</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -905,7 +969,10 @@ public class GetScriptResponseBody extends TeaModel {
             } 
 
             /**
-             * AccessProfileId.
+             * <p>Third-party dialogue model configuration ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c2c9baae-9351-4c49-a8cb-6f24a83a8718</p>
              */
             public Builder accessProfileId(String accessProfileId) {
                 this.accessProfileId = accessProfileId;
@@ -1063,7 +1130,10 @@ public class GetScriptResponseBody extends TeaModel {
             } 
 
             /**
-             * AgentKey.
+             * <p>Chatbot AgentKey</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1309723684579735_p_beebot_public</p>
              */
             public Builder agentKey(String agentKey) {
                 this.agentKey = agentKey;
@@ -1071,7 +1141,7 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * AgentProfile.
+             * <p>Dialogue agent configuration</p>
              */
             public Builder agentProfile(AgentProfile agentProfile) {
                 this.agentProfile = agentProfile;
@@ -1079,7 +1149,10 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * ChatbotId.
+             * <p>Chatbot ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>chatbot-cn-MQuyjjb666</p>
              */
             public Builder chatbotId(String chatbotId) {
                 this.chatbotId = chatbotId;
@@ -1087,7 +1160,7 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * FunctionMeta.
+             * <p>Function Compute configuration</p>
              */
             public Builder functionMeta(FunctionMeta functionMeta) {
                 this.functionMeta = functionMeta;
@@ -1095,7 +1168,10 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * Model.
+             * <p>Dialogue model</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen-plus</p>
              */
             public Builder model(String model) {
                 this.model = model;
@@ -1103,7 +1179,7 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * NluAccessProfile.
+             * <p>Associated configuration</p>
              */
             public Builder nluAccessProfile(NluAccessProfile nluAccessProfile) {
                 this.nluAccessProfile = nluAccessProfile;
@@ -1111,7 +1187,10 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * NluAccessType.
+             * <p>Dialogue model call method</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MANAGED</p>
              */
             public Builder nluAccessType(String nluAccessType) {
                 this.nluAccessType = nluAccessType;
@@ -1119,7 +1198,10 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * NluEngine.
+             * <p>NLU engine</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BEEBOT</p>
              */
             public Builder nluEngine(String nluEngine) {
                 this.nluEngine = nluEngine;
@@ -1127,7 +1209,10 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * OmniModel.
+             * <p>Indicates whether the model is an Omni model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder omniModel(Boolean omniModel) {
                 this.omniModel = omniModel;
@@ -1181,7 +1266,10 @@ public class GetScriptResponseBody extends TeaModel {
             } 
 
             /**
-             * AccessProfileId.
+             * <p>Third-party voice configuration</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0c4f978a-73bb-4841-bd84-75c0398edd4f</p>
              */
             public Builder accessProfileId(String accessProfileId) {
                 this.accessProfileId = accessProfileId;
@@ -1248,7 +1336,10 @@ public class GetScriptResponseBody extends TeaModel {
             } 
 
             /**
-             * Pattern.
+             * <p>Word prone to errors</p>
+             * 
+             * <strong>example:</strong>
+             * <p>还钱</p>
              */
             public Builder pattern(String pattern) {
                 this.pattern = pattern;
@@ -1256,7 +1347,10 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * Replacement.
+             * <p>Replacement word</p>
+             * 
+             * <strong>example:</strong>
+             * <p>环钱</p>
              */
             public Builder replacement(String replacement) {
                 this.replacement = replacement;
@@ -1414,7 +1508,10 @@ public class GetScriptResponseBody extends TeaModel {
             } 
 
             /**
-             * Model.
+             * <p>TTS model</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CosyVoice</p>
              */
             public Builder model(String model) {
                 this.model = model;
@@ -1422,7 +1519,7 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * NlsAccessProfile.
+             * <p>Access account configuration</p>
              */
             public Builder nlsAccessProfile(NlsAccessProfile nlsAccessProfile) {
                 this.nlsAccessProfile = nlsAccessProfile;
@@ -1430,7 +1527,10 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * NlsAccessType.
+             * <p>TTS call method</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MANAGED</p>
              */
             public Builder nlsAccessType(String nlsAccessType) {
                 this.nlsAccessType = nlsAccessType;
@@ -1438,7 +1538,10 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * NlsEngine.
+             * <p>TTS engine</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BAILIAN</p>
              */
             public Builder nlsEngine(String nlsEngine) {
                 this.nlsEngine = nlsEngine;
@@ -1446,7 +1549,10 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * PitchRate.
+             * <p>The speech pitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder pitchRate(Integer pitchRate) {
                 this.pitchRate = pitchRate;
@@ -1454,7 +1560,7 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * PronRules.
+             * <p>List of TTS intervention dictionaries</p>
              */
             public Builder pronRules(java.util.List<PronRules> pronRules) {
                 this.pronRules = pronRules;
@@ -1462,7 +1568,10 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * SpeechRate.
+             * <p>Speech rate</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder speechRate(Integer speechRate) {
                 this.speechRate = speechRate;
@@ -1470,7 +1579,10 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * Voice.
+             * <p>Voice</p>
+             * 
+             * <strong>example:</strong>
+             * <p>longanyang</p>
              */
             public Builder voice(String voice) {
                 this.voice = voice;
@@ -1478,7 +1590,10 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * Volume.
+             * <p>Volume</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder volume(Integer volume) {
                 this.volume = volume;
@@ -1545,7 +1660,10 @@ public class GetScriptResponseBody extends TeaModel {
             } 
 
             /**
-             * Pattern.
+             * <p>Word prone to errors</p>
+             * 
+             * <strong>example:</strong>
+             * <p>还钱</p>
              */
             public Builder pattern(String pattern) {
                 this.pattern = pattern;
@@ -1553,7 +1671,10 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * Replacement.
+             * <p>Replacement word</p>
+             * 
+             * <strong>example:</strong>
+             * <p>环钱</p>
              */
             public Builder replacement(String replacement) {
                 this.replacement = replacement;
@@ -1607,7 +1728,10 @@ public class GetScriptResponseBody extends TeaModel {
             } 
 
             /**
-             * AccessProfileId.
+             * <p>Third-party voice configuration ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0c4f978a-73bb-4841-bd84-75c0398edd4f</p>
              */
             public Builder accessProfileId(String accessProfileId) {
                 this.accessProfileId = accessProfileId;
@@ -1773,7 +1897,10 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * CustomizationId.
+             * <p>Self-learning language model ID (not currently supported)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0c4f978a-73bb-4841-bd84-75c0398edd6f</p>
              */
             public Builder customizationId(String customizationId) {
                 this.customizationId = customizationId;
@@ -1781,7 +1908,10 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * EndSilenceTimeout.
+             * <p>Voice Activity Detection (VAD) sentence segmentation</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder endSilenceTimeout(Integer endSilenceTimeout) {
                 this.endSilenceTimeout = endSilenceTimeout;
@@ -1789,7 +1919,10 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * Model.
+             * <p>ASR model</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Paraformer</p>
              */
             public Builder model(String model) {
                 this.model = model;
@@ -1797,7 +1930,7 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * NlsAccessProfile.
+             * <p>Access account configuration</p>
              */
             public Builder nlsAccessProfile(TranscriberConfigNlsAccessProfile nlsAccessProfile) {
                 this.nlsAccessProfile = nlsAccessProfile;
@@ -1805,7 +1938,10 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * NlsAccessType.
+             * <p>ASR call method</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MANAGED</p>
              */
             public Builder nlsAccessType(String nlsAccessType) {
                 this.nlsAccessType = nlsAccessType;
@@ -1813,7 +1949,10 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * NlsEngine.
+             * <p>ASR engine</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BAILIAN</p>
              */
             public Builder nlsEngine(String nlsEngine) {
                 this.nlsEngine = nlsEngine;
@@ -1821,7 +1960,10 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * SpeechNoiseThreshold.
+             * <p>Noise threshold</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder speechNoiseThreshold(String speechNoiseThreshold) {
                 this.speechNoiseThreshold = speechNoiseThreshold;
@@ -1829,7 +1971,10 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * VocabularyId.
+             * <p>Hotword ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0c4f978a-73bb-4841-bd84-75c0398edd5f</p>
              */
             public Builder vocabularyId(String vocabularyId) {
                 this.vocabularyId = vocabularyId;
@@ -1948,7 +2093,7 @@ public class GetScriptResponseBody extends TeaModel {
             } 
 
             /**
-             * InteractionConfig.
+             * <p>Interaction configuration</p>
              */
             public Builder interactionConfig(InteractionConfig interactionConfig) {
                 this.interactionConfig = interactionConfig;
@@ -1956,7 +2101,7 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * LabelConfig.
+             * <p>List of label objects</p>
              */
             public Builder labelConfig(java.util.List<LabelConfig> labelConfig) {
                 this.labelConfig = labelConfig;
@@ -1964,7 +2109,7 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * ScriptProfile.
+             * <p>Dialogue capability configuration</p>
              */
             public Builder scriptProfile(ScriptProfile scriptProfile) {
                 this.scriptProfile = scriptProfile;
@@ -1972,7 +2117,7 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * SynthesizerConfig.
+             * <p>TTS configuration</p>
              */
             public Builder synthesizerConfig(SynthesizerConfig synthesizerConfig) {
                 this.synthesizerConfig = synthesizerConfig;
@@ -1980,7 +2125,7 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * TranscriberConfig.
+             * <p>ASR configuration</p>
              */
             public Builder transcriberConfig(TranscriberConfig transcriberConfig) {
                 this.transcriberConfig = transcriberConfig;
@@ -1988,7 +2133,10 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * VersionId.
+             * <p>Version ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0c4f978a-73bb-4841-bd84-75c0398edd4e</p>
              */
             public Builder versionId(String versionId) {
                 this.versionId = versionId;
@@ -2081,7 +2229,12 @@ public class GetScriptResponseBody extends TeaModel {
             } 
 
             /**
-             * ClosingStatement.
+             * <ul>
+             * <li>The message to play when hanging up after reaching the maximum number of rounds.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>感谢您的接听，祝您生活愉快，再见!</p>
              */
             public Builder closingStatement(String closingStatement) {
                 this.closingStatement = closingStatement;
@@ -2089,7 +2242,9 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * KeyWords.
+             * <ul>
+             * <li>List of custom interception keywords</li>
+             * </ul>
              */
             public Builder keyWords(java.util.List<String> keyWords) {
                 this.keyWords = keyWords;
@@ -2097,7 +2252,19 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * TriggerType.
+             * <ul>
+             * <li><p><strong>TurnLimit</strong>: Maximum interaction rounds check.</p>
+             * </li>
+             * <li><p><strong>IntelligentVoiceAssistant</strong>: Voice assistant.</p>
+             * </li>
+             * <li><p><strong>InteractiveVoiceResponse</strong>: Extension transfer.</p>
+             * </li>
+             * <li><p><strong>KeyWords</strong>: Custom interception.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TurnLimit</p>
              */
             public Builder triggerType(String triggerType) {
                 this.triggerType = triggerType;
@@ -2105,7 +2272,17 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * TurnLimit.
+             * <ul>
+             * <li><p>Hangs up when the number of interaction rounds exceeds x.</p>
+             * </li>
+             * <li><p>The range is 0 to 100.</p>
+             * </li>
+             * <li><p>A value of 0 indicates that the hang-up feature for exceeding the round limit is disabled.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder turnLimit(Integer turnLimit) {
                 this.turnLimit = turnLimit;
@@ -2172,7 +2349,10 @@ public class GetScriptResponseBody extends TeaModel {
             } 
 
             /**
-             * Delay.
+             * <p>The hang-up action is executed x seconds after the hang-up message is played. The range is 0 to 5.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder delay(Integer delay) {
                 this.delay = delay;
@@ -2180,7 +2360,7 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * Triggers.
+             * <p>Special case interception</p>
              */
             public Builder triggers(java.util.List<EndConversationConfigTriggers> triggers) {
                 this.triggers = triggers;
@@ -2247,7 +2427,11 @@ public class GetScriptResponseBody extends TeaModel {
             } 
 
             /**
-             * MaxRepeats.
+             * <p>Hang up after consecutive rounds of silence.<br>
+             * This takes effect when NluEngine is set to PROMPTS for the current scenario.<br></p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder maxRepeats(Integer maxRepeats) {
                 this.maxRepeats = maxRepeats;
@@ -2255,7 +2439,12 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * Timeout.
+             * <p>Silence timeout period in milliseconds.<br>
+             * If the user remains silent for longer than the specified value, a silence timeout message is played.<br>
+             * The range is 2000 to 10000.<br><br></p>
+             * 
+             * <strong>example:</strong>
+             * <p>5000</p>
              */
             public Builder timeout(Integer timeout) {
                 this.timeout = timeout;
@@ -2348,7 +2537,10 @@ public class GetScriptResponseBody extends TeaModel {
             } 
 
             /**
-             * BackgroundMusicId.
+             * <p>Background music ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>office-ambience</p>
              */
             public Builder backgroundMusicId(String backgroundMusicId) {
                 this.backgroundMusicId = backgroundMusicId;
@@ -2356,7 +2548,7 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * EndConversationConfig.
+             * <p>Hang-up configuration</p>
              */
             public Builder endConversationConfig(InteractionConfigEndConversationConfig endConversationConfig) {
                 this.endConversationConfig = endConversationConfig;
@@ -2364,7 +2556,15 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * InitialGreetingDelayMilliseconds.
+             * <ul>
+             * <li><p>The delay before playing audio after the call is connected.</p>
+             * </li>
+             * <li><p>Unit: milliseconds.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2000</p>
              */
             public Builder initialGreetingDelayMilliseconds(Integer initialGreetingDelayMilliseconds) {
                 this.initialGreetingDelayMilliseconds = initialGreetingDelayMilliseconds;
@@ -2372,7 +2572,7 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * SilenceDetectionConfig.
+             * <p>Silence detection configuration</p>
              */
             public Builder silenceDetectionConfig(InteractionConfigSilenceDetectionConfig silenceDetectionConfig) {
                 this.silenceDetectionConfig = silenceDetectionConfig;
@@ -2452,7 +2652,7 @@ public class GetScriptResponseBody extends TeaModel {
             } 
 
             /**
-             * CandidateValues.
+             * <p>List of candidate values for the label</p>
              */
             public Builder candidateValues(java.util.List<String> candidateValues) {
                 this.candidateValues = candidateValues;
@@ -2460,7 +2660,10 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>Label description</p>
+             * 
+             * <strong>example:</strong>
+             * <p>用户是否同意于还款截止日期前还款</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2468,7 +2671,10 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Label name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>是否同意还款</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2561,7 +2767,10 @@ public class GetScriptResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>Dialogue agent description</p>
+             * 
+             * <strong>example:</strong>
+             * <p>用于测试</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2569,7 +2778,10 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Dialogue agent name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test agent</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2577,7 +2789,10 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * PromptsJson.
+             * <p><strong>Prompt JSON</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;prompts\&quot;:\&quot;我是一个聊天机器人。\&quot;}</p>
              */
             public Builder promptsJson(String promptsJson) {
                 this.promptsJson = promptsJson;
@@ -2585,7 +2800,10 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * ScriptProfileTemplateId.
+             * <p><strong>Scenario template ID</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>CCC_PROMPTS_DEFAULT</p>
              */
             public Builder scriptProfileTemplateId(String scriptProfileTemplateId) {
                 this.scriptProfileTemplateId = scriptProfileTemplateId;
@@ -2691,7 +2909,10 @@ public class GetScriptResponseBody extends TeaModel {
             } 
 
             /**
-             * FunctionId.
+             * <p>Function service ID. This is required when NluEngine is set to FUNCTION for the current scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9b752bbb-805a-4d3e-9013-eab5555c3fef</p>
              */
             public Builder functionId(String functionId) {
                 this.functionId = functionId;
@@ -2699,7 +2920,10 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * FunctionName.
+             * <p>Function service name. This is required when NluEngine is set to FUNCTION for the current scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my_function</p>
              */
             public Builder functionName(String functionName) {
                 this.functionName = functionName;
@@ -2707,7 +2931,10 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * HttpTriggerName.
+             * <p>Function trigger name. This is required when NluEngine is set to FUNCTION for the current scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>defaultTrigger</p>
              */
             public Builder httpTriggerName(String httpTriggerName) {
                 this.httpTriggerName = httpTriggerName;
@@ -2715,7 +2942,10 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * HttpTriggerUrl.
+             * <p>Function trigger URL. This is required when NluEngine is set to FUNCTION for the current scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://chat-xxxxx-v-yewiundukb.cn-hangzhou-xxx.run">http://chat-xxxxx-v-yewiundukb.cn-hangzhou-xxx.run</a></p>
              */
             public Builder httpTriggerUrl(String httpTriggerUrl) {
                 this.httpTriggerUrl = httpTriggerUrl;
@@ -2723,7 +2953,10 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>Region where the function service is located. This is required when NluEngine is set to FUNCTION for the current scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -2777,7 +3010,10 @@ public class GetScriptResponseBody extends TeaModel {
             } 
 
             /**
-             * AccessProfileId.
+             * <p>Third-party dialogue model configuration ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c2c9baae-9351-4c49-a8cb-6f24a83a8718</p>
              */
             public Builder accessProfileId(String accessProfileId) {
                 this.accessProfileId = accessProfileId;
@@ -2935,7 +3171,10 @@ public class GetScriptResponseBody extends TeaModel {
             } 
 
             /**
-             * AgentKey.
+             * <p>Chatbot AgentKey. This is required when NluEngine is set to BEEBOT for the current scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1309723684579735_p_beebot_public</p>
              */
             public Builder agentKey(String agentKey) {
                 this.agentKey = agentKey;
@@ -2943,7 +3182,7 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * AgentProfile.
+             * <p>Dialogue agent configuration</p>
              */
             public Builder agentProfile(ScriptProfileAgentProfile agentProfile) {
                 this.agentProfile = agentProfile;
@@ -2951,7 +3190,10 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * ChatbotId.
+             * <p>Chatbot ID. This is required when NluEngine is set to BEEBOT for the current scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>chatbot-cn-MQuyjjb666</p>
              */
             public Builder chatbotId(String chatbotId) {
                 this.chatbotId = chatbotId;
@@ -2959,7 +3201,7 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * FunctionMeta.
+             * <p>Function Compute configuration</p>
              */
             public Builder functionMeta(ScriptProfileFunctionMeta functionMeta) {
                 this.functionMeta = functionMeta;
@@ -2967,7 +3209,10 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * Model.
+             * <p>Dialogue model. This is required when NluEngine is set to PROMPTS for the current scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen-plus</p>
              */
             public Builder model(String model) {
                 this.model = model;
@@ -2975,7 +3220,7 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * NluAccessProfile.
+             * <p><strong>Associated configuration</strong></p>
              */
             public Builder nluAccessProfile(ScriptProfileNluAccessProfile nluAccessProfile) {
                 this.nluAccessProfile = nluAccessProfile;
@@ -2983,7 +3228,10 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * NluAccessType.
+             * <p>Dialogue model call method</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MANAGED</p>
              */
             public Builder nluAccessType(String nluAccessType) {
                 this.nluAccessType = nluAccessType;
@@ -2991,7 +3239,10 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * NluEngine.
+             * <p>NLU engine</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BEEBOT</p>
              */
             public Builder nluEngine(String nluEngine) {
                 this.nluEngine = nluEngine;
@@ -2999,7 +3250,10 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * OmniModel.
+             * <p>Indicates whether the model is an Omni model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder omniModel(Boolean omniModel) {
                 this.omniModel = omniModel;
@@ -3053,7 +3307,10 @@ public class GetScriptResponseBody extends TeaModel {
             } 
 
             /**
-             * AccessProfileId.
+             * <p>Third-party voice configuration ID (required when using third-party ASR services such as Doubao or iFLYTEK).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c2c9baae-9351-4c49-a8cb-6f24a83a8718</p>
              */
             public Builder accessProfileId(String accessProfileId) {
                 this.accessProfileId = accessProfileId;
@@ -3120,7 +3377,10 @@ public class GetScriptResponseBody extends TeaModel {
             } 
 
             /**
-             * Pattern.
+             * <p>Word prone to errors</p>
+             * 
+             * <strong>example:</strong>
+             * <p>还钱</p>
              */
             public Builder pattern(String pattern) {
                 this.pattern = pattern;
@@ -3128,7 +3388,10 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * Replacement.
+             * <p>Homophone</p>
+             * 
+             * <strong>example:</strong>
+             * <p>环钱</p>
              */
             public Builder replacement(String replacement) {
                 this.replacement = replacement;
@@ -3286,7 +3549,10 @@ public class GetScriptResponseBody extends TeaModel {
             } 
 
             /**
-             * Model.
+             * <p><strong>TTS model</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>CosyVoice</p>
              */
             public Builder model(String model) {
                 this.model = model;
@@ -3294,7 +3560,7 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * NlsAccessProfile.
+             * <p>Associated configuration</p>
              */
             public Builder nlsAccessProfile(SynthesizerConfigNlsAccessProfile nlsAccessProfile) {
                 this.nlsAccessProfile = nlsAccessProfile;
@@ -3302,7 +3568,10 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * NlsAccessType.
+             * <p><strong>TTS call method</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>MANAGED</p>
              */
             public Builder nlsAccessType(String nlsAccessType) {
                 this.nlsAccessType = nlsAccessType;
@@ -3310,7 +3579,10 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * NlsEngine.
+             * <p><strong>TTS engine</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>BAILIAN</p>
              */
             public Builder nlsEngine(String nlsEngine) {
                 this.nlsEngine = nlsEngine;
@@ -3318,7 +3590,12 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * PitchRate.
+             * <p>Pitch rate
+             * The range is -500 to 500.
+             * The default value is 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder pitchRate(Integer pitchRate) {
                 this.pitchRate = pitchRate;
@@ -3326,7 +3603,7 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * PronRules.
+             * <p>List of TTS intervention entries</p>
              */
             public Builder pronRules(java.util.List<SynthesizerConfigPronRules> pronRules) {
                 this.pronRules = pronRules;
@@ -3334,7 +3611,12 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * SpeechRate.
+             * <p><strong>Speech rate</strong>
+             * The range is -500 to 500.
+             * The default value is 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder speechRate(Integer speechRate) {
                 this.speechRate = speechRate;
@@ -3342,7 +3624,10 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * Voice.
+             * <p><strong>Voice</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>longanyang</p>
              */
             public Builder voice(String voice) {
                 this.voice = voice;
@@ -3350,7 +3635,12 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * Volume.
+             * <p>Volume
+             * The range is 0 to 100.
+             * The default value is 50.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder volume(Integer volume) {
                 this.volume = volume;
@@ -3417,7 +3707,10 @@ public class GetScriptResponseBody extends TeaModel {
             } 
 
             /**
-             * Pattern.
+             * <p>Word prone to errors</p>
+             * 
+             * <strong>example:</strong>
+             * <p>还钱</p>
              */
             public Builder pattern(String pattern) {
                 this.pattern = pattern;
@@ -3425,7 +3718,10 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * Replacement.
+             * <p>Homophone</p>
+             * 
+             * <strong>example:</strong>
+             * <p>环钱</p>
              */
             public Builder replacement(String replacement) {
                 this.replacement = replacement;
@@ -3479,7 +3775,10 @@ public class GetScriptResponseBody extends TeaModel {
             } 
 
             /**
-             * AccessProfileId.
+             * <p>Third-party voice configuration ID (required when using third-party ASR services such as Doubao or iFLYTEK).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c2c9baae-9351-4c49-a8cb-6f24a83a8718</p>
              */
             public Builder accessProfileId(String accessProfileId) {
                 this.accessProfileId = accessProfileId;
@@ -3645,7 +3944,10 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * CustomizationId.
+             * <p>Custom language model ID for ASR</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cd97223f-42f2-4cd9-95af-e734e2fe1fe4</p>
              */
             public Builder customizationId(String customizationId) {
                 this.customizationId = customizationId;
@@ -3653,7 +3955,10 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * EndSilenceTimeout.
+             * <p>Silence detection (sentence segmentation is triggered when the speaking interval exceeds x milliseconds, which is Voice Activity Detection (VAD)).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>700</p>
              */
             public Builder endSilenceTimeout(Integer endSilenceTimeout) {
                 this.endSilenceTimeout = endSilenceTimeout;
@@ -3661,7 +3966,10 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * Model.
+             * <p>ASR model</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Paraformer</p>
              */
             public Builder model(String model) {
                 this.model = model;
@@ -3669,7 +3977,7 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * NlsAccessProfile.
+             * <p><strong>Associated configuration</strong></p>
              */
             public Builder nlsAccessProfile(PublishedVersionTranscriberConfigNlsAccessProfile nlsAccessProfile) {
                 this.nlsAccessProfile = nlsAccessProfile;
@@ -3677,7 +3985,10 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * NlsAccessType.
+             * <p><strong>ASR call method</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>MANAGED</p>
              */
             public Builder nlsAccessType(String nlsAccessType) {
                 this.nlsAccessType = nlsAccessType;
@@ -3685,7 +3996,10 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * NlsEngine.
+             * <p><strong>ASR engine</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>BAILIAN</p>
              */
             public Builder nlsEngine(String nlsEngine) {
                 this.nlsEngine = nlsEngine;
@@ -3693,7 +4007,12 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * SpeechNoiseThreshold.
+             * <p>Noise parameter threshold. The range is -100 to 100. The following describes the values:</p>
+             * <p>The closer the value is to -100, the more likely noise is identified as speech.</p>
+             * <p>The closer the value is to 100, the more likely speech is identified as noise.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder speechNoiseThreshold(String speechNoiseThreshold) {
                 this.speechNoiseThreshold = speechNoiseThreshold;
@@ -3701,7 +4020,10 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * VocabularyId.
+             * <p>Hotword table ID (obtained from the hotword management page).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cd97223f-42f2-4cd9-95af-e734e2fe1fe3</p>
              */
             public Builder vocabularyId(String vocabularyId) {
                 this.vocabularyId = vocabularyId;
@@ -3820,7 +4142,7 @@ public class GetScriptResponseBody extends TeaModel {
             } 
 
             /**
-             * InteractionConfig.
+             * <p>Interaction configuration</p>
              */
             public Builder interactionConfig(PublishedVersionInteractionConfig interactionConfig) {
                 this.interactionConfig = interactionConfig;
@@ -3828,7 +4150,7 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * LabelConfig.
+             * <p>Custom tag configuration</p>
              */
             public Builder labelConfig(java.util.List<PublishedVersionLabelConfig> labelConfig) {
                 this.labelConfig = labelConfig;
@@ -3836,7 +4158,7 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * ScriptProfile.
+             * <p>Dialogue capability configuration</p>
              */
             public Builder scriptProfile(PublishedVersionScriptProfile scriptProfile) {
                 this.scriptProfile = scriptProfile;
@@ -3844,7 +4166,7 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * SynthesizerConfig.
+             * <p>TTS configuration</p>
              */
             public Builder synthesizerConfig(PublishedVersionSynthesizerConfig synthesizerConfig) {
                 this.synthesizerConfig = synthesizerConfig;
@@ -3852,7 +4174,7 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * TranscriberConfig.
+             * <p>ASR configuration</p>
              */
             public Builder transcriberConfig(PublishedVersionTranscriberConfig transcriberConfig) {
                 this.transcriberConfig = transcriberConfig;
@@ -3860,7 +4182,10 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * VersionId.
+             * <p>Version ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8b77ff09-6a90-4784-8560-fdc2b860dc68</p>
              */
             public Builder versionId(String versionId) {
                 this.versionId = versionId;
@@ -4031,7 +4356,10 @@ public class GetScriptResponseBody extends TeaModel {
             } 
 
             /**
-             * Concurrency.
+             * <p>Concurrency</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder concurrency(Integer concurrency) {
                 this.concurrency = concurrency;
@@ -4039,7 +4367,10 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedTime.
+             * <p>Creation time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1773228988000</p>
              */
             public Builder createdTime(Long createdTime) {
                 this.createdTime = createdTime;
@@ -4047,7 +4378,10 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>Description</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test script</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -4055,7 +4389,7 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * DraftVersion.
+             * <p>Draft version information</p>
              */
             public Builder draftVersion(DraftVersion draftVersion) {
                 this.draftVersion = draftVersion;
@@ -4063,7 +4397,10 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Scenario name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试场景</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -4071,7 +4408,10 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * NluEngine.
+             * <p>Natural Language Understanding (NLU) engine</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BEEBOT</p>
              */
             public Builder nluEngine(String nluEngine) {
                 this.nluEngine = nluEngine;
@@ -4079,7 +4419,7 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * PublishedVersion.
+             * <p>Published version information</p>
              */
             public Builder publishedVersion(PublishedVersion publishedVersion) {
                 this.publishedVersion = publishedVersion;
@@ -4087,7 +4427,10 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * ScriptId.
+             * <p>Scenario ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>64241e64-190c-45d1-af66-06f51c07b090</p>
              */
             public Builder scriptId(String scriptId) {
                 this.scriptId = scriptId;
@@ -4095,7 +4438,10 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Status</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DRAFT</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -4103,7 +4449,10 @@ public class GetScriptResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedTime.
+             * <p>Update time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1773228988000</p>
              */
             public Builder updatedTime(Long updatedTime) {
                 this.updatedTime = updatedTime;

@@ -73,7 +73,10 @@ public class DeleteVoiceAccessProfileRequest extends Request {
         } 
 
         /**
-         * AccessProfileId.
+         * <p>The ID of the access profile.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>af81a389-91f0-4157-8d82-720edd02b66b</p>
          */
         public Builder accessProfileId(String accessProfileId) {
             this.putBodyParameter("AccessProfileId", accessProfileId);
@@ -82,7 +85,10 @@ public class DeleteVoiceAccessProfileRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>af81a389-91f0-4157-8d82-720edd02b66a</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);

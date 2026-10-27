@@ -115,7 +115,10 @@ public class UpdateScriptRequest extends Request {
         } 
 
         /**
-         * Concurrency.
+         * <p>The concurrency.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder concurrency(Integer concurrency) {
             this.putBodyParameter("Concurrency", concurrency);
@@ -124,7 +127,10 @@ public class UpdateScriptRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>For testing</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -133,7 +139,10 @@ public class UpdateScriptRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19ac2375-53e3-477f-abe9-6cd334227981</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -142,7 +151,10 @@ public class UpdateScriptRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The scenario name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Navigation test scenario</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -151,7 +163,10 @@ public class UpdateScriptRequest extends Request {
         }
 
         /**
-         * ScriptId.
+         * <p>The scenario ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>64241e64-190c-45d1-af66-06f51c07b090</p>
          */
         public Builder scriptId(String scriptId) {
             this.putBodyParameter("ScriptId", scriptId);

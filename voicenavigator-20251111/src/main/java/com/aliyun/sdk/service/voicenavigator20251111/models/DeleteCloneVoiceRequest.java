@@ -73,7 +73,10 @@ public class DeleteCloneVoiceRequest extends Request {
         } 
 
         /**
-         * CloneVoiceId.
+         * <p>The cloned voice ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e48e45dd-e47a-4744-a063-f08cbebb1c5b</p>
          */
         public Builder cloneVoiceId(String cloneVoiceId) {
             this.putBodyParameter("CloneVoiceId", cloneVoiceId);
@@ -82,7 +85,10 @@ public class DeleteCloneVoiceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e48e45dd-e47a-4744-a063-f08cbebb1c5a</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
