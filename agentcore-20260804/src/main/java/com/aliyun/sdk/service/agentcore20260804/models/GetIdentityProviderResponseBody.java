@@ -149,7 +149,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message. Returns an error description if the request fails.</p>
+         * <p>The response message. An error description is returned if the request fails.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -197,12 +197,6 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("entityId")
         private String entityId;
 
-        @com.aliyun.core.annotation.NameInMap("jitProvisionStatus")
-        private String jitProvisionStatus;
-
-        @com.aliyun.core.annotation.NameInMap("jitUpdateStatus")
-        private String jitUpdateStatus;
-
         @com.aliyun.core.annotation.NameInMap("loginUrl")
         private String loginUrl;
 
@@ -212,8 +206,6 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         private Configuration(Builder builder) {
             this.bindingType = builder.bindingType;
             this.entityId = builder.entityId;
-            this.jitProvisionStatus = builder.jitProvisionStatus;
-            this.jitUpdateStatus = builder.jitUpdateStatus;
             this.loginUrl = builder.loginUrl;
             this.ssoStatus = builder.ssoStatus;
         }
@@ -241,20 +233,6 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         }
 
         /**
-         * @return jitProvisionStatus
-         */
-        public String getJitProvisionStatus() {
-            return this.jitProvisionStatus;
-        }
-
-        /**
-         * @return jitUpdateStatus
-         */
-        public String getJitUpdateStatus() {
-            return this.jitUpdateStatus;
-        }
-
-        /**
          * @return loginUrl
          */
         public String getLoginUrl() {
@@ -271,8 +249,6 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         public static final class Builder {
             private String bindingType; 
             private String entityId; 
-            private String jitProvisionStatus; 
-            private String jitUpdateStatus; 
             private String loginUrl; 
             private String ssoStatus; 
 
@@ -282,14 +258,12 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             private Builder(Configuration model) {
                 this.bindingType = model.bindingType;
                 this.entityId = model.entityId;
-                this.jitProvisionStatus = model.jitProvisionStatus;
-                this.jitUpdateStatus = model.jitUpdateStatus;
                 this.loginUrl = model.loginUrl;
                 this.ssoStatus = model.ssoStatus;
             } 
 
             /**
-             * <p>HTTP-Redirect or HTTP-POST. This parameter is required when you manually enter the configuration. Queries return the short name.</p>
+             * <p>HTTP-Redirect or HTTP-POST. This parameter is required for manual entry. Queries return the short name.</p>
              * 
              * <strong>example:</strong>
              * <p>HTTP-Redirect</p>
@@ -300,7 +274,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This parameter is required when you manually enter the configuration. It must be non-empty and cannot exceed 2,048 characters. Existing configurations cannot be replaced. This is different from the entity ID of the service provider (SP) returned in queries.</p>
+             * <p>This parameter is required for manual entry. It must be non-empty and cannot exceed 2,048 characters. Existing configurations do not support replacement. This is different from the local entity ID queried by the SP.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://idp.example.com/entity">https://idp.example.com/entity</a></p>
@@ -311,29 +285,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The actual switch value, which is Enabled or Disabled.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Disabled</p>
-             */
-            public Builder jitProvisionStatus(String jitProvisionStatus) {
-                this.jitProvisionStatus = jitProvisionStatus;
-                return this;
-            }
-
-            /**
-             * <p>The actual switch value, which is Enabled or Disabled.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Disabled</p>
-             */
-            public Builder jitUpdateStatus(String jitUpdateStatus) {
-                this.jitUpdateStatus = jitUpdateStatus;
-                return this;
-            }
-
-            /**
-             * <p>This parameter is required when you manually enter the configuration. It must be an absolute HTTPS URL and cannot contain user credentials or fragments.</p>
+             * <p>This parameter is required for manual entry. It must be an absolute HTTPS URL and cannot contain user credentials or fragments.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://idp.example.com/sso">https://idp.example.com/sso</a></p>
@@ -344,7 +296,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The actual switch value, which is Enabled or Disabled. This is not equivalent to the expected loginEnabled value saved in AC.</p>
+             * <p>The actual switch value is Enabled or Disabled. This is not equivalent to the expected loginEnabled value saved by AC.</p>
              * 
              * <strong>example:</strong>
              * <p>Enabled</p>
@@ -534,7 +486,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This parameter is required when you manually enter the configuration. It must be non-empty and cannot exceed 2,048 characters. Existing configurations cannot be replaced. This is different from the entity ID of the service provider (SP) returned in queries.</p>
+             * <p>This parameter is required for manual entry. It must be non-empty and cannot exceed 2,048 characters. Existing configurations do not support replacement. This is different from the local entity ID queried by the SP.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://idp.example.com/entity">https://idp.example.com/entity</a></p>
@@ -545,7 +497,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This parameter is required when you manually enter the configuration. It must be an absolute HTTPS URL and cannot contain user credentials or fragments.</p>
+             * <p>This parameter is required for manual entry. It must be an absolute HTTPS URL and cannot contain user credentials or fragments.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://idp.example.com/sso">https://idp.example.com/sso</a></p>
@@ -575,12 +527,6 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("entityId")
         private String entityId;
 
-        @com.aliyun.core.annotation.NameInMap("jitProvisionEnabled")
-        private Boolean jitProvisionEnabled;
-
-        @com.aliyun.core.annotation.NameInMap("jitUpdateEnabled")
-        private Boolean jitUpdateEnabled;
-
         @com.aliyun.core.annotation.NameInMap("loginUrl")
         private String loginUrl;
 
@@ -590,8 +536,6 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         private Saml(Builder builder) {
             this.bindingType = builder.bindingType;
             this.entityId = builder.entityId;
-            this.jitProvisionEnabled = builder.jitProvisionEnabled;
-            this.jitUpdateEnabled = builder.jitUpdateEnabled;
             this.loginUrl = builder.loginUrl;
             this.x509Certificates = builder.x509Certificates;
         }
@@ -619,20 +563,6 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         }
 
         /**
-         * @return jitProvisionEnabled
-         */
-        public Boolean getJitProvisionEnabled() {
-            return this.jitProvisionEnabled;
-        }
-
-        /**
-         * @return jitUpdateEnabled
-         */
-        public Boolean getJitUpdateEnabled() {
-            return this.jitUpdateEnabled;
-        }
-
-        /**
          * @return loginUrl
          */
         public String getLoginUrl() {
@@ -649,8 +579,6 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         public static final class Builder {
             private String bindingType; 
             private String entityId; 
-            private Boolean jitProvisionEnabled; 
-            private Boolean jitUpdateEnabled; 
             private String loginUrl; 
             private java.util.List<String> x509Certificates; 
 
@@ -660,14 +588,12 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             private Builder(Saml model) {
                 this.bindingType = model.bindingType;
                 this.entityId = model.entityId;
-                this.jitProvisionEnabled = model.jitProvisionEnabled;
-                this.jitUpdateEnabled = model.jitUpdateEnabled;
                 this.loginUrl = model.loginUrl;
                 this.x509Certificates = model.x509Certificates;
             } 
 
             /**
-             * <p>HTTP-Redirect or HTTP-POST. This parameter is required when you manually enter the configuration. Queries return the short name.</p>
+             * <p>HTTP-Redirect or HTTP-POST. This parameter is required for manual entry. Queries return the short name.</p>
              * 
              * <strong>example:</strong>
              * <p>HTTP-Redirect</p>
@@ -678,7 +604,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This parameter is required when you manually enter the configuration. It must be non-empty and cannot exceed 2,048 characters. Existing configurations cannot be replaced. This is different from the entity ID of the service provider (SP) returned in queries.</p>
+             * <p>This parameter is required for manual entry. It must be non-empty and cannot exceed 2,048 characters. Existing configurations do not support replacement. This is different from the local entity ID queried by the SP.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://idp.example.com/entity">https://idp.example.com/entity</a></p>
@@ -689,29 +615,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This parameter can be set independently. If it is omitted during an update, the existing value is retained. If it is omitted for the first time, the default value is false. A valid SAML configuration is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
-             */
-            public Builder jitProvisionEnabled(Boolean jitProvisionEnabled) {
-                this.jitProvisionEnabled = jitProvisionEnabled;
-                return this;
-            }
-
-            /**
-             * <p>This parameter can be set independently. If it is omitted during an update, the existing value is retained. If it is omitted for the first time, the default value is false. A valid SAML configuration is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
-             */
-            public Builder jitUpdateEnabled(Boolean jitUpdateEnabled) {
-                this.jitUpdateEnabled = jitUpdateEnabled;
-                return this;
-            }
-
-            /**
-             * <p>This parameter is required when you manually enter the configuration. It must be an absolute HTTPS URL and cannot contain user credentials or fragments.</p>
+             * <p>This parameter is required for manual entry. It must be an absolute HTTPS URL and cannot contain user credentials or fragments.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://idp.example.com/sso">https://idp.example.com/sso</a></p>
@@ -722,7 +626,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This parameter is required when you manually enter the configuration. It must be a non-empty array that uses PEM X.509 certificate text. The current validity period is verified, and a maximum of 10 certificates are allowed.</p>
+             * <p>A non-empty array is required for manual entry. Use PEM X.509 certificate text. The current validity period is verified. A maximum of two certificates are allowed after deduplication.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;-----BEGIN CERTIFICATE-----\\nMIICwDCCAaigAwIBAgIULlsHLfcADyBax5ZtFlj+YGzZVo0wDQYJKoZIhvcNAQEL\\nBQAwGjEYMBYGA1UEAwwPaWRwLmV4YW1wbGUuY29tMB4XDTI2MDEwMTAwMDAwMFoX\\nDTM2MDEwMTAwMDAwMFowGjEYMBYGA1UEAwwPaWRwLmV4YW1wbGUuY29tMIIBIjAN\\nBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAto0DN0W1CrPRzK9QZ9A1aApb4Lg8\\noGlp2c0PbN3LokXe/HzwxCMXx65IDnrenttxzTwp9BgUnUN/3LRzWaOL2UQ/vNYN\\nW9LFLkI1T64UPyI7eyi28YlALhb41xkYhEp7rz+MjqifBzVZeTDUxBYtbK2hAhbY\\nEL1+udwsXEx0KB7xuQ/rbI2OKeqAEAD1tfYg7T/SM2wrXNYhx+o1HtchM4/0I8Ok\\nkk27JQ4y3ofzC5sTySmFF1Y7XcpSd+5WSyazedhkAieo8AB01DkJV6nnKfH8sH0E\\nBsnH3FP8FhqCLrIeEkjX9B9OcIRLGjiZqx4u/ryW1QhMldnv+pFfNjWy/wIDAQAB\\nMA0GCSqGSIb3DQEBCwUAA4IBAQC1hSQG8AwtGOoX2gKBK4Hi5XBrBreij8WlLTUW\\nld0FINQ0Rg84f/27CjDthywj6wgxCesCuOVFhpxQa1UacsP/Gcai1aKABtLWImca\\nWECRYK5gDkwhTMFKM9mXA26hH1l4v/UR2iTpEK9H78egC4W7bs2LDTpPryuaNKTq\\nP2O0tMbNkAHB8yecz5LxHXnxadL9Egow25g2RClvpifWqDnuS9TSbKkIWLcPLjoc\\nJj2K9ILpBwhXiXi/BiSgyYTLiYvVvih9vX4s+hKGZNJc0j92YLiOHDF0XH1oxgdV\\njfTmRiedeb2VZJZElptD92z0AqFR7z2d5B+OqpPA2gjuMLV5\\n-----END CERTIFICATE-----&quot;]</p>
@@ -803,11 +707,11 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scope mode. Valid values:</p>
+             * <p>Valid values:</p>
              * <ul>
-             * <li>AllAuthorized: All authorized scopes, which are limited by the application address book authorization.</li>
+             * <li>AllAuthorized: The full authorization scope, which is limited by the application address book authorization.</li>
              * <li>SelectedDepartments: The selected departments and all their sub-departments.
-             * When you explicitly submit syncScope, you must provide a valid mode, which is verified by the backend.</li>
+             * When explicitly submitting syncScope, you must provide a valid mode, which is verified by the backend.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1034,7 +938,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The actual SAML configuration is read back on demand only by GetIdentityProvider. SCIM queries and preparations return the actual receiving status and URL.</p>
+             * <p>The actual SAML configuration is read back on demand only by GetIdentityProvider. SCIM queries and preparations return the actual received status and URLs.</p>
              */
             public Builder configuration(Configuration configuration) {
                 this.configuration = configuration;
@@ -1064,7 +968,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The external identity provider type. Valid values: DingTalk and Feishu.</p>
+             * <p>The type of the external identity provider. Valid values: DingTalk and Feishu.</p>
              * 
              * <strong>example:</strong>
              * <p>DingTalk</p>
@@ -1102,7 +1006,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Only SAML is currently supported. This parameter may not be returned if no valid configuration is saved. OIDC placeholder initialization is not supported.</p>
+             * <p>Only SAML is currently supported. This parameter may not be returned if no valid configuration is saved. Placeholder initialization with OIDC is not supported.</p>
              * 
              * <strong>example:</strong>
              * <p>SAML</p>
@@ -1123,15 +1027,15 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             /**
              * <p>The status. Valid values:</p>
              * <ul>
-             * <li>CONFIGURED: The configuration is accepted and the system is waiting for the user pool to be activated.</li>
+             * <li>CONFIGURED: The configuration is accepted and waiting for the user pool to be activated.</li>
              * <li>SYNCING: Organization members are being synchronized.</li>
-             * <li>SYNCED: Organization members are synchronized.</li>
+             * <li>SYNCED: The synchronization of organization members is complete.</li>
              * <li>READY: The binding is in effect.</li>
              * <li>SYNC_FAILED: The synchronization of organization members failed.</li>
              * <li>UPDATING: The configuration is being updated.</li>
              * <li>UPDATE_FAILED: The configuration update failed.</li>
-             * <li>DISCONNECTING: The binding is being removed.</li>
-             * <li>DISCONNECT_FAILED: The binding removal failed.</li>
+             * <li>DISCONNECTING: The unbinding is in progress.</li>
+             * <li>DISCONNECT_FAILED: The unbinding failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1143,7 +1047,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to enable the synchronization of organization members. After this feature is enabled, organization members are synchronized as workspace users by this external identity provider.</p>
+             * <p>Specifies whether to enable the synchronization of organization members. After this feature is enabled, the external identity provider synchronizes organization members as workspace users.</p>
              */
             public Builder syncEnabled(Boolean syncEnabled) {
                 this.syncEnabled = syncEnabled;
@@ -1151,7 +1055,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The synchronization scope definition by department is used. If it is omitted during creation, the default value is AllAuthorized. The first vendor synchronization is determined by syncOnBind. If it is omitted or set to null during an update, the original value is retained. Updating and saving the scope does not automatically perform full synchronization.</p>
+             * <p>The synchronization scope definition by department is retained. If this parameter is omitted during creation, the default value AllAuthorized is used. The first vendor synchronization is determined by syncOnBind. If this parameter is omitted or set to null during an update, the original value is retained. Updating and saving the scope does not automatically trigger full synchronization.</p>
              */
             public Builder syncScope(SyncScope syncScope) {
                 this.syncScope = syncScope;

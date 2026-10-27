@@ -73,7 +73,7 @@ public class CreateWorkspaceRequest extends Request {
         } 
 
         /**
-         * <p>The workspace creation request body.</p>
+         * <p>The request body for creating a workspace.</p>
          */
         public Builder body(CreateWorkspaceRequestBody body) {
             String bodyShrink = shrink(body, "body", "json");
@@ -178,7 +178,7 @@ public class CreateWorkspaceRequest extends Request {
             }
 
             /**
-             * <p>The list of vSwitch IDs. When the VPC network is enabled, the list must contain at least one vSwitch, and all vSwitches must belong to the VPC specified by VpcId.</p>
+             * <p>The list of vSwitch IDs. If the VPC network is enabled, at least one vSwitch must be included, and all vSwitches must belong to the VPC specified by VpcId.</p>
              */
             public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
@@ -186,7 +186,7 @@ public class CreateWorkspaceRequest extends Request {
             }
 
             /**
-             * <p>The user VPC ID.</p>
+             * <p>The ID of the user VPC.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-bp1234567890</p>
@@ -269,7 +269,7 @@ public class CreateWorkspaceRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to allow public outbound access from the platform. If this parameter is not specified, the default value is true. This setting only controls whether the latest versions of managed and custom agents use the public outbound endpoint of the platform. It does not affect fixed historical versions, model or MCP proxy endpoints, or the public outbound endpoint of the user VPC.</p>
+             * <p>Specifies whether to allow public outbound access from the platform. If not specified, the default value is true. This setting only controls whether the latest versions of managed and custom agents use the public outbound endpoint of the platform. It does not affect fixed historical versions, model or Model Context Protocol (MCP) proxy outbound endpoints, or the public outbound endpoint of the user VPC.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -280,7 +280,7 @@ public class CreateWorkspaceRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to allow public inbound access. If this parameter is not specified, the default value is true. If disabled, the public inbound endpoints of all agent endpoints in the workspace are closed, and the original public inbound endpoints are restored when re-enabled. INNER_DIRECT and user VPC endpoints are not affected. Collaboration and Element Web endpoints are not controlled by this parameter.</p>
+             * <p>Specifies whether to allow public inbound access. If not specified, the default value is true. If disabled, the public inbound endpoints of all agent endpoints in the workspace are closed. If re-enabled, the original public inbound endpoints are restored. INNER_DIRECT and user VPC inbound endpoints are not affected. Collaboration and Element Web inbound endpoints are not controlled by this setting.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -291,7 +291,7 @@ public class CreateWorkspaceRequest extends Request {
             }
 
             /**
-             * <p>The user VPC network configuration.</p>
+             * <p>The VPC network configuration of the user.</p>
              */
             public Builder vpc(Vpc vpc) {
                 this.vpc = vpc;
@@ -312,6 +312,12 @@ public class CreateWorkspaceRequest extends Request {
      * <p>CreateWorkspaceRequest</p>
      */
     public static class CreateWorkspaceRequestBody extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("agentSpace")
+        private String agentSpace;
+
+        @com.aliyun.core.annotation.NameInMap("cmsWorkspace")
+        private String cmsWorkspace;
+
         @com.aliyun.core.annotation.NameInMap("name")
         @com.aliyun.core.annotation.Validation(required = true)
         private String name;
@@ -323,6 +329,8 @@ public class CreateWorkspaceRequest extends Request {
         private String storageType;
 
         private CreateWorkspaceRequestBody(Builder builder) {
+            this.agentSpace = builder.agentSpace;
+            this.cmsWorkspace = builder.cmsWorkspace;
             this.name = builder.name;
             this.networkConfiguration = builder.networkConfiguration;
             this.storageType = builder.storageType;
@@ -334,6 +342,20 @@ public class CreateWorkspaceRequest extends Request {
 
         public static CreateWorkspaceRequestBody create() {
             return builder().build();
+        }
+
+        /**
+         * @return agentSpace
+         */
+        public String getAgentSpace() {
+            return this.agentSpace;
+        }
+
+        /**
+         * @return cmsWorkspace
+         */
+        public String getCmsWorkspace() {
+            return this.cmsWorkspace;
         }
 
         /**
@@ -358,6 +380,8 @@ public class CreateWorkspaceRequest extends Request {
         }
 
         public static final class Builder {
+            private String agentSpace; 
+            private String cmsWorkspace; 
             private String name; 
             private NetworkConfiguration networkConfiguration; 
             private String storageType; 
@@ -366,10 +390,34 @@ public class CreateWorkspaceRequest extends Request {
             } 
 
             private Builder(CreateWorkspaceRequestBody model) {
+                this.agentSpace = model.agentSpace;
+                this.cmsWorkspace = model.cmsWorkspace;
                 this.name = model.name;
                 this.networkConfiguration = model.networkConfiguration;
                 this.storageType = model.storageType;
             } 
+
+            /**
+             * <p>If specified, the workspace is directly bound to this AgentSpace without creating a new one. The associated CloudMonitor (CMS) workspace is determined by the server\&quot;s reverse lookup result, and CmsWorkspace validation is skipped. When the workspace is deleted, only the binding is removed, and the AgentSpace is not deleted. The value must match the current account and region, and the associated CMS workspace must be found through reverse lookup. Otherwise, InvalidParameter is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-agent-space</p>
+             */
+            public Builder agentSpace(String agentSpace) {
+                this.agentSpace = agentSpace;
+                return this;
+            }
+
+            /**
+             * <p>If specified, the workspace is bound to this CloudMonitor (CMS) workspace without creating a new one. When the workspace is deleted, only the binding is removed, and the CMS workspace is not deleted. The value must match the current account and region. Otherwise, InvalidParameter is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-cms-workspace</p>
+             */
+            public Builder cmsWorkspace(String cmsWorkspace) {
+                this.cmsWorkspace = cmsWorkspace;
+                return this;
+            }
 
             /**
              * <p>The name of the workspace.</p>
@@ -392,7 +440,7 @@ public class CreateWorkspaceRequest extends Request {
             }
 
             /**
-             * <p>The workspace storage type. PLATFORM indicates platform-managed storage, and PRIVATE indicates user private OSS storage.</p>
+             * <p>The storage type of the workspace. PLATFORM indicates platform-managed storage. PRIVATE indicates user-owned private Object Storage Service (OSS) storage.</p>
              * 
              * <strong>example:</strong>
              * <p>PRIVATE</p>

@@ -130,7 +130,7 @@ public class DeleteIdentityProviderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The binding information of the external identity provider after the disconnection operation is accepted.</p>
+         * <p>The external identity provider binding information after the disconnection operation is accepted.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -149,7 +149,7 @@ public class DeleteIdentityProviderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message. If the request fails, an error description is returned.</p>
+         * <p>The response message. An error description is returned if the request fails.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -160,7 +160,7 @@ public class DeleteIdentityProviderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>request-123456</p>
@@ -197,12 +197,6 @@ public class DeleteIdentityProviderResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("entityId")
         private String entityId;
 
-        @com.aliyun.core.annotation.NameInMap("jitProvisionStatus")
-        private String jitProvisionStatus;
-
-        @com.aliyun.core.annotation.NameInMap("jitUpdateStatus")
-        private String jitUpdateStatus;
-
         @com.aliyun.core.annotation.NameInMap("loginUrl")
         private String loginUrl;
 
@@ -212,8 +206,6 @@ public class DeleteIdentityProviderResponseBody extends TeaModel {
         private Configuration(Builder builder) {
             this.bindingType = builder.bindingType;
             this.entityId = builder.entityId;
-            this.jitProvisionStatus = builder.jitProvisionStatus;
-            this.jitUpdateStatus = builder.jitUpdateStatus;
             this.loginUrl = builder.loginUrl;
             this.ssoStatus = builder.ssoStatus;
         }
@@ -241,20 +233,6 @@ public class DeleteIdentityProviderResponseBody extends TeaModel {
         }
 
         /**
-         * @return jitProvisionStatus
-         */
-        public String getJitProvisionStatus() {
-            return this.jitProvisionStatus;
-        }
-
-        /**
-         * @return jitUpdateStatus
-         */
-        public String getJitUpdateStatus() {
-            return this.jitUpdateStatus;
-        }
-
-        /**
          * @return loginUrl
          */
         public String getLoginUrl() {
@@ -271,8 +249,6 @@ public class DeleteIdentityProviderResponseBody extends TeaModel {
         public static final class Builder {
             private String bindingType; 
             private String entityId; 
-            private String jitProvisionStatus; 
-            private String jitUpdateStatus; 
             private String loginUrl; 
             private String ssoStatus; 
 
@@ -282,14 +258,12 @@ public class DeleteIdentityProviderResponseBody extends TeaModel {
             private Builder(Configuration model) {
                 this.bindingType = model.bindingType;
                 this.entityId = model.entityId;
-                this.jitProvisionStatus = model.jitProvisionStatus;
-                this.jitUpdateStatus = model.jitUpdateStatus;
                 this.loginUrl = model.loginUrl;
                 this.ssoStatus = model.ssoStatus;
             } 
 
             /**
-             * <p>HTTP-Redirect or HTTP-POST. This parameter is required when you manually enter the configuration. The query returns the short name.</p>
+             * <p>HTTP-Redirect or HTTP-POST. This parameter is required when manually filled in. Queries return the short name.</p>
              * 
              * <strong>example:</strong>
              * <p>HTTP-Redirect</p>
@@ -300,7 +274,7 @@ public class DeleteIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This parameter is required when you manually enter the configuration. It must be non-empty and cannot exceed 2,048 characters. Existing configurations do not support replacement. It is different from the Entity ID of the service provider queried by the system.</p>
+             * <p>This parameter is required when manually filled in. It must be non-empty and cannot exceed 2,048 characters. Existing configurations do not support replacement. This is different from the Entity ID of the SP queried on our side.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://idp.example.com/entity">https://idp.example.com/entity</a></p>
@@ -311,29 +285,7 @@ public class DeleteIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The actual switch value, which is Enabled or Disabled.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Disabled</p>
-             */
-            public Builder jitProvisionStatus(String jitProvisionStatus) {
-                this.jitProvisionStatus = jitProvisionStatus;
-                return this;
-            }
-
-            /**
-             * <p>The actual switch value, which is Enabled or Disabled.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Disabled</p>
-             */
-            public Builder jitUpdateStatus(String jitUpdateStatus) {
-                this.jitUpdateStatus = jitUpdateStatus;
-                return this;
-            }
-
-            /**
-             * <p>This parameter is required when you manually enter the configuration. It must be an absolute HTTPS URL and cannot contain user credentials or fragments.</p>
+             * <p>This parameter is required when manually filled in. It must be an absolute HTTPS URL and cannot contain user credentials or fragments.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://idp.example.com/sso">https://idp.example.com/sso</a></p>
@@ -344,7 +296,7 @@ public class DeleteIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The actual switch value, which is Enabled or Disabled. It is not equivalent to the expected value of loginEnabled saved in AC.</p>
+             * <p>The actual switch value, which is Enabled or Disabled. This is not equivalent to the expected value of loginEnabled saved in AC.</p>
              * 
              * <strong>example:</strong>
              * <p>Enabled</p>
@@ -374,12 +326,6 @@ public class DeleteIdentityProviderResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("entityId")
         private String entityId;
 
-        @com.aliyun.core.annotation.NameInMap("jitProvisionEnabled")
-        private Boolean jitProvisionEnabled;
-
-        @com.aliyun.core.annotation.NameInMap("jitUpdateEnabled")
-        private Boolean jitUpdateEnabled;
-
         @com.aliyun.core.annotation.NameInMap("loginUrl")
         private String loginUrl;
 
@@ -389,8 +335,6 @@ public class DeleteIdentityProviderResponseBody extends TeaModel {
         private Saml(Builder builder) {
             this.bindingType = builder.bindingType;
             this.entityId = builder.entityId;
-            this.jitProvisionEnabled = builder.jitProvisionEnabled;
-            this.jitUpdateEnabled = builder.jitUpdateEnabled;
             this.loginUrl = builder.loginUrl;
             this.x509Certificates = builder.x509Certificates;
         }
@@ -418,20 +362,6 @@ public class DeleteIdentityProviderResponseBody extends TeaModel {
         }
 
         /**
-         * @return jitProvisionEnabled
-         */
-        public Boolean getJitProvisionEnabled() {
-            return this.jitProvisionEnabled;
-        }
-
-        /**
-         * @return jitUpdateEnabled
-         */
-        public Boolean getJitUpdateEnabled() {
-            return this.jitUpdateEnabled;
-        }
-
-        /**
          * @return loginUrl
          */
         public String getLoginUrl() {
@@ -448,8 +378,6 @@ public class DeleteIdentityProviderResponseBody extends TeaModel {
         public static final class Builder {
             private String bindingType; 
             private String entityId; 
-            private Boolean jitProvisionEnabled; 
-            private Boolean jitUpdateEnabled; 
             private String loginUrl; 
             private java.util.List<String> x509Certificates; 
 
@@ -459,14 +387,12 @@ public class DeleteIdentityProviderResponseBody extends TeaModel {
             private Builder(Saml model) {
                 this.bindingType = model.bindingType;
                 this.entityId = model.entityId;
-                this.jitProvisionEnabled = model.jitProvisionEnabled;
-                this.jitUpdateEnabled = model.jitUpdateEnabled;
                 this.loginUrl = model.loginUrl;
                 this.x509Certificates = model.x509Certificates;
             } 
 
             /**
-             * <p>HTTP-Redirect or HTTP-POST. This parameter is required when you manually enter the configuration. The query returns the short name.</p>
+             * <p>HTTP-Redirect or HTTP-POST. This parameter is required when manually filled in. Queries return the short name.</p>
              * 
              * <strong>example:</strong>
              * <p>HTTP-Redirect</p>
@@ -477,7 +403,7 @@ public class DeleteIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This parameter is required when you manually enter the configuration. It must be non-empty and cannot exceed 2,048 characters. Existing configurations do not support replacement. It is different from the Entity ID of the service provider queried by the system.</p>
+             * <p>This parameter is required when manually filled in. It must be non-empty and cannot exceed 2,048 characters. Existing configurations do not support replacement. This is different from the Entity ID of the SP queried on our side.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://idp.example.com/entity">https://idp.example.com/entity</a></p>
@@ -488,29 +414,7 @@ public class DeleteIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This parameter can be set independently. If it is omitted during an update, the existing value is retained. If it is omitted for the first time, the default value is false. A valid SAML configuration is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
-             */
-            public Builder jitProvisionEnabled(Boolean jitProvisionEnabled) {
-                this.jitProvisionEnabled = jitProvisionEnabled;
-                return this;
-            }
-
-            /**
-             * <p>This parameter can be set independently. If it is omitted during an update, the existing value is retained. If it is omitted for the first time, the default value is false. A valid SAML configuration is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
-             */
-            public Builder jitUpdateEnabled(Boolean jitUpdateEnabled) {
-                this.jitUpdateEnabled = jitUpdateEnabled;
-                return this;
-            }
-
-            /**
-             * <p>This parameter is required when you manually enter the configuration. It must be an absolute HTTPS URL and cannot contain user credentials or fragments.</p>
+             * <p>This parameter is required when manually filled in. It must be an absolute HTTPS URL and cannot contain user credentials or fragments.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://idp.example.com/sso">https://idp.example.com/sso</a></p>
@@ -521,7 +425,7 @@ public class DeleteIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This parameter is required when you manually enter the configuration. It must be a non-empty array and use PEM X.509 certificate text. The current validity period is verified. A maximum of 10 certificates are supported.</p>
+             * <p>This parameter is required when manually filled in. It must be a non-empty array and use PEM X.509 certificate text. The current validity period is verified. A maximum of two certificates are allowed after deduplication.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;-----BEGIN CERTIFICATE-----\\nMIICwDCCAaigAwIBAgIULlsHLfcADyBax5ZtFlj+YGzZVo0wDQYJKoZIhvcNAQEL\\nBQAwGjEYMBYGA1UEAwwPaWRwLmV4YW1wbGUuY29tMB4XDTI2MDEwMTAwMDAwMFoX\\nDTM2MDEwMTAwMDAwMFowGjEYMBYGA1UEAwwPaWRwLmV4YW1wbGUuY29tMIIBIjAN\\nBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAto0DN0W1CrPRzK9QZ9A1aApb4Lg8\\noGlp2c0PbN3LokXe/HzwxCMXx65IDnrenttxzTwp9BgUnUN/3LRzWaOL2UQ/vNYN\\nW9LFLkI1T64UPyI7eyi28YlALhb41xkYhEp7rz+MjqifBzVZeTDUxBYtbK2hAhbY\\nEL1+udwsXEx0KB7xuQ/rbI2OKeqAEAD1tfYg7T/SM2wrXNYhx+o1HtchM4/0I8Ok\\nkk27JQ4y3ofzC5sTySmFF1Y7XcpSd+5WSyazedhkAieo8AB01DkJV6nnKfH8sH0E\\nBsnH3FP8FhqCLrIeEkjX9B9OcIRLGjiZqx4u/ryW1QhMldnv+pFfNjWy/wIDAQAB\\nMA0GCSqGSIb3DQEBCwUAA4IBAQC1hSQG8AwtGOoX2gKBK4Hi5XBrBreij8WlLTUW\\nld0FINQ0Rg84f/27CjDthywj6wgxCesCuOVFhpxQa1UacsP/Gcai1aKABtLWImca\\nWECRYK5gDkwhTMFKM9mXA26hH1l4v/UR2iTpEK9H78egC4W7bs2LDTpPryuaNKTq\\nP2O0tMbNkAHB8yecz5LxHXnxadL9Egow25g2RClvpifWqDnuS9TSbKkIWLcPLjoc\\nJj2K9ILpBwhXiXi/BiSgyYTLiYvVvih9vX4s+hKGZNJc0j92YLiOHDF0XH1oxgdV\\njfTmRiedeb2VZJZElptD92z0AqFR7z2d5B+OqpPA2gjuMLV5\\n-----END CERTIFICATE-----&quot;]</p>
@@ -662,7 +566,7 @@ public class DeleteIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Only SAML is supported. This parameter may not be returned if no valid configuration is saved. OIDC placeholder initialization is not supported.</p>
+             * <p>Currently, only SAML is supported. This parameter may not be returned if no valid configuration is saved. OIDC placeholders are not supported for initialization.</p>
              * 
              * <strong>example:</strong>
              * <p>SAML</p>
@@ -673,7 +577,7 @@ public class DeleteIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The input supports either XML or complete manual entry. The query returns the standardized configuration and does not echo the original XML. This parameter can be omitted if it is not configured.</p>
+             * <p>The input supports either XML or complete manual configuration. Queries return the standardized configuration and do not echo the original XML. This parameter can be omitted when not configured.</p>
              */
             public Builder saml(Saml saml) {
                 this.saml = saml;
@@ -681,7 +585,7 @@ public class DeleteIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status. Valid values: CONFIGURED (the configuration is accepted and the system is waiting to activate the user pool), SYNCING (synchronizing organization members), SYNCED (organization member synchronization is complete), READY (the binding has taken effect), SYNC_FAILED (organization member synchronization failed), UPDATING (updating the configuration), UPDATE_FAILED (configuration update failed), DISCONNECTING (disconnecting), and DISCONNECT_FAILED (disconnection failed).</p>
+             * <p>The status. Valid values: CONFIGURED (the configuration is accepted and the system is waiting to activate the user pool), SYNCING (synchronizing organization members), SYNCED (organization member synchronization is complete), READY (the binding is effective), SYNC_FAILED (organization member synchronization failed), UPDATING (updating the configuration), UPDATE_FAILED (configuration update failed), DISCONNECTING (disconnecting), and DISCONNECT_FAILED (disconnection failed).</p>
              * 
              * <strong>example:</strong>
              * <p>READY</p>
@@ -692,7 +596,7 @@ public class DeleteIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the workspace.</p>
+             * <p>The workspace ID.</p>
              * 
              * <strong>example:</strong>
              * <p>ws-123456</p>

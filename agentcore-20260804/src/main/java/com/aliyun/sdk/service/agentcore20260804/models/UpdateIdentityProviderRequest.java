@@ -89,7 +89,7 @@ public class UpdateIdentityProviderRequest extends Request {
         } 
 
         /**
-         * <p>The workspace ID.</p>
+         * <p>The ID of the workspace to which the identity provider belongs. The request region must be the same as the region of the target workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class UpdateIdentityProviderRequest extends Request {
         }
 
         /**
-         * <p>The type of the external identity provider. Valid values: DingTalk and Feishu.</p>
+         * <p>The type of the identity provider. DingTalk: DingTalk. Feishu: Lark. CustomSSO: custom enterprise identity provider connected through SAML. The value must be the same as the type of the identity provider bound to the current workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +115,7 @@ public class UpdateIdentityProviderRequest extends Request {
         }
 
         /**
-         * <p>The request content for updating the external identity provider.</p>
+         * <p>The configuration fields to be modified. For DingTalk and Lark, you must submit at least one of loginEnabled, syncEnabled, metadata, and syncScope. For CustomSSO, use protocol, saml, and loginEnabled. You cannot submit vendor metadata, syncEnabled, or syncScope.</p>
          */
         public Builder body(UpdateIdentityProviderRequestBody body) {
             String bodyShrink = shrink(body, "body", "json");
@@ -236,7 +236,7 @@ public class UpdateIdentityProviderRequest extends Request {
             } 
 
             /**
-             * <p>The App ID of the Feishu application. This parameter is required when the binding type is Feishu.</p>
+             * <p>The App ID of the Lark application. If this parameter is omitted during an update, the existing value is retained. If explicitly submitted, it must be a non-empty value. The merged configuration for Lark must include this field.</p>
              * 
              * <strong>example:</strong>
              * <p>cli_exampleappid01</p>
@@ -247,7 +247,7 @@ public class UpdateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>The AppKey of the DingTalk application. This parameter is required when the binding type is DingTalk.</p>
+             * <p>The AppKey of the DingTalk application. If this parameter is omitted during an update, the existing value is retained. If explicitly submitted, it must be a non-empty value. The merged configuration for DingTalk must include this field.</p>
              * 
              * <strong>example:</strong>
              * <p>dingexampleappkey01</p>
@@ -258,7 +258,7 @@ public class UpdateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>Required. The secret of the external identity provider application. This parameter is used only for writing and is not returned by query APIs.</p>
+             * <p>The AppSecret of the DingTalk or Lark application. If this parameter is omitted during an update, the existing secret is retained and does not need to be retransmitted each time. If explicitly submitted, it must be a non-empty value, and the merged configuration must include this field. This is sensitive input and is not echoed in queries. The example is a fictitious value.</p>
              * 
              * <strong>example:</strong>
              * <p>example-app-secret</p>
@@ -269,7 +269,7 @@ public class UpdateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>The CorpId of the DingTalk enterprise. This parameter is required when the binding type is DingTalk.</p>
+             * <p>The CorpId of the organization to which the DingTalk application belongs. If this parameter is omitted during an update, the existing value is retained. If explicitly submitted, it must be a non-empty value and must match the organization to which the application belongs. The merged configuration for DingTalk must include this field.</p>
              * 
              * <strong>example:</strong>
              * <p>dingexamplecorpid01</p>
@@ -280,7 +280,7 @@ public class UpdateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>The data encryption key for event subscription. The value must be the same as the one configured in the external identity provider application. This parameter is used only for writing and is not returned by query APIs.</p>
+             * <p>The encryption key for vendor event callbacks, which must be consistent with the vendor application configuration. If this parameter is omitted during an update, the existing value is retained. When incremental synchronization is enabled, the merged configuration must include this field. This is sensitive input and is not echoed in queries.</p>
              * 
              * <strong>example:</strong>
              * <p>example-encrypt-key</p>
@@ -291,7 +291,7 @@ public class UpdateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>The verification token for event subscription. The value must be the same as the one configured in the external identity provider application. This parameter is used only for writing and is not returned by query APIs.</p>
+             * <p>The verification token for vendor event callbacks, which must be consistent with the vendor application configuration. If this parameter is omitted during an update, the existing value is retained. When incremental synchronization is enabled, the merged configuration must include this field. This is sensitive input and is not echoed in queries.</p>
              * 
              * <strong>example:</strong>
              * <p>example-verification-token</p>
@@ -321,12 +321,6 @@ public class UpdateIdentityProviderRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("entityId")
         private String entityId;
 
-        @com.aliyun.core.annotation.NameInMap("jitProvisionEnabled")
-        private Boolean jitProvisionEnabled;
-
-        @com.aliyun.core.annotation.NameInMap("jitUpdateEnabled")
-        private Boolean jitUpdateEnabled;
-
         @com.aliyun.core.annotation.NameInMap("loginUrl")
         private String loginUrl;
 
@@ -339,8 +333,6 @@ public class UpdateIdentityProviderRequest extends Request {
         private Saml(Builder builder) {
             this.bindingType = builder.bindingType;
             this.entityId = builder.entityId;
-            this.jitProvisionEnabled = builder.jitProvisionEnabled;
-            this.jitUpdateEnabled = builder.jitUpdateEnabled;
             this.loginUrl = builder.loginUrl;
             this.metadataXml = builder.metadataXml;
             this.x509Certificates = builder.x509Certificates;
@@ -369,20 +361,6 @@ public class UpdateIdentityProviderRequest extends Request {
         }
 
         /**
-         * @return jitProvisionEnabled
-         */
-        public Boolean getJitProvisionEnabled() {
-            return this.jitProvisionEnabled;
-        }
-
-        /**
-         * @return jitUpdateEnabled
-         */
-        public Boolean getJitUpdateEnabled() {
-            return this.jitUpdateEnabled;
-        }
-
-        /**
          * @return loginUrl
          */
         public String getLoginUrl() {
@@ -406,8 +384,6 @@ public class UpdateIdentityProviderRequest extends Request {
         public static final class Builder {
             private String bindingType; 
             private String entityId; 
-            private Boolean jitProvisionEnabled; 
-            private Boolean jitUpdateEnabled; 
             private String loginUrl; 
             private String metadataXml; 
             private java.util.List<String> x509Certificates; 
@@ -418,15 +394,13 @@ public class UpdateIdentityProviderRequest extends Request {
             private Builder(Saml model) {
                 this.bindingType = model.bindingType;
                 this.entityId = model.entityId;
-                this.jitProvisionEnabled = model.jitProvisionEnabled;
-                this.jitUpdateEnabled = model.jitUpdateEnabled;
                 this.loginUrl = model.loginUrl;
                 this.metadataXml = model.metadataXml;
                 this.x509Certificates = model.x509Certificates;
             } 
 
             /**
-             * <p>HTTP-Redirect or HTTP-POST. This parameter is required for manual entry. Queries return the short name.</p>
+             * <p>The binding type for manual SAML configuration. HTTP-Redirect and HTTP-POST are supported. This parameter must be submitted together with entityId, loginUrl, and x509Certificates, and cannot be mixed with metadataXml.</p>
              * 
              * <strong>example:</strong>
              * <p>HTTP-Redirect</p>
@@ -437,7 +411,7 @@ public class UpdateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>Required for manual entry. It must be non-empty and up to 2,048 characters in length. Existing configurations do not support replacement. It is different from the local entity ID returned by SP queries.</p>
+             * <p>The entity ID of the enterprise IdP. This parameter is required for manual configuration. It must be non-empty and up to 2,048 characters, and cannot be changed after saving. It must be submitted together with loginUrl, bindingType, and x509Certificates, and cannot be mixed with metadataXml.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://idp.example.com/entity">https://idp.example.com/entity</a></p>
@@ -448,29 +422,7 @@ public class UpdateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>Can be set independently. If omitted during an update, the existing value is retained. If omitted for the first time, the default value is false. A valid SAML configuration is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
-             */
-            public Builder jitProvisionEnabled(Boolean jitProvisionEnabled) {
-                this.jitProvisionEnabled = jitProvisionEnabled;
-                return this;
-            }
-
-            /**
-             * <p>Can be set independently. If omitted during an update, the existing value is retained. If omitted for the first time, the default value is false. A valid SAML configuration is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
-             */
-            public Builder jitUpdateEnabled(Boolean jitUpdateEnabled) {
-                this.jitUpdateEnabled = jitUpdateEnabled;
-                return this;
-            }
-
-            /**
-             * <p>Required for manual entry. It must be an absolute HTTPS URL without user credentials or fragments.</p>
+             * <p>The SSO logon URL of the enterprise IdP. This parameter is required for manual configuration. It must be an absolute HTTPS URL without user credentials and fragments. It must be submitted together with entityId, bindingType, and x509Certificates, and cannot be mixed with metadataXml.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://idp.example.com/sso">https://idp.example.com/sso</a></p>
@@ -481,7 +433,7 @@ public class UpdateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>The input is the XML text of a single IdP EntityDescriptor, with a maximum size of 1 MiB. It cannot be a URL or a file path. It is mutually exclusive with the four manual entry fields.</p>
+             * <p>The original SAML metadata XML text of the enterprise IdP, not a URL or file path. The maximum size is 1 MiB. It must contain a single EntityDescriptor. DTDs and external entities are prohibited. It cannot be mixed with the four manual configuration fields. After saving, queries return the standardized configuration and do not echo the original XML text.</p>
              * 
              * <strong>example:</strong>
              * <p><EntityDescriptor xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.example.com/entity"><IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol"><KeyDescriptor use="signing"><KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#"><X509Data><X509Certificate>MIICwDCCAaigAwIBAgIULlsHLfcADyBax5ZtFlj+YGzZVo0wDQYJKoZIhvcNAQELBQAwGjEYMBYGA1UEAwwPaWRwLmV4YW1wbGUuY29tMB4XDTI2MDEwMTAwMDAwMFoXDTM2MDEwMTAwMDAwMFowGjEYMBYGA1UEAwwPaWRwLmV4YW1wbGUuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAto0DN0W1CrPRzK9QZ9A1aApb4Lg8oGlp2c0PbN3LokXe/HzwxCMXx65IDnrenttxzTwp9BgUnUN/3LRzWaOL2UQ/vNYNW9LFLkI1T64UPyI7eyi28YlALhb41xkYhEp7rz+MjqifBzVZeTDUxBYtbK2hAhbYEL1+udwsXEx0KB7xuQ/rbI2OKeqAEAD1tfYg7T/SM2wrXNYhx+o1HtchM4/0I8Okkk27JQ4y3ofzC5sTySmFF1Y7XcpSd+5WSyazedhkAieo8AB01DkJV6nnKfH8sH0EBsnH3FP8FhqCLrIeEkjX9B9OcIRLGjiZqx4u/ryW1QhMldnv+pFfNjWy/wIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQC1hSQG8AwtGOoX2gKBK4Hi5XBrBreij8WlLTUWld0FINQ0Rg84f/27CjDthywj6wgxCesCuOVFhpxQa1UacsP/Gcai1aKABtLWImcaWECRYK5gDkwhTMFKM9mXA26hH1l4v/UR2iTpEK9H78egC4W7bs2LDTpPryuaNKTqP2O0tMbNkAHB8yecz5LxHXnxadL9Egow25g2RClvpifWqDnuS9TSbKkIWLcPLjocJj2K9ILpBwhXiXi/BiSgyYTLiYvVvih9vX4s+hKGZNJc0j92YLiOHDF0XH1oxgdVjfTmRiedeb2VZJZElptD92z0AqFR7z2d5B+OqpPA2gjuMLV5</X509Certificate></X509Data></KeyInfo></KeyDescriptor><SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.example.com/sso"/></IDPSSODescriptor></EntityDescriptor></p>
@@ -492,7 +444,7 @@ public class UpdateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>Required for manual entry. It must be a non-empty array using PEM X.509 certificate text. The current validity period is validated, and up to 10 certificates are supported.</p>
+             * <p>The list of X.509 signing certificates for the enterprise IdP. For manual configuration, a non-empty list must be provided, with a maximum of 10 certificates. The certificates must be valid. This parameter must be submitted together with entityId, loginUrl, and bindingType, and cannot be mixed with metadataXml.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;-----BEGIN CERTIFICATE-----\\nMIICwDCCAaigAwIBAgIULlsHLfcADyBax5ZtFlj+YGzZVo0wDQYJKoZIhvcNAQEL\\nBQAwGjEYMBYGA1UEAwwPaWRwLmV4YW1wbGUuY29tMB4XDTI2MDEwMTAwMDAwMFoX\\nDTM2MDEwMTAwMDAwMFowGjEYMBYGA1UEAwwPaWRwLmV4YW1wbGUuY29tMIIBIjAN\\nBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAto0DN0W1CrPRzK9QZ9A1aApb4Lg8\\noGlp2c0PbN3LokXe/HzwxCMXx65IDnrenttxzTwp9BgUnUN/3LRzWaOL2UQ/vNYN\\nW9LFLkI1T64UPyI7eyi28YlALhb41xkYhEp7rz+MjqifBzVZeTDUxBYtbK2hAhbY\\nEL1+udwsXEx0KB7xuQ/rbI2OKeqAEAD1tfYg7T/SM2wrXNYhx+o1HtchM4/0I8Ok\\nkk27JQ4y3ofzC5sTySmFF1Y7XcpSd+5WSyazedhkAieo8AB01DkJV6nnKfH8sH0E\\nBsnH3FP8FhqCLrIeEkjX9B9OcIRLGjiZqx4u/ryW1QhMldnv+pFfNjWy/wIDAQAB\\nMA0GCSqGSIb3DQEBCwUAA4IBAQC1hSQG8AwtGOoX2gKBK4Hi5XBrBreij8WlLTUW\\nld0FINQ0Rg84f/27CjDthywj6wgxCesCuOVFhpxQa1UacsP/Gcai1aKABtLWImca\\nWECRYK5gDkwhTMFKM9mXA26hH1l4v/UR2iTpEK9H78egC4W7bs2LDTpPryuaNKTq\\nP2O0tMbNkAHB8yecz5LxHXnxadL9Egow25g2RClvpifWqDnuS9TSbKkIWLcPLjoc\\nJj2K9ILpBwhXiXi/BiSgyYTLiYvVvih9vX4s+hKGZNJc0j92YLiOHDF0XH1oxgdV\\njfTmRiedeb2VZJZElptD92z0AqFR7z2d5B+OqpPA2gjuMLV5\\n-----END CERTIFICATE-----&quot;]</p>
@@ -562,7 +514,7 @@ public class UpdateIdentityProviderRequest extends Request {
             } 
 
             /**
-             * <p>When the mode is SelectedDepartments, it must contain at least one non-empty department ID, which should be obtained from ListIdentityProviderDepartments. When the mode is AllAuthorized, pass an empty array or omit this parameter.</p>
+             * <p>The list of department IDs in the synchronization scope, obtained from ListIdentityProviderDepartments. In SelectedDepartments mode, at least one non-empty department ID must be provided. In AllAuthorized mode, this parameter should be omitted or an empty array should be passed.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;10001&quot;]</p>
@@ -573,12 +525,7 @@ public class UpdateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>AllAuthorized: The full authorization scope, subject to the application address book authorization limits.</li>
-             * <li>SelectedDepartments: The selected departments and all their sub-departments.
-             * When explicitly submitting syncScope, you must provide a valid mode, which is validated by the backend.</li>
-             * </ul>
+             * <p>The synchronization scope mode. AllAuthorized: all members within the authorization scope of the application address book. SelectedDepartments: the selected departments and all their sub-departments. A valid mode must be provided when syncScope is explicitly submitted.</p>
              * 
              * <strong>example:</strong>
              * <p>SelectedDepartments</p>
@@ -700,7 +647,7 @@ public class UpdateIdentityProviderRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to allow workspace users to log on through the external identity provider.</p>
+             * <p>Specifies whether to allow logon by using this identity provider. If this parameter is omitted or set to null during an update, the original value is retained. For CustomSSO, a valid SAML configuration must exist before logon is enabled. Disabling logon does not delete the saved SAML or SCIM configurations.</p>
              */
             public Builder loginEnabled(Boolean loginEnabled) {
                 this.loginEnabled = loginEnabled;
@@ -708,7 +655,7 @@ public class UpdateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>The new application configuration of the external identity provider. If not specified, the existing configuration remains unchanged.</p>
+             * <p>Applies only to DingTalk and Lark. The application configuration is merged by field. Omitted fields and existing keys retain their original values. Explicitly submitted fields must not be null, empty strings, or blank strings. The merged configuration must meet the complete configuration requirements of the vendor. CustomSSO does not accept this field.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;appSecret&quot;:&quot;example-app-secret&quot;}</p>
@@ -719,7 +666,7 @@ public class UpdateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>Currently, only SAML is supported. This parameter may not be returned if no valid configuration is saved. OIDC placeholder initialization is not supported.</p>
+             * <p>The logon protocol, which applies only to CustomSSO. Currently, only SAML is supported. DingTalk and Lark do not accept this field. If submitted with a non-empty saml configuration, this field can be omitted and the server processes it as SAML.</p>
              * 
              * <strong>example:</strong>
              * <p>SAML</p>
@@ -730,7 +677,7 @@ public class UpdateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>The input supports either XML or complete manual entry. Queries return standardized configurations and do not echo the original XML. This parameter can be omitted if it is not configured.</p>
+             * <p>Applies only to CustomSSO. You can either provide metadataXml or provide the four complete manual configuration fields. The two methods cannot be mixed. If a valid configuration already exists, you can also modify only the JIT switches. Saving the configuration does not automatically enable logon.</p>
              */
             public Builder saml(Saml saml) {
                 this.saml = saml;
@@ -738,7 +685,7 @@ public class UpdateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable organization member synchronization. After it is enabled, the external identity provider synchronizes organization members as workspace users.</p>
+             * <p>Applies only to DingTalk and Lark. Controls the incremental synchronization of subsequent address book change events. If this parameter is omitted or set to null during an update, the original value is retained. It does not control the initial synchronization or manual synchronization. When enabled, the merged metadata must include encryptKey and verificationToken. For CustomSSO, use UpdateIdentityProviderSCIM to manage the synchronization switch.</p>
              */
             public Builder syncEnabled(Boolean syncEnabled) {
                 this.syncEnabled = syncEnabled;
@@ -746,7 +693,7 @@ public class UpdateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>Follows the synchronization scope definition by department. If omitted during creation, the default value is AllAuthorized. The first vendor synchronization is determined by syncOnBind. If omitted or set to null during an update, the original value is retained. Updating and saving the scope does not automatically perform full synchronization.</p>
+             * <p>The address book synchronization scope, which applies only to DingTalk and Lark. If this parameter is omitted or set to null, the current scope is retained. Saving the scope does not automatically trigger a full synchronization. CustomSSO does not accept this field.</p>
              */
             public Builder syncScope(SyncScope syncScope) {
                 this.syncScope = syncScope;

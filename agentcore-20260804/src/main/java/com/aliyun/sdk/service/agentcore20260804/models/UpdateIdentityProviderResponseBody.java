@@ -119,7 +119,7 @@ public class UpdateIdentityProviderResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The business status code.</p>
+         * <p>The business status code of the API request. SUCCESS indicates that the request is successful, but does not mean that the asynchronous configuration or synchronization task is completed.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -130,7 +130,7 @@ public class UpdateIdentityProviderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The updated external identity provider binding information.</p>
+         * <p>The currently saved identity provider binding information, including the expected configuration and resource status. The actual update may still be executing in the background.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -138,7 +138,7 @@ public class UpdateIdentityProviderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The HTTP status code of the API request, which does not represent the execution result of the background task.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -149,7 +149,7 @@ public class UpdateIdentityProviderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message. An error description is returned when the request fails.</p>
+         * <p>The response message of the API request. An error description is returned if the request fails.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -160,7 +160,7 @@ public class UpdateIdentityProviderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The unique identifier of the request. Provide this value when you troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>request-123456</p>
@@ -171,7 +171,7 @@ public class UpdateIdentityProviderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful.</p>
+         * <p>Indicates whether the API request is successful. To check whether the background configuration has taken effect, query the identity provider status separately.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -197,12 +197,6 @@ public class UpdateIdentityProviderResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("entityId")
         private String entityId;
 
-        @com.aliyun.core.annotation.NameInMap("jitProvisionStatus")
-        private String jitProvisionStatus;
-
-        @com.aliyun.core.annotation.NameInMap("jitUpdateStatus")
-        private String jitUpdateStatus;
-
         @com.aliyun.core.annotation.NameInMap("loginUrl")
         private String loginUrl;
 
@@ -212,8 +206,6 @@ public class UpdateIdentityProviderResponseBody extends TeaModel {
         private Configuration(Builder builder) {
             this.bindingType = builder.bindingType;
             this.entityId = builder.entityId;
-            this.jitProvisionStatus = builder.jitProvisionStatus;
-            this.jitUpdateStatus = builder.jitUpdateStatus;
             this.loginUrl = builder.loginUrl;
             this.ssoStatus = builder.ssoStatus;
         }
@@ -241,20 +233,6 @@ public class UpdateIdentityProviderResponseBody extends TeaModel {
         }
 
         /**
-         * @return jitProvisionStatus
-         */
-        public String getJitProvisionStatus() {
-            return this.jitProvisionStatus;
-        }
-
-        /**
-         * @return jitUpdateStatus
-         */
-        public String getJitUpdateStatus() {
-            return this.jitUpdateStatus;
-        }
-
-        /**
          * @return loginUrl
          */
         public String getLoginUrl() {
@@ -271,8 +249,6 @@ public class UpdateIdentityProviderResponseBody extends TeaModel {
         public static final class Builder {
             private String bindingType; 
             private String entityId; 
-            private String jitProvisionStatus; 
-            private String jitUpdateStatus; 
             private String loginUrl; 
             private String ssoStatus; 
 
@@ -282,14 +258,12 @@ public class UpdateIdentityProviderResponseBody extends TeaModel {
             private Builder(Configuration model) {
                 this.bindingType = model.bindingType;
                 this.entityId = model.entityId;
-                this.jitProvisionStatus = model.jitProvisionStatus;
-                this.jitUpdateStatus = model.jitUpdateStatus;
                 this.loginUrl = model.loginUrl;
                 this.ssoStatus = model.ssoStatus;
             } 
 
             /**
-             * <p>HTTP-Redirect or HTTP-POST. This parameter is required for manual entry. Queries return the short name.</p>
+             * <p>The actual SAML binding type saved in the upstream, which is HTTP-Redirect or HTTP-POST.</p>
              * 
              * <strong>example:</strong>
              * <p>HTTP-Redirect</p>
@@ -300,7 +274,7 @@ public class UpdateIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Required for manual entry. It must be non-empty and up to 2,048 characters in length. Existing configurations do not support replacement. It is different from the local entity ID returned by SP queries.</p>
+             * <p>The actual enterprise IdP entity ID saved in the upstream.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://idp.example.com/entity">https://idp.example.com/entity</a></p>
@@ -311,29 +285,7 @@ public class UpdateIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The actual switch value. Valid values: Enabled and Disabled.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Disabled</p>
-             */
-            public Builder jitProvisionStatus(String jitProvisionStatus) {
-                this.jitProvisionStatus = jitProvisionStatus;
-                return this;
-            }
-
-            /**
-             * <p>The actual switch value. Valid values: Enabled and Disabled.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Disabled</p>
-             */
-            public Builder jitUpdateStatus(String jitUpdateStatus) {
-                this.jitUpdateStatus = jitUpdateStatus;
-                return this;
-            }
-
-            /**
-             * <p>Required for manual entry. It must be an absolute HTTPS URL without user credentials or fragments.</p>
+             * <p>The actual enterprise IdP SSO logon URL saved in the upstream.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://idp.example.com/sso">https://idp.example.com/sso</a></p>
@@ -344,7 +296,7 @@ public class UpdateIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The actual switch value. Valid values: Enabled and Disabled. This value is not equivalent to the expected loginEnabled value saved in AC.</p>
+             * <p>The actual SSO logon status in the upstream. Enabled indicates that it is turned on, and Disabled indicates that it is turned off. This should be evaluated separately from the expected value of loginEnabled.</p>
              * 
              * <strong>example:</strong>
              * <p>Enabled</p>
@@ -374,12 +326,6 @@ public class UpdateIdentityProviderResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("entityId")
         private String entityId;
 
-        @com.aliyun.core.annotation.NameInMap("jitProvisionEnabled")
-        private Boolean jitProvisionEnabled;
-
-        @com.aliyun.core.annotation.NameInMap("jitUpdateEnabled")
-        private Boolean jitUpdateEnabled;
-
         @com.aliyun.core.annotation.NameInMap("loginUrl")
         private String loginUrl;
 
@@ -389,8 +335,6 @@ public class UpdateIdentityProviderResponseBody extends TeaModel {
         private Saml(Builder builder) {
             this.bindingType = builder.bindingType;
             this.entityId = builder.entityId;
-            this.jitProvisionEnabled = builder.jitProvisionEnabled;
-            this.jitUpdateEnabled = builder.jitUpdateEnabled;
             this.loginUrl = builder.loginUrl;
             this.x509Certificates = builder.x509Certificates;
         }
@@ -418,20 +362,6 @@ public class UpdateIdentityProviderResponseBody extends TeaModel {
         }
 
         /**
-         * @return jitProvisionEnabled
-         */
-        public Boolean getJitProvisionEnabled() {
-            return this.jitProvisionEnabled;
-        }
-
-        /**
-         * @return jitUpdateEnabled
-         */
-        public Boolean getJitUpdateEnabled() {
-            return this.jitUpdateEnabled;
-        }
-
-        /**
          * @return loginUrl
          */
         public String getLoginUrl() {
@@ -448,8 +378,6 @@ public class UpdateIdentityProviderResponseBody extends TeaModel {
         public static final class Builder {
             private String bindingType; 
             private String entityId; 
-            private Boolean jitProvisionEnabled; 
-            private Boolean jitUpdateEnabled; 
             private String loginUrl; 
             private java.util.List<String> x509Certificates; 
 
@@ -459,14 +387,12 @@ public class UpdateIdentityProviderResponseBody extends TeaModel {
             private Builder(Saml model) {
                 this.bindingType = model.bindingType;
                 this.entityId = model.entityId;
-                this.jitProvisionEnabled = model.jitProvisionEnabled;
-                this.jitUpdateEnabled = model.jitUpdateEnabled;
                 this.loginUrl = model.loginUrl;
                 this.x509Certificates = model.x509Certificates;
             } 
 
             /**
-             * <p>HTTP-Redirect or HTTP-POST. This parameter is required for manual entry. Queries return the short name.</p>
+             * <p>The saved SAML binding type, which is HTTP-Redirect or HTTP-POST.</p>
              * 
              * <strong>example:</strong>
              * <p>HTTP-Redirect</p>
@@ -477,7 +403,7 @@ public class UpdateIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Required for manual entry. It must be non-empty and up to 2,048 characters in length. Existing configurations do not support replacement. It is different from the local entity ID returned by SP queries.</p>
+             * <p>The saved enterprise IdP entity ID, which is different from the entity ID of the service provider (SP).</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://idp.example.com/entity">https://idp.example.com/entity</a></p>
@@ -488,29 +414,7 @@ public class UpdateIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Can be set independently. If omitted during an update, the existing value is retained. If omitted for the first time, the default value is false. A valid SAML configuration is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
-             */
-            public Builder jitProvisionEnabled(Boolean jitProvisionEnabled) {
-                this.jitProvisionEnabled = jitProvisionEnabled;
-                return this;
-            }
-
-            /**
-             * <p>Can be set independently. If omitted during an update, the existing value is retained. If omitted for the first time, the default value is false. A valid SAML configuration is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
-             */
-            public Builder jitUpdateEnabled(Boolean jitUpdateEnabled) {
-                this.jitUpdateEnabled = jitUpdateEnabled;
-                return this;
-            }
-
-            /**
-             * <p>Required for manual entry. It must be an absolute HTTPS URL without user credentials or fragments.</p>
+             * <p>The saved enterprise IdP SSO logon URL.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://idp.example.com/sso">https://idp.example.com/sso</a></p>
@@ -521,7 +425,7 @@ public class UpdateIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Required for manual entry. It must be a non-empty array using PEM X.509 certificate text. The current validity period is validated, and up to 10 certificates are supported.</p>
+             * <p>The list of saved enterprise IdP X.509 signing certificates.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;-----BEGIN CERTIFICATE-----\\nMIICwDCCAaigAwIBAgIULlsHLfcADyBax5ZtFlj+YGzZVo0wDQYJKoZIhvcNAQEL\\nBQAwGjEYMBYGA1UEAwwPaWRwLmV4YW1wbGUuY29tMB4XDTI2MDEwMTAwMDAwMFoX\\nDTM2MDEwMTAwMDAwMFowGjEYMBYGA1UEAwwPaWRwLmV4YW1wbGUuY29tMIIBIjAN\\nBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAto0DN0W1CrPRzK9QZ9A1aApb4Lg8\\noGlp2c0PbN3LokXe/HzwxCMXx65IDnrenttxzTwp9BgUnUN/3LRzWaOL2UQ/vNYN\\nW9LFLkI1T64UPyI7eyi28YlALhb41xkYhEp7rz+MjqifBzVZeTDUxBYtbK2hAhbY\\nEL1+udwsXEx0KB7xuQ/rbI2OKeqAEAD1tfYg7T/SM2wrXNYhx+o1HtchM4/0I8Ok\\nkk27JQ4y3ofzC5sTySmFF1Y7XcpSd+5WSyazedhkAieo8AB01DkJV6nnKfH8sH0E\\nBsnH3FP8FhqCLrIeEkjX9B9OcIRLGjiZqx4u/ryW1QhMldnv+pFfNjWy/wIDAQAB\\nMA0GCSqGSIb3DQEBCwUAA4IBAQC1hSQG8AwtGOoX2gKBK4Hi5XBrBreij8WlLTUW\\nld0FINQ0Rg84f/27CjDthywj6wgxCesCuOVFhpxQa1UacsP/Gcai1aKABtLWImca\\nWECRYK5gDkwhTMFKM9mXA26hH1l4v/UR2iTpEK9H78egC4W7bs2LDTpPryuaNKTq\\nP2O0tMbNkAHB8yecz5LxHXnxadL9Egow25g2RClvpifWqDnuS9TSbKkIWLcPLjoc\\nJj2K9ILpBwhXiXi/BiSgyYTLiYvVvih9vX4s+hKGZNJc0j92YLiOHDF0XH1oxgdV\\njfTmRiedeb2VZJZElptD92z0AqFR7z2d5B+OqpPA2gjuMLV5\\n-----END CERTIFICATE-----&quot;]</p>
@@ -591,7 +495,7 @@ public class UpdateIdentityProviderResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>When the mode is SelectedDepartments, it must contain at least one non-empty department ID, which should be obtained from ListIdentityProviderDepartments. When the mode is AllAuthorized, pass an empty array or omit this parameter.</p>
+             * <p>The list of department IDs in the synchronization scope, obtained from ListIdentityProviderDepartments. In SelectedDepartments mode, at least one non-empty department ID must be provided. In AllAuthorized mode, this parameter should be omitted or an empty array should be passed.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;10001&quot;]</p>
@@ -602,12 +506,7 @@ public class UpdateIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>AllAuthorized: The full authorization scope, subject to the application address book authorization limits.</li>
-             * <li>SelectedDepartments: The selected departments and all their sub-departments.
-             * When explicitly submitting syncScope, you must provide a valid mode, which is validated by the backend.</li>
-             * </ul>
+             * <p>The synchronization scope mode. AllAuthorized: all members within the authorization scope of the application address book. SelectedDepartments: the selected departments and all their sub-departments. A valid mode must be provided when syncScope is explicitly submitted.</p>
              * 
              * <strong>example:</strong>
              * <p>SelectedDepartments</p>
@@ -768,7 +667,7 @@ public class UpdateIdentityProviderResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The actual SAML configuration is read back on demand only by GetIdentityProvider. SCIM queries and preparations return the actual received status and URL.</p>
+             * <p>The actual SAML configuration read back from the upstream. This update operation does not perform the read-back and usually does not return this field. Use GetIdentityProvider to obtain it.</p>
              */
             public Builder configuration(Configuration configuration) {
                 this.configuration = configuration;
@@ -776,7 +675,7 @@ public class UpdateIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the external identity provider. Valid values: DingTalk and Feishu.</p>
+             * <p>The type of the identity provider. DingTalk: DingTalk. Feishu: Lark. CustomSSO: custom enterprise identity provider connected through SAML. The value must be the same as the type of the identity provider bound to the current workspace.</p>
              * 
              * <strong>example:</strong>
              * <p>DingTalk</p>
@@ -787,7 +686,7 @@ public class UpdateIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to allow workspace users to log on through the external identity provider.</p>
+             * <p>The currently saved expected value of the logon switch, which alone does not prove that the upstream logon configuration has taken effect.</p>
              */
             public Builder loginEnabled(Boolean loginEnabled) {
                 this.loginEnabled = loginEnabled;
@@ -795,7 +694,7 @@ public class UpdateIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Currently, only SAML is supported. This parameter may not be returned if no valid configuration is saved. OIDC placeholder initialization is not supported.</p>
+             * <p>The currently saved logon protocol for CustomSSO, which is SAML when configured. This field is not returned for DingTalk or Lark.</p>
              * 
              * <strong>example:</strong>
              * <p>SAML</p>
@@ -806,7 +705,7 @@ public class UpdateIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The input supports either XML or complete manual entry. Queries return standardized configurations and do not echo the original XML. This parameter can be omitted if it is not configured.</p>
+             * <p>The saved standardized SAML configuration for CustomSSO. The original metadata XML is not echoed. This field is not returned if no valid configuration is saved or if the identity provider is DingTalk or Lark. This value is the locally saved configuration and is not equivalent to the actual upstream configuration.</p>
              */
             public Builder saml(Saml saml) {
                 this.saml = saml;
@@ -814,7 +713,19 @@ public class UpdateIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The binding status. Valid values: CONFIGURED (the configuration is accepted and waiting for the user pool to be activated), SYNCING (synchronizing organization members), SYNCED (organization member synchronization is completed), READY (the binding is in effect), SYNC_FAILED (organization member synchronization failed), UPDATING (updating the configuration), UPDATE_FAILED (configuration update failed), DISCONNECTING (disconnecting), and DISCONNECT_FAILED (disconnection failed).</p>
+             * <p>The status of the identity provider resource and logon configuration. Valid values:</p>
+             * <ul>
+             * <li>CONFIGURED: The configuration is accepted.</li>
+             * <li>UPDATING: The configuration is being updated.</li>
+             * <li>SYNCING: Synchronization is in progress.</li>
+             * <li>SYNCED: The synchronization phase is completed.</li>
+             * <li>READY: The resource is ready.</li>
+             * <li>SYNC_FAILED: Synchronization failed.</li>
+             * <li>UPDATE_FAILED: The update failed.</li>
+             * <li>DISCONNECTING: Unbinding is in progress.</li>
+             * <li>DISCONNECT_FAILED: Unbinding failed.
+             * READY alone does not indicate that users have been imported. Query the SCIM operation results for CustomSSO separately.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>READY</p>
@@ -825,7 +736,7 @@ public class UpdateIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to enable organization member synchronization. After it is enabled, the external identity provider synchronizes organization members as workspace users.</p>
+             * <p>The currently saved expected value of the synchronization switch. For DingTalk and Lark, it is used for subsequent address book change events. The SCIM switch for CustomSSO is managed through UpdateIdentityProviderSCIM, and the operation results are queried through GetIdentityProviderSCIM.</p>
              */
             public Builder syncEnabled(Boolean syncEnabled) {
                 this.syncEnabled = syncEnabled;
@@ -833,7 +744,7 @@ public class UpdateIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Follows the synchronization scope definition by department. If omitted during creation, the default value is AllAuthorized. The first vendor synchronization is determined by syncOnBind. If omitted or set to null during an update, the original value is retained. Updating and saving the scope does not automatically perform full synchronization.</p>
+             * <p>The saved synchronization scope for DingTalk and Lark. The default value for valid historical configurations is AllAuthorized, and this field may not be returned for corrupted historical configurations. This field is not returned for CustomSSO.</p>
              */
             public Builder syncScope(SyncScope syncScope) {
                 this.syncScope = syncScope;
@@ -841,7 +752,7 @@ public class UpdateIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The workspace ID.</p>
+             * <p>The ID of the workspace to which the identity provider belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>ws-123456</p>

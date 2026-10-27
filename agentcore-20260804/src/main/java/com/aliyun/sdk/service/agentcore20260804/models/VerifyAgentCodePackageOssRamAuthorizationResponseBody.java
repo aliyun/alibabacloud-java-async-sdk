@@ -119,7 +119,10 @@ public class VerifyAgentCodePackageOssRamAuthorizationResponseBody extends TeaMo
         } 
 
         /**
-         * code.
+         * <p>The business status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class VerifyAgentCodePackageOssRamAuthorizationResponseBody extends TeaMo
         }
 
         /**
-         * data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class VerifyAgentCodePackageOssRamAuthorizationResponseBody extends TeaMo
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class VerifyAgentCodePackageOssRamAuthorizationResponseBody extends TeaMo
         }
 
         /**
-         * message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class VerifyAgentCodePackageOssRamAuthorizationResponseBody extends TeaMo
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>550e8400-e29b-41d4-a716-446655440000</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,7 @@ public class VerifyAgentCodePackageOssRamAuthorizationResponseBody extends TeaMo
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -251,7 +263,7 @@ public class VerifyAgentCodePackageOssRamAuthorizationResponseBody extends TeaMo
             } 
 
             /**
-             * <p>AUTHORIZED 仅表示对应策略已绑定。</p>
+             * <p>The policy binding status.</p>
              * 
              * <strong>example:</strong>
              * <p>AUTHORIZED</p>
@@ -262,7 +274,10 @@ public class VerifyAgentCodePackageOssRamAuthorizationResponseBody extends TeaMo
             }
 
             /**
-             * ossBucketName.
+             * <p>The name of the authorized source OSS bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-agent-bucket</p>
              */
             public Builder ossBucketName(String ossBucketName) {
                 this.ossBucketName = ossBucketName;
@@ -270,7 +285,7 @@ public class VerifyAgentCodePackageOssRamAuthorizationResponseBody extends TeaMo
             }
 
             /**
-             * <p>客户端不能指定或覆盖该角色。</p>
+             * <p>The name of the workspace role selected by the backend.</p>
              * 
              * <strong>example:</strong>
              * <p>AliyunAgentCoreWorkspace-ws-a1b2c3d4e5f6</p>
@@ -281,7 +296,10 @@ public class VerifyAgentCodePackageOssRamAuthorizationResponseBody extends TeaMo
             }
 
             /**
-             * workspaceId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ws-a1b2c3d4e5f6</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;

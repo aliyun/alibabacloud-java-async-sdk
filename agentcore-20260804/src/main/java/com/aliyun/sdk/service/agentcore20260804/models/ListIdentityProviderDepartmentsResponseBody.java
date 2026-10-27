@@ -158,7 +158,7 @@ public class ListIdentityProviderDepartmentsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The business status code of the API request. A value of SUCCESS indicates that the request is successful, but does not indicate that the asynchronous synchronization task is completed.</p>
+         * <p>The business status code of the API request. SUCCESS indicates that the request is successful, but does not indicate that the asynchronous synchronization task is completed.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -169,7 +169,7 @@ public class ListIdentityProviderDepartmentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code of the API request. This code does not indicate the execution result of an asynchronous task.</p>
+         * <p>The HTTP status code of the API request, which does not indicate the execution result of the asynchronous task.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -180,7 +180,7 @@ public class ListIdentityProviderDepartmentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The direct child departments on the current page under the parent department. You must query the details of the child departments separately.</p>
+         * <p>The direct child departments on the current page under the current parent department. You must make another query to obtain the details of the child departments.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;id&quot;:&quot;10001&quot;,&quot;name&quot;:&quot;R&amp;D Department&quot;,&quot;parentId&quot;:&quot;1&quot;,&quot;memberCount&quot;:12,&quot;hasChildren&quot;:true}]</p>
@@ -191,7 +191,7 @@ public class ListIdentityProviderDepartmentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page used for this query.</p>
+         * <p>The number of items per page used for this query.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -213,7 +213,7 @@ public class ListIdentityProviderDepartmentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token for the next page. An empty or missing value indicates that there are no subsequent pages at the current hierarchy of the parent department, but does not indicate that the entire department tree has been returned.</p>
+         * <p>The token for the next page. An empty or missing value indicates that there are no subsequent pages at the current hierarchy level of the parent department, but does not indicate that the entire department tree has been returned.</p>
          * 
          * <strong>example:</strong>
          * <p>example-next-page-token</p>
@@ -246,7 +246,7 @@ public class ListIdentityProviderDepartmentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of departments. This API does not provide this statistic. The value may not be returned and must not be treated as 0.</p>
+         * <p>The total number of departments. This operation does not provide this statistic and may not return this field. Do not treat a missing value as 0.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -354,7 +354,7 @@ public class ListIdentityProviderDepartmentsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether child departments exist. A value of true indicates that child departments exist and an expansion entry can be displayed. A value of false indicates a leaf node. If this field is not returned, the status is unknown. To query the details of child departments, use the ID of the current node.</p>
+             * <p>Indicates whether the department has child departments. A value of true indicates that the department has child departments and an expansion entry can be displayed accordingly. A value of false indicates a leaf node. If this field is not returned, the status is unknown. You must use the ID of the current node to make another query to obtain the details of the child departments.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -365,7 +365,7 @@ public class ListIdentityProviderDepartmentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique identifier of the department returned by the identity provider. When querying the child departments of this node, use this value as parentDepartmentId.</p>
+             * <p>The unique identifier of the department returned by the identity provider. When querying the child departments of this node, use this value as the parentDepartmentId.</p>
              * 
              * <strong>example:</strong>
              * <p>10001</p>
@@ -376,7 +376,7 @@ public class ListIdentityProviderDepartmentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of members in the department returned by the identity provider. This value is not returned when unknown. Do not treat a missing value as 0.</p>
+             * <p>The number of members in the department returned by the identity provider. This field is not returned when the number is unknown. Do not treat a missing value as 0.</p>
              * 
              * <strong>example:</strong>
              * <p>12</p>

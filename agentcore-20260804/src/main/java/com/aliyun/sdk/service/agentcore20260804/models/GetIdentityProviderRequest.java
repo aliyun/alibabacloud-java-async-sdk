@@ -88,7 +88,7 @@ public class GetIdentityProviderRequest extends Request {
         }
 
         /**
-         * <p>The external identity provider type. Valid values: DingTalk and Feishu.</p>
+         * <p>The type of the external identity provider. Valid values: DingTalk and Feishu.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -101,7 +101,7 @@ public class ListIdentityProvidersRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return on a single page. Valid values: 1 to 100. If you do not specify this parameter, 10 entries are returned by default.</p>
+         * <p>The maximum number of records to return per page. Valid values: 1 to 100. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -113,7 +113,7 @@ public class ListIdentityProvidersRequest extends Request {
         }
 
         /**
-         * <p>The cursor for querying the next page. Do not specify this parameter for the first call. For subsequent calls, specify the nextToken value returned in the previous call.</p>
+         * <p>The cursor for querying the next page. Do not specify this parameter for the first call. For subsequent calls, specify the nextToken value returned from the previous call.</p>
          * 
          * <strong>example:</strong>
          * <p>aWRlbnRpdHktcHJvdmlkZXItb2Zmc2V0OjEw</p>

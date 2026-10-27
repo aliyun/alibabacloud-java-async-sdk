@@ -131,7 +131,7 @@ public class ListIdentityProviderDepartmentsRequest extends Request {
         }
 
         /**
-         * <p>The type of the identity provider. A value of DingTalk indicates DingTalk, and a value of Feishu indicates Feishu.</p>
+         * <p>The type of the identity provider. DingTalk indicates DingTalk, and Feishu indicates Lark.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,7 +156,7 @@ public class ListIdentityProviderDepartmentsRequest extends Request {
         }
 
         /**
-         * <p>The next token returned from the previous page. Do not specify this parameter for the first query. To continue pagination, keep the identity provider and parentDepartmentId unchanged and pass the token as is. If the returned value is empty or not returned, it indicates that there are no subsequent pages at the current hierarchy.</p>
+         * <p>The nextToken returned from the previous page. Do not specify this parameter for the first query. When continuing pagination, keep the identity provider and parentDepartmentId unchanged, and pass the token as is. An empty or missing return value indicates that there are no subsequent pages at the current hierarchy level.</p>
          * 
          * <strong>example:</strong>
          * <p>example-next-page-token</p>
@@ -168,7 +168,7 @@ public class ListIdentityProviderDepartmentsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the parent department. Specifies the department whose direct child departments you want to query. If this parameter is not specified or is left empty, the root hierarchy is queried without recursively returning all descendants. When expanding a node in the list, specify the ID of the node instead of its parentId.</p>
+         * <p>Queries the direct child departments of the specified department. If this parameter is not specified or is empty, the root hierarchy is queried, and all descendants are not recursively returned. When expanding a node in the list, pass the ID of the node, not its parentId.</p>
          * 
          * <strong>example:</strong>
          * <p>10001</p>

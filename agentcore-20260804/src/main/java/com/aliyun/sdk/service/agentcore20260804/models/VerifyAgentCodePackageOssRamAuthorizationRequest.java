@@ -75,7 +75,7 @@ public class VerifyAgentCodePackageOssRamAuthorizationRequest extends Request {
         } 
 
         /**
-         * <p>目标 Workspace，地域沿用调用 endpoint。</p>
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class VerifyAgentCodePackageOssRamAuthorizationRequest extends Request {
         }
 
         /**
-         * <p>与 Workspace 同账号、同地域；不修改 Workspace 默认 OSS 绑定。</p>
+         * <p>The name of the source OSS bucket.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
